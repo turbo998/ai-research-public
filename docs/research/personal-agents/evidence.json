@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "title": "Personal agents 五产品研究",
+  "cutoff_date": "2026-10-11",
+  "timezone": "Asia/Shanghai",
+  "retrieval_dates_local": ["2026-10-11", "2026-10-12"],
+  "method": "公开官网直接读取；必要时使用未登录 public browser；benchmark框架由独立research agent核验，成稿另由独立reviewer核对。不是产品实测。",
+  "status": {"research": "static", "independent_review": "completed_fixes_verified_no_open_substantive_findings", "product_testing": "not_executed", "protocol": "not_executed", "publication": "public_publication", "privacy_review": "completed_public_candidate_no_open_privacy_findings"},
+  "provenance": {
+    "raw_sources_committed": false,
+    "media_committed": false,
+    "private_accounts_accessed": false,
+    "full_site_reviewed": false,
+    "web_byte_hashes_retained": false,
+    "retrieval_time_rule": "保留实际读取日期；公开版不发布内部进程的秒级clock。来源自身的publication、modified、measurement及commit日期原样保留。脱敏发布不是一次新的资料检索。",
+    "web_version_rule": "live pages，未保留不可变历史快照；不能证明读取内容在cutoff前全部相同。明确晚于cutoff发布的事件不纳入结论。",
+    "github_version_rule": "B3/B6/B8的SHA经GitHub REST commit object核验为真实commit，不是blob SHA；不证明官网由该commit构建。",
+    "delegated_reading": "B1-B9来自research agent实际读取并返回的范围，非主作者逐份重复读取；最终review另核对关键来源。",
+    "benchmark_search": "一次跨五产品搜索后直接追踪Every和Personal Agent Bench/Instinct memory来源；搜索摘要的无benchmark结论被直接证据纠正，未采纳。未系统穷尽全网。"
+  },
+  "source_defaults": {
+    "reading_method": "web_fetch simplified markdown，若注明raw/browser则使用该方法",
+    "retrieved_on_local": "2026-10-11",
+    "version_binding": "live_at_retrieval",
+    "claim_type": "official_vendor_statement",
+    "scope_limit": "只支持已列读取范围内的claim；不证明本账户access、运行成功、全站政策或不可变历史。"
+  },
+  "sources": [
+    {
+      "id": "S1", "publisher": "Meta Newsroom", "title": "Introducing Muse",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "published_at": "2026-09-08T19:00:51Z", "modified_at": "2026-09-30T20:53:21Z",
+      "reading_method": "web_fetch正文；raw HTML前7000字符中的article时间metadata",
+      "reading_scope": "How It Works、Built to be Private/Safe/Secure、Looking Ahead的返回正文；HTML metadata，不读媒体",
+      "supports": ["Muse产品身份与Muse Spark底层模型", "WhatsApp/iOS/Android/web、US rollout", "Secure VM/Sentinel/敏感动作审批/训练opt-out/不进广告系统/forget", "free+subscription", "Confidential VM、1Password、AI glasses是路线图"],
+      "limitations": ["modified date不是新launch", "没有订阅金额与具体额度", "安全与能力为官方宣称"]
+    },
+    {
+      "id": "S2", "publisher": "Meta AI Research", "title": "Security and safety for AI agents: Muse",
+      "url": "https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "requested_url": "https://security.muse.ai",
+      "published_at": null,
+      "reading_scope": "返回前15000字符：launch system、VM、runtime cell、Sentinel、human-in-loop、least privilege，至defense-in-depth开头",
+      "supports": ["isolated linux VM及runtime/host安全域", "Sentinel sole connector/egress permission authority", "credential surrogation", "按scope审批且可低风险auto-allow", "有限inference/telemetry出VM", "官方承认会错误"],
+      "limitations": ["非全文或安全审计", "剩余eval/privacy章节未读", "未核验攻击成功率或安全保证"]
+    },
+    {
+      "id": "S3", "publisher": "Muse product team / Meta", "title": "Introducing Muse: product design",
+      "url": "https://introducing.muse.ai/",
+      "published_at": null,
+      "reading_scope": "返回正文：main/side chats、persistent memory、Goals/Ideas、Artifacts、activity、Memory files和deterministic controls",
+      "supports": ["Memory files可读改", "长期目标、事件/时间后台推进", "Artifacts、structured approvals", "主动消息可调整"],
+      "limitations": ["个人用例为产品团队叙述，不是独立benchmark", "没有物理删除/backup保证"]
+    },
+    {
+      "id": "S4", "publisher": "Meta AI", "title": "Muse overview and free-use FAQ",
+      "url": "https://ai.meta.com/muse/",
+      "retrieved_on_local": "2026-10-12",
+      "published_at": null,
+      "reading_method": "public browser，body.innerText，点击Is Muse free?并读取对应FAQ",
+      "reading_scope": "当前主内容、Mac/Small Business入口；free FAQ展开文本",
+      "supports": ["当前官网描述mobile/Mac/WhatsApp、本地files/apps/tabs", "free with usage limit，refresh或upgrade", "1Password仍coming soon"],
+      "limitations": ["实际跨午夜，非10月11日不可变快照", "未核验Mac发布日期/资格或付费价目", "出现Hatch残留文案，不据此更改Muse身份"]
+    },
+    {
+      "id": "S5", "publisher": "x.ai (页面当前品牌SpaceXSI)", "title": "Introducing Grok Bot",
+      "url": "https://x.ai/news/introducing-grok-bot",
+      "published_at": "2026-08-11",
+      "reading_method": "web_fetch正文；public browser header/time/footer核验",
+      "reading_scope": "launch、How different和内部团队例子；time datetime及品牌",
+      "supports": ["beta、公告套餐名单、macOS/iOS", "cloud computer、multiple Bots/群聊/remember/routines/proactivity", "内部工作示例"],
+      "limitations": ["当前access以S7为准，不能把公告waitlist当永久状态", "testimonial不是独立benchmark", "不推断企业法人沿革"]
+    },
+    {
+      "id": "S6", "publisher": "Cursor", "title": "Grok Bot security",
+      "url": "https://cursor.com/docs/grok-bot/security",
+      "published_at": null,
+      "reading_scope": "返回前14000字符：architecture/network、Auto Review、identity、tokens、deletion、residency、models/privacy，至provider agreements段开头",
+      "supports": ["Enterprise-only network/enforcement/audit controls", "Auto Review非所有side effect", "Bots act as member，tokens backend，team connector例外", "durable disk和独立cleanup", "US computers非默认US-only residency", "动态模型mix、team model allowlist不约束Bot", "Privacy Mode enabled不训练customer data"],
+      "limitations": ["x.ai概览称DLP，而本详细页称dedicated DLP hooks不可用；不用概览作全部租户保证", "未读取完整subprocessors/retention contracts", "非消费者完整物理删除认证"]
+    },
+    {
+      "id": "S7", "publisher": "Cursor", "title": "Grok Bot plans and billing",
+      "url": "https://cursor.com/help/grok-bot/plans",
+      "published_at": null,
+      "reading_scope": "作者返回前12000字符：access表、individual/Teams/linked grants、weekly/on-demand、trial、macOS/iOS bucket；独立review另直接读取Teams及monthly limit FAQ",
+      "independent_review_read_on_local": "2026-10-12",
+      "supports": ["paid individual Cursor及Teams、linked SuperGrok/Plus/Heavy/X Premium+和self-serve Grok Business seat", "SuperGrok Lite不包含", "grant不叠加取较高", "weekly grant及on-demand monthly limit；Teams on-demand默认开，运行中任务可能超monthly limit完成，非hard cap", "free trial credit加7-day window", "不需standalone subscription"],
+      "limitations": ["未核验美元价目、具体token/step额度、年龄/地域", "作者未全文读取后半FAQ；limit资格补充来自独立review实际读取"]
+    },
+    {
+      "id": "S8", "publisher": "Cursor", "title": "Work with Grok Bot",
+      "url": "https://cursor.com/docs/grok-bot/work",
+      "published_at": null,
+      "reading_scope": "返回前12000字符：Bots/memory、delete、group messaging/handoffs、shared computer、takeover、plugins开头",
+      "supports": ["per-Bot偏好事实摘要", "账户共享persistent computer与plugins，各screen非安全边界", "delete Bot不清文件/sign-ins", "异步handoff，group 2-6 Bots", "接管敏感login/payment/identity步骤"],
+      "limitations": ["没有读取完整skills/routines后续章节", "记忆不是权威最新source，不证明隔离或删除"]
+    },
+    {
+      "id": "S9", "publisher": "OpenAI", "title": "dot 正式登场",
+      "url": "https://openai.com/zh-Hans-CN/index/introducing-dots/",
+      "published_at": "2026-09-29",
+      "reading_method": "web_fetch403后，未登录public browser读取body.innerText和官方help links",
+      "reading_scope": "公告完整可见正文含独立工作/工作流/防护/权限/审批/specialist/入门，不观看视频",
+      "supports": ["dot身份、GPT-6 Astra、cloud computer、optional local", "4000+应用为生态宣称", "ChatGPT/Slack/Teams/voice、主动研究只读", "Custom Rules/auto-review/内置安全", "personal与business training区别及主动研究间接训练限定", "首个包含、额度、Codex/工作任务计量、specialist pilot与未来多-dot团队"],
+      "limitations": ["SMS soon和access受后续S10限制/更新", "没有模型或产品成功率", "未读取system card或安全blog"]
+    },
+    {
+      "id": "S10", "publisher": "OpenAI Help Center", "title": "dot 入门指南",
+      "url": "https://help.openai.com/zh-hans-cn/articles/20001530-getting-started-with-your-dot",
+      "requested_url": "https://help.openai.com/articles/20001530",
+      "published_at": null, "displayed_update": "更新于：前天（读取时相对显示，未转成确定版本日期）",
+      "reading_method": "fetch403后public browser article.innerText",
+      "reading_scope": "完整可见article，含资格、mobile、local access、memory、SMS、rules、pause/reset",
+      "supports": ["Pro地域排除及Business Premium supported regions/admin beta", "desktop创建、mobile web不支持", "local默认关闭、可revoke", "ChatGPT记忆和dot自己的记忆", "disconnect不删取得信息、reset删dot记忆/会话/schedules", "SMS US Pro限量beta、无主动call", "scheduled tasks和rule choices"],
+      "limitations": ["relative update不能证明不可变历史", "reset不等于所有外部或ChatGPT/备份数据删除"]
+    },
+    {
+      "id": "S11", "publisher": "Google Gemini", "title": "Gemini Spark overview",
+      "url": "https://gemini.google/overview/agent/spark/",
+      "published_at": null,
+      "reading_method": "fetch只有短段；public browser main、availability FAQ点击及其他FAQ DOM textContent",
+      "reading_scope": "main用例及7 FAQ文本、18+subscription footnote",
+      "supports": ["24/7/background，关机仍可工作为overview宣称", "Tasks/Skills/Schedules、Google apps默认关闭connections", "Pro/Ultra select countries与select business users", "不是无差别24/7读邮箱", "major action check设计"],
+      "limitations": ["business资格与S12个人账号限定冲突", "offline schedule与S12段落差异", "未核验launch date、订阅金额"]
+    },
+    {
+      "id": "S12", "publisher": "Google Gemini Apps Help", "title": "Use Gemini Spark to manage tasks and workflows",
+      "url": "https://support.google.com/gemini/answer/17094507?hl=en",
+      "published_at": null,
+      "reading_method": "fetch部分auto-browse；public browser中文visible article后改英文读取选定article textContent（含折叠内容）",
+      "reading_scope": "What you need、before-use/Chrome、turn-off、sources、limits、safety、common questions/Workspace actions",
+      "supports": ["personal account、Pro/Ultra、18+、Keep Activity；排除EEA/Nigeria/Switzerland/UK", "local Chrome awake、remote继续与login接管", "confirmation/Stop/Take control，不保证所有风险", "Google Tasks private bulk无确认、shared doc edits确认", "15 concurrent tasks与schedules容量", "关闭不删tasks/threads/schedules/写入files、data另清"],
+      "limitations": ["overview称select business users，本页说work/school暂不支持", "页内remote能继续与device-off schedules不运行未完全一致，保留差异", "不是全局每写必确认或自动恢复SLA"]
+    },
+    {
+      "id": "S13", "publisher": "Google Gemini Apps Help", "title": "Gemini Apps Privacy Hub: Spark section",
+      "url": "https://support.google.com/gemini/answer/13594961",
+      "published_at": null,
+      "reading_scope": "fetch返回Spark专节：beta、Keep Activity、remote browser/computer/connected folders、processed/shared data、manage/delete",
+      "supports": ["beta Spark要Keep Activity", "remote cookies/auth及files可能敏感", "按Gemini Apps Privacy Notice处理", "第三方任务所需信息分享", "settings清理remote data、Mac connected folders"],
+      "limitations": ["非完整Privacy Hub训练/retention全文", "不据此承诺不训练、固定保留期或物理删除"]
+    },
+    {
+      "id": "S14", "publisher": "Google Cloud", "title": "Welcome to Gemini at Work 2026",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+      "published_at": "2026-10-08",
+      "reading_scope": "fetch前16000字符：Workspace assistance/delegation/coworker、Securing and governing agents；未用客户performance数字",
+      "supports": ["企业coworker独立Workspace account", "企业identity/RBAC/audit/Sandbox/Gateway与Spark区别"],
+      "independent_review_read_on_local": "2026-10-12",
+      "limitations": ["企业营销材料，非消费者套餐功能保证", "作者fetch未返回日期metadata；独立review直接读取JSON-LD核验datePublished为2026-10-08"]
+    },
+    {
+      "id": "S15", "publisher": "Instinct", "title": "Instinct home",
+      "url": "https://instinct.com/",
+      "published_at": null,
+      "reading_scope": "返回首页定位、text/call、phone/computer和生活事务例子；未进入login",
+      "supports": ["text/call、phone/computer生活assistant定位", "Text Instinct入口"],
+      "limitations": ["不保证WhatsApp/iMessage具体地域、public GA、invite或free access", "发布日期/价格未给"]
+    },
+    {
+      "id": "S16", "publisher": "Spear Street Technology, Inc. d/b/a Instinct", "title": "Instinct Terms",
+      "url": "https://instinct.com/terms",
+      "published_at": null, "revised_on": "2026-08-26",
+      "reading_method": "fetch Using services；raw HTML范围0-6000、14300-24400核验identity/age、paid、restrictions",
+      "reading_scope": "operator/18+、§3 Input/Connected Services/Actions/Materials/risk、§4 paid、§6 use restrictions及设备地域；非全部仲裁条款",
+      "supports": ["运营方、18+、修订不是launch", "广泛actions授权、用户风险责任、records可能不准确", "disconnect不删indexed Input", "training opt-out仅未来且安全例外、Vault不训练", "paid USD价可改、通常不退款", "§6 benchmarking受限制，须written permission或适用法律例外"],
+      "limitations": ["法律解释须专业意见；不宣称许可例外已成立", "没有价格金额或完整地域表", "不把第三方approval体验转成terms保证"]
+    },
+    {
+      "id": "S17", "publisher": "Instinct", "title": "Instinct Privacy Policy",
+      "url": "https://instinct.com/privacy-policy",
+      "requested_url": "https://instinct.com/privacy",
+      "published_at": null,
+      "reading_scope": "返回Collection/use及各data sources、Google Workspace、opt-out和disconnect/deletion；未全文retention/legal章节",
+      "supports": ["个性化context/previous interactions", "训练可能及安全review例外", "Google Workspace API数据不训练不用于ads/secondary purposes", "connected data与voice/可能敏感数据", "disconnect不删indexed data，workspace deletion"],
+      "limitations": ["未核验backup/retention/物理删除", "Workspace例外不泛化到所有Input", "非专业advice"]
+    },
+    {
+      "id": "S18", "publisher": "Every", "title": "Personal agents comparison",
+      "url": "https://every.to/personal-agents-comparison",
+      "published_at": null, "claim_type": "secondary_editorial_comparison",
+      "reading_scope": "返回At glance、channels/tools/privacy/memory和Sources/limitations；只将官方链接及外部测试作为发现入口",
+      "supports": ["作者声明未在所有产品跑同一jobs", "Instinct invite/beta/free等为第三方描述", "候选primary/help与black-box/benchmark链接"],
+      "limitations": ["表内价格与provider断言不直接当一手核验", "不是统一performance benchmark", "未保留不可变文章版本"]
+    },
+    {
+      "id": "S19", "publisher": "Dhravya Shah / Supermemory", "title": "Reverse-engineering Instinct memory",
+      "url": "https://supermemory.ai/blog/reverse-engineering-instinct-memory/",
+      "published_at": "2026-09-20", "claim_type": "third_party_black_box_observation_with_commercial_interest",
+      "reading_scope": "返回前18000字符，重点方法caveat、profile/ingestion/search、Performance rubric；不复制作者私人信息、内部输出或实现代码",
+      "supports": ["black-box/iMessage观察、未见source code的自限", "explicit recall与implicit personalization差异、forgetting未解决", "vibe-test非严格分数、>1M/months未测", "作者为memory vendor founder"],
+      "limitations": ["不认证git/grep/24h为实际内部实现", "没有统一任务分母/repeats", "不复刻或再发布上游私人会话/产品内部材料"]
+    },
+    {
+      "id": "S20", "publisher": "Personal Agent Bench / Zentor", "title": "Personal agent scorecard",
+      "url": "https://personalagentbench.com/",
+      "page_last_verified": "2026-10-09", "measurement_date": "2026-09-22", "published_at": null,
+      "claim_type": "third_party_product_benchmark_report",
+      "reading_method": "fetch前18000字符；public browser前两table tr.textContent恢复product标签与数值",
+      "reading_scope": "first results、current/older filtered table、adapter修正、raw batch不可公开、Grok未公布行与limitations；独立review另直接读取首table As of日期、method未重评分段和publisher利害声明",
+      "independent_review_read_on_local": "2026-10-12",
+      "supports": ["当前展示Instinct43% interval36-50 n159、Muse19% interval13-25 n90，测于2026-09-22非last verified日期", "这些rates未按2026-09-28至10-04新规则重评分", "current样本不同，最新raw batches未发布", "Muse旧12%由adapter defects、修正19%、83 re-run", "older Instinct52/Muse40、114 tasks、380/637 kept attempts、旧规则", "Grok入exam无公布值", "运营方Zentor开发agent软件，主动声明商业利害并排除自身产品"],
+      "limitations": ["数字是作者报告，非本库复算", "商业利害不能视为无利益关系的认证", "model/build/工具权限/预算/repeats与失败闭包未独立核验", "当前与older不能混榜，新方法不可自动回填旧测量，其他产品不属本主比较"]
+    },
+    {
+      "id": "S21", "publisher": "Personal Agent Bench", "title": "How the exam works",
+      "url": "https://personalagentbench.com/how-the-exam-works/",
+      "published_at": null, "claim_type": "third_party_benchmark_methodology",
+      "reading_scope": "作者返回前13000字符：7 worlds、deterministic hidden facts、faults/outcomes、approval/takeover、separate measures、timing、publishable batches；末尾prose judge部分仅开头。独立review另读What measured so far确认2026-09-22 rates尚未按新规则重评分",
+      "independent_review_read_on_local": "2026-10-12",
+      "supports": ["simulated resettable state、web/API共用state、final-state而非回复评分", "infra排除、capability/timeout/wrong state分开", "money至unpaid prepared order、越权attempt计数", "canonical commit/clean batch gate", "2026-09-28至10-04方法变化"],
+      "limitations": ["未实际复现grader/adapter", "未固定该bench仓库commit或读取全部trajectories", "上游原始案例/私人posts不复制"]
+    },
+    {
+      "id": "S22", "publisher": "Personal Agent Bench", "title": "Recorded runs and Instinct teardown",
+      "urls": ["https://personalagentbench.com/runs/", "https://personalagentbench.com/agents/instinct/"],
+      "published_at": null, "claim_type": "third_party_hands_on_report",
+      "reading_scope": "runs索引返回文本；Instinct页返回正文（最多18000字符）含approval、memory、trigger、unknowns与收费限制",
+      "supports": ["公开runs仅Instinct一个batch7条", "hands-on描述exact-text-bound approval和memory/triggers", "作者称production model/main host未知"],
+      "limitations": ["没有读取完整7轨迹，不核验aggregate", "不将拆解内部claims当官方保证", "不采纳页面无price-page断言或未知日期pricing句为全网事实"]
+    },
+    {
+      "id": "B1", "publisher": "GAIA paper authors / arXiv", "title": "GAIA",
+      "urls": ["https://arxiv.org/abs/2311.12983", "https://arxiv.org/html/2311.12983v1"],
+      "published_at": "2023-11-21T20:34:47Z", "version_binding": "arXiv:2311.12983v1",
+      "reading_method": "research agent direct HTTP/raw selected ranges",
+      "reading_scope": "submission history、abstract/intro、§§3.1-3.4、§4开头、Appendix B",
+      "claim_type": "primary_framework_paper",
+      "supports": ["466 questions、166developer/300heldout", "normalized answer评分", "不包含consequential网站actions", "API可用时3 repeats平均"],
+      "limitations": ["不是消费产品benchmark或policy score", "非完整paper或dataset读取"]
+    },
+    {
+      "id": "B2", "publisher": "GAIA benchmark authors / Hugging Face", "title": "GAIA dataset card",
+      "urls": ["https://huggingface.co/datasets/gaia-benchmark/GAIA", "https://huggingface.co/api/datasets/gaia-benchmark/GAIA"],
+      "published_at": null, "version_binding": "live_public_card_at_retrieval",
+      "reading_method": "research agent public card和API metadata",
+      "reading_scope": "完整rendered card、API header/card metadata；未取得gated dataset files",
+      "claim_type": "primary_dataset_access_policy",
+      "supports": ["gated access、anti-resharing", "2025-10 Parquet format迁移非新扩题", "未建立dataset blanket license"],
+      "limitations": ["raw README401未绕过", "未下载题目/附件/answers"]
+    },
+    {
+      "id": "B3", "publisher": "xlang-ai / OSWorld maintainers", "title": "OSWorld pinned repository",
+      "url": "https://github.com/xlang-ai/OSWorld/blob/b138d348256078fa634fc3b73567a7337c793e6b/README.md",
+      "commit": "b138d348256078fa634fc3b73567a7337c793e6b", "commit_date": "2026-09-14T16:08:47Z",
+      "version_binding": "verified_git_commit",
+      "reading_method": "research agent GitHub REST commit object及pinned raw files",
+      "reading_scope": "README全部；mm_agents和data READMEs；LICENSE opening；非整个repo",
+      "claim_type": "primary_framework_documentation",
+      "supports": ["2024-04-11 release、Verified2025-07-28", "model+PromptAgent/action/observation配置", "环境/account/proxy/public evaluation约束", "root code Apache-2.0"],
+      "limitations": ["不推断所有task跨OS同分布", "dataset/assets/VM权利不等于root code license", "未执行"]
+    },
+    {
+      "id": "B4", "publisher": "OSWorld paper authors / arXiv", "title": "OSWorld paper",
+      "url": "https://arxiv.org/abs/2404.07972",
+      "published_at": "2024-04-11", "revised_on": "2024-05-30",
+      "version_binding": "arXiv submission history",
+      "reading_method": "research agent direct abstract/history",
+      "reading_scope": "abstract、原始/修订日期",
+      "claim_type": "primary_framework_paper",
+      "supports": ["369 real computer tasks、initial setup/custom execution evaluators", "Ubuntu/Windows/macOS环境支持"],
+      "limitations": ["未完整paper，不保证所有OS相同评测条件"]
+    },
+    {
+      "id": "B5", "publisher": "xlang / OSWorld maintainers", "title": "OSWorld-Verified report",
+      "url": "https://xlang.ai/blog/osworld-verified",
+      "published_at": "2025-07-28", "version_binding": "live_report_at_retrieval",
+      "reading_method": "research agent rendered前20000字符",
+      "reading_scope": "Why update、infra、task/evaluator fixes；后续model score未读",
+      "claim_type": "primary_framework_update",
+      "supports": ["300+ feedback/issues修复非300new tasks", "web/ambiguity/timing/evaluator条件影响", "旧新score不可自动互换"],
+      "limitations": ["不采用未读score为产品数字"]
+    },
+    {
+      "id": "B6", "publisher": "Sierra Research", "title": "Original tau-bench pinned repository",
+      "url": "https://github.com/sierra-research/tau-bench/blob/59a200c6d575d595120f1cb70fea53cef0632f6b/README.md",
+      "commit": "59a200c6d575d595120f1cb70fea53cef0632f6b", "commit_date": "2026-03-18T17:36:06Z",
+      "version_binding": "verified_git_commit",
+      "reading_method": "research agent REST commit object、pinned README/LICENSE/run.py",
+      "reading_scope": "三文件全部；run.py reward errors和metric functions",
+      "claim_type": "primary_framework_documentation",
+      "supports": ["old tasks outdated notice与successor", "current README user model与original paper区别", "runner errors reward0", "MIT root code"],
+      "limitations": ["不是最新任务集；未执行", "数据/外部assets权利单独核验"]
+    },
+    {
+      "id": "B7", "publisher": "tau-bench paper authors / arXiv", "title": "tau-bench paper",
+      "urls": ["https://arxiv.org/abs/2406.12045", "https://arxiv.org/html/2406.12045v1"],
+      "published_at": "2024-06-17T19:33:08Z", "version_binding": "arXiv:2406.12045v1",
+      "reading_method": "research agent selected raw HTML",
+      "reading_scope": "history、§3、§4.1/Table1、§5",
+      "claim_type": "primary_framework_paper",
+      "supports": ["115retail+50airline合成任务", "agent/API/policy及stochastic user simulator", "binary final DB+communication仍可能漏policy violation", "pass^k全成功 vs pass@k至少一次", "original max30 actions、至少3trials、temperature0/1"],
+      "limitations": ["其配置非当前repo defaults，不移植consumer score"]
+    },
+    {
+      "id": "B8", "publisher": "Sierra Research", "title": "tau2-bench current tau3 pinned repository",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/4ce7c0397c1eb65c9bbe59aeacfe1ca44a1cd699/README.md",
+      "commit": "4ce7c0397c1eb65c9bbe59aeacfe1ca44a1cd699", "commit_date": "2026-10-07T04:04:44Z",
+      "version_binding": "verified_git_commit",
+      "reading_method": "research agent REST commit object、pinned raw files",
+      "reading_scope": "README、LICENSE、docs/evaluation全部；metrics relevant trial/error/scoring functions",
+      "claim_type": "primary_framework_documentation",
+      "supports": ["当前tau3、retrieval/voice及75+fixes", "banking_knowledge <1.0.1 vs >=1.0.1不比较", "endstate/communication与explicit ACTION区别", "infra errors排除与incomplete trials", "MIT root code"],
+      "limitations": ["本轮未复现或下载external数据", "不是原tau/消费product scores"]
+    },
+    {
+      "id": "B9", "publisher": "tau2-bench paper authors / arXiv", "title": "tau2-bench paper",
+      "url": "https://arxiv.org/abs/2506.07982",
+      "published_at": "2025-06-09T17:52:18Z", "version_binding": "arXiv submission history",
+      "reading_method": "research agent abstract/history",
+      "reading_scope": "abstract及submission history",
+      "claim_type": "primary_framework_paper",
+      "supports": ["dual-control telecom、compositional tasks、state-constrained user simulator"],
+      "limitations": ["非完整paper或tau3当前scores"]
+    }
+  ],
+  "framework_retrieval": {
+    "retrieved_on_local": "2026-10-11",
+    "internal_process_timestamps_published": false,
+    "selected_commits_predate_cutoff_and_read": true,
+    "commit_metadata_endpoints": [
+      "https://api.github.com/repos/xlang-ai/OSWorld/commits/b138d348256078fa634fc3b73567a7337c793e6b",
+      "https://api.github.com/repos/sierra-research/tau-bench/commits/59a200c6d575d595120f1cb70fea53cef0632f6b",
+      "https://api.github.com/repos/sierra-research/tau2-bench/commits/4ce7c0397c1eb65c9bbe59aeacfe1ca44a1cd699"
+    ]
+  },
+  "bounded_failed_reads": [
+    {"url": "https://openai.com/zh-Hans-CN/index/introducing-dots/", "result": "fetch403，合法public browser成功"},
+    {"url": "https://help.openai.com/articles/20001530", "result": "fetch403，public browser成功"},
+    {"url": "https://help.openai.com/articles/20001529", "result": "fetch403，本轮未核验，不用于claim"},
+    {"url": "https://muse.ai", "result": "redirect transport failure；未登录，不保存临时重定向query"},
+    {"url": "https://cursor.com/help/grok-bot/work", "result": "404，官方docs路径S8成功"},
+    {"url": "https://gemini.google/subscriptions/", "result": "fetch只返回条款摘要，不用于美元价目"},
+    {"url": "https://cursor.com/pricing", "result": "fetch只返回计划建议，不用于美元价目"},
+    {"url": "https://one.google.com/about/google-ai-plans/", "result": "fetch只返回模型摘要，不用于美元价目"}
+  ]
+}
