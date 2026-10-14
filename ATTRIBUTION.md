@@ -2,15 +2,16 @@
 
 本公开库由 **turbo998** 维护。Personal agents 的中文分析、比较组织、统一 benchmark 合同及 18 个合成案例为原创整理，使用 AI 辅助研究与独立另进程 AI 审阅；不冒称人工认证或产品实测。
 
-## 本专题引用
+## 本库专题引用
 
-| 内容 | 公开出处与归属 |
+| 专题 / 内容 | 公开出处与归属 |
 |---|---|
-| 产品、资格、控制及政策声明 | Meta/Muse；x.ai 与 Cursor；OpenAI；Google/Gemini/Google Cloud；Spear Street Technology, Inc. d/b/a Instinct。准确页面与读取范围见 S1–S17 |
-| 第三方比较与产品观察 | Every；Dhravya Shah / Supermemory；Personal Agent Bench / Zentor。商业利害、方法限制及未复算状态见 S18–S22 |
-| Benchmark 论文与文档 | GAIA 作者及 arXiv/Hugging Face；OSWorld 作者及 xlang-ai maintainers；τ 系列作者及 Sierra Research。版本、固定公开 commit 与访问边界见 B1–B9 |
+| **Omarchy agent 设计机制与契约评测** | 上游公开入口 `basecamp/omarchy`、规范仓库 `omacom/omarchy`，固定 commit [`9480d1b6a98156314dbabe6bfef08f39f8b9cd07`](https://github.com/omacom/omarchy/commit/9480d1b6a98156314dbabe6bfef08f39f8b9cd07)；原维护者及根 `LICENSE`（MIT）版权归属 David Heinemeier Hansson。轻量平台比较引用 Anthropic 与 GitHub 官方文档（W1–W7）。完整可复核台账见 [`docs/research/omarchy-agent-design/evidence.json`](docs/research/omarchy-agent-design/evidence.json) |
+| **Personal agents：产品、资格、控制及政策声明** | Meta/Muse；x.ai 与 Cursor；OpenAI；Google/Gemini/Google Cloud；Spear Street Technology, Inc. d/b/a Instinct。准确页面与读取范围见 S1–S17 |
+| **Personal agents：第三方比较与产品观察** | Every；Dhravya Shah / Supermemory；Personal Agent Bench / Zentor。商业利害、方法限制及未复算状态见 S18–S22 |
+| **Personal agents：Benchmark 论文与文档** | GAIA 作者及 arXiv/Hugging Face；OSWorld 作者及 xlang-ai maintainers；τ 系列作者及 Sierra Research。版本、固定公开 commit 与访问边界见 B1–B9 |
 
-完整可复核引用：[evidence.json](docs/research/personal-agents/evidence.json)。保留研究所需且本就公开的 source attribution；不刊登上游私人会话、实际联系人、账号、媒体、题目库、代码或完整原文。
+完整可复核引用：[Omarchy evidence.json](docs/research/omarchy-agent-design/evidence.json) · [Personal agents evidence.json](docs/research/personal-agents/evidence.json) · [第三方声明](THIRD_PARTY_NOTICES.md)。保留研究所需且本就公开的 source attribution；不刊登上游私人会话、实际联系人、账号、媒体、题目库、完整上游代码或完整原文。
 
 ## 许可与再分发
 

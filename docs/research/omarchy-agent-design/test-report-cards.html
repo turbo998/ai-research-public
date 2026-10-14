@@ -1,0 +1,558 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>Omarchy Agent Design · Static Contract Benchmark</title><style>*{box-sizing:border-box}body{margin:0;padding:2rem 1rem;background:#e2e8f0;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}.deck-wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:2.2rem}.report-card{background:#f8fafc;border-radius:18px;overflow:hidden;box-shadow:0 16px 40px rgba(15,23,42,.12);border:1px solid #cbd5e1;min-height:1025px;display:flex;flex-direction:column}.card-accent-bar{height:10px;background:linear-gradient(90deg,#6366f1 0%,#4f46e5 55%,#2563eb 100%)}.card-inner{padding:2.4rem 2.8rem 1.8rem;flex:1;display:flex;flex-direction:column;justify-content:space-between}.card-eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.12em;color:#4f46e5;text-transform:uppercase;margin-bottom:.55rem}.card-headline{font-size:2.35rem;line-height:1.12;font-weight:800;margin:0 0 .65rem;letter-spacing:-.02em;color:#0f172a}.grad-text{background:linear-gradient(90deg,#3b82f6,#4f46e5);-webkit-background-clip:text;background-clip:text;color:transparent}.card-subtitle{font-size:1.08rem;line-height:1.45;color:#475569;margin:0 0 1.2rem}.card-canvas{flex:1;display:flex;flex-direction:column;justify-content:center;gap:1rem}.quote-box,.callout-box{background:#eef2f6;border-radius:12px;padding:1rem 1.25rem;font-size:.98rem;line-height:1.48;color:#1e293b}.stack-list{display:flex;flex-direction:column;gap:.85rem}.decision-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:.95rem 1.15rem}.decision-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.75rem}.field-name{font-weight:700;font-size:1rem}.type-pill{background:#e2e8f0;color:#475569;font-size:.75rem;padding:.12rem .45rem;border-radius:6px;font-weight:600}.question-sub{font-size:.84rem;color:#64748b;margin-top:.15rem}.action-pill{font-size:.76rem;font-weight:700;padding:.22rem .6rem;border-radius:999px;white-space:nowrap}.pill-auto{background:#dcfce7;color:#15803d}.pill-confirm{background:#fef3c7;color:#b45309}.pill-human{background:#fee2e2;color:#b91c1c}.decision-main{font-size:1.18rem;margin:.45rem 0 .55rem}.conf-muted{font-size:.88rem;color:#64748b;font-weight:600}.dist-row{display:grid;grid-template-columns:170px 1fr 54px;align-items:center;gap:.6rem;font-size:.84rem;margin:.24rem 0}.dist-track{background:#e2e8f0;height:9px;border-radius:999px;overflow:hidden}.dist-fill{background:linear-gradient(90deg,#4f46e5,#6366f1);height:100%;border-radius:999px}.dist-pct{text-align:right;font-variant-numeric:tabular-nums;color:#334155}.clean-table{width:100%;border-collapse:collapse;font-size:.95rem;background:transparent}.clean-table th{font-size:.75rem;letter-spacing:.08em;color:#64748b;text-align:left;padding:.55rem .4rem;border-bottom:1px solid #cbd5e1}.clean-table td{padding:.62rem .4rem;border-bottom:1px solid #e2e8f0;vertical-align:top}.sc-col{font-weight:600;color:#1e293b}.act-col,.num-col{text-align:right;font-variant-numeric:tabular-nums}.act-auto{color:#15803d;font-weight:700}.act-confirm{color:#b45309;font-weight:700}.act-human{color:#b91c1c;font-weight:700}.miss-mark{color:#dc2626;font-weight:800}.code-dark{background:#0f172a;color:#e2e8f0;padding:1.1rem 1.3rem;border-radius:12px;font-size:.84rem;line-height:1.45;overflow-x:auto;margin:0}.code-transition{color:#4f46e5;font-weight:700;font-size:.95rem;padding:.15rem 0}.hl-answer{color:#fbbf24;font-weight:700}.rob-main{font-weight:600;color:#0f172a}.rob-sub{font-size:.8rem;color:#64748b}.lat-list{display:flex;flex-direction:column;gap:1rem}.lat-title{font-weight:700;font-size:1.02rem;margin-bottom:.35rem}.lat-row{display:flex;align-items:center;gap:.65rem;margin:.28rem 0}.lat-tag{width:95px;font-size:.85rem;color:#64748b}.lat-bar{height:22px;border-radius:6px}.lat-blue{background:#2563eb}.lat-gray{background:#cbd5e1}.lat-val{font-size:.92rem;font-variant-numeric:tabular-nums}.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}.fit-card{border-radius:14px;padding:1.25rem 1.4rem;font-size:1rem;line-height:1.6}.fit-good{background:#ecfdf5;border:1px solid #a7f3d0}.fit-bad{background:#fff1f2;border:1px solid #fecdd3}.fit-head{font-weight:800;font-size:1.12rem;margin-bottom:.5rem}.dark-footer-box{background:#0f172a;color:#f8fafc;border-radius:14px;padding:1.25rem 1.5rem;font-size:1rem;line-height:1.5}.dark-repo{color:#38bdf8;font-family:ui-monospace,Consolas,monospace;margin-bottom:0}.workbench-shell{background:#fff;border:1px solid #cbd5e1;border-radius:14px;overflow:hidden}.wb-topbar{background:linear-gradient(90deg,#3b82f6,#6366f1);color:#fff;padding:.75rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}.wb-sub{font-size:.76rem;opacity:.92}.wb-status{background:rgba(15,23,42,.28);font-size:.74rem;padding:.25rem .6rem;border-radius:999px;white-space:nowrap}.wb-grid{display:grid;grid-template-columns:220px 1fr;gap:.85rem;padding:.9rem}.wb-col-title{font-size:.78rem;font-weight:700;color:#475569;text-transform:uppercase;margin-bottom:.4rem}.wb-item{font-size:.8rem;padding:.38rem .5rem;border-radius:6px;background:#f8fafc;border:1px solid #e2e8f0;margin-bottom:.32rem}.wb-note{font-size:.73rem;color:#64748b;margin-top:.55rem;line-height:1.38}.wb-metrics{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.55rem}.wb-metric{font-size:.74rem;background:#f1f5f9;padding:.2rem .5rem;border-radius:6px;color:#334155;font-weight:600}.card-footer{border-top:1px solid #cbd5e1;padding-top:.9rem;margin-top:1.2rem;display:flex;justify-content:space-between;font-size:.86rem;color:#64748b}@media print{body{background:#fff;padding:0}.deck-wrap{gap:0}.report-card{box-shadow:none;page-break-after:always;border:none}}</style></head><body><main class="deck-wrap"><article class="report-card" id="card-1"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">HANDS-ON · AGENTIC OS HARNESS BENCHMARK</div><h2 class="card-headline">14 harnesses unified, <span class="grad-text">soft boundaries exposed</span></h2><p class="card-subtitle">Static contract evaluation of omacom/omarchy @ 9480d1b6a98156314dbabe6bfef08f39f8b9cd07 across 6 mechanism tracks (E1–E6), 174 traceable assertions, 87 source blobs, and 12 formal contract checks.</p></header><div class="card-canvas"><div class="workbench-shell"><div class="wb-topbar"><div><strong>Omarchy Agent Mechanism Contract Workbench (omacom/omarchy @ 9480d1b)</strong><div class="wb-sub">A System One decision & benchmark view: structured state, calibrated confidence bands, zero fabricated coordinates</div></div><span class="wb-status">174 assertions · 87 blobs SHA-verified · upstream_runtime=not_run</span></div><div class="wb-grid"><div class="wb-col-left"><div class="wb-col-title">Scenarios</div><div class="wb-item">E1 Launcher (14 harnesses · 28 argv paths)</div><div class="wb-item">E2 Skill Symlinks (3 skills · 6 global roots)</div><div class="wb-item">E3 Crash Pipeline (5 filters · click gate)</div><div class="wb-item">E4 Accounts &amp; Usage (3 account · 4 usage)</div><div class="wb-item">E5 Agent-Native Repo (11 shell · 1 VM suite)</div><div class="wb-item">E6 Trust Boundaries (5 hard · 11 soft controls)</div><div class="wb-note">Evidence gating: source_fact (122/174 = 70.1%) -&gt; Act automatically; documentation_claim (33/174 = 19.0%) -&gt; Confirm; test_contract not_run (19/174 = 10.9%) -&gt; Send to a human.</div></div><div class="wb-col-right"><div class="wb-metrics"><span class="wb-metric">174 Assertions</span><span class="wb-metric">87 Cited Blobs (272 cached)</span><span class="wb-metric">14 Harnesses / 28 Paths</span><span class="wb-metric">12 Contract Checks</span></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">e1_argv_contract</span> <span class="type-pill">choice</span><div class="question-sub">Do all 14 launchable harnesses preserve single-token prompt argv separation across 28 branches?</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>28 / 28 branches (100.0%)</strong><span class="conf-muted"> · closest to "11 direct exec · 2 subcommand · 1 gateway+tui" · confidence 1.0</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">direct_exec_argv (11/14)</span><div class="dist-track"><div class="dist-fill" style="width:78.6%"></div></div><span class="dist-pct">78.6%</span></div><div class="dist-row"><span class="dist-label">subcommand_run_or_code (2/14)</span><div class="dist-track"><div class="dist-fill" style="width:14.3%"></div></div><span class="dist-pct">14.3%</span></div><div class="dist-row"><span class="dist-label">gateway_tui_openclaw (1/14)</span><div class="dist-track"><div class="dist-fill" style="width:7.1%"></div></div><span class="dist-pct">7.1%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">e4_provider_alignment</span> <span class="type-pill">choice</span><div class="question-sub">Are launchable harnesses (14), account providers (3), and usage collectors (4) 1-to-1 isomorphic?</div></div><span class="action-pill pill-confirm">Confirm</span></div><div class="decision-main"><strong>Non-isomorphic (3 / 14 = 21.4%)</strong><span class="conf-muted"> · closest to "Fireworks is usage-only (no launcher branch)" · confidence 0.786</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">launch_only_harness (11/14)</span><div class="dist-track"><div class="dist-fill" style="width:78.6%"></div></div><span class="dist-pct">78.6%</span></div><div class="dist-row"><span class="dist-label">account_and_usage_provider (3/14)</span><div class="dist-track"><div class="dist-fill" style="width:21.4%"></div></div><span class="dist-pct">21.4%</span></div><div class="dist-row"><span class="dist-label">usage_only_fireworks (1/4 usage)</span><div class="dist-track"><div class="dist-fill" style="width:25.0%"></div></div><span class="dist-pct">25.0%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">e6_isolation_model</span> <span class="type-pill">score</span><div class="question-sub">What share of Omarchy&#x27;s 16 agent safety controls are hard OS/code boundaries vs soft conventions?</div></div><span class="action-pill pill-human">Send to a human</span></div><div class="decision-main"><strong>5 / 16 hard boundaries (31.3%)</strong><span class="conf-muted"> · closest to "0/14 OS sandbox in omarchy-agent; 12/14 pass auto/bypass flags" · confidence 0.313</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">soft_convention_or_flag (11/16)</span><div class="dist-track"><div class="dist-fill" style="width:68.8%"></div></div><span class="dist-pct">68.8%</span></div><div class="dist-row"><span class="dist-label">hard_code_or_ipc_boundary (5/16)</span><div class="dist-track"><div class="dist-fill" style="width:31.3%"></div></div><span class="dist-pct">31.3%</span></div><div class="dist-row"><span class="dist-label">os_container_sandbox_in_launcher (0/14)</span><div class="dist-track"><div class="dist-fill" style="width:1.5%"></div></div><span class="dist-pct">0.0%</span></div></div></div></div></div></div><div class="callout-box"><strong>Omarchy integrates agents at the OS session/launcher/telemetry layer rather than building a proprietary agent runtime.</strong> All 28 launcher paths preserve single-argument prompt boundaries, but 12/14 unprompted branches pass permission-bypass flags (--yolo, --allow-all, bypassPermissions) without an OS-level container sandbox.</div></div><footer class="card-footer"><span><strong>Omarchy Agent Design · Static Contract Benchmark</strong> · measured (offline static contract verifier · upstream runtime not_run)</span><span>1 / 7</span></footer></div></article><article class="report-card" id="card-2"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">SCENARIO: E1–E6 STATIC CONTRACT DEEP DIVE</div><h2 class="card-headline">174 assertions. 87 blobs. 7 doc-vs-code drifts caught.</h2><p class="card-subtitle">Granular verification of evidence composition, crash-to-agent human gating, and multi-account autoswitch edge cases on pinned commit 9480d1b6a98156314dbabe6bfef08f39f8b9cd07.</p></header><div class="card-canvas"><div class="quote-box">"Target: basecamp/omarchy -&gt; omacom/omarchy @ 9480d1b6a98156314dbabe6bfef08f39f8b9cd07 (tree f1ef20f4..., 2,663 entries). Evaluation verifies exact byte/line contracts and flags every gap between README claims, attachment assumptions, and bash/Python/QML implementation."</div><div class="stack-list"><div class="decision-card"><div class="decision-head"><div><span class="field-name">evidence_composition</span> <span class="type-pill">choice</span><div class="question-sub">How do the 174 indexed assertions break down across verification evidence tiers?</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>source_fact 122 / 174 (70.1%)</strong><span class="conf-muted"> · closest to "87 fixed blobs + 7 official docs W1-W7" · confidence 0.701</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">source_fact · static_read (122)</span><div class="dist-track"><div class="dist-fill" style="width:70.1%"></div></div><span class="dist-pct">70.1%</span></div><div class="dist-row"><span class="dist-label">documentation_claim · doc/official (33)</span><div class="dist-track"><div class="dist-fill" style="width:19.0%"></div></div><span class="dist-pct">19.0%</span></div><div class="dist-row"><span class="dist-label">test_contract · not_run (19)</span><div class="dist-track"><div class="dist-fill" style="width:10.9%"></div></div><span class="dist-pct">10.9%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">e3_crash_pipeline_gates</span> <span class="type-pill">noul</span><div class="question-sub">Does omarchy-crash-watch enforce all 5 pre-notification filters and require human click before agent launch?</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>Yes (5 / 5 gates · 100.0%)</strong><span class="conf-muted"> · closest to "_UID + disabled + ignore + mute + seen_key dedupe" · P(true) = 1.0</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">enforced_static_gates (5/5)</span><div class="dist-track"><div class="dist-fill" style="width:100.0%"></div></div><span class="dist-pct">100.0%</span></div><div class="dist-row"><span class="dist-label">silent_background_agent_exec (0/5)</span><div class="dist-track"><div class="dist-fill" style="width:1.5%"></div></div><span class="dist-pct">0.0%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">e4_autoswitch_vs_stale</span> <span class="type-pill">score</span><div class="question-sub">Does omarchy-agent-account-autoswitch enforce 95% threshold &amp; auth filtering while excluding stale=true caches?</div></div><span class="action-pill pill-confirm">Confirm</span></div><div class="decision-main"><strong>4 / 5 rules (80.0% · stale=true not excluded)</strong><span class="conf-muted"> · closest to "Waiting for auth excluded; stale=true still ranked" · confidence 0.8</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">mode_95pct_auth_tiebreak (4/5)</span><div class="dist-track"><div class="dist-fill" style="width:80.0%"></div></div><span class="dist-pct">80.0%</span></div><div class="dist-row"><span class="dist-label">stale_cache_still_eligible_gap (1/5)</span><div class="dist-track"><div class="dist-fill" style="width:20.0%"></div></div><span class="dist-pct">20.0%</span></div></div></div></div><div class="callout-box"><strong>Static contract verification caught 3 attachment errors and 4 upstream design/documentation boundary drifts.</strong> Attachment PLAN.md missed openclaw (13 vs 14 harnesses) and falsely claimed Azure VM completion; upstream shell/plugins/agents/README.md claims read-only display while Panel.qml dispatches 4 write/control commands.</div></div><footer class="card-footer"><span><strong>Omarchy Agent Design · Static Contract Benchmark</strong> · measured (offline static contract verifier · upstream runtime not_run)</span><span>2 / 7</span></footer></div></article><article class="report-card" id="card-3"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">WHAT I TESTED</div><h2 class="card-headline">6 mechanism tracks, 12 formal contract checks</h2><p class="card-subtitle">Each check compares an explicit architectural expectation or documentation claim against fixed source lines in omacom/omarchy@9480d1b. Misses (✕) mark verified contract drift or soft-boundary hazards.</p></header><div class="card-canvas"><table class="clean-table"><thead><tr><th>SCENARIO</th><th>QUESTION</th><th>DECIDER'S ANSWER</th><th class="act-col">ACTION</th></tr></thead><tbody><tr><td class="sc-col">E1 Launcher</td><td>Attachment harness list (13) vs bin/omarchy-agent case branches (14)</td><td><strong>13/14 matched (missed openclaw gateway)</strong> (93%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>Single-argument prompt boundary across 14 harnesses × 2 modes (28 paths)</td><td><strong>28/28 preserve argv boundary</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Unattended/bypass flag retention from unprompted to prompted mode (12 harnesses)</td><td><strong>11/12 retained (crush drops --yolo on run)</strong> (92%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col">E2 Skills</td><td>Idempotent skill symlink provisioning across global harness roots (omarchy-provision-user)</td><td><strong>6/6 roots + Hermes profiles/*/skills</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Symlink target namespace coverage across all 14 launchable harnesses</td><td><strong>6/14 linked (8 harnesses have no symlink root)</strong> (43%) <span class="miss-mark">✕</span></td><td class="act-col act-human">Human</td></tr><tr><td class="sc-col">E3 Crash</td><td>Pre-notification filter gates (_UID, disabled, ignore, mute, seen_key) + click gate</td><td><strong>5/5 gates + user click required</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">E4 Accounts</td><td>Provider set isomorphism across launcher (14), accounts (3), and usage (4)</td><td><strong>3/14 account-managed (+Fireworks usage-only)</strong> (21%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>Autoswitch invariants: mode=auto, &gt;=95% trigger, exclude Waiting for auth, 5h-&gt;wk-&gt;num</td><td><strong>4/4 source &amp; test contracts verified</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Candidate ranking exclusion when cached account usage has stale=true</td><td><strong>0/1 filtered (stale=true still eligible)</strong> (0%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col">E4 Desktop UI</td><td>shell/plugins/agents/README.md claim that QML plugin is &#x27;strictly a display layer&#x27;</td><td><strong>2/6 read-only (4 write/exec actions in Panel.qml)</strong> (33%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col">E5 Repo Native</td><td>Headless test/all (11 shell suites) vs graphical VM test/acceptance (1 suite) split</td><td><strong>11/11 headless isolated from VM acceptance</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">E6 Safety</td><td>Hard deterministic OS/code boundaries vs soft conventions across 16 controls</td><td><strong>5/16 hard boundaries (0/14 OS sandbox in launcher)</strong> (31%) <span class="miss-mark">✕</span></td><td class="act-col act-human">Human</td></tr></tbody></table><div class="callout-box"><strong>5 of 12 contract checks passed 100% as hard invariants (Auto); 7 of 12 exposed critical architectural boundaries (Confirm / Human).</strong> Hard invariants hold on argv boundary preservation (28/28), 6-root skill symlinks (6/6), 5-stage crash filtering + click gate (5/5), 95% autoswitch rules (4/4), and headless vs VM test separation (11/11).</div><div class="callout-box"><strong>Why the 7 ✕ boundary flags matter for engineering reuse.</strong> crush drops --yolo in prompted mode (91.7%); 8 of 14 harnesses have no global skill symlink root (42.9%); autoswitch does not filter stale=true caches (0%); and ~/Work + prompt rules are soft conventions, not an OS sandbox (31.3% hard).</div></div><footer class="card-footer"><span><strong>Omarchy Agent Design · Static Contract Benchmark</strong> · measured (offline static contract verifier · upstream runtime not_run)</span><span>3 / 7</span></footer></div></article><article class="report-card" id="card-4"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">UNDER THE HOOD</div><h2 class="card-headline">From journald coredump to argv-safe agent launch</h2><p class="card-subtitle">How Omarchy bridges systemd-coredump JSON events, D-Bus notification actions, and provider-pinned CLI execution without shell-evaluating untrusted crash metadata.</p></header><div class="card-canvas"><pre class="code-dark">{
+  &quot;SYSLOG_IDENTIFIER&quot;: &quot;systemd-coredump&quot;,
+  &quot;_UID&quot;: &quot;1000&quot;,
+  &quot;COREDUMP_EXE&quot;: &quot;/usr/bin/waybar&quot;,
+  &quot;COREDUMP_UNIT&quot;: &quot;waybar.service&quot;,
+  &quot;COREDUMP_SIGNAL&quot;: &quot;11&quot;,
+  &quot;COREDUMP_SIGNAL_NAME&quot;: &quot;SIGSEGV&quot;,
+  &quot;COREDUMP_TIMESTAMP&quot;: &quot;1787843905000000&quot;
+}
+# omarchy-crash-watch packs NUL-delimited execArgv -&gt; D-Bus ActionInvoked click required</pre><div class="code-transition">↓ user clicks &#x27;Investigate with AI&#x27; -&gt; omarchy-agent-crash builds prompt &amp; omarchy-launch-agent pins provider home</div><pre class="code-dark">&lt;crash_investigation_prompt&gt;
+Application: /usr/bin/waybar (waybar.service) · Signal: 11 (SIGSEGV)
+Step 1: coredumpctl info 1787843905000000 + journalctl --since/@timestamp
+Step 2: Identify root cause (config vs package update vs upstream bug)
+Step 3: Propose fix and ask for confirmation before modifying files
+&lt;/crash_investigation_prompt&gt;
+# omarchy-agent-account-exec claude -&gt; exports OMARCHY_AGENT_CLAUDE_HOME &amp; CLAUDE_CONFIG_DIR
+# exec $1 &quot;$@&quot; -&gt; claude --dangerously-skip-permissions &quot;&lt;prompt&gt;&quot; -&gt; <span class="hl-answer">&lt;answer&gt;</span></pre><div class="callout-box"><strong>Hard argv boundary up to CLI entry, followed by high-privilege CLI execution.</strong> Crash fields never pass through bash eval; notification-daemon invokes execArgv directly. However, once launched, the default harness receives --dangerously-skip-permissions / --yolo inside ~/Work, relying on prompt instructions to pause before edits.</div></div><footer class="card-footer"><span><strong>Omarchy Agent Design · Static Contract Benchmark</strong> · measured (offline static contract verifier · upstream runtime not_run)</span><span>4 / 7</span></footer></div></article><article class="report-card" id="card-5"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">ROBUSTNESS CHECK</div><h2 class="card-headline">Mode perturbations, overrides &amp; window sensitivity</h2><p class="card-subtitle">Comparing baseline contracts (ORIGINAL) against perturbed invocation modes, historical migrations, network failure fallbacks, and commit slices (REVERSED).</p></header><div class="card-canvas"><table class="clean-table"><thead><tr><th>QUESTION / ANSWER</th><th class="num-col">ORIGINAL</th><th class="num-col">REVERSED</th><th class="num-col">CHANGE (PTS)</th></tr></thead><tbody><tr><td><div class="rob-main">E1 · Prompt Argv Token Integrity (14 Harnesses)</div><div class="rob-sub">Unprompted launch (14/14) vs Prompted launch with spaces/quotes (14/14)</div></td><td class="num-col">100.0%</td><td class="num-col">100.0%</td><td class="num-col">0.0</td></tr><tr><td><div class="rob-main">E1 · Unattended / Bypass Flag Retention (14 Harnesses)</div><div class="rob-sub">Unprompted auto/bypass flags (12/14) vs Prompted mode (11/14; crush drops --yolo)</div></td><td class="num-col">85.7%</td><td class="num-col">78.6%</td><td class="num-col">-7.1</td></tr><tr><td><div class="rob-main">E2 · Global Skill Symlink Roots (6 Namespaces)</div><div class="rob-sub">omarchy-provision-user (6/6 roots) vs initial migration 1786719479.sh (5/6 before Hermes)</div></td><td class="num-col">100.0%</td><td class="num-col">83.3%</td><td class="num-col">-16.7</td></tr><tr><td><div class="rob-main">E4 · Explicit Provider Home Override Precedence (3 Providers)</div><div class="rob-sub">Fresh session pin (3/3) vs Explicit CLAUDE_CONFIG_DIR / CODEX_HOME / GROK_HOME override (3/3)</div></td><td class="num-col">100.0%</td><td class="num-col">100.0%</td><td class="num-col">0.0</td></tr><tr><td><div class="rob-main">E4 · Collector Stale-Window Retention on Transient Failure (4 Providers)</div><div class="rob-sub">Normal local state/cache use (3/4) vs Stale limit retention on HTTP error (2/4: Claude &amp; Grok)</div></td><td class="num-col">75.0%</td><td class="num-col">50.0%</td><td class="num-col">-25.0</td></tr><tr><td><div class="rob-main">E5 · Git Trailer Attribution Denominator (200-Commit Window vs 3-Page Slice)</div><div class="rob-sub">Latest 100 commits (10/100 = 10.0%) vs Commits 101-200 (11/100 = 11.0%)</div></td><td class="num-col">10.0%</td><td class="num-col">11.0%</td><td class="num-col">+1.0</td></tr></tbody></table><div class="callout-box"><strong>Argv safety and explicit environment overrides held at 100.0% (0.0 pts drift), while collector failure fallback dropped -25.0 pts.</strong> Explicit CLAUDE_CONFIG_DIR / CODEX_HOME / GROK_HOME overrides cleanly bypass session pinning (100%). Under network failure, Claude (900s) and Grok (30d refresh) retain cached limits, whereas Codex clears limits and Fireworks is stateless.</div></div><footer class="card-footer"><span><strong>Omarchy Agent Design · Static Contract Benchmark</strong> · measured (offline static contract verifier · upstream runtime not_run)</span><span>5 / 7</span></footer></div></article><article class="report-card" id="card-6"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">LATENCY</div><h2 class="card-headline">Batched static contract verification vs one-by-one</h2><p class="card-subtitle">Shared in-memory blob SHA-1 + line-range table verification across 87 cited files (1, 3, 6, and 12 check cohorts) vs per-question process invocation.</p></header><div class="card-canvas"><div class="lat-list"><div class="lat-group"><div class="lat-title">1 question</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:6.7%"></div><strong class="lat-val">159 ms</strong></div></div><div class="lat-group"><div class="lat-title">3 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:6.5%"></div><strong class="lat-val">155 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:17.9%"></div><strong class="lat-val">423 ms</strong></div></div><div class="lat-group"><div class="lat-title">6 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:10.1%"></div><strong class="lat-val">239 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:66.1%"></div><strong class="lat-val">1566 ms</strong></div></div><div class="lat-group"><div class="lat-title">12 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:6.0%"></div><strong class="lat-val">137 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:78.0%"></div><strong class="lat-val">1848 ms</strong></div></div></div><div class="callout-box"><strong>12 contract cohorts batched took 137 ms vs 1,848 ms one by one (13.5x faster).</strong> Medians of 7 measured local runs on Windows ARM64 (CPython 3.12.10) over 87 SHA-verified git blobs. Upstream runtime polling timers (not run): 15s Claude probe, 20s scan cache, 30s retryAdvised, 60s Grok probe, 180s near-limit, 900s default.</div></div><footer class="card-footer"><span><strong>Omarchy Agent Design · Static Contract Benchmark</strong> · measured (offline static contract verifier · upstream runtime not_run)</span><span>6 / 7</span></footer></div></article><article class="report-card" id="card-7"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">MY TAKE</div><h2 class="card-headline">Where Omarchy&#x27;s agent design shines, and where not to copy it</h2></header><div class="card-canvas"><div class="fit-grid"><div class="fit-card fit-good"><div class="fit-head">✅ Good fit</div><ul><li>Single-user developer desktop unifying 14 heterogeneous agent CLIs behind one hotkey/terminal contract</li><li>Single-source-of-truth SKILL.md distribution via idempotent symlinks across multi-vendor agent directories</li><li>Human-in-the-loop OS crash triage: systemd-coredump filtering + notification click -&gt; structured diagnostic prompt</li><li>Local multi-subscription quota pooling (95% threshold autoswitch + per-process credential home pinning)</li><li>Separating fast headless shell contract tests (test/all) from VM-only desktop acceptance tests</li></ul></div><div class="fit-card fit-bad"><div class="fit-head">⛔ Not for</div><ul><li>Multi-tenant or enterprise zero-trust environments requiring mandatory OS container/VM sandboxing</li><li>Treating ~/Work directory cd, --yolo flags, or SKILL.md &#x27;ask before editing&#x27; text as a security boundary</li><li>Using local transcript token estimates or undocumented web/OAuth usage endpoints as authoritative billing</li><li>Assuming symlinked SKILL.md files are identically discovered and enforced by every third-party CLI</li></ul></div></div><div class="dark-footer-box"><p>Provenance: Static source &amp; test-contract evaluation on pinned commit 9480d1b6a98156314dbabe6bfef08f39f8b9cd07 (upstream bash/VM/live agent runtime = not_run).</p><p class="dark-repo">Upstream (MIT): https://github.com/omacom/omarchy · Report format: benchmark-harness-engineering 7-Card Deck v1</p></div></div><footer class="card-footer"><span><strong>Omarchy Agent Design · Static Contract Benchmark</strong> · measured (offline static contract verifier · upstream runtime not_run)</span><span>7 / 7</span></footer></div></article><details><summary>Exact card deck data</summary><pre>{
+  &quot;batch_latency_detail&quot;: [
+    {
+      &quot;batched_median_ms&quot;: 159,
+      &quot;batched_runs_ms&quot;: [
+        1759.4,
+        158.6,
+        144.1,
+        187.2,
+        151.9,
+        156.4,
+        248.6
+      ],
+      &quot;one_by_one_estimated_ms&quot;: 173,
+      &quot;one_by_one_runs_ms&quot;: [
+        174.4,
+        225.0,
+        144.9,
+        171.5,
+        143.0,
+        172.9,
+        254.3
+      ],
+      &quot;question_count&quot;: 1,
+      &quot;runs&quot;: 7
+    },
+    {
+      &quot;batched_median_ms&quot;: 155,
+      &quot;batched_runs_ms&quot;: [
+        160.6,
+        154.8,
+        156.6,
+        124.7,
+        146.7,
+        125.0,
+        159.2
+      ],
+      &quot;one_by_one_estimated_ms&quot;: 423,
+      &quot;one_by_one_runs_ms&quot;: [
+        464.2,
+        400.8,
+        386.8,
+        423.4,
+        535.2,
+        383.2,
+        593.7
+      ],
+      &quot;question_count&quot;: 3,
+      &quot;runs&quot;: 7
+    },
+    {
+      &quot;batched_median_ms&quot;: 239,
+      &quot;batched_runs_ms&quot;: [
+        405.7,
+        441.1,
+        579.7,
+        239.4,
+        192.6,
+        141.8,
+        171.9
+      ],
+      &quot;one_by_one_estimated_ms&quot;: 1566,
+      &quot;one_by_one_runs_ms&quot;: [
+        1601.2,
+        2192.0,
+        4163.5,
+        1565.7,
+        1293.5,
+        1201.3,
+        1054.8
+      ],
+      &quot;question_count&quot;: 6,
+      &quot;runs&quot;: 7
+    },
+    {
+      &quot;batched_median_ms&quot;: 137,
+      &quot;batched_runs_ms&quot;: [
+        355.6,
+        134.5,
+        120.4,
+        138.1,
+        161.0,
+        137.0,
+        129.1
+      ],
+      &quot;one_by_one_estimated_ms&quot;: 1848,
+      &quot;one_by_one_runs_ms&quot;: [
+        2238.7,
+        2343.3,
+        1848.5,
+        2132.4,
+        1652.5,
+        1521.1,
+        1434.4
+      ],
+      &quot;question_count&quot;: 12,
+      &quot;runs&quot;: 7
+    }
+  ],
+  &quot;cards&quot;: [
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;All 28 launcher paths preserve single-argument prompt boundaries, but 12/14 unprompted branches pass permission-bypass flags (--yolo, --allow-all, bypassPermissions) without an OS-level container sandbox.&quot;,
+          &quot;lead&quot;: &quot;Omarchy integrates agents at the OS session/launcher/telemetry layer rather than building a proprietary agent runtime.&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;HANDS-ON · AGENTIC OS HARNESS BENCHMARK&quot;,
+      &quot;headline_Gradient&quot;: &quot;soft boundaries exposed&quot;,
+      &quot;headline_prefix&quot;: &quot;14 harnesses unified, &quot;,
+      &quot;kind&quot;: &quot;overview&quot;,
+      &quot;subtitle&quot;: &quot;Static contract evaluation of omacom/omarchy @ 9480d1b6a98156314dbabe6bfef08f39f8b9cd07 across 6 mechanism tracks (E1–E6), 174 traceable assertions, 87 source blobs, and 12 formal contract checks.&quot;,
+      &quot;workbench&quot;: {
+        &quot;bands_note&quot;: &quot;Evidence gating: source_fact (122/174 = 70.1%) -&gt; Act automatically; documentation_claim (33/174 = 19.0%) -&gt; Confirm; test_contract not_run (19/174 = 10.9%) -&gt; Send to a human.&quot;,
+        &quot;decisions&quot;: [
+          {
+            &quot;action&quot;: &quot;Act automatically&quot;,
+            &quot;closest_label&quot;: &quot;11 direct exec · 2 subcommand · 1 gateway+tui&quot;,
+            &quot;confidence&quot;: 1.0,
+            &quot;distribution_pct&quot;: {
+              &quot;direct_exec_argv (11/14)&quot;: 78.6,
+              &quot;gateway_tui_openclaw (1/14)&quot;: 7.1,
+              &quot;subcommand_run_or_code (2/14)&quot;: 14.3
+            },
+            &quot;field&quot;: &quot;e1_argv_contract&quot;,
+            &quot;question&quot;: &quot;Do all 14 launchable harnesses preserve single-token prompt argv separation across 28 branches?&quot;,
+            &quot;question_type&quot;: &quot;choice&quot;,
+            &quot;selected_answer&quot;: &quot;28 / 28 branches (100.0%)&quot;,
+            &quot;top_probability_pct&quot;: 100.0
+          },
+          {
+            &quot;action&quot;: &quot;Confirm&quot;,
+            &quot;closest_label&quot;: &quot;Fireworks is usage-only (no launcher branch)&quot;,
+            &quot;confidence&quot;: 0.786,
+            &quot;distribution_pct&quot;: {
+              &quot;account_and_usage_provider (3/14)&quot;: 21.4,
+              &quot;launch_only_harness (11/14)&quot;: 78.6,
+              &quot;usage_only_fireworks (1/4 usage)&quot;: 25.0
+            },
+            &quot;field&quot;: &quot;e4_provider_alignment&quot;,
+            &quot;question&quot;: &quot;Are launchable harnesses (14), account providers (3), and usage collectors (4) 1-to-1 isomorphic?&quot;,
+            &quot;question_type&quot;: &quot;choice&quot;,
+            &quot;selected_answer&quot;: &quot;Non-isomorphic (3 / 14 = 21.4%)&quot;,
+            &quot;top_probability_pct&quot;: 78.6
+          },
+          {
+            &quot;action&quot;: &quot;Send to a human&quot;,
+            &quot;closest_label&quot;: &quot;0/14 OS sandbox in omarchy-agent; 12/14 pass auto/bypass flags&quot;,
+            &quot;confidence&quot;: 0.313,
+            &quot;distribution_pct&quot;: {
+              &quot;hard_code_or_ipc_boundary (5/16)&quot;: 31.3,
+              &quot;os_container_sandbox_in_launcher (0/14)&quot;: 0.0,
+              &quot;soft_convention_or_flag (11/16)&quot;: 68.8
+            },
+            &quot;field&quot;: &quot;e6_isolation_model&quot;,
+            &quot;question&quot;: &quot;What share of Omarchy&#x27;s 16 agent safety controls are hard OS/code boundaries vs soft conventions?&quot;,
+            &quot;question_type&quot;: &quot;score&quot;,
+            &quot;selected_answer&quot;: &quot;5 / 16 hard boundaries (31.3%)&quot;,
+            &quot;top_probability_pct&quot;: 31.3
+          }
+        ],
+        &quot;metrics&quot;: [
+          &quot;174 Assertions&quot;,
+          &quot;87 Cited Blobs (272 cached)&quot;,
+          &quot;14 Harnesses / 28 Paths&quot;,
+          &quot;12 Contract Checks&quot;
+        ],
+        &quot;scenarios&quot;: [
+          &quot;E1 Launcher (14 harnesses · 28 argv paths)&quot;,
+          &quot;E2 Skill Symlinks (3 skills · 6 global roots)&quot;,
+          &quot;E3 Crash Pipeline (5 filters · click gate)&quot;,
+          &quot;E4 Accounts &amp; Usage (3 account · 4 usage)&quot;,
+          &quot;E5 Agent-Native Repo (11 shell · 1 VM suite)&quot;,
+          &quot;E6 Trust Boundaries (5 hard · 11 soft controls)&quot;
+        ],
+        &quot;status_pill&quot;: &quot;174 assertions · 87 blobs SHA-verified · upstream_runtime=not_run&quot;,
+        &quot;title&quot;: &quot;Omarchy Agent Mechanism Contract Workbench (omacom/omarchy @ 9480d1b)&quot;
+      }
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Attachment PLAN.md missed openclaw (13 vs 14 harnesses) and falsely claimed Azure VM completion; upstream shell/plugins/agents/README.md claims read-only display while Panel.qml dispatches 4 write/control commands.&quot;,
+          &quot;lead&quot;: &quot;Static contract verification caught 3 attachment errors and 4 upstream design/documentation boundary drifts.&quot;
+        }
+      ],
+      &quot;decisions&quot;: [
+        {
+          &quot;action&quot;: &quot;Act automatically&quot;,
+          &quot;closest_label&quot;: &quot;87 fixed blobs + 7 official docs W1-W7&quot;,
+          &quot;confidence&quot;: 0.701,
+          &quot;distribution_pct&quot;: {
+            &quot;documentation_claim · doc/official (33)&quot;: 19.0,
+            &quot;source_fact · static_read (122)&quot;: 70.1,
+            &quot;test_contract · not_run (19)&quot;: 10.9
+          },
+          &quot;field&quot;: &quot;evidence_composition&quot;,
+          &quot;question&quot;: &quot;How do the 174 indexed assertions break down across verification evidence tiers?&quot;,
+          &quot;question_type&quot;: &quot;choice&quot;,
+          &quot;selected_answer&quot;: &quot;source_fact 122 / 174 (70.1%)&quot;,
+          &quot;top_probability_pct&quot;: 70.1
+        },
+        {
+          &quot;action&quot;: &quot;Act automatically&quot;,
+          &quot;closest_label&quot;: &quot;_UID + disabled + ignore + mute + seen_key dedupe&quot;,
+          &quot;confidence&quot;: 1.0,
+          &quot;distribution_pct&quot;: {
+            &quot;enforced_static_gates (5/5)&quot;: 100.0,
+            &quot;silent_background_agent_exec (0/5)&quot;: 0.0
+          },
+          &quot;field&quot;: &quot;e3_crash_pipeline_gates&quot;,
+          &quot;question&quot;: &quot;Does omarchy-crash-watch enforce all 5 pre-notification filters and require human click before agent launch?&quot;,
+          &quot;question_type&quot;: &quot;noul&quot;,
+          &quot;selected_answer&quot;: &quot;Yes (5 / 5 gates · 100.0%)&quot;,
+          &quot;top_probability_pct&quot;: 100.0
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;closest_label&quot;: &quot;Waiting for auth excluded; stale=true still ranked&quot;,
+          &quot;confidence&quot;: 0.8,
+          &quot;distribution_pct&quot;: {
+            &quot;mode_95pct_auth_tiebreak (4/5)&quot;: 80.0,
+            &quot;stale_cache_still_eligible_gap (1/5)&quot;: 20.0
+          },
+          &quot;field&quot;: &quot;e4_autoswitch_vs_stale&quot;,
+          &quot;question&quot;: &quot;Does omarchy-agent-account-autoswitch enforce 95% threshold &amp; auth filtering while excluding stale=true caches?&quot;,
+          &quot;question_type&quot;: &quot;score&quot;,
+          &quot;selected_answer&quot;: &quot;4 / 5 rules (80.0% · stale=true not excluded)&quot;,
+          &quot;top_probability_pct&quot;: 80.0
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;SCENARIO: E1–E6 STATIC CONTRACT DEEP DIVE&quot;,
+      &quot;headline&quot;: &quot;174 assertions. 87 blobs. 7 doc-vs-code drifts caught.&quot;,
+      &quot;kind&quot;: &quot;deep_dive&quot;,
+      &quot;quote&quot;: &quot;Target: basecamp/omarchy -&gt; omacom/omarchy @ 9480d1b6a98156314dbabe6bfef08f39f8b9cd07 (tree f1ef20f4..., 2,663 entries). Evaluation verifies exact byte/line contracts and flags every gap between README claims, attachment assumptions, and bash/Python/QML implementation.&quot;,
+      &quot;subtitle&quot;: &quot;Granular verification of evidence composition, crash-to-agent human gating, and multi-account autoswitch edge cases on pinned commit 9480d1b6a98156314dbabe6bfef08f39f8b9cd07.&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Hard invariants hold on argv boundary preservation (28/28), 6-root skill symlinks (6/6), 5-stage crash filtering + click gate (5/5), 95% autoswitch rules (4/4), and headless vs VM test separation (11/11).&quot;,
+          &quot;lead&quot;: &quot;5 of 12 contract checks passed 100% as hard invariants (Auto); 7 of 12 exposed critical architectural boundaries (Confirm / Human).&quot;
+        },
+        {
+          &quot;body&quot;: &quot;crush drops --yolo in prompted mode (91.7%); 8 of 14 harnesses have no global skill symlink root (42.9%); autoswitch does not filter stale=true caches (0%); and ~/Work + prompt rules are soft conventions, not an OS sandbox (31.3% hard).&quot;,
+          &quot;lead&quot;: &quot;Why the 7 ✕ boundary flags matter for engineering reuse.&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;WHAT I TESTED&quot;,
+      &quot;headline&quot;: &quot;6 mechanism tracks, 12 formal contract checks&quot;,
+      &quot;kind&quot;: &quot;scorecard&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;13/14 matched (missed openclaw gateway)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Attachment harness list (13) vs bin/omarchy-agent case branches (14)&quot;,
+          &quot;reported_probability_pct&quot;: 93,
+          &quot;scenario&quot;: &quot;E1 Launcher&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;28/28 preserve argv boundary&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Single-argument prompt boundary across 14 harnesses × 2 modes (28 paths)&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;E1 Launcher&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;11/12 retained (crush drops --yolo on run)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Unattended/bypass flag retention from unprompted to prompted mode (12 harnesses)&quot;,
+          &quot;reported_probability_pct&quot;: 92,
+          &quot;scenario&quot;: &quot;E1 Launcher&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;6/6 roots + Hermes profiles/*/skills&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Idempotent skill symlink provisioning across global harness roots (omarchy-provision-user)&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;E2 Skills&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Human&quot;,
+          &quot;decider_answer&quot;: &quot;6/14 linked (8 harnesses have no symlink root)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Symlink target namespace coverage across all 14 launchable harnesses&quot;,
+          &quot;reported_probability_pct&quot;: 43,
+          &quot;scenario&quot;: &quot;E2 Skills&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;5/5 gates + user click required&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Pre-notification filter gates (_UID, disabled, ignore, mute, seen_key) + click gate&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;E3 Crash&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;3/14 account-managed (+Fireworks usage-only)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Provider set isomorphism across launcher (14), accounts (3), and usage (4)&quot;,
+          &quot;reported_probability_pct&quot;: 21,
+          &quot;scenario&quot;: &quot;E4 Accounts&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;4/4 source &amp; test contracts verified&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Autoswitch invariants: mode=auto, &gt;=95% trigger, exclude Waiting for auth, 5h-&gt;wk-&gt;num&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;E4 Accounts&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;0/1 filtered (stale=true still eligible)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Candidate ranking exclusion when cached account usage has stale=true&quot;,
+          &quot;reported_probability_pct&quot;: 0,
+          &quot;scenario&quot;: &quot;E4 Accounts&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;2/6 read-only (4 write/exec actions in Panel.qml)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;shell/plugins/agents/README.md claim that QML plugin is &#x27;strictly a display layer&#x27;&quot;,
+          &quot;reported_probability_pct&quot;: 33,
+          &quot;scenario&quot;: &quot;E4 Desktop UI&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;11/11 headless isolated from VM acceptance&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Headless test/all (11 shell suites) vs graphical VM test/acceptance (1 suite) split&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;E5 Repo Native&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Human&quot;,
+          &quot;decider_answer&quot;: &quot;5/16 hard boundaries (0/14 OS sandbox in launcher)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Hard deterministic OS/code boundaries vs soft conventions across 16 controls&quot;,
+          &quot;reported_probability_pct&quot;: 31,
+          &quot;scenario&quot;: &quot;E6 Safety&quot;
+        }
+      ],
+      &quot;subtitle&quot;: &quot;Each check compares an explicit architectural expectation or documentation claim against fixed source lines in omacom/omarchy@9480d1b. Misses (✕) mark verified contract drift or soft-boundary hazards.&quot;
+    },
+    {
+      &quot;bottom_code&quot;: &quot;&lt;crash_investigation_prompt&gt;\nApplication: /usr/bin/waybar (waybar.service) · Signal: 11 (SIGSEGV)\nStep 1: coredumpctl info 1787843905000000 + journalctl --since/@timestamp\nStep 2: Identify root cause (config vs package update vs upstream bug)\nStep 3: Propose fix and ask for confirmation before modifying files\n&lt;/crash_investigation_prompt&gt;\n# omarchy-agent-account-exec claude -&gt; exports OMARCHY_AGENT_CLAUDE_HOME &amp; CLAUDE_CONFIG_DIR\n# exec $1 \&quot;$@\&quot; -&gt; claude --dangerously-skip-permissions \&quot;&lt;prompt&gt;\&quot; -&gt; &lt;answer&gt;&quot;,
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Crash fields never pass through bash eval; notification-daemon invokes execArgv directly. However, once launched, the default harness receives --dangerously-skip-permissions / --yolo inside ~/Work, relying on prompt instructions to pause before edits.&quot;,
+          &quot;lead&quot;: &quot;Hard argv boundary up to CLI entry, followed by high-privilege CLI execution.&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;UNDER THE HOOD&quot;,
+      &quot;headline&quot;: &quot;From journald coredump to argv-safe agent launch&quot;,
+      &quot;kind&quot;: &quot;protocol&quot;,
+      &quot;subtitle&quot;: &quot;How Omarchy bridges systemd-coredump JSON events, D-Bus notification actions, and provider-pinned CLI execution without shell-evaluating untrusted crash metadata.&quot;,
+      &quot;top_code&quot;: &quot;{\n  \&quot;SYSLOG_IDENTIFIER\&quot;: \&quot;systemd-coredump\&quot;,\n  \&quot;_UID\&quot;: \&quot;1000\&quot;,\n  \&quot;COREDUMP_EXE\&quot;: \&quot;/usr/bin/waybar\&quot;,\n  \&quot;COREDUMP_UNIT\&quot;: \&quot;waybar.service\&quot;,\n  \&quot;COREDUMP_SIGNAL\&quot;: \&quot;11\&quot;,\n  \&quot;COREDUMP_SIGNAL_NAME\&quot;: \&quot;SIGSEGV\&quot;,\n  \&quot;COREDUMP_TIMESTAMP\&quot;: \&quot;1787843905000000\&quot;\n}\n# omarchy-crash-watch packs NUL-delimited execArgv -&gt; D-Bus ActionInvoked click required&quot;,
+      &quot;transition&quot;: &quot;↓ user clicks &#x27;Investigate with AI&#x27; -&gt; omarchy-agent-crash builds prompt &amp; omarchy-launch-agent pins provider home&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Explicit CLAUDE_CONFIG_DIR / CODEX_HOME / GROK_HOME overrides cleanly bypass session pinning (100%). Under network failure, Claude (900s) and Grok (30d refresh) retain cached limits, whereas Codex clears limits and Fireworks is stateless.&quot;,
+          &quot;lead&quot;: &quot;Argv safety and explicit environment overrides held at 100.0% (0.0 pts drift), while collector failure fallback dropped -25.0 pts.&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;ROBUSTNESS CHECK&quot;,
+      &quot;headline&quot;: &quot;Mode perturbations, overrides &amp; window sensitivity&quot;,
+      &quot;kind&quot;: &quot;robustness&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 0.0,
+          &quot;original_pct&quot;: 100.0,
+          &quot;reversed_pct&quot;: 100.0,
+          &quot;scenario&quot;: &quot;E1 · Prompt Argv Token Integrity (14 Harnesses)&quot;,
+          &quot;selected_option&quot;: &quot;Unprompted launch (14/14) vs Prompted launch with spaces/quotes (14/14)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: -7.1,
+          &quot;original_pct&quot;: 85.7,
+          &quot;reversed_pct&quot;: 78.6,
+          &quot;scenario&quot;: &quot;E1 · Unattended / Bypass Flag Retention (14 Harnesses)&quot;,
+          &quot;selected_option&quot;: &quot;Unprompted auto/bypass flags (12/14) vs Prompted mode (11/14; crush drops --yolo)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: -16.7,
+          &quot;original_pct&quot;: 100.0,
+          &quot;reversed_pct&quot;: 83.3,
+          &quot;scenario&quot;: &quot;E2 · Global Skill Symlink Roots (6 Namespaces)&quot;,
+          &quot;selected_option&quot;: &quot;omarchy-provision-user (6/6 roots) vs initial migration 1786719479.sh (5/6 before Hermes)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 0.0,
+          &quot;original_pct&quot;: 100.0,
+          &quot;reversed_pct&quot;: 100.0,
+          &quot;scenario&quot;: &quot;E4 · Explicit Provider Home Override Precedence (3 Providers)&quot;,
+          &quot;selected_option&quot;: &quot;Fresh session pin (3/3) vs Explicit CLAUDE_CONFIG_DIR / CODEX_HOME / GROK_HOME override (3/3)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: -25.0,
+          &quot;original_pct&quot;: 75.0,
+          &quot;reversed_pct&quot;: 50.0,
+          &quot;scenario&quot;: &quot;E4 · Collector Stale-Window Retention on Transient Failure (4 Providers)&quot;,
+          &quot;selected_option&quot;: &quot;Normal local state/cache use (3/4) vs Stale limit retention on HTTP error (2/4: Claude &amp; Grok)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 1.0,
+          &quot;original_pct&quot;: 10.0,
+          &quot;reversed_pct&quot;: 11.0,
+          &quot;scenario&quot;: &quot;E5 · Git Trailer Attribution Denominator (200-Commit Window vs 3-Page Slice)&quot;,
+          &quot;selected_option&quot;: &quot;Latest 100 commits (10/100 = 10.0%) vs Commits 101-200 (11/100 = 11.0%)&quot;
+        }
+      ],
+      &quot;subtitle&quot;: &quot;Comparing baseline contracts (ORIGINAL) against perturbed invocation modes, historical migrations, network failure fallbacks, and commit slices (REVERSED).&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Medians of 7 measured local runs on Windows ARM64 (CPython 3.12.10) over 87 SHA-verified git blobs. Upstream runtime polling timers (not run): 15s Claude probe, 20s scan cache, 30s retryAdvised, 60s Grok probe, 180s near-limit, 900s default.&quot;,
+          &quot;lead&quot;: &quot;12 contract cohorts batched took 137 ms vs 1,848 ms one by one (13.5x faster).&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;LATENCY&quot;,
+      &quot;headline&quot;: &quot;Batched static contract verification vs one-by-one&quot;,
+      &quot;kind&quot;: &quot;latency&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;batched_median_ms&quot;: 159,
+          &quot;one_by_one_estimated_ms&quot;: 173,
+          &quot;question_count&quot;: 1,
+          &quot;runs&quot;: 7
+        },
+        {
+          &quot;batched_median_ms&quot;: 155,
+          &quot;one_by_one_estimated_ms&quot;: 423,
+          &quot;question_count&quot;: 3,
+          &quot;runs&quot;: 7
+        },
+        {
+          &quot;batched_median_ms&quot;: 239,
+          &quot;one_by_one_estimated_ms&quot;: 1566,
+          &quot;question_count&quot;: 6,
+          &quot;runs&quot;: 7
+        },
+        {
+          &quot;batched_median_ms&quot;: 137,
+          &quot;one_by_one_estimated_ms&quot;: 1848,
+          &quot;question_count&quot;: 12,
+          &quot;runs&quot;: 7
+        }
+      ],
+      &quot;subtitle&quot;: &quot;Shared in-memory blob SHA-1 + line-range table verification across 87 cited files (1, 3, 6, and 12 check cohorts) vs per-question process invocation.&quot;
+    },
+    {
+      &quot;dark_box&quot;: {
+        &quot;lead&quot;: &quot;Provenance: Static source &amp; test-contract evaluation on pinned commit 9480d1b6a98156314dbabe6bfef08f39f8b9cd07 (upstream bash/VM/live agent runtime = not_run).&quot;,
+        &quot;repo&quot;: &quot;Upstream (MIT): https://github.com/omacom/omarchy · Report format: benchmark-harness-engineering 7-Card Deck v1&quot;
+      },
+      &quot;eyebrow&quot;: &quot;MY TAKE&quot;,
+      &quot;good_fit&quot;: [
+        &quot;Single-user developer desktop unifying 14 heterogeneous agent CLIs behind one hotkey/terminal contract&quot;,
+        &quot;Single-source-of-truth SKILL.md distribution via idempotent symlinks across multi-vendor agent directories&quot;,
+        &quot;Human-in-the-loop OS crash triage: systemd-coredump filtering + notification click -&gt; structured diagnostic prompt&quot;,
+        &quot;Local multi-subscription quota pooling (95% threshold autoswitch + per-process credential home pinning)&quot;,
+        &quot;Separating fast headless shell contract tests (test/all) from VM-only desktop acceptance tests&quot;
+      ],
+      &quot;headline&quot;: &quot;Where Omarchy&#x27;s agent design shines, and where not to copy it&quot;,
+      &quot;kind&quot;: &quot;takeaways&quot;,
+      &quot;not_for&quot;: [
+        &quot;Multi-tenant or enterprise zero-trust environments requiring mandatory OS container/VM sandboxing&quot;,
+        &quot;Treating ~/Work directory cd, --yolo flags, or SKILL.md &#x27;ask before editing&#x27; text as a security boundary&quot;,
+        &quot;Using local transcript token estimates or undocumented web/OAuth usage endpoints as authoritative billing&quot;,
+        &quot;Assuming symlinked SKILL.md files are identically discovered and enforced by every third-party CLI&quot;
+      ]
+    }
+  ],
+  &quot;deck_title&quot;: &quot;Omarchy Agent Design · Static Contract Benchmark&quot;,
+  &quot;evidence_binding&quot;: {
+    &quot;assertion_index_csv_sha256&quot;: &quot;31a6fc0fb62603ae1fbaec296a39abce2b35eb08a39278ee9d97e6a32299a701&quot;,
+    &quot;cached_verified_blobs&quot;: 272,
+    &quot;cited_source_blobs&quot;: 87,
+    &quot;contract_Pass_auto&quot;: 5,
+    &quot;contract_drift_or_boundary_confirm_human&quot;: 7,
+    &quot;evidence_json_sha256&quot;: &quot;6b84767707ff83cb90c5e61e4f41d34aef86b1590c7bea8c031ca5d9a6fdfa51&quot;,
+    &quot;formal_contract_questions&quot;: 12,
+    &quot;official_comparison_docs&quot;: 7,
+    &quot;pinned_commit&quot;: &quot;9480d1b6a98156314dbabe6bfef08f39f8b9cd07&quot;,
+    &quot;root_tree_sha&quot;: &quot;f1ef20f439289dc3cd1c968eb475a9750d64bc61&quot;,
+    &quot;total_assertions&quot;: 174,
+    &quot;upstream_repo&quot;: &quot;omacom/omarchy (requested alias: basecamp/omarchy)&quot;,
+    &quot;upstream_runtime_execution&quot;: &quot;not_run&quot;
+  },
+  &quot;independently_reproduced&quot;: false,
+  &quot;provenance&quot;: &quot;measured (offline static contract verifier · upstream runtime not_run)&quot;,
+  &quot;report_id&quot;: &quot;omarchy-agent-design&quot;,
+  &quot;runtime_timer_constants_ms&quot;: [
+    {
+      &quot;constant&quot;: &quot;Claude usage probe cache window&quot;,
+      &quot;source&quot;: &quot;bin/omarchy-agent-usage-claude:372-377&quot;,
+      &quot;value_ms&quot;: 15000
+    },
+    {
+      &quot;constant&quot;: &quot;Transcript local scan reuse window&quot;,
+      &quot;source&quot;: &quot;bin/omarchy-agent-usage-claude:636-652, bin/omarchy-agent-usage-codex:495-511&quot;,
+      &quot;value_ms&quot;: 20000
+    },
+    {
+      &quot;constant&quot;: &quot;Panel retryAdvised fast retry timer&quot;,
+      &quot;source&quot;: &quot;shell/plugins/agents/Main.qml:43-50,247&quot;,
+      &quot;value_ms&quot;: 30000
+    },
+    {
+      &quot;constant&quot;: &quot;Grok rate-limits probe cache window&quot;,
+      &quot;source&quot;: &quot;bin/omarchy-agent-usage-grok:153-168&quot;,
+      &quot;value_ms&quot;: 60000
+    },
+    {
+      &quot;constant&quot;: &quot;Near-limit (&gt;=80%) fast poll interval&quot;,
+      &quot;source&quot;: &quot;shell/plugins/agents/Main.qml:46,247&quot;,
+      &quot;value_ms&quot;: 180000
+    },
+    {
+      &quot;constant&quot;: &quot;Default background poll / limits-only cache&quot;,
+      &quot;source&quot;: &quot;shell/plugins/agents/Main.qml:45,247, bin/omarchy-agent-usage-claude:618-634&quot;,
+      &quot;value_ms&quot;: 900000
+    }
+  ],
+  &quot;schema_version&quot;: 1
+}</pre></details></main></body></html>

@@ -1,0 +1,175 @@
+assertion_id,claim,source_path,commit,line_start,line_end,evidence_kind,validation_status,topic
+E1-01,agent解析flags并在HOME且Work存在时改变cwd,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,7,53,source_fact,static_read,E1
+E1-02,无默认报错或pick菜单并拒绝未知case,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,38,137,source_fact,static_read,E1
+E1-03,首次登录只邀请选择默认agent,install/user/first-run/setup-agent.hook,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,11,source_fact,static_read,E1
+E1-04,规范别名与mise或专用installer选择路径,bin/omarchy-default-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,13,79,source_fact,static_read,E1
+E1-05,安装成功才落盘启动且扩展失败被容忍,bin/omarchy-default-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,81,104,source_fact,static_read,E1
+E1-06,lazy wrapper检查名字并quote参数后mise use和exec,bin/omarchy-mise-install,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,6,59,source_fact,static_read,E1
+E1-07,关闭mise升级自动清理并登记lazy wrappers,install/user/mise.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,29,source_fact,static_read,E1
+E1-08,Hermes专用runtime和完整安装检查,bin/omarchy-install-hermes-cli,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,190,240,source_fact,static_read,E1
+E1-09,prompt子入口将多参数合并单段文本,bin/omarchy-agent-prompt,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,7,23,source_fact,static_read,E1
+E1-10,TUI经uwsm及xdg-terminal启动并支持app-id,bin/omarchy-launch-tui,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,13,source_fact,static_read,E1
+E1-11,新session去父pin选择并在argv携带provider home,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,139,168,source_fact,static_read,E1
+E1-12,OpenClaw所属PATH及foreign gateway检查和service迁移,bin/omarchy-install-openclaw-cli,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,21,271,source_fact,static_read,E1
+E1-13,OpenClaw配置和gateway恢复后才TUI或webapp,bin/omarchy-launch-openclaw,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,9,91,source_fact,static_read,E1
+E1-14,onboard验证本轮配置及listener MainPID并有deadline,bin/omarchy-openclaw-onboard,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,23,134,source_fact,static_read,E1
+E1-M01,opencode argv与prompt分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,57,60,source_fact,static_read,E1
+E1-M02,agy argv与prompt分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,61,64,source_fact,static_read,E1
+E1-M03,copilot argv与prompt分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,65,68,source_fact,static_read,E1
+E1-M04,crush有prompt改run而非yolo interactive,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,69,76,source_fact,static_read,E1
+E1-M05,claude permission-mode auto与prompt分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,77,80,source_fact,static_read,E1
+E1-M06,grok bypassPermissions与prompt分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,81,84,source_fact,static_read,E1
+E1-M07,openclaw专用launcher tui及message分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,85,93,source_fact,static_read,E1
+E1-M08,codex approve-for-me与prompt分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,94,97,source_fact,static_read,E1
+E1-M09,cursor-agent yolo trust及agent子命令分隔,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,98,105,source_fact,static_read,E1
+E1-M10,hermes有prompt清source并用query单参数,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,106,112,source_fact,static_read,E1
+E1-M11,muse approval-mode never实际传参,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,113,117,source_fact,static_read,E1
+E1-M12,omp auto-approve与prompt分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,118,121,source_fact,static_read,E1
+E1-M13,ori code interactive prompt分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,122,128,source_fact,static_read,E1
+E1-M14,pi单prompt位置参数分支,bin/omarchy-agent,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,129,132,source_fact,static_read,E1
+T1-01,default和argv逐参数与安装失败契约,test/shell.d/default-agent-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,450,941,test_contract,not_run,E1
+T1-02,gateway恢复与TUI message契约,test/shell.d/launch-openclaw-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,90,189,test_contract,not_run,E1
+T1-03,旧config及孤儿gateway不得误判完成,test/shell.d/openclaw-onboard-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,215,300,test_contract,not_run,E1
+E2-01,provision marker与六根skill目标及已有profiles,bin/omarchy-provision-user,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,58,104,source_fact,static_read,E2
+E2-02,omarchy用户任务技能与安全确认指导,default/agents/skills/omarchy/SKILL.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,276,documentation_claim,document_read,E2
+E2-03,omarchy-app任务与数据安全及完成loop,default/agents/skills/omarchy-app/SKILL.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,107,documentation_claim,document_read,E2
+E2-04,diagnose-crash证据只读core和mute边界,default/agents/skills/diagnose-crash/SKILL.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,128,documentation_claim,document_read,E2
+E2-05,app模板与版权保留及build test package形状,default/agents/skills/omarchy-app/templates.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,431,documentation_claim,document_read,E2
+E2-06,Hyprland现有绑定校验及查官网规则指导,default/agents/skills/omarchy/hyprland.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,80,documentation_claim,document_read,E2
+E2-07,plugins输入与unsandboxed shell指导,default/agents/skills/omarchy/plugins.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,71,documentation_claim,document_read,E2
+E2-08,themes用户overlay及下载主题边界指导,default/agents/skills/omarchy/theming.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,79,documentation_claim,document_read,E2
+E2-09,hooks事件目录与授权说明,default/agents/skills/omarchy/hooks.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,30,documentation_claim,document_read,E2
+E2-10,capture采集分享入口指导,default/agents/skills/omarchy/capture.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,59,documentation_claim,document_read,E2
+E2-11,contributing区分bug feature support,default/agents/skills/omarchy/contributing.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,65,documentation_claim,document_read,E2
+E2-12,app确认任务及丢弃数据和显式错误,default/agents/skills/omarchy-app/SKILL.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,24,107,documentation_claim,document_read,E2
+E2-13,reporting的verified bug同意与现有gh三门槛,default/agents/skills/diagnose-crash/reporting.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,104,documentation_claim,document_read,E2
+E2-14,omarchy四根目录relink,migrations/1786098807.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,7,source_fact,static_read,E2
+E2-15,diagnose-crash分发与watcher迁移,migrations/1786539345.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,31,source_fact,static_read,E2
+E2-16,Gemini替换agy并分发skills,migrations/1786719479.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,41,source_fact,static_read,E2
+E2-17,Hermes默认及已有profiles skill迁移,migrations/1787843905.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,22,source_fact,static_read,E2
+E2-18,omarchy-app迁移保留非link用户skill,migrations/1790702606.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,28,source_fact,static_read,E2
+T2-01,Hermes skill链接幂等及不创建profile契约,test/shell.d/hermes-skills-migration-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,7,75,test_contract,not_run,E2
+E3-01,watcher绑定graphical session及全局off flag,default/systemd/user/omarchy-crash-watch.service,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,19,source_fact,static_read,E3
+E3-02,首次登录逐unit enable now包含watcher,install/user/first-run/enable-user-units.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,16,35,source_fact,static_read,E3
+E3-03,旧用户watcher enable fallback及图形start,migrations/1786539345.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,16,31,source_fact,static_read,E3
+E3-04,journal字段COREDUMP_PID数字及_UID过滤和name降级,bin/omarchy-crash-watch,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,47,88,source_fact,static_read,E3
+E3-05,ignore self mute及只在announce成功后dedupe,bin/omarchy-crash-watch,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,17,109,source_fact,static_read,E3
+E3-06,notification readiness默认10秒及失败返回,bin/omarchy-notification-wait,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,9,30,source_fact,static_read,E3
+E3-07,omarchy-action通过DND的源码分支,shell/plugins/notifications/NotificationLogic.js,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,118,126,source_fact,static_read,E3
+E3-08,exec尾部argv经NUL JSON与typed Dbus传递,bin/omarchy-notification-send,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,118,211,source_fact,static_read,E3
+E3-09,parseExecArgv检查结构而不判断意图,shell/plugins/notifications/NotificationLogic.js,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,144,177,source_fact,static_read,E3
+E3-10,点击才调用execArgv并dismiss,shell/plugins/notifications/Service.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,394,410,source_fact,static_read,E3
+E3-11,execArgv以常量shell脚本及positional参数执行,shell/Commons/Util.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,61,68,source_fact,static_read,E3
+E3-12,agent-crash校验PID构造事实和skill path模板,bin/omarchy-agent-crash,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,14,52,source_fact,static_read,E3
+E3-13,全局crash toggle stop start与持久flag,bin/omarchy-toggle-crash-capture,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,8,18,source_fact,static_read,E3
+E3-14,mute basename action与失败不报成功,bin/omarchy-crash-mute,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,12,73,source_fact,static_read,E3
+E3-15,toggle helper持久创建和删除off文件,bin/omarchy-toggle,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,42,source_fact,static_read,E3
+E3-16,toggle enabled查询off文件,bin/omarchy-toggle-enabled,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,6,source_fact,static_read,E3
+T3-01,crash toggle mute name空字段和后续事件契约,test/shell.d/crash-capture-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,26,254,test_contract,not_run,E3
+T3-02,mute失败不报成功及regular file契约,test/shell.d/crash-capture-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,255,396,test_contract,not_run,E3
+E4-01,Accounts provider仅claude codex grok及共享配置表,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,35,69,source_fact,static_read,E4
+E4-02,默认Usage含Fireworks且周期900秒,shell/plugins/agents/manifest.json,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,20,34,source_fact,static_read,E4
+E4-03,registry默认Main manual threshold95及正常化,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,199,225,source_fact,static_read,E4
+E4-04,registry原子0600保存及provider flock,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,232,268,source_fact,static_read,E4
+E4-05,primary home不受provider home env影响,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,95,113,source_fact,static_read,E4
+E4-06,附加home共享非登录项而不覆盖已有文件,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,293,305,source_fact,static_read,E4
+E4-07,Claude复制指定MCP trust onboarding键,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,307,322,source_fact,static_read,E4
+E4-08,非空显式home优先于account-home解析,bin/omarchy-agent-account-exec,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,22,32,source_fact,static_read,E4
+E4-09,存在的home pin优先registry且空pin表示Main,bin/omarchy-agent-account-home,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,18,25,source_fact,static_read,E4
+E4-10,rename更新ID和active但不搬home,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,395,411,source_fact,static_read,E4
+E4-11,remove拒绝primary运行home且只删受控目录,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,441,472,source_fact,static_read,E4
+E4-12,threshold钳制50到100,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,475,486,source_fact,static_read,E4
+E4-13,peak取未reset最大window且全部reset为0,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,492,516,source_fact,static_read,E4
+E4-14,候选按near threshold stale usage reset排序,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,579,600,source_fact,static_read,E4
+E4-15,usage_by_account只明确排除Waiting for auth,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,623,632,source_fact,static_read,E4
+E4-16,auto改新session active而manual提供切换通知,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,643,679,source_fact,static_read,E4
+E4-17,nearLimit取80%和threshold减15点的min且180s周期,shell/plugins/agents/Main.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,124,152,source_fact,static_read,E4
+E4-18,retryAdvised驱动30秒单次provider重试,shell/plugins/agents/Main.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,90,115,source_fact,static_read,E4
+E4-19,Claude按message最大output整快照去重,bin/omarchy-agent-usage-claude,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,173,274,source_fact,static_read,E4
+E4-20,Claude读取opencode的两种SQLite schema,bin/omarchy-agent-usage-claude,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,683,725,source_fact,static_read,E4
+E4-21,Claude OAuth解析five_hour weekly和scoped limits,bin/omarchy-agent-usage-claude,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,924,1031,source_fact,static_read,E4
+E4-22,Claude15秒probe复用及900秒failure freshness,bin/omarchy-agent-usage-claude,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1111,1143,source_fact,static_read,E4
+E4-23,Claude多账号limits cache按subscription identity,bin/omarchy-agent-usage-claude,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1179,1209,source_fact,static_read,E4
+E4-24,Codex native mtime最近30天及OpenAI过滤,bin/omarchy-agent-usage-codex,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,435,496,source_fact,static_read,E4
+E4-25,Codex仅相同cumulative snapshot判通知重复,bin/omarchy-agent-usage-codex,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,504,531,source_fact,static_read,E4
+E4-26,Codex scan cache schema date和incomplete处理,bin/omarchy-agent-usage-codex,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,539,748,source_fact,static_read,E4
+E4-27,Codex app-server RPC及plan缺失才account read,bin/omarchy-agent-usage-codex,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,882,982,source_fact,static_read,E4
+E4-28,Codex分钟window及usedPercent除100,bin/omarchy-agent-usage-codex,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,802,823,source_fact,static_read,E4
+E4-29,Grok session summary及usage turns本地统计,bin/omarchy-agent-usage-grok,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,86,150,source_fact,static_read,E4
+E4-30,Grok credits消费config period和percent,bin/omarchy-agent-usage-grok,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,186,195,source_fact,static_read,E4
+E4-31,Grok过期access可refresh时旧limits live及roll forward,bin/omarchy-agent-usage-grok,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,198,244,source_fact,static_read,E4
+E4-32,Fireworks key顺序env firectl pi opencode,bin/omarchy-agent-usage-fireworks,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,179,294,source_fact,static_read,E4
+E4-33,Fireworks billingUsage最多20页,bin/omarchy-agent-usage-fireworks,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,394,413,source_fact,static_read,E4
+E4-34,Fireworks真实余额优先及funding减ACCOUNT cost估算,bin/omarchy-agent-usage-fireworks,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,438,486,source_fact,static_read,E4
+E4-35,Fireworks无cache且force limits-only仅接口兼容,bin/omarchy-agent-usage-fireworks,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,535,554,source_fact,static_read,E4
+E4-36,updater成功非空JSON验证及atomic mv,bin/omarchy-agent-usage-update,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,42,52,source_fact,static_read,E4
+E4-37,collector后autoswitch并重采已改变的active,bin/omarchy-agent-usage-update,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,71,86,source_fact,static_read,E4
+E4-38,QML record JSON parse与bad record清空,shell/plugins/agents/Agent.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,20,51,source_fact,static_read,E4
+E4-39,Main透传状态并补默认值而无完整schema校验,shell/plugins/agents/Main.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,317,356,source_fact,static_read,E4
+E4-40,sync snapshot只含stats不含账号额度余额,shell/plugins/agents/Main.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,747,781,source_fact,static_read,E4
+E4-41,Panel过期window显示0且explicit title优先,shell/plugins/agents/Panel.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,509,526,source_fact,static_read,E4
+E4-42,三provider pin和显式home测试契约,test/shell.d/agent-account-exec-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,76,125,test_contract,not_run,E4
+E4-43,fresh与stale ranking fixture,test/shell.d/agent-account-autoswitch-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,159,202,test_contract,not_run,E4
+E4-44,Claude scoped与fraction fixture,test/shell.d/agent-usage-claude-limits-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,26,64,test_contract,not_run,E4
+E4-45,Codex通知重复及counter reset fixture,test/shell.d/agent-usage-codex-notifications-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,54,79,test_contract,not_run,E4
+E4-46,Grok refreshable expiry及weekly reset fixture,test/shell.d/agent-usage-grok-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,89,125,test_contract,not_run,E4
+E4-47,Fireworks真实估算余额及失败保留token fixture,test/shell.d/agent-usage-fireworks-scanner-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,246,256,test_contract,not_run,E4
+E4-48,updater nonJSON及provider过滤fixture,test/shell.d/agent-usage-update-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,40,65,test_contract,not_run,E4
+E4-49,Node提取QML JS验证reload及badJSON恢复而非OS VM,test/shell.d/agent-usage-fallback-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,24,55,test_contract,not_run,E4
+E4-50,stale只有hover年龄而不opacity dim契约,test/shell.d/agents-panel-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,30,36,test_contract,not_run,E4
+E4-51,README声称Panel严格display,shell/plugins/agents/README.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,3,8,documentation_claim,document_read,E4
+E4-52,README声称console key限制getBalance访问,shell/plugins/agents/README.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,110,118,documentation_claim,document_read,E4
+E4-53,updater glob发现collector且排除自身,bin/omarchy-agent-usage-update,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,61,69,source_fact,static_read,E4
+E4-54,Main发现usage JSON而非固定四枚举,shell/plugins/agents/Main.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,24,87,source_fact,static_read,E4
+E4-55,registry和usage使用XDG state root路径,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,79,92,source_fact,static_read,E4
+E4-56,summary重新读identity且含email home等摘要,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,691,710,source_fact,static_read,E4
+E4-57,mise三provider系统dispatcher配置,etc/mise/conf.d/omarchy-agent-accounts.toml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,13,source_fact,static_read,E4
+E4-58,pending注册验证identity并失败回滚home,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,335,376,source_fact,static_read,E4
+E4-59,use改active并声明running sessions stay,bin/omarchy-agent-account-use,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,26,39,source_fact,static_read,E4
+E4-60,Claude scan缓存index及atomic发布,bin/omarchy-agent-usage-claude,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,387,452,source_fact,static_read,E4
+E4-61,Claude cache history及pi omp fallback解析,bin/omarchy-agent-usage-claude,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,458,638,source_fact,static_read,E4
+E4-62,Claude credential plan及expiry cache处理,bin/omarchy-agent-usage-claude,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,803,1143,source_fact,static_read,E4
+E4-63,Codex补充provider histories和去重,bin/omarchy-agent-usage-codex,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,241,433,source_fact,static_read,E4
+E4-64,Codex多账号probe和无持久limits timestamp输出,bin/omarchy-agent-usage-codex,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,989,1077,source_fact,static_read,E4
+E4-65,Grok真实endpoint及failure fallback,bin/omarchy-agent-usage-grok,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,198,263,source_fact,static_read,E4
+E4-66,Fireworks serverless costs stats及account scope,bin/omarchy-agent-usage-fireworks,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,58,176,source_fact,static_read,E4
+E4-67,Fireworks日期HTTP单account scan和余额估算,bin/omarchy-agent-usage-fireworks,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,296,532,source_fact,static_read,E4
+E4-68,Claude record updatedAt及独立limitsFetchedAt,bin/omarchy-agent-usage-claude,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1247,1280,source_fact,static_read,E4
+E4-69,Main在update退出reload弥补atomic rename watcher,shell/plugins/agents/Main.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,155,205,source_fact,static_read,E4
+E4-70,Panel有账号操作与reauth入口,shell/plugins/agents/Panel.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,278,447,source_fact,static_read,E4
+E4-71,Panel binding window 90%告警及余额10%判据,shell/plugins/agents/Panel.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,204,210,source_fact,static_read,E4
+E4-72,exhausted恢复取阻塞最晚reset并需全known,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,537,618,source_fact,static_read,E4
+E4-73,Panel打开触发limits-only,shell/plugins/agents/Panel.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,770,777,source_fact,static_read,E4
+E4-74,sync device相加account按provider max及日期union,shell/plugins/agents/Main.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,667,706,source_fact,static_read,E4
+E4-75,identity读取Claude资料Codex JWT payload及Grok settings,bin/omarchy-agent-account-state,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,136,189,source_fact,static_read,E4
+E4-76,exec解析真实CLI并prepend跨provider dispatcher PATH,bin/omarchy-agent-account-exec,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,34,43,source_fact,static_read,E4
+E4-77,Fireworks只有discovery恰好一个account才自动选择,bin/omarchy-agent-usage-fireworks,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,376,388,source_fact,static_read,E4
+E4-78,余额警告需funded正且remaining比值不高于0.1,shell/plugins/agents/Panel.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,595,597,source_fact,static_read,E4
+E4-79,binding window只对当前provider limits取max,shell/plugins/agents/Panel.qml,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,563,570,source_fact,static_read,E4
+T4-01,账号credentials独立而settings shared权限契约,test/shell.d/agent-account-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,123,133,test_contract,not_run,E4
+T4-02,rename不搬home和remove保护契约,test/shell.d/agent-account-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,252,297,test_contract,not_run,E4
+T4-03,429缓存current stale及fetchedAt fixture,test/shell.d/agent-usage-claude-limits-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,383,413,test_contract,not_run,E4
+T4-04,Fireworks账户stats scope及日期和分页fixture,test/shell.d/agent-usage-fireworks-scanner-test.sh,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,232,280,test_contract,not_run,E4
+E5-01,AGENTS任务guides文档受众及验证约定,AGENTS.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,161,documentation_claim,document_read,E5
+E5-02,CLAUDE普通文件引用AGENTS,CLAUDE.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,1,source_fact,static_read,E5
+E5-03,command metadata任务指导,agents/skills/command-metadata.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,31,documentation_claim,document_read,E5
+E5-04,install root user及sourced leaf分层指导,agents/skills/install-scripts.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,22,documentation_claim,document_read,E5
+E5-05,shell event push filewatch及facade非sandbox指导,agents/skills/shell-dev.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,62,documentation_claim,document_read,E5
+E5-06,migration per-user幂等同步和login通知不静默执行,agents/skills/migrations.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,172,documentation_claim,document_read,E5
+E5-07,test all只有cli shell且失败继续汇总,test/all,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,23,source_fact,static_read,E5
+E5-08,testing区分headless skip及fixture方法,docs/testing.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,133,documentation_claim,document_read,E5
+E5-09,acceptance要求disposable VM和screenshots logs,agents/skills/acceptance-tests.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,46,documentation_claim,document_read,E5
+E5-10,visual artifact必须实际审阅的指导,agents/skills/visual-verification.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,41,documentation_claim,document_read,E5
+E5-11,backup plan revision自述与threat model而非实现证明,plans/backup.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,123,documentation_claim,document_read,E5
+E5-12,dots plan review自述及拒绝raw git HOME,plans/dots.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,100,documentation_claim,document_read,E5
+E5-13,acceptance检查live session timeout并捕捉screenshots logs,test/acceptance,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,101,source_fact,static_read,E5
+E6-01,snapshot入口缺工具及缺config失败和遍历configs,bin/omarchy-snapshot,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,9,49,source_fact,static_read,E6
+E6-02,manual说明restore root非home且Limine条件,manual/47-system-snapshots.md,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,25,documentation_claim,document_read,E6
+L1,固定根LICENSE为DHH署名MIT文本,LICENSE,9480d1b6a98156314dbabe6bfef08f39f8b9cd07,1,20,documentation_claim,document_read,provenance
+W1,Claude SDK是自己运营进程的Code loop并有工具hooks会话及auth条件,https://code.claude.com/docs/en/agent-sdk/overview,,,,documentation_claim,official_read,comparison
+W2,Claude SDK permission分层及callback非必经,https://code.claude.com/docs/en/agent-sdk/permissions,,,,documentation_claim,official_read,comparison
+W3,Claude SDK skills discovery sources及init观察口,https://code.claude.com/docs/en/agent-sdk/skills,,,,documentation_claim,official_read,comparison
+W4,Claude SDK成本是estimate且需正确usage去重累计,https://code.claude.com/docs/en/agent-sdk/cost-tracking,,,,documentation_claim,official_read,comparison
+W5,Copilot CLI模型工具approval与sandbox及trusted目录条件,https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli,,,,documentation_claim,official_read,comparison
+W6,Copilot cloud委派环境events context模型及计划条件,https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github,,,,documentation_claim,official_read,comparison
+W7,Copilot cloud触发branch credential firewall及审计mitigations,https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/risks-and-mitigations,,,,documentation_claim,official_read,comparison

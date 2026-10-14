@@ -1,0 +1,13 @@
+scenario,question,decider_answer,reported_probability_pct,pointed_right_way,action
+E1 Launcher,Attachment harness list (13) vs bin/omarchy-agent case branches (14),13/14 matched (missed openclaw gateway),93,False,Confirm
+E1 Launcher,Single-argument prompt boundary across 14 harnesses × 2 modes (28 paths),28/28 preserve argv boundary,100,True,Auto
+E1 Launcher,Unattended/bypass flag retention from unprompted to prompted mode (12 harnesses),11/12 retained (crush drops --yolo on run),92,False,Confirm
+E2 Skills,Idempotent skill symlink provisioning across global harness roots (omarchy-provision-user),6/6 roots + Hermes profiles/*/skills,100,True,Auto
+E2 Skills,Symlink target namespace coverage across all 14 launchable harnesses,6/14 linked (8 harnesses have no symlink root),43,False,Human
+E3 Crash,"Pre-notification filter gates (_UID, disabled, ignore, mute, seen_key) + click gate",5/5 gates + user click required,100,True,Auto
+E4 Accounts,"Provider set isomorphism across launcher (14), accounts (3), and usage (4)",3/14 account-managed (+Fireworks usage-only),21,False,Confirm
+E4 Accounts,"Autoswitch invariants: mode=auto, >=95% trigger, exclude Waiting for auth, 5h->wk->num",4/4 source & test contracts verified,100,True,Auto
+E4 Accounts,Candidate ranking exclusion when cached account usage has stale=true,0/1 filtered (stale=true still eligible),0,False,Confirm
+E4 Desktop UI,shell/plugins/agents/README.md claim that QML plugin is 'strictly a display layer',2/6 read-only (4 write/exec actions in Panel.qml),33,False,Confirm
+E5 Repo Native,Headless test/all (11 shell suites) vs graphical VM test/acceptance (1 suite) split,11/11 headless isolated from VM acceptance,100,True,Auto
+E6 Safety,Hard deterministic OS/code boundaries vs soft conventions across 16 controls,5/16 hard boundaries (0/14 OS sandbox in launcher),31,False,Human

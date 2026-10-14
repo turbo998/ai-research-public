@@ -1,0 +1,7 @@
+scenario,selected_option,original_pct,reversed_pct,change_pts,answer_held
+E1 · Prompt Argv Token Integrity (14 Harnesses),Unprompted launch (14/14) vs Prompted launch with spaces/quotes (14/14),100.0,100.0,0.0,True
+E1 · Unattended / Bypass Flag Retention (14 Harnesses),Unprompted auto/bypass flags (12/14) vs Prompted mode (11/14; crush drops --yolo),85.7,78.6,-7.1,True
+E2 · Global Skill Symlink Roots (6 Namespaces),omarchy-provision-user (6/6 roots) vs initial migration 1786719479.sh (5/6 before Hermes),100.0,83.3,-16.7,True
+E4 · Explicit Provider Home Override Precedence (3 Providers),Fresh session pin (3/3) vs Explicit CLAUDE_CONFIG_DIR / CODEX_HOME / GROK_HOME override (3/3),100.0,100.0,0.0,True
+E4 · Collector Stale-Window Retention on Transient Failure (4 Providers),Normal local state/cache use (3/4) vs Stale limit retention on HTTP error (2/4: Claude & Grok),75.0,50.0,-25.0,True
+E5 · Git Trailer Attribution Denominator (200-Commit Window vs 3-Page Slice),Latest 100 commits (10/100 = 10.0%) vs Commits 101-200 (11/100 = 11.0%),10.0,11.0,1.0,True
