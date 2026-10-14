@@ -27,6 +27,12 @@
 
 ## Infra
 
-预留分类，暂无公开专题；不声称已有部署、基础设施实验或资源使用。
+| 专题 | 子分类 / 标签 | 范围与状态 |
+|---|---|---|
+| [阿里云 AI Infra 全栈架构深度测评](alibaba-cloud-ai-infra/README.md) | 云原生 AI 算存网底座与训推平台（`T-Head PPU/CPU`、`Zhenwu M890/V900`、`HPN 7.0`、`Solar-RDMA`、`PAI-Lingjun`、`PAI`、`Bailian`） | 覆盖平头哥真武 PPU（810E/M890/V900/J900）、倚天 CPU、ICN Switch 1.0、磐脉 920、镇岳 510、磐久 AL128、HPN 7.0 + Solar-RDMA、灵骏、PAI 与百炼平台的 L0–L3 架构师视角深度测评与选型决策矩阵；cutoff 2026-10-14，静态公开资料研究（`not_executed_by_design`） |
+
+### 阿里云 AI Infra 全栈架构深度测评专题材料
+
+- **核心阅读**：[深度测评报告正文](alibaba-cloud-ai-infra/README.md) · [21 条一手来源证据台账 JSON](alibaba-cloud-ai-infra/evidence.json) · [技术审校与证据边界记录](alibaba-cloud-ai-infra/review.md)
 
 [返回首页](../../README.md) · [归属与权利边界](../../ATTRIBUTION.md) · [第三方声明](../../THIRD_PARTY_NOTICES.md)
