@@ -6,7 +6,6 @@
 
 | 专题 / 内容 | 公开出处与归属 |
 |---|---|
-| **阿里云 AI Infra 全栈架构深度测评** | 阿里云官方文档（PAI、灵骏、百炼 Model Studio、CPFS）、阿里云开发者社区 2026 云栖大会技术解读、ACM SIGCOMM 2024 HPN 7.0 论文报道、MemoryS 2026 闪存峰会报道及 Flopper 硬件数据库。所有吞吐倍率与架构参数保留上游公开归属，未执行实机跑分。完整可复核台账见 [`docs/research/alibaba-cloud-ai-infra/evidence.json`](docs/research/alibaba-cloud-ai-infra/evidence.json) |
 | **Omarchy agent 设计机制与契约评测** | 上游公开入口 `basecamp/omarchy`、规范仓库 `omacom/omarchy`，固定 commit [`9480d1b6a98156314dbabe6bfef08f39f8b9cd07`](https://github.com/omacom/omarchy/commit/9480d1b6a98156314dbabe6bfef08f39f8b9cd07)；原维护者及根 `LICENSE`（MIT）版权归属 David Heinemeier Hansson。轻量平台比较引用 Anthropic 与 GitHub 官方文档（W1–W7）。完整可复核台账见 [`docs/research/omarchy-agent-design/evidence.json`](docs/research/omarchy-agent-design/evidence.json) |
 | **Personal agents：产品、资格、控制及政策声明** | Meta/Muse；x.ai 与 Cursor；OpenAI；Google/Gemini/Google Cloud；Spear Street Technology, Inc. d/b/a Instinct。准确页面与读取范围见 S1–S17 |
 | **Personal agents：第三方比较与产品观察** | Every；Dhravya Shah / Supermemory；Personal Agent Bench / Zentor。商业利害、方法限制及未复算状态见 S18–S22 |
