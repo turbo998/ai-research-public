@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Skills 与逆向工程研究专题门户 · MJX 14303 × Ryan Doser × REA Scrap Swarm</title>
+<style>
+:root {
+  --bg: #070b14;
+  --card: #0f172a;
+  --border: #334155;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --blue: #38bdf8;
+  --amber: #fbbf24;
+  --teal: #34d399;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: radial-gradient(circle at 20% 0%, #111c38 0%, #070b14 60%);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+.hero {
+  text-align: center;
+  padding: 36px 24px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 20px;
+  margin-bottom: 32px;
+}
+.badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--blue);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+h1 {
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.sub {
+  color: var(--muted);
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 22px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue);
+}
+.tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.card h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.card p {
+  font-size: 13.5px;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+.feature-list {
+  list-style: none;
+  margin-bottom: 22px;
+}
+.feature-list li {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.btn:hover { opacity: 0.92; }
+.btn-primary { background: var(--blue); color: #070b14; }
+.btn-amber { background: var(--amber); color: #070b14; }
+.btn-teal { background: var(--teal); color: #070b14; }
+.btn-ghost {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #475569;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="hero">
+    <span class="badge">LIVE INTERACTIVE H5 SUITE · GITHUB PAGES</span>
+    <h1>AI Agent Skills 工程化与逆向工程研究专题</h1>
+    <p class="sub">
+      涵盖 <strong>L2 商业化营销 SOP 门控 (Ryan Doser)</strong>、<strong>L3 参数化机械等距解剖引擎 (<code>wheresryan22/anatomy</code> × 美嘉欣 14303)</strong> 与 <strong>L4 密码学证据链逆向引擎 (<code>morluto/rea</code> × 废土斗机祭)</strong> 的三大在线交互式成果。
+    </p>
+  </header>
+
+  <div class="cards">
+    <!-- Card 1: MJX 14303 -->
+    <div class="card">
+      <div>
+        <div class="tag" style="color:var(--blue)">DEMO 01 · MECHANICAL ANATOMY H5</div>
+        <h2>🏎️ 美嘉欣 MJX Hyper Go 14303 底盘机械原理交互台</h2>
+        <p>基于 <code>wheresryan22/anatomy</code> 参数化等距套件与 3D 光线投射深度审计构建，支持向外部客户直观演示四驱底盘内部构造。</p>
+        <ul class="feature-list">
+          <li>✓ 10 大机械总成点击聚焦、弹簧阻尼平滑爆炸拆解 (`E` 键)</li>
+          <li>✓ 2S (7.4V, 42.8km/h) / 3S (11.1V, 62.4km/h) 动力链路实时遥测</li>
+          <li>✓ G3C 陀螺仪漂移反打与油压绞牙避震下压 (`S` 键) 仿真</li>
+          <li>✓ 通过 <code>kit/audit.mjs</code> 871 个状态、8,864 对重叠 0 穿模验证</li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="./h5/mjx-14303-anatomy/index.html">🌙 打开深色蓝图版 H5</a>
+        <a class="btn btn-ghost" href="./h5/mjx-14303-anatomy/mjx-14303-chassis-light.html">☀️ 打开浅色出版物版</a>
+      </div>
+    </div>
+
+    <!-- Card 2: Ryan Doser -->
+    <div class="card">
+      <div>
+        <div class="tag" style="color:var(--amber)">REPORT 02 · VISUAL SKILL RESEARCH H5</div>
+        <h2>📊 Ryan Doser Skill 矩阵、技术深度与 6 阶变现报告</h2>
+        <p>深度拆解 Ryan Doser 的 8 大类 60+ Claude Code Skills、<code>anti-slop.md</code> 源码、4-Agent 门控架构与 $0 → $100K+ 商业漏斗。</p>
+        <ul class="feature-list">
+          <li>✓ 8 大垂直领域代表性 Skill 输入/输出契约交互检索器</li>
+          <li>✓ 实时 <code>anti-slop.md</code> 反 AI 味违禁词与套路句式检测沙盒</li>
+          <li>✓ L1–L4 Agent Skill 工程化深度对比高清矢量图谱</li>
+          <li>✓ 交互式“卖 $99 铲子撬动 $100K 代运营”漏斗收益计算器</li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-amber" href="./h5/ryan-doser-skills-report/index.html">📊 打开可视化交互报告 H5</a>
+        <a class="btn btn-ghost" href="https://github.com/turbo998/ai-research-public/blob/main/docs/research/agent-skills-and-rea/findings/02-ryan-doser-skill-business.md" target="_blank" rel="noopener">📄 阅读 Markdown 报告</a>
+      </div>
+    </div>
+
+    <!-- Card 3: REA Scrap Swarm Clone -->
+    <div class="card">
+      <div>
+        <div class="tag" style="color:var(--teal)">DEMO 03 · REA v6.4.0 REVERSE-ENGINEERED GAME</div>
+        <h2>🎮 《废土斗机祭 (Scrap Swarm)》REA 1:1 逆向复刻版</h2>
+        <p>使用 <code>morluto/rea</code> (v6.4.0) 静态解析 <code>index-BCy1aADK.js</code> 的 433,836 个 AST 节点并生成 6 条 <code>ev_&lt;sha256&gt;</code> 密码学证据后 1:1 还原。</p>
+        <ul class="feature-list">
+          <li>✓ 100% 还原 <code>xorshift32</code> 确定性伪随机、Core Dash 与 5 大武器</li>
+          <li>✓ 零外部音频资源：纯 WebAudio 过程化合成重低音、激光与警报</li>
+          <li>✓ 右侧内嵌实时 <code>ev_&lt;sha256&gt;</code> 密码学证据台账脉冲高亮 HUD</li>
+          <li>✓ 内置 <code>[AI AutoBot]</code> 自动走位战斗演示与机库剧情模式</li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-teal" href="./h5/rea-scrap-swarm-clone/index.html">🎮 立即在线试玩复刻版 H5</a>
+        <a class="btn btn-ghost" href="./evidence/rea-evidence-ledger.json" target="_blank" rel="noopener">🔐 查看 SHA-256 证据台账</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

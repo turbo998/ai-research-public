@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryan Doser · Claude Code Skills 覆盖范围、技术深度与 6 阶变现漏斗可视化研究报告</title>
+<style>
+:root {
+  --bg: #070b14;
+  --bg-card: #0f172a;
+  --bg-elevated: #1e293b;
+  --border: #334155;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --blue: #38bdf8;
+  --teal: #34d399;
+  --amber: #fbbf24;
+  --purple: #a78bfa;
+  --rose: #fb7185;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: radial-gradient(circle at 15% 0%, #0f1d3a 0%, #070b14 55%);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  padding-bottom: 80px;
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Sticky Topbar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7, 11, 20, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.22);
+  padding: 12px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 15px;
+  color: #fff;
+}
+.badge {
+  background: linear-gradient(135deg, #d97706, #fbbf24);
+  color: #090d16;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+}
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.nav-pill {
+  padding: 6px 13px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted);
+  background: rgba(30, 41, 59, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  transition: all 0.16s ease;
+}
+.nav-pill:hover, .nav-pill.active {
+  color: #fff;
+  border-color: var(--blue);
+  background: rgba(56, 189, 248, 0.15);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96) 0%, rgba(30, 41, 59, 0.72) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-radius: 18px;
+  padding: 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.hero h1 {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+.hero h1 span {
+  background: linear-gradient(90deg, #fbbf24, #38bdf8, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-sub {
+  color: #cbd5e1;
+  font-size: 15px;
+  max-width: 980px;
+  margin-bottom: 22px;
+}
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+.kpi-card {
+  background: rgba(9, 13, 22, 0.78);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.kpi-val {
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+}
+.kpi-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-top: 4px;
+}
+.kpi-desc {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Section Generic */
+.section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 28px;
+}
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+.section-tag {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.section-title {
+  font-size: 21px;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 3px;
+}
+.section-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* SVG Showcase */
+.svg-frame {
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 12px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+.svg-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Interactive Skill Matrix */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+.filter-btn {
+  background: #131c2e;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--blue);
+  color: #090d16;
+  border-color: var(--blue);
+  font-weight: 700;
+}
+.search-input {
+  margin-left: auto;
+  background: #090d16;
+  border: 1px solid #334155;
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  min-width: 240px;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+.skill-card {
+  background: #131c2e;
+  border: 1px solid #26354d;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.skill-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+}
+.skill-cat-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.skill-name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.skill-desc {
+  font-size: 12.5px;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+.skill-meta {
+  font-size: 11px;
+  color: var(--muted);
+  border-top: 1px dashed rgba(148, 163, 184, 0.2);
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Interactive Anti-Slop Sandbox */
+.slop-workbench {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 16px;
+}
+@media (max-width: 900px) {
+  .slop-workbench { grid-template-columns: 1fr; }
+}
+.slop-panel {
+  background: #090d16;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 18px;
+}
+.slop-panel h4 {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.preset-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.preset-btn {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  cursor: pointer;
+}
+.preset-btn:hover, .preset-btn.active {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+.slop-textarea {
+  width: 100%;
+  min-height: 125px;
+  background: #111827;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 13px;
+  line-height: 1.55;
+  resize: vertical;
+  font-family: inherit;
+}
+.highlighted-box {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  min-height: 95px;
+  margin-top: 10px;
+  line-height: 1.65;
+}
+.slop-hit {
+  background: rgba(244, 63, 94, 0.25);
+  color: #fda4af;
+  border-bottom: 2px solid #f43f5e;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+.trope-hit {
+  background: rgba(245, 158, 11, 0.25);
+  color: #fde68a;
+  border-bottom: 2px solid #f59e0b;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+.clean-box {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 13.5px;
+  color: #ecfdf5;
+  line-height: 1.65;
+  margin-top: 10px;
+}
+
+/* Interactive Revenue Funnel Calculator */
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+@media (max-width: 900px) {
+  .calc-grid { grid-template-columns: 1fr; }
+}
+.slider-row {
+  margin-bottom: 14px;
+}
+.slider-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.slider-label span:last-child {
+  color: var(--amber);
+  font-family: ui-monospace, monospace;
+  font-weight: 800;
+}
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--blue);
+}
+.rev-breakdown {
+  background: #090d16;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+}
+.rev-tier-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #1e293b;
+  font-size: 13px;
+}
+.rev-tier-row:last-child { border-bottom: none; }
+.rev-bar-wrap {
+  width: 100%;
+  height: 8px;
+  background: #1e293b;
+  border-radius: 999px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.rev-bar {
+  height: 100%;
+  border-radius: 999px;
+}
+
+/* Comparison Table */
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.comp-table th, .comp-table td {
+  padding: 12px 14px;
+  border: 1px solid #1e293b;
+  text-align: left;
+  vertical-align: top;
+}
+.comp-table th {
+  background: #090d16;
+  color: var(--blue);
+  font-weight: 800;
+}
+.comp-table tr:nth-child(even) td {
+  background: rgba(15, 23, 42, 0.55);
+}
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="brand">
+    <span class="badge">SKILL ECONOMY REPORT</span>
+    <span>Ryan Doser · Claude Code Skills 深度拆解与变现模型</span>
+  </div>
+  <div class="nav-pills">
+    <a class="nav-pill" href="../../index.html">🏠 专题总门户</a>
+    <a class="nav-pill active" href="./index.html">📊 Ryan Doser 可视化报告</a>
+    <a class="nav-pill" href="../mjx-14303-anatomy/index.html">🏎️ 美嘉欣 14303 解剖 H5</a>
+    <a class="nav-pill" href="../rea-scrap-swarm-clone/index.html">🎮 废土斗机祭 REA 复刻 H5</a>
+    <a class="nav-pill" href="https://github.com/turbo998/ai-research-public/blob/main/docs/research/agent-skills-and-rea/findings/02-ryan-doser-skill-business.md" target="_blank" rel="noopener">📄 Markdown 原文</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-eyebrow">⚡ 商业化 AI Skill 标杆案例研究 · Ryan Doser (@ryandoser / AI Growth Kit)</div>
+    <h1>从“卖 $99 铲子”到“签 $100K+ 包工程”：<br><span>Ryan Doser 的 60+ Claude Code Skills 架构与变现全解</span></h1>
+    <p class="hero-sub">
+      为什么绝大多数人卖 Prompt 只能赚几百美金零花钱，而 Ryan Doser 能靠一套纯 Markdown 编写的 Claude Code Skills 实现单品 <strong>$10,000+ 被动收入</strong>，并撬动占总营收 <strong>75%</strong> 的 <strong>$100K+/年 B2B 代运营业务</strong>？本页通过可视化架构图、60+ Skills 交互检索器、<code>anti-slop.md</code> 实时去 AI 味沙盒与漏斗收益测算器为您完整还原。
+    </p>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-val" style="color:var(--blue)">8 大类 / 60+</div>
+        <div class="kpi-label">全链路数字营销 Skills 矩阵</div>
+        <div class="kpi-desc">100% 绑定 SEO/GEO 排名、YouTube 完播、广告 ROAS 与邮件成单</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-val" style="color:var(--amber)">4-Agent 门控</div>
+        <div class="kpi-label">生成与审查上下文物理隔离</div>
+        <div class="kpi-desc">Content Reviewer · Fact Checker · SEO/GEO · Format Enforcer</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-val" style="color:var(--teal)">L2 声明式 SOP</div>
+        <div class="kpi-label">95% 结构化 SOP + 50+ 禁用词表</div>
+        <div class="kpi-desc">非程序员零门槛运行，把 10 年营销方法论编译为确定性规则</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-val" style="color:var(--rose)">$0 → $100K+</div>
+        <div class="kpi-label">6 阶自融资信任变现漏斗</div>
+        <div class="kpi-desc">$47/$99 数字包筛选高意向企业主，无缝升单 $3K–$10K/月代运营</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 1: 8-Category Architecture & Interactive Explorer -->
+  <section class="section" id="coverage">
+    <div class="section-header">
+      <div>
+        <div class="section-tag">PART 01 · SKILL COVERAGE &amp; ARCHITECTURE</div>
+        <div class="section-title">1. Skill 覆盖范围全景图：8 大业务垂直域与 4-Agent 门控流水线</div>
+      </div>
+      <div class="section-note">点击下方分类按钮或搜索关键词，交互式查阅代表性 Skill 的输入/输出契约</div>
+    </div>
+
+    <div class="svg-frame">
+      <img src="../../assets/01-ryan-doser-8category-skill-architecture.svg" alt="Ryan Doser 8-Category Skill Architecture and 4-Agent Quality Gate">
+    </div>
+
+    <div class="filter-bar" id="skillFilters">
+      <button class="filter-btn active" data-cat="all">全部 8 大领域 (24 核心代表)</button>
+      <button class="filter-btn" data-cat="seo">01 · SEO &amp; GEO</button>
+      <button class="filter-btn" data-cat="yt">02 · YouTube 引擎</button>
+      <button class="filter-btn" data-cat="ads">03 · 广告与转化漏斗</button>
+      <button class="filter-btn" data-cat="email">04 · 邮件自动化</button>
+      <button class="filter-btn" data-cat="voice">05 · 品牌反 AI 味</button>
+      <button class="filter-btn" data-cat="social">06 · 社媒飞轮 (1→12)</button>
+      <button class="filter-btn" data-cat="lead">07 · 诱饵与微工具</button>
+      <button class="filter-btn" data-cat="intel">08 · 竞品情报</button>
+      <input type="text" class="search-input" id="skillSearch" placeholder="🔍 搜索 Skill 名称或场景 (如 programmatic, hook, email)...">
+    </div>
+
+    <div class="skills-grid" id="skillsGrid"></div>
+  </section>
+
+  <!-- Section 2: Technical Depth & Live Anti-Slop Simulator -->
+  <section class="section" id="anti-slop">
+    <div class="section-header">
+      <div>
+        <div class="section-tag">PART 02 · TECHNICAL DEPTH &amp; ANTI-SLOP SANDBOX</div>
+        <div class="section-title">2. 技术深度拆解：<code>rules/anti-slop.md</code> 实时反 AI 味检测与改写沙盒</div>
+      </div>
+      <div class="section-note">可切换 3 个典型重灾区文本或直接粘贴您的文案，实时体验 Ryan Doser 的违禁词/伪悬念句式拦截器</div>
+    </div>
+
+    <div class="slop-workbench">
+      <div class="slop-panel">
+        <h4>
+          <span>📝 原始 LLM 生成初稿（含典型 AI Slop 黑话与套路句式）</span>
+          <span id="slopScoreBadge" style="background:#f43f5e;color:#fff;padding:2px 9px;border-radius:999px;font-size:11.5px;">Slop 风险：高危</span>
+        </h4>
+        <div class="preset-btns">
+          <button class="preset-btn active" onclick="loadPreset(0, this)">示例 1：SaaS 产品发布文案</button>
+          <button class="preset-btn" onclick="loadPreset(1, this)">示例 2：B2B 冷启动开发信</button>
+          <button class="preset-btn" onclick="loadPreset(2, this)">示例 3：SEO 行业趋势长文导语</button>
+        </div>
+        <textarea id="slopInput" class="slop-textarea" oninput="analyzeSlop()"></textarea>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted);">
+          🔴 红色高亮 = <code>anti-slop.md</code> 禁用黑话词表 &nbsp;|&nbsp; 🟡 黄色高亮 = 禁用伪深沉/二元对立句式
+        </div>
+        <div id="slopHighlighted" class="highlighted-box"></div>
+      </div>
+
+      <div class="slop-panel">
+        <h4>
+          <span>✅ 经过 <code>anti-slop.md</code> + 4-Agent Quality Gate 门控重写后</span>
+          <span style="background:#10b981;color:#052e16;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:800;">Publish-Ready</span>
+        </h4>
+        <div id="slopStats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px;">
+          <div style="background:#111827;padding:10px;border-radius:8px;border:1px solid #1e293b;">
+            <div style="font-size:11px;color:var(--muted);">命中的禁用词</div>
+            <div id="statWords" style="font-size:20px;font-weight:800;color:#fb7185;">0</div>
+          </div>
+          <div style="background:#111827;padding:10px;border-radius:8px;border:1px solid #1e293b;">
+            <div style="font-size:11px;color:var(--muted);">命中的套路句式</div>
+            <div id="statTropes" style="font-size:20px;font-weight:800;color:#fbbf24;">0</div>
+          </div>
+          <div style="background:#111827;padding:10px;border-radius:8px;border:1px solid #1e293b;">
+            <div style="font-size:11px;color:var(--muted);">平均句长 (词/句)</div>
+            <div id="statAvgLen" style="font-size:20px;font-weight:800;color:#38bdf8;">0</div>
+          </div>
+        </div>
+        <div style="font-size:12px;font-weight:700;color:var(--teal);margin-top:4px;">Gate 1 (Content Reviewer) + Gate 2 (Fact Checker) 修正输出：</div>
+        <div id="cleanOutput" class="clean-box"></div>
+        <div style="margin-top:12px;font-size:12px;color:var(--muted);line-height:1.55;">
+          <strong>核心工程原理：</strong> 单次 Prompt 让模型“边写边改”会出现注意力稀释（Self-Bias）。Ryan Doser 将生成 Skill 与 4 个 Critic Sub-Agents 拆分为独立上下文步骤，强制执行<strong>“先生成 → 独立扫描打回 → 事实核验 → 结构化交付”</strong>。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: L1-L4 Technical Depth Spectrum -->
+  <section class="section" id="spectrum">
+    <div class="section-header">
+      <div>
+        <div class="section-tag">PART 03 · L1 TO L4 ENGINEERING SPECTRUM</div>
+        <div class="section-title">3. 横向技术对标：从 L1 提示词模板、L2 Ryan Doser 到 L3 <code>anatomy</code> 与 L4 <code>rea</code></div>
+      </div>
+      <div class="section-note">本项目研究的三个标杆恰好完整覆盖了 AI Agent Skill 的 L2、L3、L4 三个工程层级</div>
+    </div>
+
+    <div class="svg-frame">
+      <img src="../../assets/03-agent-skill-l1-to-l4-depth-spectrum.svg" alt="L1 to L4 Agent Skill Technical Depth Spectrum">
+    </div>
+
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>评估维度</th>
+          <th>L1 · 普通 Prompt 模板</th>
+          <th>L2 · Ryan Doser Skills Stack</th>
+          <th>L3 · <code>wheresryan22/anatomy</code></th>
+          <th>L4 · <code>morluto/rea</code> (v6.4.0)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>核心形态</strong></td>
+          <td>单文件提示词列表</td>
+          <td><code>CLAUDE.md</code> + 60+ <code>SKILL.md</code> + <code>anti-slop.md</code> + 4 Critics</td>
+          <td><code>SKILL.md</code> + 参数化 3D 几何库 (<code>iso-kit/lathe/tube</code>) + <code>audit.mjs</code></td>
+          <td>TS Agent 编排层 + C++/Rust 原生静态/动态逆向引擎 + <code>EvidenceLedger</code></td>
+        </tr>
+        <tr>
+          <td><strong>防幻觉与验证机制</strong></td>
+          <td>无验证，完全依赖模型自觉</td>
+          <td>独立 Sub-Agent 词表扫描 + 无出处数字强制打回标 <code>[VERIFY]</code></td>
+          <td>确定性 3D 三角形光线投射（871 个物理状态自动抓取穿模与深度冲突）</td>
+          <td>密码学硬约束：每个逆向结论必须绑定 <code>ev_&lt;sha256&gt;</code>，篡改 1 字节即报错</td>
+        </tr>
+        <tr>
+          <td><strong>目标受众</strong></td>
+          <td>大众尝鲜用户</td>
+          <td>创业者、内容团队、增长黑客、代运营机构</td>
+          <td>硬件/机械产品经理、技术布道师、工业视觉工程师</td>
+          <td>安全研究员、逆向工程师、遗留系统迁移与游戏复刻团队</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Section 4: 6-Tier Monetization Funnel & Interactive Calculator -->
+  <section class="section" id="monetization">
+    <div class="section-header">
+      <div>
+        <div class="section-tag">PART 04 · 6-TIER VALUE LADDER &amp; REVENUE SIMULATOR</div>
+        <div class="section-title">4. 价值变现路径：6 阶信任漏斗与“卖铲子撬动包工程”收益测算器</div>
+      </div>
+      <div class="section-note">拖动左侧滑块，实时测算“开源引流 → 低客单 Skill 包 → 高客单代运营”的营收放大效应</div>
+    </div>
+
+    <div class="svg-frame">
+      <img src="../../assets/02-ryan-doser-6tier-monetization-funnel.svg" alt="Ryan Doser 6-Tier Value Monetization Funnel">
+    </div>
+
+    <div class="calc-grid">
+      <div class="slop-panel">
+        <h4 style="margin-bottom:14px;">🎛️ Skill 商业化漏斗参数模拟器</h4>
+
+        <div class="slider-row">
+          <div class="slider-label">
+            <span>Tier 0 · 月度公域精准流量 (YouTube / GitHub / Substack)</span>
+            <span id="valTraffic">25,000 访客/月</span>
+          </div>
+          <input type="range" id="inTraffic" min="5000" max="100000" step="1000" value="25000" oninput="updateCalc()">
+        </div>
+
+        <div class="slider-row">
+          <div class="slider-label">
+            <span>Tier 1 &amp; 2 · 低客单 Skill 包转化率 ($47 / $99 混合均价 $82)</span>
+            <span id="valLowCvr">1.2%</span>
+          </div>
+          <input type="range" id="inLowCvr" min="0.2" max="4.0" step="0.1" value="1.2" oninput="updateCalc()">
+        </div>
+
+        <div class="slider-row">
+          <div class="slider-label">
+            <span>Tier 3 · $199 垂类系统加购率 (占低客单买家比例)</span>
+            <span id="valMidCvr">18%</span>
+          </div>
+          <input type="range" id="inMidCvr" min="5" max="40" step="1" value="18" oninput="updateCalc()">
+        </div>
+
+        <div class="slider-row">
+          <div class="slider-label">
+            <span>Tier 4 · $600/h 1V1 高管咨询转化率 (占买家比例)</span>
+            <span id="valConsultCvr">4.0%</span>
+          </div>
+          <input type="range" id="inConsultCvr" min="1" max="12" step="0.5" value="4.0" oninput="updateCalc()">
+        </div>
+
+        <div class="slider-row">
+          <div class="slider-label">
+            <span>Tier 5 · B2B 代运营签约率 ($5,000/月 Retainer，占买家比例)</span>
+            <span id="valAgencyCvr">2.5%</span>
+          </div>
+          <input type="range" id="inAgencyCvr" min="0.5" max="8.0" step="0.5" value="2.5" oninput="updateCalc()">
+        </div>
+      </div>
+
+      <div class="rev-breakdown">
+        <h4 style="font-size:15px;font-weight:800;margin-bottom:12px;display:flex;justify-content:space-between;">
+          <span>💰 测算月度总营收 (Monthly Run-Rate)</span>
+          <span id="totalMonthlyRev" style="color:var(--teal);font-size:22px;">$0</span>
+        </h4>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">
+          折合年化经常性营收 (ARR Run-Rate)：<strong id="totalAnnualRev" style="color:#fff;font-size:15px;">$0 / 年</strong>
+        </div>
+
+        <div class="rev-tier-row">
+          <div style="width:100%;">
+            <div style="display:flex;justify-content:space-between;">
+              <span>📦 Tier 1–3 数字 Skill 资产包 ($47 / $99 / $199)</span>
+              <strong id="revDigital" style="color:var(--blue)">$0</strong>
+            </div>
+            <div class="rev-bar-wrap"><div id="barDigital" class="rev-bar" style="background:var(--blue);width:20%;"></div></div>
+          </div>
+        </div>
+
+        <div class="rev-tier-row">
+          <div style="width:100%;">
+            <div style="display:flex;justify-content:space-between;">
+              <span>🎯 Tier 4 高管 1V1 架构咨询 ($600/h)</span>
+              <strong id="revConsult" style="color:var(--amber)">$0</strong>
+            </div>
+            <div class="rev-bar-wrap"><div id="barConsult" class="rev-bar" style="background:var(--amber);width:10%;"></div></div>
+          </div>
+        </div>
+
+        <div class="rev-tier-row">
+          <div style="width:100%;">
+            <div style="display:flex;justify-content:space-between;">
+              <span>🏢 Tier 5 B2B 全案代运营 Retainer (高毛利主力)</span>
+              <strong id="revAgency" style="color:var(--rose)">$0</strong>
+            </div>
+            <div class="rev-bar-wrap"><div id="barAgency" class="rev-bar" style="background:var(--rose);width:70%;"></div></div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:12px;background:#131c2e;border-radius:8px;font-size:12px;color:#cbd5e1;">
+          <strong>商业杠杆比率：</strong> 每 <strong>$1</strong> 的 Skill 数字产品销售额，在后端衍生出 <strong id="leverageRatio" style="color:var(--amber);">2.4x</strong> 的高客单咨询与机构代运营收入。
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+const SKILLS_DATA = [
+  { cat: "seo", catLabel: "01 · SEO & GEO", color: "#38bdf8", name: "programmatic-seo-architect", desc: "根据行业词根与数据集自动规划数百个高转化落地页矩阵（如 [工具 A] vs [工具 B]）。", io: "输入: 词根CSV → 输出: 批量页面Schema与模板" },
+  { cat: "seo", catLabel: "01 · SEO & GEO", color: "#38bdf8", name: "geo-ai-citation-optimizer", desc: "针对 ChatGPT Search、Perplexity 与 Google AI Overviews 优化 40-60 词直接回答块与实体密度。", io: "输入: 草稿Markdown → 输出: 高引用率结构化段落" },
+  { cat: "seo", catLabel: "01 · SEO & GEO", color: "#38bdf8", name: "competitor-comparison-post", desc: "构建高转化率 'Alternative to X' 与 'X vs Y' 对比评测长文，客观呈现竞品短板。", io: "输入: 竞品URL → 输出: 对比矩阵表+迁移指南" },
+  { cat: "yt", catLabel: "02 · YouTube 引擎", color: "#fbbf24", name: "youtube-scriptwriter-pro", desc: "内置 0-15 秒反直觉黄金钩子、故事张力弧线与置顶评论私域转化引导脚本。", io: "输入: 选题大纲 → 输出: 分镜口播稿+B-Roll提示" },
+  { cat: "yt", catLabel: "02 · YouTube 引擎", color: "#fbbf24", name: "youtube-title-thumbnail-lab", desc: "基于好奇心缺口与损失厌恶生成 20 组高点击率 (CTR) 标题与缩略图视觉冲突方案。", io: "输入: 视频核心结论 → 输出: 20组标题+画面构图" },
+  { cat: "yt", catLabel: "02 · YouTube 引擎", color: "#fbbf24", name: "video-transcript-to-pillar-post", desc: "将口语化 YouTube 字幕清洗并重构为 2,500 字深度图文教程，自动剔除口水话。", io: "输入: SRT字幕 → 输出: 结构化SEO长文" },
+  { cat: "ads", catLabel: "03 · 广告与转化漏斗", color: "#34d399", name: "meta-ad-creative-matrix", desc: "一次生成 5 种心理学角度（PAS痛点、反常识、前后对比、UGC证言、数据冲击）广告文案。", io: "输入: 产品Offer → 输出: 15组Meta广告变体" },
+  { cat: "ads", catLabel: "03 · 广告与转化漏斗", color: "#34d399", name: "google-rsa-strict-generator", desc: "严格遵守 Google 搜索广告 30 字符标题 / 90 字符描述硬约束的高意图买词文案生成。", io: "输入: 搜索关键词组 → 输出: 15标题+4描述矩阵" },
+  { cat: "ads", catLabel: "03 · 广告与转化漏斗", color: "#34d399", name: "high-converting-landing-page", desc: "遵循首屏价值主张、痛点共鸣、机制拆解、社会认同、风险逆转 (Guarantee) 9 步法。", io: "输入: ICP画像+产品 → 输出: 完整着陆页线框与文案" },
+  { cat: "email", catLabel: "04 · 邮件自动化", color: "#a78bfa", name: "cold-email-4step-sequence", desc: "低于 90 词的极简 B2B 冷启动开发信序列（首信破冰+案例追信+价值补充+礼貌告别）。", io: "输入: 目标客户痛点 → 输出: 4封序列邮件" },
+  { cat: "email", catLabel: "04 · 邮件自动化", color: "#a78bfa", name: "welcome-nurture-5day-funnel", desc: "新订阅者 5 天信任培育序列，从交付免费诱饵平滑过渡到 $47/$99 产品或预约咨询。", io: "输入: 诱饵主题 → 输出: 5封自动化培育信" },
+  { cat: "email", catLabel: "04 · 邮件自动化", color: "#a78bfa", name: "newsletter-authority-builder", desc: "每周权威周刊生成器：1 个实战拆解 + 1 个可复制框架 + 1 个软性产品植入。", io: "输入: 本周速记 → 输出: 高打开率Newsletter" },
+  { cat: "voice", catLabel: "05 · 品牌反 AI 味", color: "#f43f5e", name: "brand-voice-dna-extractor", desc: "分析创始人过往 5 篇真实文章或播客逐字稿，提取句长分布、口头禅与立场锋芒。", io: "输入: 历史语料 → 输出: brand-voice.md配置文件" },
+  { cat: "voice", catLabel: "05 · 品牌反 AI 味", color: "#f43f5e", name: "anti-slop-humanizer", desc: "对照 anti-slop.md 强力清洗 50+ AI 高频套话与伪深沉排比句，恢复真人专家语感。", io: "输入: AI初稿 → 输出: 零AI腔调定稿" },
+  { cat: "voice", catLabel: "05 · 品牌反 AI 味", color: "#f43f5e", name: "icp-pain-point-profiler", desc: "深挖理想客户画像 (ICP) 在深夜焦虑的具体业务瓶颈、表面借口与真实购买触发点。", io: "输入: 行业与客单价 → 输出: 3层心理画像文档" },
+  { cat: "social", catLabel: "06 · 社媒飞轮 (1→12)", color: "#38bdf8", name: "omni-channel-repurposer", desc: "将 1 篇核心长文或视频拆解为 3 条 LinkedIn 帖子、2 条 X Thread、5 条短视频脚本与 2 封邮件。", io: "输入: 母本资产 → 输出: 12件跨平台内容包" },
+  { cat: "social", catLabel: "06 · 社媒飞轮 (1→12)", color: "#38bdf8", name: "linkedin-authority-carousel", desc: "生成高收藏率 LinkedIn 顿悟型短帖与滑动卡片大纲，首行强制制造阅读停顿。", io: "输入: 实战经验点 → 输出: 首行钩子+正文+互动提问" },
+  { cat: "social", catLabel: "06 · 社媒飞轮 (1→12)", color: "#38bdf8", name: "reddit-native-value-post", desc: "专为严格反营销的 Subreddit 社区设计纯干货分享帖，零硬广痕迹自然引流。", io: "输入: 目标板块规则 → 输出: 原生社区复盘帖" },
+  { cat: "lead", catLabel: "07 · 诱饵与微工具", color: "#fbbf24", name: "interactive-roi-calculator", desc: "直接生成单文件自包含 HTML/JS 投资回报率计算器，嵌入网站作为高转化获客磁铁。", io: "输入: 业务测算公式 → 输出: 单文件交互式HTML" },
+  { cat: "lead", catLabel: "07 · 诱饵与微工具", color: "#fbbf24", name: "lead-magnet-blueprint", desc: "设计让访客愿意立刻留下工作邮箱的速查表 (Cheat Sheet)、模板包或诊断工具。", io: "输入: 核心付费产品 → 输出: 前置诱饵资产包" },
+  { cat: "lead", catLabel: "07 · 诱饵与微工具", color: "#fbbf24", name: "assessment-quiz-funnel", desc: "构建 5 步自测诊断问卷漏斗，根据访客得分自动推荐 $99 工具包或 $100K 代运营方案。", io: "输入: 客户分层标准 → 输出: 计分逻辑与结果页文案" },
+  { cat: "intel", catLabel: "08 · 竞品情报", color: "#34d399", name: "competitor-funnel-teardown", desc: "逆向拆解竞品的流量来源、着陆页承诺、定价锚点与后端升单路径。", io: "输入: 竞品域名 → 输出: 漏斗拆解与攻防策略表" },
+  { cat: "intel", catLabel: "08 · 竞品情报", color: "#34d399", name: "g2-reddit-review-miner", desc: "从 G2、Trustpilot 与 Reddit 差评中提取用户原话抱怨，直接转化为广告痛点钩子。", io: "输入: 竞品评论文本 → 输出: 痛点频次表+原话文案库" },
+  { cat: "intel", catLabel: "08 · 竞品情报", color: "#34d399", name: "hormozi-grand-slam-offer", desc: "运用价值方程（梦想结果×实现概率 ÷ 时间延迟×付出努力）重构高溢价产品包装。", io: "输入: 现有服务内容 → 输出: 高客单Offer堆栈方案" }
+];
+
+let currentCat = "all";
+function renderSkills() {
+  const q = (document.getElementById("skillSearch").value || "").toLowerCase();
+  const grid = document.getElementById("skillsGrid");
+  const filtered = SKILLS_DATA.filter(s => {
+    const matchCat = currentCat === "all" || s.cat === currentCat;
+    const matchQ = !q || s.name.toLowerCase().includes(q) || s.desc.toLowerCase().includes(q) || s.catLabel.toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+  grid.innerHTML = filtered.map(s => `
+    <div class="skill-card">
+      <div>
+        <span class="skill-cat-badge" style="background:${s.color}22;color:${s.color};border:1px solid ${s.color}55;">${s.catLabel}</span>
+        <div class="skill-name">${s.name}</div>
+        <div class="skill-desc">${s.desc}</div>
+      </div>
+      <div class="skill-meta">
+        <span>契约: ${s.io}</span>
+      </div>
+    </div>
+  `).join("");
+}
+
+document.querySelectorAll("#skillFilters .filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("#skillFilters .filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    currentCat = btn.getAttribute("data-cat");
+    renderSkills();
+  });
+});
+document.getElementById("skillSearch").addEventListener("input", renderSkills);
+
+const PRESETS = [
+  {
+    raw: "In today's fast-paced digital landscape, AI agents are a true game-changer. It's not just about automation — it's about unlocking a vibrant tapestry of seamless productivity. Let's delve into how our pivotal platform serves as a testament to innovation and empowers your team to navigate complex workflows.",
+    clean: "Most B2B content teams waste 14 hours a week fixing generic AI drafts. Our 4-Agent Claude Code pipeline cuts editing time to 25 minutes by running four separate checks: banned-word removal, source verification, search entity formatting, and layout validation."
+  },
+  {
+    raw: "Here's the uncomfortable truth: your SEO strategy is broken. Moreover, in an ever-evolving landscape, traditional blogs no longer work. Our revolutionary AI SEO System is not about writing more words — it's about delving into programmatic growth to unleash skyrocketing traffic.",
+    clean: "We audited 42 SaaS blogs last quarter: 78% of their informational posts get zero clicks because Google AI Overviews answer the query directly. We replaced top-of-funnel fluff with 35 bottom-of-funnel competitor comparison pages, adding $18,400 in pipeline within 60 days."
+  },
+  {
+    raw: "As we delve into the realm of modern marketing, one thing becomes crystal clear. A robust content engine is the cornerstone of success. Furthermore, by leveraging cutting-edge Claude Code workflows, you can foster authentic connections and elevate your brand to new heights.",
+    clean: "One 15-minute YouTube screen recording can fund your entire weekly distribution. Using our content-repurposer skill, we turn a single video transcript into 1 SEO tutorial, 3 LinkedIn posts, 2 X threads, and 1 newsletter issue in under 18 minutes."
+  }
+];
+
+const BANNED_WORDS = [
+  "delve", "delving", "tapestry", "vibrant", "game-changer", "testament", "unleash", "unlocking",
+  "navigate", "landscape", "pivotal", "seamless", "moreover", "furthermore", "ever-evolving",
+  "revolutionary", "skyrocketing", "realm", "cornerstone", "leveraging", "cutting-edge", "foster", "elevate"
+];
+const BANNED_TROPES = [
+  "in today's fast-paced", "it's not just about", "it's not about", "it's about",
+  "here's the uncomfortable truth", "crystal clear"
+];
+
+let activePresetIndex = 0;
+function loadPreset(idx, btnEl) {
+  activePresetIndex = idx;
+  document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("active"));
+  if (btnEl) btnEl.classList.add("active");
+  document.getElementById("slopInput").value = PRESETS[idx].raw;
+  analyzeSlop();
+}
+
+function analyzeSlop() {
+  const text = document.getElementById("slopInput").value;
+  let html = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  let wordHits = 0;
+  let tropeHits = 0;
+
+  BANNED_TROPES.forEach(t => {
+    const reg = new RegExp(`(${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+    const matches = html.match(reg);
+    if (matches) tropeHits += matches.length;
+    html = html.replace(reg, `<span class="trope-hit" title="禁用句式套路">$1</span>`);
+  });
+
+  BANNED_WORDS.forEach(w => {
+    const reg = new RegExp(`\\b(${w.replace('-', '\\-')})\\b`, "gi");
+    const matches = html.match(reg);
+    if (matches) wordHits += matches.length;
+    html = html.replace(reg, `<span class="slop-hit" title="anti-slop.md 禁用词">$1</span>`);
+  });
+
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+  const words = text.trim().split(/\s+/).filter(Boolean);
+  const avgLen = sentences.length ? (words.length / sentences.length).toFixed(1) : "0";
+
+  document.getElementById("slopHighlighted").innerHTML = html || "<span style='color:#64748b'>请输入或选择上方示例文本...</span>";
+  document.getElementById("statWords").textContent = wordHits;
+  document.getElementById("statTropes").textContent = tropeHits;
+  document.getElementById("statAvgLen").textContent = avgLen;
+
+  const badge = document.getElementById("slopScoreBadge");
+  const totalHits = wordHits + tropeHits;
+  if (totalHits >= 5) {
+    badge.style.background = "#f43f5e";
+    badge.textContent = `Slop 警报：拦截 ${totalHits} 处违禁项 (打回重写)`;
+  } else if (totalHits > 0) {
+    badge.style.background = "#f59e0b";
+    badge.textContent = `Slop 警告：发现 ${totalHits} 处痕迹`;
+  } else {
+    badge.style.background = "#10b981";
+    badge.textContent = "通过 anti-slop 门控";
+  }
+
+  let cleaned = PRESETS[activePresetIndex].clean;
+  if (text.trim() !== PRESETS[activePresetIndex].raw.trim()) {
+    cleaned = text;
+    BANNED_TROPES.forEach(t => {
+      cleaned = cleaned.replace(new RegExp(t, "gi"), "");
+    });
+    BANNED_WORDS.forEach(w => {
+      cleaned = cleaned.replace(new RegExp(`\\b${w}\\b`, "gi"), "[具体数据/动词]");
+    });
+  }
+  document.getElementById("cleanOutput").textContent = cleaned;
+}
+
+function updateCalc() {
+  const traffic = parseFloat(document.getElementById("inTraffic").value);
+  const lowCvr = parseFloat(document.getElementById("inLowCvr").value) / 100;
+  const midCvr = parseFloat(document.getElementById("inMidCvr").value) / 100;
+  const consultCvr = parseFloat(document.getElementById("inConsultCvr").value) / 100;
+  const agencyCvr = parseFloat(document.getElementById("inAgencyCvr").value) / 100;
+
+  document.getElementById("valTraffic").textContent = traffic.toLocaleString() + " 访客/月";
+  document.getElementById("valLowCvr").textContent = (lowCvr * 100).toFixed(1) + "%";
+  document.getElementById("valMidCvr").textContent = Math.round(midCvr * 100) + "%";
+  document.getElementById("valConsultCvr").textContent = (consultCvr * 100).toFixed(1) + "%";
+  document.getElementById("valAgencyCvr").textContent = (agencyCvr * 100).toFixed(1) + "%";
+
+  const buyers = traffic * lowCvr;
+  const revLow = buyers * 82;
+  const revMid = buyers * midCvr * 199;
+  const revDigital = Math.round(revLow + revMid);
+  const revConsult = Math.round(buyers * consultCvr * 600);
+  const revAgency = Math.round(buyers * agencyCvr * 5000);
+  const total = revDigital + revConsult + revAgency;
+
+  document.getElementById("revDigital").textContent = "$" + revDigital.toLocaleString() + " (" + Math.round(revDigital / total * 100) + "%)";
+  document.getElementById("revConsult").textContent = "$" + revConsult.toLocaleString() + " (" + Math.round(revConsult / total * 100) + "%)";
+  document.getElementById("revAgency").textContent = "$" + revAgency.toLocaleString() + " (" + Math.round(revAgency / total * 100) + "%)";
+  document.getElementById("totalMonthlyRev").textContent = "$" + total.toLocaleString() + " / 月";
+  document.getElementById("totalAnnualRev").textContent = "$" + (total * 12).toLocaleString() + " / 年";
+
+  document.getElementById("barDigital").style.width = Math.max(5, Math.round(revDigital / total * 100)) + "%";
+  document.getElementById("barConsult").style.width = Math.max(5, Math.round(revConsult / total * 100)) + "%";
+  document.getElementById("barAgency").style.width = Math.max(5, Math.round(revAgency / total * 100)) + "%";
+
+  const ratio = revDigital > 0 ? ((revConsult + revAgency) / revDigital).toFixed(1) : "0.0";
+  document.getElementById("leverageRatio").textContent = ratio + "x";
+}
+
+renderSkills();
+loadPreset(0);
+updateCalc();
+</script>
+</body>
+</html>

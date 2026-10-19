@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="accentGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="accentGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="accentPurple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgGrad)" rx="16"/>
+  <rect x="16" y="16" width="1168" height="728" fill="none" stroke="#1e293b" stroke-width="1.5" rx="12"/>
+
+  <!-- Header -->
+  <text x="40" y="54" fill="#f8fafc" font-size="22" font-weight="800">Ryan Doser · Claude Code Skills 全景能力矩阵与 4-Agent 质量门控架构</text>
+  <text x="40" y="78" fill="#94a3b8" font-size="13">8 大垂直业务域 · 60+ 生产级 SOP Skills · 共享规则库 (anti-slop.md) · 4 个独立复核子智能体 (Sub-Agent Critics)</text>
+  <rect x="980" y="34" width="178" height="32" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="1069" y="55" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">L2 Declarative SOP + Gate</text>
+
+  <!-- Layer 1: 8 Skill Categories (2x4 Grid) -->
+  <text x="40" y="114" fill="#38bdf8" font-size="13" font-weight="700" letter-spacing="1">LAYER 1 · 8 大垂直领域生产级 SKILLS 矩阵 (60+ SKILLS)</text>
+
+  <!-- Card 1 -->
+  <rect x="40" y="128" width="268" height="130" rx="10" fill="#131c2e" stroke="#334155" stroke-width="1.2"/>
+  <rect x="40" y="128" width="268" height="5" rx="2" fill="url(#accentBlue)"/>
+  <text x="56" y="154" fill="#38bdf8" font-size="13" font-weight="800">01 · SEO &amp; GEO (生成式引擎优化)</text>
+  <text x="272" y="154" fill="#64748b" font-size="11" font-weight="700">9 Skills</text>
+  <text x="56" y="176" fill="#e2e8f0" font-size="11.5">• programmatic-seo / comparison-post</text>
+  <text x="56" y="195" fill="#e2e8f0" font-size="11.5">• schema-markup / internal-linking</text>
+  <text x="56" y="214" fill="#e2e8f0" font-size="11.5">• content-refresh / topical-map</text>
+  <text x="56" y="240" fill="#94a3b8" font-size="10.5">目标：抢占 Google 首页与 ChatGPT/Perplexity 引用</text>
+
+  <!-- Card 2 -->
+  <rect x="326" y="128" width="268" height="130" rx="10" fill="#131c2e" stroke="#334155" stroke-width="1.2"/>
+  <rect x="326" y="128" width="268" height="5" rx="2" fill="url(#accentGold)"/>
+  <text x="342" y="154" fill="#fbbf24" font-size="13" font-weight="800">02 · YouTube 与视频获客引擎</text>
+  <text x="558" y="154" fill="#64748b" font-size="11" font-weight="700">8 Skills</text>
+  <text x="342" y="176" fill="#e2e8f0" font-size="11.5">• youtube-scriptwriter (0-15s 黄金钩子)</text>
+  <text x="342" y="195" fill="#e2e8f0" font-size="11.5">• youtube-title-thumbnail (CTR 心理模型)</text>
+  <text x="342" y="214" fill="#e2e8f0" font-size="11.5">• video-to-blog / shorts-clipper</text>
+  <text x="342" y="240" fill="#94a3b8" font-size="10.5">目标：驱动高留存完播率与置顶评论私域转化</text>
+
+  <!-- Card 3 -->
+  <rect x="612" y="128" width="268" height="130" rx="10" fill="#131c2e" stroke="#334155" stroke-width="1.2"/>
+  <rect x="612" y="128" width="268" height="5" rx="2" fill="url(#accentGreen)"/>
+  <text x="628" y="154" fill="#34d399" font-size="13" font-weight="800">03 · 付费广告与着陆页转化漏斗</text>
+  <text x="844" y="154" fill="#64748b" font-size="11" font-weight="700">8 Skills</text>
+  <text x="628" y="176" fill="#e2e8f0" font-size="11.5">• meta-ad-creatives (PAS / Before-After)</text>
+  <text x="628" y="195" fill="#e2e8f0" font-size="11.5">• google-rsa-generator (字符硬约束)</text>
+  <text x="628" y="214" fill="#e2e8f0" font-size="11.5">• landing-page-copy / vsl-script</text>
+  <text x="628" y="240" fill="#94a3b8" font-size="10.5">目标：直接提升 ROAS 与单页转化率 (CVR)</text>
+
+  <!-- Card 4 -->
+  <rect x="898" y="128" width="262" height="130" rx="10" fill="#131c2e" stroke="#334155" stroke-width="1.2"/>
+  <rect x="898" y="128" width="262" height="5" rx="2" fill="url(#accentPurple)"/>
+  <text x="914" y="154" fill="#a78bfa" font-size="13" font-weight="800">04 · 邮件生命周期与自动化</text>
+  <text x="1124" y="154" fill="#64748b" font-size="11" font-weight="700">7 Skills</text>
+  <text x="914" y="176" fill="#e2e8f0" font-size="11.5">• cold-email-sequence (4 步冷启动)</text>
+  <text x="914" y="195" fill="#e2e8f0" font-size="11.5">• welcome-nurture-sequence (5 封培育)</text>
+  <text x="914" y="214" fill="#e2e8f0" font-size="11.5">• newsletter-edition / cart-recovery</text>
+  <text x="914" y="240" fill="#94a3b8" font-size="10.5">目标：把免费订阅者自动培育为高客单价买家</text>
+
+  <!-- Card 5 -->
+  <rect x="40" y="274" width="268" height="130" rx="10" fill="#131c2e" stroke="#334155" stroke-width="1.2"/>
+  <rect x="40" y="274" width="268" height="5" rx="2" fill="url(#accentPurple)"/>
+  <text x="56" y="300" fill="#a78bfa" font-size="13" font-weight="800">05 · 品牌语调校准与反 AI 味</text>
+  <text x="272" y="300" fill="#64748b" font-size="11" font-weight="700">7 Skills</text>
+  <text x="56" y="322" fill="#e2e8f0" font-size="11.5">• brand-voice-extractor (语料特征提取)</text>
+  <text x="56" y="341" fill="#e2e8f0" font-size="11.5">• anti-slop-rewriter (清洗 50+ 高频黑话)</text>
+  <text x="56" y="360" fill="#e2e8f0" font-size="11.5">• icp-persona-builder / founder-story</text>
+  <text x="56" y="386" fill="#94a3b8" font-size="10.5">目标：消除 AI 腔调，复刻创始人真实写作指纹</text>
+
+  <!-- Card 6 -->
+  <rect x="326" y="274" width="268" height="130" rx="10" fill="#131c2e" stroke="#334155" stroke-width="1.2"/>
+  <rect x="326" y="274" width="268" height="5" rx="2" fill="url(#accentBlue)"/>
+  <text x="342" y="300" fill="#38bdf8" font-size="13" font-weight="800">06 · 社媒全矩阵飞轮 (1 → 12 衍生)</text>
+  <text x="558" y="300" fill="#64748b" font-size="11" font-weight="700">8 Skills</text>
+  <text x="342" y="322" fill="#e2e8f0" font-size="11.5">• content-repurposer (单视频拆 12 资产)</text>
+  <text x="342" y="341" fill="#e2e8f0" font-size="11.5">• linkedin-post / x-thread-builder</text>
+  <text x="342" y="360" fill="#e2e8f0" font-size="11.5">• reddit-value-post (防封号原生长帖)</text>
+  <text x="342" y="386" fill="#94a3b8" font-size="10.5">目标：单人团队实现全平台日更分发</text>
+
+  <!-- Card 7 -->
+  <rect x="612" y="274" width="268" height="130" rx="10" fill="#131c2e" stroke="#334155" stroke-width="1.2"/>
+  <rect x="612" y="274" width="268" height="5" rx="2" fill="url(#accentGold)"/>
+  <text x="628" y="300" fill="#fbbf24" font-size="13" font-weight="800">07 · 诱饵工程与微工具生成</text>
+  <text x="844" y="300" fill="#64748b" font-size="11" font-weight="700">7 Skills</text>
+  <text x="628" y="322" fill="#e2e8f0" font-size="11.5">• lead-magnet-architect (高转化诱饵)</text>
+  <text x="628" y="341" fill="#e2e8f0" font-size="11.5">• roi-calculator-builder (单文件 HTML)</text>
+  <text x="628" y="360" fill="#e2e8f0" font-size="11.5">• checklist-generator / quiz-funnel</text>
+  <text x="628" y="386" fill="#94a3b8" font-size="10.5">目标：用交互式小工具替代廉价 PDF 获取高意向线索</text>
+
+  <!-- Card 8 -->
+  <rect x="898" y="274" width="262" height="130" rx="10" fill="#131c2e" stroke="#334155" stroke-width="1.2"/>
+  <rect x="898" y="274" width="262" height="5" rx="2" fill="url(#accentGreen)"/>
+  <text x="914" y="300" fill="#34d399" font-size="13" font-weight="800">08 · 竞品情报与市场研究</text>
+  <text x="1124" y="300" fill="#64748b" font-size="11" font-weight="700">7 Skills</text>
+  <text x="914" y="322" fill="#e2e8f0" font-size="11.5">• competitor-teardown (定位弱点拆解)</text>
+  <text x="914" y="341" fill="#e2e8f0" font-size="11.5">• review-mining (G2/Reddit 差评痛点挖掘)</text>
+  <text x="914" y="360" fill="#e2e8f0" font-size="11.5">• offer-hormozi-architect (价值方程设计)</text>
+  <text x="914" y="386" fill="#94a3b8" font-size="10.5">目标：提取客户原话痛点，打造不可抗拒 Offer</text>
+
+  <!-- Layer 2: Shared Rules Engine -->
+  <rect x="40" y="424" width="1120" height="84" rx="10" fill="#172033" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="62" y="452" fill="#fbbf24" font-size="14" font-weight="800">LAYER 2 · 共享底层规则宪法 (`rules/anti-slop.md` + `CLAUDE.md` 品牌上下文总线)</text>
+  <text x="62" y="476" fill="#e2e8f0" font-size="12">• 禁用 50+ AI 高频套话词表：delve, tapestry, vibrant, game-changer, testament, unleash, navigate, landscape, pivotal, seamless...</text>
+  <text x="62" y="495" fill="#e2e8f0" font-size="12">• 禁用句式结构：禁用 "It's not X — it's Y" 伪二元对立、禁用 "Here's the uncomfortable truth" 制造伪悬念、禁用段尾空洞总结、强制主动语态与长短句交错</text>
+
+  <!-- Layer 3: 4-Agent Quality Gate Pipeline -->
+  <text x="40" y="542" fill="#34d399" font-size="13" font-weight="700" letter-spacing="1">LAYER 3 · 4-AGENT QUALITY GATE (多智能体独立串行门控流水线 —— 杜绝单次 Prompt 自吹自擂)</text>
+
+  <!-- Gate 1 -->
+  <rect x="40" y="558" width="250" height="150" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="58" y="586" fill="#38bdf8" font-size="13" font-weight="800">Gate 1 · Content Reviewer</text>
+  <text x="58" y="608" fill="#94a3b8" font-size="11">独立上下文 Critic Agent</text>
+  <text x="58" y="632" fill="#e2e8f0" font-size="11.5">• 逐段扫描 `anti-slop.md` 违禁词</text>
+  <text x="58" y="652" fill="#e2e8f0" font-size="11.5">• 检测句长方差 (Burstiness)</text>
+  <text x="58" y="672" fill="#e2e8f0" font-size="11.5">• 校验开头前 2 句是否直击痛点</text>
+  <text x="58" y="694" fill="#34d399" font-size="11" font-weight="700">不达标 → 退回重写</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 294 633 L 322 633" stroke="#64748b" stroke-width="2" fill="none"/>
+  <polygon points="322,628 330,633 322,638" fill="#64748b"/>
+
+  <!-- Gate 2 -->
+  <rect x="334" y="558" width="250" height="150" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="352" y="586" fill="#fbbf24" font-size="13" font-weight="800">Gate 2 · Fact Checker</text>
+  <text x="352" y="608" fill="#94a3b8" font-size="11">零信任事实与幻觉核查</text>
+  <text x="352" y="632" fill="#e2e8f0" font-size="11.5">• 提取正文全部百分比、价格与年份</text>
+  <text x="352" y="652" fill="#e2e8f0" font-size="11.5">• 拦截无出处的 "Studies show..."</text>
+  <text x="352" y="672" fill="#e2e8f0" font-size="11.5">• 核对竞品特性与真实定价页面</text>
+  <text x="352" y="694" fill="#fbbf24" font-size="11" font-weight="700">无来源断言 → 强制标注 [VERIFY]</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 588 633 L 616 633" stroke="#64748b" stroke-width="2" fill="none"/>
+  <polygon points="616,628 624,633 616,638" fill="#64748b"/>
+
+  <!-- Gate 3 -->
+  <rect x="628" y="558" width="250" height="150" rx="10" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="646" y="586" fill="#a78bfa" font-size="13" font-weight="800">Gate 3 · SEO &amp; GEO Optimizer</text>
+  <text x="646" y="608" fill="#94a3b8" font-size="11">搜索与 AI 引用结构增强</text>
+  <text x="646" y="632" fill="#e2e8f0" font-size="11.5">• 校验 H1/H2/H3 语义实体覆盖度</text>
+  <text x="646" y="652" fill="#e2e8f0" font-size="11.5">• 注入 40-60 词 Direct Answer 块</text>
+  <text x="646" y="672" fill="#e2e8f0" font-size="11.5">• 自动生成 FAQ JSON-LD Schema</text>
+  <text x="646" y="694" fill="#a78bfa" font-size="11" font-weight="700">提升 Perplexity / AI Overview 引用率</text>
+
+  <!-- Arrow 3 -->
+  <path d="M 882 633 L 910 633" stroke="#64748b" stroke-width="2" fill="none"/>
+  <polygon points="910,628 918,633 910,638" fill="#64748b"/>
+
+  <!-- Gate 4 -->
+  <rect x="922" y="558" width="238" height="150" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="940" y="586" fill="#34d399" font-size="13" font-weight="800">Gate 4 · Format Enforcer</text>
+  <text x="940" y="608" fill="#94a3b8" font-size="11">多渠道排版与交付规范</text>
+  <text x="940" y="632" fill="#e2e8f0" font-size="11.5">• 消除超过 4 行的密集文字墙</text>
+  <text x="940" y="652" fill="#e2e8f0" font-size="11.5">• 校验对比表格、Callout 与 CTA</text>
+  <text x="940" y="672" fill="#e2e8f0" font-size="11.5">• 输出可直接发布的 Markdown/HTML</text>
+  <text x="940" y="694" fill="#34d399" font-size="11" font-weight="700">✓ Publish-Ready 生产交付</text>
+</svg>

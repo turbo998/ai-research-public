@@ -7,6 +7,17 @@
 > - AI SEO 系统官网：[`seo.ryandoser.com` — The AI SEO System ($199)](https://seo.ryandoser.com/)
 > - V2 架构说明与案例复盘：[`ryandoser.com/claude-code-skills-stack-v2-update/`](https://ryandoser.com/claude-code-skills-stack-v2-update/)、[`ryandoser.com/make-money-with-claude/`](https://ryandoser.com/make-money-with-claude/)、[`ryandoser.com/claude-code-ai-marketing-agents/`](https://ryandoser.com/claude-code-ai-marketing-agents/)
 > - 开源免费引流 Skill 原始源码：[`skills.ryandoser.com/anti-slop.md`](https://skills.ryandoser.com/anti-slop.md)
+- 🌐 **在线交互式可视化报告（H5 页面，含 60+ Skill 检索器、`anti-slop.md` 实时检测沙盒与漏斗收益模拟器）**：  
+  👉 **[立即打开 Ryan Doser Skill 可视化交互报告 (GitHub Pages)](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/ryan-doser-skills-report/)**
+
+---
+
+## 0. 可视化核心图谱导览（Visual Atlas）
+
+本报告配套 **3 张自包含高清矢量架构图（SVG）** 与 **1 个在线交互式 H5 仪表盘**：
+1. [图 1：Ryan Doser 8 大垂直领域 Skills 矩阵与 4-Agent 质量门控架构图](../assets/01-ryan-doser-8category-skill-architecture.svg)
+2. [图 2：Ryan Doser “卖铲子撬动包工程” 6 阶价值变现漏斗与营收结构图](../assets/02-ryan-doser-6tier-monetization-funnel.svg)
+3. [图 3：AI Agent Skill 工程化演进四级光谱 (L1 提示词 → L2 Ryan Doser → L3 `anatomy` → L4 `rea`)](../assets/03-agent-skill-l1-to-l4-depth-spectrum.svg)
 
 ---
 
@@ -19,6 +30,8 @@
 ---
 
 ## 二、 Skill 覆盖范围全景（8 大模块 · 60+ 技能矩阵）
+
+![Ryan Doser 8 大垂直领域 Skills 矩阵与 4-Agent 质量门控架构图](../assets/01-ryan-doser-8category-skill-architecture.svg)
 
 在 2026 年 9 月发布的 **Claude Code Skills Stack V2** 中，Ryan Doser 将技能库扩展至 **60+ 个独立 Skill 文件**，全部搭载于统一的 `AGENTS.md` / `CLAUDE.md` 品牌中枢之上：
 
@@ -84,6 +97,34 @@
 
 ### 3.3 技术深度横向对比：`Ryan Doser` vs `wheresryan22/anatomy` vs `morluto/rea`
 
+![AI Agent Skill 工程化演进四级光谱](../assets/03-agent-skill-l1-to-l4-depth-spectrum.svg)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as 创作者 / 营销负责人
+    participant Bus as CLAUDE.md 品牌总线<br/>(company / customer / voice.md)
+    participant Gen as 垂类生成 Skill<br/>(60+ 专项 Markdown SOP)
+    participant G1 as Gate 1: Anti-Slop Critic<br/>(rules/anti-slop.md)
+    participant G2 as Gate 2: Accuracy & Fact Critic
+    participant G3 as Gate 3: Brand & GEO Critic
+    participant G4 as Gate 4: Manager Ship/No-Ship
+
+    User->>Gen: 输入选题 / 视频字幕 / 竞品 URL
+    Bus-->>Gen: 自动注入 ICP 痛点、语调与产品锚点
+    Gen->>G1: 产出结构化初稿 (Draft v1)
+    G1->>G1: 扫描 50+ 禁用黑话与伪二元对立句式
+    alt 命中 Slop 违禁词或句长过于死板
+        G1-->>Gen: 打回重写 (附违禁行号与替代表达)
+    else 通过反 AI 味检查
+        G1->>G2: 进入事实与数据核验
+    end
+    G2->>G2: 校验统计数字、价格与内链真实性
+    G2->>G3: 注入 40-60 词 AI 引用块与 JSON-LD
+    G3->>G4: 汇总三关评分 (阈值 >= 80/100)
+    G4-->>User: 输出 Publish-Ready 生产级资产
+```
+
 | 维度 | Ryan Doser (`Skills Stack V2`) | `wheresryan22/anatomy` (机械解剖学) | `morluto/rea` (逆向工程 Agent) |
 |---|---|---|---|
 | **技术深度层级** | **L2 · 声明式领域 SOP + 多 Agent 门控** | **L4 · 确定性几何引擎 + 空间光线投射验证** | **L4 · 多语言二进制/运行时桥接 + 密码学证据账本** |
@@ -95,6 +136,8 @@
 ---
 
 ## 四、 价值变现路径拆解（6 阶商业化漏斗）
+
+![Ryan Doser 6 阶价值变现漏斗与营收结构图](../assets/02-ryan-doser-6tier-monetization-funnel.svg)
 
 Ryan Doser 并非单纯依靠“卖 Prompt/Skill 小册子”生存，而是将 **Claude Code Skills 同时作为「生产力内部引擎」与「对外标准化诱饵产品」**，跑通了完整的 **6 阶商业变现飞轮**：
 

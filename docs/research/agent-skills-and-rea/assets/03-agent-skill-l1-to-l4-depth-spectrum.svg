@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="640" fill="url(#bg3)" rx="16"/>
+  <rect x="16" y="16" width="1168" height="608" fill="none" stroke="#1e293b" stroke-width="1.5" rx="12"/>
+
+  <!-- Header -->
+  <text x="40" y="54" fill="#f8fafc" font-size="22" font-weight="800">AI Agent Skill 工程化演进四级光谱 (L1 → L4 Technical Depth Spectrum)</text>
+  <text x="40" y="78" fill="#94a3b8" font-size="13">对比普通 Prompt 模板、Ryan Doser 声明式 SOP 门控、wheresryan22/anatomy 参数化物理几何套件与 morluto/rea 确定性逆向引擎</text>
+
+  <!-- Column Headers -->
+  <!-- L1 -->
+  <rect x="40" y="108" width="265" height="480" rx="12" fill="#111827" stroke="#334155" stroke-width="1.2"/>
+  <rect x="40" y="108" width="265" height="6" rx="3" fill="#64748b"/>
+  <text x="58" y="140" fill="#94a3b8" font-size="12" font-weight="800">LEVEL 1 · 基础提示词层</text>
+  <text x="58" y="164" fill="#f8fafc" font-size="16" font-weight="800">单次 Prompt 模板包</text>
+  <text x="58" y="186" fill="#64748b" font-size="11.5">Notion / PDF Prompt 列表</text>
+
+  <line x1="58" y1="202" x2="285" y2="202" stroke="#1e293b"/>
+  <text x="58" y="226" fill="#38bdf8" font-size="11.5" font-weight="700">代码与工具占比</text>
+  <text x="58" y="246" fill="#cbd5e1" font-size="12">100% 自然语言文本 (0% 代码)</text>
+
+  <text x="58" y="282" fill="#38bdf8" font-size="11.5" font-weight="700">质量保障与验证机制</text>
+  <text x="58" y="302" fill="#cbd5e1" font-size="12">无独立验证；单次生成靠运气，</text>
+  <text x="58" y="320" fill="#cbd5e1" font-size="12">极易产出充满 AI 套话的泛化水文</text>
+
+  <text x="58" y="356" fill="#38bdf8" font-size="11.5" font-weight="700">防幻觉能力</text>
+  <text x="58" y="376" fill="#f43f5e" font-size="12" font-weight="700">★☆☆☆☆ (极弱，模型自行编造)</text>
+
+  <text x="58" y="412" fill="#38bdf8" font-size="11.5" font-weight="700">护城河与可复制性</text>
+  <text x="58" y="432" fill="#cbd5e1" font-size="12">极易被截图盗版，生命周期短</text>
+
+  <rect x="58" y="520" width="229" height="48" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="172" y="541" fill="#94a3b8" font-size="11" text-anchor="middle">商业溢价上限</text>
+  <text x="172" y="559" fill="#e2e8f0" font-size="13" font-weight="800" text-anchor="middle">$9 – $29 (一次性模板)</text>
+
+  <!-- L2: Ryan Doser -->
+  <rect x="325" y="108" width="265" height="480" rx="12" fill="#131c2e" stroke="#f59e0b" stroke-width="1.8"/>
+  <rect x="325" y="108" width="265" height="6" rx="3" fill="#f59e0b"/>
+  <text x="343" y="140" fill="#fbbf24" font-size="12" font-weight="800">LEVEL 2 · 声明式 SOP + 多智能体门控</text>
+  <text x="343" y="164" fill="#f8fafc" font-size="16" font-weight="800">Ryan Doser Skills Stack</text>
+  <text x="343" y="186" fill="#fbbf24" font-size="11.5">60+ Skills + 4 Critics + anti-slop.md</text>
+
+  <line x1="343" y1="202" x2="570" y2="202" stroke="#1e293b"/>
+  <text x="343" y="226" fill="#38bdf8" font-size="11.5" font-weight="700">代码与工具占比</text>
+  <text x="343" y="246" fill="#cbd5e1" font-size="12">95% 结构化 SOP + 5% HTML 生成</text>
+
+  <text x="343" y="282" fill="#38bdf8" font-size="11.5" font-weight="700">质量保障与验证机制</text>
+  <text x="343" y="302" fill="#cbd5e1" font-size="12">生成与审查物理隔离：4 个独立</text>
+  <text x="343" y="320" fill="#cbd5e1" font-size="12">Sub-Agent 逐关过滤黑话与幻觉</text>
+
+  <text x="343" y="356" fill="#38bdf8" font-size="11.5" font-weight="700">防幻觉能力</text>
+  <text x="343" y="376" fill="#fbbf24" font-size="12" font-weight="700">★★★☆☆ (Fact-Checker 拦截无源数据)</text>
+
+  <text x="343" y="412" fill="#38bdf8" font-size="11.5" font-weight="700">核心优势</text>
+  <text x="343" y="432" fill="#cbd5e1" font-size="12">零代码依赖、非程序员即装即用、</text>
+  <text x="343" y="450" fill="#cbd5e1" font-size="12">直接绑定流量与现金流转化指标</text>
+
+  <rect x="343" y="520" width="229" height="48" rx="8" fill="#0f172a" stroke="#f59e0b"/>
+  <text x="457" y="541" fill="#fbbf24" font-size="11" text-anchor="middle">商业溢价验证</text>
+  <text x="457" y="559" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">$47–$199 产品 → $100K+ 代运营</text>
+
+  <!-- L3: wheresryan22/anatomy -->
+  <rect x="610" y="108" width="265" height="480" rx="12" fill="#131c2e" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="610" y="108" width="265" height="6" rx="3" fill="#38bdf8"/>
+  <text x="628" y="140" fill="#38bdf8" font-size="12" font-weight="800">LEVEL 3 · 声明式规范 + 确定性引擎</text>
+  <text x="628" y="164" fill="#f8fafc" font-size="16" font-weight="800">wheresryan22 / anatomy</text>
+  <text x="628" y="186" fill="#38bdf8" font-size="11.5">SKILL.md + iso-kit / lathe / audit.mjs</text>
+
+  <line x1="628" y1="202" x2="855" y2="202" stroke="#1e293b"/>
+  <text x="628" y="226" fill="#38bdf8" font-size="11.5" font-weight="700">代码与工具占比</text>
+  <text x="628" y="246" fill="#cbd5e1" font-size="12">40% 规范文档 + 60% 3D 几何算法</text>
+
+  <text x="628" y="282" fill="#38bdf8" font-size="11.5" font-weight="700">质量保障与验证机制</text>
+  <text x="628" y="302" fill="#cbd5e1" font-size="12">`kit/audit.mjs` 执行 3D 三角形光线</text>
+  <text x="628" y="320" fill="#cbd5e1" font-size="12">投射，在 871 个物理状态抓穿模</text>
+
+  <text x="628" y="356" fill="#38bdf8" font-size="11.5" font-weight="700">防幻觉能力</text>
+  <text x="628" y="376" fill="#34d399" font-size="12" font-weight="700">★★★★☆ (数学几何与间隙硬校验)</text>
+
+  <text x="628" y="412" fill="#38bdf8" font-size="11.5" font-weight="700">核心优势</text>
+  <text x="628" y="432" fill="#cbd5e1" font-size="12">解决 LLM 空间坐标直觉缺陷，</text>
+  <text x="628" y="450" fill="#cbd5e1" font-size="12">单文件离线输出工业级交互蓝图</text>
+
+  <rect x="628" y="520" width="229" height="48" rx="8" fill="#0f172a" stroke="#38bdf8"/>
+  <text x="742" y="541" fill="#38bdf8" font-size="11" text-anchor="middle">典型应用场景</text>
+  <text x="742" y="559" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">高精硬件演示 / 售前交互数字孪生</text>
+
+  <!-- L4: morluto/rea -->
+  <rect x="895" y="108" width="265" height="480" rx="12" fill="#131c2e" stroke="#34d399" stroke-width="1.8"/>
+  <rect x="895" y="108" width="265" height="6" rx="3" fill="#34d399"/>
+  <text x="913" y="140" fill="#34d399" font-size="12" font-weight="800">LEVEL 4 · 密码学证据链与双层运行时</text>
+  <text x="913" y="164" fill="#f8fafc" font-size="16" font-weight="800">morluto / rea (v6.4.0)</text>
+  <text x="913" y="186" fill="#34d399" font-size="11.5">TS Host + Native C++/Rust + Evidence</text>
+
+  <line x1="913" y1="202" x2="1140" y2="202" stroke="#1e293b"/>
+  <text x="913" y="226" fill="#38bdf8" font-size="11.5" font-weight="700">代码与工具占比</text>
+  <text x="913" y="246" fill="#cbd5e1" font-size="12">10% Skill 引导 + 90% 编译器/逆向核</text>
+
+  <text x="913" y="282" fill="#38bdf8" font-size="11.5" font-weight="700">质量保障与验证机制</text>
+  <text x="913" y="302" fill="#cbd5e1" font-size="12">所有断言必须绑定 `ev_&lt;sha256&gt;`，</text>
+  <text x="913" y="320" fill="#cbd5e1" font-size="12">篡改 1 字节即触发 Hash 校验阻断</text>
+
+  <text x="913" y="356" fill="#38bdf8" font-size="11.5" font-weight="700">防幻觉能力</text>
+  <text x="913" y="376" fill="#34d399" font-size="12" font-weight="700">★★★★★ (密码学零幻觉硬约束)</text>
+
+  <text x="913" y="412" fill="#38bdf8" font-size="11.5" font-weight="700">核心优势</text>
+  <text x="913" y="432" fill="#cbd5e1" font-size="12">可解析 43万+ AST 节点与 PE/ELF/APK，</text>
+  <text x="913" y="450" fill="#cbd5e1" font-size="12">构建可审计的软件逆向与安全基座</text>
+
+  <rect x="913" y="520" width="229" height="48" rx="8" fill="#0f172a" stroke="#34d399"/>
+  <text x="1027" y="541" fill="#34d399" font-size="11" text-anchor="middle">典型应用场景</text>
+  <text x="1027" y="559" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">遗留系统重构 / 安全审计 / 1:1 复刻</text>
+</svg>

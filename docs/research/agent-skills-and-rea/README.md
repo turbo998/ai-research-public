@@ -10,15 +10,23 @@
 
 ## 目录与交付物导航
 
-### 一、 交互式 H5 演示系统（单文件零外部依赖，支持直接打开）
+### 一、 🌐 已发布公开访问的在线交互式 H5 页面（GitHub Pages，可直接发给外部客户演示）
 
-| 演示项目 | 适用任务 | 核心交互特性 | 入口链接 |
+| 在线演示项目 | 适用任务 | 公开访问 URL (GitHub Pages) | 仓库源码入口 |
 |---|---|---|---|
-| **美嘉欣 MJX 14303 四驱底盘机械解剖台（深色版）** | 任务 1 (`anatomy` Demo) | 10 大可拆解机械总成、`E` 键弹簧阻尼爆炸视图、`S` 键油压绞牙避震下压、2S(7.4V)/3S(11.1V) 切换、FDR `8.54:1` 转速/车速遥测、阿克曼转向与 G3C 陀螺仪漂移反打仿真 | [`h5/mjx-14303-anatomy/mjx-14303-chassis.html`](h5/mjx-14303-anatomy/mjx-14303-chassis.html) / [`index.html`](h5/mjx-14303-anatomy/index.html) |
-| **美嘉欣 MJX 14303 四驱底盘机械解剖台（浅色版）** | 任务 1 (`anatomy` Demo) | 浅色工程出版物配色（`--light`），完整保留全部 10 大总成交互与遥测能力 | [`h5/mjx-14303-anatomy/mjx-14303-chassis-light.html`](h5/mjx-14303-anatomy/mjx-14303-chassis-light.html) |
-| **《废土斗机祭 (Scrap Swarm)》REA 6.4.0 逆向复刻可玩版** | 任务 3 (`rea` 逆向复刻 Demo) | 1:1 复刻 Xorshift32 确定性随机数、三把武器（爆铆拳炮/震磁圆阵/雷索连击）、三幕波次、避难所电磁中继站、BOSS「铁冠·赫克托」热能锁暴露 1.65× 暴击及 **右侧实时 `ev_<sha256>` 证据脉冲台账** | [`h5/rea-scrap-swarm-clone/index.html`](h5/rea-scrap-swarm-clone/index.html) |
+| **🏠 专题总览门户 (Showcase Portal)** | 三大任务统一导航页 | **[👉 立即打开在线总门户](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/)** | [`index.html`](index.html) |
+| **🏎️ 美嘉欣 MJX 14303 四驱底盘机械解剖台（深色版）** | 任务 1 (`anatomy` 客户演示) | **[👉 立即打开深色蓝图版 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/mjx-14303-anatomy/)** | [`h5/mjx-14303-anatomy/mjx-14303-chassis.html`](h5/mjx-14303-anatomy/mjx-14303-chassis.html) |
+| **☀️ 美嘉欣 MJX 14303 四驱底盘机械解剖台（浅色版）** | 任务 1 (`anatomy` 出版物版) | **[👉 立即打开浅色出版物版 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/mjx-14303-anatomy/mjx-14303-chassis-light.html)** | [`h5/mjx-14303-anatomy/mjx-14303-chassis-light.html`](h5/mjx-14303-anatomy/mjx-14303-chassis-light.html) |
+| **📊 Ryan Doser Skill 生态与 6 阶变现可视化报告** | 任务 2 (可视化交互报告 H5) | **[👉 立即打开可视化研究报告 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/ryan-doser-skills-report/)** | [`h5/ryan-doser-skills-report/index.html`](h5/ryan-doser-skills-report/index.html) |
+| **🎮 《废土斗机祭 (Scrap Swarm)》REA 逆向复刻可玩版** | 任务 3 (`rea` 1:1 可玩复刻) | **[👉 立即在线试玩复刻版 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/rea-scrap-swarm-clone/)** | [`h5/rea-scrap-swarm-clone/index.html`](h5/rea-scrap-swarm-clone/index.html) |
 
-### 二、 深度研究报告与密码学证据链
+### 二、 📐 专题配套高清矢量架构图（SVG Visual Atlas）
+
+- [图 1：Ryan Doser 8 大垂直领域 Skills 矩阵与 4-Agent 质量门控架构图](assets/01-ryan-doser-8category-skill-architecture.svg)
+- [图 2：Ryan Doser “卖铲子撬动包工程” 6 阶价值变现漏斗与营收结构图](assets/02-ryan-doser-6tier-monetization-funnel.svg)
+- [图 3：AI Agent Skill 工程化演进四级光谱 (L1 提示词 → L2 Ryan Doser → L3 `anatomy` → L4 `rea`)](assets/03-agent-skill-l1-to-l4-depth-spectrum.svg)
+
+### 三、 深度研究报告与密码学证据链
 
 | 文档 / 数据资产 | 对应主题 | 核心内容摘要 |
 |---|---|---|
