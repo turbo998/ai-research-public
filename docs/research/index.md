@@ -6,6 +6,7 @@
 
 | 专题 | 子分类 / 标签 | 范围与状态 |
 |---|---|---|
+| [Agent 逆向工程 (`morluto/rea`)、机械解剖学 (`anatomy`) 与商业化 Skills 生态研究](agent-skills-and-rea/README.md) | 确定性逆向工程 Agent、等轴测机械解剖图生成、Skills 商业化漏斗（`morluto/rea`、`wheresryan22/anatomy`、`Ryan Doser`、`MJX 14303`、`Scrap Swarm`） | 覆盖 `morluto/rea@6.4.0` 四层架构与 6 条 `ev_<sha256>` 证据链、Ryan Doser 8 大类 60+ Skills 深度与 6 阶变现路径、[`MJX 14303` 底盘机械原理互动 H5](agent-skills-and-rea/h5/mjx-14303-anatomy/mjx-14303-chassis.html) 及 [《废土斗机祭》REA 逆向复刻可玩 H5](agent-skills-and-rea/h5/rea-scrap-swarm-clone/index.html) |
 | [AI Agent Infrastructure on Azure 全栈方案设计与选型 Playbook](azure-agent-infra/README.md) | Agent Runtime、MicroVM 沙箱、状态持久化与多租户治理（`Foundry`、`ACA Sandboxes`、`AKSClaw`、`E2B Firecracker`、`HorizonDB`、`Entra Agent ID`） | 覆盖四层参考架构、六大运行时光谱（含 `Standard_D96as_v7` `108ms/132ms` 实测锚点）、10万并发沙箱 VMSS 容量模型、8 幅 SVG 架构图、[7 页 4:5 视觉卡片报告](azure-agent-infra/test-report.md) 与 [交互式 H5 仿真套件](azure-agent-infra/h5/index.html) |
 | [Omarchy agent 设计机制](omarchy-agent-design/README.md) | Agentic OS 与本地 Harness 集成（`Agentic OS`、`Harness Integration`、`Skills`、`Event-driven Agent`、`Identity & Usage`） | 基于 `omacom/omarchy@9480d1b6a98156314dbabe6bfef08f39f8b9cd07` 的 6 大机制专题（E1–E6）、174 条源码/文档/测试契约断言与 [7 页 4:5 视觉卡片测试报告](omarchy-agent-design/test-report.md)；离线静态契约已核验，上游运行 `not_run` |
 | [Personal agents：五产品比较](personal-agents/README.md) | 消费级与工作流 Personal Agents | Meta Muse、Grok Bot、OpenAI dot/dots、Google Gemini Spark、Instinct；企业 Gemini 单列区别。cutoff 2026-10-11，静态公开资料研究 |

@@ -6,6 +6,7 @@
 
 | 专题 / 内容 | 公开出处与归属 |
 |---|---|
+| **Agent 逆向工程 (`morluto/rea`)、机械解剖学 (`anatomy`) 与商业化 Skills 研究** | 上游开源仓库 [`morluto/rea`](https://github.com/morluto/rea)（MIT License，个人 Fork [`turbo998/rea`](https://github.com/turbo998/rea)）、[`wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy) 及 Ryan Doser 公开产品页（`ryandoser.com` / `skills.ryandoser.com`）。被逆向 H5 游戏《废土斗机祭 (Scrap Swarm)》源自本账号自有开源仓库 [`turbo998/scrap-swarm`](https://github.com/turbo998/scrap-swarm) 与 [`turbo998/ai-gaming-lab`](https://github.com/turbo998/ai-gaming-lab) |
 | **Omarchy agent 设计机制与契约评测** | 上游公开入口 `basecamp/omarchy`、规范仓库 `omacom/omarchy`，固定 commit [`9480d1b6a98156314dbabe6bfef08f39f8b9cd07`](https://github.com/omacom/omarchy/commit/9480d1b6a98156314dbabe6bfef08f39f8b9cd07)；原维护者及根 `LICENSE`（MIT）版权归属 David Heinemeier Hansson。轻量平台比较引用 Anthropic 与 GitHub 官方文档（W1–W7）。完整可复核台账见 [`docs/research/omarchy-agent-design/evidence.json`](docs/research/omarchy-agent-design/evidence.json) |
 | **Personal agents：产品、资格、控制及政策声明** | Meta/Muse；x.ai 与 Cursor；OpenAI；Google/Gemini/Google Cloud；Spear Street Technology, Inc. d/b/a Instinct。准确页面与读取范围见 S1–S17 |
 | **Personal agents：第三方比较与产品观察** | Every；Dhravya Shah / Supermemory；Personal Agent Bench / Zentor。商业利害、方法限制及未复算状态见 S18–S22 |

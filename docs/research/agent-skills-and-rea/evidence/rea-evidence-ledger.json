@@ -1,0 +1,684 @@
+{
+  "schema": "rea.reconstruction-evidence-ledger.v1",
+  "generator": "morluto/rea@6.4.0",
+  "target_application": {
+    "name": "Scrap Swarm (废土斗机祭)",
+    "source_repo": "https://github.com/turbo998/scrap-swarm",
+    "deployed_bundle_repo": "https://github.com/turbo998/ai-gaming-lab",
+    "deployed_bundle_path": "public/demos/scrap-swarm/assets/index-BCy1aADK.js",
+    "bundle_bytes": 1278114,
+    "bundle_sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9",
+    "inventory_evidence_id": "ev_3b73667757958ab29a62c84700cbbf03c7c0b6f1c3a3b41011df19f84e0d4fdf",
+    "inventory_manifest_id": "agm_bc5cd736d48bff93819bd5342f03a7ab967069fbab5fa304567720132da13d1d"
+  },
+  "ast_metrics": {
+    "full_bundle_visited_ast_nodes": 433836,
+    "game_modules_visited_ast_nodes": 10419,
+    "game_modules_scopes": 6,
+    "game_modules_bindings": 53,
+    "game_modules_callables": 17,
+    "parse_status": "complete",
+    "modules": {
+      "rng.ts": {
+        "sha256": "1497761ebe20f13271b0ae57fb590ba9f22e7d5f4492f32c26f377762a2c7b45",
+        "bytes": 362,
+        "visited_ast_nodes": 70,
+        "scopes": 1,
+        "bindings": 2,
+        "callables": 2,
+        "callable_names": [
+          "nextRandom",
+          "hashSeed"
+        ]
+      },
+      "data.ts": {
+        "sha256": "af748f06d68bc606ac0be2d915ba094787bd8351c07f19b9899f0596aa3f1fd3",
+        "bytes": 2302,
+        "visited_ast_nodes": 454,
+        "scopes": 1,
+        "bindings": 11,
+        "callables": 0,
+        "callable_names": []
+      },
+      "simulation.ts": {
+        "sha256": "cacf6987b7d687f11121bb5f9dbd40b5f22a82d4aa31223bf2c6ef5885ba5ed1",
+        "bytes": 22179,
+        "visited_ast_nodes": 4778,
+        "scopes": 1,
+        "bindings": 30,
+        "callables": 12,
+        "callable_names": [
+          "createGame",
+          "startGame",
+          "togglePause",
+          "triggerDash",
+          "stepGame",
+          "spawnEnemy",
+          "applyUpgrade",
+          "buyWeapon",
+          "repairAtShop",
+          "continueFromShop",
+          "summary",
+          "advanceTicks"
+        ]
+      },
+      "audio.ts": {
+        "sha256": "a168784c1a6defe9d2a79fc3a2baaa2b08a6f04e42b35817264f98d9b41b2e3d",
+        "bytes": 5217,
+        "visited_ast_nodes": 870,
+        "scopes": 1,
+        "bindings": 2,
+        "callables": 0,
+        "callable_names": []
+      },
+      "hangar.ts": {
+        "sha256": "54c570e647af8b043efa99111248a30bd3eac4c9e68778648a2b266aa40bc8d7",
+        "bytes": 16643,
+        "visited_ast_nodes": 3659,
+        "scopes": 1,
+        "bindings": 5,
+        "callables": 2,
+        "callable_names": [
+          "renderHangarPreview",
+          "mapEnemyToHangar"
+        ]
+      },
+      "story.ts": {
+        "sha256": "95db3735d0b0b42279d2ac1462865bfe36945f3d009923e2dc7b644b00aca6b1",
+        "bytes": 8778,
+        "visited_ast_nodes": 588,
+        "scopes": 1,
+        "bindings": 3,
+        "callables": 1,
+        "callable_names": [
+          "speakerBadgeSvg"
+        ]
+      }
+    }
+  },
+  "evidence_count": 6,
+  "evidence_records": [
+    {
+      "evidence_id": "ev_129d9abd6e21292acf3a3273c6f31cbcf8c920d3d0fc34bf3337eec667ac5428",
+      "subject": {
+        "name": "index-BCy1aADK.js",
+        "digest": {
+          "sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9"
+        },
+        "format": "unknown",
+        "architecture": null,
+        "local_path": "public/demos/scrap-swarm/assets/index-BCy1aADK.js"
+      },
+      "provider": {
+        "id": "rea-javascript-static-semantic",
+        "name": "REA JavaScript AST & Semantic Reconstructor",
+        "version": "6.4.0"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.reconstruction.rng_xorshift32",
+      "operation": "analyze_javascript_application",
+      "parameters": {
+        "bundle_sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9",
+        "subsystem": "rng_xorshift32",
+        "locator": "assets/index-BCy1aADK.js:69 (nextRandom / hashSeed)"
+      },
+      "raw_result": {
+        "shifts": [
+          13,
+          17,
+          5
+        ],
+        "fallback_state": "0x9e3779b9",
+        "fallback_seed": "0x6d2b79f5",
+        "divisor": "0x100000000"
+      },
+      "normalized_result": {
+        "subsystem": "rng_xorshift32",
+        "title": "Deterministic Xorshift32 PRNG & Seed Hash",
+        "source_file": "src/game/rng.ts",
+        "bundle_locator": "assets/index-BCy1aADK.js:69 (nextRandom / hashSeed)",
+        "module_analysis": {
+          "sha256": "1497761ebe20f13271b0ae57fb590ba9f22e7d5f4492f32c26f377762a2c7b45",
+          "bytes": 362,
+          "visited_ast_nodes": 70,
+          "scopes": 1,
+          "bindings": 2,
+          "callables": 2,
+          "callable_names": [
+            "nextRandom",
+            "hashSeed"
+          ]
+        },
+        "recovered_constants": {
+          "shifts": [
+            13,
+            17,
+            5
+          ],
+          "fallback_state": "0x9e3779b9",
+          "fallback_seed": "0x6d2b79f5",
+          "divisor": "0x100000000"
+        },
+        "obligations_verified": [
+          "Bitwise state ^= state << 13; state ^= state >>> 17; state ^= state << 5",
+          "Zero-state guard falls back to golden-ratio constant 0x9e3779b9",
+          "URL ?seed= query parameter extracted via URLSearchParams('seed')"
+        ]
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [],
+      "locations": [],
+      "evidence_links": []
+    },
+    {
+      "evidence_id": "ev_e5fceece6c71fb6ac645541763508f3877f8dfdc8ffc13503e093f8fe6a61616",
+      "subject": {
+        "name": "index-BCy1aADK.js",
+        "digest": {
+          "sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9"
+        },
+        "format": "unknown",
+        "architecture": null,
+        "local_path": "public/demos/scrap-swarm/assets/index-BCy1aADK.js"
+      },
+      "provider": {
+        "id": "rea-javascript-static-semantic",
+        "name": "REA JavaScript AST & Semantic Reconstructor",
+        "version": "6.4.0"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.reconstruction.arena_and_core_dash",
+      "operation": "analyze_javascript_application",
+      "parameters": {
+        "bundle_sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9",
+        "subsystem": "arena_and_core_dash",
+        "locator": "assets/index-BCy1aADK.js:69 (ARENA / CORE_DASH / SHELTER_CONFIG)"
+      },
+      "raw_result": {
+        "arena": {
+          "width": 1280,
+          "height": 720,
+          "margin": 34,
+          "tickRate": 60
+        },
+        "core_dash": {
+          "cooldown": 3,
+          "duration": 0.18,
+          "speedMultiplier": 2.85,
+          "damageReduction": 0.35,
+          "shockRadius": 138,
+          "shockDamage": 15,
+          "knockback": 44,
+          "pickupPullRadius": 235
+        },
+        "shelter": {
+          "x": 490,
+          "y": 330,
+          "maxHp": 160,
+          "radius": 118,
+          "maxCharge": 100,
+          "pulseRadius": 220,
+          "pulseDamage": 22,
+          "scrapReward": 6,
+          "healReward": 12
+        }
+      },
+      "normalized_result": {
+        "subsystem": "arena_and_core_dash",
+        "title": "Arena Geometry (1280x720) & Core Dash Shockwave",
+        "source_file": "src/game/data.ts",
+        "bundle_locator": "assets/index-BCy1aADK.js:69 (ARENA / CORE_DASH / SHELTER_CONFIG)",
+        "module_analysis": {
+          "sha256": "af748f06d68bc606ac0be2d915ba094787bd8351c07f19b9899f0596aa3f1fd3",
+          "bytes": 2302,
+          "visited_ast_nodes": 454,
+          "scopes": 1,
+          "bindings": 11,
+          "callables": 0,
+          "callable_names": []
+        },
+        "recovered_constants": {
+          "arena": {
+            "width": 1280,
+            "height": 720,
+            "margin": 34,
+            "tickRate": 60
+          },
+          "core_dash": {
+            "cooldown": 3,
+            "duration": 0.18,
+            "speedMultiplier": 2.85,
+            "damageReduction": 0.35,
+            "shockRadius": 138,
+            "shockDamage": 15,
+            "knockback": 44,
+            "pickupPullRadius": 235
+          },
+          "shelter": {
+            "x": 490,
+            "y": 330,
+            "maxHp": 160,
+            "radius": 118,
+            "maxCharge": 100,
+            "pulseRadius": 220,
+            "pulseDamage": 22,
+            "scrapReward": 6,
+            "healReward": 12
+          }
+        },
+        "obligations_verified": [
+          "60Hz fixed-timestep simulation loop (dt = 1/60s)",
+          "Dash shockwave deals 15 AoE damage within 138px + 44px radial knockback",
+          "Magnetic vacuum pulls XP/Scrap pickups within 235px radius during dash"
+        ]
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [],
+      "locations": [],
+      "evidence_links": []
+    },
+    {
+      "evidence_id": "ev_5e2c6aa1e6cb3425e1d3902e0b0bda999513c8d0ab6ec6b189ea6b8e73789a4c",
+      "subject": {
+        "name": "index-BCy1aADK.js",
+        "digest": {
+          "sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9"
+        },
+        "format": "unknown",
+        "architecture": null,
+        "local_path": "public/demos/scrap-swarm/assets/index-BCy1aADK.js"
+      },
+      "provider": {
+        "id": "rea-javascript-static-semantic",
+        "name": "REA JavaScript AST & Semantic Reconstructor",
+        "version": "6.4.0"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.reconstruction.weapons_arsenal",
+      "operation": "analyze_javascript_application",
+      "parameters": {
+        "bundle_sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9",
+        "subsystem": "weapons_arsenal",
+        "locator": "assets/index-BCy1aADK.js:69 (WEAPONS / UPGRADES)"
+      },
+      "raw_result": {
+        "rivet": {
+          "name": "爆铆拳炮",
+          "damage": 12,
+          "cooldown": 0.34,
+          "range": 430,
+          "color": "#ffcc38",
+          "price": 0
+        },
+        "pulse": {
+          "name": "震磁圆阵",
+          "damage": 18,
+          "cooldown": 1.45,
+          "range": 150,
+          "color": "#00e5ff",
+          "price": 28
+        },
+        "arc": {
+          "name": "雷索连击",
+          "damage": 10,
+          "cooldown": 0.9,
+          "range": 300,
+          "color": "#b66cff",
+          "price": 42
+        }
+      },
+      "normalized_result": {
+        "subsystem": "weapons_arsenal",
+        "title": "3-Weapon Mecha Arsenal (Rivet / Pulse / Arc)",
+        "source_file": "src/game/data.ts",
+        "bundle_locator": "assets/index-BCy1aADK.js:69 (WEAPONS / UPGRADES)",
+        "module_analysis": {
+          "sha256": "af748f06d68bc606ac0be2d915ba094787bd8351c07f19b9899f0596aa3f1fd3",
+          "bytes": 2302,
+          "visited_ast_nodes": 454,
+          "scopes": 1,
+          "bindings": 11,
+          "callables": 0,
+          "callable_names": []
+        },
+        "recovered_constants": {
+          "rivet": {
+            "name": "爆铆拳炮",
+            "damage": 12,
+            "cooldown": 0.34,
+            "range": 430,
+            "color": "#ffcc38",
+            "price": 0
+          },
+          "pulse": {
+            "name": "震磁圆阵",
+            "damage": 18,
+            "cooldown": 1.45,
+            "range": 150,
+            "color": "#00e5ff",
+            "price": 28
+          },
+          "arc": {
+            "name": "雷索连击",
+            "damage": 10,
+            "cooldown": 0.9,
+            "range": 300,
+            "color": "#b66cff",
+            "price": 42
+          }
+        },
+        "obligations_verified": [
+          "Auto-targeting nearest enemy within weapon range",
+          "Pulse ring hits all enemies within 150px and applies radial pushback",
+          "Arc chain lightning jumps across up to 3 nearest targets within 300px"
+        ]
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [],
+      "locations": [],
+      "evidence_links": []
+    },
+    {
+      "evidence_id": "ev_6108f6bfa4fdc3c7396568d58aaa81313bba871494564a392bbb63ea955676dd",
+      "subject": {
+        "name": "index-BCy1aADK.js",
+        "digest": {
+          "sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9"
+        },
+        "format": "unknown",
+        "architecture": null,
+        "local_path": "public/demos/scrap-swarm/assets/index-BCy1aADK.js"
+      },
+      "provider": {
+        "id": "rea-javascript-static-semantic",
+        "name": "REA JavaScript AST & Semantic Reconstructor",
+        "version": "6.4.0"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.reconstruction.enemy_roster_and_boss",
+      "operation": "analyze_javascript_application",
+      "parameters": {
+        "bundle_sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9",
+        "subsystem": "enemy_roster_and_boss",
+        "locator": "assets/index-BCy1aADK.js:69..95 (ENEMIES / stepGame)"
+      },
+      "raw_result": {
+        "scuttler": {
+          "name": "赤砂牙轮",
+          "hp": 24,
+          "speed": 88,
+          "radius": 13,
+          "damage": 7,
+          "xp": 4,
+          "scrap": 2
+        },
+        "brute": {
+          "name": "铁壁角斗机",
+          "hp": 78,
+          "speed": 44,
+          "radius": 22,
+          "damage": 15,
+          "xp": 9,
+          "scrap": 5
+        },
+        "zapper": {
+          "name": "苍雷浮游卫",
+          "hp": 40,
+          "speed": 61,
+          "radius": 16,
+          "damage": 9,
+          "xp": 6,
+          "scrap": 3
+        },
+        "boss": {
+          "name": "铁冠·赫克托",
+          "hp": 780,
+          "speed": 38,
+          "radius": 48,
+          "damage": 20,
+          "xp": 50,
+          "scrap": 100,
+          "exposedDamageMult": 1.65
+        }
+      },
+      "normalized_result": {
+        "subsystem": "enemy_roster_and_boss",
+        "title": "3-Act Enemy Roster & Boss 'Iron Crown Hector' Lock-Break",
+        "source_file": "src/game/simulation.ts",
+        "bundle_locator": "assets/index-BCy1aADK.js:69..95 (ENEMIES / stepGame)",
+        "module_analysis": {
+          "sha256": "cacf6987b7d687f11121bb5f9dbd40b5f22a82d4aa31223bf2c6ef5885ba5ed1",
+          "bytes": 22179,
+          "visited_ast_nodes": 4778,
+          "scopes": 1,
+          "bindings": 30,
+          "callables": 12,
+          "callable_names": [
+            "createGame",
+            "startGame",
+            "togglePause",
+            "triggerDash",
+            "stepGame",
+            "spawnEnemy",
+            "applyUpgrade",
+            "buyWeapon",
+            "repairAtShop",
+            "continueFromShop",
+            "summary",
+            "advanceTicks"
+          ]
+        },
+        "recovered_constants": {
+          "scuttler": {
+            "name": "赤砂牙轮",
+            "hp": 24,
+            "speed": 88,
+            "radius": 13,
+            "damage": 7,
+            "xp": 4,
+            "scrap": 2
+          },
+          "brute": {
+            "name": "铁壁角斗机",
+            "hp": 78,
+            "speed": 44,
+            "radius": 22,
+            "damage": 15,
+            "xp": 9,
+            "scrap": 5
+          },
+          "zapper": {
+            "name": "苍雷浮游卫",
+            "hp": 40,
+            "speed": 61,
+            "radius": 16,
+            "damage": 9,
+            "xp": 6,
+            "scrap": 3
+          },
+          "boss": {
+            "name": "铁冠·赫克托",
+            "hp": 780,
+            "speed": 38,
+            "radius": 48,
+            "damage": 20,
+            "xp": 50,
+            "scrap": 100,
+            "exposedDamageMult": 1.65
+          }
+        },
+        "obligations_verified": [
+          "Wave 1 (Act I): Scuttler & Brute swarm; clears at 22s into Upgrade + Shop",
+          "Wave 2 (Act II): Shelter Relay (x:490, y:330, r:118) charging to 100% triggers 220px EMP pulse (22 dmg + 12 HP heal + 6 scrap)",
+          "Wave 3 (Act III): Boss Iron Crown Hector (780 HP) telegraphs Slam -> exposes rear thermal lock for 1.65x critical damage"
+        ]
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [],
+      "locations": [],
+      "evidence_links": []
+    },
+    {
+      "evidence_id": "ev_c4735012ce832b5316cfb805fe7288526d0d14ca13215dde051e69e46c8e0295",
+      "subject": {
+        "name": "index-BCy1aADK.js",
+        "digest": {
+          "sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9"
+        },
+        "format": "unknown",
+        "architecture": null,
+        "local_path": "public/demos/scrap-swarm/assets/index-BCy1aADK.js"
+      },
+      "provider": {
+        "id": "rea-javascript-static-semantic",
+        "name": "REA JavaScript AST & Semantic Reconstructor",
+        "version": "6.4.0"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.reconstruction.webaudio_procedural_synth",
+      "operation": "analyze_javascript_application",
+      "parameters": {
+        "bundle_sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9",
+        "subsystem": "webaudio_procedural_synth",
+        "locator": "assets/index-BCy1aADK.js:95 (SoundController)"
+      },
+      "raw_result": {
+        "shot_freq": "380Hz -> 120Hz triangle",
+        "pulse_freq": "180Hz -> 55Hz sine",
+        "arc_freq": "680Hz -> 240Hz sawtooth",
+        "dash_freq": "140Hz -> 420Hz triangle",
+        "boss_slam_freq": "95Hz -> 28Hz sawtooth"
+      },
+      "normalized_result": {
+        "subsystem": "webaudio_procedural_synth",
+        "title": "Zero-Asset WebAudio Procedural Sound Synthesizer",
+        "source_file": "src/game/audio.ts",
+        "bundle_locator": "assets/index-BCy1aADK.js:95 (SoundController)",
+        "module_analysis": {
+          "sha256": "a168784c1a6defe9d2a79fc3a2baaa2b08a6f04e42b35817264f98d9b41b2e3d",
+          "bytes": 5217,
+          "visited_ast_nodes": 870,
+          "scopes": 1,
+          "bindings": 2,
+          "callables": 0,
+          "callable_names": []
+        },
+        "recovered_constants": {
+          "shot_freq": "380Hz -> 120Hz triangle",
+          "pulse_freq": "180Hz -> 55Hz sine",
+          "arc_freq": "680Hz -> 240Hz sawtooth",
+          "dash_freq": "140Hz -> 420Hz triangle",
+          "boss_slam_freq": "95Hz -> 28Hz sawtooth"
+        },
+        "obligations_verified": [
+          "Pure WebAudio OscillatorNode + GainNode envelopes with exponential frequency ramps",
+          "Zero external MP3/WAV network requests"
+        ]
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [],
+      "locations": [],
+      "evidence_links": []
+    },
+    {
+      "evidence_id": "ev_5cda9305a1245d1450766419a646cfee0cb9cf5e21644448be5728ec61f8ef12",
+      "subject": {
+        "name": "index-BCy1aADK.js",
+        "digest": {
+          "sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9"
+        },
+        "format": "unknown",
+        "architecture": null,
+        "local_path": "public/demos/scrap-swarm/assets/index-BCy1aADK.js"
+      },
+      "provider": {
+        "id": "rea-javascript-static-semantic",
+        "name": "REA JavaScript AST & Semantic Reconstructor",
+        "version": "6.4.0"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.reconstruction.mecha_hangar_and_story",
+      "operation": "analyze_javascript_application",
+      "parameters": {
+        "bundle_sha256": "1131159ce81a143b8b1f44132181b57e4f82c2da76a6734565f786d81b985ef9",
+        "subsystem": "mecha_hangar_and_story",
+        "locator": "assets/index-BCy1aADK.js:69..95 (HANGAR_UNITS / STORY_CHAPTERS)"
+      },
+      "raw_result": {
+        "units": [
+          "K-09 赤砂铁拳 (Brawler)",
+          "R-14 避难所中继站 (Shelter Relay)",
+          "BOSS 铁冠·赫克托 (Iron Crown Hector)"
+        ],
+        "acts": [
+          "Act I · 锈火初鸣",
+          "Act II · 护盾共鸣",
+          "Act III · 铁冠折戟"
+        ]
+      },
+      "normalized_result": {
+        "subsystem": "mecha_hangar_and_story",
+        "title": "Procedural SVG Mecha Hangar & 3-Act Wasteland Story Archive",
+        "source_file": "src/game/hangar.ts & src/game/story.ts",
+        "bundle_locator": "assets/index-BCy1aADK.js:69..95 (HANGAR_UNITS / STORY_CHAPTERS)",
+        "module_analysis": {
+          "hangar": {
+            "sha256": "54c570e647af8b043efa99111248a30bd3eac4c9e68778648a2b266aa40bc8d7",
+            "bytes": 16643,
+            "visited_ast_nodes": 3659,
+            "scopes": 1,
+            "bindings": 5,
+            "callables": 2,
+            "callable_names": [
+              "renderHangarPreview",
+              "mapEnemyToHangar"
+            ]
+          },
+          "story": {
+            "sha256": "95db3735d0b0b42279d2ac1462865bfe36945f3d009923e2dc7b644b00aca6b1",
+            "bytes": 8778,
+            "visited_ast_nodes": 588,
+            "scopes": 1,
+            "bindings": 3,
+            "callables": 1,
+            "callable_names": [
+              "speakerBadgeSvg"
+            ]
+          }
+        },
+        "recovered_constants": {
+          "units": [
+            "K-09 赤砂铁拳 (Brawler)",
+            "R-14 避难所中继站 (Shelter Relay)",
+            "BOSS 铁冠·赫克托 (Iron Crown Hector)"
+          ],
+          "acts": [
+            "Act I · 锈火初鸣",
+            "Act II · 护盾共鸣",
+            "Act III · 铁冠折戟"
+          ]
+        },
+        "obligations_verified": [
+          "Procedural 2D layered mecha silhouette with articulated shoulder pauldrons, core reactor glow, and rivet fist recoil",
+          "Boss telegraph ring + thermal lock-break vulnerability window"
+        ]
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [],
+      "locations": [],
+      "evidence_links": []
+    }
+  ]
+}

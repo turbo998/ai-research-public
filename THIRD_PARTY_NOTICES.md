@@ -10,3 +10,10 @@
 ## Personal Agents 五产品比较研究
 
 - 相关消费级/企业级 Agent 产品声明、第三方观察与公开 Benchmark 论文（GAIA、OSWorld、τ-bench）的归属与权利边界见 [归属与权利边界](ATTRIBUTION.md) 与 [`docs/research/personal-agents/evidence.json`](docs/research/personal-agents/evidence.json)。
+
+## Agent 逆向工程 (`morluto/rea`)、机械解剖学 (`anatomy`) 与商业化 Skills 研究
+
+- **`morluto/rea`**：上游仓库 [`morluto/rea`](https://github.com/morluto/rea) 采用 MIT 许可证。本库收录其架构分析及对自有开源游戏 [`turbo998/scrap-swarm`](https://github.com/turbo998/scrap-swarm) 生成的 `ev_<sha256>` 证据台账（[`docs/research/agent-skills-and-rea/evidence/rea-evidence-ledger.json`](docs/research/agent-skills-and-rea/evidence/rea-evidence-ledger.json)）。
+- **`wheresryan22/anatomy`**：上游仓库 [`wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy) 提供等轴测 SVG 几何构建器；本库中的美嘉欣 MJX 14303 机械解剖图（[`docs/research/agent-skills-and-rea/h5/mjx-14303-anatomy/`](docs/research/agent-skills-and-rea/h5/mjx-14303-anatomy/)）为原创参数化建模产出。
+- **Ryan Doser Skills 分析**：仅基于其公开网页与免费公开示例 `anti-slop.md` 进行结构与商业模式分析，不收录或分发任何付费私有仓库内容。
+

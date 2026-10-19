@@ -6,11 +6,12 @@
 
 | 分类 | 入口与当前状态 |
 |---|---|
-| Agent | [Agent 研究索引](docs/research/index.md#agent)：含 [Omarchy agent 设计机制](docs/research/omarchy-agent-design/README.md)（含 [7 页 4:5 视觉卡片测试报告](docs/research/omarchy-agent-design/test-report.md)）、[Personal agents 五产品比较](docs/research/personal-agents/README.md) 及 [Azure AI Agent Runtime 与沙箱架构](docs/research/azure-agent-infra/README.md) |
+| Agent | [Agent 研究索引](docs/research/index.md#agent)：含 [Agent 逆向工程 (`morluto/rea`)、机械解剖学 (`anatomy`) 与商业化 Skills 生态研究及互动 H5 套件](docs/research/agent-skills-and-rea/README.md)、[Omarchy agent 设计机制](docs/research/omarchy-agent-design/README.md)（含 [7 页 4:5 视觉卡片测试报告](docs/research/omarchy-agent-design/test-report.md)）、[Personal agents 五产品比较](docs/research/personal-agents/README.md) 及 [Azure AI Agent Runtime 与沙箱架构](docs/research/azure-agent-infra/README.md) |
 | Model | [Model 分类](docs/research/index.md#model)：预留分类，暂无公开专题 |
 | Infra | [Infra 研究索引](docs/research/index.md#infra)：含 [AI Agent Infrastructure on Azure 全栈方案设计与架构选型 Playbook](docs/research/azure-agent-infra/README.md)（含 8 幅 SVG 架构图、[7 页 4:5 视觉卡片测试报告](docs/research/azure-agent-infra/test-report.md)、[离线 7 页卡片 HTML](docs/research/azure-agent-infra/test-report-cards.html) 与 [交互式 H5 Playbook & Demo](docs/research/azure-agent-infra/h5/index.html)） |
 
 直接阅读：
+- **Agent 逆向工程 (`morluto/rea`)、机械解剖学 (`anatomy`) 与商业化 Skills 生态**：[专题总入口](docs/research/agent-skills-and-rea/README.md) · [美嘉欣 MJX 14303 四驱底盘机械解剖互动 H5](docs/research/agent-skills-and-rea/h5/mjx-14303-anatomy/mjx-14303-chassis.html) · [《废土斗机祭》REA 6.4.0 逆向复刻可玩 H5](docs/research/agent-skills-and-rea/h5/rea-scrap-swarm-clone/index.html) · [Ryan Doser 技能生态与变现研究](docs/research/agent-skills-and-rea/findings/02-ryan-doser-skill-business.md)
 - **Azure AI Agent Infra 全栈方案设计、技术选型与架构师 Playbook（Build · Run · Ground · Govern）**：[研究总入口](docs/research/azure-agent-infra/README.md) · [7 页 4:5 视觉卡片测试报告](docs/research/azure-agent-infra/test-report.md) · [离线自包含 7 页卡片 HTML](docs/research/azure-agent-infra/test-report-cards.html) · [交互式 H5 全景手册与仿真台](docs/research/azure-agent-infra/h5/index.html) · [12 项架构路由矩阵 CSV](docs/research/azure-agent-infra/evidence/test-scenarios.csv)
 - **Omarchy Agent 设计机制（Agentic OS 与本地 Harness 集成）**：[研究总入口](docs/research/omarchy-agent-design/README.md) · [7 页 4:5 视觉卡片测试报告](docs/research/omarchy-agent-design/test-report.md) · [离线自包含 7 页卡片 HTML](docs/research/omarchy-agent-design/test-report-cards.html) · [174 条断言索引 CSV](docs/research/omarchy-agent-design/evidence/assertion-index.csv)
 - **Personal Agents 五产品比较**：[Personal agents 研究正文](docs/research/personal-agents/README.md) · [未执行 benchmark 协议](docs/research/personal-agents/benchmark.md)
