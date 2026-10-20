@@ -32,7 +32,7 @@
 
 | 专题 | 子分类 / 标签 | 范围与状态 |
 |---|---|---|
-| [AI Agent Infrastructure on Azure 全栈方案设计与架构选型 Playbook (中文)](azure-agent-infra/README.md) · [English](azure-agent-infra/README.en.md) | 云原生 Agent 基础设施、硬件虚拟化沙箱与状态数据库（`ACA Dynamic Sessions`、`ACA Sandboxes`、`AKS Kata / AKSClaw`、`E2B on VMSS D96as_v7`、`Azure HorizonDB`、`APIM AI Gateway`） | 80 章全栈架构与行业物理模型深度研究、8 幅自包含 SVG 架构与工作流图、75 套生产级 IaC 蓝图、74 项确定性仿真器（83/83 单测通过）、[7 页 4:5 视觉卡片报告 (中文)](azure-agent-infra/test-report.md) / [English](azure-agent-infra/test-report.en.md) 与 [4 页交互式双语 H5 套件](azure-agent-infra/h5/index.html) |
+| [AI Agent Infrastructure on Azure 全栈方案设计与架构选型 Playbook (中文)](azure-agent-infra/README.md) · [English](azure-agent-infra/README.en.md) | 云原生 Agent 基础设施、硬件虚拟化沙箱与状态数据库（`ACA Dynamic Sessions`、`ACA Sandboxes`、`AKS Kata / AKSClaw`、`E2B on VMSS D96as_v7`、`Azure HorizonDB`、`APIM AI Gateway`） | 81 章全栈架构与行业物理模型深度研究、8 幅自包含 SVG 架构与工作流图、76 套生产级 IaC 蓝图、75 项确定性仿真器（84/84 单测通过）、[7 页 4:5 视觉卡片报告 (中文)](azure-agent-infra/test-report.md) / [English](azure-agent-infra/test-report.en.md) 与 [4 页交互式双语 H5 套件](azure-agent-infra/h5/index.html) |
 
 ### Azure AI Agent Infrastructure 专题材料（中英双语 / Bilingual）
 
