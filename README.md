@@ -2,7 +2,7 @@
 
 > 🌐 **Language / 语言版本切换**: **[🇨🇳 中文主页 (README.zh-CN.md)](README.zh-CN.md)** | **[🇬🇧 English Homepage (README.en.md)](README.en.md)** | **[📘 Azure Agent Infra Playbook (中文)](docs/research/azure-agent-infra/README.zh-CN.md)** | **[📘 Azure Agent Infra Playbook (English)](docs/research/azure-agent-infra/README.en.md)**
 
-面向可复核证据的公开 AI 研究，由 **turbo998** 维护。当前发布 **Azure AI Agent Infra 全栈方案设计与架构选型 Playbook（中英双语版 · 93 章行业模型 · 88 套 IaC 蓝图 · 87 项交互式仿真器 · 7 页 4:5 视觉卡片评测与交互式 H5 仿真）**、**Personal agents 五产品比较** 与 **Omarchy agent 设计机制及 7 页 4:5 视觉卡片契约评测** 三个专题的原创分析、公开来源链接与可复核测试报告；不包含其他未公开材料或其 Git 历史。公开不代表取得第三方素材的再分发许可。
+面向可复核证据的公开 AI 研究，由 **turbo998** 维护。当前发布 **Azure AI Agent Infra 全栈方案设计与架构选型 Playbook（中英双语版 · 94 章行业模型 · 89 套 IaC 蓝图 · 88 项交互式仿真器 · 7 页 4:5 视觉卡片评测与交互式 H5 仿真）**、**Personal agents 五产品比较** 与 **Omarchy agent 设计机制及 7 页 4:5 视觉卡片契约评测** 三个专题的原创分析、公开来源链接与可复核测试报告；不包含其他未公开材料或其 Git 历史。公开不代表取得第三方素材的再分发许可。
 
 ## 三类研究入口
 
