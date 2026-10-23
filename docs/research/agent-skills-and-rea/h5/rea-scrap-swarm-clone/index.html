@@ -697,6 +697,7 @@
           <div class="btn-group">
             <button type="button" class="act-btn primary" id="btnAutoPlay">🤖 AI 自动巡航演示: ON</button>
             <button type="button" class="act-btn" id="btnSwitchWeapon">切换三武器 (1/2/3)</button>
+            <button type="button" class="act-btn" id="btnDash">💨 推进冲刺 (Space)</button>
             <button type="button" class="act-btn" id="btnTriggerOverdrive">⚡ 释放蒸汽超载 (Q)</button>
             <button type="button" class="act-btn" id="btnShelterEmp">🌐 避难所磁暴脉冲 (E)</button>
             <button type="button" class="act-btn" id="btnSpawnBoss">👑 立即召唤铁冠领主 Boss</button>
@@ -767,6 +768,7 @@
           <button type="button" class="act-btn" data-ast="data">data.ts</button>
           <button type="button" class="act-btn" data-ast="story">story.ts</button>
           <button type="button" class="act-btn" data-ast="audio">audio.ts</button>
+          <button type="button" class="act-btn" data-ast="prng">prng.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -1603,6 +1605,17 @@ export class ProceduralAudioEngine {
   }
 }`,
       },
+      prng: {
+        minified: `function qt(e){let t=e>>>0||2463534242;return()=>{t^=t<<13,t^=t>>>17,t^=t<<5;return(t>>>0)/4294967296}}`,
+        decompiled: `// Reconstructed Deterministic xorshift32 PRNG (src/game/prng.ts)
+export function createXorShift32(seed = 0x92d68ca2): () => number {
+  let state = seed >>> 0 || 2463534242;
+  return () => {
+    state ^= state << 13; state ^= state >>> 17; state ^= state << 5;
+    return (state >>> 0) / 4294967296;
+  };
+}`,
+      },
     };
 
     // =========================================================================
@@ -1928,12 +1941,28 @@ export class ProceduralAudioEngine {
       }
     }
 
+    const afterimages = [];
+    function triggerDash() {
+      for (let i = 0; i < 4; i++) {
+        afterimages.push({ x: player.x, y: player.y, life: 0.28 - i * 0.05 });
+      }
+      const ang = Math.random() * Math.PI * 2;
+      player.x = Math.max(80, Math.min(880, player.x + Math.cos(ang) * 95));
+      player.y = Math.max(80, Math.min(520, player.y + Math.sin(ang) * 95));
+      audio.play("dash");
+      pulseEvidence("hangar");
+    }
+
     const keys = {};
     window.addEventListener("keydown", (e) => {
       keys[e.key.toLowerCase()] = true;
       if (e.key === "1") weaponIdx = 0;
       if (e.key === "2") weaponIdx = 1;
       if (e.key === "3") weaponIdx = 2;
+      if (e.key === " ") {
+        e.preventDefault();
+        triggerDash();
+      }
       if (e.key.toLowerCase() === "q") triggerOverdrive();
       if (e.key.toLowerCase() === "e") triggerShelterEmp();
     });
@@ -1958,6 +1987,7 @@ export class ProceduralAudioEngine {
       audio.play("dash");
       pulseEvidence("weapon");
     });
+    document.getElementById("btnDash").addEventListener("click", () => triggerDash());
     document.getElementById("btnTriggerOverdrive").addEventListener("click", () => triggerOverdrive());
     document.getElementById("btnShelterEmp").addEventListener("click", () => triggerShelterEmp());
     document.getElementById("btnSpawnBoss").addEventListener("click", () => {
@@ -2191,7 +2221,19 @@ export class ProceduralAudioEngine {
         gCtx.fillRect(boss.x - 65, boss.y - 74, 130 * Math.max(0, boss.hp / boss.maxHp), 8);
       }
 
-      // Draw Player R-17 Mecha
+      // Draw Afterimages & Player R-17 Mecha
+      for (let i = afterimages.length - 1; i >= 0; i--) {
+        const a = afterimages[i];
+        a.life -= 1 / 60;
+        if (a.life <= 0) {
+          afterimages.splice(i, 1);
+          continue;
+        }
+        gCtx.save();
+        gCtx.globalAlpha = Math.max(0.1, a.life * 1.8);
+        drawMechaR17(gCtx, a.x, a.y, 0.66, "overdrive", gameClock);
+        gCtx.restore();
+      }
       drawMechaR17(
         gCtx,
         player.x,

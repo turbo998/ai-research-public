@@ -300,12 +300,15 @@ function buildChassis() {
     out.push(S(k.cylinder(px, py, 3.5, CHASSIS_Z + 31, 2.2, P, 16), { tone: "hi" }));
   }
 
-  // Rear 5-fin aerodynamic diffuser bumper (+114 to +136)
+  // Rear 5-fin aerodynamic diffuser bumper (+114 to +136) + Twin Titanium Rally Exhaust Tailpipes
   const bumperR = { x: 116, y: -44, w: 20, d: 88, r: 5 };
   out.push(S(k.slabOf(bumperR, CHASSIS_Z, 6, P, 5, 0.7), { tone: "lo" }));
   for (const dy of [-28, -14, 0, 14, 28]) {
     out.push(S(k.slabOf({ x: 120, y: dy - 1.2, w: 16, d: 2.4, r: 0.5 }, CHASSIS_Z - 1, 7.8, P, 2), { tone: "hi" }));
   }
+  const F_EX1 = G.frameOf([135, 19, CHASSIS_Z + 3.2], [1, 0, 0], [0, 1, 0], [0, 0, 1]);
+  const F_EX2 = G.frameOf([135, 25, CHASSIS_Z + 3.2], [1, 0, 0], [0, 1, 0], [0, 0, 1]);
+  out.push(`<g class="mjx-headlight-pod">${S(G.disc(-4, 2.5, 2.3, F_EX1, P, { bevel: 0.3 }), { tone: "hi", lit: true })}${S(G.disc(-4, 2.5, 2.3, F_EX2, P, { bevel: 0.3 }), { tone: "hi", lit: true })}</g>`);
 
   // Countersunk chassis screws
   out.push(D(k.dotGrid(-36, -12, 4, 2, 16, zTop, P), { size: 0.42, tone: "lo" }));
@@ -576,6 +579,12 @@ function buildSuspension(isFront) {
     for (const part of tubePieces(upperRoute, 1.45, P, { maxLength: 45 })) {
       out.push(tubeSvg(part, { tone: "hi" }));
     }
+
+    // CNC Anodized Outer Steering C-Hub / Knuckle Carrier + Brass Kingpin Bushings
+    const hubY = side > 0 ? yOuter - 3 : yOuter - 2;
+    const cHub = { x: ax - 4.5, y: hubY, w: 9, d: 5, r: 1.2 };
+    out.push(S(k.slabOf(cHub, WHEEL_Z - 6, 13.5, P, 3, 0.4), { tone: "hi" }));
+    out.push(S(k.cylinder(ax, side * (TRACK_Y - 11), 2.1, WHEEL_Z + 7.5, 1.8, P, 14), { tone: "hi", lit: true }));
 
     const shockX = towerX + 2.2;
     const shockY = side * 22;
@@ -936,6 +945,16 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="cyber"] .mjx-piece[data-piece="upper_deck"]{
   --anatomy-top:#22d3ee;--anatomy-fill:#0891b2;--anatomy-hi:#67e8f9;--anatomy-lit:#f472b6;
 }
+/* Livery 6: Gulf Heritage Ice Blue & Tangerine Orange */
+.iso-stage[data-color-mode="vivid"][data-livery="gulf"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#7dd3fc;--anatomy-fill:#38bdf8;--anatomy-shade-0:#0c4a6e;--anatomy-shade-1:#0369a1;--anatomy-shade-2:#0284c7;--anatomy-shade-3:#38bdf8;--anatomy-hi:#fb923c;--anatomy-lit:#f97316;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="gulf"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="gulf"] .mjx-piece[data-piece="wheels_r"],
+.iso-stage[data-color-mode="vivid"][data-livery="gulf"] .mjx-piece[data-piece="suspension_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="gulf"] .mjx-piece[data-piece="suspension_r"]{
+  --anatomy-top:#fb923c;--anatomy-fill:#ea580c;--anatomy-hi:#ffedd5;--anatomy-lit:#38bdf8;
+}
 .iso-stage[data-lights="on"] .mjx-headlight-pod{
   filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
@@ -969,17 +988,19 @@ const partsButtonsHtml = ORDER.map(
 const customControlsHtml = `
 <div class="mjx-topbar">
   <div class="mjx-topbar-group">
-    <span class="mjx-topbar-label">🎬 动态演示剧本 (Auto Demo Scenarios):</span>
+    <span class="mjx-topbar-label">🎬 动态演示剧本:</span>
     <button type="button" class="mjx-btn" data-demo="manual" data-active>🕹️ 自由操控台</button>
-    <button type="button" class="mjx-btn" data-demo="launch">🚀 3S 弹射起步 (62km/h)</button>
-    <button type="button" class="mjx-btn" data-demo="drift">🌀 拉力钟摆漂移 + 陀螺仪救车</button>
-    <button type="button" class="mjx-btn" data-demo="offroad">⛰️ 砂石飞跳与油压避震</button>
-    <button type="button" class="mjx-btn" data-demo="tour">🔍 12 总成自动拆解巡礼</button>
+    <button type="button" class="mjx-btn" data-demo="launch">🚀 3S 弹射起步</button>
+    <button type="button" class="mjx-btn" data-demo="drift">🌀 拉力钟摆漂移</button>
+    <button type="button" class="mjx-btn" data-demo="offroad">⛰️ 砂石飞跳避震</button>
+    <button type="button" class="mjx-btn" data-demo="dyno">📈 阶梯功率测功</button>
+    <button type="button" class="mjx-btn" data-demo="tour">🔍 12 总成拆解巡礼</button>
   </div>
   <div class="mjx-topbar-group">
     <span class="mjx-topbar-label">🎨 涂装与分色:</span>
     <button type="button" class="mjx-btn" data-livery-btn="hyper" data-active>厂队赤红金</button>
-    <button type="button" class="mjx-btn" data-livery-btn="wrc">WRC 蓝金拉力</button>
+    <button type="button" class="mjx-btn" data-livery-btn="wrc">WRC 蓝金</button>
+    <button type="button" class="mjx-btn" data-livery-btn="gulf">海湾冰蓝橙</button>
     <button type="button" class="mjx-btn" data-livery-btn="martini">传奇红白蓝</button>
     <button type="button" class="mjx-btn" data-livery-btn="cyber">赛博霓虹紫</button>
     <button type="button" class="mjx-btn" data-livery-btn="stealth">黑金暗夜绿</button>
@@ -1243,6 +1264,10 @@ function setDemoMode(mode) {
     setCells(2);
     setThrottle(0.68);
     if (selected) selectPart(null);
+  } else if (mode === "dyno") {
+    toggleExplode(false);
+    setSteer(0);
+    if (selected) selectPart(null);
   } else if (mode === "tour") {
     toggleExplode(true);
     cycleShell("xray");
@@ -1423,6 +1448,11 @@ function tick(now) {
     if (Math.floor((elapsed - dt) / 2.6) < Math.floor(elapsed / 2.6)) {
       triggerBump(-210);
     }
+  } else if (demoMode === "dyno") {
+    const step = Math.floor(elapsed / 2.2) % 6;
+    setCells(step >= 3 ? 3 : 2);
+    const levels = [0.28, 0.55, 0.85, 0.35, 0.72, 1.0];
+    setThrottle(levels[step]);
   } else if (demoMode === "tour") {
     setThrottle(0.42);
     const idx = Math.floor(elapsed / 2.8) % ORDER.length;
