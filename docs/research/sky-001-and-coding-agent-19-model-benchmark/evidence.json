@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "topic": "sky-001-and-coding-agent-19-model-benchmark",
+  "generated_at": "2026-10-23",
+  "provenance": "anonymized_reported",
+  "independently_reproduced": false,
+  "upstream_repositories": [
+    {
+      "repo": "satomic/copilot-benchmark",
+      "url": "https://github.com/satomic/copilot-benchmark",
+      "pinned_commit": "a191383571a13143685fd6f7787512c4e281a9ba",
+      "commit_date": "2026-10-15T08:28:58Z",
+      "commit_message": "add haiku 5.5 and gemini 5 argon",
+      "commit_url": "https://github.com/satomic/copilot-benchmark/commit/a191383571a13143685fd6f7787512c4e281a9ba",
+      "previous_commit": "aa1e0dc31661ff6343433f06fe3bea1e015b8525",
+      "license": null,
+      "license_note": "No SPDX LICENSE file present at commit a191383571a13143685fd6f7787512c4e281a9ba; only factual benchmark statistics and schema metadata are cited.",
+      "verified_counts": {
+        "tasks": 11,
+        "models": 19,
+        "non_reference_report_bundles": 209,
+        "reference_report_bundles": 11,
+        "hidden_assertions_per_model": 1310,
+        "new_bundles_in_supplement_5": 22,
+        "prior_model_score_drifts_in_commit": 0
+      }
+    },
+    {
+      "repo": "skyfall.ai (Public Production Bundles)",
+      "url": "https://skyfall.ai/blog/introducing-sky-001",
+      "artifacts": [
+        {
+          "url": "https://skyfall.ai/assets/index-D5BqB7X_.js",
+          "bytes": 494518,
+          "sha256": "1bc34257c0f2f1db82336d13f95f88c391950c0957655377f752954b4cd7199f"
+        },
+        {
+          "url": "https://skyfall.ai/assets/article-D6mnIEDb.js",
+          "bytes": 77103,
+          "sha256": "8f22592c0d7f0bc1600158903685a5212ddb417499cde1c1e93754de5e6a9830"
+        }
+      ],
+      "launch_date": "2026-10-19",
+      "access_status": "Waitlist-only closed preview (no public weights, API, or raw 1,000-case geometry files released)"
+    }
+  ],
+  "verified_supplement_5_bundles": {
+    "claude-haiku-5.5": {
+      "cli_version": "1.0.98",
+      "effort": "medium",
+      "capi_pricing_per_1m": {
+        "input_usd": 0.1,
+        "cache_read_usd": 0.01,
+        "cache_write_usd": 0.125,
+        "output_usd": 0.5,
+        "long_context_threshold_tokens": 100000
+      },
+      "totals": {
+        "score_sum": 1091.61,
+        "score_mean": 99.24,
+        "atomic_mean": 99.15,
+        "medium_mean": 99.5,
+        "complex_mean": 99.22,
+        "hidden_passed": 1308,
+        "hidden_total": 1310,
+        "failed_hidden_tests": [
+          "_verify.test_c4::test_parse_errors[if true { }]",
+          "_verify.test_c4::test_parse_errors[while true { }]"
+        ],
+        "wall_clock_s": 2103.62,
+        "api_time_s": 1851.85,
+        "premium_requests": 94,
+        "ai_credits": 33.38,
+        "cost_usd": 0.3338,
+        "output_tokens": 453116
+      }
+    },
+    "gemini-4-argon": {
+      "cli_version": "1.0.98",
+      "effort": "medium",
+      "commit_message_note": "Commit a1913835 message wrote 'gemini 5 argon', but run.json model id and CAPI catalog entry are 'gemini-4-argon' ('Gemini 4 Argon').",
+      "capi_pricing_per_1m": {
+        "input_usd": 2.0,
+        "cache_read_usd": 0.1,
+        "cache_write_usd": 0.0,
+        "output_usd": 10.0,
+        "max_context_window_tokens": 1048576
+      },
+      "totals": {
+        "score_sum": 1084.5,
+        "score_mean": 98.59,
+        "atomic_mean": 99.0,
+        "medium_mean": 98.62,
+        "complex_mean": 98.06,
+        "hidden_passed": 1310,
+        "hidden_total": 1310,
+        "failed_hidden_tests": [],
+        "wall_clock_s": 2709.84,
+        "api_time_s": 2512.3,
+        "premium_requests": 106,
+        "ai_credits": 282.09,
+        "cost_usd": 2.8209,
+        "output_tokens": 116755
+      }
+    }
+  },
+  "sky001_verified_bundle_arrays": {
+    "cad_blog_article_D6mnIEDb_js": [
+      {
+        "model": "SKY-001",
+        "iou_pct": 79.7,
+        "seconds_per_case": 3.9,
+        "usd_per_case": 0.005,
+        "ours": true
+      },
+      {
+        "model": "GPT-6 Astra",
+        "iou_pct": 79.1,
+        "seconds_per_case": 199.0,
+        "usd_per_case": 0.75,
+        "ours": false
+      },
+      {
+        "model": "Gemini 4",
+        "iou_pct": 76.9,
+        "seconds_per_case": 253.0,
+        "usd_per_case": 0.25,
+        "ours": false
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "iou_pct": 34.4,
+        "seconds_per_case": 764.0,
+        "usd_per_case": 0.3,
+        "ours": false
+      },
+      {
+        "model": "Kimi K3",
+        "iou_pct": 9.5,
+        "seconds_per_case": 439.0,
+        "usd_per_case": 0.13,
+        "ours": false
+      },
+      {
+        "model": "Grok 4.7",
+        "iou_pct": null,
+        "seconds_per_case": 1250.0,
+        "usd_per_case": 0.59,
+        "ours": false
+      }
+    ],
+    "cad_landing_index_D5BqB7X_js": [
+      {
+        "model": "SKY-001",
+        "iou_pct": 79.7,
+        "seconds_per_case": 3.9,
+        "usd_per_case": 0.005,
+        "ours": true
+      },
+      {
+        "model": "GPT-6 Astra",
+        "iou_pct": 79.1,
+        "seconds_per_case": 199.0,
+        "usd_per_case": 0.75,
+        "ours": false
+      },
+      {
+        "model": "Opus 5.5",
+        "iou_pct": 69.4,
+        "seconds_per_case": 110.0,
+        "usd_per_case": 0.31,
+        "ours": false
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "iou_pct": 54.7,
+        "seconds_per_case": 112.0,
+        "usd_per_case": 0.08,
+        "ours": false
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "iou_pct": 34.4,
+        "seconds_per_case": 764.0,
+        "usd_per_case": 0.3,
+        "ours": false
+      },
+      {
+        "model": "Kimi K3",
+        "iou_pct": 9.5,
+        "seconds_per_case": 439.0,
+        "usd_per_case": 0.13,
+        "ours": false
+      },
+      {
+        "model": "Grok 4.7",
+        "iou_pct": null,
+        "seconds_per_case": 1250.0,
+        "usd_per_case": 0.59,
+        "ours": false
+      }
+    ],
+    "bim_blog_article_D6mnIEDb_js": [
+      {
+        "model": "SKY-001",
+        "iou_pct": 43.6,
+        "seconds_per_case": 1.22,
+        "usd_per_case": 0.0024,
+        "ours": true
+      },
+      {
+        "model": "GPT-6 Astra",
+        "iou_pct": 40.6,
+        "seconds_per_case": 144.6,
+        "usd_per_case": 0.446,
+        "ours": false
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "iou_pct": 42.3,
+        "seconds_per_case": 346.2,
+        "usd_per_case": 0.218,
+        "ours": false
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "iou_pct": 28.8,
+        "seconds_per_case": 255.3,
+        "usd_per_case": 0.111,
+        "ours": false
+      },
+      {
+        "model": "Kimi K3",
+        "iou_pct": 33.7,
+        "seconds_per_case": 113.9,
+        "usd_per_case": 0.27,
+        "ours": false
+      },
+      {
+        "model": "Grok 4.7",
+        "iou_pct": 28.2,
+        "seconds_per_case": 592.1,
+        "usd_per_case": 0.305,
+        "ours": false
+      }
+    ],
+    "bim_landing_index_D5BqB7X_js": [
+      {
+        "model": "SKY-001",
+        "iou_pct": 43.6,
+        "seconds_per_case": 1.22,
+        "usd_per_case": 0.00237,
+        "ours": true
+      },
+      {
+        "model": "GPT-6 Astra",
+        "iou_pct": 40.6,
+        "seconds_per_case": 144.4,
+        "usd_per_case": 0.4465,
+        "ours": false
+      },
+      {
+        "model": "Opus 5.5",
+        "iou_pct": 34.4,
+        "seconds_per_case": 113.1,
+        "usd_per_case": 0.276,
+        "ours": false
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "iou_pct": 42.3,
+        "seconds_per_case": 345.4,
+        "usd_per_case": 0.2185,
+        "ours": false
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "iou_pct": 28.8,
+        "seconds_per_case": 254.5,
+        "usd_per_case": 0.111,
+        "ours": false
+      },
+      {
+        "model": "Kimi K3",
+        "iou_pct": 33.7,
+        "seconds_per_case": 114.0,
+        "usd_per_case": 0.27,
+        "ours": false
+      },
+      {
+        "model": "Grok 4.7",
+        "iou_pct": 28.2,
+        "seconds_per_case": 592.3,
+        "usd_per_case": 0.305,
+        "ours": false
+      }
+    ],
+    "composer_llm_judges": {
+      "Part decomposition": {
+        "SKY-001": 7.8,
+        "GPT-6 Astra": 6.4
+      },
+      "Interior": {
+        "SKY-001": 7.3,
+        "GPT-6 Astra": 6.3
+      },
+      "Complexity": {
+        "SKY-001": 8.0,
+        "GPT-6 Astra": 7.3
+      },
+      "Match to the input image": {
+        "SKY-001": 8.1,
+        "GPT-6 Astra": 6.7
+      },
+      "Exterior realism": {
+        "SKY-001": 7.7,
+        "GPT-6 Astra": 7.4
+      }
+    }
+  }
+}

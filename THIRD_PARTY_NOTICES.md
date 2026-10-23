@@ -1,5 +1,10 @@
 # 第三方声明
 
+## SKY-001 工程世界模型与 Coding Agent 十九模型基准深度评测（增补报告 5）
+
+- **[`satomic/copilot-benchmark`](https://github.com/satomic/copilot-benchmark/tree/a191383571a13143685fd6f7787512c4e281a9ba)**：固定 commit `a191383571a13143685fd6f7787512c4e281a9ba`（`2026-10-15T08:28:58Z`）。本库收录去标识化后的 19 模型统计汇总、帕累托前沿分析与原创离线验证脚本（[`docs/research/sky-001-and-coding-agent-19-model-benchmark/`](docs/research/sky-001-and-coding-agent-19-model-benchmark/README.md)，标注 `anonymized_reported`, `independently_reproduced=false`），不重分发完整上游运行工作区文件。
+- **Skyfall AI (`SKY-001`)**：基于公开技术文章 `https://skyfall.ai/blog/introducing-sky-001` 与公开前端生产包（`index-D5BqB7X_.js` / `article-D6mnIEDb.js`）中披露的基准统计指标进行独立算术核验与架构评述，不代表获得闭源模型或原始 3D 资产许可。
+
 ## Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE 研究
 
 - **`customer-success-microsoft/faf-agents` (Agent Forge / FAF v2.0.1)**：固定 commit `a740ad88afa0b054e656207e72205002ca6744f0`，上游根 `LICENSE` 为 MIT License（其中 `docx`、`pptx`、`xlsx`、`pdf` 技能包含源自 Anthropic Claude Code Skills 的许可与归属声明）。本公开库仅保留脱敏后的架构机制分析、量化评分权重公式摘要与元数据（[`docs/research/faf-vs-agent-forge/`](docs/research/faf-vs-agent-forge/README.zh-CN.md)），不复制或再分发上游插件源码、完整提示词正文或任何内部客户材料。

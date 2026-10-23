@@ -1,0 +1,1535 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>SKY-001 World Model &amp; Coding Agent 19-Model Benchmark (Supplement 5: Haiku 5.5 &amp; Gemini 4 Argon)</title><style>*{box-sizing:border-box}body{margin:0;padding:2rem 1rem;background:#e2e8f0;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}.deck-wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:2.2rem}.report-card{background:#f8fafc;border-radius:18px;overflow:hidden;box-shadow:0 16px 40px rgba(15,23,42,.12);border:1px solid #cbd5e1;min-height:1025px;display:flex;flex-direction:column}.card-accent-bar{height:10px;background:linear-gradient(90deg,#6366f1 0%,#4f46e5 55%,#2563eb 100%)}.card-inner{padding:2.4rem 2.8rem 1.8rem;flex:1;display:flex;flex-direction:column;justify-content:space-between}.card-eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.12em;color:#4f46e5;text-transform:uppercase;margin-bottom:.55rem}.card-headline{font-size:2.35rem;line-height:1.12;font-weight:800;margin:0 0 .65rem;letter-spacing:-.02em;color:#0f172a}.grad-text{background:linear-gradient(90deg,#3b82f6,#4f46e5);-webkit-background-clip:text;background-clip:text;color:transparent}.card-subtitle{font-size:1.08rem;line-height:1.45;color:#475569;margin:0 0 1.2rem}.card-canvas{flex:1;display:flex;flex-direction:column;justify-content:center;gap:1rem}.quote-box,.callout-box{background:#eef2f6;border-radius:12px;padding:1rem 1.25rem;font-size:.98rem;line-height:1.48;color:#1e293b}.stack-list{display:flex;flex-direction:column;gap:.85rem}.decision-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:.95rem 1.15rem}.decision-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.75rem}.field-name{font-weight:700;font-size:1rem}.type-pill{background:#e2e8f0;color:#475569;font-size:.75rem;padding:.12rem .45rem;border-radius:6px;font-weight:600}.question-sub{font-size:.84rem;color:#64748b;margin-top:.15rem}.action-pill{font-size:.76rem;font-weight:700;padding:.22rem .6rem;border-radius:999px;white-space:nowrap}.pill-auto{background:#dcfce7;color:#15803d}.pill-confirm{background:#fef3c7;color:#b45309}.pill-human{background:#fee2e2;color:#b91c1c}.decision-main{font-size:1.18rem;margin:.45rem 0 .55rem}.conf-muted{font-size:.88rem;color:#64748b;font-weight:600}.dist-row{display:grid;grid-template-columns:170px 1fr 54px;align-items:center;gap:.6rem;font-size:.84rem;margin:.24rem 0}.dist-track{background:#e2e8f0;height:9px;border-radius:999px;overflow:hidden}.dist-fill{background:linear-gradient(90deg,#4f46e5,#6366f1);height:100%;border-radius:999px}.dist-pct{text-align:right;font-variant-numeric:tabular-nums;color:#334155}.clean-table{width:100%;border-collapse:collapse;font-size:.95rem;background:transparent}.clean-table th{font-size:.75rem;letter-spacing:.08em;color:#64748b;text-align:left;padding:.55rem .4rem;border-bottom:1px solid #cbd5e1}.clean-table td{padding:.62rem .4rem;border-bottom:1px solid #e2e8f0;vertical-align:top}.sc-col{font-weight:600;color:#1e293b}.act-col,.num-col{text-align:right;font-variant-numeric:tabular-nums}.act-auto{color:#15803d;font-weight:700}.act-confirm{color:#b45309;font-weight:700}.act-human{color:#b91c1c;font-weight:700}.miss-mark{color:#dc2626;font-weight:800}.code-dark{background:#0f172a;color:#e2e8f0;padding:1.1rem 1.3rem;border-radius:12px;font-size:.84rem;line-height:1.45;overflow-x:auto;margin:0}.code-transition{color:#4f46e5;font-weight:700;font-size:.95rem;padding:.15rem 0}.hl-answer{color:#fbbf24;font-weight:700}.rob-main{font-weight:600;color:#0f172a}.rob-sub{font-size:.8rem;color:#64748b}.lat-list{display:flex;flex-direction:column;gap:1rem}.lat-title{font-weight:700;font-size:1.02rem;margin-bottom:.35rem}.lat-row{display:flex;align-items:center;gap:.65rem;margin:.28rem 0}.lat-tag{width:95px;font-size:.85rem;color:#64748b}.lat-bar{height:22px;border-radius:6px}.lat-blue{background:#2563eb}.lat-gray{background:#cbd5e1}.lat-val{font-size:.92rem;font-variant-numeric:tabular-nums}.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}.fit-card{border-radius:14px;padding:1.25rem 1.4rem;font-size:1rem;line-height:1.6}.fit-good{background:#ecfdf5;border:1px solid #a7f3d0}.fit-bad{background:#fff1f2;border:1px solid #fecdd3}.fit-head{font-weight:800;font-size:1.12rem;margin-bottom:.5rem}.dark-footer-box{background:#0f172a;color:#f8fafc;border-radius:14px;padding:1.25rem 1.5rem;font-size:1rem;line-height:1.5}.dark-repo{color:#38bdf8;font-family:ui-monospace,Consolas,monospace;margin-bottom:0}.workbench-shell{background:#fff;border:1px solid #cbd5e1;border-radius:14px;overflow:hidden}.wb-topbar{background:linear-gradient(90deg,#3b82f6,#6366f1);color:#fff;padding:.75rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}.wb-sub{font-size:.76rem;opacity:.92}.wb-status{background:rgba(15,23,42,.28);font-size:.74rem;padding:.25rem .6rem;border-radius:999px;white-space:nowrap}.wb-grid{display:grid;grid-template-columns:220px 1fr;gap:.85rem;padding:.9rem}.wb-col-title{font-size:.78rem;font-weight:700;color:#475569;text-transform:uppercase;margin-bottom:.4rem}.wb-item{font-size:.8rem;padding:.38rem .5rem;border-radius:6px;background:#f8fafc;border:1px solid #e2e8f0;margin-bottom:.32rem}.wb-note{font-size:.73rem;color:#64748b;margin-top:.55rem;line-height:1.38}.wb-metrics{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.55rem}.wb-metric{font-size:.74rem;background:#f1f5f9;padding:.2rem .5rem;border-radius:6px;color:#334155;font-weight:600}.card-footer{border-top:1px solid #cbd5e1;padding-top:.9rem;margin-top:1.2rem;display:flex;justify-content:space-between;font-size:.86rem;color:#64748b}@media print{body{background:#fff;padding:0}.deck-wrap{gap:0}.report-card{box-shadow:none;page-break-after:always;border:none}}</style></head><body><main class="deck-wrap"><article class="report-card" id="card-1"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">HANDS-ON · ENGINEERING WORLD MODEL &amp; 19-MODEL CODING BENCHMARK</div><h2 class="card-headline">Haiku 5.5 (#4 at $0.33), Gemini 4 Argon (100% hidden) &amp; <span class="grad-text">SKY-001 98.4x Critical-Path Scaling</span></h2><p class="card-subtitle">Supplement 5 expands Copilot CLI to 19 models (209 runs, CLI 1.0.98): Haiku 5.5 jumps to 99.24 (#4) for $0.33 and Gemini 4 Argon passes 1,310/1,310 hidden tests (98.59). Cross-auditing Skyfall AI&#x27;s SKY-001 shows why hierarchical 3D state decomposition beats one-shot LLM CAD scripts by 51x–118.5x in speed.</p></header><div class="card-canvas"><div class="workbench-shell"><div class="wb-topbar"><div><strong>Dual-Track Engineering Benchmark Workbench (19 Coding Agents + SKY-001 CAD/BIM)</strong><div class="wb-sub">A System One decision & benchmark view: structured state, calibrated confidence bands, zero fabricated coordinates</div></div><span class="wb-status">CLI 1.0.84-3..1.0.98 (209 runs) + SKY-001 JS Audit · anonymized_reported</span></div><div class="wb-grid"><div class="wb-col-left"><div class="wb-col-title">Scenarios</div><div class="wb-item">Track A · Coding Agent (19 models × 11 stdlib tasks = 209 runs, 1,310 hidden tests)</div><div class="wb-item">Supplement 5 (2026-10-15 · CLI 1.0.98): Claude Haiku 5.5 &amp; Gemini 4 Argon (+22 runs)</div><div class="wb-item">Track B · SKY-001 Stage 1: Hierarchical Composer (Coarse 3D -&gt; Split Tree -&gt; Leaf Refiner)</div><div class="wb-item">Track B · SKY-001 Stage 2: Construction World Model (3D State Subgoals + 2D Inverse Sketches)</div><div class="wb-item">SKY-001 CAD Benchmark (1,000 parts, ~100 steps/part, 3D IoU + latency + cost)</div><div class="wb-item">SKY-001 BIM Benchmark (1,000 floor plans: 350 IFC + 650 apartments, ~70 steps/plan)</div><div class="wb-item">Cross-Modality Audit: 6 overlapping frontier families (Astra, Opus 5.5, Gemini 4, Flash, Kimi K3, Grok 4.7)</div><div class="wb-note">Coding Agent gating: Act automatically if 1,310/1,310 hidden pass &amp; mean &gt;= 98.45 (9 models); Confirm if &lt;1,310 hidden or mean 97.50–98.44 (8 models); Send to a human if hidden &lt; 1,260 (2 models).</div></div><div class="wb-col-right"><div class="wb-metrics"><span class="wb-metric">Haiku 5.5: 99.24 (#4) · $0.33 · 35.1m</span><span class="wb-metric">Gemini 4 Argon: 98.59 (#10) · 1310/1310 · $2.82</span><span class="wb-metric">SKY-001 CAD: 79.7% IoU · 3.9s · $0.005</span><span class="wb-metric">SKY-001 BIM: 43.6% IoU · 1.22s · $0.0024</span></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">supplement_5_coding_breakthrough</span> <span class="type-pill">choice</span><div class="question-sub">How do Claude Haiku 5.5 and Gemini 4 Argon reshape the 19-model Coding Agent Pareto frontier?</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>Haiku 5.5 hits 99.24 (#4, $0.33) · Gemini 4 Argon hits 98.59 (1,310/1,310 hidden, $2.82)</strong><span class="conf-muted"> · closest to "Haiku 5.5 beats Sonnet 5.5 (99.00) &amp; GPT-6.1 Sol (98.86) at 88.6% lower cost; Argon is 9th 100%-hidden model" · confidence 0.992</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">Haiku 5.5 overall mean (99.24/100 · $0.33)</span><div class="dist-track"><div class="dist-fill" style="width:99.2%"></div></div><span class="dist-pct">99.2%</span></div><div class="dist-row"><span class="dist-label">Sonnet 5.5 overall mean (99.00/100 · $2.89)</span><div class="dist-track"><div class="dist-fill" style="width:99.0%"></div></div><span class="dist-pct">99.0%</span></div><div class="dist-row"><span class="dist-label">Gemini 4 Argon overall mean (98.59/100 · $2.82)</span><div class="dist-track"><div class="dist-fill" style="width:98.6%"></div></div><span class="dist-pct">98.6%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">sky_001_world_model_advantage</span> <span class="type-pill">score</span><div class="question-sub">Does SKY-001 beat frontier LLMs via single-part IoU accuracy or parallel hierarchical critical-path compression?</div></div><span class="action-pill pill-confirm">Confirm</span></div><div class="decision-main"><strong>51x–118.5x faster &amp; 150x–188.4x cheaper (IoU +0.6 pt CAD tie vs Astra; +1.3 pt BIM vs Flash)</strong><span class="conf-muted"> · closest to "Jaguar E-Type (103 leaves, depth 5): 10,336 flat steps compressed to 105 sequential steps (98.44x speedup)" · confidence 0.797</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">SKY-001 CAD IoU (3.9s · $0.005)</span><div class="dist-track"><div class="dist-fill" style="width:79.7%"></div></div><span class="dist-pct">79.7%</span></div><div class="dist-row"><span class="dist-label">GPT-6 Astra CAD IoU (199s · $0.75)</span><div class="dist-track"><div class="dist-fill" style="width:79.1%"></div></div><span class="dist-pct">79.1%</span></div><div class="dist-row"><span class="dist-label">Gemini 4 CAD IoU (253s · $0.25 · blog)</span><div class="dist-track"><div class="dist-fill" style="width:76.9%"></div></div><span class="dist-pct">76.9%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">executable_cad_vs_visual_rollout</span> <span class="type-pill">noul</span><div class="question-sub">Does SKY-001 currently output an editable parametric CAD feature tree (B-Rep/STEP) ready for manufacturing?</div></div><span class="action-pill pill-confirm">Confirm</span></div><div class="decision-main"><strong>No (outputs visual 3D state + 2D sketch rollouts; executable feature history is roadmap)</strong><span class="conf-muted"> · closest to "Waitlist-only closed preview; BIM mean IoU is 43.6% across 1,000 floor plans" · P(true) = 0.436</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">SKY-001 BIM 1,000-plan IoU (1.22s · $0.0024)</span><div class="dist-track"><div class="dist-fill" style="width:43.6%"></div></div><span class="dist-pct">43.6%</span></div><div class="dist-row"><span class="dist-label">Gemini 3.8 Flash BIM IoU (346.2s · $0.218)</span><div class="dist-track"><div class="dist-fill" style="width:42.3%"></div></div><span class="dist-pct">42.3%</span></div><div class="dist-row"><span class="dist-label">GPT-6 Astra BIM IoU (144.6s · $0.446)</span><div class="dist-track"><div class="dist-fill" style="width:40.6%"></div></div><span class="dist-pct">40.6%</span></div></div></div></div></div></div><div class="callout-box"><strong>Two complementary engineering paradigms audited from primary artifacts (anonymized_reported, independently_reproduced=false).</strong> In code space with a CLI test loop, lightweight Haiku 5.5 ($0.33) and Gemini 4 Argon ($2.82, 0$ cache-write) match flagship agents; in 3D geometry space without a visual state-feedback loop, one-shot LLM scripts collapse or stall.</div></div><footer class="card-footer"><span><strong>SKY-001 World Model &amp; Coding Agent 19-Model Benchmark (Supplement 5: Haiku 5.5 &amp; Gemini 4 Argon)</strong> · anonymized_reported</span><span>1 / 7</span></footer></div></article><article class="report-card" id="card-2"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">SCENARIO: HAIKU 5.5, GEMINI 4 ARGON &amp; SKY-001 DUAL-SOURCE AUDIT</div><h2 class="card-headline">Haiku 5.5 leaps +5.28 pts to 99.24 ($0.33); Argon hits 1,310/1,310; SKY-001 cuts critical path 98.4x.</h2></header><div class="card-canvas"><div class="quote-box">"Supplement 5 commit a1913835 (2026-10-15, CLI 1.0.98) adds 22 runs for claude-haiku-5.5 and gemini-4-argon while verifying zero score changes across all 17 prior models. Skyfall AI&#x27;s production JS bundles (index-D5BqB7X_.js &amp; article-D6mnIEDb.js) expose exact CAD/BIM metrics and tree node counts."</div><div class="stack-list"><div class="decision-card"><div class="decision-head"><div><span class="field-name">claude_haiku_5_5_deep_dive</span> <span class="type-pill">score</span><div class="question-sub">Claude Haiku 5.5 vs Haiku 4.5 &amp; Sonnet 5.5 across A1–C4 (CLI 1.0.98, effort=medium)</div></div><span class="action-pill pill-confirm">Confirm</span></div><div class="decision-main"><strong>99.24 / 100 (Rank 4 of 19 · 1,308/1,310 hidden · $0.33 · 94 rounds · 45.3w out)</strong><span class="conf-muted"> · closest to "+5.28 pts &amp; -91.6% cost vs Haiku 4.5 ($3.93); only 2 hidden misses in C4-microvm test_parse_errors" · confidence 0.992</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">Medium M1-M2 mean (99.50/100)</span><div class="dist-track"><div class="dist-fill" style="width:99.5%"></div></div><span class="dist-pct">99.5%</span></div><div class="dist-row"><span class="dist-label">Complex C1-C4 mean (99.22/100)</span><div class="dist-track"><div class="dist-fill" style="width:99.2%"></div></div><span class="dist-pct">99.2%</span></div><div class="dist-row"><span class="dist-label">Atomic A1-A5 mean (99.15/100)</span><div class="dist-track"><div class="dist-fill" style="width:99.2%"></div></div><span class="dist-pct">99.2%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">gemini_4_argon_deep_dive</span> <span class="type-pill">score</span><div class="question-sub">Gemini 4 Argon vs Gemini 3.8 Flash &amp; GPT-6.1 Sol (1.05M context, $0/M cache_write)</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>98.59 / 100 (Rank 10 of 19 · 1,310/1,310 hidden · $2.82 · 106 rounds · 11.7w out)</strong><span class="conf-muted"> · closest to "Eliminates all 34 hidden test failures of Gemini 3.8 Flash; 61.7% fewer API rounds (106 vs 277)" · confidence 0.986</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">Hidden test pass rate (1310/1310)</span><div class="dist-track"><div class="dist-fill" style="width:100.0%"></div></div><span class="dist-pct">100.0%</span></div><div class="dist-row"><span class="dist-label">Atomic A1-A5 mean (99.00/100)</span><div class="dist-track"><div class="dist-fill" style="width:99.0%"></div></div><span class="dist-pct">99.0%</span></div><div class="dist-row"><span class="dist-label">Complex C1-C4 mean (98.06/100)</span><div class="dist-track"><div class="dist-fill" style="width:98.1%"></div></div><span class="dist-pct">98.1%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">sky_001_bundle_discrepancy_audit</span> <span class="type-pill">choice</span><div class="question-sub">What did cross-auditing Skyfall AI&#x27;s blog bundle (article-D6mnIEDb.js) vs landing bundle (index-D5BqB7X_.js) reveal?</div></div><span class="action-pill pill-confirm">Confirm</span></div><div class="decision-main"><strong>Blog includes Gemini 4 (76.9% CAD IoU); Landing swaps in Opus 5.5 (69.4%) &amp; Flash (54.7%)</strong><span class="conf-muted"> · closest to "In BIM, Gemini 3.8 Flash (42.3% IoU) beats GPT-6 Astra (40.6% IoU) and trails SKY-001 (43.6%) by 1.3 pts" · confidence 0.95</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">Jaguar critical-path compression (105 vs 10,336)</span><div class="dist-track"><div class="dist-fill" style="width:99.0%"></div></div><span class="dist-pct">99.0%</span></div><div class="dist-row"><span class="dist-label">SKY-001 Composer LLM-judge win rate (5/5 axes)</span><div class="dist-track"><div class="dist-fill" style="width:100.0%"></div></div><span class="dist-pct">100.0%</span></div><div class="dist-row"><span class="dist-label">Astra Composer asset completion rate (82%)</span><div class="dist-track"><div class="dist-fill" style="width:82.0%"></div></div><span class="dist-pct">82.0%</span></div></div></div></div><div class="callout-box"><strong>Haiku 5.5 achieves 100.0 on A1, A4, M1, C2, C3 and 99.61 on C4 — missing Auto gating solely due to 2/296 parser error tests in C4-microvm.</strong> Meanwhile, Gemini 4 Argon passes 100% of hidden tests (1,310/1,310) with zero cache-write billing, losing points only on subjective/structural deductions in A3 (97.0), M2 (97.25), C3 (96.0), and C4 (98.0).</div></div><footer class="card-footer"><span><strong>SKY-001 World Model &amp; Coding Agent 19-Model Benchmark (Supplement 5: Haiku 5.5 &amp; Gemini 4 Argon)</strong> · anonymized_reported</span><span>2 / 7</span></footer></div></article><article class="report-card" id="card-3"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">WHAT I TESTED</div><h2 class="card-headline">19 coding models (209 runs) + SKY-001 2,000-case CAD/BIM matrix</h2></header><div class="card-canvas"><table class="clean-table"><thead><tr><th>SCENARIO</th><th>QUESTION</th><th>DECIDER'S ANSWER</th><th class="act-col">ACTION</th></tr></thead><tbody><tr><td class="sc-col">Tier 1 · Flagship Ceiling</td><td>Fable 5.1 (142 rounds · 55.9m wall · $14.45 · 15.8w out)</td><td><strong>99.77 mean | Complex 99.62 | 1310/1310 hidden</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Opus 5.5 (92 rounds · 31.8m wall · $5.84 · 17.6w out)</td><td><strong>99.68 mean | Complex 99.62 | 1310/1310 hidden</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Opus 5 (188 rounds · 63.3m wall · $17.41 · 24.9w out)</td><td><strong>99.59 mean | Complex 99.38 | 1310/1310 hidden</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Tier 2 · High-ROI Pareto</td><td>Haiku 5.5 [NEW] (94 rounds · 35.1m wall · $0.33 · 45.3w out)</td><td><strong>99.24 mean | Complex 99.22 | 1308/1310 (-2 hidden)</strong> (99%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col">Tier 3 · High-Score Specialist</td><td>Grok 4.7 (143 rounds · 181.2m wall · $12.22 · 51.5w out)</td><td><strong>99.21 mean | Complex 99.33 | 1299/1310 (-11 hidden)</strong> (99%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col">Tier 2 · High-ROI Pareto</td><td>Sonnet 5.5 (65 rounds · 21.7m wall · $2.89 · 16.1w out)</td><td><strong>99.00 mean | Complex 99.19 | 1310/1310 hidden</strong> (99%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>GPT-6.1 Sol (60 rounds · 27.4m wall · $1.71 · 9.3w out)</td><td><strong>98.86 mean | Complex 99.38 | 1310/1310 hidden</strong> (99%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Tier 3 · High-Score Specialist</td><td>GPT-6 Astra (62 rounds · 32.7m wall · $9.91 · 9.8w out)</td><td><strong>98.82 mean | Complex 99.75 | 1310/1310 hidden</strong> (99%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Sonnet 5 (190 rounds · 53.2m wall · $7.87 · 23.9w out)</td><td><strong>98.70 mean | Complex 98.88 | 1310/1310 hidden</strong> (99%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Kimi K3 (143 rounds · 150.5m wall · $5.58 · 17.5w out)</td><td><strong>98.68 mean | Complex 98.81 | 1305/1310 (-5 hidden)</strong> (99%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>Gemini 4 Argon [NEW] (106 rounds · 45.2m wall · $2.82 · 11.7w out)</td><td><strong>98.59 mean | Complex 98.06 | 1310/1310 hidden</strong> (99%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Grok 4.6 (138 rounds · 69.5m wall · $5.21 · 19.4w out)</td><td><strong>98.57 mean | Complex 98.06 | 1305/1310 (-5 hidden)</strong> (99%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col">Tier 2 · High-ROI Pareto</td><td>HydraFusion (85 rounds · 24.1m wall · $3.58 · 8.9w out)</td><td><strong>98.45 mean | Complex 98.75 | 1310/1310 hidden</strong> (98%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Tier 4 · Low-Cost &amp; Lightweight</td><td>GPT-6 Luna (139 rounds · 44.6m wall · $0.17 · 14.5w out)</td><td><strong>98.16 mean | Complex 96.88 | 1279/1310 (-31 hidden)</strong> (98%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>Gemini 3.8 Flash (277 rounds · 85.4m wall · $2.83 · 12.3w out)</td><td><strong>98.00 mean | Complex 97.00 | 1276/1310 (-34 hidden)</strong> (98%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>GPT-5.6 Luna (235 rounds · 51.0m wall · $0.39 · 10.7w out)</td><td><strong>97.88 mean | Complex 96.42 | 1293/1310 (-17 hidden)</strong> (98%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>MAI-Code-1.1-Flash (192 rounds · 56.5m wall · $0.53 · 23.3w out)</td><td><strong>97.70 mean | Complex 96.61 | 1284/1310 (-26 hidden)</strong> (98%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>DeepSeek-V4-Flash (420 rounds · 179.0m wall · $1.95 · 29.0w out)</td><td><strong>95.10 mean | Complex 95.91 | 1250/1310 (-60 hidden)</strong> (95%) <span class="miss-mark">✕</span></td><td class="act-col act-human">Human</td></tr><tr><td class="sc-col"></td><td>Haiku 4.5 (341 rounds · 80.8m wall · $3.93 · 30.3w out)</td><td><strong>93.96 mean | Complex 89.64 | 1239/1310 (-71 hidden)</strong> (94%) <span class="miss-mark">✕</span></td><td class="act-col act-human">Human</td></tr><tr><td class="sc-col">Track B · SKY-001 CAD (1k cases)</td><td>SKY-001 vs GPT-6 Astra (3.9s / $0.005 vs 199s / $0.75 per part)</td><td><strong>79.7% vs 79.1% IoU (+0.6 pt tie; 51.0x faster, 150.0x cheaper)</strong> (80%)</td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col">Track B · SKY-001 BIM (1k plans)</td><td>SKY-001 vs Gemini 3.8 Flash &amp; Astra (1.22s / $0.0024 vs 346.2s &amp; 144.6s)</td><td><strong>43.6% vs 42.3% Flash &amp; 40.6% Astra (118.5x faster, 185.8x cheaper)</strong> (44%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr></tbody></table><div class="callout-box"><strong>9 of 19 coding models pass all 1,310 / 1,310 hidden assertions and clear the Auto bar (&gt;= 98.45 mean).</strong> Auto-eligible cohort: Fable 5.1, Opus 5.5, Opus 5, Sonnet 5.5, GPT-6.1 Sol, GPT-6 Astra, Sonnet 5, Gemini 4 Argon [NEW], and HydraFusion.</div><div class="callout-box"><strong>The near-miss champion (✕): Claude Haiku 5.5 ranks #4 overall (99.24) at $0.33 with 1,308/1,310 hidden pass.</strong> Haiku 5.5 outscores Sonnet 5.5 (99.00) and GPT-6.1 Sol (98.86) at 1/9th to 1/5th the cost, requiring only a lightweight AST/parser guard on C4 to reach full automation.</div></div><footer class="card-footer"><span><strong>SKY-001 World Model &amp; Coding Agent 19-Model Benchmark (Supplement 5: Haiku 5.5 &amp; Gemini 4 Argon)</strong> · anonymized_reported</span><span>3 / 7</span></footer></div></article><article class="report-card" id="card-4"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">UNDER THE HOOD</div><h2 class="card-headline">Copilot CLI 70/15/15 verifier vs SKY-001 Two-Pass World Model</h2></header><div class="card-canvas"><pre class="code-dark">{
+  &quot;track_A_copilot_cli_supplement_5&quot;: {
+    &quot;commit&quot;: &quot;a191383571a13143685fd6f7787512c4e281a9ba&quot;,
+    &quot;cli_version&quot;: &quot;1.0.98&quot;,
+    &quot;haiku_5_5_C4_microvm&quot;: {
+      &quot;wall_s&quot;: 278.8,
+      &quot;api_s&quot;: 250.5,
+      &quot;rounds&quot;: 14,
+      &quot;ai_credits&quot;: 5.13,
+      &quot;hidden_tests&quot;: &quot;294/296 (2 test_parse_errors misses -&gt; 69.61/70)&quot;,
+      &quot;total_score&quot;: 99.61
+    },
+    &quot;gemini_4_argon_C3_microdb&quot;: {
+      &quot;wall_s&quot;: 1007.4,
+      &quot;api_s&quot;: 983.9,
+      &quot;rounds&quot;: 29,
+      &quot;ai_credits&quot;: 98.58,
+      &quot;cache_write_price_per_m&quot;: 0.0,
+      &quot;hidden_tests&quot;: &quot;377/377 (58/58 + 12/12 self_test = 70/70)&quot;,
+      &quot;total_score&quot;: 96.0
+    }
+  }
+}</pre><div class="code-transition">↓ vs SKY-001 Hierarchical Part Tree + Matryoshka Two-Pass Construction Rollout</div><pre class="code-dark">&lt;sky_001_execution_graph steps_per_part=&quot;100&quot; parallel_workers=&quot;128&quot;&gt;
+  Stage 1 (Hierarchical Composer): Coarse 3D DiT -&gt; Parallel Tree Split (depth D) -&gt; Leaf Refiner DiT
+    Jaguar E-Type: L=103 leaves, N=139 nodes (36 splits), D=5
+    Flat chain:   (N - L) + L * S = 36 + 103 * 100 = 10,336 sequential steps
+    Tree rollout: D + ceil(L / W) * S = 5 + 1 * 100 = 105 sequential steps (98.44x shorter!)
+  Stage 2 (Construction World Model):
+    Pass 1: Roll out intermediate 3D solid states + 2D inverse sketches in leading Matryoshka latents
+    Pass 2: Parallel full-resolution Refiner restores sharp edges, corners &amp; vertices
+&lt;/sky_001_execution_graph&gt;
+<span class="hl-answer">&lt;answer&gt;</span></pre><div class="callout-box"><strong>Why Haiku 5.5 generated 453k output tokens for only $0.33 while Argon cost $2.82 for 117k tokens:</strong> In C3-microdb, Haiku 5.5 emitted 263,769 output tokens ($0.50/M output, $0.01/M cache read = 16.93 credits), whereas Argon billed $2.00/M input, $0.10/M cache read, $0.00/M cache write, and $10.00/M output (98.58 credits).</div></div><footer class="card-footer"><span><strong>SKY-001 World Model &amp; Coding Agent 19-Model Benchmark (Supplement 5: Haiku 5.5 &amp; Gemini 4 Argon)</strong> · anonymized_reported</span><span>4 / 7</span></footer></div></article><article class="report-card" id="card-5"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">ROBUSTNESS CHECK</div><h2 class="card-headline">Generational leaps &amp; cross-modality sensitivity (Code vs 3D CAD)</h2><p class="card-subtitle">Comparing Supplement 5 models against their predecessors on the 11-task CLI suite, and contrasting 6 frontier families across multi-turn CLI coding vs Skyfall&#x27;s one-shot 3D CAD scripting benchmark.</p></header><div class="card-canvas"><table class="clean-table"><thead><tr><th>QUESTION / ANSWER</th><th class="num-col">ORIGINAL</th><th class="num-col">REVERSED</th><th class="num-col">CHANGE (PTS)</th></tr></thead><tbody><tr><td><div class="rob-main">Haiku 5.5 · Generational Leap vs Haiku 4.5 (11-Task Mean &amp; Complex)</div><div class="rob-sub">Complex mean 89.64% -&gt; 99.22% (+9.58 pts); Hidden 1239 -&gt; 1308/1310; Cost $3.93 -&gt; $0.33 (-91.6%)</div></td><td class="num-col">94.0%</td><td class="num-col">99.2%</td><td class="num-col">+5.2</td></tr><tr><td><div class="rob-main">Gemini 4 Argon · Generational Leap vs Gemini 3.8 Flash (11-Task Mean)</div><div class="rob-sub">Hidden assertions 1276/1310 (97.4%) -&gt; 1310/1310 (100.0%); Rounds 277 -&gt; 106 (-61.7%)</div></td><td class="num-col">98.0%</td><td class="num-col">98.6%</td><td class="num-col">+0.6</td></tr><tr><td><div class="rob-main">Grok 4.7 ·Modality Shift: One-Shot CAD Script vs Multi-Turn CLI Agent</div><div class="rob-sub">SKY-001 CAD benchmark: 0.0% IoU (null output at 1,250s) -&gt; Copilot CLI: 99.21% (#5 of 19)</div></td><td class="num-col">0.0%</td><td class="num-col">99.2%</td><td class="num-col">+99.2</td></tr><tr><td><div class="rob-main">Kimi K3 · Modality Shift: One-Shot CAD Script vs Multi-Turn CLI Agent</div><div class="rob-sub">SKY-001 CAD benchmark: 9.5% IoU (439s, $0.13) -&gt; Copilot CLI: 98.68% (1,305/1,310 hidden)</div></td><td class="num-col">9.5%</td><td class="num-col">98.7%</td><td class="num-col">+89.2</td></tr><tr><td><div class="rob-main">GPT-6 Astra · Modality Shift: One-Shot CAD Script vs Multi-Turn CLI Agent</div><div class="rob-sub">SKY-001 CAD: 79.1% IoU (-0.6 pt vs SKY-001) -&gt; Copilot CLI: 98.82% (Complex #1 at 99.75%)</div></td><td class="num-col">79.1%</td><td class="num-col">98.8%</td><td class="num-col">+19.7</td></tr><tr><td><div class="rob-main">Opus 5.5 · Modality Shift: One-Shot CAD Script vs Multi-Turn CLI Agent</div><div class="rob-sub">SKY-001 CAD landing: 69.4% IoU (omitted in blog) -&gt; Copilot CLI: 99.68% (#2 overall, 1310/1310)</div></td><td class="num-col">69.4%</td><td class="num-col">99.7%</td><td class="num-col">+30.3</td></tr><tr><td><div class="rob-main">Gemini 4 / Argon · Modality Shift: One-Shot CAD vs Multi-Turn CLI Agent</div><div class="rob-sub">SKY-001 CAD blog: 76.9% IoU (omitted on landing page) -&gt; Copilot CLI: 98.59% (1310/1310 hidden)</div></td><td class="num-col">76.9%</td><td class="num-col">98.6%</td><td class="num-col">+21.7</td></tr></tbody></table><div class="callout-box"><strong>Modality &amp; harness inversion: Grok 4.7 (0% -&gt; 99.21%) and Kimi K3 (9.5% -&gt; 98.68%).</strong> Frontier LLMs fail when forced to emit a 100-step 3D CAD/Blender script in a single blind shot without spatial state feedback, yet excel when paired with an iterative CLI test/compiler loop.</div></div><footer class="card-footer"><span><strong>SKY-001 World Model &amp; Coding Agent 19-Model Benchmark (Supplement 5: Haiku 5.5 &amp; Gemini 4 Argon)</strong> · anonymized_reported</span><span>5 / 7</span></footer></div></article><article class="report-card" id="card-6"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">LATENCY</div><h2 class="card-headline">11-task API inference vs wall time across top 8 models (seconds)</h2><p class="card-subtitle">Blue bars (&#x27;Batched&#x27; slot) show pure API inference seconds; gray bars (&#x27;One by one*&#x27; slot) show total 11-task wall-clock seconds across #1 Sonnet 5.5 (995/1301s), #2 HydraFusion (1034/1444s), #3 GPT-6.1 Sol (1348/1645s), #4 Opus 5.5 (1570/1909s), #5 Astra (1617/1960s), #6 Haiku 5.5 (1852/2104s), #7 Argon (2512/2710s), #8 Fable 5.1 (2210/3355s).</p></header><div class="card-canvas"><div class="lat-list"><div class="lat-group"><div class="lat-title">1 question</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:23.1%"></div><strong class="lat-val">995 ms</strong></div></div><div class="lat-group"><div class="lat-title">2 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:24.0%"></div><strong class="lat-val">1034 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:33.6%"></div><strong class="lat-val">1444 ms</strong></div></div><div class="lat-group"><div class="lat-title">3 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:31.3%"></div><strong class="lat-val">1348 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:38.2%"></div><strong class="lat-val">1645 ms</strong></div></div><div class="lat-group"><div class="lat-title">4 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:36.5%"></div><strong class="lat-val">1570 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:44.4%"></div><strong class="lat-val">1909 ms</strong></div></div><div class="lat-group"><div class="lat-title">5 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:37.6%"></div><strong class="lat-val">1617 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:45.6%"></div><strong class="lat-val">1960 ms</strong></div></div><div class="lat-group"><div class="lat-title">6 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:43.1%"></div><strong class="lat-val">1852 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:48.9%"></div><strong class="lat-val">2104 ms</strong></div></div><div class="lat-group"><div class="lat-title">7 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:58.4%"></div><strong class="lat-val">2512 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:63.0%"></div><strong class="lat-val">2710 ms</strong></div></div><div class="lat-group"><div class="lat-title">8 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:51.4%"></div><strong class="lat-val">2210 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:78.0%"></div><strong class="lat-val">3355 ms</strong></div></div></div><div class="callout-box"><strong>Haiku 5.5 ranks #6 in total wall time (2,104s = 35.1m) because 53% of its time was spent in C3-microdb (1,116s).</strong> On Atomic tasks (A1–A5), Haiku 5.5 is the fastest model in the entire 19-model cohort (141.5s total = 28.3s/task). Meanwhile, in 3D CAD, SKY-001 finishes a 100-step part in 3.9s vs Astra&#x27;s 199s (51.0x faster).</div></div><footer class="card-footer"><span><strong>SKY-001 World Model &amp; Coding Agent 19-Model Benchmark (Supplement 5: Haiku 5.5 &amp; Gemini 4 Argon)</strong> · anonymized_reported</span><span>6 / 7</span></footer></div></article><article class="report-card" id="card-7"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">MY TAKE</div><h2 class="card-headline">Where Haiku 5.5, Gemini 4 Argon &amp; SKY-001 fit in production</h2></header><div class="card-canvas"><div class="fit-grid"><div class="fit-card fit-good"><div class="fit-head">✅ Good fit</div><ul><li>Claude Haiku 5.5 ($0.33, 99.24): Default high-throughput Coding Agent for atomic/medium tasks and CI auto-repair with a final pytest gate</li><li>Gemini 4 Argon ($2.82, 1310/1310 hidden): Long-context (1.05M) multi-file refactoring where $0/M cache-write slashes prompt-warmed cost</li><li>Sonnet 5.5 ($2.89, 21.7m) &amp; GPT-6.1 Sol ($1.71, 60 rds): Primary unattended daily drivers clearing 1,310/1,310 hidden tests</li><li>SKY-001 Architecture: Coarse-to-fine 3D concept exploration, hierarchical assembly decomposition, and visual construction planning</li></ul></div><div class="fit-card fit-bad"><div class="fit-head">⛔ Not for</div><ul><li>Treating SKY-001&#x27;s current visual state+sketch rollouts as manufacturing-ready parametric B-Rep/STEP feature histories</li><li>Benchmarking general LLMs on 3D CAD via single-request blind scripts without a geometric solver or visual feedback loop</li><li>Running Haiku 5.5 unguarded on complex parser/VM edge cases without unit-test assertions (2/296 misses on C4)</li><li>Over-interpreting &lt;1.0 pt single-run (repeat=1) rank gaps across CLI versions 1.0.84-3..1.0.98</li></ul></div></div><div class="dark-footer-box"><p>Provenance: anonymized_reported (independently_reproduced=false) + Offline Verifier Suite (6/6 unit tests passing).</p><p class="dark-repo">Sources: satomic/copilot-benchmark@a1913835 · skyfall.ai JS bundles · benchmark-harness-engineering 7-Card v1</p></div></div><footer class="card-footer"><span><strong>SKY-001 World Model &amp; Coding Agent 19-Model Benchmark (Supplement 5: Haiku 5.5 &amp; Gemini 4 Argon)</strong> · anonymized_reported</span><span>7 / 7</span></footer></div></article><details><summary>Exact card deck data</summary><pre>{
+  &quot;cards&quot;: [
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;In code space with a CLI test loop, lightweight Haiku 5.5 ($0.33) and Gemini 4 Argon ($2.82, 0$ cache-write) match flagship agents; in 3D geometry space without a visual state-feedback loop, one-shot LLM scripts collapse or stall.&quot;,
+          &quot;lead&quot;: &quot;Two complementary engineering paradigms audited from primary artifacts (anonymized_reported, independently_reproduced=false).&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;HANDS-ON · ENGINEERING WORLD MODEL &amp; 19-MODEL CODING BENCHMARK&quot;,
+      &quot;headline_Gradient&quot;: &quot;SKY-001 98.4x Critical-Path Scaling&quot;,
+      &quot;headline_prefix&quot;: &quot;Haiku 5.5 (#4 at $0.33), Gemini 4 Argon (100% hidden) &amp; &quot;,
+      &quot;kind&quot;: &quot;overview&quot;,
+      &quot;subtitle&quot;: &quot;Supplement 5 expands Copilot CLI to 19 models (209 runs, CLI 1.0.98): Haiku 5.5 jumps to 99.24 (#4) for $0.33 and Gemini 4 Argon passes 1,310/1,310 hidden tests (98.59). Cross-auditing Skyfall AI&#x27;s SKY-001 shows why hierarchical 3D state decomposition beats one-shot LLM CAD scripts by 51x–118.5x in speed.&quot;,
+      &quot;workbench&quot;: {
+        &quot;bands_note&quot;: &quot;Coding Agent gating: Act automatically if 1,310/1,310 hidden pass &amp; mean &gt;= 98.45 (9 models); Confirm if &lt;1,310 hidden or mean 97.50–98.44 (8 models); Send to a human if hidden &lt; 1,260 (2 models).&quot;,
+        &quot;decisions&quot;: [
+          {
+            &quot;action&quot;: &quot;Act automatically&quot;,
+            &quot;closest_label&quot;: &quot;Haiku 5.5 beats Sonnet 5.5 (99.00) &amp; GPT-6.1 Sol (98.86) at 88.6% lower cost; Argon is 9th 100%-hidden model&quot;,
+            &quot;confidence&quot;: 0.992,
+            &quot;distribution_pct&quot;: {
+              &quot;Gemini 4 Argon overall mean (98.59/100 · $2.82)&quot;: 98.6,
+              &quot;Haiku 5.5 overall mean (99.24/100 · $0.33)&quot;: 99.2,
+              &quot;Sonnet 5.5 overall mean (99.00/100 · $2.89)&quot;: 99.0
+            },
+            &quot;field&quot;: &quot;supplement_5_coding_breakthrough&quot;,
+            &quot;question&quot;: &quot;How do Claude Haiku 5.5 and Gemini 4 Argon reshape the 19-model Coding Agent Pareto frontier?&quot;,
+            &quot;question_type&quot;: &quot;choice&quot;,
+            &quot;selected_answer&quot;: &quot;Haiku 5.5 hits 99.24 (#4, $0.33) · Gemini 4 Argon hits 98.59 (1,310/1,310 hidden, $2.82)&quot;
+          },
+          {
+            &quot;action&quot;: &quot;Confirm&quot;,
+            &quot;closest_label&quot;: &quot;Jaguar E-Type (103 leaves, depth 5): 10,336 flat steps compressed to 105 sequential steps (98.44x speedup)&quot;,
+            &quot;confidence&quot;: 0.797,
+            &quot;distribution_pct&quot;: {
+              &quot;GPT-6 Astra CAD IoU (199s · $0.75)&quot;: 79.1,
+              &quot;Gemini 4 CAD IoU (253s · $0.25 · blog)&quot;: 76.9,
+              &quot;SKY-001 CAD IoU (3.9s · $0.005)&quot;: 79.7
+            },
+            &quot;field&quot;: &quot;sky_001_world_model_advantage&quot;,
+            &quot;question&quot;: &quot;Does SKY-001 beat frontier LLMs via single-part IoU accuracy or parallel hierarchical critical-path compression?&quot;,
+            &quot;question_type&quot;: &quot;score&quot;,
+            &quot;selected_answer&quot;: &quot;51x–118.5x faster &amp; 150x–188.4x cheaper (IoU +0.6 pt CAD tie vs Astra; +1.3 pt BIM vs Flash)&quot;
+          },
+          {
+            &quot;action&quot;: &quot;Confirm&quot;,
+            &quot;closest_label&quot;: &quot;Waitlist-only closed preview; BIM mean IoU is 43.6% across 1,000 floor plans&quot;,
+            &quot;confidence&quot;: 0.436,
+            &quot;distribution_pct&quot;: {
+              &quot;GPT-6 Astra BIM IoU (144.6s · $0.446)&quot;: 40.6,
+              &quot;Gemini 3.8 Flash BIM IoU (346.2s · $0.218)&quot;: 42.3,
+              &quot;SKY-001 BIM 1,000-plan IoU (1.22s · $0.0024)&quot;: 43.6
+            },
+            &quot;field&quot;: &quot;executable_cad_vs_visual_rollout&quot;,
+            &quot;question&quot;: &quot;Does SKY-001 currently output an editable parametric CAD feature tree (B-Rep/STEP) ready for manufacturing?&quot;,
+            &quot;question_type&quot;: &quot;noul&quot;,
+            &quot;selected_answer&quot;: &quot;No (outputs visual 3D state + 2D sketch rollouts; executable feature history is roadmap)&quot;
+          }
+        ],
+        &quot;metrics&quot;: [
+          &quot;Haiku 5.5: 99.24 (#4) · $0.33 · 35.1m&quot;,
+          &quot;Gemini 4 Argon: 98.59 (#10) · 1310/1310 · $2.82&quot;,
+          &quot;SKY-001 CAD: 79.7% IoU · 3.9s · $0.005&quot;,
+          &quot;SKY-001 BIM: 43.6% IoU · 1.22s · $0.0024&quot;
+        ],
+        &quot;scenarios&quot;: [
+          &quot;Track A · Coding Agent (19 models × 11 stdlib tasks = 209 runs, 1,310 hidden tests)&quot;,
+          &quot;Supplement 5 (2026-10-15 · CLI 1.0.98): Claude Haiku 5.5 &amp; Gemini 4 Argon (+22 runs)&quot;,
+          &quot;Track B · SKY-001 Stage 1: Hierarchical Composer (Coarse 3D -&gt; Split Tree -&gt; Leaf Refiner)&quot;,
+          &quot;Track B · SKY-001 Stage 2: Construction World Model (3D State Subgoals + 2D Inverse Sketches)&quot;,
+          &quot;SKY-001 CAD Benchmark (1,000 parts, ~100 steps/part, 3D IoU + latency + cost)&quot;,
+          &quot;SKY-001 BIM Benchmark (1,000 floor plans: 350 IFC + 650 apartments, ~70 steps/plan)&quot;,
+          &quot;Cross-Modality Audit: 6 overlapping frontier families (Astra, Opus 5.5, Gemini 4, Flash, Kimi K3, Grok 4.7)&quot;
+        ],
+        &quot;status_pill&quot;: &quot;CLI 1.0.84-3..1.0.98 (209 runs) + SKY-001 JS Audit · anonymized_reported&quot;,
+        &quot;title&quot;: &quot;Dual-Track Engineering Benchmark Workbench (19 Coding Agents + SKY-001 CAD/BIM)&quot;
+      }
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Meanwhile, Gemini 4 Argon passes 100% of hidden tests (1,310/1,310) with zero cache-write billing, losing points only on subjective/structural deductions in A3 (97.0), M2 (97.25), C3 (96.0), and C4 (98.0).&quot;,
+          &quot;lead&quot;: &quot;Haiku 5.5 achieves 100.0 on A1, A4, M1, C2, C3 and 99.61 on C4 — missing Auto gating solely due to 2/296 parser error tests in C4-microvm.&quot;
+        }
+      ],
+      &quot;decisions&quot;: [
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;closest_label&quot;: &quot;+5.28 pts &amp; -91.6% cost vs Haiku 4.5 ($3.93); only 2 hidden misses in C4-microvm test_parse_errors&quot;,
+          &quot;confidence&quot;: 0.992,
+          &quot;distribution_pct&quot;: {
+            &quot;Atomic A1-A5 mean (99.15/100)&quot;: 99.2,
+            &quot;Complex C1-C4 mean (99.22/100)&quot;: 99.2,
+            &quot;Medium M1-M2 mean (99.50/100)&quot;: 99.5
+          },
+          &quot;field&quot;: &quot;claude_haiku_5_5_deep_dive&quot;,
+          &quot;question&quot;: &quot;Claude Haiku 5.5 vs Haiku 4.5 &amp; Sonnet 5.5 across A1–C4 (CLI 1.0.98, effort=medium)&quot;,
+          &quot;question_type&quot;: &quot;score&quot;,
+          &quot;selected_answer&quot;: &quot;99.24 / 100 (Rank 4 of 19 · 1,308/1,310 hidden · $0.33 · 94 rounds · 45.3w out)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Act automatically&quot;,
+          &quot;closest_label&quot;: &quot;Eliminates all 34 hidden test failures of Gemini 3.8 Flash; 61.7% fewer API rounds (106 vs 277)&quot;,
+          &quot;confidence&quot;: 0.986,
+          &quot;distribution_pct&quot;: {
+            &quot;Atomic A1-A5 mean (99.00/100)&quot;: 99.0,
+            &quot;Complex C1-C4 mean (98.06/100)&quot;: 98.1,
+            &quot;Hidden test pass rate (1310/1310)&quot;: 100.0
+          },
+          &quot;field&quot;: &quot;gemini_4_argon_deep_dive&quot;,
+          &quot;question&quot;: &quot;Gemini 4 Argon vs Gemini 3.8 Flash &amp; GPT-6.1 Sol (1.05M context, $0/M cache_write)&quot;,
+          &quot;question_type&quot;: &quot;score&quot;,
+          &quot;selected_answer&quot;: &quot;98.59 / 100 (Rank 10 of 19 · 1,310/1,310 hidden · $2.82 · 106 rounds · 11.7w out)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;closest_label&quot;: &quot;In BIM, Gemini 3.8 Flash (42.3% IoU) beats GPT-6 Astra (40.6% IoU) and trails SKY-001 (43.6%) by 1.3 pts&quot;,
+          &quot;confidence&quot;: 0.95,
+          &quot;distribution_pct&quot;: {
+            &quot;Astra Composer asset completion rate (82%)&quot;: 82.0,
+            &quot;Jaguar critical-path compression (105 vs 10,336)&quot;: 99.0,
+            &quot;SKY-001 Composer LLM-judge win rate (5/5 axes)&quot;: 100.0
+          },
+          &quot;field&quot;: &quot;sky_001_bundle_discrepancy_audit&quot;,
+          &quot;question&quot;: &quot;What did cross-auditing Skyfall AI&#x27;s blog bundle (article-D6mnIEDb.js) vs landing bundle (index-D5BqB7X_.js) reveal?&quot;,
+          &quot;question_type&quot;: &quot;choice&quot;,
+          &quot;selected_answer&quot;: &quot;Blog includes Gemini 4 (76.9% CAD IoU); Landing swaps in Opus 5.5 (69.4%) &amp; Flash (54.7%)&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;SCENARIO: HAIKU 5.5, GEMINI 4 ARGON &amp; SKY-001 DUAL-SOURCE AUDIT&quot;,
+      &quot;headline&quot;: &quot;Haiku 5.5 leaps +5.28 pts to 99.24 ($0.33); Argon hits 1,310/1,310; SKY-001 cuts critical path 98.4x.&quot;,
+      &quot;kind&quot;: &quot;deep_dive&quot;,
+      &quot;quote&quot;: &quot;Supplement 5 commit a1913835 (2026-10-15, CLI 1.0.98) adds 22 runs for claude-haiku-5.5 and gemini-4-argon while verifying zero score changes across all 17 prior models. Skyfall AI&#x27;s production JS bundles (index-D5BqB7X_.js &amp; article-D6mnIEDb.js) expose exact CAD/BIM metrics and tree node counts.&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Auto-eligible cohort: Fable 5.1, Opus 5.5, Opus 5, Sonnet 5.5, GPT-6.1 Sol, GPT-6 Astra, Sonnet 5, Gemini 4 Argon [NEW], and HydraFusion.&quot;,
+          &quot;lead&quot;: &quot;9 of 19 coding models pass all 1,310 / 1,310 hidden assertions and clear the Auto bar (&gt;= 98.45 mean).&quot;
+        },
+        {
+          &quot;body&quot;: &quot;Haiku 5.5 outscores Sonnet 5.5 (99.00) and GPT-6.1 Sol (98.86) at 1/9th to 1/5th the cost, requiring only a lightweight AST/parser guard on C4 to reach full automation.&quot;,
+          &quot;lead&quot;: &quot;The near-miss champion (✕): Claude Haiku 5.5 ranks #4 overall (99.24) at $0.33 with 1,308/1,310 hidden pass.&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;WHAT I TESTED&quot;,
+      &quot;headline&quot;: &quot;19 coding models (209 runs) + SKY-001 2,000-case CAD/BIM matrix&quot;,
+      &quot;kind&quot;: &quot;scorecard&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;99.77 mean | Complex 99.62 | 1310/1310 hidden&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Fable 5.1 (142 rounds · 55.9m wall · $14.45 · 15.8w out)&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;Tier 1 · Flagship Ceiling&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;99.68 mean | Complex 99.62 | 1310/1310 hidden&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Opus 5.5 (92 rounds · 31.8m wall · $5.84 · 17.6w out)&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;Tier 1 · Flagship Ceiling&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;99.59 mean | Complex 99.38 | 1310/1310 hidden&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Opus 5 (188 rounds · 63.3m wall · $17.41 · 24.9w out)&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;Tier 1 · Flagship Ceiling&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;99.24 mean | Complex 99.22 | 1308/1310 (-2 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Haiku 5.5 [NEW] (94 rounds · 35.1m wall · $0.33 · 45.3w out)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Tier 2 · High-ROI Pareto&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;99.21 mean | Complex 99.33 | 1299/1310 (-11 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Grok 4.7 (143 rounds · 181.2m wall · $12.22 · 51.5w out)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Tier 3 · High-Score Specialist&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;99.00 mean | Complex 99.19 | 1310/1310 hidden&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Sonnet 5.5 (65 rounds · 21.7m wall · $2.89 · 16.1w out)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Tier 2 · High-ROI Pareto&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;98.86 mean | Complex 99.38 | 1310/1310 hidden&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;GPT-6.1 Sol (60 rounds · 27.4m wall · $1.71 · 9.3w out)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Tier 2 · High-ROI Pareto&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;98.82 mean | Complex 99.75 | 1310/1310 hidden&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;GPT-6 Astra (62 rounds · 32.7m wall · $9.91 · 9.8w out)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Tier 3 · High-Score Specialist&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;98.70 mean | Complex 98.88 | 1310/1310 hidden&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Sonnet 5 (190 rounds · 53.2m wall · $7.87 · 23.9w out)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Tier 3 · High-Score Specialist&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;98.68 mean | Complex 98.81 | 1305/1310 (-5 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Kimi K3 (143 rounds · 150.5m wall · $5.58 · 17.5w out)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Tier 3 · High-Score Specialist&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;98.59 mean | Complex 98.06 | 1310/1310 hidden&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Gemini 4 Argon [NEW] (106 rounds · 45.2m wall · $2.82 · 11.7w out)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Tier 3 · High-Score Specialist&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;98.57 mean | Complex 98.06 | 1305/1310 (-5 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Grok 4.6 (138 rounds · 69.5m wall · $5.21 · 19.4w out)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Tier 3 · High-Score Specialist&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;98.45 mean | Complex 98.75 | 1310/1310 hidden&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;HydraFusion (85 rounds · 24.1m wall · $3.58 · 8.9w out)&quot;,
+          &quot;reported_probability_pct&quot;: 98,
+          &quot;scenario&quot;: &quot;Tier 2 · High-ROI Pareto&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;98.16 mean | Complex 96.88 | 1279/1310 (-31 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;GPT-6 Luna (139 rounds · 44.6m wall · $0.17 · 14.5w out)&quot;,
+          &quot;reported_probability_pct&quot;: 98,
+          &quot;scenario&quot;: &quot;Tier 4 · Low-Cost &amp; Lightweight&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;98.00 mean | Complex 97.00 | 1276/1310 (-34 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Gemini 3.8 Flash (277 rounds · 85.4m wall · $2.83 · 12.3w out)&quot;,
+          &quot;reported_probability_pct&quot;: 98,
+          &quot;scenario&quot;: &quot;Tier 4 · Low-Cost &amp; Lightweight&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;97.88 mean | Complex 96.42 | 1293/1310 (-17 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;GPT-5.6 Luna (235 rounds · 51.0m wall · $0.39 · 10.7w out)&quot;,
+          &quot;reported_probability_pct&quot;: 98,
+          &quot;scenario&quot;: &quot;Tier 4 · Low-Cost &amp; Lightweight&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;97.70 mean | Complex 96.61 | 1284/1310 (-26 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;MAI-Code-1.1-Flash (192 rounds · 56.5m wall · $0.53 · 23.3w out)&quot;,
+          &quot;reported_probability_pct&quot;: 98,
+          &quot;scenario&quot;: &quot;Tier 4 · Low-Cost &amp; Lightweight&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Human&quot;,
+          &quot;decider_answer&quot;: &quot;95.10 mean | Complex 95.91 | 1250/1310 (-60 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;DeepSeek-V4-Flash (420 rounds · 179.0m wall · $1.95 · 29.0w out)&quot;,
+          &quot;reported_probability_pct&quot;: 95,
+          &quot;scenario&quot;: &quot;Tier 4 · Low-Cost &amp; Lightweight&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Human&quot;,
+          &quot;decider_answer&quot;: &quot;93.96 mean | Complex 89.64 | 1239/1310 (-71 hidden)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Haiku 4.5 (341 rounds · 80.8m wall · $3.93 · 30.3w out)&quot;,
+          &quot;reported_probability_pct&quot;: 94,
+          &quot;scenario&quot;: &quot;Tier 4 · Low-Cost &amp; Lightweight&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;79.7% vs 79.1% IoU (+0.6 pt tie; 51.0x faster, 150.0x cheaper)&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;SKY-001 vs GPT-6 Astra (3.9s / $0.005 vs 199s / $0.75 per part)&quot;,
+          &quot;reported_probability_pct&quot;: 80,
+          &quot;scenario&quot;: &quot;Track B · SKY-001 CAD (1k cases)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;43.6% vs 42.3% Flash &amp; 40.6% Astra (118.5x faster, 185.8x cheaper)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;SKY-001 vs Gemini 3.8 Flash &amp; Astra (1.22s / $0.0024 vs 346.2s &amp; 144.6s)&quot;,
+          &quot;reported_probability_pct&quot;: 44,
+          &quot;scenario&quot;: &quot;Track B · SKY-001 BIM (1k plans)&quot;
+        }
+      ]
+    },
+    {
+      &quot;bottom_code&quot;: &quot;&lt;sky_001_execution_graph steps_per_part=\&quot;100\&quot; parallel_workers=\&quot;128\&quot;&gt;\n  Stage 1 (Hierarchical Composer): Coarse 3D DiT -&gt; Parallel Tree Split (depth D) -&gt; Leaf Refiner DiT\n    Jaguar E-Type: L=103 leaves, N=139 nodes (36 splits), D=5\n    Flat chain:   (N - L) + L * S = 36 + 103 * 100 = 10,336 sequential steps\n    Tree rollout: D + ceil(L / W) * S = 5 + 1 * 100 = 105 sequential steps (98.44x shorter!)\n  Stage 2 (Construction World Model):\n    Pass 1: Roll out intermediate 3D solid states + 2D inverse sketches in leading Matryoshka latents\n    Pass 2: Parallel full-resolution Refiner restores sharp edges, corners &amp; vertices\n&lt;/sky_001_execution_graph&gt;\n&lt;answer&gt;&quot;,
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;In C3-microdb, Haiku 5.5 emitted 263,769 output tokens ($0.50/M output, $0.01/M cache read = 16.93 credits), whereas Argon billed $2.00/M input, $0.10/M cache read, $0.00/M cache write, and $10.00/M output (98.58 credits).&quot;,
+          &quot;lead&quot;: &quot;Why Haiku 5.5 generated 453k output tokens for only $0.33 while Argon cost $2.82 for 117k tokens:&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;UNDER THE HOOD&quot;,
+      &quot;headline&quot;: &quot;Copilot CLI 70/15/15 verifier vs SKY-001 Two-Pass World Model&quot;,
+      &quot;kind&quot;: &quot;protocol&quot;,
+      &quot;top_code&quot;: &quot;{\n  \&quot;track_A_copilot_cli_supplement_5\&quot;: {\n    \&quot;commit\&quot;: \&quot;a191383571a13143685fd6f7787512c4e281a9ba\&quot;,\n    \&quot;cli_version\&quot;: \&quot;1.0.98\&quot;,\n    \&quot;haiku_5_5_C4_microvm\&quot;: {\n      \&quot;wall_s\&quot;: 278.8,\n      \&quot;api_s\&quot;: 250.5,\n      \&quot;rounds\&quot;: 14,\n      \&quot;ai_credits\&quot;: 5.13,\n      \&quot;hidden_tests\&quot;: \&quot;294/296 (2 test_parse_errors misses -&gt; 69.61/70)\&quot;,\n      \&quot;total_score\&quot;: 99.61\n    },\n    \&quot;gemini_4_argon_C3_microdb\&quot;: {\n      \&quot;wall_s\&quot;: 1007.4,\n      \&quot;api_s\&quot;: 983.9,\n      \&quot;rounds\&quot;: 29,\n      \&quot;ai_credits\&quot;: 98.58,\n      \&quot;cache_write_price_per_m\&quot;: 0.0,\n      \&quot;hidden_tests\&quot;: \&quot;377/377 (58/58 + 12/12 self_test = 70/70)\&quot;,\n      \&quot;total_score\&quot;: 96.0\n    }\n  }\n}&quot;,
+      &quot;transition&quot;: &quot;↓ vs SKY-001 Hierarchical Part Tree + Matryoshka Two-Pass Construction Rollout&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Frontier LLMs fail when forced to emit a 100-step 3D CAD/Blender script in a single blind shot without spatial state feedback, yet excel when paired with an iterative CLI test/compiler loop.&quot;,
+          &quot;lead&quot;: &quot;Modality &amp; harness inversion: Grok 4.7 (0% -&gt; 99.21%) and Kimi K3 (9.5% -&gt; 98.68%).&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;ROBUSTNESS CHECK&quot;,
+      &quot;headline&quot;: &quot;Generational leaps &amp; cross-modality sensitivity (Code vs 3D CAD)&quot;,
+      &quot;kind&quot;: &quot;robustness&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 5.2,
+          &quot;original_pct&quot;: 94.0,
+          &quot;reversed_pct&quot;: 99.2,
+          &quot;scenario&quot;: &quot;Haiku 5.5 · Generational Leap vs Haiku 4.5 (11-Task Mean &amp; Complex)&quot;,
+          &quot;selected_option&quot;: &quot;Complex mean 89.64% -&gt; 99.22% (+9.58 pts); Hidden 1239 -&gt; 1308/1310; Cost $3.93 -&gt; $0.33 (-91.6%)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 0.6,
+          &quot;original_pct&quot;: 98.0,
+          &quot;reversed_pct&quot;: 98.6,
+          &quot;scenario&quot;: &quot;Gemini 4 Argon · Generational Leap vs Gemini 3.8 Flash (11-Task Mean)&quot;,
+          &quot;selected_option&quot;: &quot;Hidden assertions 1276/1310 (97.4%) -&gt; 1310/1310 (100.0%); Rounds 277 -&gt; 106 (-61.7%)&quot;
+        },
+        {
+          &quot;answer_held&quot;: false,
+          &quot;change_pts&quot;: 99.2,
+          &quot;original_pct&quot;: 0.0,
+          &quot;reversed_pct&quot;: 99.2,
+          &quot;scenario&quot;: &quot;Grok 4.7 ·Modality Shift: One-Shot CAD Script vs Multi-Turn CLI Agent&quot;,
+          &quot;selected_option&quot;: &quot;SKY-001 CAD benchmark: 0.0% IoU (null output at 1,250s) -&gt; Copilot CLI: 99.21% (#5 of 19)&quot;
+        },
+        {
+          &quot;answer_held&quot;: false,
+          &quot;change_pts&quot;: 89.2,
+          &quot;original_pct&quot;: 9.5,
+          &quot;reversed_pct&quot;: 98.7,
+          &quot;scenario&quot;: &quot;Kimi K3 · Modality Shift: One-Shot CAD Script vs Multi-Turn CLI Agent&quot;,
+          &quot;selected_option&quot;: &quot;SKY-001 CAD benchmark: 9.5% IoU (439s, $0.13) -&gt; Copilot CLI: 98.68% (1,305/1,310 hidden)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 19.7,
+          &quot;original_pct&quot;: 79.1,
+          &quot;reversed_pct&quot;: 98.8,
+          &quot;scenario&quot;: &quot;GPT-6 Astra · Modality Shift: One-Shot CAD Script vs Multi-Turn CLI Agent&quot;,
+          &quot;selected_option&quot;: &quot;SKY-001 CAD: 79.1% IoU (-0.6 pt vs SKY-001) -&gt; Copilot CLI: 98.82% (Complex #1 at 99.75%)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 30.3,
+          &quot;original_pct&quot;: 69.4,
+          &quot;reversed_pct&quot;: 99.7,
+          &quot;scenario&quot;: &quot;Opus 5.5 · Modality Shift: One-Shot CAD Script vs Multi-Turn CLI Agent&quot;,
+          &quot;selected_option&quot;: &quot;SKY-001 CAD landing: 69.4% IoU (omitted in blog) -&gt; Copilot CLI: 99.68% (#2 overall, 1310/1310)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 21.7,
+          &quot;original_pct&quot;: 76.9,
+          &quot;reversed_pct&quot;: 98.6,
+          &quot;scenario&quot;: &quot;Gemini 4 / Argon · Modality Shift: One-Shot CAD vs Multi-Turn CLI Agent&quot;,
+          &quot;selected_option&quot;: &quot;SKY-001 CAD blog: 76.9% IoU (omitted on landing page) -&gt; Copilot CLI: 98.59% (1310/1310 hidden)&quot;
+        }
+      ],
+      &quot;subtitle&quot;: &quot;Comparing Supplement 5 models against their predecessors on the 11-task CLI suite, and contrasting 6 frontier families across multi-turn CLI coding vs Skyfall&#x27;s one-shot 3D CAD scripting benchmark.&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;On Atomic tasks (A1–A5), Haiku 5.5 is the fastest model in the entire 19-model cohort (141.5s total = 28.3s/task). Meanwhile, in 3D CAD, SKY-001 finishes a 100-step part in 3.9s vs Astra&#x27;s 199s (51.0x faster).&quot;,
+          &quot;lead&quot;: &quot;Haiku 5.5 ranks #6 in total wall time (2,104s = 35.1m) because 53% of its time was spent in C3-microdb (1,116s).&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;LATENCY&quot;,
+      &quot;headline&quot;: &quot;11-task API inference vs wall time across top 8 models (seconds)&quot;,
+      &quot;kind&quot;: &quot;latency&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;batched_median_ms&quot;: 995,
+          &quot;one_by_one_estimated_ms&quot;: 1301,
+          &quot;question_count&quot;: 1,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1034,
+          &quot;one_by_one_estimated_ms&quot;: 1444,
+          &quot;question_count&quot;: 2,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1348,
+          &quot;one_by_one_estimated_ms&quot;: 1645,
+          &quot;question_count&quot;: 3,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1570,
+          &quot;one_by_one_estimated_ms&quot;: 1909,
+          &quot;question_count&quot;: 4,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1617,
+          &quot;one_by_one_estimated_ms&quot;: 1960,
+          &quot;question_count&quot;: 5,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1852,
+          &quot;one_by_one_estimated_ms&quot;: 2104,
+          &quot;question_count&quot;: 6,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 2512,
+          &quot;one_by_one_estimated_ms&quot;: 2710,
+          &quot;question_count&quot;: 7,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 2210,
+          &quot;one_by_one_estimated_ms&quot;: 3355,
+          &quot;question_count&quot;: 8,
+          &quot;runs&quot;: 11
+        }
+      ],
+      &quot;subtitle&quot;: &quot;Blue bars (&#x27;Batched&#x27; slot) show pure API inference seconds; gray bars (&#x27;One by one*&#x27; slot) show total 11-task wall-clock seconds across #1 Sonnet 5.5 (995/1301s), #2 HydraFusion (1034/1444s), #3 GPT-6.1 Sol (1348/1645s), #4 Opus 5.5 (1570/1909s), #5 Astra (1617/1960s), #6 Haiku 5.5 (1852/2104s), #7 Argon (2512/2710s), #8 Fable 5.1 (2210/3355s).&quot;
+    },
+    {
+      &quot;dark_box&quot;: {
+        &quot;lead&quot;: &quot;Provenance: anonymized_reported (independently_reproduced=false) + Offline Verifier Suite (6/6 unit tests passing).&quot;,
+        &quot;repo&quot;: &quot;Sources: satomic/copilot-benchmark@a1913835 · skyfall.ai JS bundles · benchmark-harness-engineering 7-Card v1&quot;
+      },
+      &quot;eyebrow&quot;: &quot;MY TAKE&quot;,
+      &quot;good_fit&quot;: [
+        &quot;Claude Haiku 5.5 ($0.33, 99.24): Default high-throughput Coding Agent for atomic/medium tasks and CI auto-repair with a final pytest gate&quot;,
+        &quot;Gemini 4 Argon ($2.82, 1310/1310 hidden): Long-context (1.05M) multi-file refactoring where $0/M cache-write slashes prompt-warmed cost&quot;,
+        &quot;Sonnet 5.5 ($2.89, 21.7m) &amp; GPT-6.1 Sol ($1.71, 60 rds): Primary unattended daily drivers clearing 1,310/1,310 hidden tests&quot;,
+        &quot;SKY-001 Architecture: Coarse-to-fine 3D concept exploration, hierarchical assembly decomposition, and visual construction planning&quot;
+      ],
+      &quot;headline&quot;: &quot;Where Haiku 5.5, Gemini 4 Argon &amp; SKY-001 fit in production&quot;,
+      &quot;kind&quot;: &quot;takeaways&quot;,
+      &quot;not_for&quot;: [
+        &quot;Treating SKY-001&#x27;s current visual state+sketch rollouts as manufacturing-ready parametric B-Rep/STEP feature histories&quot;,
+        &quot;Benchmarking general LLMs on 3D CAD via single-request blind scripts without a geometric solver or visual feedback loop&quot;,
+        &quot;Running Haiku 5.5 unguarded on complex parser/VM edge cases without unit-test assertions (2/296 misses on C4)&quot;,
+        &quot;Over-interpreting &lt;1.0 pt single-run (repeat=1) rank gaps across CLI versions 1.0.84-3..1.0.98&quot;
+      ]
+    }
+  ],
+  &quot;cross_modality_matrix&quot;: [
+    {
+      &quot;coding_11task_cost_usd&quot;: 9.91,
+      &quot;coding_11task_wall_min&quot;: 32.7,
+      &quot;coding_complex_mean&quot;: 99.75,
+      &quot;coding_hidden_pass&quot;: &quot;1310/1310&quot;,
+      &quot;coding_mean_score&quot;: 98.82,
+      &quot;coding_model&quot;: &quot;GPT-6 Astra&quot;,
+      &quot;sky_bim_iou_pct&quot;: 40.6,
+      &quot;sky_bim_seconds_per_case&quot;: 144.4,
+      &quot;sky_bim_usd_per_case&quot;: 0.4465,
+      &quot;sky_cad_iou_pct&quot;: 79.1,
+      &quot;sky_cad_model_label&quot;: &quot;GPT-6 Astra&quot;,
+      &quot;sky_cad_seconds_per_case&quot;: 199.0,
+      &quot;sky_cad_usd_per_case&quot;: 0.75
+    },
+    {
+      &quot;coding_11task_cost_usd&quot;: 5.84,
+      &quot;coding_11task_wall_min&quot;: 31.8,
+      &quot;coding_complex_mean&quot;: 99.62,
+      &quot;coding_hidden_pass&quot;: &quot;1310/1310&quot;,
+      &quot;coding_mean_score&quot;: 99.68,
+      &quot;coding_model&quot;: &quot;Opus 5.5&quot;,
+      &quot;sky_bim_iou_pct&quot;: 34.4,
+      &quot;sky_bim_seconds_per_case&quot;: 113.1,
+      &quot;sky_bim_usd_per_case&quot;: 0.276,
+      &quot;sky_cad_iou_pct&quot;: 69.4,
+      &quot;sky_cad_model_label&quot;: &quot;Opus 5.5&quot;,
+      &quot;sky_cad_seconds_per_case&quot;: 110.0,
+      &quot;sky_cad_usd_per_case&quot;: 0.31
+    },
+    {
+      &quot;coding_11task_cost_usd&quot;: 2.82,
+      &quot;coding_11task_wall_min&quot;: 45.2,
+      &quot;coding_complex_mean&quot;: 98.06,
+      &quot;coding_hidden_pass&quot;: &quot;1310/1310&quot;,
+      &quot;coding_mean_score&quot;: 98.59,
+      &quot;coding_model&quot;: &quot;Gemini 4 Argon&quot;,
+      &quot;sky_bim_iou_pct&quot;: null,
+      &quot;sky_bim_seconds_per_case&quot;: null,
+      &quot;sky_bim_usd_per_case&quot;: null,
+      &quot;sky_cad_iou_pct&quot;: 76.9,
+      &quot;sky_cad_model_label&quot;: &quot;Gemini 4&quot;,
+      &quot;sky_cad_seconds_per_case&quot;: 253.0,
+      &quot;sky_cad_usd_per_case&quot;: 0.25
+    },
+    {
+      &quot;coding_11task_cost_usd&quot;: 2.83,
+      &quot;coding_11task_wall_min&quot;: 85.4,
+      &quot;coding_complex_mean&quot;: 97.0,
+      &quot;coding_hidden_pass&quot;: &quot;1276/1310&quot;,
+      &quot;coding_mean_score&quot;: 98.0,
+      &quot;coding_model&quot;: &quot;Gemini 3.8 Flash&quot;,
+      &quot;sky_bim_iou_pct&quot;: 42.3,
+      &quot;sky_bim_seconds_per_case&quot;: 345.4,
+      &quot;sky_bim_usd_per_case&quot;: 0.2185,
+      &quot;sky_cad_iou_pct&quot;: 54.7,
+      &quot;sky_cad_model_label&quot;: &quot;Gemini 3.8 Flash&quot;,
+      &quot;sky_cad_seconds_per_case&quot;: 112.0,
+      &quot;sky_cad_usd_per_case&quot;: 0.08
+    },
+    {
+      &quot;coding_11task_cost_usd&quot;: 5.58,
+      &quot;coding_11task_wall_min&quot;: 150.5,
+      &quot;coding_complex_mean&quot;: 98.81,
+      &quot;coding_hidden_pass&quot;: &quot;1305/1310&quot;,
+      &quot;coding_mean_score&quot;: 98.68,
+      &quot;coding_model&quot;: &quot;Kimi K3&quot;,
+      &quot;sky_bim_iou_pct&quot;: 33.7,
+      &quot;sky_bim_seconds_per_case&quot;: 114.0,
+      &quot;sky_bim_usd_per_case&quot;: 0.27,
+      &quot;sky_cad_iou_pct&quot;: 9.5,
+      &quot;sky_cad_model_label&quot;: &quot;Kimi K3&quot;,
+      &quot;sky_cad_seconds_per_case&quot;: 439.0,
+      &quot;sky_cad_usd_per_case&quot;: 0.13
+    },
+    {
+      &quot;coding_11task_cost_usd&quot;: 12.22,
+      &quot;coding_11task_wall_min&quot;: 181.2,
+      &quot;coding_complex_mean&quot;: 99.33,
+      &quot;coding_hidden_pass&quot;: &quot;1299/1310&quot;,
+      &quot;coding_mean_score&quot;: 99.21,
+      &quot;coding_model&quot;: &quot;Grok 4.7&quot;,
+      &quot;sky_bim_iou_pct&quot;: 28.2,
+      &quot;sky_bim_seconds_per_case&quot;: 592.3,
+      &quot;sky_bim_usd_per_case&quot;: 0.305,
+      &quot;sky_cad_iou_pct&quot;: null,
+      &quot;sky_cad_model_label&quot;: &quot;Grok 4.7&quot;,
+      &quot;sky_cad_seconds_per_case&quot;: 1250.0,
+      &quot;sky_cad_usd_per_case&quot;: 0.59
+    }
+  ],
+  &quot;deck_title&quot;: &quot;SKY-001 World Model &amp; Coding Agent 19-Model Benchmark (Supplement 5: Haiku 5.5 &amp; Gemini 4 Argon)&quot;,
+  &quot;independently_reproduced&quot;: false,
+  &quot;pareto_frontier_19_models&quot;: [
+    &quot;Fable 5.1&quot;,
+    &quot;Opus 5.5&quot;,
+    &quot;Haiku 5.5&quot;,
+    &quot;Sonnet 5.5&quot;,
+    &quot;GPT-6.1 Sol&quot;,
+    &quot;GPT-6 Luna&quot;
+  ],
+  &quot;provenance&quot;: &quot;anonymized_reported&quot;,
+  &quot;report_id&quot;: &quot;sky-001-and-coding-agent-19-model-benchmark&quot;,
+  &quot;schema_version&quot;: 1,
+  &quot;sky001_audit&quot;: {
+    &quot;bim&quot;: {
+      &quot;cost_ratio_vs_astra_blog_x&quot;: 185.8,
+      &quot;cost_ratio_vs_astra_landing_x&quot;: 188.4,
+      &quot;iou_lead_vs_astra_pts&quot;: 3.0,
+      &quot;iou_lead_vs_next_best_pts&quot;: 1.3,
+      &quot;models_only_in_landing&quot;: [
+        &quot;Opus 5.5&quot;
+      ],
+      &quot;next_best_iou_pct&quot;: 42.3,
+      &quot;next_best_model&quot;: &quot;Gemini 3.8 Flash&quot;,
+      &quot;sky001_iou_pct&quot;: 43.6,
+      &quot;speedup_vs_astra_blog_x&quot;: 118.5,
+      &quot;speedup_vs_astra_landing_x&quot;: 118.4
+    },
+    &quot;cad&quot;: {
+      &quot;astra_iou_pct&quot;: 79.1,
+      &quot;cost_ratio_vs_astra_x&quot;: 150.0,
+      &quot;grok_4_7_completed_cases&quot;: 0,
+      &quot;iou_lead_vs_astra_pts&quot;: 0.6,
+      &quot;models_only_in_blog&quot;: [
+        &quot;Gemini 4&quot;
+      ],
+      &quot;models_only_in_landing&quot;: [
+        &quot;Gemini 3.8 Flash&quot;,
+        &quot;Opus 5.5&quot;
+      ],
+      &quot;sky001_iou_pct&quot;: 79.7,
+      &quot;speedup_vs_astra_x&quot;: 51.0
+    }
+  },
+  &quot;sky001_composer_llm_judges&quot;: {
+    &quot;Complexity&quot;: {
+      &quot;GPT-6 Astra&quot;: 7.3,
+      &quot;SKY-001&quot;: 8.0
+    },
+    &quot;Exterior realism&quot;: {
+      &quot;GPT-6 Astra&quot;: 7.4,
+      &quot;SKY-001&quot;: 7.7
+    },
+    &quot;Interior&quot;: {
+      &quot;GPT-6 Astra&quot;: 6.3,
+      &quot;SKY-001&quot;: 7.3
+    },
+    &quot;Match to the input image&quot;: {
+      &quot;GPT-6 Astra&quot;: 6.7,
+      &quot;SKY-001&quot;: 8.1
+    },
+    &quot;Part decomposition&quot;: {
+      &quot;GPT-6 Astra&quot;: 6.4,
+      &quot;SKY-001&quot;: 7.8
+    }
+  },
+  &quot;source_binding&quot;: {
+    &quot;hidden_assertions_per_model&quot;: 1310,
+    &quot;models_evaluated_coding&quot;: 19,
+    &quot;new_models_in_supplement_5&quot;: [
+      &quot;Claude Haiku 5.5&quot;,
+      &quot;Gemini 4 Argon&quot;
+    ],
+    &quot;pinned_commit&quot;: &quot;a191383571a13143685fd6f7787512c4e281a9ba&quot;,
+    &quot;previous_commit&quot;: &quot;aa1e0dc31661ff6343433f06fe3bea1e015b8525&quot;,
+    &quot;reference_bundles&quot;: 11,
+    &quot;scored_non_reference_runs&quot;: 209,
+    &quot;sky001_launch_date&quot;: &quot;2026-10-19&quot;,
+    &quot;skyfall_article_bundle&quot;: &quot;https://skyfall.ai/assets/article-D6mnIEDb.js&quot;,
+    &quot;skyfall_article_sha256&quot;: &quot;8f22592c0d7f0bc1600158903685a5212ddb417499cde1c1e93754de5e6a9830&quot;,
+    &quot;skyfall_landing_bundle&quot;: &quot;https://skyfall.ai/assets/index-D5BqB7X_.js&quot;,
+    &quot;skyfall_landing_sha256&quot;: &quot;1bc34257c0f2f1db82336d13f95f88c391950c0957655377f752954b4cd7199f&quot;,
+    &quot;supplement_5_cli&quot;: &quot;1.0.98&quot;,
+    &quot;supplement_5_date&quot;: &quot;2026-10-15&quot;,
+    &quot;tasks_evaluated_coding&quot;: 11,
+    &quot;upstream_coding_repo&quot;: &quot;satomic/copilot-benchmark&quot;
+  },
+  &quot;tables&quot;: [
+    {
+      &quot;columns&quot;: [
+        &quot;Rank&quot;,
+        &quot;Model&quot;,
+        &quot;Cohort&quot;,
+        &quot;CLI&quot;,
+        &quot;Atomic (5)&quot;,
+        &quot;Medium (2)&quot;,
+        &quot;Complex (4)&quot;,
+        &quot;Total Mean&quot;,
+        &quot;Hidden Pass&quot;
+      ],
+      &quot;name&quot;: &quot;scores_by_difficulty_19_models&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;1&quot;,
+          &quot;Fable 5.1&quot;,
+          &quot;Baseline (5-Model)&quot;,
+          &quot;1.0.84-3&quot;,
+          &quot;100.00&quot;,
+          &quot;99.50&quot;,
+          &quot;99.62&quot;,
+          &quot;99.77&quot;,
+          &quot;1310/1310&quot;
+        ],
+        [
+          &quot;2&quot;,
+          &quot;Opus 5.5&quot;,
+          &quot;Supplement 3 (15-Model)&quot;,
+          &quot;1.0.89-5&quot;,
+          &quot;99.80&quot;,
+          &quot;99.50&quot;,
+          &quot;99.62&quot;,
+          &quot;99.68&quot;,
+          &quot;1310/1310&quot;
+        ],
+        [
+          &quot;3&quot;,
+          &quot;Opus 5&quot;,
+          &quot;Baseline (5-Model)&quot;,
+          &quot;1.0.84-3&quot;,
+          &quot;99.80&quot;,
+          &quot;99.50&quot;,
+          &quot;99.38&quot;,
+          &quot;99.59&quot;,
+          &quot;1310/1310&quot;
+        ],
+        [
+          &quot;4&quot;,
+          &quot;Haiku 5.5&quot;,
+          &quot;Supplement 5 (19-Model)&quot;,
+          &quot;1.0.98&quot;,
+          &quot;99.15&quot;,
+          &quot;99.50&quot;,
+          &quot;99.22&quot;,
+          &quot;99.24&quot;,
+          &quot;1308/1310&quot;
+        ],
+        [
+          &quot;5&quot;,
+          &quot;Grok 4.7&quot;,
+          &quot;Supplement 2 (12-Model)&quot;,
+          &quot;1.0.89-0&quot;,
+          &quot;99.00&quot;,
+          &quot;99.50&quot;,
+          &quot;99.33&quot;,
+          &quot;99.21&quot;,
+          &quot;1299/1310&quot;
+        ],
+        [
+          &quot;6&quot;,
+          &quot;Sonnet 5.5&quot;,
+          &quot;Supplement 4 (17-Model)&quot;,
+          &quot;1.0.90-5&quot;,
+          &quot;98.80&quot;,
+          &quot;99.12&quot;,
+          &quot;99.19&quot;,
+          &quot;99.00&quot;,
+          &quot;1310/1310&quot;
+        ],
+        [
+          &quot;7&quot;,
+          &quot;GPT-6.1 Sol&quot;,
+          &quot;Supplement 4 (17-Model)&quot;,
+          &quot;1.0.90-5&quot;,
+          &quot;98.40&quot;,
+          &quot;99.00&quot;,
+          &quot;99.38&quot;,
+          &quot;98.86&quot;,
+          &quot;1310/1310&quot;
+        ],
+        [
+          &quot;8&quot;,
+          &quot;GPT-6 Astra&quot;,
+          &quot;Baseline (5-Model)&quot;,
+          &quot;1.0.84-3&quot;,
+          &quot;98.00&quot;,
+          &quot;99.00&quot;,
+          &quot;99.75&quot;,
+          &quot;98.82&quot;,
+          &quot;1310/1310&quot;
+        ],
+        [
+          &quot;9&quot;,
+          &quot;Sonnet 5&quot;,
+          &quot;Baseline (5-Model)&quot;,
+          &quot;1.0.84-3&quot;,
+          &quot;98.40&quot;,
+          &quot;99.12&quot;,
+          &quot;98.88&quot;,
+          &quot;98.70&quot;,
+          &quot;1310/1310&quot;
+        ],
+        [
+          &quot;10&quot;,
+          &quot;Kimi K3&quot;,
+          &quot;Supplement 1 (10-Model)&quot;,
+          &quot;1.0.84-8&quot;,
+          &quot;98.40&quot;,
+          &quot;99.12&quot;,
+          &quot;98.81&quot;,
+          &quot;98.68&quot;,
+          &quot;1305/1310&quot;
+        ],
+        [
+          &quot;11&quot;,
+          &quot;Gemini 4 Argon&quot;,
+          &quot;Supplement 5 (19-Model)&quot;,
+          &quot;1.0.98&quot;,
+          &quot;99.00&quot;,
+          &quot;98.62&quot;,
+          &quot;98.06&quot;,
+          &quot;98.59&quot;,
+          &quot;1310/1310&quot;
+        ],
+        [
+          &quot;12&quot;,
+          &quot;Grok 4.6&quot;,
+          &quot;Supplement 1 (10-Model)&quot;,
+          &quot;1.0.84-8&quot;,
+          &quot;98.40&quot;,
+          &quot;100.00&quot;,
+          &quot;98.06&quot;,
+          &quot;98.57&quot;,
+          &quot;1305/1310&quot;
+        ],
+        [
+          &quot;13&quot;,
+          &quot;HydraFusion&quot;,
+          &quot;Supplement 3 (15-Model)&quot;,
+          &quot;1.0.89-5&quot;,
+          &quot;98.40&quot;,
+          &quot;98.00&quot;,
+          &quot;98.75&quot;,
+          &quot;98.45&quot;,
+          &quot;1310/1310&quot;
+        ],
+        [
+          &quot;14&quot;,
+          &quot;GPT-6 Luna&quot;,
+          &quot;Supplement 2 (12-Model)&quot;,
+          &quot;1.0.89-0&quot;,
+          &quot;98.80&quot;,
+          &quot;99.12&quot;,
+          &quot;96.88&quot;,
+          &quot;98.16&quot;,
+          &quot;1279/1310&quot;
+        ],
+        [
+          &quot;15&quot;,
+          &quot;Gemini 3.8 Flash&quot;,
+          &quot;Supplement 1 (10-Model)&quot;,
+          &quot;1.0.84-8&quot;,
+          &quot;98.75&quot;,
+          &quot;98.12&quot;,
+          &quot;97.00&quot;,
+          &quot;98.00&quot;,
+          &quot;1276/1310&quot;
+        ],
+        [
+          &quot;16&quot;,
+          &quot;GPT-5.6 Luna&quot;,
+          &quot;Supplement 1 (10-Model)&quot;,
+          &quot;1.0.84-8&quot;,
+          &quot;98.40&quot;,
+          &quot;99.50&quot;,
+          &quot;96.42&quot;,
+          &quot;97.88&quot;,
+          &quot;1293/1310&quot;
+        ],
+        [
+          &quot;17&quot;,
+          &quot;MAI-Code-1.1-Flash&quot;,
+          &quot;Supplement 1 (10-Model)&quot;,
+          &quot;1.0.84-8&quot;,
+          &quot;98.20&quot;,
+          &quot;98.62&quot;,
+          &quot;96.61&quot;,
+          &quot;97.70&quot;,
+          &quot;1284/1310&quot;
+        ],
+        [
+          &quot;18&quot;,
+          &quot;DeepSeek-V4-Flash&quot;,
+          &quot;Supplement 3 (15-Model · BYOK)&quot;,
+          &quot;1.0.89-6&quot;,
+          &quot;97.30&quot;,
+          &quot;88.00&quot;,
+          &quot;95.91&quot;,
+          &quot;95.10&quot;,
+          &quot;1250/1310&quot;
+        ],
+        [
+          &quot;19&quot;,
+          &quot;Haiku 4.5&quot;,
+          &quot;Baseline (5-Model)&quot;,
+          &quot;1.0.84-3&quot;,
+          &quot;97.25&quot;,
+          &quot;94.39&quot;,
+          &quot;89.64&quot;,
+          &quot;93.96&quot;,
+          &quot;1239/1310&quot;
+        ]
+      ],
+      &quot;unit&quot;: &quot;score_points_0_to_100&quot;
+    },
+    {
+      &quot;columns&quot;: [
+        &quot;Model&quot;,
+        &quot;Atomic Rds&quot;,
+        &quot;Medium Rds&quot;,
+        &quot;Complex Rds&quot;,
+        &quot;C/A Ratio&quot;,
+        &quot;Total Rds&quot;,
+        &quot;Output Tokens&quot;,
+        &quot;Cost ($)&quot;,
+        &quot;Wall (s)&quot;,
+        &quot;Inference (s)&quot;
+      ],
+      &quot;name&quot;: &quot;usage_and_efficiency_19_models&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;Fable 5.1&quot;,
+          &quot;4.2&quot;,
+          &quot;13.0&quot;,
+          &quot;23.8&quot;,
+          &quot;5.7x&quot;,
+          &quot;142&quot;,
+          &quot;157854&quot;,
+          &quot;14.45&quot;,
+          &quot;3355&quot;,
+          &quot;2210&quot;
+        ],
+        [
+          &quot;Opus 5.5&quot;,
+          &quot;4.8&quot;,
+          &quot;7.5&quot;,
+          &quot;13.2&quot;,
+          &quot;2.8x&quot;,
+          &quot;92&quot;,
+          &quot;175976&quot;,
+          &quot;5.84&quot;,
+          &quot;1909&quot;,
+          &quot;1570&quot;
+        ],
+        [
+          &quot;Opus 5&quot;,
+          &quot;5.0&quot;,
+          &quot;12.5&quot;,
+          &quot;34.5&quot;,
+          &quot;6.9x&quot;,
+          &quot;188&quot;,
+          &quot;249164&quot;,
+          &quot;17.41&quot;,
+          &quot;3797&quot;,
+          &quot;3042&quot;
+        ],
+        [
+          &quot;Haiku 5.5&quot;,
+          &quot;4.2&quot;,
+          &quot;8.5&quot;,
+          &quot;14.0&quot;,
+          &quot;3.3x&quot;,
+          &quot;94&quot;,
+          &quot;453116&quot;,
+          &quot;0.33&quot;,
+          &quot;2104&quot;,
+          &quot;1852&quot;
+        ],
+        [
+          &quot;Grok 4.7&quot;,
+          &quot;5.0&quot;,
+          &quot;6.5&quot;,
+          &quot;26.2&quot;,
+          &quot;5.2x&quot;,
+          &quot;143&quot;,
+          &quot;514873&quot;,
+          &quot;12.22&quot;,
+          &quot;10873&quot;,
+          &quot;7849&quot;
+        ],
+        [
+          &quot;Sonnet 5.5&quot;,
+          &quot;2.8&quot;,
+          &quot;6.5&quot;,
+          &quot;9.5&quot;,
+          &quot;3.4x&quot;,
+          &quot;65&quot;,
+          &quot;161136&quot;,
+          &quot;2.89&quot;,
+          &quot;1301&quot;,
+          &quot;995&quot;
+        ],
+        [
+          &quot;GPT-6.1 Sol&quot;,
+          &quot;4.4&quot;,
+          &quot;5.0&quot;,
+          &quot;7.0&quot;,
+          &quot;1.6x&quot;,
+          &quot;60&quot;,
+          &quot;92907&quot;,
+          &quot;1.71&quot;,
+          &quot;1645&quot;,
+          &quot;1348&quot;
+        ],
+        [
+          &quot;GPT-6 Astra&quot;,
+          &quot;4.0&quot;,
+          &quot;5.5&quot;,
+          &quot;7.8&quot;,
+          &quot;1.9x&quot;,
+          &quot;62&quot;,
+          &quot;98061&quot;,
+          &quot;9.91&quot;,
+          &quot;1960&quot;,
+          &quot;1617&quot;
+        ],
+        [
+          &quot;Sonnet 5&quot;,
+          &quot;5.0&quot;,
+          &quot;12.5&quot;,
+          &quot;35.0&quot;,
+          &quot;7.0x&quot;,
+          &quot;190&quot;,
+          &quot;239150&quot;,
+          &quot;7.87&quot;,
+          &quot;3192&quot;,
+          &quot;2393&quot;
+        ],
+        [
+          &quot;Kimi K3&quot;,
+          &quot;6.6&quot;,
+          &quot;16.5&quot;,
+          &quot;19.2&quot;,
+          &quot;2.9x&quot;,
+          &quot;143&quot;,
+          &quot;175321&quot;,
+          &quot;5.58&quot;,
+          &quot;9028&quot;,
+          &quot;4944&quot;
+        ],
+        [
+          &quot;Gemini 4 Argon&quot;,
+          &quot;6.0&quot;,
+          &quot;7.5&quot;,
+          &quot;15.2&quot;,
+          &quot;2.5x&quot;,
+          &quot;106&quot;,
+          &quot;116755&quot;,
+          &quot;2.82&quot;,
+          &quot;2710&quot;,
+          &quot;2512&quot;
+        ],
+        [
+          &quot;Grok 4.6&quot;,
+          &quot;8.0&quot;,
+          &quot;10.0&quot;,
+          &quot;19.5&quot;,
+          &quot;2.4x&quot;,
+          &quot;138&quot;,
+          &quot;194210&quot;,
+          &quot;5.21&quot;,
+          &quot;4172&quot;,
+          &quot;3302&quot;
+        ],
+        [
+          &quot;HydraFusion&quot;,
+          &quot;6.2&quot;,
+          &quot;8.0&quot;,
+          &quot;9.5&quot;,
+          &quot;1.5x&quot;,
+          &quot;85&quot;,
+          &quot;88979&quot;,
+          &quot;3.58&quot;,
+          &quot;1444&quot;,
+          &quot;1034&quot;
+        ],
+        [
+          &quot;GPT-6 Luna&quot;,
+          &quot;4.8&quot;,
+          &quot;8.0&quot;,
+          &quot;24.8&quot;,
+          &quot;5.2x&quot;,
+          &quot;139&quot;,
+          &quot;145411&quot;,
+          &quot;0.17&quot;,
+          &quot;2675&quot;,
+          &quot;2129&quot;
+        ],
+        [
+          &quot;Gemini 3.8 Flash&quot;,
+          &quot;18.0&quot;,
+          &quot;28.5&quot;,
+          &quot;32.5&quot;,
+          &quot;1.8x&quot;,
+          &quot;277&quot;,
+          &quot;122989&quot;,
+          &quot;2.83&quot;,
+          &quot;5122&quot;,
+          &quot;3750&quot;
+        ],
+        [
+          &quot;GPT-5.6 Luna&quot;,
+          &quot;9.2&quot;,
+          &quot;14.0&quot;,
+          &quot;40.2&quot;,
+          &quot;4.4x&quot;,
+          &quot;235&quot;,
+          &quot;106599&quot;,
+          &quot;0.39&quot;,
+          &quot;3061&quot;,
+          &quot;1316&quot;
+        ],
+        [
+          &quot;MAI-Code-1.1-Flash&quot;,
+          &quot;6.0&quot;,
+          &quot;14.0&quot;,
+          &quot;33.5&quot;,
+          &quot;5.6x&quot;,
+          &quot;192&quot;,
+          &quot;233100&quot;,
+          &quot;0.53&quot;,
+          &quot;3388&quot;,
+          &quot;2448&quot;
+        ],
+        [
+          &quot;DeepSeek-V4-Flash&quot;,
+          &quot;8.0&quot;,
+          &quot;22.0&quot;,
+          &quot;84.0&quot;,
+          &quot;10.5x&quot;,
+          &quot;420&quot;,
+          &quot;290100&quot;,
+          &quot;1.95&quot;,
+          &quot;10740&quot;,
+          &quot;5618&quot;
+        ],
+        [
+          &quot;Haiku 4.5&quot;,
+          &quot;13.8&quot;,
+          &quot;22.0&quot;,
+          &quot;57.0&quot;,
+          &quot;4.1x&quot;,
+          &quot;341&quot;,
+          &quot;303100&quot;,
+          &quot;3.93&quot;,
+          &quot;4849&quot;,
+          &quot;3163&quot;
+        ]
+      ],
+      &quot;unit&quot;: &quot;mixed_usage_metrics&quot;
+    },
+    {
+      &quot;columns&quot;: [
+        &quot;Model&quot;,
+        &quot;A1&quot;,
+        &quot;A2&quot;,
+        &quot;A3&quot;,
+        &quot;A4&quot;,
+        &quot;A5&quot;,
+        &quot;M1&quot;,
+        &quot;M2&quot;,
+        &quot;C1&quot;,
+        &quot;C2&quot;,
+        &quot;C3&quot;,
+        &quot;C4&quot;,
+        &quot;Sum&quot;
+      ],
+      &quot;name&quot;: &quot;task_scores_19_models&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;Fable 5.1&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;98.50&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;1097.50&quot;
+        ],
+        [
+          &quot;Opus 5.5&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;98.50&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;1096.50&quot;
+        ],
+        [
+          &quot;Opus 5&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;97.50&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;1095.50&quot;
+        ],
+        [
+          &quot;Haiku 5.5&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;98.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.75&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;97.25&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;99.61&quot;,
+          &quot;1091.61&quot;
+        ],
+        [
+          &quot;Grok 4.7&quot;,
+          &quot;99.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;96.00&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;98.87&quot;,
+          &quot;100.00&quot;,
+          &quot;98.46&quot;,
+          &quot;100.00&quot;,
+          &quot;1091.33&quot;
+        ],
+        [
+          &quot;Sonnet 5.5&quot;,
+          &quot;99.00&quot;,
+          &quot;99.00&quot;,
+          &quot;98.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.25&quot;,
+          &quot;97.50&quot;,
+          &quot;100.00&quot;,
+          &quot;99.25&quot;,
+          &quot;100.00&quot;,
+          &quot;1089.00&quot;
+        ],
+        [
+          &quot;GPT-6.1 Sol&quot;,
+          &quot;99.00&quot;,
+          &quot;96.00&quot;,
+          &quot;97.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.00&quot;,
+          &quot;97.50&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;1087.50&quot;
+        ],
+        [
+          &quot;GPT-6 Astra&quot;,
+          &quot;98.00&quot;,
+          &quot;96.00&quot;,
+          &quot;97.00&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.00&quot;,
+          &quot;99.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;1087.00&quot;
+        ],
+        [
+          &quot;Sonnet 5&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;97.00&quot;,
+          &quot;100.00&quot;,
+          &quot;96.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.25&quot;,
+          &quot;97.50&quot;,
+          &quot;100.00&quot;,
+          &quot;98.00&quot;,
+          &quot;100.00&quot;,
+          &quot;1085.75&quot;
+        ],
+        [
+          &quot;Kimi K3&quot;,
+          &quot;99.00&quot;,
+          &quot;97.00&quot;,
+          &quot;97.00&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.25&quot;,
+          &quot;97.12&quot;,
+          &quot;99.27&quot;,
+          &quot;98.85&quot;,
+          &quot;100.00&quot;,
+          &quot;1085.49&quot;
+        ],
+        [
+          &quot;Gemini 4 Argon&quot;,
+          &quot;99.00&quot;,
+          &quot;99.00&quot;,
+          &quot;97.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;97.25&quot;,
+          &quot;98.25&quot;,
+          &quot;100.00&quot;,
+          &quot;96.00&quot;,
+          &quot;98.00&quot;,
+          &quot;1084.50&quot;
+        ],
+        [
+          &quot;Grok 4.6&quot;,
+          &quot;99.00&quot;,
+          &quot;98.00&quot;,
+          &quot;97.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;97.12&quot;,
+          &quot;99.27&quot;,
+          &quot;99.85&quot;,
+          &quot;96.00&quot;,
+          &quot;1084.24&quot;
+        ],
+        [
+          &quot;HydraFusion&quot;,
+          &quot;96.00&quot;,
+          &quot;99.00&quot;,
+          &quot;97.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;97.00&quot;,
+          &quot;99.00&quot;,
+          &quot;99.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.00&quot;,
+          &quot;98.00&quot;,
+          &quot;1083.00&quot;
+        ],
+        [
+          &quot;GPT-6 Luna&quot;,
+          &quot;99.00&quot;,
+          &quot;98.00&quot;,
+          &quot;97.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.25&quot;,
+          &quot;97.12&quot;,
+          &quot;100.00&quot;,
+          &quot;92.38&quot;,
+          &quot;98.00&quot;,
+          &quot;1079.75&quot;
+        ],
+        [
+          &quot;Gemini 3.8 Flash&quot;,
+          &quot;100.00&quot;,
+          &quot;100.00&quot;,
+          &quot;95.75&quot;,
+          &quot;100.00&quot;,
+          &quot;98.00&quot;,
+          &quot;100.00&quot;,
+          &quot;96.25&quot;,
+          &quot;98.25&quot;,
+          &quot;99.00&quot;,
+          &quot;93.77&quot;,
+          &quot;97.00&quot;,
+          &quot;1078.02&quot;
+        ],
+        [
+          &quot;GPT-5.6 Luna&quot;,
+          &quot;99.00&quot;,
+          &quot;98.00&quot;,
+          &quot;97.00&quot;,
+          &quot;100.00&quot;,
+          &quot;98.00&quot;,
+          &quot;100.00&quot;,
+          &quot;99.00&quot;,
+          &quot;97.50&quot;,
+          &quot;97.51&quot;,
+          &quot;94.69&quot;,
+          &quot;96.00&quot;,
+          &quot;1076.70&quot;
+        ],
+        [
+          &quot;MAI-Code-1.1-Flash&quot;,
+          &quot;99.00&quot;,
+          &quot;97.00&quot;,
+          &quot;99.00&quot;,
+          &quot;100.00&quot;,
+          &quot;96.00&quot;,
+          &quot;100.00&quot;,
+          &quot;97.25&quot;,
+          &quot;97.12&quot;,
+          &quot;97.00&quot;,
+          &quot;95.71&quot;,
+          &quot;96.61&quot;,
+          &quot;1074.69&quot;
+        ],
+        [
+          &quot;DeepSeek-V4-Flash&quot;,
+          &quot;99.00&quot;,
+          &quot;97.00&quot;,
+          &quot;95.75&quot;,
+          &quot;100.00&quot;,
+          &quot;94.75&quot;,
+          &quot;100.00&quot;,
+          &quot;76.00&quot;,
+          &quot;94.32&quot;,
+          &quot;97.32&quot;,
+          &quot;97.08&quot;,
+          &quot;94.90&quot;,
+          &quot;1046.12&quot;
+        ],
+        [
+          &quot;Haiku 4.5&quot;,
+          &quot;97.75&quot;,
+          &quot;95.00&quot;,
+          &quot;95.75&quot;,
+          &quot;100.00&quot;,
+          &quot;97.75&quot;,
+          &quot;93.78&quot;,
+          &quot;95.00&quot;,
+          &quot;93.98&quot;,
+          &quot;94.76&quot;,
+          &quot;82.81&quot;,
+          &quot;87.01&quot;,
+          &quot;1033.59&quot;
+        ]
+      ],
+      &quot;unit&quot;: &quot;score_points_0_to_100&quot;
+    },
+    {
+      &quot;columns&quot;: [
+        &quot;Assembly&quot;,
+        &quot;Leaves (L)&quot;,
+        &quot;Total Nodes (N)&quot;,
+        &quot;Internal (N-L)&quot;,
+        &quot;Tree Depth (D)&quot;,
+        &quot;Flat Sequential Calls&quot;,
+        &quot;Hierarchical Sequential Calls&quot;,
+        &quot;Critical Path Speedup&quot;
+      ],
+      &quot;name&quot;: &quot;sky001_critical_path_scaling&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;Jaguar E-Type Roadster&quot;,
+          &quot;103&quot;,
+          &quot;139&quot;,
+          &quot;36&quot;,
+          &quot;5&quot;,
+          &quot;10336&quot;,
+          &quot;105&quot;,
+          &quot;98.44x&quot;
+        ],
+        [
+          &quot;Jet Engine&quot;,
+          &quot;70&quot;,
+          &quot;96&quot;,
+          &quot;26&quot;,
+          &quot;5&quot;,
+          &quot;7026&quot;,
+          &quot;105&quot;,
+          &quot;66.91x&quot;
+        ],
+        [
+          &quot;FANUC ArcMate 100iB Welding Robot&quot;,
+          &quot;35&quot;,
+          &quot;55&quot;,
+          &quot;20&quot;,
+          &quot;4&quot;,
+          &quot;3520&quot;,
+          &quot;104&quot;,
+          &quot;33.85x&quot;
+        ],
+        [
+          &quot;Minitractor 4x4&quot;,
+          &quot;92&quot;,
+          &quot;130&quot;,
+          &quot;38&quot;,
+          &quot;5&quot;,
+          &quot;9238&quot;,
+          &quot;105&quot;,
+          &quot;87.98x&quot;
+        ]
+      ],
+      &quot;unit&quot;: &quot;sequential_model_evaluations_at_S100_W128&quot;
+    }
+  ]
+}</pre></details></main></body></html>
