@@ -2,9 +2,9 @@
 
 本专题收录了针对三大前沿 Agent Skills 与工具链的深度研究报告及 **2 套可离线交互的 H5 演示系统**：
 
-1. **任务一 · 机械解剖学 (`wheresryan22/anatomy`) 互动 H5 演示**：**美嘉欣（MJX）Hyper Go 14303（1/14 全时四驱无刷拉力/漂移遥控车）底盘机械原理互动解剖台**（深色蓝图版 + 浅色印刷版 + 参数化生成源码）。
+1. **任务一 · 机械解剖学 (`wheresryan22/anatomy`) 互动 H5 演示 (V2 整车深度强化版)**：**美嘉欣（MJX）Hyper Go 14303（1/14 全时四驱无刷拉力/漂移遥控车）整车 12 总成机械原理互动解剖台**（涵盖宽体拉力车壳/双层尾翼、CNC 二楼板防倾杆、6 辐轮毂+打孔刹车盘+卡钳、行星差速齿轮、四滚筒测功机、4 套高饱和阳极氧化涂装、5 大动态工况演示与 60Hz 双通道实时示波器，深浅双版本均通过 `kit/audit.mjs` 91 状态 0 穿模审计）。
 2. **任务二 · 独立创作者商业化闭环研究**：**Ryan Doser (`@RyanDoserAI`) 的 Claude Code Skills 覆盖范围（8 大类 60+ 技能）、技术深度（`anti-slop.md` 源码级拆解 + 4 子智能体质量门控）与 6 阶价值变现漏斗（$47 → $99 → $199 → $600 咨询 → $100K+ 代运营）**。
-3. **任务三 · `morluto/rea` 逆向工程 Demo 与小游戏复刻**：基于已 Fork 的 [`turbo998/rea`](https://github.com/turbo998/rea)（`v6.4.0`），对 [`turbo998/ai-gaming-lab`](https://github.com/turbo998/ai-gaming-lab) 中已发布的 H5 小游戏 **《废土斗机祭 (Scrap Swarm)》** 生产构建包（`assets/index-BCy1aADK.js`，`433,836` 个 AST 节点）执行静态语义分析与密码学证据生成（6 条 `ev_<sha256>` 证据记录），并构建内置实时证据脉冲 HUD 的 **1:1 可玩 H5 复刻版**。
+3. **任务三 · `morluto/rea` 逆向工程 Demo 与小游戏复刻 (V2 全档案热补丁实验台)**：基于已 Fork 的 [`turbo998/rea`](https://github.com/turbo998/rea)（`v6.4.0`），对 **《废土斗机祭 (Scrap Swarm)》** 生产构建包执行静态语义分析与密码学证据生成，并完整复刻 **实战竞技场 + 五机甲整备库 (5 Units × 4 Poses) + 五章战役剧情与矢量立绘特写横幅 + REA AST 对照与运行时内存热补丁工作台 + 10 音效 Web Audio 双振荡器测试台**。
 
 ---
 
