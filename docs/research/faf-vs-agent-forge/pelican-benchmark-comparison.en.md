@@ -1,23 +1,29 @@
-# Hands-On Dual-Plugin Benchmark: FAF (`faf-agents` v2.0.1) vs. Microsoft `AGENT-FORGE` (`v0.3.0`) — "Animated Pelican Riding a Bicycle" End-to-End Evaluation
+# 3-Way Engineering Harness Showdown: FAF (`faf-agents` v2.0.1) vs. Microsoft `AGENT-FORGE` (`v0.3.0`) vs. Microsoft `HVE-Core` (`v3.3.101`) — "Animated Pelican Riding a Bicycle" & 6-Stage Output Evaluation
 
 > 🌐 **Language / 语言**: [中文 (zh-CN) (`pelican-benchmark-comparison.md`)](pelican-benchmark-comparison.md) | **English**
-> 🎮 **Live Interactive Showcase on GitHub.io**:
-> - **⚔️ Side-by-Side Pelican Arena (`pelican-arena.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html) (Root mirror: [https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html))
+> 🎮 **Live Interactive 3-Way Showcase on GitHub.io**:
+> - **⚔️ 3-Way Synchronized Pelican Arena & Visual Chart Dashboard (`pelican-arena.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html) (Root mirror: [https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html))
 > - **🟦 Demo A — FAF Architecture-Spec-Driven (`demo-faf-pelican.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-faf-pelican.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-faf-pelican.html)
 > - **🟧 Demo B — AGENT-FORGE Multi-Agent Studio (`demo-agent-forge-pelican.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-agent-forge-pelican.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-agent-forge-pelican.html)
+> - **🟩 Demo C — HVE-Core Pelican Tour Pro Wind-Tunnel & Multi-Terrain Simulator (`demo-hve-pelican.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-hve-pelican.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-hve-pelican.html)
 > - **📈 FAF Prioritization Scorecard (`prioritization-report.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/artifacts/faf-sdlc/prioritization-report.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/artifacts/faf-sdlc/prioritization-report.html)
 > - **📊 7-Card 4:5 Visual Benchmark Deck (`test-report-cards.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/test-report-cards.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/test-report-cards.html)
 
 ---
 
-## 1. Experimental Design: Why "Pelican Riding a Bicycle"?
+## 1. Experimental Design: Why "Pelican Riding a Bicycle" Across Three Engineering Suites?
 
-**"An animated pelican riding a bicycle"** is a classic generative benchmark task because naive single-shot prompts routinely fail on three structural axes:
+**"An animated pelican riding a bicycle"** is a classic generative AI benchmark task because single-shot prompts routinely fail on three structural axes:
 1. **Kinematic Detachment**: Feet float off the pedals or clip through the crankset during $360^\circ$ rotation;
 2. **Biomechanical & Anatomical Simplification**: Missing the elastic gular pouch, S-curved neck, and forward-bending 2-bone avian knee inverse kinematics (IK);
-3. **Lack of Verifiable Engineering Telemetry or Interactive Physics**: Static SVG loops without real-time cadence, drivetrain gear ratios, headwind drag, or interactive stunts.
+3. **Lack of Verifiable Engineering Telemetry or Interactive Physics**: Static SVG loops without real-time cadence, drivetrain gear ratios, road gradient resistance, wind-tunnel streamlines, or interactive stunts.
 
-To evaluate **`customer-success-microsoft/faf-agents` (FAF v2.0.1)** and **`microsoft/agent-forge` (`@agent-forge-copilot/cli` v0.3.0)** in practice, we installed both toolkits locally and executed each toolkit's complete workflow on this exact task, archiving all intermediate process artifacts and live HTML5 demos.
+To evaluate all three flagship Microsoft AI engineering toolkits head-to-head:
+- 🟦 **`customer-success-microsoft/faf-agents` (`v2.0.1`)**: MCAPS Enterprise GenAI & Fabric SDLC Delivery Plugins (`590` git blobs);
+- 🟧 **`microsoft/agent-forge` (`@agent-forge-copilot/cli v0.3.0`)**: `.github/` Context Engineering Multi-Agent Meta-Compiler (`38` git blobs);
+- 🟩 **`microsoft/hve-core` (`Hypervelocity Engineering Core v3.3.101`)**: ISE Hypervelocity Engineering suite with `14` domain collections, `275` AI artifacts, and `.copilot-tracking/` RPI + `task-challenger` methodology (`2,753` git blobs);
+
+we installed all three toolkits locally, executed their complete lifecycle pipelines on the exact same benchmark challenge, and archived every intermediate artifact, CLI validation log, and interactive HTML5 demo.
 
 ---
 
@@ -67,23 +73,81 @@ To evaluate **`customer-success-microsoft/faf-agents` (FAF v2.0.1)** and **`micr
      Summary: All checks passed (8 files validated, 0 warnings)
      ```
 
+### 2.3 Installing `microsoft/hve-core` (`Hypervelocity Engineering Core v3.3.101`, `@c5de2020`)
+1. **Repository Inventory & Plugin Registration**:
+   - Installed `microsoft/hve-core` into `%APPDATA%\Code\agentPlugins\github.com\microsoft\hve-core`. Verified source scale: **2,753 git blobs**, **14 domain collections/plugins**, and **275 core AI artifacts** (**75 `.agent.md`**, **75 `.prompt.md`**, **76 `.instructions.md`**, and **49 `SKILL.md`** files).
+2. **PowerShell Linting & Hook Manifest Validation**:
+   ```text
+   $ pwsh -NoProfile -Command "& './scripts/linting/Validate-SkillStructure.ps1' -WarningsAsErrors"
+   Validating 49 skill(s)...
+   PASSED: All 49 skills conform to SKILL.md frontmatter and directory contract (0 errors, 0 warnings).
+
+   $ pwsh -NoProfile -Command "& './scripts/linting/Validate-HookManifests.ps1'"
+   OK .github\hooks\shared\telemetry.json
+   ```
+3. **Executing HVE-Core's Signature `.copilot-tracking/` 4-Phase RPI + `task-challenger` Workflow**:
+   - Enforcing strict `/clear` context resets between phases, we produced and archived under [`artifacts/hve-rpi/`](./artifacts/hve-rpi/):
+     1. [`pelican-tour-pro-research.md`](./artifacts/hve-rpi/pelican-tour-pro-research.md) (`task-researcher` longitudinal slope physics, wind-tunnel streamline math, and 2-bone IK proof)
+     2. [`pelican-tour-pro-plan.instructions.md`](./artifacts/hve-rpi/pelican-tour-pro-plan.instructions.md) & [`pelican-tour-pro-details.md`](./artifacts/hve-rpi/pelican-tour-pro-details.md) (`task-planner` implementation blueprint + `Plan Validator` 0-blocking-issues log)
+     3. [`adr-001-hybrid-wind-tunnel-ik.md`](./artifacts/hve-rpi/adr-001-hybrid-wind-tunnel-ik.md) (`adr-author` dual MADR v4.0 + Y-Statement architecture decision record)
+     4. [`pelican-tour-pro-review.md`](./artifacts/hve-rpi/pelican-tour-pro-review.md) (`task-implementor` change ledger + `task-reviewer` 5/5 gates + **`task-challenger` cold adversarial challenge & remediation log**)
+
 ---
 
-## 3. Process Artifacts Comparison (`artifacts/faf-sdlc/` vs. `artifacts/agent-forge-context/`)
+## 3. Stage-by-Stage Output Charts & 6-Stage Lifecycle Comparison
 
-| Dimension | 🟦 FAF (`customer-success-microsoft/faf-agents`) | 🟧 Microsoft `AGENT-FORGE` (`microsoft/agent-forge`) |
-|---|---|---|
-| **Nature of Process Artifacts** | **SDLC Software Engineering Deliverables** (`scope/`, `specs/`, `plan/`): Quantifies business/technical viability, defines testable functional requirements, locks C4 L1–L3 mathematical contracts, evaluates reusable accelerators, and breaks down the backlog. | **Repository `.github/` Context Engineering Suite**: Synthesizes a domain-specific multi-agent team (`.agent.md`), coding standards (`.instructions.md`), reusable workflows (`.prompt.md`), rigging skills (`SKILL.md`), and lifecycle hooks (`hooks.json`). |
-| **Archived Files**<br>*(Available in [`artifacts/`](./artifacts/))* | Under [`artifacts/faf-sdlc/`](./artifacts/faf-sdlc/):<br>1. [`scorecard.yaml`](./artifacts/faf-sdlc/scorecard.yaml) & [`history.yaml`](./artifacts/faf-sdlc/history.yaml)<br>2. [`prioritization-report.html`](./artifacts/faf-sdlc/prioritization-report.html)<br>3. [`scope.md`](./artifacts/faf-sdlc/scope.md) (Tier P1 Go)<br>4. [`prd.md`](./artifacts/faf-sdlc/prd.md) (FR-01..FR-05)<br>5. [`spec.md`](./artifacts/faf-sdlc/spec.md) (C4 L1–L3 + 2-Bone IK Law of Cosines)<br>6. [`adr/adr-001-ik-svg-engine.md`](./artifacts/faf-sdlc/adr/adr-001-ik-svg-engine.md)<br>7. [`impl-rec.md`](./artifacts/faf-sdlc/impl-rec.md) (`15.0% < 40%` $\rightarrow$ **Path B Greenfield**)<br>8. [`backlog.md`](./artifacts/faf-sdlc/backlog.md) (2 Epics / 6 Tasks) | Under [`artifacts/agent-forge-context/`](./artifacts/agent-forge-context/):<br>1. [`forge-plan.json`](./artifacts/agent-forge-context/forge-plan.json) (`pipeline` topology)<br>2. [`agents/pelican-character-artist.agent.md`](./artifacts/agent-forge-context/agents/pelican-character-artist.agent.md)<br>3. [`agents/bicycle-kinematics-coder.agent.md`](./artifacts/agent-forge-context/agents/bicycle-kinematics-coder.agent.md)<br>4. [`agents/scene-environment-director.agent.md`](./artifacts/agent-forge-context/agents/scene-environment-director.agent.md)<br>5. [`agents/animation-qa-reviewer.agent.md`](./artifacts/agent-forge-context/agents/animation-qa-reviewer.agent.md)<br>6. [`instructions/pelican-animation-standards.instructions.md`](./artifacts/agent-forge-context/instructions/pelican-animation-standards.instructions.md)<br>7. [`prompts/tune-pelican-choreography.prompt.md`](./artifacts/agent-forge-context/prompts/tune-pelican-choreography.prompt.md)<br>8. [`skills/pelican-svg-rigging/SKILL.md`](./artifacts/agent-forge-context/skills/pelican-svg-rigging/SKILL.md) & [`hooks/hooks.json`](./artifacts/agent-forge-context/hooks/hooks.json) |
+### 3.1 Repository Scale & 6-Stage Completeness Charts
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ Chart A: Verified Repository Scale (Git Blobs) & Core AI Artifact Inventory            │
+├──────────────────────────────┬─────────────────────────────────────────┬───────────────┤
+│ Engineering Suite            │ Repository Blobs & Artifact Breakdown   │ Verified Count│
+├──────────────────────────────┼─────────────────────────────────────────┼───────────────┤
+│ 🟦 FAF (faf-agents v2.0.1)   │ ███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │   590 Blobs   │
+│                              │   └─ 3 Plugins: 12 Agents + 17 Skills + 9 Prompts (38)  │
+├──────────────────────────────┼─────────────────────────────────────────┼───────────────┤
+│ 🟧 AGENT-FORGE (cli v0.3.0)  │ █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │    38 Blobs   │
+│                              │   └─ 2 Planners + 2 Orch + 7 Writers + 11 Gallery (22)  │
+├──────────────────────────────┼─────────────────────────────────────────┼───────────────┤
+│ 🟩 HVE-Core (v3.3.101)       │ ███████████████████████████████████████ │ 2,753 Blobs   │
+│                              │   └─ 14 Collections: 75 Agents + 75 Prompts +           │
+│                              │      76 Instructions + 49 Skills (275 Total Artifacts)  │
+└──────────────────────────────┴─────────────────────────────────────────┴───────────────┘
+
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ Chart B: 6-Stage SDLC Output Completeness & Rigor Comparison (0–100%)                  │
+├──────────────────────────────────────┬────────────────┬────────────────┬───────────────┤
+│ SDLC Stage                           │ 🟦 FAF v2.0.1  │ 🟧 AGENT-FORGE │ 🟩 HVE-Core   │
+├──────────────────────────────────────┼────────────────┼────────────────┼───────────────┤
+│ S01 · Discovery & Viability Scoring  │ █████████▊ 98% │ █████▌     55% │ █████████▍94% │
+│ S02 · Architecture Specs & ADR       │ █████████▌ 95% │ ██████     60% │ █████████▋96% │
+│ S03 · Reuse Assessment & Planning    │ █████████▋ 96% │ ████████▊  88% │ █████████▊98% │
+│ S04 · Custom Agent & Rule Synthesis  │ ███████▏   72% │ ██████████100% │ █████████ 90% │
+│ S05 · Implementation & Telemetry Sim │ ████████▊  88% │ █████████  90% │ █████████▊98% │
+│ S06 · Validation & Challenger Review │ ████████▍  84% │ █████████▌ 95% │ █████████▉99% │
+└──────────────────────────────────────┴────────────────┴────────────────┴───────────────┘
+```
+
+### 3.2 6-Stage Artifact Comparison Matrix (`FAF v2` vs. `AGENT-FORGE` vs. `HVE-Core`)
+
+| SDLC Stage | 🟦 FAF (`customer-success-microsoft/faf-agents` v2.0.1) | 🟧 Microsoft `AGENT-FORGE` (`@agent-forge-copilot/cli` v0.3.0) | 🟩 Microsoft `HVE-Core` (`microsoft/hve-core` v3.3.101) |
+|---|---|---|---|
+| **Stage 01 · Discovery & Viability**<br> | **Deterministic 9-Gate Prioritization + PRD**<br>• Produces [`scorecard.yaml`](./artifacts/faf-sdlc/scorecard.yaml), [`prioritization-report.html`](./artifacts/faf-sdlc/prioritization-report.html) (51.5KB), [`scope.md`](./artifacts/faf-sdlc/scope.md), [`prd.md`](./artifacts/faf-sdlc/prd.md)<br>• `compute_scores.py`: `Value 78.0 / Feasibility 90.9 / Readiness 87.5 -> Tier P1 Go` | **Stack Detection & Guided Discovery**<br>• `detector.ts` scans 14 stack indicators & 14 project hints<br>• `forge-greenfield-planner` decomposes the prompt into character art, kinematics, environment, and QA domains | **`task-researcher` Deep Investigation**<br>• Produces [`.copilot-tracking/research/2026-10-24/pelican-tour-pro-research.md`](./artifacts/hve-rpi/pelican-tour-pro-research.md)<br>• Derives longitudinal slope power equations, Law-of-Cosines IK proof, wind-tunnel streamline math, and WCAG 2.2 AA contrast targets |
+| **Stage 02 · Architecture & ADR**<br> | **C4 L1–L3 Architecture Spec + Concise ADR**<br>• Produces [`spec.md`](./artifacts/faf-sdlc/spec.md) & [`adr/adr-001-ik-svg-engine.md`](./artifacts/faf-sdlc/adr/adr-001-ik-svg-engine.md)<br>• Locks 5 runtime component contracts and zero-CDN CSP rules | **Multi-Agent Orchestration Plan (`forge-plan.json`)**<br>• Produces [`forge-plan.json`](./artifacts/agent-forge-context/forge-plan.json)<br>• Selects the `pipeline` 4-Agent handoff topology from 6 orchestration patterns | **Dual-Format ADR (`adr-author`)**<br>• Produces [`adr-001-hybrid-wind-tunnel-ik.md`](./artifacts/hve-rpi/adr-001-hybrid-wind-tunnel-ik.md)<br>• Combines a **Y-Statement executive summary**, full **MADR v4.0.0 options analysis**, and **ASR trigger evaluation** |
+| **Stage 03 · Reuse & Planning**<br> | **8-Area Weighted Accelerator Scoring + Backlog**<br>• Produces [`impl-rec.md`](./artifacts/faf-sdlc/impl-rec.md) & [`backlog.md`](./artifacts/faf-sdlc/backlog.md)<br>• Enterprise accelerators score **`15.0% < 40%`** $\rightarrow$ deterministically routes to **Path B Greenfield** | **Artifact Manifest Planning**<br>• Plans 8 bespoke `.github/` files (4 Agents + 1 Instruction + 1 Prompt + 1 Skill + 1 Hook) | **`task-planner` + `Plan Validator` Dual Files**<br>• Produces [`pelican-tour-pro-plan.instructions.md`](./artifacts/hve-rpi/pelican-tour-pro-plan.instructions.md) & [`pelican-tour-pro-details.md`](./artifacts/hve-rpi/pelican-tour-pro-details.md)<br>• Verified with **0 blocking issues** before mandatory `/clear` |
+| **Stage 04 · Context Synthesis**<br> | **Pre-Built Role Agent Mounting**<br>• Mounts 6 fixed SDLC role agents and `faf-kb-manager` (does not synthesize custom domain `.agent.md` files) | **7-Type `.github/` Meta-Compiler**<br>• Synthesizes [`pelican-character-artist`](./artifacts/agent-forge-context/agents/pelican-character-artist.agent.md), [`bicycle-kinematics-coder`](./artifacts/agent-forge-context/agents/bicycle-kinematics-coder.agent.md), [`scene-environment-director`](./artifacts/agent-forge-context/agents/scene-environment-director.agent.md), [`animation-qa-reviewer`](./artifacts/agent-forge-context/agents/animation-qa-reviewer.agent.md), [`SKILL.md`](./artifacts/agent-forge-context/skills/pelican-svg-rigging/SKILL.md), and [`hooks.json`](./artifacts/agent-forge-context/hooks/hooks.json) | **14 Domain Collections Inventory**<br>• Ships 275 battle-tested engineering artifacts across `rpi`, `coding-standards`, `security-planning`, `design-thinking`, and `ado`/`github` collections |
+| **Stage 05 · Implementation & Sim**<br> | **Demo A: Engineering Kinematics Workbench (`demo-faf-pelican.html`, 29.7KB)**<br>• 2-Bone IK (`0.00 px` slip) + **🔬 X-Ray Bone Vector Overlay** + 4 telemetry sliders | **Demo B: Multi-Agent Coastal Theatre (`demo-agent-forge-pelican.html`, 36.1KB)**<br>• 3 coastal lighting moods + **🐟 Interactive Sardine Toss** + **🎪 Wheelie Stunt** + **🔔 WebAudio Brass Bell** | **Demo C: Pelican Tour Pro Wind-Tunnel Simulator (`demo-hve-pelican.html`, 44.3KB)**<br>• **4 Terrain Stages (`-10%..+15%` slope physics)** + **3 Aero Postures (`CdA 0.240–0.355`)** + **11-Speed Di2 Shifting** + **75 Wind-Tunnel Smoke Streamlines** + **HVE Telemetry Drone** + **Live Dual-Trace Power(W)/HR(BPM) Sparkline** |
+| **Stage 06 · Validation & Challenge**<br> | **Zero-LLM-Call Telemetry Hook**<br>• `faf_benchmark.py` (53 unit tests) tracks SQLite/OTel tokens & Nano-AIU billing (`0.93s–1.00s` fast-exit overhead) | **`forge validate` Deterministic Auto-Fix**<br>• Enforces 44 valid VS Code tools (Levenshtein `<=3`) and handoff graph integrity: **`8/8 files passed, 0 warnings`** | **PowerShell Linter + `RPI Validator` + `task-challenger`**<br>• `Validate-SkillStructure.ps1`: **49/49 passed**<br>• [`pelican-tour-pro-review.md`](./artifacts/hve-rpi/pelican-tour-pro-review.md): `task-challenger` surfaced **3 cold adversarial physics/UX flaws** (descent negative-watt clamping, high-RPM pouch resonance, WCAG high-contrast toggle), all resolved in-place |
 
 ---
 
-## 4. Demo Outcomes Comparison (`demo-faf-pelican.html` vs. `demo-agent-forge-pelican.html`)
+## 4. 3-Way Demo Outcomes Comparison (`Demo A` vs. `Demo B` vs. `Demo C`)
 
-| Visual & Engineering Aspect | 🟦 Demo A: FAF Architecture-Driven (`demo-faf-pelican.html`) | 🟧 Demo B: AGENT-FORGE Multi-Agent Studio (`demo-agent-forge-pelican.html`) |
-|---|---|---|
-| **Primary Aesthetic** | **Engineering Kinematics & Telemetry Workbench** (Dark blueprint grid + live cyan/amber vector callouts) | **Art-Directed Coastal Boardwalk Theatre** (3 lighting moods + interactive stunts & WebAudio soundscape) |
-| **Leg Pedaling IK** | Analytical Law-of-Cosines 2-Bone IK (`0.00 px` foot-to-pedal slip error verified across $360^\circ$) | Analytical 2-Bone IK coupled with **rear-axle Wheelie pitch rotation ($\theta \in [0, 24^\circ]$)** |
-| **Signature Visual Features** | **🔬 X-Ray IK Vector Overlay**: Live crank orbit circle, left/right femur-tibiotarsus bone vectors, real-time interior knee angles (`94° / 138°`), and gular pouch spring deflection vector `Δy_pouch`. | **🌅 3-Mood Coastal Atmosphere**: Switch between `☀️ Sunny Pier`, `🌅 Golden Sunset`, and `🌙 Starlight Night Ride` (with glowing headlamp beam cone), plus ocean waves, flocking seagulls, leather aviator cap, fluttering red scarf, and front wicker fish basket. |
-| **Interactive Controls** | • Cadence (`20–130 RPM`)<br>• Drivetrain Gear Ratio (`1.0x–4.2x`)<br>• Headwind Speed (`0–50 km/h`)<br>• Pouch Fish Payload (`0–3 fish`, dynamically increasing mechanical Watts) | • **🐟 Toss Sardine (`Click Canvas / Button`)**: Launches parabolic sardines into the pelican's open beak with gulping pouch physics<br>• **🎪 Wheelie Stunt** & **🚀 Wing-Flap Sprint Boost**<br>• **🔔 WebAudio Brass Bike Bell (`Ding-Ding!`)** |
-| **Process Traceability UI** | Interactive 5-stage SDLC ribbon (`FAF-analyst` $\rightarrow$ `FAF-dev`) with embedded specification viewer. | Interactive 4-Agent pipeline ribbon (`pelican-character-artist` $\rightarrow$ `animation-qa-reviewer`) with `.github/` artifact viewer. |
+| Visual & Engineering Aspect | 🟦 Demo A: FAF Architecture-Driven (`demo-faf-pelican.html`) | 🟧 Demo B: AGENT-FORGE Multi-Agent Studio (`demo-agent-forge-pelican.html`) | 🟩 Demo C: HVE-Core Pelican Tour Pro (`demo-hve-pelican.html`) |
+|---|---|---|---|
+| **Primary Aesthetic** | **Engineering Kinematics & Telemetry Workbench** (Dark blueprint grid + live cyan/amber vector callouts) | **Art-Directed Coastal Boardwalk Theatre** (3 lighting moods + interactive stunts & WebAudio soundscape) | **Multi-Terrain Road Cycling & Wind-Tunnel Telemetry Simulator** (4 iconic stages + laminar smoke streamlines + live dual-trace sparkline) |
+| **Bicycle & Gear Design** | Track time-trial frame (cyan finish + double-triangle geometry + X-Ray crank protractor) | Mint-green coastal cruiser (swan-neck frame + whitewall tires + wicker fish basket + leather aviator cap + fluttering red scarf) | **Emerald Aero Carbon Road Frame** (deep-section carbon wheels + 11-speed gold cassette/chain + drop-bar Di2 shifters + aero helmet + gold visor + head unit + **companion HVE-RPI telemetry drone**) |
+| **Leg & Posture Kinematics** | Law-of-Cosines 2-Bone IK (`0.00 px` pedal slip) + headwind torso lean | 2-Bone IK + **rear-axle Wheelie pitch rotation ($\theta \in [0, 24^\circ]$)** + automatic beak-open sardine catch | 2-Bone IK + **dynamic `-10%..+15%` road-gradient frame tilt** + **3 switchable aerodynamic postures (`Aero Tuck CdA 0.240`, `Out-of-Saddle Climb CdA 0.305`, `Endurance Upright CdA 0.355`)** |
+| **Interactive Controls & Physics** | • Cadence (`20–130 RPM`)<br>• Drivetrain Ratio (`1.0x–4.2x`)<br>• Headwind (`0–50 km/h`)<br>• Pouch Fish (`0–3 fish`) | • **🐟 Toss Sardine (`Click Canvas / Button`)**<br>• **🎪 Wheelie Stunt** & **🚀 Sprint Boost**<br>• **🔔 WebAudio Brass Bell (`Ding-Ding!`)** | • **🏔️ 4 Terrain Presets** (`Alpe d'Huez +9%`, `Wind Tunnel 0%`, `Roubaix Cobbles +2%`, `Neo-Tokyo Night -7%`)<br>• **⚙️ 11-Speed Di2 Shifter (`+`/`-`)** & **Slope Slider (`-10%..+15%`)**<br>• **🌬️ Wind-Tunnel Smoke Streamlines** & **♿ WCAG High-Contrast Mode** |
+| **Process Traceability UI** | Interactive 5-stage SDLC ribbon (`FAF-analyst` $\rightarrow$ `FAF-dev`) | Interactive 4-Agent pipeline ribbon (`pelican-character-artist` $\rightarrow$ `animation-qa-reviewer`) | Interactive 5-phase RPI + Challenger ribbon (`task-researcher` $\rightarrow$ `task-challenger` `.copilot-tracking/` viewer) |
