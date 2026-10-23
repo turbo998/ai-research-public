@@ -499,11 +499,13 @@ function buildEsc() {
     ),
   );
 
-  // G3C Gyro 3-Channel Receiver Box behind ESC + Gyro Status Indicator LED
+  // G3C Gyro 3-Channel Receiver Box behind ESC + Gyro Status Indicator LED + Bind Micro-Button & 3-Ch Gold-Pin Header Bank
   const rxPlan = { x: -64, y: -32, w: 18, d: 22, r: 2 };
   out.push(S(k.slabOf(rxPlan, zTop, 12, P, 4, 0.6), { tone: "mid" }));
   out.push(L(k.planOutline(k.insetPlan(rxPlan, 2), zTop + 12, P, 3), { tone: "lo" }));
   out.push(S(k.cylinder(-50, -15, 1.6, zTop + 12, 1.4, P, 14), { tone: "hi", lit: true }));
+  out.push(S(k.cylinder(-50, -27, 1.3, zTop + 12, 1.2, P, 12), { tone: "hi" }));
+  out.push(S(k.slabOf({ x: -62, y: -19, w: 4.2, d: 7.5, r: 0.6 }, zTop + 12, 1.6, P, 2, 0.2), { tone: "hi", lit: true }));
   out.push(
     k.faceTextSvg(k.topMatrix([-55, -21], zTop + 12, P, "x"), "G3C GYRO", {
       size: 2.3,
@@ -664,11 +666,13 @@ function buildSuspension(isFront) {
     // CNC Multi-Hole Camber-Link Adjustment Plate on Shock Tower Inner Ear
     out.push(S(k.slabOf({ x: towerX - 0.6, y: side > 0 ? 11 : -16, w: 5.7, d: 5, r: 0.8 }, zTop + 14.2, 3.8, P, 2, 0.3), { tone: "hi", lit: true }));
 
-    // CNC Anodized Outer Steering C-Hub / Knuckle Carrier + Brass Kingpin Bushings
+    // CNC Anodized Outer Steering C-Hub / Knuckle Carrier + Brass Kingpin Bushings + Brake Rotor Cooling Air Scoop Duct
     const hubY = side > 0 ? yOuter - 3 : yOuter - 2;
     const cHub = { x: ax - 4.5, y: hubY, w: 9, d: 5, r: 1.2 };
     out.push(S(k.slabOf(cHub, WHEEL_Z - 6, 13.5, P, 3, 0.4), { tone: "hi" }));
     out.push(S(k.cylinder(ax, side * (TRACK_Y - 11), 2.1, WHEEL_Z + 7.5, 1.8, P, 14), { tone: "hi", lit: true }));
+    const ductY = side > 0 ? yOuter - 5.8 : yOuter + 3.2;
+    out.push(S(k.slabOf({ x: ax - 3.2, y: ductY, w: 6.4, d: 2.4, r: 0.6 }, WHEEL_Z - 3.5, 4.2, P, 2, 0.3), { tone: "hi", lit: true }));
 
     const shockX = towerX + 2.2;
     const shockY = side * 22;
@@ -736,9 +740,10 @@ function buildWheels(isFront) {
     }).join("");
     wheelGroup.push(`<g class="mjx-wheel-spokes">${L(spokesD, { tone: "lo", free: true })}</g>`);
 
-    // 12mm Hex Center Wheel Locknut
+    // 12mm Hex Center Wheel Locknut + Brass Tire Valve Stem & Rim Balance Weight Pad
     wheelGroup.push(S(G.disc(WHEEL_W / 2 + 0.5, WHEEL_W / 2 + 2.4, 4.0, F_W, P), { tone: "mid", lit: true }));
     wheelGroup.push(D(G.dotsOf(F_W, WHEEL_W / 2 + 0.6, WHEEL_R * 0.38, 6, P, { all: true }), { size: 0.55, tone: "lo" }));
+    wheelGroup.push(S(k.cylinder(ax + WHEEL_R * 0.52, rimY, 0.85, WHEEL_Z - 1.2, 2.0, P, 10), { tone: "hi", lit: true }));
 
     out.push(`<g ${partAttr}>${wheelGroup.join("")}</g>`);
   }
@@ -907,6 +912,10 @@ function buildBodyShell() {
   for (const side of [-1, 1]) {
     const endplate = { x: 80, y: side > 0 ? 40 : -43.5, w: 28, d: 3.5, r: 1 };
     out.push(S(k.slabOf(endplate, zBase + 13, 13.5, P, 3, 0.4), { tone: "hi" }));
+    const ey = side > 0 ? 43.6 : -43.6;
+    for (const ez of [zBase + 16.5, zBase + 19.5, zBase + 22.5]) {
+      out.push(L(k.segment([84, ey, ez], [103, ey, ez], P), { tone: "lit", free: true }));
+    }
   }
 
   // 4 R-Type Metal Body Clips on hood & trunk + NACA Hood Ducts, Rear Window Louvers & Side Skirt Finlets
@@ -1207,6 +1216,16 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="subaru555"] .mjx-piece[data-piece="wheels_r"]{
   --anatomy-top:#fde047;--anatomy-fill:#ca8a04;--anatomy-hi:#fef08a;--anatomy-lit:#38bdf8;
 }
+/* Livery 17: Castrol WRC White, Emerald Green & Crimson */
+.iso-stage[data-color-mode="vivid"][data-livery="castrol"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#f8fafc;--anatomy-fill:#16a34a;--anatomy-shade-0:#052e16;--anatomy-shade-1:#14532d;--anatomy-shade-2:#15803d;--anatomy-shade-3:#22c55e;--anatomy-hi:#ef4444;--anatomy-lit:#dc2626;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="castrol"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="castrol"] .mjx-piece[data-piece="wheels_r"],
+.iso-stage[data-color-mode="vivid"][data-livery="castrol"] .mjx-piece[data-piece="suspension_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="castrol"] .mjx-piece[data-piece="suspension_r"]{
+  --anatomy-top:#f8fafc;--anatomy-fill:#dc2626;--anatomy-hi:#4ade80;--anatomy-lit:#ef4444;
+}
 .iso-stage[data-lights="on"] .mjx-headlight-pod{
   filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
@@ -1254,6 +1273,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-demo="jturn">🔥 手刹 180° 掉头</button>
     <button type="button" class="mjx-btn" data-demo="aquaplane">🌊 水漂打滑救车</button>
     <button type="button" class="mjx-btn" data-demo="scandi">🌪️ 沙石北欧钟摆</button>
+    <button type="button" class="mjx-btn" data-demo="pikespeak">🏔️ 派克峰爬山赛</button>
     <button type="button" class="mjx-btn" data-demo="dyno">📈 阶梯功率测功</button>
     <button type="button" class="mjx-btn" data-demo="tour">🔍 12 总成拆解巡礼</button>
   </div>
@@ -1264,6 +1284,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-livery-btn="pinkpig">粉猪传奇</button>
     <button type="button" class="mjx-btn" data-livery-btn="jps">黑金传奇 JPS</button>
     <button type="button" class="mjx-btn" data-livery-btn="subaru555">富士星芒 555</button>
+    <button type="button" class="mjx-btn" data-livery-btn="castrol">嘉实多绿白红</button>
     <button type="button" class="mjx-btn" data-livery-btn="wrc">WRC 蓝金</button>
     <button type="button" class="mjx-btn" data-livery-btn="redbull">红牛深蓝金</button>
     <button type="button" class="mjx-btn" data-livery-btn="monster">魔爪黑绿</button>
@@ -1357,7 +1378,7 @@ const inspectorHtml = `
 const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-family:system-ui,-apple-system,sans-serif;font-size:12.5px;border-radius:8px;background:rgba(128,128,128,0.12);border:1px solid rgba(128,128,128,0.22)">
   <a href="../../index.html" style="color:inherit;text-decoration:none;font-weight:600">← 返回 AI Agent Skills &amp; REA 演示门户 (Portal)</a>
   <div style="display:flex;gap:8px;align-items:center">
-    <span style="opacity:0.7">整车 12 总成 + 13 动态演示 + 15 涂装:</span>
+    <span style="opacity:0.7">整车 12 总成 + 16 动态演示 + 18 涂装:</span>
     <a href="index.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "dark" ? "background:#f5a524;color:#111;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">🌙 暗黑多彩测功台 (Dark)</a>
     <a href="mjx-14303-chassis-light.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "light" ? "background:#d97706;color:#fff;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">☀️ 工程浅色蓝图 (Light)</a>
   </div>
@@ -1366,7 +1387,7 @@ const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding
 const body = `<style>${CSS}</style>${navBannerHtml}<div class="mjx-wrap">${k.plateHtml({
   fig: "Fig 1 · MJX HYPER GO 14303 · 12-ASSEMBLY COMPLETE VEHICLE LAB",
   title: "美嘉欣 14303 · 1/14 全时四驱无刷拉力/漂移整车机械原理与动态测功台",
-  hint: "支持 15 种自动动态剧本 · 17 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
+  hint: "支持 16 种自动动态剧本 · 18 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
   readout: "2S 7.4V · 15.0 km/h · Manual Lab",
   keys: [
     { mark: "lit", label: "核心动力链：2845 无刷电机 → 15T/45T 金属齿 → 中央铝轴 → 前后 37T/13T 行星伞齿差速器 → 四轮 CVD + 通风刹车盘" },
@@ -1611,6 +1632,14 @@ function setDemoMode(mode) {
     btnGyro.textContent = "G3C 陀螺仪 ON";
     cycleShell("xray");
     selectPart("suspension_r", true);
+  } else if (mode === "pikespeak") {
+    toggleExplode(false);
+    setCells(3);
+    gyroEnabled = true;
+    btnGyro.setAttribute("data-active", "");
+    btnGyro.textContent = "G3C 陀螺仪 ON";
+    cycleShell("xray");
+    selectPart("motor", true);
   } else if (mode === "dyno") {
     toggleExplode(false);
     setSteer(0);
@@ -1876,6 +1905,19 @@ function tick(now) {
     } else {
       setThrottle(0.96);
       setSteer(-24 + Math.sin(elapsed * 6.0) * 4);
+    }
+  } else if (demoMode === "pikespeak") {
+    const cyc = elapsed % 6.0;
+    if (cyc < 2.0) {
+      setThrottle(0.98);
+      setSteer(Math.sin(elapsed * 4.5) * 28);
+    } else if (cyc < 4.0) {
+      setThrottle(0.82);
+      setSteer(Math.cos(elapsed * 5.2) * 27);
+      if (Math.floor((elapsed - dt) / 3.0) < Math.floor(elapsed / 3.0)) triggerBump(-165);
+    } else {
+      setThrottle(0.94);
+      setSteer(Math.sin(elapsed * 2.4) * 16);
     }
   } else if (demoMode === "dyno") {
     const step = Math.floor(elapsed / 2.2) % 6;

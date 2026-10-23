@@ -780,6 +780,7 @@
           <button type="button" class="act-btn" data-ast="particles">particles.ts</button>
           <button type="button" class="act-btn" data-ast="loot">loot.ts</button>
           <button type="button" class="act-btn" data-ast="beacon">beacon.ts</button>
+          <button type="button" class="act-btn" data-ast="shield">shield.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -835,6 +836,10 @@
           <div class="patch-row">
             <div class="patch-row-head"><span>shelter.nanoRepairRate (信标纳米维修速率)</span><strong id="valNanoRate">8 HP/s</strong></div>
             <input type="range" id="patchNanoRate" min="2" max="30" step="2" value="8" />
+          </div>
+          <div class="patch-row">
+            <div class="patch-row-head"><span>player.shieldDeflectDmg (磁盾偏折反击伤害)</span><strong id="valShieldDmg">22 DMG</strong></div>
+            <input type="range" id="patchShieldDmg" min="10" max="80" step="4" value="22" />
           </div>
         </div>
       </div>
@@ -1760,6 +1765,17 @@ export function stepBeaconNanoTether(player: PlayerEntity, repairRatePerSec: num
   return false;
 }`,
       },
+      shield: {
+        minified: `function St(e,t,n,r){if(Math.hypot(e.x-t.x,e.y-t.y)<34){for(const a of n)Math.hypot(a.x-t.x,a.y-t.y)<155&&(a.hp-=r);return!0}return!1}`,
+        decompiled: `// Reconstructed R-17 Magnetic Shield Deflect & Counter-Pulse (src/game/shield.ts)
+export function deflectBoltAndCounterPulse(bolt: EnemyBolt, player: Vec2, enemies: EnemyEntity[], reflectDmg = 22): boolean {
+  if (Math.hypot(bolt.x - player.x, bolt.y - player.y) < 34) {
+    for (const enemy of enemies) if (Math.hypot(enemy.x - player.x, enemy.y - player.y) < 155) enemy.hp -= reflectDmg;
+    return true;
+  }
+  return false;
+}`,
+      },
     };
 
     // =========================================================================
@@ -2017,6 +2033,7 @@ export function stepBeaconNanoTether(player: PlayerEntity, repairRatePerSec: num
       empDamage: 35,
       dashDistancePx: 95,
       nanoRepairRate: 8,
+      shieldDeflectDmg: 22,
     };
 
     document.getElementById("patchSpeed").addEventListener("input", (e) => {
@@ -2085,6 +2102,14 @@ export function stepBeaconNanoTether(player: PlayerEntity, repairRatePerSec: num
         livePatch.nanoRepairRate = Number(e.target.value);
         document.getElementById("valNanoRate").textContent = livePatch.nanoRepairRate + " HP/s";
         pulseEvidence("emp");
+      });
+    }
+    const patchShieldDmgEl = document.getElementById("patchShieldDmg");
+    if (patchShieldDmgEl) {
+      patchShieldDmgEl.addEventListener("input", (e) => {
+        livePatch.shieldDeflectDmg = Number(e.target.value);
+        document.getElementById("valShieldDmg").textContent = livePatch.shieldDeflectDmg + " DMG";
+        pulseEvidence("hangar");
       });
     }
 
@@ -2503,6 +2528,20 @@ export function stepBeaconNanoTether(player: PlayerEntity, repairRatePerSec: num
             color: "#00e5ff",
             life: 0.48,
           });
+          for (const target of enemies) {
+            if (Math.hypot(target.x - player.x, target.y - player.y) < 165) {
+              target.hp -= livePatch.shieldDeflectDmg;
+              lightningArcs.push({ x1: player.x, y1: player.y, x2: target.x, y2: target.y, life: 0.22 });
+              dmgPopups.push({
+                x: target.x,
+                y: target.y - 24,
+                text: "COUNTER -" + livePatch.shieldDeflectDmg,
+                color: "#00e5ff",
+                life: 0.48,
+              });
+              break;
+            }
+          }
           for (let k = 0; k < 4; k++) {
             particles.push({
               x: eb.x,
