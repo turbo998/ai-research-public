@@ -282,12 +282,15 @@ function buildChassis() {
   out.push(S(k.slabOf(bumper, CHASSIS_Z - 0.5, 7.5, P, 6, 1.0), { tone: "lo" }));
   out.push(L(k.planOutline(k.insetPlan(bumper, 3), CHASSIS_Z + 7, P, 4), { tone: "faint" }));
 
-  // Front Dual Rally LED Fog-Light Pods + Angel-Eye Halos + Aero Canards mounted on bumper
+  // Front Dual Rally LED Fog-Light Pods + Angel-Eye Halos + Aero Canards + CNC Red Front Tow Hook
   const braceF = { x: -132, y: -32, w: 14, d: 64, r: 3 };
   out.push(S(k.slabOf(braceF, CHASSIS_Z + 7, 3, P, 4, 0.4), { tone: "mid" }));
   const F_LED_L = G.frameOf([-136, -26, CHASSIS_Z + 8.5], [-1, 0, 0], [0, 1, 0], [0, 0, 1]);
   const F_LED_R = G.frameOf([-136, 26, CHASSIS_Z + 8.5], [-1, 0, 0], [0, 1, 0], [0, 0, 1]);
   out.push(`<g class="mjx-headlight-pod">${S(G.disc(-3, 2, 4.4, F_LED_L, P, { bevel: 0.4 }), { tone: "hi", lit: true })}${S(G.disc(-3, 2, 4.4, F_LED_R, P, { bevel: 0.4 }), { tone: "hi", lit: true })}</g>`);
+  // Front CNC Rally Tow Hook Ring protruding at center of splitter
+  const towHookF = { x: -149, y: -3.5, w: 7, d: 7, r: 2 };
+  out.push(S(k.slabOf(towHookF, CHASSIS_Z + 0.5, 1.8, P, 3, 0.3), { tone: "hi", lit: true }));
   // Side aerodynamic dive-plane canards on front bumper corners
   for (const side of [-1, 1]) {
     const canard = { x: -140, y: side > 0 ? 49 : -53, w: 16, d: 4, r: 1 };
@@ -493,11 +496,20 @@ function buildBattery() {
   out.push(S(k.cylinder(31, -8, 2.0, zTop, 20.5, P, 14), { tone: "mid" }));
   out.push(S(k.slabOf({ x: 26, y: -35, w: 10, d: 28, r: 1.5 }, zTop + 18.8, 2.2, P, 3, 0.4), { tone: "hi" }));
 
-  // Amber XT60 High-Current Plug & JST Balance Plug on front end of battery pack
+  // Amber XT60 High-Current Plug & JST Balance Plug on front end of battery pack + 14AWG Silicone Leads
   const xt60 = { x: -7, y: -27, w: 7, d: 10, r: 1.2 };
   out.push(S(k.slabOf(xt60, zTop + 9, 6, P, 3, 0.4), { tone: "hi", lit: true }));
   const jst = { x: -5, y: -15, w: 5, d: 6, r: 0.8 };
   out.push(S(k.slabOf(jst, zTop + 10, 4, P, 2, 0.3), { tone: "hi" }));
+  for (const [idx, wy] of [-24.5, -20.5].entries()) {
+    const pwrRoute = [
+      [1, wy, zTop + 12],
+      [-7, wy, zTop + 12],
+    ];
+    for (const part of tubePieces(pwrRoute, 1.35, P, { maxLength: 20 })) {
+      out.push(tubeSvg(part, { tone: idx === 0 ? "hi" : "lo" }));
+    }
+  }
   return out.join("");
 }
 
@@ -723,7 +735,7 @@ function buildBodyShell() {
     }),
   );
 
-  // Aerodynamic Cabin Greenhouse & Windshield/Windows (-42 to +68)
+  // Aerodynamic Cabin Greenhouse & Windshield/Windows (-42 to +68) + Internal FIA Tubular Roll Cage
   const cabin = { x: -42, y: -35, w: 108, d: 70, r: 10 };
   out.push(
     S(k.slabOf(cabin, zBase + 8.5, 13, P, 7, 1.8), {
@@ -732,6 +744,24 @@ function buildBodyShell() {
     }),
   );
   out.push(L(k.planOutline(k.insetPlan(cabin, 5), zBase + 21.5, P, 5), { tone: "lo" }));
+  // FIA Rally Roll-Cage diagonal braces visible inside cabin greenhouse
+  out.push(
+    L(
+      k.segment([-24, -24, zBase + 10], [42, 24, zBase + 20], P) +
+        k.segment([-24, 24, zBase + 10], [42, -24, zBase + 20], P),
+      { tone: "lit", free: true },
+    ),
+  );
+
+  // 4-Pod Roof Rally LED Light Bar mounted ahead of roof ram-air scoop
+  const roofLightBar = { x: -36, y: -22, w: 6, d: 44, r: 1.5 };
+  const roofPods = [-15, -5, 5, 15]
+    .map((ry) => {
+      const F_RL = G.frameOf([-37, ry, zBase + 23.2], [-1, 0, 0], [0, 1, 0], [0, 0, 1]);
+      return S(G.disc(-1.5, 1.5, 2.5, F_RL, P, { bevel: 0.3 }), { tone: "hi", lit: true });
+    })
+    .join("");
+  out.push(`<g class="mjx-headlight-pod">${S(k.slabOf(roofLightBar, zBase + 21.5, 3.0, P, 3, 0.4), { tone: "mid" })}${roofPods}</g>`);
 
   // Rally Roof Ram-Air Scoop feeding cool air toward the 2845 motor fan + Roof Shark-Fin Vortex Generators
   const scoop = { x: -16, y: -11, w: 38, d: 22, r: 3 };
@@ -855,7 +885,7 @@ const CSS = `
 .mjx-btn:hover{border-color:var(--anatomy-hi)}
 .mjx-btn[data-active]{background:var(--anatomy-lit);color:#111;border-color:var(--anatomy-lit);font-weight:700}
 .mjx-slider{width:100%;accent-color:var(--anatomy-lit);cursor:pointer}
-.mjx-telemetry{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:10px 16px;border-top:1px solid var(--anatomy-faint);font-variant-numeric:tabular-nums}
+.mjx-telemetry{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:10px 16px;border-top:1px solid var(--anatomy-faint);font-variant-numeric:tabular-nums}
 .mjx-stat{padding:6px 10px;border:1px solid var(--anatomy-faint);border-radius:4px;background:color-mix(in srgb,var(--anatomy-paper) 96%,var(--anatomy-hi) 4%)}
 .mjx-stat-label{font-size:10.5px;color:var(--anatomy-mid);text-transform:uppercase;letter-spacing:.04em}
 .mjx-stat-val{font-size:14.5px;font-weight:700;color:var(--anatomy-hi);margin-top:2px}
@@ -955,6 +985,14 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="gulf"] .mjx-piece[data-piece="suspension_r"]{
   --anatomy-top:#fb923c;--anatomy-fill:#ea580c;--anatomy-hi:#ffedd5;--anatomy-lit:#38bdf8;
 }
+/* Livery 7: Dakar Desert Sand Gold & Emerald Rally Raid */
+.iso-stage[data-color-mode="vivid"][data-livery="dakar"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#fde68a;--anatomy-fill:#d97706;--anatomy-shade-0:#451a03;--anatomy-shade-1:#78350f;--anatomy-shade-2:#b45309;--anatomy-shade-3:#f59e0b;--anatomy-hi:#34d399;--anatomy-lit:#10b981;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="dakar"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="dakar"] .mjx-piece[data-piece="wheels_r"]{
+  --anatomy-top:#fcd34d;--anatomy-fill:#1c1917;--anatomy-hi:#34d399;--anatomy-lit:#f97316;
+}
 .iso-stage[data-lights="on"] .mjx-headlight-pod{
   filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
@@ -1003,6 +1041,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-livery-btn="gulf">海湾冰蓝橙</button>
     <button type="button" class="mjx-btn" data-livery-btn="martini">传奇红白蓝</button>
     <button type="button" class="mjx-btn" data-livery-btn="cyber">赛博霓虹紫</button>
+    <button type="button" class="mjx-btn" data-livery-btn="dakar">达喀尔沙金</button>
     <button type="button" class="mjx-btn" data-livery-btn="stealth">黑金暗夜绿</button>
     <button type="button" class="mjx-btn" data-livery-btn="mono">工程单色</button>
   </div>
@@ -1055,12 +1094,17 @@ const customControlsHtml = `
     <div class="mjx-stat-label">车身姿态 (俯仰 Pitch / 避震 Travel)</div>
     <div class="mjx-stat-val" data-tel-pose>Pitch +0.4° · 0.0 mm</div>
   </div>
+  <div class="mjx-stat">
+    <div class="mjx-stat-label">45A 电调电流 / 功率 &amp; 温升</div>
+    <div class="mjx-stat-val" data-tel-power>14.2A · 105W · 38°C</div>
+  </div>
 </div>
 <div class="mjx-scope-bar">
   <canvas id="mjxScope" class="mjx-scope-canvas" width="680" height="76"></canvas>
   <div class="mjx-scope-legend">
-    <div style="font-weight:700;color:var(--anatomy-hi)">📈 实时多通道动力学示波器 (60Hz)</div>
+    <div style="font-weight:700;color:var(--anatomy-hi)">📈 实时四通道动力学示波器 (60Hz)</div>
     <div class="mjx-scope-item"><span class="mjx-dot" style="background:#facc15"></span><span>车速曲线 Speed (0–65 km/h)</span></div>
+    <div class="mjx-scope-item"><span class="mjx-dot" style="background:#f43f5e"></span><span>45A 电调相电流 ESC Current (0–45A)</span></div>
     <div class="mjx-scope-item"><span class="mjx-dot" style="background:#38bdf8"></span><span>油压绞牙避震行程 Shock Travel (mm)</span></div>
     <div class="mjx-scope-item"><span class="mjx-dot" style="background:#34d399"></span><span>G3C 陀螺仪反打角 Gyro Counter (°)</span></div>
   </div>
@@ -1081,7 +1125,7 @@ const inspectorHtml = `
 const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-family:system-ui,-apple-system,sans-serif;font-size:12.5px;border-radius:8px;background:rgba(128,128,128,0.12);border:1px solid rgba(128,128,128,0.22)">
   <a href="../../index.html" style="color:inherit;text-decoration:none;font-weight:600">← 返回 AI Agent Skills &amp; REA 演示门户 (Portal)</a>
   <div style="display:flex;gap:8px;align-items:center">
-    <span style="opacity:0.7">整车 12 总成 + 5 动态演示:</span>
+    <span style="opacity:0.7">整车 12 总成 + 6 动态演示 + 8 涂装:</span>
     <a href="index.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "dark" ? "background:#f5a524;color:#111;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">🌙 暗黑多彩测功台 (Dark)</a>
     <a href="mjx-14303-chassis-light.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "light" ? "background:#d97706;color:#fff;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">☀️ 工程浅色蓝图 (Light)</a>
   </div>
@@ -1090,7 +1134,7 @@ const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding
 const body = `<style>${CSS}</style>${navBannerHtml}<div class="mjx-wrap">${k.plateHtml({
   fig: "Fig 1 · MJX HYPER GO 14303 · 12-ASSEMBLY COMPLETE VEHICLE LAB",
   title: "美嘉欣 14303 · 1/14 全时四驱无刷拉力/漂移整车机械原理与动态测功台",
-  hint: "支持 5 种自动动态剧本 · 4 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视",
+  hint: "支持 6 种自动动态剧本 · 8 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
   readout: "2S 7.4V · 15.0 km/h · Manual Lab",
   keys: [
     { mark: "lit", label: "核心动力链：2845 无刷电机 → 15T/45T 金属齿 → 中央铝轴 → 前后 37T/13T 行星伞齿差速器 → 四轮 CVD + 通风刹车盘" },
@@ -1129,6 +1173,7 @@ const telWheel = document.querySelector("[data-tel-wheel]");
 const telSpeed = document.querySelector("[data-tel-speed]");
 const telSteer = document.querySelector("[data-tel-steer]");
 const telPose = document.querySelector("[data-tel-pose]");
+const telPower = document.querySelector("[data-tel-power]");
 const insName = document.querySelector("[data-ins-name]");
 const insSpec = document.querySelector("[data-ins-spec]");
 const insDesc = document.querySelector("[data-ins-desc]");
@@ -1415,6 +1460,18 @@ function drawOscilloscope() {
     else scopeCtx.lineTo(x, y);
   });
   scopeCtx.stroke();
+
+  // Plot ESC Current (0..45A -> bottom to top)
+  scopeCtx.strokeStyle = "#f43f5e";
+  scopeCtx.lineWidth = 1.6;
+  scopeCtx.beginPath();
+  history.forEach((pt, idx) => {
+    const x = (idx / 160) * w;
+    const y = h - 8 - (Math.min(45, pt.amps || 0) / 45) * (h - 16);
+    if (idx === 0) scopeCtx.moveTo(x, y);
+    else scopeCtx.lineTo(x, y);
+  });
+  scopeCtx.stroke();
 }
 
 function tick(now) {
@@ -1549,12 +1606,19 @@ function tick(now) {
     innerDeg.toFixed(1) + "° / " + outerDeg.toFixed(1) + "° · Gyro " + (gyroCounter >= 0 ? "+" : "") + gyroCounter.toFixed(1) + "°";
   telPose.textContent =
     "Pitch +" + squatPitchDeg.toFixed(1) + "° · " + (bumpState.z + rearSquatZ).toFixed(1) + " mm";
+  const escAmps = Math.min(45, (throttle * (cells === 3 ? 38.5 : 26.4)) + (Math.abs(bumpState.z) * 0.35));
+  const escWatts = Math.round(escAmps * voltage);
+  const escTemp = Math.round(34 + throttle * (cells === 3 ? 28 : 18));
+  if (telPower) {
+    telPower.textContent = escAmps.toFixed(1) + "A · " + escWatts + "W · " + escTemp + "°C";
+  }
 
   const modeNames = {
     manual: "Manual Lab",
     launch: "3S Launch Squat",
     drift: "Rally Drift + Gyro",
     offroad: "Gravel Jump",
+    dyno: "Step Dyno Sweep",
     tour: "12-Part Tour",
   };
   const stateLabel = apart
@@ -1565,7 +1629,7 @@ function tick(now) {
   const rText = cells + "S " + voltage.toFixed(1) + "V · " + speedKmh.toFixed(1) + " km/h · " + stateLabel;
   if (readout.textContent !== rText) readout.textContent = rText;
 
-  history.push({ speed: speedKmh, shock: bumpState.z + rearSquatZ, gyro: gyroCounter });
+  history.push({ speed: speedKmh, shock: bumpState.z + rearSquatZ, gyro: gyroCounter, amps: escAmps });
   if (history.length > 160) history.shift();
   drawOscilloscope();
 

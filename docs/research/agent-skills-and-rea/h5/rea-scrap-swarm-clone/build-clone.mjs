@@ -775,6 +775,7 @@ const html = `<!DOCTYPE html>
           <button type="button" class="act-btn" data-ast="story">story.ts</button>
           <button type="button" class="act-btn" data-ast="audio">audio.ts</button>
           <button type="button" class="act-btn" data-ast="prng">prng.ts</button>
+          <button type="button" class="act-btn" data-ast="physics">physics.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -1622,6 +1623,19 @@ export function createXorShift32(seed = 0x92d68ca2): () => number {
   };
 }\`,
       },
+      physics: {
+        minified: \`function Yt(e,t,n){const r=t.x-e.x,a=t.y-e.y,i=Math.hypot(r,a)||1;if(i<n){const s=(n-i)/i*.5;e.x-=r*s,e.y-=a*s,t.x+=r*s,t.y+=a*s}}\`,
+        decompiled: \`// Reconstructed Circle-Circle Knockback & Separation Solver (src/game/physics.ts)
+export function resolveCircleImpulse(a: Vec2, b: Vec2, minDist: number): void {
+  const dx = b.x - a.x, dy = b.y - a.y;
+  const dist = Math.hypot(dx, dy) || 1;
+  if (dist < minDist) {
+    const push = ((minDist - dist) / dist) * 0.5;
+    a.x -= dx * push; a.y -= dy * push;
+    b.x += dx * push; b.y += dy * push;
+  }
+}\`,
+      },
     };
 
     // =========================================================================
@@ -1898,6 +1912,7 @@ export function createXorShift32(seed = 0x92d68ca2): () => number {
 
     const bullets = [];
     const particles = [];
+    const dmgPopups = [];
     const enemies = [
       { kind: "scuttler", x: 180, y: 150, hp: 60, maxHp: 60 },
       { kind: "scuttler", x: 780, y: 160, hp: 60, maxHp: 60 },
@@ -1939,6 +1954,7 @@ export function createXorShift32(seed = 0x92d68ca2): () => number {
         e.x = Math.max(50, Math.min(910, e.x + Math.cos(ang) * 110));
         e.y = Math.max(50, Math.min(550, e.y + Math.sin(ang) * 110));
         e.hp -= 35;
+        dmgPopups.push({ x: e.x, y: e.y - 26, text: "EMP -35", color: "#00e5ff", life: 0.75 });
       }
       if (boss) {
         boss.exposed = true;
@@ -2100,6 +2116,13 @@ export function createXorShift32(seed = 0x92d68ca2): () => number {
           const dmg = boss.exposed ? 45 : 7;
           boss.hp -= dmg;
           hit = true;
+          dmgPopups.push({
+            x: boss.x + (Math.random() - 0.5) * 32,
+            y: boss.y - 42,
+            text: boss.exposed ? "CRIT -" + dmg + "!" : "-" + dmg,
+            color: boss.exposed ? "#00e5ff" : "#b8ad96",
+            life: 0.65,
+          });
           for (let k = 0; k < 4; k++) {
             particles.push({
               x: b.x,
@@ -2119,8 +2142,17 @@ export function createXorShift32(seed = 0x92d68ca2): () => number {
         for (let j = enemies.length - 1; j >= 0 && !hit; j--) {
           const e = enemies[j];
           if (Math.hypot(b.x - e.x, b.y - e.y) < 34) {
-            e.hp -= 26;
+            const isCrit = player.overdriveTimer > 0;
+            const dmg = isCrit ? 42 : 26;
+            e.hp -= dmg;
             hit = true;
+            dmgPopups.push({
+              x: e.x + (Math.random() - 0.5) * 20,
+              y: e.y - 28,
+              text: isCrit ? "CRIT -" + dmg + "!" : "-" + dmg,
+              color: isCrit ? "#ffb548" : "#ffe28a",
+              life: 0.55,
+            });
             particles.push({
               x: b.x,
               y: b.y,
@@ -2146,13 +2178,19 @@ export function createXorShift32(seed = 0x92d68ca2): () => number {
         e.y += Math.sin(ang) * spd * dt;
       }
 
-      // Update particles
+      // Update particles & floating damage numbers
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i];
         p.x += p.vx * dt;
         p.y += p.vy * dt;
         p.life -= dt;
         if (p.life <= 0) particles.splice(i, 1);
+      }
+      for (let i = dmgPopups.length - 1; i >= 0; i--) {
+        const dp = dmgPopups[i];
+        dp.y -= 28 * dt;
+        dp.life -= dt;
+        if (dp.life <= 0) dmgPopups.splice(i, 1);
       }
 
       // HUD refresh
@@ -2257,10 +2295,19 @@ export function createXorShift32(seed = 0x92d68ca2): () => number {
         gCtx.fill();
       }
 
-      // Draw Particles
+      // Draw Particles & Floating Damage Popups
       for (const p of particles) {
         gCtx.fillStyle = p.color;
         gCtx.fillRect(p.x - 2, p.y - 2, 4, 4);
+      }
+      gCtx.font = "800 12px 'JetBrains Mono', monospace";
+      gCtx.textAlign = "center";
+      for (const dp of dmgPopups) {
+        gCtx.save();
+        gCtx.globalAlpha = Math.max(0, Math.min(1, dp.life * 1.8));
+        gCtx.fillStyle = dp.color;
+        gCtx.fillText(dp.text, dp.x, dp.y);
+        gCtx.restore();
       }
     }
 
