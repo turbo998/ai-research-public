@@ -2447,7 +2447,7 @@ export function formatTacticalReadout(player: PlayerState, boss: BossState | nul
         gCtx.stroke();
       }
 
-      // Shelter magnetic ring in center
+      // Shelter magnetic ring & Central Ashen Beacon Nano-Repair Tether in center
       gCtx.strokeStyle = "rgba(0, 229, 255, 0.18)";
       gCtx.lineWidth = 2;
       gCtx.setLineDash([8, 6]);
@@ -2455,6 +2455,20 @@ export function formatTacticalReadout(player: PlayerState, boss: BossState | nul
       gCtx.arc(480, 320, 95 + Math.sin(gameClock * 2.5) * 4, 0, Math.PI * 2);
       gCtx.stroke();
       gCtx.setLineDash([]);
+      gCtx.fillStyle = "rgba(0, 229, 255, 0.22)";
+      gCtx.beginPath();
+      gCtx.arc(480, 320, 12, 0, Math.PI * 2);
+      gCtx.fill();
+      if (Math.hypot(player.x - 480, player.y - 320) < 175) {
+        gCtx.strokeStyle = "rgba(82, 229, 168, 0.35)";
+        gCtx.lineWidth = 2;
+        gCtx.setLineDash([6, 4]);
+        gCtx.beginPath();
+        gCtx.moveTo(480, 320);
+        gCtx.lineTo(player.x, player.y);
+        gCtx.stroke();
+        gCtx.setLineDash([]);
+      }
 
       if (empWaveRadius > 0) {
         empWaveRadius += 14;
