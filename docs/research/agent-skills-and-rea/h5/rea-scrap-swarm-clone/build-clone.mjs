@@ -781,6 +781,7 @@ const html = `<!DOCTYPE html>
           <button type="button" class="act-btn" data-ast="spatial">spatial.ts</button>
           <button type="button" class="act-btn" data-ast="combat">combat.ts</button>
           <button type="button" class="act-btn" data-ast="save">save.ts</button>
+          <button type="button" class="act-btn" data-ast="hud">hud.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -816,6 +817,10 @@ const html = `<!DOCTYPE html>
           <div class="patch-row">
             <div class="patch-row-head"><span>weapon.arcChainCount (电弧枪连锁跳数)</span><strong id="valArcChain">3 跳</strong></div>
             <input type="range" id="patchArcChain" min="2" max="7" step="1" value="3" />
+          </div>
+          <div class="patch-row">
+            <div class="patch-row-head"><span>player.overdriveDuration (蒸汽超载持续时间)</span><strong id="valOverdriveDur">6.0 s</strong></div>
+            <input type="range" id="patchOverdriveDur" min="3.0" max="15.0" step="0.5" value="6.0" />
           </div>
         </div>
       </div>
@@ -1692,6 +1697,16 @@ export function loadOrInitSaveProfile(): SaveProfile {
   }
 }\`,
       },
+      hud: {
+        minified: \`function Nt(e,t){return{actLabel:t?t.exposed?"BOSS // WEAKPOINT OPEN":"BOSS // ARMOR 75%":"ACT I-II // SWARM",overdrivePct:Math.min(1,e.overdriveTimer/e.overdriveMax)}}\`,
+        decompiled: \`// Reconstructed Tactical HUD State Formatter (src/game/hud.ts)
+export function formatTacticalReadout(player: PlayerState, boss: BossState | null): HudReadout {
+  return {
+    actLabel: boss ? (boss.exposed ? "BOSS // WEAKPOINT OPEN" : "BOSS // ARMOR 75%") : "ACT I-II // SWARM",
+    overdrivePct: Math.min(1, player.overdriveTimer / player.overdriveMax),
+  };
+}\`,
+      },
     };
 
     // =========================================================================
@@ -1944,6 +1959,7 @@ export function loadOrInitSaveProfile(): SaveProfile {
       bossExposeSec: 4.5,
       magnetRadius: 175,
       arcChainCount: 3,
+      overdriveDuration: 6.0,
     };
 
     document.getElementById("patchSpeed").addEventListener("input", (e) => {
@@ -1972,6 +1988,14 @@ export function loadOrInitSaveProfile(): SaveProfile {
         livePatch.arcChainCount = Number(e.target.value);
         document.getElementById("valArcChain").textContent = livePatch.arcChainCount + " 跳";
         pulseEvidence("weapon");
+      });
+    }
+    const patchOverdriveDurEl = document.getElementById("patchOverdriveDur");
+    if (patchOverdriveDurEl) {
+      patchOverdriveDurEl.addEventListener("input", (e) => {
+        livePatch.overdriveDuration = Number(e.target.value);
+        document.getElementById("valOverdriveDur").textContent = livePatch.overdriveDuration.toFixed(1) + " s";
+        pulseEvidence("hangar");
       });
     }
 
@@ -2082,7 +2106,7 @@ export function loadOrInitSaveProfile(): SaveProfile {
     });
 
     function triggerOverdrive() {
-      player.overdriveTimer = 6.0;
+      player.overdriveTimer = livePatch.overdriveDuration;
       showCutin("overdrive");
       pulseEvidence("hangar");
       pulseEvidence("story");
@@ -2157,13 +2181,29 @@ export function loadOrInitSaveProfile(): SaveProfile {
         });
       }
 
-      // Boss state machine
+      // Boss state machine + 6-way radial siege plasma ring barrage
       if (boss) {
         boss.timer -= dt;
         if (boss.timer <= 0) {
           boss.exposed = !boss.exposed;
           boss.timer = boss.exposed ? livePatch.bossExposeSec : 4.2;
           if (boss.exposed) showCutin("boss_lock_open");
+        }
+        boss.barrageTimer = (boss.barrageTimer || 2.4) - dt;
+        if (boss.barrageTimer <= 0) {
+          boss.barrageTimer = 2.6;
+          shockRings.push({ x: boss.x, y: boss.y, r: 18, maxR: 84, life: 0.34 });
+          for (let k = 0; k < 6; k++) {
+            const a = (k * Math.PI) / 3 + gameClock * 0.6;
+            enemyBolts.push({
+              x: boss.x + Math.cos(a) * 26,
+              y: boss.y + Math.sin(a) * 26,
+              vx: Math.cos(a) * 215,
+              vy: Math.sin(a) * 215,
+              life: 2.4,
+            });
+          }
+          pulseEvidence("boss");
         }
         boss.x = 480 + Math.sin(gameClock * 0.7) * 180;
       }
