@@ -779,6 +779,7 @@
           <button type="button" class="act-btn" data-ast="camera">camera.ts</button>
           <button type="button" class="act-btn" data-ast="particles">particles.ts</button>
           <button type="button" class="act-btn" data-ast="loot">loot.ts</button>
+          <button type="button" class="act-btn" data-ast="beacon">beacon.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -830,6 +831,10 @@
           <div class="patch-row">
             <div class="patch-row-head"><span>player.dashDistancePx (推进冲刺位移跨度)</span><strong id="valDashDist">95 px</strong></div>
             <input type="range" id="patchDashDist" min="55" max="220" step="15" value="95" />
+          </div>
+          <div class="patch-row">
+            <div class="patch-row-head"><span>shelter.nanoRepairRate (信标纳米维修速率)</span><strong id="valNanoRate">8 HP/s</strong></div>
+            <input type="range" id="patchNanoRate" min="2" max="30" step="2" value="8" />
           </div>
         </div>
       </div>
@@ -1744,6 +1749,17 @@ export function rollScrapDropTable(orbs: ScrapOrb[], enemy: EnemyEntity, rng: ()
   orbs.push({ x: enemy.x, y: enemy.y, core: isOverdriveCore, val: enemy.kind === "brute" ? 18 : 10 });
 }`,
       },
+      beacon: {
+        minified: `function Bt(e,t,n){if(Math.hypot(e.x-480,e.y-320)<175)return e.hp=Math.min(120,e.hp+t*n),!0;return!1}`,
+        decompiled: `// Reconstructed Ashen Beacon Proximity Nano-Repair Tether (src/game/beacon.ts)
+export function stepBeaconNanoTether(player: PlayerEntity, repairRatePerSec: number, dt: number): boolean {
+  if (Math.hypot(player.x - 480, player.y - 320) < 175) {
+    player.hp = Math.min(120, player.hp + repairRatePerSec * dt);
+    return true;
+  }
+  return false;
+}`,
+      },
     };
 
     // =========================================================================
@@ -2000,6 +2016,7 @@ export function rollScrapDropTable(orbs: ScrapOrb[], enemy: EnemyEntity, rng: ()
       barrageIntervalSec: 2.6,
       empDamage: 35,
       dashDistancePx: 95,
+      nanoRepairRate: 8,
     };
 
     document.getElementById("patchSpeed").addEventListener("input", (e) => {
@@ -2060,6 +2077,14 @@ export function rollScrapDropTable(orbs: ScrapOrb[], enemy: EnemyEntity, rng: ()
         livePatch.dashDistancePx = Number(e.target.value);
         document.getElementById("valDashDist").textContent = livePatch.dashDistancePx + " px";
         pulseEvidence("hangar");
+      });
+    }
+    const patchNanoRateEl = document.getElementById("patchNanoRate");
+    if (patchNanoRateEl) {
+      patchNanoRateEl.addEventListener("input", (e) => {
+        livePatch.nanoRepairRate = Number(e.target.value);
+        document.getElementById("valNanoRate").textContent = livePatch.nanoRepairRate + " HP/s";
+        pulseEvidence("emp");
       });
     }
 
@@ -2171,6 +2196,13 @@ export function rollScrapDropTable(orbs: ScrapOrb[], enemy: EnemyEntity, rng: ()
 
     function triggerOverdrive() {
       player.overdriveTimer = livePatch.overdriveDuration;
+      shockRings.push({ x: player.x, y: player.y, r: 16, maxR: 165, life: 0.42 });
+      for (const e of enemies) {
+        if (Math.hypot(e.x - player.x, e.y - player.y) < 185) {
+          e.hp -= 28;
+          dmgPopups.push({ x: e.x, y: e.y - 30, text: "THERMAL NOVA -28", color: "#ffb548", life: 0.65 });
+        }
+      }
       showCutin("overdrive");
       pulseEvidence("hangar");
       pulseEvidence("story");
@@ -2203,6 +2235,9 @@ export function rollScrapDropTable(orbs: ScrapOrb[], enemy: EnemyEntity, rng: ()
 
     function updateArena(dt) {
       gameClock += dt;
+      if (Math.hypot(player.x - 480, player.y - 320) < 175 && player.hp < 120) {
+        player.hp = Math.min(120, +(player.hp + livePatch.nanoRepairRate * dt).toFixed(1));
+      }
       if (cutinTimer > 0) {
         cutinTimer -= dt;
         if (cutinTimer <= 0) {

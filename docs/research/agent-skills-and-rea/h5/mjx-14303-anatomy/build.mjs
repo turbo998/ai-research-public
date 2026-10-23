@@ -345,10 +345,13 @@ function buildDrivetrain() {
   const shaftZ = zTop + 9;
   const F_X = G.frameOf([0, 0, shaftZ], [1, 0, 0], [0, 1, 0], [0, 0, 1]);
 
-  // Front & Rear Cutaway Differential Housings + Internal 37T Bevel Ring Gear + 4 Planetary Satellites
+  // Front & Rear Cutaway Differential Housings + CNC Hinge-Pin Toe-Blocks + Internal 37T Bevel Ring Gear + 4 Planetary Satellites
   for (const ax of [AXLE_F, AXLE_R]) {
     const housing = { x: ax - 13, y: -15, w: 26, d: 30, r: 4 };
     out.push(S(k.slabOf(housing, zTop, 16, P, 5, 0.8), { tone: "mid" }));
+    for (const dx of [-15.2, 12.2]) {
+      out.push(S(k.slabOf({ x: ax + dx, y: -14, w: 3.0, d: 28, r: 0.7 }, zTop, 4.0, P, 2, 0.3), { tone: "hi", lit: true }));
+    }
     out.push(L(k.planOutline(k.insetPlan(housing, 2.5), zTop + 16, P, 4), { tone: "lo" }));
     out.push(D(k.corners(housing, 3.5).map(([x, y]) => at([x, y, zTop + 16])), { size: 0.45 }));
 
@@ -467,6 +470,8 @@ function buildMotor() {
       out.push(tubeSvg(part, { tone: idx === 1 ? "hi" : "mid" }));
     }
   }
+  // Braided NTC Motor Thermal Sensor Harness to ESC Sensor Port
+  out.push(L(k.segment([-9, 9.5, motorZ - 1], [-18, 6.5, motorZ - 2], P), { tone: "lit", free: true }));
   return out.join("");
 }
 
@@ -535,12 +540,15 @@ function buildBattery() {
     }),
   );
 
-  // Upper hold-down strap bar & posts + Anodized Knurled Thumb-Nuts
+  // Upper hold-down strap bar & posts + Anodized Knurled Thumb-Nuts + Dual-Piezo Low-Voltage Lipo Buzzer Alarm
   out.push(S(k.cylinder(31, -34, 2.0, zTop, 20.5, P, 14), { tone: "mid" }));
   out.push(S(k.cylinder(31, -8, 2.0, zTop, 20.5, P, 14), { tone: "mid" }));
   out.push(S(k.slabOf({ x: 26, y: -35, w: 10, d: 28, r: 1.5 }, zTop + 18.8, 2.2, P, 3, 0.4), { tone: "hi" }));
   out.push(S(k.cylinder(31, -34, 3.0, zTop + 20.6, 1.4, P, 14), { tone: "hi", lit: true }));
   out.push(S(k.cylinder(31, -8, 3.0, zTop + 20.6, 1.4, P, 14), { tone: "hi", lit: true }));
+  out.push(S(k.slabOf({ x: 46, y: -26, w: 11, d: 10, r: 1.4 }, zTop + 18.5, 2.4, P, 2, 0.3), { tone: "mid" }));
+  out.push(S(k.cylinder(49, -21, 1.8, zTop + 20.9, 1.1, P, 12), { tone: "hi", lit: true }));
+  out.push(S(k.cylinder(54, -21, 1.8, zTop + 20.9, 1.1, P, 12), { tone: "hi", lit: true }));
 
   // Amber XT60 High-Current Plug & JST Balance Plug on front end of battery pack + 14AWG Silicone Leads
   const xt60 = { x: -7, y: -27, w: 7, d: 10, r: 1.2 };
@@ -800,10 +808,13 @@ function buildBodyShell() {
   );
   out.push(L(k.planOutline(k.insetPlan(lowerBody, 4), zBase + 8.5, P, 6), { tone: "lo" }));
 
-  // Hood vents & rally livery stripes on front hood (-102 to -42)
+  // Hood vents & extractor louver slats & rally livery stripes on front hood (-102 to -42)
   for (const vy of [-18, 10]) {
     const vent = { x: -94, y: vy, w: 32, d: 8, r: 1.5 };
     out.push(L(k.planOutline(vent, zBase + 8.5, P, 3), { tone: "hi" }));
+    for (const sx of [-88, -80, -72]) {
+      out.push(L(k.segment([sx, vy + 1, zBase + 8.6], [sx, vy + 7, zBase + 8.6], P), { tone: "lit", free: true }));
+    }
   }
   out.push(
     k.faceTextSvg(k.topMatrix([-76, 0], zBase + 8.6, P, "x"), "MJX HYPER GO · 14303 RALLY", {
@@ -878,10 +889,11 @@ function buildBodyShell() {
     .join("");
   out.push(`<g class="mjx-headlight-pod">${S(k.slabOf(frontLightBar, zBase + 3.2, 2.8, P, 3, 0.3), { tone: "hi", lit: true })}${S(k.slabOf(rearTailBar, zBase + 4.2, 2.6, P, 3, 0.3), { tone: "hi", lit: true })}${hoodLampPods}</g>`);
 
-  // High-Downforce Dual-Plane Rally Rear Wing (+78 to +110)
+  // High-Downforce Dual-Plane Rally Rear Wing (+78 to +110) + Swan-Neck Top-Mount Pylon Gussets
   for (const wy of [-24, 24]) {
-    // Wing struts
+    // Wing struts & swan-neck top gussets
     out.push(S(k.slabOf({ x: 80, y: wy - 1.5, w: 14, d: 3, r: 0.8 }, zBase + 8.5, 14, P, 3, 0.3), { tone: "mid" }));
+    out.push(S(k.slabOf({ x: 78, y: wy - 1.8, w: 8, d: 3.6, r: 0.8 }, zBase + 22.0, 2.8, P, 2, 0.3), { tone: "hi", lit: true }));
   }
   // Lower & Upper Rear Wing Elements + Side Endplates + Center Dorsal Stabilizer Fin & Trailing-Edge Gurney Flap
   const dorsalFin = { x: 46, y: -1.1, w: 36, d: 2.2, r: 0.6 };
@@ -1187,6 +1199,14 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="jps"] .mjx-piece[data-piece="upper_deck"]{
   --anatomy-top:#fde047;--anatomy-fill:#ca8a04;--anatomy-hi:#fef9c3;--anatomy-lit:#facc15;
 }
+/* Livery 16: Subaru 555 World Rally Blue & Gold */
+.iso-stage[data-color-mode="vivid"][data-livery="subaru555"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#3b82f6;--anatomy-fill:#1d4ed8;--anatomy-shade-0:#172554;--anatomy-shade-1:#1e3a8a;--anatomy-shade-2:#1d4ed8;--anatomy-shade-3:#2563eb;--anatomy-hi:#fde047;--anatomy-lit:#facc15;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="subaru555"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="subaru555"] .mjx-piece[data-piece="wheels_r"]{
+  --anatomy-top:#fde047;--anatomy-fill:#ca8a04;--anatomy-hi:#fef08a;--anatomy-lit:#38bdf8;
+}
 .iso-stage[data-lights="on"] .mjx-headlight-pod{
   filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
@@ -1233,6 +1253,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-demo="gymkhana">⚡ 金卡纳绕桩王</button>
     <button type="button" class="mjx-btn" data-demo="jturn">🔥 手刹 180° 掉头</button>
     <button type="button" class="mjx-btn" data-demo="aquaplane">🌊 水漂打滑救车</button>
+    <button type="button" class="mjx-btn" data-demo="scandi">🌪️ 沙石北欧钟摆</button>
     <button type="button" class="mjx-btn" data-demo="dyno">📈 阶梯功率测功</button>
     <button type="button" class="mjx-btn" data-demo="tour">🔍 12 总成拆解巡礼</button>
   </div>
@@ -1242,6 +1263,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-livery-btn="rosso">法拉利红金</button>
     <button type="button" class="mjx-btn" data-livery-btn="pinkpig">粉猪传奇</button>
     <button type="button" class="mjx-btn" data-livery-btn="jps">黑金传奇 JPS</button>
+    <button type="button" class="mjx-btn" data-livery-btn="subaru555">富士星芒 555</button>
     <button type="button" class="mjx-btn" data-livery-btn="wrc">WRC 蓝金</button>
     <button type="button" class="mjx-btn" data-livery-btn="redbull">红牛深蓝金</button>
     <button type="button" class="mjx-btn" data-livery-btn="monster">魔爪黑绿</button>
@@ -1344,7 +1366,7 @@ const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding
 const body = `<style>${CSS}</style>${navBannerHtml}<div class="mjx-wrap">${k.plateHtml({
   fig: "Fig 1 · MJX HYPER GO 14303 · 12-ASSEMBLY COMPLETE VEHICLE LAB",
   title: "美嘉欣 14303 · 1/14 全时四驱无刷拉力/漂移整车机械原理与动态测功台",
-  hint: "支持 14 种自动动态剧本 · 16 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
+  hint: "支持 15 种自动动态剧本 · 17 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
   readout: "2S 7.4V · 15.0 km/h · Manual Lab",
   keys: [
     { mark: "lit", label: "核心动力链：2845 无刷电机 → 15T/45T 金属齿 → 中央铝轴 → 前后 37T/13T 行星伞齿差速器 → 四轮 CVD + 通风刹车盘" },
@@ -1581,6 +1603,14 @@ function setDemoMode(mode) {
     btnGyro.textContent = "G3C 陀螺仪 ON";
     cycleShell("xray");
     selectPart("servo", true);
+  } else if (mode === "scandi") {
+    toggleExplode(false);
+    setCells(3);
+    gyroEnabled = true;
+    btnGyro.setAttribute("data-active", "");
+    btnGyro.textContent = "G3C 陀螺仪 ON";
+    cycleShell("xray");
+    selectPart("suspension_r", true);
   } else if (mode === "dyno") {
     toggleExplode(false);
     setSteer(0);
@@ -1834,6 +1864,19 @@ function tick(now) {
     if (Math.sin(elapsed * 15) > 0.88 && Math.abs(bumpState.z) < 2.0) {
       bumpState.v -= 55;
     }
+  } else if (demoMode === "scandi") {
+    const cyc = elapsed % 4.8;
+    if (cyc < 1.2) {
+      setThrottle(0.75);
+      setSteer(-18);
+    } else if (cyc < 2.0) {
+      setThrottle(0.32);
+      setSteer(28);
+      if (Math.floor((elapsed - dt) / 4.8) < Math.floor(elapsed / 4.8)) triggerBump(145);
+    } else {
+      setThrottle(0.96);
+      setSteer(-24 + Math.sin(elapsed * 6.0) * 4);
+    }
   } else if (demoMode === "dyno") {
     const step = Math.floor(elapsed / 2.2) % 6;
     setCells(step >= 3 ? 3 : 2);
@@ -1960,6 +2003,7 @@ function tick(now) {
     gymkhana: "Gymkhana Apex Flick",
     jturn: "180° Handbrake J-Turn",
     aquaplane: "Aquaplane Hydro-Recovery",
+    scandi: "Scandinavian Flick",
     dyno: "Step Dyno Sweep",
     tour: "12-Part Tour",
   };
