@@ -1,13 +1,14 @@
-# Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE 深度研究与架构对比
+# Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE vs. Microsoft HVE-Core 深度研究与三方工程竞技对比
 
-[English Version (英文版)](./README.en.md) | [⚔️ 鹈鹕骑自行车同题竞技场 (Live Arena)](./pelican-arena.html) | [双插件实操对比报告](./pelican-benchmark-comparison.md) | [16 维对比矩阵](./comparison-matrix.md) | [7 页 4:5 视觉评测报告](./test-report.md) | [HTML 视觉卡片 (4:5)](./test-report-cards.html) | [机器核验证据账本](./evidence.json)
+[English Version (英文版)](./README.en.md) | [⚔️ 三套件同屏竞技场 + 图表看板 (Live Arena)](./pelican-arena.html) | [三套件实操与全环节图表对比报告](./pelican-benchmark-comparison.md) | [16 维对比矩阵](./comparison-matrix.md) | [7 页 4:5 视觉评测报告](./test-report.md) | [HTML 视觉卡片 (4:5)](./test-report-cards.html) | [机器核验证据账本](./evidence.json)
 
-> **🔥 新增实装同题对决（Hands-On Pelican Bicycle Benchmark — Live on GitHub.io）**：
-> 我们已在本地完整实装两套插件，并使用同一经典命题 **“动画版鹈鹕骑自行车（Animated Pelican Riding a Bicycle）”** 分别跑通了 **FAF v2 五阶段 SDLC 规范流** 与 **Microsoft AGENT-FORGE 四智能体 `.github/` 上下文生成流**：
-> - **⚔️ 双插件同屏同步对比竞技场 (`pelican-arena.html`)**：[在线打开 GitHub.io 竞技场 →](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html)（主站镜像：[turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html)）
+> **🔥 新增三大工程套件实装同题对决（3-Way Pelican Bicycle Showdown — Live on GitHub.io）**：
+> 我们已在本地完整实装三套微软 AI 工程套件，并使用同一经典命题 **“动画版鹈鹕骑自行车（Animated Pelican Riding a Bicycle）”** 分别跑通了 **FAF v2 五阶段 SDLC 规范流**、**Microsoft AGENT-FORGE 四智能体 `.github/` 上下文生成流** 以及 **Microsoft HVE-Core (`v3.3.101`) 四阶段 RPI + `task-challenger` 对抗验证流**：
+> - **⚔️ 三套件同屏同步竞技场 + SVG 图表看板 (`pelican-arena.html`)**：[在线打开 GitHub.io 三方竞技场 →](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html)（主站镜像：[turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html)）
 > - **🟦 Demo A — FAF 架构规范驱动版 (`demo-faf-pelican.html`)**：余弦定理双连杆逆运动学（`0.00 px` 零滑移）、X-Ray 骨骼矢量透视、1.0x–4.2x 变速齿比与功率遥测仪表盘 + [真实 `compute_scores.py` 立项报告 (`P1 Go: 78.0 / 90.9 / 87.5`)](./artifacts/faf-sdlc/prioritization-report.html)
 > - **🟧 Demo B — AGENT-FORGE 多智能体创意剧场版 (`demo-agent-forge-pelican.html`)**：加州海滨三幕光影切换（晴空/落日/星夜车灯）、点击抛沙丁鱼抛物线投喂吞咽、翘前轮特技（Wheelie）、WebAudio 双振荡器铜车铃 + [`forge validate` 8/8 零警告 `.github/` 产物包](./artifacts/agent-forge-context/)
-> - **📄 完整实操与过程文档对比报告**：[中文报告 (`pelican-benchmark-comparison.md`)](./pelican-benchmark-comparison.md) | [English Report (`pelican-benchmark-comparison.en.md`)](./pelican-benchmark-comparison.en.md)
+> - **🟩 Demo C — HVE-Core 环法多地形风洞遥测版 (`demo-hve-pelican.html`)**：4 大传奇地形赛段（阿尔卑斯 `+9%` 爬坡 / 风洞实验室 `0%` / 鲁贝石头路 `+2%` / 新东京霓虹夜降 `-7%`）、3 种气动骑姿 (`CdA 0.240–0.355`)、11 速 Di2 电子变速、75 条实时风洞层流/湍流烟雾粒子、HVE 伴飞遥测无人机、实时功率(W)/心率(BPM)双轨折线图 + [`.copilot-tracking/` RPI + `task-challenger` 完整归档](./artifacts/hve-rpi/)
+> - **📄 完整三方实操、6 阶段产出图表与对比报告**：[中文报告 (`pelican-benchmark-comparison.md`)](./pelican-benchmark-comparison.md) | [English Report (`pelican-benchmark-comparison.en.md`)](./pelican-benchmark-comparison.en.md)
 
 > **核心结论（Executive Summary）**：
 > 尽管 **`customer-success-microsoft/faf-agents`**（仓库文档自称 **Agent Forge (FAF)**，Marketplace 名称 `agent-forge-plugins`，`v2.0.1`）与 **`microsoft/agent-forge`**（npm 包 `@agent-forge-copilot/cli`，`v0.3.0`）共享了“Agent Forge”这一名称，但二者处于**完全不同的元层级（Meta-Level）**，解决的问题截然不同且天然互补：
