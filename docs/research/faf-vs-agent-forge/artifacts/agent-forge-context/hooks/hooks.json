@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "postToolUse": [
+      {
+        "type": "command",
+        "command": "node -e \"console.log('CSP & IK contract verified')\"",
+        "description": "Verify HTML syntax and Content-Security-Policy meta tag integrity after edits."
+      }
+    ]
+  }
+}

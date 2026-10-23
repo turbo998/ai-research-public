@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; frame-src 'self'; img-src data:;">
+<title>FAF v2 vs. Microsoft AGENT-FORGE — “鹈鹕骑自行车”双插件全链路实操竞技场 (Pelican Bicycle Dual-Plugin Arena)</title>
+<style>
+  :root {
+    --bg: #050811;
+    --panel: #0f172a;
+    --panel-2: #161f38;
+    --border: #1e293b;
+    --faf: #38bdf8;
+    --af: #f59e0b;
+    --green: #10b981;
+    --pink: #ec4899;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    padding: 18px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .hero {
+    background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(30,41,59,0.82));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  .pill {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid;
+  }
+  .pill.faf { color: var(--faf); border-color: rgba(56,189,248,0.45); background: rgba(56,189,248,0.12); }
+  .pill.af { color: var(--af); border-color: rgba(245,158,11,0.45); background: rgba(245,158,11,0.12); }
+  .pill.green { color: var(--green); border-color: rgba(16,185,129,0.45); background: rgba(16,185,129,0.12); }
+  h1 { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; }
+  .hero-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .nav-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+  a.btn, button {
+    background: var(--panel-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 8px 13px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  a.btn:hover, button:hover {
+    border-color: var(--faf);
+    background: rgba(56,189,248,0.14);
+  }
+  .sync-bar {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .sync-controls {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .sync-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+  }
+  .sync-item span.val {
+    font-family: var(--mono);
+    color: var(--faf);
+    font-weight: 700;
+    min-width: 58px;
+  }
+  .arena-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 1180px) {
+    .arena-grid { grid-template-columns: 1fr; }
+  }
+  .demo-frame-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .demo-frame-card.faf-card { border-top: 3px solid var(--faf); }
+  .demo-frame-card.af-card { border-top: 3px solid var(--af); }
+  .card-head {
+    padding: 10px 16px;
+    background: rgba(15,23,42,0.9);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  iframe {
+    width: 100%;
+    height: 650px;
+    border: none;
+    background: #070b14;
+  }
+  .section-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .sec-title {
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+  th, td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  th {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    background: rgba(2, 6, 23, 0.45);
+  }
+  code {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    background: rgba(56, 189, 248, 0.12);
+    color: #bae6fd;
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+  .diff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 960px) {
+    .diff-grid { grid-template-columns: 1fr; }
+  }
+  .code-panel {
+    background: #04070f;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: #cbd5e1;
+    white-space: pre-wrap;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div>
+    <div class="hero-badges">
+      <span class="pill faf">PLUGIN A: customer-success-microsoft/faf-agents (v2.0.1)</span>
+      <span class="pill af">PLUGIN B: microsoft/agent-forge (@agent-forge-copilot/cli v0.3.0)</span>
+      <span class="pill green">HANDS-ON BENCHMARK: 鹈鹕骑自行车 (Pelican Riding a Bicycle)</span>
+    </div>
+    <h1 id="h-title">双插件实装与同题对决：FAF SDLC 交付角色链 vs. AGENT-FORGE 上下文工程元生成器</h1>
+    <div class="hero-sub" id="h-sub">
+      同一命题“制作一个动画版鹈鹕骑自行车 Demo”：左侧使用 FAF v2 五阶段 SDLC 规范驱动（Analyst → Architect → Impl-Recommender → PO → Dev），右侧使用 AGENT-FORGE 定制 4-Agent 美术与特技流水线。
+    </div>
+  </div>
+  <div class="nav-btns">
+    <a class="btn" href="demo-faf-pelican.html" target="_blank">🔍 独立打开 FAF Demo ↗</a>
+    <a class="btn" href="demo-agent-forge-pelican.html" target="_blank">🎨 独立打开 AGENT-FORGE Demo ↗</a>
+    <a class="btn" href="test-report-cards.html" target="_blank">📊 7-Card 4:5 评测卡片 ↗</a>
+    <a class="btn" href="artifacts/faf-sdlc/prioritization-report.html" target="_blank">📈 FAF 立项评分报告 ↗</a>
+  </div>
+</div>
+
+<div class="sync-bar">
+  <div style="font-weight:700;font-size:13px;color:var(--faf);">🎛️ 双端同步广播控制器 (Broadcast Sync Controls to Both Demos)</div>
+  <div class="sync-controls">
+    <div class="sync-item">
+      <label>同步踏频 Cadence:</label>
+      <input type="range" id="sync-cad" min="20" max="130" value="76" oninput="broadcastSync()">
+      <span class="val" id="sync-cad-v">76 RPM</span>
+    </div>
+    <div class="sync-item">
+      <label>同步风速 Wind/Breeze:</label>
+      <input type="range" id="sync-wind" min="0" max="45" value="16" oninput="broadcastSync()">
+      <span class="val" id="sync-wind-v">16 km/h</span>
+    </div>
+    <button onclick="broadcastPreset(115, 28, 3)">⚡ 双端同步高速冲刺 (115 RPM)</button>
+    <button onclick="broadcastPreset(30, 5, 1)">🔬 双端同步慢动作对比 (30 RPM)</button>
+    <button onclick="toggleSyncPause()" id="btn-sync-pause">⏸ 双端同步暂停 / 播放</button>
+  </div>
+</div>
+
+<div class="arena-grid">
+  <div class="demo-frame-card faf-card">
+    <div class="card-head">
+      <span style="color:var(--faf)">🟦 Demo A: FAF (`faf-genai` SDLC 架构规范驱动版)</span>
+      <span style="font-family:var(--mono);font-size:11px;color:var(--muted)">Analytical 2-Bone IK · X-Ray Vector HUD · Power Telemetry</span>
+    </div>
+    <iframe id="frame-faf" src="demo-faf-pelican.html" title="FAF Pelican Bicycle Demo"></iframe>
+  </div>
+
+  <div class="demo-frame-card af-card">
+    <div class="card-head">
+      <span style="color:var(--af)">🟧 Demo B: Microsoft AGENT-FORGE (4-Agent 上下文工程创意剧场版)</span>
+      <span style="font-family:var(--mono);font-size:11px;color:var(--muted)">3 Coastal Moods · Toss-a-Fish &amp; Wheelie · WebAudio Bell</span>
+    </div>
+    <iframe id="frame-af" src="demo-agent-forge-pelican.html" title="AGENT-FORGE Pelican Bicycle Demo"></iframe>
+  </div>
+</div>
+
+<div class="section-card">
+  <div class="sec-title">
+    <span>📊 过程文档（Process Artifacts）与 Demo 视觉效果全维度对比矩阵</span>
+    <span style="font-family:var(--mono);font-size:11px;color:var(--muted)">Verified Hands-On Execution</span>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:16%">对比维度</th>
+        <th style="width:42%">🟦 `customer-success-microsoft/faf-agents` (FAF v2.0.1)</th>
+        <th style="width:42%">🟧 `microsoft/agent-forge` (`@agent-forge-copilot/cli` v0.3.0)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>1. 实装方式与运行形态</b></td>
+        <td>克隆安装三套 Copilot 插件（<code>faf-core@2.1.1</code>, <code>faf-genai@2.1.0</code>, <code>faf-analytics@1.0.1</code>）至 VS Code <code>agentPlugins</code> 与工作区 <code>.github/</code>，配套 Python 确定性计分引擎 <code>compute_scores.py</code> 与 OTel 归因脚本 <code>faf_benchmark.py</code>。</td>
+        <td>通过 Node.js / TypeScript 构建运行 CLI (<code>forge --version</code> -> <code>0.3.0</code>，<code>forge check</code> 校验 Node v24.22.1 / Copilot CLI v1.0.99 / Git / gh)，执行 <code>forge validate</code> 与 <code>forge list</code>。</td>
+      </tr>
+      <tr>
+        <td><b>2. 中间过程文档形态<br>(Process Artifacts)</b></td>
+        <td><b>软件工程 SDLC 交付物</b>（存放于 <code>scope/</code>, <code>specs/</code>, <code>plan/</code>）：<br>• <code>scope/scorecard.yaml</code> &amp; <code>prioritization-report.html</code>（计算得 Value <code>78.0</code>, Feasibility <code>90.9</code>, Readiness <code>87.5</code> → <b>Tier P1 Go</b>）<br>• <code>specs/prd.md</code>（定义 FR-01..05 验收标准）<br>• <code>specs/spec.md</code> &amp; <code>adr-001.md</code>（C4 L1–L3 架构与双连杆余弦定理 IK 数学方程）<br>• <code>specs/impl-rec.md</code>（6 大企业加速器最高仅 <code>15.0% &lt; 40%</code>，触发 <b>Path B 绿地研发</b>）<br>• <code>plan/backlog.md</code>（2 Epics / 6 Tasks）</td>
+        <td><b>上下文工程 `.github/` 元配置套件</b>（全部带 <code>&lt;!-- Generated by AGENT-FORGE --&gt;</code> 签名并通过 <code>forge validate</code> 8/8 零警告校验）：<br>• <code>.github/forge-plan.json</code>（定义 <code>pipeline</code> 编排拓扑）<br>• 4 个专属定制 Agent：<code>pelican-character-artist.agent.md</code>, <code>bicycle-kinematics-coder.agent.md</code>, <code>scene-environment-director.agent.md</code>, <code>animation-qa-reviewer.agent.md</code><br>• <code>.github/instructions/pelican-animation-standards.instructions.md</code><br>• <code>.github/prompts/tune-pelican-choreography.prompt.md</code><br>• <code>.github/skills/pelican-svg-rigging/SKILL.md</code> &amp; <code>.github/hooks/hooks.json</code></td>
+      </tr>
+      <tr>
+        <td><b>3. 校验与门禁机制</b></td>
+        <td><b>业务立项门禁 + 架构匹配阈值门禁</b>：<code>compute_scores.py</code> 强制校验 1–5 整数证据评分与 9 项业务/合规 Gate；<code>FAF-impl-recommender</code> 按 8 域加权阈值（<code>70% / 40%</code>）决定复用或绿地自研。</td>
+        <td><b>静态语法与工具白名单门禁</b>：<code>forge validate</code> 实测拦截了 3 项 <code>hooks.json</code> Schema 错误、1 项非法工具名（<code>get_errors</code>）与 3 项 <code>SKILL.md</code> 触发词缺失（<code>USE FOR:</code> / <code>DO NOT USE FOR:</code>），修复后实现 <b>8/8 Passed, 0 Warnings</b>。</td>
+      </tr>
+      <tr>
+        <td><b>4. Demo 视觉风格与交互侧重</b></td>
+        <td><b>工程精密仿真实验室风（Engineering Kinematics Workbench）</b>：<br>• 深色蓝图坐标网格 + <b>X-Ray 逆运动学骨骼/膝角/喉囊弹簧矢量叠加层</b><br>• 精确控制踏频 RPM、变速齿比（1.0x–4.2x）、逆风风阻（0–50 km/h）与喉囊载鱼质量<br>• 实时计算地面速度（km/h）、机械输出功率（Watts）与脚踏贴合误差（<code>0.00 px</code>）</td>
+        <td><b>多智能体艺术指导与趣味互动剧场（Coastal Boardwalk Studio）</b>：<br>• 加州海滨木栈道三幕光影切换（☀️ 晴空栈道 / 🌅 落日余晖 / 🌙 星夜车灯照明锥）<br>• 飞行员皮帽与随风飘动的红围巾、复古薄荷绿白边轮胎巡航车、车前藤编鱼篓<br>• 支持点击画布<b>抛沙丁鱼投喂（抛物线张嘴吞鱼物理）</b>、<b>翘前轮特技（Wheelie）</b>、<b>扇翅冲刺</b>与纯 WebAudio 合成的<b>清脆铜车铃（Ding-Ding!）</b></td>
+      </tr>
+      <tr>
+        <td><b>5. 核心结论：何时选谁？</b></td>
+        <td>当团队需要<b>从立项评估、PRD、C4 架构规范、存量资产匹配到代码交付与 Token 审计的标准 SDLC 闭环</b>时，选 <b>FAF (`faf-agents`)</b>。</td>
+        <td>当团队需要<b>针对特定项目技术栈或创意领域（如 SVG 角色动画），快速生成一套职责分工明确、通过静态 Schema 校验的 `.github/agents` 专属团队</b>时，选 <b>Microsoft `AGENT-FORGE`</b>。</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <div class="sec-title">
+    <span>📂 真实生成的过程文档源码对比 (Process Artifact Source Diff)</span>
+    <span style="font-family:var(--mono);font-size:11px;color:var(--muted)">Left: FAF SDLC Specs | Right: AGENT-FORGE .github/ Configs</span>
+  </div>
+  <div class="diff-grid">
+    <div>
+      <div style="font-size:12px;font-weight:700;color:var(--faf);margin-bottom:6px;">🟦 FAF `specs/impl-rec.md` &amp; `compute_scores.py` 实测输出</div>
+      <div class="code-panel">=== 1. compute_scores.py Output (scope/scorecard.yaml) ===
+{
+  "initiative_id": "pelican-bicycle-sim",
+  "value":       { "score": 78.0, "band": "High", "confidence": 100.0 },
+  "feasibility": { "score": 90.9, "band": "High", "confidence": 100.0 },
+  "readiness":   { "score": 87.5, "band": "High", "confidence": 100.0 },
+  "tier": "P1",
+  "tier_label": "Go",
+  "open_gates": []
+}
+
+=== 2. FAF-impl-recommender 8-Area Accelerator Matrix ===
+| Accelerator ID                 | Weighted Total |
+|--------------------------------|---------------:|
+| multi-agent-custom-automation  |          15.0% |
+| multimodal-rag-knowledge       |           9.8% |
+| modern-banking-assistant       |           8.3% |
+| call-center-voice-agent        |           8.3% |
+| content-processing-solution    |           7.3% |
+| copilot-studio-hybrid-template |           5.8% |
+Decision: 15.0% &lt; 40% threshold -&gt; Route to Path B (Greenfield Build)</div>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:700;color:var(--af);margin-bottom:6px;">🟧 AGENT-FORGE `forge-plan.json` &amp; `forge validate` 实测输出</div>
+      <div class="code-panel">=== 1. .github/forge-plan.json (Orchestration Blueprint) ===
+{
+  "projectType": "frontend-procedural-animation",
+  "orchestrationPattern": "pipeline",
+  "agents": [
+    "pelican-character-artist  -> [handoff] -> bicycle-kinematics-coder",
+    "bicycle-kinematics-coder  -> [handoff] -> scene-environment-director",
+    "scene-environment-director-> [handoff] -> animation-qa-reviewer",
+    "animation-qa-reviewer     -> [terminal QA gate]"
+  ]
+}
+
+=== 2. forge validate --no-fix CLI Verification ===
+- Validating customization files...
+  ✓ 4 agents (.github/agents/*.agent.md)
+  ✓ 1 prompt (.github/prompts/tune-pelican-choreography.prompt.md)
+  ✓ 1 instruction (.github/instructions/pelican-animation-standards.instructions.md)
+  ✓ 1 skill (.github/skills/pelican-svg-rigging/SKILL.md)
+  ✓ 1 hook (.github/hooks/hooks.json)
+Summary: All checks passed (8 files validated, 0 warnings)</div>
+    </div>
+  </div>
+</div>
+
+<script>
+let syncPaused = false;
+
+function broadcastSync() {
+  const cad = Number(document.getElementById('sync-cad').value);
+  const wind = Number(document.getElementById('sync-wind').value);
+  document.getElementById('sync-cad-v').textContent = `${cad} RPM`;
+  document.getElementById('sync-wind-v').textContent = `${wind} km/h`;
+
+  const msg = { type: 'arena-sync', cadence: cad, wind: wind, paused: syncPaused };
+  const f1 = document.getElementById('frame-faf').contentWindow;
+  const f2 = document.getElementById('frame-af').contentWindow;
+  if (f1) f1.postMessage(msg, '*');
+  if (f2) f2.postMessage(msg, '*');
+}
+
+function broadcastPreset(cad, wind, fish) {
+  document.getElementById('sync-cad').value = cad;
+  document.getElementById('sync-wind').value = wind;
+  document.getElementById('sync-cad-v').textContent = `${cad} RPM`;
+  document.getElementById('sync-wind-v').textContent = `${wind} km/h`;
+
+  const msg = { type: 'arena-sync', cadence: cad, wind: wind, fish: fish, paused: syncPaused };
+  const f1 = document.getElementById('frame-faf').contentWindow;
+  const f2 = document.getElementById('frame-af').contentWindow;
+  if (f1) f1.postMessage(msg, '*');
+  if (f2) f2.postMessage(msg, '*');
+}
+
+function toggleSyncPause() {
+  syncPaused = !syncPaused;
+  document.getElementById('btn-sync-pause').textContent = syncPaused
+    ? '▶ 双端同步继续'
+    : '⏸ 双端同步暂停 / 播放';
+  broadcastSync();
+}
+</script>
+</body>
+</html>

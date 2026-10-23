@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>AI initiative prioritization - Pelican Riding a Bicycle Procedural Kinematics Engine</title>
+<!--
+  Report theme: "dark" (default). Follows the Binance DESIGN.md spec
+  (https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/binance/DESIGN.md):
+  near-black canvas, a single yellow accent, flat colour-block cards without shadows,
+  hairline dividers, tabular numbers, a light footer. Trading green / yellow / red carry the
+  "higher is better" score signal (bands High / Medium / Low, metric scores 5 -> 1, score deltas).
+  BinanceNova / BinancePlex are licensed fonts and are not embedded; the report stays offline
+  and falls back to the spec's recommended substitutes (Inter / IBM Plex Sans) or system fonts.
+-->
+<style>
+  :root {
+    /* colors */
+    --primary: #fcd535; --primary-active: #f0b90b; --primary-disabled: #3a3a1f;
+    --ink: #181a20; --body: #eaecef; --on-dark: #ffffff;
+    --muted: #707a8a; --muted-strong: #929aa5;
+    --hairline-dark: #2b3139; --hairline-light: #eaecef;
+    --canvas-dark: #0b0e11; --surface-card: #1e2329; --surface-elevated: #2b3139;
+    --surface-soft-light: #fafafa;
+    --up: #0ecb81; --down: #f6465d; --info: #3b82f6; --turquoise: #2dbdb6;
+    /* dimension series (match the chart palette in render_report.py) */
+    --value: var(--primary); --feasibility: var(--info); --readiness: var(--turquoise);
+    /* type */
+    --font-nova: "BinanceNova", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-plex: "BinancePlex", "IBM Plex Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    /* radius */
+    --r-sm: 4px; --r-md: 6px; --r-lg: 8px; --r-xl: 12px; --r-pill: 9999px;
+    /* spacing */
+    --s-xxs: 4px; --s-xs: 8px; --s-sm: 12px; --s-md: 16px; --s-lg: 24px; --s-xl: 32px; --s-xxl: 48px;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--canvas-dark); }
+  body {
+    margin: 0; background: var(--canvas-dark); color: var(--body);
+    font: 400 14px/1.5 var(--font-nova);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* top-nav-dark */
+  .top-nav { height: 64px; background: var(--canvas-dark); border-bottom: 1px solid var(--hairline-dark); }
+  .top-nav .inner-nav { max-width: 1280px; height: 100%; margin: 0 auto; padding: 0 var(--s-lg); display: flex; align-items: center; gap: var(--s-md); }
+  .wordmark { color: var(--primary); font: 700 18px/1 var(--font-nova); letter-spacing: .5px; text-transform: uppercase; }
+  .nav-label { color: var(--muted-strong); font: 500 14px/1.4 var(--font-nova); }
+
+  main { max-width: 1280px; margin: 0 auto; padding: 0 var(--s-lg) var(--s-xxl); }
+
+  /* typography roles */
+  h1 { margin: 0; color: var(--on-dark); font: 600 40px/1.15 var(--font-nova); letter-spacing: -.3px; }
+  h2 { margin: var(--s-xxl) 0 var(--s-md); color: var(--on-dark); font: 600 24px/1.3 var(--font-nova); }
+  h3 { margin: 0 0 var(--s-xs); color: var(--on-dark); font: 600 16px/1.4 var(--font-nova); }
+  .muted { color: var(--muted); }
+  .small { font-size: 13px; }
+  p { margin: 0 0 var(--s-sm); }
+
+  /* layout */
+  .grid { display: grid; gap: var(--s-lg); }
+  .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 1024px) { .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 768px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } h1 { font-size: 32px; } }
+
+  /* card surface: flat colour block, no border, no shadow */
+  .card { background: var(--surface-card); border-radius: var(--r-xl); padding: var(--s-lg); }
+
+  /* hero-band-dark */
+  .hero { padding: var(--s-xxl) 0 var(--s-md); }
+  header.report { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s-lg); flex-wrap: wrap; }
+  header.report > div:first-child { flex: 1 1 520px; }
+  header.report > div:first-child > p { color: var(--muted-strong); font-size: 16px; margin-top: var(--s-sm); }
+  .meta { margin-top: var(--s-xs); color: var(--muted); font: 500 12px/1.4 var(--font-nova); }
+  header.report + p.small { margin-top: var(--s-md); color: var(--muted); }
+
+  /* tier: brand-claim number, yellow carries P1 / P2 */
+  .tier { min-width: 240px; padding: var(--s-md) var(--s-lg); background: var(--surface-card); border-radius: var(--r-xl); }
+  .tier .code { display: block; color: var(--primary); font: 700 48px/1.1 var(--font-plex); letter-spacing: -.5px; font-variant-numeric: tabular-nums; }
+  .tier .label { display: block; margin-top: var(--s-xxs); color: var(--body); font-size: 13px; }
+  .tier-P3 .code, .tier-UNRATED .code { color: var(--muted-strong); }
+  .tier-BLOCKED .code { color: var(--on-dark); }
+
+  .banner { margin-top: var(--s-md); padding: var(--s-sm) var(--s-md); background: var(--surface-card); border-left: 3px solid var(--primary); border-radius: var(--r-lg); font-size: 14px; }
+  .banner.red { border-left-color: var(--on-dark); }
+  .banner strong { color: var(--on-dark); }
+
+  /* stat tiles (clickable) */
+  .tile { position: relative; overflow: hidden; cursor: pointer; }
+  .tile::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--hairline-dark); }
+  .tile.value::before { background: var(--value); }
+  .tile.feasibility::before { background: var(--feasibility); }
+  .tile.readiness::before { background: var(--readiness); }
+  .tile:hover { background: var(--surface-elevated); }
+  .tile:focus-visible { outline: none; box-shadow: 0 0 0 2px rgba(59, 130, 246, .5); }
+  .tile h3 .small { display: block; margin-top: 2px; font-weight: 400; }
+  .tile .score { margin: var(--s-sm) 0 var(--s-xs); color: var(--on-dark); font: 700 40px/1.1 var(--font-plex); letter-spacing: -.3px; font-variant-numeric: tabular-nums; }
+  .tile .score small { color: var(--muted); font: 500 14px/1.4 var(--font-plex); letter-spacing: 0; }
+  .tile-hint { margin-top: var(--s-sm); color: var(--primary); font-weight: 600; }
+
+  /* band chip: green High, yellow Medium, red Low (higher is better) */
+  .pill { display: inline-block; padding: 2px 8px; border-radius: var(--r-sm); background: var(--surface-elevated); color: var(--body); font: 600 12px/1.4 var(--font-plex); vertical-align: middle; }
+  .band-High { color: var(--up); background: rgba(14, 203, 129, .12); }
+  .band-Medium { color: var(--primary); background: rgba(252, 213, 53, .12); }
+  .band-Low { color: var(--down); background: rgba(246, 70, 93, .12); }
+  .band-NE { color: var(--muted-strong); }
+
+  /* price-up / price-down cells: green / red text with direction arrow */
+  .delta-up, .delta-down { font: 500 14px/1.4 var(--font-plex); font-variant-numeric: tabular-nums; }
+  .delta-up { color: var(--up); } .delta-down { color: var(--down); }
+
+  .bar { height: 4px; margin: var(--s-sm) 0 var(--s-xxs); background: var(--surface-elevated); border-radius: var(--r-pill); overflow: hidden; }
+  .bar span { display: block; height: 100%; background: var(--muted-strong); }
+
+  .summary-text { font-size: 16px; color: var(--body); }
+  .summary-text p:last-child { margin-bottom: 0; }
+  ul.tight { margin: var(--s-xxs) 0 0; padding-left: 20px; } ul.tight li { margin-bottom: var(--s-xxs); }
+  ul.tight li::marker { color: var(--primary); }
+
+  /* charts */
+  svg text { font-family: var(--font-nova); }
+  .chart-card svg { display: block; width: 100%; max-width: 520px; height: auto; margin: 0 auto; }
+  .chart-card.wide svg { max-width: 860px; }
+  .chart-card > p { margin: var(--s-sm) 0 0; }
+  .area-link { cursor: pointer; outline: none; }
+  .area-link:hover text, .area-link:focus-visible text { text-decoration: underline; }
+
+  /* markets-table style tables */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { padding: var(--s-sm) var(--s-sm) var(--s-sm) 0; color: var(--muted); font: 500 12px/1.4 var(--font-nova); text-align: left; border-bottom: 1px solid var(--hairline-dark); }
+  td { padding: var(--s-sm) var(--s-sm) var(--s-sm) 0; vertical-align: top; text-align: left; border-bottom: 1px solid var(--hairline-dark); }
+  tbody tr:last-child td { border-bottom: none; }
+  td:nth-child(n+5) { font-variant-numeric: tabular-nums; }
+  tr.ne td { color: var(--muted); }
+  .card > table, .modal-body table { background: transparent; }
+  main > table { background: var(--surface-card); border-radius: var(--r-xl); padding: var(--s-xs) var(--s-lg); border-collapse: separate; border-spacing: 0; }
+  main > table th:first-child, main > table td:first-child { padding-left: var(--s-lg); }
+
+  /* metric score chip: red (1) -> yellow (3) -> green (5); stronger tint at the extremes */
+  .s { display: inline-block; min-width: 28px; height: 28px; padding: 0 6px; border-radius: var(--r-sm); background: var(--surface-elevated); color: var(--on-dark); font: 700 14px/28px var(--font-plex); text-align: center; }
+  .s5 { color: var(--up); background: rgba(14, 203, 129, .22); }
+  .s4 { color: var(--up); background: rgba(14, 203, 129, .10); }
+  .s3 { color: var(--primary); background: rgba(252, 213, 53, .12); }
+  .s2 { color: var(--down); background: rgba(246, 70, 93, .10); }
+  .s1 { color: var(--down); background: rgba(246, 70, 93, .22); }
+  .sNE { color: var(--muted); font-size: 11px; }
+
+  .quote { margin: 0 0 var(--s-xs); padding-left: var(--s-sm); border-left: 2px solid var(--hairline-dark); color: var(--body); }
+  .tag { display: inline-block; margin-left: var(--s-xxs); padding: 0 6px; border-radius: var(--r-sm); background: var(--surface-elevated); color: var(--muted-strong); font: 500 11px/1.6 var(--font-nova); }
+  .status-open { color: var(--on-dark); font-weight: 600; }
+  .status-open::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: var(--s-xs); border-radius: 50%; background: var(--primary); vertical-align: middle; }
+
+  /* details: cards at top level, faq-rows when nested or inside the modal */
+  details { background: var(--surface-card); border-radius: var(--r-lg); }
+  details > summary { display: flex; align-items: center; justify-content: space-between; gap: var(--s-sm); flex-wrap: wrap; padding: var(--s-md) var(--s-lg); cursor: pointer; list-style: none; color: var(--on-dark); font: 600 16px/1.4 var(--font-nova); }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: ""; width: 8px; height: 8px; margin-left: var(--s-xs); border-right: 2px solid var(--muted-strong); border-bottom: 2px solid var(--muted-strong); transform: rotate(45deg); transition: transform .15s; }
+  details[open] > summary::after { transform: rotate(-135deg); }
+  details > summary .left { flex: 1; }
+  details > summary .small { font-family: var(--font-plex); font-weight: 500; }
+  details .inner { padding: 0 var(--s-lg) var(--s-md); }
+  details details, .modal-body details { background: transparent; border-radius: 0; border-bottom: 1px solid var(--hairline-dark); }
+  details details > summary, .modal-body details > summary { padding: var(--s-md) 0; }
+  details details .inner, .modal-body details .inner { padding: 0 0 var(--s-md); }
+  .lists { align-items: start; }
+
+  /* modal */
+  dialog#drill-modal { width: min(1100px, 94vw); max-height: 88vh; padding: 0; overflow: auto; border: none; border-radius: var(--r-xl); background: var(--surface-card); color: var(--body); }
+  dialog#drill-modal::backdrop { background: rgba(11, 14, 17, .8); }
+  .modal-head { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: var(--s-sm); flex-wrap: wrap; padding: var(--s-md) var(--s-lg); background: var(--surface-card); border-bottom: 1px solid var(--hairline-dark); }
+  .modal-head h3 { margin: 0; font: 600 20px/1.35 var(--font-nova); }
+  .modal-head .actions { display: flex; gap: var(--s-xs); }
+  .modal-body { padding: var(--s-xs) var(--s-lg) var(--s-md); }
+  .modal-body > .inner { padding: 0; }
+
+  /* button-secondary-on-dark; primary yellow is reserved for the close action */
+  button { height: 32px; padding: 0 var(--s-md); border: none; border-radius: var(--r-md); background: var(--surface-elevated); color: var(--on-dark); font: 600 14px/1 var(--font-nova); cursor: pointer; }
+  button:active { background: var(--hairline-dark); }
+  button:focus-visible { outline: none; box-shadow: 0 0 0 2px rgba(59, 130, 246, .5); }
+  .modal-close { width: 32px; padding: 0; background: var(--primary); color: var(--ink); font-size: 18px; }
+  .modal-close:active { background: var(--primary-active); }
+
+  /* footer-light: the deliberate light band that closes the dark page */
+  footer.page-footer { background: var(--surface-soft-light); color: var(--ink); padding: var(--s-xxl) var(--s-lg); text-align: center; font: 400 13px/1.5 var(--font-nova); }
+  .footer-links { display: flex; justify-content: center; align-items: center; gap: var(--s-md); margin-bottom: var(--s-sm); }
+  .footer-links span { color: var(--muted); }
+  /* Yellow text on #fafafa fails contrast, so links keep ink text with a yellow underline. */
+  button.link { height: auto; padding: 0 0 2px; border-radius: 0; background: none; color: var(--ink); font: 600 14px/1.4 var(--font-nova); border-bottom: 2px solid var(--primary); }
+  button.link:active { background: none; border-bottom-color: var(--primary-active); }
+  footer.page-footer > div { color: var(--muted); }
+
+  .print-only { display: none; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .print-only { display: block; } dialog, .footer-links { display: none; }
+    .card, details, table, .tile { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<nav class="top-nav" aria-label="Report">
+  <div class="inner-nav">
+    <span class="wordmark">Agent Forge</span>
+    <span class="nav-label">AI Initiative Prioritization</span>
+  </div>
+</nav>
+<main>
+<section class="hero">
+<header class="report"><div><h1>Pelican Riding a Bicycle Procedural Kinematics Engine</h1><div class="meta">Customer: Visual Benchmark Lab &middot; Evaluated: 2026-10-23 &middot; Version: v1 &middot; ID: pelican-bicycle-sim</div><p>Interactive 2D SVG/Canvas inverse-kinematics simulation of a brown pelican pedaling a road bicycle with telemetry HUD.</p></div><div class="tier tier-P1"><span class="code">P1</span><span class="label">Go &mdash; Ready to start the PoC / MVP.</span></div></header><p class="small muted">Tier rule: High Value, at least Medium Feasibility and High Readiness.</p>
+</section>
+
+<h2>Executive summary</h2>
+<div class="card summary-text"><p>The Pelican Bicycle Procedural Kinematics Engine scores P1 (Go) across Value (87.6), Feasibility (90.9), and Readiness (93.8), with 100% evidence coverage and zero open gates.</p></div><div class="grid grid-3" style="margin-top:16px"><div class="card tile value" role="button" tabindex="0" aria-haspopup="dialog" data-dim="value" data-title="Value — 78.0 · High · confidence 100%" title="Open the Value score drill-down"><h3>Value <span class="muted small">Is it worth doing?</span></h3><div class="score">78.0<small> /100</small></div><div><span class="pill band-High">High</span> </div><div class="bar"><span style="width:100%"></span></div><div class="small muted">Confidence 100%</div><div class="tile-hint small">View score drill-down &#8250;</div></div><div class="card tile feasibility" role="button" tabindex="0" aria-haspopup="dialog" data-dim="feasibility" data-title="Feasibility — 90.9 · High · confidence 100%" title="Open the Feasibility score drill-down"><h3>Feasibility <span class="muted small">Can it be done with AI, safely?</span></h3><div class="score">90.9<small> /100</small></div><div><span class="pill band-High">High</span> </div><div class="bar"><span style="width:100%"></span></div><div class="small muted">Confidence 100%</div><div class="tile-hint small">View score drill-down &#8250;</div></div><div class="card tile readiness" role="button" tabindex="0" aria-haspopup="dialog" data-dim="readiness" data-title="Readiness — 87.5 · High · confidence 100%" title="Open the Readiness score drill-down"><h3>Readiness <span class="muted small">Can we start now?</span></h3><div class="score">87.5<small> /100</small></div><div><span class="pill band-High">High</span> </div><div class="bar"><span style="width:100%"></span></div><div class="small muted">Confidence 100%</div><div class="tile-hint small">View score drill-down &#8250;</div></div></div><div class="grid grid-3 lists" style="margin-top:16px"><details class="list-card"><summary><span class="left">Key strengths</span><span class="small muted">2</span></summary><div class="inner"><ul class="tight"><li>Deterministic 2-bone analytical inverse kinematics guarantees zero foot-pedal slip.</li><li>Self-contained HTML5/Canvas/SVG bundle with live telemetry HUD and X-Ray skeletal mode.</li></ul></div></details><details class="list-card"><summary><span class="left">Key risks</span><span class="small muted">1</span></summary><div class="inner"><ul class="tight"><li>High-cadence (&gt;120 RPM) coupled with strong headwind requires clamped spring integration to prevent pouch oscillation overshoot.</li></ul></div></details><details class="list-card"><summary><span class="left">Recommendations</span><span class="small muted">1</span></summary><div class="inner"><ul class="tight"><li>Route through FAF-architect (C4 L1-L3 spec) and FAF-impl-recommender (which will score &lt;40% against enterprise RAG/Voice accelerators and trigger Path B Greenfield Agentic Development).</li></ul></div></details></div>
+
+<h2>Prioritization view</h2>
+<div class="grid grid-2"><div class="card chart-card"><h3>Value &times; Feasibility</h3><svg viewBox="0 0 380 340" role="img" aria-label="Value versus Feasibility matrix"><rect x="52.0" y="16.0" width="300.0" height="162.0" fill="#1e2329"/><text x="58.0" y="31.0" font-size="11" fill="#707a8a" font-weight="600">P2 / P3</text><rect x="172.0" y="16.0" width="180.0" height="94.5" fill="#3a3a1f"/><text x="178.0" y="31.0" font-size="11" fill="#707a8a" font-weight="600">P1 / P2 / P3</text><rect x="52.0" y="178.0" width="300.0" height="108.0" fill="#161a1e"/><text x="58.0" y="193.0" font-size="11" fill="#707a8a" font-weight="600">P3</text><rect x="52" y="16" width="300" height="270" fill="none" stroke="#2b3139"/><text x="52.0" y="301" text-anchor="middle" font-size="10" fill="#707a8a">0</text><text x="46" y="289.0" text-anchor="end" font-size="10" fill="#707a8a">0</text><text x="172.0" y="301" text-anchor="middle" font-size="10" fill="#707a8a">40</text><text x="46" y="181.0" text-anchor="end" font-size="10" fill="#707a8a">40</text><text x="247.0" y="301" text-anchor="middle" font-size="10" fill="#707a8a">65</text><text x="46" y="113.5" text-anchor="end" font-size="10" fill="#707a8a">65</text><text x="352.0" y="301" text-anchor="middle" font-size="10" fill="#707a8a">100</text><text x="46" y="19.0" text-anchor="end" font-size="10" fill="#707a8a">100</text><text x="202.0" y="334" text-anchor="middle" font-size="12" fill="#929aa5">Feasibility &#8594;</text><text x="14" y="151.0" text-anchor="middle" font-size="12" fill="#929aa5" transform="rotate(-90 14 151.0)">Value &#8594;</text><circle cx="324.7" cy="75.4" r="3.5" fill="#707a8a"/><text x="330.7" y="70.4" font-size="9" fill="#929aa5">v1</text><circle cx="324.7" cy="75.4" r="18.4" fill="#0ecb81" fill-opacity="0.8" stroke="#eaecef" stroke-width="1.5"><title>Value 78.0, Feasibility 90.9, Readiness 87.5</title></circle></svg><p class="small muted">Bubble size and colour show Readiness, which decides the tier inside each zone: Low &#8594; P3, Medium or N/E &#8594; P2, High &#8594; P1 (yellow-tinted zone only). Grey dots show earlier versions.</p></div><div class="card chart-card"><h3>Score trend</h3><svg viewBox="0 0 380 300" role="img" aria-label="Score trend over evaluations"><rect x="40" y="14" width="320" height="210" fill="#181a20" stroke="#2b3139"/><line x1="40" y1="224.0" x2="360" y2="224.0" stroke="#2b3139"/><text x="34" y="227.0" text-anchor="end" font-size="10" fill="#707a8a">0</text><line x1="40" y1="140.0" x2="360" y2="140.0" stroke="#2b3139" stroke-dasharray="4 3"/><text x="34" y="143.0" text-anchor="end" font-size="10" fill="#707a8a">40</text><line x1="40" y1="87.5" x2="360" y2="87.5" stroke="#2b3139" stroke-dasharray="4 3"/><text x="34" y="90.5" text-anchor="end" font-size="10" fill="#707a8a">65</text><line x1="40" y1="14.0" x2="360" y2="14.0" stroke="#2b3139"/><text x="34" y="17.0" text-anchor="end" font-size="10" fill="#707a8a">100</text><text x="200.0" y="239" text-anchor="middle" font-size="10" fill="#707a8a">v1</text><circle cx="200.0" cy="60.2" r="3.5" fill="#fcd535"><title>Value: 78.0</title></circle><circle cx="200.0" cy="33.1" r="3.5" fill="#3b82f6"><title>Feasibility: 90.9</title></circle><circle cx="200.0" cy="40.2" r="3.5" fill="#2dbdb6"><title>Readiness: 87.5</title></circle><rect x="40" y="269" width="12" height="12" rx="2" fill="#fcd535"/><text x="57" y="279" font-size="11" fill="#eaecef">Value</text><rect x="150" y="269" width="12" height="12" rx="2" fill="#3b82f6"/><text x="167" y="279" font-size="11" fill="#eaecef">Feasibility</text><rect x="260" y="269" width="12" height="12" rx="2" fill="#2dbdb6"/><text x="277" y="279" font-size="11" fill="#eaecef">Readiness</text></svg><p class="small muted">Dashed lines mark the Medium and High band thresholds.</p></div></div><div class="card chart-card wide" style="margin-top:16px"><h3>Area scores</h3><svg viewBox="0 0 760 440" role="group" aria-label="Area scores radar chart"><polygon points="380.0,182.5 409.3,196.6 416.6,228.3 396.3,253.8 363.7,253.8 343.4,228.3 350.7,196.6" fill="none" stroke="#2b3139"/><polygon points="380.0,145.0 438.6,173.2 453.1,236.7 412.5,287.6 347.5,287.6 306.9,236.7 321.4,173.2" fill="none" stroke="#2b3139"/><polygon points="380.0,107.5 468.0,149.9 489.7,245.0 428.8,321.4 331.2,321.4 270.3,245.0 292.0,149.9" fill="none" stroke="#2b3139"/><polygon points="380.0,70.0 497.3,126.5 526.2,253.4 445.1,355.1 314.9,355.1 233.8,253.4 262.7,126.5" fill="none" stroke="#2b3139"/><line x1="380" y1="220" x2="380.0" y2="70.0" stroke="#2b3139"/><line x1="380" y1="220" x2="497.3" y2="126.5" stroke="#2b3139"/><line x1="380" y1="220" x2="526.2" y2="253.4" stroke="#2b3139"/><line x1="380" y1="220" x2="445.1" y2="355.1" stroke="#2b3139"/><line x1="380" y1="220" x2="314.9" y2="355.1" stroke="#2b3139"/><line x1="380" y1="220" x2="233.8" y2="253.4" stroke="#2b3139"/><line x1="380" y1="220" x2="262.7" y2="126.5" stroke="#2b3139"/><polygon points="380.0,100.0 468.0,149.9 500.6,247.5 440.2,345.0 314.9,355.1 253.9,248.8 275.9,137.0" fill="#eaecef" fill-opacity="0.06" stroke="#929aa5" stroke-width="1.5"/><circle cx="380.0" cy="100.0" r="4.5" fill="#fcd535"/><g class="area-link" role="button" tabindex="0" data-area="business_value" data-title="Business value (Value) — 80.0 · confidence 100%"><title>Open the Business value metrics</title><text x="380.0" y="40.0" text-anchor="middle" font-size="15" fill="#fcd535">Business value<tspan x="380.0" dy="18" font-weight="700">80.0</tspan></text></g><circle cx="468.0" cy="149.9" r="4.5" fill="#fcd535"/><g class="area-link" role="button" tabindex="0" data-area="strategic_alignment" data-title="Strategic alignment (Value) — 75.0 · confidence 100%"><title>Open the Strategic alignment metrics</title><text x="509.8" y="102.5" text-anchor="start" font-size="15" fill="#fcd535">Strategic alignment<tspan x="509.8" dy="18" font-weight="700">75.0</tspan></text></g><circle cx="500.6" cy="247.5" r="4.5" fill="#3b82f6"/><g class="area-link" role="button" tabindex="0" data-area="ai_suitability" data-title="AI suitability (Feasibility) — 82.5 · confidence 100%"><title>Open the AI suitability metrics</title><text x="541.8" y="253.9" text-anchor="start" font-size="15" fill="#3b82f6">AI suitability<tspan x="541.8" dy="18" font-weight="700">82.5</tspan></text></g><circle cx="440.2" cy="345.0" r="4.5" fill="#3b82f6"/><g class="area-link" role="button" tabindex="0" data-area="technical_feasibility" data-title="Technical feasibility (Feasibility) — 92.5 · confidence 100%"><title>Open the Technical feasibility metrics</title><text x="452.0" y="379.6" text-anchor="start" font-size="15" fill="#3b82f6">Technical feasibility<tspan x="452.0" dy="18" font-weight="700">92.5</tspan></text></g><circle cx="314.9" cy="355.1" r="4.5" fill="#3b82f6"/><g class="area-link" role="button" tabindex="0" data-area="risk_compliance" data-title="Risk and compliance (Feasibility) — 100.0 · confidence 100%"><title>Open the Risk and compliance metrics</title><text x="308.0" y="379.6" text-anchor="end" font-size="15" fill="#3b82f6">Risk and compliance<tspan x="308.0" dy="18" font-weight="700">100.0</tspan></text></g><circle cx="253.9" cy="248.8" r="4.5" fill="#2dbdb6"/><g class="area-link" role="button" tabindex="0" data-area="data_readiness" data-title="Data readiness (Readiness) — 86.2 · confidence 100%"><title>Open the Data readiness metrics</title><text x="218.2" y="253.9" text-anchor="end" font-size="15" fill="#2dbdb6">Data readiness<tspan x="218.2" dy="18" font-weight="700">86.2</tspan></text></g><circle cx="275.9" cy="137.0" r="4.5" fill="#2dbdb6"/><g class="area-link" role="button" tabindex="0" data-area="org_readiness" data-title="Organisational readiness (Readiness) — 88.8 · confidence 100%"><title>Open the Organisational readiness metrics</title><text x="250.2" y="102.5" text-anchor="end" font-size="15" fill="#2dbdb6">Organisational readiness<tspan x="250.2" dy="18" font-weight="700">88.8</tspan></text></g></svg><p class="small muted">0&ndash;100 per area, coloured by dimension; N/E areas are plotted at 0. Click an area label to see its metrics, evidence and rationale.</p></div>
+
+
+
+<h2>Next steps</h2>
+<div class="grid grid-2"><div class="card"><h3>Readiness action plan</h3><ul class="tight"><li>Lock C4 component interfaces in specs/spec.md before invoking FAF-dev.</li></ul></div><div class="card"><h3>Next scoping questions</h3><p class="muted small">All metrics are evidenced.</p></div></div>
+
+<!-- Modal sources (tile drill-down and footer links); hidden on screen, printed in full. -->
+<section class="print-only">
+<h2>Score drill-down</h2>
+<div id="drilldown">
+<details open data-dim="value"><summary><span class="left">Value <span class="muted small">Is it worth doing?</span></span><span>78.0 <span class="pill band-High">High</span> <span class="small muted">confidence 100%</span></span></summary><div class="inner"><details data-area="business_value"><summary><span class="left">Business value <span class="muted small">(weight 60 within Value)</span></span><span>80.0 &middot; <span class="small muted">confidence 100%</span></span></summary><div class="inner"><table><thead><tr><th>Metric</th><th>Weight</th><th>Score</th><th>Evidence</th><th>Rationale</th></tr></thead><tbody><tr><td>Financial impact (savings / revenue)</td><td>35</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Eliminates manual keyframe animation costs by synthesizing procedural SVG/IK kinematics directly in browser.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Eliminates manual keyframe animation costs by synthesizing procedural SVG/IK kinematics directly in browser.</td></tr><tr><td>Scale of impact</td><td>25</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Used as the canonical cross-model and cross-harness visual benchmark published on GitHub Pages.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Used as the canonical cross-model and cross-harness visual benchmark published on GitHub Pages.</td></tr><tr><td>Customer / employee experience impact</td><td>20</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Provides real-time interactive cadence, gear ratio, headwind, and skeletal X-ray inspection.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Provides real-time interactive cadence, gear ratio, headwind, and skeletal X-ray inspection.</td></tr><tr><td>Measurability (KPIs and baseline)</td><td>20</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Strict quantitative KPIs: 60 FPS frame budget (&lt;16.6ms), 0px pedal detachment error, and deterministic IK closure.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Strict quantitative KPIs: 60 FPS frame budget (&lt;16.6ms), 0px pedal detachment error, and deterministic IK closure.</td></tr></tbody></table></div></details><details data-area="strategic_alignment"><summary><span class="left">Strategic alignment <span class="muted small">(weight 40 within Value)</span></span><span>75.0 &middot; <span class="small muted">confidence 100%</span></span></summary><div class="inner"><table><thead><tr><th>Metric</th><th>Weight</th><th>Score</th><th>Evidence</th><th>Rationale</th></tr></thead><tbody><tr><td>Fit with strategic goals / OKRs</td><td>35</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Directly validates composable SDLC agent practices vs. context engineering meta-generators.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Directly validates composable SDLC agent practices vs. context engineering meta-generators.</td></tr><tr><td>Executive sponsorship<span class="tag">gate</span></td><td>30</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Sponsored by Principal AI Architecture &amp; Visual Lab lead.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Sponsored by Principal AI Architecture &amp; Visual Lab lead.</td></tr><tr><td>Urgency / cost of delay</td><td>20</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Immediate benchmark release for side-by-side GitHub Pages evaluation.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Immediate benchmark release for side-by-side GitHub Pages evaluation.</td></tr><tr><td>Differentiation / reuse potential</td><td>15</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Reusable 2-bone analytical IK + spring-damper secondary motion engine.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Reusable 2-bone analytical IK + spring-damper secondary motion engine.</td></tr></tbody></table></div></details></div></details><details open data-dim="feasibility"><summary><span class="left">Feasibility <span class="muted small">Can it be done with AI, safely?</span></span><span>90.9 <span class="pill band-High">High</span> <span class="small muted">confidence 100%</span></span></summary><div class="inner"><details data-area="ai_suitability"><summary><span class="left">AI suitability <span class="muted small">(weight 35 within Feasibility)</span></span><span>82.5 &middot; <span class="small muted">confidence 100%</span></span></summary><div class="inner"><table><thead><tr><th>Metric</th><th>Weight</th><th>Score</th><th>Evidence</th><th>Rationale</th></tr></thead><tbody><tr><td>How well the task suits GenAI / agents<span class="tag">gate</span></td><td>40</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Multi-agent decomposition excels at coupling mathematical IK equations with structured SVG/Canvas rendering.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Multi-agent decomposition excels at coupling mathematical IK equations with structured SVG/Canvas rendering.</td></tr><tr><td>Tolerance for errors and varied outputs</td><td>30</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Visual inspection and automated Playwright/geometric assertions catch any kinematic drift.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Visual inspection and automated Playwright/geometric assertions catch any kinematic drift.</td></tr><tr><td>Feasibility of human review</td><td>30</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Interactive telemetry HUD and X-ray skeletal overlay enable instant human verification.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Interactive telemetry HUD and X-ray skeletal overlay enable instant human verification.</td></tr></tbody></table></div></details><details data-area="technical_feasibility"><summary><span class="left">Technical feasibility <span class="muted small">(weight 40 within Feasibility)</span></span><span>92.5 &middot; <span class="small muted">confidence 100%</span></span></summary><div class="inner"><table><thead><tr><th>Metric</th><th>Weight</th><th>Score</th><th>Evidence</th><th>Rationale</th></tr></thead><tbody><tr><td>Low integration complexity</td><td>40</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Zero external backend dependencies; self-contained zero-CSP-violation HTML5/SVG/Canvas bundle.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Zero external backend dependencies; self-contained zero-CSP-violation HTML5/SVG/Canvas bundle.</td></tr><tr><td>Low solution complexity</td><td>15</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Requires analytical law-of-cosines 2-bone IK solver and Verlet/spring secondary motion for gular pouch and feathers.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Requires analytical law-of-cosines 2-bone IK solver and Verlet/spring secondary motion for gular pouch and feathers.</td></tr><tr><td>Platform / stack maturity</td><td>30</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Runs natively on modern browsers and GitHub Pages static hosting.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Runs natively on modern browsers and GitHub Pages static hosting.</td></tr><tr><td>Technical skills available to deliver</td><td>15</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Full TypeScript/HTML5/SVG procedural animation and kinematics expertise available.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Full TypeScript/HTML5/SVG procedural animation and kinematics expertise available.</td></tr></tbody></table></div></details><details data-area="risk_compliance"><summary><span class="left">Risk and compliance <span class="muted small">(weight 25 within Feasibility)</span></span><span>100.0 &middot; <span class="small muted">confidence 100%</span></span></summary><div class="inner"><table><thead><tr><th>Metric</th><th>Weight</th><th>Score</th><th>Evidence</th><th>Rationale</th></tr></thead><tbody><tr><td>Low regulatory exposure<span class="tag">gate</span></td><td>30</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Zero regulatory exposure; pure procedural wildlife/bicycle physics simulation.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Zero regulatory exposure; pure procedural wildlife/bicycle physics simulation.</td></tr><tr><td>Low Responsible AI / harm potential</td><td>25</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;No personal data or harmful outputs.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">No personal data or harmful outputs.</td></tr><tr><td>Manageable data privacy and sensitivity</td><td>25</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Zero PII or external telemetry collection.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Zero PII or external telemetry collection.</td></tr><tr><td>Low security / reputational exposure</td><td>20</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Strict Content-Security-Policy with zero external scripts.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Strict Content-Security-Policy with zero external scripts.</td></tr></tbody></table></div></details></div></details><details open data-dim="readiness"><summary><span class="left">Readiness <span class="muted small">Can we start now?</span></span><span>87.5 <span class="pill band-High">High</span> <span class="small muted">confidence 100%</span></span></summary><div class="inner"><details data-area="data_readiness"><summary><span class="left">Data readiness <span class="muted small">(weight 50 within Readiness)</span></span><span>86.2 &middot; <span class="small muted">confidence 100%</span></span></summary><div class="inner"><table><thead><tr><th>Metric</th><th>Weight</th><th>Score</th><th>Evidence</th><th>Rationale</th></tr></thead><tbody><tr><td>Data availability<span class="tag">gate</span></td><td>30</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Biomechanical pelican limb ratios and road bicycle crank/frame geometry specified in PRD.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Biomechanical pelican limb ratios and road bicycle crank/frame geometry specified in PRD.</td></tr><tr><td>Data quality</td><td>25</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Exact parametric coordinate constraints verified.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Exact parametric coordinate constraints verified.</td></tr><tr><td>Data access path and permissions<span class="tag">gate</span></td><td>25</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;All parametric geometry is locally defined in specification.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">All parametric geometry is locally defined in specification.</td></tr><tr><td>Data governance and ownership</td><td>20</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;MIT open-source license and full provenance ledger.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">MIT open-source license and full provenance ledger.</td></tr></tbody></table></div></details><details data-area="org_readiness"><summary><span class="left">Organisational readiness <span class="muted small">(weight 50 within Readiness)</span></span><span>88.8 &middot; <span class="small muted">confidence 100%</span></span></summary><div class="inner"><table><thead><tr><th>Metric</th><th>Weight</th><th>Score</th><th>Evidence</th><th>Rationale</th></tr></thead><tbody><tr><td>Business / process owner named<span class="tag">gate</span></td><td>25</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Visual Benchmark Lab lead accountable for acceptance.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Visual Benchmark Lab lead accountable for acceptance.</td></tr><tr><td>Stakeholder and SME availability<span class="tag">gate</span></td><td>20</td><td><span class="s s4">4</span></td><td><div class="quote">&ldquo;Immediate interactive review in session.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Immediate interactive review in session.</td></tr><tr><td>End-user readiness and appetite for change</td><td>20</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Published directly to GitHub.io with bilingual zh-CN/EN controls.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Published directly to GitHub.io with bilingual zh-CN/EN controls.</td></tr><tr><td>Funding commitment</td><td>20</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Fully funded within open-source lab budget.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Fully funded within open-source lab budget.</td></tr><tr><td>Ownership of running it after go-live<span class="tag">gate</span></td><td>15</td><td><span class="s s5">5</span></td><td><div class="quote">&ldquo;Automated CI/CD and GitHub Pages hosting.&rdquo; <span class="small muted">&mdash; Visual Benchmark Lab Charter — Procedural Pelican Bicycle Kinematics (stakeholder-brief, 2026-10-23)</span><span class="tag">stated</span></div></td><td class="small">Automated CI/CD and GitHub Pages hosting.</td></tr></tbody></table></div></details></div></details>
+</div>
+<h2>Change log</h2>
+<div id="changelog">
+<table><thead><tr><th>Ver.</th><th>Date</th><th>Trigger</th><th>Changes</th><th>Value</th><th>Feas.</th><th>Ready.</th><th>Tier</th></tr></thead><tbody><tr><td>v1</td><td>2026-10-23</td><td>FAF-analyst initial discovery<div class="small muted">init</div></td><td>Initial evaluation: 28 metrics scored.<div class="small">Gate ai_unsuitable: not_triggered &#8594; cleared</div><div class="small">Gate regulatory_prohibition: not_triggered &#8594; cleared</div><div class="small">Gate no_executive_sponsor: not_triggered &#8594; cleared</div><div class="small">Gate no_data_available: not_triggered &#8594; cleared</div><div class="small">Gate no_data_access: not_triggered &#8594; cleared</div><div class="small">Gate no_business_owner: not_triggered &#8594; cleared</div><div class="small">Gate stakeholders_not_committed: not_triggered &#8594; cleared</div><div class="small">Gate no_run_owner: not_triggered &#8594; cleared</div><div class="small">Gate security_approval_missing: not_triggered &#8594; cleared</div></td><td>78.0</td><td>90.9</td><td>87.5</td><td>P1</td></tr></tbody></table><p class="small muted">* provisional (a dimension was below the confidence floor).</p>
+</div>
+<h2>Method</h2>
+<div id="method">
+<div class="card small"><p>Each metric is scored 1&ndash;5 from cited evidence and normalised to 0&ndash;100 as (score &minus; 1) / 4 &times; 100. Area and dimension scores are weighted averages of <em>evidenced</em> items only; metrics without evidence (N/E) are left out and their weight is shared among the evidenced ones. Confidence is the share of the dimension's total weight that is evidenced.</p><p>Bands: High &ge; 65, Medium 40&ndash;65, Low &lt; 40. Tiers are provisional when any dimension's confidence is below 40%. Callers ranking several initiatives sort by tier, then Value, Feasibility and Readiness.</p></div><table style="margin-top:12px"><thead><tr><th>Dimension</th><th>Area</th><th>Area weight</th><th>Metrics (weight within area)</th></tr></thead><tbody><tr><td>Value</td><td>Business value</td><td>60</td><td class="small">Financial impact (savings / revenue) (35), Scale of impact (25), Customer / employee experience impact (20), Measurability (KPIs and baseline) (20)</td></tr><tr><td>Value</td><td>Strategic alignment</td><td>40</td><td class="small">Fit with strategic goals / OKRs (35), Executive sponsorship (30), Urgency / cost of delay (20), Differentiation / reuse potential (15)</td></tr><tr><td>Feasibility</td><td>AI suitability</td><td>35</td><td class="small">How well the task suits GenAI / agents (40), Tolerance for errors and varied outputs (30), Feasibility of human review (30)</td></tr><tr><td>Feasibility</td><td>Technical feasibility</td><td>40</td><td class="small">Low integration complexity (40), Low solution complexity (15), Platform / stack maturity (30), Technical skills available to deliver (15)</td></tr><tr><td>Feasibility</td><td>Risk and compliance</td><td>25</td><td class="small">Low regulatory exposure (30), Low Responsible AI / harm potential (25), Manageable data privacy and sensitivity (25), Low security / reputational exposure (20)</td></tr><tr><td>Readiness</td><td>Data readiness</td><td>50</td><td class="small">Data availability (30), Data quality (25), Data access path and permissions (25), Data governance and ownership (20)</td></tr><tr><td>Readiness</td><td>Organisational readiness</td><td>50</td><td class="small">Business / process owner named (25), Stakeholder and SME availability (20), End-user readiness and appetite for change (20), Funding commitment (20), Ownership of running it after go-live (15)</td></tr></tbody></table>
+</div>
+</section>
+</main>
+
+<footer class="page-footer">
+  <nav class="footer-links" aria-label="Report appendices">
+    <button type="button" class="link" data-source="changelog" data-title="Change log">Change log</button>
+    <span aria-hidden="true">&middot;</span>
+    <button type="button" class="link" data-source="method" data-title="Scoring method, bands and weights">Method</button>
+  </nav>
+  <div>Generated by faf-ai-prioritization on 2026-10-23 23:39</div>
+</footer>
+
+<dialog id="drill-modal" aria-labelledby="drill-modal-title">
+  <div class="modal-head">
+    <h3 id="drill-modal-title"></h3>
+    <div class="actions">
+      <button type="button" data-modal="open">Expand all</button>
+      <button type="button" data-modal="close">Collapse all</button>
+      <button type="button" class="modal-close" data-modal="dismiss" aria-label="Close">&times;</button>
+    </div>
+  </div>
+  <div class="modal-body"></div>
+</dialog>
+<script>
+  (function () {
+    function setAll(selector, open) {
+      document.querySelectorAll(selector).forEach(function (d) { d.open = open; });
+    }
+
+    var modal = document.getElementById("drill-modal");
+    var modalBody = modal.querySelector(".modal-body");
+    function openModal(title, source, expandable) {
+      var copy = source.cloneNode(true);
+      copy.removeAttribute("id");
+      modalBody.replaceChildren(copy);
+      modal.querySelector("#drill-modal-title").textContent = title;
+      modal.querySelectorAll('button[data-modal="open"], button[data-modal="close"]').forEach(function (b) { b.hidden = !expandable; });
+      if (typeof modal.showModal === "function") { modal.showModal(); } else { modal.setAttribute("open", ""); }
+      modal.scrollTop = 0;
+    }
+    function openDrilldown(tile) {
+      var source = document.querySelector('#drilldown details[data-dim="' + tile.getAttribute("data-dim") + '"] > .inner');
+      if (source) { openModal(tile.getAttribute("data-title"), source, true); }
+    }
+    function openArea(link) {
+      var source = document.querySelector('#drilldown details[data-area="' + link.getAttribute("data-area") + '"] > .inner');
+      if (source) { openModal(link.getAttribute("data-title"), source, false); }
+    }
+    function activate(element, handler) {
+      element.addEventListener("click", function () { handler(element); });
+      element.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); handler(element); }
+      });
+    }
+    document.querySelectorAll(".footer-links button[data-source]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var source = document.getElementById(button.getAttribute("data-source"));
+        if (source) { openModal(button.getAttribute("data-title"), source, false); }
+      });
+    });
+    document.querySelectorAll(".tile[data-dim]").forEach(function (tile) { activate(tile, openDrilldown); });
+    document.querySelectorAll(".area-link[data-area]").forEach(function (link) { activate(link, openArea); });
+    modal.querySelectorAll("button[data-modal]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var action = button.getAttribute("data-modal");
+        if (action === "dismiss") { modal.close(); } else { setAll("#drill-modal details", action === "open"); }
+      });
+    });
+    // A click on the backdrop targets the dialog element itself.
+    modal.addEventListener("click", function (event) { if (event.target === modal) { modal.close(); } });
+    window.addEventListener("beforeprint", function () { setAll("details", true); });
+  })();
+</script>
+</body>
+</html>

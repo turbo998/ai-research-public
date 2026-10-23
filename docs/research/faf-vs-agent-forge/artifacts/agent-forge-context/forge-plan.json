@@ -1,0 +1,92 @@
+{
+  "projectType": "frontend-procedural-animation",
+  "techStack": [
+    "HTML5",
+    "SVG",
+    "Canvas2D",
+    "WebAudio",
+    "TypeScript"
+  ],
+  "domain": "Interactive 2D Character & Vehicle Animation (Pelican Riding a Bicycle)",
+  "orchestrationPattern": "pipeline",
+  "agents": [
+    {
+      "name": "pelican-character-artist",
+      "description": "Designs multi-layered brown/white pelican plumage, articulated beak, elastic gular pouch, expressive eye blink, and secondary feather motion.",
+      "role": "specialist",
+      "tools": [
+        "read_file",
+        "create_file",
+        "replace_string_in_file",
+        "file_search"
+      ],
+      "handoffs": [
+        "bicycle-kinematics-coder"
+      ]
+    },
+    {
+      "name": "bicycle-kinematics-coder",
+      "description": "Implements closed-chain crankset pedaling, wheel rotation, wheelie physics, sprint boost dynamics, and fish-catching parabolic trajectories.",
+      "role": "specialist",
+      "tools": [
+        "read_file",
+        "create_file",
+        "replace_string_in_file",
+        "run_in_terminal"
+      ],
+      "handoffs": [
+        "scene-environment-director"
+      ]
+    },
+    {
+      "name": "scene-environment-director",
+      "description": "Creates coastal boardwalk parallax, Golden Hour / Day / Neon Night lighting moods, flocking seagulls, ocean waves, and WebAudio synthesizer bike bell.",
+      "role": "specialist",
+      "tools": [
+        "read_file",
+        "create_file",
+        "replace_string_in_file"
+      ],
+      "handoffs": [
+        "animation-qa-reviewer"
+      ]
+    },
+    {
+      "name": "animation-qa-reviewer",
+      "description": "Audits 60 FPS frame budget, Content-Security-Policy compliance, responsive layout, and multi-agent pipeline telemetry.",
+      "role": "reviewer",
+      "tools": [
+        "read_file",
+        "grep_search",
+        "get_errors"
+      ],
+      "handoffs": []
+    }
+  ],
+  "instructions": [
+    {
+      "name": "pelican-animation-standards",
+      "applyTo": "**/*.html",
+      "description": "Enforces 60 FPS zero-allocation rendering loop, strict CSP, four-tone feather shading, and synchronized crank-to-foot kinematics."
+    }
+  ],
+  "prompts": [
+    {
+      "name": "tune-pelican-choreography",
+      "description": "Prompt workflow to adjust pelican riding choreography, trick stunts, and coastal lighting palettes.",
+      "agent": "pelican-character-artist"
+    }
+  ],
+  "skills": [
+    {
+      "name": "pelican-svg-rigging",
+      "description": "Procedural rigging patterns for avian limb inverse kinematics, elastic gular pouch physics, and WebAudio procedural sound effects."
+    }
+  ],
+  "hooks": [
+    {
+      "event": "postToolUse",
+      "description": "Verify HTML syntax and Content-Security-Policy meta tag integrity after edits."
+    }
+  ]
+}

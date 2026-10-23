@@ -1,0 +1,208 @@
+initiative_id: pelican-bicycle-sim
+entries:
+- version: 1
+  date: '2026-10-23'
+  mode: init
+  trigger: FAF-analyst initial discovery
+  sources: []
+  changes:
+  - metric: business_value.financial_impact
+    from: null
+    to: 4
+    rationale: Eliminates manual keyframe animation costs by synthesizing procedural SVG/IK kinematics
+      directly in browser.
+  - metric: business_value.scale_of_impact
+    from: null
+    to: 4
+    rationale: Used as the canonical cross-model and cross-harness visual benchmark published on GitHub
+      Pages.
+  - metric: business_value.experience_impact
+    from: null
+    to: 4
+    rationale: Provides real-time interactive cadence, gear ratio, headwind, and skeletal X-ray inspection.
+  - metric: business_value.measurability
+    from: null
+    to: 5
+    rationale: 'Strict quantitative KPIs: 60 FPS frame budget (<16.6ms), 0px pedal detachment error, and
+      deterministic IK closure.'
+  - metric: strategic_alignment.strategic_fit
+    from: null
+    to: 4
+    rationale: Directly validates composable SDLC agent practices vs. context engineering meta-generators.
+  - metric: strategic_alignment.executive_sponsorship
+    from: null
+    to: 4
+    rationale: Sponsored by Principal AI Architecture & Visual Lab lead.
+  - metric: strategic_alignment.urgency
+    from: null
+    to: 4
+    rationale: Immediate benchmark release for side-by-side GitHub Pages evaluation.
+  - metric: strategic_alignment.differentiation_reuse
+    from: null
+    to: 4
+    rationale: Reusable 2-bone analytical IK + spring-damper secondary motion engine.
+  - metric: ai_suitability.task_ai_fit
+    from: null
+    to: 4
+    rationale: Multi-agent decomposition excels at coupling mathematical IK equations with structured
+      SVG/Canvas rendering.
+  - metric: ai_suitability.error_tolerance
+    from: null
+    to: 4
+    rationale: Visual inspection and automated Playwright/geometric assertions catch any kinematic drift.
+  - metric: ai_suitability.human_oversight
+    from: null
+    to: 5
+    rationale: Interactive telemetry HUD and X-ray skeletal overlay enable instant human verification.
+  - metric: technical_feasibility.integration_complexity
+    from: null
+    to: 5
+    rationale: Zero external backend dependencies; self-contained zero-CSP-violation HTML5/SVG/Canvas
+      bundle.
+  - metric: technical_feasibility.solution_complexity
+    from: null
+    to: 4
+    rationale: Requires analytical law-of-cosines 2-bone IK solver and Verlet/spring secondary motion
+      for gular pouch and feathers.
+  - metric: technical_feasibility.platform_maturity
+    from: null
+    to: 5
+    rationale: Runs natively on modern browsers and GitHub Pages static hosting.
+  - metric: technical_feasibility.delivery_skills
+    from: null
+    to: 4
+    rationale: Full TypeScript/HTML5/SVG procedural animation and kinematics expertise available.
+  - metric: risk_compliance.regulatory_exposure
+    from: null
+    to: 5
+    rationale: Zero regulatory exposure; pure procedural wildlife/bicycle physics simulation.
+  - metric: risk_compliance.responsible_ai
+    from: null
+    to: 5
+    rationale: No personal data or harmful outputs.
+  - metric: risk_compliance.data_privacy
+    from: null
+    to: 5
+    rationale: Zero PII or external telemetry collection.
+  - metric: risk_compliance.security_reputation
+    from: null
+    to: 5
+    rationale: Strict Content-Security-Policy with zero external scripts.
+  - metric: data_readiness.data_availability
+    from: null
+    to: 4
+    rationale: Biomechanical pelican limb ratios and road bicycle crank/frame geometry specified in PRD.
+  - metric: data_readiness.data_quality
+    from: null
+    to: 4
+    rationale: Exact parametric coordinate constraints verified.
+  - metric: data_readiness.data_access
+    from: null
+    to: 5
+    rationale: All parametric geometry is locally defined in specification.
+  - metric: data_readiness.data_governance
+    from: null
+    to: 5
+    rationale: MIT open-source license and full provenance ledger.
+  - metric: org_readiness.business_owner
+    from: null
+    to: 4
+    rationale: Visual Benchmark Lab lead accountable for acceptance.
+  - metric: org_readiness.stakeholder_availability
+    from: null
+    to: 4
+    rationale: Immediate interactive review in session.
+  - metric: org_readiness.user_readiness
+    from: null
+    to: 5
+    rationale: Published directly to GitHub.io with bilingual zh-CN/EN controls.
+  - metric: org_readiness.funding
+    from: null
+    to: 5
+    rationale: Fully funded within open-source lab budget.
+  - metric: org_readiness.run_ownership
+    from: null
+    to: 5
+    rationale: Automated CI/CD and GitHub Pages hosting.
+  gate_changes:
+  - gate: ai_unsuitable
+    from: not_triggered
+    to: cleared
+  - gate: regulatory_prohibition
+    from: not_triggered
+    to: cleared
+  - gate: no_executive_sponsor
+    from: not_triggered
+    to: cleared
+  - gate: no_data_available
+    from: not_triggered
+    to: cleared
+  - gate: no_data_access
+    from: not_triggered
+    to: cleared
+  - gate: no_business_owner
+    from: not_triggered
+    to: cleared
+  - gate: stakeholders_not_committed
+    from: not_triggered
+    to: cleared
+  - gate: no_run_owner
+    from: not_triggered
+    to: cleared
+  - gate: security_approval_missing
+    from: not_triggered
+    to: cleared
+  metric_scores:
+    business_value.financial_impact: 4
+    business_value.scale_of_impact: 4
+    business_value.experience_impact: 4
+    business_value.measurability: 5
+    strategic_alignment.strategic_fit: 4
+    strategic_alignment.executive_sponsorship: 4
+    strategic_alignment.urgency: 4
+    strategic_alignment.differentiation_reuse: 4
+    ai_suitability.task_ai_fit: 4
+    ai_suitability.error_tolerance: 4
+    ai_suitability.human_oversight: 5
+    technical_feasibility.integration_complexity: 5
+    technical_feasibility.solution_complexity: 4
+    technical_feasibility.platform_maturity: 5
+    technical_feasibility.delivery_skills: 4
+    risk_compliance.regulatory_exposure: 5
+    risk_compliance.responsible_ai: 5
+    risk_compliance.data_privacy: 5
+    risk_compliance.security_reputation: 5
+    data_readiness.data_availability: 4
+    data_readiness.data_quality: 4
+    data_readiness.data_access: 5
+    data_readiness.data_governance: 5
+    org_readiness.business_owner: 4
+    org_readiness.stakeholder_availability: 4
+    org_readiness.user_readiness: 5
+    org_readiness.funding: 5
+    org_readiness.run_ownership: 5
+  gate_status:
+    ai_unsuitable: cleared
+    regulatory_prohibition: cleared
+    no_executive_sponsor: cleared
+    no_data_available: cleared
+    no_data_access: cleared
+    no_business_owner: cleared
+    stakeholders_not_committed: cleared
+    no_run_owner: cleared
+    security_approval_missing: cleared
+  results:
+    value:
+      score: 78.0
+      band: High
+      confidence: 100.0
+    feasibility:
+      score: 90.9
+      band: High
+      confidence: 100.0
+    readiness:
+      score: 87.5
+      band: High
+      confidence: 100.0
+    tier: P1
+    provisional: false

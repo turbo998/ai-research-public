@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:;">
+<title>Microsoft AGENT-FORGE v0.3.0 Demo — 海岸木栈道鹈鹕骑车多智能体创意剧场 (Coastal Pelican Bicycle Studio)</title>
+<style>
+  :root {
+    --bg: #0b0914;
+    --panel: #151226;
+    --panel-alt: #1f1a38;
+    --border: #312954;
+    --accent: #f59e0b;
+    --accent-2: #ec4899;
+    --teal: #14b8a6;
+    --violet: #a855f7;
+    --text: #fdf4ff;
+    --muted: #a79bc2;
+    --mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px;
+    gap: 14px;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(21,18,38,0.95), rgba(49,41,84,0.75));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 18px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    background: rgba(245,158,11,0.16);
+    color: var(--accent);
+    border: 1px solid rgba(245,158,11,0.45);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .badge.pink {
+    background: rgba(236,72,153,0.16);
+    color: var(--accent-2);
+    border-color: rgba(236,72,153,0.45);
+  }
+  h1 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .sub {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  button, .btn {
+    background: var(--panel-alt);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  button:hover, .btn:hover {
+    border-color: var(--accent);
+    background: rgba(245,158,11,0.16);
+  }
+  button.active {
+    background: rgba(245,158,11,0.24);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .pipeline-ribbon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .pipe-step {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .pipe-step:hover, .pipe-step.selected {
+    border-color: var(--accent);
+    background: rgba(245,158,11,0.1);
+  }
+  .pipe-step .role {
+    font-family: var(--mono);
+    color: var(--accent);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+  }
+  .pipe-step .art {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 10.5px;
+  }
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 14px;
+    flex: 1;
+    min-height: 520px;
+  }
+  @media (max-width: 1024px) {
+    .main-grid { grid-template-columns: 1fr; }
+    .pipeline-ribbon { grid-template-columns: 1fr 1fr; }
+  }
+  .stage-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .canvas-wrap {
+    position: relative;
+    flex: 1;
+    min-height: 440px;
+    width: 100%;
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .hud-overlay {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .kpi-strip {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .kpi-pill {
+    background: rgba(11, 9, 20, 0.78);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+  .kpi-pill .lbl { color: var(--muted); font-size: 9.5px; display: block; }
+  .kpi-pill .val { color: var(--accent); font-weight: 700; font-size: 13px; }
+  .kpi-pill .val.pink { color: var(--accent-2); }
+  .kpi-pill .val.teal { color: var(--teal); }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .panel-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .panel-box-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ctrl-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .ctrl-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  .ctrl-head span.v {
+    font-family: var(--mono);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+  .stunt-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  .mood-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .doc-viewer {
+    background: #07050e;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.5;
+    color: #e9d5ff;
+    max-height: 195px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+  .formula-bar {
+    border-top: 1px solid var(--border);
+    background: #090712;
+    padding: 8px 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="badge">AGENT-FORGE v0.3.0 · CONTEXT PIPELINE</span>
+    <span class="badge pink">8 / 8 Files Validated · 0 Warnings</span>
+    <div>
+      <h1 id="t-title">AGENT-FORGE 多智能体版：加州海滨木栈道鹈鹕骑车互动剧场</h1>
+      <div class="sub">4 Custom Agents (Character · Kinematics · Environment · QA) · 3 Coastal Moods · Toss-a-Fish &amp; Wheelie Stunts · WebAudio Bell</div>
+    </div>
+  </div>
+  <div class="header-actions">
+    <button onclick="tossFish()">🐟 抛鱼投喂 Toss Sardine</button>
+    <button onclick="triggerWheelie()">🎪 翘头特技 Wheelie!</button>
+    <button onclick="ringBikeBell()">🔔 按响铜铃 Ding-Ding!</button>
+    <button id="btn-lang" onclick="toggleLang()">🌐 EN / 中文</button>
+    <a class="btn" href="pelican-arena.html">⚔️ 双插件同屏对比 Arena →</a>
+  </div>
+</header>
+
+<div class="pipeline-ribbon">
+  <div class="pipe-step selected" onclick="selectAgent(0)">
+    <div class="role"><span>1. pelican-character-artist</span><span>Plumage &amp; Pouch</span></div>
+    <div class="art">.github/agents/pelican-character-artist.agent.md</div>
+  </div>
+  <div class="pipe-step" onclick="selectAgent(1)">
+    <div class="role"><span>2. bicycle-kinematics-coder</span><span>Cruiser IK &amp; Stunts</span></div>
+    <div class="art">.github/agents/bicycle-kinematics-coder.agent.md</div>
+  </div>
+  <div class="pipe-step" onclick="selectAgent(2)">
+    <div class="role"><span>3. scene-environment-director</span><span>Coastal &amp; WebAudio</span></div>
+    <div class="art">.github/agents/scene-environment-director.agent.md</div>
+  </div>
+  <div class="pipe-step" onclick="selectAgent(3)">
+    <div class="role"><span>4. animation-qa-reviewer</span><span>8/8 Validated</span></div>
+    <div class="art">forge-plan.json + SKILL.md + hooks.json</div>
+  </div>
+</div>
+
+<div class="main-grid">
+  <div class="stage-card">
+    <div class="canvas-wrap">
+      <canvas id="stage"></canvas>
+      <div class="hud-overlay">
+        <div class="kpi-strip">
+          <div class="kpi-pill"><span class="lbl">SCENE ATMOSPHERE</span><span class="val" id="k-mood">Golden Sunset</span></div>
+          <div class="kpi-pill"><span class="lbl">SARDINES CAUGHT</span><span class="val pink" id="k-caught">3 🐟</span></div>
+          <div class="kpi-pill"><span class="lbl">STUNT STATE</span><span class="val teal" id="k-stunt">Cruising</span></div>
+          <div class="kpi-pill"><span class="lbl">FORGE VALIDATOR</span><span class="val" id="k-val">8/8 Passed (0 Warn)</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="formula-bar">
+      <span>AGENT-FORGE Pipeline: forge-greenfield-planner → forge-plan.json → 7 Writers → postGenerationValidateAndFix</span>
+      <span id="live-status">Active Layer Highlight: ALL AGENTS | Click stage to toss a sardine!</span>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="panel-box">
+      <div class="panel-box-title"><span id="p-ctrl-title">🎨 剧场氛围与特技控制台</span><span>Multi-Agent</span></div>
+
+      <div class="mood-grid">
+        <button id="m-day" onclick="setMood('day')">☀️ 晴空栈道</button>
+        <button id="m-sunset" class="active" onclick="setMood('sunset')">🌅 落日余晖</button>
+        <button id="m-night" onclick="setMood('night')">🌙 星夜车灯</button>
+      </div>
+
+      <div class="ctrl-row">
+        <div class="ctrl-head"><label id="l-cad">骑行节奏 Cadence (RPM)</label><span class="v" id="v-cad">76 RPM</span></div>
+        <input type="range" id="s-cad" min="20" max="130" value="76" oninput="updateControls()">
+      </div>
+
+      <div class="ctrl-row">
+        <div class="ctrl-head"><label id="l-breeze">海风与海鸥 Sea Breeze</label><span class="v" id="v-breeze">16 kt</span></div>
+        <input type="range" id="s-breeze" min="0" max="45" value="16" oninput="updateControls()">
+      </div>
+
+      <div class="stunt-grid">
+        <button onclick="tossFish()">🐟 抛沙丁鱼投喂</button>
+        <button onclick="triggerWheelie()">🎪 翘前轮 Wheelie</button>
+        <button onclick="triggerSprint()">🚀 扇翅加速冲刺</button>
+        <button onclick="ringBikeBell()">🔔 清脆铜车铃</button>
+      </div>
+    </div>
+
+    <div class="panel-box" style="flex:1">
+      <div class="panel-box-title"><span id="p-doc-title">📦 AGENT-FORGE `.github/` 制品检视器</span><span id="p-doc-tag">Agent 1</span></div>
+      <div class="doc-viewer" id="doc-box"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const AGENT_DOCS = [
+  {
+    tag: "pelican-character-artist.agent.md",
+    text: `---
+name: pelican-character-artist
+description: "Designs multi-layered brown/white pelican plumage, articulated beak, elastic gular pouch, expressive eye blink, and secondary feather motion."
+tools: [read, edit, search]
+handoffs:
+  - label: "Hand off to Bicycle Kinematics Coder"
+    agent: bicycle-kinematics-coder
+---
+<!-- Generated by AGENT-FORGE -->
+• California Brown Pelican four-tone plumage (umber mantle, golden crown, coral webbed feet)
+• Red-tipped hooked beak + gulping throat pouch when catching tossed sardines
+• Aviator cap & scarf fluttering in the coastal breeze`
+  },
+  {
+    tag: "bicycle-kinematics-coder.agent.md",
+    text: `---
+name: bicycle-kinematics-coder
+description: "Implements closed-chain crankset pedaling, wheel rotation, wheelie physics, sprint boost dynamics, and fish-catching parabolic trajectories."
+tools: [read, edit, execute, search]
+handoffs:
+  - label: "Hand off to Scene Environment Director"
+    agent: scene-environment-director
+---
+<!-- Generated by AGENT-FORGE -->
+• Vintage Mint-Turquoise Coastal Cruiser frame with wicker front basket & brass bell
+• Closed-loop 2-bone analytical IK keeping webbed feet anchored on pedals
+• Spring-damped Wheelie pitch physics (0° -> 22°) & parabolic sardine catch ballistics`
+  },
+  {
+    tag: "scene-environment-director.agent.md",
+    text: `---
+name: scene-environment-director
+description: "Creates coastal boardwalk parallax, Golden Hour / Day / Neon Night lighting moods, flocking seagulls, ocean waves, and WebAudio synthesizer bike bell."
+tools: [read, edit, search]
+handoffs:
+  - label: "Hand off to Animation QA Reviewer"
+    agent: animation-qa-reviewer
+---
+<!-- Generated by AGENT-FORGE -->
+• 3 Coastal Atmospheres: Sunny Pier, Golden Sunset, Starlight Night Ride (with headlamp beam)
+• Multi-layer parallax: distant lighthouse, ocean waves, wooden boardwalk planks & railing
+• Pure WebAudio synthesizer for brass bike bell (1568Hz + 2349Hz) & fish gulp sound`
+  },
+  {
+    tag: "forge validate --no-fix (8/8 Passed)",
+    text: `$ forge validate --no-fix
+- Validating customization files...
+✓ .github/agents/pelican-character-artist.agent.md
+✓ .github/agents/bicycle-kinematics-coder.agent.md
+✓ .github/agents/scene-environment-director.agent.md
+✓ .github/agents/animation-qa-reviewer.agent.md
+✓ .github/instructions/pelican-animation-standards.instructions.md
+✓ .github/prompts/tune-pelican-choreography.prompt.md
+✓ .github/skills/pelican-svg-rigging/SKILL.md
+✓ .github/hooks/hooks.json
+
+Summary: All checks passed (8 files validated, 0 warnings)`
+  }
+];
+
+let lang = 'zh';
+let paused = false;
+let state = {
+  mood: 'sunset',
+  cadence: 76,
+  breeze: 16,
+  crankAngle: 0.8,
+  wheelAngle: 0,
+  boardwalkOffset: 0,
+  wavePhase: 0,
+  wheeliePitch: 0,
+  wheelieVel: 0,
+  sprintTimer: 0,
+  pouchGulp: 0,
+  sardinesCaught: 3,
+  flyingFish: [],
+  bellRings: [],
+  seagulls: [
+    { x: 180, y: 85, s: 0.9, phase: 0.2 },
+    { x: 460, y: 62, s: 0.7, phase: 1.7 },
+    { x: 720, y: 105, s: 0.8, phase: 3.1 }
+  ],
+  time: 0
+};
+
+function selectAgent(idx) {
+  document.querySelectorAll('.pipe-step').forEach((el, i) => {
+    el.classList.toggle('selected', i === idx);
+  });
+  document.getElementById('p-doc-tag').textContent = AGENT_DOCS[idx].tag;
+  document.getElementById('doc-box').textContent = AGENT_DOCS[idx].text;
+}
+selectAgent(0);
+
+function setMood(m) {
+  state.mood = m;
+  ['day', 'sunset', 'night'].forEach(k => {
+    document.getElementById('m-' + k).classList.toggle('active', k === m);
+  });
+  const labels = { day: 'Sunny Pier', sunset: 'Golden Sunset', night: 'Starlight Night' };
+  document.getElementById('k-mood').textContent = labels[m];
+}
+
+function updateControls() {
+  state.cadence = Number(document.getElementById('s-cad').value);
+  state.breeze = Number(document.getElementById('s-breeze').value);
+  document.getElementById('v-cad').textContent = `${state.cadence} RPM`;
+  document.getElementById('v-breeze').textContent = `${state.breeze} kt`;
+}
+
+// WebAudio Procedural Sound Effects (Zero external audio assets)
+let audioCtx = null;
+function ensureAudio() {
+  if (!audioCtx && (window.AudioContext || window.webkitAudioContext)) {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    audioCtx = new AC();
+  }
+  if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+}
+
+function ringBikeBell() {
+  state.bellRings.push({ r: 6, alpha: 1.0 });
+  try {
+    ensureAudio();
+    if (!audioCtx) return;
+    [0, 0.11].forEach(delay => {
+      const now = audioCtx.currentTime + delay;
+      const osc1 = audioCtx.createOscillator();
+      const osc2 = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc1.type = 'sine';
+      osc2.type = 'triangle';
+      osc1.frequency.setValueAtTime(1568, now);
+      osc2.frequency.setValueAtTime(2349, now);
+      gain.gain.setValueAtTime(0.14, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+      osc1.connect(gain);
+      osc2.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc1.start(now);
+      osc2.start(now);
+      osc1.stop(now + 0.46);
+      osc2.stop(now + 0.46);
+    });
+  } catch (_) {}
+}
+
+function playGulpSound() {
+  try {
+    ensureAudio();
+    if (!audioCtx) return;
+    const now = audioCtx.currentTime;
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(280, now);
+    osc.frequency.exponentialRampToValueAtTime(620, now + 0.14);
+    gain.gain.setValueAtTime(0.12, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.16);
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start(now);
+    osc.stop(now + 0.17);
+  } catch (_) {}
+}
+
+function tossFish(targetX, targetY) {
+  const w = canvas.clientWidth || 800;
+  const h = canvas.clientHeight || 460;
+  state.flyingFish.push({
+    x: targetX || (w * 0.88),
+    y: targetY || (h * 0.55),
+    vx: -340,
+    vy: -250,
+    rot: 0
+  });
+  document.getElementById('k-stunt').textContent = 'Catching Fish!';
+}
+
+function triggerWheelie() {
+  state.wheelieVel = -3.6;
+  document.getElementById('k-stunt').textContent = 'Wheelie Stunt!';
+}
+
+function triggerSprint() {
+  state.sprintTimer = 2.2;
+  document.getElementById('k-stunt').textContent = 'Sprint Boost!';
+}
+
+function toggleLang() {
+  lang = lang === 'zh' ? 'en' : 'zh';
+  document.getElementById('t-title').textContent = lang === 'zh'
+    ? 'AGENT-FORGE 多智能体版：加州海滨木栈道鹈鹕骑车互动剧场'
+    : 'AGENT-FORGE Multi-Agent Studio: Coastal Boardwalk Pelican Cyclist';
+  document.getElementById('p-ctrl-title').textContent = lang === 'zh'
+    ? '🎨 剧场氛围与特技控制台'
+    : '🎨 Coastal Mood & Stunt Controls';
+  document.getElementById('p-doc-title').textContent = lang === 'zh'
+    ? '📦 AGENT-FORGE .github/ 制品检视器'
+    : '📦 AGENT-FORGE .github/ Artifact Viewer';
+}
+
+window.addEventListener('message', (ev) => {
+  if (!ev.data || typeof ev.data !== 'object') return;
+  if (ev.data.type === 'arena-sync') {
+    if (typeof ev.data.cadence === 'number') document.getElementById('s-cad').value = ev.data.cadence;
+    if (typeof ev.data.wind === 'number') document.getElementById('s-breeze').value = ev.data.wind;
+    if (typeof ev.data.fish === 'number' && ev.data.fish > state.sardinesCaught) tossFish();
+    if (typeof ev.data.paused === 'boolean') paused = ev.data.paused;
+    updateControls();
+  }
+});
+
+function solveTwoBoneIK(hx, hy, px, py, L1, L2) {
+  const dx = px - hx;
+  const dy = py - hy;
+  const rawDist = Math.hypot(dx, dy);
+  const eps = 0.001;
+  const d = Math.min(Math.max(rawDist, Math.abs(L1 - L2) + eps), L1 + L2 - eps);
+  const cosAlpha = (L1 * L1 + d * d - L2 * L2) / (2 * L1 * d);
+  const alpha = Math.acos(Math.min(1, Math.max(-1, cosAlpha)));
+  const beta = Math.atan2(dy, dx);
+  const kneeAngle = beta - alpha;
+  return {
+    kx: hx + L1 * Math.cos(kneeAngle),
+    ky: hy + L1 * Math.sin(kneeAngle),
+    fx: px,
+    fy: py
+  };
+}
+
+const canvas = document.getElementById('stage');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+canvas.addEventListener('click', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  tossFish(e.clientX - rect.left, e.clientY - rect.top);
+});
+
+function drawCruiserWheel(cx, cy, r, angle) {
+  ctx.save();
+  ctx.translate(cx, cy);
+
+  // Cream whitewall cruiser tire
+  ctx.beginPath();
+  ctx.arc(0, 0, r, 0, Math.PI * 2);
+  ctx.strokeStyle = '#1e293b';
+  ctx.lineWidth = 11;
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(0, 0, r - 3, 0, Math.PI * 2);
+  ctx.strokeStyle = '#fef3c7';
+  ctx.lineWidth = 4;
+  ctx.stroke();
+
+  // Chrome rim
+  ctx.beginPath();
+  ctx.arc(0, 0, r - 7, 0, Math.PI * 2);
+  ctx.strokeStyle = '#cbd5e1';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+
+  // Spokes
+  ctx.strokeStyle = 'rgba(248, 250, 252, 0.5)';
+  ctx.lineWidth = 1.2;
+  for (let i = 0; i < 16; i++) {
+    const a = angle + (i * Math.PI * 2) / 16;
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo((r - 8) * Math.cos(a), (r - 8) * Math.sin(a));
+    ctx.stroke();
+  }
+
+  ctx.fillStyle = '#14b8a6';
+  ctx.beginPath();
+  ctx.arc(0, 0, 7, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+}
+
+let lastTs = performance.now();
+
+function render(now) {
+  const dt = Math.min(0.05, (now - lastTs) / 1000);
+  lastTs = now;
+
+  const w = canvas.clientWidth;
+  const h = canvas.clientHeight;
+  const cx = w * 0.48;
+  const groundY = Math.min(h - 50, h * 0.83);
+
+  if (!paused) {
+    state.time += dt;
+    const boostMult = state.sprintTimer > 0 ? 1.55 : 1.0;
+    if (state.sprintTimer > 0) state.sprintTimer = Math.max(0, state.sprintTimer - dt);
+
+    const effCadence = state.cadence * boostMult;
+    const omegaCrank = (effCadence / 60) * Math.PI * 2;
+    state.crankAngle = (state.crankAngle + omegaCrank * dt) % (Math.PI * 2);
+    state.wheelAngle = (state.wheelAngle + omegaCrank * 2.3 * dt) % (Math.PI * 2);
+    state.boardwalkOffset = (state.boardwalkOffset + omegaCrank * 145 * dt) % 48;
+    state.wavePhase += dt * 1.8;
+
+    // Wheelie spring physics
+    const kPitch = 28;
+    const cPitch = 6.5;
+    const aPitch = -kPitch * state.wheeliePitch - cPitch * state.wheelieVel;
+    state.wheelieVel += aPitch * dt;
+    state.wheeliePitch = Math.min(0, Math.max(-0.42, state.wheeliePitch + state.wheelieVel * dt));
+    if (Math.abs(state.wheeliePitch) < 0.01 && state.sprintTimer <= 0 && state.flyingFish.length === 0) {
+      document.getElementById('k-stunt').textContent = 'Cruising';
+    }
+
+    if (state.pouchGulp > 0) state.pouchGulp = Math.max(0, state.pouchGulp - dt * 2.5);
+
+    // Update flying sardines toward the pelican's beak
+    const beakTargetX = cx + 145;
+    const beakTargetY = groundY - 245 + state.wheeliePitch * 120;
+    for (let i = state.flyingFish.length - 1; i >= 0; i--) {
+      const f = state.flyingFish[i];
+      f.x += (beakTargetX - f.x) * 4.2 * dt + f.vx * 0.25 * dt;
+      f.y += f.vy * dt;
+      f.vy += 480 * dt;
+      f.rot += 6 * dt;
+      if (Math.hypot(f.x - beakTargetX, f.y - beakTargetY) < 42 || f.x < beakTargetX) {
+        state.flyingFish.splice(i, 1);
+        state.sardinesCaught++;
+        state.pouchGulp = 1.0;
+        document.getElementById('k-caught').textContent = `${state.sardinesCaught} 🐟`;
+        playGulpSound();
+      }
+    }
+
+    for (let i = state.bellRings.length - 1; i >= 0; i--) {
+      state.bellRings[i].r += 85 * dt;
+      state.bellRings[i].alpha -= 1.4 * dt;
+      if (state.bellRings[i].alpha <= 0) state.bellRings.splice(i, 1);
+    }
+  }
+
+  // 1. Sky & Coastal Atmosphere (scene-environment-director)
+  const skyGrad = ctx.createLinearGradient(0, 0, 0, groundY);
+  if (state.mood === 'day') {
+    skyGrad.addColorStop(0, '#0284c7');
+    skyGrad.addColorStop(0.65, '#38bdf8');
+    skyGrad.addColorStop(1, '#bae6fd');
+  } else if (state.mood === 'sunset') {
+    skyGrad.addColorStop(0, '#1e1b4b');
+    skyGrad.addColorStop(0.45, '#7e22ce');
+    skyGrad.addColorStop(0.78, '#f97316');
+    skyGrad.addColorStop(1, '#fde047');
+  } else {
+    skyGrad.addColorStop(0, '#030712');
+    skyGrad.addColorStop(0.6, '#0f172a');
+    skyGrad.addColorStop(1, '#1e1b4b');
+  }
+  ctx.fillStyle = skyGrad;
+  ctx.fillRect(0, 0, w, groundY);
+
+  // Sun / Moon orb
+  const sunX = w * 0.78;
+  const sunY = state.mood === 'sunset' ? groundY - 95 : groundY - 190;
+  ctx.save();
+  if (state.mood === 'night') {
+    // Twinkling stars
+    ctx.fillStyle = '#fef9c3';
+    for (let s = 0; s < 28; s++) {
+      const sx = (s * 97) % w;
+      const sy = (s * 43) % (groundY - 120);
+      const r = 1 + 0.8 * Math.sin(state.time * 3 + s);
+      ctx.beginPath(); ctx.arc(sx, sy, r, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.fillStyle = '#fef08a';
+    ctx.beginPath(); ctx.arc(sunX, sunY, 26, 0, Math.PI * 2); ctx.fill();
+  } else {
+    const sunRadius = state.mood === 'sunset' ? 48 : 34;
+    ctx.fillStyle = state.mood === 'sunset' ? 'rgba(251, 191, 36, 0.9)' : '#fef08a';
+    ctx.beginPath(); ctx.arc(sunX, sunY, sunRadius, 0, Math.PI * 2); ctx.fill();
+  }
+  ctx.restore();
+
+  // Seagulls flocking
+  ctx.strokeStyle = state.mood === 'night' ? '#94a3b8' : '#1e293b';
+  ctx.lineWidth = 2;
+  state.seagulls.forEach(g => {
+    const gx = ((g.x - state.time * (18 + state.breeze * 0.7) * g.s) % (w + 80) + (w + 80)) % (w + 80) - 40;
+    const gy = g.y + Math.sin(state.time * 3 + g.phase) * 8;
+    const wingY = Math.sin(state.time * 7 + g.phase) * 7 * g.s;
+    ctx.beginPath();
+    ctx.moveTo(gx - 12 * g.s, gy + wingY);
+    ctx.quadraticCurveTo(gx - 5 * g.s, gy - 5 * g.s, gx, gy);
+    ctx.quadraticCurveTo(gx + 5 * g.s, gy - 5 * g.s, gx + 12 * g.s, gy + wingY);
+    ctx.stroke();
+  });
+
+  // Ocean Horizon & Rolling Waves
+  const oceanTop = groundY - 58;
+  ctx.fillStyle = state.mood === 'day' ? '#0369a1' : (state.mood === 'sunset' ? '#3b0764' : '#090d16');
+  ctx.fillRect(0, oceanTop, w, 58);
+
+  for (let layer = 0; layer < 2; layer++) {
+    ctx.fillStyle = layer === 0
+      ? (state.mood === 'sunset' ? 'rgba(249, 115, 22, 0.28)' : 'rgba(56, 189, 248, 0.25)')
+      : (state.mood === 'sunset' ? 'rgba(236, 72, 153, 0.22)' : 'rgba(20, 184, 166, 0.25)');
+    ctx.beginPath();
+    ctx.moveTo(0, groundY);
+    for (let x = 0; x <= w; x += 24) {
+      const wy = oceanTop + 16 + layer * 16 + Math.sin(x * 0.025 + state.wavePhase * (1 + layer * 0.4)) * 6;
+      ctx.lineTo(x, wy);
+    }
+    ctx.lineTo(w, groundY);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  // Wooden Boardwalk Railing & Planks
+  ctx.strokeStyle = state.mood === 'night' ? '#334155' : '#78350f';
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.moveTo(0, groundY - 34);
+  ctx.lineTo(w, groundY - 34);
+  ctx.stroke();
+
+  for (let x = -state.boardwalkOffset * 2; x < w + 60; x += 96) {
+    ctx.fillStyle = state.mood === 'night' ? '#1e293b' : '#451a03';
+    ctx.fillRect(x, groundY - 38, 8, 38);
+  }
+
+  ctx.fillStyle = state.mood === 'night' ? '#0f172a' : '#271206';
+  ctx.fillRect(0, groundY, w, h - groundY);
+  ctx.strokeStyle = state.mood === 'sunset' ? '#f59e0b' : '#14b8a6';
+  ctx.lineWidth = 3;
+  ctx.beginPath(); ctx.moveTo(0, groundY); ctx.lineTo(w, groundY); ctx.stroke();
+
+  // Moving wooden plank seams
+  ctx.strokeStyle = 'rgba(148, 163, 184, 0.22)';
+  ctx.lineWidth = 2;
+  for (let x = -state.boardwalkOffset; x < w; x += 48) {
+    ctx.beginPath();
+    ctx.moveTo(x, groundY + 2);
+    ctx.lineTo(x - 18, h);
+    ctx.stroke();
+  }
+
+  // 2. Bicycle & Pelican Root Transform (with Wheelie Pitch around Rear Axle)
+  const wheelR = 66;
+  const wheelY = groundY - wheelR;
+  const rearWheelX = cx - 118;
+  const frontWheelX = cx + 124;
+
+  ctx.save();
+  ctx.translate(rearWheelX, wheelY);
+  ctx.rotate(state.wheeliePitch);
+  ctx.translate(-rearWheelX, -wheelY);
+
+  const bbX = cx - 22;
+  const bbY = wheelY + 6;
+  const crankR = 34;
+  const seatX = cx - 64;
+  const seatY = wheelY - 96;
+  const headTopX = cx + 78;
+  const headTopY = wheelY - 102;
+  const headBotX = cx + 92;
+  const headBotY = wheelY - 62;
+  const handlebarX = cx + 62;
+  const handlebarY = wheelY - 136;
+
+  const bodyBob = Math.sin(state.crankAngle * 2) * 3.8;
+  const hipX = seatX + 6;
+  const hipY = seatY - 14 + bodyBob;
+
+  const pRx = bbX + crankR * Math.cos(state.crankAngle + Math.PI);
+  const pRy = bbY + crankR * Math.sin(state.crankAngle + Math.PI);
+  const pLx = bbX + crankR * Math.cos(state.crankAngle);
+  const pLy = bbY + crankR * Math.sin(state.crankAngle);
+
+  const ikRight = solveTwoBoneIK(hipX, hipY, pRx, pRy, 68, 72);
+  const ikLeft = solveTwoBoneIK(hipX, hipY, pLx, pLy, 68, 72);
+
+  // Back Leg
+  ctx.strokeStyle = '#92400e';
+  ctx.lineWidth = 11;
+  ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(hipX, hipY); ctx.lineTo(ikRight.kx, ikRight.ky); ctx.stroke();
+  ctx.strokeStyle = '#b45309';
+  ctx.lineWidth = 6.5;
+  ctx.beginPath(); ctx.moveTo(ikRight.kx, ikRight.ky); ctx.lineTo(ikRight.fx, ikRight.fy); ctx.stroke();
+  ctx.fillStyle = '#ea580c';
+  ctx.beginPath();
+  ctx.moveTo(ikRight.fx - 6, ikRight.fy - 3);
+  ctx.lineTo(ikRight.fx + 18, ikRight.fy - 5);
+  ctx.lineTo(ikRight.fx + 22, ikRight.fy + 3);
+  ctx.lineTo(ikRight.fx - 8, ikRight.fy + 4);
+  ctx.closePath(); ctx.fill();
+
+  // Cruiser Wheels
+  drawCruiserWheel(rearWheelX, wheelY, wheelR, state.wheelAngle);
+  drawCruiserWheel(frontWheelX, wheelY, wheelR, state.wheelAngle);
+
+  // Mint-Turquoise Vintage Cruiser Frame (bicycle-kinematics-coder)
+  ctx.strokeStyle = '#14b8a6';
+  ctx.lineWidth = 7.5;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+
+  ctx.beginPath();
+  ctx.moveTo(rearWheelX, wheelY);
+  ctx.lineTo(bbX, bbY);
+  ctx.lineTo(seatX, seatY);
+  ctx.lineTo(rearWheelX, wheelY);
+  ctx.stroke();
+
+  // Curved cruiser top tube & down tube
+  ctx.beginPath();
+  ctx.moveTo(seatX, seatY);
+  ctx.quadraticCurveTo(cx + 15, seatY - 12, headTopX, headTopY);
+  ctx.lineTo(headBotX, headBotY);
+  ctx.quadraticCurveTo(cx + 25, bbY - 10, bbX, bbY);
+  ctx.stroke();
+
+  // Front fork
+  ctx.beginPath();
+  ctx.moveTo(headBotX, headBotY);
+  ctx.lineTo(frontWheelX, wheelY);
+  ctx.stroke();
+
+  // Chrome Handlebars & Brass Bell
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.lineWidth = 5;
+  ctx.beginPath();
+  ctx.moveTo(headTopX, headTopY);
+  ctx.lineTo(handlebarX + 14, handlebarY);
+  ctx.lineTo(handlebarX - 10, handlebarY + 2);
+  ctx.stroke();
+
+  // Brass Bell + Sound Ring Waves
+  const bellX = handlebarX + 8;
+  const bellY = handlebarY - 7;
+  ctx.fillStyle = '#fbbf24';
+  ctx.beginPath(); ctx.arc(bellX, bellY, 6, 0, Math.PI * 2); ctx.fill();
+  state.bellRings.forEach(ring => {
+    ctx.strokeStyle = `rgba(251, 191, 36, ${Math.max(0, ring.alpha)})`;
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(bellX, bellY, ring.r, 0, Math.PI * 2); ctx.stroke();
+  });
+
+  // Wicker Front Basket with Caught Sardines
+  const basketX = headTopX + 8;
+  const basketY = headTopY - 18;
+  ctx.fillStyle = '#d97706';
+  ctx.strokeStyle = '#92400e';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.roundRect(basketX, basketY, 34, 26, 4);
+  ctx.fill();
+  ctx.stroke();
+
+  // Little fish tails in the basket
+  ctx.fillStyle = '#38bdf8';
+  for (let i = 0; i < Math.min(3, state.sardinesCaught); i++) {
+    ctx.beginPath();
+    ctx.arc(basketX + 9 + i * 8, basketY - 2, 4, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Night Headlamp Beam Cone
+  if (state.mood === 'night') {
+    const beamGrad = ctx.createLinearGradient(basketX + 34, basketY + 12, basketX + 340, basketY + 110);
+    beamGrad.addColorStop(0, 'rgba(254, 240, 138, 0.55)');
+    beamGrad.addColorStop(1, 'rgba(254, 240, 138, 0)');
+    ctx.fillStyle = beamGrad;
+    ctx.beginPath();
+    ctx.moveTo(basketX + 34, basketY + 12);
+    ctx.lineTo(basketX + 360, basketY - 25);
+    ctx.lineTo(basketX + 360, basketY + 135);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  // Brooks Leather Saddle
+  ctx.fillStyle = '#78350f';
+  ctx.beginPath();
+  ctx.roundRect(seatX - 24, seatY - 8, 44, 12, 6);
+  ctx.fill();
+
+  // 3. California Brown Pelican Character (pelican-character-artist)
+  // Fluttering Red Aviator Scarf
+  ctx.strokeStyle = '#f43f5e';
+  ctx.lineWidth = 8;
+  ctx.lineCap = 'round';
+  ctx.beginPath();
+  ctx.moveTo(hipX + 46, hipY - 58);
+  ctx.quadraticCurveTo(
+    hipX - 10,
+    hipY - 72 + Math.sin(state.time * 12) * 10,
+    hipX - 58,
+    hipY - 56 + Math.cos(state.time * 10) * 12
+  );
+  ctx.stroke();
+
+  // Tail & Plump Body
+  ctx.fillStyle = '#57534e';
+  ctx.beginPath();
+  ctx.moveTo(hipX - 28, hipY - 12);
+  ctx.lineTo(hipX - 70, hipY - 28);
+  ctx.lineTo(hipX - 58, hipY - 4);
+  ctx.closePath();
+  ctx.fill();
+
+  ctx.fillStyle = '#f5f5f4';
+  ctx.strokeStyle = '#78716c';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.ellipse(hipX + 8, hipY - 35, 49, 34, -0.2, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.stroke();
+
+  // Warm Umber Mantle Feathers
+  ctx.fillStyle = '#78350f';
+  ctx.beginPath();
+  ctx.ellipse(hipX + 4, hipY - 47, 39, 18, -0.22, Math.PI * 0.88, Math.PI * 2.12);
+  ctx.fill();
+
+  // Articulated S-Neck & Head
+  const shoulderX = hipX + 42;
+  const shoulderY = hipY - 54;
+  const headX = hipX + 70;
+  const headY = hipY - 130 + bodyBob * 0.9;
+
+  ctx.strokeStyle = '#fafaf9';
+  ctx.lineWidth = 22;
+  ctx.beginPath();
+  ctx.moveTo(shoulderX, shoulderY);
+  ctx.bezierCurveTo(shoulderX - 18, shoulderY - 32, headX - 24, headY + 26, headX, headY);
+  ctx.stroke();
+
+  ctx.strokeStyle = '#57534e';
+  ctx.lineWidth = 7.5;
+  ctx.beginPath();
+  ctx.moveTo(shoulderX - 7, shoulderY - 4);
+  ctx.bezierCurveTo(shoulderX - 24, shoulderY - 32, headX - 30, headY + 26, headX - 8, headY);
+  ctx.stroke();
+
+  // Golden Crown Head & Aviator Cap
+  ctx.fillStyle = '#fef08a';
+  ctx.beginPath();
+  ctx.arc(headX + 2, headY - 2, 18.5, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Leather Aviator Cap & Goggle Strap
+  ctx.fillStyle = '#92400e';
+  ctx.beginPath();
+  ctx.arc(headX, headY - 6, 18, Math.PI * 0.95, Math.PI * 2.05);
+  ctx.fill();
+
+  // Hooked Beak & Gulping Gular Pouch
+  const beakOpen = state.flyingFish.length > 0 ? 18 : 0;
+  const beakTipX = headX + 108;
+  const beakTipY = headY + 3;
+  const pouchBulge = 28 + Math.sin(state.crankAngle * 2) * 5 + state.pouchGulp * 22;
+
+  const pouchGrad = ctx.createLinearGradient(headX + 12, headY + 4, headX + 48, headY + pouchBulge);
+  pouchGrad.addColorStop(0, '#fb923c');
+  pouchGrad.addColorStop(1, '#e11d48');
+  ctx.fillStyle = pouchGrad;
+  ctx.beginPath();
+  ctx.moveTo(headX + 12, headY + 5);
+  ctx.quadraticCurveTo(headX + 54, headY + pouchBulge + 16, beakTipX - 4, beakTipY + 4 + beakOpen);
+  ctx.lineTo(headX + 12, headY + 5);
+  ctx.fill();
+
+  // Upper Mandible
+  ctx.fillStyle = '#facc15';
+  ctx.beginPath();
+  ctx.moveTo(headX + 10, headY - 9);
+  ctx.lineTo(beakTipX, beakTipY - 4 - beakOpen * 0.4);
+  ctx.lineTo(beakTipX + 5, beakTipY + 6 - beakOpen * 0.4);
+  ctx.lineTo(beakTipX - 5, beakTipY + 2 - beakOpen * 0.4);
+  ctx.lineTo(headX + 10, headY + 5);
+  ctx.closePath();
+  ctx.fill();
+
+  // Expressive Eye
+  ctx.fillStyle = '#0f172a';
+  ctx.beginPath();
+  ctx.arc(headX + 8, headY - 5, 4.3, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = '#ffffff';
+  ctx.beginPath();
+  ctx.arc(headX + 9.5, headY - 6.5, 1.6, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Front Crank & Left Leg
+  ctx.strokeStyle = '#fef3c7';
+  ctx.lineWidth = 4.5;
+  ctx.beginPath(); ctx.moveTo(bbX, bbY); ctx.lineTo(pLx, pLy); ctx.stroke();
+
+  ctx.strokeStyle = '#d97706';
+  ctx.lineWidth = 11;
+  ctx.beginPath(); ctx.moveTo(hipX, hipY); ctx.lineTo(ikLeft.kx, ikLeft.ky); ctx.stroke();
+  ctx.strokeStyle = '#f59e0b';
+  ctx.lineWidth = 6.5;
+  ctx.beginPath(); ctx.moveTo(ikLeft.kx, ikLeft.ky); ctx.lineTo(ikLeft.fx, ikLeft.fy); ctx.stroke();
+  ctx.fillStyle = '#fb923c';
+  ctx.beginPath();
+  ctx.moveTo(ikLeft.fx - 6, ikLeft.fy - 3);
+  ctx.lineTo(ikLeft.fx + 18, ikLeft.fy - 5);
+  ctx.lineTo(ikLeft.fx + 22, ikLeft.fy + 3);
+  ctx.lineTo(ikLeft.fx - 8, ikLeft.fy + 4);
+  ctx.closePath(); ctx.fill();
+
+  // Layered Primary Wing Reaching to Handlebar
+  const wingFlap = (state.sprintTimer > 0 ? Math.sin(state.time * 28) * 14 : Math.sin(state.crankAngle) * 4);
+  ctx.fillStyle = '#d6d3d1';
+  ctx.strokeStyle = '#57534e';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(hipX + 18, hipY - 46);
+  ctx.quadraticCurveTo(hipX + 58, hipY - 20 + wingFlap, handlebarX + 4, handlebarY - 2);
+  ctx.quadraticCurveTo(hipX + 48, hipY - 56 + wingFlap, hipX + 18, hipY - 46);
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.restore();
+
+  // Render Flying Sardines in Air
+  state.flyingFish.forEach(f => {
+    ctx.save();
+    ctx.translate(f.x, f.y);
+    ctx.rotate(f.rot);
+    ctx.fillStyle = '#38bdf8';
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 14, 6, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(12, 0);
+    ctx.lineTo(22, -7);
+    ctx.lineTo(22, 7);
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  });
+
+  requestAnimationFrame(render);
+}
+requestAnimationFrame(render);
+</script>
+</body>
+</html>
