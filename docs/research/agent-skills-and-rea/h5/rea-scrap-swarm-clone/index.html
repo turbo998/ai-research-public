@@ -778,6 +778,7 @@
           <button type="button" class="act-btn" data-ast="hud">hud.ts</button>
           <button type="button" class="act-btn" data-ast="camera">camera.ts</button>
           <button type="button" class="act-btn" data-ast="particles">particles.ts</button>
+          <button type="button" class="act-btn" data-ast="loot">loot.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -825,6 +826,10 @@
           <div class="patch-row">
             <div class="patch-row-head"><span>shelter.empDamage (避难所磁暴脉冲伤害)</span><strong id="valEmpDmg">35 DMG</strong></div>
             <input type="range" id="patchEmpDmg" min="15" max="120" step="5" value="35" />
+          </div>
+          <div class="patch-row">
+            <div class="patch-row-head"><span>player.dashDistancePx (推进冲刺位移跨度)</span><strong id="valDashDist">95 px</strong></div>
+            <input type="range" id="patchDashDist" min="55" max="220" step="15" value="95" />
           </div>
         </div>
       </div>
@@ -1731,6 +1736,14 @@ export function emitBrassShellCasing(pool: ShellCasing[], origin: Vec2, rng: () 
   });
 }`,
       },
+      loot: {
+        minified: `function Lt(e,t,n){const r=n()<.28;e.push({x:t.x,y:t.y,core:r,val:t.kind==="brute"?18:10})}`,
+        decompiled: `// Reconstructed Weighted Scrap Alloy & Overdrive Core Loot Table (src/game/loot.ts)
+export function rollScrapDropTable(orbs: ScrapOrb[], enemy: EnemyEntity, rng: () => number): void {
+  const isOverdriveCore = rng() < 0.28;
+  orbs.push({ x: enemy.x, y: enemy.y, core: isOverdriveCore, val: enemy.kind === "brute" ? 18 : 10 });
+}`,
+      },
     };
 
     // =========================================================================
@@ -1986,6 +1999,7 @@ export function emitBrassShellCasing(pool: ShellCasing[], origin: Vec2, rng: () 
       overdriveDuration: 6.0,
       barrageIntervalSec: 2.6,
       empDamage: 35,
+      dashDistancePx: 95,
     };
 
     document.getElementById("patchSpeed").addEventListener("input", (e) => {
@@ -2038,6 +2052,14 @@ export function emitBrassShellCasing(pool: ShellCasing[], origin: Vec2, rng: () 
         livePatch.empDamage = Number(e.target.value);
         document.getElementById("valEmpDmg").textContent = livePatch.empDamage + " DMG";
         pulseEvidence("emp");
+      });
+    }
+    const patchDashDistEl = document.getElementById("patchDashDist");
+    if (patchDashDistEl) {
+      patchDashDistEl.addEventListener("input", (e) => {
+        livePatch.dashDistancePx = Number(e.target.value);
+        document.getElementById("valDashDist").textContent = livePatch.dashDistancePx + " px";
+        pulseEvidence("hangar");
       });
     }
 
@@ -2124,8 +2146,8 @@ export function emitBrassShellCasing(pool: ShellCasing[], origin: Vec2, rng: () 
         afterimages.push({ x: player.x, y: player.y, life: 0.28 - i * 0.05 });
       }
       const ang = Math.random() * Math.PI * 2;
-      player.x = Math.max(80, Math.min(880, player.x + Math.cos(ang) * 95));
-      player.y = Math.max(80, Math.min(520, player.y + Math.sin(ang) * 95));
+      player.x = Math.max(80, Math.min(880, player.x + Math.cos(ang) * livePatch.dashDistancePx));
+      player.y = Math.max(80, Math.min(520, player.y + Math.sin(ang) * livePatch.dashDistancePx));
       audio.play("dash");
       pulseEvidence("hangar");
     }
@@ -2356,6 +2378,15 @@ export function emitBrassShellCasing(pool: ShellCasing[], origin: Vec2, rng: () 
               life: 0.3,
             });
             if (e.hp <= 0) {
+              if (e.kind === "scuttler") {
+                shockRings.push({ x: e.x, y: e.y, r: 8, maxR: 62, life: 0.28 });
+                dmgPopups.push({ x: e.x, y: e.y - 34, text: "VOLATILE BURST!", color: "#ff7838", life: 0.55 });
+                for (const other of enemies) {
+                  if (other !== e && Math.hypot(other.x - e.x, other.y - e.y) < 68) {
+                    other.hp -= 18;
+                  }
+                }
+              }
               scrapOrbs.push({
                 x: e.x,
                 y: e.y,

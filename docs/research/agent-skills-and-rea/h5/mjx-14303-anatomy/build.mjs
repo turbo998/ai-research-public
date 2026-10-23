@@ -314,7 +314,9 @@ function buildChassis() {
     out.push(S(k.cylinder(px, py, 3.5, CHASSIS_Z + 31, 2.2, P, 16), { tone: "hi" }));
   }
 
-  // Rear 5-fin aerodynamic diffuser bumper (+114 to +136) + Twin Titanium Rally Exhaust Tailpipes + Rear Mudflaps & Tow Hook
+  // Rear 5-fin aerodynamic diffuser bumper (+114 to +136) + Rear Undertray Skid Plate + FIA Rain Light + Twin Titanium Exhausts + Rear Mudflaps & Tow Hook
+  const rearSkidPlate = { x: 100, y: -20, w: 14, d: 40, r: 2 };
+  out.push(S(k.slabOf(rearSkidPlate, CHASSIS_Z - 1.2, 1.2, P, 3, 0.3), { tone: "hi" }));
   const bumperR = { x: 116, y: -44, w: 20, d: 88, r: 5 };
   out.push(S(k.slabOf(bumperR, CHASSIS_Z, 6, P, 5, 0.7), { tone: "lo" }));
   for (const dy of [-28, -14, 0, 14, 28]) {
@@ -326,9 +328,10 @@ function buildChassis() {
     out.push(S(k.slabOf(flap, CHASSIS_Z - 2.2, 6.2, P, 2, 0.3), { tone: "hi" }));
   }
   out.push(S(k.slabOf({ x: 135, y: -22, w: 6, d: 6, r: 1.8 }, CHASSIS_Z + 1.8, 1.8, P, 3, 0.3), { tone: "hi", lit: true }));
+  const fiaRainLight = { x: 135, y: -3.2, w: 3.2, d: 6.4, r: 1.0 };
   const F_EX1 = G.frameOf([135, 19, CHASSIS_Z + 3.2], [1, 0, 0], [0, 1, 0], [0, 0, 1]);
   const F_EX2 = G.frameOf([135, 25, CHASSIS_Z + 3.2], [1, 0, 0], [0, 1, 0], [0, 0, 1]);
-  out.push(`<g class="mjx-headlight-pod">${S(G.disc(-4, 2.5, 2.3, F_EX1, P, { bevel: 0.3 }), { tone: "hi", lit: true })}${S(G.disc(-4, 2.5, 2.3, F_EX2, P, { bevel: 0.3 }), { tone: "hi", lit: true })}</g>`);
+  out.push(`<g class="mjx-headlight-pod">${S(k.slabOf(fiaRainLight, CHASSIS_Z + 1.8, 3.6, P, 2, 0.3), { tone: "hi", lit: true })}${S(G.disc(-4, 2.5, 2.3, F_EX1, P, { bevel: 0.3 }), { tone: "hi", lit: true })}${S(G.disc(-4, 2.5, 2.3, F_EX2, P, { bevel: 0.3 }), { tone: "hi", lit: true })}</g>`);
 
   // Countersunk chassis screws
   out.push(D(k.dotGrid(-36, -12, 4, 2, 16, zTop, P), { size: 0.42, tone: "lo" }));
@@ -580,6 +583,12 @@ function buildServo() {
     out.push(S(k.cylinder(-68, py, 3.8, zTop, 14, P, 20), { tone: "mid" }));
     out.push(S(k.cylinder(-68, py, 2.4, zTop + 14, 3, P, 16), { tone: "hi" }));
   }
+  // Helical Servo-Saver Preload Spring Coils & Knurled Collar on Right Bellcrank Post (-68, 11)
+  const saverRings = Array.from({ length: 4 }, (_, i) =>
+    k.ring(-68, 11, 4.1, zTop + 3.5 + i * 2.1, P, 16),
+  ).join("");
+  out.push(L(saverRings, { tone: "lit" }));
+  out.push(S(k.cylinder(-68, 11, 4.2, zTop + 1.6, 1.5, P, 16), { tone: "hi", lit: true }));
   const dragLink = { x: -71, y: -13, w: 6, d: 26, r: 2 };
   out.push(S(k.slabOf(dragLink, zTop + 11, 2.8, P, 3, 0.4), { tone: "hi" }));
 
@@ -644,6 +653,8 @@ function buildSuspension(isFront) {
     for (const part of tubePieces(upperRoute, 1.45, P, { maxLength: 45 })) {
       out.push(tubeSvg(part, { tone: "hi" }));
     }
+    // CNC Multi-Hole Camber-Link Adjustment Plate on Shock Tower Inner Ear
+    out.push(S(k.slabOf({ x: towerX - 0.6, y: side > 0 ? 11 : -16, w: 5.7, d: 5, r: 0.8 }, zTop + 14.2, 3.8, P, 2, 0.3), { tone: "hi", lit: true }));
 
     // CNC Anodized Outer Steering C-Hub / Knuckle Carrier + Brass Kingpin Bushings
     const hubY = side > 0 ? yOuter - 3 : yOuter - 2;
@@ -841,10 +852,21 @@ function buildBodyShell() {
     out.push(S(k.slabOf({ x: 48, y: vy - 0.7, w: 7, d: 1.4, r: 0.3 }, zBase + 21.5, 2.2, P, 2), { tone: "hi" }));
   }
 
-  // Left & Right Rally Aero Wing Mirrors + Front/Rear Integrated LED Light Bars on Body Shell
+  // Left & Right Rally Aero Wing Mirrors + FIA Side Window Safety Nets + B-Pillar Brake Cooling Scoops + Front/Rear Integrated LED Light Bars
   for (const side of [-1, 1]) {
     const mirror = { x: -34, y: side > 0 ? 35 : -41, w: 9, d: 6, r: 1.8 };
     out.push(S(k.slabOf(mirror, zBase + 10.5, 3.6, P, 3, 0.4), { tone: "hi", lit: true }));
+    const bScoop = { x: 20, y: side > 0 ? 35.1 : -37.5, w: 12, d: 2.4, r: 0.7 };
+    out.push(S(k.slabOf(bScoop, zBase + 11.2, 6.2, P, 2, 0.3), { tone: "hi", lit: true }));
+    const wyNet = side * 35.1;
+    out.push(
+      L(
+        k.segment([-20, wyNet, zBase + 10.5], [8, wyNet, zBase + 19.2], P) +
+          k.segment([-20, wyNet, zBase + 19.2], [8, wyNet, zBase + 10.5], P) +
+          k.segment([-6, wyNet, zBase + 10.5], [-6, wyNet, zBase + 19.2], P),
+        { tone: "lit", free: true },
+      ),
+    );
   }
   const frontLightBar = { x: -113, y: -28, w: 4, d: 56, r: 1.2 };
   const rearTailBar = { x: 109, y: -30, w: 4, d: 60, r: 1.2 };
@@ -1156,6 +1178,15 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="pinkpig"] .mjx-piece[data-piece="wheels_r"]{
   --anatomy-top:#f8fafc;--anatomy-fill:#94a3b8;--anatomy-hi:#ffffff;--anatomy-lit:#ef4444;
 }
+/* Livery 15: Lotus JPS Black & 24K Championship Gold */
+.iso-stage[data-color-mode="vivid"][data-livery="jps"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#27272a;--anatomy-fill:#18181b;--anatomy-shade-0:#09090b;--anatomy-shade-1:#09090b;--anatomy-shade-2:#18181b;--anatomy-shade-3:#27272a;--anatomy-hi:#facc15;--anatomy-lit:#fde047;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="jps"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="jps"] .mjx-piece[data-piece="wheels_r"],
+.iso-stage[data-color-mode="vivid"][data-livery="jps"] .mjx-piece[data-piece="upper_deck"]{
+  --anatomy-top:#fde047;--anatomy-fill:#ca8a04;--anatomy-hi:#fef9c3;--anatomy-lit:#facc15;
+}
 .iso-stage[data-lights="on"] .mjx-headlight-pod{
   filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
@@ -1201,6 +1232,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-demo="wrcstage">🏁 拉力赛段全流程</button>
     <button type="button" class="mjx-btn" data-demo="gymkhana">⚡ 金卡纳绕桩王</button>
     <button type="button" class="mjx-btn" data-demo="jturn">🔥 手刹 180° 掉头</button>
+    <button type="button" class="mjx-btn" data-demo="aquaplane">🌊 水漂打滑救车</button>
     <button type="button" class="mjx-btn" data-demo="dyno">📈 阶梯功率测功</button>
     <button type="button" class="mjx-btn" data-demo="tour">🔍 12 总成拆解巡礼</button>
   </div>
@@ -1209,6 +1241,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-livery-btn="hyper" data-active>厂队赤红金</button>
     <button type="button" class="mjx-btn" data-livery-btn="rosso">法拉利红金</button>
     <button type="button" class="mjx-btn" data-livery-btn="pinkpig">粉猪传奇</button>
+    <button type="button" class="mjx-btn" data-livery-btn="jps">黑金传奇 JPS</button>
     <button type="button" class="mjx-btn" data-livery-btn="wrc">WRC 蓝金</button>
     <button type="button" class="mjx-btn" data-livery-btn="redbull">红牛深蓝金</button>
     <button type="button" class="mjx-btn" data-livery-btn="monster">魔爪黑绿</button>
@@ -1311,7 +1344,7 @@ const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding
 const body = `<style>${CSS}</style>${navBannerHtml}<div class="mjx-wrap">${k.plateHtml({
   fig: "Fig 1 · MJX HYPER GO 14303 · 12-ASSEMBLY COMPLETE VEHICLE LAB",
   title: "美嘉欣 14303 · 1/14 全时四驱无刷拉力/漂移整车机械原理与动态测功台",
-  hint: "支持 13 种自动动态剧本 · 15 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
+  hint: "支持 14 种自动动态剧本 · 16 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
   readout: "2S 7.4V · 15.0 km/h · Manual Lab",
   keys: [
     { mark: "lit", label: "核心动力链：2845 无刷电机 → 15T/45T 金属齿 → 中央铝轴 → 前后 37T/13T 行星伞齿差速器 → 四轮 CVD + 通风刹车盘" },
@@ -1540,6 +1573,14 @@ function setDemoMode(mode) {
     btnGyro.textContent = "G3C 陀螺仪 ON";
     cycleShell("xray");
     selectPart("wheels_r", true);
+  } else if (mode === "aquaplane") {
+    toggleExplode(false);
+    setCells(3);
+    gyroEnabled = true;
+    btnGyro.setAttribute("data-active", "");
+    btnGyro.textContent = "G3C 陀螺仪 ON";
+    cycleShell("xray");
+    selectPart("servo", true);
   } else if (mode === "dyno") {
     toggleExplode(false);
     setSteer(0);
@@ -1787,6 +1828,12 @@ function tick(now) {
       setThrottle(0.88);
       setSteer(-25);
     }
+  } else if (demoMode === "aquaplane") {
+    setThrottle(0.76 + Math.sin(elapsed * 8.5) * 0.16);
+    setSteer(Math.sin(elapsed * 5.8) * 26 + Math.cos(elapsed * 13.0) * 5);
+    if (Math.sin(elapsed * 15) > 0.88 && Math.abs(bumpState.z) < 2.0) {
+      bumpState.v -= 55;
+    }
   } else if (demoMode === "dyno") {
     const step = Math.floor(elapsed / 2.2) % 6;
     setCells(step >= 3 ? 3 : 2);
@@ -1912,6 +1959,7 @@ function tick(now) {
     wrcstage: "WRC 4-Sector Stage Lap",
     gymkhana: "Gymkhana Apex Flick",
     jturn: "180° Handbrake J-Turn",
+    aquaplane: "Aquaplane Hydro-Recovery",
     dyno: "Step Dyno Sweep",
     tour: "12-Part Tour",
   };
