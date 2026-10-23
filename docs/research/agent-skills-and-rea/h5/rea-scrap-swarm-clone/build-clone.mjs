@@ -722,6 +722,7 @@ const html = `<!DOCTYPE html>
           <div class="hangar-top-controls">
             <div class="btn-group" id="hangarUnitBtns"></div>
             <div class="btn-group" id="hangarPoseBtns"></div>
+            <button type="button" class="act-btn" id="btnHangarXray">🔍 内部骨架透视 (X-Ray)</button>
           </div>
           <div class="hangar-stage-grid">
             <div class="hangar-canvas-box">
@@ -777,6 +778,7 @@ const html = `<!DOCTYPE html>
           <button type="button" class="act-btn" data-ast="prng">prng.ts</button>
           <button type="button" class="act-btn" data-ast="physics">physics.ts</button>
           <button type="button" class="act-btn" data-ast="director">director.ts</button>
+          <button type="button" class="act-btn" data-ast="spatial">spatial.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -1646,6 +1648,18 @@ export function evaluateWaveBudget(elapsedSec: number): WaveBudget {
   return { act: 3, maxSwarm: 32, spawnIronCrown: true };
 }\`,
       },
+      spatial: {
+        minified: \`function Vt(e,t,n){for(const r of e){const a=t.x-r.x,i=t.y-r.y,s=Math.hypot(a,i);s<n&&(r.x+=a/s*220,r.y+=i/s*220)}}\`,
+        decompiled: \`// Reconstructed Magnetic Scrap Tractor-Beam Solver (src/game/spatial.ts)
+export function pullScrapOrbsWithinRadius(orbs: ScrapOrb[], player: Vec2, magnetRadius = 155, dt = 1/60): void {
+  for (const orb of orbs) {
+    const dx = player.x - orb.x, dy = player.y - orb.y, dist = Math.hypot(dx, dy);
+    if (dist < magnetRadius && dist > 1) {
+      orb.x += (dx / dist) * 220 * dt; orb.y += (dy / dist) * 220 * dt;
+    }
+  }
+}\`,
+      },
     };
 
     // =========================================================================
@@ -1709,8 +1723,18 @@ export function evaluateWaveBudget(elapsedSec: number): WaveBudget {
     // Hangar UI Wiring
     let activeHangarUnit = HANGAR_UNITS[0];
     let activeHangarPose = "cruise";
+    let hangarXray = false;
     const unitBtnsWrap = document.getElementById("hangarUnitBtns");
     const poseBtnsWrap = document.getElementById("hangarPoseBtns");
+    const btnHangarXray = document.getElementById("btnHangarXray");
+    if (btnHangarXray) {
+      btnHangarXray.addEventListener("click", () => {
+        hangarXray = !hangarXray;
+        btnHangarXray.classList.toggle("primary", hangarXray);
+        audio.play("arc");
+        pulseEvidence("hangar");
+      });
+    }
 
     function updateHangarMeta() {
       document.getElementById("hangarRole").textContent = activeHangarUnit.code + " · " + activeHangarUnit.role;
@@ -1925,6 +1949,7 @@ export function evaluateWaveBudget(elapsedSec: number): WaveBudget {
     const dmgPopups = [];
     const shockRings = [];
     const lightningArcs = [];
+    const scrapOrbs = [];
     const enemies = [
       { kind: "scuttler", x: 180, y: 150, hp: 60, maxHp: 60 },
       { kind: "scuttler", x: 780, y: 160, hp: 60, maxHp: 60 },
@@ -2183,12 +2208,43 @@ export function evaluateWaveBudget(elapsedSec: number): WaveBudget {
               life: 0.3,
             });
             if (e.hp <= 0) {
+              scrapOrbs.push({
+                x: e.x,
+                y: e.y,
+                core: Math.random() < 0.28,
+                val: e.kind === "brute" ? 18 : 10,
+              });
               enemies.splice(j, 1);
-              player.scrap += 12;
             }
           }
         }
         if (hit || b.life <= 0) bullets.splice(i, 1);
+      }
+
+      // Magnetic Scrap Orb & Overdrive Cell Tractor Beam
+      for (let i = scrapOrbs.length - 1; i >= 0; i--) {
+        const orb = scrapOrbs[i];
+        const dx = player.x - orb.x;
+        const dy = player.y - orb.y;
+        const dist = Math.hypot(dx, dy) || 1;
+        if (dist < 175) {
+          orb.x += (dx / dist) * 235 * dt;
+          orb.y += (dy / dist) * 235 * dt;
+        }
+        if (dist < 26) {
+          player.scrap += orb.val;
+          if (orb.core) {
+            player.hp = Math.min(120, player.hp + 5);
+          }
+          dmgPopups.push({
+            x: player.x,
+            y: player.y - 34,
+            text: orb.core ? "+CORE +5HP" : "+" + orb.val + " SCRAP",
+            color: orb.core ? "#00e5ff" : "#b9dd78",
+            life: 0.55,
+          });
+          scrapOrbs.splice(i, 1);
+        }
       }
 
       // Update enemies
@@ -2308,6 +2364,25 @@ export function evaluateWaveBudget(elapsedSec: number): WaveBudget {
         gameClock
       );
 
+      // Draw Magnetic Scrap Alloy Orbs & Tractor-Beam Tethers
+      for (const orb of scrapOrbs) {
+        const dist = Math.hypot(player.x - orb.x, player.y - orb.y);
+        if (dist < 175) {
+          gCtx.strokeStyle = "rgba(0, 229, 255, 0.28)";
+          gCtx.lineWidth = 1.5;
+          gCtx.setLineDash([4, 4]);
+          gCtx.beginPath();
+          gCtx.moveTo(orb.x, orb.y);
+          gCtx.lineTo(player.x, player.y);
+          gCtx.stroke();
+          gCtx.setLineDash([]);
+        }
+        gCtx.fillStyle = orb.core ? "#00e5ff" : "#f0b34f";
+        gCtx.beginPath();
+        gCtx.arc(orb.x, orb.y, orb.core ? 6.5 : 5, 0, Math.PI * 2);
+        gCtx.fill();
+      }
+
       // Draw Bullets, Shock Hammer AoE Rings & Arc Tether Chain Lightning
       for (let i = shockRings.length - 1; i >= 0; i--) {
         const sr = shockRings[i];
@@ -2394,6 +2469,25 @@ export function evaluateWaveBudget(elapsedSec: number): WaveBudget {
       else if (u === "brute") drawMechaBrute(hCtx, 290, 215, 1.55, activeHangarPose, gameClock);
       else if (u === "zapper") drawMechaZapper(hCtx, 290, 210, 1.6, activeHangarPose, gameClock);
       else if (u === "boss") drawMechaBoss(hCtx, 290, 215, 1.45, activeHangarPose, gameClock);
+
+      if (hangarXray) {
+        hCtx.save();
+        hCtx.strokeStyle = "rgba(0, 229, 255, 0.78)";
+        hCtx.lineWidth = 1.6;
+        hCtx.setLineDash([5, 4]);
+        hCtx.beginPath();
+        hCtx.arc(290, 212, u === "boss" ? 92 : 66, 0, Math.PI * 2);
+        hCtx.stroke();
+        hCtx.setLineDash([]);
+        hCtx.fillStyle = "rgba(0, 229, 255, 0.22)";
+        hCtx.beginPath();
+        hCtx.arc(290, 212, 16 + Math.sin(gameClock * 8) * 3, 0, Math.PI * 2);
+        hCtx.fill();
+        hCtx.fillStyle = "#00e5ff";
+        hCtx.font = "bold 10px monospace";
+        hCtx.fillText("REA HITBOX & REACTOR CORE X-RAY", 198, 108);
+        hCtx.restore();
+      }
 
       // Blueprint Callout Pins
       activeHangarUnit.callouts.forEach((c, idx) => {

@@ -288,9 +288,16 @@ function buildChassis() {
   const F_LED_L = G.frameOf([-136, -26, CHASSIS_Z + 8.5], [-1, 0, 0], [0, 1, 0], [0, 0, 1]);
   const F_LED_R = G.frameOf([-136, 26, CHASSIS_Z + 8.5], [-1, 0, 0], [0, 1, 0], [0, 0, 1]);
   out.push(`<g class="mjx-headlight-pod">${S(G.disc(-3, 2, 4.4, F_LED_L, P, { bevel: 0.4 }), { tone: "hi", lit: true })}${S(G.disc(-3, 2, 4.4, F_LED_R, P, { bevel: 0.4 }), { tone: "hi", lit: true })}</g>`);
-  // Front CNC Rally Tow Hook Ring protruding at center of splitter
+  // Front CNC Rally Tow Hook Ring protruding at center of splitter + Dual Stainless Splitter Tie-Rod Struts
   const towHookF = { x: -149, y: -3.5, w: 7, d: 7, r: 2 };
   out.push(S(k.slabOf(towHookF, CHASSIS_Z + 0.5, 1.8, P, 3, 0.3), { tone: "hi", lit: true }));
+  out.push(
+    L(
+      k.segment([-144, -18, CHASSIS_Z + 0.2], [-134, -18, CHASSIS_Z + 7.2], P) +
+        k.segment([-144, 18, CHASSIS_Z + 0.2], [-134, 18, CHASSIS_Z + 7.2], P),
+      { tone: "hi", free: true },
+    ),
+  );
   // Side aerodynamic dive-plane canards on front bumper corners
   for (const side of [-1, 1]) {
     const canard = { x: -140, y: side > 0 ? 49 : -53, w: 16, d: 4, r: 1 };
@@ -361,6 +368,8 @@ function buildDrivetrain() {
         out.push(tubeSvg(part, { tone: "hi" }));
       }
       out.push(S(G.disc(side > 0 ? 13 : -17, side > 0 ? 17 : -13, 3.8, F_Y, P), { tone: "hi", lit: true }));
+      // Hardened Steel Diff Outdrive Cup Collar & Rubber CVD Dust Boot
+      out.push(S(G.disc(side > 0 ? 17 : -20.5, side > 0 ? 20.5 : -17, 2.9, F_Y, P), { tone: "mid" }));
     }
   }
 
@@ -425,6 +434,14 @@ function buildMotor() {
     );
   }).join("");
   out.push(`<g class="mjx-fan-blades">${L(fanBlades, { tone: "hi", free: true })}</g>`);
+  // Billet Aluminum Protective Fan Grill Crossbars
+  out.push(
+    L(
+      k.segment([-8, 15.5, fanZ + 5.7], [10, 15.5, fanZ + 5.7], P) +
+        k.segment([1, 6.5, fanZ + 5.7], [1, 24.5, fanZ + 5.7], P),
+      { tone: "lo", free: true },
+    ),
+  );
   out.push(S(k.cylinder(1, 15.5, 3.3, fanZ + 4, 1.9, P, 18), { tone: "hi" }));
   out.push(D(k.corners(fanPlan, 2.6).map(([x, y]) => at([x, y, fanZ + 5.5])), { size: 0.45 }));
 
@@ -805,9 +822,13 @@ function buildBodyShell() {
     out.push(S(k.slabOf(endplate, zBase + 13, 13.5, P, 3, 0.4), { tone: "hi" }));
   }
 
-  // 4 R-Type Metal Body Clips on hood & trunk
+  // 4 R-Type Metal Body Clips on hood & trunk + NACA Hood Ducts & Fluorescent Pull-Tab Tether Loops
   for (const [bx, by] of [[-96, -22], [-96, 22], [72, -22], [72, 22]]) {
     out.push(S(k.cylinder(bx, by, 2.8, zBase + 8.5, 1.4, P, 14), { tone: "hi", lit: true }));
+    out.push(L(k.segment([bx, by, zBase + 9.9], [bx - 4.5, by + (by > 0 ? 3.5 : -3.5), zBase + 10.6], P), { tone: "lit", free: true }));
+  }
+  for (const ny of [-12, 12]) {
+    out.push(S(k.slabOf({ x: -64, y: ny - 2.2, w: 12, d: 4.4, r: 1 }, zBase + 8.4, 1.1, P, 3, 0.2), { tone: "lo" }));
   }
 
   // Aero Streamlines flowing over hood, roof scoop, and rear wing
@@ -1012,6 +1033,15 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="sakura"] .mjx-piece[data-piece="wheels_r"]{
   --anatomy-top:#67e8f9;--anatomy-fill:#0f172a;--anatomy-hi:#f9a8d4;--anatomy-lit:#facc15;
 }
+/* Livery 9: Aurora Chameleon Teal-Violet & Rose Gold */
+.iso-stage[data-color-mode="vivid"][data-livery="aurora"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#2dd4bf;--anatomy-fill:#0d9488;--anatomy-shade-0:#134e4a;--anatomy-shade-1:#115e59;--anatomy-shade-2:#0f766e;--anatomy-shade-3:#14b8a6;--anatomy-hi:#f472b6;--anatomy-lit:#a855f7;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="aurora"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="aurora"] .mjx-piece[data-piece="wheels_r"],
+.iso-stage[data-color-mode="vivid"][data-livery="aurora"] .mjx-piece[data-piece="upper_deck"]{
+  --anatomy-top:#fda4af;--anatomy-fill:#e11d48;--anatomy-hi:#fef08a;--anatomy-lit:#2dd4bf;
+}
 .iso-stage[data-lights="on"] .mjx-headlight-pod{
   filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
@@ -1051,6 +1081,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-demo="drift">🌀 拉力钟摆漂移</button>
     <button type="button" class="mjx-btn" data-demo="offroad">⛰️ 砂石飞跳避震</button>
     <button type="button" class="mjx-btn" data-demo="slalom">🎯 麋鹿测试阿克曼</button>
+    <button type="button" class="mjx-btn" data-demo="brake">🛑 急刹重心前移</button>
     <button type="button" class="mjx-btn" data-demo="dyno">📈 阶梯功率测功</button>
     <button type="button" class="mjx-btn" data-demo="tour">🔍 12 总成拆解巡礼</button>
   </div>
@@ -1062,6 +1093,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-livery-btn="martini">传奇红白蓝</button>
     <button type="button" class="mjx-btn" data-livery-btn="cyber">赛博霓虹紫</button>
     <button type="button" class="mjx-btn" data-livery-btn="sakura">樱花漂移粉</button>
+    <button type="button" class="mjx-btn" data-livery-btn="aurora">极光变色龙</button>
     <button type="button" class="mjx-btn" data-livery-btn="dakar">达喀尔沙金</button>
     <button type="button" class="mjx-btn" data-livery-btn="stealth">黑金暗夜绿</button>
     <button type="button" class="mjx-btn" data-livery-btn="mono">工程单色</button>
@@ -1146,7 +1178,7 @@ const inspectorHtml = `
 const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-family:system-ui,-apple-system,sans-serif;font-size:12.5px;border-radius:8px;background:rgba(128,128,128,0.12);border:1px solid rgba(128,128,128,0.22)">
   <a href="../../index.html" style="color:inherit;text-decoration:none;font-weight:600">← 返回 AI Agent Skills &amp; REA 演示门户 (Portal)</a>
   <div style="display:flex;gap:8px;align-items:center">
-    <span style="opacity:0.7">整车 12 总成 + 7 动态演示 + 9 涂装:</span>
+    <span style="opacity:0.7">整车 12 总成 + 8 动态演示 + 10 涂装:</span>
     <a href="index.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "dark" ? "background:#f5a524;color:#111;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">🌙 暗黑多彩测功台 (Dark)</a>
     <a href="mjx-14303-chassis-light.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "light" ? "background:#d97706;color:#fff;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">☀️ 工程浅色蓝图 (Light)</a>
   </div>
@@ -1155,7 +1187,7 @@ const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding
 const body = `<style>${CSS}</style>${navBannerHtml}<div class="mjx-wrap">${k.plateHtml({
   fig: "Fig 1 · MJX HYPER GO 14303 · 12-ASSEMBLY COMPLETE VEHICLE LAB",
   title: "美嘉欣 14303 · 1/14 全时四驱无刷拉力/漂移整车机械原理与动态测功台",
-  hint: "支持 7 种自动动态剧本 · 9 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
+  hint: "支持 8 种自动动态剧本 · 10 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
   readout: "2S 7.4V · 15.0 km/h · Manual Lab",
   keys: [
     { mark: "lit", label: "核心动力链：2845 无刷电机 → 15T/45T 金属齿 → 中央铝轴 → 前后 37T/13T 行星伞齿差速器 → 四轮 CVD + 通风刹车盘" },
@@ -1336,6 +1368,12 @@ function setDemoMode(mode) {
     setThrottle(0.62);
     cycleShell("xray");
     selectPart("servo", true);
+  } else if (mode === "brake") {
+    toggleExplode(false);
+    setCells(3);
+    setSteer(0);
+    cycleShell("xray");
+    selectPart("wheels_f", true);
   } else if (mode === "dyno") {
     toggleExplode(false);
     setSteer(0);
@@ -1535,6 +1573,14 @@ function tick(now) {
   } else if (demoMode === "slalom") {
     setThrottle(0.62);
     setSteer(Math.sin(elapsed * 3.8) * 28);
+  } else if (demoMode === "brake") {
+    const cyc = elapsed % 4.6;
+    if (cyc < 2.2) {
+      setThrottle(0.95);
+    } else {
+      setThrottle(Math.max(0.04, 0.95 - (cyc - 2.2) * 0.9));
+    }
+    setSteer(0);
   } else if (demoMode === "dyno") {
     const step = Math.floor(elapsed / 2.2) % 6;
     setCells(step >= 3 ? 3 : 2);
@@ -1571,8 +1617,13 @@ function tick(now) {
   const innerDeg = netSteer * 1.08;
   const outerDeg = netSteer * 0.84;
 
-  // Dynamic Pitch (Launch Squat under high throttle) & Roll (under steering lateral G)
-  const squatPitchDeg = throttle > 0.45 ? (throttle - 0.45) * (cells === 3 ? 4.2 : 2.4) : 0;
+  // Dynamic Pitch (Launch Squat under high throttle or Nose Dive under ABS braking) & Roll
+  const brakeDiveActive = demoMode === "brake" && (elapsed % 4.6) >= 2.2;
+  const squatPitchDeg = brakeDiveActive
+    ? -3.4 * Math.max(0.2, 1 - ((elapsed % 4.6) - 2.2) / 2.2)
+    : throttle > 0.45
+      ? (throttle - 0.45) * (cells === 3 ? 4.2 : 2.4)
+      : 0;
   const frontLiftZ = squatPitchDeg * 0.65;
   const rearSquatZ = -squatPitchDeg * 0.95;
 
@@ -1635,8 +1686,8 @@ function tick(now) {
   telSteer.textContent =
     innerDeg.toFixed(1) + "° / " + outerDeg.toFixed(1) + "° · Gyro " + (gyroCounter >= 0 ? "+" : "") + gyroCounter.toFixed(1) + "°";
   telPose.textContent =
-    "Pitch +" + squatPitchDeg.toFixed(1) + "° · " + (bumpState.z + rearSquatZ).toFixed(1) + " mm";
-  const escAmps = Math.min(45, (throttle * (cells === 3 ? 38.5 : 26.4)) + (Math.abs(bumpState.z) * 0.35));
+    "Pitch " + (squatPitchDeg >= 0 ? "+" : "") + squatPitchDeg.toFixed(1) + "° · " + (bumpState.z + rearSquatZ).toFixed(1) + " mm";
+  const escAmps = Math.min(45, (throttle * (cells === 3 ? 38.5 : 26.4)) + (Math.abs(bumpState.z) * 0.35) + (brakeDiveActive ? 22.5 : 0));
   const escWatts = Math.round(escAmps * voltage);
   const escTemp = Math.round(34 + throttle * (cells === 3 ? 28 : 18));
   if (telPower) {
@@ -1649,6 +1700,7 @@ function tick(now) {
     drift: "Rally Drift + Gyro",
     offroad: "Gravel Jump",
     slalom: "Slalom Ackermann",
+    brake: "ABS Brake Nose-Dive",
     dyno: "Step Dyno Sweep",
     tour: "12-Part Tour",
   };
