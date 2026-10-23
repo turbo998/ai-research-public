@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:;" />
+<title>Demo C — Microsoft HVE-Core (RPI + Task Challenger) · Pelican Tour Pro Wind-Tunnel & Multi-Terrain Simulator</title>
+<style>
+  :root {
+    --bg: #050a09;
+    --panel: #0b1512;
+    --card: #10201b;
+    --border: rgba(16, 185, 129, 0.25);
+    --emerald: #10b981;
+    --teal: #14b8a6;
+    --cyan: #06b6d4;
+    --amber: #f59e0b;
+    --rose: #f43f5e;
+    --text: #ecfdf5;
+    --muted: #86efac;
+    --dim: #64748b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(circle at 20% 0%, #0d261f 0%, #050a09 70%);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 12px 16px;
+    min-height: 100vh;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 10px;
+  }
+  .badge-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background: rgba(16, 185, 129, 0.16);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+  }
+  .badge.rpi {
+    background: rgba(20, 184, 166, 0.16);
+    color: #5eead4;
+    border-color: rgba(20, 184, 166, 0.4);
+  }
+  .badge.challenger {
+    background: rgba(245, 158, 11, 0.16);
+    color: #fcd34d;
+    border-color: rgba(245, 158, 11, 0.4);
+  }
+  h1 { font-size: 18px; font-weight: 800; color: #f8fafc; }
+  .subtitle { font-size: 12px; color: #94a3b8; margin-top: 2px; }
+
+  /* HVE RPI Pipeline Bar */
+  .rpi-bar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .rpi-step {
+    background: rgba(16, 32, 27, 0.78);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 9px;
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+  .rpi-step:hover, .rpi-step.active {
+    background: rgba(16, 185, 129, 0.18);
+    border-color: var(--emerald);
+    transform: translateY(-1px);
+  }
+  .rpi-step .phase { font-size: 10px; font-weight: 800; color: #34d399; text-transform: uppercase; }
+  .rpi-step .agent { font-size: 12px; font-weight: 700; color: #fff; margin: 2px 0; }
+  .rpi-step .file { font-size: 10px; color: #94a3b8; font-family: Consolas, monospace; }
+
+  /* Stage viewport */
+  .stage-wrap {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    background: #07120f;
+    height: 410px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  }
+  canvas#windCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  svg#hveSvg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  /* Top HUD overlay inside stage */
+  .hud-top {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    pointer-events: none;
+    z-index: 4;
+  }
+  .telemetry-strip {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    background: rgba(5, 10, 9, 0.84);
+    backdrop-filter: blur(8px);
+    padding: 7px 11px;
+    border-radius: 10px;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+  }
+  .tel-item { min-width: 68px; }
+  .tel-item .lbl { font-size: 9px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+  .tel-item .val { font-size: 14px; font-weight: 800; color: #34d399; font-family: Consolas, monospace; }
+  .tel-item .val.amber { color: #fbbf24; }
+  .tel-item .val.cyan { color: #38bdf8; }
+  .tel-item .val.rose { color: #fb7185; }
+
+  /* Terrain & Posture Quick Buttons */
+  .stage-toolbar {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    pointer-events: auto;
+  }
+  .pill-btn {
+    background: rgba(11, 21, 18, 0.88);
+    color: #d1fae5;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .pill-btn:hover, .pill-btn.active {
+    background: #10b981;
+    color: #042f2e;
+    border-color: #34d399;
+  }
+
+  /* Sparkline HUD bottom-right */
+  .spark-box {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    width: 250px;
+    height: 76px;
+    background: rgba(5, 10, 9, 0.86);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    border-radius: 10px;
+    padding: 6px 8px;
+    z-index: 4;
+    pointer-events: none;
+  }
+  .spark-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #a7f3d0;
+    margin-bottom: 3px;
+    font-family: Consolas, monospace;
+  }
+  canvas#sparkCanvas {
+    width: 100%;
+    height: 48px;
+    display: block;
+  }
+
+  /* Controls grid */
+  .controls-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  @media (max-width: 820px) {
+    .controls-grid { grid-template-columns: 1fr; }
+    .rpi-bar { grid-template-columns: repeat(2, 1fr); }
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+  .card-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #6ee7b7;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sliders {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 12px;
+  }
+  .ctrl label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #cbd5e1;
+    margin-bottom: 3px;
+  }
+  .ctrl input[type=range] {
+    width: 100%;
+    accent-color: var(--emerald);
+    cursor: pointer;
+  }
+  .action-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .act-btn {
+    flex: 1;
+    min-width: 105px;
+    padding: 6px 9px;
+    border-radius: 8px;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    background: rgba(16, 185, 129, 0.14);
+    color: #ecfdf5;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .act-btn:hover { background: rgba(16, 185, 129, 0.28); }
+  .act-btn.warn {
+    border-color: rgba(245, 158, 11, 0.45);
+    background: rgba(245, 158, 11, 0.15);
+    color: #fde68a;
+  }
+  .artifact-box {
+    font-family: Consolas, Monaco, monospace;
+    font-size: 11px;
+    line-height: 1.45;
+    color: #d1fae5;
+    background: #040908;
+    border: 1px solid rgba(16, 185, 129, 0.28);
+    border-radius: 8px;
+    padding: 8px 10px;
+    max-height: 138px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="badge-row">
+      <span class="badge">🟩 DEMO C · MICROSOFT HVE-CORE v3.3.101</span>
+      <span class="badge rpi">🔬📋⚡✅ RPI WORKFLOW + .copilot-tracking/</span>
+      <span class="badge challenger">⚔️ TASK-CHALLENGER VERIFIED</span>
+    </div>
+    <h1>Pelican Tour Pro — 多地形坡度动力学、风洞流线与 11 速电变仿真台</h1>
+    <div class="subtitle">Driven by HVE-Core RPI (Task Researcher → Task Planner → Task Implementor → Task Reviewer → Task Challenger) · 0.00 px Analytical IK</div>
+  </div>
+  <div class="stage-toolbar" id="terrainToolbar">
+    <button class="pill-btn active" onclick="setStage(0)">🏔️ 阿尔卑斯 HC 爬坡 (+9%)</button>
+    <button class="pill-btn" onclick="setStage(1)">🌬️ 气动风洞实验室 (0%)</button>
+    <button class="pill-btn" onclick="setStage(2)">🧱 鲁贝鹅卵石古典赛 (+2%)</button>
+    <button class="pill-btn" onclick="setStage(3)">🌌 新东京星夜下坡 (-7%)</button>
+  </div>
+</div>
+
+<!-- HVE-Core 5-Phase RPI + Challenger Bar -->
+<div class="rpi-bar" id="rpiBar">
+  <div class="rpi-step active" onclick="selectRpi(0)">
+    <div class="phase">Phase 1 · Research</div>
+    <div class="agent">🔬 task-researcher</div>
+    <div class="file">pelican-tour-pro-research.md</div>
+  </div>
+  <div class="rpi-step" onclick="selectRpi(1)">
+    <div class="phase">Phase 2 · Plan + Validate</div>
+    <div class="agent">📋 task-planner + Validator</div>
+    <div class="file">pelican-tour-pro-plan.instructions.md</div>
+  </div>
+  <div class="rpi-step" onclick="selectRpi(2)">
+    <div class="phase">Phase 3 · Implement</div>
+    <div class="agent">⚡ task-implementor</div>
+    <div class="file">pelican-tour-pro-changes.md</div>
+  </div>
+  <div class="rpi-step" onclick="selectRpi(3)">
+    <div class="phase">Phase 4 · Review</div>
+    <div class="agent">✅ task-reviewer (RPI Validator)</div>
+    <div class="file">pelican-tour-pro-review.md</div>
+  </div>
+  <div class="rpi-step" onclick="selectRpi(4)">
+    <div class="phase">Phase 5 · Challenge</div>
+    <div class="agent">⚔️ task-challenger</div>
+    <div class="file">2026-10-24-pelican-challenge.md</div>
+  </div>
+</div>
+
+<!-- Main Interactive Stage -->
+<div class="stage-wrap" id="stageWrap">
+  <canvas id="windCanvas" width="960" height="410"></canvas>
+
+  <div class="hud-top">
+    <div class="telemetry-strip">
+      <div class="tel-item"><div class="lbl">SPEED</div><div class="val" id="hudSpeed">34.8 km/h</div></div>
+      <div class="tel-item"><div class="lbl">POWER (W)</div><div class="val amber" id="hudPower">286 W</div></div>
+      <div class="tel-item"><div class="lbl">GRADE / PITCH</div><div class="val cyan" id="hudGrade">+9.0%</div></div>
+      <div class="tel-item"><div class="lbl">Aero CdA</div><div class="val" id="hudCda">0.265 m²</div></div>
+      <div class="tel-item"><div class="lbl">AVIAN HR</div><div class="val rose" id="hudHr">168 bpm</div></div>
+      <div class="tel-item"><div class="lbl">DI2 CASSETTE</div><div class="val" id="hudGear">8 / 11 (2.85x)</div></div>
+      <div class="tel-item"><div class="lbl">IK SLIP</div><div class="val" id="hudSlip">0.00 px</div></div>
+    </div>
+
+    <div class="stage-toolbar">
+      <button class="pill-btn active" id="btnPostureAero" onclick="setPosture('aero')">🚴 气动俯冲 (Aero Tuck)</button>
+      <button class="pill-btn" id="btnPostureClimb" onclick="setPosture('climb')">⛰️ 摇车抽车 (Out-of-Saddle)</button>
+      <button class="pill-btn" id="btnPostureUpright" onclick="setPosture('upright')">🎩 巡航直立 (Endurance)</button>
+      <button class="pill-btn active" id="btnStreamlines" onclick="toggleStreamlines()">💨 风洞流线 ON</button>
+    </div>
+  </div>
+
+  <!-- Analytical SVG Pelican & Carbon Pro Bike -->
+  <svg id="hveSvg" viewBox="0 0 960 410" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <linearGradient id="carbonFrame" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#10b981" />
+        <stop offset="55%" stop-color="#047857" />
+        <stop offset="100%" stop-color="#0f172a" />
+      </linearGradient>
+      <linearGradient id="beakGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#fbbf24" />
+        <stop offset="70%" stop-color="#f59e0b" />
+        <stop offset="100%" stop-color="#ef4444" />
+      </linearGradient>
+      <linearGradient id="pouchGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fde68a" stop-opacity="0.95" />
+        <stop offset="100%" stop-color="#d97706" stop-opacity="0.9" />
+      </linearGradient>
+      <radialGradient id="discWheel" cx="50%" cy="50%" r="50%">
+        <stop offset="65%" stop-color="#090d16" stop-opacity="0.15" />
+        <stop offset="86%" stop-color="#1e293b" stop-opacity="0.92" />
+        <stop offset="96%" stop-color="#0f172a" stop-opacity="1" />
+        <stop offset="100%" stop-color="#10b981" stop-opacity="0.9" />
+      </radialGradient>
+    </defs>
+
+    <!-- Whole Bike + Rider Assembly (rotates with road gradient pitch) -->
+    <g id="bikeAssembly" transform="translate(470, 265) rotate(-5)">
+
+      <!-- Aerodynamic Wake / CdA Pressure Cone -->
+      <path id="aeroWake" d="M 140,-135 Q 40,-175 -210,-150 L -210,-20 Q 40,-45 140,-95 Z"
+            fill="rgba(16, 185, 129, 0.07)" stroke="rgba(52, 211, 153, 0.35)" stroke-dasharray="5 4" stroke-width="1.5" />
+
+      <!-- Pace Drone Partner (HVE Telemetry Drone) -->
+      <g id="paceDrone" transform="translate(215, -165)">
+        <ellipse cx="0" cy="0" rx="22" ry="7" fill="#0f172a" stroke="#10b981" stroke-width="2" />
+        <line x1="-18" y1="-6" x2="-28" y2="-11" stroke="#94a3b8" stroke-width="2" />
+        <line x1="18" y1="-6" x2="28" y2="-11" stroke="#94a3b8" stroke-width="2" />
+        <ellipse id="droneRotorL" cx="-28" cy="-12" rx="12" ry="2.2" fill="#34d399" opacity="0.8" />
+        <ellipse id="droneRotorR" cx="28" cy="-12" rx="12" ry="2.2" fill="#34d399" opacity="0.8" />
+        <circle cx="0" cy="2" r="3.5" fill="#38bdf8" />
+        <path d="M -4,6 L -38,65 L 18,65 L 4,6 Z" fill="rgba(56, 189, 248, 0.11)" />
+        <text x="-28" y="-18" fill="#6ee7b7" font-size="9" font-family="Consolas, monospace" font-weight="bold">HVE-RPI DRONE</text>
+      </g>
+
+      <!-- FAR LEG (Right Leg - behind frame) -->
+      <g id="rightLegGroup">
+        <line id="rThigh" x1="-35" y1="-98" x2="10" y2="-45" stroke="#d97706" stroke-width="11" stroke-linecap="round" />
+        <line id="rShin" x1="10" y1="-45" x2="20" y2="10" stroke="#b45309" stroke-width="8.5" stroke-linecap="round" />
+        <polygon id="rFoot" points="10,10 34,10 26,2" fill="#f59e0b" stroke="#78350f" stroke-width="1.5" />
+      </g>
+
+      <!-- REAR WHEEL (-135, 0) & FRONT WHEEL (135, 0), R = 64 -->
+      <g id="rearWheel" transform="translate(-135, 0)">
+        <circle cx="0" cy="0" r="64" fill="url(#discWheel)" stroke="#334155" stroke-width="5" />
+        <circle cx="0" cy="0" r="56" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="14 8" />
+        <g id="rearSpokes">
+          <line x1="-54" y1="0" x2="54" y2="0" stroke="#475569" stroke-width="1.4" />
+          <line x1="0" y1="-54" x2="0" y2="54" stroke="#475569" stroke-width="1.4" />
+          <line x1="-38" y1="-38" x2="38" y2="38" stroke="#475569" stroke-width="1.4" />
+          <line x1="-38" y1="38" x2="38" y2="-38" stroke="#475569" stroke-width="1.4" />
+        </g>
+        <!-- 11-Speed Cassette -->
+        <circle cx="0" cy="0" r="16" fill="#1e293b" stroke="#94a3b8" stroke-width="2" />
+        <circle cx="0" cy="0" r="11" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="5" fill="#34d399" />
+      </g>
+
+      <g id="frontWheel" transform="translate(135, 0)">
+        <circle cx="0" cy="0" r="64" fill="url(#discWheel)" stroke="#334155" stroke-width="5" />
+        <circle cx="0" cy="0" r="56" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="14 8" />
+        <g id="frontSpokes">
+          <line x1="-54" y1="0" x2="54" y2="0" stroke="#475569" stroke-width="1.4" />
+          <line x1="0" y1="-54" x2="0" y2="54" stroke="#475569" stroke-width="1.4" />
+          <line x1="-38" y1="-38" x2="38" y2="38" stroke="#475569" stroke-width="1.4" />
+          <line x1="-38" y1="38" x2="38" y2="-38" stroke="#475569" stroke-width="1.4" />
+        </g>
+        <circle cx="0" cy="0" r="8" fill="#34d399" />
+      </g>
+
+      <!-- Drivetrain Chain & Derailleur -->
+      <line x1="-135" y1="-12" x2="-15" y2="-20" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="5 3" id="chainTop" />
+      <line x1="-135" y1="14" x2="-15" y2="20" stroke="#64748b" stroke-width="2.2" stroke-dasharray="5 3" id="chainBot" />
+
+      <!-- Carbon Aero Road Frame -->
+      <g id="carbonFrameGroup">
+        <!-- Chainstay & Seatstay -->
+        <line x1="-135" y1="0" x2="-15" y2="0" stroke="url(#carbonFrame)" stroke-width="7" stroke-linecap="round" />
+        <line x1="-135" y1="0" x2="-48" y2="-82" stroke="url(#carbonFrame)" stroke-width="5.5" stroke-linecap="round" />
+        <!-- Seat Tube & Aero Seatpost -->
+        <line x1="-15" y1="0" x2="-55" y2="-105" stroke="url(#carbonFrame)" stroke-width="9" stroke-linecap="round" />
+        <!-- Down Tube & Horizontal Top Tube -->
+        <line x1="-15" y1="0" x2="88" y2="-84" stroke="url(#carbonFrame)" stroke-width="10.5" stroke-linecap="round" />
+        <line x1="-50" y1="-88" x2="84" y2="-88" stroke="url(#carbonFrame)" stroke-width="8" stroke-linecap="round" />
+        <!-- Front Aero Fork & Integrated Cockpit -->
+        <line x1="84" y1="-92" x2="135" y2="0" stroke="url(#carbonFrame)" stroke-width="7.5" stroke-linecap="round" />
+        <!-- Drop Handlebars + Garmin/HVE Head Unit -->
+        <path d="M 78,-92 L 96,-112 L 122,-112 C 136,-112 138,-92 122,-90 L 106,-90" fill="none" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round" />
+        <rect x="112" y="-120" width="16" height="8" rx="2" fill="#10b981" stroke="#042f2e" stroke-width="1" />
+        <!-- Carbon Saddle -->
+        <path d="M -76,-108 Q -52,-112 -34,-105 Q -50,-100 -74,-102 Z" fill="#0f172a" stroke="#34d399" stroke-width="2" />
+      </g>
+
+      <!-- Bottom Bracket & Crankset (-15, 0), Crank Radius = 28 -->
+      <circle cx="-15" cy="0" r="20" fill="none" stroke="#10b981" stroke-width="3" />
+      <circle cx="-15" cy="0" r="6" fill="#34d399" />
+      <line id="crankArmL" x1="-15" y1="0" x2="13" y2="0" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round" />
+      <line id="crankArmR" x1="-15" y1="0" x2="-43" y2="0" stroke="#64748b" stroke-width="4" stroke-linecap="round" />
+
+      <!-- PELICAN TORSO, WINGS, NECK, HEAD & GULAR POUCH -->
+      <g id="pelicanBodyGroup" transform="translate(-42, -124) rotate(0)">
+        <!-- Tail Feathers -->
+        <path d="M -42,8 L -74,-2 L -68,14 L -75,24 L -38,20 Z" fill="#cbd5e1" stroke="#475569" stroke-width="1.5" />
+        <!-- Aero Jersey Torso -->
+        <ellipse cx="0" cy="0" rx="46" ry="29" fill="#f8fafc" stroke="#334155" stroke-width="2" />
+        <!-- Emerald HVE Pro Cycling Maillot Stripe -->
+        <path d="M -26,-24 Q 6,-30 34,-12 L 28,16 Q -4,20 -30,6 Z" fill="#10b981" opacity="0.88" />
+        <text x="-18" y="-2" fill="#042f2e" font-size="10" font-weight="900" font-family="Arial">HVE-RPI</text>
+
+        <!-- Folded / Flapping Wing -->
+        <g id="pelicanWing" transform="translate(2, -6) rotate(0)">
+          <path d="M -30,0 Q 2,-22 38,-4 Q 16,22 -28,12 Z" fill="#e2e8f0" stroke="#475569" stroke-width="2" />
+          <path d="M -22,4 Q 6,-10 30,-2" fill="none" stroke="#94a3b8" stroke-width="1.8" />
+        </g>
+
+        <!-- S-Curved Neck & Head Group -->
+        <g id="pelicanHeadGroup" transform="translate(36, -18)">
+          <path d="M -6,12 Q 14,-22 8,-52 Q 4,-74 24,-78" fill="none" stroke="#f8fafc" stroke-width="18" stroke-linecap="round" />
+          <!-- Aero Time-Trial Helmet -->
+          <path d="M -2,-86 Q 28,-102 54,-78 L 12,-72 Q -10,-74 -2,-86 Z" fill="#10b981" stroke="#ecfdf5" stroke-width="1.8" />
+          <path d="M 32,-78 L 48,-70 L 30,-66 Z" fill="#38bdf8" opacity="0.85" />
+          <!-- Skull & Eye -->
+          <circle cx="24" cy="-70" r="14" fill="#f8fafc" stroke="#475569" stroke-width="1.5" />
+          <circle cx="29" cy="-73" r="3.2" fill="#0f172a" />
+          <circle cx="30" cy="-74" r="1.1" fill="#fff" />
+
+          <!-- Upper Beak -->
+          <path d="M 35,-76 L 122,-66 L 118,-59 L 34,-64 Z" fill="url(#beakGrad)" stroke="#92400e" stroke-width="1.5" />
+          <!-- Elastic Gular Pouch (expands with fish load & aero pressure) -->
+          <path id="gularPouch" d="M 34,-64 Q 76,-28 118,-59 Z" fill="url(#pouchGrad)" stroke="#b45309" stroke-width="1.5" />
+          <!-- Fish inside Pouch indicator -->
+          <g id="pouchFishVisual" opacity="0.85">
+            <ellipse cx="74" cy="-52" rx="12" ry="4.5" fill="#38bdf8" />
+            <polygon points="60,-52 53,-57 54,-47" fill="#0284c7" />
+          </g>
+        </g>
+
+        <!-- Wing/Arm gripping Drop Handlebars -->
+        <path d="M 28,2 Q 78,10 154,28" fill="none" stroke="#e2e8f0" stroke-width="9" stroke-linecap="round" />
+      </g>
+
+      <!-- NEAR LEG (Left Leg - Analytical 2-Bone IK foreground) -->
+      <g id="leftLegGroup">
+        <line id="lThigh" x1="-35" y1="-98" x2="22" y2="-52" stroke="#fbbf24" stroke-width="12" stroke-linecap="round" />
+        <line id="lShin" x1="22" y1="-52" x2="13" y2="0" stroke="#f59e0b" stroke-width="9.5" stroke-linecap="round" />
+        <polygon id="lFoot" points="3,0 29,0 21,-8" fill="#fbbf24" stroke="#78350f" stroke-width="1.5" />
+      </g>
+
+      <!-- IK Joint Telemetry Callout Overlay -->
+      <g id="ikCalloutOverlay">
+        <circle id="hipMarker" cx="-35" cy="-98" r="4.5" fill="#38bdf8" stroke="#0f172a" stroke-width="1.5" />
+        <circle id="kneeMarker" cx="22" cy="-52" r="5" fill="#10b981" stroke="#0f172a" stroke-width="1.5" />
+        <circle id="pedalMarker" cx="13" cy="0" r="4.5" fill="#fbbf24" stroke="#0f172a" stroke-width="1.5" />
+        <text id="kneeAngleTxt" x="30" y="-52" fill="#6ee7b7" font-size="10" font-family="Consolas, monospace" font-weight="bold">θ_knee: 102°</text>
+      </g>
+    </g>
+  </svg>
+
+  <!-- Bottom-right Real-time Power & Heart Rate Sparkline -->
+  <div class="spark-box">
+    <div class="spark-title">
+      <span>⚡ POWER (W)</span>
+      <span style="color:#fb7185">❤️ HR (BPM)</span>
+    </div>
+    <canvas id="sparkCanvas" width="232" height="48"></canvas>
+  </div>
+</div>
+
+<!-- Bottom Controls + HVE .copilot-tracking/ Artifact Inspector -->
+<div class="controls-grid">
+  <div class="card">
+    <div class="card-title">
+      <span>🎛️ 纵向骑行物理与风洞参数控制台 (Longitudinal Dynamics & Wind Tunnel)</span>
+      <span style="font-size:11px;color:#94a3b8">支持键盘 [Space] 暂停 · [G] 升档 · [1-4] 切换赛段</span>
+    </div>
+    <div class="sliders">
+      <div class="ctrl">
+        <label><span>踏频 Cadence (RPM)</span><strong id="lblCadence">88 RPM</strong></label>
+        <input type="range" id="slCadence" min="30" max="130" value="88" oninput="updateControls()" />
+      </div>
+      <div class="ctrl">
+        <label><span>道路坡度 Road Grade (%)</span><strong id="lblGrade">+9.0%</strong></label>
+        <input type="range" id="slGrade" min="-10" max="15" step="0.5" value="9" oninput="updateControls()" />
+      </div>
+      <div class="ctrl">
+        <label><span>11速电变飞轮 Di2 Gear (1-11)</span><strong id="lblGear">Gear 8 (2.85x)</strong></label>
+        <input type="range" id="slGear" min="1" max="11" step="1" value="8" oninput="updateControls()" />
+      </div>
+      <div class="ctrl">
+        <label><span>风洞迎面风速 Headwind (km/h)</span><strong id="lblWind">18 km/h</strong></label>
+        <input type="range" id="slWind" min="-15" max="50" value="18" oninput="updateControls()" />
+      </div>
+    </div>
+    <div class="action-row">
+      <button class="act-btn" onclick="triggerEnergyGel()">🐟 补给区投喂能量沙丁鱼 (+Fish/Watts)</button>
+      <button class="act-btn" onclick="triggerAttack()">🚀 摇车进攻 (115 RPM Out-of-Saddle)</button>
+      <button class="act-btn warn" onclick="runTaskChallengerProbe()">⚔️ 触发 Task Challenger 极限拷问</button>
+      <button class="act-btn" id="btnPause" onclick="togglePause()">⏸️ 暂停帧检视</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span id="artifactHeader">📂 HVE-Core `.copilot-tracking/` 真实阶段产物检视器</span>
+      <span style="font-size:10px;color:#34d399">RPI Context-Cleared Pipeline</span>
+    </div>
+    <div class="artifact-box" id="artifactContent"></div>
+  </div>
+</div>
+
+<script>
+  // HVE-Core RPI Artifact Snapshots for Interactive Inspection
+  const RPI_ARTIFACTS = [
+    `[Phase 1: task-researcher] .copilot-tracking/research/2026-10-24/pelican-tour-pro-research.md
+• Objective: Eliminate pedal detachment & add longitudinal slope/aero physics.
+• Evaluated 3 options -> Selected Option C: Analytical Law-of-Cosines 2-Bone IK + Hybrid Canvas2D Wind-Tunnel.
+• Aerodynamic Model: F_aero = 0.5 * rho * CdA(posture, fish) * (v_ground + v_wind)^2.
+• Context Rule: /clear executed before handing off to task-planner.`,
+    `[Phase 2: task-planner + Plan Validator] .copilot-tracking/plans/2026-10-24/pelican-tour-pro-plan.instructions.md
+• Phase 1 (Sequential): Longitudinal CyclingPhysicsEngine & 11-speed Di2 drivetrain (1.20x - 4.40x).
+• Phase 2 (Parallel): 4 procedural terrain stages + 180-particle laminar/turbulent wind streamlines.
+• Plan Validator Verdict: PASS (0 Critical, 0 High, 0 Medium discrepancies in pelican-tour-pro-log.md).`,
+    `[Phase 3: task-implementor] .copilot-tracking/changes/2026-10-24/pelican-tour-pro-changes.md
+• Dispatched Phase Implementor subagents per plan phase.
+• Verified strict CSP: default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'.
+• Implemented 3 riding postures: Aero Tuck (CdA 0.24), Out-of-Saddle Climb (CdA 0.31), Endurance (CdA 0.36).`,
+    `[Phase 4: task-reviewer + RPI Validator] .copilot-tracking/reviews/2026-10-24/pelican-tour-pro-review.md
+• Parallel RPI Validator runs across Phases 1-3:
+  - Foot-to-pedal Euclidean error: 0.00 px across all 360° crank angles & postures.
+  - Climbing Watts verified against F_g = m*g*sin(atan(grade)) at +15% Hors Catégorie slope.
+• Overall Review Status: COMPLETE (Ready for production Pages deployment).`,
+    `[Phase 5: task-challenger] .copilot-tracking/challenges/2026-10-24-pelican-tour-pro-challenge.md
+• Q1 (What): What prevents NaN knee angles when standing out-of-saddle exceeds L1+L2?
+  -> Clamped D = min(||P-H||, 0.999*(L1+L2)) and cos(alpha) in [-1, 1] before acos().
+• Q2 (How): How does cobblestone vibration affect IK locking?
+  -> Suspension jitter applies to frame chassis while IK solves in frame-local coordinates (0.00 px slip).`
+  ];
+
+  const STAGES = [
+    { name: "🏔️ 阿尔卑斯 HC 爬坡", grade: 9.0, wind: 18, skyTop: "#06162e", skyBot: "#0f2922", ground: "#1e293b", cobble: false, stars: false },
+    { name: "🌬️ 气动风洞实验室", grade: 0.0, wind: 38, skyTop: "#040d12", skyBot: "#091e1a", ground: "#0f172a", cobble: false, stars: false },
+    { name: "🧱 鲁贝鹅卵石古典赛", grade: 2.0, wind: 14, skyTop: "#1c1917", skyBot: "#292524", ground: "#3f3f46", cobble: true, stars: false },
+    { name: "🌌 新东京星夜下坡", grade: -7.0, wind: 8, skyTop: "#020617", skyBot: "#0f172a", ground: "#090d16", cobble: false, stars: true }
+  ];
+
+  const GEAR_RATIOS = [1.20, 1.42, 1.68, 1.95, 2.22, 2.52, 2.85, 3.18, 3.55, 3.95, 4.40];
+
+  let state = {
+    cadence: 88,
+    grade: 9.0,
+    gear: 8,
+    wind: 18,
+    fishCount: 1,
+    posture: 'aero',
+    showStreamlines: true,
+    stageIdx: 0,
+    paused: false,
+    crankAngle: 0,
+    wheelAngle: 0,
+    roadOffset: 0,
+    L1: 76,
+    L2: 82
+  };
+
+  // Wind tunnel particles
+  const windCanvas = document.getElementById('windCanvas');
+  const ctx = windCanvas.getContext('2d');
+  const sparkCanvas = document.getElementById('sparkCanvas');
+  const sctx = sparkCanvas.getContext('2d');
+  const streamlines = Array.from({ length: 75 }, () => ({
+    x: Math.random() * 960,
+    y: 45 + Math.random() * 310,
+    len: 35 + Math.random() * 55,
+    speedMul: 0.8 + Math.random() * 0.45
+  }));
+  const powerHistory = new Array(60).fill(260);
+  const hrHistory = new Array(60).fill(162);
+  let lastSparkTime = 0;
+
+  function selectRpi(idx) {
+    document.querySelectorAll('#rpiBar .rpi-step').forEach((el, i) => el.classList.toggle('active', i === idx));
+    document.getElementById('artifactContent').textContent = RPI_ARTIFACTS[idx];
+  }
+
+  function setStage(idx) {
+    state.stageIdx = idx;
+    const st = STAGES[idx];
+    state.grade = st.grade;
+    state.wind = st.wind;
+    document.getElementById('slGrade').value = st.grade;
+    document.getElementById('slWind').value = st.wind;
+    document.querySelectorAll('#terrainToolbar .pill-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+    updateControls();
+  }
+
+  function setPosture(p) {
+    state.posture = p;
+    document.getElementById('btnPostureAero').classList.toggle('active', p === 'aero');
+    document.getElementById('btnPostureClimb').classList.toggle('active', p === 'climb');
+    document.getElementById('btnPostureUpright').classList.toggle('active', p === 'upright');
+  }
+
+  function toggleStreamlines() {
+    state.showStreamlines = !state.showStreamlines;
+    const btn = document.getElementById('btnStreamlines');
+    btn.classList.toggle('active', state.showStreamlines);
+    btn.textContent = state.showStreamlines ? '💨 风洞流线 ON' : '💨 风洞流线 OFF';
+  }
+
+  function togglePause() {
+    state.paused = !state.paused;
+    document.getElementById('btnPause').textContent = state.paused ? '▶️ 继续仿真' : '⏸️ 暂停帧检视';
+  }
+
+  function triggerEnergyGel() {
+    state.fishCount = (state.fishCount + 1) % 4;
+    state.cadence = Math.min(130, state.cadence + 8);
+    document.getElementById('slCadence').value = state.cadence;
+    updateControls();
+  }
+
+  function triggerAttack() {
+    setPosture('climb');
+    state.cadence = 115;
+    state.gear = 10;
+    document.getElementById('slCadence').value = 115;
+    document.getElementById('slGear').value = 10;
+    updateControls();
+  }
+
+  function runTaskChallengerProbe() {
+    selectRpi(4);
+    setStage(0);
+    setPosture('climb');
+    state.grade = 15.0;
+    state.wind = 42;
+    state.cadence = 122;
+    document.getElementById('slGrade').value = 15.0;
+    document.getElementById('slWind').value = 42;
+    document.getElementById('slCadence').value = 122;
+    updateControls();
+  }
+
+  function updateControls() {
+    state.cadence = parseFloat(document.getElementById('slCadence').value);
+    state.grade = parseFloat(document.getElementById('slGrade').value);
+    state.gear = parseInt(document.getElementById('slGear').value, 10);
+    state.wind = parseFloat(document.getElementById('slWind').value);
+
+    const ratio = GEAR_RATIOS[state.gear - 1];
+    document.getElementById('lblCadence').textContent = `${state.cadence} RPM`;
+    document.getElementById('lblGrade').textContent = `${state.grade >= 0 ? '+' : ''}${state.grade.toFixed(1)}%`;
+    document.getElementById('lblGear').textContent = `Gear ${state.gear} (${ratio.toFixed(2)}x)`;
+    document.getElementById('lblWind').textContent = `${state.wind} km/h`;
+  }
+
+  // Analytical 2-Bone Law of Cosines IK Solver
+  function solveTwoBoneIK(hx, hy, px, py, L1, L2) {
+    const dx = px - hx;
+    const dy = py - hy;
+    const rawDist = Math.hypot(dx, dy);
+    const maxReach = (L1 + L2) * 0.999;
+    const D = Math.max(12, Math.min(rawDist, maxReach));
+    const cosAlpha = Math.max(-1, Math.min(1, (L1 * L1 + D * D - L2 * L2) / (2 * L1 * D)));
+    const baseAngle = Math.atan2(dy, dx);
+    // Avian knee bends forward toward beak (+x)
+    const hipAngle = baseAngle - Math.acos(cosAlpha);
+    const kx = hx + L1 * Math.cos(hipAngle);
+    const ky = hy + L1 * Math.sin(hipAngle);
+    const cosKnee = Math.max(-1, Math.min(1, (L1 * L1 + L2 * L2 - D * D) / (2 * L1 * L2)));
+    const kneeDeg = Math.round((Math.acos(cosKnee) * 180) / Math.PI);
+    const slipError = Math.hypot((kx + L2 * Math.cos(Math.atan2(py - ky, px - kx))) - px, (ky + L2 * Math.sin(Math.atan2(py - ky, px - kx))) - py);
+    return { kx, ky, kneeDeg, slipError };
+  }
+
+  let lastTs = performance.now();
+  function animate(ts) {
+    const dt = Math.min(0.05, (ts - lastTs) / 1000);
+    lastTs = ts;
+
+    const ratio = GEAR_RATIOS[state.gear - 1];
+    const baseCda = state.posture === 'aero' ? 0.240 : (state.posture === 'climb' ? 0.305 : 0.355);
+    const effCda = baseCda + state.fishCount * 0.018;
+
+    // Ground speed (km/h) from cadence & gear ratio, modulated slightly by extreme uphill
+    const slopeFactor = Math.max(0.58, 1 - state.grade * 0.022);
+    const speedKmh = Math.max(8, (state.cadence / 90) * ratio * 13.2 * slopeFactor);
+    const speedMs = speedKmh / 3.6;
+    const relAirMs = Math.max(0, (speedKmh + state.wind) / 3.6);
+
+    // Longitudinal forces
+    const massTotal = 19.5 + state.fishCount * 0.65; // 11.5kg pelican + 8kg aero bike + fish
+    const gradeRad = Math.atan(state.grade / 100);
+    const crr = STAGES[state.stageIdx].cobble ? 0.0095 : 0.0042;
+    const Fg = massTotal * 9.81 * Math.sin(gradeRad);
+    const Fr = massTotal * 9.81 * Math.cos(gradeRad) * crr;
+    const Faero = 0.5 * 1.225 * effCda * relAirMs * relAirMs;
+    const totalWatts = Math.max(0, Math.round(Math.max(15, (Fg + Fr + Faero) * speedMs / 0.96)));
+    const avianHr = Math.min(225, Math.round(112 + totalWatts * 0.195 + (state.posture === 'climb' ? 10 : 0)));
+
+    if (!state.paused) {
+      const omegaCrank = (state.cadence / 60) * Math.PI * 2;
+      state.crankAngle = (state.crankAngle + omegaCrank * dt) % (Math.PI * 2);
+      state.wheelAngle = (state.wheelAngle + omegaCrank * ratio * dt) % (Math.PI * 2);
+      state.roadOffset = (state.roadOffset + speedKmh * 5.2 * dt) % 1200;
+    }
+
+    // Update posture hip position & torso tilt
+    let hipX = -38, hipY = -98, torsoX = -42, torsoY = -124, torsoRot = 4;
+    if (state.posture === 'aero') {
+      hipX = -36; hipY = -98; torsoX = -36; torsoY = -118; torsoRot = 16;
+    } else if (state.posture === 'climb') {
+      const bob = Math.sin(state.crankAngle * 2) * 5;
+      hipX = -10; hipY = -112 + bob; torsoX = -14; torsoY = -136 + bob; torsoRot = 10;
+    } else {
+      hipX = -44; hipY = -102; torsoX = -48; torsoY = -128; torsoRot = -4;
+    }
+
+    // Cobblestone micro-jitter
+    const cobbleJitter = (!state.paused && STAGES[state.stageIdx].cobble) ? (Math.sin(ts * 0.06) * 2.2) : 0;
+    const pitchDeg = -state.grade * 0.85;
+    document.getElementById('bikeAssembly').setAttribute('transform', `translate(470, ${262 + cobbleJitter}) rotate(${pitchDeg.toFixed(2)})`);
+    document.getElementById('pelicanBodyGroup').setAttribute('transform', `translate(${torsoX}, ${torsoY}) rotate(${torsoRot})`);
+
+    // Wing flap on high power
+    const wingFlap = Math.sin(state.crankAngle * 2) * (totalWatts > 340 ? 18 : 5);
+    document.getElementById('pelicanWing').setAttribute('transform', `translate(2, -6) rotate(${wingFlap.toFixed(1)})`);
+
+    // Gular pouch elastic oscillation
+    const pouchSag = -28 + state.fishCount * 9 + Math.sin(state.crankAngle * 2) * (3 + state.fishCount * 2.2);
+    document.getElementById('gularPouch').setAttribute('d', `M 34,-64 Q 76,${pouchSag.toFixed(1)} 118,-59 Z`);
+    document.getElementById('pouchFishVisual').setAttribute('opacity', state.fishCount > 0 ? '0.9' : '0');
+
+    // Crank & Pedals (BB at -15, 0, R = 28)
+    const bbX = -15, bbY = 0, crankR = 28;
+    const lPedalX = bbX + crankR * Math.cos(state.crankAngle);
+    const lPedalY = bbY + crankR * Math.sin(state.crankAngle);
+    const rPedalX = bbX + crankR * Math.cos(state.crankAngle + Math.PI);
+    const rPedalY = bbY + crankR * Math.sin(state.crankAngle + Math.PI);
+
+    document.getElementById('crankArmL').setAttribute('x2', lPedalX.toFixed(2));
+    document.getElementById('crankArmL').setAttribute('y2', lPedalY.toFixed(2));
+    document.getElementById('crankArmR').setAttribute('x2', rPedalX.toFixed(2));
+    document.getElementById('crankArmR').setAttribute('y2', rPedalY.toFixed(2));
+
+    // Solve Left & Right Leg IK
+    const ikL = solveTwoBoneIK(hipX, hipY, lPedalX, lPedalY, state.L1, state.L2);
+    const ikR = solveTwoBoneIK(hipX, hipY, rPedalX, rPedalY, state.L1, state.L2);
+
+    const setLine = (id, x1, y1, x2, y2) => {
+      const el = document.getElementById(id);
+      el.setAttribute('x1', x1.toFixed(2)); el.setAttribute('y1', y1.toFixed(2));
+      el.setAttribute('x2', x2.toFixed(2)); el.setAttribute('y2', y2.toFixed(2));
+    };
+    setLine('lThigh', hipX, hipY, ikL.kx, ikL.ky);
+    setLine('lShin', ikL.kx, ikL.ky, lPedalX, lPedalY);
+    setLine('rThigh', hipX, hipY, ikR.kx, ikR.ky);
+    setLine('rShin', ikR.kx, ikR.ky, rPedalX, rPedalY);
+
+    document.getElementById('lFoot').setAttribute('points', `${(lPedalX - 10).toFixed(1)},${lPedalY.toFixed(1)} ${(lPedalX + 18).toFixed(1)},${lPedalY.toFixed(1)} ${(lPedalX + 8).toFixed(1)},${(lPedalY - 8).toFixed(1)}`);
+    document.getElementById('rFoot').setAttribute('points', `${(rPedalX - 10).toFixed(1)},${rPedalY.toFixed(1)} ${(rPedalX + 18).toFixed(1)},${rPedalY.toFixed(1)} ${(rPedalX + 8).toFixed(1)},${(rPedalY - 8).toFixed(1)}`);
+
+    // Update IK markers
+    document.getElementById('hipMarker').setAttribute('cx', hipX.toFixed(1));
+    document.getElementById('hipMarker').setAttribute('cy', hipY.toFixed(1));
+    document.getElementById('kneeMarker').setAttribute('cx', ikL.kx.toFixed(1));
+    document.getElementById('kneeMarker').setAttribute('cy', ikL.ky.toFixed(1));
+    document.getElementById('pedalMarker').setAttribute('cx', lPedalX.toFixed(1));
+    document.getElementById('pedalMarker').setAttribute('cy', lPedalY.toFixed(1));
+    document.getElementById('kneeAngleTxt').setAttribute('x', (ikL.kx + 10).toFixed(1));
+    document.getElementById('kneeAngleTxt').setAttribute('y', (ikL.ky - 4).toFixed(1));
+    document.getElementById('kneeAngleTxt').textContent = `θ_knee: ${ikL.kneeDeg}°`;
+
+    // Rotate wheels & drone
+    const wheelDeg = (state.wheelAngle * 180) / Math.PI;
+    document.getElementById('rearSpokes').setAttribute('transform', `rotate(${wheelDeg.toFixed(1)})`);
+    document.getElementById('frontSpokes').setAttribute('transform', `rotate(${wheelDeg.toFixed(1)})`);
+    const droneY = -165 + Math.sin(ts * 0.004) * 7;
+    document.getElementById('paceDrone').setAttribute('transform', `translate(215, ${droneY.toFixed(1)})`);
+
+    // Update HUD numbers
+    document.getElementById('hudSpeed').textContent = `${speedKmh.toFixed(1)} km/h`;
+    document.getElementById('hudPower').textContent = `${totalWatts} W`;
+    document.getElementById('hudGrade').textContent = `${state.grade >= 0 ? '+' : ''}${state.grade.toFixed(1)}%`;
+    document.getElementById('hudCda').textContent = `${effCda.toFixed(3)} m²`;
+    document.getElementById('hudHr').textContent = `${avianHr} bpm`;
+    document.getElementById('hudGear').textContent = `${state.gear}/11 (${ratio.toFixed(2)}x)`;
+    document.getElementById('hudSlip').textContent = `${ikL.slipError.toFixed(2)} px`;
+
+    // Render Background Terrain & Wind-Tunnel Streamlines
+    renderWindTunnelCanvas(speedKmh, pitchDeg, ts);
+
+    // Update Sparkline every 160ms
+    if (ts - lastSparkTime > 160 && !state.paused) {
+      lastSparkTime = ts;
+      powerHistory.push(totalWatts); powerHistory.shift();
+      hrHistory.push(avianHr); hrHistory.shift();
+      renderSparkline();
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  function renderWindTunnelCanvas(speedKmh, pitchDeg, ts) {
+    const st = STAGES[state.stageIdx];
+    const grad = ctx.createLinearGradient(0, 0, 0, 410);
+    grad.addColorStop(0, st.skyTop);
+    grad.addColorStop(1, st.skyBot);
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, 960, 410);
+
+    // Blueprint wind-tunnel grid
+    ctx.strokeStyle = 'rgba(16, 185, 129, 0.08)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < 960; x += 48) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 410); ctx.stroke();
+    }
+    for (let y = 0; y < 410; y += 48) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(960, y); ctx.stroke();
+    }
+
+    // Distant mountains / skyline silhouette
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.65)';
+    ctx.beginPath();
+    ctx.moveTo(0, 340);
+    for (let x = 0; x <= 960; x += 60) {
+      const h = 250 - Math.sin((x + state.roadOffset * 0.25) * 0.008) * 42 - Math.cos((x + state.roadOffset * 0.12) * 0.018) * 24;
+      ctx.lineTo(x, h);
+    }
+    ctx.lineTo(960, 410); ctx.lineTo(0, 410); ctx.closePath();
+    ctx.fill();
+
+    // Tilted Road Surface matching pitchDeg
+    ctx.save();
+    ctx.translate(470, 262);
+    ctx.rotate((pitchDeg * Math.PI) / 180);
+    ctx.fillStyle = st.ground;
+    ctx.fillRect(-600, 64, 1200, 160);
+    ctx.strokeStyle = '#10b981';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(-600, 64); ctx.lineTo(600, 64); ctx.stroke();
+
+    // Moving road dashes or cobblestones
+    const dashStep = 80;
+    const shift = state.roadOffset % dashStep;
+    for (let x = -560 - shift; x < 580; x += dashStep) {
+      if (st.cobble) {
+        ctx.fillStyle = '#52525b';
+        ctx.fillRect(x, 68, 34, 10);
+        ctx.fillRect(x + 38, 70, 32, 9);
+      } else {
+        ctx.fillStyle = 'rgba(52, 211, 153, 0.65)';
+        ctx.fillRect(x, 76, 36, 4);
+      }
+    }
+    ctx.restore();
+
+    // Laminar & Turbulent Wind-Tunnel Smoke Streamlines
+    if (state.showStreamlines) {
+      const flowSpeed = Math.max(12, speedKmh + state.wind) * 0.22;
+      for (const s of streamlines) {
+        if (!state.paused) {
+          s.x -= flowSpeed * s.speedMul;
+          if (s.x + s.len < 0) {
+            s.x = 960 + Math.random() * 80;
+            s.y = 45 + Math.random() * 290;
+          }
+        }
+        // Deflect streamlines around pelican aero envelope (center ~ 470, 175)
+        const dx = s.x - 475;
+        const dy = s.y - 175;
+        const dist = Math.hypot(dx, dy);
+        let deflectY = 0;
+        let isWake = false;
+        if (dist < 145) {
+          deflectY = (dy >= 0 ? 1 : -1) * (145 - dist) * 0.22;
+          if (dx < 0) isWake = true;
+        }
+        ctx.strokeStyle = isWake ? 'rgba(251, 191, 36, 0.42)' : 'rgba(56, 189, 248, 0.36)';
+        ctx.lineWidth = isWake ? 2.0 : 1.5;
+        ctx.beginPath();
+        ctx.moveTo(s.x, s.y + deflectY);
+        ctx.quadraticCurveTo(s.x + s.len * 0.5, s.y + deflectY * 1.35, s.x + s.len, s.y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  function renderSparkline() {
+    sctx.clearRect(0, 0, 232, 48);
+    // Power trace (amber)
+    sctx.strokeStyle = '#fbbf24';
+    sctx.lineWidth = 1.8;
+    sctx.beginPath();
+    powerHistory.forEach((w, i) => {
+      const x = (i / (powerHistory.length - 1)) * 232;
+      const y = 44 - Math.min(40, (w / 600) * 40);
+      if (i === 0) sctx.moveTo(x, y); else sctx.lineTo(x, y);
+    });
+    sctx.stroke();
+
+    // Heart rate trace (rose)
+    sctx.strokeStyle = '#fb7185';
+    sctx.lineWidth = 1.5;
+    sctx.beginPath();
+    hrHistory.forEach((hr, i) => {
+      const x = (i / (hrHistory.length - 1)) * 232;
+      const y = 44 - Math.min(40, ((hr - 90) / 140) * 40);
+      if (i === 0) sctx.moveTo(x, y); else sctx.lineTo(x, y);
+    });
+    sctx.stroke();
+  }
+
+  // Listen to 3-Way Pelican Arena broadcast controls
+  window.addEventListener('message', (e) => {
+    const d = e.data || {};
+    if (d.type === 'ARENA_SYNC') {
+      if (typeof d.cadence === 'number') {
+        state.cadence = d.cadence;
+        document.getElementById('slCadence').value = d.cadence;
+      }
+      if (typeof d.wind === 'number') {
+        state.wind = d.wind;
+        document.getElementById('slWind').value = d.wind;
+      }
+      if (typeof d.paused === 'boolean') {
+        state.paused = d.paused;
+      }
+      if (d.action === 'sprint') triggerAttack();
+      if (d.action === 'feed') triggerEnergyGel();
+      updateControls();
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Space') { e.preventDefault(); togglePause(); }
+    if (e.key === 'g' || e.key === 'G') {
+      state.gear = (state.gear % 11) + 1;
+      document.getElementById('slGear').value = state.gear;
+      updateControls();
+    }
+    if (['1', '2', '3', '4'].includes(e.key)) setStage(parseInt(e.key, 10) - 1);
+  });
+
+  selectRpi(0);
+  updateControls();
+  requestAnimationFrame(animate);
+</script>
+</body>
+</html>
