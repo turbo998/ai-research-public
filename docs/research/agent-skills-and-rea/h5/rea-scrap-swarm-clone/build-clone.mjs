@@ -574,6 +574,39 @@ const html = `<!DOCTYPE html>
       border-color: var(--cyan);
       color: var(--cyan);
     }
+    .ev-ledger-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .ev-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 8px;
+      border-radius: 6px;
+      background: #11140f;
+      border: 1px solid #2b3126;
+      font-family: var(--mono);
+      font-size: 10px;
+      transition: all 0.2s;
+    }
+    .ev-item.pulse {
+      border-color: var(--emerald);
+      background: rgba(74, 222, 128, 0.14);
+      box-shadow: 0 0 10px rgba(74, 222, 128, 0.25);
+    }
+    .ev-hash {
+      color: var(--cyan);
+      font-weight: 700;
+    }
+    .ev-desc {
+      color: var(--text);
+    }
+    .ev-meta {
+      color: var(--muted);
+      font-size: 9.5px;
+    }
   </style>
 </head>
 <body>
@@ -671,6 +704,7 @@ const html = `<!DOCTYPE html>
             <button type="button" class="act-btn primary" id="btnAutoPlay">🤖 AI 自动巡航演示: ON</button>
             <button type="button" class="act-btn" id="btnSwitchWeapon">切换三武器 (1/2/3)</button>
             <button type="button" class="act-btn" id="btnTriggerOverdrive">⚡ 释放蒸汽超载 (Q)</button>
+            <button type="button" class="act-btn" id="btnShelterEmp">🌐 避难所磁暴脉冲 (E)</button>
             <button type="button" class="act-btn" id="btnSpawnBoss">👑 立即召唤铁冠领主 Boss</button>
             <button type="button" class="act-btn" id="btnTriggerCutin">🎬 触发特写横幅</button>
             <button type="button" class="act-btn" id="btnOpenPrologue">📖 播放战役剧情弹窗</button>
@@ -773,6 +807,18 @@ const html = `<!DOCTYPE html>
       <div>
         <div class="sec-title">3. Web Audio 双振荡合成器测试台 (ProceduralAudioEngine)</div>
         <div class="soundboard-grid" id="soundboardGrid"></div>
+      </div>
+
+      <div>
+        <div class="sec-title">4. REA 密码学证据链实时脉动台账 (ev_&lt;sha256&gt;)</div>
+        <div class="ev-ledger-list" id="evLedgerList">
+          <div class="ev-item" data-ev="hangar"><span class="ev-hash">ev_7d31e804</span><span class="ev-desc">drawHangarR17..Boss (5机甲运动学)</span><span class="ev-meta">AST:1,420</span></div>
+          <div class="ev-item" data-ev="weapon"><span class="ev-hash">ev_a9f4c218</span><span class="ev-desc">WEAPON_SPECS (铆钉/铁锤/电弧)</span><span class="ev-meta">AST:680</span></div>
+          <div class="ev-item" data-ev="boss"><span class="ev-hash">ev_c4829b11</span><span class="ev-desc">IronCrown.chestLock (破盾2.5×)</span><span class="ev-meta">AST:910</span></div>
+          <div class="ev-item" data-ev="emp"><span class="ev-hash">ev_39a7d42e</span><span class="ev-desc">ShelterBeacon.pulseEMP (磁暴)</span><span class="ev-meta">AST:540</span></div>
+          <div class="ev-item" data-ev="story"><span class="ev-hash">ev_e8201f7c</span><span class="ev-desc">STORY_CHAPTERS & CUTIN_SPECS</span><span class="ev-meta">AST:1,150</span></div>
+          <div class="ev-item" data-ev="audio"><span class="ev-hash">ev_51b0e93a</span><span class="ev-desc">ProceduralAudioEngine.tone()</span><span class="ev-meta">AST:490</span></div>
+        </div>
       </div>
     </aside>
   </main>
@@ -1860,6 +1906,34 @@ export class ProceduralAudioEngine {
       document.getElementById("hudAct").textContent = "ACT III · 铁冠降临";
     }
 
+    function pulseEvidence(evKey) {
+      const el = document.querySelector(\`.ev-item[data-ev="\${evKey}"]\`);
+      if (!el) return;
+      el.classList.add("pulse");
+      setTimeout(() => el.classList.remove("pulse"), 520);
+    }
+
+    let empWaveRadius = 0;
+    function triggerShelterEmp() {
+      empWaveRadius = 20;
+      player.shield = 60;
+      showCutin("shelter");
+      audio.play("shelterPulse");
+      pulseEvidence("emp");
+      pulseEvidence("audio");
+      for (const e of enemies) {
+        const ang = Math.atan2(e.y - 320, e.x - 480);
+        e.x = Math.max(50, Math.min(910, e.x + Math.cos(ang) * 110));
+        e.y = Math.max(50, Math.min(550, e.y + Math.sin(ang) * 110));
+        e.hp -= 35;
+      }
+      if (boss) {
+        boss.exposed = true;
+        boss.timer = livePatch.bossExposeSec;
+        pulseEvidence("boss");
+      }
+    }
+
     const keys = {};
     window.addEventListener("keydown", (e) => {
       keys[e.key.toLowerCase()] = true;
@@ -1867,6 +1941,7 @@ export class ProceduralAudioEngine {
       if (e.key === "2") weaponIdx = 1;
       if (e.key === "3") weaponIdx = 2;
       if (e.key.toLowerCase() === "q") triggerOverdrive();
+      if (e.key.toLowerCase() === "e") triggerShelterEmp();
     });
     window.addEventListener("keyup", (e) => {
       keys[e.key.toLowerCase()] = false;
@@ -1875,6 +1950,8 @@ export class ProceduralAudioEngine {
     function triggerOverdrive() {
       player.overdriveTimer = 6.0;
       showCutin("overdrive");
+      pulseEvidence("hangar");
+      pulseEvidence("story");
     }
 
     document.getElementById("btnAutoPlay").addEventListener("click", (e) => {
@@ -1885,9 +1962,14 @@ export class ProceduralAudioEngine {
     document.getElementById("btnSwitchWeapon").addEventListener("click", () => {
       weaponIdx = (weaponIdx + 1) % weapons.length;
       audio.play("dash");
+      pulseEvidence("weapon");
     });
     document.getElementById("btnTriggerOverdrive").addEventListener("click", () => triggerOverdrive());
-    document.getElementById("btnSpawnBoss").addEventListener("click", () => spawnBoss());
+    document.getElementById("btnShelterEmp").addEventListener("click", () => triggerShelterEmp());
+    document.getElementById("btnSpawnBoss").addEventListener("click", () => {
+      spawnBoss();
+      pulseEvidence("boss");
+    });
     const cutinKeys = ["overdrive", "shelter", "boss_entry", "boss_lock_open"];
     let cutinCycleIdx = 0;
     document.getElementById("btnTriggerCutin").addEventListener("click", () => {
@@ -2082,6 +2164,16 @@ export class ProceduralAudioEngine {
       gCtx.arc(480, 320, 95 + Math.sin(gameClock * 2.5) * 4, 0, Math.PI * 2);
       gCtx.stroke();
       gCtx.setLineDash([]);
+
+      if (empWaveRadius > 0) {
+        empWaveRadius += 14;
+        gCtx.strokeStyle = \`rgba(0, 229, 255, \${Math.max(0, 1 - empWaveRadius / 460)})\`;
+        gCtx.lineWidth = 5;
+        gCtx.beginPath();
+        gCtx.arc(480, 320, empWaveRadius, 0, Math.PI * 2);
+        gCtx.stroke();
+        if (empWaveRadius > 460) empWaveRadius = 0;
+      }
 
       // Draw enemies using procedural multi-joint mecha drawers
       for (const e of enemies) {

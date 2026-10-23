@@ -282,13 +282,17 @@ function buildChassis() {
   out.push(S(k.slabOf(bumper, CHASSIS_Z - 0.5, 7.5, P, 6, 1.0), { tone: "lo" }));
   out.push(L(k.planOutline(k.insetPlan(bumper, 3), CHASSIS_Z + 7, P, 4), { tone: "faint" }));
 
-  // Front Dual Rally LED Fog-Light Pods mounted on bumper brace
+  // Front Dual Rally LED Fog-Light Pods + Angel-Eye Halos + Aero Canards mounted on bumper
   const braceF = { x: -132, y: -32, w: 14, d: 64, r: 3 };
   out.push(S(k.slabOf(braceF, CHASSIS_Z + 7, 3, P, 4, 0.4), { tone: "mid" }));
   const F_LED_L = G.frameOf([-136, -26, CHASSIS_Z + 8.5], [-1, 0, 0], [0, 1, 0], [0, 0, 1]);
   const F_LED_R = G.frameOf([-136, 26, CHASSIS_Z + 8.5], [-1, 0, 0], [0, 1, 0], [0, 0, 1]);
-  out.push(S(G.disc(-3, 2, 4.2, F_LED_L, P, { bevel: 0.4 }), { tone: "hi", lit: true }));
-  out.push(S(G.disc(-3, 2, 4.2, F_LED_R, P, { bevel: 0.4 }), { tone: "hi", lit: true }));
+  out.push(`<g class="mjx-headlight-pod">${S(G.disc(-3, 2, 4.4, F_LED_L, P, { bevel: 0.4 }), { tone: "hi", lit: true })}${S(G.disc(-3, 2, 4.4, F_LED_R, P, { bevel: 0.4 }), { tone: "hi", lit: true })}</g>`);
+  // Side aerodynamic dive-plane canards on front bumper corners
+  for (const side of [-1, 1]) {
+    const canard = { x: -140, y: side > 0 ? 49 : -53, w: 16, d: 4, r: 1 };
+    out.push(S(k.slabOf(canard, CHASSIS_Z + 2, 4.8, P, 3, 0.3), { tone: "hi" }));
+  }
 
   // Front & Rear Body Mounting Posts with height adjustment pin holes
   for (const [px, py] of [[-125, -22], [-125, 22], [112, -22], [112, 22]]) {
@@ -720,9 +724,21 @@ function buildBodyShell() {
   );
   out.push(L(k.planOutline(k.insetPlan(cabin, 5), zBase + 21.5, P, 5), { tone: "lo" }));
 
-  // Rally Roof Ram-Air Scoop feeding cool air toward the 2845 motor fan
+  // Rally Roof Ram-Air Scoop feeding cool air toward the 2845 motor fan + Roof Shark-Fin Vortex Generators
   const scoop = { x: -16, y: -11, w: 38, d: 22, r: 3 };
   out.push(S(k.slabOf(scoop, zBase + 21.5, 4.2, P, 4, 0.7), { tone: "hi", lit: true }));
+  for (const vy of [-20, -10, 0, 10, 20]) {
+    out.push(S(k.slabOf({ x: 48, y: vy - 0.7, w: 7, d: 1.4, r: 0.3 }, zBase + 21.5, 2.2, P, 2), { tone: "hi" }));
+  }
+
+  // Left & Right Rally Aero Wing Mirrors + Front/Rear Integrated LED Light Bars on Body Shell
+  for (const side of [-1, 1]) {
+    const mirror = { x: -34, y: side > 0 ? 35 : -41, w: 9, d: 6, r: 1.8 };
+    out.push(S(k.slabOf(mirror, zBase + 10.5, 3.6, P, 3, 0.4), { tone: "hi", lit: true }));
+  }
+  const frontLightBar = { x: -113, y: -28, w: 4, d: 56, r: 1.2 };
+  const rearTailBar = { x: 109, y: -30, w: 4, d: 60, r: 1.2 };
+  out.push(`<g class="mjx-headlight-pod">${S(k.slabOf(frontLightBar, zBase + 3.2, 2.8, P, 3, 0.3), { tone: "hi", lit: true })}${S(k.slabOf(rearTailBar, zBase + 4.2, 2.6, P, 3, 0.3), { tone: "hi", lit: true })}</g>`);
 
   // High-Downforce Dual-Plane Rally Rear Wing (+78 to +110)
   for (const wy of [-24, 24]) {
@@ -903,10 +919,25 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="stealth"] .mjx-piece[data-piece="body_shell"]{
   --anatomy-top:#52525b;--anatomy-fill:#27272a;--anatomy-shade-0:#09090b;--anatomy-shade-1:#18181b;--anatomy-shade-2:#27272a;--anatomy-shade-3:#3f3f46;--anatomy-hi:#a3e635;--anatomy-lit:#a3e635;
 }
-.iso-stage[data-color-mode="vivid"][data-livery="stealth"] .mjx-piece[data-piece="suspension_f"],
-.iso-stage[data-color-mode="vivid"][data-livery="stealth"] .mjx-piece[data-piece="suspension_r"],
-.iso-stage[data-color-mode="vivid"][data-livery="stealth"] .mjx-piece[data-piece="upper_deck"]{
-  --anatomy-top:#a3e635;--anatomy-fill:#65a30d;--anatomy-shade-0:#365314;--anatomy-shade-1:#3f6212;--anatomy-shade-2:#4d7c0f;--anatomy-shade-3:#84cc16;--anatomy-hi:#ecfccb;
+/* Livery 4: Martini Rally Legend (White / Cobalt Blue / Crimson Stripe) */
+.iso-stage[data-color-mode="vivid"][data-livery="martini"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#f8fafc;--anatomy-fill:#e2e8f0;--anatomy-shade-0:#475569;--anatomy-shade-1:#94a3b8;--anatomy-shade-2:#cbd5e1;--anatomy-shade-3:#f1f5f9;--anatomy-hi:#ef4444;--anatomy-lit:#2563eb;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="martini"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="martini"] .mjx-piece[data-piece="wheels_r"]{
+  --anatomy-top:#f8fafc;--anatomy-fill:#1e293b;--anatomy-hi:#38bdf8;--anatomy-lit:#ef4444;
+}
+
+/* Livery 5: Cyber Neon Violet & Cyan */
+.iso-stage[data-color-mode="vivid"][data-livery="cyber"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#c084fc;--anatomy-fill:#7e22ce;--anatomy-shade-0:#3b0764;--anatomy-shade-1:#581c87;--anatomy-shade-2:#6b21a8;--anatomy-shade-3:#9333ea;--anatomy-hi:#22d3ee;--anatomy-lit:#22d3ee;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="cyber"] .mjx-piece[data-piece="drivetrain"],
+.iso-stage[data-color-mode="vivid"][data-livery="cyber"] .mjx-piece[data-piece="upper_deck"]{
+  --anatomy-top:#22d3ee;--anatomy-fill:#0891b2;--anatomy-hi:#67e8f9;--anatomy-lit:#f472b6;
+}
+.iso-stage[data-lights="on"] .mjx-headlight-pod{
+  filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
 
 @media (max-width:760px){
@@ -949,8 +980,10 @@ const customControlsHtml = `
     <span class="mjx-topbar-label">🎨 涂装与分色:</span>
     <button type="button" class="mjx-btn" data-livery-btn="hyper" data-active>厂队赤红金</button>
     <button type="button" class="mjx-btn" data-livery-btn="wrc">WRC 蓝金拉力</button>
+    <button type="button" class="mjx-btn" data-livery-btn="martini">传奇红白蓝</button>
+    <button type="button" class="mjx-btn" data-livery-btn="cyber">赛博霓虹紫</button>
     <button type="button" class="mjx-btn" data-livery-btn="stealth">黑金暗夜绿</button>
-    <button type="button" class="mjx-btn" data-livery-btn="mono">工程单色模式</button>
+    <button type="button" class="mjx-btn" data-livery-btn="mono">工程单色</button>
   </div>
 </div>
 <div class="mjx-toolbar">
@@ -960,6 +993,7 @@ const customControlsHtml = `
       <button type="button" class="mjx-btn" data-act="explode">爆炸拆解 (E)</button>
       <button type="button" class="mjx-btn" data-act="bump">飞跳下压 (S)</button>
       <button type="button" class="mjx-btn" data-act="shell">车壳: X-Ray 透视 (B)</button>
+      <button type="button" class="mjx-btn" data-act="lights" data-active>💡 车灯 ON (L)</button>
       <button type="button" class="mjx-btn" data-act="gyro" data-active>G3C 陀螺仪 ON</button>
     </div>
   </div>
@@ -1044,7 +1078,7 @@ const body = `<style>${CSS}</style>${navBannerHtml}<div class="mjx-wrap">${k.pla
   caption:
     inspectorHtml +
     "美嘉欣（MJX）Hyper Go 14303 采用 192 mm 轴距 6061-T6 铝合金蜂窝主底盘与 CNC 二楼板抗扭强化结构。2845 3700KV 四极无刷电机输出动力经初级齿轮副（45T/15T = 3.0）与前后粉末冶金行星伞齿差速器（37T/13T = 2.846，总减速比 8.54:1）分配至四轮；配备前后横向防倾杆、油压绞牙独立悬架、内置 G3C 陀螺仪的 17g 数字舵机阿克曼转向系统及高下压力拉力宽体车壳。",
-  body: `<div class="iso-stage" data-color-mode="vivid" data-livery="hyper" data-shell="xray" tabindex="0" role="application" aria-label="美嘉欣 14303 整车互动解剖与动态测功台">${svg}</div>${customControlsHtml}`,
+  body: `<div class="iso-stage" data-color-mode="vivid" data-livery="hyper" data-shell="xray" data-lights="on" tabindex="0" role="application" aria-label="美嘉欣 14303 整车互动解剖与动态测功台">${svg}</div>${customControlsHtml}`,
 })}</div>`;
 
 const live = `
@@ -1061,6 +1095,7 @@ const liveryBtns = [...document.querySelectorAll("[data-livery-btn]")];
 const btnExplode = document.querySelector('[data-act="explode"]');
 const btnBump = document.querySelector('[data-act="bump"]');
 const btnShell = document.querySelector('[data-act="shell"]');
+const btnLights = document.querySelector('[data-act="lights"]');
 const btnGyro = document.querySelector('[data-act="gyro"]');
 const batBtns = [...document.querySelectorAll("[data-bat]")];
 const thrInput = document.querySelector("[data-thr]");
@@ -1250,6 +1285,15 @@ for (const btn of partBtns) {
 btnExplode.addEventListener("click", () => toggleExplode());
 btnBump.addEventListener("click", () => triggerBump(-185));
 btnShell.addEventListener("click", () => cycleShell());
+if (btnLights) {
+  btnLights.addEventListener("click", () => {
+    const isOn = stage.getAttribute("data-lights") !== "off";
+    stage.setAttribute("data-lights", isOn ? "off" : "on");
+    if (!isOn) btnLights.setAttribute("data-active", "");
+    else btnLights.removeAttribute("data-active");
+    btnLights.textContent = !isOn ? "💡 车灯 ON (L)" : "💡 车灯 OFF (L)";
+  });
+}
 btnGyro.addEventListener("click", () => {
   gyroEnabled = !gyroEnabled;
   if (gyroEnabled) btnGyro.setAttribute("data-active", "");
@@ -1281,6 +1325,9 @@ window.addEventListener("keydown", (e) => {
   } else if (e.key === "b" || e.key === "B") {
     e.preventDefault();
     cycleShell();
+  } else if (e.key === "l" || e.key === "L") {
+    e.preventDefault();
+    if (btnLights) btnLights.click();
   } else if (e.key === "ArrowLeft") {
     setDemoMode("manual");
     setSteer(steerDeg - 4);
