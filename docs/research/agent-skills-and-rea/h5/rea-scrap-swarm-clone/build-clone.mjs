@@ -780,6 +780,7 @@ const html = `<!DOCTYPE html>
           <button type="button" class="act-btn" data-ast="director">director.ts</button>
           <button type="button" class="act-btn" data-ast="spatial">spatial.ts</button>
           <button type="button" class="act-btn" data-ast="combat">combat.ts</button>
+          <button type="button" class="act-btn" data-ast="save">save.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -811,6 +812,10 @@ const html = `<!DOCTYPE html>
           <div class="patch-row">
             <div class="patch-row-head"><span>player.magnetRadius (废铁磁吸牵引半径)</span><strong id="valMagnet">175 px</strong></div>
             <input type="range" id="patchMagnet" min="80" max="360" step="10" value="175" />
+          </div>
+          <div class="patch-row">
+            <div class="patch-row-head"><span>weapon.arcChainCount (电弧枪连锁跳数)</span><strong id="valArcChain">3 跳</strong></div>
+            <input type="range" id="patchArcChain" min="2" max="7" step="1" value="3" />
           </div>
         </div>
       </div>
@@ -1674,6 +1679,19 @@ export function computeDamageWithArmor(baseDmg: number, isOverdrive: boolean, ta
   return Math.round(baseDmg * overdriveMul * armorMul);
 }\`,
       },
+      save: {
+        minified: \`const Qt="scrap-swarm-save-v1";function Bt(){try{const e=JSON.parse(localStorage.getItem(Qt)||"{}");return{scrap:e.scrap|0,bestAct:Math.max(1,e.bestAct|0),upgrades:e.upgrades||{}}}catch{return{scrap:0,bestAct:1,upgrades:{}}}}\`,
+        decompiled: \`// Reconstructed LocalStorage Save Profile & Sanitizer (src/game/save.ts)
+export const SAVE_KEY = "scrap-swarm-save-v1";
+export function loadOrInitSaveProfile(): SaveProfile {
+  try {
+    const raw = JSON.parse(localStorage.getItem(SAVE_KEY) || "{}");
+    return { scrap: raw.scrap | 0, bestAct: Math.max(1, raw.bestAct | 0), upgrades: raw.upgrades ?? {} };
+  } catch {
+    return { scrap: 0, bestAct: 1, upgrades: {} };
+  }
+}\`,
+      },
     };
 
     // =========================================================================
@@ -1925,6 +1943,7 @@ export function computeDamageWithArmor(baseDmg: number, isOverdrive: boolean, ta
       fireRateScale: 1.0,
       bossExposeSec: 4.5,
       magnetRadius: 175,
+      arcChainCount: 3,
     };
 
     document.getElementById("patchSpeed").addEventListener("input", (e) => {
@@ -1945,6 +1964,14 @@ export function computeDamageWithArmor(baseDmg: number, isOverdrive: boolean, ta
         livePatch.magnetRadius = Number(e.target.value);
         document.getElementById("valMagnet").textContent = livePatch.magnetRadius + " px";
         pulseEvidence("emp");
+      });
+    }
+    const patchArcChainEl = document.getElementById("patchArcChain");
+    if (patchArcChainEl) {
+      patchArcChainEl.addEventListener("input", (e) => {
+        livePatch.arcChainCount = Number(e.target.value);
+        document.getElementById("valArcChain").textContent = livePatch.arcChainCount + " 跳";
+        pulseEvidence("weapon");
       });
     }
 
@@ -1974,6 +2001,7 @@ export function computeDamageWithArmor(baseDmg: number, isOverdrive: boolean, ta
     const lightningArcs = [];
     const scrapOrbs = [];
     const shellCasings = [];
+    const enemyBolts = [];
     const enemies = [
       { kind: "scuttler", x: 180, y: 150, hp: 60, maxHp: 60 },
       { kind: "scuttler", x: 780, y: 160, hp: 60, maxHp: 60 },
@@ -2220,10 +2248,14 @@ export function computeDamageWithArmor(baseDmg: number, isOverdrive: boolean, ta
             if (b.kind === "hammer") {
               shockRings.push({ x: e.x, y: e.y, r: 10, maxR: 92, life: 0.32 });
             } else if (b.kind === "arc" && enemies.length > 1) {
-              const other = enemies[(j + 1) % enemies.length];
-              if (other && other !== e) {
-                other.hp -= 18;
-                lightningArcs.push({ x1: e.x, y1: e.y, x2: other.x, y2: other.y, life: 0.22 });
+              let prev = e;
+              for (let c = 1; c < livePatch.arcChainCount; c++) {
+                const next = enemies[(j + c) % enemies.length];
+                if (next && next !== prev) {
+                  next.hp -= 16;
+                  lightningArcs.push({ x1: prev.x, y1: prev.y, x2: next.x, y2: next.y, life: 0.24 });
+                  prev = next;
+                }
               }
             }
             dmgPopups.push({
@@ -2290,12 +2322,49 @@ export function computeDamageWithArmor(baseDmg: number, isOverdrive: boolean, ta
         if (sc.life <= 0) shellCasings.splice(i, 1);
       }
 
-      // Update enemies
+      // Update enemies & Zapper/Boss ranged plasma bolts deflected by R-17 Magnetic Shield
       for (const e of enemies) {
         const ang = Math.atan2(player.y - e.y, player.x - e.x);
         const spd = e.kind === "scuttler" ? 68 : e.kind === "brute" ? 38 : 28;
         e.x += Math.cos(ang) * spd * dt;
         e.y += Math.sin(ang) * spd * dt;
+        if (e.kind === "zapper" && Math.random() < dt * 0.55) {
+          enemyBolts.push({
+            x: e.x,
+            y: e.y,
+            vx: Math.cos(ang) * 260,
+            vy: Math.sin(ang) * 260,
+            life: 2.2,
+          });
+        }
+      }
+      for (let i = enemyBolts.length - 1; i >= 0; i--) {
+        const eb = enemyBolts[i];
+        eb.x += eb.vx * dt;
+        eb.y += eb.vy * dt;
+        eb.life -= dt;
+        if (Math.hypot(eb.x - player.x, eb.y - player.y) < 34) {
+          dmgPopups.push({
+            x: player.x - 18,
+            y: player.y - 30,
+            text: "SHIELD DEFLECT",
+            color: "#00e5ff",
+            life: 0.48,
+          });
+          for (let k = 0; k < 4; k++) {
+            particles.push({
+              x: eb.x,
+              y: eb.y,
+              vx: (Math.random() - 0.5) * 150,
+              vy: (Math.random() - 0.5) * 150,
+              color: "#00e5ff",
+              life: 0.28,
+            });
+          }
+          enemyBolts.splice(i, 1);
+          continue;
+        }
+        if (eb.life <= 0) enemyBolts.splice(i, 1);
       }
 
       // Update particles & floating damage numbers
@@ -2475,6 +2544,12 @@ export function computeDamageWithArmor(baseDmg: number, isOverdrive: boolean, ta
         gCtx.fillStyle = b.kind === "arc" ? "#00e5ff" : b.kind === "hammer" ? "#f0b34f" : "#ffe28a";
         gCtx.beginPath();
         gCtx.arc(b.x, b.y, b.kind === "hammer" ? 7 : 4.5, 0, Math.PI * 2);
+        gCtx.fill();
+      }
+      for (const eb of enemyBolts) {
+        gCtx.fillStyle = "#ff5c77";
+        gCtx.beginPath();
+        gCtx.arc(eb.x, eb.y, 4.2, 0, Math.PI * 2);
         gCtx.fill();
       }
 
