@@ -383,10 +383,11 @@ function buildDrivetrain() {
     }
   }
 
-  // Center Aluminum Main Driveshaft running from AXLE_F + 14 to AXLE_R - 14 with phase collars + Center High-Speed Bearing Block
+  // Center Aluminum Main Driveshaft running from AXLE_F + 14 to AXLE_R - 14 with phase collars + Center High-Speed Bearing Block + Brass Dynamic Balance Collar
   out.push(S(G.disc(AXLE_F + 14, AXLE_R - 14, 3.1, F_X, P, { bevel: 0.4 }), { tone: "hi", lit: true }));
   const centerBearingBlock = { x: -4.5, y: -5.5, w: 9, d: 11, r: 1.5 };
   out.push(S(k.slabOf(centerBearingBlock, zTop, 13.5, P, 3, 0.4), { tone: "mid" }));
+  out.push(S(G.disc(-7.5, -5.2, 4.4, F_X, P, { bevel: 0.35 }), { tone: "hi", lit: true }));
   for (const sx of [-48, -16, 12, 54]) {
     out.push(S(G.disc(sx - 1.2, sx + 1.2, 4.1, F_X, P, { bevel: 0.3 }), { tone: "mid", lit: true }));
   }
@@ -601,6 +602,9 @@ function buildServo() {
   out.push(S(k.cylinder(-68, 11, 4.2, zTop + 1.6, 1.5, P, 16), { tone: "hi", lit: true }));
   const dragLink = { x: -71, y: -13, w: 6, d: 26, r: 2 };
   out.push(S(k.slabOf(dragLink, zTop + 11, 2.8, P, 3, 0.4), { tone: "hi" }));
+  // CNC Upper Bellcrank Stiffener Bridge Plate
+  const bellcrankBridge = { x: -70.2, y: -12.5, w: 4.4, d: 25, r: 1.4 };
+  out.push(S(k.slabOf(bellcrankBridge, zTop + 16.6, 1.5, P, 2, 0.25), { tone: "hi", lit: true }));
 
   // Adjustable turnbuckle tie rods out to front steering knuckles + Center Hex Turnbuckle Nuts
   for (const side of [-1, 1]) {
@@ -687,8 +691,10 @@ function buildSuspension(isFront) {
     out.push(L(springRings, { tone: "hi" }));
     out.push(S(k.cylinder(shockX, shockY, 3.8, zSpringTop - 7, zCapTop - (zSpringTop - 7), P, 20, 0.5), { tone: "hi" }));
     out.push(L(k.knurl(shockX, shockY, 4.0, zSpringTop - 2.2, zSpringTop, 18, P), { tone: "lo" }));
-    // CNC Piggyback External Oil Reservoir Canister & Compression Dial on Upper Shock Cap
-    out.push(S(k.cylinder(shockX + (isFront ? -3.4 : 3.4), shockY, 2.1, zSpringTop - 1.5, 7.2, P, 14), { tone: "hi", lit: true }));
+    // CNC Piggyback External Oil Reservoir Canister & Braided Hydraulic Transfer Line on Upper Shock Cap
+    const resX = shockX + (isFront ? -3.4 : 3.4);
+    out.push(S(k.cylinder(resX, shockY, 2.1, zSpringTop - 1.5, 7.2, P, 14), { tone: "hi", lit: true }));
+    out.push(L(k.segment([shockX, shockY, zCapTop - 1.2], [resX, shockY, zSpringTop + 5.2], P), { tone: "lit", free: true }));
   }
   return out.join("");
 }
@@ -918,10 +924,13 @@ function buildBodyShell() {
     }
   }
 
-  // 4 R-Type Metal Body Clips on hood & trunk + NACA Hood Ducts, Rear Window Louvers & Side Skirt Finlets
+  // 4 R-Type Metal Body Clips on hood & trunk + Front Aero Flush Latch Pins + NACA Hood Ducts, Rear Window Louvers & Side Skirt Finlets
   for (const [bx, by] of [[-96, -22], [-96, 22], [72, -22], [72, 22]]) {
     out.push(S(k.cylinder(bx, by, 2.8, zBase + 8.5, 1.4, P, 14), { tone: "hi", lit: true }));
     out.push(L(k.segment([bx, by, zBase + 9.9], [bx - 4.5, by + (by > 0 ? 3.5 : -3.5), zBase + 10.6], P), { tone: "lit", free: true }));
+  }
+  for (const ly of [-16, 16]) {
+    out.push(S(k.cylinder(-102, ly, 2.1, zBase + 8.5, 0.9, P, 12), { tone: "hi", lit: true }));
   }
   for (const ny of [-12, 12]) {
     out.push(S(k.slabOf({ x: -64, y: ny - 2.2, w: 12, d: 4.4, r: 1 }, zBase + 8.4, 1.1, P, 3, 0.2), { tone: "lo" }));
@@ -1226,6 +1235,15 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="castrol"] .mjx-piece[data-piece="suspension_r"]{
   --anatomy-top:#f8fafc;--anatomy-fill:#dc2626;--anatomy-hi:#4ade80;--anatomy-lit:#ef4444;
 }
+/* Livery 18: Renault 5 Turbo Group B Sunburst Yellow & Obsidian Black */
+.iso-stage[data-color-mode="vivid"][data-livery="renault"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#fef08a;--anatomy-fill:#eab308;--anatomy-shade-0:#422006;--anatomy-shade-1:#713f12;--anatomy-shade-2:#ca8a04;--anatomy-shade-3:#facc15;--anatomy-hi:#18181b;--anatomy-lit:#ef4444;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="renault"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="renault"] .mjx-piece[data-piece="wheels_r"],
+.iso-stage[data-color-mode="vivid"][data-livery="renault"] .mjx-piece[data-piece="upper_deck"]{
+  --anatomy-top:#fde047;--anatomy-fill:#18181b;--anatomy-hi:#facc15;--anatomy-lit:#ef4444;
+}
 .iso-stage[data-lights="on"] .mjx-headlight-pod{
   filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
@@ -1274,6 +1292,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-demo="aquaplane">🌊 水漂打滑救车</button>
     <button type="button" class="mjx-btn" data-demo="scandi">🌪️ 沙石北欧钟摆</button>
     <button type="button" class="mjx-btn" data-demo="pikespeak">🏔️ 派克峰爬山赛</button>
+    <button type="button" class="mjx-btn" data-demo="dakardune">🏜️ 达喀尔沙丘冲顶</button>
     <button type="button" class="mjx-btn" data-demo="dyno">📈 阶梯功率测功</button>
     <button type="button" class="mjx-btn" data-demo="tour">🔍 12 总成拆解巡礼</button>
   </div>
@@ -1285,6 +1304,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-livery-btn="jps">黑金传奇 JPS</button>
     <button type="button" class="mjx-btn" data-livery-btn="subaru555">富士星芒 555</button>
     <button type="button" class="mjx-btn" data-livery-btn="castrol">嘉实多绿白红</button>
+    <button type="button" class="mjx-btn" data-livery-btn="renault">雷诺黄黑传奇</button>
     <button type="button" class="mjx-btn" data-livery-btn="wrc">WRC 蓝金</button>
     <button type="button" class="mjx-btn" data-livery-btn="redbull">红牛深蓝金</button>
     <button type="button" class="mjx-btn" data-livery-btn="monster">魔爪黑绿</button>
@@ -1378,7 +1398,7 @@ const inspectorHtml = `
 const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-family:system-ui,-apple-system,sans-serif;font-size:12.5px;border-radius:8px;background:rgba(128,128,128,0.12);border:1px solid rgba(128,128,128,0.22)">
   <a href="../../index.html" style="color:inherit;text-decoration:none;font-weight:600">← 返回 AI Agent Skills &amp; REA 演示门户 (Portal)</a>
   <div style="display:flex;gap:8px;align-items:center">
-    <span style="opacity:0.7">整车 12 总成 + 16 动态演示 + 18 涂装:</span>
+    <span style="opacity:0.7">整车 12 总成 + 17 动态演示 + 19 涂装:</span>
     <a href="index.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "dark" ? "background:#f5a524;color:#111;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">🌙 暗黑多彩测功台 (Dark)</a>
     <a href="mjx-14303-chassis-light.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "light" ? "background:#d97706;color:#fff;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">☀️ 工程浅色蓝图 (Light)</a>
   </div>
@@ -1387,7 +1407,7 @@ const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding
 const body = `<style>${CSS}</style>${navBannerHtml}<div class="mjx-wrap">${k.plateHtml({
   fig: "Fig 1 · MJX HYPER GO 14303 · 12-ASSEMBLY COMPLETE VEHICLE LAB",
   title: "美嘉欣 14303 · 1/14 全时四驱无刷拉力/漂移整车机械原理与动态测功台",
-  hint: "支持 16 种自动动态剧本 · 18 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
+  hint: "支持 17 种自动动态剧本 · 19 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
   readout: "2S 7.4V · 15.0 km/h · Manual Lab",
   keys: [
     { mark: "lit", label: "核心动力链：2845 无刷电机 → 15T/45T 金属齿 → 中央铝轴 → 前后 37T/13T 行星伞齿差速器 → 四轮 CVD + 通风刹车盘" },
@@ -1640,6 +1660,14 @@ function setDemoMode(mode) {
     btnGyro.textContent = "G3C 陀螺仪 ON";
     cycleShell("xray");
     selectPart("motor", true);
+  } else if (mode === "dakardune") {
+    toggleExplode(false);
+    setCells(3);
+    gyroEnabled = true;
+    btnGyro.setAttribute("data-active", "");
+    btnGyro.textContent = "G3C 陀螺仪 ON";
+    cycleShell("xray");
+    selectPart("suspension_f", true);
   } else if (mode === "dyno") {
     toggleExplode(false);
     setSteer(0);
@@ -1919,6 +1947,19 @@ function tick(now) {
       setThrottle(0.94);
       setSteer(Math.sin(elapsed * 2.4) * 16);
     }
+  } else if (demoMode === "dakardune") {
+    const cyc = elapsed % 5.2;
+    if (cyc < 1.8) {
+      setThrottle(0.96);
+      setSteer(Math.sin(elapsed * 2.6) * 14);
+    } else if (cyc < 3.2) {
+      setThrottle(0.74);
+      setSteer(Math.cos(elapsed * 4.2) * 24);
+      if (Math.floor((elapsed - dt) / 2.6) < Math.floor(elapsed / 2.6)) triggerBump(-205);
+    } else {
+      setThrottle(0.88);
+      setSteer(Math.sin(elapsed * 3.4) * 22);
+    }
   } else if (demoMode === "dyno") {
     const step = Math.floor(elapsed / 2.2) % 6;
     setCells(step >= 3 ? 3 : 2);
@@ -2046,6 +2087,8 @@ function tick(now) {
     jturn: "180° Handbrake J-Turn",
     aquaplane: "Aquaplane Hydro-Recovery",
     scandi: "Scandinavian Flick",
+    pikespeak: "Pikes Peak Hillclimb",
+    dakardune: "Dakar Dune Bash",
     dyno: "Step Dyno Sweep",
     tour: "12-Part Tour",
   };

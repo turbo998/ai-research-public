@@ -781,6 +781,7 @@
           <button type="button" class="act-btn" data-ast="loot">loot.ts</button>
           <button type="button" class="act-btn" data-ast="beacon">beacon.ts</button>
           <button type="button" class="act-btn" data-ast="shield">shield.ts</button>
+          <button type="button" class="act-btn" data-ast="overdrive">overdrive.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -840,6 +841,10 @@
           <div class="patch-row">
             <div class="patch-row-head"><span>player.shieldDeflectDmg (磁盾偏折反击伤害)</span><strong id="valShieldDmg">22 DMG</strong></div>
             <input type="range" id="patchShieldDmg" min="10" max="80" step="4" value="22" />
+          </div>
+          <div class="patch-row">
+            <div class="patch-row-head"><span>player.novaRadiusPx (热能新星冲击波半径)</span><strong id="valNovaRadius">185 px</strong></div>
+            <input type="range" id="patchNovaRadius" min="110" max="280" step="15" value="185" />
           </div>
         </div>
       </div>
@@ -1776,6 +1781,14 @@ export function deflectBoltAndCounterPulse(bolt: EnemyBolt, player: Vec2, enemie
   return false;
 }`,
       },
+      overdrive: {
+        minified: `function Ot(e,t,n,r){e.overdriveTimer=n;for(const a of t)Math.hypot(a.x-e.x,a.y-e.y)<r&&(a.hp-=28)}`,
+        decompiled: `// Reconstructed Overdrive Thermal Nova Burst (src/game/overdrive.ts)
+export function triggerThermalNovaOverdrive(player: PlayerEntity, enemies: EnemyEntity[], durSec = 6.0, radiusPx = 185): void {
+  player.overdriveTimer = durSec;
+  for (const enemy of enemies) if (Math.hypot(enemy.x - player.x, enemy.y - player.y) < radiusPx) enemy.hp -= 28;
+}`,
+      },
     };
 
     // =========================================================================
@@ -2034,6 +2047,7 @@ export function deflectBoltAndCounterPulse(bolt: EnemyBolt, player: Vec2, enemie
       dashDistancePx: 95,
       nanoRepairRate: 8,
       shieldDeflectDmg: 22,
+      novaRadiusPx: 185,
     };
 
     document.getElementById("patchSpeed").addEventListener("input", (e) => {
@@ -2109,6 +2123,14 @@ export function deflectBoltAndCounterPulse(bolt: EnemyBolt, player: Vec2, enemie
       patchShieldDmgEl.addEventListener("input", (e) => {
         livePatch.shieldDeflectDmg = Number(e.target.value);
         document.getElementById("valShieldDmg").textContent = livePatch.shieldDeflectDmg + " DMG";
+        pulseEvidence("hangar");
+      });
+    }
+    const patchNovaRadiusEl = document.getElementById("patchNovaRadius");
+    if (patchNovaRadiusEl) {
+      patchNovaRadiusEl.addEventListener("input", (e) => {
+        livePatch.novaRadiusPx = Number(e.target.value);
+        document.getElementById("valNovaRadius").textContent = livePatch.novaRadiusPx + " px";
         pulseEvidence("hangar");
       });
     }
@@ -2221,9 +2243,9 @@ export function deflectBoltAndCounterPulse(bolt: EnemyBolt, player: Vec2, enemie
 
     function triggerOverdrive() {
       player.overdriveTimer = livePatch.overdriveDuration;
-      shockRings.push({ x: player.x, y: player.y, r: 16, maxR: 165, life: 0.42 });
+      shockRings.push({ x: player.x, y: player.y, r: 16, maxR: livePatch.novaRadiusPx - 20, life: 0.42 });
       for (const e of enemies) {
-        if (Math.hypot(e.x - player.x, e.y - player.y) < 185) {
+        if (Math.hypot(e.x - player.x, e.y - player.y) < livePatch.novaRadiusPx) {
           e.hp -= 28;
           dmgPopups.push({ x: e.x, y: e.y - 30, text: "THERMAL NOVA -28", color: "#ffb548", life: 0.65 });
         }
