@@ -8,17 +8,9 @@
 
 | 专题 | 子分类 / 标签 | 范围与状态 |
 |---|---|---|
-| [SKY-001 工程世界模型与 Coding Agent 十九模型基准深度评测（增补报告 5：Claude Haiku 5.5 与 Gemini 4 Argon）(中文)](sky-001-and-coding-agent-19-model-benchmark/README.md) · [English](sky-001-and-coding-agent-19-model-benchmark/README.en.md) | 工程世界模型（3D CAD/BIM 分层状态规划）与 CLI Coding Agent 19 模型帕累托评测（`SKY-001`、`Claude Haiku 5.5`、`Gemini 4 Argon`、`Copilot CLI 1.0.98`） | 基于 `satomic/copilot-benchmark@a1913835`（19 模型 × 11 题 = 209 次运行，每模型 1,310 项隐藏断言）与 Skyfall AI `SKY-001` 双源生产 JS Bundle（`index-D5BqB7X_.js` / `article-D6mnIEDb.js`）的双语深度研究、[7 页 4:5 视觉卡片报告 (中文)](sky-001-and-coding-agent-19-model-benchmark/test-report.md) / [English](sky-001-and-coding-agent-19-model-benchmark/test-report.en.md)、[离线 HTML 卡片](sky-001-and-coding-agent-19-model-benchmark/test-report-cards.html) 与 [离线验证套件](sky-001-and-coding-agent-19-model-benchmark/simulator/sky001_and_19model_verifier.py) |
-| [Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE 深度研究与架构对比 (中文)](faf-vs-agent-forge/README.zh-CN.md) · [English](faf-vs-agent-forge/README.en.md) | 企业级 SDLC 领域交付插件体系 vs. 上下文工程元编译器（`FAF v2.0.1`、`@agent-forge-copilot/cli v0.3.0`、`Harness Engineering`、`8-Area Weighted Scorecard`、`Schema Auto-Fix`） | 基于 `customer-success-microsoft/faf-agents@a740ad88`（590 Blobs）与 `microsoft/agent-forge@655ff340`（38 Blobs）的双语架构研究、[16 维源码对比矩阵 (中文)](faf-vs-agent-forge/comparison-matrix.md) / [English](faf-vs-agent-forge/comparison-matrix.en.md)、[7 页 4:5 视觉卡片评测报告 (中文)](faf-vs-agent-forge/test-report.md) / [English](faf-vs-agent-forge/test-report.en.md) 与 [自包含 7 页 HTML 卡片](faf-vs-agent-forge/test-report-cards.html) |
 | [AI Agent Infrastructure on Azure 全栈方案设计与选型 Playbook (中文)](azure-agent-infra/README.md) · [English](azure-agent-infra/README.en.md) | Agent Runtime、MicroVM 沙箱、状态持久化与多租户治理（`Foundry`、`ACA Sandboxes`、`AKSClaw`、`E2B Firecracker`、`HorizonDB`、`Entra Agent ID`） | 覆盖四层参考架构、六大运行时光谱（含 `Standard_D96as_v7` `108ms/132ms` 实测锚点）、10万并发沙箱 VMSS 容量模型、80 章行业物理模型、75 套 IaC 蓝图、74 项仿真器（83/83 单测全绿）、8 幅 SVG 架构图、[7 页 4:5 视觉卡片报告 (中文)](azure-agent-infra/test-report.md) / [English](azure-agent-infra/test-report.en.md) 与 [交互式双语 H5 仿真套件](azure-agent-infra/h5/index.html) |
 | [Omarchy agent 设计机制](omarchy-agent-design/README.md) | Agentic OS 与本地 Harness 集成（`Agentic OS`、`Harness Integration`、`Skills`、`Event-driven Agent`、`Identity & Usage`） | 基于 `omacom/omarchy@9480d1b6a98156314dbabe6bfef08f39f8b9cd07` 的 6 大机制专题（E1–E6）、174 条源码/文档/测试契约断言与 [7 页 4:5 视觉卡片测试报告](omarchy-agent-design/test-report.md)；离线静态契约已核验，上游运行 `not_run` |
 | [Personal agents：五产品比较](personal-agents/README.md) | 消费级与工作流 Personal Agents | Meta Muse、Grok Bot、OpenAI dot/dots、Google Gemini Spark、Instinct；企业 Gemini 单列区别。cutoff 2026-10-11，静态公开资料研究 |
-
-### Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE 专题材料（中英双语 / Bilingual）
-
-- **核心阅读与 16 维对比矩阵**：[中文研究报告 (`README.zh-CN.md`)](faf-vs-agent-forge/README.zh-CN.md) · [English Guide (`README.en.md`)](faf-vs-agent-forge/README.en.md) · [16 维源码级对比矩阵 (中文)](faf-vs-agent-forge/comparison-matrix.md) · [16-Dimension Matrix (English)](faf-vs-agent-forge/comparison-matrix.en.md)
-- **7 页 4:5 视觉卡片测试报告**：[中文报告 (`test-report.md`)](faf-vs-agent-forge/test-report.md) · [English Report (`test-report.en.md`)](faf-vs-agent-forge/test-report.en.md) · [可离线预览 7 页卡片 HTML (`test-report-cards.html`)](faf-vs-agent-forge/test-report-cards.html) · [密封评测数据 (`report.json`)](faf-vs-agent-forge/evidence/report.json) · [12 项契约矩阵 CSV (`test-scenarios.csv`)](faf-vs-agent-forge/evidence/test-scenarios.csv) · [鲁棒性扰动 CSV (`test-robustness.csv`)](faf-vs-agent-forge/evidence/test-robustness.csv) · [Hook 与超时延迟 CSV (`test-batch-latency.csv`)](faf-vs-agent-forge/evidence/test-batch-latency.csv)
-- **可复核证据与审查记录**：[证据台账 (`evidence.json`)](faf-vs-agent-forge/evidence.json) · [双语一致性与脱敏审查 (`review.md`)](faf-vs-agent-forge/review.md)
 
 ### Omarchy agent 设计机制专题材料
 
@@ -34,15 +26,7 @@
 
 ## Model
 
-| 专题 | 子分类 / 标签 | 范围与状态 |
-|---|---|---|
-| [SKY-001 工程世界模型与 Coding Agent 十九模型基准深度评测（增补报告 5：Claude Haiku 5.5 与 Gemini 4 Argon）(中文)](sky-001-and-coding-agent-19-model-benchmark/README.md) · [English](sky-001-and-coding-agent-19-model-benchmark/README.en.md) | 3D CAD/BIM 分层构造世界模型 vs. 19 模型 CLI 编程基准（`SKY-001`、`Claude Haiku 5.5`、`Gemini 4 Argon`、`GPT-6 Astra`、`Opus 5.5`、`Fable 5.1`） | 涵盖 `SKY-001` 双阶段架构与关键路径压缩（`98.44x`）、双源 JS Bundle 差异审计、`Haiku 5.5`（`99.24` 分 / `$0.33` 总榜 #4）与 `Gemini 4 Argon`（`98.59` 分 / `1,310/1,310` 隐藏断言 `100%` 全通）19 模型全表及 [7 页 4:5 视觉卡片报告 (中文)](sky-001-and-coding-agent-19-model-benchmark/test-report.md) / [English](sky-001-and-coding-agent-19-model-benchmark/test-report.en.md) · [HTML 卡片](sky-001-and-coding-agent-19-model-benchmark/test-report-cards.html) |
-
-### SKY-001 工程世界模型与 Coding Agent 十九模型基准专题材料（中英双语 / Bilingual）
-
-- **核心阅读**：[中文研究报告 (`README.md`)](sky-001-and-coding-agent-19-model-benchmark/README.md) · [English Study (`README.en.md`)](sky-001-and-coding-agent-19-model-benchmark/README.en.md)
-- **7 页 4:5 视觉卡片测试报告**：[中文报告 (`test-report.md`)](sky-001-and-coding-agent-19-model-benchmark/test-report.md) · [English Report (`test-report.en.md`)](sky-001-and-coding-agent-19-model-benchmark/test-report.en.md) · [可离线预览 7 页卡片 HTML (`test-report-cards.html`)](sky-001-and-coding-agent-19-model-benchmark/test-report-cards.html) · [密封评测数据 (`report.json`)](sky-001-and-coding-agent-19-model-benchmark/report.json)
-- **离线验证套件与证据锁**：[关键路径与 19 模型验证器 (`simulator/sky001_and_19model_verifier.py`)](sky-001-and-coding-agent-19-model-benchmark/simulator/sky001_and_19model_verifier.py) · [单元测试 (`simulator/test_sky001_and_19model_verifier.py`)](sky-001-and-coding-agent-19-model-benchmark/simulator/test_sky001_and_19model_verifier.py) · [证据台账 (`evidence.json`)](sky-001-and-coding-agent-19-model-benchmark/evidence.json) · [方法论审查 (`review.md`)](sky-001-and-coding-agent-19-model-benchmark/review.md)
+预留分类，暂无公开专题；不声称已有模型实验或评测结果。
 
 ## Infra
 
