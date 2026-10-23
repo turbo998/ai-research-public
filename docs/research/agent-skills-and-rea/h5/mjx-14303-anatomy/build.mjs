@@ -303,12 +303,18 @@ function buildChassis() {
     out.push(S(k.cylinder(px, py, 3.5, CHASSIS_Z + 31, 2.2, P, 16), { tone: "hi" }));
   }
 
-  // Rear 5-fin aerodynamic diffuser bumper (+114 to +136) + Twin Titanium Rally Exhaust Tailpipes
+  // Rear 5-fin aerodynamic diffuser bumper (+114 to +136) + Twin Titanium Rally Exhaust Tailpipes + Rear Mudflaps & Tow Hook
   const bumperR = { x: 116, y: -44, w: 20, d: 88, r: 5 };
   out.push(S(k.slabOf(bumperR, CHASSIS_Z, 6, P, 5, 0.7), { tone: "lo" }));
   for (const dy of [-28, -14, 0, 14, 28]) {
     out.push(S(k.slabOf({ x: 120, y: dy - 1.2, w: 16, d: 2.4, r: 0.5 }, CHASSIS_Z - 1, 7.8, P, 2), { tone: "hi" }));
   }
+  // Rear Rally Flexible Mudflaps behind rear wheel arches + Rear CNC Recovery Tow Ring
+  for (const side of [-1, 1]) {
+    const flap = { x: 113, y: side > 0 ? 36 : -45, w: 3.5, d: 9, r: 0.8 };
+    out.push(S(k.slabOf(flap, CHASSIS_Z - 2.2, 6.2, P, 2, 0.3), { tone: "hi" }));
+  }
+  out.push(S(k.slabOf({ x: 135, y: -22, w: 6, d: 6, r: 1.8 }, CHASSIS_Z + 1.8, 1.8, P, 3, 0.3), { tone: "hi", lit: true }));
   const F_EX1 = G.frameOf([135, 19, CHASSIS_Z + 3.2], [1, 0, 0], [0, 1, 0], [0, 0, 1]);
   const F_EX2 = G.frameOf([135, 25, CHASSIS_Z + 3.2], [1, 0, 0], [0, 1, 0], [0, 0, 1]);
   out.push(`<g class="mjx-headlight-pod">${S(G.disc(-4, 2.5, 2.3, F_EX1, P, { bevel: 0.3 }), { tone: "hi", lit: true })}${S(G.disc(-4, 2.5, 2.3, F_EX2, P, { bevel: 0.3 }), { tone: "hi", lit: true })}</g>`);
@@ -364,7 +370,8 @@ function buildDrivetrain() {
     out.push(S(G.disc(sx - 1.2, sx + 1.2, 4.1, F_X, P, { bevel: 0.3 }), { tone: "mid", lit: true }));
   }
 
-  // 45T Metal Spur Gear + Slipper Clutch Hub at x = 38
+  // 45T Metal Spur Gear + Slipper Clutch Hub + Knurled Preload Spring Locknut at x = 26..42.5
+  out.push(S(G.disc(25.5, 31.2, 4.9, F_X, P, { bevel: 0.35 }), { tone: "mid", lit: true }));
   out.push(S(G.disc(34, 40, 13.5, F_X, P, { bevel: 0.7 }), { tone: "hi", lit: true }));
   out.push(S(G.disc(31.5, 42.5, 6.4, F_X, P, { bevel: 0.4 }), { tone: "hi", lit: true }));
   out.push(D(G.dotsOf(F_X, 40.2, 9.8, 12, P, { all: true }), { size: 0.48, tone: "lo" }));
@@ -744,14 +751,18 @@ function buildBodyShell() {
     }),
   );
   out.push(L(k.planOutline(k.insetPlan(cabin, 5), zBase + 21.5, P, 5), { tone: "lo" }));
-  // FIA Rally Roll-Cage diagonal braces visible inside cabin greenhouse
+  // FIA Rally Roll-Cage diagonal braces + Dual Front Windshield Wiper Blades
   out.push(
     L(
       k.segment([-24, -24, zBase + 10], [42, 24, zBase + 20], P) +
-        k.segment([-24, 24, zBase + 10], [42, -24, zBase + 20], P),
+        k.segment([-24, 24, zBase + 10], [42, -24, zBase + 20], P) +
+        k.segment([-40, -16, zBase + 9.2], [-27, -3, zBase + 16.5], P) +
+        k.segment([-40, 4, zBase + 9.2], [-27, 17, zBase + 16.5], P),
       { tone: "lit", free: true },
     ),
   );
+  // Roof Rally GPS / Telemetry Shark-Fin Antenna behind Roof Scoop
+  out.push(S(k.slabOf({ x: 26, y: -1.6, w: 12, d: 3.2, r: 0.8 }, zBase + 21.5, 4.4, P, 3, 0.4), { tone: "hi", lit: true }));
 
   // 4-Pod Roof Rally LED Light Bar mounted ahead of roof ram-air scoop
   const roofLightBar = { x: -36, y: -22, w: 6, d: 44, r: 1.5 };
@@ -993,6 +1004,14 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="dakar"] .mjx-piece[data-piece="wheels_r"]{
   --anatomy-top:#fcd34d;--anatomy-fill:#1c1917;--anatomy-hi:#34d399;--anatomy-lit:#f97316;
 }
+/* Livery 8: Sakura JDM Drift Magenta & Mint Cyan */
+.iso-stage[data-color-mode="vivid"][data-livery="sakura"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#f9a8d4;--anatomy-fill:#ec4899;--anatomy-shade-0:#500724;--anatomy-shade-1:#831843;--anatomy-shade-2:#be185d;--anatomy-shade-3:#f472b6;--anatomy-hi:#67e8f9;--anatomy-lit:#22d3ee;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="sakura"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="sakura"] .mjx-piece[data-piece="wheels_r"]{
+  --anatomy-top:#67e8f9;--anatomy-fill:#0f172a;--anatomy-hi:#f9a8d4;--anatomy-lit:#facc15;
+}
 .iso-stage[data-lights="on"] .mjx-headlight-pod{
   filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
@@ -1031,6 +1050,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-demo="launch">🚀 3S 弹射起步</button>
     <button type="button" class="mjx-btn" data-demo="drift">🌀 拉力钟摆漂移</button>
     <button type="button" class="mjx-btn" data-demo="offroad">⛰️ 砂石飞跳避震</button>
+    <button type="button" class="mjx-btn" data-demo="slalom">🎯 麋鹿测试阿克曼</button>
     <button type="button" class="mjx-btn" data-demo="dyno">📈 阶梯功率测功</button>
     <button type="button" class="mjx-btn" data-demo="tour">🔍 12 总成拆解巡礼</button>
   </div>
@@ -1041,6 +1061,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-livery-btn="gulf">海湾冰蓝橙</button>
     <button type="button" class="mjx-btn" data-livery-btn="martini">传奇红白蓝</button>
     <button type="button" class="mjx-btn" data-livery-btn="cyber">赛博霓虹紫</button>
+    <button type="button" class="mjx-btn" data-livery-btn="sakura">樱花漂移粉</button>
     <button type="button" class="mjx-btn" data-livery-btn="dakar">达喀尔沙金</button>
     <button type="button" class="mjx-btn" data-livery-btn="stealth">黑金暗夜绿</button>
     <button type="button" class="mjx-btn" data-livery-btn="mono">工程单色</button>
@@ -1125,7 +1146,7 @@ const inspectorHtml = `
 const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-family:system-ui,-apple-system,sans-serif;font-size:12.5px;border-radius:8px;background:rgba(128,128,128,0.12);border:1px solid rgba(128,128,128,0.22)">
   <a href="../../index.html" style="color:inherit;text-decoration:none;font-weight:600">← 返回 AI Agent Skills &amp; REA 演示门户 (Portal)</a>
   <div style="display:flex;gap:8px;align-items:center">
-    <span style="opacity:0.7">整车 12 总成 + 6 动态演示 + 8 涂装:</span>
+    <span style="opacity:0.7">整车 12 总成 + 7 动态演示 + 9 涂装:</span>
     <a href="index.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "dark" ? "background:#f5a524;color:#111;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">🌙 暗黑多彩测功台 (Dark)</a>
     <a href="mjx-14303-chassis-light.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "light" ? "background:#d97706;color:#fff;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">☀️ 工程浅色蓝图 (Light)</a>
   </div>
@@ -1134,7 +1155,7 @@ const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding
 const body = `<style>${CSS}</style>${navBannerHtml}<div class="mjx-wrap">${k.plateHtml({
   fig: "Fig 1 · MJX HYPER GO 14303 · 12-ASSEMBLY COMPLETE VEHICLE LAB",
   title: "美嘉欣 14303 · 1/14 全时四驱无刷拉力/漂移整车机械原理与动态测功台",
-  hint: "支持 6 种自动动态剧本 · 8 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
+  hint: "支持 7 种自动动态剧本 · 9 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
   readout: "2S 7.4V · 15.0 km/h · Manual Lab",
   keys: [
     { mark: "lit", label: "核心动力链：2845 无刷电机 → 15T/45T 金属齿 → 中央铝轴 → 前后 37T/13T 行星伞齿差速器 → 四轮 CVD + 通风刹车盘" },
@@ -1309,6 +1330,12 @@ function setDemoMode(mode) {
     setCells(2);
     setThrottle(0.68);
     if (selected) selectPart(null);
+  } else if (mode === "slalom") {
+    toggleExplode(false);
+    setCells(2);
+    setThrottle(0.62);
+    cycleShell("xray");
+    selectPart("servo", true);
   } else if (mode === "dyno") {
     toggleExplode(false);
     setSteer(0);
@@ -1505,6 +1532,9 @@ function tick(now) {
     if (Math.floor((elapsed - dt) / 2.6) < Math.floor(elapsed / 2.6)) {
       triggerBump(-210);
     }
+  } else if (demoMode === "slalom") {
+    setThrottle(0.62);
+    setSteer(Math.sin(elapsed * 3.8) * 28);
   } else if (demoMode === "dyno") {
     const step = Math.floor(elapsed / 2.2) % 6;
     setCells(step >= 3 ? 3 : 2);
@@ -1618,6 +1648,7 @@ function tick(now) {
     launch: "3S Launch Squat",
     drift: "Rally Drift + Gyro",
     offroad: "Gravel Jump",
+    slalom: "Slalom Ackermann",
     dyno: "Step Dyno Sweep",
     tour: "12-Part Tour",
   };

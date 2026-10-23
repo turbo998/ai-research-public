@@ -770,6 +770,7 @@
           <button type="button" class="act-btn" data-ast="audio">audio.ts</button>
           <button type="button" class="act-btn" data-ast="prng">prng.ts</button>
           <button type="button" class="act-btn" data-ast="physics">physics.ts</button>
+          <button type="button" class="act-btn" data-ast="director">director.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -1630,6 +1631,15 @@ export function resolveCircleImpulse(a: Vec2, b: Vec2, minDist: number): void {
   }
 }`,
       },
+      director: {
+        minified: `function Gt(e){return e<45?{act:1,cap:12,boss:!1}:e<110?{act:2,cap:24,boss:!1}:{act:3,cap:32,boss:!0}}`,
+        decompiled: `// Reconstructed Wave Director & Act Escalation State Machine (src/game/director.ts)
+export function evaluateWaveBudget(elapsedSec: number): WaveBudget {
+  if (elapsedSec < 45)  return { act: 1, maxSwarm: 12, spawnIronCrown: false };
+  if (elapsedSec < 110) return { act: 2, maxSwarm: 24, spawnIronCrown: false };
+  return { act: 3, maxSwarm: 32, spawnIronCrown: true };
+}`,
+      },
     };
 
     // =========================================================================
@@ -1907,6 +1917,8 @@ export function resolveCircleImpulse(a: Vec2, b: Vec2, minDist: number): void {
     const bullets = [];
     const particles = [];
     const dmgPopups = [];
+    const shockRings = [];
+    const lightningArcs = [];
     const enemies = [
       { kind: "scuttler", x: 180, y: 150, hp: 60, maxHp: 60 },
       { kind: "scuttler", x: 780, y: 160, hp: 60, maxHp: 60 },
@@ -2140,6 +2152,15 @@ export function resolveCircleImpulse(a: Vec2, b: Vec2, minDist: number): void {
             const dmg = isCrit ? 42 : 26;
             e.hp -= dmg;
             hit = true;
+            if (b.kind === "hammer") {
+              shockRings.push({ x: e.x, y: e.y, r: 10, maxR: 92, life: 0.32 });
+            } else if (b.kind === "arc" && enemies.length > 1) {
+              const other = enemies[(j + 1) % enemies.length];
+              if (other && other !== e) {
+                other.hp -= 18;
+                lightningArcs.push({ x1: e.x, y1: e.y, x2: other.x, y2: other.y, life: 0.22 });
+              }
+            }
             dmgPopups.push({
               x: e.x + (Math.random() - 0.5) * 20,
               y: e.y - 28,
@@ -2281,7 +2302,36 @@ export function resolveCircleImpulse(a: Vec2, b: Vec2, minDist: number): void {
         gameClock
       );
 
-      // Draw Bullets
+      // Draw Bullets, Shock Hammer AoE Rings & Arc Tether Chain Lightning
+      for (let i = shockRings.length - 1; i >= 0; i--) {
+        const sr = shockRings[i];
+        sr.r += (sr.maxR - sr.r) * 0.22;
+        sr.life -= 1 / 60;
+        if (sr.life <= 0) {
+          shockRings.splice(i, 1);
+          continue;
+        }
+        gCtx.strokeStyle = `rgba(240, 179, 79, ${Math.max(0, sr.life * 2.8)})`;
+        gCtx.lineWidth = 3;
+        gCtx.beginPath();
+        gCtx.arc(sr.x, sr.y, sr.r, 0, Math.PI * 2);
+        gCtx.stroke();
+      }
+      for (let i = lightningArcs.length - 1; i >= 0; i--) {
+        const la = lightningArcs[i];
+        la.life -= 1 / 60;
+        if (la.life <= 0) {
+          lightningArcs.splice(i, 1);
+          continue;
+        }
+        gCtx.strokeStyle = `rgba(0, 229, 255, ${Math.max(0, la.life * 4)})`;
+        gCtx.lineWidth = 2.5;
+        gCtx.beginPath();
+        gCtx.moveTo(la.x1, la.y1);
+        gCtx.lineTo((la.x1 + la.x2) * 0.5 + (Math.random() - 0.5) * 24, (la.y1 + la.y2) * 0.5 + (Math.random() - 0.5) * 24);
+        gCtx.lineTo(la.x2, la.y2);
+        gCtx.stroke();
+      }
       for (const b of bullets) {
         gCtx.fillStyle = b.kind === "arc" ? "#00e5ff" : b.kind === "hammer" ? "#f0b34f" : "#ffe28a";
         gCtx.beginPath();
