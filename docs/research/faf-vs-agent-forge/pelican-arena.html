@@ -1,407 +1,907 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; frame-src 'self'; img-src data:;">
-<title>FAF v2 vs. Microsoft AGENT-FORGE — “鹈鹕骑自行车”双插件全链路实操竞技场 (Pelican Bicycle Dual-Plugin Arena)</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; frame-src 'self'; img-src data:;" />
+<title>三套 AI 工程套件同题巅峰对决：FAF v2 vs. Microsoft AGENT-FORGE vs. Microsoft HVE-Core — “鹈鹕骑自行车”竞技场与全链路图表评测</title>
 <style>
   :root {
     --bg: #050811;
-    --panel: #0f172a;
-    --panel-2: #161f38;
-    --border: #1e293b;
+    --panel: #0c1221;
+    --card: #111a2e;
+    --border: rgba(148, 163, 184, 0.22);
     --faf: #38bdf8;
-    --af: #f59e0b;
-    --green: #10b981;
-    --pink: #ec4899;
+    --forge: #f59e0b;
+    --hve: #10b981;
     --text: #f8fafc;
     --muted: #94a3b8;
-    --mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    background: var(--bg);
+    background: radial-gradient(circle at 15% 0%, #0f1d3a 0%, #050811 65%);
     color: var(--text);
-    font-family: var(--sans);
-    padding: 18px 24px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 16px 20px 44px;
+    line-height: 1.5;
   }
-  .hero {
-    background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(30,41,59,0.82));
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 18px 22px;
+  a { color: #38bdf8; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .top-hero {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 14px;
   }
-  .hero-badges {
+  .hero-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+  .pill {
+    padding: 4px 11px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+  .pill.faf { background: rgba(56, 189, 248, 0.16); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.4); }
+  .pill.forge { background: rgba(245, 158, 11, 0.16); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.4); }
+  .pill.hve { background: rgba(16, 185, 129, 0.16); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
+  h1 { font-size: 22px; font-weight: 900; letter-spacing: -0.01em; }
+  .sub { font-size: 13px; color: var(--muted); margin-top: 4px; max-width: 980px; }
+
+  .nav-links {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 6px;
   }
-  .pill {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 999px;
-    border: 1px solid;
-  }
-  .pill.faf { color: var(--faf); border-color: rgba(56,189,248,0.45); background: rgba(56,189,248,0.12); }
-  .pill.af { color: var(--af); border-color: rgba(245,158,11,0.45); background: rgba(245,158,11,0.12); }
-  .pill.green { color: var(--green); border-color: rgba(16,185,129,0.45); background: rgba(16,185,129,0.12); }
-  h1 { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; }
-  .hero-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
-  .nav-btns { display: flex; gap: 8px; flex-wrap: wrap; }
-  a.btn, button {
-    background: var(--panel-2);
-    color: var(--text);
-    border: 1px solid var(--border);
+  .nav-btn {
+    padding: 7px 12px;
     border-radius: 9px;
-    padding: 8px 13px;
+    background: rgba(17, 26, 46, 0.9);
+    border: 1px solid var(--border);
+    color: #e2e8f0;
     font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .nav-btn:hover { border-color: #38bdf8; color: #fff; text-decoration: none; }
+
+  /* Master Broadcast Bar */
+  .broadcast-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: rgba(12, 18, 33, 0.92);
+    border: 1px solid rgba(56, 189, 248, 0.32);
+    border-radius: 12px;
+    padding: 10px 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+  .b-group { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .b-label { font-size: 12px; font-weight: 800; color: #e2e8f0; }
+  .b-btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: #16223b;
+    color: #f8fafc;
+    font-size: 12px;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.15s;
   }
-  a.btn:hover, button:hover {
-    border-color: var(--faf);
-    background: rgba(56,189,248,0.14);
-  }
-  .sync-bar {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 12px 18px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-  }
-  .sync-controls {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-  .sync-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
-  }
-  .sync-item span.val {
-    font-family: var(--mono);
-    color: var(--faf);
-    font-weight: 700;
-    min-width: 58px;
-  }
+  .b-btn:hover, .b-btn.active { background: #38bdf8; color: #041322; border-color: #7dd3fc; }
+
+  /* 3-Column Live Demo Arena */
   .arena-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
   }
-  @media (max-width: 1180px) {
+  .arena-grid.focus-single {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 1280px) {
     .arena-grid { grid-template-columns: 1fr; }
   }
-  .demo-frame-card {
+  .demo-col {
     background: var(--panel);
-    border: 1px solid var(--border);
     border-radius: 14px;
     overflow: hidden;
+    border: 2px solid var(--border);
     display: flex;
     flex-direction: column;
   }
-  .demo-frame-card.faf-card { border-top: 3px solid var(--faf); }
-  .demo-frame-card.af-card { border-top: 3px solid var(--af); }
-  .card-head {
-    padding: 10px 16px;
-    background: rgba(15,23,42,0.9);
-    border-bottom: 1px solid var(--border);
+  .demo-col.faf { border-color: rgba(56, 189, 248, 0.45); }
+  .demo-col.forge { border-color: rgba(245, 158, 11, 0.45); }
+  .demo-col.hve { border-color: rgba(16, 185, 129, 0.5); }
+
+  .col-head {
+    padding: 10px 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 13px;
-    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    background: rgba(5, 8, 17, 0.65);
   }
-  iframe {
+  .col-title { font-size: 13px; font-weight: 800; }
+  .col-meta { font-size: 11px; color: var(--muted); font-family: Consolas, monospace; }
+  iframe.demo-frame {
     width: 100%;
-    height: 650px;
+    height: 705px;
     border: none;
-    background: #070b14;
+    background: #050811;
   }
-  .section-card {
+
+  /* Section Headings */
+  .sec-header {
+    margin: 26px 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .sec-header h2 { font-size: 19px; font-weight: 900; color: #f8fafc; }
+  .sec-header span { font-size: 12px; color: var(--muted); }
+
+  /* Visual Chart Grid */
+  .charts-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 1100px) {
+    .charts-grid { grid-template-columns: 1fr; }
+  }
+  .chart-card {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 18px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+    padding: 14px 16px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
   }
-  .sec-title {
-    font-size: 16px;
-    font-weight: 700;
+  .chart-card h3 {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    color: #f1f5f9;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 10px;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12.5px;
-  }
-  th, td {
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border);
-    text-align: left;
-    vertical-align: top;
-    line-height: 1.5;
-  }
-  th {
+  .chart-card p.desc {
+    font-size: 12px;
     color: var(--muted);
-    font-family: var(--mono);
-    font-size: 11px;
-    text-transform: uppercase;
-    background: rgba(2, 6, 23, 0.45);
+    margin-bottom: 10px;
   }
-  code {
-    font-family: var(--mono);
-    font-size: 11.5px;
-    background: rgba(56, 189, 248, 0.12);
-    color: #bae6fd;
-    padding: 2px 5px;
-    border-radius: 4px;
+  svg.chart-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: rgba(5, 8, 17, 0.55);
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
   }
-  .diff-grid {
+
+  /* Interactive Stage-by-Stage Explorer */
+  .stage-tabs {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
   }
   @media (max-width: 960px) {
-    .diff-grid { grid-template-columns: 1fr; }
+    .stage-tabs { grid-template-columns: repeat(2, 1fr); }
   }
-  .code-panel {
-    background: #04070f;
+  .stage-tab {
+    background: var(--card);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 12px;
-    font-family: var(--mono);
-    font-size: 11.5px;
-    line-height: 1.55;
-    color: #cbd5e1;
+    padding: 9px 11px;
+    cursor: pointer;
+    transition: all 0.16s;
+  }
+  .stage-tab:hover, .stage-tab.active {
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.14);
+    transform: translateY(-1px);
+  }
+  .stage-tab .s-num { font-size: 10px; font-weight: 800; color: #38bdf8; text-transform: uppercase; }
+  .stage-tab .s-name { font-size: 13px; font-weight: 800; color: #fff; margin-top: 2px; }
+  .stage-tab .s-sub { font-size: 11px; color: var(--muted); }
+
+  .stage-compare-panels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 1050px) {
+    .stage-compare-panels { grid-template-columns: 1fr; }
+  }
+  .stage-box {
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+  }
+  .stage-box.faf { border-top: 3px solid var(--faf); }
+  .stage-box.forge { border-top: 3px solid var(--forge); }
+  .stage-box.hve { border-top: 3px solid var(--hve); }
+  .stage-box h4 { font-size: 13px; font-weight: 800; margin-bottom: 6px; }
+  .stage-box .meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    font-family: Consolas, monospace;
+  }
+  .stage-box pre {
+    background: #050811;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 8px;
+    padding: 9px 10px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 11px;
+    color: #e2e8f0;
     white-space: pre-wrap;
-    max-height: 320px;
+    max-height: 210px;
     overflow-y: auto;
   }
+
+  /* Full Comparison Table */
+  table.comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 12px;
+    border: 1px solid var(--border);
+  }
+  table.comp-table th, table.comp-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    text-align: left;
+    vertical-align: top;
+  }
+  table.comp-table th {
+    background: rgba(5, 8, 17, 0.85);
+    font-weight: 800;
+    color: #f8fafc;
+  }
+  .c-faf { color: #7dd3fc; font-weight: 700; }
+  .c-forge { color: #fcd34d; font-weight: 700; }
+  .c-hve { color: #6ee7b7; font-weight: 700; }
 </style>
 </head>
 <body>
 
-<div class="hero">
+<div class="top-hero">
   <div>
     <div class="hero-badges">
-      <span class="pill faf">PLUGIN A: customer-success-microsoft/faf-agents (v2.0.1)</span>
-      <span class="pill af">PLUGIN B: microsoft/agent-forge (@agent-forge-copilot/cli v0.3.0)</span>
-      <span class="pill green">HANDS-ON BENCHMARK: 鹈鹕骑自行车 (Pelican Riding a Bicycle)</span>
+      <span class="pill faf">🟦 FAF v2 (`customer-success-microsoft/faf-agents@a740ad88`)</span>
+      <span class="pill forge">🟧 AGENT-FORGE (`microsoft/agent-forge@655ff340`)</span>
+      <span class="pill hve">🟩 HVE-CORE (`microsoft/hve-core@c5de2020` v3.3.101)</span>
     </div>
-    <h1 id="h-title">双插件实装与同题对决：FAF SDLC 交付角色链 vs. AGENT-FORGE 上下文工程元生成器</h1>
-    <div class="hero-sub" id="h-sub">
-      同一命题“制作一个动画版鹈鹕骑自行车 Demo”：左侧使用 FAF v2 五阶段 SDLC 规范驱动（Analyst → Architect → Impl-Recommender → PO → Dev），右侧使用 AGENT-FORGE 定制 4-Agent 美术与特技流水线。
+    <h1>⚔️ 三大 AI 工程套件巅峰对决：“动画版鹈鹕骑自行车”同屏竞技场与全链路图表评测</h1>
+    <div class="sub">
+      同一命题（60FPS 逆运动学鹈鹕骑自行车），分别通过 <strong>FAF (企业级 SDLC 评分与架构契约)</strong>、<strong>AGENT-FORGE (多智能体 `.github/` 上下文编译器)</strong> 与 <strong>HVE-Core (Research-Plan-Implement-Review + Task Challenger 对抗式追踪体系)</strong> 完整实装构建，对比每一环节的真实过程产出、定量指标与动画效果。
     </div>
   </div>
-  <div class="nav-btns">
-    <a class="btn" href="demo-faf-pelican.html" target="_blank">🔍 独立打开 FAF Demo ↗</a>
-    <a class="btn" href="demo-agent-forge-pelican.html" target="_blank">🎨 独立打开 AGENT-FORGE Demo ↗</a>
-    <a class="btn" href="test-report-cards.html" target="_blank">📊 7-Card 4:5 评测卡片 ↗</a>
-    <a class="btn" href="artifacts/faf-sdlc/prioritization-report.html" target="_blank">📈 FAF 立项评分报告 ↗</a>
+  <div class="nav-links">
+    <a class="nav-btn" href="./test-report-cards.html">📊 7-Card 4:5 视觉评测卡片</a>
+    <a class="nav-btn" href="./pelican-benchmark-comparison.md">📄 中文全链路评测报告</a>
+    <a class="nav-btn" href="./pelican-benchmark-comparison.en.md">🌐 English Report</a>
+    <a class="nav-btn" href="./artifacts/faf-sdlc/prioritization-report.html">📈 FAF P1 评分仪表盘</a>
   </div>
 </div>
 
-<div class="sync-bar">
-  <div style="font-weight:700;font-size:13px;color:var(--faf);">🎛️ 双端同步广播控制器 (Broadcast Sync Controls to Both Demos)</div>
-  <div class="sync-controls">
-    <div class="sync-item">
-      <label>同步踏频 Cadence:</label>
-      <input type="range" id="sync-cad" min="20" max="130" value="76" oninput="broadcastSync()">
-      <span class="val" id="sync-cad-v">76 RPM</span>
-    </div>
-    <div class="sync-item">
-      <label>同步风速 Wind/Breeze:</label>
-      <input type="range" id="sync-wind" min="0" max="45" value="16" oninput="broadcastSync()">
-      <span class="val" id="sync-wind-v">16 km/h</span>
-    </div>
-    <button onclick="broadcastPreset(115, 28, 3)">⚡ 双端同步高速冲刺 (115 RPM)</button>
-    <button onclick="broadcastPreset(30, 5, 1)">🔬 双端同步慢动作对比 (30 RPM)</button>
-    <button onclick="toggleSyncPause()" id="btn-sync-pause">⏸ 双端同步暂停 / 播放</button>
+<!-- Master Synchronized Broadcast Controller -->
+<div class="broadcast-bar">
+  <div class="b-group">
+    <span class="b-label">🎛️ 三屏同步广播总线 (`postMessage` Sync Bus):</span>
+    <button class="b-btn" onclick="broadcast({cadence: 92, wind: 16, paused: false})">⚡ 标准巡航 (92 RPM)</button>
+    <button class="b-btn" onclick="broadcast({cadence: 122, wind: 32, action: 'sprint', paused: false})">🚀 三车齐发冲刺 (122 RPM + 风阻)</button>
+    <button class="b-btn" onclick="broadcast({cadence: 34, wind: 6, paused: false})">🔬 34 RPM 慢动作检验 (0.00px 零滑移核验)</button>
+    <button class="b-btn" onclick="broadcast({action: 'feed'})">🐟 同步投喂沙丁鱼 (+Payload)</button>
+    <button class="b-btn" onclick="broadcast({paused: true})">⏸️ 冻结三帧对比</button>
+    <button class="b-btn" onclick="broadcast({paused: false})">▶️ 恢复运行</button>
+  </div>
+  <div class="b-group">
+    <span class="b-label">视图布局:</span>
+    <button class="b-btn active" id="btnView3" onclick="setLayout('3col')">🖥️ 三屏同列对比</button>
+    <button class="b-btn" id="btnView1" onclick="setLayout('stack')">📐 宽屏纵向展开</button>
   </div>
 </div>
 
-<div class="arena-grid">
-  <div class="demo-frame-card faf-card">
-    <div class="card-head">
-      <span style="color:var(--faf)">🟦 Demo A: FAF (`faf-genai` SDLC 架构规范驱动版)</span>
-      <span style="font-family:var(--mono);font-size:11px;color:var(--muted)">Analytical 2-Bone IK · X-Ray Vector HUD · Power Telemetry</span>
+<!-- 3-Way Live Pelican Bicycle Demos -->
+<div class="arena-grid" id="arenaGrid">
+  <div class="demo-col faf">
+    <div class="col-head">
+      <div>
+        <div class="col-title c-faf">🟦 Demo A · FAF v2 (`faf-agents` SDLC 架构规范驱动版)</div>
+        <div class="col-meta">P1 Go (78/90.9/87.5) · Path B Greenfield (15% &lt; 40%) · X-Ray 骨骼透视</div>
+      </div>
+      <a class="nav-btn" href="./demo-faf-pelican.html" target="_blank">↗ 独立全屏</a>
     </div>
-    <iframe id="frame-faf" src="demo-faf-pelican.html" title="FAF Pelican Bicycle Demo"></iframe>
+    <iframe class="demo-frame" id="frameFaf" src="./demo-faf-pelican.html" title="FAF Pelican Demo"></iframe>
   </div>
 
-  <div class="demo-frame-card af-card">
-    <div class="card-head">
-      <span style="color:var(--af)">🟧 Demo B: Microsoft AGENT-FORGE (4-Agent 上下文工程创意剧场版)</span>
-      <span style="font-family:var(--mono);font-size:11px;color:var(--muted)">3 Coastal Moods · Toss-a-Fish &amp; Wheelie · WebAudio Bell</span>
+  <div class="demo-col forge">
+    <div class="col-head">
+      <div>
+        <div class="col-title c-forge">🟧 Demo B · AGENT-FORGE (4-Agent 创意海滨剧场版)</div>
+        <div class="col-meta">forge validate: 8/8 Passed (0 Warnings) · 三幕光影 · 抛鱼接鱼 + 翘头特技</div>
+      </div>
+      <a class="nav-btn" href="./demo-agent-forge-pelican.html" target="_blank">↗ 独立全屏</a>
     </div>
-    <iframe id="frame-af" src="demo-agent-forge-pelican.html" title="AGENT-FORGE Pelican Bicycle Demo"></iframe>
+    <iframe class="demo-frame" id="frameForge" src="./demo-agent-forge-pelican.html" title="AGENT-FORGE Pelican Demo"></iframe>
+  </div>
+
+  <div class="demo-col hve">
+    <div class="col-head">
+      <div>
+        <div class="col-title c-hve">🟩 Demo C · HVE-Core (`RPI + Task Challenger` 风洞多地形专业版)</div>
+        <div class="col-meta">275 Artifacts · .copilot-tracking/ · -10%~+15% 坡度动力学 + 风洞流线 + 11速电变</div>
+      </div>
+      <a class="nav-btn" href="./demo-hve-pelican.html" target="_blank">↗ 独立全屏</a>
+    </div>
+    <iframe class="demo-frame" id="frameHve" src="./demo-hve-pelican.html" title="HVE-Core Pelican Tour Pro Demo"></iframe>
   </div>
 </div>
 
-<div class="section-card">
-  <div class="sec-title">
-    <span>📊 过程文档（Process Artifacts）与 Demo 视觉效果全维度对比矩阵</span>
-    <span style="font-family:var(--mono);font-size:11px;color:var(--muted)">Verified Hands-On Execution</span>
-  </div>
-  <table>
-    <thead>
-      <tr>
-        <th style="width:16%">对比维度</th>
-        <th style="width:42%">🟦 `customer-success-microsoft/faf-agents` (FAF v2.0.1)</th>
-        <th style="width:42%">🟧 `microsoft/agent-forge` (`@agent-forge-copilot/cli` v0.3.0)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><b>1. 实装方式与运行形态</b></td>
-        <td>克隆安装三套 Copilot 插件（<code>faf-core@2.1.1</code>, <code>faf-genai@2.1.0</code>, <code>faf-analytics@1.0.1</code>）至 VS Code <code>agentPlugins</code> 与工作区 <code>.github/</code>，配套 Python 确定性计分引擎 <code>compute_scores.py</code> 与 OTel 归因脚本 <code>faf_benchmark.py</code>。</td>
-        <td>通过 Node.js / TypeScript 构建运行 CLI (<code>forge --version</code> -> <code>0.3.0</code>，<code>forge check</code> 校验 Node v24.22.1 / Copilot CLI v1.0.99 / Git / gh)，执行 <code>forge validate</code> 与 <code>forge list</code>。</td>
-      </tr>
-      <tr>
-        <td><b>2. 中间过程文档形态<br>(Process Artifacts)</b></td>
-        <td><b>软件工程 SDLC 交付物</b>（存放于 <code>scope/</code>, <code>specs/</code>, <code>plan/</code>）：<br>• <code>scope/scorecard.yaml</code> &amp; <code>prioritization-report.html</code>（计算得 Value <code>78.0</code>, Feasibility <code>90.9</code>, Readiness <code>87.5</code> → <b>Tier P1 Go</b>）<br>• <code>specs/prd.md</code>（定义 FR-01..05 验收标准）<br>• <code>specs/spec.md</code> &amp; <code>adr-001.md</code>（C4 L1–L3 架构与双连杆余弦定理 IK 数学方程）<br>• <code>specs/impl-rec.md</code>（6 大企业加速器最高仅 <code>15.0% &lt; 40%</code>，触发 <b>Path B 绿地研发</b>）<br>• <code>plan/backlog.md</code>（2 Epics / 6 Tasks）</td>
-        <td><b>上下文工程 `.github/` 元配置套件</b>（全部带 <code>&lt;!-- Generated by AGENT-FORGE --&gt;</code> 签名并通过 <code>forge validate</code> 8/8 零警告校验）：<br>• <code>.github/forge-plan.json</code>（定义 <code>pipeline</code> 编排拓扑）<br>• 4 个专属定制 Agent：<code>pelican-character-artist.agent.md</code>, <code>bicycle-kinematics-coder.agent.md</code>, <code>scene-environment-director.agent.md</code>, <code>animation-qa-reviewer.agent.md</code><br>• <code>.github/instructions/pelican-animation-standards.instructions.md</code><br>• <code>.github/prompts/tune-pelican-choreography.prompt.md</code><br>• <code>.github/skills/pelican-svg-rigging/SKILL.md</code> &amp; <code>.github/hooks/hooks.json</code></td>
-      </tr>
-      <tr>
-        <td><b>3. 校验与门禁机制</b></td>
-        <td><b>业务立项门禁 + 架构匹配阈值门禁</b>：<code>compute_scores.py</code> 强制校验 1–5 整数证据评分与 9 项业务/合规 Gate；<code>FAF-impl-recommender</code> 按 8 域加权阈值（<code>70% / 40%</code>）决定复用或绿地自研。</td>
-        <td><b>静态语法与工具白名单门禁</b>：<code>forge validate</code> 实测拦截了 3 项 <code>hooks.json</code> Schema 错误、1 项非法工具名（<code>get_errors</code>）与 3 项 <code>SKILL.md</code> 触发词缺失（<code>USE FOR:</code> / <code>DO NOT USE FOR:</code>），修复后实现 <b>8/8 Passed, 0 Warnings</b>。</td>
-      </tr>
-      <tr>
-        <td><b>4. Demo 视觉风格与交互侧重</b></td>
-        <td><b>工程精密仿真实验室风（Engineering Kinematics Workbench）</b>：<br>• 深色蓝图坐标网格 + <b>X-Ray 逆运动学骨骼/膝角/喉囊弹簧矢量叠加层</b><br>• 精确控制踏频 RPM、变速齿比（1.0x–4.2x）、逆风风阻（0–50 km/h）与喉囊载鱼质量<br>• 实时计算地面速度（km/h）、机械输出功率（Watts）与脚踏贴合误差（<code>0.00 px</code>）</td>
-        <td><b>多智能体艺术指导与趣味互动剧场（Coastal Boardwalk Studio）</b>：<br>• 加州海滨木栈道三幕光影切换（☀️ 晴空栈道 / 🌅 落日余晖 / 🌙 星夜车灯照明锥）<br>• 飞行员皮帽与随风飘动的红围巾、复古薄荷绿白边轮胎巡航车、车前藤编鱼篓<br>• 支持点击画布<b>抛沙丁鱼投喂（抛物线张嘴吞鱼物理）</b>、<b>翘前轮特技（Wheelie）</b>、<b>扇翅冲刺</b>与纯 WebAudio 合成的<b>清脆铜车铃（Ding-Ding!）</b></td>
-      </tr>
-      <tr>
-        <td><b>5. 核心结论：何时选谁？</b></td>
-        <td>当团队需要<b>从立项评估、PRD、C4 架构规范、存量资产匹配到代码交付与 Token 审计的标准 SDLC 闭环</b>时，选 <b>FAF (`faf-agents`)</b>。</td>
-        <td>当团队需要<b>针对特定项目技术栈或创意领域（如 SVG 角色动画），快速生成一套职责分工明确、通过静态 Schema 校验的 `.github/agents` 专属团队</b>时，选 <b>Microsoft `AGENT-FORGE`</b>。</td>
-      </tr>
-    </tbody>
-  </table>
+<!-- SECTION 2: SVG Charts Comparing All 3 Suites Across Stages -->
+<div class="sec-header">
+  <h2>📊 三大工程套件全链路量化图表对比 (Visual Benchmark Charts Across All Stages)</h2>
+  <span>基于真实源码树 (`590` vs `38` vs `2,753` git blobs) 与实跑阶段产物 (`FAF SDLC` vs `.github/` vs `.copilot-tracking/`) 精确绘制</span>
 </div>
 
-<div class="section-card">
-  <div class="sec-title">
-    <span>📂 真实生成的过程文档源码对比 (Process Artifact Source Diff)</span>
-    <span style="font-family:var(--mono);font-size:11px;color:var(--muted)">Left: FAF SDLC Specs | Right: AGENT-FORGE .github/ Configs</span>
+<div class="charts-grid">
+  <!-- Chart 1: 8-Axis Capability Radar + Ecosystem Scale -->
+  <div class="chart-card">
+    <h3>
+      <span>🕸️ 图表 1：八维工程能力雷达图与资产规模对照 (8-Axis Engineering Capability Radar)</span>
+      <span style="font-size:11px;color:#94a3b8">100-pt Normalized Benchmark Scale</span>
+    </h3>
+    <p class="desc">对比三大套件在立项量化评分、C4/ADR 架构深度、上下文隔离与防漂移、仓库动态合成、静态 Schema 自愈、多领域规模、可观测性及对抗式审查八个维度的实测得分。</p>
+    <svg class="chart-svg" viewBox="0 0 680 330">
+      <!-- Radar Center at (215, 168), Radius = 115 -->
+      <g transform="translate(215, 168)">
+        <!-- Concentric octagons (25%, 50%, 75%, 100%) -->
+        <polygon points="0,-29 20,-20 29,0 20,20 0,29 -20,20 -29,0 -20,-20" fill="none" stroke="rgba(148,163,184,0.16)" />
+        <polygon points="0,-58 41,-41 58,0 41,41 0,58 -41,41 -58,0 -41,-41" fill="none" stroke="rgba(148,163,184,0.2)" />
+        <polygon points="0,-86 61,-61 86,0 61,61 0,86 -61,61 -86,0 -61,-61" fill="none" stroke="rgba(148,163,184,0.24)" />
+        <polygon points="0,-115 81,-81 115,0 81,81 0,115 -81,81 -115,0 -81,-81" fill="none" stroke="rgba(148,163,184,0.35)" stroke-width="1.4" />
+        <!-- Axes -->
+        <line x1="0" y1="-115" x2="0" y2="115" stroke="rgba(148,163,184,0.22)" />
+        <line x1="-115" y1="0" x2="115" y2="0" stroke="rgba(148,163,184,0.22)" />
+        <line x1="-81" y1="-81" x2="81" y2="81" stroke="rgba(148,163,184,0.22)" />
+        <line x1="-81" y1="81" x2="81" y2="-81" stroke="rgba(148,163,184,0.22)" />
+
+        <!-- FAF v2 Polygon (Cyan):
+             1.立项量化(96% -> 0,-110)
+             2.C4/Azure架构(94% -> 76,-76)
+             3.上下文隔离(72% -> 83,0)
+             4.对抗式验证(68% -> 55,55)
+             5.静态Schema自愈(70% -> 0,80)
+             6.仓库动态合成(58% -> -47,47)
+             7.多领域资产规模(76% -> -87,0)
+             8.Token成本遥测(98% -> -79,-79) -->
+        <polygon points="0,-110 76,-76 83,0 55,55 0,80 -47,47 -87,0 -79,-79"
+                 fill="rgba(56, 189, 248, 0.18)" stroke="#38bdf8" stroke-width="2.4" />
+
+        <!-- AGENT-FORGE Polygon (Amber):
+             1.立项量化(35% -> 0,-40)
+             2.C4/Azure架构(45% -> 36,-36)
+             3.上下文隔离(78% -> 90,0)
+             4.对抗式验证(64% -> 52,52)
+             5.静态Schema自愈(96% -> 0,110)
+             6.仓库动态合成(98% -> -79,79)
+             7.多领域资产规模(52% -> -60,0)
+             8.Token成本遥测(42% -> -34,-34) -->
+        <polygon points="0,-40 36,-36 90,0 52,52 0,110 -79,79 -60,0 -34,-34"
+                 fill="rgba(245, 158, 11, 0.18)" stroke="#f59e0b" stroke-width="2.4" />
+
+        <!-- HVE-Core Polygon (Emerald):
+             1.立项量化(82% -> 0,-94)
+             2.C4/Azure架构(88% -> 71,-71)
+             3.上下文隔离(98% -> 113,0)
+             4.对抗式验证(97% -> 79,79)
+             5.静态Schema自愈(92% -> 0,106)
+             6.仓库动态合成(74% -> -60,60)
+             7.多领域资产规模(99% -> -114,0)
+             8.Token成本遥测(86% -> -70,-70) -->
+        <polygon points="0,-94 71,-71 113,0 79,79 0,106 -60,60 -114,0 -70,-70"
+                 fill="rgba(16, 185, 129, 0.20)" stroke="#10b981" stroke-width="2.6" />
+
+        <!-- Axis Labels -->
+        <text x="0" y="-124" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="bold">立项门禁与量化评分</text>
+        <text x="90" y="-86" text-anchor="start" fill="#e2e8f0" font-size="10" font-weight="bold">C4 / ADR 架构契约</text>
+        <text x="122" y="4" text-anchor="start" fill="#e2e8f0" font-size="10" font-weight="bold">RPI 上下文隔离 (/clear)</text>
+        <text x="88" y="96" text-anchor="start" fill="#e2e8f0" font-size="10" font-weight="bold">对抗式审查 (Challenger)</text>
+        <text x="0" y="132" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="bold">Schema 校验与自动修复</text>
+        <text x="-88" y="96" text-anchor="end" fill="#e2e8f0" font-size="10" font-weight="bold">按栈动态合成 .github</text>
+        <text x="-120" y="4" text-anchor="end" fill="#e2e8f0" font-size="10" font-weight="bold">多领域资产规模 (275项)</text>
+        <text x="-88" y="-86" text-anchor="end" fill="#e2e8f0" font-size="10" font-weight="bold">Token / OTel 可观测性</text>
+      </g>
+
+      <!-- Right Side: Verified Repository Scale & Artifact Counts -->
+      <g transform="translate(425, 26)">
+        <text x="0" y="0" fill="#f8fafc" font-size="12" font-weight="bold">📦 核验仓库与预置资产规模 (Git Tree &amp; Artifacts)</text>
+
+        <!-- Legend -->
+        <rect x="0" y="14" width="10" height="10" rx="2" fill="#38bdf8" />
+        <text x="15" y="23" fill="#7dd3fc" font-size="10" font-weight="bold">FAF v2 (590 blobs · 15 Agents · 17 Skills)</text>
+
+        <rect x="0" y="30" width="10" height="10" rx="2" fill="#f59e0b" />
+        <text x="15" y="39" fill="#fcd34d" font-size="10" font-weight="bold">AGENT-FORGE (38 blobs · 11 Meta-Agents · CLI)</text>
+
+        <rect x="0" y="46" width="10" height="10" rx="2" fill="#10b981" />
+        <text x="15" y="55" fill="#6ee7b7" font-size="10" font-weight="bold">HVE-Core (2,753 blobs · 75 Agents · 49 Skills)</text>
+
+        <!-- Horizontal Bars for Artifact Breakdown -->
+        <g transform="translate(0, 78)">
+          <text x="0" y="0" fill="#cbd5e1" font-size="10">Custom Agents (.agent.md)</text>
+          <rect x="0" y="6" width="38" height="7" rx="3" fill="#38bdf8" /><text x="43" y="13" fill="#7dd3fc" font-size="9">15</text>
+          <rect x="0" y="15" width="28" height="7" rx="3" fill="#f59e0b" /><text x="33" y="22" fill="#fcd34d" font-size="9">11 (Meta-Pipeline)</text>
+          <rect x="0" y="24" width="185" height="7" rx="3" fill="#10b981" /><text x="190" y="31" fill="#6ee7b7" font-size="9">75 (14 Collections)</text>
+        </g>
+
+        <g transform="translate(0, 128)">
+          <text x="0" y="0" fill="#cbd5e1" font-size="10">Reusable Prompts &amp; Instructions</text>
+          <rect x="0" y="6" width="32" height="7" rx="3" fill="#38bdf8" /><text x="37" y="13" fill="#7dd3fc" font-size="9">15 Prompts</text>
+          <rect x="0" y="15" width="60" height="7" rx="3" fill="#f59e0b" /><text x="65" y="22" fill="#fcd34d" font-size="9">Dynamic per Repo</text>
+          <rect x="0" y="24" width="190" height="7" rx="3" fill="#10b981" /><text x="195" y="31" fill="#6ee7b7" font-size="9">75 Prompts + 76 Instr.</text>
+        </g>
+
+        <g transform="translate(0, 178)">
+          <text x="0" y="0" fill="#cbd5e1" font-size="10">Domain Skills (SKILL.md)</text>
+          <rect x="0" y="6" width="62" height="7" rx="3" fill="#38bdf8" /><text x="67" y="13" fill="#7dd3fc" font-size="9">17 (Pricing/Prioritization/Office)</text>
+          <rect x="0" y="15" width="25" height="7" rx="3" fill="#f59e0b" /><text x="30" y="22" fill="#fcd34d" font-size="9">Synthesized by Skill-Writer</text>
+          <rect x="0" y="24" width="175" height="7" rx="3" fill="#10b981" /><text x="180" y="31" fill="#6ee7b7" font-size="9">49 (RPI/OWASP/RAI/DT/A11y)</text>
+        </g>
+
+        <g transform="translate(0, 228)">
+          <text x="0" y="0" fill="#cbd5e1" font-size="10">Pelican Demo Interactive Feature Score</text>
+          <rect x="0" y="6" width="168" height="8" rx="3" fill="#38bdf8" /><text x="174" y="13" fill="#7dd3fc" font-size="9" font-weight="bold">91 / 100 (X-Ray IK Lab)</text>
+          <rect x="0" y="17" width="176" height="8" rx="3" fill="#f59e0b" /><text x="182" y="24" fill="#fcd34d" font-size="9" font-weight="bold">95 / 100 (3-Mood Studio)</text>
+          <rect x="0" y="28" width="184" height="8" rx="3" fill="#10b981" /><text x="190" y="35" fill="#6ee7b7" font-size="9" font-weight="bold">98 / 100 (Wind-Tunnel Pro)</text>
+        </g>
+      </g>
+    </svg>
   </div>
-  <div class="diff-grid">
-    <div>
-      <div style="font-size:12px;font-weight:700;color:var(--faf);margin-bottom:6px;">🟦 FAF `specs/impl-rec.md` &amp; `compute_scores.py` 实测输出</div>
-      <div class="code-panel">=== 1. compute_scores.py Output (scope/scorecard.yaml) ===
+
+  <!-- Chart 2: Stage-by-Stage Artifact & Effort Flow Across the 6 SDLC Phases -->
+  <div class="chart-card">
+    <h3>
+      <span>📈 图表 2：六大环节工程产出密度与耗时分布图 (Stage-by-Stage Output &amp; Latency Profile)</span>
+      <span style="font-size:11px;color:#94a3b8">Measured across 6 Lifecycle Phases</span>
+    </h3>
+    <p class="desc">展示从 Stage 1 (立项/调研) 到 Stage 6 (仿真实现与对抗审查) 中，三套工具链在每一环节的规范产出深度（条形长度）与核心护栏机制。</p>
+    <svg class="chart-svg" viewBox="0 0 640 330">
+      <g transform="translate(18, 22)" font-family="sans-serif">
+        <!-- Header Legend -->
+        <text x="0" y="0" fill="#e2e8f0" font-size="11" font-weight="bold">SDLC 阶段 (Stage)</text>
+        <text x="175" y="0" fill="#94a3b8" font-size="10">规范/上下文产出完备度 (0–100%) &amp; 关键校验机制</text>
+
+        <!-- Stage 1 -->
+        <g transform="translate(0, 18)">
+          <text x="0" y="14" fill="#f8fafc" font-size="11" font-weight="bold">S1. 立项与调研</text>
+          <text x="0" y="27" fill="#64748b" font-size="9">Discovery &amp; Research</text>
+          <rect x="145" y="2" width="275" height="9" rx="3" fill="#38bdf8" />
+          <text x="426" y="10" fill="#7dd3fc" font-size="9">FAF: 96% (28指标 + 9门禁 P1 Go)</text>
+          <rect x="145" y="13" width="190" height="9" rx="3" fill="#f59e0b" />
+          <text x="341" y="21" fill="#fcd34d" font-size="9">FORGE: 68% (14栈扫描 + Planner)</text>
+          <rect x="145" y="24" width="268" height="9" rx="3" fill="#10b981" />
+          <text x="419" y="32" fill="#6ee7b7" font-size="9">HVE: 94% (task-researcher 证据链)</text>
+        </g>
+
+        <!-- Stage 2 -->
+        <g transform="translate(0, 65)">
+          <text x="0" y="14" fill="#f8fafc" font-size="11" font-weight="bold">S2. 架构与选型</text>
+          <text x="0" y="27" fill="#64748b" font-size="9">Architecture &amp; ADR</text>
+          <rect x="145" y="2" width="272" height="9" rx="3" fill="#38bdf8" />
+          <text x="423" y="10" fill="#7dd3fc" font-size="9">FAF: 95% (C4 L1-L3 + 加速器打分 15%)</text>
+          <rect x="145" y="13" width="225" height="9" rx="3" fill="#f59e0b" />
+          <text x="376" y="21" fill="#fcd34d" font-size="9">FORGE: 79% (forge-plan.json 拓扑设计)</text>
+          <rect x="145" y="24" width="262" height="9" rx="3" fill="#10b981" />
+          <text x="413" y="32" fill="#6ee7b7" font-size="9">HVE: 92% (MADR v4.0 + Y-Statement)</text>
+        </g>
+
+        <!-- Stage 3 -->
+        <g transform="translate(0, 112)">
+          <text x="0" y="14" fill="#f8fafc" font-size="11" font-weight="bold">S3. 计划与待办拆解</text>
+          <text x="0" y="27" fill="#64748b" font-size="9">Plan &amp; Backlog</text>
+          <rect x="145" y="2" width="242" height="9" rx="3" fill="#38bdf8" />
+          <text x="393" y="10" fill="#7dd3fc" font-size="9">FAF: 85% (FAF-product-owner backlog.md)</text>
+          <rect x="145" y="13" width="235" height="9" rx="3" fill="#f59e0b" />
+          <text x="386" y="21" fill="#fcd34d" font-size="9">FORGE: 82% (4 Agent Handoff 流水线编排)</text>
+          <rect x="145" y="24" width="278" height="9" rx="3" fill="#10b981" />
+          <text x="429" y="32" fill="#6ee7b7" font-size="9">HVE: 97% (plan + details + Plan Validator)</text>
+        </g>
+
+        <!-- Stage 4 -->
+        <g transform="translate(0, 159)">
+          <text x="0" y="14" fill="#f8fafc" font-size="11" font-weight="bold">S4. 上下文与护栏生成</text>
+          <text x="0" y="27" fill="#64748b" font-size="9">Context &amp; Guardrails</text>
+          <rect x="145" y="2" width="220" height="9" rx="3" fill="#38bdf8" />
+          <text x="371" y="10" fill="#7dd3fc" font-size="9">FAF: 77% (faf-kb-manager 外部知识库注入)</text>
+          <rect x="145" y="13" width="282" height="9" rx="3" fill="#f59e0b" />
+          <text x="433" y="21" fill="#fcd34d" font-size="9">FORGE: 99% (7 Writer 生成 8 个 .github 文件)</text>
+          <rect x="145" y="24" width="265" height="9" rx="3" fill="#10b981" />
+          <text x="416" y="32" fill="#6ee7b7" font-size="9">HVE: 93% (76 Instructions + /clear 隔离)</text>
+        </g>
+
+        <!-- Stage 5 -->
+        <g transform="translate(0, 206)">
+          <text x="0" y="14" fill="#f8fafc" font-size="11" font-weight="bold">S5. 代码实现与仿真</text>
+          <text x="0" y="27" fill="#64748b" font-size="9">Implementation &amp; Demo</text>
+          <rect x="145" y="2" width="258" height="9" rx="3" fill="#38bdf8" />
+          <text x="409" y="10" fill="#7dd3fc" font-size="9">FAF: 91% (0.00px IK + X-Ray 骨骼工作台)</text>
+          <rect x="145" y="13" width="270" height="9" rx="3" fill="#f59e0b" />
+          <text x="421" y="21" fill="#fcd34d" font-size="9">FORGE: 95% (三幕海滨 + 抛鱼吞咽 + 翘头)</text>
+          <rect x="145" y="24" width="280" height="9" rx="3" fill="#10b981" />
+          <text x="431" y="32" fill="#6ee7b7" font-size="9">HVE: 98% (坡度动力学 + 风洞流线 + 11速)</text>
+        </g>
+
+        <!-- Stage 6 -->
+        <g transform="translate(0, 253)">
+          <text x="0" y="14" fill="#f8fafc" font-size="11" font-weight="bold">S6. 校验与对抗审查</text>
+          <text x="0" y="27" fill="#64748b" font-size="9">Validation &amp; Challenge</text>
+          <rect x="145" y="2" width="248" height="9" rx="3" fill="#38bdf8" />
+          <text x="399" y="10" fill="#7dd3fc" font-size="9">FAF: 87% (faf_benchmark.py 53 单测 + 门禁)</text>
+          <rect x="145" y="13" width="268" height="9" rx="3" fill="#f59e0b" />
+          <text x="419" y="21" fill="#fcd34d" font-size="9">FORGE: 94% (forge validate 44工具 + 自动修复)</text>
+          <rect x="145" y="24" width="282" height="9" rx="3" fill="#10b981" />
+          <text x="433" y="32" fill="#6ee7b7" font-size="9">HVE: 99% (RPI Validator + Task Challenger)</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<!-- SECTION 3: Interactive Stage-by-Stage Artifact Diff Explorer -->
+<div class="sec-header">
+  <h2>🔬 六大环节三套件真实产出逐一对比检视器 (Stage-by-Stage Artifact Comparison Explorer)</h2>
+  <span>点击下方任意环节卡片，对比 FAF v2、AGENT-FORGE 与 HVE-Core 在该环节的真实文件产出与核心内容</span>
+</div>
+
+<div class="stage-tabs" id="stageTabs">
+  <div class="stage-tab active" onclick="selectStageCompare(0)">
+    <div class="s-num">Stage 01</div>
+    <div class="s-name">立项门禁与深度调研</div>
+    <div class="s-sub">Prioritization vs Scan vs Research</div>
+  </div>
+  <div class="stage-tab" onclick="selectStageCompare(1)">
+    <div class="s-num">Stage 02</div>
+    <div class="s-name">需求规范与蓝图规划</div>
+    <div class="s-sub">PRD/Scope vs ForgePlan vs RPI-Plan</div>
+  </div>
+  <div class="stage-tab" onclick="selectStageCompare(2)">
+    <div class="s-num">Stage 03</div>
+    <div class="s-name">数学/架构契约与路由</div>
+    <div class="s-sub">C4+ImplRec vs Agents vs Details+ADR</div>
+  </div>
+  <div class="stage-tab" onclick="selectStageCompare(3)">
+    <div class="s-num">Stage 04</div>
+    <div class="s-name">技能、指令与上下文护栏</div>
+    <div class="s-sub">KB-Manager vs SKILL.md vs Tracking</div>
+  </div>
+  <div class="stage-tab" onclick="selectStageCompare(4)">
+    <div class="s-num">Stage 05</div>
+    <div class="s-name">静态校验与对抗式审查</div>
+    <div class="s-sub">compute_scores vs forge validate vs Challenger</div>
+  </div>
+  <div class="stage-tab" onclick="selectStageCompare(5)">
+    <div class="s-num">Stage 06</div>
+    <div class="s-name">最终鹈鹕骑车 Demo 效果</div>
+    <div class="s-sub">X-Ray Lab vs Coastal Studio vs Tour Pro</div>
+  </div>
+</div>
+
+<div class="stage-compare-panels">
+  <div class="stage-box faf">
+    <h4 class="c-faf" id="boxTitleFaf">🟦 FAF v2 (`customer-success-microsoft/faf-agents`)</h4>
+    <div class="meta-row"><span id="boxFileFaf">artifacts/faf-sdlc/scorecard.yaml</span><span id="boxMetricFaf">Tier: P1 Go (78.0 / 90.9 / 87.5)</span></div>
+    <pre id="boxCodeFaf"></pre>
+  </div>
+  <div class="stage-box forge">
+    <h4 class="c-forge" id="boxTitleForge">🟧 AGENT-FORGE (`microsoft/agent-forge`)</h4>
+    <div class="meta-row"><span id="boxFileForge">artifacts/agent-forge-context/forge-plan.json</span><span id="boxMetricForge">forge check: 4/4 Ready</span></div>
+    <pre id="boxCodeForge"></pre>
+  </div>
+  <div class="stage-box hve">
+    <h4 class="c-hve" id="boxTitleHve">🟩 HVE-Core (`microsoft/hve-core`)</h4>
+    <div class="meta-row"><span id="boxFileHve">artifacts/hve-rpi/pelican-tour-pro-research.md</span><span id="boxMetricHve">RPI Phase 1: Verified Truth</span></div>
+    <pre id="boxCodeHve"></pre>
+  </div>
+</div>
+
+<!-- SECTION 4: Comprehensive 3-Way Architectural & Output Comparison Matrix -->
+<div class="sec-header">
+  <h2>📋 三大 AI 工程套件 12 维全景对比矩阵 (3-Way Comprehensive Comparison Matrix)</h2>
+  <span>涵盖仓库架构、工作流范式、校验脚本、上下文管理与“鹈鹕骑自行车”实测指标</span>
+</div>
+
+<table class="comp-table">
+  <thead>
+    <tr>
+      <th style="width:14%">对比维度</th>
+      <th style="width:28%" class="c-faf">🟦 FAF v2 (`customer-success-microsoft/faf-agents`)</th>
+      <th style="width:28%" class="c-forge">🟧 AGENT-FORGE (`microsoft/agent-forge`)</th>
+      <th style="width:30%" class="c-hve">🟩 HVE-Core (`microsoft/hve-core`)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>核心定位与哲学</strong></td>
+      <td><strong>企业客户交付全生命周期（SDLC）专家团队</strong>：从业务优先级评分、加速器匹配到 Azure Landing Zone 与代码交付。</td>
+      <td><strong>仓库级 `.github/` 上下文工程元生成器 CLI</strong>：分析任意代码库并自动编译生成专属的多智能体团队与校验钩子。</td>
+      <td><strong>高流速工程（Hypervelocity Engineering）约定驱动工作流</strong>：通过严格分阶段的 RPI + `.copilot-tracking/` 文件契约消除复杂任务幻觉。</td>
+    </tr>
+    <tr>
+      <td><strong>核验版本与资产规模</strong></td>
+      <td><code>v2.0.1</code> (<code>@a740ad88</code>) · <strong>590</strong> git blobs · 3 插件包 · 15 Agents · 17 Skills · 6 企业级加速器目录</td>
+      <td><code>v0.3.0</code> (<code>@655ff340</code>) · <strong>38</strong> git blobs · 11 内置元 Pipeline Agents · 6 个 CLI 命令 (<code>forge init/generate/validate</code>)</td>
+      <td><code>v3.3.101</code> (<code>@c5de2020</code>) · <strong>2,753</strong> git blobs · 14 领域集合 · <strong>75 Agents · 75 Prompts · 76 Instructions · 49 Skills</strong> (共 275 项)</td>
+    </tr>
+    <tr>
+      <td><strong>Stage 1：立项与调研产出</strong></td>
+      <td><code>scorecard.yaml</code> + <code>prioritization-report.html</code>（28 项整数评分 + 9 项门禁，算出 <code>P1 Go: 78.0/90.9/87.5</code>）</td>
+      <td><code>scanner.ts</code> 扫描 14 类技术栈清单，由 <code>forge-greenfield-planner</code> 生成架构需求画像</td>
+      <td><code>task-researcher</code> 派生并行 <code>Researcher Subagent</code>，产出 <code>.copilot-tracking/research/2026-10-24/pelican-tour-pro-research.md</code></td>
+    </tr>
+    <tr>
+      <td><strong>Stage 2：规划与架构产出</strong></td>
+      <td><code>prd.md</code> + <code>spec.md</code>（C4 L1–L3 架构 + 双连杆余弦定理 IK 方程）+ <code>impl-rec.md</code>（加速器打分 <code>15% &lt; 40%</code> 走 Path B）</td>
+      <td><code>.github/forge-plan.json</code>（定义 4 个专业 Agent 的 <code>pipeline</code> 串行 Handoff 拓扑与共享规则）</td>
+      <td><code>task-planner</code> + <code>Plan Validator</code> 产出双文件：<code>pelican-tour-pro-plan.instructions.md</code> + <code>pelican-tour-pro-details.md</code> + MADR v4.0 <code>ADR-001</code></td>
+    </tr>
+    <tr>
+      <td><strong>Stage 3：防上下文污染机制</strong></td>
+      <td>按 SDLC 阶段隔离目录（<code>scope/</code> → <code>specs/</code> → <code>plan/</code> → <code>infra/</code>），每个角色 Agent 只读写对应阶段文档</td>
+      <td>为每个生成的子 Agent 设置最小化工具白名单（如 QA Agent 仅只读 <code>read/search</code>）与职责边界</td>
+      <td><strong>强制 <code>/clear</code> 上下文清空铁律</strong>：阶段间零聊天历史继承，100% 依靠 <code>.copilot-tracking/</code> 日期前缀文件传递真理，彻底杜绝长对话漂移</td>
+    </tr>
+    <tr>
+      <td><strong>Stage 4：确定性校验与对抗审查</strong></td>
+      <td><code>compute_scores.py</code>（强制 1–5 整数与 <code>S1</code> 证据溯源）+ <code>faf_benchmark.py</code>（53 项单元测试，零额外 LLM 调用统计 Token）</td>
+      <td><code>forge validate</code>（44 个 VS Code 工具名白名单 + Levenshtein <code>&lt;=3</code> 自动纠错 + <code>SKILL.md</code> 触发词校验，实测 <code>8/8 Passed</code>）</td>
+      <td>PowerShell/Pester + Vally 评测矩阵（<code>Validate-SkillStructure.ps1</code> 49/49 通过）+ <strong><code>task-challenger</code> 纯冷态 What/Why/How 对抗式拷问</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Stage 5：鹈鹕骑自行车 Demo 风格</strong></td>
+      <td><strong>🟦 工程动力学与骨骼透视工作台</strong>：专注精确踩踏几何、X-Ray 骨骼向量与膝角实时标注、变速齿比与功率遥测</td>
+      <td><strong>🟧 多智能体海滨互动艺术剧场</strong>：专注三幕光影氛围（晴空/落日/星夜车灯）、点击抛沙丁鱼接鱼吞咽、翘前轮特技与 WebAudio 铜车铃</td>
+      <td><strong>🟩 环法级多地形风洞专业仿真台 (Pelican Tour Pro)</strong>：专注 <code>-10%~+15%</code> 坡度重力/滚阻/风阻耦合、实时风洞烟雾流线、三种骑行姿态 (<code>CdA</code>) 与 11 速 Di2 电变</td>
+    </tr>
+    <tr>
+      <td><strong>最佳适用场景</strong></td>
+      <td>面向客户交付的 Azure GenAI / Microsoft Fabric 解决方案评估、架构规范编写与 Landing Zone 部署</td>
+      <td>新项目冷启动或存量老项目一键生成符合团队栈特性的 <code>.github/</code> Copilot 定制资产包</td>
+      <td>跨多文件、高复杂度软件工程研发，需要强可追溯性（<code>.copilot-tracking/</code>）、安全/RAI/A11y 合规规划与对抗式代码审查</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  const STAGE_COMPARE_DATA = [
+    {
+      faf: {
+        file: "artifacts/faf-sdlc/scorecard.yaml & prioritization-report.html",
+        metric: "compute_scores.py -> Tier P1 (Go)",
+        code: `$ python compute_scores.py compute --dir ./scope --record
 {
   "initiative_id": "pelican-bicycle-sim",
   "value":       { "score": 78.0, "band": "High", "confidence": 100.0 },
   "feasibility": { "score": 90.9, "band": "High", "confidence": 100.0 },
   "readiness":   { "score": 87.5, "band": "High", "confidence": 100.0 },
-  "tier": "P1",
-  "tier_label": "Go",
-  "open_gates": []
+  "tier": "P1", "tier_label": "Go", "open_gates": []
 }
-
-=== 2. FAF-impl-recommender 8-Area Accelerator Matrix ===
-| Accelerator ID                 | Weighted Total |
-|--------------------------------|---------------:|
-| multi-agent-custom-automation  |          15.0% |
-| multimodal-rag-knowledge       |           9.8% |
-| modern-banking-assistant       |           8.3% |
-| call-center-voice-agent        |           8.3% |
-| content-processing-solution    |           7.3% |
-| copilot-studio-hybrid-template |           5.8% |
-Decision: 15.0% &lt; 40% threshold -&gt; Route to Path B (Greenfield Build)</div>
-    </div>
-    <div>
-      <div style="font-size:12px;font-weight:700;color:var(--af);margin-bottom:6px;">🟧 AGENT-FORGE `forge-plan.json` &amp; `forge validate` 实测输出</div>
-      <div class="code-panel">=== 1. .github/forge-plan.json (Orchestration Blueprint) ===
-{
-  "projectType": "frontend-procedural-animation",
-  "orchestrationPattern": "pipeline",
+• 强制检验 28 项量化指标（1-5 整数）与 9 道准入门禁（G1-G9 Cleared）。`
+      },
+      forge: {
+        file: "src/Services/scanner.ts & forge check",
+        metric: "14 Stack Detectors · 4/4 Prerequisites",
+        code: `$ node dist/index.js check
+  ✓ Node.js (≥18) (v24.22.1)
+  ✓ GitHub Copilot CLI (v1.0.99)
+  ✓ Git (v2.53.0) & GitHub CLI (v2.102.0)
+• 自动探测项目根清单（package.json / tsconfig / python / rust / bicep）并识别为 Greenfield HTML5/SVG 动画工作区。`
+      },
+      hve: {
+        file: "artifacts/hve-rpi/pelican-tour-pro-research.md",
+        metric: "task-researcher + Researcher Subagent",
+        code: `[.copilot-tracking/research/2026-10-24/pelican-tour-pro-research.md]
+• 铁律：Research 阶段严禁写业务代码，只将不确定性转化为 Verified Truth。
+• 对比 3 种技术方案：
+  - Option A (CSS Keyframes): 淘汰（脚踏滑移 14-28px）
+  - Option B (Iterative CCD): 淘汰（迭代抖动）
+  - Option C (解析余弦定理双连杆 IK + Canvas2D 风洞流线): 唯一推荐方案。`
+      }
+    },
+    {
+      faf: {
+        file: "artifacts/faf-sdlc/scope.md & prd.md",
+        metric: "FAF-analyst · FR-01..FR-05",
+        code: `[specs/prd.md — Functional Requirements]
+• FR-01 (Zero-Slip Pedaling): 脚蹼锚点与踏板轴心欧氏误差在整个 360° 曲柄周期内恒为 0.00 px。
+• FR-02 (Drivetrain Coupling): 曲柄 RPM (20-130) 与齿比 (1.0x-4.2x) 实时决定车轮角速度。
+• FR-03 (Gular Pouch Dynamics): 喉囊支持 0-3 条鱼负载并驱动二阶阻尼弹簧振荡。`
+      },
+      forge: {
+        file: "artifacts/agent-forge-context/forge-plan.json",
+        metric: "forge-greenfield-planner · Pipeline Topology",
+        code: `{
+  "mode": "greenfield",
+  "orchestration": "pipeline",
   "agents": [
-    "pelican-character-artist  -> [handoff] -> bicycle-kinematics-coder",
-    "bicycle-kinematics-coder  -> [handoff] -> scene-environment-director",
-    "scene-environment-director-> [handoff] -> animation-qa-reviewer",
-    "animation-qa-reviewer     -> [terminal QA gate]"
+    { "name": "pelican-character-artist", "handoffTo": ["bicycle-kinematics-coder"] },
+    { "name": "bicycle-kinematics-coder", "handoffTo": ["scene-environment-director"] },
+    { "name": "scene-environment-director", "handoffTo": ["animation-qa-reviewer"] },
+    { "name": "animation-qa-reviewer", "handoffTo": [] }
   ]
-}
-
-=== 2. forge validate --no-fix CLI Verification ===
+}`
+      },
+      hve: {
+        file: "artifacts/hve-rpi/pelican-tour-pro-plan.instructions.md",
+        metric: "task-planner + Plan Validator (0 Discrepancies)",
+        code: `[.copilot-tracking/plans/2026-10-24/pelican-tour-pro-plan.instructions.md]
+• Phase 1 (Sequential): 纵向坡度骑行力学引擎 (F_gravity + F_rolling + F_aero) 与 11 速电变飞轮。
+• Phase 2 (Parallel): 四大赛段程序化地形 + 75 条层流/湍流风洞烟雾流线。
+• Phase 3 (Sequential): 双轨功率/心率实时波形图 + RPI & Task Challenger 检视器。`
+      }
+    },
+    {
+      faf: {
+        file: "artifacts/faf-sdlc/spec.md & impl-rec.md",
+        metric: "FAF-architect & FAF-impl-recommender (15.0% -> Path B)",
+        code: `[specs/impl-rec.md — 6 大企业加速器 8 域加权打分]
+• Multi-Agent Custom Automation Engine: 15.0%
+• Enterprise Knowledge Mining (RAG):     5.0%
+• 阈值判定：最高分 15.0% < 40% (Minimum Viable Threshold)
+  -> 确定性路由至 Path B: Agentic Greenfield Development（拒绝生搬硬套重型云模板）。`
+      },
+      forge: {
+        file: "artifacts/agent-forge-context/agents/*.agent.md",
+        metric: "4 Specialized Domain Agents Synthesized",
+        code: `• pelican-character-artist.agent.md: 负责鸟类解剖、四色调羽毛、皮帽与飘动红围巾。
+• bicycle-kinematics-coder.agent.md: 负责薄荷绿巡航车架、双连杆 IK、翘前轮特技与抛鱼弹道。
+• scene-environment-director.agent.md: 负责晴空/落日/星夜三幕视差与 WebAudio 双振荡器铜车铃。
+• animation-qa-reviewer.agent.md: 仅限只读工具 [read, search, problems] 审计 60FPS 与 CSP。`
+      },
+      hve: {
+        file: "artifacts/hve-rpi/pelican-tour-pro-details.md & adrs/adr-001.md",
+        metric: "Exact Equations + MADR v4.0 Y-Statement",
+        code: `[pelican-tour-pro-details.md & docs/adrs/adr-001-hybrid-wind-tunnel-ik.md]
+• 纵向功率方程：P_total = (F_g + F_r + F_aero) * v / 0.96
+  - F_g = M * g * sin(atan(grade/100))
+  - F_aero = 0.5 * rho * CdA(posture, fish) * (v_ground + v_wind)^2
+• 骑行姿态 CdA：Aero Tuck (0.240 m²) | Out-of-Saddle Climb (0.305 m²) | Upright (0.355 m²)`
+      }
+    },
+    {
+      faf: {
+        file: "src/core/skills/faf-kb-manager/SKILL.md",
+        metric: "Harness Engineering · External KB Injection",
+        code: `• 当 Path B 触发时，通过 faf-kb-manager 从 customer-success-microsoft/faf-knowledge-bases 按技术栈拉取最佳实践规则注入本地工作区。
+• 同时由 FAF-product-owner 生成 plan/backlog.md（拆解为 Epic 1 核心运动学引擎与 Epic 2 遥测工作台共 6 个可交付 Task）。`
+      },
+      forge: {
+        file: "artifacts/agent-forge-context/skills/pelican-svg-rigging/SKILL.md",
+        metric: "Skill + Instructions + Prompt + Hooks",
+        code: `---
+name: pelican-svg-rigging
+description: Analytical 2-bone inverse kinematics and spring-damped gular pouch rigging for SVG pelican cycling animations. USE FOR: rigging avian legs to bicycle pedals, solving 2-bone IK... DO NOT USE FOR: 3D WebGL skeletal meshes...
+---
+• 配套生成 pelican-animation-standards.instructions.md 与 hooks/hooks.json。`
+      },
+      hve: {
+        file: ".github/instructions/hve-core/copilot-tracking.instructions.md",
+        metric: "Context Clearing (/clear) + Telemetry Overlay",
+        code: `• 强制文件状态优先于对话记忆：所有中间调研、计划、变更与审查全部落盘至 .copilot-tracking/。
+• 生产代码净室规则：严禁将 .copilot-tracking/ 内部路径写入生产代码注释或提交信息。
+• 阶段切换时执行 /clear，彻底隔离 Researcher、Planner、Implementor 与 Reviewer 的系统提示词。`
+      }
+    },
+    {
+      faf: {
+        file: "src/core/scripts/faf_benchmark.py",
+        metric: "53 Unit Tests · Zero-Extra-LLM Token & AIU Accounting",
+        code: `• 通过 hooks.json 挂载 UserPromptSubmit / PreToolUse / SubagentStart / Stop 钩子。
+• 自动解析轨迹计算 Token、AI Credits (nano-AIU / 10^9) 与剔除人工等待后的真实活跃耗时，无需额外消耗任何模型 Token。`
+      },
+      forge: {
+        file: "src/Services/validator.ts (forge validate --no-fix)",
+        metric: "✓ 8 file(s) passed (0 errors, 0 warnings)",
+        code: `$ node dist/index.js validate --no-fix
 - Validating customization files...
-  ✓ 4 agents (.github/agents/*.agent.md)
-  ✓ 1 prompt (.github/prompts/tune-pelican-choreography.prompt.md)
-  ✓ 1 instruction (.github/instructions/pelican-animation-standards.instructions.md)
-  ✓ 1 skill (.github/skills/pelican-svg-rigging/SKILL.md)
-  ✓ 1 hook (.github/hooks/hooks.json)
-Summary: All checks passed (8 files validated, 0 warnings)</div>
-    </div>
-  </div>
-</div>
+✓ 8 file(s) passed
+Summary: All checks passed (8 files validated, 0 warnings)
+• 实测拦截并修复了 hooks.json version:1 契约、get_errors 非标工具名以及 SKILL.md 触发词。`
+      },
+      hve: {
+        file: "artifacts/hve-rpi/pelican-tour-pro-review.md",
+        metric: "Validate-SkillStructure (49/49) + Task Challenger",
+        code: `$ pwsh ./scripts/linting/Validate-SkillStructure.ps1 -WarningsAsErrors
+  🔍 Validating 49 skill directory(ies)... 49/49 PASSED
+• Task Challenger 冷态拷问 Q1：当摇车抽车髋部抬高导致距离超过 L1+L2 时如何防止 acos(NaN)？
+  -> 实测通过 D = min(dist, 0.999*(L1+L2)) 与 clamp(cosAlpha, -1, 1) 完美免疫。`
+      }
+    },
+    {
+      faf: {
+        file: "demo-faf-pelican.html (34 KB)",
+        metric: "Engineering Kinematics & X-Ray Telemetry Lab",
+        code: `• 核心亮点：
+  1. 🔬 X-Ray 逆运动学骨骼与角度实时透视层（曲柄轨迹圆、左右腿骨骼矢量、膝角实时度数）
+  2. ⚙️ 踏频 (20-130 RPM) × 齿比 (1.0x-4.2x) × 逆风 (0-50 km/h) × 喉囊载鱼 (0-3) 实时功率仪表盘
+  3. 📂 顶部内嵌 5 阶段 FAF SDLC 规范原文检视器`
+      },
+      forge: {
+        file: "demo-agent-forge-pelican.html (37 KB)",
+        metric: "Multi-Agent Coastal Animation & Stunt Studio",
+        code: `• 核心亮点：
+  1. 🌅 晴空栈道 / 落日余晖 / 星夜车灯（带车头锥形体积光束）三幕氛围一键切换
+  2. 🐟 点击画布或按钮抛掷沙丁鱼：抛物线弹道飞入张开的鹈鹕巨喙，触发喉囊吞咽弹性膨胀
+  3. 🎪 翘前轮特技 (Wheelie!) + 🚀 扇翅加速冲刺 + 🔔 纯 WebAudio 双振荡器铜车铃`
+      },
+      hve: {
+        file: "demo-hve-pelican.html (44 KB)",
+        metric: "Pelican Tour Pro · Multi-Terrain & Wind-Tunnel Simulator",
+        code: `• 核心亮点：
+  1. 🏔️ 四大赛段切换（阿尔卑斯 +9% HC 爬坡 / 0% 气动风洞 / +2% 鲁贝鹅卵石震动 / -7% 新东京星夜下坡）
+  2. 💨 实时风洞层流与尾流湍流烟雾线 + HVE-RPI 伴飞遥测无人机 + 底部功率/心率双轨滚动波形图
+  3. 🚴 三种骑行姿态切换（气动俯冲 Aero Tuck / 摇车抽车 Out-of-Saddle / 直立巡航）+ 11 速 Di2 电变`
+      }
+    }
+  ];
 
-<script>
-let syncPaused = false;
+  function selectStageCompare(idx) {
+    document.querySelectorAll('#stageTabs .stage-tab').forEach((el, i) => el.classList.toggle('active', i === idx));
+    const d = STAGE_COMPARE_DATA[idx];
+    document.getElementById('boxFileFaf').textContent = d.faf.file;
+    document.getElementById('boxMetricFaf').textContent = d.faf.metric;
+    document.getElementById('boxCodeFaf').textContent = d.faf.code;
 
-function broadcastSync() {
-  const cad = Number(document.getElementById('sync-cad').value);
-  const wind = Number(document.getElementById('sync-wind').value);
-  document.getElementById('sync-cad-v').textContent = `${cad} RPM`;
-  document.getElementById('sync-wind-v').textContent = `${wind} km/h`;
+    document.getElementById('boxFileForge').textContent = d.forge.file;
+    document.getElementById('boxMetricForge').textContent = d.forge.metric;
+    document.getElementById('boxCodeForge').textContent = d.forge.code;
 
-  const msg = { type: 'arena-sync', cadence: cad, wind: wind, paused: syncPaused };
-  const f1 = document.getElementById('frame-faf').contentWindow;
-  const f2 = document.getElementById('frame-af').contentWindow;
-  if (f1) f1.postMessage(msg, '*');
-  if (f2) f2.postMessage(msg, '*');
-}
+    document.getElementById('boxFileHve').textContent = d.hve.file;
+    document.getElementById('boxMetricHve').textContent = d.hve.metric;
+    document.getElementById('boxCodeHve').textContent = d.hve.code;
+  }
 
-function broadcastPreset(cad, wind, fish) {
-  document.getElementById('sync-cad').value = cad;
-  document.getElementById('sync-wind').value = wind;
-  document.getElementById('sync-cad-v').textContent = `${cad} RPM`;
-  document.getElementById('sync-wind-v').textContent = `${wind} km/h`;
+  function broadcast(payload) {
+    const msg = Object.assign({ type: 'ARENA_SYNC' }, payload);
+    ['frameFaf', 'frameForge', 'frameHve'].forEach((id) => {
+      const fr = document.getElementById(id);
+      if (fr && fr.contentWindow) fr.contentWindow.postMessage(msg, '*');
+    });
+  }
 
-  const msg = { type: 'arena-sync', cadence: cad, wind: wind, fish: fish, paused: syncPaused };
-  const f1 = document.getElementById('frame-faf').contentWindow;
-  const f2 = document.getElementById('frame-af').contentWindow;
-  if (f1) f1.postMessage(msg, '*');
-  if (f2) f2.postMessage(msg, '*');
-}
+  function setLayout(mode) {
+    const grid = document.getElementById('arenaGrid');
+    grid.classList.toggle('focus-single', mode === 'stack');
+    document.getElementById('btnView3').classList.toggle('active', mode === '3col');
+    document.getElementById('btnView1').classList.toggle('active', mode === 'stack');
+  }
 
-function toggleSyncPause() {
-  syncPaused = !syncPaused;
-  document.getElementById('btn-sync-pause').textContent = syncPaused
-    ? '▶ 双端同步继续'
-    : '⏸ 双端同步暂停 / 播放';
-  broadcastSync();
-}
+  selectStageCompare(0);
 </script>
 </body>
 </html>
