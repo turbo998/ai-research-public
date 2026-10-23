@@ -783,6 +783,7 @@ const html = `<!DOCTYPE html>
           <button type="button" class="act-btn" data-ast="save">save.ts</button>
           <button type="button" class="act-btn" data-ast="hud">hud.ts</button>
           <button type="button" class="act-btn" data-ast="camera">camera.ts</button>
+          <button type="button" class="act-btn" data-ast="particles">particles.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -826,6 +827,10 @@ const html = `<!DOCTYPE html>
           <div class="patch-row">
             <div class="patch-row-head"><span>boss.barrageIntervalSec (铁冠齐射冷却周期)</span><strong id="valBarrageInt">2.6 s</strong></div>
             <input type="range" id="patchBarrageInt" min="1.2" max="5.0" step="0.2" value="2.6" />
+          </div>
+          <div class="patch-row">
+            <div class="patch-row-head"><span>shelter.empDamage (避难所磁暴脉冲伤害)</span><strong id="valEmpDmg">35 DMG</strong></div>
+            <input type="range" id="patchEmpDmg" min="15" max="120" step="5" value="35" />
           </div>
         </div>
       </div>
@@ -1721,6 +1726,17 @@ export function stepCameraTrauma(cam: { trauma: number }, rng: () => number, dt:
   return { ox: (rng() - 0.5) * 2 * shake, oy: (rng() - 0.5) * 2 * shake };
 }\`,
       },
+      particles: {
+        minified: \`function Pt(e,t,n,r){const a=r-Math.PI*.55+(n()-.5)*.4;e.push({x:t.x+Math.cos(r)*14,y:t.y+Math.sin(r)*14,vx:Math.cos(a)*85,vy:Math.sin(a)*85-35,rot:0,vrot:12,life:.75})}\`,
+        decompiled: \`// Reconstructed Ballistic Brass Shell-Casing & Spark Emitter (src/game/particles.ts)
+export function emitBrassShellCasing(pool: ShellCasing[], origin: Vec2, rng: () => number, aimRad: number): void {
+  const ejectAng = aimRad - Math.PI * 0.55 + (rng() - 0.5) * 0.4;
+  pool.push({
+    x: origin.x + Math.cos(aimRad) * 14, y: origin.y + Math.sin(aimRad) * 14,
+    vx: Math.cos(ejectAng) * 85, vy: Math.sin(ejectAng) * 85 - 35, rot: 0, vrot: 12, life: 0.75,
+  });
+}\`,
+      },
     };
 
     // =========================================================================
@@ -1975,6 +1991,7 @@ export function stepCameraTrauma(cam: { trauma: number }, rng: () => number, dt:
       arcChainCount: 3,
       overdriveDuration: 6.0,
       barrageIntervalSec: 2.6,
+      empDamage: 35,
     };
 
     document.getElementById("patchSpeed").addEventListener("input", (e) => {
@@ -2019,6 +2036,14 @@ export function stepCameraTrauma(cam: { trauma: number }, rng: () => number, dt:
         livePatch.barrageIntervalSec = Number(e.target.value);
         document.getElementById("valBarrageInt").textContent = livePatch.barrageIntervalSec.toFixed(1) + " s";
         pulseEvidence("boss");
+      });
+    }
+    const patchEmpDmgEl = document.getElementById("patchEmpDmg");
+    if (patchEmpDmgEl) {
+      patchEmpDmgEl.addEventListener("input", (e) => {
+        livePatch.empDamage = Number(e.target.value);
+        document.getElementById("valEmpDmg").textContent = livePatch.empDamage + " DMG";
+        pulseEvidence("emp");
       });
     }
 
@@ -2089,8 +2114,8 @@ export function stepCameraTrauma(cam: { trauma: number }, rng: () => number, dt:
         const ang = Math.atan2(e.y - 320, e.x - 480);
         e.x = Math.max(50, Math.min(910, e.x + Math.cos(ang) * 110));
         e.y = Math.max(50, Math.min(550, e.y + Math.sin(ang) * 110));
-        e.hp -= 35;
-        dmgPopups.push({ x: e.x, y: e.y - 26, text: "EMP -35", color: "#00e5ff", life: 0.75 });
+        e.hp -= livePatch.empDamage;
+        dmgPopups.push({ x: e.x, y: e.y - 26, text: "EMP -" + livePatch.empDamage, color: "#00e5ff", life: 0.75 });
       }
       if (boss) {
         boss.exposed = true;
@@ -2385,12 +2410,16 @@ export function stepCameraTrauma(cam: { trauma: number }, rng: () => number, dt:
         if (sc.life <= 0) shellCasings.splice(i, 1);
       }
 
-      // Update enemies & Zapper/Boss ranged plasma bolts deflected by R-17 Magnetic Shield
+      // Update enemies & Zapper/Boss ranged plasma bolts deflected by R-17 Magnetic Shield + Brute Seismic Ground-Slam
       for (const e of enemies) {
         const ang = Math.atan2(player.y - e.y, player.x - e.x);
         const spd = e.kind === "scuttler" ? 68 : e.kind === "brute" ? 38 : 28;
         e.x += Math.cos(ang) * spd * dt;
         e.y += Math.sin(ang) * spd * dt;
+        if (e.kind === "brute" && Math.hypot(player.x - e.x, player.y - e.y) < 135 && Math.random() < dt * 0.45) {
+          shockRings.push({ x: e.x, y: e.y, r: 12, maxR: 76, life: 0.3 });
+          dmgPopups.push({ x: e.x, y: e.y - 32, text: "ANVIL SLAM!", color: "#f0b34f", life: 0.5 });
+        }
         if (e.kind === "zapper" && Math.random() < dt * 0.55) {
           enemyBolts.push({
             x: e.x,
