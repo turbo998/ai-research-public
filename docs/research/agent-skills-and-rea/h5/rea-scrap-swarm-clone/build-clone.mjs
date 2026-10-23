@@ -779,6 +779,7 @@ const html = `<!DOCTYPE html>
           <button type="button" class="act-btn" data-ast="physics">physics.ts</button>
           <button type="button" class="act-btn" data-ast="director">director.ts</button>
           <button type="button" class="act-btn" data-ast="spatial">spatial.ts</button>
+          <button type="button" class="act-btn" data-ast="combat">combat.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -806,6 +807,10 @@ const html = `<!DOCTYPE html>
           <div class="patch-row">
             <div class="patch-row-head"><span>boss.chestLockExposeSec (铁冠破盾暴露窗口)</span><strong id="valBossExpose">4.5 s</strong></div>
             <input type="range" id="patchBossExpose" min="2.0" max="10.0" step="0.5" value="4.5" />
+          </div>
+          <div class="patch-row">
+            <div class="patch-row-head"><span>player.magnetRadius (废铁磁吸牵引半径)</span><strong id="valMagnet">175 px</strong></div>
+            <input type="range" id="patchMagnet" min="80" max="360" step="10" value="175" />
           </div>
         </div>
       </div>
@@ -1660,6 +1665,15 @@ export function pullScrapOrbsWithinRadius(orbs: ScrapOrb[], player: Vec2, magnet
   }
 }\`,
       },
+      combat: {
+        minified: \`function Ht(e,t,n){const r=t?1.6:1,a=n?.exposed?2.5:n?.isBoss?.25:1;return Math.round(e*r*a)}\`,
+        decompiled: \`// Reconstructed Armor Mitigation & Boss Weakpoint Multiplier (src/game/combat.ts)
+export function computeDamageWithArmor(baseDmg: number, isOverdrive: boolean, target: { isBoss?: boolean; exposed?: boolean }): number {
+  const overdriveMul = isOverdrive ? 1.6 : 1.0;
+  const armorMul = target.exposed ? 2.5 : target.isBoss ? 0.25 : 1.0;
+  return Math.round(baseDmg * overdriveMul * armorMul);
+}\`,
+      },
     };
 
     // =========================================================================
@@ -1910,6 +1924,7 @@ export function pullScrapOrbsWithinRadius(orbs: ScrapOrb[], player: Vec2, magnet
       moveSpeed: 245,
       fireRateScale: 1.0,
       bossExposeSec: 4.5,
+      magnetRadius: 175,
     };
 
     document.getElementById("patchSpeed").addEventListener("input", (e) => {
@@ -1924,6 +1939,14 @@ export function pullScrapOrbsWithinRadius(orbs: ScrapOrb[], player: Vec2, magnet
       livePatch.bossExposeSec = Number(e.target.value);
       document.getElementById("valBossExpose").textContent = livePatch.bossExposeSec.toFixed(1) + " s";
     });
+    const patchMagnetEl = document.getElementById("patchMagnet");
+    if (patchMagnetEl) {
+      patchMagnetEl.addEventListener("input", (e) => {
+        livePatch.magnetRadius = Number(e.target.value);
+        document.getElementById("valMagnet").textContent = livePatch.magnetRadius + " px";
+        pulseEvidence("emp");
+      });
+    }
 
     const weapons = [
       { id: "rivet", name: "铆钉机炮 [1]", cd: 0.16 },
@@ -1950,6 +1973,7 @@ export function pullScrapOrbsWithinRadius(orbs: ScrapOrb[], player: Vec2, magnet
     const shockRings = [];
     const lightningArcs = [];
     const scrapOrbs = [];
+    const shellCasings = [];
     const enemies = [
       { kind: "scuttler", x: 180, y: 150, hp: 60, maxHp: 60 },
       { kind: "scuttler", x: 780, y: 160, hp: 60, maxHp: 60 },
@@ -2140,6 +2164,16 @@ export function pullScrapOrbsWithinRadius(orbs: ScrapOrb[], player: Vec2, magnet
           kind: w.id,
           life: 1.1,
         });
+        const ejectAng = ang - Math.PI * 0.55 + (Math.random() - 0.5) * 0.4;
+        shellCasings.push({
+          x: player.x + Math.cos(ang) * 14,
+          y: player.y + Math.sin(ang) * 14,
+          vx: Math.cos(ejectAng) * (65 + Math.random() * 45),
+          vy: Math.sin(ejectAng) * (65 + Math.random() * 45) - 35,
+          rot: Math.random() * Math.PI,
+          vrot: (Math.random() - 0.5) * 18,
+          life: 0.75,
+        });
       }
 
       // Update bullets
@@ -2227,7 +2261,7 @@ export function pullScrapOrbsWithinRadius(orbs: ScrapOrb[], player: Vec2, magnet
         const dx = player.x - orb.x;
         const dy = player.y - orb.y;
         const dist = Math.hypot(dx, dy) || 1;
-        if (dist < 175) {
+        if (dist < livePatch.magnetRadius) {
           orb.x += (dx / dist) * 235 * dt;
           orb.y += (dy / dist) * 235 * dt;
         }
@@ -2245,6 +2279,15 @@ export function pullScrapOrbsWithinRadius(orbs: ScrapOrb[], player: Vec2, magnet
           });
           scrapOrbs.splice(i, 1);
         }
+      }
+      for (let i = shellCasings.length - 1; i >= 0; i--) {
+        const sc = shellCasings[i];
+        sc.x += sc.vx * dt;
+        sc.y += sc.vy * dt;
+        sc.vy += 180 * dt;
+        sc.rot += sc.vrot * dt;
+        sc.life -= dt;
+        if (sc.life <= 0) shellCasings.splice(i, 1);
       }
 
       // Update enemies
@@ -2364,10 +2407,25 @@ export function pullScrapOrbsWithinRadius(orbs: ScrapOrb[], player: Vec2, magnet
         gameClock
       );
 
-      // Draw Magnetic Scrap Alloy Orbs & Tractor-Beam Tethers
+      // Draw Magnetic Scrap Alloy Orbs & Tractor-Beam Tethers + Ejected Brass Shell Casings
+      gCtx.strokeStyle = "rgba(0, 229, 255, 0.11)";
+      gCtx.lineWidth = 1;
+      gCtx.setLineDash([4, 6]);
+      gCtx.beginPath();
+      gCtx.arc(player.x, player.y, livePatch.magnetRadius, 0, Math.PI * 2);
+      gCtx.stroke();
+      gCtx.setLineDash([]);
+      for (const sc of shellCasings) {
+        gCtx.save();
+        gCtx.translate(sc.x, sc.y);
+        gCtx.rotate(sc.rot);
+        gCtx.fillStyle = "#e0b354";
+        gCtx.fillRect(-3, -1.3, 6, 2.6);
+        gCtx.restore();
+      }
       for (const orb of scrapOrbs) {
         const dist = Math.hypot(player.x - orb.x, player.y - orb.y);
-        if (dist < 175) {
+        if (dist < livePatch.magnetRadius) {
           gCtx.strokeStyle = "rgba(0, 229, 255, 0.28)";
           gCtx.lineWidth = 1.5;
           gCtx.setLineDash([4, 4]);

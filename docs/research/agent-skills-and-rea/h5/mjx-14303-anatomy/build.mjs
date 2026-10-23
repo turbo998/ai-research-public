@@ -288,7 +288,9 @@ function buildChassis() {
   const F_LED_L = G.frameOf([-136, -26, CHASSIS_Z + 8.5], [-1, 0, 0], [0, 1, 0], [0, 0, 1]);
   const F_LED_R = G.frameOf([-136, 26, CHASSIS_Z + 8.5], [-1, 0, 0], [0, 1, 0], [0, 0, 1]);
   out.push(`<g class="mjx-headlight-pod">${S(G.disc(-3, 2, 4.4, F_LED_L, P, { bevel: 0.4 }), { tone: "hi", lit: true })}${S(G.disc(-3, 2, 4.4, F_LED_R, P, { bevel: 0.4 }), { tone: "hi", lit: true })}</g>`);
-  // Front CNC Rally Tow Hook Ring protruding at center of splitter + Dual Stainless Splitter Tie-Rod Struts
+  // Front CNC Rally Tow Hook Ring protruding at center of splitter + Dual Stainless Splitter Tie-Rod Struts + Front Intercooler Core
+  const intercooler = { x: -129, y: -18, w: 5.5, d: 36, r: 1 };
+  out.push(S(k.slabOf(intercooler, CHASSIS_Z + 1.5, 5.2, P, 3, 0.3), { tone: "hi" }));
   const towHookF = { x: -149, y: -3.5, w: 7, d: 7, r: 2 };
   out.push(S(k.slabOf(towHookF, CHASSIS_Z + 0.5, 1.8, P, 3, 0.3), { tone: "hi", lit: true }));
   out.push(
@@ -715,7 +717,7 @@ function buildUpperDeck() {
     }),
   );
 
-  // Front & Rear Spring-Steel Anti-Roll Sway Bars
+  // Front & Rear Spring-Steel Anti-Roll Sway Bars + Vertical Ball-Cup End-Link Drop Rods
   for (const ax of [AXLE_F, AXLE_R]) {
     const swayX = ax < 0 ? ax + 15 : ax - 15;
     const swayRoute = [
@@ -727,6 +729,13 @@ function buildUpperDeck() {
     for (const part of tubePieces(swayRoute, 1.15, P, { maxLength: 40 })) {
       out.push(tubeSvg(part, { tone: "hi" }));
     }
+    out.push(
+      L(
+        k.segment([swayX, -24, zDeck - 1], [swayX, -24, zDeck - 9.5], P) +
+          k.segment([swayX, 24, zDeck - 1], [swayX, 24, zDeck - 9.5], P),
+        { tone: "lit", free: true },
+      ),
+    );
   }
   return out.join("");
 }
@@ -812,11 +821,15 @@ function buildBodyShell() {
     // Wing struts
     out.push(S(k.slabOf({ x: 80, y: wy - 1.5, w: 14, d: 3, r: 0.8 }, zBase + 8.5, 14, P, 3, 0.3), { tone: "mid" }));
   }
-  // Lower & Upper Rear Wing Elements + Side Endplates
+  // Lower & Upper Rear Wing Elements + Side Endplates + Center Dorsal Stabilizer Fin & Trailing-Edge Gurney Flap
+  const dorsalFin = { x: 46, y: -1.1, w: 36, d: 2.2, r: 0.6 };
+  out.push(S(k.slabOf(dorsalFin, zBase + 14.5, 7.2, P, 3, 0.3), { tone: "hi" }));
   const wingLower = { x: 82, y: -40, w: 20, d: 80, r: 3 };
   const wingUpper = { x: 86, y: -42, w: 22, d: 84, r: 3.5 };
+  const gurneyFlap = { x: 105.5, y: -41, w: 2.6, d: 82, r: 0.6 };
   out.push(S(k.slabOf(wingLower, zBase + 16, 2.2, P, 4, 0.4), { tone: "mid" }));
   out.push(S(k.slabOf(wingUpper, zBase + 22, 2.6, P, 4, 0.5), { tone: "hi", lit: true }));
+  out.push(S(k.slabOf(gurneyFlap, zBase + 24.6, 2.1, P, 3, 0.3), { tone: "hi", lit: true }));
   for (const side of [-1, 1]) {
     const endplate = { x: 80, y: side > 0 ? 40 : -43.5, w: 28, d: 3.5, r: 1 };
     out.push(S(k.slabOf(endplate, zBase + 13, 13.5, P, 3, 0.4), { tone: "hi" }));
@@ -1042,6 +1055,14 @@ const CSS = `
 .iso-stage[data-color-mode="vivid"][data-livery="aurora"] .mjx-piece[data-piece="upper_deck"]{
   --anatomy-top:#fda4af;--anatomy-fill:#e11d48;--anatomy-hi:#fef08a;--anatomy-lit:#2dd4bf;
 }
+/* Livery 10: Red Bull WRC Midnight Navy, Crimson & Sunburst Gold */
+.iso-stage[data-color-mode="vivid"][data-livery="redbull"] .mjx-piece[data-piece="body_shell"]{
+  --anatomy-top:#3b82f6;--anatomy-fill:#1e3a8a;--anatomy-shade-0:#0f172a;--anatomy-shade-1:#172554;--anatomy-shade-2:#1e3a8a;--anatomy-shade-3:#2563eb;--anatomy-hi:#facc15;--anatomy-lit:#ef4444;
+}
+.iso-stage[data-color-mode="vivid"][data-livery="redbull"] .mjx-piece[data-piece="wheels_f"],
+.iso-stage[data-color-mode="vivid"][data-livery="redbull"] .mjx-piece[data-piece="wheels_r"]{
+  --anatomy-top:#facc15;--anatomy-fill:#1e1b4b;--anatomy-hi:#ef4444;--anatomy-lit:#38bdf8;
+}
 .iso-stage[data-lights="on"] .mjx-headlight-pod{
   filter:drop-shadow(0 0 7px var(--anatomy-lit));
 }
@@ -1082,6 +1103,7 @@ const customControlsHtml = `
     <button type="button" class="mjx-btn" data-demo="offroad">⛰️ 砂石飞跳避震</button>
     <button type="button" class="mjx-btn" data-demo="slalom">🎯 麋鹿测试阿克曼</button>
     <button type="button" class="mjx-btn" data-demo="brake">🛑 急刹重心前移</button>
+    <button type="button" class="mjx-btn" data-demo="donut">🍩 定圆动力漂移</button>
     <button type="button" class="mjx-btn" data-demo="dyno">📈 阶梯功率测功</button>
     <button type="button" class="mjx-btn" data-demo="tour">🔍 12 总成拆解巡礼</button>
   </div>
@@ -1089,6 +1111,7 @@ const customControlsHtml = `
     <span class="mjx-topbar-label">🎨 涂装与分色:</span>
     <button type="button" class="mjx-btn" data-livery-btn="hyper" data-active>厂队赤红金</button>
     <button type="button" class="mjx-btn" data-livery-btn="wrc">WRC 蓝金</button>
+    <button type="button" class="mjx-btn" data-livery-btn="redbull">红牛深蓝金</button>
     <button type="button" class="mjx-btn" data-livery-btn="gulf">海湾冰蓝橙</button>
     <button type="button" class="mjx-btn" data-livery-btn="martini">传奇红白蓝</button>
     <button type="button" class="mjx-btn" data-livery-btn="cyber">赛博霓虹紫</button>
@@ -1178,7 +1201,7 @@ const inspectorHtml = `
 const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-family:system-ui,-apple-system,sans-serif;font-size:12.5px;border-radius:8px;background:rgba(128,128,128,0.12);border:1px solid rgba(128,128,128,0.22)">
   <a href="../../index.html" style="color:inherit;text-decoration:none;font-weight:600">← 返回 AI Agent Skills &amp; REA 演示门户 (Portal)</a>
   <div style="display:flex;gap:8px;align-items:center">
-    <span style="opacity:0.7">整车 12 总成 + 8 动态演示 + 10 涂装:</span>
+    <span style="opacity:0.7">整车 12 总成 + 9 动态演示 + 11 涂装:</span>
     <a href="index.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "dark" ? "background:#f5a524;color:#111;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">🌙 暗黑多彩测功台 (Dark)</a>
     <a href="mjx-14303-chassis-light.html" style="padding:3px 9px;border-radius:4px;text-decoration:none;${theme === "light" ? "background:#d97706;color:#fff;font-weight:700;" : "color:inherit;border:1px solid rgba(128,128,128,0.35);"}">☀️ 工程浅色蓝图 (Light)</a>
   </div>
@@ -1187,7 +1210,7 @@ const navBannerHtml = `<div style="max-width:1020px;margin:10px auto 6px;padding
 const body = `<style>${CSS}</style>${navBannerHtml}<div class="mjx-wrap">${k.plateHtml({
   fig: "Fig 1 · MJX HYPER GO 14303 · 12-ASSEMBLY COMPLETE VEHICLE LAB",
   title: "美嘉欣 14303 · 1/14 全时四驱无刷拉力/漂移整车机械原理与动态测功台",
-  hint: "支持 8 种自动动态剧本 · 10 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
+  hint: "支持 9 种自动动态剧本 · 11 套阳极氧化分色涂装 · 按 E 爆炸拆解 · 按 B 切换车壳透视 · 按 L 开关车灯",
   readout: "2S 7.4V · 15.0 km/h · Manual Lab",
   keys: [
     { mark: "lit", label: "核心动力链：2845 无刷电机 → 15T/45T 金属齿 → 中央铝轴 → 前后 37T/13T 行星伞齿差速器 → 四轮 CVD + 通风刹车盘" },
@@ -1374,6 +1397,15 @@ function setDemoMode(mode) {
     setSteer(0);
     cycleShell("xray");
     selectPart("wheels_f", true);
+  } else if (mode === "donut") {
+    toggleExplode(false);
+    setCells(3);
+    setThrottle(0.92);
+    gyroEnabled = true;
+    btnGyro.setAttribute("data-active", "");
+    btnGyro.textContent = "G3C 陀螺仪 ON";
+    cycleShell("xray");
+    selectPart("drivetrain", true);
   } else if (mode === "dyno") {
     toggleExplode(false);
     setSteer(0);
@@ -1581,6 +1613,10 @@ function tick(now) {
       setThrottle(Math.max(0.04, 0.95 - (cyc - 2.2) * 0.9));
     }
     setSteer(0);
+  } else if (demoMode === "donut") {
+    setThrottle(0.88 + Math.sin(elapsed * 4.5) * 0.08);
+    const dir = Math.floor(elapsed / 3.6) % 2 === 0 ? 1 : -1;
+    setSteer(dir * 26);
   } else if (demoMode === "dyno") {
     const step = Math.floor(elapsed / 2.2) % 6;
     setCells(step >= 3 ? 3 : 2);
@@ -1701,6 +1737,7 @@ function tick(now) {
     offroad: "Gravel Jump",
     slalom: "Slalom Ackermann",
     brake: "ABS Brake Nose-Dive",
+    donut: "AWD Donut Power-Slide",
     dyno: "Step Dyno Sweep",
     tour: "12-Part Tour",
   };
