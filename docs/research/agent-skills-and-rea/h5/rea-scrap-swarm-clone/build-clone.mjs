@@ -782,6 +782,7 @@ const html = `<!DOCTYPE html>
           <button type="button" class="act-btn" data-ast="combat">combat.ts</button>
           <button type="button" class="act-btn" data-ast="save">save.ts</button>
           <button type="button" class="act-btn" data-ast="hud">hud.ts</button>
+          <button type="button" class="act-btn" data-ast="camera">camera.ts</button>
         </div>
         <div class="code-compare">
           <div>
@@ -821,6 +822,10 @@ const html = `<!DOCTYPE html>
           <div class="patch-row">
             <div class="patch-row-head"><span>player.overdriveDuration (蒸汽超载持续时间)</span><strong id="valOverdriveDur">6.0 s</strong></div>
             <input type="range" id="patchOverdriveDur" min="3.0" max="15.0" step="0.5" value="6.0" />
+          </div>
+          <div class="patch-row">
+            <div class="patch-row-head"><span>boss.barrageIntervalSec (铁冠齐射冷却周期)</span><strong id="valBarrageInt">2.6 s</strong></div>
+            <input type="range" id="patchBarrageInt" min="1.2" max="5.0" step="0.2" value="2.6" />
           </div>
         </div>
       </div>
@@ -1707,6 +1712,15 @@ export function formatTacticalReadout(player: PlayerState, boss: BossState | nul
   };
 }\`,
       },
+      camera: {
+        minified: \`function Mt(e,t,n){const r=Math.max(0,e.trauma-n*1.8),a=r*r*14;return e.trauma=r,{ox:(t()-.5)*2*a,oy:(t()-.5)*2*a}}\`,
+        decompiled: \`// Reconstructed Quadratic Trauma Screen-Shake Solver (src/game/camera.ts)
+export function stepCameraTrauma(cam: { trauma: number }, rng: () => number, dt: number): { ox: number; oy: number } {
+  cam.trauma = Math.max(0, cam.trauma - dt * 1.8);
+  const shake = cam.trauma * cam.trauma * 14;
+  return { ox: (rng() - 0.5) * 2 * shake, oy: (rng() - 0.5) * 2 * shake };
+}\`,
+      },
     };
 
     // =========================================================================
@@ -1960,6 +1974,7 @@ export function formatTacticalReadout(player: PlayerState, boss: BossState | nul
       magnetRadius: 175,
       arcChainCount: 3,
       overdriveDuration: 6.0,
+      barrageIntervalSec: 2.6,
     };
 
     document.getElementById("patchSpeed").addEventListener("input", (e) => {
@@ -1996,6 +2011,14 @@ export function formatTacticalReadout(player: PlayerState, boss: BossState | nul
         livePatch.overdriveDuration = Number(e.target.value);
         document.getElementById("valOverdriveDur").textContent = livePatch.overdriveDuration.toFixed(1) + " s";
         pulseEvidence("hangar");
+      });
+    }
+    const patchBarrageIntEl = document.getElementById("patchBarrageInt");
+    if (patchBarrageIntEl) {
+      patchBarrageIntEl.addEventListener("input", (e) => {
+        livePatch.barrageIntervalSec = Number(e.target.value);
+        document.getElementById("valBarrageInt").textContent = livePatch.barrageIntervalSec.toFixed(1) + " s";
+        pulseEvidence("boss");
       });
     }
 
@@ -2189,9 +2212,9 @@ export function formatTacticalReadout(player: PlayerState, boss: BossState | nul
           boss.timer = boss.exposed ? livePatch.bossExposeSec : 4.2;
           if (boss.exposed) showCutin("boss_lock_open");
         }
-        boss.barrageTimer = (boss.barrageTimer || 2.4) - dt;
+        boss.barrageTimer = (boss.barrageTimer || livePatch.barrageIntervalSec) - dt;
         if (boss.barrageTimer <= 0) {
-          boss.barrageTimer = 2.6;
+          boss.barrageTimer = livePatch.barrageIntervalSec;
           shockRings.push({ x: boss.x, y: boss.y, r: 18, maxR: 84, life: 0.34 });
           for (let k = 0; k < 6; k++) {
             const a = (k * Math.PI) / 3 + gameClock * 0.6;
