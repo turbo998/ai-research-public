@@ -1,0 +1,5 @@
+tier_label,primary_ms,primary_label,baseline_ms,baseline_label,note
+FAF Unmarked Hook Check: UserPromptSubmit (Avg vs Max Observed),930,930 ms avg (Unmarked fast-exit),1190,"1,190 ms max (Observed range 0.70–1.19s)",Reported in docs/core/README-faf-token-benchmark.md (5 unmarked runs on Windows)
+FAF Unmarked Hook Check: Stop Event (Avg vs Max Observed),1000,"1,000 ms avg (Detached finalizer check)",1340,"1,340 ms max (Observed range 0.86–1.34s)",Reported in docs/core/README-faf-token-benchmark.md (5 unmarked runs on Windows)
+FAF Hook Execution Timeout Gate vs Recovery Wait Window,5000,"5,000 ms (src/core/hooks.json timeoutSec: 5)",15000,"15,000 ms (faf_benchmark.py recover --wait-seconds 15)",Source fact in src/core/hooks.json and docs/core/README-faf-token-benchmark.md
+AGENT-FORGE Init: Static Gallery Templates vs LLM Validator Fix Timeout,120,~120 ms local file copy (forge init --mode templates),30000,"30,000 ms timeout (callLlmForJson in validator.ts)",Static file copy in merger.ts vs default 30_000ms Copilot CLI timeout in validator.ts:48

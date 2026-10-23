@@ -1,5 +1,10 @@
 # 第三方声明
 
+## Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE 研究
+
+- **`customer-success-microsoft/faf-agents` (Agent Forge / FAF v2.0.1)**：固定 commit `a740ad88afa0b054e656207e72205002ca6744f0`，上游根 `LICENSE` 为 MIT License（其中 `docx`、`pptx`、`xlsx`、`pdf` 技能包含源自 Anthropic Claude Code Skills 的许可与归属声明）。本公开库仅保留脱敏后的架构机制分析、量化评分权重公式摘要与元数据（[`docs/research/faf-vs-agent-forge/`](docs/research/faf-vs-agent-forge/README.zh-CN.md)），不复制或再分发上游插件源码、完整提示词正文或任何内部客户材料。
+- **[`microsoft/agent-forge`](https://github.com/microsoft/agent-forge/tree/655ff3401d18bd000252907a512a3f674114f708) (`@agent-forge-copilot/cli@0.3.0`)**：固定 commit `655ff3401d18bd000252907a512a3f674114f708`，上游根 `LICENSE` 为 MIT License。本库仅保留原创中英双语对比分析、契约评测统计与已核验 blob 元数据，不重新分发完整 CLI 源代码。
+
 ## Omarchy Agent 设计机制研究
 
 - **上游仓库**：[omacom/omarchy](https://github.com/omacom/omarchy/tree/9480d1b6a98156314dbabe6bfef08f39f8b9cd07)（请求入口别名 `basecamp/omarchy`），固定 commit `9480d1b6a98156314dbabe6bfef08f39f8b9cd07`。

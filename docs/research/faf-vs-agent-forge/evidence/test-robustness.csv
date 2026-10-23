@@ -1,0 +1,7 @@
+dimension,comparison,original_pct,perturbed_pct,delta_pts,holds
+FAF Telemetry Coverage: Copilot Session Store vs VS Code Journal Fallback,Full Copilot CLI/App session store (6/6 exact telemetry dimensions: 100.0%) vs VS Code without OTel journal fallback (2/6 exact dimensions: 33.3%),100.0,33.3,-66.7,True
+FAF Analytics Agent Exposure: Full Source Tree vs v1.0 Release Manifest,src/analytics/agents/*.agent.md (9/9 agents in source tree: 100.0%) vs src/analytics/plugin.json (6/9 registered; 3 workflow runners omitted: 66.7%),100.0,66.7,-33.3,True
+FAF Accelerator Recommendation Gate: High Match (>70%) vs Low Match (<40%),"Accelerator A (83.9% weighted score -> 100% Agentic Customization) vs Low-Fit Custom Scenario (<40% score -> 0% accelerator reuse, switches to Agentic Development)",83.9,35.0,-48.9,True
+AGENT-FORGE Init Mode: Templates Gallery (No LLM) vs Create/Analyze Pipeline,"forge init --mode create/analyze (7/7 artifact types dynamically generated: 100.0%) vs --mode templates (11 static gallery bundles, 0 LLM calls: 71.4% artifact coverage)",100.0,71.4,-28.6,True
+AGENT-FORGE Smart Merge: Default Safe Merge vs --force Overwrite,Default mergeIntoExisting on user-authored files (100.0% user files preserved) vs --force flag enabled (0.0% conflicting user files preserved; 100% overwritten),100.0,0.0,-100.0,True
+AGENT-FORGE Tool Typo Auto-Fix: Distance <=3 vs Distance >3,Levenshtein distance <=3 against 44 VALID_VSCODE_TOOLS (100.0% auto-suggested) vs distance >3 unknown custom MCP tool (0.0% false-positive replacement),100.0,0.0,-100.0,True

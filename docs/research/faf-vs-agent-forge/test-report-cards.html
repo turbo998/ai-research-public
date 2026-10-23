@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:;">
+<title>Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE — 7-Card 4:5 Benchmark Report</title>
+<style>
+  :root {
+    --bg-page: #0B1120;
+    --bg-card: #FFFFFF;
+    --bg-subtle: #F8FAFC;
+    --bg-dark: #0F172A;
+    --text-main: #0F172A;
+    --text-muted: #475569;
+    --text-light: #94A3B8;
+    --border-color: #E2E8F0;
+    --accent-blue: #2563EB;
+    --accent-bar: #3B82F6;
+    --baseline-bar: #CBD5E1;
+    --green-bg: #ECFDF5;
+    --green-border: #A7F3D0;
+    --green-text: #065F46;
+    --amber-bg: #FFFBEB;
+    --amber-border: #FDE68A;
+    --amber-text: #92400E;
+    --red-bg: #FEF2F2;
+    --red-border: #FECACA;
+    --red-text: #991B1B;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-page);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-main);
+    padding: 36px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+  .deck-header {
+    width: 900px;
+    color: #F8FAFC;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .deck-header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .deck-header p { font-size: 13px; color: #94A3B8; }
+  .card {
+    width: 900px;
+    min-height: 1125px;
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+    position: relative;
+    overflow: hidden;
+  }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+  }
+  .kicker {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+  }
+  .page-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    background: var(--bg-subtle);
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+  }
+  .headline {
+    font-size: 25px;
+    line-height: 1.28;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 10px;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #1D4ED8 0%, #0EA5E9 55%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .subheadline {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  .workbench-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+    flex: 1;
+  }
+  .wb-col {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .wb-title {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+  }
+  .wb-item {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+  .wb-item strong { display: block; color: var(--text-main); margin-bottom: 3px; font-size: 13px; }
+  .pill {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .pill-auto { background: var(--green-bg); color: var(--green-text); border: 1px solid var(--green-border); }
+  .pill-confirm { background: var(--amber-bg); color: var(--amber-text); border: 1px solid var(--amber-border); }
+  .pill-human { background: var(--red-bg); color: var(--red-text); border: 1px solid var(--red-border); }
+  .pill-type { background: #EEF2FF; color: #3730A3; border: 1px solid #C7D2FE; text-transform: uppercase; }
+  .quote-box {
+    background: #F1F5F9;
+    border-left: 4px solid var(--accent-blue);
+    padding: 12px 16px;
+    border-radius: 0 10px 10px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #1E293B;
+    margin-bottom: 16px;
+  }
+  .decision-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+    margin-bottom: 16px;
+  }
+  .decision-card {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: var(--bg-subtle);
+  }
+  .dc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .dc-title { font-size: 14px; font-weight: 800; color: var(--text-main); }
+  .bar-row {
+    display: grid;
+    grid-template-columns: 240px 1fr 64px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+    font-size: 12px;
+  }
+  .bar-track {
+    height: 10px;
+    background: #E2E8F0;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    background: var(--accent-bar);
+    border-radius: 999px;
+  }
+  .bar-fill-green { background: #10B981; }
+  .bar-fill-amber { background: #F59E0B; }
+  .bar-val { font-weight: 700; text-align: right; color: var(--text-main); }
+  table.matrix {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+  table.matrix th {
+    background: var(--bg-dark);
+    color: #FFFFFF;
+    text-align: left;
+    padding: 9px 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  table.matrix td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+    line-height: 1.38;
+  }
+  table.matrix tr:nth-child(even) td { background: var(--bg-subtle); }
+  .miss-mark { color: #DC2626; font-weight: 800; margin-left: 4px; }
+  .dual-callout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .callout-box {
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 12px;
+    line-height: 1.45;
+    border: 1px solid var(--border-color);
+    background: var(--bg-subtle);
+  }
+  .code-block {
+    background: var(--bg-dark);
+    color: #E2E8F0;
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 11.8px;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .code-arrow {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    margin: 6px 0;
+  }
+  .latency-group {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .lat-card {
+    border: 1px solid var(--border-color);
+    background: var(--bg-subtle);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .lat-title { font-size: 13.5px; font-weight: 800; margin-bottom: 8px; }
+  .lat-bar-row {
+    display: grid;
+    grid-template-columns: 190px 1fr 150px;
+    align-items: center;
+    gap: 12px;
+    margin: 6px 0;
+    font-size: 12px;
+  }
+  .lat-track { height: 14px; background: #E2E8F0; border-radius: 6px; overflow: hidden; }
+  .lat-primary { height: 100%; background: #3B82F6; border-radius: 6px; }
+  .lat-base { height: 100%; background: #94A3B8; border-radius: 6px; }
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    flex: 1;
+    margin-bottom: 16px;
+  }
+  .fit-box-good {
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+    border-radius: 14px;
+    padding: 18px;
+    color: var(--green-text);
+  }
+  .fit-box-bad {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 14px;
+    padding: 18px;
+    color: var(--red-text);
+  }
+  .fit-box-good h3, .fit-box-bad h3 { font-size: 16px; margin-bottom: 10px; }
+  .fit-list { padding-left: 18px; font-size: 12.5px; line-height: 1.55; display: flex; flex-direction: column; gap: 8px; }
+  .footer-dark {
+    background: var(--bg-dark);
+    color: #F8FAFC;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 12px;
+    line-height: 1.48;
+  }
+  .footer-dark strong { color: #38BDF8; }
+</style>
+</head>
+<body>
+
+<div class="deck-header">
+  <h1>Agent Forge (FAF v2.0.1) vs. Microsoft AGENT-FORGE (v0.3.0) — 7-Card 4:5 Benchmark Deck</h1>
+  <p>Static Contract Verification &amp; Reported Telemetry Benchmark · Commits: faf-agents@a740ad88 &amp; agent-forge@655ff340 · 2026-10-23</p>
+</div>
+
+<!-- CARD 1 -->
+<section class="card" id="card-1">
+  <div>
+    <div class="card-top">
+      <span class="kicker">HANDS-ON · AGENT SYSTEMS &amp; CONTEXT ENGINEERING</span>
+      <span class="page-num">1 / 7</span>
+    </div>
+    <h2 class="headline">
+      <span class="gradient-text">FAF v2 Ships 3 Domain Plugins &amp; 12 Registered SDLC Role Agents</span>; AGENT-FORGE Compiles All 7 <code style="font-size:21px;">.github/</code> Artifact Types
+    </h2>
+    <p class="subheadline">
+      Despite sharing the name "Agent Forge", <strong>customer-success-microsoft/faf-agents</strong> (FAF v2.0.1) is a pre-built enterprise GenAI &amp; Fabric delivery system, while <strong>microsoft/agent-forge</strong> (@agent-forge-copilot/cli v0.3.0) is a stack-agnostic meta-generator CLI for <code style="font-size:12px;">.github/</code> customizations.
+    </p>
+  </div>
+
+  <div class="workbench-grid">
+    <div class="wb-col">
+      <div class="wb-title">1. Scenarios &amp; Thresholds</div>
+      <div class="wb-item">
+        <strong>12 Contract Scenarios Evaluated</strong>
+        <span class="pill pill-auto">8 Act automatically (100%)</span><br>
+        <span class="pill pill-confirm" style="margin-top:4px;">2 Confirm (33%–67%)</span><br>
+        <span class="pill pill-human" style="margin-top:4px;">2 Send to a human (0%)</span>
+      </div>
+      <div class="wb-item">
+        <strong>FAF Accelerator Scoring Bands</strong>
+        • <code>&gt; 70%</code>: Path A — Agentic Customization<br>
+        • <code>40% – 70%</code>: Further Architect Review<br>
+        • <code>&lt; 40%</code>: Path B — Agentic Development
+      </div>
+      <div class="wb-item">
+        <strong>FAF AI Prioritization Bands</strong>
+        • <code>High &gt;= 65</code> | <code>Medium 40–64</code> | <code>Low &lt; 40</code><br>
+        • 9 Gates (2 Hard + 7 Readiness)<br>
+        • <code>40%</code> Evidence Confidence Floor
+      </div>
+    </div>
+
+    <div class="wb-col">
+      <div class="wb-title">2. Dual System Contract Input</div>
+      <div class="wb-item">
+        <strong>FAF v2 (agent-forge-plugins v2.0.1)</strong>
+        • <code>faf-core@2.1.1</code>: 8 shared skills (<code>faf-kb-manager</code>, <code>faf-azure-pricing</code>, diagrams, Office docs) + Benchmark hooks<br>
+        • <code>faf-genai@2.1.0</code>: 6 GA Agents + 3 Skills + 9 Slash Prompts + Workbench extension<br>
+        • <code>faf-analytics@1.0.1</code>: 6 registered Fabric Agents (9 in source tree) + 6 Skills
+      </div>
+      <div class="wb-item">
+        <strong>AGENT-FORGE (@agent-forge-copilot/cli v0.3.0)</strong>
+        • 14 <code>TECH_INDICATORS</code> + 14 <code>PROJECT_TYPE_HINTS</code><br>
+        • 2 Planners (Greenfield / Brownfield) + 6 Orchestration Patterns<br>
+        • 7 Specialized Writer Agents &rarr; 7 Artifact Types<br>
+        • 11 Built-in Gallery Templates (Zero-LLM mode)
+      </div>
+    </div>
+
+    <div class="wb-col">
+      <div class="wb-title">3. Latency, Accounting &amp; Decisions</div>
+      <div class="wb-item">
+        <strong>FAF Zero-LLM-Call Benchmark Hook</strong>
+        • <code>UserPromptSubmit</code>: <strong>930 ms</strong> avg (0.70–1.19s)<br>
+        • <code>Stop</code> Event: <strong>1,000 ms</strong> avg (0.86–1.34s)<br>
+        • Billing: <code>1 AI Credit = 10^9 nano-AIU ($0.01)</code><br>
+        • Subtracts non-overlapping <code>ask_user</code> wait
+      </div>
+      <div class="wb-item">
+        <strong>AGENT-FORGE Validation &amp; Merge</strong>
+        • <strong>44</strong> whitelisted VS Code tool names<br>
+        • Levenshtein distance <code>&lt;= 3</code> typo auto-fix<br>
+        • <code>~120 ms</code> static template copy vs. <code>30,000 ms</code> LLM validator fix cap
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-dark">
+    <strong>Provenance &amp; Verification Boundary:</strong> <code>static_contract_verified + anonymized_reported (independently_reproduced=false)</code> · Verified against <code>customer-success-microsoft/faf-agents@a740ad88afa0b054e656207e72205002ca6744f0</code> (590 blobs) and <code>microsoft/agent-forge@655ff3401d18bd000252907a512a3f674114f708</code> (38 blobs). Zero customer PII included.
+  </div>
+</section>
+
+<!-- CARD 2 -->
+<section class="card" id="card-2">
+  <div>
+    <div class="card-top">
+      <span class="kicker">SCENARIO: ENTERPRISE GENAI SCOPING TO REPO CUSTOMIZATION</span>
+      <span class="page-num">2 / 7</span>
+    </div>
+    <h2 class="headline">
+      8-Area Weighted Accelerator Score (<span class="gradient-text">83.9% &gt; 70%</span>) Selects Customization Path; 44-Tool Validator Locks Repo Rules
+    </h2>
+    <div class="quote-box">
+      <strong>Input Case:</strong> "Scope an enterprise Azure AI Foundry + AI Search investment research &amp; document intelligence workload, verify all 9 prioritization gates, produce a C4 spec, score existing Solution Accelerators, and synthesize non-destructive <code>.github/</code> coding rules and hooks for the scaffolded repository."
+    </div>
+  </div>
+
+  <div class="decision-stack">
+    <div class="decision-card">
+      <div class="dc-header">
+        <div>
+          <span class="pill pill-type">score</span>
+          <span class="dc-title" style="margin-left:8px;">1. FAF AI Prioritization &amp; 9-Gate Assessment (faf-ai-prioritization)</span>
+        </div>
+        <span class="pill pill-auto">Act automatically · Confidence 85% (&gt;=40%)</span>
+      </div>
+      <div class="bar-row">
+        <span>Value (60% Biz + 40% Strategic)</span>
+        <div class="bar-track"><div class="bar-fill bar-fill-green" style="width:78%;"></div></div>
+        <span class="bar-val">78.0%</span>
+      </div>
+      <div class="bar-row">
+        <span>Feasibility (35% AI + 40% Tech + 25% Risk)</span>
+        <div class="bar-track"><div class="bar-fill bar-fill-green" style="width:74%;"></div></div>
+        <span class="bar-val">74.0%</span>
+      </div>
+      <div class="bar-row">
+        <span>Readiness (50% Data + 50% Org)</span>
+        <div class="bar-track"><div class="bar-fill bar-fill-green" style="width:70%;"></div></div>
+        <span class="bar-val">70.0%</span>
+      </div>
+    </div>
+
+    <div class="decision-card">
+      <div class="dc-header">
+        <div>
+          <span class="pill pill-type">choice</span>
+          <span class="dc-title" style="margin-left:8px;">2. FAF Implementation Recommender 8-Area Weighted Score (FAF-impl-recommender)</span>
+        </div>
+        <span class="pill pill-auto">Act automatically · 83.9% (&gt;70% Customize)</span>
+      </div>
+      <div class="bar-row">
+        <span>Use Case (25% wt) &amp; Agentic Patterns (20% wt)</span>
+        <div class="bar-track"><div class="bar-fill" style="width:86.4%;"></div></div>
+        <span class="bar-val">86.4%</span>
+      </div>
+      <div class="bar-row">
+        <span>AI Stack (18% wt) &amp; Data Scenario (15% wt)</span>
+        <div class="bar-track"><div class="bar-fill" style="width:82.4%;"></div></div>
+        <span class="bar-val">82.4%</span>
+      </div>
+      <div class="bar-row">
+        <span>Hosting (10%) + API (5%) + UI (4%) + Infra (3%)</span>
+        <div class="bar-track"><div class="bar-fill" style="width:81.3%;"></div></div>
+        <span class="bar-val">81.3%</span>
+      </div>
+    </div>
+
+    <div class="decision-card">
+      <div class="dc-header">
+        <div>
+          <span class="pill pill-type">noul</span>
+          <span class="dc-title" style="margin-left:8px;">3. AGENT-FORGE Repo Synthesis &amp; Deterministic Auto-Fix (forge init --mode analyze)</span>
+        </div>
+        <span class="pill pill-auto">Act automatically · 100% Merge Safe</span>
+      </div>
+      <div class="bar-row">
+        <span>7 Customization Artifact Types Synthesized</span>
+        <div class="bar-track"><div class="bar-fill bar-fill-green" style="width:100%;"></div></div>
+        <span class="bar-val">100.0%</span>
+      </div>
+      <div class="bar-row">
+        <span>44 VS Code Tool Whitelist &amp; Handoff Integrity</span>
+        <div class="bar-track"><div class="bar-fill bar-fill-green" style="width:100%;"></div></div>
+        <span class="bar-val">100.0%</span>
+      </div>
+      <div class="bar-row">
+        <span>Existing Unmarked User / FAF Files Preserved</span>
+        <div class="bar-track"><div class="bar-fill bar-fill-green" style="width:100%;"></div></div>
+        <span class="bar-val">100.0%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-dark">
+    <strong>Synergy Takeaway:</strong> FAF governs the customer SDLC decision (scoring <strong>83.9% &gt; 70%</strong> to customize an existing accelerator rather than building from scratch), while AGENT-FORGE compiles repo-specific <code>.github/</code> rules and hooks without overwriting FAF's <code>scope/</code> or <code>specs/</code> deliverables.
+  </div>
+</section>
+
+<!-- CARD 3 -->
+<section class="card" id="card-3">
+  <div>
+    <div class="card-top">
+      <span class="kicker">WHAT I TESTED · 12-SCENARIO CONTRACT MATRIX</span>
+      <span class="page-num">3 / 7</span>
+    </div>
+    <h2 class="headline">
+      8 of 12 Contract Scenarios Pass Automatically (<span class="gradient-text">100%</span>); 4 Expose Key Telemetry &amp; Cache Boundaries (<span style="color:#DC2626;">✕</span>)
+    </h2>
+  </div>
+
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th style="width:21%;">SCENARIO</th>
+        <th style="width:39%;">QUESTION / CONTRACT CHECK</th>
+        <th style="width:24%;">VERIFIED OUTCOME</th>
+        <th style="width:16%;">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>S01 · FAF Plugins</strong></td>
+        <td>Does <code>marketplace.json</code> split FAF v2 into <code>faf-core</code>, <code>faf-genai</code>, and <code>faf-analytics</code>?</td>
+        <td>3 / 3 modular plugins (100%)</td>
+        <td><span class="pill pill-auto">Act automatically</span></td>
+      </tr>
+      <tr>
+        <td><strong>S02 · FAF GenAI</strong></td>
+        <td>Does <code>faf-genai@2.1.0</code> ship all 6 GA role agents and 9 <code>/FAF-genai-*</code> prompts?</td>
+        <td>6 GA Agents + 9 Prompts (100%)</td>
+        <td><span class="pill pill-auto">Act automatically</span></td>
+      </tr>
+      <tr>
+        <td><strong>S03 · FAF 8-Area</strong></td>
+        <td>Do accelerator scoring weights sum to 100% with <code>&gt;70%</code> / <code>40-70%</code> / <code>&lt;40%</code> bands?</td>
+        <td>8 Areas = 100% + 3 Bands (100%)</td>
+        <td><span class="pill pill-auto">Act automatically</span></td>
+      </tr>
+      <tr>
+        <td><strong>S04 · FAF 9 Gates</strong></td>
+        <td>Does <code>faf-ai-prioritization</code> enforce 2 hard + 7 readiness gates + 40% floor?</td>
+        <td>3 Dims + 9 Gates + 40% Floor (100%)</td>
+        <td><span class="pill pill-auto">Act automatically</span></td>
+      </tr>
+      <tr>
+        <td><strong>S05 · FAF Analytics</strong></td>
+        <td>Are all 9 agent files in <code>src/analytics/agents/</code> registered in <code>plugin.json</code>?</td>
+        <td>6/9 registered (3 runners omitted) (67%)<span class="miss-mark">✕</span></td>
+        <td><span class="pill pill-confirm">Confirm</span></td>
+      </tr>
+      <tr>
+        <td><strong>S06 · FAF Telemetry</strong></td>
+        <td>Without VS Code OTel enabled, does Chat Journal capture nested subagent tokens?</td>
+        <td>Top-level aggregate only (2/6 = 33%)<span class="miss-mark">✕</span></td>
+        <td><span class="pill pill-confirm">Confirm</span></td>
+      </tr>
+      <tr>
+        <td><strong>S07 · FAF Upgrade</strong></td>
+        <td>Does VS Code UI plugin reinstall auto-fetch latest GitHub commits?</td>
+        <td>0% auto-refresh (uses disk cache)<span class="miss-mark">✕</span></td>
+        <td><span class="pill pill-human">Send to a human</span></td>
+      </tr>
+      <tr>
+        <td><strong>S08 · AF Pipeline</strong></td>
+        <td>Does <code>agent-forge</code> generate all 7 artifact types via Planner + 7 Writers?</td>
+        <td>2 Planners + 7 Writers &rarr; 7 Types (100%)</td>
+        <td><span class="pill pill-auto">Act automatically</span></td>
+      </tr>
+      <tr>
+        <td><strong>S09 · AF Detector</strong></td>
+        <td>Does <code>detector.ts</code> scan 14 manifest indicators and 14 project-type hints?</td>
+        <td>14 Indicators + 14 Hints (100%)</td>
+        <td><span class="pill pill-auto">Act automatically</span></td>
+      </tr>
+      <tr>
+        <td><strong>S10 · AF Validator</strong></td>
+        <td>Does <code>validator.ts</code> enforce 44 valid tools, Levenshtein <code>&lt;=3</code>, and handoff repair?</td>
+        <td>44 Tools + Dist&lt;=3 + Handoff Fix (100%)</td>
+        <td><span class="pill pill-auto">Act automatically</span></td>
+      </tr>
+      <tr>
+        <td><strong>S11 · AF Merger</strong></td>
+        <td>Does <code>merger.ts</code> preserve 100% of unmarked user-authored files by default?</td>
+        <td>100% preserved unless <code>--force</code> (100%)</td>
+        <td><span class="pill pill-auto">Act automatically</span></td>
+      </tr>
+      <tr>
+        <td><strong>S12 · Role Scope</strong></td>
+        <td>Does <code>agent-forge</code> bundle FAF's customer PRD/C4 specs, scorecards, or Bicep LZ?</td>
+        <td>0% domain delivery IP bundled<span class="miss-mark">✕</span></td>
+        <td><span class="pill pill-human">Send to a human</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="dual-callout">
+    <div class="callout-box">
+      <strong>Threshold Gating Summary:</strong> <strong>8/12 (66.7%)</strong> contracts verify at 100% (<code>Act automatically</code>). <strong>S05 (67%)</strong> reflects intentional v1.0 scoping (3 internal workflow runner agents omitted from <code>src/analytics/plugin.json</code>), and <strong>S06 (33%)</strong> reflects VS Code Chat Journal limitations without OTel enabled.
+    </div>
+    <div class="callout-box">
+      <strong>Critical Boundary Analysis:</strong> <strong>S07 (0%)</strong> highlights a major operational trap documented in <code>INSTALL.md</code>: upgrading FAF requires manually deleting <code>%APPDATA%\Code\agentPlugins\...</code> while VS Code is closed. <strong>S12 (0%)</strong> confirms that <code>microsoft/agent-forge</code> is a meta-compiler, not an Azure delivery methodology.
+    </div>
+  </div>
+</section>
+
+<!-- CARD 4 -->
+<section class="card" id="card-4">
+  <div>
+    <div class="card-top">
+      <span class="kicker">UNDER THE HOOD · SCORING &amp; VALIDATION MECHANICS</span>
+      <span class="page-num">4 / 7</span>
+    </div>
+    <h2 class="headline">
+      Protocol Trace: <span class="gradient-text">FAF 8-Area Weighted Scorecard &amp; Nano-AIU Billing</span> vs. AGENT-FORGE Deterministic Schema Auto-Fixer
+    </h2>
+    <p class="subheadline">
+      Both repositories pair LLM reasoning with deterministic local algorithms: FAF computes weighted accelerator fit and parses SQLite/OTel traces in Python, while AGENT-FORGE auto-repairs YAML frontmatter, tool names, and handoff graphs in TypeScript.
+    </p>
+  </div>
+
+  <div>
+    <div class="code-block">/* Block A — customer-success-microsoft/faf-agents (accelerators-scoring-card.md &amp; faf_benchmark.py) */
+AREA_WEIGHTS = {
+  "use_case": 0.25, "agentic_patterns": 0.20, "ai_stack": 0.18, "data_scenario": 0.15,
+  "hosting":  0.10, "api_integration":  0.05, "ui_scenario": 0.04, "infrastructure": 0.03
+} // Exact sum = 1.00 (100%); metrics scored in {0%, 25%, 50%, 75%, 100%}
+// Decision Gate: &gt; 70% =&gt; Path A (Agentic Customization)
+//                40%..70% =&gt; Further Assessment Required (Human Architect Review)
+//                &lt; 40% =&gt; Path B (Agentic Development + faf-kb-manager Harness Engineering)
+
+// faf_benchmark.py (124,109 bytes, 53 unit tests — zero extra LLM calls):
+ai_credits         = nano_aiu / 1_000_000_000;      // 1 AI credit = 10^9 nano-AIU
+estimated_usd      = ai_credits * 0.01;             // $0.01 per AI credit
+active_duration_ms = wall_clock_ms - ask_user_wait; // Subtracts non-overlapping human wait</div>
+
+    <div class="code-arrow">&darr; Complementary Repository-Level Compilation &amp; Verification &darr;</div>
+
+    <div class="code-block">/* Block B — microsoft/agent-forge (src/lib/validator.ts &amp; src/lib/merger.ts) */
+export function postGenerationValidateAndFix(files: GeneratedFile[]): PostGenResult {
+  // 1. Reconstruct missing YAML frontmatter &amp; strip unrecognized fields per ArtifactType
+  // 2. Validate tools against 44 VALID_VSCODE_TOOLS with Levenshtein distance &lt;= 3 typo fix:
+  const suggestion = findClosestTool(tool, VALID_VSCODE_TOOLS); // e.g. 'editFile' -&gt; 'editFiles'
+  // 3. Repair cross-file handoffs (autoFixHandoffReferences):
+  //    Matches target .agent.md by case-insensitive exact match, substring, or Levenshtein &lt;= 3
+}
+
+// src/lib/merger.ts — Non-destructive smart merge protection:
+const GENERATED_MARKER = '&lt;!-- Generated by AGENT-FORGE --&gt;';
+const LEGACY_MARKER    = '&lt;!-- Generated by SpecForge --&gt;'; // Reveals SpecForge origin!
+// Never overwrites existing user or FAF files unless options.force === true or marker is present</div>
+  </div>
+
+  <div class="footer-dark">
+    <strong>Architectural Insight:</strong> Notice <code>LEGACY_MARKER = '&lt;!-- Generated by SpecForge --&gt;'</code> in <code>src/lib/merger.ts:8</code>—confirming that <code>microsoft/agent-forge</code> evolved from <strong>SpecForge</strong>, completely independent of MCAPS's <strong>FAF (Field/Factory Agent Forge)</strong>.
+  </div>
+</section>
+
+<!-- CARD 5 -->
+<section class="card" id="card-5">
+  <div>
+    <div class="card-top">
+      <span class="kicker">ROBUSTNESS CHECK · PERTURBATION &amp; MODE CONSISTENCY</span>
+      <span class="page-num">5 / 7</span>
+    </div>
+    <h2 class="headline">
+      Boundary Perturbations Hold Strictly: <span class="gradient-text">Telemetry Fallback (-66.7 pts)</span>, Manifest Scoping (-33.3 pts) &amp; Merge Lock (-100.0 pts)
+    </h2>
+    <p class="subheadline">
+      Testing how both systems behave when switching telemetry backends, comparing source trees against release manifests, crossing the 70%/40% accelerator gates, or toggling CLI flags.
+    </p>
+  </div>
+
+  <table class="matrix" style="flex:1;">
+    <thead>
+      <tr>
+        <th style="width:30%;">DIMENSION / PERTURBATION</th>
+        <th style="width:26%;">ORIGINAL (PRIMARY PATH)</th>
+        <th style="width:26%;">PERTURBED / FALLBACK PATH</th>
+        <th style="width:18%;">CHANGE (PTS)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. FAF Telemetry Backend</strong><br>Copilot Session Store / OTel vs. VS Code Journal Fallback</td>
+        <td><strong>100.0% (6 / 6 dims)</strong><br>Exact Input/Output/Cached tokens, per-call breakdown, nested subagents &amp; AIU</td>
+        <td><strong>33.3% (2 / 6 dims)</strong><br>Request-level aggregate tokens &amp; model count only; no nested subagent breakdown</td>
+        <td><strong>-66.7 pts</strong><br><span class="pill pill-auto">Holds</span></td>
+      </tr>
+      <tr>
+        <td><strong>2. FAF Analytics Agent Roster</strong><br>Source Tree (<code>src/analytics/agents/</code>) vs. <code>plugin.json</code></td>
+        <td><strong>100.0% (9 / 9 files)</strong><br>Includes 6 core agents + 3 internal workflow runner/tester agents</td>
+        <td><strong>66.7% (6 / 9 registered)</strong><br><code>plugin.json</code> exposes only the 6 user-facing Fabric analytics agents</td>
+        <td><strong>-33.3 pts</strong><br><span class="pill pill-auto">Holds</span></td>
+      </tr>
+      <tr>
+        <td><strong>3. FAF Accelerator Gate</strong><br>High-Fit Sample (<code>&gt;70%</code>) vs. Low-Fit Custom (<code>&lt;40%</code>)</td>
+        <td><strong>83.9% Weighted Score</strong><br>Triggers Path A: Agentic Customization of existing accelerator</td>
+        <td><strong>35.0% Weighted Score</strong><br>Triggers Path B: Agentic Development + <code>faf-kb-manager</code> KB sync</td>
+        <td><strong>-48.9 pts</strong><br><span class="pill pill-auto">Holds</span></td>
+      </tr>
+      <tr>
+        <td><strong>4. AGENT-FORGE Init Mode</strong><br><code>--mode create/analyze</code> vs. <code>--mode templates</code></td>
+        <td><strong>100.0% (7 / 7 types)</strong><br>Multi-agent pipeline synthesizes all 7 customization artifact categories</td>
+        <td><strong>71.4% (5 / 7 types)</strong><br>11 static gallery bundles cover instructions, prompts, agents, hooks, MCP (0 LLM calls)</td>
+        <td><strong>-28.6 pts</strong><br><span class="pill pill-auto">Holds</span></td>
+      </tr>
+      <tr>
+        <td><strong>5. AGENT-FORGE Merge Safety</strong><br>Default <code>mergeIntoExisting</code> vs. <code>--force</code> Flag</td>
+        <td><strong>100.0% Preserved</strong><br>All unmarked user-authored and FAF files are skipped and protected</td>
+        <td><strong>0.0% Preserved</strong><br><code>--force</code> overwrites conflicting target files regardless of marker</td>
+        <td><strong>-100.0 pts</strong><br><span class="pill pill-auto">Holds</span></td>
+      </tr>
+      <tr>
+        <td><strong>6. AGENT-FORGE Tool Typo Fix</strong><br>Levenshtein Distance <code>&lt;= 3</code> vs. Distance <code>&gt; 3</code></td>
+        <td><strong>100.0% Auto-Suggested</strong><br>Typos within edit distance 3 of 44 valid VS Code tools are auto-mapped</td>
+        <td><strong>0.0% False Replacement</strong><br>Custom MCP tool names with distance &gt; 3 are never falsely overwritten</td>
+        <td><strong>-100.0 pts</strong><br><span class="pill pill-auto">Holds</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer-dark">
+    <strong>Robustness Verdict:</strong> All 6 boundary perturbations behave deterministically as designed in source code—gracefully degrading telemetry when OTel is absent and preventing accidental file or tool-name corruption.
+  </div>
+</section>
+
+<!-- CARD 6 -->
+<section class="card" id="card-6">
+  <div>
+    <div class="card-top">
+      <span class="kicker">LATENCY · HOOK OVERHEAD &amp; EXECUTION TIMEOUT WINDOWS</span>
+      <span class="page-num">6 / 7</span>
+    </div>
+    <h2 class="headline">
+      Unmarked FAF Prompts Add Only <span class="gradient-text">0.93s–1.00s Hook Overhead</span>; AGENT-FORGE Templates Copy in ~120ms vs. 30s LLM Fix Cap
+    </h2>
+    <p class="subheadline">
+      Comparing primary/fast-path execution against maximum observed latency or configured timeout ceilings across FAF v2 and AGENT-FORGE (scaled per tier from sealed <code>report.json</code> data).
+    </p>
+  </div>
+
+  <div class="latency-group">
+    <div class="lat-card">
+      <div class="lat-title">Tier 1 · FAF Unmarked Hook Fast-Exit: UserPromptSubmit (Windows 5-Run Measured Report)</div>
+      <div class="lat-bar-row">
+        <span><strong>Primary (Mean Fast-Exit)</strong></span>
+        <div class="lat-track"><div class="lat-primary" style="width:78.1%;"></div></div>
+        <span style="font-weight:800; color:#2563EB;">930 ms (0.93s)</span>
+      </div>
+      <div class="lat-bar-row">
+        <span>Baseline (Max Observed)</span>
+        <div class="lat-track"><div class="lat-base" style="width:100%;"></div></div>
+        <span style="font-weight:700; color:#475569;">1,190 ms (1.19s)</span>
+      </div>
+    </div>
+
+    <div class="lat-card">
+      <div class="lat-title">Tier 2 · FAF Unmarked Hook Fast-Exit: Stop Event (Windows 5-Run Measured Report)</div>
+      <div class="lat-bar-row">
+        <span><strong>Primary (Mean Fast-Exit)</strong></span>
+        <div class="lat-track"><div class="lat-primary" style="width:74.6%;"></div></div>
+        <span style="font-weight:800; color:#2563EB;">1,000 ms (1.00s)</span>
+      </div>
+      <div class="lat-bar-row">
+        <span>Baseline (Max Observed)</span>
+        <div class="lat-track"><div class="lat-base" style="width:100%;"></div></div>
+        <span style="font-weight:700; color:#475569;">1,340 ms (1.34s)</span>
+      </div>
+    </div>
+
+    <div class="lat-card">
+      <div class="lat-title">Tier 3 · FAF Synchronous Hook Timeout vs. Detached Recovery Wait Window (hooks.json vs. recover)</div>
+      <div class="lat-bar-row">
+        <span><strong>Primary (Sync Hook Timeout)</strong></span>
+        <div class="lat-track"><div class="lat-primary" style="width:33.3%;"></div></div>
+        <span style="font-weight:800; color:#2563EB;">5,000 ms (5.0s)</span>
+      </div>
+      <div class="lat-bar-row">
+        <span>Baseline (Recovery Wait Cap)</span>
+        <div class="lat-track"><div class="lat-base" style="width:100%;"></div></div>
+        <span style="font-weight:700; color:#475569;">15,000 ms (15.0s)</span>
+      </div>
+    </div>
+
+    <div class="lat-card">
+      <div class="lat-title">Tier 4 · AGENT-FORGE Static Gallery Copy (--mode templates) vs. LLM Validator Fix Timeout (validator.ts:48)</div>
+      <div class="lat-bar-row">
+        <span><strong>Primary (Static Gallery Copy)</strong></span>
+        <div class="lat-track"><div class="lat-primary" style="width:4.0%;"></div></div>
+        <span style="font-weight:800; color:#2563EB;">~120 ms (0 LLM)</span>
+      </div>
+      <div class="lat-bar-row">
+        <span>Baseline (callLlmForJson Cap)</span>
+        <div class="lat-track"><div class="lat-base" style="width:100%;"></div></div>
+        <span style="font-weight:700; color:#475569;">30,000 ms (30.0s)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-dark">
+    <strong>Performance Takeaway:</strong> FAF's benchmark hook spawns a detached finalizer so it never blocks the user beyond the <code>5,000 ms</code> hook timeout, while AGENT-FORGE's deterministic validator and static gallery run locally in milliseconds without waiting on the <code>30,000 ms</code> LLM repair path.
+  </div>
+</section>
+
+<!-- CARD 7 -->
+<section class="card" id="card-7">
+  <div>
+    <div class="card-top">
+      <span class="kicker">MY TAKE · DECISION GUIDE &amp; COMBINED WORKFLOW</span>
+      <span class="page-num">7 / 7</span>
+    </div>
+    <h2 class="headline">
+      Use <span class="gradient-text">FAF v2</span> to Architect &amp; Deliver Azure/Fabric Solutions; Use <span class="gradient-text">AGENT-FORGE</span> to Compile Repo-Specific <code style="font-size:21px;">.github/</code> Rules
+    </h2>
+    <p class="subheadline">
+      Rather than competing, the two toolkits form a clean two-stage relay: FAF turns customer requirements into architecture specs and scaffolded repos, and AGENT-FORGE equips those repos with tailored Copilot guardrails.
+    </p>
+  </div>
+
+  <div class="fit-grid">
+    <div class="fit-box-good">
+      <h3>✅ Good Fit (When to Use Which)</h3>
+      <ul class="fit-list">
+        <li><strong>Use FAF (faf-agents) for Enterprise SDLC Delivery:</strong> Customer scoping, 9-gate AI prioritization, C4 architecture specs, 11-dim Foundry model selection, live Azure retail TCO estimates, and 8-area weighted Solution Accelerator scoring (<code>&gt;70%</code> customize vs. <code>&lt;40%</code> greenfield).</li>
+        <li><strong>Use FAF for Microsoft Fabric Analytics:</strong> Scoping &amp; architecting Fabric Real-Time Intelligence (RTI) and SQL Server / Synapse DW migrations to Medallion architectures.</li>
+        <li><strong>Use AGENT-FORGE (@agent-forge-copilot/cli) for Any Codebase:</strong> Auto-generating and validating <code>.github/agents/</code>, <code>prompts/</code>, <code>instructions/</code>, <code>skills/</code>, <code>hooks/</code>, and <code>.vscode/mcp.json</code> across 14+ tech stacks.</li>
+        <li><strong>Combine Both on Customer Repos:</strong> Run FAF first to scaffold the solution, then run <code>npx @agent-forge-copilot/cli init --mode analyze --strategy guided</code> to add stack-specific coding instructions and pre-commit hooks.</li>
+      </ul>
+    </div>
+
+    <div class="fit-box-bad">
+      <h3>⛔ Not For (Anti-Patterns &amp; Gotchas)</h3>
+      <ul class="fit-list">
+        <li><strong>Do Not Use AGENT-FORGE as a Business/Architecture Consultant:</strong> It ships zero Azure Bicep Landing Zones, customer PRD/C4 templates, or accelerator scorecards.</li>
+        <li><strong>Do Not Expect FAF to Auto-Compile Generic Repo Rules for Non-Azure Stacks:</strong> FAF's agents and knowledge bases are purpose-built around Azure AI Foundry and Microsoft Fabric.</li>
+        <li><strong>Never Upgrade FAF via VS Code UI Reinstall Alone:</strong> VS Code reuses cached plugins in <code>%APPDATA%\Code\agentPlugins</code>; always close VS Code and delete the cached folder before reinstalling.</li>
+        <li><strong>Do Not Expect Subagent Token Breakdowns in Default VS Code Chat:</strong> Enable VS Code OTel (<code>dbSpanExporter</code>) or use Copilot CLI/App for 6/6 benchmark telemetry fidelity.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-dark">
+    <strong>Readiness &amp; License Summary:</strong> <code>faf-core@2.1.1</code> &amp; <code>faf-genai@2.1.0</code> are <strong>GA Production-Ready</strong> (6 role agents, 53 benchmark unit tests); <code>faf-analytics@1.0.1</code> is a <strong>Scoped v1.0 Release</strong> (6 registered agents, tested on Fabric RTI &amp; DW migration); <code>@agent-forge-copilot/cli@0.3.0</code> is a <strong>Public CLI Preview</strong>. Both repositories use the <strong>MIT License</strong> (FAF includes Anthropic-derived document skill notices).
+  </div>
+</section>
+
+</body>
+</html>

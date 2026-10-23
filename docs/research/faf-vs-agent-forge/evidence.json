@@ -1,0 +1,186 @@
+{
+  "study_id": "faf-vs-agent-forge-2026-10-23",
+  "title_zh": "Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE：企业级 SDLC 领域交付插件体系与 Context Engineering 元生成工具链深度研究",
+  "title_en": "Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE: Composable SDLC Delivery Plugin Marketplace vs. Context Engineering Meta-Generator Toolkit",
+  "retrieved_at": "2026-10-23",
+  "provenance_classification": "static_source_verified + anonymized_reported (independently_reproduced=false)",
+  "execution_boundary": {
+    "global_plugin_install_run": false,
+    "global_npm_install_run": false,
+    "paid_llm_inference_run": false,
+    "static_contract_verification": true,
+    "sanitization_policy": "All internal customer names, employee emails, and internal nomination URLs are physically excluded from archived reports."
+  },
+  "repositories": {
+    "faf_agents": {
+      "repo": "customer-success-microsoft/faf-agents",
+      "commit": "a740ad88afa0b054e656207e72205002ca6744f0",
+      "tree": "a740ad88afa0b054e656207e72205002ca6744f0",
+      "total_blobs": 590,
+      "total_tree_entries": 736,
+      "verified_files": {
+        "README.md": {
+          "sha": "240b6d1d5d4e1b5cdc0b44b5fa931c5c824db5c4",
+          "size": 9862
+        },
+        "docs/ABOUT.md": {
+          "sha": "d7c77777cbafa891503441cca5e8f99a506377da",
+          "size": 6368
+        },
+        "docs/agent-forge-v2-release-notes.md": {
+          "sha": "e24e174b2d68ea5689cea711103f3baf8f160cc8",
+          "size": 10734
+        },
+        "docs/agentic-development-scenarios.md": {
+          "sha": "8600afc7ef2d110f71e186956acc0735d658b8d2",
+          "size": 21921
+        },
+        "docs/marketplace/INSTALL.md": {
+          "sha": "e86a8676bc726eb5485fab400ccfb7e5ca914fb3",
+          "size": 9228
+        },
+        "docs/core/README-faf-token-benchmark.md": {
+          "sha": "8fc3869a6997c67a46ac5759b42110dba13889d6",
+          "size": 31329
+        },
+        ".github/plugin/marketplace.json": {
+          "sha": "1385f2460c4541cb40bed11eeb935aad562e33b5",
+          "size": 979
+        },
+        "src/core/plugin.json": {
+          "sha": "d96ccb3627af0fadd367b4b0995641aba9dc6ea9",
+          "size": 192
+        },
+        "src/core/hooks.json": {
+          "sha": "6ee63126c8b413c2e23b5489c70526c473f6a046",
+          "size": 8078
+        },
+        "src/core/scripts/faf_benchmark.py": {
+          "sha": "75a59679d6e4d2e6dd2bb6068913929ca8f52980",
+          "size": 124109
+        },
+        "src/genai/plugin.json": {
+          "sha": "47b2409c516077d9aea16e0ffcb5cb3bb01d0e1b",
+          "size": 304
+        },
+        "src/genai/mcp/mcp.json": {
+          "sha": "0e513a6cc01ec64fe174d154c8a83e263b003b0d",
+          "size": 384
+        },
+        "src/analytics/plugin.json": {
+          "sha": "4b5ca1a5bad5ab85fbc97dd2a5415498c8adb8e6",
+          "size": 842
+        },
+        "src/genai/agents/references/implementation-recommender/accelerators-scoring-card.md": {
+          "sha": "80504d8e941e48f8f5cac212e13fa824e8b0d6d7",
+          "size": 8159
+        },
+        "src/genai/skills/faf-ai-prioritization/references/scoring-framework.yaml": {
+          "sha": "fa8f4ea5a61bc2a3268f25fde7250952bb97150f",
+          "size": 8476
+        },
+        "src/genai/skills/faf-genai-foundry-model-evaluation/references/lllm-model-scoring-card.md": {
+          "sha": "67d159642898d0e8b4637af458cce6b81b08bc5a",
+          "size": 3326
+        },
+        "analytics/RELEASE_NOTES_v1.md": {
+          "sha": "80f9e58f9eac3727d34a267e9a4117f8d0033d9d",
+          "size": 8132
+        },
+        "analytics/testing/mock-transcripts/scoring/faf-analytics-score-below-70-analysis.md": {
+          "sha": "45c8e5365379495a37174b56f411b936e86ba992",
+          "size": 20334
+        }
+      }
+    },
+    "microsoft_agent_forge": {
+      "repo": "microsoft/agent-forge",
+      "commit": "655ff3401d18bd000252907a512a3f674114f708",
+      "tree": "655ff3401d18bd000252907a512a3f674114f708",
+      "total_blobs": 38,
+      "total_tree_entries": 48,
+      "verified_files": {
+        "README.md": {
+          "sha": "2873a1d3aa33ba8dc1d3f612d0f8cba43e87d682",
+          "size": 12979
+        },
+        "package.json": {
+          "sha": "fd85a88a9be97554a4e78c3e01fab35e9b7f3181",
+          "size": 1744
+        },
+        "src/index.ts": {
+          "sha": "77d45691339858bc3530b73b048cce40d50e9b31",
+          "size": 3816
+        },
+        "src/types.ts": {
+          "sha": "413a69b93f48c427db6d80311529d3ba4deb15db",
+          "size": 8205
+        },
+        "src/commands/init.ts": {
+          "sha": "1da5d74d965ef03485b21e632bfd5909d2e82d57",
+          "size": 33975
+        },
+        "src/commands/generate.ts": {
+          "sha": "970e08cfb6988e828e4da2169e5b5ac4c520754a",
+          "size": 14838
+        },
+        "src/commands/validate.ts": {
+          "sha": "96ab2548a0f669883a8225aefb49a3637de8ef75",
+          "size": 3400
+        },
+        "src/lib/copilot-cli.ts": {
+          "sha": "d791b10fbce6d133638c076f7520797766d82b89",
+          "size": 18198
+        },
+        "src/lib/detector.ts": {
+          "sha": "1d30240361308be52dff7b4c1ac0b58e64785fe7",
+          "size": 4907
+        },
+        "src/lib/domain-registry.ts": {
+          "sha": "f85ccc6242ba16cf01f5cf8c22b685a175ede9c6",
+          "size": 8978
+        },
+        "src/lib/gallery.ts": {
+          "sha": "9e6928ad777fe69e938000bb384649d3fe6cc5ae",
+          "size": 4440
+        },
+        "src/lib/merger.ts": {
+          "sha": "92b7758f62a6618d4cc3beaf7107e81fcd353329",
+          "size": 2493
+        },
+        "src/lib/prompt-builder.ts": {
+          "sha": "6c332a2dc61d9a3bb39862acf5d9f434c7c5397f",
+          "size": 79598
+        },
+        "src/lib/scaffold.ts": {
+          "sha": "c209f7c1271f8b9a7679d6ae63ec5143ee5c4b2e",
+          "size": 22407
+        },
+        "src/lib/validator.ts": {
+          "sha": "6b262222236ce5184447be0974614e6c09643e4b",
+          "size": 44671
+        },
+        "src/cli/planners/forge-greenfield-planner.agent.md": {
+          "sha": "e5694d78d26fdf87ecb9943320f100bb236c6c61",
+          "size": 30389
+        },
+        "src/cli/planners/forge-brownfield-planner.agent.md": {
+          "sha": "16a3447ba04b74e8b6c935403da728fbe9991af7",
+          "size": 23224
+        },
+        "src/cli/orchestrators/forge-greenfield-orchestrator.agent.md": {
+          "sha": "dfa9395e88c541629ffccb74acc695a9587b9c5c",
+          "size": 6361
+        },
+        "src/cli/orchestrators/forge-brownfield-orchestrator.agent.md": {
+          "sha": "9f5d949aa2d26d3b062ea72c9e0bdc72dd813c39",
+          "size": 7410
+        },
+        "src/cli/writers/forge-agent-writer.agent.md": {
+          "sha": "1b5af13afdfd94e9c2431a61615512f83140fecb",
+          "size": 14717
+        }
+      }
+    }
+  }
+}

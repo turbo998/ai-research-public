@@ -1,0 +1,250 @@
+{
+  "report_id": "faf-vs-agent-forge-benchmark-2026",
+  "title_zh": "Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE 机制契约与能力评测报告（7 页 4:5 视觉卡片版）",
+  "title_en": "Agent Forge (FAF v2) vs. Microsoft AGENT-FORGE Contract & Capability Benchmark Report (7-Card 4:5 Visual Deck)",
+  "generated_at": "2026-10-23",
+  "provenance": {
+    "status": "static_contract_verified_and_anonymized_reported",
+    "independently_reproduced": false,
+    "faf_commit": "a740ad88afa0b054e656207e72205002ca6744f0",
+    "agent_forge_commit": "655ff3401d18bd000252907a512a3f674114f708",
+    "note": "All percentages, weights, token accounting formulas, hook overhead measurements, and validation rules are extracted directly from pinned commit blobs (590 blobs in faf-agents, 38 blobs in microsoft/agent-forge)."
+  },
+  "summary_metrics": {
+    "faf_plugins": 3,
+    "faf_genai_ga_agents": 6,
+    "faf_analytics_total_agents": 9,
+    "faf_analytics_v1_registered_agents": 6,
+    "faf_core_shared_skills": 8,
+    "faf_genai_skills": 3,
+    "faf_analytics_skills": 6,
+    "faf_accelerator_scoring_areas": 8,
+    "faf_foundry_model_eval_dimensions": 11,
+    "faf_benchmark_unit_tests_reported": 53,
+    "agent_forge_artifact_types": 7,
+    "agent_forge_writer_agents": 7,
+    "agent_forge_builtin_templates": 11,
+    "agent_forge_valid_vscode_tools": 44,
+    "scenarios_evaluated": 12,
+    "scenarios_verified_auto": 8,
+    "scenarios_confirm_or_human": 4
+  },
+  "scenarios": [
+    {
+      "id": "S01",
+      "category": "FAF · Plugin Architecture",
+      "question_zh": "FAF v2.0.1 插件市场 (`marketplace.json`) 是否将单包拆分为 `faf-core`、`faf-genai`、`faf-analytics` 三大独立插件？",
+      "question_en": "Does FAF v2.0.1 (`marketplace.json`) split the monolithic package into 3 modular plugins (`faf-core`, `faf-genai`, `faf-analytics`)?",
+      "answer": "3 / 3 plugins verified (100%)",
+      "score_pct": 100.0,
+      "expected_met": true,
+      "action": "Act automatically",
+      "anchor": ".github/plugin/marketplace.json (sha:1385f246)"
+    },
+    {
+      "id": "S02",
+      "category": "FAF · GenAI Delivery Chain",
+      "question_zh": "`faf-genai@2.1.0` 是否完整提供从 Scoping 到 Delivery 的 6 个 GA 角色 Agent 与 9 个 `FAF-genai-*` 提示词命令？",
+      "question_en": "Does `faf-genai@2.1.0` provide all 6 GA role agents and 9 `FAF-genai-*` slash prompt commands from Scoping to Delivery?",
+      "answer": "6 GA Agents + 9 Prompts (100%)",
+      "score_pct": 100.0,
+      "expected_met": true,
+      "action": "Act automatically",
+      "anchor": "src/genai/plugin.json (sha:47b2409c)"
+    },
+    {
+      "id": "S03",
+      "category": "FAF · Weighted Accelerator Scoring",
+      "question_zh": "Implementation Recommender 的 8 域加权评分卡权重总和是否严格等于 100% 且设置 `>70%` / `40-70%` / `<40%` 三档决策阈值？",
+      "question_en": "Do the 8 accelerator scoring area weights sum to 100% (25+20+18+15+10+5+4+3) with >70% / 40-70% / <40% thresholds?",
+      "answer": "8 Areas = 100% + 3 Threshold Bands (100%)",
+      "score_pct": 100.0,
+      "expected_met": true,
+      "action": "Act automatically",
+      "anchor": "accelerators-scoring-card.md (sha:80504d8e)"
+    },
+    {
+      "id": "S04",
+      "category": "FAF · AI Prioritization Gates",
+      "question_zh": "`faf-ai-prioritization` 是否在三维度评分外实施 9 项门禁（2 项 Hard Gate + 7 项 Readiness Gate）与置信度底线（`<40%` Provisional）？",
+      "question_en": "Does `faf-ai-prioritization` enforce 9 gates (2 hard + 7 readiness) and a 40% confidence floor across Value, Feasibility, and Readiness?",
+      "answer": "3 Dimensions + 9 Gates + 40% Floor (100%)",
+      "score_pct": 100.0,
+      "expected_met": true,
+      "action": "Act automatically",
+      "anchor": "scoring-framework.yaml (sha:fa8f4ea5)"
+    },
+    {
+      "id": "S05",
+      "category": "FAF · Analytics Manifest vs Tree",
+      "question_zh": "`src/analytics/agents/` 目录下的 9 个 Analytics Agent 是否全部在 `src/analytics/plugin.json` 中默认注册暴露？",
+      "question_en": "Are all 9 agent files in `src/analytics/agents/` registered by default in `src/analytics/plugin.json`?",
+      "answer": "6/9 registered (3 experimental workflow runners omitted) (67%) ✕",
+      "score_pct": 66.7,
+      "expected_met": false,
+      "action": "Confirm",
+      "anchor": "src/analytics/plugin.json (sha:4b5ca1a5)"
+    },
+    {
+      "id": "S06",
+      "category": "FAF · Token Benchmark Telemetry",
+      "question_zh": "在不开启 VS Code OTel (`dbSpanExporter`) 的默认 VS Code Chat Journal 路径下，能否获取完整嵌套子 Agent Token 与逐调用精确归因？",
+      "question_en": "Without VS Code OTel enabled, does the default VS Code Chat Journal provide full nested-subagent tokens and per-call attribution?",
+      "answer": "Top-level request-aggregate only (2 / 6 full-precision sources = 33%) ✕",
+      "score_pct": 33.3,
+      "expected_met": false,
+      "action": "Confirm",
+      "anchor": "README-faf-token-benchmark.md (sha:8fc3869a)"
+    },
+    {
+      "id": "S07",
+      "category": "FAF · VS Code Plugin Cache Update",
+      "question_zh": "在 VS Code UI 中卸载 FAF 插件后直接重新添加，是否会自动拉取 GitHub 最新版本？",
+      "question_en": "Does uninstalling and re-adding the FAF plugin in VS Code UI automatically fetch the latest GitHub commits without manual cache deletion?",
+      "answer": "0% auto-refresh (reuses cached %APPDATA%\\Code\\agentPlugins copy) ✕",
+      "score_pct": 0.0,
+      "expected_met": false,
+      "action": "Send to a human",
+      "anchor": "docs/marketplace/INSTALL.md (sha:e86a8676)"
+    },
+    {
+      "id": "S08",
+      "category": "AGENT-FORGE · Plan-Then-Execute",
+      "question_zh": "`microsoft/agent-forge` 是否通过 Greenfield/Brownfield Planner + Orchestrator + 7 个 специализированные Writer Agents 生成全部 7 类定制文件？",
+      "question_en": "Does `microsoft/agent-forge` generate all 7 Copilot customization artifact types via Planner + Orchestrator + 7 specialized Writer Agents?",
+      "answer": "2 Planners + 2 Orchestrators + 7 Writers -> 7 Artifact Types (100%)",
+      "score_pct": 100.0,
+      "expected_met": true,
+      "action": "Act automatically",
+      "anchor": "src/types.ts (sha:413a69b9) & src/cli/writers/"
+    },
+    {
+      "id": "S09",
+      "category": "AGENT-FORGE · Workspace Detection",
+      "question_zh": "`detector.ts` 是否支持扫描 14 种技术栈指示文件（`TECH_INDICATORS`）与 14 种项目类型提示文件（`PROJECT_TYPE_HINTS`）？",
+      "question_en": "Does `detector.ts` scan 14 manifest indicator files (`TECH_INDICATORS`) and 14 project-type hint files (`PROJECT_TYPE_HINTS`)?",
+      "answer": "14 Tech Indicators + 14 Type Hints (100%)",
+      "score_pct": 100.0,
+      "expected_met": true,
+      "action": "Act automatically",
+      "anchor": "src/lib/detector.ts (sha:1d302403)"
+    },
+    {
+      "id": "S10",
+      "category": "AGENT-FORGE · Deterministic Auto-Fix",
+      "question_zh": "`validator.ts` 是否内置 44 个已知 VS Code Copilot 工具名白名单、Levenshtein 距离 `<=3` 拼写建议与跨文件 handoff 名称自动对齐？",
+      "question_en": "Does `validator.ts` enforce 44 known VS Code tool names, Levenshtein distance <=3 typo suggestions, and cross-file handoff auto-fix?",
+      "answer": "44 Valid Tools + Levenshtein<=3 + Handoff Fix (100%)",
+      "score_pct": 100.0,
+      "expected_met": true,
+      "action": "Act automatically",
+      "anchor": "src/lib/validator.ts (sha:6b262222)"
+    },
+    {
+      "id": "S11",
+      "category": "AGENT-FORGE · Smart Merge Safety",
+      "question_zh": "`merger.ts` 在非 `--force` 模式下是否仅覆盖带有 `<!-- Generated by AGENT-FORGE -->`（或 `SpecForge`）标记的文件并保护用户手写配置？",
+      "question_en": "Does `merger.ts` preserve user-authored `.github/` files and only overwrite files bearing `<!-- Generated by AGENT-FORGE -->` (or `SpecForge`)?",
+      "answer": "100% user-file preservation unless --force (100%)",
+      "score_pct": 100.0,
+      "expected_met": true,
+      "action": "Act automatically",
+      "anchor": "src/lib/merger.ts (sha:92b7758f)"
+    },
+    {
+      "id": "S12",
+      "category": "Cross-Comparison · Role & Scope",
+      "question_zh": "`microsoft/agent-forge` 生成的 `.github/` 配置是否自带 FAF 的客户立项评分、PRD/C4 架构规范模板、加权加速器目录与 Bicep Landing Zone 部署脚本？",
+      "question_en": "Does `microsoft/agent-forge` ship with FAF's customer PRD/C4 spec templates, weighted accelerator catalogues, or AI Landing Zone Bicep scripts?",
+      "answer": "0% domain delivery IP bundled (meta-generator vs SDLC practice) ✕",
+      "score_pct": 0.0,
+      "expected_met": false,
+      "action": "Send to a human",
+      "anchor": "Cross-repo architectural boundary verification"
+    }
+  ],
+  "robustness_checks": [
+    {
+      "dimension": "FAF Telemetry Coverage: Copilot Session Store vs VS Code Journal Fallback",
+      "comparison": "Full Copilot CLI/App session store (6/6 exact telemetry dimensions: 100.0%) vs VS Code without OTel journal fallback (2/6 exact dimensions: 33.3%)",
+      "original_pct": 100.0,
+      "perturbed_pct": 33.3,
+      "delta_pts": -66.7,
+      "holds": true
+    },
+    {
+      "dimension": "FAF Analytics Agent Exposure: Full Source Tree vs v1.0 Release Manifest",
+      "comparison": "src/analytics/agents/*.agent.md (9/9 agents in source tree: 100.0%) vs src/analytics/plugin.json (6/9 registered; 3 workflow runners omitted: 66.7%)",
+      "original_pct": 100.0,
+      "perturbed_pct": 66.7,
+      "delta_pts": -33.3,
+      "holds": true
+    },
+    {
+      "dimension": "FAF Accelerator Recommendation Gate: High Match (>70%) vs Low Match (<40%)",
+      "comparison": "Accelerator A (83.9% weighted score -> 100% Agentic Customization) vs Low-Fit Custom Scenario (<40% score -> 0% accelerator reuse, switches to Agentic Development)",
+      "original_pct": 83.9,
+      "perturbed_pct": 35.0,
+      "delta_pts": -48.9,
+      "holds": true
+    },
+    {
+      "dimension": "AGENT-FORGE Init Mode: Templates Gallery (No LLM) vs Create/Analyze Pipeline",
+      "comparison": "forge init --mode create/analyze (7/7 artifact types dynamically generated: 100.0%) vs --mode templates (11 static gallery bundles, 0 LLM calls: 71.4% artifact coverage)",
+      "original_pct": 100.0,
+      "perturbed_pct": 71.4,
+      "delta_pts": -28.6,
+      "holds": true
+    },
+    {
+      "dimension": "AGENT-FORGE Smart Merge: Default Safe Merge vs --force Overwrite",
+      "comparison": "Default mergeIntoExisting on user-authored files (100.0% user files preserved) vs --force flag enabled (0.0% conflicting user files preserved; 100% overwritten)",
+      "original_pct": 100.0,
+      "perturbed_pct": 0.0,
+      "delta_pts": -100.0,
+      "holds": true
+    },
+    {
+      "dimension": "AGENT-FORGE Tool Typo Auto-Fix: Distance <=3 vs Distance >3",
+      "comparison": "Levenshtein distance <=3 against 44 VALID_VSCODE_TOOLS (100.0% auto-suggested) vs distance >3 unknown custom MCP tool (0.0% false-positive replacement)",
+      "original_pct": 100.0,
+      "perturbed_pct": 0.0,
+      "delta_pts": -100.0,
+      "holds": true
+    }
+  ],
+  "latency_tiers": [
+    {
+      "tier_label": "FAF Unmarked Hook Check: UserPromptSubmit (Avg vs Max Observed)",
+      "primary_ms": 930,
+      "primary_label": "930 ms avg (Unmarked fast-exit)",
+      "baseline_ms": 1190,
+      "baseline_label": "1,190 ms max (Observed range 0.70–1.19s)",
+      "note": "Reported in docs/core/README-faf-token-benchmark.md (5 unmarked runs on Windows)"
+    },
+    {
+      "tier_label": "FAF Unmarked Hook Check: Stop Event (Avg vs Max Observed)",
+      "primary_ms": 1000,
+      "primary_label": "1,000 ms avg (Detached finalizer check)",
+      "baseline_ms": 1340,
+      "baseline_label": "1,340 ms max (Observed range 0.86–1.34s)",
+      "note": "Reported in docs/core/README-faf-token-benchmark.md (5 unmarked runs on Windows)"
+    },
+    {
+      "tier_label": "FAF Hook Execution Timeout Gate vs Recovery Wait Window",
+      "primary_ms": 5000,
+      "primary_label": "5,000 ms (src/core/hooks.json timeoutSec: 5)",
+      "baseline_ms": 15000,
+      "baseline_label": "15,000 ms (faf_benchmark.py recover --wait-seconds 15)",
+      "note": "Source fact in src/core/hooks.json and docs/core/README-faf-token-benchmark.md"
+    },
+    {
+      "tier_label": "AGENT-FORGE Init: Static Gallery Templates vs LLM Validator Fix Timeout",
+      "primary_ms": 120,
+      "primary_label": "~120 ms local file copy (forge init --mode templates)",
+      "baseline_ms": 30000,
+      "baseline_label": "30,000 ms timeout (callLlmForJson in validator.ts)",
+      "note": "Static file copy in merger.ts vs default 30_000ms Copilot CLI timeout in validator.ts:48"
+    }
+  ]
+}
