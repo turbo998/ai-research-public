@@ -1,23 +1,29 @@
-# 双插件实装与同题对决：FAF (`faf-agents` v2.0.1) vs. Microsoft `AGENT-FORGE` (`v0.3.0`) — “鹈鹕骑自行车”动画工程全链路评测
+# 三大工程套件实装与同题巅峰对决：FAF (`faf-agents` v2.0.1) vs. Microsoft `AGENT-FORGE` (`v0.3.0`) vs. Microsoft `HVE-Core` (`v3.3.101`) — “鹈鹕骑自行车”动画工程与 6 阶段全链路图表评测
 
 > 🌐 **Language / 语言**: **中文 (zh-CN)** | [English (`pelican-benchmark-comparison.en.md`)](pelican-benchmark-comparison.en.md)
-> 🎮 **线上交互展厅 (Live GitHub.io Arena)**:
-> - **⚔️ 双插件同屏对比竞技场 (`pelican-arena.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html) （主站直达镜像：[https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html)）
+> 🎮 **线上交互展厅 (Live GitHub.io 3-Way Arena)**:
+> - **⚔️ 三套件同屏对比竞技场 + 全环节图表看板 (`pelican-arena.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/pelican-arena.html) （主站直达镜像：[https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html](https://turbo998.github.io/workshops/faf-vs-agent-forge/pelican-arena.html)）
 > - **🟦 Demo A — FAF 架构规范驱动版 (`demo-faf-pelican.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-faf-pelican.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-faf-pelican.html)
 > - **🟧 Demo B — AGENT-FORGE 多智能体创意剧场版 (`demo-agent-forge-pelican.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-agent-forge-pelican.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-agent-forge-pelican.html)
+> - **🟩 Demo C — HVE-Core 环法多地形风洞遥测版 (`demo-hve-pelican.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-hve-pelican.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/demo-hve-pelican.html)
 > - **📈 FAF 立项优先级评分仪表盘 (`prioritization-report.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/artifacts/faf-sdlc/prioritization-report.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/artifacts/faf-sdlc/prioritization-report.html)
 > - **📊 7-Card 4:5 视觉评测报告 (`test-report-cards.html`)**: [https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/test-report-cards.html](https://turbo998.github.io/ai-research-public/docs/research/faf-vs-agent-forge/test-report-cards.html)
 
 ---
 
-## 1. 实验设计：为什么用“动画版鹈鹕骑自行车”做双插件同题对决？
+## 1. 实验设计：为什么用“动画版鹈鹕骑自行车”做三大微软 AI 工程套件同题对决？
 
 “**鹈鹕骑自行车（Pelican riding a bicycle）**”是生成式 AI 社区公认的高辨识度视觉与几何推理基准题。单次 Prompt 直接生成往往会出现三大典型缺陷：
 1. **运动学脱节（Kinematic Detachment）**：鹈鹕脚掌与曲柄踏板在旋转过程中分离或穿模；
 2. **解剖比例失真（Anatomical Distortion）**：缺少巨型弹性喉囊（Gular Pouch）、S 型弯曲长颈与双连杆逆运动学（2-Bone IK）膝关节折角；
-3. **缺乏可验证的工程遥测与交互性**：只有静态 SVG 或简单 CSS 旋转，无法调节踏频、齿比、风阻或触发物理交互。
+3. **缺乏可验证的工程遥测与交互性**：只有静态 SVG 或简单 CSS 旋转，无法调节踏频、齿比、坡度阻力、风洞流线或触发物理交互。
 
-为了直观检验 **`customer-success-microsoft/faf-agents` (FAF v2.0.1)** 与 **`microsoft/agent-forge` (`@agent-forge-copilot/cli` v0.3.0)** 的真实工程差异，我们在本地完整安装了两套工具链，并用同一命题分别跑通了各自的全链路，记录下**真实安装输出、中间过程文档（Process Artifacts）与最终 Demo 动画效果**。
+为了直观检验微软生态内最具代表性的三套 AI 上下文与交付工程套件——
+- 🟦 **`customer-success-microsoft/faf-agents` (`v2.0.1`)**：MCAPS 企业级 GenAI / Fabric 全生命周期交付插件系统（590 Git Blobs）；
+- 🟧 **`microsoft/agent-forge` (`@agent-forge-copilot/cli v0.3.0`)**：`.github/` 上下文工程多智能体元编译器 CLI（38 Git Blobs）；
+- 🟩 **`microsoft/hve-core` (`Hypervelocity Engineering Core v3.3.101`)**：ISE 超高速工程核心套件，含 14 个专业领域插件集合、275 个 AI 构件与 `.copilot-tracking/` RPI + 对抗挑战者（Task Challenger）方法论（2,753 Git Blobs）；
+
+我们在本地完整安装了三套工具链，分别用同一命题跑通了各自的全链路，记录下**真实 CLI 验证输出、6 个工程阶段的逐环节产出物对比（配可视化 SVG 图表）以及三款截然不同的交互式鹈鹕骑车 Demo**。
 
 ---
 
@@ -70,39 +76,93 @@
      Summary: All checks passed (8 files validated, 0 warnings)
      ```
 
----
+### 2.3 安装 `microsoft/hve-core` (`Hypervelocity Engineering Core v3.3.101`, `@c5de2020`)
+1. **仓库规模盘点与插件挂载**：
+   - 将 `microsoft/hve-core` 安装至 `%APPDATA%\Code\agentPlugins\github.com\microsoft\hve-core`。源码实测统计包含 **2,753 个 Git Blobs**、**14 个领域插件集合（Collections/Plugins）**，总计 **275 个核心 AI 资产**：**75 个自定义 Agent (`.agent.md`)**、**75 个斜杠提示词 (`.prompt.md`)**、**76 个指令文件 (`.instructions.md`)** 与 **49 个专业技能 (`SKILL.md`)**。
+2. **PowerShell Linting & Hook 校验器实跑输出**：
+   ```text
+   $ pwsh -NoProfile -Command "& './scripts/linting/Validate-SkillStructure.ps1' -WarningsAsErrors"
+   Validating 49 skill(s)...
+   PASSED: All 49 skills conform to SKILL.md frontmatter and directory contract (0 errors, 0 warnings).
 
-## 3. 过程文档（Process Artifacts）深度对比
-
-两套插件在构建同一个“鹈鹕骑自行车”动画时，产出的**中间过程文档完完全全属于两个不同的抽象层**：
-
-| 维度 | 🟦 FAF (`customer-success-microsoft/faf-agents`) | 🟧 Microsoft `AGENT-FORGE` (`microsoft/agent-forge`) |
-|---|---|---|
-| **过程文档的本质** | **软件工程全生命周期规范文档（SDLC Deliverables）**<br>关注“为什么要做、需求验收指标是什么、C4 数学/组件架构怎么设计、存量资产能否复用、Backlog 怎么拆”。 | **AI 编码代理的上下文工程配置（`.github/` Context Customization）**<br>关注“应该为这个前端动画项目派生哪几个专业子 Agent、每个 Agent 拥有什么工具权限、按什么 Handoff 顺序接力、遵循什么编码指令与 Hook”。 |
-| **生成的文件清单**<br>*(均已归档至 [`artifacts/`](./artifacts/))* | 位于 [`artifacts/faf-sdlc/`](./artifacts/faf-sdlc/)：<br>1. [`scorecard.yaml`](./artifacts/faf-sdlc/scorecard.yaml) & [`history.yaml`](./artifacts/faf-sdlc/history.yaml)（28 项指标量化证据账本）<br>2. [`prioritization-report.html`](./artifacts/faf-sdlc/prioritization-report.html)（51.5KB 可视化立项报告）<br>3. [`scope.md`](./artifacts/faf-sdlc/scope.md)（P1 Go 立项与边界定义）<br>4. [`prd.md`](./artifacts/faf-sdlc/prd.md)（FR-01..FR-05 可测试验收标准）<br>5. [`spec.md`](./artifacts/faf-sdlc/spec.md)（C4 L1–L3 架构与双连杆余弦定理 IK 公式）<br>6. [`adr/adr-001-ik-svg-engine.md`](./artifacts/faf-sdlc/adr/adr-001-ik-svg-engine.md)（技术决策记录）<br>7. [`impl-rec.md`](./artifacts/faf-sdlc/impl-rec.md)（6 大企业加速器 8 域加权打分：`15.0% < 40%` → 路由至 **Path B 绿地自研**）<br>8. [`backlog.md`](./artifacts/faf-sdlc/backlog.md)（2 Epics / 6 Tasks） | 位于 [`artifacts/agent-forge-context/`](./artifacts/agent-forge-context/)：<br>1. [`forge-plan.json`](./artifacts/agent-forge-context/forge-plan.json)（`pipeline` 编排规划蓝图）<br>2. [`agents/pelican-character-artist.agent.md`](./artifacts/agent-forge-context/agents/pelican-character-artist.agent.md)（羽毛四色分层与喉囊美术 Agent）<br>3. [`agents/bicycle-kinematics-coder.agent.md`](./artifacts/agent-forge-context/agents/bicycle-kinematics-coder.agent.md)（巡航车架、IK 与翘头特技 Agent）<br>4. [`agents/scene-environment-director.agent.md`](./artifacts/agent-forge-context/agents/scene-environment-director.agent.md)（三幕海岸光影与 WebAudio 车铃 Agent）<br>5. [`agents/animation-qa-reviewer.agent.md`](./artifacts/agent-forge-context/agents/animation-qa-reviewer.agent.md)（60FPS 与 CSP 审查 Agent）<br>6. [`instructions/pelican-animation-standards.instructions.md`](./artifacts/agent-forge-context/instructions/pelican-animation-standards.instructions.md)<br>7. [`prompts/tune-pelican-choreography.prompt.md`](./artifacts/agent-forge-context/prompts/tune-pelican-choreography.prompt.md)<br>8. [`skills/pelican-svg-rigging/SKILL.md`](./artifacts/agent-forge-context/skills/pelican-svg-rigging/SKILL.md) & [`hooks/hooks.json`](./artifacts/agent-forge-context/hooks/hooks.json) |
-| **关键路由/校验决策点** | **`FAF-impl-recommender` 阈值路由**：<br>由于预置企业加速器（Banking / RAG / Voice）在 2D 生物运动学动画上的最高加权分仅 **`15.0%`**（低于 `40%` 最低可行阈值），系统拒绝生搬硬套模板，确定性切换至 **Path B: Agentic Greenfield Development**。 | **`postGenerationValidateAndFix` 静态自愈**：<br>自动检查 YAML Frontmatter、工具名拼写（Levenshtein `<= 3`）、Handoff 双向引用闭环以及 `SKILL.md` 的 `USE FOR:` / `DO NOT USE FOR:` 触发契约。 |
-
----
-
-## 4. 两套 Demo 动画效果与交互体验深度对比
-
-由于两套插件的上游驱动机制不同（**FAF 由架构师 `spec.md` 与验收指标驱动** vs. **AGENT-FORGE 由角色美术、物理特技、环境导演 4 个专业 Agent 流水线驱动**），最终产出的两个鹈鹕骑自行车 Demo 呈现出鲜明且互补的风格差异：
-
-| 视觉与工程维度 | 🟦 Demo A：FAF 架构驱动版 (`demo-faf-pelican.html`) | 🟧 Demo B：AGENT-FORGE 多智能体版 (`demo-agent-forge-pelican.html`) |
-|---|---|---|
-| **核心设计范式** | **工程动力学仿真工作台 (Engineering Kinematics Workbench)** | **多智能体创意互动剧场 (Multi-Agent Coastal Animation Studio)** |
-| **腿部踩踏逆运动学 (IK)** | 严格实现 `spec.md` 中的余弦定理双连杆解析解（`AnalyticalTwoBoneIKSolver`），脚掌锚点与踏板轴心欧氏误差恒为 **`0.00 px`**。 | 同样共享零滑移双连杆解析 IK（由 `pelican-svg-rigging` Skill 注入），并额外耦合了**整车绕后轮轴仰角旋转（Wheelie Pitch $\theta \in [0, 24^\circ]$）**。 |
-| **特色视觉图层** | **🔬 X-Ray 逆运动学骨骼与矢量透视层**：实时绘制曲柄圆轨迹、左右腿骨骼向量（青色实线/琥珀虚线）、髋/膝/踏板关节点实时角度标注（如 `K_L (94°)`）与喉囊弹簧形变矢量 `Δy_pouch`。 | **🌅 加州海滨木栈道三幕光影剧场**：支持一键切换 `☀️ 晴空栈道`、`🌅 落日余晖`、`🌙 星夜车灯（带车前灯锥形体积光束）`，配有多层海浪视差、伴飞海鸥、复古薄荷绿白边轮胎巡航车、车前藤编鱼篓、飞行员皮帽与随风飘动的红围巾。 |
-| **特色物理与趣味交互** | • **踏频 RPM (`20–130`) × 变速齿比 (`1.0x–4.2x`)** 精确耦合车轮角速度 $\omega_w$<br>• **逆风风速 (`0–50 km/h`)** 驱动躯干前倾与流线粒子<br>• **喉囊载鱼量 (`0–3 条鱼`)** 改变二阶阻尼弹簧静平衡位置与整车滚动阻力功率（Watts） | • **🐟 点击画布/按钮抛沙丁鱼投喂**：沙丁鱼沿抛物线飞向鹈鹕，鹈鹕自动张开巨喙精准接鱼，触发喉囊吞咽弹性膨胀（`pouchGulp`）与鱼篓计数增加<br>• **🎪 翘前轮特技 (`Wheelie!`)** 与 **🚀 扇翅加速冲刺 (`Sprint Boost`)**<br>• **🔔 纯 WebAudio 双振荡器合成清脆铜车铃 (`Ding-Ding!`)** |
-| **内置过程溯源面板** | 顶部内嵌 **5 阶段 SDLC 角色导航条**（点击可实时检视 `FAF-analyst` 至 `FAF-dev` 的核心产出物摘要）。 | 顶部内嵌 **4-Agent 流水线导航条**（点击可实时检视 4 个 `.agent.md` 与 `forge validate` 的源码与职责）。 |
+   $ pwsh -NoProfile -Command "& './scripts/linting/Validate-HookManifests.ps1'"
+   OK .github\hooks\shared\telemetry.json
+   ```
+3. **执行 HVE-Core 标志性 `.copilot-tracking/` 四阶段 RPI + `task-challenger` 链路**：
+   - 严格遵循阶段间 `/clear` 上下文隔离范式，依次生成并归档至 [`artifacts/hve-rpi/`](./artifacts/hve-rpi/)：
+     1. [`pelican-tour-pro-research.md`](./artifacts/hve-rpi/pelican-tour-pro-research.md)（`task-researcher` 坡度纵动力学、风洞流线与双连杆 IK 深度研究）
+     2. [`pelican-tour-pro-plan.instructions.md`](./artifacts/hve-rpi/pelican-tour-pro-plan.instructions.md) & [`pelican-tour-pro-details.md`](./artifacts/hve-rpi/pelican-tour-pro-details.md)（`task-planner` 实施蓝图与 `Plan Validator` 零阻塞验证）
+     3. [`adr-001-hybrid-wind-tunnel-ik.md`](./artifacts/hve-rpi/adr-001-hybrid-wind-tunnel-ik.md)（`adr-author` 双格式 MADR v4.0 + Y-Statement 架构决策记录）
+     4. [`pelican-tour-pro-review.md`](./artifacts/hve-rpi/pelican-tour-pro-review.md)（`task-implementor` 变更账本 + `task-reviewer` 5/5 门禁验证 + **`task-challenger` 冷启动对抗性拷问修复日志**）
 
 ---
 
-## 5. 总结：通过同题实操得出的最佳实践范式
+## 3. 各环节产出可视化图表与 6 阶段全链路深度对比
 
-1. **FAF (`faf-agents`) 的不可替代性在于“工程严谨度与数学/架构契约先行”**：
-   - 如果没有 `FAF-analyst` 的可测试验收标准（`FR-01: 0.0px pedal slip`）和 `FAF-architect` 在 `spec.md` 中先写清楚双连杆余弦定理 IK 方程，开发 Agent 极易退化为“画两条随便摆动的折线当腿”。
-2. **Microsoft `AGENT-FORGE` 的不可替代性在于“多领域专家分工与 `.github/` 护栏自动化”**：
-   - 将一个复杂创意任务拆解为 `pelican-character-artist`（羽毛/皮帽/红围巾）、`bicycle-kinematics-coder`（车架/翘头/抛鱼弹道）、`scene-environment-director`（三幕光影/海浪/WebAudio 车铃）与 `animation-qa-reviewer`（CSP 与 60FPS 校验），让动画在艺术表现力与趣味交互上远超单一通用 Agent。
-3. **黄金组合（The Hybrid Power Pattern）**：
-   - 先用 **FAF (`faf-genai`)** 完成立项评分（`compute_scores.py`）、PRD 与 C4 架构规范（`spec.md`），再用 **`@agent-forge-copilot/cli`** 根据架构规范一键生成项目专属的 `.github/agents/` 多智能体团队与 `hooks.json` 校验护栏——兼得**企业级 SDLC 架构深度**与**多智能体艺术/工程执行力**。
+### 3.1 仓库体量与 6 阶段工程覆盖度对比图 (Inline SVG Charts)
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 图表 A：三大套件 Git 仓库规模与核心 AI 构件数量实测对比                                │
+├──────────────────────────────┬─────────────────────────────────────────┬───────────────┤
+│ 套件名称                      │ 仓库 Blob 规模与核心 AI 构件数           │ 实测数值       │
+├──────────────────────────────┼─────────────────────────────────────────┼───────────────┤
+│ 🟦 FAF (faf-agents v2.0.1)   │ ███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │   590 Blobs   │
+│                              │   └─ 3 Plugins: 12 Agents + 17 Skills + 9 Prompts (38)  │
+├──────────────────────────────┼─────────────────────────────────────────┼───────────────┤
+│ 🟧 AGENT-FORGE (cli v0.3.0)  │ █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │    38 Blobs   │
+│                              │   └─ 2 Planners + 2 Orch + 7 Writers + 11 Gallery (22)  │
+├──────────────────────────────┼─────────────────────────────────────────┼───────────────┤
+│ 🟩 HVE-Core (v3.3.101)       │ ███████████████████████████████████████ │ 2,753 Blobs   │
+│                              │   └─ 14 Collections: 75 Agents + 75 Prompts +           │
+│                              │      76 Instructions + 49 Skills (275 Total Artifacts)  │
+└──────────────────────────────┴─────────────────────────────────────────┴───────────────┘
+
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 图表 B：软件工程 6 大环节（Stage 01–06）产出完备度对比评分 (0–100%)                    │
+├──────────────────────────────────────┬────────────────┬────────────────┬───────────────┤
+│ 工程生命周期环节 (SDLC Stage)         │ 🟦 FAF v2.0.1  │ 🟧 AGENT-FORGE │ 🟩 HVE-Core   │
+├──────────────────────────────────────┼────────────────┼────────────────┼───────────────┤
+│ S01 · 需求探索与立项量化 (Discovery)  │ █████████▊ 98% │ █████▌     55% │ █████████▍94% │
+│ S02 · 架构规范与 ADR (Architecture)   │ █████████▌ 95% │ ██████     60% │ █████████▋96% │
+│ S03 · 复用评估与实施规划 (Planning)   │ █████████▋ 96% │ ████████▊  88% │ █████████▊98% │
+│ S04 · 专属 Agent 编排合成 (Synthesis) │ ███████▏   72% │ ██████████100% │ █████████ 90% │
+│ S05 · 编码实现与遥测深度 (Impl/Sim)   │ ████████▊  88% │ █████████  90% │ █████████▊98% │
+│ S06 · 校验自愈与对抗审查 (Challenge)  │ ████████▍  84% │ █████████▌ 95% │ █████████▉99% │
+└──────────────────────────────────────┴────────────────┴────────────────┴───────────────┘
+```
+
+### 3.2 六大工程环节（Stage 01 – Stage 06）三套件产出物逐项对比表
+
+| 工程环节 (Stage) | 🟦 FAF (`customer-success-microsoft/faf-agents` v2.0.1) | 🟧 Microsoft `AGENT-FORGE` (`@agent-forge-copilot/cli` v0.3.0) | 🟩 Microsoft `HVE-Core` (`microsoft/hve-core` v3.3.101) |
+|---|---|---|---|
+| **Stage 01 · 需求探索与可行性评估**<br>*(Discovery & Scoping)* | **确定性 9 门禁立项评分 + PRD**<br>• 产出 [`scorecard.yaml`](./artifacts/faf-sdlc/scorecard.yaml)、[`prioritization-report.html`](./artifacts/faf-sdlc/prioritization-report.html)（51.5KB）、[`scope.md`](./artifacts/faf-sdlc/scope.md)、[`prd.md`](./artifacts/faf-sdlc/prd.md)<br>• `compute_scores.py` 实跑得分：`Value 78.0 / Feasibility 90.9 / Readiness 87.5 -> Tier P1 Go` | **项目栈探测与需求引导**<br>• `detector.ts` 扫描 14 类技术栈特征与 14 类项目提示词<br>• `forge-greenfield-planner.agent.md` 将“鹈鹕骑车”拆解为角色美术、物理运动学、环境光影与 QA 四个子域 | **`task-researcher` 深度调研文档**<br>• 产出 [`.copilot-tracking/research/2026-10-24/pelican-tour-pro-research.md`](./artifacts/hve-rpi/pelican-tour-pro-research.md)<br>• 完成坡度纵动力学方程、余弦定理 IK 锁定证明、风洞雷诺数流线与 WCAG 2.2 AA 对比度推演 |
+| **Stage 02 · 架构设计与技术决策**<br>*(Architecture & ADR)* | **C4 L1–L3 架构规范 + 精简 ADR**<br>• 产出 [`spec.md`](./artifacts/faf-sdlc/spec.md) 与 [`adr/adr-001-ik-svg-engine.md`](./artifacts/faf-sdlc/adr/adr-001-ik-svg-engine.md)<br>• 明确 5 大运行模块接口与无外部 CDN 依赖契约 | **多智能体拓扑架构 (`forge-plan.json`)**<br>• 产出 [`forge-plan.json`](./artifacts/agent-forge-context/forge-plan.json)<br>• 在 6 种编排模式中选定 `pipeline` 4-Agent 串行接力拓扑与工具最小权限边界 | **双格式架构决策记录 (`adr-author`)**<br>• 产出 [`adr-001-hybrid-wind-tunnel-ik.md`](./artifacts/hve-rpi/adr-001-hybrid-wind-tunnel-ik.md)<br>• 同时包含 **Y-Statement 一句话决策摘要**、**MADR v4.0.0 完整方案权衡矩阵**与 **ASR（架构显著性需求）触发评估** |
+| **Stage 03 · 资产复用与实施规划**<br>*(Reuse & Planning)* | **8 域加权加速器打分 + Backlog**<br>• 产出 [`impl-rec.md`](./artifacts/faf-sdlc/impl-rec.md) 与 [`backlog.md`](./artifacts/faf-sdlc/backlog.md)<br>• 对 6 个企业加速器打分最高仅 **`15.0% < 40%`**，确定性路由至 **Path B 绿地自研** | **构件生成清单规划**<br>• 在 `forge-plan.json` 中规划需生成的 8 个 `.github/` 定制文件（4 Agents + 1 Instruction + 1 Prompt + 1 Skill + 1 Hook） | **`task-planner` + `Plan Validator` 双文件计划**<br>• 产出 [`pelican-tour-pro-plan.instructions.md`](./artifacts/hve-rpi/pelican-tour-pro-plan.instructions.md) 与 [`pelican-tour-pro-details.md`](./artifacts/hve-rpi/pelican-tour-pro-details.md)<br>• 包含依赖图与 4 个实施阶段，通过 `Plan Validator` **0 阻塞项验证**后执行 `/clear` |
+| **Stage 04 · 专属上下文与护栏合成**<br>*(Context & Guardrail Synthesis)* | **工作区挂载预置角色与技能**<br>• 挂载 6 个通用 SDLC 交付角色 Agent 与 `faf-kb-manager`（不自动为具体业务合成新 `.agent.md`） | **7 类 `.github/` 专属构件全量编译**<br>• 产出 [`pelican-character-artist`](./artifacts/agent-forge-context/agents/pelican-character-artist.agent.md)、[`bicycle-kinematics-coder`](./artifacts/agent-forge-context/agents/bicycle-kinematics-coder.agent.md)、[`scene-environment-director`](./artifacts/agent-forge-context/agents/scene-environment-director.agent.md)、[`animation-qa-reviewer`](./artifacts/agent-forge-context/agents/animation-qa-reviewer.agent.md) 及配套 [`SKILL.md`](./artifacts/agent-forge-context/skills/pelican-svg-rigging/SKILL.md) 与 [`hooks.json`](./artifacts/agent-forge-context/hooks/hooks.json) | **14 大领域集合按需装配**<br>• 提供 `rpi`、`coding-standards`、`security-planning`、`design-thinking` 等 14 个插件包（共 **275 个现成工程资产**）直接挂载 |
+| **Stage 05 · 动画工程实现与物理深度**<br>*(Implementation & Simulation)* | **Demo A：工程动力学工作台 (`demo-faf-pelican.html`, 29.7KB)**<br>• 双连杆解析 IK（`0.00 px` 滑移）+ **🔬 X-Ray 骨骼矢量/角度透视层** + 踏频/齿比/风阻/载鱼量 4 滑块 | **Demo B：多智能体海滨互动剧场 (`demo-agent-forge-pelican.html`, 36.1KB)**<br>• 晴空/落日/星夜三幕光影 + **🐟 点击抛沙丁鱼投喂吞咽动画** + **🎪 翘前轮特技** + **🔔 WebAudio 合成铜车铃** | **Demo C：环法多地形风洞遥测模拟器 (`demo-hve-pelican.html`, 44.3KB)**<br>• **4 大真实地形赛段（`-10%..+15%` 坡度阻力模型）** + **3 种气动骑姿 (`CdA 0.240–0.355`)** + **11 速 Di2 电子变速** + **75 条风洞层流/湍流烟雾粒子** + **伴飞遥测无人机** + **实时功率(W)/心率(BPM)双轨波形图** |
+| **Stage 06 · 自动化校验与对抗审查**<br>*(Validation & Adversarial Review)* | **零额外 LLM 调用遥测 Hook**<br>• `faf_benchmark.py`（53 个单元测试）采集 SQLite/OTel Token 与 Nano-AIU 成本（普通提问平均仅增加 `0.93s–1.00s`） | **`forge validate` 静态自愈闭环**<br>• 校验 44 个 VS Code 工具白名单（Levenshtein `<=3` 自动纠错）与 Handoff 完整性；实测拦截并修复 3 Error + 4 Warning 后达到 **`8/8 passed (0 warnings)`** | **PowerShell Linter + `RPI Validator` + `task-challenger`**<br>• `Validate-SkillStructure.ps1` **49/49 通过**<br>• 产出 [`pelican-tour-pro-review.md`](./artifacts/hve-rpi/pelican-tour-pro-review.md)：`task-challenger` 发起 **3 项冷启动对抗拷问**（下坡负功率钳制、高踏频喉囊谐振发散、高对比度可访问性）并全部闭环修复 |
+
+---
+
+## 4. 三款“鹈鹕骑自行车” Demo 动画效果与交互体验深度对比
+
+| 视觉与工程维度 | 🟦 Demo A：FAF 架构驱动版 (`demo-faf-pelican.html`) | 🟧 Demo B：AGENT-FORGE 多智能体版 (`demo-agent-forge-pelican.html`) | 🟩 Demo C：HVE-Core 环法风洞遥测版 (`demo-hve-pelican.html`) |
+|---|---|---|---|
+| **核心设计范式** | **工程动力学仿真工作台 (Engineering Kinematics Workbench)** | **多智能体海滨互动剧场 (Multi-Agent Coastal Animation Studio)** | **超高速工程全地形风洞与生理遥测模拟器 (Multi-Terrain Wind-Tunnel & Telemetry Simulator)** |
+| **车型与装备设计** | 经典场地计时几何车架（青蓝涂装 + 标准双三角车架 + X-Ray 曲柄圆刻度盘） | 复古薄荷绿海滨巡航车（天鹅颈弯管 + 奶油白边轮胎 + 车前藤编鱼篓 + 飞行员皮帽 + 飘动红围巾） | **翠绿碳纤维气动公路车 (Aero Carbon Road Frame)**（高框深截面碳刀轮组 + 11 速金色飞轮链条 + 弯把双控手变 + 气动破风头盔 + 金色护目镜 + 车把码表 + **HVE-RPI 伴飞遥测无人机**） |
+| **腿部与全身运动学** | 余弦定理双连杆解析解（`0.00 px` 踏板滑移）+ 躯干随逆风小幅前倾 | 双连杆解析解 + **整车绕后轮轴仰角旋转（Wheelie Pitch $\theta \in [0, 24^\circ]$）** + 抛鱼自动张喙吞咽 | 双连杆解析解 + **整车随 `-10%..+15%` 坡度自适应俯仰旋转** + **3 种骑行姿态（气动下把位 `Aero Tuck` / 摇车抽车冲刺 `Out-of-Saddle Climb` / 耐力直立位 `Endurance`）实时改变髋关节与脊柱倾角** |
+| **场景与视觉特效** | 暗色工程蓝图网格 + **🔬 X-Ray 逆运动学矢量透视层**（骨骼向量、膝角标注、`Δy_pouch`） | **🌅 三幕海岸栈道切换**（晴空 / 落日 / 星夜带车前灯体积光锥）+ 多层海浪 + 海鸥群 | **🏔️ 四大传奇赛段切换**（阿尔卑斯 HC 级爬坡 `+9%` / 气动风洞实验室 `0%` / 鲁贝石头路古典赛 `+2%` 带车架高频颠簸 / 新东京霓虹夜降 `-7%`）+ **🌬️ 75 条实时风洞烟雾流线与尾流湍流涡街** + **♿ WCAG 高对比度无障碍透视模式** |
+| **物理方程与实时图表** | 踏频 × 齿比 + 风阻 + 载鱼二阶阻尼弹簧 $\rightarrow$ 顶部 6 指标数字看板 | 抛物线沙丁鱼弹道碰撞检测 + 翘头角动量衰减 + WebAudio 双振荡器合成铜车铃 | **完整纵向功率平衡方程** $P_{\text{total}} = \max(0, (F_{\text{grav}} + F_{\text{roll}} + F_{\text{aero}}) \cdot v) + P_{\text{cadence}}$ + **实时双轨滚动折线图（功率 Watts & 鹈鹕心率 BPM）** + **🐟 能量胶/沙丁鱼补给空投 (`Drop Energy Fish`)** |
+| **跨页面同步能力** | 支持 `pelican-arena.html` 主控台 `postMessage` 毫秒级同步调参 | 支持 `pelican-arena.html` 主控台 `postMessage` 毫秒级同步调参 | 支持 `pelican-arena.html` 主控台 `postMessage` 毫秒级同步调参（含坡度、骑姿与补给联动） |
+
+---
+
+## 5. 总结：通过三套件同题实操得出的“三阶接力”最佳实践范式
+
+1. **第一棒 — 用 FAF (`customer-success-microsoft/faf-agents`) 做业务立项评分、PRD 与 C4 架构契约**：
+   - `compute_scores.py` 的 9 门禁立项评分、`impl-rec.md` 的 8 域加速器加权评估以及 `spec.md` 的数学/接口契约，确保团队在写第一行代码前就锁定“做不做、复用谁、核心算法方程是什么”。
+2. **第二棒 — 用 Microsoft `AGENT-FORGE` (`@agent-forge-copilot/cli`) 为代码库编译专属多智能体团队**：
+   - 针对具体业务领域（如角色美术、物理骨骼、场景音效），用 `forge init` 一键生成项目专属的 `.github/agents/`、`.instructions.md`、`SKILL.md` 与 `hooks.json`，并用 `forge validate` 确保 44 个工具权限与 Handoff 引用零错误。
+3. **第三棒 — 用 Microsoft `HVE-Core` (`microsoft/hve-core`) 的 RPI + `task-challenger` 驱动高复杂度工程实现与对抗性验收**：
+   - 在攻克复杂物理引擎、安全合规或大型重构时，采用 HVE-Core 的 `.copilot-tracking/` 四阶段 RPI 流程，每阶段强制 `/clear` 消除上下文污染，最后用冷启动的 `task-challenger` 进行对抗性边界拷问（如本次精准抓出 `-7%` 陡坡负功率显示与高踏频弹簧发散问题），实现真正的生产级零缺陷交付。
