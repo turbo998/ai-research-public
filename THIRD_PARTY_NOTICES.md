@@ -27,3 +27,7 @@
 - **`wheresryan22/anatomy`**：上游仓库 [`wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy) 提供等轴测 SVG 几何构建器；本库中的美嘉欣 MJX 14303 机械解剖图（[`docs/research/agent-skills-and-rea/h5/mjx-14303-anatomy/`](docs/research/agent-skills-and-rea/h5/mjx-14303-anatomy/)）为原创参数化建模产出。
 - **Ryan Doser Skills 分析**：仅基于其公开网页与免费公开示例 `anti-slop.md` 进行结构与商业模式分析，不收录或分发任何付费私有仓库内容。
 
+## 构建 E2B 沙箱韧性：Nomad 心跳机制的发现与实践 (`e2b-nomad-heartbeat-resilience`)
+
+- **公开故障注入案例研究**：基于 `https://robinsujob.github.io/zh/p/e2b-sandbox-resilience-nomad-heartbeats/` 与英文版公开披露的测试统计及架构图进行独立整理与确定性建模（标注 `anonymized_reported`, `independently_reproduced=false`）。
+- **上游开源仓库源码引用**：[`hashicorp/nomad@bf24b0dd97430d3b364b68b1f7375e85e585778f`](https://github.com/hashicorp/nomad/tree/bf24b0dd97430d3b364b68b1f7375e85e585778f)（MPL-2.0）、[`hashicorp/yamux@v0.1.2`](https://github.com/hashicorp/yamux/tree/v0.1.2)（MPL-2.0）与 [`e2b-dev/runtime@afaaeaef96aae86f65ce60bf38fe083e7638a28e`](https://github.com/e2b-dev/runtime/tree/afaaeaef96aae86f65ce60bf38fe083e7638a28e)（Apache-2.0）。本库仅引用行号锚点与最小说明性代码片段，不重分发上游源码。

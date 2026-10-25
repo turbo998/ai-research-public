@@ -1,0 +1,6 @@
+scenario,selected_option,original_pct,reversed_pct,change_pts,answer_held
+Orchestrator Retention · Baseline (no disconnect) -> Solution 1 (disconnect 50s),"13/20 (65.0%) retained -> 20/20 (100.0%) retained (unknown 1.7–31.6s, replace=false)",65.0,100.0,35.0,True
+session-proxy Retention · Baseline (no disconnect) -> Solution 1 (disconnect 50s),13/20 (65.0%) retained -> 20/20 (100.0%) retained across all 20 sandbox hosts,65.0,100.0,35.0,True
+client-proxy Ingress Retention · Baseline -> Solution 1 (disconnect 50s),"1/3 (33.3%) retained -> 3/3 (100.0%) retained (23/23 NDJSON streams + 12,581 reqs 0 err)",33.3,100.0,66.7,True
+New Sandbox Placement Pool · Solution 1 (grace=10s) -> Solution 2 (grace=50s),13/20 (65.0%) ready nodes during switch -> 20/20 (100.0%) ready nodes across 2 rounds,65.0,100.0,35.0,True
+Real Client Crash Fencing Speed · Default (grace=10s) -> Extended (grace=50s),Heartbeat-layer detection within 30s (100% timely) -> 70s (+40s slower without gRPC fence),100.0,42.9,-57.1,False

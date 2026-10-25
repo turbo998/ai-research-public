@@ -32,6 +32,7 @@
 
 | 专题 | 子分类 / 标签 | 范围与状态 |
 |---|---|---|
+| [构建 E2B 沙箱韧性：Nomad 心跳机制的发现与实践 (中文)](e2b-nomad-heartbeat-resilience/README.zh-CN.md) · [English](e2b-nomad-heartbeat-resilience/README.en.md) | E2B 沙箱控制面韧性、Nomad 心跳与 `yamux` 多路复用切换、`disconnect` 保活与节点池爆炸半径（`hashicorp/nomad`、`hashicorp/yamux`、`e2b-dev/runtime`） | 单非 Leader Nomad Server 停机导致 `7/20` (`35%`) `Orchestrator`、`7/20` `session-proxy`、`2/3` `client-proxy` 被误杀替换的 6 步源码调用链、`disconnect (50s)` 全链路保活（`10/10` 沙箱、`23/23` 长流、`12,581` 短请求 `0` 错误）、E2B API 新建容量爆炸半径（`-35%` 节点池）与 `heartbeat_grace = 50s`（2 轮 `20/20` 节点 `ready`）工程权衡；含 [7-Card 报告 (中文)](e2b-nomad-heartbeat-resilience/test-report.md) / [EN](e2b-nomad-heartbeat-resilience/test-report.en.md)、[离线 HTML 卡片](e2b-nomad-heartbeat-resilience/test-report-cards.html) 与 [确定性验证器](e2b-nomad-heartbeat-resilience/simulator/) |
 | [AI Agent Infrastructure on Azure 全栈方案设计与架构选型 Playbook (中文)](azure-agent-infra/README.md) · [English](azure-agent-infra/README.en.md) | 云原生 Agent 基础设施、硬件虚拟化沙箱与状态数据库（`ACA Dynamic Sessions`、`ACA Sandboxes`、`AKS Kata / AKSClaw`、`E2B on VMSS D96as_v7`、`Azure HorizonDB`、`APIM AI Gateway`） | 106 章全栈架构与行业物理模型深度研究、8 幅自包含 SVG 架构与工作流图、101 套生产级 IaC 蓝图、100 项确定性仿真器（109/109 单测通过）、[7 页 4:5 视觉卡片报告 (中文)](azure-agent-infra/test-report.md) / [English](azure-agent-infra/test-report.en.md) 与 [4 页交互式双语 H5 套件](azure-agent-infra/h5/index.html) |
 
 ### Azure AI Agent Infrastructure 专题材料（中英双语 / Bilingual）

@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "topic": "e2b-nomad-heartbeat-resilience",
+  "generated_at": "2026-10-25",
+  "provenance": "anonymized_reported",
+  "independently_reproduced": false,
+  "primary_sources": [
+    {
+      "id": "S1",
+      "type": "technical_case_study",
+      "title_zh": "构建 E2B 沙箱韧性：Nomad 心跳机制的发现与实践",
+      "title_en": "Building E2B Sandbox Resilience: Discovering and Tuning Nomad Heartbeats",
+      "url_zh": "https://robinsujob.github.io/zh/p/e2b-sandbox-resilience-nomad-heartbeats/",
+      "url_en": "https://robinsujob.github.io/p/e2b-sandbox-resilience-nomad-heartbeats/",
+      "published_date": "2026-10-22",
+      "accessed_date": "2026-10-25",
+      "note": "Primary fault-injection case study on a 3-Server, 20-Client self-hosted E2B on Nomad cluster; all empirical counts and timeline observations are attributed to this reported experiment."
+    },
+    {
+      "id": "S2",
+      "type": "git_repository",
+      "repo": "hashicorp/nomad",
+      "url": "https://github.com/hashicorp/nomad",
+      "pinned_commit": "bf24b0dd97430d3b364b68b1f7375e85e585778f",
+      "verified_paths": [
+        "client/client.go#L1870-L1923 (registerAndHeartbeat)",
+        "client/client.go#L2236-L2274 (updateNodeStatus)",
+        "client/client.go#L2482-L2545 (watchAllocations)",
+        "client/rpc.go#L83-L146 (rpc / FindServer / NotifyFailedServer)",
+        "client/allocrunner/alloc_runner.go#L1078-L1101 (handleAllocUpdate / killTasks)",
+        "nomad/node_endpoint.go#L655-L678 (Node.UpdateStatus forward check)",
+        "nomad/node_endpoint.go#L816-L873 (node status Raft update & evaluation trigger)",
+        "nomad/rpc.go#L603-L618 (forward)",
+        "nomad/heartbeat.go#L56-L181 (resetHeartbeatTimer / invalidateHeartbeat)",
+        "nomad/structs/alloc.go#L756-L779 (Allocation.Expired)",
+        "scheduler/reconciler/reconcile_cluster.go#L1097-L1127 (service allocation stop calculation)",
+        "scheduler/reconciler/reconcile_node.go#L185-L263 (system job node reconciliation)",
+        "scheduler/reconciler/filters.go#L527-L544 (isDisconnecting && !alloc.ReplaceOnDisconnect)"
+      ]
+    },
+    {
+      "id": "S3",
+      "type": "git_repository",
+      "repo": "hashicorp/yamux",
+      "url": "https://github.com/hashicorp/yamux",
+      "pinned_tag": "v0.1.2",
+      "verified_paths": [
+        "session.go#L327-L379 (keepalive Ping 30s interval + 10s Pong timeout -> 10-40s failure detection)"
+      ]
+    },
+    {
+      "id": "S4",
+      "type": "git_repository",
+      "repo": "e2b-dev/runtime",
+      "url": "https://github.com/e2b-dev/runtime",
+      "pinned_commit": "afaaeaef96aae86f65ce60bf38fe083e7638a28e",
+      "verified_paths": [
+        "packages/shared/pkg/clusters/discovery/nomad.go#L29-L57 (ClientStatus == 'running' discovery filter)",
+        "packages/api/internal/orchestrator/cache.go#L53-L120, #L195-L211 (API node pool sync & removal)"
+      ]
+    },
+    {
+      "id": "S5",
+      "type": "github_issue_and_docs",
+      "urls": [
+        "https://github.com/hashicorp/nomad/issues/17974",
+        "https://developer.hashicorp.com/nomad/docs/configuration/server#heartbeat_grace",
+        "https://developer.hashicorp.com/nomad/docs/configuration/server#client-heartbeats",
+        "https://developer.hashicorp.com/nomad/docs/job-specification/disconnect",
+        "https://developer.hashicorp.com/nomad/docs/configuration/rpc"
+      ]
+    }
+  ],
+  "reported_metrics": {
+    "baseline_no_disconnect_11min": {
+      "orchestrator_replaced": "7/20 (35.0%)",
+      "session_proxy_replaced": "7/20 (35.0%)",
+      "client_proxy_replaced": "2/3 (66.7%)",
+      "log_timeline_s": {
+        "platform_server_stop_confirmed_s": 0,
+        "client_healthy_server_heartbeat_captured_s": 21,
+        "original_task_killing_started_s": 39,
+        "original_stream_closed_s": 44
+      }
+    },
+    "solution_1_disconnect_50s": {
+      "lost_after": "50s",
+      "replace": false,
+      "reconcile": "keep_original",
+      "observed_unknown_range_s": [
+        1.7,
+        31.6
+      ],
+      "allocations_replaced": 0,
+      "sandboxes_preserved": "10/10",
+      "http_ndjson_streams_preserved": "23/23",
+      "short_requests": {
+        "total": 12581,
+        "errors": 0
+      }
+    },
+    "solution_2_heartbeat_grace_50s": {
+      "heartbeat_grace": "50s",
+      "test_rounds": 2,
+      "surviving_clients_ready_per_round": "20/20",
+      "clients_down_or_disconnected": 0,
+      "allocations_replaced": 0
+    }
+  }
+}
