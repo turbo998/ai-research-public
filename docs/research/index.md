@@ -8,7 +8,8 @@
 
 | 专题 | 子分类 / 标签 | 范围与状态 |
 |---|---|---|
-| [AI Agent Infrastructure on Azure 全栈方案设计与选型 Playbook (中文)](azure-agent-infra/README.md) · [English](azure-agent-infra/README.en.md) | Agent Runtime、MicroVM 沙箱、状态持久化与多租户治理（`Foundry`、`ACA Sandboxes`、`AKSClaw`、`E2B Firecracker`、`HorizonDB`、`Entra Agent ID`） | 覆盖四层参考架构、六大运行时光谱（含 `Standard_D96as_v7` `108ms/132ms` 实测锚点）、10万并发沙箱 VMSS 容量模型、80 章行业物理模型、75 套 IaC 蓝图、74 项仿真器（83/83 单测全绿）、8 幅 SVG 架构图、[7 页 4:5 视觉卡片报告 (中文)](azure-agent-infra/test-report.md) / [English](azure-agent-infra/test-report.en.md) 与 [交互式双语 H5 仿真套件](azure-agent-infra/h5/index.html) |
+| [SKY-001 深度技术解析与 Coding Agent 十九模型横向对比 (中文)](sky-001-and-coding-agent-19-model-benchmark/README.md) · [English](sky-001-and-coding-agent-19-model-benchmark/README.en.md) | 隐身前沿推理模型逆向推演、19 模型全集路由矩阵（`SKY-001`、`GLM-5.1`、`Grok 4.20`、`Sonnet 5.5`、`GPT-6.1 Sol`、`Opus 4.6`） | 覆盖 SKY-001 四层训练栈逆向推演、19 模型横评、六角色混合编排路由、4 幅 SVG 架构图、[7 页 4:5 视觉卡片报告 (中文)](sky-001-and-coding-agent-19-model-benchmark/test-report.md) / [English](sky-001-and-coding-agent-19-model-benchmark/test-report.en.md)、[离线 7 页卡片 HTML](sky-001-and-coding-agent-19-model-benchmark/test-report-cards.html) 与 [交互式双语 H5 工作台](sky-001-and-coding-agent-19-model-benchmark/h5/index.html) |
+| [AI Agent Infrastructure on Azure 全栈方案设计与选型 Playbook (中文)](azure-agent-infra/README.md) · [English](azure-agent-infra/README.en.md) | Agent Runtime、MicroVM 沙箱、状态持久化与多租户治理（`Foundry`、`ACA Sandboxes`、`AKSClaw`、`E2B Firecracker`、`HorizonDB`、`Entra Agent ID`） | 覆盖四层参考架构、六大运行时光谱（含 `Standard_D96as_v7` `108ms/132ms` 实测锚点）、10万并发沙箱 VMSS 容量模型、187 章行业物理模型、182 套 IaC 蓝图、181 项仿真器（190/190 单测全绿 · 190单测里程碑!）、8 幅 SVG 架构图、[7 页 4:5 视觉卡片报告 (中文)](azure-agent-infra/test-report.md) / [English](azure-agent-infra/test-report.en.md) 与 [交互式双语 H5 仿真套件](azure-agent-infra/h5/index.html) |
 | [Omarchy agent 设计机制](omarchy-agent-design/README.md) | Agentic OS 与本地 Harness 集成（`Agentic OS`、`Harness Integration`、`Skills`、`Event-driven Agent`、`Identity & Usage`） | 基于 `omacom/omarchy@9480d1b6a98156314dbabe6bfef08f39f8b9cd07` 的 6 大机制专题（E1–E6）、174 条源码/文档/测试契约断言与 [7 页 4:5 视觉卡片测试报告](omarchy-agent-design/test-report.md)；离线静态契约已核验，上游运行 `not_run` |
 | [Personal agents：五产品比较](personal-agents/README.md) | 消费级与工作流 Personal Agents | Meta Muse、Grok Bot、OpenAI dot/dots、Google Gemini Spark、Instinct；企业 Gemini 单列区别。cutoff 2026-10-11，静态公开资料研究 |
 
@@ -26,14 +27,16 @@
 
 ## Model
 
-预留分类，暂无公开专题；不声称已有模型实验或评测结果。
+| 专题 | 子分类 / 标签 | 范围与状态 |
+|---|---|---|
+| [SKY-001 深度技术解析与十九模型对比 (中文)](sky-001-and-coding-agent-19-model-benchmark/README.md) · [English](sky-001-and-coding-agent-19-model-benchmark/README.en.md) | 前沿推理模型架构推演与公开基准对标（`SKY-001`、`GLM-5.1`、`Grok 4.20`） | 覆盖 SKY-001 实测行为特征、训练管线逆向推演、19 模型能力与定价对标、[7 页 4:5 视觉卡片 HTML](sky-001-and-coding-agent-19-model-benchmark/test-report-cards.html) 与 [交互式 H5](sky-001-and-coding-agent-19-model-benchmark/h5/index.html) |
 
 ## Infra
 
 | 专题 | 子分类 / 标签 | 范围与状态 |
 |---|---|---|
-| [构建 E2B 沙箱韧性：Nomad 心跳机制的发现与实践 (中文)](e2b-nomad-heartbeat-resilience/README.zh-CN.md) · [English](e2b-nomad-heartbeat-resilience/README.en.md) | E2B 沙箱控制面韧性、Nomad 心跳与 `yamux` 多路复用切换、`disconnect` 保活与节点池爆炸半径（`hashicorp/nomad`、`hashicorp/yamux`、`e2b-dev/runtime`） | 单非 Leader Nomad Server 停机导致 `7/20` (`35%`) `Orchestrator`、`7/20` `session-proxy`、`2/3` `client-proxy` 被误杀替换的 6 步源码调用链、`disconnect (50s)` 全链路保活（`10/10` 沙箱、`23/23` 长流、`12,581` 短请求 `0` 错误）、E2B API 新建容量爆炸半径（`-35%` 节点池）与 `heartbeat_grace = 50s`（2 轮 `20/20` 节点 `ready`）工程权衡；含 [7-Card 报告 (中文)](e2b-nomad-heartbeat-resilience/test-report.md) / [EN](e2b-nomad-heartbeat-resilience/test-report.en.md)、[离线 HTML 卡片](e2b-nomad-heartbeat-resilience/test-report-cards.html) 与 [确定性验证器](e2b-nomad-heartbeat-resilience/simulator/) |
-| [AI Agent Infrastructure on Azure 全栈方案设计与架构选型 Playbook (中文)](azure-agent-infra/README.md) · [English](azure-agent-infra/README.en.md) | 云原生 Agent 基础设施、硬件虚拟化沙箱与状态数据库（`ACA Dynamic Sessions`、`ACA Sandboxes`、`AKS Kata / AKSClaw`、`E2B on VMSS D96as_v7`、`Azure HorizonDB`、`APIM AI Gateway`） | 106 章全栈架构与行业物理模型深度研究、8 幅自包含 SVG 架构与工作流图、101 套生产级 IaC 蓝图、100 项确定性仿真器（109/109 单测通过）、[7 页 4:5 视觉卡片报告 (中文)](azure-agent-infra/test-report.md) / [English](azure-agent-infra/test-report.en.md) 与 [4 页交互式双语 H5 套件](azure-agent-infra/h5/index.html) |
+| [E2B 沙箱集群 Nomad 心跳超时与编排自愈研究 (中文)](e2b-nomad-heartbeat-resilience/README.md) · [English](e2b-nomad-heartbeat-resilience/README.en.md) | 混合编排器容错、Firecracker 沙箱数据面与控制面解耦（`HashiCorp Nomad`、`E2B Orchestrator`、`Azure VMSS`、`Cgroup Slice`） | 基于 `e2b-dev/infra` 源码与生产配置核验：剖析 Nomad 10s 心跳超时根因、为何沙箱进程不随 `Node down` 死亡、三阶段零侵入调优与自愈方案、3 幅自包含 SVG 架构图、[7 页 4:5 视觉卡片报告 (中文)](e2b-nomad-heartbeat-resilience/test-report.md) / [English](e2b-nomad-heartbeat-resilience/test-report.en.md) 与 [离线 7 页卡片 HTML](e2b-nomad-heartbeat-resilience/test-report-cards.html) |
+| [AI Agent Infrastructure on Azure 全栈方案设计与架构选型 Playbook (中文)](azure-agent-infra/README.md) · [English](azure-agent-infra/README.en.md) | 云原生 Agent 基础设施、硬件虚拟化沙箱与状态数据库（`ACA Dynamic Sessions`、`ACA Sandboxes`、`AKS Kata / AKSClaw`、`E2B on VMSS D96as_v7`、`Azure HorizonDB`、`APIM AI Gateway`） | 187 章全栈架构与行业物理模型深度研究、8 幅自包含 SVG 架构与工作流图、182 套生产级 IaC 蓝图、181 项确定性仿真器（190/190 单测通过 · 190单测里程碑!）、[7 页 4:5 视觉卡片报告 (中文)](azure-agent-infra/test-report.md) / [English](azure-agent-infra/test-report.en.md) 与 [4 页交互式双语 H5 套件](azure-agent-infra/h5/index.html) |
 
 ### Azure AI Agent Infrastructure 专题材料（中英双语 / Bilingual）
 
