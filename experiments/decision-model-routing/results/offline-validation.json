@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "execution": "offline-unit-and-artifact-validation",
+  "verified_date": "2026-10-14",
+  "hash_verified_at_utc": "2026-10-14T05:19:21.763035+00:00",
+  "classification": "SYNTHETIC",
+  "status": "passed-offline-only",
+  "scope": "Only this offline validation receipt has zero model calls; actual four-model execution is separately reported.",
+  "python": "3.12.10",
+  "os": "Windows",
+  "third_party_python_dependencies": [],
+  "model_inference_calls": 0,
+  "real_model_credentials_used": false,
+  "line_endings": "Canonical LF under the existing repository .gitattributes policy",
+  "code_sha256": "d1fe177b6951b03e10db89fdbfc92b21fadc9a8d01f55d125d58c753b7bd73c6",
+  "tests_sha256": "008c4ecf827ba8537ad29db2ea22161b185f19047773dc62153fde4b8ee9986e",
+  "dataset_sha256": "a445498d5a09673e6990dcc325845312c20edb600d6f1ab3627149cf76ebec6c",
+  "corpus_sha256": "0c80929f2ab49689543508a6af8a9756822d8c96952a71761bbad070819ef97b",
+  "contract_sha256": "fe062d33c0bafa037d71379c293ede59010a01a6444bc77232836f9e824bcbb1",
+  "full_repository_suite": {
+    "command": "python -B -m unittest discover -s tests -q",
+    "tests_run": 202,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0,
+    "topic_tests_included": 118,
+    "negative_fixtures": "Expected ERROR/retry messages are assertions of offline failure handling, not provider calls."
+  },
+  "targeted_suite": {
+    "command": "python -B -m unittest discover -s tests -p test_decision_model_routing.py -q",
+    "tests_run": 118,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0
+  },
+  "artifact_check": {
+    "command": "python -B experiments\\decision-model-routing\\runner.py dataset --check",
+    "exit_code": 0,
+    "rows_verified": 920
+  },
+  "new_strands_checks": {
+    "scope": "Strict explicit loopback/no cloud credential HTTP, health/identity/revision, native ordinal confidence and four-decimal serialization bounds without normalization, local zero-API basis, enabled four-role subset without Jev key, frozen paired/gold-stratified input selection and wire/prompt option order, server/client/rate-wait latency separation, failed smoke nonzero exit.",
+    "fake_auth_and_transport": true,
+    "inference_calls_by_these_tests": 0,
+    "live_frozen_code_hash_matches": true
+  },
+  "auth_refresh_followup": {
+    "historical_followup_date": "2026-10-11",
+    "new_portable_tests": 9,
+    "scope": "Fresh headers before every actual HTTP attempt including retries; five-minute margin, acquisition failures without HTTP sends or inflated API-attempt counts, selected scope, shared provider, TypeSafe static auth and rotated token/raw base64 redaction.",
+    "fake_token_clock_and_transport": true,
+    "historical_2026_10_11_contract_dataset_corpus_ledger_and_phase_claims_unchanged": true,
+    "current_extension_preserves_dataset_corpus_and_original_cumulative_ledger_not_its_zero_balance": true,
+    "historical_archive_code_sha256": "7cea27c718e082058cfdaa4e2647b7f13c33b80d2b923b533005a572f80f45c1",
+    "historical_coordinator_probes_cover_current_source": false
+  },
+  "limitations": [
+    "This verifies offline code and deterministic fixtures, not live provider compatibility or model performance.",
+    "No independent human/full-code review or production cloud integration is established; live compatibility is separate.",
+    "A source/test hash change invalidates this receipt until validation is rerun."
+  ]
+}

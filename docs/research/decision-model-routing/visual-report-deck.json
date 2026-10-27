@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "report_id": "decision-model-routing",
+  "deck_title": "Decision Model & Multi-Model Routing Benchmark · 4-Model Live Pilot",
+  "provenance": "measured",
+  "independently_reproduced": true,
+  "evidence_binding": {
+    "analysis_sha256": "b969a0f88a8ad7a5bd75d754abb1102f1c6b669412b3a24c23a6d5c03f5ac470",
+    "records_sha256": "0d7b5e941bea559b5800e5e6420a32e70230d4739c21aeea5c6cdc5b94ff7833",
+    "code_sha256": "d1fe177b6951b03e10db89fdbfc92b21fadc9a8d01f55d125d58c753b7bd73c6",
+    "contract_sha256": "fe062d33c0bafa037d71379c293ede59010a01a6444bc77232836f9e824bcbb1",
+    "cases_sha256": "a445498d5a09673e6990dcc325845312c20edb600d6f1ab3627149cf76ebec6c",
+    "corpus_sha256": "0c80929f2ab49689543508a6af8a9756822d8c96952a71761bbad070819ef97b",
+    "formal_test_rows": 544,
+    "unattempted_formal_test_rows": 0,
+    "cumulative_logical_calls": 1179,
+    "cumulative_http_attempts": 1307,
+    "cumulative_usage_estimated_usd": "1.332755984",
+    "cumulative_unknown_upper_usd": "0.333570816",
+    "cumulative_committed_upper_usd": "1.666326800",
+    "budget_cap_usd": "50"
+  },
+  "cards": [
+    {
+      "kind": "overview",
+      "eyebrow": "HANDS-ON · ROUTING & DECISION MODELS",
+      "headline_prefix": "Sub-second closed-set decisions, ",
+      "headline_Gradient": "no proven E2E routing win",
+      "subtitle": "4 live models (Microsoft-Decision-1 v1, Strands Decider 2B v1-2610, GPT-5.4-mini, GPT-6.1 Sol) across 544 formal test rows (384 decision + 160 E2E) and 1,179 cumulative model calls ($1.67 / $50 cap).",
+      "workbench": {
+        "title": "Decision-Model Routing Evaluation Workbench (Sealed 544-Row Matrix)",
+        "status_pill": "4 models live · Jev untested_missing_external_api_key · measured",
+        "scenarios": [
+          "Classification (n=16/arm · 5 teams)",
+          "Tool Selection (n=12/arm · 5 tools)",
+          "Model Selection (n=4/arm · 3 routes)",
+          "Probability Gating (n=16/arm · Noul)",
+          "Rubric Scoring (n=16/arm · 0-4 scale)",
+          "E2E Support Tickets (n=16/arm · 5 arms)",
+          "E2E RAG Routing (n=16/arm · 5 arms)"
+        ],
+        "bands_note": "Calibration-frozen operational gates: Decision-1 gate=0.9466 (RAG suff=0.9978, Support suff=0.0759); Strands gate=0.9329 (RAG suff=0.8951, Support suff=null); Mini-prob=0.9800; Sol-prob=0.9900.",
+        "metrics": [
+          "Formal 544/544 rows",
+          "Calls 1,179 (1,307 HTTP)",
+          "Est. $1.333 + Unk. $0.334",
+          "Committed $1.666 / $50"
+        ],
+        "decisions": [
+          {
+            "field": "decision1_scoring",
+            "question_type": "score",
+            "question": "Rubric scoring (n=16, |score-gold|<=0.5) · Network P50 701.3 ms",
+            "selected_answer": "16 / 16 (100.0%)",
+            "closest_label": "MAE 0.0082 · Brier 0.0012 · ECE 0.0149",
+            "confidence": 0.985,
+            "action": "Act automatically",
+            "distribution_pct": {
+              "accepted_within_0.5": 100.0,
+              "rejected": 0.0
+            }
+          },
+          {
+            "field": "decision1_gating",
+            "question_type": "noul",
+            "question": "Safety/policy probability gating (n=16, threshold 0.9466) · Network P50 636.2 ms",
+            "selected_answer": "15 / 16 (93.8%)",
+            "closest_label": "False allow 0/8 · False block 1/8 · Coverage 43.8%",
+            "confidence": 0.938,
+            "action": "Act automatically",
+            "distribution_pct": {
+              "correct_gate": 93.8,
+              "false_block_safe": 6.2
+            }
+          },
+          {
+            "field": "e2e_support_routing",
+            "question_type": "choice",
+            "question": "E2E customer support acceptance (n=16/arm): Strong 81.3% vs Rule 68.8% vs Decision-1 56.3%",
+            "selected_answer": "Strong-only leads (13/16)",
+            "closest_label": "Small gate=null on both native routers",
+            "confidence": 0.563,
+            "action": "Confirm",
+            "distribution_pct": {
+              "strong_only_13_16": 81.3,
+              "rule_11_16": 68.8,
+              "decision1_9_16": 56.3,
+              "small_or_strands_2_16": 12.5
+            }
+          }
+        ]
+      },
+      "svg_key": "decision_scatter",
+      "callouts": [
+        {
+          "lead": "Scatter 1 (above) maps all 30 decision-task cohorts (5 tasks × 6 arms) by exact Network P50 latency and acceptance rate.",
+          "body": "Azure Microsoft-Decision-1 (v1) delivers 572.9–701.3 ms network P50 on 4 closed-set tasks; local Strands 2B runs on Windows ARM64 x64-emulated CPU (torch 2.14.1+cpu, fp32, 6 threads) at 6.3–18.5 s."
+        }
+      ]
+    },
+    {
+      "kind": "deep_dive",
+      "eyebrow": "SCENARIO: E2E-SUPPORT-FAMILY-03-CASE-02-EN",
+      "headline": "One call. Four decisions. 572.7 ms on Decision-1.",
+      "subtitle": "Single-request multi-question fanout on customer support ticket triage (`department`, `tool`, `sufficient`, `route`), contrasting Azure Decision-1 (572.7 ms, 395 tokens) with local CPU Strands (29,587.5 ms, 575 tokens).",
+      "quote": "Case e2e-support-family-03-case-02-en: \"I need to recover access after changing email.\" (signed_in=true, owner_match=true, readonly_facts={\"account.step\": \"use the reset link\"}, refund_approval=false, allowed_tools=[invoice_lookup, service_status, kb_search, clarify, human]).",
+      "decisions": [
+        {
+          "field": "department",
+          "question_type": "choice",
+          "question": "Which support department owns this ticket? (Gold: account)",
+          "selected_answer": "account (99.2%)",
+          "closest_label": "Strands CPU also picked account (92.4%, conf 0.905)",
+          "confidence": 0.99,
+          "action": "Act automatically",
+          "distribution_pct": {
+            "account": 99.2,
+            "unknown": 0.4,
+            "billing": 0.2,
+            "technical": 0.1,
+            "sales": 0.1
+          }
+        },
+        {
+          "field": "tool",
+          "question_type": "choice",
+          "question": "Which read-only tool should run first? (Gold: kb_search)",
+          "selected_answer": "kb_search (94.9%)",
+          "closest_label": "Strands CPU missed: picked clarify (49.1%, conf 0.363)",
+          "confidence": 0.937,
+          "action": "Act automatically",
+          "distribution_pct": {
+            "kb_search": 94.9,
+            "invoice_lookup": 2.5,
+            "clarify": 2.0,
+            "human": 0.3,
+            "service_status": 0.3
+          }
+        },
+        {
+          "field": "sufficient + route",
+          "question_type": "noul",
+          "question": "Are facts sufficient to answer (gate=0.0759) and which tier should generate? (Raw route: small 94.6%)",
+          "selected_answer": "Yes (94.7%) → Escalated to strong (gpt-6.1-sol)",
+          "closest_label": "Calibration set small_gate=null → safe fallback to strong, accepted in 6,844.2 ms",
+          "confidence": 0.947,
+          "action": "Confirm",
+          "distribution_pct": {
+            "sufficient_true": 94.7,
+            "sufficient_false": 5.3,
+            "raw_route_small": 94.6,
+            "raw_route_strong": 2.9,
+            "raw_route_human": 2.5
+          }
+        }
+      ],
+      "callouts": [
+        {
+          "lead": "Calibration gating prevented an unverified small-model handoff even when raw `route` favored `small` at 94.6%.",
+          "body": "Because `small` (`gpt-5.4-mini`) passed only 2/16 support tickets in calibration, `small_gate` froze to `null`: Decision-1 routed answerable tickets to `gpt-6.1-sol` (accepted=true), whereas Strands had `sufficient_gate=null` and sent all 16 support rows to simulated human review."
+        }
+      ]
+    },
+    {
+      "kind": "scorecard",
+      "eyebrow": "WHAT I TESTED",
+      "headline": "6 benchmark suites, 40 cohorts, 544 formal test rows",
+      "subtitle": "Representative cohort scorecard across the 4 decision tasks (384 rows) and 2 E2E routing scenarios (160 rows), plus Scatter 2 mapping E2E acceptance against latency and cost.",
+      "rows": [
+        {
+          "scenario": "Classification (n=16)",
+          "question": "5-team ticket routing (Decision-1 / Strands / Mini-prob / Sol-prob)",
+          "decider_answer": "D1 13/16 (81%) · Strands 13/16 (81%) · Mini/Sol 16/16 (100%)",
+          "reported_probability_pct": 81,
+          "pointed_right_way": true,
+          "action": "Confirm"
+        },
+        {
+          "scenario": "Tool Selection (n=12)",
+          "question": "5-option read-only tool pick (Decision-1 / Strands / Mini / Sol)",
+          "decider_answer": "D1 11/12 (92%) · Strands 11/12 (92%) · Mini/Sol 12/12 (100%)",
+          "reported_probability_pct": 92,
+          "pointed_right_way": true,
+          "action": "Auto"
+        },
+        {
+          "scenario": "Model Selection (n=4)",
+          "question": "Counterfactual route vs oracle (all 4 gold=small)",
+          "decider_answer": "Strands 4/4 (100%) · D1 / Mini / Sol 2/4 (50%)",
+          "reported_probability_pct": 50,
+          "pointed_right_way": false,
+          "action": "Confirm"
+        },
+        {
+          "scenario": "Safety Gating (n=16)",
+          "question": "Noul allow/abstain under frozen calibration threshold",
+          "decider_answer": "Sol 16/16 · D1 15/16 (FA 0/8) · Mini-prob 14/16 · Strands 13/16",
+          "reported_probability_pct": 94,
+          "pointed_right_way": true,
+          "action": "Auto"
+        },
+        {
+          "scenario": "Safety Gating (n=16)",
+          "question": "Mini label-only boolean gate without probability threshold",
+          "decider_answer": "15/16 total but 1/8 False Allow on unsafe case",
+          "reported_probability_pct": 12,
+          "pointed_right_way": false,
+          "action": "Human"
+        },
+        {
+          "scenario": "Rubric Scoring (n=16)",
+          "question": "0-4 ordinal score within |score - gold| <= 0.5 (Decision-1 & Sol)",
+          "decider_answer": "D1 16/16 (MAE 0.0082) · Sol 16/16 (MAE 0.0000)",
+          "reported_probability_pct": 100,
+          "pointed_right_way": true,
+          "action": "Auto"
+        },
+        {
+          "scenario": "Rubric Scoring (n=16)",
+          "question": "Strands native & Mini-prob ZH ordinal score stability",
+          "decider_answer": "Strands 4/16 (25%, MAE 0.741) · Mini-prob 11/16 (5 ZH invalid)",
+          "reported_probability_pct": 25,
+          "pointed_right_way": false,
+          "action": "Human"
+        },
+        {
+          "scenario": "E2E Support (n=16/arm)",
+          "question": "Full ticket resolution (Strong / Rule / Decision-1 / Mini / Strands)",
+          "decider_answer": "Strong 13/16 (81%) · Rule 11/16 · D1 9/16 · Mini 2/16 · Strands 2/16",
+          "reported_probability_pct": 56,
+          "pointed_right_way": false,
+          "action": "Confirm"
+        },
+        {
+          "scenario": "E2E RAG (n=16/arm)",
+          "question": "Grounded QA & abstention (Rule / Mini / Sol / Strands / Decision-1)",
+          "decider_answer": "Rule/Mini/Sol/Strands 16/16 (100%) · D1 13/16 (81%)",
+          "reported_probability_pct": 100,
+          "pointed_right_way": true,
+          "action": "Auto"
+        }
+      ],
+      "svg_key": "e2e_scatter",
+      "callouts": [
+        {
+          "lead": "Across all 544 formal jobs, 537 were schema-valid and 456 were machine-accepted; all 8 E2E paired bootstrap checks are `inconclusive`.",
+          "body": "Support routing degraded acceptance vs Strong-only (-25.0 pp for Decision-1, -68.8 pp for Strands/Mini); RAG reached 16/16 on Rule, Mini, Sol, and Strands, but 4 template clusters (8 base cases) cannot prove <=2% non-inferiority."
+        },
+        {
+          "lead": "Why the `✕` misses happened: calibration abstention, ZH JSON drift, and unsafe uncalibrated booleans.",
+          "body": "Mini-label had 1/8 false allow on unsafe gating; Mini-prob had 5/8 ZH scoring schema/mean failures; Strands 2B had high ordinal spread on 5-level scoring (MAE 0.7412) and abstained on all 16 support tickets."
+        }
+      ]
+    },
+    {
+      "kind": "protocol",
+      "eyebrow": "UNDER THE HOOD",
+      "headline": "One `/v1/systemone` contract, two confidence math worlds",
+      "subtitle": "Both Microsoft-Decision-1 and Strands Decider consume the same structured `state + questions` payload and score `<answer>` in a single forward pass—but their Score confidence formulas and verifiers differ.",
+      "top_code": "{\n  \"model\": \"Microsoft-Decision-1 | StrandsAgents/strands-decider-2B-qwen3.5-v1-2610\",\n  \"state\": \"{\\\"language\\\":\\\"en\\\",\\\"request\\\":\\\"Recover access after changing email...\\\"}\",\n  \"questions\": {\n    \"department\": { \"type\": \"choice\", \"criteria\": { \"billing\": \"...\", \"account\": \"...\" } },\n    \"sufficient\": { \"type\": \"noul\",   \"instructions\": \"Are facts sufficient to answer safely?\" },\n    \"relevance\":  { \"type\": \"score\",  \"criteria\": { \"0\": \"Irrelevant\", \"4\": \"Exact match\" } }\n  }\n}",
+      "transition": "↓ server renders XML tags & PointerHead scores option end-tokens at <answer> without autoregressive decoding",
+      "bottom_code": "<state>{\"language\":\"en\",\"request\":\"Recover access after changing email...\"}</state>\n<question type=\"score\">\nScore the passage relevance from 0 to 4.\n<options>\n0 - 0: Irrelevant · 1 - 1: Weak · 2 - 2: Partial · 3 - 3: Good · 4 - 4: Exact match\n</options>\n</question>\n<answer>\n# Choice confidence (Jev & Strands): (N * p_max - 1) / (N - 1)\n# Strands Score confidence (std-dev): clamp((sigma_max - sigma) / (sigma_max - sqrt(0.1)), 0, 1)\n# Harness verifier: checks 4dp half-unit rounding bounds & per-attempt 5-min Entra bearer refresh",
+      "callouts": [
+        {
+          "lead": "Zero generated output tokens for native deciders vs. full JSON token generation for LLM probability wrappers.",
+          "body": "Strands encodes `<state>` once via `_fork_layered_cache` (Gated DeltaNet conv/recurrent states + attention KV) and projects the `<answer>` hidden state (`pointer_dim=768` in v1 soup) against each option's final token."
+        }
+      ]
+    },
+    {
+      "kind": "robustness",
+      "eyebrow": "ROBUSTNESS CHECK",
+      "headline": "Bilingual EN vs. ZH pairing & probability wrapper drift",
+      "subtitle": "Every base case was tested in matched English and localized Chinese criteria (544 rows = 272 EN + 272 ZH). Auxiliary option-reversal calls were locked to 0 by contract (`auxiliary_max_api_calls=0`).",
+      "rows": [
+        {
+          "scenario": "Decision-1 · Classification & Scoring",
+          "selected_option": "EN vs ZH matched criteria (n=8 EN, n=8 ZH each)",
+          "original_pct": 93.8,
+          "reversed_pct": 87.5,
+          "change_pts": -6.3,
+          "answer_held": true
+        },
+        {
+          "scenario": "Decision-1 · Tool Selection & Gating",
+          "selected_option": "EN vs ZH matched criteria (Tool n=6/6, Gate n=8/8)",
+          "original_pct": 85.7,
+          "reversed_pct": 100.0,
+          "change_pts": 14.3,
+          "answer_held": true
+        },
+        {
+          "scenario": "GPT-5.4-mini · Rubric Scoring (Prob Mode)",
+          "selected_option": "EN (8/8 valid) vs ZH (3/8 valid; 5 schema/mean errors)",
+          "original_pct": 100.0,
+          "reversed_pct": 37.5,
+          "change_pts": -62.5,
+          "answer_held": false
+        },
+        {
+          "scenario": "GPT-5.4-mini · Rubric Scoring (Label vs Prob)",
+          "selected_option": "Label-only mode (16/16) vs Probability JSON mode (11/16)",
+          "original_pct": 100.0,
+          "reversed_pct": 68.8,
+          "change_pts": -31.2,
+          "answer_held": false
+        },
+        {
+          "scenario": "Deterministic Rule · E2E Support Routing",
+          "selected_option": "EN (7/8 accepted) vs ZH (4/8 accepted via Mini generator)",
+          "original_pct": 87.5,
+          "reversed_pct": 50.0,
+          "change_pts": -37.5,
+          "answer_held": false
+        },
+        {
+          "scenario": "GPT-6.1 Sol · All 4 Decision Tasks (Label & Prob)",
+          "selected_option": "EN (30/32) vs ZH (30/32) across Class/Tool/Gate/Score",
+          "original_pct": 93.8,
+          "reversed_pct": 93.8,
+          "change_pts": 0.0,
+          "answer_held": true
+        }
+      ],
+      "svg_key": "calibration_scatter",
+      "callouts": [
+        {
+          "lead": "Prompting a small LLM for JSON probability distributions caused a -62.5 pt Chinese scoring collapse (100% EN → 37.5% ZH).",
+          "body": "While `gpt-5.4-mini` achieved 100% (16/16) in label-only scoring, asking it for 5-level probabilities produced 5 Chinese schema/expectation mismatches—showing why native single-pass deciders (`Decision-1` 16/16, ECE 0.0149) avoid JSON wrapper fragility."
+        }
+      ]
+    },
+    {
+      "kind": "latency",
+      "eyebrow": "LATENCY",
+      "headline": "Decision-1 is 3.0x–6.2x faster than LLM probability wrappers",
+      "subtitle": "Client network P50 latency (ms) on successful attempts across all 6 cohorts. Blue bars show Azure Decision-1; gray/purple bars compare GPT-5.4-mini, GPT-6.1 Sol, and local CPU Strands.",
+      "rows": [
+        {
+          "group_title": "Classification (n=16 · 5 options) — Decision-1 is 3.6x faster than Mini-prob, 7.6x faster than Sol-prob",
+          "bars": [
+            {
+              "tag": "Decision-1",
+              "ms": 572.9,
+              "cls": "lat-blue",
+              "note": "572.9 ms (Total P50 780.0 ms)"
+            },
+            {
+              "tag": "Mini-label",
+              "ms": 1790.2,
+              "cls": "lat-green",
+              "note": "1,790.2 ms"
+            },
+            {
+              "tag": "Mini-prob",
+              "ms": 2051.6,
+              "cls": "lat-gray",
+              "note": "2,051.6 ms"
+            },
+            {
+              "tag": "Sol-prob",
+              "ms": 4351.4,
+              "cls": "lat-dark",
+              "note": "4,351.4 ms"
+            },
+            {
+              "tag": "Strands CPU",
+              "ms": 6789.1,
+              "cls": "lat-purple",
+              "note": "6,789.1 ms (Server 6,751.9 ms)"
+            }
+          ]
+        },
+        {
+          "group_title": "Tool Selection (n=12 · 5 options) — Decision-1 is 3.8x faster than Mini-prob, 5.7x faster than Sol-prob",
+          "bars": [
+            {
+              "tag": "Decision-1",
+              "ms": 582.4,
+              "cls": "lat-blue",
+              "note": "582.4 ms (Total P50 644.7 ms)"
+            },
+            {
+              "tag": "Mini-label",
+              "ms": 2020.7,
+              "cls": "lat-green",
+              "note": "2,020.7 ms"
+            },
+            {
+              "tag": "Mini-prob",
+              "ms": 2199.6,
+              "cls": "lat-gray",
+              "note": "2,199.6 ms"
+            },
+            {
+              "tag": "Sol-prob",
+              "ms": 3295.6,
+              "cls": "lat-dark",
+              "note": "3,295.6 ms"
+            },
+            {
+              "tag": "Strands CPU",
+              "ms": 9153.2,
+              "cls": "lat-purple",
+              "note": "9,153.2 ms (Server 9,147.5 ms)"
+            }
+          ]
+        },
+        {
+          "group_title": "Probability Gating (n=16 · Noul) — Decision-1 is 2.9x faster than Mini-prob, 5.0x faster than Sol-prob",
+          "bars": [
+            {
+              "tag": "Decision-1",
+              "ms": 636.2,
+              "cls": "lat-blue",
+              "note": "636.2 ms (Total P50 674.0 ms)"
+            },
+            {
+              "tag": "Mini-prob",
+              "ms": 1853.2,
+              "cls": "lat-gray",
+              "note": "1,853.2 ms"
+            },
+            {
+              "tag": "Mini-label",
+              "ms": 1948.7,
+              "cls": "lat-green",
+              "note": "1,948.7 ms"
+            },
+            {
+              "tag": "Sol-prob",
+              "ms": 3166.9,
+              "cls": "lat-dark",
+              "note": "3,166.9 ms"
+            },
+            {
+              "tag": "Strands CPU",
+              "ms": 6308.3,
+              "cls": "lat-purple",
+              "note": "6,308.3 ms (Server 6,292.9 ms)"
+            }
+          ]
+        },
+        {
+          "group_title": "Rubric Scoring (n=16 · 5 levels) — Decision-1 is 3.3x faster than Mini-prob, 5.0x faster than Sol-prob",
+          "bars": [
+            {
+              "tag": "Decision-1",
+              "ms": 701.3,
+              "cls": "lat-blue",
+              "note": "701.3 ms (Total P50 719.6 ms)"
+            },
+            {
+              "tag": "Mini-label",
+              "ms": 1816.5,
+              "cls": "lat-green",
+              "note": "1,816.5 ms"
+            },
+            {
+              "tag": "Mini-prob",
+              "ms": 2329.8,
+              "cls": "lat-gray",
+              "note": "2,329.8 ms"
+            },
+            {
+              "tag": "Sol-prob",
+              "ms": 3516.9,
+              "cls": "lat-dark",
+              "note": "3,516.9 ms"
+            },
+            {
+              "tag": "Strands CPU",
+              "ms": 11647.9,
+              "cls": "lat-purple",
+              "note": "11,647.9 ms (Server 11,628.0 ms)"
+            }
+          ]
+        },
+        {
+          "group_title": "E2E Total Logical P50 (Support / RAG, n=16/arm) — Includes routing + retrieval + generation",
+          "bars": [
+            {
+              "tag": "D1 (Sup/RAG)",
+              "ms": 1149.6,
+              "cls": "lat-blue",
+              "note": "Support 1,149.6 ms (10 human) / RAG 2,009.2 ms"
+            },
+            {
+              "tag": "Rule (Sup/RAG)",
+              "ms": 2571.8,
+              "cls": "lat-gray",
+              "note": "Support 2,571.8 ms / RAG 853.0 ms (8 policy-only)"
+            },
+            {
+              "tag": "Strong-only",
+              "ms": 5376.6,
+              "cls": "lat-dark",
+              "note": "Support 5,376.6 ms / RAG 4,624.4 ms"
+            },
+            {
+              "tag": "Small-only",
+              "ms": 6698.8,
+              "cls": "lat-green",
+              "note": "Support 6,698.8 ms / RAG 2,746.7 ms"
+            },
+            {
+              "tag": "Strands E2E",
+              "ms": 29341.3,
+              "cls": "lat-purple",
+              "note": "Support 29,341.3 ms / RAG 33,036.1 ms (4-q CPU)"
+            }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "lead": "P95 and P99 are intentionally reported as `null` (`NA`) under the pre-registered sample-size guardrail.",
+          "body": "Each task/scenario has 8 independent base cases (16 EN/ZH rows; 2 base cases for model selection), below the 40-case P95 and 500-case P99 thresholds. Local Strands CPU timings (Windows ARM64 x64-emulated fp32) must never be conflated with supplier RTX 3090 (115 ms) or H100 numbers."
+        }
+      ]
+    },
+    {
+      "kind": "takeaways",
+      "eyebrow": "MY TAKE",
+      "headline": "Where native decision models fit, and where they do not",
+      "subtitle": "Engineering guidance synthesized from 544 formal test rows, 1,179 live model calls, and three concrete routing architectures (TypeSafe Jev, Azure Decision-1, local Strands Decider).",
+      "good_fit": [
+        "Sub-second closed-set rubric scoring & relevance grading (Decision-1: 16/16, MAE 0.0082, ECE 0.0149 at 701 ms)",
+        "Calibrated probability gating with explicit abstention (Decision-1: 15/16, 0/8 false allow, Brier 0.0051 at 636 ms)",
+        "High-volume tool/intent classification where $0.042/1M input & 0 output tokens beat LLM JSON wrappers",
+        "Multi-question shared-prefix fanout over a single state payload (`/v1/systemone`)",
+        "GPU/MPS-backed edge deployment of Apache-2.0 Strands Decider when data cannot leave local infrastructure"
+      ],
+      "not_for": [
+        "Replacing deterministic authorization, ownership, tool allowlists, or refund/money policy checks",
+        "Claiming E2E multi-model routing cost/speed wins when the small generator fails task acceptance (Support 2/16)",
+        "Running 2B Gated DeltaNet models on x64-emulated CPU for latency-sensitive online routing (6.3–33.0 s)",
+        "Treating uncalibrated LLM boolean labels (`Mini-label` 1/8 false allow) or ZH JSON probabilities as calibrated gates",
+        "Extrapolating 8-base-case pilot intervals (`status=inconclusive`) as population <=2% non-inferiority guarantees"
+      ],
+      "dark_box": {
+        "lead": "Readiness & Provenance: `measured` 4-model pilot (544/544 formal rows; committed upper $1.666326800 / $50 cap; local Strands server stopped). Jev (`jev-1.13.0`) remains `untested_missing_external_api_key`.",
+        "repo": "Sealed artifacts: experiments/decision-model-routing/results/{analysis.json,records.json} · Code SHA256: d1fe177b6951...73c6"
+      }
+    }
+  ]
+}

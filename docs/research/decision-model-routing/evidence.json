@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "topic": "decision-model-routing",
+  "verified_date": "2026-10-14",
+  "status": "four-model-live-pilot-completed; 544 formal rows, Jev explicitly untested",
+  "privacy": "Original synthetic dataset; no credentials, private resource identifiers, internal endpoints, private conversations or full supplier articles.",
+  "evidence_levels": {
+    "official_documentation": "Published capabilities/protocol/billing guidance, not authenticated access.",
+    "official_catalog_observation": "Foundry catalog/model-card metadata read through catalog tools, not tenant deployability.",
+    "supplier_benchmark": "Vendor-reported performance and training claims, not independently reproduced.",
+    "public_retail_metadata": "First-party public USD meter observations, not an account quote or billing settlement.",
+    "offline_validation": "Executed code/fixture checks, no model calls.",
+    "project_live_measurement": "Actual local Strands and selected Azure requests; not supplier, fixture or invoice-settled billing evidence."
+  },
+  "sources": [
+    {
+      "id": "J1",
+      "url": "https://docs.typesafe.ai/models",
+      "level": "official_documentation",
+      "supports": [
+        "jev-1.13.0 pinned; moving latest/preview aliases are not freeze-safe.",
+        "Text-only, 64K total request, state plus longest question at most 32K.",
+        "Input USD0.042/M, output free; account applicability not verified.",
+        "State read once for multi-question fanout.",
+        "100K tokens/s and 80 requests/s are explicitly dynamic supplier limits, not measured throughput.",
+        "English primary language; supplier data-handling statements are not account-specific ZDR guarantees."
+      ],
+      "verification": "First-party page observations from implementation and coordinating research sessions; original synopsis only."
+    },
+    {
+      "id": "J2",
+      "url": "https://docs.typesafe.ai/api",
+      "level": "official_documentation",
+      "supports": [
+        "Official POST https://api.typesafe.ai/v1/systemone with state and typed questions.",
+        "Choice: choice/probabilities/confidence; 2-255 options.",
+        "Score: score/probabilities/confidence/legend; 2-10 ordered levels.",
+        "Noul: noul yes probability, no matching native confidence field."
+      ]
+    },
+    {
+      "id": "J3",
+      "url": "https://docs.typesafe.ai/confidence",
+      "level": "official_documentation",
+      "supports": [
+        "Choice confidence=(p_max-1/n)/(1-1/n).",
+        "Score confidence uses distribution absolute deviation from its mode relative to a uniform baseline, not Choice formula.",
+        "These are probability-distribution statistics, not independently measured correctness."
+      ]
+    },
+    {
+      "id": "J4",
+      "url": "https://docs.typesafe.ai/introduction/machine-learning-primer",
+      "level": "official_documentation",
+      "supports": [
+        "RLCD means reinforcement learning for calibrated decisions, a supplier-described training target.",
+        "Calibration is a distribution/population property, not a guarantee for one high-probability answer."
+      ],
+      "verification": "Fresh first-party observation supplied by the coordinating research session; does not establish task calibration."
+    },
+    {
+      "id": "J5",
+      "url": "https://docs.typesafe.ai/model-jaggedness/jev-1.13",
+      "level": "official_documentation",
+      "supports": [
+        "Arithmetic/date/counting, indirection, irrelevant large state, conflicting criteria, option order and adversarial state are documented limitations.",
+        "Type safety does not prove semantic correctness or injection immunity."
+      ]
+    },
+    {
+      "id": "J6",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "level": "supplier_benchmark",
+      "supports": [
+        "System One/parallel sampler and workflow-level latency/cost supplier descriptions.",
+        "Reported 70-500ms and selected workflow 193.6x latency/444.6x cost comparisons."
+      ],
+      "limitations": "Vendor workload, short input, west-coast client and probability-output adapters; not project results or fair direct head-to-head with Decision-1."
+    },
+    {
+      "id": "M1",
+      "url": "https://learn.microsoft.com/azure/foundry/foundry-models/how-to/use-foundry-models-microsoft-decision",
+      "level": "official_documentation",
+      "supports": [
+        "Resource-root /providers/microsoft/v1/systemone; model field uses deployment name.",
+        "Choice/Score/Noul state+questions, Entra or api-key, documented input/output usage.",
+        "Not a Chat Completions endpoint."
+      ],
+      "limitations": "Does not prove selected account access. Advertised input/output price semantics are sourced from M3, not inferred from this guide."
+    },
+    {
+      "id": "M2",
+      "url": "https://ai.azure.com/catalog/models/Microsoft-Decision-1",
+      "asset": "azureml://registries/azureml-msr/models/Microsoft-Decision-1/versions/1",
+      "level": "official_catalog_observation",
+      "supports": [
+        "Microsoft-Decision-1 version1, release2026-10-08, Microsoft post-trained Qwen3.5-9B.",
+        "Text-only, max input32768, hosted weights not distributed.",
+        "English optimized and multilingual evaluated."
+      ],
+      "limitations": "Dynamic HTML may not show full card; catalog tools supplied metadata. GA/preview and deployment-region/SKU fields conflict with other published fields. No deployability inference."
+    },
+    {
+      "id": "M3",
+      "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
+      "level": "supplier_benchmark",
+      "official_pricing": {"input_usd_per_million": "0.042", "output_usd_per_million": "0"},
+      "supports": [
+        "Pricing section explicitly states input USD0.042/M and output free, superseding earlier advertised-semantics uncertainty.",
+        "Vendor P50 about35x faster than GPT-6 Sol, NOT GPT-6.1 Sol; about4.5x vs Quyet-1.0-Large.",
+        "Vendor highest accuracy over36 public/private benchmarks and nearly150K questions blinded from training.",
+        "Vendor average1.3% flips over8 perturbations, with some zero-flip option changes.",
+        "Xbox labeling, Copilot grading, incident retrieval, Discovery replanning are supplier scenarios."
+      ],
+      "limitations": "No independent reproduction, direct Jev1.13 comparison or project inference; launch pricing is not an account quote. Other providers mentioned in the article are not authorized here."
+    },
+    {
+      "id": "G1",
+      "url": "https://learn.microsoft.com/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure#gpt-61",
+      "level": "official_documentation",
+      "observed_doc_commit": "9586c846951c6a1142057355d5b7d6f73c63d1b7",
+      "supports": [
+        "gpt-6.1-sol version2026-09-29 and gpt-5.4-mini version2026-03-17.",
+        "Sol Responses/Chat Completions/structured outputs, 1050000 context, 922000 maximum input and128000 maximum output.",
+        "Catalog also lists mini400000 context; these are capability bounds, not selected deployment capacity."
+      ]
+    },
+    {
+      "id": "G2",
+      "url": "https://learn.microsoft.com/azure/foundry/openai/how-to/reasoning",
+      "level": "official_documentation",
+      "supports": [
+        "Reasoning included in total billed output, not an additional count to double charge.",
+        "max_completion_tokens/max_output_tokens cap reasoning, visible and formatting tokens together.",
+        "Incomplete output can still consume billable input/reasoning."
+      ]
+    },
+    {
+      "id": "G3",
+      "url": "https://learn.microsoft.com/azure/foundry/openai/concepts/model-router",
+      "level": "official_documentation",
+      "observed_doc_commit": "69e912118f8ddcc742dc027dc0a00f7607e1df3d",
+      "supports": [
+        "Observed supported managed pool does not list Jev, Decision-1 or gpt-6.1-sol.",
+        "Main design must be application-level routing; any different managed pool is supplemental."
+      ]
+    },
+    {
+      "id": "P1",
+      "url": "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview",
+      "level": "public_retail_metadata",
+      "currency": "USD",
+      "query_observations": [
+        {"model": "Microsoft-Decision-1", "filter": "contains(meterName, 'Decision') or contains(skuName, 'Decision')", "rows": 37, "next_page": false},
+        {"model": "gpt-6.1-sol", "filter": "contains(meterName, '6.1') or contains(skuName, '6.1')", "rows": 520, "next_page": false},
+        {"model": "gpt-5.4-mini", "filter": "(contains(meterName, '5.4') or contains(skuName, '5.4')) and (contains(meterName, 'mini') or contains(skuName, 'mini'))", "rows": 372, "next_page": false}
+      ],
+      "decision_meter": {
+        "product_name": "Microsoft Decision Models",
+        "service_name": "Foundry Models",
+        "sku_name": "Microsoft Decision 1",
+        "arm_sku_name": "Pi 1 glbl",
+        "meter_name": "Microsoft Decision 1 1M Tokens",
+        "public_meter_id": "55ee5e79-468c-54ab-8cec-f4b94b0ea0dd",
+        "example_region": "westcentralus",
+        "unit": "1M",
+        "retail_price_usd": "0.042",
+        "type": "Consumption",
+        "effective_start_date": "2026-10-01",
+        "tier_minimum_units": 0
+      },
+      "limitations": "Selected public metadata, not archived full API responses or authenticated quote. Meter alone says Tokens; input/output semantics from M3. Regions do not prove availability. Legacy Sol armSkuName 6-astraMI is not invoked model identity. Direct official REST succeeded where MCP wrapper enum/filter failed."
+    },
+    {
+      "id": "P2",
+      "url": "https://learn.microsoft.com/azure/foundry/openai/how-to/provisioned-throughput-sizing",
+      "level": "official_documentation",
+      "section": "Normalized token pricing for GPT-6 Astra and newer models",
+      "supports": [
+        "Explicit GPT-6.1 Sol Global Standard short2/0.1/2.5/10 and long4/0.2/5/15 USD/M category prices.",
+        "Input token categories are exclusive; cache read/write not also ordinary input."
+      ],
+      "limitations": "Corroborates prices, not this project's PTU throughput or account SKU."
+    },
+    {
+      "id": "P3",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/azure-openai/",
+      "level": "official_documentation",
+      "supports": ["Separate short/long context, cache-read and cache-write categories."],
+      "limitations": "Dynamic HTML had numeric placeholders; no verified GPT6.1 numeric short/long boundary. Never borrow another model's threshold."
+    },
+    {
+      "id": "P4",
+      "url": "https://learn.microsoft.com/azure/foundry/concepts/manage-costs",
+      "level": "official_documentation",
+      "supports": [
+        "HTTP errors can be billed depending on processing.",
+        "Cost ingestion delayed; Azure budget alerts are not hard inference caps."
+      ]
+    },
+    {
+      "id": "A1",
+      "url": "https://learn.microsoft.com/rest/api/aiservices/accountmanagement/accounts/get?view=rest-aiservices-accountmanagement-2024-10-01",
+      "level": "official_documentation",
+      "observed_doc_commit": "9d3e538a2eab85ad2fa6699a1798fe21e047821d",
+      "supports": ["Read-only selected account endpoint/endpoints/customSubDomainName/id/location verification."],
+      "limitations": "Exact selected account GET used privately; resource metadata/config/raw remain ignored. Management is not inference proof."
+    },
+    {
+      "id": "A2",
+      "url": "https://learn.microsoft.com/rest/api/aiservices/accountmanagement/deployments/get?view=rest-aiservices-accountmanagement-2024-10-01",
+      "level": "official_documentation",
+      "supports": ["Read-only exact deployment id/provisioningState/model name/version/SKU verification using API2024-10-01."],
+      "limitations": "Exact three selected deployment GETs used privately, not subscription inventory. Version upgrade policy is not permanent pinning."
+    },
+    {
+      "id": "S1",
+      "url": "https://github.com/strands-labs/strands-decider/tree/8b6faa553038a59e73fa7f16c4081f8ceb21d27e",
+      "level": "official_source",
+      "source_commit": "8b6faa553038a59e73fa7f16c4081f8ceb21d27e",
+      "license": "Apache-2.0",
+      "supports": [
+        "Inspected official code, not a third-party architecture description.",
+        "Installed schema/server/infer/modeling/cli bytes match the selected source.",
+        "Local public safetensors load, native systemone and metadata-only health."
+      ]
+    },
+    {
+      "id": "S2",
+      "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-qwen3.5-v1-2610/tree/216d1ccb46a9e9b036eb9187b248db98480f77d4",
+      "level": "official_model_metadata",
+      "checkpoint_revision": "216d1ccb46a9e9b036eb9187b248db98480f77d4",
+      "base_model": "Qwen/Qwen3.5-2B-Base",
+      "base_revision": "b1485b2fa6dfa1287294f269f5fb618e03d52d7c",
+      "public_ungated": true,
+      "license": "Apache-2.0",
+      "supports": [
+        "Selected actual pointer_dim768, rank48, alpha96, max_length4096, ordinal_smoothing0.1.",
+        "temperature_by_kind: choice0.8629556148274228, noul1.0704394404346953, score1.834409163182587.",
+        "head/adapter safetensors and published manifest checked; base safetensors downloaded at exact revision."
+      ],
+      "limitations": "Base revision provenance says inferred at training time, not originally pinned by training hosts. No full training reproduction claim."
+    },
+    {
+      "id": "S3",
+      "url": "https://github.com/strands-labs/strands-decider/blob/8b6faa553038a59e73fa7f16c4081f8ceb21d27e/docs/architecture.md",
+      "level": "official_source",
+      "supports": [
+        "Decoder torso without open-text LM head, fp32 LayerNorm/q/k pointer readout, scaled dot product, masked_log_softmax, per-kind temperatures.",
+        "Generic default dim256 is about1M parameters; selected three-head soup has dim768, not256.",
+        "One single-question forward, no autoregressive decoding; multi-question state-prefix forward plus batched suffix.",
+        "Hybrid state cache forks attention KV and Gated DeltaNet conv/recurrent states.",
+        "Architecture document reports option reversal moves the distribution about0.016; causal attention order sensitivity remains."
+      ]
+    },
+    {
+      "id": "S4",
+      "url": "https://github.com/strands-labs/strands-decider/blob/8b6faa553038a59e73fa7f16c4081f8ceb21d27e/training/soup.py",
+      "level": "official_source",
+      "supports": [
+        "LoRA soup averages each layer's B@A update through a stacked rank-Nr adapter, not independent A/B parameter means.",
+        "Fold LayerNorm and stack pointer heads so logits on same features equal mean seed logits; pointer_dim multiplied by three.",
+        "Recalibrate soup temperatures rather than average seed temperatures."
+      ]
+    },
+    {
+      "id": "S5",
+      "url": "https://github.com/strands-labs/strands-decider/blob/8b6faa553038a59e73fa7f16c4081f8ceb21d27e/evaluation/results.md",
+      "level": "supplier_benchmark",
+      "supports": [
+        "Selected1.9B Qwen3.5 v1:246678 commercial-friendly rows, gemma-4-31B-it teacher, v19 KL anchor0.3, three seed soup.",
+        "v1 public JevBench180/231, Brier0.280, ECE0.072; release checks on L4 and CPU are vendor observations.",
+        "Gemma4 E2B/E4B/12B/26B-A4B:135602-row Qwen3.5-4B teacher mix; JevBench180/187/200/207 of231.",
+        "115ms median/299ms P95 RTX3090 figures belong to historical v19, not selected v1."
+      ],
+      "limitations": "Not our EN/ZH benchmark, not independent reproduction. v1 data builders not fully on main; training cannot be rebuilt from that source alone."
+    },
+    {
+      "id": "S6",
+      "url": "https://github.com/strands-labs/strands-decider/blob/8b6faa553038a59e73fa7f16c4081f8ceb21d27e/docs/inference.md",
+      "level": "official_documentation",
+      "supports": [
+        "CPU fp32 support and strict-window rejection instead of silent truncation.",
+        "Historical v14/RTX3090 sixteen questions over2000-token state:4086ms batched versus445ms shared prefix.",
+        "Gemma4 H100 median102/139/136/245ms is separate vendor hardware context.",
+        "Optional vision reuses frozen native ViT; not enabled in this text-only project."
+      ],
+      "limitations": "Hardware/version-specific vendor timings cannot be assigned to local Windows ARM64/x64 CPU measurements."
+    },
+    {
+      "id": "S7",
+      "url": "https://github.com/strands-labs/strands-decider/blob/8b6faa553038a59e73fa7f16c4081f8ceb21d27e/src/strands_decider/schema.py",
+      "level": "official_source",
+      "supports": [
+        "Choice2-255, Score2-10, Noul only P(true) without native confidence.",
+        "Choice confidence=(N*p_max-1)/(N-1).",
+        "Score confidence uses sigma of ordinal levels, sigma_max=(L-1)/2, sigma_floor=sqrt(ordinal_smoothing), clipped normalized difference; unlike Jev mode-deviation formula."
+      ],
+      "serialization_source": "https://github.com/strands-labs/strands-decider/blob/8b6faa553038a59e73fa7f16c4081f8ceb21d27e/src/strands_decider/infer.py",
+      "serialization": "Independent four-decimal rounding; half-unit bounded validation, preserve original values, never normalize. Metrics use as-displayed probabilities, not reconstructed latent logits."
+    }
+  ],
+  "public_prices_usd_per_million": [
+    {"model": "jev-1.13.0", "category": "official-input-only", "input": "0.042", "output": "0", "source_ids": ["J1"]},
+    {"model": "Microsoft-Decision-1", "category": "advertised-input-only", "input": "0.042", "output": "0", "source_ids": ["M3", "P1"]},
+    {"model": "gpt-5.4-mini", "category": "GlobalStandard", "input": "0.75", "cache_read": "0.075", "cache_write": null, "output": "4.5", "source_ids": ["P1"]},
+    {"model": "gpt-6.1-sol", "category": "GlobalStandard-ShortCo", "input": "2", "cache_read": "0.1", "cache_write": "2.5", "output": "10", "source_ids": ["P1", "P2"]},
+    {"model": "gpt-6.1-sol", "category": "GlobalStandard-LongCo", "input": "4", "cache_read": "0.2", "cache_write": "5", "output": "15", "source_ids": ["P1", "P2"]},
+    {"model": "strands-decider-2B-qwen3.5-v1-2610", "category": "local-self-hosted-zero-API-fee", "input": "0", "output": "0", "source_ids": ["S1", "S2"], "excludes": "Hardware, electricity, hosting, setup and maintenance"}
+  ],
+  "public_price_reverification": {
+    "verified_date": "2026-10-14",
+    "selected_category": "Standard Global Consumption, USD/1M tokens",
+    "user_authorized_estimate_basis": true,
+    "account_quote_or_invoice": false,
+    "sol_input_2_50_correction": "2.50 is ShortCo cache-write, not unified ordinary input. Retain verified all-context maxima4/0.2/5/15 and max-input-category reservation, not a guessed short threshold.",
+    "decision1": "Retail Microsoft Decision1 1M Tokens0.042; input/output semantics from M3.",
+    "mini": "Model-labelled non-priority/non-batch Global meters0.75 ordinary,0.075 cached,4.5 output.",
+    "raw_public_query_artifacts": "Ignored local evidence, not full Retail API copied into repository."
+  },
+  "billing_unknowns": [
+    "Selected deployment/account/SKU applicable rates, discounts and cache-write applicability.",
+    "Smoke accepted4096 total-output cap/reasoning-low on both selected generators; this is not unrestricted parameter/capacity validation.",
+    "GPT6.1 numeric short/long input boundary; config requires conservative_all_contexts.",
+    "Invoice settlement absent; public-rate estimates are not actual account invoice charges."
+  ],
+  "offline_project_evidence": {
+    "scope": "Zero model calls describes offline tests and historical probes only; completed real requests are recorded separately in project_live_evidence.",
+    "model_inference_calls": 0,
+    "dataset_sha256": "a445498d5a09673e6990dcc325845312c20edb600d6f1ab3627149cf76ebec6c",
+    "code_sha256": "d1fe177b6951b03e10db89fdbfc92b21fadc9a8d01f55d125d58c753b7bd73c6",
+    "line_endings": "Canonical LF as required by existing repository .gitattributes; tests and manifest regenerated after normalization.",
+    "validation_receipt": "../../../experiments/decision-model-routing/results/offline-validation.json",
+    "topic_tests": 118,
+    "topic_tests_successful": true,
+    "full_tests_run": 202,
+    "full_tests_successful": true,
+    "full_validation_status": "202 full/118 topic tests executed on exact live-frozen implementation; validation receipt binds current bytes. Earlier198/187 records are historical.",
+    "entra_refresh_followup": {
+      "verified_date": "2026-10-11",
+      "new_portable_tests": 9,
+      "scope": "Per-HTTP-attempt/retry refresh, five-minute margin, scoped identity, acquisition failure stops sending and is excluded from API-attempt counts, shared provider, static TypeSafe auth and rotated credential/base64 redaction.",
+      "fixture_only": true,
+      "model_inference_calls": 0,
+      "selected_management_and_token_preparation_verified_privately": true,
+      "data_plane_rbac_verified": false,
+      "credentials_or_resource_metadata_committed": false,
+      "contract_data_and_original_ledger_unchanged": true,
+      "cli_reference": "https://learn.microsoft.com/cli/azure/account#az-account-get-access-token"
+    },
+    "coordinator_scoped_probes": {
+      "execution": "offline-regression-probes",
+      "verified_at_utc": "2026-10-10T03:49:35.658011+00:00",
+      "tests_run": 11,
+      "failures": 0,
+      "errors": 0,
+      "source_code_sha256_before_and_after": "7cea27c718e082058cfdaa4e2647b7f13c33b80d2b923b533005a572f80f45c1",
+      "current_source_match": false,
+      "status": "passed-historical-canonical-LF-archive",
+      "source_stable_during_run": true,
+      "https_transport_disabled": true,
+      "real_credentials_used": false,
+      "model_inference_calls": 0,
+      "scope": "Budget retention/lock,401 non-JSON stop, identity and semantic routing redaction, EN/ZH amount refund rejection, Score ECE, executed gate, bilingual criteria/instructions and explicit generation language.",
+      "limitations": "Historical scoped AI offline regression verification, not independent human or full-code review; does not cover Entra/Strands additions. Current source is separately tested and live evidence is separate."
+    }
+  },
+  "project_live_evidence": {
+    "execution": "actual-local-Strands-and-selected-Azure-requests",
+    "completed_date": "2026-10-14",
+    "analysis_created_at_utc": "2026-10-14T06:10:01.863580+00:00",
+    "status": "live-results-complete-matrix",
+    "code_sha256": "d1fe177b6951b03e10db89fdbfc92b21fadc9a8d01f55d125d58c753b7bd73c6",
+    "contract_sha256": "fe062d33c0bafa037d71379c293ede59010a01a6444bc77232836f9e824bcbb1",
+    "analysis_artifact": "../../../experiments/decision-model-routing/results/analysis.json",
+    "analysis_sha256": "b969a0f88a8ad7a5bd75d754abb1102f1c6b669412b3a24c23a6d5c03f5ac470",
+    "records_artifact": "../../../experiments/decision-model-routing/results/records.json",
+    "records_sha256": "0d7b5e941bea559b5800e5e6420a32e70230d4739c21aeea5c6cdc5b94ff7833",
+    "enabled_models": ["strands", "decision1", "small", "strong"],
+    "disabled_models": {"jev": "untested_missing_external_api_key"},
+    "source_dataset_rows": 920,
+    "selected_input_rows_across_splits": 192,
+    "formal_decision_logical_jobs": 384,
+    "formal_e2e_logical_jobs": 160,
+    "formal_unattempted_jobs": 0,
+    "formal_schema_valid_jobs": 537,
+    "formal_machine_accepted_jobs": 456,
+    "formal_logical_model_calls": 550,
+    "formal_http_transport_attempts": 615,
+    "calibration_decision_logical_jobs": 384,
+    "calibration_e2e_logical_jobs": 160,
+    "oracle_model_calls_across_splits": 16,
+    "new_source_smoke_usable_calls": 20,
+    "first_smoke_usable_calls": 16,
+    "first_smoke_total_calls": 20,
+    "first_smoke_failure_and_cost_retained": true,
+    "cumulative_logical_model_calls": 1179,
+    "cumulative_http_transport_attempts": 1307,
+    "cumulative_http_200_attempts": 1177,
+    "cumulative_usable_model_calls": 1161,
+    "cumulative_budget": {
+      "cap_usd": "50",
+      "reported_usage_public_conservative_estimate_usd": "1.332755984",
+      "unknown_failed_charge_upper_usd": "0.333570816",
+      "in_flight_reserved_usd": "0",
+      "committed_upper_usd": "1.666326800",
+      "remaining_usd": "48.333673200",
+      "invoice_settled_usd": null
+    },
+    "native_routing_small_gates": "No viable empirical small gate for either native router in either scenario; test uses strong or simulated human, not small.",
+    "all_quality_matched_speed_cost_claims_disabled": true,
+    "all_paired_noninferiority_statuses": "inconclusive",
+    "local_runtime": {
+      "host": "Windows ARM64 Snapdragon, 12 logical CPUs, 31.6GiB RAM, no NVIDIA CUDA",
+      "isolated_runtime": "x64 CPython3.12.10, torch2.14.1+cpu, six CPU threads, fp32",
+      "strict_window": 4096,
+      "vision": false,
+      "prefix_cache": true,
+      "owned_service_stopped": true,
+      "loopback_port_8000_no_listener_verified": true,
+      "api_fee_excludes": "Hardware, electricity, hosting, installation and maintenance"
+    },
+    "limitations": "AI-authored synthetic gold and limited machine rubric; translation/template dependence, single round, CPU/cloud and pacing differences. No independent human review, full independent code review, production deployment or invoice settlement. Transport attempts do not prove server receipt."
+  },
+  "derived_planning_examples": {
+    "execution": "offline-price-arithmetic-and-illustrative-statistics",
+    "observed_model_results": false,
+    "price_example": {
+      "input_tokens": 1000,
+      "total_billable_output_tokens": 256,
+      "decision_usd": "0.000042",
+      "mini_usd": "0.001902",
+      "sol_assumed_short_usd": "0.00456",
+      "cheap_fraction_break_even": "0.01580135440180586907449209932",
+      "assumptions": "Equal acceptance and branch lengths; no cache/retry/failure/grading/extra overhead; assumed advertised ShortCo rate, not verified account boundary."
+    },
+    "zero_event_one_sided_95": {
+      "formula": "1 - 0.05^(1/n)",
+      "n20": "0.13910834066826516",
+      "n60": "0.04870291331009746",
+      "n149": "0.019904816220685073",
+      "limitations": "Only iid Bernoulli illustration; not dataset confidence intervals, actual safety subset counts or paired noninferiority power."
+    }
+  },
+  "unverified_project_claims": [
+    "No quality-matched speed/cost superiority or hardware-matched CPU/cloud inference claim.",
+    "Selected deployments and three Azure data planes verified in actual smoke; not a production deployed solution or role-assignment audit.",
+    "No independent human gold/review or production safety/compliance guarantee.",
+    "Current paired-template pilot cannot establish2pp noninferiority or speed/cost superiority."
+  ]
+}

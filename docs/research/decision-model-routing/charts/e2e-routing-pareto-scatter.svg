@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 410" width="100%" role="img" aria-label="End-to-End Routing Acceptance vs Total P50 Latency and Cost Bubble Scatter">
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;fill:#0f172a}.lbl{font-size:10.5px;font-weight:600;fill:#1e293b}.axis{font-size:11px;fill:#475569;font-weight:600}.title{font-size:14px;font-weight:800;fill:#0f172a}.sub{font-size:11px;fill:#64748b}</style>
+<rect width="820" height="410" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="24" y="26" class="title">Scatter 2 · End-to-End Scenarios (Support &amp; RAG, n=16/arm): Acceptance (%) vs. Total E2E P50 Latency &amp; Cost</text>
+<text x="24" y="43" class="sub">Bubble radius scales with Upper USD / Accepted Task (or hollow ring for $0 local API fee). All paired bootstrap gates are inconclusive.</text>
+<line x1="72" y1="338.0" x2="780" y2="338.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="342.0" text-anchor="end" class="axis">0%</text>
+<line x1="72" y1="272.7" x2="780" y2="272.7" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="276.7" text-anchor="end" class="axis">25%</text>
+<line x1="72" y1="207.4" x2="780" y2="207.4" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="211.4" text-anchor="end" class="axis">50%</text>
+<line x1="72" y1="142.2" x2="780" y2="142.2" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="146.2" text-anchor="end" class="axis">75%</text>
+<line x1="72" y1="76.9" x2="780" y2="76.9" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="80.9" text-anchor="end" class="axis">100%</text>
+<line x1="107.3" y1="56" x2="107.3" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="107.3" y="356" text-anchor="middle" class="axis">800 ms</text>
+<line x1="214.0" y1="56" x2="214.0" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="214.0" y="356" text-anchor="middle" class="axis">1.5 s</text>
+<line x1="331.8" y1="56" x2="331.8" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="331.8" y="356" text-anchor="middle" class="axis">3 s</text>
+<line x1="449.5" y1="56" x2="449.5" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="449.5" y="356" text-anchor="middle" class="axis">6 s</text>
+<line x1="605.1" y1="56" x2="605.1" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="605.1" y="356" text-anchor="middle" class="axis">15 s</text>
+<line x1="749.0" y1="56" x2="749.0" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="749.0" y="356" text-anchor="middle" class="axis">35 s</text>
+<line x1="72" y1="56" x2="72" y2="338" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="72" y1="338" x2="780" y2="338" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="426.0" y="374" text-anchor="middle" class="axis">End-to-End Total Logical P50 Latency (ms, log10 scale)</text>
+<text x="18" y="197.0" text-anchor="middle" transform="rotate(-90 18 197.0)" class="axis">Machine Acceptance Rate (%)</text>
+<circle cx="263.7" cy="125.8" r="10.3" fill="#2563EB" fill-opacity="0.85" stroke="#2563EB" stroke-width="2"/>
+<text x="275.7" y="119.8" class="lbl">RAG · Decision-1 (81.3%, 2.01s, $0.00159)</text>
+<circle cx="118.2" cy="76.9" r="9.3" fill="#475569" fill-opacity="0.85" stroke="#475569" stroke-width="2"/>
+<text x="128.2" y="90.9" class="lbl">RAG · Rule (100%, 853ms, $0.00095)</text>
+<circle cx="316.8" cy="76.9" r="9.4" fill="#059669" fill-opacity="0.85" stroke="#059669" stroke-width="2"/>
+<text x="296.8" y="62.9" class="lbl">RAG · Small-only (100%, 2.75s, $0.00101)</text>
+<circle cx="739.2" cy="76.9" r="10.7" fill="#9333EA" fill-opacity="0.85" stroke="#9333EA" stroke-width="2"/>
+<text x="564.2" y="62.9" class="lbl">RAG · Strands (100%, 33.0s, $0.00191)</text>
+<circle cx="405.3" cy="76.9" r="12.3" fill="#0F172A" fill-opacity="0.85" stroke="#0F172A" stroke-width="2"/>
+<text x="417.3" y="91.9" class="lbl">RAG · Strong-only (100%, 4.62s, $0.00348)</text>
+<circle cx="168.8" cy="191.1" r="11.1" fill="#2563EB" fill-opacity="0.62" stroke="#2563EB" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="180.8" y="195.1" class="lbl">Support · Decision-1 (56.3%, 1.15s, $0.00222)</text>
+<circle cx="305.6" cy="158.5" r="10.4" fill="#475569" fill-opacity="0.62" stroke="#475569" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="317.6" y="162.5" class="lbl">Support · Rule (68.8%, 2.57s, $0.00164)</text>
+<circle cx="468.2" cy="305.4" r="18.0" fill="#059669" fill-opacity="0.62" stroke="#059669" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="428.2" y="287.4" class="lbl">Support · Small-only (12.5%, 6.70s, $0.01305/acc)</text>
+<circle cx="719.1" cy="305.4" r="7.0" fill="#9333EA" fill-opacity="0.22" stroke="#9333EA" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="514.1" y="291.4" class="lbl">Support · Strands (12.5%, 29.3s, $0 API, 16/16 human)</text>
+<circle cx="430.9" cy="125.8" r="12.3" fill="#0F172A" fill-opacity="0.62" stroke="#0F172A" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="442.9" y="130.8" class="lbl">Support · Strong-only (81.3%, 5.38s, $0.00341)</text>
+<text x="24" y="396" class="sub">Solid circle = RAG scenario (n=16/arm) · Dashed circle = Support ticket scenario (n=16/arm) · Radius ∝ Upper USD per accepted task</text>
+</svg>

@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+<title>Decision Model &amp; Multi-Model Routing Benchmark · 4-Model Live Pilot</title>
+<style>
+:root {
+  --bg: #E2E8F0;
+  --card-bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --ink: #0F172A;
+  --muted: #475569;
+  --subtle: #64748B;
+  --line: #E2E8F0;
+  --blue: #2563EB;
+  --purple: #7C3AED;
+  --green-bg: #DCFCE7;
+  --green-ink: #15803D;
+  --amber-bg: #FEF3C7;
+  --amber-ink: #B45309;
+  --red-bg: #FEE2E2;
+  --red-ink: #B91C1C;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 28px 16px 56px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+}
+.deck-header {
+  max-width: 980px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.deck-nav a {
+  color: var(--blue);
+  text-decoration: none;
+  margin-left: 8px;
+  font-weight: 600;
+}
+.deck-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+.report-card {
+  width: 980px;
+  min-height: 1225px;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.12);
+  border: 1px solid #CBD5E1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-accent-bar {
+  height: 10px;
+  background: linear-gradient(90deg, #2563EB 0%, #6366F1 55%, #8B5CF6 100%);
+}
+.card-header {
+  padding: 24px 36px 8px;
+}
+.card-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.card-headline {
+  font-size: 32px;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+  margin: 0 0 8px;
+  font-weight: 800;
+}
+.grad-text {
+  background: linear-gradient(90deg, #2563EB, #7C3AED);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.card-subtitle {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.card-canvas {
+  padding: 12px 36px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+.card-footer {
+  padding: 6px 36px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.callout-box {
+  background: #F1F5F9;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.42;
+  color: var(--muted);
+}
+.callout-box strong { color: var(--ink); }
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--subtle);
+  padding-top: 2px;
+}
+.wb-shell {
+  background: var(--surface);
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.wb-bar {
+  background: #0F172A;
+  color: #F8FAFC;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+}
+.wb-status { color: #93C5FD; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.wb-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 12px;
+  padding: 12px;
+}
+.wb-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wb-sec-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--subtle);
+}
+.wb-scen-list { display: flex; flex-direction: column; gap: 4px; }
+.wb-scen {
+  font-size: 11.5px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #EFF6FF;
+  color: #1D4ED8;
+  font-weight: 600;
+}
+.wb-bands {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.38;
+  background: #F8FAFC;
+  padding: 7px 9px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+.wb-metrics { display: flex; gap: 5px; flex-wrap: wrap; }
+.wb-metric {
+  font-size: 11px;
+  background: #F1F5F9;
+  border: 1px solid var(--line);
+  padding: 3px 7px;
+  border-radius: 999px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.quote-box {
+  background: var(--surface);
+  border-left: 4px solid var(--blue);
+  border-top: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.dec-stack { display: flex; flex-direction: column; gap: 10px; }
+.dec-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dec-top {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.dec-field {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.dec-type {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.type-choice { background: #E0E7FF; color: #3730A3; }
+.type-noul { background: #CCFBF1; color: #115E59; }
+.type-score { background: #F3E8FF; color: #6B21A8; }
+.dec-conf {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--subtle);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.dec-act {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+.act-auto { background: var(--green-bg); color: var(--green-ink); }
+.act-confirm { background: var(--amber-bg); color: var(--amber-ink); }
+.act-human { background: var(--red-bg); color: var(--red-ink); }
+.dec-q { font-size: 12px; color: var(--muted); }
+.dec-ans-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.dec-ans { font-size: 15px; font-weight: 800; color: var(--ink); }
+.dec-closest { font-size: 11.5px; color: var(--subtle); }
+.prob-list { display: flex; flex-direction: column; gap: 3px; margin-top: 2px; }
+.prob-row {
+  display: grid;
+  grid-template-columns: 145px 1fr 48px;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+}
+.prob-key {
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.prob-track {
+  height: 6px;
+  background: #F1F5F9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.prob-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3B82F6, #6366F1);
+  border-radius: 999px;
+}
+.prob-val {
+  text-align: right;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  color: var(--subtle);
+}
+.embedded-svg-wrap {
+  background: var(--surface);
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 6px;
+  overflow: hidden;
+}
+.embedded-svg-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.table-wrap {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.score-table th {
+  text-align: left;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: var(--subtle);
+  background: #F8FAFC;
+  padding: 8px 11px;
+  border-bottom: 1px solid var(--line);
+}
+.score-table td {
+  padding: 7px 11px;
+  border-bottom: 1px solid #F1F5F9;
+  vertical-align: middle;
+}
+.score-table tr:last-child td { border-bottom: none; }
+.row-miss { background: #FFF5F5; }
+.miss-mark { color: var(--red-ink); font-weight: 800; }
+.td-scen { font-weight: 700; white-space: nowrap; }
+.td-ans { font-weight: 600; }
+.td-num {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-weight: 700;
+}
+.rob-scen { font-weight: 700; color: var(--ink); }
+.rob-opt { font-size: 11px; color: var(--subtle); }
+.chg-ok { color: var(--green-ink); }
+.chg-bad { color: var(--red-ink); }
+.code-box {
+  margin: 0;
+  background: #0F172A;
+  color: #E2E8F0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.45;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+.proto-arrow {
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--blue);
+  padding: 2px 0;
+}
+.lat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lat-group {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.lat-title { font-size: 12.5px; font-weight: 700; color: var(--ink); }
+.lat-bar-row {
+  display: grid;
+  grid-template-columns: 95px 1fr 235px;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+}
+.lat-tag { color: var(--muted); font-weight: 700; }
+.lat-track {
+  height: 11px;
+  background: #F1F5F9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.lat-fill { height: 100%; border-radius: 999px; }
+.lat-blue { background: linear-gradient(90deg, #2563EB, #60A5FA); }
+.lat-green { background: linear-gradient(90deg, #059669, #34D399); }
+.lat-gray { background: #94A3B8; }
+.lat-dark { background: #334155; }
+.lat-purple { background: linear-gradient(90deg, #7C3AED, #C084FC); }
+.lat-ms {
+  text-align: right;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 11px;
+}
+.take-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.take-col {
+  border-radius: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+}
+.take-good { background: #F0FDF4; border-color: #BBF7D0; }
+.take-bad { background: #FEF2F2; border-color: #FECACA; }
+.take-head { font-size: 17px; font-weight: 800; margin-bottom: 10px; }
+.take-col ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 13.5px;
+  line-height: 1.42;
+}
+.dark-footer-box {
+  background: #0F172A;
+  color: #F8FAFC;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dark-lead { font-size: 13.5px; line-height: 1.45; }
+.dark-repo {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 11.5px;
+  color: #93C5FD;
+}
+</style>
+</head>
+<body>
+<div class="deck-header">
+  <div><strong>Decision Model &amp; Multi-Model Routing Benchmark · 4-Model Live Pilot</strong> · 7-Card 4:5 Visual Report Deck (Provenance: <code>measured</code>)</div>
+  <nav class="deck-nav">
+    <a href="#card-1">1 Overview &amp; Scatter</a>
+    <a href="#card-2">2 Deep Dive</a>
+    <a href="#card-3">3 Scorecard &amp; Pareto</a>
+    <a href="#card-4">4 Protocol</a>
+    <a href="#card-5">5 Robustness &amp; Calibration</a>
+    <a href="#card-6">6 Latency</a>
+    <a href="#card-7">7 My Take</a>
+  </nav>
+</div>
+<main class="deck-grid">
+<article class="report-card" id="card-1"><div class="card-accent-bar"></div><header class="card-header"><div class="card-eyebrow">HANDS-ON · ROUTING &amp; DECISION MODELS</div><h2 class="card-headline">Sub-second closed-set decisions, <span class="grad-text">no proven E2E routing win</span></h2><p class="card-subtitle">4 live models (Microsoft-Decision-1 v1, Strands Decider 2B v1-2610, GPT-5.4-mini, GPT-6.1 Sol) across 544 formal test rows (384 decision + 160 E2E) and 1,179 cumulative model calls ($1.67 / $50 cap).</p></header><div class="card-canvas"><div class="wb-shell"><div class="wb-bar"><span class="wb-title">Decision-Model Routing Evaluation Workbench (Sealed 544-Row Matrix)</span><span class="wb-status">4 models live · Jev untested_missing_external_api_key · measured</span></div><div class="wb-grid"><div class="wb-col"><div class="wb-sec-label">SCENARIOS &amp; FROZEN GATES</div><div class="wb-scen-list"><span class="wb-scen">Classification (n=16/arm · 5 teams)</span><span class="wb-scen">Tool Selection (n=12/arm · 5 tools)</span><span class="wb-scen">Model Selection (n=4/arm · 3 routes)</span><span class="wb-scen">Probability Gating (n=16/arm · Noul)</span><span class="wb-scen">Rubric Scoring (n=16/arm · 0-4 scale)</span><span class="wb-scen">E2E Support Tickets (n=16/arm · 5 arms)</span><span class="wb-scen">E2E RAG Routing (n=16/arm · 5 arms)</span></div><div class="wb-bands">Calibration-frozen operational gates: Decision-1 gate=0.9466 (RAG suff=0.9978, Support suff=0.0759); Strands gate=0.9329 (RAG suff=0.8951, Support suff=null); Mini-prob=0.9800; Sol-prob=0.9900.</div></div><div class="wb-col"><div class="wb-sec-label">RUN TELEMETRY &amp; KEY COHORT OUTCOMES</div><div class="wb-metrics"><span class="wb-metric">Formal 544/544 rows</span><span class="wb-metric">Calls 1,179 (1,307 HTTP)</span><span class="wb-metric">Est. $1.333 + Unk. $0.334</span><span class="wb-metric">Committed $1.666 / $50</span></div><div class="dec-card"><div class="dec-top"><span class="dec-field">decision1_scoring</span><span class="dec-type type-score">score</span><span class="dec-conf">confidence 0.985</span><span class="dec-act act-auto">Act automatically</span></div><div class="dec-q">Rubric scoring (n=16, |score-gold|&lt;=0.5) · Network P50 701.3 ms</div><div class="dec-ans-row"><span class="dec-ans">16 / 16 (100.0%)</span><div class="dec-closest">MAE 0.0082 · Brier 0.0012 · ECE 0.0149</div></div><div class="prob-list"><div class="prob-row"><span class="prob-key">accepted_within_0.5</span><div class="prob-track"><div class="prob-fill" style="width:100.0%"></div></div><span class="prob-val">100.0%</span></div><div class="prob-row"><span class="prob-key">rejected</span><div class="prob-track"><div class="prob-fill" style="width:0.0%"></div></div><span class="prob-val">0.0%</span></div></div></div><div class="dec-card"><div class="dec-top"><span class="dec-field">decision1_gating</span><span class="dec-type type-noul">noul</span><span class="dec-conf">confidence 0.938</span><span class="dec-act act-auto">Act automatically</span></div><div class="dec-q">Safety/policy probability gating (n=16, threshold 0.9466) · Network P50 636.2 ms</div><div class="dec-ans-row"><span class="dec-ans">15 / 16 (93.8%)</span><div class="dec-closest">False allow 0/8 · False block 1/8 · Coverage 43.8%</div></div><div class="prob-list"><div class="prob-row"><span class="prob-key">correct_gate</span><div class="prob-track"><div class="prob-fill" style="width:93.8%"></div></div><span class="prob-val">93.8%</span></div><div class="prob-row"><span class="prob-key">false_block_safe</span><div class="prob-track"><div class="prob-fill" style="width:6.2%"></div></div><span class="prob-val">6.2%</span></div></div></div><div class="dec-card"><div class="dec-top"><span class="dec-field">e2e_support_routing</span><span class="dec-type type-choice">choice</span><span class="dec-conf">confidence 0.563</span><span class="dec-act act-confirm">Confirm</span></div><div class="dec-q">E2E customer support acceptance (n=16/arm): Strong 81.3% vs Rule 68.8% vs Decision-1 56.3%</div><div class="dec-ans-row"><span class="dec-ans">Strong-only leads (13/16)</span><div class="dec-closest">Small gate=null on both native routers</div></div><div class="prob-list"><div class="prob-row"><span class="prob-key">strong_only_13_16</span><div class="prob-track"><div class="prob-fill" style="width:81.3%"></div></div><span class="prob-val">81.3%</span></div><div class="prob-row"><span class="prob-key">rule_11_16</span><div class="prob-track"><div class="prob-fill" style="width:68.8%"></div></div><span class="prob-val">68.8%</span></div><div class="prob-row"><span class="prob-key">decision1_9_16</span><div class="prob-track"><div class="prob-fill" style="width:56.3%"></div></div><span class="prob-val">56.3%</span></div><div class="prob-row"><span class="prob-key">small_or_strands_2_16</span><div class="prob-track"><div class="prob-fill" style="width:12.5%"></div></div><span class="prob-val">12.5%</span></div></div></div></div></div></div><div class="embedded-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" width="100%" role="img" aria-label="Decision Task Accuracy vs Network P50 Latency Scatter Plot">
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;fill:#0f172a}.lbl{font-size:10.5px;font-weight:600;fill:#334155}.axis{font-size:11px;fill:#475569;font-weight:600}.title{font-size:14px;font-weight:800;fill:#0f172a}.sub{font-size:11px;fill:#64748b}</style>
+<rect width="820" height="430" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="24" y="26" class="title">Scatter 1 · Decision Task Acceptance / Accuracy (%) vs. Client Network P50 Latency (ms, log scale)</text>
+<text x="24" y="43" class="sub">30 cohort points (5 tasks × 6 arms, 384 formal rows). Decision-1 occupies the sub-750 ms frontier on 4/5 tasks; Strands CPU sits at 6.3–18.5 s.</text>
+<rect x="72.0" y="66.6" width="156.9" height="77.4" fill="#eff6ff" rx="6" stroke="#bfdbfe" stroke-dasharray="4 3"/>
+<text x="80.0" y="81.6" style="font-size:10px;font-weight:700;fill:#1d4ed8">Sub-1s Native Fast Zone (Decision-1: 573–701 ms)</text>
+<line x1="72" y1="337.4" x2="780" y2="337.4" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="341.4" text-anchor="end" class="axis">25%</text>
+<line x1="72" y1="249.5" x2="780" y2="249.5" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="253.5" text-anchor="end" class="axis">50%</text>
+<line x1="72" y1="161.5" x2="780" y2="161.5" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="165.5" text-anchor="end" class="axis">75%</text>
+<line x1="72" y1="108.8" x2="780" y2="108.8" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="112.8" text-anchor="end" class="axis">90%</text>
+<line x1="72" y1="73.6" x2="780" y2="73.6" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="77.6" text-anchor="end" class="axis">100%</text>
+<line x1="110.2" y1="56" x2="110.2" y2="355" stroke="#e2e8f0" stroke-width="1"/>
+<text x="110.2" y="373" text-anchor="middle" class="axis">500 ms</text>
+<line x1="228.9" y1="56" x2="228.9" y2="355" stroke="#e2e8f0" stroke-width="1"/>
+<text x="228.9" y="373" text-anchor="middle" class="axis">1 s</text>
+<line x1="347.6" y1="56" x2="347.6" y2="355" stroke="#e2e8f0" stroke-width="1"/>
+<text x="347.6" y="373" text-anchor="middle" class="axis">2 s</text>
+<line x1="504.4" y1="56" x2="504.4" y2="355" stroke="#e2e8f0" stroke-width="1"/>
+<text x="504.4" y="373" text-anchor="middle" class="axis">5 s</text>
+<line x1="623.1" y1="56" x2="623.1" y2="355" stroke="#e2e8f0" stroke-width="1"/>
+<text x="623.1" y="373" text-anchor="middle" class="axis">10 s</text>
+<line x1="741.8" y1="56" x2="741.8" y2="355" stroke="#e2e8f0" stroke-width="1"/>
+<text x="741.8" y="373" text-anchor="middle" class="axis">20 s</text>
+<line x1="72" y1="56" x2="72" y2="355" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="72" y1="355" x2="780" y2="355" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="426.0" y="391" text-anchor="middle" class="axis">Successful Attempt Client Network P50 Latency (log10 scale)</text>
+<text x="18" y="205.5" text-anchor="middle" transform="rotate(-90 18 205.5)" class="axis">Task Acceptance / Accuracy (%)</text>
+<circle cx="133.5" cy="139.5" r="6.5" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="141.5" y="151.5" class="lbl">D1 Class (573ms, 81.3%)</text>
+<circle cx="328.6" cy="73.6" r="6.5" fill="#059669" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="322.6" y="62.6" class="lbl">Mini-lbl (1.79s, 100%)</text>
+<circle cx="351.9" cy="73.6" r="6.5" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<circle cx="556.8" cy="139.5" r="6.5" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<circle cx="444.2" cy="73.6" r="6.5" fill="#D97706" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<circle cx="480.7" cy="73.6" r="6.5" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="151.4,86.8 160.2,103.0 142.7,103.0" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="159.4" y="88.6" class="lbl">D1 Gate (636ms, 93.8%)</text>
+<polygon points="343.1,86.8 351.9,103.0 334.3,103.0" fill="#059669" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="334.5,108.8 343.3,125.0 325.7,125.0" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="544.2,130.8 553.0,147.0 535.5,147.0" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="536.2" y="129.5" class="lbl">Strands Gate (6.31s, 81.3%)</text>
+<polygon points="454.0,64.8 462.8,81.0 445.2,81.0" fill="#D97706" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="426.2,64.8 435.0,81.0 417.5,81.0" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="174.9,69.7 174.9,77.5 168.1,81.4 161.4,77.5 161.4,69.7 168.1,65.8" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="176.1" y="64.6" class="lbl">D1 Score (701ms, 100%)</text>
+<polygon points="337.8,69.7 337.8,77.5 331.1,81.4 324.3,77.5 324.3,69.7 331.1,65.8" fill="#059669" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="380.4,179.6 380.4,187.4 373.7,191.3 366.9,187.4 366.9,179.6 373.7,175.7" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="381.7" y="187.5" class="lbl">Mini-prob Score (2.33s, 68.8%)</text>
+<polygon points="656.0,333.5 656.0,341.3 649.2,345.2 642.5,341.3 642.5,333.5 649.2,329.6" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="639.2" y="327.4" class="lbl">Strands Score (11.65s, 25.0%)</text>
+<polygon points="423.3,69.7 423.3,77.5 416.6,81.4 409.8,77.5 409.8,69.7 416.6,65.8" fill="#D97706" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="451.0,69.7 451.0,77.5 444.2,81.4 437.4,77.5 437.4,69.7 444.2,65.8" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="452.2" y="86.6" class="lbl">Sol-prob (3.52s, 100%)</text>
+<polygon points="317.0,240.7 325.8,249.5 317.0,258.2 308.2,249.5" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="307.0" y="239.5" class="lbl">D1 Model (1673ms, 50%)</text>
+<polygon points="346.2,240.7 355.0,249.5 346.2,258.2 337.4,249.5" fill="#059669" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="362.4,240.7 371.1,249.5 362.4,258.2 353.6,249.5" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="728.9,64.8 737.6,73.6 728.9,82.4 720.1,73.6" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="603.9" y="89.6" class="lbl">Strands Model (18.55s, 100%, n=4)</text>
+<polygon points="422.2,240.7 431.0,249.5 422.2,258.2 413.5,249.5" fill="#D97706" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="480.6,240.7 489.4,249.5 480.6,258.2 471.8,249.5" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="130.9" y="97.5" width="10.7" height="10.7" rx="2" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="144.3" y="106.9" class="lbl">D1 Tool (582ms, 91.7%)</text>
+<rect x="344.0" y="68.2" width="10.7" height="10.7" rx="2" fill="#059669" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="358.5" y="68.2" width="10.7" height="10.7" rx="2" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="602.6" y="97.5" width="10.7" height="10.7" rx="2" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="600.0" y="92.9" class="lbl">Strands Tool (9.15s, 91.7%)</text>
+<rect x="395.6" y="68.2" width="10.7" height="10.7" rx="2" fill="#D97706" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="427.7" y="68.2" width="10.7" height="10.7" rx="2" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<circle cx="24" cy="410" r="5" fill="#2563EB"/>
+<text x="33" y="414" class="sub" style="font-weight:700;fill:#1e293b">Decision-1</text>
+<circle cx="110" cy="410" r="5" fill="#9333EA"/>
+<text x="119" y="414" class="sub" style="font-weight:700;fill:#1e293b">Strands-CPU</text>
+<circle cx="196" cy="410" r="5" fill="#059669"/>
+<text x="205" y="414" class="sub" style="font-weight:700;fill:#1e293b">Mini-lbl</text>
+<circle cx="282" cy="410" r="5" fill="#10B981"/>
+<text x="291" y="414" class="sub" style="font-weight:700;fill:#1e293b">Mini-prob</text>
+<circle cx="368" cy="410" r="5" fill="#D97706"/>
+<text x="377" y="414" class="sub" style="font-weight:700;fill:#1e293b">Sol-lbl</text>
+<circle cx="454" cy="410" r="5" fill="#0F172A"/>
+<text x="463" y="414" class="sub" style="font-weight:700;fill:#1e293b">Sol-prob</text>
+<text x="546" y="414" class="sub">Shapes: ● Class  ■ Tool  ◆ Model  ▲ Gate  ⬡ Score</text>
+</svg></div></div><footer class="card-footer"><div class="callout-box"><strong>Scatter 1 (above) maps all 30 decision-task cohorts (5 tasks × 6 arms) by exact Network P50 latency and acceptance rate.</strong> Azure Microsoft-Decision-1 (v1) delivers 572.9–701.3 ms network P50 on 4 closed-set tasks; local Strands 2B runs on Windows ARM64 x64-emulated CPU (torch 2.14.1+cpu, fp32, 6 threads) at 6.3–18.5 s.</div><div class="card-meta"><span>Decision Model &amp; Multi-Model Routing Benchmark · 4-Model Live Pilot · measured</span><span>1 / 7</span></div></footer></article><article class="report-card" id="card-2"><div class="card-accent-bar"></div><header class="card-header"><div class="card-eyebrow">SCENARIO: E2E-SUPPORT-FAMILY-03-CASE-02-EN</div><h2 class="card-headline">One call. Four decisions. 572.7 ms on Decision-1.</h2><p class="card-subtitle">Single-request multi-question fanout on customer support ticket triage (`department`, `tool`, `sufficient`, `route`), contrasting Azure Decision-1 (572.7 ms, 395 tokens) with local CPU Strands (29,587.5 ms, 575 tokens).</p></header><div class="card-canvas"><div class="quote-box">Case e2e-support-family-03-case-02-en: &quot;I need to recover access after changing email.&quot; (signed_in=true, owner_match=true, readonly_facts={&quot;account.step&quot;: &quot;use the reset link&quot;}, refund_approval=false, allowed_tools=[invoice_lookup, service_status, kb_search, clarify, human]).</div><div class="dec-stack"><div class="dec-card"><div class="dec-top"><span class="dec-field">department</span><span class="dec-type type-choice">choice</span><span class="dec-conf">confidence 0.990</span><span class="dec-act act-auto">Act automatically</span></div><div class="dec-q">Which support department owns this ticket? (Gold: account)</div><div class="dec-ans-row"><span class="dec-ans">account (99.2%)</span><div class="dec-closest">Strands CPU also picked account (92.4%, conf 0.905)</div></div><div class="prob-list"><div class="prob-row"><span class="prob-key">account</span><div class="prob-track"><div class="prob-fill" style="width:99.2%"></div></div><span class="prob-val">99.2%</span></div><div class="prob-row"><span class="prob-key">unknown</span><div class="prob-track"><div class="prob-fill" style="width:0.4%"></div></div><span class="prob-val">0.4%</span></div><div class="prob-row"><span class="prob-key">billing</span><div class="prob-track"><div class="prob-fill" style="width:0.2%"></div></div><span class="prob-val">0.2%</span></div><div class="prob-row"><span class="prob-key">technical</span><div class="prob-track"><div class="prob-fill" style="width:0.1%"></div></div><span class="prob-val">0.1%</span></div><div class="prob-row"><span class="prob-key">sales</span><div class="prob-track"><div class="prob-fill" style="width:0.1%"></div></div><span class="prob-val">0.1%</span></div></div></div><div class="dec-card"><div class="dec-top"><span class="dec-field">tool</span><span class="dec-type type-choice">choice</span><span class="dec-conf">confidence 0.937</span><span class="dec-act act-auto">Act automatically</span></div><div class="dec-q">Which read-only tool should run first? (Gold: kb_search)</div><div class="dec-ans-row"><span class="dec-ans">kb_search (94.9%)</span><div class="dec-closest">Strands CPU missed: picked clarify (49.1%, conf 0.363)</div></div><div class="prob-list"><div class="prob-row"><span class="prob-key">kb_search</span><div class="prob-track"><div class="prob-fill" style="width:94.9%"></div></div><span class="prob-val">94.9%</span></div><div class="prob-row"><span class="prob-key">invoice_lookup</span><div class="prob-track"><div class="prob-fill" style="width:2.5%"></div></div><span class="prob-val">2.5%</span></div><div class="prob-row"><span class="prob-key">clarify</span><div class="prob-track"><div class="prob-fill" style="width:2.0%"></div></div><span class="prob-val">2.0%</span></div><div class="prob-row"><span class="prob-key">human</span><div class="prob-track"><div class="prob-fill" style="width:0.3%"></div></div><span class="prob-val">0.3%</span></div><div class="prob-row"><span class="prob-key">service_status</span><div class="prob-track"><div class="prob-fill" style="width:0.3%"></div></div><span class="prob-val">0.3%</span></div></div></div><div class="dec-card"><div class="dec-top"><span class="dec-field">sufficient + route</span><span class="dec-type type-noul">noul</span><span class="dec-conf">confidence 0.947</span><span class="dec-act act-confirm">Confirm</span></div><div class="dec-q">Are facts sufficient to answer (gate=0.0759) and which tier should generate? (Raw route: small 94.6%)</div><div class="dec-ans-row"><span class="dec-ans">Yes (94.7%) → Escalated to strong (gpt-6.1-sol)</span><div class="dec-closest">Calibration set small_gate=null → safe fallback to strong, accepted in 6,844.2 ms</div></div><div class="prob-list"><div class="prob-row"><span class="prob-key">sufficient_true</span><div class="prob-track"><div class="prob-fill" style="width:94.7%"></div></div><span class="prob-val">94.7%</span></div><div class="prob-row"><span class="prob-key">sufficient_false</span><div class="prob-track"><div class="prob-fill" style="width:5.3%"></div></div><span class="prob-val">5.3%</span></div><div class="prob-row"><span class="prob-key">raw_route_small</span><div class="prob-track"><div class="prob-fill" style="width:94.6%"></div></div><span class="prob-val">94.6%</span></div><div class="prob-row"><span class="prob-key">raw_route_strong</span><div class="prob-track"><div class="prob-fill" style="width:2.9%"></div></div><span class="prob-val">2.9%</span></div><div class="prob-row"><span class="prob-key">raw_route_human</span><div class="prob-track"><div class="prob-fill" style="width:2.5%"></div></div><span class="prob-val">2.5%</span></div></div></div></div></div><footer class="card-footer"><div class="callout-box"><strong>Calibration gating prevented an unverified small-model handoff even when raw `route` favored `small` at 94.6%.</strong> Because `small` (`gpt-5.4-mini`) passed only 2/16 support tickets in calibration, `small_gate` froze to `null`: Decision-1 routed answerable tickets to `gpt-6.1-sol` (accepted=true), whereas Strands had `sufficient_gate=null` and sent all 16 support rows to simulated human review.</div><div class="card-meta"><span>Decision Model &amp; Multi-Model Routing Benchmark · 4-Model Live Pilot · measured</span><span>2 / 7</span></div></footer></article><article class="report-card" id="card-3"><div class="card-accent-bar"></div><header class="card-header"><div class="card-eyebrow">WHAT I TESTED</div><h2 class="card-headline">6 benchmark suites, 40 cohorts, 544 formal test rows</h2><p class="card-subtitle">Representative cohort scorecard across the 4 decision tasks (384 rows) and 2 E2E routing scenarios (160 rows), plus Scatter 2 mapping E2E acceptance against latency and cost.</p></header><div class="card-canvas"><div class="table-wrap"><table class="score-table"><thead><tr><th>COHORT / TASK</th><th>EVALUATION SCOPE</th><th>MEASURED OUTCOME</th><th>GATE</th></tr></thead><tbody><tr class=""><td class="td-scen">Classification (n=16)</td><td>5-team ticket routing (Decision-1 / Strands / Mini-prob / Sol-prob)</td><td class="td-ans">D1 13/16 (81%) · Strands 13/16 (81%) · Mini/Sol 16/16 (100%)</td><td><span class="dec-act act-confirm">Confirm</span></td></tr><tr class=""><td class="td-scen">Tool Selection (n=12)</td><td>5-option read-only tool pick (Decision-1 / Strands / Mini / Sol)</td><td class="td-ans">D1 11/12 (92%) · Strands 11/12 (92%) · Mini/Sol 12/12 (100%)</td><td><span class="dec-act act-auto">Auto</span></td></tr><tr class="row-miss"><td class="td-scen">Model Selection (n=4)</td><td>Counterfactual route vs oracle (all 4 gold=small)</td><td class="td-ans"><span class="miss-mark">✕</span> Strands 4/4 (100%) · D1 / Mini / Sol 2/4 (50%)</td><td><span class="dec-act act-confirm">Confirm</span></td></tr><tr class=""><td class="td-scen">Safety Gating (n=16)</td><td>Noul allow/abstain under frozen calibration threshold</td><td class="td-ans">Sol 16/16 · D1 15/16 (FA 0/8) · Mini-prob 14/16 · Strands 13/16</td><td><span class="dec-act act-auto">Auto</span></td></tr><tr class="row-miss"><td class="td-scen">Safety Gating (n=16)</td><td>Mini label-only boolean gate without probability threshold</td><td class="td-ans"><span class="miss-mark">✕</span> 15/16 total but 1/8 False Allow on unsafe case</td><td><span class="dec-act act-human">Human</span></td></tr><tr class=""><td class="td-scen">Rubric Scoring (n=16)</td><td>0-4 ordinal score within |score - gold| &lt;= 0.5 (Decision-1 &amp; Sol)</td><td class="td-ans">D1 16/16 (MAE 0.0082) · Sol 16/16 (MAE 0.0000)</td><td><span class="dec-act act-auto">Auto</span></td></tr><tr class="row-miss"><td class="td-scen">Rubric Scoring (n=16)</td><td>Strands native &amp; Mini-prob ZH ordinal score stability</td><td class="td-ans"><span class="miss-mark">✕</span> Strands 4/16 (25%, MAE 0.741) · Mini-prob 11/16 (5 ZH invalid)</td><td><span class="dec-act act-human">Human</span></td></tr><tr class="row-miss"><td class="td-scen">E2E Support (n=16/arm)</td><td>Full ticket resolution (Strong / Rule / Decision-1 / Mini / Strands)</td><td class="td-ans"><span class="miss-mark">✕</span> Strong 13/16 (81%) · Rule 11/16 · D1 9/16 · Mini 2/16 · Strands 2/16</td><td><span class="dec-act act-confirm">Confirm</span></td></tr><tr class=""><td class="td-scen">E2E RAG (n=16/arm)</td><td>Grounded QA &amp; abstention (Rule / Mini / Sol / Strands / Decision-1)</td><td class="td-ans">Rule/Mini/Sol/Strands 16/16 (100%) · D1 13/16 (81%)</td><td><span class="dec-act act-auto">Auto</span></td></tr></tbody></table></div><div class="embedded-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 410" width="100%" role="img" aria-label="End-to-End Routing Acceptance vs Total P50 Latency and Cost Bubble Scatter">
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;fill:#0f172a}.lbl{font-size:10.5px;font-weight:600;fill:#1e293b}.axis{font-size:11px;fill:#475569;font-weight:600}.title{font-size:14px;font-weight:800;fill:#0f172a}.sub{font-size:11px;fill:#64748b}</style>
+<rect width="820" height="410" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="24" y="26" class="title">Scatter 2 · End-to-End Scenarios (Support &amp; RAG, n=16/arm): Acceptance (%) vs. Total E2E P50 Latency &amp; Cost</text>
+<text x="24" y="43" class="sub">Bubble radius scales with Upper USD / Accepted Task (or hollow ring for $0 local API fee). All paired bootstrap gates are inconclusive.</text>
+<line x1="72" y1="338.0" x2="780" y2="338.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="342.0" text-anchor="end" class="axis">0%</text>
+<line x1="72" y1="272.7" x2="780" y2="272.7" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="276.7" text-anchor="end" class="axis">25%</text>
+<line x1="72" y1="207.4" x2="780" y2="207.4" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="211.4" text-anchor="end" class="axis">50%</text>
+<line x1="72" y1="142.2" x2="780" y2="142.2" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="146.2" text-anchor="end" class="axis">75%</text>
+<line x1="72" y1="76.9" x2="780" y2="76.9" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64" y="80.9" text-anchor="end" class="axis">100%</text>
+<line x1="107.3" y1="56" x2="107.3" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="107.3" y="356" text-anchor="middle" class="axis">800 ms</text>
+<line x1="214.0" y1="56" x2="214.0" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="214.0" y="356" text-anchor="middle" class="axis">1.5 s</text>
+<line x1="331.8" y1="56" x2="331.8" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="331.8" y="356" text-anchor="middle" class="axis">3 s</text>
+<line x1="449.5" y1="56" x2="449.5" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="449.5" y="356" text-anchor="middle" class="axis">6 s</text>
+<line x1="605.1" y1="56" x2="605.1" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="605.1" y="356" text-anchor="middle" class="axis">15 s</text>
+<line x1="749.0" y1="56" x2="749.0" y2="338" stroke="#e2e8f0" stroke-width="1"/>
+<text x="749.0" y="356" text-anchor="middle" class="axis">35 s</text>
+<line x1="72" y1="56" x2="72" y2="338" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="72" y1="338" x2="780" y2="338" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="426.0" y="374" text-anchor="middle" class="axis">End-to-End Total Logical P50 Latency (ms, log10 scale)</text>
+<text x="18" y="197.0" text-anchor="middle" transform="rotate(-90 18 197.0)" class="axis">Machine Acceptance Rate (%)</text>
+<circle cx="263.7" cy="125.8" r="10.3" fill="#2563EB" fill-opacity="0.85" stroke="#2563EB" stroke-width="2"/>
+<text x="275.7" y="119.8" class="lbl">RAG · Decision-1 (81.3%, 2.01s, $0.00159)</text>
+<circle cx="118.2" cy="76.9" r="9.3" fill="#475569" fill-opacity="0.85" stroke="#475569" stroke-width="2"/>
+<text x="128.2" y="90.9" class="lbl">RAG · Rule (100%, 853ms, $0.00095)</text>
+<circle cx="316.8" cy="76.9" r="9.4" fill="#059669" fill-opacity="0.85" stroke="#059669" stroke-width="2"/>
+<text x="296.8" y="62.9" class="lbl">RAG · Small-only (100%, 2.75s, $0.00101)</text>
+<circle cx="739.2" cy="76.9" r="10.7" fill="#9333EA" fill-opacity="0.85" stroke="#9333EA" stroke-width="2"/>
+<text x="564.2" y="62.9" class="lbl">RAG · Strands (100%, 33.0s, $0.00191)</text>
+<circle cx="405.3" cy="76.9" r="12.3" fill="#0F172A" fill-opacity="0.85" stroke="#0F172A" stroke-width="2"/>
+<text x="417.3" y="91.9" class="lbl">RAG · Strong-only (100%, 4.62s, $0.00348)</text>
+<circle cx="168.8" cy="191.1" r="11.1" fill="#2563EB" fill-opacity="0.62" stroke="#2563EB" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="180.8" y="195.1" class="lbl">Support · Decision-1 (56.3%, 1.15s, $0.00222)</text>
+<circle cx="305.6" cy="158.5" r="10.4" fill="#475569" fill-opacity="0.62" stroke="#475569" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="317.6" y="162.5" class="lbl">Support · Rule (68.8%, 2.57s, $0.00164)</text>
+<circle cx="468.2" cy="305.4" r="18.0" fill="#059669" fill-opacity="0.62" stroke="#059669" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="428.2" y="287.4" class="lbl">Support · Small-only (12.5%, 6.70s, $0.01305/acc)</text>
+<circle cx="719.1" cy="305.4" r="7.0" fill="#9333EA" fill-opacity="0.22" stroke="#9333EA" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="514.1" y="291.4" class="lbl">Support · Strands (12.5%, 29.3s, $0 API, 16/16 human)</text>
+<circle cx="430.9" cy="125.8" r="12.3" fill="#0F172A" fill-opacity="0.62" stroke="#0F172A" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="442.9" y="130.8" class="lbl">Support · Strong-only (81.3%, 5.38s, $0.00341)</text>
+<text x="24" y="396" class="sub">Solid circle = RAG scenario (n=16/arm) · Dashed circle = Support ticket scenario (n=16/arm) · Radius ∝ Upper USD per accepted task</text>
+</svg></div></div><footer class="card-footer"><div class="callout-box"><strong>Across all 544 formal jobs, 537 were schema-valid and 456 were machine-accepted; all 8 E2E paired bootstrap checks are `inconclusive`.</strong> Support routing degraded acceptance vs Strong-only (-25.0 pp for Decision-1, -68.8 pp for Strands/Mini); RAG reached 16/16 on Rule, Mini, Sol, and Strands, but 4 template clusters (8 base cases) cannot prove &lt;=2% non-inferiority.</div><div class="callout-box"><strong>Why the `✕` misses happened: calibration abstention, ZH JSON drift, and unsafe uncalibrated booleans.</strong> Mini-label had 1/8 false allow on unsafe gating; Mini-prob had 5/8 ZH scoring schema/mean failures; Strands 2B had high ordinal spread on 5-level scoring (MAE 0.7412) and abstained on all 16 support tickets.</div><div class="card-meta"><span>Decision Model &amp; Multi-Model Routing Benchmark · 4-Model Live Pilot · measured</span><span>3 / 7</span></div></footer></article><article class="report-card" id="card-4"><div class="card-accent-bar"></div><header class="card-header"><div class="card-eyebrow">UNDER THE HOOD</div><h2 class="card-headline">One `/v1/systemone` contract, two confidence math worlds</h2><p class="card-subtitle">Both Microsoft-Decision-1 and Strands Decider consume the same structured `state + questions` payload and score `&lt;answer&gt;` in a single forward pass—but their Score confidence formulas and verifiers differ.</p></header><div class="card-canvas"><pre class="code-box">{
+  &quot;model&quot;: &quot;Microsoft-Decision-1 | StrandsAgents/strands-decider-2B-qwen3.5-v1-2610&quot;,
+  &quot;state&quot;: &quot;{\&quot;language\&quot;:\&quot;en\&quot;,\&quot;request\&quot;:\&quot;Recover access after changing email...\&quot;}&quot;,
+  &quot;questions&quot;: {
+    &quot;department&quot;: { &quot;type&quot;: &quot;choice&quot;, &quot;criteria&quot;: { &quot;billing&quot;: &quot;...&quot;, &quot;account&quot;: &quot;...&quot; } },
+    &quot;sufficient&quot;: { &quot;type&quot;: &quot;noul&quot;,   &quot;instructions&quot;: &quot;Are facts sufficient to answer safely?&quot; },
+    &quot;relevance&quot;:  { &quot;type&quot;: &quot;score&quot;,  &quot;criteria&quot;: { &quot;0&quot;: &quot;Irrelevant&quot;, &quot;4&quot;: &quot;Exact match&quot; } }
+  }
+}</pre><div class="proto-arrow">↓ server renders XML tags &amp; PointerHead scores option end-tokens at &lt;answer&gt; without autoregressive decoding</div><pre class="code-box">&lt;state&gt;{&quot;language&quot;:&quot;en&quot;,&quot;request&quot;:&quot;Recover access after changing email...&quot;}&lt;/state&gt;
+&lt;question type=&quot;score&quot;&gt;
+Score the passage relevance from 0 to 4.
+&lt;options&gt;
+0 - 0: Irrelevant · 1 - 1: Weak · 2 - 2: Partial · 3 - 3: Good · 4 - 4: Exact match
+&lt;/options&gt;
+&lt;/question&gt;
+&lt;answer&gt;
+# Choice confidence (Jev &amp; Strands): (N * p_max - 1) / (N - 1)
+# Strands Score confidence (std-dev): clamp((sigma_max - sigma) / (sigma_max - sqrt(0.1)), 0, 1)
+# Harness verifier: checks 4dp half-unit rounding bounds &amp; per-attempt 5-min Entra bearer refresh</pre></div><footer class="card-footer"><div class="callout-box"><strong>Zero generated output tokens for native deciders vs. full JSON token generation for LLM probability wrappers.</strong> Strands encodes `&lt;state&gt;` once via `_fork_layered_cache` (Gated DeltaNet conv/recurrent states + attention KV) and projects the `&lt;answer&gt;` hidden state (`pointer_dim=768` in v1 soup) against each option&#x27;s final token.</div><div class="card-meta"><span>Decision Model &amp; Multi-Model Routing Benchmark · 4-Model Live Pilot · measured</span><span>4 / 7</span></div></footer></article><article class="report-card" id="card-5"><div class="card-accent-bar"></div><header class="card-header"><div class="card-eyebrow">ROBUSTNESS CHECK</div><h2 class="card-headline">Bilingual EN vs. ZH pairing &amp; probability wrapper drift</h2><p class="card-subtitle">Every base case was tested in matched English and localized Chinese criteria (544 rows = 272 EN + 272 ZH). Auxiliary option-reversal calls were locked to 0 by contract (`auxiliary_max_api_calls=0`).</p></header><div class="card-canvas"><div class="table-wrap"><table class="score-table"><thead><tr><th>COHORT &amp; PERTURBATION AXIS</th><th>EN / BASELINE</th><th>ZH / VARIANT</th><th>CHANGE (PTS)</th></tr></thead><tbody><tr><td><div class="rob-scen">Decision-1 · Classification &amp; Scoring</div><div class="rob-opt">EN vs ZH matched criteria (n=8 EN, n=8 ZH each)</div></td><td class="td-num">93.8%</td><td class="td-num">87.5%</td><td class="td-num chg-ok">-6.3 pts</td></tr><tr><td><div class="rob-scen">Decision-1 · Tool Selection &amp; Gating</div><div class="rob-opt">EN vs ZH matched criteria (Tool n=6/6, Gate n=8/8)</div></td><td class="td-num">85.7%</td><td class="td-num">100.0%</td><td class="td-num chg-ok">+14.3 pts</td></tr><tr><td><div class="rob-scen">GPT-5.4-mini · Rubric Scoring (Prob Mode)</div><div class="rob-opt">EN (8/8 valid) vs ZH (3/8 valid; 5 schema/mean errors)</div></td><td class="td-num">100.0%</td><td class="td-num">37.5%</td><td class="td-num chg-bad">-62.5 pts</td></tr><tr><td><div class="rob-scen">GPT-5.4-mini · Rubric Scoring (Label vs Prob)</div><div class="rob-opt">Label-only mode (16/16) vs Probability JSON mode (11/16)</div></td><td class="td-num">100.0%</td><td class="td-num">68.8%</td><td class="td-num chg-bad">-31.2 pts</td></tr><tr><td><div class="rob-scen">Deterministic Rule · E2E Support Routing</div><div class="rob-opt">EN (7/8 accepted) vs ZH (4/8 accepted via Mini generator)</div></td><td class="td-num">87.5%</td><td class="td-num">50.0%</td><td class="td-num chg-bad">-37.5 pts</td></tr><tr><td><div class="rob-scen">GPT-6.1 Sol · All 4 Decision Tasks (Label &amp; Prob)</div><div class="rob-opt">EN (30/32) vs ZH (30/32) across Class/Tool/Gate/Score</div></td><td class="td-num">93.8%</td><td class="td-num">93.8%</td><td class="td-num chg-ok">0.0 pts</td></tr></tbody></table></div><div class="embedded-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 390" width="100%" role="img" aria-label="Calibration Error and Gate Coverage Trade-off Scatter Plots">
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;fill:#0f172a}.lbl{font-size:10px;font-weight:600;fill:#1e293b}.axis{font-size:10.5px;fill:#475569;font-weight:600}.title{font-size:13.5px;font-weight:800;fill:#0f172a}.sub{font-size:10.5px;fill:#64748b}</style>
+<rect width="820" height="390" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="24" y="25" class="title">Scatter 3 · Left: Multiclass Brier vs. 10-Bin ECE (20 Probability Cohorts) | Right: Gate Coverage vs. False-Block Rate</text>
+<text x="24" y="42" class="sub">Left ideal corner is bottom-left (ECE→0, Brier→0). Right shows frozen gate thresholds on n=16 test rows (8 safe, 8 unsafe).</text>
+<line x1="64.0" y1="58" x2="64.0" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64.0" y="341" text-anchor="middle" class="axis">0.0</text>
+<line x1="129.6" y1="58" x2="129.6" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="129.6" y="341" text-anchor="middle" class="axis">0.1</text>
+<line x1="195.2" y1="58" x2="195.2" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="195.2" y="341" text-anchor="middle" class="axis">0.2</text>
+<line x1="260.7" y1="58" x2="260.7" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="260.7" y="341" text-anchor="middle" class="axis">0.3</text>
+<line x1="326.3" y1="58" x2="326.3" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="326.3" y="341" text-anchor="middle" class="axis">0.4</text>
+<line x1="391.9" y1="58" x2="391.9" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="391.9" y="341" text-anchor="middle" class="axis">0.5</text>
+<line x1="64" y1="325.0" x2="405" y2="325.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="329.0" text-anchor="end" class="axis">0.00</text>
+<line x1="64" y1="261.4" x2="405" y2="261.4" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="265.4" text-anchor="end" class="axis">0.25</text>
+<line x1="64" y1="197.9" x2="405" y2="197.9" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="201.9" text-anchor="end" class="axis">0.50</text>
+<line x1="64" y1="134.3" x2="405" y2="134.3" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="138.3" text-anchor="end" class="axis">0.75</text>
+<line x1="64" y1="70.7" x2="405" y2="70.7" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="74.7" text-anchor="end" class="axis">1.00</text>
+<line x1="64" y1="58" x2="64" y2="325" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="64" y1="325" x2="405" y2="325" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="234.5" y="359" text-anchor="middle" class="axis">10-Bin ECE (Predicted-Class Probability)</text>
+<text x="16" y="191.5" text-anchor="middle" transform="rotate(-90 16 191.5)" class="axis">Multiclass Brier Sum</text>
+<circle cx="143.6" cy="262.7" r="5.8" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="149.6" y="258.7" class="lbl">D1 Class (0.121, 0.245)</text>
+<circle cx="134.9" cy="319.6" r="5.8" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<circle cx="148.4" cy="251.1" r="5.8" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<circle cx="92.8" cy="320.7" r="5.8" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="90.4,314.6 98.3,329.1 82.6,329.1" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="96.4" y="334.4" class="lbl">D1 Gate (0.040, 0.010)</text>
+<polygon points="130.4,257.7 138.2,272.2 122.6,272.2" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="290.3,185.9 298.1,200.4 282.5,200.4" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="205.3" y="185.7" class="lbl">Strands Gate (0.345, 0.516)</text>
+<polygon points="65.7,317.2 73.6,331.6 57.9,331.6" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="79.8,321.2 79.8,328.2 73.8,331.6 67.8,328.2 67.8,321.2 73.8,317.7" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="79.8" y="316.7" class="lbl">D1 Score (0.015, 0.001)</text>
+<polygon points="144.5,311.4 144.5,318.4 138.5,321.9 132.5,318.4 132.5,311.4 138.5,307.9" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="349.2,192.6 349.2,199.5 343.2,203.0 337.2,199.5 337.2,192.6 343.2,189.1" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="248.2" y="210.1" class="lbl">Strands Score (0.426, 0.507)</text>
+<polygon points="70.0,321.5 70.0,328.5 64.0,332.0 58.0,328.5 58.0,321.5 64.0,318.0" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="383.2,71.7 391.0,79.6 383.2,87.4 375.3,79.6" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="248.2" y="71.6" class="lbl">D1/Sol Model (ECE ~0.48, Brier ~0.97)</text>
+<polygon points="298.4,97.8 306.3,105.6 298.4,113.4 290.6,105.6" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="204.4,291.3 212.2,299.1 204.4,307.0 196.6,299.1" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="210.4" y="303.1" class="lbl">Strands Model (0.214, 0.102)</text>
+<polygon points="378.8,70.3 386.6,78.2 378.8,86.0 370.9,78.2" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="95.9" y="306.8" width="9.6" height="9.6" rx="2" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="106.7" y="307.5" class="lbl">D1 Tool (0.056, 0.053)</text>
+<rect x="193.6" y="302.7" width="9.6" height="9.6" rx="2" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="150.9" y="280.4" width="9.6" height="9.6" rx="2" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="83.3" y="319.0" width="9.6" height="9.6" rx="2" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<line x1="513.9" y1="58" x2="513.9" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="513.9" y="341" text-anchor="middle" class="axis">25%</text>
+<line x1="581.7" y1="58" x2="581.7" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="581.7" y="341" text-anchor="middle" class="axis">35%</text>
+<line x1="649.4" y1="58" x2="649.4" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="649.4" y="341" text-anchor="middle" class="axis">45%</text>
+<line x1="717.2" y1="58" x2="717.2" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="717.2" y="341" text-anchor="middle" class="axis">55%</text>
+<line x1="785.0" y1="58" x2="785.0" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="785.0" y="341" text-anchor="middle" class="axis">65%</text>
+<line x1="480" y1="325.0" x2="785" y2="325.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="474" y="329.0" text-anchor="end" class="axis">0.0%</text>
+<line x1="480" y1="250.8" x2="785" y2="250.8" stroke="#e2e8f0" stroke-width="1"/>
+<text x="474" y="254.8" text-anchor="end" class="axis">12.5%</text>
+<line x1="480" y1="176.7" x2="785" y2="176.7" stroke="#e2e8f0" stroke-width="1"/>
+<text x="474" y="180.7" text-anchor="end" class="axis">25.0%</text>
+<line x1="480" y1="102.5" x2="785" y2="102.5" stroke="#e2e8f0" stroke-width="1"/>
+<text x="474" y="106.5" text-anchor="end" class="axis">37.5%</text>
+<line x1="480" y1="58" x2="480" y2="325" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="480" y1="325" x2="785" y2="325" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="632.5" y="359" text-anchor="middle" class="axis">Auto-Allow Coverage (% of all 16 gating rows)</text>
+<text x="438" y="191.5" text-anchor="middle" transform="rotate(-90 438 191.5)" class="axis">False-Block Rate on Safe (%)</text>
+<circle cx="641.0" cy="250.8" r="7" fill="#2563EB" stroke="#fff" stroke-width="1.5"/>
+<text x="596.0" y="240.8" class="lbl">Decision-1 (cov 43.8%, FB 1/8, FA 0/8)</text>
+<circle cx="598.6" cy="176.7" r="7" fill="#10B981" stroke="#fff" stroke-width="1.5"/>
+<text x="563.6" y="166.7" class="lbl">Mini-prob (cov 37.5%, FB 2/8, FA 0/8)</text>
+<circle cx="556.2" cy="102.5" r="7" fill="#9333EA" stroke="#fff" stroke-width="1.5"/>
+<text x="564.2" y="106.5" class="lbl">Strands (cov 31.3%, FB 3/8, FA 0/8)</text>
+<circle cx="683.3" cy="325.0" r="7" fill="#0F172A" stroke="#fff" stroke-width="1.5"/>
+<text x="538.3" y="313.0" class="lbl">Sol-prob &amp; Sol-lbl (cov 50.0%, FB 0/8, FA 0/8)</text>
+<circle cx="725.7" cy="325.0" r="7" fill="#dc2626" stroke="#fff" stroke-width="1.5"/>
+<text x="580.7" y="299.0" class="lbl">Mini-lbl (cov 56.3%, FB 0/8, FA 1/8 unsafe!)</text>
+</svg></div></div><footer class="card-footer"><div class="callout-box"><strong>Prompting a small LLM for JSON probability distributions caused a -62.5 pt Chinese scoring collapse (100% EN → 37.5% ZH).</strong> While `gpt-5.4-mini` achieved 100% (16/16) in label-only scoring, asking it for 5-level probabilities produced 5 Chinese schema/expectation mismatches—showing why native single-pass deciders (`Decision-1` 16/16, ECE 0.0149) avoid JSON wrapper fragility.</div><div class="card-meta"><span>Decision Model &amp; Multi-Model Routing Benchmark · 4-Model Live Pilot · measured</span><span>5 / 7</span></div></footer></article><article class="report-card" id="card-6"><div class="card-accent-bar"></div><header class="card-header"><div class="card-eyebrow">LATENCY</div><h2 class="card-headline">Decision-1 is 3.0x–6.2x faster than LLM probability wrappers</h2><p class="card-subtitle">Client network P50 latency (ms) on successful attempts across all 6 cohorts. Blue bars show Azure Decision-1; gray/purple bars compare GPT-5.4-mini, GPT-6.1 Sol, and local CPU Strands.</p></header><div class="card-canvas"><div class="lat-list"><div class="lat-group"><div class="lat-title">Classification (n=16 · 5 options) — Decision-1 is 3.6x faster than Mini-prob, 7.6x faster than Sol-prob</div><div class="lat-bar-row"><span class="lat-tag">Decision-1</span><div class="lat-track"><div class="lat-fill lat-blue" style="width:36.3%"></div></div><span class="lat-ms">572.9 ms (Total P50 780.0 ms)</span></div><div class="lat-bar-row"><span class="lat-tag">Mini-label</span><div class="lat-track"><div class="lat-fill lat-green" style="width:54.7%"></div></div><span class="lat-ms">1,790.2 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Mini-prob</span><div class="lat-track"><div class="lat-fill lat-gray" style="width:56.9%"></div></div><span class="lat-ms">2,051.6 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Sol-prob</span><div class="lat-track"><div class="lat-fill lat-dark" style="width:69.1%"></div></div><span class="lat-ms">4,351.4 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Strands CPU</span><div class="lat-track"><div class="lat-fill lat-purple" style="width:76.3%"></div></div><span class="lat-ms">6,789.1 ms (Server 6,751.9 ms)</span></div></div><div class="lat-group"><div class="lat-title">Tool Selection (n=12 · 5 options) — Decision-1 is 3.8x faster than Mini-prob, 5.7x faster than Sol-prob</div><div class="lat-bar-row"><span class="lat-tag">Decision-1</span><div class="lat-track"><div class="lat-fill lat-blue" style="width:36.5%"></div></div><span class="lat-ms">582.4 ms (Total P50 644.7 ms)</span></div><div class="lat-bar-row"><span class="lat-tag">Mini-label</span><div class="lat-track"><div class="lat-fill lat-green" style="width:56.7%"></div></div><span class="lat-ms">2,020.7 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Mini-prob</span><div class="lat-track"><div class="lat-fill lat-gray" style="width:58.0%"></div></div><span class="lat-ms">2,199.6 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Sol-prob</span><div class="lat-track"><div class="lat-fill lat-dark" style="width:64.6%"></div></div><span class="lat-ms">3,295.6 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Strands CPU</span><div class="lat-track"><div class="lat-fill lat-purple" style="width:81.1%"></div></div><span class="lat-ms">9,153.2 ms (Server 9,147.5 ms)</span></div></div><div class="lat-group"><div class="lat-title">Probability Gating (n=16 · Noul) — Decision-1 is 2.9x faster than Mini-prob, 5.0x faster than Sol-prob</div><div class="lat-bar-row"><span class="lat-tag">Decision-1</span><div class="lat-track"><div class="lat-fill lat-blue" style="width:38.0%"></div></div><span class="lat-ms">636.2 ms (Total P50 674.0 ms)</span></div><div class="lat-bar-row"><span class="lat-tag">Mini-prob</span><div class="lat-track"><div class="lat-fill lat-gray" style="width:55.3%"></div></div><span class="lat-ms">1,853.2 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Mini-label</span><div class="lat-track"><div class="lat-fill lat-green" style="width:56.1%"></div></div><span class="lat-ms">1,948.7 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Sol-prob</span><div class="lat-track"><div class="lat-fill lat-dark" style="width:64.0%"></div></div><span class="lat-ms">3,166.9 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Strands CPU</span><div class="lat-track"><div class="lat-fill lat-purple" style="width:75.1%"></div></div><span class="lat-ms">6,308.3 ms (Server 6,292.9 ms)</span></div></div><div class="lat-group"><div class="lat-title">Rubric Scoring (n=16 · 5 levels) — Decision-1 is 3.3x faster than Mini-prob, 5.0x faster than Sol-prob</div><div class="lat-bar-row"><span class="lat-tag">Decision-1</span><div class="lat-track"><div class="lat-fill lat-blue" style="width:39.5%"></div></div><span class="lat-ms">701.3 ms (Total P50 719.6 ms)</span></div><div class="lat-bar-row"><span class="lat-tag">Mini-label</span><div class="lat-track"><div class="lat-fill lat-green" style="width:55.0%"></div></div><span class="lat-ms">1,816.5 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Mini-prob</span><div class="lat-track"><div class="lat-fill lat-gray" style="width:59.0%"></div></div><span class="lat-ms">2,329.8 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Sol-prob</span><div class="lat-track"><div class="lat-fill lat-dark" style="width:65.6%"></div></div><span class="lat-ms">3,516.9 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Strands CPU</span><div class="lat-track"><div class="lat-fill lat-purple" style="width:85.0%"></div></div><span class="lat-ms">11,647.9 ms (Server 11,628.0 ms)</span></div></div><div class="lat-group"><div class="lat-title">E2E Total Logical P50 (Support / RAG, n=16/arm) — Includes routing + retrieval + generation</div><div class="lat-bar-row"><span class="lat-tag">D1 (Sup/RAG)</span><div class="lat-track"><div class="lat-fill lat-blue" style="width:47.5%"></div></div><span class="lat-ms">Support 1,149.6 ms (10 human) / RAG 2,009.2 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Rule (Sup/RAG)</span><div class="lat-track"><div class="lat-fill lat-gray" style="width:60.6%"></div></div><span class="lat-ms">Support 2,571.8 ms / RAG 853.0 ms (8 policy-only)</span></div><div class="lat-bar-row"><span class="lat-tag">Strong-only</span><div class="lat-track"><div class="lat-fill lat-dark" style="width:72.5%"></div></div><span class="lat-ms">Support 5,376.6 ms / RAG 4,624.4 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Small-only</span><div class="lat-track"><div class="lat-fill lat-green" style="width:76.1%"></div></div><span class="lat-ms">Support 6,698.8 ms / RAG 2,746.7 ms</span></div><div class="lat-bar-row"><span class="lat-tag">Strands E2E</span><div class="lat-track"><div class="lat-fill lat-purple" style="width:100.0%"></div></div><span class="lat-ms">Support 29,341.3 ms / RAG 33,036.1 ms (4-q CPU)</span></div></div></div></div><footer class="card-footer"><div class="callout-box"><strong>P95 and P99 are intentionally reported as `null` (`NA`) under the pre-registered sample-size guardrail.</strong> Each task/scenario has 8 independent base cases (16 EN/ZH rows; 2 base cases for model selection), below the 40-case P95 and 500-case P99 thresholds. Local Strands CPU timings (Windows ARM64 x64-emulated fp32) must never be conflated with supplier RTX 3090 (115 ms) or H100 numbers.</div><div class="card-meta"><span>Decision Model &amp; Multi-Model Routing Benchmark · 4-Model Live Pilot · measured</span><span>6 / 7</span></div></footer></article><article class="report-card" id="card-7"><div class="card-accent-bar"></div><header class="card-header"><div class="card-eyebrow">MY TAKE</div><h2 class="card-headline">Where native decision models fit, and where they do not</h2><p class="card-subtitle">Engineering guidance synthesized from 544 formal test rows, 1,179 live model calls, and three concrete routing architectures (TypeSafe Jev, Azure Decision-1, local Strands Decider).</p></header><div class="card-canvas"><div class="take-grid"><div class="take-col take-good"><div class="take-head">✅ Good fit</div><ul><li>Sub-second closed-set rubric scoring &amp; relevance grading (Decision-1: 16/16, MAE 0.0082, ECE 0.0149 at 701 ms)</li><li>Calibrated probability gating with explicit abstention (Decision-1: 15/16, 0/8 false allow, Brier 0.0051 at 636 ms)</li><li>High-volume tool/intent classification where $0.042/1M input &amp; 0 output tokens beat LLM JSON wrappers</li><li>Multi-question shared-prefix fanout over a single state payload (`/v1/systemone`)</li><li>GPU/MPS-backed edge deployment of Apache-2.0 Strands Decider when data cannot leave local infrastructure</li></ul></div><div class="take-col take-bad"><div class="take-head">⛔ Not for</div><ul><li>Replacing deterministic authorization, ownership, tool allowlists, or refund/money policy checks</li><li>Claiming E2E multi-model routing cost/speed wins when the small generator fails task acceptance (Support 2/16)</li><li>Running 2B Gated DeltaNet models on x64-emulated CPU for latency-sensitive online routing (6.3–33.0 s)</li><li>Treating uncalibrated LLM boolean labels (`Mini-label` 1/8 false allow) or ZH JSON probabilities as calibrated gates</li><li>Extrapolating 8-base-case pilot intervals (`status=inconclusive`) as population &lt;=2% non-inferiority guarantees</li></ul></div></div><div class="dark-footer-box"><div class="dark-lead">Readiness &amp; Provenance: `measured` 4-model pilot (544/544 formal rows; committed upper $1.666326800 / $50 cap; local Strands server stopped). Jev (`jev-1.13.0`) remains `untested_missing_external_api_key`.</div><div class="dark-repo">Sealed artifacts: experiments/decision-model-routing/results/{analysis.json,records.json} · Code SHA256: d1fe177b6951...73c6</div></div></div><footer class="card-footer"><div class="card-meta"><span>Decision Model &amp; Multi-Model Routing Benchmark · 4-Model Live Pilot · measured</span><span>7 / 7</span></div></footer></article>
+</main>
+</body>
+</html>

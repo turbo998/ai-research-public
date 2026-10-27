@@ -1,0 +1,1945 @@
+{
+  "schema_version": 2,
+  "research_date_utc": "2026-09-27",
+  "source": {
+    "repo": "githubnext/localjev",
+    "attribution": "LocalJev contributors",
+    "commit": "3f23e36e1a3bff46c7e83e8e3781d3512bc82021",
+    "tree_sha": "95c4a7409e1f78ef036594a71c1b83d3fd380344",
+    "commit_date_utc": "2026-09-18T20:17:51Z",
+    "collected_at_utc": "2026-09-27T14:34:29.293203+00:00",
+    "tree_truncated": false,
+    "commit_tree_relationship_verified": true,
+    "license": "MIT (root LICENSE declaration)"
+  },
+  "method": {
+    "description": "Source-pinned static AI research plus one separate-context claim/source review. All validation is documentation/metadata-only.",
+    "integrity": "SHA-1 of b'blob '+decimal_byte_length+b'\\0'+raw_bytes equals Git blob SHA; byte length equals fixed tree size.",
+    "semantic_reading": "1-based inclusive actual read_ranges, separate from byte collection; JSON field projections do not imply full-file semantic reading.",
+    "execution_performed": false,
+    "raw_sources_committed": false,
+    "datasets_or_models_downloaded": false,
+    "dataset_cards_only": true,
+    "private_external_materials_accessed": false,
+    "upstream_tests_or_benchmarks_executed": false,
+    "paid_inference_called": false,
+    "security_audit_or_exploit_testing": false,
+    "feishu_synced": false,
+    "publication": "private repository research branch and review PR only; no automatic merge",
+    "source_research": {
+      "reader": "bounded_source_research_ai",
+      "files_fully_read": 9,
+      "lines_read": 1355,
+      "artifact_persisted_by": "coordinating_research_ai",
+      "note": "Researcher returned full analysis without file-writing; coordinator preserved the actual returned artifact outside Git."
+    }
+  },
+  "report_binding": {
+    "path": "README.md",
+    "sha256": "3c607f65ad34176984140bb07333aadb5dfb358cc7584555972b12a0a3b9f844",
+    "bytes": 34010,
+    "review_record": "review.md"
+  },
+  "source_collection": {
+    "primary_files_integrity_verified": 24,
+    "primary_files_fully_read": 21,
+    "comparison_files_integrity_verified": 4,
+    "excluded_run_files": [
+      "eval/reports/2026-09-18-bakeoff/results.jsonl",
+      "eval/reports/2026-09-18-bakeoff/warmups.jsonl"
+    ],
+    "exclusion_note": "No raw per-request reaggregation; committed summary/report/manifest selected fields only."
+  },
+  "files": [
+    {
+      "path": ".env.example",
+      "blob_sha": "a3b10c7572d8c8e0b764bd9908eed61541b8571f",
+      "bytes": 494,
+      "line_count": 16,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          16
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/.env.example",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "bounded_source_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "LICENSE",
+      "blob_sha": "9cf0b3e4f32cdf7890f9e0e1fcbd058ed6b57846",
+      "bytes": 1078,
+      "line_count": 21,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          21
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/LICENSE",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "README.md",
+      "blob_sha": "39939e63911e8357ff3791b4f50aed1e4cddab79",
+      "bytes": 7463,
+      "line_count": 211,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          211
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/README.md",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "author_documentation"
+    },
+    {
+      "path": "docs/evaluation-results-2026-09-18.md",
+      "blob_sha": "418cae790c096c508cb6d672a5a1e5abf75e4a88",
+      "bytes": 7189,
+      "line_count": 118,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          118
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/docs/evaluation-results-2026-09-18.md",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "author_documentation"
+    },
+    {
+      "path": "docs/evaluation.md",
+      "blob_sha": "e39e865b4f499f1e8adf5d2df0ea7e91cd939687",
+      "bytes": 14731,
+      "line_count": 261,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          261
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/docs/evaluation.md",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "author_documentation"
+    },
+    {
+      "path": "eval/default.json",
+      "blob_sha": "cb0eec95f28b33f653dcb4af74b2d0ab70942ebd",
+      "bytes": 424,
+      "line_count": 18,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          18
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/eval/default.json",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "eval/reports/2026-09-18-bakeoff/manifest.json",
+      "blob_sha": "90a1ab168878c8a755c3ef5483a00fa9dc52d930",
+      "bytes": 40012,
+      "line_count": 1667,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          110
+        ],
+        [
+          1500,
+          1667
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/eval/reports/2026-09-18-bakeoff/manifest.json",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "selected_lines_and_field_projection",
+      "evidence_kind": "author_run_artifact",
+      "inspected_json_paths": [
+        "/examples/*/id",
+        "/examples/*/task",
+        "/examples/*/gold",
+        "/codeHashes",
+        "/config",
+        "/sources",
+        "/environment",
+        "/gitCommit",
+        "/dirty",
+        "/models",
+        "/inspectedLocalModelSettings"
+      ]
+    },
+    {
+      "path": "eval/reports/2026-09-18-bakeoff/report.md",
+      "blob_sha": "637403a3968bf1f4da53e2212c6e331b05323965",
+      "bytes": 10850,
+      "line_count": 136,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          136
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/eval/reports/2026-09-18-bakeoff/report.md",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "author_run_artifact"
+    },
+    {
+      "path": "eval/reports/2026-09-18-bakeoff/summary.json",
+      "blob_sha": "a50eca0388c507a1d992be643594907b9530929c",
+      "bytes": 36398,
+      "line_count": 1558,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          332
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/eval/reports/2026-09-18-bakeoff/summary.json",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "selected_lines_and_field_projection",
+      "evidence_kind": "author_run_artifact",
+      "inspected_json_paths": [
+        "/reportCodeHashes",
+        "/results",
+        "/expectedResults",
+        "/cells/*/model",
+        "/cells/*/backgroundWords",
+        "/cells/*/macroTaskAccuracy",
+        "/cells/*/tasks/*/correct",
+        "/cells/*/tasks/*/valid",
+        "/cells/*/tasks/*/total",
+        "/cells/*/tasks/*/effectiveAccuracy",
+        "/cells/*/tasks/*/confusion",
+        "/cells/*/tasks/sst5/scoreMAE",
+        "/cells/*/timing/latencyP50Ms",
+        "/cells/*/timing/latencyP95Ms",
+        "/cells/*/timing/retriedRequests",
+        "/cells/*/timing/additionalAttempts",
+        "/cells/*/timing/failures",
+        "/cells/*/timing/reportedCachedFraction"
+      ]
+    },
+    {
+      "path": "package.json",
+      "blob_sha": "f1c8e408eaee52d4617d7483e6db88a54dec372c",
+      "bytes": 628,
+      "line_count": 22,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          22
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/package.json",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "bounded_source_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "scripts/eval/common.ts",
+      "blob_sha": "2eb3c48a6307df42b2eb8e7a00480b35c81fed5b",
+      "bytes": 4634,
+      "line_count": 124,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          124
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/common.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "scripts/eval/data.ts",
+      "blob_sha": "1d6551d9afaeae130af1a7322f20c1d3505d0670",
+      "bytes": 7876,
+      "line_count": 128,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          128
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/data.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "scripts/eval/metrics.ts",
+      "blob_sha": "326943d165caa8d08be757959f0250e7ab337f61",
+      "bytes": 4158,
+      "line_count": 70,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          70
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/metrics.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "scripts/eval/report.ts",
+      "blob_sha": "59fdb21c04fcd65c4520618f908b39a837af5671",
+      "bytes": 10611,
+      "line_count": 108,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          108
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/report.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "scripts/eval/run.ts",
+      "blob_sha": "f955214b85a24bdcb31acca6e5d870a540c34e24",
+      "bytes": 13267,
+      "line_count": 202,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          202
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/run.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "src/config.ts",
+      "blob_sha": "18bf3db681772cdb7e588c2b1ade3671499c406b",
+      "bytes": 2776,
+      "line_count": 96,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          96
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/config.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "bounded_source_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "src/engine.ts",
+      "blob_sha": "5104d3e9abc0f9e09c31b0c7b474390a327ff26f",
+      "bytes": 16715,
+      "line_count": 523,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          523
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/engine.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "bounded_source_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "src/index.ts",
+      "blob_sha": "d2030fca56db457efb8fa3b28907496677b08f45",
+      "bytes": 838,
+      "line_count": 32,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          32
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/index.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "bounded_source_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "src/server.ts",
+      "blob_sha": "f3266ad49d6741d38af4f8dbd61450ae3b1afe75",
+      "bytes": 6106,
+      "line_count": 225,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          225
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/server.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "bounded_source_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "src/types.ts",
+      "blob_sha": "39656c7e156dff865600ce7ac671d38fb6becf63",
+      "bytes": 5546,
+      "line_count": 191,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          191
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/types.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "bounded_source_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "test/engine.test.ts",
+      "blob_sha": "15bf1ec0cdd68d6f41ed93a75c6dc5f85aa11d24",
+      "bytes": 4294,
+      "line_count": 144,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          144
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/test/engine.test.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "bounded_source_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "test/eval.test.ts",
+      "blob_sha": "5145ab05f219c8e1ee4a61f56687998eeed37337",
+      "bytes": 7360,
+      "line_count": 126,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          126
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/test/eval.test.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "coordinating_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "path": "test/server.test.ts",
+      "blob_sha": "117b4750c877b342783d834589eff29933bfb7c7",
+      "bytes": 3609,
+      "line_count": 106,
+      "integrity_verified": true,
+      "read_ranges": [
+        [
+          1,
+          106
+        ]
+      ],
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/test/server.test.ts",
+      "repo": "githubnext/localjev",
+      "collected_date_utc": "2026-09-27",
+      "reader": "bounded_source_research_ai",
+      "semantic_read_status": "full",
+      "evidence_kind": "static_source"
+    },
+    {
+      "repo": "githubnext/localjev",
+      "path": "bun.lock",
+      "blob_sha": "cc938c20fd4d6488dfdc99ee562fac48a89f2197",
+      "bytes": 1898,
+      "line_count": 34,
+      "integrity_verified": true,
+      "url": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/bun.lock",
+      "collected_date_utc": "2026-09-27",
+      "reader": null,
+      "read_ranges": [],
+      "semantic_read_status": "not_semantically_read",
+      "evidence_kind": "static_source",
+      "use": "Git blob/bytes and recorded evaluation SHA-256 comparison only"
+    }
+  ],
+  "comparison": {
+    "repo": "razorback16/openjev",
+    "commit": "e4f72c49f3ba887dbd24dd9912ffa84db85fefd4",
+    "tree_sha": "dae445536a80d0b7e276d301f5889dea988445ae",
+    "commit_date_utc": "2026-09-27T05:21:32Z",
+    "files": [
+      {
+        "repo": "razorback16/openjev",
+        "commit": "e4f72c49f3ba887dbd24dd9912ffa84db85fefd4",
+        "tree_sha": "dae445536a80d0b7e276d301f5889dea988445ae",
+        "path": "README.md",
+        "blob_sha": "c7f636e8a0f5c987f8d75f8a0bf16cbe06dcb5f3",
+        "bytes": 29731,
+        "line_count": 528,
+        "integrity_verified": true,
+        "url": "https://github.com/razorback16/openjev/blob/e4f72c49f3ba887dbd24dd9912ffa84db85fefd4/README.md",
+        "read_ranges": [
+          [
+            1,
+            170
+          ]
+        ],
+        "reader": "coordinating_research_ai",
+        "collected_date_utc": "2026-09-27",
+        "semantic_read_status": "selected_lines"
+      },
+      {
+        "repo": "razorback16/openjev",
+        "commit": "e4f72c49f3ba887dbd24dd9912ffa84db85fefd4",
+        "tree_sha": "dae445536a80d0b7e276d301f5889dea988445ae",
+        "path": "openjev/engine.py",
+        "blob_sha": "f36fee776eb290308cdd6128736f53c313ee9db1",
+        "bytes": 22957,
+        "line_count": 451,
+        "integrity_verified": true,
+        "url": "https://github.com/razorback16/openjev/blob/e4f72c49f3ba887dbd24dd9912ffa84db85fefd4/openjev/engine.py",
+        "read_ranges": [
+          [
+            1,
+            180
+          ],
+          [
+            241,
+            315
+          ],
+          [
+            332,
+            394
+          ],
+          [
+            421,
+            451
+          ]
+        ],
+        "reader": "coordinating_research_ai",
+        "collected_date_utc": "2026-09-27",
+        "semantic_read_status": "selected_lines"
+      },
+      {
+        "repo": "razorback16/openjev",
+        "commit": "e4f72c49f3ba887dbd24dd9912ffa84db85fefd4",
+        "tree_sha": "dae445536a80d0b7e276d301f5889dea988445ae",
+        "path": "openjev/mlx_backend.py",
+        "blob_sha": "6d104672ebf2293e7b2dfd82a59ed6ff433ae4ae",
+        "bytes": 11731,
+        "line_count": 235,
+        "integrity_verified": true,
+        "url": "https://github.com/razorback16/openjev/blob/e4f72c49f3ba887dbd24dd9912ffa84db85fefd4/openjev/mlx_backend.py",
+        "read_ranges": [
+          [
+            1,
+            235
+          ]
+        ],
+        "reader": "coordinating_research_ai",
+        "collected_date_utc": "2026-09-27",
+        "semantic_read_status": "full"
+      },
+      {
+        "repo": "razorback16/openjev",
+        "commit": "e4f72c49f3ba887dbd24dd9912ffa84db85fefd4",
+        "tree_sha": "dae445536a80d0b7e276d301f5889dea988445ae",
+        "path": "openjev/encoders.py",
+        "blob_sha": "e338f06edc9622dd39d72ab7504f43f44b7fba56",
+        "bytes": 21303,
+        "line_count": 445,
+        "integrity_verified": true,
+        "url": "https://github.com/razorback16/openjev/blob/e4f72c49f3ba887dbd24dd9912ffa84db85fefd4/openjev/encoders.py",
+        "read_ranges": [
+          [
+            1,
+            90
+          ]
+        ],
+        "reader": "coordinating_research_ai",
+        "collected_date_utc": "2026-09-27",
+        "semantic_read_status": "selected_lines"
+      }
+    ],
+    "scope": "Selected direct-read code and backend declarations, not a full OpenJev review or performance comparison."
+  },
+  "web_sources": [
+    {
+      "id": "W1",
+      "url": "https://docs.typesafe.ai/introduction.md",
+      "version_status": "mutable_documentation",
+      "read_scope": "Introduction, primitives table, atomic questions",
+      "finding": "TypeSafe describes Jev as its System One model, producing typed decisions without text generation/parsing; this is vendor description, not independently verified model internals."
+    },
+    {
+      "id": "W2",
+      "url": "https://docs.typesafe.ai/api.md",
+      "version_status": "mutable_documentation",
+      "read_scope": "Entire returned API reference",
+      "finding": "POST /v1/systemone; state/model/questions -> model/answers/usage; choice <=255 options, score <=10 levels; request examples and documented errors."
+    },
+    {
+      "id": "W3",
+      "url": "https://docs.typesafe.ai/confidence",
+      "version_status": "mutable_documentation",
+      "read_scope": "Entire returned confidence page",
+      "finding": "Confidence is derived from distribution shape, absent on noul; interactive demo explicitly uses an approximation from largest probability, not evidence for the production formula."
+    },
+    {
+      "id": "W4",
+      "url": "https://docs.typesafe.ai/sdk/python/api/clients/sync.md",
+      "version_status": "mutable_documentation",
+      "read_scope": "First 10300 returned characters: constructor, environment, retry option and example; not full system_one API",
+      "finding": "TypeSafeClient accepts API base override; TYPESAFE_BASE_URL and TYPESAFE_API_KEY; configurable SDK retries can amplify LocalJev internal attempts."
+    },
+    {
+      "id": "W5",
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "version_status": "mutable_documentation",
+      "read_scope": "First 13000 returned characters, especially Structured Outputs vs JSON mode",
+      "finding": "JSON mode promises valid JSON, Structured Outputs schema adherence within supported scope. Neither statement establishes calibrated semantic probabilities for arbitrary local OpenAI-compatible runners."
+    },
+    {
+      "id": "W6",
+      "url": "https://github.com/lmstudio-ai/mlx-engine/issues/336",
+      "version_status": "mutable_issue_metadata",
+      "state": "open",
+      "updated_at": "2026-06-14T09:46:45Z",
+      "read_scope": "Issue title, body and status; comments not read",
+      "finding": "Reporter describes diffusion_gemma load failure; open issue is not proof that all current LM Studio configurations fail."
+    },
+    {
+      "id": "W7",
+      "url": "https://github.com/lmstudio-ai/lmstudio-bug-tracker/issues/2037",
+      "version_status": "mutable_issue_metadata",
+      "state": "open",
+      "updated_at": "2026-07-01T14:32:21Z",
+      "read_scope": "Issue title, body and status; comments not read; machine paths not retained",
+      "finding": "Reporter describes LM Studio 0.4.16 Build 2 on macOS and bundled mlx-vlm incompatibility. No local reproduction or current release matrix verification."
+    },
+    {
+      "id": "W8",
+      "url": "https://github.com/vllm-project/vllm/pull/57250",
+      "version_status": "mutable_pull_request_metadata",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-09-22T20:51:18Z",
+      "head_sha": "a7c23ac96d7806e7c7e7d862eadbce5a33529b94",
+      "read_scope": "Title, state, merged flag/time and head SHA, not implementation or released packages",
+      "finding": "The cited structured-generation PR was merged after LocalJev's September 18 snapshot; unmerged is no longer an accurate current claim. Release availability is unverified."
+    },
+    {
+      "id": "W9",
+      "url": "https://huggingface.co/datasets/fancyzhx/ag_news/raw/eb185aade064a813bc0b7f42de02595523103ca4/README.md",
+      "version_status": "revision_pinned_document",
+      "read_scope": "Complete returned card across two reads",
+      "finding": "License metadata unknown, source description restricts to research/non-commercial activities, test split 7600. Only card read, no dataset downloaded."
+    },
+    {
+      "id": "W10",
+      "url": "https://huggingface.co/datasets/google/boolq/raw/35b264d03638db9f4ce671b711558bf7ff0f80d5/README.md",
+      "version_status": "revision_pinned_document",
+      "read_scope": "First 4000 returned characters; YAML license/splits and description",
+      "finding": "Card declares CC BY-SA 3.0 and validation split 3270. Only card read, no dataset downloaded."
+    },
+    {
+      "id": "W11",
+      "url": "https://huggingface.co/datasets/SetFit/sst5/raw/e51bdcd8cd3a30da231967c1a249ba59361279a3/README.md",
+      "version_status": "revision_pinned_document",
+      "read_scope": "Entire short card",
+      "finding": "Five-level Stanford Sentiment Treebank mirror, links source/splits, does not specify license. No dataset downloaded; 2210 test rows remains LocalJev author-reported."
+    }
+  ],
+  "citation_index": {
+    "S1": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/index.ts#L1-L32",
+    "S2": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/config.ts#L18-L96",
+    "S3": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/types.ts#L54-L191",
+    "S4": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/server.ts#L23-L225",
+    "S5": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/engine.ts#L77-L335",
+    "S6": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/engine.ts#L341-L523",
+    "S7": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/README.md#L96-L157",
+    "S8": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/test/engine.test.ts#L35-L144",
+    "S9": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/test/server.test.ts#L18-L106",
+    "S10": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/data.ts#L6-L128",
+    "S11": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/run.ts#L12-L202",
+    "S12": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/metrics.ts#L1-L70",
+    "S13": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/test/eval.test.ts#L29-L126",
+    "S14": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/docs/evaluation.md#L1-L261",
+    "S15": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/eval/reports/2026-09-18-bakeoff/report.md#L1-L136",
+    "S16": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/eval/reports/2026-09-18-bakeoff/manifest.json#L1585-L1667",
+    "S17": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/eval/reports/2026-09-18-bakeoff/summary.json#L1-L1558",
+    "S18": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/LICENSE#L1-L21",
+    "S19": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/eval/default.json#L1-L18",
+    "S20": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/common.ts#L78-L124",
+    "S21": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/scripts/eval/report.ts#L7-L108",
+    "S22": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/package.json#L1-L22",
+    "S23": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/src/engine.ts#L49-L68",
+    "S24": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/eval/reports/2026-09-18-bakeoff/manifest.json#L1-L3",
+    "O1": "https://github.com/razorback16/openjev/blob/e4f72c49f3ba887dbd24dd9912ffa84db85fefd4/README.md#L1-L170",
+    "O2": "https://github.com/razorback16/openjev/blob/e4f72c49f3ba887dbd24dd9912ffa84db85fefd4/openjev/engine.py#L261-L308",
+    "O3": "https://github.com/razorback16/openjev/blob/e4f72c49f3ba887dbd24dd9912ffa84db85fefd4/openjev/mlx_backend.py#L97-L145",
+    "O4": "https://github.com/razorback16/openjev/blob/e4f72c49f3ba887dbd24dd9912ffa84db85fefd4/openjev/encoders.py#L1-L33",
+    "W1": "https://docs.typesafe.ai/introduction.md",
+    "W2": "https://docs.typesafe.ai/api.md",
+    "W3": "https://docs.typesafe.ai/confidence",
+    "W4": "https://docs.typesafe.ai/sdk/python/api/clients/sync.md",
+    "W5": "https://developers.openai.com/api/docs/guides/structured-outputs",
+    "W6": "https://github.com/lmstudio-ai/mlx-engine/issues/336",
+    "W7": "https://github.com/lmstudio-ai/lmstudio-bug-tracker/issues/2037",
+    "W8": "https://github.com/vllm-project/vllm/pull/57250",
+    "W9": "https://huggingface.co/datasets/fancyzhx/ag_news/raw/eb185aade064a813bc0b7f42de02595523103ca4/README.md",
+    "W10": "https://huggingface.co/datasets/google/boolq/raw/35b264d03638db9f4ce671b711558bf7ff0f80d5/README.md",
+    "W11": "https://huggingface.co/datasets/SetFit/sst5/raw/e51bdcd8cd3a30da231967c1a249ba59361279a3/README.md"
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "report_section": "1-2",
+      "kind": "static_source_and_comparison",
+      "statement": "LocalJev is a generated-probability protocol bridge, not Jev model internals or a direct-logit reader.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            194,
+            235
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            397,
+            490
+          ]
+        }
+      ],
+      "web_source_ids": [
+        "W1",
+        "W2",
+        "W5"
+      ]
+    },
+    {
+      "id": "C02",
+      "report_section": "2",
+      "kind": "static_source_and_temporal_metadata",
+      "statement": "Current OpenJev has direct MLX reads alongside vLLM extensions; the cited vLLM PR is merged, not proof of released support.",
+      "source_refs": [
+        {
+          "repo": "razorback16/openjev",
+          "path": "openjev/engine.py",
+          "lines": [
+            261,
+            308
+          ]
+        },
+        {
+          "repo": "razorback16/openjev",
+          "path": "openjev/mlx_backend.py",
+          "lines": [
+            97,
+            145
+          ]
+        }
+      ],
+      "web_source_ids": [
+        "W8"
+      ]
+    },
+    {
+      "id": "C03",
+      "report_section": "2",
+      "kind": "author_report_not_runtime_verification",
+      "statement": "LM Studio issues remained open at collection; reports do not establish universal current runner incompatibility.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "README.md",
+          "lines": [
+            190,
+            211
+          ]
+        }
+      ],
+      "web_source_ids": [
+        "W6",
+        "W7"
+      ]
+    },
+    {
+      "id": "C04",
+      "report_section": "3.1",
+      "kind": "static_source",
+      "statement": "index/config/types/server/engine compose the Bun decision service; package declares 0.2.0.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/index.ts",
+          "lines": [
+            10,
+            32
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "package.json",
+          "lines": [
+            1,
+            22
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/server.ts",
+          "lines": [
+            159,
+            201
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C05",
+      "report_section": "3.2",
+      "kind": "static_source",
+      "statement": "Request shapes, choice 2-128, score 2-10, optional instructions/noul criteria and extra-field handling.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/types.ts",
+          "lines": [
+            54,
+            191
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C06",
+      "report_section": "3.2",
+      "kind": "static_source_and_contract_comparison",
+      "statement": "Four aliases use one upstream model; only two are listed and success reports localjev-0.2; not full TypeSafe behavior parity.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/config.ts",
+          "lines": [
+            76,
+            96
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/server.ts",
+          "lines": [
+            153,
+            201
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            411,
+            436
+          ]
+        }
+      ],
+      "web_source_ids": [
+        "W2",
+        "W4"
+      ]
+    },
+    {
+      "id": "C07",
+      "report_section": "3.3",
+      "kind": "static_source_with_runtime_limit",
+      "statement": "Fixed strict json_schema, internal q IDs, content extraction and stable seed; no schema negotiation or deterministic-runtime proof.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            115,
+            289
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            411,
+            490
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/server.ts",
+          "lines": [
+            69,
+            88
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C08",
+      "report_section": "4.1",
+      "kind": "static_source",
+      "statement": "Finite [0,1] entries and exact shape checked before positive-sum normalization; JSON duplicate keys are not checked before parsing.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            87,
+            113
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            238,
+            310
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/server.ts",
+          "lines": [
+            159,
+            175
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C09",
+      "report_section": "4.2",
+      "kind": "static_source_and_mathematical_deduction",
+      "statement": "Choice tie order, index expectation, noul scalar and inverse-entropy confidence use unrounded floats; helper assumes validated input.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            77,
+            113
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            292,
+            335
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/types.ts",
+          "lines": [
+            123,
+            147
+          ]
+        }
+      ],
+      "web_source_ids": [
+        "W3"
+      ]
+    },
+    {
+      "id": "C10",
+      "report_section": "5",
+      "kind": "static_source",
+      "statement": "Loopback default, optional client authentication, separate upstream key, health versus models-based readiness.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/config.ts",
+          "lines": [
+            35,
+            68
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/index.ts",
+          "lines": [
+            13,
+            18
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/server.ts",
+          "lines": [
+            44,
+            67
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/server.ts",
+          "lines": [
+            123,
+            157
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            352,
+            371
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C11",
+      "report_section": "5",
+      "kind": "static_source_with_fetch_semantics_inference",
+      "statement": "maxQueue counts unfinished decisions; FIFO semaphore surrounds fetch, not subsequent body parsing; no whole-request deadline or cancellation chain.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            49,
+            68
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            428,
+            467
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            494,
+            521
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/server.ts",
+          "lines": [
+            188,
+            193
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C12",
+      "report_section": "5",
+      "kind": "static_source",
+      "statement": "Sequential greedy chunks, noul counts one outcome, single question not split; only malformed content retries; no partial result on terminal failure.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            374,
+            394
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            411,
+            490
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            494,
+            521
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C13",
+      "report_section": "5",
+      "kind": "static_source_and_cost_inference",
+      "statement": "Layered errors and upstream-reported usage; eventual failures hide spent partial usage; no monetary cost ledger and external retries can amplify work.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/server.ts",
+          "lines": [
+            159,
+            222
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            428,
+            490
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            504,
+            521
+          ]
+        }
+      ],
+      "web_source_ids": [
+        "W4"
+      ]
+    },
+    {
+      "id": "C14",
+      "report_section": "5 tests",
+      "kind": "static_test_intent_only",
+      "statement": "Five Engine, four server and ten eval test cases are read, not executed; mocks do not prove runtime or probability quality.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "test/engine.test.ts",
+          "lines": [
+            1,
+            144
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "test/server.test.ts",
+          "lines": [
+            1,
+            106
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "test/eval.test.ts",
+          "lines": [
+            1,
+            126
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C15",
+      "report_section": "6.1",
+      "kind": "static_source_and_metadata_check",
+      "statement": "Default matrix, fixed source checksums, balanced deterministic sampling, interleaved tasks, and full target with 2048 background words.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/default.json",
+          "lines": [
+            1,
+            18
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/data.ts",
+          "lines": [
+            6,
+            128
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/common.ts",
+          "lines": [
+            78,
+            124
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/run.ts",
+          "lines": [
+            108,
+            183
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/reports/2026-09-18-bakeoff/manifest.json",
+          "lines": [
+            1,
+            110
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C16",
+      "report_section": "6.2",
+      "kind": "author_report_and_source_configuration",
+      "statement": "Five exact model IDs, hardware/runtime and cache policy are author artifacts, not independently verified weights or effective settings.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/default.json",
+          "lines": [
+            1,
+            18
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/run.ts",
+          "lines": [
+            30,
+            37
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/run.ts",
+          "lines": [
+            80,
+            99
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/run.ts",
+          "lines": [
+            118,
+            121
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/run.ts",
+          "lines": [
+            165,
+            165
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/reports/2026-09-18-bakeoff/manifest.json",
+          "lines": [
+            1,
+            3
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/reports/2026-09-18-bakeoff/manifest.json",
+          "lines": [
+            1585,
+            1667
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C17",
+      "report_section": "6.3",
+      "kind": "static_source",
+      "statement": "Failure-aware accuracy versus valid-only probability metrics; linear quantiles, full-decision timing and both-valid pairing, not TTFT.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/metrics.ts",
+          "lines": [
+            1,
+            70
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/common.ts",
+          "lines": [
+            88,
+            96
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/run.ts",
+          "lines": [
+            165,
+            189
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/report.ts",
+          "lines": [
+            7,
+            38
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C18",
+      "report_section": "6.4",
+      "kind": "author_run_artifact_with_aggregate_crosscheck",
+      "statement": "Ten reported result cells, 1200 requests over 120 IDs, and E2B long-input 3 failures; no raw-row recomputation.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/reports/2026-09-18-bakeoff/report.md",
+          "lines": [
+            1,
+            110
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/reports/2026-09-18-bakeoff/summary.json",
+          "lines": [
+            1,
+            320
+          ]
+        }
+      ],
+      "web_source_ids": [],
+      "inspected_json_paths": [
+        "/cells/*/model",
+        "/cells/*/backgroundWords",
+        "/cells/*/tasks/*/{correct,valid,total}",
+        "/cells/*/macroTaskAccuracy",
+        "/cells/*/tasks/sst5/scoreMAE",
+        "/cells/*/timing/{latencyP50Ms,latencyP95Ms,retriedRequests,additionalAttempts,failures,reportedCachedFraction}"
+      ]
+    },
+    {
+      "id": "C19",
+      "report_section": "6.4",
+      "kind": "research_inference",
+      "statement": "Small differences, quantization/runtime confounders and artificial context do not support isolated architecture rankings.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "docs/evaluation-results-2026-09-18.md",
+          "lines": [
+            43,
+            98
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "docs/evaluation.md",
+          "lines": [
+            231,
+            261
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/reports/2026-09-18-bakeoff/report.md",
+          "lines": [
+            14,
+            44
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C20",
+      "report_section": "6.5",
+      "kind": "metadata_integrity_check_not_runtime_reproduction",
+      "statement": "Dirty run commit differs; all seven run-code/lock and two report-code hashes match fixed bytes.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/reports/2026-09-18-bakeoff/manifest.json",
+          "lines": [
+            1585,
+            1615
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "eval/reports/2026-09-18-bakeoff/summary.json",
+          "lines": [
+            1,
+            9
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C21",
+      "report_section": "6.5",
+      "kind": "static_source",
+      "statement": "Missing model refusal, bounded consecutive failure stop, resume hash checks, writer lock and duplicate result rejection.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/run.ts",
+          "lines": [
+            40,
+            78
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/run.ts",
+          "lines": [
+            101,
+            105
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/run.ts",
+          "lines": [
+            183,
+            199
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "scripts/eval/report.ts",
+          "lines": [
+            7,
+            12
+          ]
+        }
+      ],
+      "web_source_ids": []
+    },
+    {
+      "id": "C22",
+      "report_section": "6.6",
+      "kind": "license_declaration_not_legal_opinion",
+      "statement": "LocalJev MIT attribution is distinct from model/data rights; dataset cards have different or missing terms.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "LICENSE",
+          "lines": [
+            1,
+            21
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "docs/evaluation.md",
+          "lines": [
+            51,
+            71
+          ]
+        }
+      ],
+      "web_source_ids": [
+        "W9",
+        "W10",
+        "W11"
+      ]
+    },
+    {
+      "id": "C23",
+      "report_section": "7-8",
+      "kind": "research_recommendation_not_executed",
+      "statement": "Transfer narrow typed judgments into code-controlled workflows; calibrate and test separately before consequential use.",
+      "source_refs": [
+        {
+          "repo": "githubnext/localjev",
+          "path": "src/engine.ts",
+          "lines": [
+            292,
+            335
+          ]
+        },
+        {
+          "repo": "githubnext/localjev",
+          "path": "docs/evaluation.md",
+          "lines": [
+            247,
+            261
+          ]
+        }
+      ],
+      "web_source_ids": [
+        "W3",
+        "W5"
+      ]
+    }
+  ],
+  "metadata_checks": {
+    "kind": "artifact_metadata_check_not_benchmark",
+    "manifest_code_hash_comparison": {
+      "src/engine.ts": {
+        "recorded_sha256": "74b2c583cf5776d7b8f2fece99e02f98bd7c71eb12be548f2fe0b6f944bb0c4f",
+        "current_sha256": "74b2c583cf5776d7b8f2fece99e02f98bd7c71eb12be548f2fe0b6f944bb0c4f",
+        "matches": true
+      },
+      "src/types.ts": {
+        "recorded_sha256": "850eb1603808ae92c3db2d43dee77e2b62b5de8860edb34196c5a9107f69b8bc",
+        "current_sha256": "850eb1603808ae92c3db2d43dee77e2b62b5de8860edb34196c5a9107f69b8bc",
+        "matches": true
+      },
+      "src/config.ts": {
+        "recorded_sha256": "6338dc551151112ea7a7036e02a7b9b1ce36580ff987681380783dd4d72e5dd6",
+        "current_sha256": "6338dc551151112ea7a7036e02a7b9b1ce36580ff987681380783dd4d72e5dd6",
+        "matches": true
+      },
+      "bun.lock": {
+        "recorded_sha256": "450b2b5349f3046dd62bf8fda65d6b68abf093f79d09927c848350de14e47840",
+        "current_sha256": "450b2b5349f3046dd62bf8fda65d6b68abf093f79d09927c848350de14e47840",
+        "matches": true
+      },
+      "scripts/eval/common.ts": {
+        "recorded_sha256": "049f6edb9b105b671ec76851ade44422b99685810a3f65e388928f62f3a98bfe",
+        "current_sha256": "049f6edb9b105b671ec76851ade44422b99685810a3f65e388928f62f3a98bfe",
+        "matches": true
+      },
+      "scripts/eval/data.ts": {
+        "recorded_sha256": "14b40736b2dfdd8ee7a9ec6ea1bda81369606a6c3672ce16dfaa3f0fb6a7783a",
+        "current_sha256": "14b40736b2dfdd8ee7a9ec6ea1bda81369606a6c3672ce16dfaa3f0fb6a7783a",
+        "matches": true
+      },
+      "scripts/eval/run.ts": {
+        "recorded_sha256": "58195ae1cd7a3c4b1556052abcc0c71a1f15872a47a04b3b3fa2e2001cc9d044",
+        "current_sha256": "58195ae1cd7a3c4b1556052abcc0c71a1f15872a47a04b3b3fa2e2001cc9d044",
+        "matches": true
+      },
+      "scripts/eval/report.ts": {
+        "recorded_sha256": "4b39d6e5a2e916af968da40f18d8ab9aa04213a499814d12083daef89b87a5dc",
+        "current_sha256": "4b39d6e5a2e916af968da40f18d8ab9aa04213a499814d12083daef89b87a5dc",
+        "matches": true
+      },
+      "scripts/eval/metrics.ts": {
+        "recorded_sha256": "09095558d28eda30e9a1e6aafc9be191ca6680a676991ae0132b8d08024eb914",
+        "current_sha256": "09095558d28eda30e9a1e6aafc9be191ca6680a676991ae0132b8d08024eb914",
+        "matches": true
+      }
+    },
+    "manifest_sample_counts": {
+      "ag_news": {
+        "1": 10,
+        "2": 10,
+        "0": 10,
+        "3": 10
+      },
+      "boolq": {
+        "1": 20,
+        "0": 20
+      },
+      "sst5": {
+        "0": 8,
+        "4": 8,
+        "3": 8,
+        "1": 8,
+        "2": 8
+      }
+    },
+    "unique_sample_ids": 120,
+    "reported_results": 1200,
+    "cells": [
+      {
+        "model": "gemma-4-E2B-it-UD-MLX-4bit",
+        "background_words": 0,
+        "task_correct_valid_total": {
+          "ag_news": [
+            13,
+            40,
+            40
+          ],
+          "boolq": [
+            28,
+            40,
+            40
+          ],
+          "sst5": [
+            14,
+            40,
+            40
+          ]
+        },
+        "macro": 0.4583333333333333,
+        "score_mae": 0.9261356107660458,
+        "p50_ms": 522.1696039999997,
+        "p95_ms": 641.6804541499841,
+        "retried": 0,
+        "additional_attempts": 0,
+        "failures": 0,
+        "cached_fraction": 0
+      },
+      {
+        "model": "gemma-4-E2B-it-UD-MLX-4bit",
+        "background_words": 2048,
+        "task_correct_valid_total": {
+          "ag_news": [
+            11,
+            39,
+            40
+          ],
+          "boolq": [
+            32,
+            40,
+            40
+          ],
+          "sst5": [
+            6,
+            38,
+            40
+          ]
+        },
+        "macro": 0.4083333333333334,
+        "score_mae": 1.625438596491228,
+        "p50_ms": 698.3115004999945,
+        "p95_ms": 2075.7175583500016,
+        "retried": 21,
+        "additional_attempts": 28,
+        "failures": 3,
+        "cached_fraction": 0
+      },
+      {
+        "model": "gemma-4-E4B-it-UD-MLX-4bit",
+        "background_words": 0,
+        "task_correct_valid_total": {
+          "ag_news": [
+            26,
+            40,
+            40
+          ],
+          "boolq": [
+            30,
+            40,
+            40
+          ],
+          "sst5": [
+            20,
+            40,
+            40
+          ]
+        },
+        "macro": 0.6333333333333333,
+        "score_mae": 0.6108333333333335,
+        "p50_ms": 543.1517710000044,
+        "p95_ms": 713.5772375000058,
+        "retried": 3,
+        "additional_attempts": 3,
+        "failures": 0,
+        "cached_fraction": 0
+      },
+      {
+        "model": "gemma-4-E4B-it-UD-MLX-4bit",
+        "background_words": 2048,
+        "task_correct_valid_total": {
+          "ag_news": [
+            30,
+            40,
+            40
+          ],
+          "boolq": [
+            25,
+            40,
+            40
+          ],
+          "sst5": [
+            5,
+            40,
+            40
+          ]
+        },
+        "macro": 0.5,
+        "score_mae": 1.7482790404040405,
+        "p50_ms": 1079.3618750000023,
+        "p95_ms": 1298.5445357500153,
+        "retried": 1,
+        "additional_attempts": 1,
+        "failures": 0,
+        "cached_fraction": 0
+      },
+      {
+        "model": "gemma-4-26b-a4b-it-UD-MLX-4bit",
+        "background_words": 0,
+        "task_correct_valid_total": {
+          "ag_news": [
+            35,
+            40,
+            40
+          ],
+          "boolq": [
+            34,
+            40,
+            40
+          ],
+          "sst5": [
+            21,
+            40,
+            40
+          ]
+        },
+        "macro": 0.75,
+        "score_mae": 0.533,
+        "p50_ms": 675.220604000031,
+        "p95_ms": 873.9052878000831,
+        "retried": 0,
+        "additional_attempts": 0,
+        "failures": 0,
+        "cached_fraction": 0
+      },
+      {
+        "model": "gemma-4-26b-a4b-it-UD-MLX-4bit",
+        "background_words": 2048,
+        "task_correct_valid_total": {
+          "ag_news": [
+            34,
+            40,
+            40
+          ],
+          "boolq": [
+            34,
+            40,
+            40
+          ],
+          "sst5": [
+            15,
+            40,
+            40
+          ]
+        },
+        "macro": 0.6916666666666668,
+        "score_mae": 0.6480000250000001,
+        "p50_ms": 1750.0458755000436,
+        "p95_ms": 2108.414303849893,
+        "retried": 0,
+        "additional_attempts": 0,
+        "failures": 0,
+        "cached_fraction": 0
+      },
+      {
+        "model": "qwen3.6-35b-a3b-ud-mlx-4bit",
+        "background_words": 0,
+        "task_correct_valid_total": {
+          "ag_news": [
+            36,
+            40,
+            40
+          ],
+          "boolq": [
+            34,
+            40,
+            40
+          ],
+          "sst5": [
+            22,
+            40,
+            40
+          ]
+        },
+        "macro": 0.7666666666666666,
+        "score_mae": 0.5990250000000001,
+        "p50_ms": 888.9528954999987,
+        "p95_ms": 1006.6232316000852,
+        "retried": 0,
+        "additional_attempts": 0,
+        "failures": 0,
+        "cached_fraction": 0
+      },
+      {
+        "model": "qwen3.6-35b-a3b-ud-mlx-4bit",
+        "background_words": 2048,
+        "task_correct_valid_total": {
+          "ag_news": [
+            35,
+            40,
+            40
+          ],
+          "boolq": [
+            32,
+            40,
+            40
+          ],
+          "sst5": [
+            16,
+            40,
+            40
+          ]
+        },
+        "macro": 0.6916666666666668,
+        "score_mae": 0.7639250000000001,
+        "p50_ms": 1499.2377500000293,
+        "p95_ms": 1772.4665582999878,
+        "retried": 0,
+        "additional_attempts": 0,
+        "failures": 0,
+        "cached_fraction": 0
+      },
+      {
+        "model": "diffusiongemma-26B-A4B-it-4bit",
+        "background_words": 0,
+        "task_correct_valid_total": {
+          "ag_news": [
+            35,
+            40,
+            40
+          ],
+          "boolq": [
+            35,
+            40,
+            40
+          ],
+          "sst5": [
+            19,
+            40,
+            40
+          ]
+        },
+        "macro": 0.7416666666666667,
+        "score_mae": 0.6032982857109241,
+        "p50_ms": 1207.2880420000292,
+        "p95_ms": 1896.8047375000199,
+        "retried": 1,
+        "additional_attempts": 1,
+        "failures": 0,
+        "cached_fraction": 0
+      },
+      {
+        "model": "diffusiongemma-26B-A4B-it-4bit",
+        "background_words": 2048,
+        "task_correct_valid_total": {
+          "ag_news": [
+            33,
+            40,
+            40
+          ],
+          "boolq": [
+            35,
+            40,
+            40
+          ],
+          "sst5": [
+            10,
+            40,
+            40
+          ]
+        },
+        "macro": 0.65,
+        "score_mae": 0.937238285106706,
+        "p50_ms": 2049.551604499924,
+        "p95_ms": 3138.9183877999776,
+        "retried": 5,
+        "additional_attempts": 5,
+        "failures": 0,
+        "cached_fraction": 0
+      }
+    ],
+    "not_recomputed": "No raw results.jsonl, data bytes, inference, or upstream report code executed."
+  },
+  "limitations": [
+    "Runtime, inference, SDK interoperability, calibration and service deployment are unverified.",
+    "Source byte identity and metadata arithmetic do not prove author measurements authentic or reproducible.",
+    "Model/quantization/tokenizer file revisions and full effective runner settings are not pinned.",
+    "Raw results/warmups and dataset bytes were not retrieved; no independent request-row aggregation.",
+    "Website/issue/PR observations are mutable snapshots dated 2026-09-27; no release-package support verification.",
+    "Existing repository baseline and navigation remain unchanged."
+  ]
+}

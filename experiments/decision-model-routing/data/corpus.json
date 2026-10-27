@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "classification": "SYNTHETIC",
+  "passages": [
+    {
+      "id": "Aurora.p1.en",
+      "source_group": "original-product-Aurora",
+      "language": "en",
+      "text": "Aurora fictional service facts: Aurora.basic_price=USD 12; Aurora.trial_days=7",
+      "facts": {
+        "Aurora.basic_price": "USD 12",
+        "Aurora.trial_days": "7"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Aurora.p2.en",
+      "source_group": "original-product-Aurora",
+      "language": "en",
+      "text": "Aurora fictional service facts: Aurora.backup_days=30",
+      "facts": {
+        "Aurora.backup_days": "30"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Aurora.p3.en",
+      "source_group": "original-product-Aurora",
+      "language": "en",
+      "text": "Aurora fictional service facts: Aurora.refund_policy=manual approval; Aurora.support_code=SUP-10",
+      "facts": {
+        "Aurora.refund_policy": "manual approval",
+        "Aurora.support_code": "SUP-10"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Aurora.p1.zh",
+      "source_group": "original-product-Aurora",
+      "language": "zh",
+      "text": "Aurora虚构服务资料: Aurora.basic_price=USD 12; Aurora.trial_days=7",
+      "facts": {
+        "Aurora.basic_price": "USD 12",
+        "Aurora.trial_days": "7"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Aurora.p2.zh",
+      "source_group": "original-product-Aurora",
+      "language": "zh",
+      "text": "Aurora虚构服务资料: Aurora.backup_days=30",
+      "facts": {
+        "Aurora.backup_days": "30"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Aurora.p3.zh",
+      "source_group": "original-product-Aurora",
+      "language": "zh",
+      "text": "Aurora虚构服务资料: Aurora.refund_policy=人工审批; Aurora.support_code=SUP-10",
+      "facts": {
+        "Aurora.refund_policy": "人工审批",
+        "Aurora.support_code": "SUP-10"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Birch.p1.en",
+      "source_group": "original-product-Birch",
+      "language": "en",
+      "text": "Birch fictional service facts: Birch.basic_price=USD 13; Birch.trial_days=8",
+      "facts": {
+        "Birch.basic_price": "USD 13",
+        "Birch.trial_days": "8"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Birch.p2.en",
+      "source_group": "original-product-Birch",
+      "language": "en",
+      "text": "Birch fictional service facts: Birch.backup_days=31",
+      "facts": {
+        "Birch.backup_days": "31"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Birch.p3.en",
+      "source_group": "original-product-Birch",
+      "language": "en",
+      "text": "Birch fictional service facts: Birch.refund_policy=manual approval; Birch.support_code=SUP-11",
+      "facts": {
+        "Birch.refund_policy": "manual approval",
+        "Birch.support_code": "SUP-11"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Birch.p1.zh",
+      "source_group": "original-product-Birch",
+      "language": "zh",
+      "text": "Birch虚构服务资料: Birch.basic_price=USD 13; Birch.trial_days=8",
+      "facts": {
+        "Birch.basic_price": "USD 13",
+        "Birch.trial_days": "8"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Birch.p2.zh",
+      "source_group": "original-product-Birch",
+      "language": "zh",
+      "text": "Birch虚构服务资料: Birch.backup_days=31",
+      "facts": {
+        "Birch.backup_days": "31"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Birch.p3.zh",
+      "source_group": "original-product-Birch",
+      "language": "zh",
+      "text": "Birch虚构服务资料: Birch.refund_policy=人工审批; Birch.support_code=SUP-11",
+      "facts": {
+        "Birch.refund_policy": "人工审批",
+        "Birch.support_code": "SUP-11"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Cobalt.p1.en",
+      "source_group": "original-product-Cobalt",
+      "language": "en",
+      "text": "Cobalt fictional service facts: Cobalt.basic_price=USD 14; Cobalt.trial_days=9",
+      "facts": {
+        "Cobalt.basic_price": "USD 14",
+        "Cobalt.trial_days": "9"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Cobalt.p2.en",
+      "source_group": "original-product-Cobalt",
+      "language": "en",
+      "text": "Cobalt fictional service facts: Cobalt.backup_days=32",
+      "facts": {
+        "Cobalt.backup_days": "32"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Cobalt.p3.en",
+      "source_group": "original-product-Cobalt",
+      "language": "en",
+      "text": "Cobalt fictional service facts: Cobalt.refund_policy=manual approval; Cobalt.support_code=SUP-12",
+      "facts": {
+        "Cobalt.refund_policy": "manual approval",
+        "Cobalt.support_code": "SUP-12"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Cobalt.p1.zh",
+      "source_group": "original-product-Cobalt",
+      "language": "zh",
+      "text": "Cobalt虚构服务资料: Cobalt.basic_price=USD 14; Cobalt.trial_days=9",
+      "facts": {
+        "Cobalt.basic_price": "USD 14",
+        "Cobalt.trial_days": "9"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Cobalt.p2.zh",
+      "source_group": "original-product-Cobalt",
+      "language": "zh",
+      "text": "Cobalt虚构服务资料: Cobalt.backup_days=32",
+      "facts": {
+        "Cobalt.backup_days": "32"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Cobalt.p3.zh",
+      "source_group": "original-product-Cobalt",
+      "language": "zh",
+      "text": "Cobalt虚构服务资料: Cobalt.refund_policy=人工审批; Cobalt.support_code=SUP-12",
+      "facts": {
+        "Cobalt.refund_policy": "人工审批",
+        "Cobalt.support_code": "SUP-12"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Dahlia.p1.en",
+      "source_group": "original-product-Dahlia",
+      "language": "en",
+      "text": "Dahlia fictional service facts: Dahlia.basic_price=USD 15; Dahlia.trial_days=10",
+      "facts": {
+        "Dahlia.basic_price": "USD 15",
+        "Dahlia.trial_days": "10"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Dahlia.p2.en",
+      "source_group": "original-product-Dahlia",
+      "language": "en",
+      "text": "Dahlia fictional service facts: Dahlia.backup_days=33",
+      "facts": {
+        "Dahlia.backup_days": "33"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Dahlia.p3.en",
+      "source_group": "original-product-Dahlia",
+      "language": "en",
+      "text": "Dahlia fictional service facts: Dahlia.refund_policy=manual approval; Dahlia.support_code=SUP-13",
+      "facts": {
+        "Dahlia.refund_policy": "manual approval",
+        "Dahlia.support_code": "SUP-13"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Dahlia.p1.zh",
+      "source_group": "original-product-Dahlia",
+      "language": "zh",
+      "text": "Dahlia虚构服务资料: Dahlia.basic_price=USD 15; Dahlia.trial_days=10",
+      "facts": {
+        "Dahlia.basic_price": "USD 15",
+        "Dahlia.trial_days": "10"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Dahlia.p2.zh",
+      "source_group": "original-product-Dahlia",
+      "language": "zh",
+      "text": "Dahlia虚构服务资料: Dahlia.backup_days=33",
+      "facts": {
+        "Dahlia.backup_days": "33"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Dahlia.p3.zh",
+      "source_group": "original-product-Dahlia",
+      "language": "zh",
+      "text": "Dahlia虚构服务资料: Dahlia.refund_policy=人工审批; Dahlia.support_code=SUP-13",
+      "facts": {
+        "Dahlia.refund_policy": "人工审批",
+        "Dahlia.support_code": "SUP-13"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Elm.p1.en",
+      "source_group": "original-product-Elm",
+      "language": "en",
+      "text": "Elm fictional service facts: Elm.basic_price=USD 16; Elm.trial_days=11",
+      "facts": {
+        "Elm.basic_price": "USD 16",
+        "Elm.trial_days": "11"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Elm.p2.en",
+      "source_group": "original-product-Elm",
+      "language": "en",
+      "text": "Elm fictional service facts: Elm.backup_days=34",
+      "facts": {
+        "Elm.backup_days": "34"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Elm.p3.en",
+      "source_group": "original-product-Elm",
+      "language": "en",
+      "text": "Elm fictional service facts: Elm.refund_policy=manual approval; Elm.support_code=SUP-14",
+      "facts": {
+        "Elm.refund_policy": "manual approval",
+        "Elm.support_code": "SUP-14"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Elm.p1.zh",
+      "source_group": "original-product-Elm",
+      "language": "zh",
+      "text": "Elm虚构服务资料: Elm.basic_price=USD 16; Elm.trial_days=11",
+      "facts": {
+        "Elm.basic_price": "USD 16",
+        "Elm.trial_days": "11"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Elm.p2.zh",
+      "source_group": "original-product-Elm",
+      "language": "zh",
+      "text": "Elm虚构服务资料: Elm.backup_days=34",
+      "facts": {
+        "Elm.backup_days": "34"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Elm.p3.zh",
+      "source_group": "original-product-Elm",
+      "language": "zh",
+      "text": "Elm虚构服务资料: Elm.refund_policy=人工审批; Elm.support_code=SUP-14",
+      "facts": {
+        "Elm.refund_policy": "人工审批",
+        "Elm.support_code": "SUP-14"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Fjord.p1.en",
+      "source_group": "original-product-Fjord",
+      "language": "en",
+      "text": "Fjord fictional service facts: Fjord.basic_price=USD 17; Fjord.trial_days=12",
+      "facts": {
+        "Fjord.basic_price": "USD 17",
+        "Fjord.trial_days": "12"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Fjord.p2.en",
+      "source_group": "original-product-Fjord",
+      "language": "en",
+      "text": "Fjord fictional service facts: Fjord.backup_days=35",
+      "facts": {
+        "Fjord.backup_days": "35"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Fjord.p3.en",
+      "source_group": "original-product-Fjord",
+      "language": "en",
+      "text": "Fjord fictional service facts: Fjord.refund_policy=manual approval; Fjord.support_code=SUP-15",
+      "facts": {
+        "Fjord.refund_policy": "manual approval",
+        "Fjord.support_code": "SUP-15"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Fjord.p1.zh",
+      "source_group": "original-product-Fjord",
+      "language": "zh",
+      "text": "Fjord虚构服务资料: Fjord.basic_price=USD 17; Fjord.trial_days=12",
+      "facts": {
+        "Fjord.basic_price": "USD 17",
+        "Fjord.trial_days": "12"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Fjord.p2.zh",
+      "source_group": "original-product-Fjord",
+      "language": "zh",
+      "text": "Fjord虚构服务资料: Fjord.backup_days=35",
+      "facts": {
+        "Fjord.backup_days": "35"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Fjord.p3.zh",
+      "source_group": "original-product-Fjord",
+      "language": "zh",
+      "text": "Fjord虚构服务资料: Fjord.refund_policy=人工审批; Fjord.support_code=SUP-15",
+      "facts": {
+        "Fjord.refund_policy": "人工审批",
+        "Fjord.support_code": "SUP-15"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Grove.p1.en",
+      "source_group": "original-product-Grove",
+      "language": "en",
+      "text": "Grove fictional service facts: Grove.basic_price=USD 18; Grove.trial_days=13",
+      "facts": {
+        "Grove.basic_price": "USD 18",
+        "Grove.trial_days": "13"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Grove.p2.en",
+      "source_group": "original-product-Grove",
+      "language": "en",
+      "text": "Grove fictional service facts: Grove.backup_days=36",
+      "facts": {
+        "Grove.backup_days": "36"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Grove.p3.en",
+      "source_group": "original-product-Grove",
+      "language": "en",
+      "text": "Grove fictional service facts: Grove.refund_policy=manual approval; Grove.support_code=SUP-16",
+      "facts": {
+        "Grove.refund_policy": "manual approval",
+        "Grove.support_code": "SUP-16"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Grove.p1.zh",
+      "source_group": "original-product-Grove",
+      "language": "zh",
+      "text": "Grove虚构服务资料: Grove.basic_price=USD 18; Grove.trial_days=13",
+      "facts": {
+        "Grove.basic_price": "USD 18",
+        "Grove.trial_days": "13"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Grove.p2.zh",
+      "source_group": "original-product-Grove",
+      "language": "zh",
+      "text": "Grove虚构服务资料: Grove.backup_days=36",
+      "facts": {
+        "Grove.backup_days": "36"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Grove.p3.zh",
+      "source_group": "original-product-Grove",
+      "language": "zh",
+      "text": "Grove虚构服务资料: Grove.refund_policy=人工审批; Grove.support_code=SUP-16",
+      "facts": {
+        "Grove.refund_policy": "人工审批",
+        "Grove.support_code": "SUP-16"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Hazel.p1.en",
+      "source_group": "original-product-Hazel",
+      "language": "en",
+      "text": "Hazel fictional service facts: Hazel.basic_price=USD 19; Hazel.trial_days=14",
+      "facts": {
+        "Hazel.basic_price": "USD 19",
+        "Hazel.trial_days": "14"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Hazel.p2.en",
+      "source_group": "original-product-Hazel",
+      "language": "en",
+      "text": "Hazel fictional service facts: Hazel.backup_days=37",
+      "facts": {
+        "Hazel.backup_days": "37"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Hazel.p3.en",
+      "source_group": "original-product-Hazel",
+      "language": "en",
+      "text": "Hazel fictional service facts: Hazel.refund_policy=manual approval; Hazel.support_code=SUP-17",
+      "facts": {
+        "Hazel.refund_policy": "manual approval",
+        "Hazel.support_code": "SUP-17"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Hazel.p1.zh",
+      "source_group": "original-product-Hazel",
+      "language": "zh",
+      "text": "Hazel虚构服务资料: Hazel.basic_price=USD 19; Hazel.trial_days=14",
+      "facts": {
+        "Hazel.basic_price": "USD 19",
+        "Hazel.trial_days": "14"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Hazel.p2.zh",
+      "source_group": "original-product-Hazel",
+      "language": "zh",
+      "text": "Hazel虚构服务资料: Hazel.backup_days=37",
+      "facts": {
+        "Hazel.backup_days": "37"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Hazel.p3.zh",
+      "source_group": "original-product-Hazel",
+      "language": "zh",
+      "text": "Hazel虚构服务资料: Hazel.refund_policy=人工审批; Hazel.support_code=SUP-17",
+      "facts": {
+        "Hazel.refund_policy": "人工审批",
+        "Hazel.support_code": "SUP-17"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Iris.p1.en",
+      "source_group": "original-product-Iris",
+      "language": "en",
+      "text": "Iris fictional service facts: Iris.basic_price=USD 20; Iris.trial_days=15",
+      "facts": {
+        "Iris.basic_price": "USD 20",
+        "Iris.trial_days": "15"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Iris.p2.en",
+      "source_group": "original-product-Iris",
+      "language": "en",
+      "text": "Iris fictional service facts: Iris.backup_days=38",
+      "facts": {
+        "Iris.backup_days": "38"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Iris.p3.en",
+      "source_group": "original-product-Iris",
+      "language": "en",
+      "text": "Iris fictional service facts: Iris.refund_policy=manual approval; Iris.support_code=SUP-18",
+      "facts": {
+        "Iris.refund_policy": "manual approval",
+        "Iris.support_code": "SUP-18"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Iris.p1.zh",
+      "source_group": "original-product-Iris",
+      "language": "zh",
+      "text": "Iris虚构服务资料: Iris.basic_price=USD 20; Iris.trial_days=15",
+      "facts": {
+        "Iris.basic_price": "USD 20",
+        "Iris.trial_days": "15"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Iris.p2.zh",
+      "source_group": "original-product-Iris",
+      "language": "zh",
+      "text": "Iris虚构服务资料: Iris.backup_days=38",
+      "facts": {
+        "Iris.backup_days": "38"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Iris.p3.zh",
+      "source_group": "original-product-Iris",
+      "language": "zh",
+      "text": "Iris虚构服务资料: Iris.refund_policy=人工审批; Iris.support_code=SUP-18",
+      "facts": {
+        "Iris.refund_policy": "人工审批",
+        "Iris.support_code": "SUP-18"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Juniper.p1.en",
+      "source_group": "original-product-Juniper",
+      "language": "en",
+      "text": "Juniper fictional service facts: Juniper.basic_price=USD 21; Juniper.trial_days=16",
+      "facts": {
+        "Juniper.basic_price": "USD 21",
+        "Juniper.trial_days": "16"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Juniper.p2.en",
+      "source_group": "original-product-Juniper",
+      "language": "en",
+      "text": "Juniper fictional service facts: Juniper.backup_days=39",
+      "facts": {
+        "Juniper.backup_days": "39"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Juniper.p3.en",
+      "source_group": "original-product-Juniper",
+      "language": "en",
+      "text": "Juniper fictional service facts: Juniper.refund_policy=manual approval; Juniper.support_code=SUP-19",
+      "facts": {
+        "Juniper.refund_policy": "manual approval",
+        "Juniper.support_code": "SUP-19"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Juniper.p1.zh",
+      "source_group": "original-product-Juniper",
+      "language": "zh",
+      "text": "Juniper虚构服务资料: Juniper.basic_price=USD 21; Juniper.trial_days=16",
+      "facts": {
+        "Juniper.basic_price": "USD 21",
+        "Juniper.trial_days": "16"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Juniper.p2.zh",
+      "source_group": "original-product-Juniper",
+      "language": "zh",
+      "text": "Juniper虚构服务资料: Juniper.backup_days=39",
+      "facts": {
+        "Juniper.backup_days": "39"
+      },
+      "license": "original-synthetic"
+    },
+    {
+      "id": "Juniper.p3.zh",
+      "source_group": "original-product-Juniper",
+      "language": "zh",
+      "text": "Juniper虚构服务资料: Juniper.refund_policy=人工审批; Juniper.support_code=SUP-19",
+      "facts": {
+        "Juniper.refund_policy": "人工审批",
+        "Juniper.support_code": "SUP-19"
+      },
+      "license": "original-synthetic"
+    }
+  ]
+}

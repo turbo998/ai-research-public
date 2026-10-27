@@ -1,0 +1,2104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>8-Way Model Routing Benchmark · OpenAI Decisions vs Microsoft Decision-1 (Switchyard v2.4.0 &amp; v2.4.1)</title><style>*{box-sizing:border-box}body{margin:0;padding:2rem 1rem;background:#e2e8f0;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}.deck-wrap{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:2.2rem}.report-card{background:#f8fafc;border-radius:18px;overflow:hidden;box-shadow:0 16px 40px rgba(15,23,42,.12);border:1px solid #cbd5e1;min-height:1125px;display:flex;flex-direction:column}.card-accent-bar{height:10px;background:linear-gradient(90deg,#6366f1 0%,#4f46e5 55%,#2563eb 100%)}.card-inner{padding:2.2rem 2.6rem 1.6rem;flex:1;display:flex;flex-direction:column;justify-content:space-between}.card-eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.12em;color:#4f46e5;text-transform:uppercase;margin-bottom:.5rem}.card-headline{font-size:2.2rem;line-height:1.12;font-weight:800;margin:0 0 .6rem;letter-spacing:-.02em;color:#0f172a}.grad-text{background:linear-gradient(90deg,#3b82f6,#4f46e5);-webkit-background-clip:text;background-clip:text;color:transparent}.card-subtitle{font-size:1.02rem;line-height:1.45;color:#475569;margin:0 0 1rem}.card-canvas{flex:1;display:flex;flex-direction:column;justify-content:center;gap:.9rem}.quote-box,.callout-box{background:#eef2f6;border-radius:12px;padding:.9rem 1.15rem;font-size:.94rem;line-height:1.45;color:#1e293b}.stack-list{display:flex;flex-direction:column;gap:.75rem}.decision-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:.85rem 1.1rem}.decision-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.75rem}.field-name{font-weight:700;font-size:.98rem}.type-pill{background:#e2e8f0;color:#475569;font-size:.73rem;padding:.12rem .45rem;border-radius:6px;font-weight:600}.question-sub{font-size:.82rem;color:#64748b;margin-top:.15rem}.action-pill{font-size:.74rem;font-weight:700;padding:.2rem .55rem;border-radius:999px;white-space:nowrap}.pill-auto{background:#dcfce7;color:#15803d}.pill-confirm{background:#fef3c7;color:#b45309}.pill-human{background:#fee2e2;color:#b91c1c}.decision-main{font-size:1.1rem;margin:.4rem 0 .5rem}.conf-muted{font-size:.84rem;color:#64748b;font-weight:600}.dist-row{display:grid;grid-template-columns:250px 1fr 54px;align-items:center;gap:.6rem;font-size:.82rem;margin:.22rem 0}.dist-track{background:#e2e8f0;height:9px;border-radius:999px;overflow:hidden}.dist-fill{background:linear-gradient(90deg,#4f46e5,#6366f1);height:100%;border-radius:999px}.dist-pct{text-align:right;font-variant-numeric:tabular-nums;color:#334155}.clean-table{width:100%;border-collapse:collapse;font-size:.84rem;background:transparent}.clean-table th{font-size:.72rem;letter-spacing:.08em;color:#64748b;text-align:left;padding:.42rem .35rem;border-bottom:1px solid #cbd5e1}.clean-table td{padding:.42rem .35rem;border-bottom:1px solid #e2e8f0;vertical-align:top}.sc-col{font-weight:600;color:#1e293b}.act-col,.num-col{text-align:right;font-variant-numeric:tabular-nums}.act-auto{color:#15803d;font-weight:700}.act-confirm{color:#b45309;font-weight:700}.act-human{color:#b91c1c;font-weight:700}.miss-mark{color:#dc2626;font-weight:800}.code-dark{background:#0f172a;color:#e2e8f0;padding:1rem 1.2rem;border-radius:12px;font-size:.82rem;line-height:1.45;overflow-x:auto;margin:0}.code-transition{color:#4f46e5;font-weight:700;font-size:.92rem;padding:.15rem 0}.hl-answer{color:#fbbf24;font-weight:700}.rob-main{font-weight:600;color:#0f172a}.rob-sub{font-size:.78rem;color:#64748b}.lat-list{display:flex;flex-direction:column;gap:.65rem}.lat-title{font-weight:700;font-size:.92rem;margin-bottom:.2rem}.lat-row{display:flex;align-items:center;gap:.6rem;margin:.18rem 0}.lat-tag{width:85px;font-size:.8rem;color:#64748b}.lat-bar{height:18px;border-radius:5px}.lat-blue{background:#3b82f6}.lat-gray{background:#cbd5e1}.lat-val{font-size:.84rem;font-variant-numeric:tabular-nums}.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.fit-card{border-radius:14px;padding:1.15rem 1.3rem;font-size:.95rem;line-height:1.55}.fit-good{background:#ecfdf5;border:1px solid #a7f3d0}.fit-bad{background:#fff1f2;border:1px solid #fecdd3}.fit-head{font-weight:800;font-size:1.08rem;margin-bottom:.45rem}.dark-footer-box{background:#0f172a;color:#f8fafc;border-radius:14px;padding:1.15rem 1.4rem;font-size:.95rem;line-height:1.5}.dark-repo{color:#38bdf8;font-family:ui-monospace,Consolas,monospace;margin-bottom:0;font-size:.85rem}.workbench-shell{background:#fff;border:1px solid #cbd5e1;border-radius:14px;overflow:hidden}.wb-topbar{background:linear-gradient(90deg,#3b82f6,#6366f1);color:#fff;padding:.7rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}.wb-sub{font-size:.74rem;opacity:.92}.wb-status{background:rgba(15,23,42,.28);font-size:.72rem;padding:.22rem .55rem;border-radius:999px;white-space:nowrap}.wb-grid{display:grid;grid-template-columns:235px 1fr;gap:.8rem;padding:.85rem}.wb-col-title{font-size:.76rem;font-weight:700;color:#475569;text-transform:uppercase;margin-bottom:.35rem}.wb-item{font-size:.76rem;padding:.34rem .48rem;border-radius:6px;background:#f8fafc;border:1px solid #e2e8f0;margin-bottom:.28rem}.wb-note{font-size:.71rem;color:#64748b;margin-top:.45rem;line-height:1.35}.wb-metrics{display:flex;flex-wrap:wrap;gap:.38rem;margin-bottom:.5rem}.wb-metric{font-size:.73rem;background:#f1f5f9;padding:.18rem .48rem;border-radius:6px;color:#334155;font-weight:600}.card-footer{border-top:1px solid #cbd5e1;padding-top:.8rem;margin-top:1rem;display:flex;justify-content:space-between;font-size:.82rem;color:#64748b}@media print{body{background:#fff;padding:0}.deck-wrap{gap:0}.report-card{box-shadow:none;page-break-after:always;border:none}}</style></head><body><main class="deck-wrap"><article class="report-card" id="card-1"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">HANDS-ON · 8-WAY MODEL ROUTING BENCHMARK (V2.4.0 &amp; V2.4.1)</div><h2 class="card-headline">OpenAI Decisions joins the 8-way routing test — <span class="grad-text">Microsoft Decision-1 remains #1</span></h2><p class="card-subtitle">Across 960 decisions under cost-biased instructions (v2.4.0) and 2,760 decisions across 4 instruction variants (v2.4.1) on 40 bilingual prompts (20 EN / 20 ZH, 5 target models), Microsoft Decision-1 hits 37.7/40 (94.2%) -&gt; 40/40 (100.0% neutral) at $7.6–$8.6/1M decisions, outperforming OpenAI Decisions (32/40 = 80.0% -&gt; 37/40 = 92.5% neutral at $26.1–$28.4/1M).</p></header><div class="card-canvas"><div class="workbench-shell"><div class="wb-topbar"><div><strong>Switchyard (satomic/model-router v2.4.0 &amp; v2.4.1) · 8 Routing Approaches × 40 Bilingual Prompts</strong><div class="wb-sub">A System One decision &amp; routing benchmark view: structured state, calibrated confidence bands, zero fabricated coordinates</div></div><span class="wb-status">v2.4.0 (960 calls) + v2.4.1 (2,760 calls) · anonymized_reported</span></div><div class="wb-grid"><div class="wb-col-left"><div class="wb-col-title">Scenarios &amp; Cohorts</div><div class="wb-item">Set A (20 explicit prompts: 10 EN + 10 ZH) &amp; Set B (20 implicit/borderline prompts: 10 EN + 10 ZH)</div><div class="wb-item">5 candidate backends: gpt-4.1-mini (chat), gpt-4o (general), gpt-4.1 (coding), gpt-5.4 (reasoning), gpt-6-luna (creative)</div><div class="wb-item">Cloud System One APIs: TypeSafe Jev (jev-latest) &amp; Microsoft Decision-1 (Azure AI Foundry East US 2)</div><div class="wb-item">OpenAI Native API: POST /v1/decisions (locked to gpt-6-luna, $0.10/1M input, $0 output)</div><div class="wb-item">Local Open-Weight (M4 Pro 48GB): OpenJev 27B (MLX 4-bit, CC BY-NC 4.0) &amp; Laya 0.3.20 (Apache-2.0)</div><div class="wb-item">General LLM Routers (/v1/chat/completions): gpt-4.1-mini, gpt-6-luna (reasoning=none), gpt-6-luna (default)</div><div class="wb-item">4 Instruction Variants (v2.4.1): neutral (default), cheap (v2.4.0 default), strong, bare</div><div class="wb-note">Confidence gate (tau = 0.60): Act automatically if p &gt;= 0.60 and instruction spread &lt;= 2/40 (Jev, Decision-1); Confirm if p &lt; 0.60 fallback or moderate instruction sensitivity (OpenAI Decisions, OpenJev, LLM mini/luna-none); Send to a human if high-confidence wrong picks or unstable CoT flips (luna-default, Laya).</div></div><div class="wb-col-right"><div class="wb-metrics"><span class="wb-metric">Decision-1: 94.2%-&gt;100% · $7.6–$8.6/1M · 541–597ms</span><span class="wb-metric">TypeSafe Jev: 98.3%-&gt;100% · $21.7–$24.1/1M · 326–350ms</span><span class="wb-metric">OpenAI Decisions: 80.0%-&gt;92.5% · $26.1–$28.4/1M · 369–417ms</span><span class="wb-metric">OpenJev 27B 4-bit: 92.5%-&gt;100% · $0 API · 2,276–2,566ms</span></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">production_cloud_router</span> <span class="type-pill">choice</span><div class="question-sub">Which cloud decision API delivers the best accuracy, calibration, and cost trade-off?</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>Microsoft Decision-1 (100% neutral / 94.2% cheap · $7.6–$8.6/1M)</strong><span class="conf-muted"> · "3.3x cheaper than OpenAI Decisions ($26.1–$28.4/1M) &amp; 2.8x cheaper than Jev ($21.7–$24.1/1M)" · confidence 0.962</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">TypeSafe Jev (v2.4.0 cheap 98.3% / v2.4.1 neutral 100%)</span><div class="dist-track"><div class="dist-fill" style="width:98.3%"></div></div><span class="dist-pct">98.3%</span></div><div class="dist-row"><span class="dist-label">Microsoft Decision-1 (v2.4.0 cheap 94.2% / v2.4.1 neutral 100%)</span><div class="dist-track"><div class="dist-fill" style="width:94.2%"></div></div><span class="dist-pct">94.2%</span></div><div class="dist-row"><span class="dist-label">OpenAI Decisions (v2.4.0 cheap 80.0% / v2.4.1 neutral 92.5%)</span><div class="dist-track"><div class="dist-fill" style="width:80.0%"></div></div><span class="dist-pct">80.0%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">instruction_robustness_4variants</span> <span class="type-pill">score</span><div class="question-sub">Minimum accuracy across all 4 instruction styles (neutral / cheap / strong / bare)</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>Jev 97.5% (39/40) · Decision-1 95.0% (38/40) · OpenAI 80.0% (32/40)</strong><span class="conf-muted"> · "Removing 1 cost-bias sentence lifts Decision-1 +2.3, OpenJev +3.0, OpenAI +5.0 prompts" · confidence 0.975</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">TypeSafe Jev 4-variant min (39..40/40, spread 1 pt)</span><div class="dist-track"><div class="dist-fill" style="width:97.5%"></div></div><span class="dist-pct">97.5%</span></div><div class="dist-row"><span class="dist-label">Microsoft Decision-1 4-variant min (38..40/40, spread 2 pts)</span><div class="dist-track"><div class="dist-fill" style="width:95.0%"></div></div><span class="dist-pct">95.0%</span></div><div class="dist-row"><span class="dist-label">OpenAI Decisions 4-variant min (32..38/40, spread 6 pts)</span><div class="dist-track"><div class="dist-fill" style="width:80.0%"></div></div><span class="dist-pct">80.0%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">confidence_gate_060_reliability</span> <span class="type-pill">noul</span><div class="question-sub">Does a p &lt; 0.60 fallback gate cleanly intercept routing misses across all 480 calls?</div></div><span class="action-pill pill-confirm">Confirm</span></div><div class="decision-main"><strong>Yes for Jev (3/3 caught) &amp; Decision-1 (0 misses outside cheap); No for OpenAI (24/48 &gt;= 0.60)</strong><span class="conf-muted"> · "OpenAI Decisions assigns up to p=0.78 on wrong picks to gpt-4.1-mini" · P(true) = 0.942</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">TypeSafe Jev wrong picks caught by p &lt; 0.60 (3/3)</span><div class="dist-track"><div class="dist-fill" style="width:100.0%"></div></div><span class="dist-pct">100.0%</span></div><div class="dist-row"><span class="dist-label">Microsoft Decision-1 wrong picks caught by p &lt; 0.60 (6/9)</span><div class="dist-track"><div class="dist-fill" style="width:66.7%"></div></div><span class="dist-pct">66.7%</span></div><div class="dist-row"><span class="dist-label">OpenAI Decisions wrong picks caught by p &lt; 0.60 (24/48)</span><div class="dist-track"><div class="dist-fill" style="width:50.0%"></div></div><span class="dist-pct">50.0%</span></div></div></div></div></div></div><div class="callout-box"><strong>Removing the single cost-saving sentence (&#x27;Prefer a cheaper, faster model when the request is simple...&#x27;) raises Jev, Decision-1, and OpenJev to 40/40 (100.0%).</strong> OpenAI Decisions jumps from 32/40 (80.0%) to 37/40 (92.5%) under neutral instructions (and 38/40 = 95.0% under bare), confirming it is highly sensitive to cost-saving wording while still trailing Decision-1 in accuracy, calibration, and cost ($26.1 vs $7.6/1M).</div></div><footer class="card-footer"><span><strong>8-Way Model Routing Benchmark · OpenAI Decisions vs Microsoft Decision-1 (Switchyard v2.4.0 &amp; v2.4.1)</strong> · anonymized_reported (independently_reproduced=false)</span><span>1 / 7</span></footer></div></article><article class="report-card" id="card-2"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">SCENARIO: IMPLICIT BORDERLINE PROMPTS (B14, B8, B9)</div><h2 class="card-headline">Why OpenAI Decisions misses 8 prompts in v2.4.0 and 3 in v2.4.1 neutral</h2></header><div class="card-canvas"><div class="quote-box">"B14 (ZH, want gpt-4o): &#x27;一句话总结这个 PR：把日志从 logrus 换成了 slog，删除了 3 个废弃接口，并更新了 README。&#x27; | B8 (EN, want gpt-5.4): &#x27;What is the expected number of fair coin flips until the sequence HTHT first appears? Show your work.&#x27; | B9 (EN, want gpt-6-luna): &#x27;Give me a fun, rhyming toast for my sister&#x27;s wedding.&#x27;"</div><div class="stack-list"><div class="decision-card"><div class="decision-head"><div><span class="field-name">case_B14_pr_one_line_summary</span> <span class="type-pill">choice</span><div class="question-sub">B14: Summarize PR in one sentence (expected: gpt-4o for summaries; surface contains &#x27;一句话&#x27;)</div></div><span class="action-pill pill-confirm">Confirm</span></div><div class="decision-main"><strong>v2.4.1 neutral: Jev gpt-4o (0.93) · Decision-1 gpt-4o (0.61) · OpenAI gpt-4.1-mini (0.53)</strong><span class="conf-muted"> · "Under v2.4.0 cheap, only Jev (0.76) &amp; gpt-4.1-mini got B14 right; neutral unlocks Decision-1 &amp; OpenJev" · confidence 0.93</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">TypeSafe Jev -&gt; gpt-4o (0.76 cheap / 0.93 neutral)</span><div class="dist-track"><div class="dist-fill" style="width:93.0%"></div></div><span class="dist-pct">93.0%</span></div><div class="dist-row"><span class="dist-label">Microsoft Decision-1 -&gt; gpt-4o (0.45 cheap / 0.61 neutral)</span><div class="dist-track"><div class="dist-fill" style="width:61.0%"></div></div><span class="dist-pct">61.0%</span></div><div class="dist-row"><span class="dist-label">OpenAI Decisions -&gt; gpt-4.1-mini (0.60 cheap / 0.53 neutral)</span><div class="dist-track"><div class="dist-fill" style="width:53.0%"></div></div><span class="dist-pct">53.0%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">case_B8_htht_coin_flip_markov</span> <span class="type-pill">choice</span><div class="question-sub">B8: Expected coin flips until HTHT first appears (expected: gpt-5.4 hard math/Markov state, E=20)</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>v2.4.1 neutral: Jev gpt-5.4 (1.00) · Decision-1 gpt-5.4 (0.996) · OpenAI gpt-4.1-mini (0.38)</strong><span class="conf-muted"> · "OpenAI Decisions only picks gpt-5.4 (p=0.57) under the 7-word &#x27;bare&#x27; instruction" · confidence 0.996</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">TypeSafe Jev -&gt; gpt-5.4 (p=1.000 neutral)</span><div class="dist-track"><div class="dist-fill" style="width:100.0%"></div></div><span class="dist-pct">100.0%</span></div><div class="dist-row"><span class="dist-label">Microsoft Decision-1 -&gt; gpt-5.4 (p=0.996 neutral)</span><div class="dist-track"><div class="dist-fill" style="width:99.6%"></div></div><span class="dist-pct">99.6%</span></div><div class="dist-row"><span class="dist-label">OpenAI Decisions -&gt; gpt-4.1-mini (p=0.38 neutral / 0.34 cheap)</span><div class="dist-track"><div class="dist-fill" style="width:38.0%"></div></div><span class="dist-pct">38.0%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">case_B9_rhyming_wedding_toast</span> <span class="type-pill">choice</span><div class="question-sub">B9: Fun, rhyming toast for sister&#x27;s wedding (expected: gpt-6-luna creative writing)</div></div><span class="action-pill pill-human">Send to a human</span></div><div class="decision-main"><strong>v2.4.1 neutral: Jev gpt-6-luna (0.99) · Decision-1 gpt-6-luna (0.972) · OpenAI gpt-4.1-mini (0.66)</strong><span class="conf-muted"> · "OpenAI Decisions picks gpt-4.1-mini across all 4 variants with p=0.65..0.78 (bypasses 0.60 gate)" · confidence 0.972</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">TypeSafe Jev -&gt; gpt-6-luna (p=0.990 neutral)</span><div class="dist-track"><div class="dist-fill" style="width:99.0%"></div></div><span class="dist-pct">99.0%</span></div><div class="dist-row"><span class="dist-label">Microsoft Decision-1 -&gt; gpt-6-luna (p=0.972 neutral)</span><div class="dist-track"><div class="dist-fill" style="width:97.2%"></div></div><span class="dist-pct">97.2%</span></div><div class="dist-row"><span class="dist-label">OpenAI Decisions -&gt; gpt-4.1-mini (p=0.66 neutral / 0.78 bare)</span><div class="dist-track"><div class="dist-fill" style="width:66.0%"></div></div><span class="dist-pct">66.0%</span></div></div></div></div><div class="callout-box"><strong>Across all 480 decisions in v2.4.1, 100% of OpenAI Decisions&#x27; 48 wrong picks routed the request to gpt-4.1-mini.</strong> Specifically, 33/48 downgraded higher-tier tasks to gpt-4.1-mini and 15/48 routed creative writing (gpt-6-luna) sideways to gpt-4.1-mini. On B9 and B14, OpenAI Decisions never selected the right model under any of the 4 instructions.</div></div><footer class="card-footer"><span><strong>8-Way Model Routing Benchmark · OpenAI Decisions vs Microsoft Decision-1 (Switchyard v2.4.0 &amp; v2.4.1)</strong> · anonymized_reported (independently_reproduced=false)</span><span>2 / 7</span></footer></div></article><article class="report-card" id="card-3"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">WHAT I TESTED</div><h2 class="card-headline">8 routing approaches across v2.4.0 (cost-biased) &amp; v2.4.1 (neutral): full scorecard</h2></header><div class="card-canvas"><table class="clean-table"><thead><tr><th>PROTOCOL FAMILY</th><th>ENGINE / LATENCY / COST</th><th>ACCURACY (V2.4.0 CHEAP -> V2.4.1 NEUTRAL)</th><th class="act-col">ACTION</th></tr></thead><tbody><tr><td class="sc-col">1. Cloud System One API</td><td>TypeSafe Jev (jev-latest · P50 326–350ms · P95 643–720ms · $21.7–$24.1/1M)</td><td><strong>v2.4.0: 39.3/40 (98.3%) -&gt; v2.4.1 neutral: 40/40 (100%) | 40/40 stable</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Microsoft Decision-1 (Foundry East US 2 · P50 541–597ms · P95 1.25–1.34s · $7.6–$8.6/1M)</td><td><strong>v2.4.0: 37.7/40 (94.2%) -&gt; v2.4.1 neutral: 40/40 (100%) | 40/40 stable</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">2. OpenAI Native API</td><td>OpenAI Decisions (/v1/decisions gpt-6-luna · P50 369–417ms · P95 759–804ms · $26.1–$28.4/1M)</td><td><strong>v2.4.0: 32.0/40 (80.0%) -&gt; v2.4.1 neutral: 37.0/40 (92.5%) | 40/40 stable (-3 B-set)</strong> (93%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col">3. Local Open-Weight (M4 Pro)</td><td>OpenJev 27B (MLX 4-bit 15.6GB · P50 2,276–2,566ms · P95 2,597–3,030ms · $0 API · CC BY-NC 4.0)</td><td><strong>v2.4.0: 37.0/40 (92.5%) -&gt; v2.4.1 neutral: 40/40 (100%) | 40/40 stable</strong> (100%)</td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>Self-hosted Laya 0.3.20 (196MB · P50 111–127ms · P95 143–491ms · $0 API · Apache-2.0)</td><td><strong>v2.4.0: 20.0/40 (50.0%) -&gt; v2.4.1 neutral: 19.0/40 (47.5%) | 40/40 stable (-21 misses)</strong> (48%) <span class="miss-mark">✕</span></td><td class="act-col act-human">Human</td></tr><tr><td class="sc-col">4. General LLM Prompt Router</td><td>LLM: gpt-6-luna reasoning=&#x27;none&#x27; (Foundry · P50 1,714–1,739ms · P95 2.58–2.73s · $39.8/1M)</td><td><strong>v2.4.0: 35.3/40 (88.3%, 1 err) -&gt; v2.4.1 neutral: 36.3/40 (90.8%) | 36/40 stable</strong> (91%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>LLM: gpt-4.1-mini (Foundry · P50 1,427–1,608ms · P95 2,090–2,510ms · $141.4–$141.8/1M)</td><td><strong>v2.4.0: 36.0/40 (90.0%) -&gt; v2.4.1 neutral: 36.0/40 (90.0%) | 40/40 stable (-4 over-escalated)</strong> (90%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>LLM: gpt-6-luna default reasoning (Foundry · P50 2,079–2,132ms · P95 3.05–3.54s · $62.4–$63.1/1M)</td><td><strong>v2.4.0: 30.3/40 (75.8%, 27/40 stable) -&gt; v2.4.1 neutral: 29.0/40 (72.5%, 29/40 stable, 1 err)</strong> (73%) <span class="miss-mark">✕</span></td><td class="act-col act-human">Human</td></tr></tbody></table><div class="callout-box"><strong>3 System One engines (TypeSafe Jev, Microsoft Decision-1, OpenJev 27B) hit 40/40 (100.0%) under v2.4.1 neutral instructions.</strong> Decision-1 achieves the same 40/40 accuracy as Jev at 1/3 the cost ($7.6 vs $24.1/1M) because it bills only 1 completion token (~180 input + 1 output at $0.042/1M), whereas Jev bills ~82 internal reasoning tokens.</div><div class="callout-box"><strong>5 approaches marked (✕) still miss 3 to 21 prompts under neutral instructions — and CoT reasoning actively harms LLM routing.</strong> Enabling default reasoning on gpt-6-luna drops accuracy from 90.8% (luna-none) to 72.5% (luna-default) and causes 11–13/40 prompts to flip across rounds. Meanwhile, gpt-4.1-mini is the only engine whose errors (4/40) all over-escalate to stronger models.</div></div><footer class="card-footer"><span><strong>8-Way Model Routing Benchmark · OpenAI Decisions vs Microsoft Decision-1 (Switchyard v2.4.0 &amp; v2.4.1)</strong> · anonymized_reported (independently_reproduced=false)</span><span>3 / 7</span></footer></div></article><article class="report-card" id="card-4"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">UNDER THE HOOD</div><h2 class="card-headline">OpenAI /v1/decisions vs Microsoft &amp; TypeSafe /v1/systemone wire protocol</h2></header><div class="card-canvas"><pre class="code-dark">// 1. OpenAI Decisions API: POST https://api.openai.com/v1/decisions
+// Model fixed to &quot;gpt-6-luna&quot;; 2-decimal probabilities; 0 completion_tokens ($0.10/1M in)
+{
+  &quot;model&quot;: &quot;gpt-6-luna&quot;,
+  &quot;input&quot;: &quot;What is the expected number of fair coin flips until HTHT first appears?&quot;,
+  &quot;questions&quot;: [{
+    &quot;type&quot;: &quot;choice&quot;, &quot;name&quot;: &quot;model&quot;,
+    &quot;instructions&quot;: &quot;Which backend model should handle this request? Pick the option whose description best matches...&quot;,
+    &quot;choices&quot;: [{&quot;value&quot;: &quot;gpt-4.1-mini&quot;, &quot;description&quot;: &quot;Cheapest and fastest...&quot;}, {&quot;value&quot;: &quot;gpt-5.4&quot;, &quot;description&quot;: &quot;Strongest reasoning...&quot;}]
+  }]
+}
+// -&gt; {&quot;answers&quot;: [{&quot;name&quot;: &quot;model&quot;, &quot;choice&quot;: &quot;gpt-4.1-mini&quot;, &quot;probabilities&quot;: [{&quot;value&quot;: &quot;gpt-4.1-mini&quot;, &quot;probability&quot;: 0.38}, ...]}]}</pre><div class="code-transition">↓ Switchyard (satomic/model-router v2.4.0 / v2.4.1) protocol adapter + confidence threshold gate (tau = 0.60) ↓</div><pre class="code-dark">// 2. System One API: POST https://&lt;resource&gt;.services.ai.azure.com/providers/microsoft/v1/systemone
+// Full float64 probabilities; Decision-1 bills ~180 prompt + 1 completion token ($7.6/1M at $0.042/1M)
+{
+  &quot;model&quot;: &quot;msft-decision-1&quot;,
+  &quot;state&quot;: {&quot;user_request&quot;: &quot;What is the expected number of fair coin flips until HTHT first appears?&quot;},
+  &quot;questions&quot;: {
+    &quot;model&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Which backend model should handle `user_request`? Pick the option whose description best matches...&quot;,
+      &quot;criteria&quot;: {&quot;gpt-4.1-mini&quot;: &quot;Cheapest and fastest...&quot;, &quot;gpt-5.4&quot;: &quot;Strongest reasoning...&quot;}
+    }
+  }
+}
+// -&gt; {&quot;answers&quot;: {&quot;model&quot;: {&quot;choice&quot;: &quot;gpt-5.4&quot;, &quot;probabilities&quot;: {&quot;gpt-5.4&quot;: 0.9961, ...}}}, &quot;usage&quot;: {&quot;prompt_tokens&quot;: 180, &quot;completion_tokens&quot;: 1}}
+<span class="hl-answer">&lt;answer&gt;</span></pre><div class="callout-box"><strong>Switchyard v2.4.0 also fixed a silent fallback bug for OpenAI reasoning models (gpt-6-luna) on Chat Completions.</strong> gpt-6-luna rejects Chat Completions calls that pass legacy max_tokens or temperature when reasoning is active (HTTP 400). Earlier router versions caught the exception and silently fell back to default gpt-4.1-mini (recording 0 ms); v2.4.0 uses max_completion_tokens and adds decision_reasoning_effort.</div></div><footer class="card-footer"><span><strong>8-Way Model Routing Benchmark · OpenAI Decisions vs Microsoft Decision-1 (Switchyard v2.4.0 &amp; v2.4.1)</strong> · anonymized_reported (independently_reproduced=false)</span><span>4 / 7</span></footer></div></article><article class="report-card" id="card-5"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">ROBUSTNESS CHECK</div><h2 class="card-headline">Instruction sensitivity &amp; 0.60 confidence gate across 2,760 calls (v2.4.1)</h2><p class="card-subtitle">Comparing cost-biased (&#x27;cheap&#x27;, v2.4.0 default) vs neutral (&#x27;neutral&#x27;, v2.4.1 default) accuracy, plus 4-variant spread (neutral / cheap / strong / bare, 480 decisions per dedicated engine).</p></header><div class="card-canvas"><table class="clean-table"><thead><tr><th>ENGINE / 4-VARIANT PROFILE</th><th class="num-col">CHEAP (V2.4.0)</th><th class="num-col">NEUTRAL (V2.4.1)</th><th class="num-col">GAIN (PTS)</th></tr></thead><tbody><tr><td><div class="rob-main">TypeSafe Jev (jev-latest) · 4-Variant Spread: 1/40 (39..40/40)</div><div class="rob-sub">neutral 40/40 · cheap 39/40 · strong 40/40 · bare 40/40 | 0/3 wrong &gt;=0.60 (max 0.45), 0/477 false blocks</div></td><td class="num-col">97.5%</td><td class="num-col">100.0%</td><td class="num-col">+2.5</td></tr><tr><td><div class="rob-main">Microsoft Decision-1 (Foundry) · 4-Variant Spread: 2/40 (38..40/40)</div><div class="rob-sub">neutral 40/40 · cheap 38/40 · strong 40/40 · bare 39/40 | 3/9 wrong &gt;=0.60 (only cheap, max 0.642), 11/471 false blocks</div></td><td class="num-col">95.0%</td><td class="num-col">100.0%</td><td class="num-col">+5.0</td></tr><tr><td><div class="rob-main">OpenJev 27B (MLX 4-bit Local) · 4-Variant Spread: 4/40 (36..40/40)</div><div class="rob-sub">neutral 40/40 · cheap 36/40 · strong 39/40 · bare 39/40 | 6/18 wrong &gt;=0.60 (max 0.751), 9/462 false blocks</div></td><td class="num-col">90.0%</td><td class="num-col">100.0%</td><td class="num-col">+10.0</td></tr><tr><td><div class="rob-main">OpenAI Decisions (gpt-6-luna) · 4-Variant Spread: 6/40 (32..38/40)</div><div class="rob-sub">neutral 37/40 · cheap 32/40 · strong 37/40 · bare 38/40 | 24/48 wrong &gt;=0.60 (max 0.78), 27/432 false blocks</div></td><td class="num-col">80.0%</td><td class="num-col">92.5%</td><td class="num-col">+12.5</td></tr><tr><td><div class="rob-main">LLM Router: gpt-6-luna (reasoning=&#x27;none&#x27;) · Cheap vs Neutral</div><div class="rob-sub">v2.4.0 cheap 35.33/40 (88.3%, 37/40 stable) -&gt; v2.4.1 neutral 36.33/40 (90.8%, 36/40 stable)</div></td><td class="num-col">88.3%</td><td class="num-col">90.8%</td><td class="num-col">+2.5</td></tr><tr><td><div class="rob-main">LLM Router: gpt-4.1-mini · Cheap vs Neutral (Identical 4 Over-Escalations)</div><div class="rob-sub">v2.4.0 cheap 36/40 (90.0%) -&gt; v2.4.1 neutral 36/40 (90.0%) | Misses A2, B1, B11, B12 (all stronger)</div></td><td class="num-col">90.0%</td><td class="num-col">90.0%</td><td class="num-col">0.0</td></tr><tr><td><div class="rob-main">Self-hosted Laya 0.3.20 · 4-Variant Spread: 2/40 (19..21/40)</div><div class="rob-sub">neutral 19/40 · cheap 21/40 · strong 20/40 · bare 21/40 | 24/237 wrong &gt;=0.60 (max 0.911), 192/243 false blocks</div></td><td class="num-col">52.5%</td><td class="num-col">47.5%</td><td class="num-col">-5.0</td></tr></tbody></table><div class="callout-box"><strong>Asymmetric instruction response: &#x27;Prefer cheaper&#x27; hurts every dedicated engine (-2.5 to -12.5 pts), while &#x27;Prefer stronger&#x27; never causes over-escalation.</strong> Across all 480 calls per engine in v2.4.1, 100% of errors in Jev (3/3), Decision-1 (9/9), OpenJev (18/18), and OpenAI Decisions (48/48: 33 cheaper + 15 sideways to gpt-4.1-mini) erred toward cheaper models — zero errors ever picked a stronger model than needed.</div></div><footer class="card-footer"><span><strong>8-Way Model Routing Benchmark · OpenAI Decisions vs Microsoft Decision-1 (Switchyard v2.4.0 &amp; v2.4.1)</strong> · anonymized_reported (independently_reproduced=false)</span><span>5 / 7</span></footer></div></article><article class="report-card" id="card-6"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">LATENCY</div><h2 class="card-headline">End-to-end decision latency: P50 vs P95 across all 8 engines (v2.4.1 neutral)</h2><p class="card-subtitle">Blue bars show P50 median latency (ms); gray bars show P95 tail latency (ms) under Switchyard v2.4.1 neutral instructions (Mainland China client to cloud APIs; Apple M4 Pro 48GB for local OpenJev &amp; Laya).</p></header><div class="card-canvas"><div class="lat-list"><div class="lat-group"><div class="lat-title">1. Self-hosted Laya 0.3.20 (Local M4 Pro · 47.5% acc · $0 API)</div><div class="lat-row"><span class="lat-tag">P50 median</span><div class="lat-bar lat-blue" style="width:4.0%"></div><strong class="lat-val">111 ms</strong></div><div class="lat-row"><span class="lat-tag">P95 tail</span><div class="lat-bar lat-gray" style="width:10.8%"></div><strong class="lat-val">491 ms</strong></div></div><div class="lat-group"><div class="lat-title">2. TypeSafe Jev Cloud (jev-latest · 100% neutral / 98.3% cheap · $24.1/1M)</div><div class="lat-row"><span class="lat-tag">P50 median</span><div class="lat-bar lat-blue" style="width:7.2%"></div><strong class="lat-val">326 ms</strong></div><div class="lat-row"><span class="lat-tag">P95 tail</span><div class="lat-bar lat-gray" style="width:14.2%"></div><strong class="lat-val">643 ms</strong></div></div><div class="lat-group"><div class="lat-title">3. OpenAI Decisions Cloud (gpt-6-luna · 92.5% neutral / 80.0% cheap · $26.1/1M)</div><div class="lat-row"><span class="lat-tag">P50 median</span><div class="lat-bar lat-blue" style="width:9.2%"></div><strong class="lat-val">417 ms</strong></div><div class="lat-row"><span class="lat-tag">P95 tail</span><div class="lat-bar lat-gray" style="width:17.7%"></div><strong class="lat-val">804 ms</strong></div></div><div class="lat-group"><div class="lat-title">4. Microsoft Decision-1 Cloud (Foundry East US 2 · 100% neutral / 94.2% cheap · $7.6/1M)</div><div class="lat-row"><span class="lat-tag">P50 median</span><div class="lat-bar lat-blue" style="width:13.2%"></div><strong class="lat-val">597 ms</strong></div><div class="lat-row"><span class="lat-tag">P95 tail</span><div class="lat-bar lat-gray" style="width:29.6%"></div><strong class="lat-val">1344 ms</strong></div></div><div class="lat-group"><div class="lat-title">5. LLM Router: gpt-4.1-mini (Foundry · 90.0% acc · $141.4/1M)</div><div class="lat-row"><span class="lat-tag">P50 median</span><div class="lat-bar lat-blue" style="width:35.5%"></div><strong class="lat-val">1608 ms</strong></div><div class="lat-row"><span class="lat-tag">P95 tail</span><div class="lat-bar lat-gray" style="width:55.3%"></div><strong class="lat-val">2510 ms</strong></div></div><div class="lat-group"><div class="lat-title">6. LLM Router: gpt-6-luna reasoning=&#x27;none&#x27; (Foundry · 90.8% acc · $39.8/1M)</div><div class="lat-row"><span class="lat-tag">P50 median</span><div class="lat-bar lat-blue" style="width:38.3%"></div><strong class="lat-val">1739 ms</strong></div><div class="lat-row"><span class="lat-tag">P95 tail</span><div class="lat-bar lat-gray" style="width:60.2%"></div><strong class="lat-val">2731 ms</strong></div></div><div class="lat-group"><div class="lat-title">7. LLM Router: gpt-6-luna default reasoning (Foundry · 72.5% acc · $63.1/1M)</div><div class="lat-row"><span class="lat-tag">P50 median</span><div class="lat-bar lat-blue" style="width:45.8%"></div><strong class="lat-val">2079 ms</strong></div><div class="lat-row"><span class="lat-tag">P95 tail</span><div class="lat-bar lat-gray" style="width:78.0%"></div><strong class="lat-val">3538 ms</strong></div></div><div class="lat-group"><div class="lat-title">8. OpenJev 27B Local (M4 Pro 48GB MLX 4-bit · 100% neutral / 92.5% cheap · $0 API)</div><div class="lat-row"><span class="lat-tag">P50 median</span><div class="lat-bar lat-blue" style="width:50.2%"></div><strong class="lat-val">2276 ms</strong></div><div class="lat-row"><span class="lat-tag">P95 tail</span><div class="lat-bar lat-gray" style="width:57.3%"></div><strong class="lat-val">2597 ms</strong></div></div></div><div class="callout-box"><strong>All 3 dedicated cloud decision APIs respond in 326–597 ms P50 — 3x to 5x faster than Chat Completions LLM routing (1,427–2,132 ms).</strong> In v2.4.0 (cheap), P50/P95 were: Laya 127/143 ms, Jev 350/720 ms, OpenAI Decisions 369/759 ms, Decision-1 541/1,251 ms, gpt-4.1-mini 1,427/2,090 ms, luna-none 1,714/2,578 ms, luna-default 2,132/3,045 ms, and local OpenJev 2,566/3,030 ms.</div></div><footer class="card-footer"><span><strong>8-Way Model Routing Benchmark · OpenAI Decisions vs Microsoft Decision-1 (Switchyard v2.4.0 &amp; v2.4.1)</strong> · anonymized_reported (independently_reproduced=false)</span><span>6 / 7</span></footer></div></article><article class="report-card" id="card-7"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">MY TAKE</div><h2 class="card-headline">Why Microsoft Decision-1 stays the #1 production choice after OpenAI Decisions joins</h2></header><div class="card-canvas"><div class="fit-grid"><div class="fit-card fit-good"><div class="fit-head">✅ Good fit</div><ul><li>Microsoft Decision-1 as default cloud router on Azure AI Foundry: 100% neutral accuracy (94.2% cheap), $7.6–$8.6/1M cost (3.3x cheaper than OpenAI Decisions, 16x cheaper than gpt-4.1-mini), ~550 ms P50, and clean 0.60 threshold gating</li><li>TypeSafe Jev when maximum instruction immunity (39..40/40 across all 4 variants, 0 false blocks at 0.60) and lowest cloud latency (~330 ms P50) justify ~3x Decision-1&#x27;s price ($21.7–$24.1/1M)</li><li>Neutral routing instructions (&#x27;Pick the option whose description best matches...&#x27;) while encoding tier boundaries inside candidate descriptions (+12.5% on OpenAI Decisions, +5.8% on Decision-1)</li><li>OpenAI Decisions for teams already on an OpenAI 1P key needing a fast (~400 ms P50) drop-in endpoint under neutral/bare instructions (92.5%–95.0%)</li><li>Setting reasoning_effort=&#x27;none&#x27; whenever using a reasoning LLM (gpt-6-luna) as a prompt-based router (+15.0 to +18.3 pts accuracy, -400 ms latency, -37% cost vs default reasoning)</li></ul></div><div class="fit-card fit-bad"><div class="fit-head">⛔ Not for</div><ul><li>Combining OpenAI Decisions with cost-saving prompt instructions (&#x27;prefer cheaper when simple&#x27;): accuracy drops to 80.0% (32/40) and 14/20 (70%) on implicit Set B requests</li><li>Relying on a 0.60 confidence gate with OpenAI Decisions: 50% of its misses (24/48 across v2.4.1) have p &gt;= 0.60 (up to 0.78), failing silently without triggering fallback</li><li>Calling /openai/v1/decisions on Azure AI Foundry (returns HTTP 404; Foundry serves Decision-1 at /providers/microsoft/v1/systemone instead)</li><li>Leaving default reasoning enabled on LLM routers (gpt-6-luna default drops to 72.5%–75.8% accuracy and flips choices across rounds on 11–13/40 prompts)</li><li>Commercial production use of OpenJev 27B weights (CC BY-NC 4.0 non-commercial license) or 5-way general model routing with Laya 0.3.20 (47.5%–52.5% accuracy)</li></ul></div></div><div class="dark-footer-box"><p>Provenance: anonymized_reported (independently_reproduced=false). Evaluated 2026-10-11..10-13 across Switchyard v2.3.0, v2.4.0 (960 calls), and v2.4.1 (2,760 calls + 160 direct API diagnostic calls).</p><p class="dark-repo">Public router: https://github.com/satomic/model-router (commits b58bfd31, 3408c39c, 8a20a7b6) · Archive: docs/research/openai-decisions-vs-decision-1-routing-benchmark/</p></div></div><footer class="card-footer"><span><strong>8-Way Model Routing Benchmark · OpenAI Decisions vs Microsoft Decision-1 (Switchyard v2.4.0 &amp; v2.4.1)</strong> · anonymized_reported (independently_reproduced=false)</span><span>7 / 7</span></footer></div></article><details><summary>Machine-readable card deck JSON</summary><pre class="code-dark">{
+  &quot;cards&quot;: [
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;OpenAI Decisions jumps from 32/40 (80.0%) to 37/40 (92.5%) under neutral instructions (and 38/40 = 95.0% under bare), confirming it is highly sensitive to cost-saving wording while still trailing Decision-1 in accuracy, calibration, and cost ($26.1 vs $7.6/1M).&quot;,
+          &quot;lead&quot;: &quot;Removing the single cost-saving sentence (&#x27;Prefer a cheaper, faster model when the request is simple...&#x27;) raises Jev, Decision-1, and OpenJev to 40/40 (100.0%).&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;HANDS-ON · 8-WAY MODEL ROUTING BENCHMARK (V2.4.0 &amp; V2.4.1)&quot;,
+      &quot;headline_Gradient&quot;: &quot;Microsoft Decision-1 remains #1&quot;,
+      &quot;headline_prefix&quot;: &quot;OpenAI Decisions joins the 8-way routing test — &quot;,
+      &quot;kind&quot;: &quot;overview&quot;,
+      &quot;subtitle&quot;: &quot;Across 960 decisions under cost-biased instructions (v2.4.0) and 2,760 decisions across 4 instruction variants (v2.4.1) on 40 bilingual prompts (20 EN / 20 ZH, 5 target models), Microsoft Decision-1 hits 37.7/40 (94.2%) -&gt; 40/40 (100.0% neutral) at $7.6–$8.6/1M decisions, outperforming OpenAI Decisions (32/40 = 80.0% -&gt; 37/40 = 92.5% neutral at $26.1–$28.4/1M).&quot;,
+      &quot;workbench&quot;: {
+        &quot;bands_note&quot;: &quot;Confidence gate (tau = 0.60): Act automatically if p &gt;= 0.60 and instruction spread &lt;= 2/40 (Jev, Decision-1); Confirm if p &lt; 0.60 fallback or moderate instruction sensitivity (OpenAI Decisions, OpenJev, LLM mini/luna-none); Send to a human if high-confidence wrong picks or unstable CoT flips (luna-default, Laya).&quot;,
+        &quot;decisions&quot;: [
+          {
+            &quot;action&quot;: &quot;Act automatically&quot;,
+            &quot;closest_label&quot;: &quot;3.3x cheaper than OpenAI Decisions ($26.1–$28.4/1M) &amp; 2.8x cheaper than Jev ($21.7–$24.1/1M)&quot;,
+            &quot;confidence&quot;: 0.962,
+            &quot;distribution_pct&quot;: {
+              &quot;Microsoft Decision-1 (v2.4.0 cheap 94.2% / v2.4.1 neutral 100%)&quot;: 94.2,
+              &quot;OpenAI Decisions (v2.4.0 cheap 80.0% / v2.4.1 neutral 92.5%)&quot;: 80.0,
+              &quot;TypeSafe Jev (v2.4.0 cheap 98.3% / v2.4.1 neutral 100%)&quot;: 98.3
+            },
+            &quot;field&quot;: &quot;production_cloud_router&quot;,
+            &quot;question&quot;: &quot;Which cloud decision API delivers the best accuracy, calibration, and cost trade-off?&quot;,
+            &quot;question_type&quot;: &quot;choice&quot;,
+            &quot;selected_answer&quot;: &quot;Microsoft Decision-1 (100% neutral / 94.2% cheap · $7.6–$8.6/1M)&quot;
+          },
+          {
+            &quot;action&quot;: &quot;Act automatically&quot;,
+            &quot;closest_label&quot;: &quot;Removing 1 cost-bias sentence lifts Decision-1 +2.3, OpenJev +3.0, OpenAI +5.0 prompts&quot;,
+            &quot;confidence&quot;: 0.975,
+            &quot;distribution_pct&quot;: {
+              &quot;Microsoft Decision-1 4-variant min (38..40/40, spread 2 pts)&quot;: 95.0,
+              &quot;OpenAI Decisions 4-variant min (32..38/40, spread 6 pts)&quot;: 80.0,
+              &quot;TypeSafe Jev 4-variant min (39..40/40, spread 1 pt)&quot;: 97.5
+            },
+            &quot;field&quot;: &quot;instruction_robustness_4variants&quot;,
+            &quot;question&quot;: &quot;Minimum accuracy across all 4 instruction styles (neutral / cheap / strong / bare)&quot;,
+            &quot;question_type&quot;: &quot;score&quot;,
+            &quot;selected_answer&quot;: &quot;Jev 97.5% (39/40) · Decision-1 95.0% (38/40) · OpenAI 80.0% (32/40)&quot;
+          },
+          {
+            &quot;action&quot;: &quot;Confirm&quot;,
+            &quot;closest_label&quot;: &quot;OpenAI Decisions assigns up to p=0.78 on wrong picks to gpt-4.1-mini&quot;,
+            &quot;confidence&quot;: 0.942,
+            &quot;distribution_pct&quot;: {
+              &quot;Microsoft Decision-1 wrong picks caught by p &lt; 0.60 (6/9)&quot;: 66.7,
+              &quot;OpenAI Decisions wrong picks caught by p &lt; 0.60 (24/48)&quot;: 50.0,
+              &quot;TypeSafe Jev wrong picks caught by p &lt; 0.60 (3/3)&quot;: 100.0
+            },
+            &quot;field&quot;: &quot;confidence_gate_060_reliability&quot;,
+            &quot;question&quot;: &quot;Does a p &lt; 0.60 fallback gate cleanly intercept routing misses across all 480 calls?&quot;,
+            &quot;question_type&quot;: &quot;noul&quot;,
+            &quot;selected_answer&quot;: &quot;Yes for Jev (3/3 caught) &amp; Decision-1 (0 misses outside cheap); No for OpenAI (24/48 &gt;= 0.60)&quot;
+          }
+        ],
+        &quot;metrics&quot;: [
+          &quot;Decision-1: 94.2%-&gt;100% · $7.6–$8.6/1M · 541–597ms&quot;,
+          &quot;TypeSafe Jev: 98.3%-&gt;100% · $21.7–$24.1/1M · 326–350ms&quot;,
+          &quot;OpenAI Decisions: 80.0%-&gt;92.5% · $26.1–$28.4/1M · 369–417ms&quot;,
+          &quot;OpenJev 27B 4-bit: 92.5%-&gt;100% · $0 API · 2,276–2,566ms&quot;
+        ],
+        &quot;scenarios&quot;: [
+          &quot;Set A (20 explicit prompts: 10 EN + 10 ZH) &amp; Set B (20 implicit/borderline prompts: 10 EN + 10 ZH)&quot;,
+          &quot;5 candidate backends: gpt-4.1-mini (chat), gpt-4o (general), gpt-4.1 (coding), gpt-5.4 (reasoning), gpt-6-luna (creative)&quot;,
+          &quot;Cloud System One APIs: TypeSafe Jev (jev-latest) &amp; Microsoft Decision-1 (Azure AI Foundry East US 2)&quot;,
+          &quot;OpenAI Native API: POST /v1/decisions (locked to gpt-6-luna, $0.10/1M input, $0 output)&quot;,
+          &quot;Local Open-Weight (M4 Pro 48GB): OpenJev 27B (MLX 4-bit, CC BY-NC 4.0) &amp; Laya 0.3.20 (Apache-2.0)&quot;,
+          &quot;General LLM Routers (/v1/chat/completions): gpt-4.1-mini, gpt-6-luna (reasoning=none), gpt-6-luna (default)&quot;,
+          &quot;4 Instruction Variants (v2.4.1): neutral (default), cheap (v2.4.0 default), strong, bare&quot;
+        ],
+        &quot;status_pill&quot;: &quot;v2.4.0 (960 calls) + v2.4.1 (2,760 calls) · anonymized_reported&quot;,
+        &quot;title&quot;: &quot;Switchyard (satomic/model-router v2.4.0 &amp; v2.4.1) · 8 Routing Approaches × 40 Bilingual Prompts&quot;
+      }
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Specifically, 33/48 downgraded higher-tier tasks to gpt-4.1-mini and 15/48 routed creative writing (gpt-6-luna) sideways to gpt-4.1-mini. On B9 and B14, OpenAI Decisions never selected the right model under any of the 4 instructions.&quot;,
+          &quot;lead&quot;: &quot;Across all 480 decisions in v2.4.1, 100% of OpenAI Decisions&#x27; 48 wrong picks routed the request to gpt-4.1-mini.&quot;
+        }
+      ],
+      &quot;decisions&quot;: [
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;closest_label&quot;: &quot;Under v2.4.0 cheap, only Jev (0.76) &amp; gpt-4.1-mini got B14 right; neutral unlocks Decision-1 &amp; OpenJev&quot;,
+          &quot;confidence&quot;: 0.93,
+          &quot;distribution_pct&quot;: {
+            &quot;Microsoft Decision-1 -&gt; gpt-4o (0.45 cheap / 0.61 neutral)&quot;: 61.0,
+            &quot;OpenAI Decisions -&gt; gpt-4.1-mini (0.60 cheap / 0.53 neutral)&quot;: 53.0,
+            &quot;TypeSafe Jev -&gt; gpt-4o (0.76 cheap / 0.93 neutral)&quot;: 93.0
+          },
+          &quot;field&quot;: &quot;case_B14_pr_one_line_summary&quot;,
+          &quot;question&quot;: &quot;B14: Summarize PR in one sentence (expected: gpt-4o for summaries; surface contains &#x27;一句话&#x27;)&quot;,
+          &quot;question_type&quot;: &quot;choice&quot;,
+          &quot;selected_answer&quot;: &quot;v2.4.1 neutral: Jev gpt-4o (0.93) · Decision-1 gpt-4o (0.61) · OpenAI gpt-4.1-mini (0.53)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Act automatically&quot;,
+          &quot;closest_label&quot;: &quot;OpenAI Decisions only picks gpt-5.4 (p=0.57) under the 7-word &#x27;bare&#x27; instruction&quot;,
+          &quot;confidence&quot;: 0.996,
+          &quot;distribution_pct&quot;: {
+            &quot;Microsoft Decision-1 -&gt; gpt-5.4 (p=0.996 neutral)&quot;: 99.6,
+            &quot;OpenAI Decisions -&gt; gpt-4.1-mini (p=0.38 neutral / 0.34 cheap)&quot;: 38.0,
+            &quot;TypeSafe Jev -&gt; gpt-5.4 (p=1.000 neutral)&quot;: 100.0
+          },
+          &quot;field&quot;: &quot;case_B8_htht_coin_flip_markov&quot;,
+          &quot;question&quot;: &quot;B8: Expected coin flips until HTHT first appears (expected: gpt-5.4 hard math/Markov state, E=20)&quot;,
+          &quot;question_type&quot;: &quot;choice&quot;,
+          &quot;selected_answer&quot;: &quot;v2.4.1 neutral: Jev gpt-5.4 (1.00) · Decision-1 gpt-5.4 (0.996) · OpenAI gpt-4.1-mini (0.38)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Send to a human&quot;,
+          &quot;closest_label&quot;: &quot;OpenAI Decisions picks gpt-4.1-mini across all 4 variants with p=0.65..0.78 (bypasses 0.60 gate)&quot;,
+          &quot;confidence&quot;: 0.972,
+          &quot;distribution_pct&quot;: {
+            &quot;Microsoft Decision-1 -&gt; gpt-6-luna (p=0.972 neutral)&quot;: 97.2,
+            &quot;OpenAI Decisions -&gt; gpt-4.1-mini (p=0.66 neutral / 0.78 bare)&quot;: 66.0,
+            &quot;TypeSafe Jev -&gt; gpt-6-luna (p=0.990 neutral)&quot;: 99.0
+          },
+          &quot;field&quot;: &quot;case_B9_rhyming_wedding_toast&quot;,
+          &quot;question&quot;: &quot;B9: Fun, rhyming toast for sister&#x27;s wedding (expected: gpt-6-luna creative writing)&quot;,
+          &quot;question_type&quot;: &quot;choice&quot;,
+          &quot;selected_answer&quot;: &quot;v2.4.1 neutral: Jev gpt-6-luna (0.99) · Decision-1 gpt-6-luna (0.972) · OpenAI gpt-4.1-mini (0.66)&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;SCENARIO: IMPLICIT BORDERLINE PROMPTS (B14, B8, B9)&quot;,
+      &quot;headline&quot;: &quot;Why OpenAI Decisions misses 8 prompts in v2.4.0 and 3 in v2.4.1 neutral&quot;,
+      &quot;kind&quot;: &quot;deep_dive&quot;,
+      &quot;quote&quot;: &quot;B14 (ZH, want gpt-4o): &#x27;一句话总结这个 PR：把日志从 logrus 换成了 slog，删除了 3 个废弃接口，并更新了 README。&#x27; | B8 (EN, want gpt-5.4): &#x27;What is the expected number of fair coin flips until the sequence HTHT first appears? Show your work.&#x27; | B9 (EN, want gpt-6-luna): &#x27;Give me a fun, rhyming toast for my sister&#x27;s wedding.&#x27;&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Decision-1 achieves the same 40/40 accuracy as Jev at 1/3 the cost ($7.6 vs $24.1/1M) because it bills only 1 completion token (~180 input + 1 output at $0.042/1M), whereas Jev bills ~82 internal reasoning tokens.&quot;,
+          &quot;lead&quot;: &quot;3 System One engines (TypeSafe Jev, Microsoft Decision-1, OpenJev 27B) hit 40/40 (100.0%) under v2.4.1 neutral instructions.&quot;
+        },
+        {
+          &quot;body&quot;: &quot;Enabling default reasoning on gpt-6-luna drops accuracy from 90.8% (luna-none) to 72.5% (luna-default) and causes 11–13/40 prompts to flip across rounds. Meanwhile, gpt-4.1-mini is the only engine whose errors (4/40) all over-escalate to stronger models.&quot;,
+          &quot;lead&quot;: &quot;5 approaches marked (✕) still miss 3 to 21 prompts under neutral instructions — and CoT reasoning actively harms LLM routing.&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;WHAT I TESTED&quot;,
+      &quot;headline&quot;: &quot;8 routing approaches across v2.4.0 (cost-biased) &amp; v2.4.1 (neutral): full scorecard&quot;,
+      &quot;kind&quot;: &quot;scorecard&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;v2.4.0: 39.3/40 (98.3%) -&gt; v2.4.1 neutral: 40/40 (100%) | 40/40 stable&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;TypeSafe Jev (jev-latest · P50 326–350ms · P95 643–720ms · $21.7–$24.1/1M)&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;1. Cloud System One API&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;v2.4.0: 37.7/40 (94.2%) -&gt; v2.4.1 neutral: 40/40 (100%) | 40/40 stable&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Microsoft Decision-1 (Foundry East US 2 · P50 541–597ms · P95 1.25–1.34s · $7.6–$8.6/1M)&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;1. Cloud System One API&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;v2.4.0: 32.0/40 (80.0%) -&gt; v2.4.1 neutral: 37.0/40 (92.5%) | 40/40 stable (-3 B-set)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;OpenAI Decisions (/v1/decisions gpt-6-luna · P50 369–417ms · P95 759–804ms · $26.1–$28.4/1M)&quot;,
+          &quot;reported_probability_pct&quot;: 93,
+          &quot;scenario&quot;: &quot;2. OpenAI Native API&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;v2.4.0: 37.0/40 (92.5%) -&gt; v2.4.1 neutral: 40/40 (100%) | 40/40 stable&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;OpenJev 27B (MLX 4-bit 15.6GB · P50 2,276–2,566ms · P95 2,597–3,030ms · $0 API · CC BY-NC 4.0)&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;3. Local Open-Weight (M4 Pro)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Human&quot;,
+          &quot;decider_answer&quot;: &quot;v2.4.0: 20.0/40 (50.0%) -&gt; v2.4.1 neutral: 19.0/40 (47.5%) | 40/40 stable (-21 misses)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;Self-hosted Laya 0.3.20 (196MB · P50 111–127ms · P95 143–491ms · $0 API · Apache-2.0)&quot;,
+          &quot;reported_probability_pct&quot;: 48,
+          &quot;scenario&quot;: &quot;3. Local Open-Weight (M4 Pro)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;v2.4.0: 35.3/40 (88.3%, 1 err) -&gt; v2.4.1 neutral: 36.3/40 (90.8%) | 36/40 stable&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;LLM: gpt-6-luna reasoning=&#x27;none&#x27; (Foundry · P50 1,714–1,739ms · P95 2.58–2.73s · $39.8/1M)&quot;,
+          &quot;reported_probability_pct&quot;: 91,
+          &quot;scenario&quot;: &quot;4. General LLM Prompt Router&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;v2.4.0: 36.0/40 (90.0%) -&gt; v2.4.1 neutral: 36.0/40 (90.0%) | 40/40 stable (-4 over-escalated)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;LLM: gpt-4.1-mini (Foundry · P50 1,427–1,608ms · P95 2,090–2,510ms · $141.4–$141.8/1M)&quot;,
+          &quot;reported_probability_pct&quot;: 90,
+          &quot;scenario&quot;: &quot;4. General LLM Prompt Router&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Human&quot;,
+          &quot;decider_answer&quot;: &quot;v2.4.0: 30.3/40 (75.8%, 27/40 stable) -&gt; v2.4.1 neutral: 29.0/40 (72.5%, 29/40 stable, 1 err)&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;LLM: gpt-6-luna default reasoning (Foundry · P50 2,079–2,132ms · P95 3.05–3.54s · $62.4–$63.1/1M)&quot;,
+          &quot;reported_probability_pct&quot;: 73,
+          &quot;scenario&quot;: &quot;4. General LLM Prompt Router&quot;
+        }
+      ]
+    },
+    {
+      &quot;bottom_code&quot;: &quot;// 2. System One API: POST https://&lt;resource&gt;.services.ai.azure.com/providers/microsoft/v1/systemone\n// Full float64 probabilities; Decision-1 bills ~180 prompt + 1 completion token ($7.6/1M at $0.042/1M)\n{\n  \&quot;model\&quot;: \&quot;msft-decision-1\&quot;,\n  \&quot;state\&quot;: {\&quot;user_request\&quot;: \&quot;What is the expected number of fair coin flips until HTHT first appears?\&quot;},\n  \&quot;questions\&quot;: {\n    \&quot;model\&quot;: {\n      \&quot;type\&quot;: \&quot;choice\&quot;,\n      \&quot;instructions\&quot;: \&quot;Which backend model should handle `user_request`? Pick the option whose description best matches...\&quot;,\n      \&quot;criteria\&quot;: {\&quot;gpt-4.1-mini\&quot;: \&quot;Cheapest and fastest...\&quot;, \&quot;gpt-5.4\&quot;: \&quot;Strongest reasoning...\&quot;}\n    }\n  }\n}\n// -&gt; {\&quot;answers\&quot;: {\&quot;model\&quot;: {\&quot;choice\&quot;: \&quot;gpt-5.4\&quot;, \&quot;probabilities\&quot;: {\&quot;gpt-5.4\&quot;: 0.9961, ...}}}, \&quot;usage\&quot;: {\&quot;prompt_tokens\&quot;: 180, \&quot;completion_tokens\&quot;: 1}}\n&lt;answer&gt;&quot;,
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;gpt-6-luna rejects Chat Completions calls that pass legacy max_tokens or temperature when reasoning is active (HTTP 400). Earlier router versions caught the exception and silently fell back to default gpt-4.1-mini (recording 0 ms); v2.4.0 uses max_completion_tokens and adds decision_reasoning_effort.&quot;,
+          &quot;lead&quot;: &quot;Switchyard v2.4.0 also fixed a silent fallback bug for OpenAI reasoning models (gpt-6-luna) on Chat Completions.&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;UNDER THE HOOD&quot;,
+      &quot;headline&quot;: &quot;OpenAI /v1/decisions vs Microsoft &amp; TypeSafe /v1/systemone wire protocol&quot;,
+      &quot;kind&quot;: &quot;protocol&quot;,
+      &quot;top_code&quot;: &quot;// 1. OpenAI Decisions API: POST https://api.openai.com/v1/decisions\n// Model fixed to \&quot;gpt-6-luna\&quot;; 2-decimal probabilities; 0 completion_tokens ($0.10/1M in)\n{\n  \&quot;model\&quot;: \&quot;gpt-6-luna\&quot;,\n  \&quot;input\&quot;: \&quot;What is the expected number of fair coin flips until HTHT first appears?\&quot;,\n  \&quot;questions\&quot;: [{\n    \&quot;type\&quot;: \&quot;choice\&quot;, \&quot;name\&quot;: \&quot;model\&quot;,\n    \&quot;instructions\&quot;: \&quot;Which backend model should handle this request? Pick the option whose description best matches...\&quot;,\n    \&quot;choices\&quot;: [{\&quot;value\&quot;: \&quot;gpt-4.1-mini\&quot;, \&quot;description\&quot;: \&quot;Cheapest and fastest...\&quot;}, {\&quot;value\&quot;: \&quot;gpt-5.4\&quot;, \&quot;description\&quot;: \&quot;Strongest reasoning...\&quot;}]\n  }]\n}\n// -&gt; {\&quot;answers\&quot;: [{\&quot;name\&quot;: \&quot;model\&quot;, \&quot;choice\&quot;: \&quot;gpt-4.1-mini\&quot;, \&quot;probabilities\&quot;: [{\&quot;value\&quot;: \&quot;gpt-4.1-mini\&quot;, \&quot;probability\&quot;: 0.38}, ...]}]}&quot;,
+      &quot;transition&quot;: &quot;↓ Switchyard (satomic/model-router v2.4.0 / v2.4.1) protocol adapter + confidence threshold gate (tau = 0.60) ↓&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Across all 480 calls per engine in v2.4.1, 100% of errors in Jev (3/3), Decision-1 (9/9), OpenJev (18/18), and OpenAI Decisions (48/48: 33 cheaper + 15 sideways to gpt-4.1-mini) erred toward cheaper models — zero errors ever picked a stronger model than needed.&quot;,
+          &quot;lead&quot;: &quot;Asymmetric instruction response: &#x27;Prefer cheaper&#x27; hurts every dedicated engine (-2.5 to -12.5 pts), while &#x27;Prefer stronger&#x27; never causes over-escalation.&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;ROBUSTNESS CHECK&quot;,
+      &quot;headline&quot;: &quot;Instruction sensitivity &amp; 0.60 confidence gate across 2,760 calls (v2.4.1)&quot;,
+      &quot;kind&quot;: &quot;robustness&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 2.5,
+          &quot;original_pct&quot;: 97.5,
+          &quot;reversed_pct&quot;: 100.0,
+          &quot;scenario&quot;: &quot;TypeSafe Jev (jev-latest) · 4-Variant Spread: 1/40 (39..40/40)&quot;,
+          &quot;selected_option&quot;: &quot;neutral 40/40 · cheap 39/40 · strong 40/40 · bare 40/40 | 0/3 wrong &gt;=0.60 (max 0.45), 0/477 false blocks&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 5.0,
+          &quot;original_pct&quot;: 95.0,
+          &quot;reversed_pct&quot;: 100.0,
+          &quot;scenario&quot;: &quot;Microsoft Decision-1 (Foundry) · 4-Variant Spread: 2/40 (38..40/40)&quot;,
+          &quot;selected_option&quot;: &quot;neutral 40/40 · cheap 38/40 · strong 40/40 · bare 39/40 | 3/9 wrong &gt;=0.60 (only cheap, max 0.642), 11/471 false blocks&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 10.0,
+          &quot;original_pct&quot;: 90.0,
+          &quot;reversed_pct&quot;: 100.0,
+          &quot;scenario&quot;: &quot;OpenJev 27B (MLX 4-bit Local) · 4-Variant Spread: 4/40 (36..40/40)&quot;,
+          &quot;selected_option&quot;: &quot;neutral 40/40 · cheap 36/40 · strong 39/40 · bare 39/40 | 6/18 wrong &gt;=0.60 (max 0.751), 9/462 false blocks&quot;
+        },
+        {
+          &quot;answer_held&quot;: false,
+          &quot;change_pts&quot;: 12.5,
+          &quot;original_pct&quot;: 80.0,
+          &quot;reversed_pct&quot;: 92.5,
+          &quot;scenario&quot;: &quot;OpenAI Decisions (gpt-6-luna) · 4-Variant Spread: 6/40 (32..38/40)&quot;,
+          &quot;selected_option&quot;: &quot;neutral 37/40 · cheap 32/40 · strong 37/40 · bare 38/40 | 24/48 wrong &gt;=0.60 (max 0.78), 27/432 false blocks&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 2.5,
+          &quot;original_pct&quot;: 88.3,
+          &quot;reversed_pct&quot;: 90.8,
+          &quot;scenario&quot;: &quot;LLM Router: gpt-6-luna (reasoning=&#x27;none&#x27;) · Cheap vs Neutral&quot;,
+          &quot;selected_option&quot;: &quot;v2.4.0 cheap 35.33/40 (88.3%, 37/40 stable) -&gt; v2.4.1 neutral 36.33/40 (90.8%, 36/40 stable)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 0.0,
+          &quot;original_pct&quot;: 90.0,
+          &quot;reversed_pct&quot;: 90.0,
+          &quot;scenario&quot;: &quot;LLM Router: gpt-4.1-mini · Cheap vs Neutral (Identical 4 Over-Escalations)&quot;,
+          &quot;selected_option&quot;: &quot;v2.4.0 cheap 36/40 (90.0%) -&gt; v2.4.1 neutral 36/40 (90.0%) | Misses A2, B1, B11, B12 (all stronger)&quot;
+        },
+        {
+          &quot;answer_held&quot;: false,
+          &quot;change_pts&quot;: -5.0,
+          &quot;original_pct&quot;: 52.5,
+          &quot;reversed_pct&quot;: 47.5,
+          &quot;scenario&quot;: &quot;Self-hosted Laya 0.3.20 · 4-Variant Spread: 2/40 (19..21/40)&quot;,
+          &quot;selected_option&quot;: &quot;neutral 19/40 · cheap 21/40 · strong 20/40 · bare 21/40 | 24/237 wrong &gt;=0.60 (max 0.911), 192/243 false blocks&quot;
+        }
+      ],
+      &quot;subtitle&quot;: &quot;Comparing cost-biased (&#x27;cheap&#x27;, v2.4.0 default) vs neutral (&#x27;neutral&#x27;, v2.4.1 default) accuracy, plus 4-variant spread (neutral / cheap / strong / bare, 480 decisions per dedicated engine).&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;In v2.4.0 (cheap), P50/P95 were: Laya 127/143 ms, Jev 350/720 ms, OpenAI Decisions 369/759 ms, Decision-1 541/1,251 ms, gpt-4.1-mini 1,427/2,090 ms, luna-none 1,714/2,578 ms, luna-default 2,132/3,045 ms, and local OpenJev 2,566/3,030 ms.&quot;,
+          &quot;lead&quot;: &quot;All 3 dedicated cloud decision APIs respond in 326–597 ms P50 — 3x to 5x faster than Chat Completions LLM routing (1,427–2,132 ms).&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;LATENCY&quot;,
+      &quot;headline&quot;: &quot;End-to-end decision latency: P50 vs P95 across all 8 engines (v2.4.1 neutral)&quot;,
+      &quot;kind&quot;: &quot;latency&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;baseline_tag&quot;: &quot;P95 tail&quot;,
+          &quot;batched_median_ms&quot;: 111,
+          &quot;label&quot;: &quot;1. Self-hosted Laya 0.3.20 (Local M4 Pro · 47.5% acc · $0 API)&quot;,
+          &quot;one_by_one_estimated_ms&quot;: 491,
+          &quot;primary_tag&quot;: &quot;P50 median&quot;,
+          &quot;question_count&quot;: 40,
+          &quot;runs&quot;: 120,
+          &quot;unit&quot;: &quot;ms&quot;
+        },
+        {
+          &quot;baseline_tag&quot;: &quot;P95 tail&quot;,
+          &quot;batched_median_ms&quot;: 326,
+          &quot;label&quot;: &quot;2. TypeSafe Jev Cloud (jev-latest · 100% neutral / 98.3% cheap · $24.1/1M)&quot;,
+          &quot;one_by_one_estimated_ms&quot;: 643,
+          &quot;primary_tag&quot;: &quot;P50 median&quot;,
+          &quot;question_count&quot;: 40,
+          &quot;runs&quot;: 120,
+          &quot;unit&quot;: &quot;ms&quot;
+        },
+        {
+          &quot;baseline_tag&quot;: &quot;P95 tail&quot;,
+          &quot;batched_median_ms&quot;: 417,
+          &quot;label&quot;: &quot;3. OpenAI Decisions Cloud (gpt-6-luna · 92.5% neutral / 80.0% cheap · $26.1/1M)&quot;,
+          &quot;one_by_one_estimated_ms&quot;: 804,
+          &quot;primary_tag&quot;: &quot;P50 median&quot;,
+          &quot;question_count&quot;: 40,
+          &quot;runs&quot;: 120,
+          &quot;unit&quot;: &quot;ms&quot;
+        },
+        {
+          &quot;baseline_tag&quot;: &quot;P95 tail&quot;,
+          &quot;batched_median_ms&quot;: 597,
+          &quot;label&quot;: &quot;4. Microsoft Decision-1 Cloud (Foundry East US 2 · 100% neutral / 94.2% cheap · $7.6/1M)&quot;,
+          &quot;one_by_one_estimated_ms&quot;: 1344,
+          &quot;primary_tag&quot;: &quot;P50 median&quot;,
+          &quot;question_count&quot;: 40,
+          &quot;runs&quot;: 120,
+          &quot;unit&quot;: &quot;ms&quot;
+        },
+        {
+          &quot;baseline_tag&quot;: &quot;P95 tail&quot;,
+          &quot;batched_median_ms&quot;: 1608,
+          &quot;label&quot;: &quot;5. LLM Router: gpt-4.1-mini (Foundry · 90.0% acc · $141.4/1M)&quot;,
+          &quot;one_by_one_estimated_ms&quot;: 2510,
+          &quot;primary_tag&quot;: &quot;P50 median&quot;,
+          &quot;question_count&quot;: 40,
+          &quot;runs&quot;: 120,
+          &quot;unit&quot;: &quot;ms&quot;
+        },
+        {
+          &quot;baseline_tag&quot;: &quot;P95 tail&quot;,
+          &quot;batched_median_ms&quot;: 1739,
+          &quot;label&quot;: &quot;6. LLM Router: gpt-6-luna reasoning=&#x27;none&#x27; (Foundry · 90.8% acc · $39.8/1M)&quot;,
+          &quot;one_by_one_estimated_ms&quot;: 2731,
+          &quot;primary_tag&quot;: &quot;P50 median&quot;,
+          &quot;question_count&quot;: 40,
+          &quot;runs&quot;: 120,
+          &quot;unit&quot;: &quot;ms&quot;
+        },
+        {
+          &quot;baseline_tag&quot;: &quot;P95 tail&quot;,
+          &quot;batched_median_ms&quot;: 2079,
+          &quot;label&quot;: &quot;7. LLM Router: gpt-6-luna default reasoning (Foundry · 72.5% acc · $63.1/1M)&quot;,
+          &quot;one_by_one_estimated_ms&quot;: 3538,
+          &quot;primary_tag&quot;: &quot;P50 median&quot;,
+          &quot;question_count&quot;: 40,
+          &quot;runs&quot;: 120,
+          &quot;unit&quot;: &quot;ms&quot;
+        },
+        {
+          &quot;baseline_tag&quot;: &quot;P95 tail&quot;,
+          &quot;batched_median_ms&quot;: 2276,
+          &quot;label&quot;: &quot;8. OpenJev 27B Local (M4 Pro 48GB MLX 4-bit · 100% neutral / 92.5% cheap · $0 API)&quot;,
+          &quot;one_by_one_estimated_ms&quot;: 2597,
+          &quot;primary_tag&quot;: &quot;P50 median&quot;,
+          &quot;question_count&quot;: 40,
+          &quot;runs&quot;: 120,
+          &quot;unit&quot;: &quot;ms&quot;
+        }
+      ],
+      &quot;subtitle&quot;: &quot;Blue bars show P50 median latency (ms); gray bars show P95 tail latency (ms) under Switchyard v2.4.1 neutral instructions (Mainland China client to cloud APIs; Apple M4 Pro 48GB for local OpenJev &amp; Laya).&quot;
+    },
+    {
+      &quot;dark_box&quot;: {
+        &quot;lead&quot;: &quot;Provenance: anonymized_reported (independently_reproduced=false). Evaluated 2026-10-11..10-13 across Switchyard v2.3.0, v2.4.0 (960 calls), and v2.4.1 (2,760 calls + 160 direct API diagnostic calls).&quot;,
+        &quot;repo&quot;: &quot;Public router: https://github.com/satomic/model-router (commits b58bfd31, 3408c39c, 8a20a7b6) · Archive: docs/research/openai-decisions-vs-decision-1-routing-benchmark/&quot;
+      },
+      &quot;eyebrow&quot;: &quot;MY TAKE&quot;,
+      &quot;good_fit&quot;: [
+        &quot;Microsoft Decision-1 as default cloud router on Azure AI Foundry: 100% neutral accuracy (94.2% cheap), $7.6–$8.6/1M cost (3.3x cheaper than OpenAI Decisions, 16x cheaper than gpt-4.1-mini), ~550 ms P50, and clean 0.60 threshold gating&quot;,
+        &quot;TypeSafe Jev when maximum instruction immunity (39..40/40 across all 4 variants, 0 false blocks at 0.60) and lowest cloud latency (~330 ms P50) justify ~3x Decision-1&#x27;s price ($21.7–$24.1/1M)&quot;,
+        &quot;Neutral routing instructions (&#x27;Pick the option whose description best matches...&#x27;) while encoding tier boundaries inside candidate descriptions (+12.5% on OpenAI Decisions, +5.8% on Decision-1)&quot;,
+        &quot;OpenAI Decisions for teams already on an OpenAI 1P key needing a fast (~400 ms P50) drop-in endpoint under neutral/bare instructions (92.5%–95.0%)&quot;,
+        &quot;Setting reasoning_effort=&#x27;none&#x27; whenever using a reasoning LLM (gpt-6-luna) as a prompt-based router (+15.0 to +18.3 pts accuracy, -400 ms latency, -37% cost vs default reasoning)&quot;
+      ],
+      &quot;headline&quot;: &quot;Why Microsoft Decision-1 stays the #1 production choice after OpenAI Decisions joins&quot;,
+      &quot;kind&quot;: &quot;takeaways&quot;,
+      &quot;not_for&quot;: [
+        &quot;Combining OpenAI Decisions with cost-saving prompt instructions (&#x27;prefer cheaper when simple&#x27;): accuracy drops to 80.0% (32/40) and 14/20 (70%) on implicit Set B requests&quot;,
+        &quot;Relying on a 0.60 confidence gate with OpenAI Decisions: 50% of its misses (24/48 across v2.4.1) have p &gt;= 0.60 (up to 0.78), failing silently without triggering fallback&quot;,
+        &quot;Calling /openai/v1/decisions on Azure AI Foundry (returns HTTP 404; Foundry serves Decision-1 at /providers/microsoft/v1/systemone instead)&quot;,
+        &quot;Leaving default reasoning enabled on LLM routers (gpt-6-luna default drops to 72.5%–75.8% accuracy and flips choices across rounds on 11–13/40 prompts)&quot;,
+        &quot;Commercial production use of OpenJev 27B weights (CC BY-NC 4.0 non-commercial license) or 5-way general model routing with Laya 0.3.20 (47.5%–52.5% accuracy)&quot;
+      ]
+    }
+  ],
+  &quot;datasets&quot;: {
+    &quot;direct_api_sensitivity_summary&quot;: {
+      &quot;microsoft_decision_1&quot;: {
+        &quot;neutral_correct&quot;: 40,
+        &quot;router_cheap_correct&quot;: 38
+      },
+      &quot;openai_decisions&quot;: {
+        &quot;neutral_correct&quot;: 37,
+        &quot;neutral_misses_to_mini&quot;: 3,
+        &quot;router_cheap_correct&quot;: 32,
+        &quot;router_cheap_misses_to_mini&quot;: 8
+      },
+      &quot;typesafe_jev&quot;: {
+        &quot;neutral_correct&quot;: 40,
+        &quot;router_cheap_correct&quot;: 39
+      }
+    },
+    &quot;v240_summary8&quot;: {
+      &quot;laya&quot;: {
+        &quot;A-ALL&quot;: [
+          12,
+          12,
+          12
+        ],
+        &quot;A-EN&quot;: [
+          7,
+          7,
+          7
+        ],
+        &quot;A-ZH&quot;: [
+          5,
+          5,
+          5
+        ],
+        &quot;B-ALL&quot;: [
+          8,
+          8,
+          8
+        ],
+        &quot;B-EN&quot;: [
+          5,
+          5,
+          5
+        ],
+        &quot;B-ZH&quot;: [
+          3,
+          3,
+          3
+        ],
+        &quot;EN&quot;: [
+          12,
+          12,
+          12
+        ],
+        &quot;ZH&quot;: [
+          8,
+          8,
+          8
+        ],
+        &quot;acc40&quot;: 20,
+        &quot;cost&quot;: 0.0,
+        &quot;errors&quot;: 0,
+        &quot;ms_p50&quot;: 127,
+        &quot;ms_p95&quot;: 143,
+        &quot;p_mean&quot;: 0.431,
+        &quot;pct&quot;: 50.0,
+        &quot;right_lt06&quot;: 48,
+        &quot;stable&quot;: 40,
+        &quot;wrong_ge06&quot;: 9,
+        &quot;wrong_n&quot;: 60,
+        &quot;wrong_pmax&quot;: 0.913
+      },
+      &quot;llm&quot;: {
+        &quot;A-ALL&quot;: [
+          18,
+          18,
+          18
+        ],
+        &quot;A-EN&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;A-ZH&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;B-ALL&quot;: [
+          18,
+          18,
+          18
+        ],
+        &quot;B-EN&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;B-ZH&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;EN&quot;: [
+          18,
+          18,
+          18
+        ],
+        &quot;ZH&quot;: [
+          18,
+          18,
+          18
+        ],
+        &quot;acc40&quot;: 36,
+        &quot;cost&quot;: 141.8,
+        &quot;errors&quot;: 0,
+        &quot;ms_p50&quot;: 1427,
+        &quot;ms_p95&quot;: 2090,
+        &quot;pct&quot;: 90.0,
+        &quot;stable&quot;: 40
+      },
+      &quot;luna-default&quot;: {
+        &quot;A-ALL&quot;: [
+          14,
+          15,
+          18
+        ],
+        &quot;A-EN&quot;: [
+          7,
+          8,
+          9
+        ],
+        &quot;A-ZH&quot;: [
+          7,
+          7,
+          9
+        ],
+        &quot;B-ALL&quot;: [
+          15,
+          14,
+          15
+        ],
+        &quot;B-EN&quot;: [
+          7,
+          6,
+          7
+        ],
+        &quot;B-ZH&quot;: [
+          8,
+          8,
+          8
+        ],
+        &quot;EN&quot;: [
+          14,
+          14,
+          16
+        ],
+        &quot;ZH&quot;: [
+          15,
+          15,
+          17
+        ],
+        &quot;acc40&quot;: 30.33,
+        &quot;cost&quot;: 62.4,
+        &quot;errors&quot;: 0,
+        &quot;ms_p50&quot;: 2132,
+        &quot;ms_p95&quot;: 3045,
+        &quot;pct&quot;: 75.8,
+        &quot;stable&quot;: 27,
+        &quot;tin&quot;: 213,
+        &quot;tout&quot;: 82
+      },
+      &quot;luna-none&quot;: {
+        &quot;A-ALL&quot;: [
+          18,
+          17,
+          17
+        ],
+        &quot;A-EN&quot;: [
+          9,
+          8,
+          8
+        ],
+        &quot;A-ZH&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;B-ALL&quot;: [
+          17,
+          18,
+          19
+        ],
+        &quot;B-EN&quot;: [
+          8,
+          9,
+          9
+        ],
+        &quot;B-ZH&quot;: [
+          9,
+          9,
+          10
+        ],
+        &quot;EN&quot;: [
+          17,
+          17,
+          17
+        ],
+        &quot;ZH&quot;: [
+          18,
+          18,
+          19
+        ],
+        &quot;acc40&quot;: 35.33,
+        &quot;cost&quot;: 39.9,
+        &quot;errors&quot;: 1,
+        &quot;ms_p50&quot;: 1714,
+        &quot;ms_p95&quot;: 2578,
+        &quot;pct&quot;: 88.3,
+        &quot;stable&quot;: 37,
+        &quot;tin&quot;: 213,
+        &quot;tout&quot;: 37
+      },
+      &quot;microsoft&quot;: {
+        &quot;A-ALL&quot;: [
+          19,
+          18,
+          19
+        ],
+        &quot;A-EN&quot;: [
+          10,
+          9,
+          10
+        ],
+        &quot;A-ZH&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;B-ALL&quot;: [
+          19,
+          19,
+          19
+        ],
+        &quot;B-EN&quot;: [
+          10,
+          10,
+          10
+        ],
+        &quot;B-ZH&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;EN&quot;: [
+          20,
+          19,
+          20
+        ],
+        &quot;ZH&quot;: [
+          18,
+          18,
+          18
+        ],
+        &quot;acc40&quot;: 37.67,
+        &quot;cost&quot;: 8.6,
+        &quot;errors&quot;: 0,
+        &quot;ms_p50&quot;: 541,
+        &quot;ms_p95&quot;: 1251,
+        &quot;p_mean&quot;: 0.907,
+        &quot;pct&quot;: 94.2,
+        &quot;right_lt06&quot;: 5,
+        &quot;stable&quot;: 39,
+        &quot;wrong_ge06&quot;: 0,
+        &quot;wrong_n&quot;: 7,
+        &quot;wrong_pmax&quot;: 0.56
+      },
+      &quot;openai&quot;: {
+        &quot;A-ALL&quot;: [
+          18,
+          18,
+          18
+        ],
+        &quot;A-EN&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;A-ZH&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;B-ALL&quot;: [
+          14,
+          14,
+          14
+        ],
+        &quot;B-EN&quot;: [
+          8,
+          8,
+          8
+        ],
+        &quot;B-ZH&quot;: [
+          6,
+          6,
+          6
+        ],
+        &quot;EN&quot;: [
+          17,
+          17,
+          17
+        ],
+        &quot;ZH&quot;: [
+          15,
+          15,
+          15
+        ],
+        &quot;acc40&quot;: 32,
+        &quot;cost&quot;: 28.4,
+        &quot;errors&quot;: 0,
+        &quot;ms_p50&quot;: 369,
+        &quot;ms_p95&quot;: 759,
+        &quot;p_mean&quot;: 0.764,
+        &quot;pct&quot;: 80.0,
+        &quot;right_lt06&quot;: 15,
+        &quot;stable&quot;: 40,
+        &quot;tin&quot;: 284,
+        &quot;tout&quot;: 0,
+        &quot;wrong_ge06&quot;: 9,
+        &quot;wrong_n&quot;: 24,
+        &quot;wrong_pmax&quot;: 0.75
+      },
+      &quot;openjev&quot;: {
+        &quot;A-ALL&quot;: [
+          19,
+          19,
+          19
+        ],
+        &quot;A-EN&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;A-ZH&quot;: [
+          10,
+          10,
+          10
+        ],
+        &quot;B-ALL&quot;: [
+          18,
+          18,
+          18
+        ],
+        &quot;B-EN&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;B-ZH&quot;: [
+          9,
+          9,
+          9
+        ],
+        &quot;EN&quot;: [
+          18,
+          18,
+          18
+        ],
+        &quot;ZH&quot;: [
+          19,
+          19,
+          19
+        ],
+        &quot;acc40&quot;: 37,
+        &quot;cost&quot;: 0.0,
+        &quot;errors&quot;: 0,
+        &quot;ms_p50&quot;: 2566,
+        &quot;ms_p95&quot;: 3030,
+        &quot;p_mean&quot;: 0.88,
+        &quot;pct&quot;: 92.5,
+        &quot;right_lt06&quot;: 6,
+        &quot;stable&quot;: 40,
+        &quot;wrong_ge06&quot;: 6,
+        &quot;wrong_n&quot;: 9,
+        &quot;wrong_pmax&quot;: 0.717
+      },
+      &quot;typesafe&quot;: {
+        &quot;A-ALL&quot;: [
+          20,
+          20,
+          20
+        ],
+        &quot;A-EN&quot;: [
+          10,
+          10,
+          10
+        ],
+        &quot;A-ZH&quot;: [
+          10,
+          10,
+          10
+        ],
+        &quot;B-ALL&quot;: [
+          19,
+          19,
+          20
+        ],
+        &quot;B-EN&quot;: [
+          9,
+          9,
+          10
+        ],
+        &quot;B-ZH&quot;: [
+          10,
+          10,
+          10
+        ],
+        &quot;EN&quot;: [
+          19,
+          19,
+          20
+        ],
+        &quot;ZH&quot;: [
+          20,
+          20,
+          20
+        ],
+        &quot;acc40&quot;: 39.33,
+        &quot;cost&quot;: 21.7,
+        &quot;errors&quot;: 0,
+        &quot;ms_p50&quot;: 350,
+        &quot;ms_p95&quot;: 720,
+        &quot;p_mean&quot;: 0.919,
+        &quot;pct&quot;: 98.3,
+        &quot;right_lt06&quot;: 1,
+        &quot;stable&quot;: 39,
+        &quot;wrong_ge06&quot;: 0,
+        &quot;wrong_n&quot;: 2,
+        &quot;wrong_pmax&quot;: 0.49
+      }
+    },
+    &quot;v241_summary_by_variant&quot;: {
+      &quot;laya&quot;: {
+        &quot;bare&quot;: {
+          &quot;A&quot;: [
+            12,
+            12,
+            12
+          ],
+          &quot;B&quot;: [
+            9,
+            9,
+            9
+          ],
+          &quot;EN&quot;: [
+            11,
+            11,
+            11
+          ],
+          &quot;ZH&quot;: [
+            10,
+            10,
+            10
+          ],
+          &quot;acc40&quot;: 21,
+          &quot;all&quot;: [
+            21,
+            21,
+            21
+          ],
+          &quot;cost&quot;: 0.0,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 24,
+            &quot;side&quot;: 15,
+            &quot;stronger&quot;: 18
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 104,
+          &quot;ms_p95&quot;: 602,
+          &quot;p_right&quot;: 0.461,
+          &quot;pct&quot;: 52.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 21,
+            &quot;gpt-4o&quot;: 45,
+            &quot;gpt-5.4&quot;: 15,
+            &quot;gpt-6-luna&quot;: 15
+          },
+          &quot;right_lt06&quot;: 51,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;wrong_ge06&quot;: 6,
+          &quot;wrong_n&quot;: 57,
+          &quot;wrong_pmax&quot;: 0.846
+        },
+        &quot;cheap&quot;: {
+          &quot;A&quot;: [
+            13,
+            13,
+            13
+          ],
+          &quot;B&quot;: [
+            8,
+            8,
+            8
+          ],
+          &quot;EN&quot;: [
+            12,
+            12,
+            12
+          ],
+          &quot;ZH&quot;: [
+            9,
+            9,
+            9
+          ],
+          &quot;acc40&quot;: 21,
+          &quot;all&quot;: [
+            21,
+            21,
+            21
+          ],
+          &quot;cost&quot;: 0.0,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 27,
+            &quot;side&quot;: 12,
+            &quot;stronger&quot;: 18
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 109,
+          &quot;ms_p95&quot;: 513,
+          &quot;p_right&quot;: 0.475,
+          &quot;pct&quot;: 52.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 24,
+            &quot;gpt-4o&quot;: 42,
+            &quot;gpt-5.4&quot;: 12,
+            &quot;gpt-6-luna&quot;: 18
+          },
+          &quot;right_lt06&quot;: 48,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;wrong_ge06&quot;: 6,
+          &quot;wrong_n&quot;: 57,
+          &quot;wrong_pmax&quot;: 0.905
+        },
+        &quot;neutral&quot;: {
+          &quot;A&quot;: [
+            12,
+            12,
+            12
+          ],
+          &quot;B&quot;: [
+            7,
+            7,
+            7
+          ],
+          &quot;EN&quot;: [
+            10,
+            10,
+            10
+          ],
+          &quot;ZH&quot;: [
+            9,
+            9,
+            9
+          ],
+          &quot;acc40&quot;: 19,
+          &quot;all&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;cost&quot;: 0.0,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 33,
+            &quot;side&quot;: 15,
+            &quot;stronger&quot;: 15
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 111,
+          &quot;ms_p95&quot;: 491,
+          &quot;p_right&quot;: 0.493,
+          &quot;pct&quot;: 47.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 24,
+            &quot;gpt-4o&quot;: 51,
+            &quot;gpt-5.4&quot;: 6,
+            &quot;gpt-6-luna&quot;: 15
+          },
+          &quot;right_lt06&quot;: 45,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;wrong_ge06&quot;: 6,
+          &quot;wrong_n&quot;: 63,
+          &quot;wrong_pmax&quot;: 0.911
+        },
+        &quot;strong&quot;: {
+          &quot;A&quot;: [
+            12,
+            12,
+            12
+          ],
+          &quot;B&quot;: [
+            8,
+            8,
+            8
+          ],
+          &quot;EN&quot;: [
+            11,
+            11,
+            11
+          ],
+          &quot;ZH&quot;: [
+            9,
+            9,
+            9
+          ],
+          &quot;acc40&quot;: 20,
+          &quot;all&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;cost&quot;: 0.0,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 27,
+            &quot;side&quot;: 15,
+            &quot;stronger&quot;: 18
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 112,
+          &quot;ms_p95&quot;: 478,
+          &quot;p_right&quot;: 0.495,
+          &quot;pct&quot;: 50.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 24,
+            &quot;gpt-4o&quot;: 45,
+            &quot;gpt-5.4&quot;: 12,
+            &quot;gpt-6-luna&quot;: 15
+          },
+          &quot;right_lt06&quot;: 48,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;wrong_ge06&quot;: 6,
+          &quot;wrong_n&quot;: 60,
+          &quot;wrong_pmax&quot;: 0.886
+        }
+      },
+      &quot;llm&quot;: {
+        &quot;neutral&quot;: {
+          &quot;A&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;B&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;EN&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;ZH&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;acc40&quot;: 36,
+          &quot;all&quot;: [
+            36,
+            36,
+            36
+          ],
+          &quot;cost&quot;: 141.4,
+          &quot;dir&quot;: {
+            &quot;stronger&quot;: 12
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 1608,
+          &quot;ms_p95&quot;: 2510,
+          &quot;pct&quot;: 90.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 12,
+            &quot;gpt-4o&quot;: 36,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 214,
+          &quot;tout&quot;: 35
+        }
+      },
+      &quot;luna-default&quot;: {
+        &quot;neutral&quot;: {
+          &quot;A&quot;: [
+            15,
+            17,
+            13
+          ],
+          &quot;B&quot;: [
+            14,
+            14,
+            14
+          ],
+          &quot;EN&quot;: [
+            12,
+            16,
+            12
+          ],
+          &quot;ZH&quot;: [
+            17,
+            15,
+            15
+          ],
+          &quot;acc40&quot;: 29,
+          &quot;all&quot;: [
+            29,
+            31,
+            27
+          ],
+          &quot;cost&quot;: 63.1,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 32,
+            &quot;stronger&quot;: 1
+          },
+          &quot;errors&quot;: 1,
+          &quot;ms_p50&quot;: 2079,
+          &quot;ms_p95&quot;: 3538,
+          &quot;pct&quot;: 72.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 15,
+            &quot;gpt-4.1-mini&quot;: 42,
+            &quot;gpt-4o&quot;: 25,
+            &quot;gpt-5.4&quot;: 14,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 29,
+          &quot;tin&quot;: 213,
+          &quot;tout&quot;: 84
+        }
+      },
+      &quot;luna-none&quot;: {
+        &quot;neutral&quot;: {
+          &quot;A&quot;: [
+            18,
+            17,
+            18
+          ],
+          &quot;B&quot;: [
+            19,
+            19,
+            18
+          ],
+          &quot;EN&quot;: [
+            18,
+            17,
+            18
+          ],
+          &quot;ZH&quot;: [
+            19,
+            19,
+            18
+          ],
+          &quot;acc40&quot;: 36.33,
+          &quot;all&quot;: [
+            37,
+            36,
+            36
+          ],
+          &quot;cost&quot;: 39.8,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 10,
+            &quot;stronger&quot;: 1
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 1739,
+          &quot;ms_p95&quot;: 2731,
+          &quot;pct&quot;: 90.8,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 14,
+            &quot;gpt-4.1-mini&quot;: 29,
+            &quot;gpt-4o&quot;: 28,
+            &quot;gpt-5.4&quot;: 25,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 36,
+          &quot;tin&quot;: 213,
+          &quot;tout&quot;: 37
+        }
+      },
+      &quot;microsoft&quot;: {
+        &quot;bare&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;acc40&quot;: 39,
+          &quot;all&quot;: [
+            39,
+            39,
+            39
+          ],
+          &quot;cost&quot;: 7.1,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 3
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 522,
+          &quot;ms_p95&quot;: 989,
+          &quot;p_right&quot;: 0.957,
+          &quot;pct&quot;: 97.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 27,
+            &quot;gpt-4o&quot;: 21,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 0,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 169,
+          &quot;tout&quot;: 1,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 3,
+          &quot;wrong_pmax&quot;: 0.58
+        },
+        &quot;cheap&quot;: {
+          &quot;A&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;B&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;acc40&quot;: 38,
+          &quot;all&quot;: [
+            38,
+            38,
+            38
+          ],
+          &quot;cost&quot;: 8.6,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 6
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 508,
+          &quot;ms_p95&quot;: 1004,
+          &quot;p_right&quot;: 0.924,
+          &quot;pct&quot;: 95.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 30,
+            &quot;gpt-4o&quot;: 18,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 7,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 203,
+          &quot;tout&quot;: 1,
+          &quot;wrong_ge06&quot;: 3,
+          &quot;wrong_n&quot;: 6,
+          &quot;wrong_pmax&quot;: 0.642
+        },
+        &quot;neutral&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;acc40&quot;: 40,
+          &quot;all&quot;: [
+            40,
+            40,
+            40
+          ],
+          &quot;cost&quot;: 7.6,
+          &quot;dir&quot;: {},
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 597,
+          &quot;ms_p95&quot;: 1344,
+          &quot;p_right&quot;: 0.962,
+          &quot;pct&quot;: 100.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 24,
+            &quot;gpt-4o&quot;: 24,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 1,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 180,
+          &quot;tout&quot;: 1,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 0,
+          &quot;wrong_pmax&quot;: null
+        },
+        &quot;strong&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;acc40&quot;: 40,
+          &quot;all&quot;: [
+            40,
+            40,
+            40
+          ],
+          &quot;cost&quot;: 8.0,
+          &quot;dir&quot;: {},
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 569,
+          &quot;ms_p95&quot;: 1457,
+          &quot;p_right&quot;: 0.944,
+          &quot;pct&quot;: 100.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 24,
+            &quot;gpt-4o&quot;: 24,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 3,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 189,
+          &quot;tout&quot;: 1,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 0,
+          &quot;wrong_pmax&quot;: null
+        }
+      },
+      &quot;openai&quot;: {
+        &quot;bare&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;EN&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;ZH&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;acc40&quot;: 38,
+          &quot;all&quot;: [
+            38,
+            38,
+            38
+          ],
+          &quot;cost&quot;: 24.9,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 3,
+            &quot;side&quot;: 3
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 412,
+          &quot;ms_p95&quot;: 889,
+          &quot;p_right&quot;: 0.869,
+          &quot;pct&quot;: 95.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 30,
+            &quot;gpt-4o&quot;: 21,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 21
+          },
+          &quot;right_lt06&quot;: 9,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 249,
+          &quot;tout&quot;: 0,
+          &quot;wrong_ge06&quot;: 6,
+          &quot;wrong_n&quot;: 6,
+          &quot;wrong_pmax&quot;: 0.78
+        },
+        &quot;cheap&quot;: {
+          &quot;A&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;B&quot;: [
+            14,
+            14,
+            14
+          ],
+          &quot;EN&quot;: [
+            17,
+            17,
+            17
+          ],
+          &quot;ZH&quot;: [
+            15,
+            15,
+            15
+          ],
+          &quot;acc40&quot;: 32,
+          &quot;all&quot;: [
+            32,
+            32,
+            32
+          ],
+          &quot;cost&quot;: 28.4,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 18,
+            &quot;side&quot;: 6
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 418,
+          &quot;ms_p95&quot;: 802,
+          &quot;p_right&quot;: 0.821,
+          &quot;pct&quot;: 80.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 48,
+            &quot;gpt-4o&quot;: 12,
+            &quot;gpt-5.4&quot;: 18,
+            &quot;gpt-6-luna&quot;: 18
+          },
+          &quot;right_lt06&quot;: 15,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 284,
+          &quot;tout&quot;: 0,
+          &quot;wrong_ge06&quot;: 9,
+          &quot;wrong_n&quot;: 24,
+          &quot;wrong_pmax&quot;: 0.75
+        },
+        &quot;neutral&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            17,
+            17,
+            17
+          ],
+          &quot;EN&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;ZH&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;acc40&quot;: 37,
+          &quot;all&quot;: [
+            37,
+            37,
+            37
+          ],
+          &quot;cost&quot;: 26.1,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 6,
+            &quot;side&quot;: 3
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 417,
+          &quot;ms_p95&quot;: 804,
+          &quot;p_right&quot;: 0.927,
+          &quot;pct&quot;: 92.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 33,
+            &quot;gpt-4o&quot;: 21,
+            &quot;gpt-5.4&quot;: 21,
+            &quot;gpt-6-luna&quot;: 21
+          },
+          &quot;right_lt06&quot;: 0,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 261,
+          &quot;tout&quot;: 0,
+          &quot;wrong_ge06&quot;: 3,
+          &quot;wrong_n&quot;: 9,
+          &quot;wrong_pmax&quot;: 0.66
+        },
+        &quot;strong&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            17,
+            17,
+            17
+          ],
+          &quot;EN&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;ZH&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;acc40&quot;: 37,
+          &quot;all&quot;: [
+            37,
+            37,
+            37
+          ],
+          &quot;cost&quot;: 27.0,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 6,
+            &quot;side&quot;: 3
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 416,
+          &quot;ms_p95&quot;: 773,
+          &quot;p_right&quot;: 0.878,
+          &quot;pct&quot;: 92.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 33,
+            &quot;gpt-4o&quot;: 21,
+            &quot;gpt-5.4&quot;: 21,
+            &quot;gpt-6-luna&quot;: 21
+          },
+          &quot;right_lt06&quot;: 3,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 270,
+          &quot;tout&quot;: 0,
+          &quot;wrong_ge06&quot;: 6,
+          &quot;wrong_n&quot;: 9,
+          &quot;wrong_pmax&quot;: 0.75
+        }
+      },
+      &quot;openjev&quot;: {
+        &quot;bare&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;acc40&quot;: 39,
+          &quot;all&quot;: [
+            39,
+            39,
+            39
+          ],
+          &quot;cost&quot;: 0.0,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 3
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 2245,
+          &quot;ms_p95&quot;: 2451,
+          &quot;p_right&quot;: 0.906,
+          &quot;pct&quot;: 97.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 27,
+            &quot;gpt-4o&quot;: 21,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 3,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 3,
+          &quot;wrong_pmax&quot;: 0.591
+        },
+        &quot;cheap&quot;: {
+          &quot;A&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;B&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;EN&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;ZH&quot;: [
+            18,
+            18,
+            18
+          ],
+          &quot;acc40&quot;: 36,
+          &quot;all&quot;: [
+            36,
+            36,
+            36
+          ],
+          &quot;cost&quot;: 0.0,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 12
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 2565,
+          &quot;ms_p95&quot;: 2873,
+          &quot;p_right&quot;: 0.909,
+          &quot;pct&quot;: 90.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 36,
+            &quot;gpt-4o&quot;: 12,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 3,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;wrong_ge06&quot;: 6,
+          &quot;wrong_n&quot;: 12,
+          &quot;wrong_pmax&quot;: 0.751
+        },
+        &quot;neutral&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;acc40&quot;: 40,
+          &quot;all&quot;: [
+            40,
+            40,
+            40
+          ],
+          &quot;cost&quot;: 0.0,
+          &quot;dir&quot;: {},
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 2276,
+          &quot;ms_p95&quot;: 2597,
+          &quot;p_right&quot;: 0.92,
+          &quot;pct&quot;: 100.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 24,
+            &quot;gpt-4o&quot;: 24,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 3,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 0,
+          &quot;wrong_pmax&quot;: null
+        },
+        &quot;strong&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;acc40&quot;: 39,
+          &quot;all&quot;: [
+            39,
+            39,
+            39
+          ],
+          &quot;cost&quot;: 0.0,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 3
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 2281,
+          &quot;ms_p95&quot;: 2740,
+          &quot;p_right&quot;: 0.931,
+          &quot;pct&quot;: 97.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 27,
+            &quot;gpt-4o&quot;: 21,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 0,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 3,
+          &quot;wrong_pmax&quot;: 0.489
+        }
+      },
+      &quot;typesafe&quot;: {
+        &quot;bare&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;acc40&quot;: 40,
+          &quot;all&quot;: [
+            40,
+            40,
+            40
+          ],
+          &quot;cost&quot;: 23.6,
+          &quot;dir&quot;: {},
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 325,
+          &quot;ms_p95&quot;: 698,
+          &quot;p_right&quot;: 0.96,
+          &quot;pct&quot;: 100.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 24,
+            &quot;gpt-4o&quot;: 24,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 0,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 481,
+          &quot;tout&quot;: 82,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 0,
+          &quot;wrong_pmax&quot;: null
+        },
+        &quot;cheap&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;EN&quot;: [
+            19,
+            19,
+            19
+          ],
+          &quot;ZH&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;acc40&quot;: 39,
+          &quot;all&quot;: [
+            39,
+            39,
+            39
+          ],
+          &quot;cost&quot;: 25.1,
+          &quot;dir&quot;: {
+            &quot;cheaper&quot;: 3
+          },
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 322,
+          &quot;ms_p95&quot;: 642,
+          &quot;p_right&quot;: 0.932,
+          &quot;pct&quot;: 97.5,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 21,
+            &quot;gpt-4.1-mini&quot;: 27,
+            &quot;gpt-4o&quot;: 24,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 0,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 516,
+          &quot;tout&quot;: 82,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 3,
+          &quot;wrong_pmax&quot;: 0.45
+        },
+        &quot;neutral&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;acc40&quot;: 40,
+          &quot;all&quot;: [
+            40,
+            40,
+            40
+          ],
+          &quot;cost&quot;: 24.1,
+          &quot;dir&quot;: {},
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 326,
+          &quot;ms_p95&quot;: 643,
+          &quot;p_right&quot;: 0.972,
+          &quot;pct&quot;: 100.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 24,
+            &quot;gpt-4o&quot;: 24,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 0,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 493,
+          &quot;tout&quot;: 82,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 0,
+          &quot;wrong_pmax&quot;: null
+        },
+        &quot;strong&quot;: {
+          &quot;A&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;B&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;EN&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;ZH&quot;: [
+            20,
+            20,
+            20
+          ],
+          &quot;acc40&quot;: 40,
+          &quot;all&quot;: [
+            40,
+            40,
+            40
+          ],
+          &quot;cost&quot;: 24.5,
+          &quot;dir&quot;: {},
+          &quot;errors&quot;: 0,
+          &quot;ms_p50&quot;: 325,
+          &quot;ms_p95&quot;: 745,
+          &quot;p_right&quot;: 0.963,
+          &quot;pct&quot;: 100.0,
+          &quot;picked&quot;: {
+            &quot;gpt-4.1&quot;: 24,
+            &quot;gpt-4.1-mini&quot;: 24,
+            &quot;gpt-4o&quot;: 24,
+            &quot;gpt-5.4&quot;: 24,
+            &quot;gpt-6-luna&quot;: 24
+          },
+          &quot;right_lt06&quot;: 0,
+          &quot;rounds&quot;: 3,
+          &quot;stable&quot;: 40,
+          &quot;tin&quot;: 502,
+          &quot;tout&quot;: 82,
+          &quot;wrong_ge06&quot;: 0,
+          &quot;wrong_n&quot;: 0,
+          &quot;wrong_pmax&quot;: null
+        }
+      }
+    }
+  },
+  &quot;deck_title&quot;: &quot;8-Way Model Routing Benchmark · OpenAI Decisions vs Microsoft Decision-1 (Switchyard v2.4.0 &amp; v2.4.1)&quot;,
+  &quot;independently_reproduced&quot;: false,
+  &quot;provenance&quot;: &quot;anonymized_reported&quot;,
+  &quot;report_id&quot;: &quot;openai-decisions-vs-decision-1-routing-benchmark&quot;,
+  &quot;schema_version&quot;: 1,
+  &quot;source_binding&quot;: {
+    &quot;candidate_backends&quot;: [
+      &quot;gpt-4.1-mini&quot;,
+      &quot;gpt-4o&quot;,
+      &quot;gpt-4.1&quot;,
+      &quot;gpt-5.4&quot;,
+      &quot;gpt-6-luna&quot;
+    ],
+    &quot;direct_sensitivity_decisions&quot;: 160,
+    &quot;evaluation_dates&quot;: {
+      &quot;cohort_1_decision1_4engines&quot;: &quot;2026-10-11&quot;,
+      &quot;cohort_2_openjev_5engines&quot;: &quot;2026-10-12&quot;,
+      &quot;cohort_3_openai_decisions_8engines_v240&quot;: &quot;2026-10-13&quot;,
+      &quot;cohort_4_instruction_sensitivity_v241&quot;: &quot;2026-10-13&quot;
+    },
+    &quot;pinned_commits&quot;: {
+      &quot;v2.3.0_decision1&quot;: &quot;b58bfd319f1a8890d0c1d36e5f5606ebf71b83a2&quot;,
+      &quot;v2.4.0_openai_decisions&quot;: &quot;3408c39cb65650b374094bcf882e42810e15d61c&quot;,
+      &quot;v2.4.1_neutral_instructions&quot;: &quot;8a20a7b692e14ccd7bbb4bcbdfe273b4e67a5542&quot;
+    },
+    &quot;prompts_evaluated&quot;: 40,
+    &quot;routing_approaches_evaluated&quot;: 8,
+    &quot;total_decisions&quot;: 3880,
+    &quot;upstream_public_repo&quot;: &quot;satomic/model-router&quot;,
+    &quot;v240_decisions&quot;: 960,
+    &quot;v241_decisions&quot;: 2760
+  }
+}</pre></details></main></body></html>

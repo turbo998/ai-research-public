@@ -29,6 +29,9 @@
 
 | 专题 | 子分类 / 标签 | 范围与状态 |
 |---|---|---|
+| [OpenAI Decisions 加入实测，微软 Decision-1 依旧是首选：8 种多模型路由方案与指令敏感度全景评测](openai-decisions-vs-decision-1-routing-benchmark/README.md) | 专用决策模型 vs 通用小模型路由（`Microsoft-Decision-1`、`TypeSafe Jev`、`OpenJev 27B`、`Laya 8B`、`OpenAI Decisions /v1/decisions`、`gpt-4.1-mini`、`gpt-6-luna`、`Strands Decider 2B`） | 覆盖 Switchyard `v2.4.0` & `v2.4.1` 两轮共 3,880 次路由决策调用、4 种指令变体敏感度实验、[7 页 4:5 视觉卡片评测报告 (`test-report.md`)](openai-decisions-vs-decision-1-routing-benchmark/test-report.md) 与 [离线 7 页卡片 HTML (`test-report-cards.html`)](openai-decisions-vs-decision-1-routing-benchmark/test-report-cards.html) |
+| [Jev / Microsoft-Decision-1 / Strands Decider 与 Foundry 多模型路由研究](decision-model-routing/README.md) | System One 决策模型与生成模型分层路由（`Microsoft-Decision-1`、`Strands Decider 2B`、`gpt-5.4-mini`、`gpt-6.1-sol`、`TypeSafe Jev`） | 覆盖 384 decision + 160 e2e 正式测试矩阵、闭集分类/校准/评分与多臂路由对比、3 幅 SVG 散点图、[7 页 4:5 视觉卡片报告 (`results.md`)](decision-model-routing/results.md) 与 [离线 7 页卡片 HTML (`visual-report.html`)](decision-model-routing/visual-report.html) |
+| [LocalJev（OpenJev 27B 与 Laya 8B）开源决策模型研究](localjev/README.md) | 本地开源 System One 兼容服务与许可边界（`OpenJev 27B`、`Laya 8B`、`CC BY-NC 4.0`） | 覆盖 `satomic/LocalJev` 协议实现、硬件与吞吐声明核对、商业许可边界与证据台账 |
 | [SKY-001 深度技术解析与十九模型对比 (中文)](sky-001-and-coding-agent-19-model-benchmark/README.md) · [English](sky-001-and-coding-agent-19-model-benchmark/README.en.md) | 前沿推理模型架构推演与公开基准对标（`SKY-001`、`GLM-5.1`、`Grok 4.20`） | 覆盖 SKY-001 实测行为特征、训练管线逆向推演、19 模型能力与定价对标、[7 页 4:5 视觉卡片 HTML](sky-001-and-coding-agent-19-model-benchmark/test-report-cards.html) 与 [交互式 H5](sky-001-and-coding-agent-19-model-benchmark/h5/index.html) |
 
 ## Infra

@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "topic": "openai-decisions-vs-decision-1-routing-benchmark",
+  "generated_at": "2026-10-18",
+  "provenance": "anonymized_reported",
+  "independently_reproduced": false,
+  "upstream_repositories": [
+    {
+      "repo": "satomic/model-router",
+      "name": "Switchyard (formerly Model Router)",
+      "url": "https://github.com/satomic/model-router",
+      "pinned_commits": {
+        "v2.3.0": "b58bfd319f1a8890d0c1d36e5f5606ebf71b83a2",
+        "v2.4.0": "3408c39cb65650b374094bcf882e42810e15d61c",
+        "v2.4.1": "8a20a7b692e14ccd7bbb4bcbdfe273b4e67a5542",
+        "v2.4.2": "06210d71b7dcf41ac99f8fddf9ea562d4d9bd43a"
+      }
+    },
+    {
+      "repo": "NandhaKishorM/laya",
+      "url": "https://github.com/NandhaKishorM/laya",
+      "version_tested": "0.3.20",
+      "license": "Apache-2.0"
+    },
+    {
+      "repo": "openjev/openjev",
+      "url": "https://huggingface.co/openjev/openjev",
+      "quantization_tested": "openjev-mlx-4bit (15.6 GB)",
+      "license": "CC BY-NC 4.0"
+    }
+  ],
+  "vendor_documentation": [
+    {
+      "name": "OpenAI Decisions API Guide",
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "endpoint": "POST https://api.openai.com/v1/decisions"
+    },
+    {
+      "name": "Microsoft Decision-1 on Azure AI Foundry",
+      "url": "https://ai.azure.com/catalog/models/Microsoft-Decision-1",
+      "endpoint": "POST https://<resource>.services.ai.azure.com/providers/microsoft/v1/systemone"
+    },
+    {
+      "name": "TypeSafe System One API",
+      "url": "https://www.typesafe.ai/docs/api-reference/systemone",
+      "endpoint": "POST https://api.typesafe.ai/v1/systemone"
+    }
+  ],
+  "source_dataset_digests": {
+    "summary8.json": {
+      "bytes": 3879,
+      "sha256": "1a829e312838c38793c201c65c8a98f639ebcfbf8f568afb00ad95b8f753d804"
+    },
+    "summary241.json": {
+      "bytes": 14415,
+      "sha256": "3d96ba04df05150ed27cf4eca322774b5b65583bcc660ef1e5234bd121e08a79"
+    },
+    "rows8.json": {
+      "bytes": 63728,
+      "sha256": "8d56cf482cd876c36c431e963d984815c1d6fd51c41f5372a9e83dc6baa72d3c"
+    },
+    "rows241.json": {
+      "bytes": 135734,
+      "sha256": "b69f4e8831825a7b09fe634a4dabf6f2556abd84286d3cb073cd1209eef1e33a"
+    },
+    "results-new.json": {
+      "bytes": 164821,
+      "sha256": "7d87d3a2cae70f1992b74342de898f26be796b9f6c2ef681e11c46f89a8173d4"
+    },
+    "sensitivity.json": {
+      "bytes": 20249,
+      "sha256": "fb033cf5a2107e7829af957b8e936f49434108fe9d6716c6bae75e6db91015f3"
+    },
+    "sensitivity-systemone.json": {
+      "bytes": 25518,
+      "sha256": "dd509b69288f297c5f3dbea7f04c288e95e356e27119cd0e63212baf39b1cc2e"
+    },
+    "v241-neutral.json": {
+      "bytes": 508194,
+      "sha256": "ccb7d9819436790a2743a8fec86d6816aaaf29c7ea2c1c384deb261225f2af61"
+    },
+    "v241-cheap.json": {
+      "bytes": 438096,
+      "sha256": "800103020579b2a30627561a1dae9406aa98c6587d1107feaee39113dde1c560"
+    },
+    "v241-strong.json": {
+      "bytes": 396463,
+      "sha256": "07c50f9ad18e35f4ae3bd572977e264449469c31072e32be065bad2d973b7693"
+    },
+    "v241-bare.json": {
+      "bytes": 327351,
+      "sha256": "d5c40eb4de5fece7e843e241c84ad034f7a18dbb1c43d8e8053e982725612ce8"
+    }
+  },
+  "generated_artifact_digests": {
+    "README.md": {
+      "bytes": 39817,
+      "sha256": "ec3b30683929ade2a3590e40c7392469bfd23f1e8c7ddefca386ac3bbf40d330"
+    },
+    "test-report.md": {
+      "bytes": 21487,
+      "sha256": "26348311f666745ccf5398bcc299bc575fa88e639df813194caba5cd4346f537"
+    },
+    "test-report-cards.html": {
+      "bytes": 110535,
+      "sha256": "f8cd4f09367d9819d60d5ef75bbc4b2e7eb41a560a9fd4d863876ecb269ab30b"
+    },
+    "report.json": {
+      "bytes": 218638,
+      "sha256": "1eb1955749c53a16be2113cea04c0d817ffac240c377265d75ddb22073b5842f"
+    },
+    "review.md": {
+      "bytes": 2572,
+      "sha256": "a774b8cb937d2efa4f56eecee1bc16d7faf4269e2b1a8d22ade7c954ddf1c857"
+    }
+  },
+  "privacy_and_governance_checks": {
+    "personal_author_names_removed": true,
+    "private_notion_urls_removed": true,
+    "private_foundry_hostnames_redacted": true,
+    "csp_locked_html_cards": true
+  }
+}

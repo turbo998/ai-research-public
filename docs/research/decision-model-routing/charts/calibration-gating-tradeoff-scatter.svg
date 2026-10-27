@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 390" width="100%" role="img" aria-label="Calibration Error and Gate Coverage Trade-off Scatter Plots">
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;fill:#0f172a}.lbl{font-size:10px;font-weight:600;fill:#1e293b}.axis{font-size:10.5px;fill:#475569;font-weight:600}.title{font-size:13.5px;font-weight:800;fill:#0f172a}.sub{font-size:10.5px;fill:#64748b}</style>
+<rect width="820" height="390" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="24" y="25" class="title">Scatter 3 · Left: Multiclass Brier vs. 10-Bin ECE (20 Probability Cohorts) | Right: Gate Coverage vs. False-Block Rate</text>
+<text x="24" y="42" class="sub">Left ideal corner is bottom-left (ECE→0, Brier→0). Right shows frozen gate thresholds on n=16 test rows (8 safe, 8 unsafe).</text>
+<line x1="64.0" y1="58" x2="64.0" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="64.0" y="341" text-anchor="middle" class="axis">0.0</text>
+<line x1="129.6" y1="58" x2="129.6" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="129.6" y="341" text-anchor="middle" class="axis">0.1</text>
+<line x1="195.2" y1="58" x2="195.2" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="195.2" y="341" text-anchor="middle" class="axis">0.2</text>
+<line x1="260.7" y1="58" x2="260.7" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="260.7" y="341" text-anchor="middle" class="axis">0.3</text>
+<line x1="326.3" y1="58" x2="326.3" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="326.3" y="341" text-anchor="middle" class="axis">0.4</text>
+<line x1="391.9" y1="58" x2="391.9" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="391.9" y="341" text-anchor="middle" class="axis">0.5</text>
+<line x1="64" y1="325.0" x2="405" y2="325.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="329.0" text-anchor="end" class="axis">0.00</text>
+<line x1="64" y1="261.4" x2="405" y2="261.4" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="265.4" text-anchor="end" class="axis">0.25</text>
+<line x1="64" y1="197.9" x2="405" y2="197.9" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="201.9" text-anchor="end" class="axis">0.50</text>
+<line x1="64" y1="134.3" x2="405" y2="134.3" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="138.3" text-anchor="end" class="axis">0.75</text>
+<line x1="64" y1="70.7" x2="405" y2="70.7" stroke="#e2e8f0" stroke-width="1"/>
+<text x="58" y="74.7" text-anchor="end" class="axis">1.00</text>
+<line x1="64" y1="58" x2="64" y2="325" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="64" y1="325" x2="405" y2="325" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="234.5" y="359" text-anchor="middle" class="axis">10-Bin ECE (Predicted-Class Probability)</text>
+<text x="16" y="191.5" text-anchor="middle" transform="rotate(-90 16 191.5)" class="axis">Multiclass Brier Sum</text>
+<circle cx="143.6" cy="262.7" r="5.8" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="149.6" y="258.7" class="lbl">D1 Class (0.121, 0.245)</text>
+<circle cx="134.9" cy="319.6" r="5.8" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<circle cx="148.4" cy="251.1" r="5.8" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<circle cx="92.8" cy="320.7" r="5.8" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="90.4,314.6 98.3,329.1 82.6,329.1" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="96.4" y="334.4" class="lbl">D1 Gate (0.040, 0.010)</text>
+<polygon points="130.4,257.7 138.2,272.2 122.6,272.2" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="290.3,185.9 298.1,200.4 282.5,200.4" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="205.3" y="185.7" class="lbl">Strands Gate (0.345, 0.516)</text>
+<polygon points="65.7,317.2 73.6,331.6 57.9,331.6" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="79.8,321.2 79.8,328.2 73.8,331.6 67.8,328.2 67.8,321.2 73.8,317.7" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="79.8" y="316.7" class="lbl">D1 Score (0.015, 0.001)</text>
+<polygon points="144.5,311.4 144.5,318.4 138.5,321.9 132.5,318.4 132.5,311.4 138.5,307.9" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="349.2,192.6 349.2,199.5 343.2,203.0 337.2,199.5 337.2,192.6 343.2,189.1" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="248.2" y="210.1" class="lbl">Strands Score (0.426, 0.507)</text>
+<polygon points="70.0,321.5 70.0,328.5 64.0,332.0 58.0,328.5 58.0,321.5 64.0,318.0" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="383.2,71.7 391.0,79.6 383.2,87.4 375.3,79.6" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="248.2" y="71.6" class="lbl">D1/Sol Model (ECE ~0.48, Brier ~0.97)</text>
+<polygon points="298.4,97.8 306.3,105.6 298.4,113.4 290.6,105.6" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<polygon points="204.4,291.3 212.2,299.1 204.4,307.0 196.6,299.1" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="210.4" y="303.1" class="lbl">Strands Model (0.214, 0.102)</text>
+<polygon points="378.8,70.3 386.6,78.2 378.8,86.0 370.9,78.2" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="95.9" y="306.8" width="9.6" height="9.6" rx="2" fill="#2563EB" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<text x="106.7" y="307.5" class="lbl">D1 Tool (0.056, 0.053)</text>
+<rect x="193.6" y="302.7" width="9.6" height="9.6" rx="2" fill="#10B981" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="150.9" y="280.4" width="9.6" height="9.6" rx="2" fill="#9333EA" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<rect x="83.3" y="319.0" width="9.6" height="9.6" rx="2" fill="#0F172A" fill-opacity="0.88" stroke="#fff" stroke-width="1.5"/>
+<line x1="513.9" y1="58" x2="513.9" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="513.9" y="341" text-anchor="middle" class="axis">25%</text>
+<line x1="581.7" y1="58" x2="581.7" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="581.7" y="341" text-anchor="middle" class="axis">35%</text>
+<line x1="649.4" y1="58" x2="649.4" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="649.4" y="341" text-anchor="middle" class="axis">45%</text>
+<line x1="717.2" y1="58" x2="717.2" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="717.2" y="341" text-anchor="middle" class="axis">55%</text>
+<line x1="785.0" y1="58" x2="785.0" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+<text x="785.0" y="341" text-anchor="middle" class="axis">65%</text>
+<line x1="480" y1="325.0" x2="785" y2="325.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="474" y="329.0" text-anchor="end" class="axis">0.0%</text>
+<line x1="480" y1="250.8" x2="785" y2="250.8" stroke="#e2e8f0" stroke-width="1"/>
+<text x="474" y="254.8" text-anchor="end" class="axis">12.5%</text>
+<line x1="480" y1="176.7" x2="785" y2="176.7" stroke="#e2e8f0" stroke-width="1"/>
+<text x="474" y="180.7" text-anchor="end" class="axis">25.0%</text>
+<line x1="480" y1="102.5" x2="785" y2="102.5" stroke="#e2e8f0" stroke-width="1"/>
+<text x="474" y="106.5" text-anchor="end" class="axis">37.5%</text>
+<line x1="480" y1="58" x2="480" y2="325" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="480" y1="325" x2="785" y2="325" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="632.5" y="359" text-anchor="middle" class="axis">Auto-Allow Coverage (% of all 16 gating rows)</text>
+<text x="438" y="191.5" text-anchor="middle" transform="rotate(-90 438 191.5)" class="axis">False-Block Rate on Safe (%)</text>
+<circle cx="641.0" cy="250.8" r="7" fill="#2563EB" stroke="#fff" stroke-width="1.5"/>
+<text x="596.0" y="240.8" class="lbl">Decision-1 (cov 43.8%, FB 1/8, FA 0/8)</text>
+<circle cx="598.6" cy="176.7" r="7" fill="#10B981" stroke="#fff" stroke-width="1.5"/>
+<text x="563.6" y="166.7" class="lbl">Mini-prob (cov 37.5%, FB 2/8, FA 0/8)</text>
+<circle cx="556.2" cy="102.5" r="7" fill="#9333EA" stroke="#fff" stroke-width="1.5"/>
+<text x="564.2" y="106.5" class="lbl">Strands (cov 31.3%, FB 3/8, FA 0/8)</text>
+<circle cx="683.3" cy="325.0" r="7" fill="#0F172A" stroke="#fff" stroke-width="1.5"/>
+<text x="538.3" y="313.0" class="lbl">Sol-prob &amp; Sol-lbl (cov 50.0%, FB 0/8, FA 0/8)</text>
+<circle cx="725.7" cy="325.0" r="7" fill="#dc2626" stroke="#fff" stroke-width="1.5"/>
+<text x="580.7" y="299.0" class="lbl">Mini-lbl (cov 56.3%, FB 0/8, FA 1/8 unsafe!)</text>
+</svg>

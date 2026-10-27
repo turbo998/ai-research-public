@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "classification": "SYNTHETIC",
+  "seed": 20261010,
+  "cases_sha256": "a445498d5a09673e6990dcc325845312c20edb600d6f1ab3627149cf76ebec6c",
+  "corpus_sha256": "0c80929f2ab49689543508a6af8a9756822d8c96952a71761bbad070819ef97b",
+  "generator_sha256": "80489c2c48381feb783ad6c5d1c048c428222831ac4e8eb69b7b0ba3e7c46606",
+  "rows": 920,
+  "base_cases": 460,
+  "template_clusters": 52,
+  "global_source_families": 10,
+  "counts": [
+    {
+      "suite": "decision",
+      "task": "classification",
+      "split": "calibration",
+      "language": "en",
+      "rows": 40
+    },
+    {
+      "suite": "decision",
+      "task": "classification",
+      "split": "calibration",
+      "language": "zh",
+      "rows": 40
+    },
+    {
+      "suite": "decision",
+      "task": "classification",
+      "split": "test",
+      "language": "en",
+      "rows": 60
+    },
+    {
+      "suite": "decision",
+      "task": "classification",
+      "split": "test",
+      "language": "zh",
+      "rows": 60
+    },
+    {
+      "suite": "decision",
+      "task": "gating",
+      "split": "calibration",
+      "language": "en",
+      "rows": 40
+    },
+    {
+      "suite": "decision",
+      "task": "gating",
+      "split": "calibration",
+      "language": "zh",
+      "rows": 40
+    },
+    {
+      "suite": "decision",
+      "task": "gating",
+      "split": "test",
+      "language": "en",
+      "rows": 60
+    },
+    {
+      "suite": "decision",
+      "task": "gating",
+      "split": "test",
+      "language": "zh",
+      "rows": 60
+    },
+    {
+      "suite": "decision",
+      "task": "scoring",
+      "split": "calibration",
+      "language": "en",
+      "rows": 40
+    },
+    {
+      "suite": "decision",
+      "task": "scoring",
+      "split": "calibration",
+      "language": "zh",
+      "rows": 40
+    },
+    {
+      "suite": "decision",
+      "task": "scoring",
+      "split": "test",
+      "language": "en",
+      "rows": 60
+    },
+    {
+      "suite": "decision",
+      "task": "scoring",
+      "split": "test",
+      "language": "zh",
+      "rows": 60
+    },
+    {
+      "suite": "decision",
+      "task": "selection",
+      "split": "calibration",
+      "language": "en",
+      "rows": 40
+    },
+    {
+      "suite": "decision",
+      "task": "selection",
+      "split": "calibration",
+      "language": "zh",
+      "rows": 40
+    },
+    {
+      "suite": "decision",
+      "task": "selection",
+      "split": "test",
+      "language": "en",
+      "rows": 60
+    },
+    {
+      "suite": "decision",
+      "task": "selection",
+      "split": "test",
+      "language": "zh",
+      "rows": 60
+    },
+    {
+      "suite": "e2e",
+      "task": "rag",
+      "split": "calibration",
+      "language": "en",
+      "rows": 10
+    },
+    {
+      "suite": "e2e",
+      "task": "rag",
+      "split": "calibration",
+      "language": "zh",
+      "rows": 10
+    },
+    {
+      "suite": "e2e",
+      "task": "rag",
+      "split": "test",
+      "language": "en",
+      "rows": 20
+    },
+    {
+      "suite": "e2e",
+      "task": "rag",
+      "split": "test",
+      "language": "zh",
+      "rows": 20
+    },
+    {
+      "suite": "e2e",
+      "task": "support",
+      "split": "calibration",
+      "language": "en",
+      "rows": 10
+    },
+    {
+      "suite": "e2e",
+      "task": "support",
+      "split": "calibration",
+      "language": "zh",
+      "rows": 10
+    },
+    {
+      "suite": "e2e",
+      "task": "support",
+      "split": "test",
+      "language": "en",
+      "rows": 20
+    },
+    {
+      "suite": "e2e",
+      "task": "support",
+      "split": "test",
+      "language": "zh",
+      "rows": 20
+    }
+  ],
+  "independence": "Translations and within-template rewrites are clustered, not independent trials.",
+  "source_cluster_warning": "Task-specific template clusters can share a global source family; do not pool them as independent sources.",
+  "gold_review": "AI-authored deterministic fixtures; independent human review not performed.",
+  "source_policy": "Original synthetic corpus only; no customer, company or copied third-party content."
+}
