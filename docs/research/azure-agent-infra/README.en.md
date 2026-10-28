@@ -1,13 +1,13 @@
 # Azure AI Agent Infrastructure Playbook: From 4-Layer Architecture & 6 Compute Runtimes to AKSClaw & E2B on Azure at Scale (English Edition)
 
-> 🌐 **Language / 语言切换**: **[🇬🇧 English Edition (README.en.md)](README.en.md)** | **[🇨🇳 中文主页 (README.md)](README.md)** | **[📚 Full 299-Chapter Monograph Archive (`docs/full-monograph-archive.md`)](docs/full-monograph-archive.md)** | **[📊 7-Card Report (EN)](test-report.en.md)** | **[📊 7-Card 报告 (中文)](test-report.md)** | **[🖼️ 7-Card Visual Deck (`cards.html`)](cards.html)** | **[🖥️ Interactive Selector & 100K Sizer (`selector.html`)](selector.html)**
+> 🌐 **Language / 语言切换**: **[🇬🇧 English Edition (README.en.md)](README.en.md)** | **[🇨🇳 中文主页 (README.md)](README.md)** | **[📚 Full 300-Chapter Monograph Archive (`docs/full-monograph-archive.md`)](docs/full-monograph-archive.md)** | **[📊 7-Card Report (EN)](test-report.en.md)** | **[📊 7-Card 报告 (中文)](test-report.md)** | **[🖼️ 7-Card Visual Deck (`cards.html`)](cards.html)** | **[🖥️ Interactive Selector & 100K Sizer (`selector.html`)](selector.html)**
 
 > **Executive Summary**:
 > Enterprise AI is shifting from **stateless single-turn chat** to **long-running, stateful autonomous agents** that write code, invoke MCP tools, and operate full virtual computers. Built around two non-negotiable engineering axioms—**Compute-State Decoupling** and **Platform-Enforced Zero-Trust Boundaries ("Never Trust the Prompt")**—this playbook provides an end-to-end production reference for Azure AI Agent Infrastructure across **4 Architectural Layers (`Build · Run · Ground · Control & Govern`)**, **6 Compute Runtime Tiers**, **measured generational VM benchmarks**, and a **5-Step Field Execution Workflow**:
 > 1. **Six Compute Runtimes Matched to Isolation Boundaries & Resume SLOs**: Spanning fully managed `Foundry Hosted Agents` (1,400+ MCP connectors), `Durable Functions` (multi-day HITL suspension at zero idle compute cost), `ACA Dynamic Sessions` (Hyper-V warm pool `~210 ms`), `ACA Sandboxes Preview` (explicit snapshots `~320 ms`), `AKS + Kata Pod VM (AKSClaw)` (dedicated guest kernel + 5 platform security boundaries), and `E2B on Azure VMSS Flexible (Standard_D96as_v7)` (100,000+ concurrent Firecracker MicroVMs).
 > 2. **5th-Gen AMD EPYC Turin (`Standard_D96as_v7`) + Azure Boost Leap**: Cuts E2B Base sandbox resume latency from `239 ms` (`D96as_v6` Genoa) to **`108 ms` (`54.8%` faster)** and Code-Interpreter V1 resume latency from `255 ms` to **`132 ms` (`48.2%` faster)** at the exact same `$4.608/hr` list price. With `85% HugePages` reservation and a `60% CPU` scale-out watermark, **261 `D96as_v7` client nodes** (278 VMs total) sustain **100,000 concurrent 512 MiB Firecracker MicroVMs** inside a single Azure VMSS Flexible scale set.
 > 3. **Dual-Layer State Persistence & Zero-Trust Governance**: Combines **Azure HorizonDB (Preview)** (PostgreSQL ACID + JSONB + DiskANN vector search across 15 read replicas, with PgBouncer collapsing 100K sandbox connections into 1,200 backend connections at `4.8 ms` P99) or **Azure Cosmos DB** for durable agent checkpoints with **`UFFD + NBD` MicroVM snapshots** for sub-200ms memory/filesystem restoration; enforces **Microsoft Entra Agent ID + Unified AI Gateway (APIM) + IMDS (`169.254.169.254`) blocking**.
-> 4. **Self-Contained Reproducible Engineering Bundle**: Includes **8 XML-validated SVG diagrams**, **299 domain physics chapters** (archived in [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)), **292 Bicep/Terraform/YAML blueprints** ([`blueprints/`](blueprints)), and **291 deterministic simulators / 300 unit tests** ([`simulator/`](simulator)).
+> 4. **Self-Contained Reproducible Engineering Bundle**: Includes **8 XML-validated SVG diagrams**, **300 domain physics chapters** (archived in [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)), **293 Bicep/Terraform/YAML blueprints** ([`blueprints/`](blueprints)), and **292 deterministic simulators / 301 unit tests** ([`simulator/`](simulator)).
 
 ---
 
@@ -17,9 +17,9 @@
 |---|---|---|---|
 | **1. Interactive Architecture Atlas (`index.html`)** | [`index.html`](index.html) | [Open Interactive Atlas ↗](https://turbo998.github.io/Azure-Infra-Lab/workshops/azure-agent-infra/index.html) | Bilingual 4-layer architecture explorer, 6-tier runtime matrix, and 5-step field workflow |
 | **2. Live Dual-Track Simulator (`demo.html`)** | [`demo.html`](demo.html) | [Launch AKSClaw × E2B Simulator ↗](https://turbo998.github.io/Azure-Infra-Lab/workshops/azure-agent-infra/demo.html) | Step-by-step replay of AKSClaw's 5 security boundaries and E2B's `108 ms` `UFFD+NBD` resume path |
-| **3. Architecture Selector & 100K Sizer (`selector.html`)** | [`selector.html`](selector.html) | [Open Selector & 100K Sizer ↗](https://turbo998.github.io/Azure-Infra-Lab/workshops/azure-agent-infra/selector.html) | 2-stage decision tree, 100K-sandbox VMSS & TCO calculator, HorizonDB pool sizer, and 299-chapter lab |
+| **3. Architecture Selector & 100K Sizer (`selector.html`)** | [`selector.html`](selector.html) | [Open Selector & 100K Sizer ↗](https://turbo998.github.io/Azure-Infra-Lab/workshops/azure-agent-infra/selector.html) | 2-stage decision tree, 100K-sandbox VMSS & TCO calculator, HorizonDB pool sizer, and 300-chapter lab |
 | **4. 7-Card 4:5 Benchmark Deck (`cards.html`)** | [`cards.html`](cards.html) · [EN Report](test-report.en.md) · [中文报告](test-report.md) | [View 7-Card Visual Deck ↗](https://turbo998.github.io/Azure-Infra-Lab/workshops/azure-agent-infra/cards.html) | Strict CSP (`default-src 'none'; style-src 'unsafe-inline'`) visual benchmark cards bound to [`report.json`](report.json) |
-| **5. Full 299-Chapter Monograph & Simulators** | [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md) · [`simulator/agent_infra_sizer.py`](simulator/agent_infra_sizer.py) | [Step 04 Workshop Runbook](workshop-runbook.md) | Complete 299-chapter derivations, 292 IaC blueprints, 291 physics simulators, and 300 unit tests |
+| **5. Full 300-Chapter Monograph & Simulators** | [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md) · [`simulator/agent_infra_sizer.py`](simulator/agent_infra_sizer.py) | [Step 04 Workshop Runbook](workshop-runbook.md) | Complete 300-chapter derivations, 293 IaC blueprints, 292 physics simulators, and 301 unit tests |
 
 ---
 
@@ -108,9 +108,9 @@ All 8 architecture and workflow diagrams are self-contained SVGs (available in b
 
 ---
 
-## 3. Thematic Chapter Index (299 Chapters, 281 Blueprints & 291 Physics Simulators)
+## 3. Thematic Chapter Index (300 Chapters, 281 Blueprints & 292 Physics Simulators)
 
-> 📚 **The complete 2.68 MB monograph containing all 299 chapters, full mathematical derivations, and embedded code listings is archived in [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)** so that `README.md` and `README.en.md` render instantaneously on GitHub (<50 KB). Every chapter is backed by a deterministic simulator in [`simulator/agent_infra_sizer.py`](simulator/agent_infra_sizer.py) and an IaC blueprint in [`blueprints/`](blueprints):
+> 📚 **The complete 2.68 MB monograph containing all 300 chapters, full mathematical derivations, and embedded code listings is archived in [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)** so that `README.md` and `README.en.md` render instantaneously on GitHub (<50 KB). Every chapter is backed by a deterministic simulator in [`simulator/agent_infra_sizer.py`](simulator/agent_infra_sizer.py) and an IaC blueprint in [`blueprints/`](blueprints):
 
 | Domain Cluster | Chapters | Core Architecture Topics & Representative Blueprints (`blueprints/`) | Key Quantitative Findings |
 |---|---|---|---|
@@ -120,14 +120,14 @@ All 8 architecture and workflow diagrams are self-contained SVGs (available in b
 | **IV. Financial Trading, Healthcare, Telecom, Power Grid & Autonomous Mobility** | **Ch 37 – Ch 65** | Quantitative FPGA Risk Sandbox, Core Banking Basel III Settlement, Clinical Genomics `GATK/Parabricks`, Surgical Robotics `IEC 62304`, 5G/6G O-RAN RIC Slicing, Smart Grid `IEC 61850` Synchrophasor Control, Autonomous Driving `ISO 26262 ASIL-D`, Avionics `DO-178C`, Maritime Autonomous Navigation, Railway `EN 50129 SIL-4` Signaling | Hardware/platform safety interlock latency **`< 0.5 ms`**; **`0.0%`** cross-tenant data or credential leakage |
 | **V. Clean Energy, Nuclear Fusion, Big Science Facilities & Extreme Engineering** | **Ch 66 – Ch 130** | Green Hydrogen & Ammonia, Tokamak Fusion Disruption Avoidance, Synchrotron Beamline Control, Deep-Space Adaptive Optics, Subsea Observatories & EGS Geothermal, Small Modular Reactors (`SMR Class 1E`), Tunnel Boring Machines (`TBM`), LNG Cryogenics, Subsea `HVDC`, Direct Air Capture (`DAC`), Grid BESS (`UL 9540A`), EUV Lithography (`SEMI S2`), Quantum Error Correction (`QEC`), LEO Mega-Constellations (`OISL`), Deep-Sea Mining & Hypersonic Thermal Protection | Unified **PINN + MPC + `IEC 61511 SIL-3 / Class 1E` hardware safety interlocks** with **`0.17–0.35 ms`** edge loop latency |
 | **VI. Advanced Semiconductor Fab, Aerospace Materials & Heavy Industry** | **Ch 131 – Ch 195** | `SiC/GaN` Crystal Growth, Cryogenic High-Aspect-Ratio Plasma Etch (`3D NAND HAR`), Hybrid Bonding `CMP`, Single-Crystal Superalloy Solidification, `UHV-MBE`, Hollow-Core Fiber Drawing, Polysilicon Siemens CVD, Chlor-Alkali Electrolysis, Carbon Fiber Oxidation, Direct Lithium Extraction (`DLE`), Vanadium Flow Batteries, Supercritical Water Oxidation (`PFAS`), Blast Furnace / BOF / Flash Smelting & Float Glass | **`+42% to +53%`** yield/efficiency improvement with **`0.0%` thermal runaway or excursions** under SIL-3 hardware interlocks |
-| **VII. Critical Strategic Metals, All 17 Rare Earths, Actinides & Medical Isotopes** | **Ch 196 – Ch 299** | Noble Gases (`Ne/Kr/Xe`), Refractory Metals (`W/Mo/Ta/Nb/Re`), Scattered Metals (`Ge/Ga/In/Tl/Te/Se`), Nuclear `Zr/Hf` Separation, Platinum Group Metals (`Pt/Ir/Ru/Rh/Pd/Os`), All 17 Rare Earths (`La–Lu, Sc, Y`), Actinide Fuel Cycle (`U/Th HALEU TRISO`, `Pu-238/Am-241` Space RTG, `Cm/Bk/Cf-252` Neutron Sources), Medical Cyclotron Isotopes (`Mo-99/Tc-99m/Ac-225`), and Electronic Specialty Gases | Complete periodic-table industrial coverage with **300 / 300 automated unit tests passing** (`python -m unittest discover -s simulator`) |
+| **VII. Critical Strategic Metals, All 17 Rare Earths, Actinides & Medical Isotopes** | **Ch 196 – Ch 300** | Noble Gases (`Ne/Kr/Xe`), Refractory Metals (`W/Mo/Ta/Nb/Re`), Scattered Metals (`Ge/Ga/In/Tl/Te/Se`), Nuclear `Zr/Hf` Separation, Platinum Group Metals (`Pt/Ir/Ru/Rh/Pd/Os`), All 17 Rare Earths (`La–Lu, Sc, Y`), Actinide Fuel Cycle (`U/Th HALEU TRISO`, `Pu-238/Am-241` Space RTG, `Cm/Bk/Cf-252` Neutron Sources), Medical Cyclotron Isotopes (`Mo-99/Tc-99m/Ac-225`), and Electronic Specialty Gases | Complete periodic-table industrial coverage with **301 / 301 automated unit tests passing** (`python -m unittest discover -s simulator`) |
 
 ---
 
 ## 4. Quick Local Verification
 
 ```bash
-# 1. Run all 300 unit tests (architecture routing, 100K VMSS sizing, SVG XML validity & relative link integrity)
+# 1. Run all 301 unit tests (architecture routing, 100K VMSS sizing, SVG XML validity & relative link integrity)
 python -m unittest discover -s docs/research/azure-agent-infra/simulator -p "test_*.py" -v
 
 # 2. Run the live dual-track simulation self-test
@@ -138,7 +138,7 @@ python docs/research/azure-agent-infra/demo/run_live_demo.py --self-test
 
 ## 5. Related Links
 
-- **Full 299-Chapter Technical Monograph Archive**: [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)
+- **Full 300-Chapter Technical Monograph Archive**: [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)
 - **Chinese Overview Playbook**: [`README.md`](README.md)
 - **7-Card 4:5 Benchmark Report**: [English Markdown (`test-report.en.md`)](test-report.en.md) · [中文 Markdown (`test-report.md`)](test-report.md) · [CSP-Locked HTML Deck (`cards.html`)](cards.html) · [Sealed Data (`report.json`)](report.json)
 - **Field Delivery & Governance**: [Step 04 Workshop Runbook (`workshop-runbook.md`)](workshop-runbook.md) · [Evidence Ledger (`evidence.json`)](evidence.json) · [Compliance Review (`review.md`)](review.md)
