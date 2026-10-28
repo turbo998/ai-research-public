@@ -1,13 +1,13 @@
 # Azure AI Agent Infrastructure Playbook：从四层全栈架构、六大计算运行时到 AKSClaw 与 E2B on Azure 生产实践 (Bilingual Edition / 中英双语版)
 
-> 🌐 **Language / 语言切换**: **[🇨🇳 中文主页 (README.md)](README.md)** | **[🇬🇧 English Edition (README.en.md)](README.en.md)** | **[📚 293章完整技术长卷归档 (`docs/full-monograph-archive.md`)](docs/full-monograph-archive.md)** | **[📊 7-Card 评测报告 (中文)](test-report.md)** | **[📊 7-Card Report (EN)](test-report.en.md)** | **[🖼️ 7-Card 离线卡片 (`cards.html`)](cards.html)** | **[🖥️ 交互式选型与 10万沙箱计算器 (`selector.html`)](selector.html)**
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文主页 (README.md)](README.md)** | **[🇬🇧 English Edition (README.en.md)](README.en.md)** | **[📚 294章完整技术长卷归档 (`docs/full-monograph-archive.md`)](docs/full-monograph-archive.md)** | **[📊 7-Card 评测报告 (中文)](test-report.md)** | **[📊 7-Card Report (EN)](test-report.en.md)** | **[🖼️ 7-Card 离线卡片 (`cards.html`)](cards.html)** | **[🖥️ 交互式选型与 10万沙箱计算器 (`selector.html`)](selector.html)**
 
 > **Executive Summary / 核心结论概览**：
 > 企业级 AI 应用正从 **“无状态单次 Prompt 问答（Stateless Chat）”** 演进为 **“长周期、有状态、会写代码、会调工具、会操作完整虚拟计算机的自主智能体（Stateful Autonomous Agent）”**。本专题围绕 **“计算与状态解耦（Compute-State Decoupling）”** 与 **“平台级零信任硬边界（Never Trust the Prompt）”** 两大核心公理，系统拆解在 Azure 上构建生产级 AI Agent 的 **四层参考架构（Build · Run · Ground · Control & Govern）**、**六大计算运行时光谱**、**代际实测基准** 与 **现场五步落地法**：
 > 1. **六大运行时精准卡位不同隔离边界与恢复延迟 SLO**：从全托管 `Foundry Hosted Agents`（1,400+ MCP 工具）、`Durable Functions`（跨天 HITL 零算力挂起）、`ACA Dynamic Sessions`（Hyper-V 预热池 `~210 ms`）、`ACA Sandboxes Preview`（显式快照 `~320 ms`）、`AKS + Kata Pod VM (AKSClaw)`（多租户独立内核 + 5 道平台安全硬边界）到 `E2B on Azure VMSS Flexible (Standard_D96as_v7)`（10 万+ 并发 Firecracker MicroVM）。
 > 2. **第五代 AMD EPYC Turin (`Standard_D96as_v7`) + Azure Boost 代际跃迁**：实测将 E2B Base 沙箱恢复延迟从上代 `D96as_v6`（239 ms）缩短至 **`108 ms`（提速 54.8%）**，Code-Interpreter V1 启动延迟从 `255 ms` 缩短至 **`132 ms`（提速 48.2%）**；在 `85% HugePages` 预留与 `60% CPU` 扩容水位下，仅需 **261 台 `D96as_v7` 客户端节点**（总计 278 台 VM）即可在单个 VMSS Flexible 规模集内稳态承载 **100,000 个并发 512 MiB MicroVM 沙箱**。
 > 3. **双层状态底座与零信任治理**：采用 **Azure HorizonDB (Preview)**（PG ACID + JSONB + DiskANN Vector + 15 只读副本，配合 PgBouncer 将 10 万沙箱连接收敛至 1,200 后端连接，`4.8 ms` P99）或 **Azure Cosmos DB** 存储业务检查点与长期记忆，结合 **`UFFD + NBD` 沙箱快照** 冻结进程内存与文件系统现场；通过 **Microsoft Entra Agent ID + Unified AI Gateway (APIM) + 封禁 IMDS (`169.254.169.254`)** 落实 5 道不可绕过的平台安全硬边界。
-> 4. **全量可复核工程资产**：配套 **8 幅通过 XML 校验的高清 SVG 架构图谱**、**293 章跨行业物理仿真章节**（完整长卷归档于 [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)）、**286 套 Bicep/Terraform/YAML 生产级蓝图**（[`blueprints/`](blueprints)）与 **285 个确定性仿真器 / 294 项单元测试**（[`simulator/`](simulator)）。
+> 4. **全量可复核工程资产**：配套 **8 幅通过 XML 校验的高清 SVG 架构图谱**、**294 章跨行业物理仿真章节**（完整长卷归档于 [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)）、**287 套 Bicep/Terraform/YAML 生产级蓝图**（[`blueprints/`](blueprints)）与 **286 个确定性仿真器 / 295 项单元测试**（[`simulator/`](simulator)）。
 
 ---
 
@@ -19,7 +19,7 @@
 | **2. 实时双轨仿真台 (`demo.html`)** | [`demo.html`](demo.html) | [启动 AKSClaw × E2B 仿真 ↗](https://turbo998.github.io/Azure-Infra-Lab/workshops/azure-agent-infra/demo.html) | 单步/自动回放 AKSClaw 五道硬边界拦截与 E2B `UFFD+NBD` 108ms 恢复全链路 |
 | **3. 选型决策器 & 10万沙箱计算器 (`selector.html`)** | [`selector.html`](selector.html) | [打开选型与容量计算器 ↗](https://turbo998.github.io/Azure-Infra-Lab/workshops/azure-agent-infra/selector.html) | 双阶段决策树、10万并发 VMSS 节点/TCO 测算、HorizonDB 连接池计算器及分域仿真台 |
 | **4. 7-Card 4:5 基准报告 (`cards.html`)** | [`cards.html`](cards.html) · [中文报告](test-report.md) · [EN Report](test-report.en.md) | [查看 7-Card 视觉评测卡 ↗](https://turbo998.github.io/Azure-Infra-Lab/workshops/azure-agent-infra/cards.html) | 严格锁定 CSP（`default-src 'none'; style-src 'unsafe-inline'`），绑定 [`report.json`](report.json) |
-| **5. 293章完整技术长卷与仿真源码** | [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md) · [`simulator/agent_infra_sizer.py`](simulator/agent_infra_sizer.py) | [Step 04 Workshop Runbook](workshop-runbook.md) | 293 章完整推导、286 套 IaC 蓝图、285 个物理仿真函数与 294 项单元测试 |
+| **5. 294章完整技术长卷与仿真源码** | [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md) · [`simulator/agent_infra_sizer.py`](simulator/agent_infra_sizer.py) | [Step 04 Workshop Runbook](workshop-runbook.md) | 294 章完整推导、287 套 IaC 蓝图、286 个物理仿真函数与 295 项单元测试 |
 
 ---
 
@@ -108,9 +108,9 @@
 
 ---
 
-## 3. 293 章全栈架构与跨行业物理模型分类速查表 (Thematic Chapter Index)
+## 3. 294 章全栈架构与跨行业物理模型分类速查表 (Thematic Chapter Index)
 
-> 📚 **完整 2.68 MB 技术长卷（含全部 293 章数学推导、架构拓扑与代码清单）已归档至 [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)**，解决了单文件超 GitHub 512 KB 网页渲染上限的问题。每一章均绑定 [`simulator/agent_infra_sizer.py`](simulator/agent_infra_sizer.py) 中的确定性物理仿真函数与 [`blueprints/`](blueprints) 下的生产级 IaC 蓝图：
+> 📚 **完整 2.68 MB 技术长卷（含全部 294 章数学推导、架构拓扑与代码清单）已归档至 [`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)**，解决了单文件超 GitHub 512 KB 网页渲染上限的问题。每一章均绑定 [`simulator/agent_infra_sizer.py`](simulator/agent_infra_sizer.py) 中的确定性物理仿真函数与 [`blueprints/`](blueprints) 下的生产级 IaC 蓝图：
 
 | 专题分域 (Domain Cluster) | 章节范围 | 核心架构主题与代表性蓝图 (`blueprints/`) | 代表性量化指标与实测结论 |
 |---|---|---|---|
@@ -120,14 +120,14 @@
 | **IV. 金融核心交易、医疗生命科学、电信电网与交通物流沙箱** | **Ch 37 – Ch 65** | 算法交易 FPGA 超低延迟风控、核心银行 Basel III 结算、临床基因组学 `GATK/ Parabricks`、手术机器人 `IEC 62304` 闭环、5G/6G O-RAN RIC 实时切片、电网 `IEC 61850` 广域相量控制、自动驾驶 `ISO 26262 ASIL-D` 仿真、航空空管 `DO-178C`、海事自主航行与铁路 `EN 50129 SIL-4` 信号控制 | 硬件/平台级安全联锁触发延迟 **`< 0.5 ms`**；跨租户数据与凭据泄露率 **`0.0%`** |
 | **V. 清洁能源、核能聚变、大科学装置与空天深海极端工程** | **Ch 66 – Ch 130** | 绿氢电解槽与合成氨、托卡马克磁约束聚变等离子体防淬灭、同步辐射光源束流控制、深空望远镜自适应光学、海底观测网与地热 EGS、小型模块化核反应堆 (`SMR Class 1E`)、盾构机 (`TBM`)、LNG 低温储运、柔性直流海底电缆 (`HVDC`)、直接空气捕集 (`DAC`)、储能电站 (`UL 9540A`)、EUV 光刻机 (`SEMI S2`)、超导量子纠错 (`QEC`)、低轨巨型星座 (`OISL`)、深海采矿与高超音速热防护 | 全面集成 **PINN（物理信息神经网络）+ MPC（模型预测控制）+ `IEC 61511 SIL-3 / Class 1E` 硬件安全联锁**，边缘闭环延迟 **`0.17–0.35 ms`** |
 | **VI. 半导体先进制程、航空材料、高端化工与重工业制造** | **Ch 131 – Ch 195** | 第三代半导体 `SiC/GaN` 晶体生长、极低温高深宽比等离子体刻蚀 (`3D NAND HAR`)、晶圆混合键合 `CMP`、单晶高温合金定向凝固、超高真空分子束外延 (`UHV-MBE`)、空芯光纤拉丝、多晶硅西门子法、氯碱电解、碳纤维原丝氧化炭化、盐湖提锂 (`DLE`)、全钒液流电池、超临界水氧化销毁 `PFAS`、大型高炉/转炉/闪速炉冶金与浮法玻璃 | 关键工艺良率提升 **`+42% ~ +53%`**，危险气体/热失控/爆炸越界事故率 **`0.0%`（SIL-3 硬件回路兜底）** |
-| **VII. 战略关键金属、稀土全系列、锕系核燃料与同位素工程** | **Ch 196 – Ch 293** | 电子级稀有气体（`Ne/Kr/Xe`）、难熔金属（`W/Mo/Ta/Nb/Re`）、稀散金属（`Ge/Ga/In/Tl/Te/Se`）、核级锆铪分离、铂族贵金属（`Pt/Ir/Ru/Rh/Pd/Os`）、17 种稀土元素全系列分离与磁光晶体（`La–Lu, Sc, Y`）、锕系核燃料循环（`U/Th HALEU TRISO`、`Pu-238/Am-241` 深空同位素热源、`Cm/Bk/Cf-252` 中子源）、医用回旋加速器同位素（`Mo-99/Tc-99m/Ac-225`）及半导体高纯电子特气全谱系 | 覆盖完整元素周期表工业工程场景，**294 / 294 项自动化单元测试 100% 通过**（运行 `python -m unittest discover -s simulator` 即可本地复核） |
+| **VII. 战略关键金属、稀土全系列、锕系核燃料与同位素工程** | **Ch 196 – Ch 294** | 电子级稀有气体（`Ne/Kr/Xe`）、难熔金属（`W/Mo/Ta/Nb/Re`）、稀散金属（`Ge/Ga/In/Tl/Te/Se`）、核级锆铪分离、铂族贵金属（`Pt/Ir/Ru/Rh/Pd/Os`）、17 种稀土元素全系列分离与磁光晶体（`La–Lu, Sc, Y`）、锕系核燃料循环（`U/Th HALEU TRISO`、`Pu-238/Am-241` 深空同位素热源、`Cm/Bk/Cf-252` 中子源）、医用回旋加速器同位素（`Mo-99/Tc-99m/Ac-225`）及半导体高纯电子特气全谱系 | 覆盖完整元素周期表工业工程场景，**295 / 295 项自动化单元测试 100% 通过**（运行 `python -m unittest discover -s simulator` 即可本地复核） |
 
 ---
 
 ## 4. 快速本地验证命令 (Local Verification)
 
 ```bash
-# 1. 运行 294 项确定性架构选型、容量测算、SVG XML 语法与相对链接完整性测试
+# 1. 运行 295 项确定性架构选型、容量测算、SVG XML 语法与相对链接完整性测试
 python -m unittest discover -s docs/research/azure-agent-infra/simulator -p "test_*.py" -v
 
 # 2. 运行端到端实时仿真自检脚本并校验仿真轨迹
@@ -138,7 +138,7 @@ python docs/research/azure-agent-infra/demo/run_live_demo.py --self-test
 
 ## 5. 相关导航
 
-- **完整 293 章技术长卷归档**：[`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)
+- **完整 294 章技术长卷归档**：[`docs/full-monograph-archive.md`](docs/full-monograph-archive.md)
 - **English Overview Playbook**：[`README.en.md`](README.en.md)
 - **7-Card 4:5 基准评测报告**：[中文 Markdown (`test-report.md`)](test-report.md) · [English Markdown (`test-report.en.md`)](test-report.en.md) · [CSP 锁定 HTML 卡片 (`cards.html`)](cards.html) · [密封数据 (`report.json`)](report.json)
 - **现场交付手册與合规审计**：[Step 04 Workshop Runbook (`workshop-runbook.md`)](workshop-runbook.md) · [证据账本 (`evidence.json`)](evidence.json) · [合规复核 (`review.md`)](review.md)
