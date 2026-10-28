@@ -1,5 +1,14 @@
 # Personal agents：五款产品、公开评测与统一测试协议
 
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文版 (README.md)](README.md)** | **[🇬🇧 English (README.en.md)](README.en.md)** | **[↩ 返回研究索引 (`../index.md`)](../index.md)**
+
+> **Executive Summary / 核心结论概览**：
+> Personal Agent 的范式跃迁不在于“更会聊天”，而在于**持续后台运行、跨应用主动交付、保留长期记忆上下文，并在触及高风险边界时把决定权交回用户**。本专题对比了 **Meta Muse、xAI Grok Bot、OpenAI dot/dots、Google Gemini Spark、Instinct** 五款代表性产品，并设计了包含 **18 个原创合成案例** 的统一测试协议（[`benchmark.md`](benchmark.md) / [`cases.json`](cases.json)）：
+> 1. **模型分数不等于产品成功率**：五款产品的执行边界由各自的宿主机环境（独立 Secure VM vs 共享云端电脑 vs 本地电脑挂载）、连接器授权范围与安全哨兵（如 Muse Sentinel）决定，不能用底层 LLM 跑分替代产品级评测。
+> 2. **角色分离不等于安全隔离**：如 `Grok Bot` 支持多命名 Bot 群聊协作，但同账户下共享电脑与插件权限；`Gemini Spark` 面向个人 Google 账号，不可混同于企业级 Gemini 的 IAM 治理；`Instinct` 主打短信/语音入口，但断开连接不等于删除历史数据。
+
+![Personal Agents 五款产品架构与治理对比图](assets/overview.svg)
+
 **研究 cutoff：2026-10-11；这是公开资料研究，不是产品实测。** 检索跨过北京时间午夜，实际读取日期为 2026-10-11 至 2026-10-12，详见[证据台账](evidence.json)。官网为读取时的 live version，不声称还原 cutoff 当日的全部历史网页。未采用明确晚于 cutoff 的发布事件；后续变更不能自动回填为当日状态。
 
 主对象为 **Meta Muse、Grok Bot、OpenAI dot/dots、Google Gemini Spark、Instinct**。Google 的企业 Gemini agent 另列区别，不增加第六个主对象。中文分析保留 English terminology；本文的场景选择是研究建议，厂商承诺与外部观察分别标注。

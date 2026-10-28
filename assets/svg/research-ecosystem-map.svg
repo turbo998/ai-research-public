@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 620" width="1080" height="620" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="620" rx="16" fill="url(#bgGrad)"/>
+  <rect x="20" y="20" width="1040" height="82" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="44" y="54" fill="#F8FAFC" font-size="22" font-weight="700">AI Research Ecosystem Map · 5-Pillar Full-Stack Engineering Architecture</text>
+  <text x="44" y="82" fill="#94A3B8" font-size="13">Public &amp; Cross-Repo Research Tracks: Agent Infrastructure · Frontier Benchmarks · Framework &amp; Harness · Governance &amp; Red Team · Vertical Agents</text>
+  <rect x="870" y="36" width="168" height="48" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="954" y="57" text-anchor="middle" fill="#38BDF8" font-size="12" font-weight="700">BILINGUAL ARCHIVE</text>
+  <text x="954" y="74" text-anchor="middle" fill="#E2E8F0" font-size="11">14 Tracks · 7-Card Decks</text>
+
+  <!-- Pillar 1 -->
+  <rect x="20" y="118" width="200" height="390" rx="12" fill="#0F172A" stroke="#0EA5E9" stroke-width="1.8"/>
+  <rect x="20" y="118" width="200" height="42" rx="12" fill="#0284C7"/>
+  <text x="120" y="144" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">01 · CLOUD AGENT INFRA</text>
+  <rect x="32" y="174" width="176" height="100" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="42" y="196" fill="#38BDF8" font-size="12" font-weight="700">Azure AI Agent Infra</text>
+  <text x="42" y="214" fill="#CBD5E1" font-size="11">• 4-Layer &amp; 6 Runtime Tiers</text>
+  <text x="42" y="230" fill="#CBD5E1" font-size="11">• AKSClaw 5 Security Gates</text>
+  <text x="42" y="246" fill="#CBD5E1" font-size="11">• E2B D96as_v7: 108ms / 100K</text>
+  <text x="42" y="262" fill="#34D399" font-size="10" font-weight="600">288 Ch · 281 IaC · 8 SVGs</text>
+
+  <rect x="32" y="286" width="176" height="100" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="42" y="308" fill="#38BDF8" font-size="12" font-weight="700">E2B × Nomad Heartbeat</text>
+  <text x="42" y="326" fill="#CBD5E1" font-size="11">• Yamux 10-40s vs Nomad 20s</text>
+  <text x="42" y="342" fill="#CBD5E1" font-size="11">• t=21s Kill vs t=39s Survive</text>
+  <text x="42" y="358" fill="#CBD5E1" font-size="11">• 3-Layer Resilience Fix</text>
+  <text x="42" y="374" fill="#34D399" font-size="10" font-weight="600">0 False Kills (&lt;=35s Jitter)</text>
+
+  <rect x="32" y="398" width="176" height="96" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="42" y="420" fill="#38BDF8" font-size="12" font-weight="700">Realtime Telemetry &amp; Control</text>
+  <text x="42" y="438" fill="#CBD5E1" font-size="11">• OTel + Cilium Tetragon eBPF</text>
+  <text x="42" y="454" fill="#CBD5E1" font-size="11">• Sub-ms Syscall Guardrails</text>
+  <text x="42" y="470" fill="#CBD5E1" font-size="11">• Live Trace &amp; Cost Attribution</text>
+  <text x="42" y="486" fill="#94A3B8" font-size="10">Cross-Repo Telemetry Suite</text>
+
+  <!-- Pillar 2 -->
+  <rect x="230" y="118" width="200" height="390" rx="12" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.8"/>
+  <rect x="230" y="118" width="200" height="42" rx="12" fill="#7C3AED"/>
+  <text x="330" y="144" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">02 · MODEL BENCHMARKS</text>
+  <rect x="242" y="174" width="176" height="106" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="252" y="196" fill="#C4B5FD" font-size="12" font-weight="700">SKY-001 &amp; 19-Model Eval</text>
+  <text x="252" y="214" fill="#CBD5E1" font-size="11">• SKY-001: 98.44x Speedup</text>
+  <text x="252" y="230" fill="#CBD5E1" font-size="11">• Fable 5.1: 99.77 (#1 Score)</text>
+  <text x="252" y="246" fill="#CBD5E1" font-size="11">• Haiku 5.5: 99.24 @ $0.33</text>
+  <text x="252" y="264" fill="#34D399" font-size="10" font-weight="600">Pareto Frontier &amp; 7-Card Deck</text>
+
+  <rect x="242" y="292" width="176" height="100" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="252" y="314" fill="#C4B5FD" font-size="12" font-weight="700">Decision-1 vs OpenAI</text>
+  <text x="252" y="332" fill="#CBD5E1" font-size="11">• Strands Decision-1 (0.6B)</text>
+  <text x="252" y="348" fill="#CBD5E1" font-size="11">• 19/20 Direction Match (95%)</text>
+  <text x="252" y="364" fill="#CBD5E1" font-size="11">• 72.1ms CPU Batch (3.1x)</text>
+  <text x="252" y="380" fill="#34D399" font-size="10" font-weight="600">Apache-2.0 CPU Gatekeeper</text>
+
+  <rect x="242" y="404" width="176" height="90" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="252" y="426" fill="#C4B5FD" font-size="12" font-weight="700">Pelican SVG Bench</text>
+  <text x="252" y="444" fill="#CBD5E1" font-size="11">• Visual Feedback Loop</text>
+  <text x="252" y="460" fill="#CBD5E1" font-size="11">• 68/100 → 91/100 (+33.8%)</text>
+  <text x="252" y="478" fill="#94A3B8" font-size="10">Multimodal Self-Correction</text>
+
+  <!-- Pillar 3 -->
+  <rect x="440" y="118" width="200" height="390" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <rect x="440" y="118" width="200" height="42" rx="12" fill="#059669"/>
+  <text x="540" y="144" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">03 · HARNESS &amp; FRAMEWORKS</text>
+  <rect x="452" y="174" width="176" height="106" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="462" y="196" fill="#6EE7B7" font-size="12" font-weight="700">FAF vs Agent Forge vs Spec</text>
+  <text x="462" y="214" fill="#CBD5E1" font-size="11">• Context DNA (.faf) Static</text>
+  <text x="462" y="230" fill="#CBD5E1" font-size="11">• Agent Forge Autonomous</text>
+  <text x="462" y="246" fill="#CBD5E1" font-size="11">• Spec-Driven RPI Closed Loop</text>
+  <text x="462" y="264" fill="#34D399" font-size="10" font-weight="600">Three-Way Synergy Matrix</text>
+
+  <rect x="452" y="292" width="176" height="100" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="462" y="314" fill="#6EE7B7" font-size="12" font-weight="700">Agent Framework Benchmark</text>
+  <text x="462" y="332" fill="#CBD5E1" font-size="11">• MAF vs LangGraph vs CrewAI</text>
+  <text x="462" y="348" fill="#CBD5E1" font-size="11">• AutoGen &amp; OpenAI Agents SDK</text>
+  <text x="462" y="364" fill="#CBD5E1" font-size="11">• Orchestration Overhead &amp; DX</text>
+  <text x="462" y="380" fill="#94A3B8" font-size="10">Cross-Repo Harness Suite</text>
+
+  <rect x="452" y="404" width="176" height="90" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="462" y="426" fill="#6EE7B7" font-size="12" font-weight="700">Agent Skills &amp; REA</text>
+  <text x="462" y="444" fill="#CBD5E1" font-size="11">• 3-Layer Progressive Load</text>
+  <text x="462" y="460" fill="#CBD5E1" font-size="11">• 85%+ Prompt Token Reduction</text>
+  <text x="462" y="478" fill="#94A3B8" font-size="10">SKILL.md Standard</text>
+
+  <!-- Pillar 4 -->
+  <rect x="650" y="118" width="200" height="390" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1.8"/>
+  <rect x="650" y="118" width="200" height="42" rx="12" fill="#D97706"/>
+  <text x="750" y="144" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">04 · GOVERNANCE &amp; SECURITY</text>
+  <rect x="662" y="174" width="176" height="106" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="672" y="196" fill="#FCD34D" font-size="12" font-weight="700">Governance &amp; Economics</text>
+  <text x="672" y="214" fill="#CBD5E1" font-size="11">• Entra Agent ID Attribution</text>
+  <text x="672" y="230" fill="#CBD5E1" font-size="11">• APIM 3-Tier Token Circuit</text>
+  <text x="672" y="246" fill="#CBD5E1" font-size="11">• FinOps Unit Cost Modeling</text>
+  <text x="672" y="264" fill="#34D399" font-size="10" font-weight="600">Zero-Key &amp; Budget Guardrails</text>
+
+  <rect x="662" y="292" width="176" height="100" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="672" y="314" fill="#FCD34D" font-size="12" font-weight="700">Agentic Red Team Lab</text>
+  <text x="672" y="332" fill="#CBD5E1" font-size="11">• Indirect Prompt Injection</text>
+  <text x="672" y="348" fill="#CBD5E1" font-size="11">• MCP Tool Poisoning Defense</text>
+  <text x="672" y="364" fill="#CBD5E1" font-size="11">• Sandbox Escape Verification</text>
+  <text x="672" y="380" fill="#94A3B8" font-size="10">Adversarial Security Harness</text>
+
+  <rect x="662" y="404" width="176" height="90" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="672" y="426" fill="#FCD34D" font-size="12" font-weight="700">Agentic Commerce</text>
+  <text x="672" y="444" fill="#CBD5E1" font-size="11">• Microsoft Web IQ Grounding</text>
+  <text x="672" y="460" fill="#CBD5E1" font-size="11">• ACP / UCP + x402 / AP2 Gate</text>
+  <text x="672" y="478" fill="#34D399" font-size="10" font-weight="600">Cryptographic Spend Mandates</text>
+
+  <!-- Pillar 5 -->
+  <rect x="860" y="118" width="200" height="390" rx="12" fill="#0F172A" stroke="#EC4899" stroke-width="1.8"/>
+  <rect x="860" y="118" width="200" height="42" rx="12" fill="#DB2777"/>
+  <text x="960" y="144" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">05 · PERSONAL &amp; VERTICAL</text>
+  <rect x="872" y="174" width="176" height="106" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="882" y="196" fill="#F472B6" font-size="12" font-weight="700">Personal Agents Landscape</text>
+  <text x="882" y="214" fill="#CBD5E1" font-size="11">• OpenClaw (250K+★) &amp; Hermes</text>
+  <text x="882" y="230" fill="#CBD5E1" font-size="11">• Claude Cowork &amp; Perplexity</text>
+  <text x="882" y="246" fill="#CBD5E1" font-size="11">• Manus Cloud Sandbox</text>
+  <text x="882" y="264" fill="#34D399" font-size="10" font-weight="600">5-Product Deep Comparison</text>
+
+  <rect x="872" y="292" width="176" height="100" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="882" y="314" fill="#F472B6" font-size="12" font-weight="700">Omarchy Desktop Agent</text>
+  <text x="882" y="332" fill="#CBD5E1" font-size="11">• TUI-First Keyboard UX</text>
+  <text x="882" y="348" fill="#CBD5E1" font-size="11">• 3-Layer Risk Gate (Green/Red)</text>
+  <text x="882" y="364" fill="#CBD5E1" font-size="11">• Landlock + Bubblewrap</text>
+  <text x="882" y="380" fill="#94A3B8" font-size="10">Developer OS Integration</text>
+
+  <rect x="872" y="404" width="176" height="90" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="882" y="426" fill="#F472B6" font-size="12" font-weight="700">LocalJev Cross-Border</text>
+  <text x="882" y="444" fill="#CBD5E1" font-size="11">• Industrial MRO Vision OCR</text>
+  <text x="882" y="460" fill="#CBD5E1" font-size="11">• 12-Language B2B Negotiation</text>
+  <text x="882" y="478" fill="#94A3B8" font-size="10">Edge-Cloud Hybrid Agent</text>
+
+  <!-- Bottom Cross-Cutting Foundation Bar -->
+  <rect x="20" y="524" width="1040" height="76" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="44" y="552" fill="#38BDF8" font-size="14" font-weight="700">FOUNDATIONAL ENGINEERING PRINCIPLES ACROSS ALL 5 PILLARS</text>
+  <text x="44" y="578" fill="#E2E8F0" font-size="12">1. Compute-State Decoupling (UFFD/NBD + HorizonDB/Cosmos)   |   2. Platform Zero-Trust ("Never Trust the Prompt")   |   3. Deterministic Verification Harnesses &amp; Sealed 7-Card Benchmarks</text>
+</svg>

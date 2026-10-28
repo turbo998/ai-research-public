@@ -4,13 +4,27 @@
 > **Structured Data & Evidence Lock**: [`report.json`](report.json) · [`evidence.json`](evidence.json) · [`evidence/verifier-summary.json`](evidence/verifier-summary.json) · **Methodology Audit**: [`review.md`](review.md)
 > **Runnable Offline Verification Suite**: [`simulator/sky001_and_19model_verifier.py`](simulator/sky001_and_19model_verifier.py) · [`simulator/test_sky001_and_19model_verifier.py`](simulator/test_sky001_and_19model_verifier.py)
 
+> **Executive Summary**:
+> - **Track A (19-Model × 11-Task Coding Agent Benchmark = `209` CLI Runs, `1,310` Hidden Assertions/Model)**: **`Claude Haiku 5.5`** achieves **`99.24 / 100` (Rank #4 overall)** at just **`$0.33`** (`91.6%` cheaper than `Haiku 4.5`), trailing only `Fable 5.1` (`99.77`), `Opus 5.5` (`99.68`), and `Opus 5` (`99.59`); **`Gemini 4 Argon`** (`98.59 / 100`, `$2.82`) becomes the 9th model to pass **`1,310 / 1,310` (`100%`) hidden assertions**.
+> - **Track B (Skyfall AI `SKY-001` Engineering World Model)**: Uses a two-stage `Hierarchical Composer + Construction World Model` to shrink the `Jaguar E-Type` ($L=103$ leaves, depth $D=5$) sequential critical path from `10,336` steps to **`105` steps (`98.44x` speedup)**, achieving **`79.7%` IoU at `3.9s/case` and `$0.005/case`** on the 1,000-part CAD benchmark (**`51.0x` faster and `150.0x` cheaper** than `GPT-6 Astra`).
+
+![SKY-001 Engineering World Model & 19-Model Coding Agent Benchmark Overview](assets/overview.svg)
+
+| Track & Representative Model | Score / IoU | Hidden Assertion Pass Rate | Wall Time / Per-Case Latency | Total / Per-Case Cost | Architectural Role |
+|---|---:|---:|---:|---:|---|
+| **Track A · #1 `Fable 5.1`** | **`99.77 / 100`** | `1,310 / 1,310` (`100%`) | `10,031s` (`167.2m`) | `$3.22` | Absolute quality ceiling |
+| **Track A · #2 `Claude Opus 5.5`** | **`99.68 / 100`** | `1,310 / 1,310` (`100%`) | `4,877s` (`81.3m`) | `$2.69` | Flagship workhorse (`51.4%` faster than Fable) |
+| **Track A · #4 `Claude Haiku 5.5`** | **`99.24 / 100`** | `1,308 / 1,310` (`99.85%`) | `3,167s` (`52.8m`) | **`$0.33`** (`-91.6%`) | **Pareto ROI King (default for 85% daily tasks)** |
+| **Track A · #10 `Gemini 4 Argon`** | **`98.59 / 100`** | **`1,310 / 1,310` (`100%`)** | `2,710s` (`45.2m`) | `$2.82` | First Google model with `100%` hidden pass |
+| **Track B · `SKY-001` (1,000 CAD)** | **`79.7%` IoU** | **`98.44x`** shorter critical path | **`3.9s / case`** (`51.0x`) | **`$0.005 / case`** (`150x`) | Hierarchical 3D state & 2D sketch world model |
+
 ---
 
 ## 1. Attribution, Reproduction Boundaries & Primary Evidence Anchors
 
 - **Provenance Status**: `anonymized_reported` (`independently_reproduced=false`) + Local Deterministic Offline Verifier Suite (`6/6` unit tests passing).
 - **Dual-Track Scope**:
-  1. **Track A — Coding Agent 19-Model Benchmark (Supplement 5)**: Pinned to public repository [`satomic/copilot-benchmark`](https://github.com/satomic/copilot-benchmark) at commit [`a191383571a13143685fd6f7787512c4e281a9ba`](https://github.com/satomic/copilot-benchmark/commit/a191383571a13143685fd6f7787512c4e281a9ba) (`2026-10-15T08:28:58Z`, commit message `"add haiku 5.5 and gemini 5 argon"`; note that the commit message contained a typo `"gemini 5 argon"`, whereas all bundle directories, `run.json` files, and the CAPI `/models` catalog identify the model as `gemini-4-argon` / `Gemini 4 Argon`). Executed on **GitHub Copilot CLI `1.0.98`**, Supplement 5 adds `22` complete run bundles (`11` tasks × `2` models) for **`Claude Haiku 5.5`** and **`Gemini 4 Argon`**, expanding the non-reference matrix from 17 models (`187` runs, see [`coding-agent-17-model-benchmark`](../coding-agent-17-model-benchmark/README.md)) to **19 models × 11 tasks = `209` serial CLI runs** (plus `11` `_reference` golden bundles, with `1,310` hidden `pytest` assertions per model).
+  1. **Track A — Coding Agent 19-Model Benchmark (Supplement 5)**: Pinned to public repository [`satomic/copilot-benchmark`](https://github.com/satomic/copilot-benchmark) at commit [`a191383571a13143685fd6f7787512c4e281a9ba`](https://github.com/satomic/copilot-benchmark/commit/a191383571a13143685fd6f7787512c4e281a9ba) (`2026-10-15T08:28:58Z`, commit message `"add haiku 5.5 and gemini 5 argon"`; note that the commit message contained a typo `"gemini 5 argon"`, whereas all bundle directories, `run.json` files, and the CAPI `/models` catalog identify the model as `gemini-4-argon` / `Gemini 4 Argon`). Executed on **GitHub Copilot CLI `1.0.98`**, Supplement 5 adds `22` complete run bundles (`11` tasks × `2` models) for **`Claude Haiku 5.5`** and **`Gemini 4 Argon`**, expanding the non-reference matrix from 17 models (`187` runs, see [`coding-agent-17-model-benchmark`](../sky-001-coding-agent-benchmark/README.md)) to **19 models × 11 tasks = `209` serial CLI runs** (plus `11` `_reference` golden bundles, with `1,310` hidden `pytest` assertions per model).
   2. **Track B — Skyfall AI `SKY-001` ("The First World Model for Engineering")**: Audited directly from Skyfall AI's production JavaScript bundles published on `2026-10-19` — the product landing bundle (`https://skyfall.ai/assets/index-D5BqB7X_.js`, `494,518` bytes, SHA-256 `1bc34257c0f2f1db82336d13f95f88c391950c0957655377f752954b4cd7199f`) and the technical blog bundle (`https://skyfall.ai/assets/article-D6mnIEDb.js`, `77,103` bytes, SHA-256 `8f22592c0d7f0bc1600158903685a5212ddb417499cde1c1e93754de5e6a9830`). `SKY-001` is currently a waitlist-only closed preview with no public model weights, API, or raw 2,000-case geometry files.
 
 ---

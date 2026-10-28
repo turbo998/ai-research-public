@@ -375,23 +375,35 @@ class TestAgentInfraSizer(unittest.TestCase):
         import xml.etree.ElementTree as ET
         bundle_dir = Path(__file__).resolve().parent.parent
         svg_files = sorted((bundle_dir / "assets").glob("*.svg"))
+        svg_subdir_files = sorted((bundle_dir / "assets" / "svg").glob("*.svg"))
         self.assertEqual(len(svg_files), 8)
-        for svg in svg_files:
+        self.assertEqual(len(svg_subdir_files), 8)
+        for svg in svg_files + svg_subdir_files:
             ET.fromstring(svg.read_text(encoding="utf-8"))
         for h5_name in ("index.html", "demo.html", "selector.html", "cards.html"):
-            p = bundle_dir / "h5" / h5_name
+            p = bundle_dir / h5_name
             self.assertTrue(p.exists(), f"Missing H5 file {h5_name}")
             self.assertGreater(p.stat().st_size, 20_000)
         for doc_name in (
             "README.md",
+            "README.en.md",
+            "docs/full-monograph-archive.md",
             "workshop-runbook.md",
             "test-report.md",
-            "test-report-cards.html",
+            "test-report.en.md",
+            "cards.html",
             "report.json",
             "evidence.json",
             "review.md",
         ):
             self.assertTrue((bundle_dir / doc_name).exists(), f"Missing {doc_name}")
+        self.assertLess((bundle_dir / "README.md").stat().st_size, 50_000)
+        self.assertLess((bundle_dir / "README.en.md").stat().st_size, 50_000)
+        self.assertFalse((bundle_dir / "README.zh-CN.md").exists())
+        self.assertFalse((bundle_dir / "test-report-cards.html").exists())
+        self.assertFalse((bundle_dir / "h5" / "selector.html").exists())
+        self.assertFalse((bundle_dir / "h5" / "cards.html").exists())
+        self.assertFalse((bundle_dir / "h5" / "benchmark-cards.html").exists())
         for bp_name in (
             "aksclaw-kata-fleet.yaml",
             "e2b-apim-per-host-policy.xml",

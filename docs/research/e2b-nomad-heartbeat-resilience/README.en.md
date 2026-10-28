@@ -1,7 +1,18 @@
 # Building E2B Sandbox Resilience: Discovering and Tuning Nomad Heartbeats — Deep Study Notes & Source-Level Architecture Analysis
 
-> **Language / 语言**: [中文 (`README.zh-CN.md`)](README.zh-CN.md) | **English (Current)**  
+> **Language / 语言**: [中文 (`README.md`)](README.md) | **English (`README.en.md`)**  
 > **Deliverables**: [English Benchmark Report (`test-report.en.md`)](test-report.en.md) · [中文评测报告 (`test-report.md`)](test-report.md) · [7-Card 4:5 Visual Deck (`test-report-cards.html`)](test-report-cards.html) · [Sealed Data (`report.json`)](report.json) · [Provenance Ledger (`evidence.json`)](evidence.json) · [Deterministic Simulator (`simulator/`)](simulator/) · [Review Log (`review.md`)](review.md)
+
+> **Executive Summary**:
+> Stopping a single non-Leader Nomad Server in a **3-Server + 20-Client E2B sandbox cluster** under default settings triggers a **`35%` (`7/20`) mass replacement of healthy `Orchestrator` and `session-proxy` allocations**—and a paradoxical timeline where tasks are killed at **`t=39s` (`18s` AFTER heartbeats recover at `t=21s`)**. Root-cause source analysis proves that `hashicorp/yamux` silent-drop detection (`10s–40s`) loses the race against the Nomad Leader's default heartbeat budget (`20s–30s`). Combining **task-group `disconnect` (`lost_after="50s"`, `replace=false`) + Server `heartbeat_grace = "50s"` + fast application-level probes** achieves **`0` false replacements, `10/10` sandbox survival, `23/23` uninterrupted NDJSON streams, and `100%` (`20/20`) new-sandbox placement capacity**.
+
+![E2B × Nomad Heartbeat Race Condition & 3-Layer Resilience Architecture](assets/overview.svg)
+
+| Configuration | Healthy Nodes Marked `down` | `Orchestrator` Replacement Rate | Active Sandboxes & Streams Preserved | New-Sandbox Placement Pool Capacity | Engineering Verdict |
+|---|---:|---:|---:|---:|---|
+| **1. Default Baseline (`heartbeat_grace=10s`, no `disconnect`)** | `7 / 20` (`35%`) | `7 / 20` (`35.0%`) | 35% host sandboxes killed | Drops to `65%` (`+53.85%` load surcharge) | `yamux` slow half (`25–40s`) loses to Leader TTL |
+| **2. Task-Group `disconnect` Only (`lost_after=50s`)** | `7 / 20` (`35%` brief `disconnected`) | **`0 / 20` (`0.0%`)** | **`10/10` sandboxes · `23/23` streams intact** | Temporarily drops to `65%` (`13/20`) | Saves running sandboxes, but shrinks placement pool |
+| **3. `heartbeat_grace=50s` + Full-Path `disconnect` + App Probes** | **`0 / 20` (`0.0%`)** | **`0 / 20` (`0.0%`)** | **`100%` sandboxes & streams intact** | **`20 / 20` (`100%` full capacity)** | **Production Gold Standard (absorbs `<=35s` blips)** |
 
 ---
 

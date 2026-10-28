@@ -1,9 +1,12 @@
 # OpenAI Decisions 加入实测，微软 Decision-1 依旧是首选：8 种多模型路由方案与指令敏感度全景评测（Switchyard v2.4.0 & v2.4.1）
 
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文版 (README.md)](README.md)** | **[🇬🇧 English (README.en.md)](README.en.md)**
 > **分类归属**：`评测与治理` × `Agent 与编排` → **决策模型与多模型路由评测（Decision Models & Model Routing）**
 > **关联基线专题**：[System One 专用决策模型与多模型路由横评（Decision-1 / Jev / OpenJev / Laya / Strands Decider 2B）](../decision-model-routing/README.md) · [LocalJev（OpenJev 27B 与 Laya 8B）开源协议与许可边界审计](../localjev/README.md)
 > **7-Card 4:5 视觉评测报告**：[`test-report.md`](test-report.md) · [`test-report-cards.html`](test-report-cards.html) · **结构化数据**：[`report.json`](report.json) · **证据账本**：[`evidence.json`](evidence.json) · **治理审查**：[`review.md`](review.md)
 > **数据属性（Provenance）**：`anonymized_reported`（`independently_reproduced=false`，基于开源路由器 [`satomic/model-router`](https://github.com/satomic/model-router) `v2.4.0` 与 `v2.4.1` 随附密封实测数据包 `summary8.json` / `summary241.json` / `rows8.json` / `rows241.json` 归档与交叉核验）
+
+![8 种多模型路由方案与指令敏感度全景评测概览](assets/overview.svg)
 
 ---
 

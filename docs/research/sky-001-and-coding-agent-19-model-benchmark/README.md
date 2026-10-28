@@ -4,13 +4,27 @@
 > **结构化数据与证据锁**: [`report.json`](report.json) · [`evidence.json`](evidence.json) · [`evidence/verifier-summary.json`](evidence/verifier-summary.json) · **方法论审查**: [`review.md`](review.md)
 > **可运行离线验证套件**: [`simulator/sky001_and_19model_verifier.py`](simulator/sky001_and_19model_verifier.py) · [`simulator/test_sky001_and_19model_verifier.py`](simulator/test_sky001_and_19model_verifier.py)
 
+> **Executive Summary / 核心结论概览**：
+> - **Track A（Coding Agent 19 模型 × 11 题 = `209` 次 CLI 运行，`1,310` 项隐藏断言/模型）**：**`Claude Haiku 5.5`** 以 **`99.24 / 100` 总均分** 跃居全场 **#4**（仅次于 `Fable 5.1` `99.77`、`Opus 5.5` `99.68`、`Opus 5` `99.59`），总费用从 `Haiku 4.5` 的 `$3.93` 骤降至 **`$0.33`（`-91.6%`）**；**`Gemini 4 Argon`** 以 **`98.59 / 100`（`$2.82`）** 成为第 9 个 **`1,310 / 1,310`（`100%`）隐藏断言全通**模型。
+> - **Track B（Skyfall AI `SKY-001` 工程世界模型）**：采用 `Hierarchical Composer + Construction World Model` 两阶段分层状态规划，在 `Jaguar E-Type`（$L=103$ 叶节点，树深 $D=5$）上将串行关键路径从 `10,336` 步缩短至 **`105` 步（`98.44x` 加速）**；在 1,000 例 CAD 基准上取得 **`79.7%` IoU、`3.9s/例`、`$0.005/例`**（比 `GPT-6 Astra` **快 `51.0x`、便宜 `150.0x`**）。
+
+![SKY-001 工程世界模型与 19 模型 Coding Agent 基准架构总览](assets/overview.svg)
+
+| 评测轨道与代表模型 | 综合得分 / IoU 精度 | 隐藏断言通过率 | 总耗时 / 单例延迟 | 总成本 / 单例成本 | 核心工程定位 |
+|---|---:|---:|---:|---:|---|
+| **Track A · #1 `Fable 5.1`** | **`99.77 / 100`** | `1,310 / 1,310` (`100%`) | `10,031s` (`167.2m`) | `$3.22` | 质量绝对上限标杆 |
+| **Track A · #2 `Claude Opus 5.5`** | **`99.68 / 100`** | `1,310 / 1,310` (`100%`) | `4,877s` (`81.3m`) | `$2.69` | 旗舰综合主力（比 Fable 快 `51.4%`） |
+| **Track A · #4 `Claude Haiku 5.5`** | **`99.24 / 100`** | `1,308 / 1,310` (`99.85%`) | `3,167s` (`52.8m`) | **`$0.33`** (`-91.6%`) | **Pareto 性价比之王（85% 日常任务首选）** |
+| **Track A · #10 `Gemini 4 Argon`** | **`98.59 / 100`** | **`1,310 / 1,310` (`100%`)** | `2,710s` (`45.2m`) | `$2.82` | Google 首个 `100%` 隐藏测试全通模型 |
+| **Track B · `SKY-001` (1,000 CAD)** | **`79.7%` IoU** | 关键路径缩短 **`98.44x`** | **`3.9s / 例`** (`51.0x`) | **`$0.005 / 例`** (`150x`) | 分层 3D 状态与 2D 草图规划世界模型 |
+
 ---
 
 ## 1. 归属、复现边界与一手证据锚点
 
 - **数据来源标识**：`anonymized_reported`（`independently_reproduced=false`）+ 本地确定性离线验证套件（`6/6` 单元测试通过）。
 - **双轨研究对象**：
-  1. **Track A — Coding Agent 十九模型基准（增补报告 5）**：固定引用公开仓库 [`satomic/copilot-benchmark`](https://github.com/satomic/copilot-benchmark) 的提交 [`a191383571a13143685fd6f7787512c4e281a9ba`](https://github.com/satomic/copilot-benchmark/commit/a191383571a13143685fd6f7787512c4e281a9ba)（`2026-10-15T08:28:58Z`，提交说明 `"add haiku 5.5 and gemini 5 argon"`；注：提交信息将 `gemini-4-argon` 笔误写为 `gemini 5 argon`，而运行包目录名、`run.json` 与 CAPI `/models` 目录均为 `gemini-4-argon`）。该批次在 **GitHub Copilot CLI `1.0.98`** 下新增了 **`Claude Haiku 5.5`** 与 **`Gemini 4 Argon`** 的 `22` 份完整运行包（`11` 道任务 × `2` 模型），使非参考评测矩阵从 17 模型（`187` 次运行，见前序 [`coding-agent-17-model-benchmark`](../coding-agent-17-model-benchmark/README.md)）扩展至 **19 模型 × 11 题 = `209` 次串行 CLI 运行**（外加 `11` 份 `_reference` 黄金实现包，每模型 `1,310` 项隐藏 `pytest` 断言）。
+  1. **Track A — Coding Agent 十九模型基准（增补报告 5）**：固定引用公开仓库 [`satomic/copilot-benchmark`](https://github.com/satomic/copilot-benchmark) 的提交 [`a191383571a13143685fd6f7787512c4e281a9ba`](https://github.com/satomic/copilot-benchmark/commit/a191383571a13143685fd6f7787512c4e281a9ba)（`2026-10-15T08:28:58Z`，提交说明 `"add haiku 5.5 and gemini 5 argon"`；注：提交信息将 `gemini-4-argon` 笔误写为 `gemini 5 argon`，而运行包目录名、`run.json` 与 CAPI `/models` 目录均为 `gemini-4-argon`）。该批次在 **GitHub Copilot CLI `1.0.98`** 下新增了 **`Claude Haiku 5.5`** 与 **`Gemini 4 Argon`** 的 `22` 份完整运行包（`11` 道任务 × `2` 模型），使非参考评测矩阵从 17 模型（`187` 次运行，见前序 [`coding-agent-17-model-benchmark`](../sky-001-coding-agent-benchmark/README.md)）扩展至 **19 模型 × 11 题 = `209` 次串行 CLI 运行**（外加 `11` 份 `_reference` 黄金实现包，每模型 `1,310` 项隐藏 `pytest` 断言）。
   2. **Track B — Skyfall AI `SKY-001` 工程世界模型（The First World Model for Engineering）**：固定审计 Skyfall AI 于 `2026-10-19` 发布的产品着陆页前端生产包（`https://skyfall.ai/assets/index-D5BqB7X_.js`，`494,518` 字节，SHA-256 `1bc34257c0f2f1db82336d13f95f88c391950c0957655377f752954b4cd7199f`）与技术博客生产包（`https://skyfall.ai/assets/article-D6mnIEDb.js`，`77,103` 字节，SHA-256 `8f22592c0d7f0bc1600158903685a5212ddb417499cde1c1e93754de5e6a9830`）。`SKY-001` 目前处于仅限候补名单（Waitlist-only）的闭源预览阶段，未公开模型权重、API 或 2,000 例原始几何资产。
 
 ---

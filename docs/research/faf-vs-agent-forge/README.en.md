@@ -14,6 +14,11 @@
 > Although **`customer-success-microsoft/faf-agents`** (documented internally as **Agent Forge (FAF)**, marketplace name `agent-forge-plugins`, `v2.0.1`) and **`microsoft/agent-forge`** (published on npm as `@agent-forge-copilot/cli`, `v0.3.0`) share the name "Agent Forge", they operate at **completely different meta-levels** and solve distinct, complementary problems:
 > 1. **`customer-success-microsoft/faf-agents` (FAF v2.0.1)** is a **pre-built, domain-specific Agentic SDLC Delivery System & Copilot Plugin Marketplace** for enterprise customer engagements. It ships **6 GA GenAI Role Agents + 6 registered Fabric Analytics Agents (plus 3 experimental workflow runners in source) + 17 curated domain skills + quantitative scoring cards + external Knowledge Base management (Harness Engineering)**—guiding solution architects and delivery engineers from customer discovery, AI initiative prioritization (9 gates), C4 architecture specification, and weighted accelerator scoring (`>70%` Agentic Customization vs. `<40%` Agentic Development) through Azure Bicep Landing Zone deployment and code implementation.
 > 2. **`microsoft/agent-forge` (`@agent-forge-copilot/cli` v0.3.0)** is a **stack-agnostic Context Engineering Meta-Generator CLI**. Rather than shipping domain delivery methodology or Azure/Fabric architects, it runs a multi-agent **Planner → Orchestrator → 7 Specialized Writer Agents → Deterministic Validator (44 valid VS Code tools + Levenshtein distance `<=3` typo auto-fix) → Smart Merger** pipeline (`forge init` / `forge generate`) that inspects *any* software repository (14 tech-stack manifest detectors) and dynamically synthesizes tailored `.github/agents/`, `.github/prompts/`, `.github/instructions/`, `.github/skills/`, `.github/hooks/`, `.vscode/mcp.json`, and `.github/workflows/`.
+> 3. **Microsoft HVE-Core (`v3.3.101`)** complements both with a rigorous **4-stage RPI (`Research → Plan → Implement → Review`) + adversarial `task-challenger` verification harness**, forming a complete triad: **Context Synthesis (`AGENT-FORGE`) → Enterprise SDLC Governance (`FAF v2`) → Adversarial RPI Execution (`HVE-Core`)**.
+
+![FAF v2 vs Microsoft AGENT-FORGE vs HVE-Core Three-Way Architecture Comparison](assets/three-way-comparison.svg)
+
+![3-Way Pelican Bicycle Showdown Benchmark Overview](assets/pelican-benchmark-overview.svg)
 
 ---
 

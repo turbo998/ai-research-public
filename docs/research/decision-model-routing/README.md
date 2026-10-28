@@ -1,5 +1,22 @@
 # Jev / Microsoft-Decision-1 / Strands Decider 与 Foundry 多模型路由研究
 
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文版 (README.md)](README.md)** | **[🇬🇧 English (README.en.md)](README.en.md)** | **[📊 Switchyard 8 引擎 × 3,880 次调用扩展评测 (`../openai-decisions-vs-decision-1-routing-benchmark/README.md`)](../openai-decisions-vs-decision-1-routing-benchmark/README.md)**
+
+> **Executive Summary / 核心结论概览**：
+> **专用决策模型（System One）非常适合闭集分类、工具/模型选择、概率门控（Confidence Gating）与 Rubric 评分，但不替代开放式生成、复杂多步推理或确定性权限控制。** 本研究在 `384` 行决策矩阵 + `160` 行端到端（E2E）正式评测集上对比了 **TypeSafe Jev (`jev-1.13.0`)**、**Microsoft-Decision-1（Foundry 托管后训练 Qwen3.5-9B）** 与 **本地 Strands Decider** 配合 **`gpt-5.4-mini` / `gpt-6.1-sol`** 的多模型路由表现：
+> 1. **Microsoft-Decision-1 单题分类与评分精度**：闭集分类 `13/16`、Score MAE 低至 **`0.0082`**，网络 P50 延迟约 **`0.6–0.7s`**，按单输出 Token 计费具备显著云端成本优势。
+> 2. **本地 Strands Decider CPU 基线**：本机 CPU 闭集分类同样达到 `13/16`（评分 `4/16` 通过，RAG 路由 `16/16`，客服路由 `2/16`），证明轻量级 `<answer>` Logprob 协议在闭集选择上的有效性，但在复杂评分上弱于 `9B` 级的 `Microsoft-Decision-1`。
+> 3. **端到端路由治理铁律**：客服场景下 `strong-only (gpt-6.1-sol)`（`13/16`）显著优于未校准的原生降级路由（`9/16` 与 `2/16`）；生产落地必须移除诱导“优先选便宜模型”的偏置提示词，并配合 `0.60` 置信度阈值向强模型兜底升级。
+
+![System One 决策模型与多模型路由架构总览](assets/overview.svg)
+
+| 评测模型 / 路由方案 | 架构与运行形态 | 闭集分类通过率 | Rubric 评分表现 | 客服 E2E (`n=16`) | RAG E2E (`n=16`) | 核心适用边界 |
+|---|---|---:|---:|---:|---:|---|
+| **Microsoft-Decision-1** | Foundry 托管 API（后训练 `Qwen3.5-9B`） | **`13 / 16`** | **MAE `0.0082`** | `9 / 16` (Native Routing) | **`16 / 16`** | 云端首选闭集分类、Rubric 评分与概率门控 |
+| **Strands Decider (Local CPU)** | 本地开源权重（CPU 推理） | **`13 / 16`** | `4 / 16` 通过 | `2 / 16` (Native Routing) | **`16 / 16`** | 边缘/本地零 API 费闭集初筛，不适合复杂打分 |
+| **TypeSafe Jev (`jev-1.13.0`)** | 托管 System One API（Switchyard `40/40`） | Switchyard `98.3%–100%` | 原生支持 `Score` | 需外部 Key 启用 | 需外部 Key 启用 | 低延迟（`~350ms`）高抗干扰商业 System One |
+| **Strong-Only (`gpt-6.1-sol`)** | Foundry 旗舰生成模型直接应答 | — | — | **`13 / 16` (最高质量)** | **`16 / 16`** | 高风险/强逻辑客服应答的质量锚点与兜底通道 |
+
 ## 结论与状态
 
 **决策模型适合闭集分类、工具/模型选择、概率门控和 rubric 评分，不替代开放式生成、复杂推理或确定性的权限控制。** 本专题比较 TypeSafe Jev、Microsoft-Decision-1 与开源 Strands Decider，设计与 Foundry 中 `gpt-5.4-mini`、`gpt-6.1-sol` 组合的应用层路由。

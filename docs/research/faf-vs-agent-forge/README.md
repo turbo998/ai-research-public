@@ -14,6 +14,11 @@
 > 尽管 **`customer-success-microsoft/faf-agents`**（仓库文档自称 **Agent Forge (FAF)**，Marketplace 名称 `agent-forge-plugins`，`v2.0.1`）与 **`microsoft/agent-forge`**（npm 包 `@agent-forge-copilot/cli`，`v0.3.0`）共享了“Agent Forge”这一名称，但二者处于**完全不同的元层级（Meta-Level）**，解决的问题截然不同且天然互补：
 > 1. **`customer-success-microsoft/faf-agents` (FAF v2.0.1)** 是面向企业客户交付的 **“预置领域专家团队与全生命周期（SDLC）交付实践插件集”**。它直接提供已经调校好的 **6 个 GenAI 角色 Agent + 6 个 Fabric Analytics 正式注册 Agent（外加 3 个实验性工作流 Runner）+ 17 个专项领域技能（Skills）+ 加权评分卡 + 外部知识库管理（Harness Engineering）**，指导架构师和顾问完成从客户需求梳理、AI 优先级门禁评估、C4 架构设计、预置加速器加权打分（`>70%` 走定制复用 vs. `<40%` 走从零开发）到 Azure Bicep Landing Zone 部署与代码落地的全过程。
 > 2. **`microsoft/agent-forge` (`@agent-forge-copilot/cli` v0.3.0)** 是面向任意软件工程仓库的 **“上下文工程元编译器（Context Engineering Meta-Generator Toolkit）”**。它本身不包含任何行业交付方法论或预置业务架构师，而是通过 `forge init` / `forge generate` 驱动一套 **Planner → Orchestrator → 7 个专项 Writer Agents → Deterministic Validator（44 工具白名单 + Levenshtein 距离 `<=3` 自动纠错）→ Smart Merger** 流水线，自动扫描你的代码库（支持 14 种技术栈指示文件）并为你**动态生成**专属的 `.github/agents/`、`.github/prompts/`、`.github/instructions/`、`.github/skills/`、`.github/hooks/`、`.vscode/mcp.json` 与 `.github/workflows/`。
+> 3. **Microsoft HVE-Core (`v3.3.101`)** 则提供严谨的 **四阶段 RPI（Research → Plan → Implement → Review）+ `task-challenger` 对抗验证闭环**，三者共同构成从“仓库上下文自动合成（AGENT-FORGE）→ 企业 SDLC 门禁治理（FAF v2）→ 高强度 RPI 对抗验证（HVE-Core）”的完整工程体系。
+
+![FAF v2 vs Microsoft AGENT-FORGE vs HVE-Core 三方架构对比](assets/three-way-comparison.svg)
+
+![三套件同题对决：动画版鹈鹕骑自行车 (Pelican Bicycle Showdown) 评测概览](assets/pelican-benchmark-overview.svg)
 
 ---
 

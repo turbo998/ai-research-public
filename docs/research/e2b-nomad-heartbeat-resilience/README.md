@@ -1,7 +1,18 @@
 # 构建 E2B 沙箱韧性：Nomad 心跳机制的发现与实践 — 深度学习笔记与源码级架构解析
 
-> **语言 / Language**: **中文 (`README.zh-CN.md`)** | [English (`README.en.md`)](README.en.md)  
+> **语言 / Language**: **中文 (`README.md`)** | [English (`README.en.md`)](README.en.md)  
 > **配套产出 / Deliverables**: [中文评测报告 (`test-report.md`)](test-report.md) · [English Report (`test-report.en.md`)](test-report.en.md) · [7-Card 4:5 可视化卡片 (`test-report-cards.html`)](test-report-cards.html) · [密封评测数据 (`report.json`)](report.json) · [溯源账本 (`evidence.json`)](evidence.json) · [确定性仿真验证器 (`simulator/`)](simulator/) · [复核记录 (`review.md`)](review.md)
+
+> **Executive Summary / 核心结论概览**：
+> 在 **E2B + HashiCorp Nomad（3 Server + 20 Client）** 集群中仅关停 **1 台非 Leader Server**，默认配置下却因 **`yamux` 静默断连检测耗时（`10s–40s`）大于 Nomad Leader 心跳超时窗口（`20s–30s`）**，导致 **`35%`（`7/20`）健康宿主机上的 `Orchestrator` 与 `session-proxy` 被误杀替换**，并出现“`t=21s` 心跳恢复、`t=39s` 旧任务反而被 `Killing`”的因果倒置假象。通过 **全链路任务组配置 `disconnect`（`lost_after="50s"`, `replace=false`）+ Server 端 `heartbeat_grace = "50s"` + 业务层快速健康探测** 三层防御，可实现 **`0` 次误杀替换、`10/10` 沙箱内存/PID 无损、`23/23` 长连接不断流、`20/20` 节点 `100%` 保持新建沙箱可用容量**。
+
+![E2B × Nomad 心跳竞争机理与三层韧性防御架构图](assets/overview.svg)
+
+| 实验配置方案 | 存活节点误判 `down` | `Orchestrator` 替换率 | 存量沙箱存活 / 长流保持 | 新建沙箱可用节点池容量 | 核心工程评价 |
+|---|---:|---:|---:|---:|---|
+| **1. 默认基线 (`heartbeat_grace=10s`, 无 `disconnect`)** | `7 / 20` (`35%`) | `7 / 20` (`35.0%`) | 35% 宿主机沙箱中断 | 跌至 `65%`（单机负载 `+53.85%`） | `yamux` 慢半区（`25–40s`）必输给 Leader 超时 |
+| **2. 仅配任务组 `disconnect` (`lost_after=50s`)** | `7 / 20` (`35%` 短暂 `disconnected`) | **`0 / 20` (`0.0%`)** | **`10/10` 沙箱 · `23/23` 长流无损** | 故障窗口内仍跌至 `65%` (`13/20`) | 保住存量沙箱，但未消除新建容量爆炸半径 |
+| **3. `heartbeat_grace=50s` + 全链路 `disconnect` + 业务探测** | **`0 / 20` (`0.0%`)** | **`0 / 20` (`0.0%`)** | **`100%` 存量沙箱与长流无损** | **`20 / 20` (`100%` 满容量在线)** | **生产推荐黄金组合（容忍 `<=35s` 控制面抖动）** |
 
 ---
 
