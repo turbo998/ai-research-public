@@ -8,7 +8,7 @@ import json
 import sys
 from pathlib import Path
 
-HARNESS_SRC = Path(r"C:\Users\qichen2\benchmark-harness-engineering\src")
+HARNESS_SRC = Path.home() / "benchmark-harness-engineering" / "src"
 sys.path.insert(0, str(HARNESS_SRC))
 
 from benchmark_harness.cards import render_card_deck  # noqa: E402

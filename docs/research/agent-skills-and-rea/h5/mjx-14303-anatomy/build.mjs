@@ -1,11 +1,11 @@
 import { writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import * as k from "file:///C:/Users/qichen2/.copilot/skills/anatomy/kit/iso-kit.mjs";
-import * as G from "file:///C:/Users/qichen2/.copilot/skills/anatomy/kit/lathe.mjs";
-import { tubePieces, tubeSvg } from "file:///C:/Users/qichen2/.copilot/skills/anatomy/kit/tube.mjs";
-import * as A from "file:///C:/Users/qichen2/.copilot/skills/anatomy/kit/audit.mjs";
-import { kitScript } from "file:///C:/Users/qichen2/.copilot/skills/anatomy/scripts/inline-kit.mjs";
+import * as k from "file:///C:/Users/user/.copilot/skills/anatomy/kit/iso-kit.mjs";
+import * as G from "file:///C:/Users/user/.copilot/skills/anatomy/kit/lathe.mjs";
+import { tubePieces, tubeSvg } from "file:///C:/Users/user/.copilot/skills/anatomy/kit/tube.mjs";
+import * as A from "file:///C:/Users/user/.copilot/skills/anatomy/kit/audit.mjs";
+import { kitScript } from "file:///C:/Users/user/.copilot/skills/anatomy/scripts/inline-kit.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const theme = process.argv.includes("--light") ? "light" : "dark";
