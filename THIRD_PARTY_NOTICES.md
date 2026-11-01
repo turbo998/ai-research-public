@@ -1,5 +1,11 @@
 # 第三方声明
 
+## Microsoft DEFEND 合作伙伴剧本、SMB 安全工具包与 Security AI Landing Zone 研究
+
+- **DEFEND Partner Playbook (`docs/research/defend-partner-playbook/`)**：原始参考材料显式包含微软合作伙伴剧本免责声明（属合作伙伴开发的服务构建体系，不代表微软官方产品或 SKU 承诺）。本库仅收录去标识化后的架构模型、41 项能力矩阵、51 项退出门禁与原创确定性验证器（`simulator/defend_tier_readiness_verifier.py`）。
+- **Microsoft Security Partner Toolkit for SMB 开源仓库引用**：[`microsoft/DataSecurityGuidedAssistant`](https://github.com/microsoft/DataSecurityGuidedAssistant)（v2.0.1572）、[`microsoft/SOWGenerator`](https://github.com/microsoft/SOWGenerator)（MIT License）与 [`microsoft/BestPractice_Deploy-Scripts`](https://github.com/microsoft/BestPractice_Deploy-Scripts)（PowerShell 7+ `SMBBestPracticeTool`）。本库仅引用其公开架构、任务分类与脚本门禁机制，不重新分发完整上游仓库代码。
+- **Security AI Landing Zone & Frontier SOC (`docs/research/security-ai-landing-zone/`)**：基于 42 页《The path to the Frontier: AI for Security × Security for AI》进行脱敏整理（已剥离演讲者个人姓名与追踪参数）。文中提及的 Microsoft 365、Copilot、Microsoft Agent 365、Entra、Purview、Defender、Sentinel、ISOC、MDASH 等产品名称与商标均归 Microsoft Corporation 所有；Dragos 与 Gambit Security 威胁情报引用自 Slide 3 公开报道摘要。
+
 ## Gemini 4 Carbon 网安/长程智能体与 Coding Agent 二十模型基准深度评测（增补报告 6）
 
 - **Google DeepMind (`Gemini 4 Carbon`)**：基于公开技术文章 `https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/` 与官方评测报告 `https://storage.googleapis.com/deepmind-media/gemini/gemini_4_carbon_model_evaluation.pdf`（`2026-10-28`）中披露的 17 项核心基准、网安防御子榜单与 Gray Swan IPI 对抗指标进行独立算术核验与架构评述（[`docs/research/gemini-4-carbon-and-20-model-benchmark/`](docs/research/gemini-4-carbon-and-20-model-benchmark/README.md)，标注 `anonymized_reported`, `independently_reproduced=false`），不代表获得 Fairwind Program 闭源模型权重或私有评测集许可。

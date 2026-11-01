@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 760" width="1240" height="760" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="headerBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="tierBase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="tierSec" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="tierComp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="tierComplete" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#3b0764"/>
+    </linearGradient>
+    <linearGradient id="tierExtend" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#431407"/>
+    </linearGradient>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#60a5fa"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#34d399"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="760" rx="18" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="1240" height="8" rx="4" fill="url(#headerBar)"/>
+
+  <!-- Title Header -->
+  <text x="36" y="44" fill="#38bdf8" font-size="13" font-weight="700" letter-spacing="1.5">MICROSOFT PARTNER PLAYBOOK · DEFEND FIVE-TIER MANAGED SECURITY &amp; COMPLIANCE ARCHITECTURE</text>
+  <text x="36" y="72" fill="#f8fafc" font-size="23" font-weight="800">DEFEND 五级托管安全与合规架构全景图 (Business Premium + Defender &amp; Purview Suites + Sentinel)</text>
+  <text x="36" y="96" fill="#94a3b8" font-size="13">覆盖 7 维零信任态势评估 (Zero Trust Assessment) · M365 Lighthouse (GDAP) 跨租户控制面 · Intune Plan 1 终端强制引擎 · 51 项強制准出标准 (Exit Criteria)</text>
+
+  <!-- Top Row: Pre-DEFEND Assessment & Operating Foundations -->
+  <rect x="36" y="114" width="370" height="106" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="54" y="138" fill="#38bdf8" font-size="12" font-weight="700">PHASE 0 · MICROSOFT ZERO TRUST ASSESSMENT (7 DIMENSIONS)</text>
+  <text x="54" y="158" fill="#f8fafc" font-size="14" font-weight="700">准入前 7 维零信任态势评估 (Slide 24)</text>
+  <text x="54" y="179" fill="#cbd5e1" font-size="11.5">• Identity · Devices · Applications · Data · Infrastructure</text>
+  <text x="54" y="197" fill="#cbd5e1" font-size="11.5">• Networks · AI (Copilot &amp; Shadow AI Readiness)</text>
+  <rect x="285" y="124" width="106" height="22" rx="11" fill="#0284c7"/>
+  <text x="338" y="139" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle">Evidence Baseline</text>
+
+  <rect x="430" y="114" width="380" height="106" rx="12" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="448" y="138" fill="#818cf8" font-size="12" font-weight="700">MULTI-TENANT CONTROL PLANE · M365 LIGHTHOUSE (GDAP)</text>
+  <text x="448" y="158" fill="#f8fafc" font-size="14" font-weight="700">跨租户标准化基线与态势追踪层 (Slide 21)</text>
+  <text x="448" y="179" fill="#cbd5e1" font-size="11.5">• 强制 GDAP 最小权限委托管理 · 跨租户 MFA/CA/合规基线对齐</text>
+  <text x="448" y="197" fill="#fbbf24" font-size="11.5">• 边界：非 SOC 平台 (→Sentinel)，非设备权威源 (→Intune)</text>
+
+  <rect x="834" y="114" width="370" height="106" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="852" y="138" fill="#34d399" font-size="12" font-weight="700">ENFORCEMENT ENGINE · MICROSOFT INTUNE PLAN 1</text>
+  <text x="852" y="158" fill="#f8fafc" font-size="14" font-weight="700">设备端策略强制与合规信号源 (Slide 22)</text>
+  <text x="852" y="179" fill="#cbd5e1" font-size="11.5">• Windows / Edge / M365 安全基线 · BitLocker · ASR 规则</text>
+  <text x="852" y="197" fill="#cbd5e1" font-size="11.5">• 自动注册 Defender for Endpoint · 驱动 Entra ID 条件访问</text>
+
+  <!-- Five Service Tiers Progression -->
+  <!-- Tier 1: DEFENDBase -->
+  <rect x="36" y="244" width="218" height="340" rx="14" fill="url(#tierBase)" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="50" y="258" width="96" height="22" rx="6" fill="#2563eb"/>
+  <text x="98" y="273" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">TIER 1 · BASE</text>
+  <text x="196" y="273" fill="#93c5fd" font-size="11" font-weight="700" text-anchor="end">11 Exit Checks</text>
+  <text x="50" y="302" fill="#ffffff" font-size="18" font-weight="800">DEFENDBase</text>
+  <text x="50" y="321" fill="#93c5fd" font-size="11.5" font-weight="600">激活并运营存量 Business Premium</text>
+  <line x1="50" y1="332" x2="238" y2="332" stroke="#3b82f6" stroke-opacity="0.5"/>
+  <text x="50" y="352" fill="#e2e8f0" font-size="11.5" font-weight="700">许可底座 (License Baseline):</text>
+  <text x="50" y="369" fill="#bfdbfe" font-size="11">• Microsoft 365 Business Premium</text>
+  <text x="50" y="393" fill="#e2e8f0" font-size="11.5" font-weight="700">核心交付组件 (Slide 27):</text>
+  <text x="50" y="411" fill="#cbd5e1" font-size="11">• Entra ID P1: 全员+管理员强制 MFA</text>
+  <text x="50" y="428" fill="#cbd5e1" font-size="11">• 基线条件访问 &amp; 封禁旧版认证</text>
+  <text x="50" y="445" fill="#cbd5e1" font-size="11">• Intune 注册 + 全盘加密 + DfB 健康</text>
+  <text x="50" y="462" fill="#cbd5e1" font-size="11">• Defender for Office P1 (Safe Links)</text>
+  <text x="50" y="479" fill="#cbd5e1" font-size="11">• Secure Score 基线 + 初始风险台账</text>
+  <rect x="50" y="538" width="188" height="32" rx="8" fill="#0f172a" stroke="#3b82f6"/>
+  <text x="144" y="558" fill="#60a5fa" font-size="11" font-weight="700" text-anchor="middle">Gate 1: 11/11 True or Risk Accepted</text>
+
+  <!-- Tier 2A: DEFENDSecurity -->
+  <rect x="274" y="244" width="218" height="340" rx="14" fill="url(#tierSec)" stroke="#818cf8" stroke-width="2"/>
+  <rect x="288" y="258" width="110" height="22" rx="6" fill="#4f46e5"/>
+  <text x="343" y="273" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">TIER 2A · SECURITY</text>
+  <text x="478" y="273" fill="#c7d2fe" font-size="11" font-weight="700" text-anchor="end">12 Exit Checks</text>
+  <text x="288" y="302" fill="#ffffff" font-size="18" font-weight="800">DEFENDSecurity</text>
+  <text x="288" y="321" fill="#c7d2fe" font-size="11.5" font-weight="600">威胁检测、调查与自动化响应工作流</text>
+  <line x1="288" y1="332" x2="476" y2="332" stroke="#6366f1" stroke-opacity="0.5"/>
+  <text x="288" y="352" fill="#e2e8f0" font-size="11.5" font-weight="700">许可底座 (License Step-Up):</text>
+  <text x="288" y="369" fill="#c7d2fe" font-size="11">• BP + Microsoft Defender Suite</text>
+  <text x="288" y="393" fill="#e2e8f0" font-size="11.5" font-weight="700">核心交付组件 (Slide 9, 28):</text>
+  <text x="288" y="411" fill="#cbd5e1" font-size="11">• Entra ID P2: 基于风险 CA / PIM</text>
+  <text x="288" y="428" fill="#cbd5e1" font-size="11">• MDE P2: TVM、Live Response、AIR</text>
+  <text x="288" y="445" fill="#cbd5e1" font-size="11">• MDO P2: 攻击模拟训练 &amp; Threat Explorer</text>
+  <text x="288" y="462" fill="#cbd5e1" font-size="11">• Defender for Identity (AD 横向移动)</text>
+  <text x="288" y="479" fill="#cbd5e1" font-size="11">• Defender for Cloud Apps (AI/OAuth)</text>
+  <text x="288" y="496" fill="#cbd5e1" font-size="11">• 告警归属确认与噪音调优</text>
+  <rect x="288" y="538" width="188" height="32" rx="8" fill="#0f172a" stroke="#6366f1"/>
+  <text x="382" y="558" fill="#818cf8" font-size="11" font-weight="700" text-anchor="middle">Gate 2A: 12/12 True or Accepted</text>
+
+  <!-- Tier 2B: DEFENDCompliance -->
+  <rect x="512" y="244" width="218" height="340" rx="14" fill="url(#tierComp)" stroke="#34d399" stroke-width="2"/>
+  <rect x="526" y="258" width="122" height="22" rx="6" fill="#059669"/>
+  <text x="587" y="273" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">TIER 2B · COMPLIANCE</text>
+  <text x="716" y="273" fill="#a7f3d0" font-size="11" font-weight="700" text-anchor="end">11 Exit Checks</text>
+  <text x="526" y="302" fill="#ffffff" font-size="18" font-weight="800">DEFENDCompliance</text>
+  <text x="526" y="321" fill="#a7f3d0" font-size="11.5" font-weight="600">数据分类、内部风险、审计与 AI 治理</text>
+  <line x1="526" y1="332" x2="714" y2="332" stroke="#10b981" stroke-opacity="0.5"/>
+  <text x="526" y="352" fill="#e2e8f0" font-size="11.5" font-weight="700">许可底座 (License Step-Up):</text>
+  <text x="526" y="369" fill="#a7f3d0" font-size="11">• BP + Microsoft Purview Suite</text>
+  <text x="526" y="393" fill="#e2e8f0" font-size="11.5" font-weight="700">核心交付组件 (Slide 12, 29):</text>
+  <text x="526" y="411" fill="#cbd5e1" font-size="11">• Insider Risk Mgmt &amp; 自适应保护</text>
+  <text x="526" y="428" fill="#cbd5e1" font-size="11">• Audit Premium (扩展留存与高级检索)</text>
+  <text x="526" y="445" fill="#cbd5e1" font-size="11">• eDiscovery Premium (法律保全/分析)</text>
+  <text x="526" y="462" fill="#cbd5e1" font-size="11">• 自动敏感度标签 &amp; 终端/Teams DLP</text>
+  <text x="526" y="479" fill="#cbd5e1" font-size="11">• Compliance Manager + DSPM for AI</text>
+  <text x="526" y="496" fill="#cbd5e1" font-size="11">• Copilot DLP &amp; 销毁审批归属确认</text>
+  <rect x="526" y="538" width="188" height="32" rx="8" fill="#0f172a" stroke="#10b981"/>
+  <text x="620" y="558" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">Gate 2B: 11/11 True or Accepted</text>
+
+  <!-- Tier 3: DEFENDComplete -->
+  <rect x="750" y="244" width="218" height="340" rx="14" fill="url(#tierComplete)" stroke="#c084fc" stroke-width="2"/>
+  <rect x="764" y="258" width="114" height="22" rx="6" fill="#7e22ce"/>
+  <text x="821" y="273" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">TIER 3 · COMPLETE</text>
+  <text x="954" y="273" fill="#e9d5ff" font-size="11" font-weight="700" text-anchor="end">8 Exit Checks</text>
+  <text x="764" y="302" fill="#ffffff" font-size="18" font-weight="800">DEFENDComplete</text>
+  <text x="764" y="321" fill="#e9d5ff" font-size="11.5" font-weight="600">安全与合规统一运营模型 (必经底座)</text>
+  <line x1="764" y1="332" x2="952" y2="332" stroke="#a855f7" stroke-opacity="0.5"/>
+  <text x="764" y="352" fill="#e2e8f0" font-size="11.5" font-weight="700">许可底座 (Combined Add-On):</text>
+  <text x="764" y="369" fill="#e9d5ff" font-size="11">• BP + Defender &amp; Purview Suites</text>
+  <text x="764" y="393" fill="#e2e8f0" font-size="11.5" font-weight="700">核心交付组件 (Slide 15, 30, 38):</text>
+  <text x="764" y="411" fill="#cbd5e1" font-size="11">• 100% 满足 Security + Compliance 准出</text>
+  <text x="764" y="428" fill="#cbd5e1" font-size="11">• Lighthouse 统一跨租户态势报告</text>
+  <text x="764" y="445" fill="#cbd5e1" font-size="11">• Defender 事件准确率复核与降噪</text>
+  <text x="764" y="462" fill="#cbd5e1" font-size="11">• 持续维护的风险台账与例外审批流</text>
+  <text x="764" y="479" fill="#cbd5e1" font-size="11">• 安全、IT 与合规三方职责对齐</text>
+  <text x="764" y="496" fill="#cbd5e1" font-size="11">• 面向高管的统一治理汇报机制</text>
+  <rect x="764" y="538" width="188" height="32" rx="8" fill="#0f172a" stroke="#c084fc"/>
+  <text x="858" y="558" fill="#c084fc" font-size="11" font-weight="700" text-anchor="middle">Gate 3: 8/8 + Hard Prerequisite</text>
+
+  <!-- Tier 4: DEFENDExtend -->
+  <rect x="988" y="244" width="216" height="340" rx="14" fill="url(#tierExtend)" stroke="#fb923c" stroke-width="2"/>
+  <rect x="1002" y="258" width="106" height="22" rx="6" fill="#ea580c"/>
+  <text x="1055" y="273" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">TIER 4 · EXTEND</text>
+  <text x="1190" y="273" fill="#fed7aa" font-size="11" font-weight="700" text-anchor="end">9 Exit Checks</text>
+  <text x="1002" y="302" fill="#ffffff" font-size="18" font-weight="800">DEFENDExtend</text>
+  <text x="1002" y="321" fill="#fed7aa" font-size="11.5" font-weight="600">托管安全运营中心 (SIEM/SOAR/SOC)</text>
+  <line x1="1002" y1="332" x2="1190" y2="332" stroke="#f97316" stroke-opacity="0.5"/>
+  <text x="1002" y="352" fill="#e2e8f0" font-size="11.5" font-weight="700">许可与强制前置 (Slide 31, 40):</text>
+  <text x="1002" y="369" fill="#fed7aa" font-size="11">• Complete + Microsoft Sentinel</text>
+  <text x="1002" y="393" fill="#e2e8f0" font-size="11.5" font-weight="700">核心交付组件 (Slide 31, 39):</text>
+  <text x="1002" y="411" fill="#cbd5e1" font-size="11">• Sentinel SIEM 工作区加固与日志汇聚</text>
+  <text x="1002" y="428" fill="#cbd5e1" font-size="11">• Defender XDR 跨域事件双向关联</text>
+  <text x="1002" y="445" fill="#cbd5e1" font-size="11">• SOAR 自动化遏制剧本部署与验证</text>
+  <text x="1002" y="462" fill="#cbd5e1" font-size="11">• Security Copilot 辅助分诊场景评审</text>
+  <text x="1002" y="479" fill="#cbd5e1" font-size="11">• 合作伙伴 SOC SLA 与升级路径</text>
+  <text x="1002" y="496" fill="#cbd5e1" font-size="11">• 季度演练与检测规则调优闭环</text>
+  <rect x="1002" y="538" width="188" height="32" rx="8" fill="#0f172a" stroke="#fb923c"/>
+  <text x="1096" y="558" fill="#fb923c" font-size="11" font-weight="700" text-anchor="middle">Gate 4: 9/9 (51 Cumulative)</text>
+
+  <!-- Progression Arrows -->
+  <line x1="254" y1="414" x2="270" y2="414" stroke="#60a5fa" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <line x1="492" y1="414" x2="508" y2="414" stroke="#34d399" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <line x1="730" y1="414" x2="746" y2="414" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arrowAmber)"/>
+  <line x1="968" y1="414" x2="984" y2="414" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arrowAmber)"/>
+
+  <!-- Bottom Governance & Purview Appendix Callout Bar -->
+  <rect x="36" y="604" width="1168" height="126" rx="12" fill="#0f172a" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="56" y="630" fill="#fbbf24" font-size="13" font-weight="800">THE DEFEND GOVERNANCE RULE (SLIDE 40) &amp; APPENDIX BLUEPRINTS (SLIDES 43–53)</text>
+  <text x="56" y="654" fill="#f8fafc" font-size="13" font-weight="700">1. 硬性层级门控铁律 (Hard Tier-Progression Gate)：任何客户未达成当前层级全部強制准出项（共 51 项：48 项原子控制 + 3 项跨层引用）或未完成正式书面残余风险签字，严禁跨层升迁；未落地 DEFENDComplete 严禁启用 DEFENDExtend。</text>
+  <text x="56" y="678" fill="#cbd5e1" font-size="12.5">2. 附录 B 四级 Purview-as-a-Service：Tier 1 Data Protect (手动标签/基础 DLP) → Tier 2 Data Govern (自动标签/Audit/eDiscovery Premium/IRM) → Tier 3 Data Control (DSPM for AI + Copilot DLP) → Tier 4 Data Assure (托管治理)。</text>
+  <text x="56" y="702" fill="#94a3b8" font-size="12">3. 边界声明 (Slide 4, 44, 53)：DEFEND 是面向合作伙伴的托管服务运营模型（Service Operating Model），并非微软官方 SKU 或强制捆绑包；具体功能与报价取决于客户许可、区域及合作伙伴 SLA。</text>
+</svg>

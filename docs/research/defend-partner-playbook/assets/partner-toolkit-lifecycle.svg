@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" width="1280" height="780" font-family="Segoe UI, Inter, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <linearGradient id="bgTk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="hdrTk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shTk" x="-4%" y="-4%" width="108%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="780" fill="url(#bgTk)" rx="16"/>
+  <rect x="24" y="20" width="1232" height="6" fill="url(#hdrTk)" rx="3"/>
+
+  <!-- Header -->
+  <text x="40" y="56" fill="#F8FAFC" font-size="22" font-weight="700">Microsoft Security Partner Toolkit for SMB — End-to-End 5-Stage Execution &amp; Resolved Asset Architecture</text>
+  <text x="40" y="80" fill="#94A3B8" font-size="13">Operationalizing the DEFEND 5-Tier Framework &amp; Purview-for-AI Blueprint · 6 Core aka.ms Assets · 7 Industry One-Pagers (14p) · 22 SOW Workstreams · 6 Guides (360p) · 4 PowerShell 7+ Toolkits</text>
+
+  <!-- 5 Stage Columns across the top -->
+  <!-- Stage 1 -->
+  <g filter="url(#shTk)">
+    <rect x="40" y="102" width="230" height="310" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="40" y="102" width="230" height="34" rx="10" fill="#0369A1"/>
+    <text x="155" y="124" text-anchor="middle" fill="#F8FAFC" font-size="12" font-weight="700">STAGE 1 · INITIAL CONVERSATIONS</text>
+    <text x="54" y="154" fill="#38BDF8" font-size="12" font-weight="700">7 Industry One-Pagers (14 Pages)</text>
+    <text x="54" y="170" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">aka.ms/MIP-Industry-OnePagers</text>
+    <line x1="54" y1="180" x2="256" y2="180" stroke="#334155" stroke-width="1"/>
+    <text x="54" y="198" fill="#CBD5E1" font-size="10.5">• Consumer Goods SMB (2p)</text>
+    <text x="54" y="215" fill="#CBD5E1" font-size="10.5">• Education SMB [New] (2p · FERPA)</text>
+    <text x="54" y="232" fill="#CBD5E1" font-size="10.5">• Financial Services / Insurance (2p)</text>
+    <text x="54" y="249" fill="#CBD5E1" font-size="10.5">• Healthcare SMB (2p · HIPAA/PHI)</text>
+    <text x="54" y="266" fill="#CBD5E1" font-size="10.5">• Manufacturing / Distribution (2p)</text>
+    <text x="54" y="283" fill="#CBD5E1" font-size="10.5">• Nonprofit SMB [New] (2p · Donor)</text>
+    <text x="54" y="300" fill="#CBD5E1" font-size="10.5">• Professional Services SMB (2p)</text>
+    <rect x="52" y="314" width="206" height="86" rx="6" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="62" y="332" fill="#7DD3FC" font-size="10.5" font-weight="700">30 / 60 / 90-Day Service Motion:</text>
+    <text x="62" y="348" fill="#94A3B8" font-size="10">• Day 30: 5-label MVP (EXO/SPO/OD)</text>
+    <text x="62" y="364" fill="#94A3B8" font-size="10">• Day 60: Governed external sharing</text>
+    <text x="62" y="380" fill="#94A3B8" font-size="10">• Day 90: Purview Suite + Custom SIT</text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g filter="url(#shTk)">
+    <rect x="285" y="102" width="235" height="310" rx="10" fill="#1E293B" stroke="#818CF8" stroke-width="1.5"/>
+    <rect x="285" y="102" width="235" height="34" rx="10" fill="#4338CA"/>
+    <text x="402" y="124" text-anchor="middle" fill="#F8FAFC" font-size="12" font-weight="700">STAGE 2 · DISCOVERY &amp; SCOPING</text>
+    <text x="299" y="154" fill="#A5B4FC" font-size="12" font-weight="700">Data Security Guided Assistant</text>
+    <text x="299" y="170" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">aka.ms/DataSecurityAssistant</text>
+    <line x1="299" y1="180" x2="506" y2="180" stroke="#334155" stroke-width="1"/>
+    <text x="299" y="198" fill="#CBD5E1" font-size="10.5">• OSS: microsoft/DataSecurity</text>
+    <text x="309" y="213" fill="#94A3B8" font-size="10">GuidedAssistant (v2.0.1572, CSP)</text>
+    <text x="299" y="232" fill="#CBD5E1" font-size="10.5">• 1. Labeling Decision Tree (8 vs 4)</text>
+    <text x="299" y="249" fill="#CBD5E1" font-size="10.5">• 2. DLP Scoping Engine (6 License</text>
+    <text x="309" y="264" fill="#94A3B8" font-size="10">Tiers, 8 Industries, 8 Regions)</text>
+    <text x="299" y="283" fill="#CBD5E1" font-size="10.5">• 3. Combined Label -&gt; DLP Flow</text>
+    <rect x="297" y="300" width="211" height="100" rx="6" fill="#0F172A" stroke="#6366F1" stroke-width="1"/>
+    <text x="307" y="318" fill="#C7D2FE" font-size="10.5" font-weight="700">Add-On Readiness Signals:</text>
+    <text x="307" y="335" fill="#94A3B8" font-size="10">• MDE onboarded for Endpoint DLP</text>
+    <text x="307" y="351" fill="#94A3B8" font-size="10">• Auto-labeling desired (Purview)</text>
+    <text x="307" y="367" fill="#94A3B8" font-size="10">• M365 Copilot licensed / planned</text>
+    <text x="307" y="383" fill="#94A3B8" font-size="10">• One-click Word / CSV export</text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g filter="url(#shTk)">
+    <rect x="535" y="102" width="245" height="310" rx="10" fill="#1E293B" stroke="#C084FC" stroke-width="1.5"/>
+    <rect x="535" y="102" width="245" height="34" rx="10" fill="#6D28D9"/>
+    <text x="657" y="124" text-anchor="middle" fill="#F8FAFC" font-size="12" font-weight="700">STAGE 3 · PROPOSAL DEVELOPMENT</text>
+    <text x="549" y="154" fill="#D8B4FE" font-size="12" font-weight="700">Purview SOW Generator (22 Services)</text>
+    <text x="549" y="170" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">aka.ms/SOW-Generator</text>
+    <line x1="549" y1="180" x2="766" y2="180" stroke="#334155" stroke-width="1"/>
+    <text x="549" y="198" fill="#CBD5E1" font-size="10.5">• OSS: microsoft/SOWGenerator (MIT)</text>
+    <text x="549" y="216" fill="#CBD5E1" font-size="10.5">• P1 Foundation (9): Audit, Labels,</text>
+    <text x="559" y="231" fill="#94A3B8" font-size="10">Container Labels, EXO/SPO/OD DLP</text>
+    <text x="549" y="249" fill="#CBD5E1" font-size="10.5">• P2 Intermediate (1): EXO Retention</text>
+    <text x="549" y="267" fill="#CBD5E1" font-size="10.5">• P3 Advanced + AI (12 · Purview 🔒):</text>
+    <rect x="547" y="278" width="221" height="122" rx="6" fill="#0F172A" stroke="#A855F7" stroke-width="1"/>
+    <text x="557" y="296" fill="#E9D5FF" font-size="10.5" font-weight="700">Priority 3 AI &amp; Extended DLP:</text>
+    <text x="557" y="313" fill="#CBD5E1" font-size="10">• DLP for Copilot (2-rule SIT + Label</text>
+    <text x="567" y="327" fill="#94A3B8" font-size="9.5">prompt/response simulation testing)</text>
+    <text x="557" y="343" fill="#CBD5E1" font-size="10">• DLP for Edge / Inline Web Traffic</text>
+    <text x="567" y="357" fill="#94A3B8" font-size="9.5">(blocks ChatGPT/Gemini paste/upload)</text>
+    <text x="557" y="373" fill="#CBD5E1" font-size="10">• Activate DSPM + Endpoint/Teams DLP</text>
+    <text x="557" y="389" fill="#CBD5E1" font-size="10">• 30d Hypercare + Managed Services</text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g filter="url(#shTk)">
+    <rect x="795" y="102" width="230" height="310" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="795" y="102" width="230" height="34" rx="10" fill="#B45309"/>
+    <text x="910" y="124" text-anchor="middle" fill="#F8FAFC" font-size="12" font-weight="700">STAGE 4 · PLANNING &amp; GUIDES</text>
+    <text x="809" y="154" fill="#FCD34D" font-size="12" font-weight="700">6 Deployment Guides (360 Pages)</text>
+    <text x="809" y="170" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">aka.ms/Security_SMBDeploymentGuides</text>
+    <line x1="809" y1="180" x2="1011" y2="180" stroke="#334155" stroke-width="1"/>
+    <text x="809" y="198" fill="#CBD5E1" font-size="10.5">1. Data Security Guide (92 pages)</text>
+    <text x="809" y="216" fill="#CBD5E1" font-size="10.5">2. Identity Protection (90 pages)</text>
+    <text x="809" y="234" fill="#CBD5E1" font-size="10.5">3. Email &amp; Collaboration (52 pages)</text>
+    <text x="809" y="252" fill="#CBD5E1" font-size="10.5">4. Device Security / DfB+MDE (51p)</text>
+    <text x="809" y="270" fill="#CBD5E1" font-size="10.5">5. Device Mgmt / Intune (40 pages)</text>
+    <text x="809" y="288" fill="#CBD5E1" font-size="10.5">6. SaaS Security / MDA (35 pages)</text>
+    <rect x="807" y="302" width="206" height="98" rx="6" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="817" y="320" fill="#FDE68A" font-size="10.5" font-weight="700">Standardized Tier Progression:</text>
+    <text x="817" y="337" fill="#94A3B8" font-size="10">• Priority 1: Must-do BP Foundation</text>
+    <text x="817" y="353" fill="#94A3B8" font-size="10">• Priority 2: Enhanced Governance</text>
+    <text x="817" y="369" fill="#94A3B8" font-size="10">• Priority 3: Strengthened Controls</text>
+    <text x="817" y="385" fill="#94A3B8" font-size="10">• Advanced: Defender &amp; Purview Suites</text>
+  </g>
+
+  <!-- Stage 5 -->
+  <g filter="url(#shTk)">
+    <rect x="1040" y="102" width="200" height="310" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+    <rect x="1040" y="102" width="200" height="34" rx="10" fill="#047857"/>
+    <text x="1140" y="124" text-anchor="middle" fill="#F8FAFC" font-size="12" font-weight="700">STAGE 5 · AUTOMATION</text>
+    <text x="1052" y="154" fill="#6EE7B7" font-size="12" font-weight="700">PowerShell 7+ Deploy Scripts</text>
+    <text x="1052" y="170" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">aka.ms/Deploy-Scripts</text>
+    <line x1="1052" y1="180" x2="1228" y2="180" stroke="#334155" stroke-width="1"/>
+    <text x="1052" y="198" fill="#CBD5E1" font-size="10.5">• Products/Purview (Labels, DLP)</text>
+    <text x="1052" y="216" fill="#CBD5E1" font-size="10.5">• Products/Entra (13 CA JSONs)</text>
+    <text x="1052" y="234" fill="#CBD5E1" font-size="10.5">• Products/Intune (6 Baselines)</text>
+    <text x="1052" y="252" fill="#CBD5E1" font-size="10.5">• Products/Defender (ASR Audit)</text>
+    <rect x="1050" y="268" width="180" height="132" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+    <text x="1060" y="286" fill="#A7F3D0" font-size="10.5" font-weight="700">Fail-Closed Safety Gates:</text>
+    <text x="1060" y="303" fill="#94A3B8" font-size="10">• Enforces pwsh 7+ &amp; -WhatIf</text>
+    <text x="1060" y="319" fill="#94A3B8" font-size="10">• GDAP DelegatedOrg support</text>
+    <text x="1060" y="335" fill="#94A3B8" font-size="10">• 13 CA policies Report-Only</text>
+    <text x="1060" y="351" fill="#94A3B8" font-size="10">• Break-glass GA verification</text>
+    <text x="1060" y="367" fill="#94A3B8" font-size="10">• Day-30 DLP Exit Runbook</text>
+    <text x="1060" y="383" fill="#94A3B8" font-size="10">• HTML + JSON Evidence Pack</text>
+  </g>
+
+  <!-- Bottom Left Panel: 8-Label DEFEND-Aligned Taxonomy -->
+  <g filter="url(#shTk)">
+    <rect x="40" y="432" width="600" height="320" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="40" y="432" width="600" height="34" rx="12" fill="#1E293B"/>
+    <text x="58" y="454" fill="#38BDF8" font-size="13" font-weight="700">8-Label DEFEND-Aligned Sensitivity Taxonomy (With LOB Encryption Exception Gates)</text>
+
+    <text x="58" y="484" fill="#E2E8F0" font-size="11" font-weight="700">1. PUBLIC</text>
+    <text x="275" y="484" fill="#94A3B8" font-size="10.5">No encryption · External sharing allowed (Brochures, public releases)</text>
+
+    <text x="58" y="510" fill="#E2E8F0" font-size="11" font-weight="700">2. GENERAL (Default Email)</text>
+    <text x="275" y="510" fill="#94A3B8" font-size="10.5">No encryption · Internal marking only · Standard routine business ops</text>
+
+    <text x="58" y="536" fill="#7DD3FC" font-size="11" font-weight="700">3. CONFIDENTIAL \ ALL EMPLOYEES</text>
+    <text x="275" y="536" fill="#CBD5E1" font-size="10.5">Default File/Site · Encryption + marking · No external sharing</text>
+
+    <text x="58" y="562" fill="#7DD3FC" font-size="11" font-weight="700">4. CONFIDENTIAL \ SPECIFIC PEOPLE</text>
+    <text x="275" y="562" fill="#CBD5E1" font-size="10.5">Named-user encryption for governed external partners/vendors/clients</text>
+
+    <rect x="52" y="574" width="576" height="28" rx="4" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <text x="58" y="592" fill="#FCD34D" font-size="10.5" font-weight="700">5. CONFIDENTIAL \ INTERNAL EXCEPTION</text>
+    <text x="285" y="592" fill="#FDE68A" font-size="10">Marking ONLY (No encryption) when encryption breaks ERP/EHR/SIS/MRP · Quarterly review</text>
+
+    <text x="58" y="624" fill="#C084FC" font-size="11" font-weight="700">6. HIGHLY CONF \ ALL EMPLOYEES</text>
+    <text x="275" y="624" fill="#CBD5E1" font-size="10.5">Strong encryption + watermark · Block external access (Payroll, PHI, IP)</text>
+
+    <text x="58" y="650" fill="#C084FC" font-size="11" font-weight="700">7. HIGHLY CONF \ SPECIFIC PEOPLE</text>
+    <text x="275" y="650" fill="#CBD5E1" font-size="10.5">Named-user only + SIT auto-labeling recommended (M&amp;A, legal, audits)</text>
+
+    <rect x="52" y="662" width="576" height="28" rx="4" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+    <text x="58" y="680" fill="#FCA5A5" font-size="10.5" font-weight="700">8. HIGHLY CONF \ INTERNAL EXCEPTION</text>
+    <text x="285" y="680" fill="#FECACA" font-size="10">Marking ONLY where encryption breaks QMS/clinical/regulatory tools · IT sign-off + 90d audit</text>
+
+    <text x="58" y="718" fill="#94A3B8" font-size="10.5">Architectural Insight: Explicitly separating INTERNAL EXCEPTION sub-labels prevents shadow workarounds while</text>
+    <text x="58" y="734" fill="#94A3B8" font-size="10.5">preserving DLP inspection and aligning directly with DEFEND Slide 35–40 formal risk-acceptance governance.</text>
+  </g>
+
+  <!-- Bottom Right Panel: Mapping Toolkit to DEFEND Tiers & AI Guardrails -->
+  <g filter="url(#shTk)">
+    <rect x="656" y="432" width="584" height="320" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+    <rect x="656" y="432" width="584" height="34" rx="12" fill="#1E293B"/>
+    <text x="674" y="454" fill="#6EE7B7" font-size="13" font-weight="700">How the Toolkit Operationalizes DEFEND Tiers &amp; Copilot/Shadow AI Guardrails</text>
+
+    <!-- Row 1 -->
+    <rect x="672" y="476" width="552" height="58" rx="6" fill="#1E293B" stroke="#0284C7" stroke-width="1"/>
+    <text x="684" y="495" fill="#38BDF8" font-size="11" font-weight="700">DEFENDBase &amp; Purview Tier 1 (Data Protect) · Day-30 Foundation MVP</text>
+    <text x="684" y="512" fill="#CBD5E1" font-size="10">• SOW Priority 1 (9 services) + Guides Priority 1 + SMBBestPracticeTool (Entra 13 Report-Only CA policies,</text>
+    <text x="684" y="526" fill="#94A3B8" font-size="10">  Intune 6 baselines, Defender ASR Audit, Purview core labels/DLP) -&gt; Satisfies Slide 35 (11/11 Base Exit Gates).</text>
+
+    <!-- Row 2 -->
+    <rect x="672" y="544" width="552" height="58" rx="6" fill="#1E293B" stroke="#6366F1" stroke-width="1"/>
+    <text x="684" y="563" fill="#A5B4FC" font-size="11" font-weight="700">DEFENDSecurity &amp; DEFENDCompliance · Day-60/90 Step-Up Execution</text>
+    <text x="684" y="580" fill="#CBD5E1" font-size="10">• Identity (90p), Device Security (51p), Email (52p) &amp; SaaS (35p) Advanced chapters -&gt; Slide 36 (12/12 Security Gates).</text>
+    <text x="684" y="594" fill="#94A3B8" font-size="10">• Data Security Guide Priority 3 (pp. 42–90) + Day-30 DLP Simulation Exit Runbook -&gt; Slide 37 (11/11 Compliance Gates).</text>
+
+    <!-- Row 3 -->
+    <rect x="672" y="612" width="552" height="68" rx="6" fill="#1E293B" stroke="#C084FC" stroke-width="1"/>
+    <text x="684" y="631" fill="#D8B4FE" font-size="11" font-weight="700">Purview Tier 3 (Data Control) · Dual AI Guardrail Pattern (Governed Copilot vs Shadow Web AI)</text>
+    <text x="684" y="648" fill="#CBD5E1" font-size="10">• Internal Governed AI: DLP for M365 Copilot (2 rules: SITs + Sensitivity Labels with prompt/response simulation).</text>
+    <text x="684" y="663" fill="#CBD5E1" font-size="10">• External Unmanaged AI: DLP for Edge / Inline Web Traffic (blocks sensitive paste/upload to ChatGPT &amp; Gemini)</text>
+    <text x="684" y="676" fill="#94A3B8" font-size="9.5">  paired with Activate DSPM (oversharing discovery) and Defender for Cloud Apps Shadow IT governance.</text>
+
+    <!-- Row 4 -->
+    <rect x="672" y="688" width="552" height="52" rx="6" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <text x="684" y="707" fill="#6EE7B7" font-size="11" font-weight="700">DEFENDComplete, Data Assure (Tier 4) &amp; DEFENDExtend · Ongoing Managed Services</text>
+    <text x="684" y="724" fill="#CBD5E1" font-size="10">• SOW Generator 30-Day Hypercare + Ongoing Managed Services (Monthly Health Monitoring, Quarterly Policy</text>
+    <text x="684" y="736" fill="#94A3B8" font-size="9.5">  Tuning, Incident Response) -&gt; Satisfies Slide 38 Complete (8/8) before unlocking Slide 39 Sentinel Extend (9/9).</text>
+  </g>
+</svg>

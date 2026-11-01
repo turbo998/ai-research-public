@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 700" width="1240" height="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <marker id="arrCyan" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="700" rx="18" fill="url(#bg3)"/>
+  <rect width="1240" height="8" rx="4" fill="url(#bar3)"/>
+
+  <text x="36" y="44" fill="#34d399" font-size="13" font-weight="700" letter-spacing="1.4">APPENDIX B · 4-TIER PURVIEW-AS-A-SERVICE &amp; ARCHITECTURAL BRIDGE TO AGENTIC AI SECURITY</text>
+  <text x="36" y="72" fill="#f8fafc" font-size="22" font-weight="800">四级 Purview-as-a-Service 数据治理蓝图与云原生 Agent 安全架构映射 (Slides 47–51)</text>
+  <text x="36" y="96" fill="#94a3b8" font-size="13">从 M365 Copilot / Shadow AI 数据防泄漏 (Data Control) 到 Azure 云原生多智能体沙箱与零信任网关的全栈协同</text>
+
+  <!-- Left Half: Appendix B 4-Tier Purview-as-a-Service -->
+  <rect x="36" y="118" width="560" height="544" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="1.8"/>
+  <text x="56" y="148" fill="#34d399" font-size="15" font-weight="800">Appendix B · Purview-as-a-Service 四级递进模型 (Slides 49–51)</text>
+
+  <!-- Tier 1 Protect -->
+  <rect x="56" y="166" width="520" height="104" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="72" y="190" fill="#38bdf8" font-size="13.5" font-weight="800">Tier 1 — Data Protect (基础防泄漏 · Microsoft 365 Business Premium)</text>
+  <text x="72" y="212" fill="#cbd5e1" font-size="11.5">• 敏感度标签：手动/默认/强制标签 (Manual, Default &amp; Mandatory Labels) + 邮件加密</text>
+  <text x="72" y="231" fill="#cbd5e1" font-size="11.5">• DLP 范围：Exchange 邮件与 SharePoint/OneDrive 文件基础防泄漏</text>
+  <text x="72" y="250" fill="#94a3b8" font-size="11">• 审计与态势：基础 90 天日志留存 · Compliance Manager 自评估基线 (适合起步期 SMB)</text>
+
+  <!-- Tier 2 Govern -->
+  <rect x="56" y="284" width="520" height="104" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="1.2"/>
+  <text x="72" y="308" fill="#818cf8" font-size="13.5" font-weight="800">Tier 2 — Data Govern (自动化合规治理 · + Microsoft Purview Suite)</text>
+  <text x="72" y="330" fill="#cbd5e1" font-size="11.5">• 敏感度标签：基于敏感内容与高级分类器的自动打标 (Auto-labeling across M365)</text>
+  <text x="72" y="349" fill="#cbd5e1" font-size="11.5">• DLP 扩展：覆盖 Endpoint DLP (终端)、Teams 聊天与频道、Defender 云应用控制</text>
+  <text x="72" y="368" fill="#94a3b8" font-size="11">• 取证与生命周期：Audit Premium · eDiscovery Premium · Insider Risk Mgmt · 记录管理</text>
+
+  <!-- Tier 3 Control -->
+  <rect x="56" y="402" width="520" height="114" rx="10" fill="#064e3b" stroke="#34d399" stroke-width="1.8"/>
+  <text x="72" y="426" fill="#34d399" font-size="13.5" font-weight="800">Tier 3 — Data Control (Copilot &amp; AI 专项治理 · + Microsoft Purview Suite)</text>
+  <text x="72" y="448" fill="#ecfdf5" font-size="11.5" font-weight="700">• DSPM for AI：AI 交互可见性、敏感数据过曝扫描、Prompt/Response 风险评估</text>
+  <text x="72" y="467" fill="#ecfdf5" font-size="11.5" font-weight="700">• DLP for Microsoft 365 Copilot：阻止机密标签文件被 Copilot 引用或摘要输出</text>
+  <text x="72" y="486" fill="#a7f3d0" font-size="11.5">• Adaptive Protection (DSPM 驱动)：高危内部风险用户动态拦截 AI 与外发权限</text>
+  <text x="72" y="504" fill="#a7f3d0" font-size="11">• 配合 Defender for Cloud Apps 发现并管控非授权第三方 Shadow AI / OAuth 应用</text>
+
+  <!-- Tier 4 Assure -->
+  <rect x="56" y="530" width="520" height="112" rx="10" fill="#3b0764" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="72" y="554" fill="#e9d5ff" font-size="13.5" font-weight="800">Tier 4 — Data Assure (全托管合规保障服务 · + Partner Managed Services)</text>
+  <text x="72" y="576" fill="#cbd5e1" font-size="11.5">• 合作伙伴持续交付：月度治理态势报告、策略持续调优、内部风险与 DLP 事件分诊</text>
+  <text x="72" y="595" fill="#cbd5e1" font-size="11.5">• 季度治理评审 (QBR) 与变更影响评估 · 可辩护的监管响应与证据链归档</text>
+  <text x="72" y="614" fill="#d8b4fe" font-size="11">• 商业价值：将一次性合规部署转化为高粘性、按月订阅的托管数据治理经常性收入 (MRR)</text>
+
+  <!-- Right Half: Bridge to Cloud-Native Agentic AI Security (Pillar 01 & Pillar 04) -->
+  <rect x="644" y="118" width="560" height="544" rx="14" fill="#0f172a" stroke="#c084fc" stroke-width="1.8"/>
+  <text x="664" y="148" fill="#c084fc" font-size="15" font-weight="800">DEFEND × 云原生 Agentic AI 安全架构映射 (Pillar 01 &amp; Pillar 04)</text>
+
+  <rect x="664" y="166" width="520" height="104" rx="10" fill="#1e293b" stroke="#60a5fa" stroke-width="1.2"/>
+  <text x="680" y="190" fill="#60a5fa" font-size="13.5" font-weight="800">1. 身份与访问层：Entra ID P2 + PIM  ──►  Entra Agent ID 双重归属</text>
+  <text x="680" y="212" fill="#cbd5e1" font-size="11.5">• DEFEND 侧：全员 MFA、风险条件访问、特权身份管理 (PIM)、GDAP 跨租户委托</text>
+  <text x="680" y="231" fill="#cbd5e1" font-size="11.5">• Agent 架构侧：强制绑定 Agent Blueprint + Human Sponsor 双重审计归属，杜绝幽灵身份</text>
+  <text x="680" y="250" fill="#93c5fd" font-size="11">• 零信任验证：无长期静态 AK/SK，全面采用联邦工作负载身份 (Workload Identity Federation)</text>
+
+  <rect x="664" y="284" width="520" height="104" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="1.2"/>
+  <text x="680" y="308" fill="#818cf8" font-size="13.5" font-weight="800">2. 终端与运行环境：Intune + MDE P2  ──►  Kata / E2B Firecracker 硬件沙箱</text>
+  <text x="680" y="330" fill="#cbd5e1" font-size="11.5">• DEFEND 侧：Intune 合规基线、ASR 攻击面缩减、BitLocker、MDE P2 自动调查隔离</text>
+  <text x="680" y="349" fill="#cbd5e1" font-size="11.5">• Agent 架构侧：高危代码/工具执行强制进入独立硬件虚拟化 MicroVM (D96as_v7 108ms)</text>
+  <text x="680" y="368" fill="#c7d2fe" font-size="11">• 平台硬边界：封禁 169.254.169.254 IMDS + 默认拒绝出网 + Cosign/Ratify 签名 MCP 准入</text>
+
+  <rect x="664" y="402" width="520" height="114" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="680" y="426" fill="#34d399" font-size="13.5" font-weight="800">3. 数据与 AI 护栏：Purview Tier 3  ──►  Web IQ + APIM AI Gateway + ACP/AP2</text>
+  <text x="680" y="448" fill="#cbd5e1" font-size="11.5">• DEFEND 侧：DSPM for AI + DLP for M365 Copilot + Adaptive Protection + MDA Shadow AI</text>
+  <text x="680" y="467" fill="#cbd5e1" font-size="11.5">• Agent 架构侧：Web IQ 结构化知识层将网页间接提示注入劫持率从 31.4% 压降至 0.0%</text>
+  <text x="680" y="486" fill="#cbd5e1" font-size="11.5">• 经济与交易熔断：APIM 三级 Token/预算熔断 + AP2/x402 (&gt;$50 强制 FIDO2 硬件签名)</text>
+  <text x="680" y="504" fill="#a7f3d0" font-size="11">• 数据闭环：防止过度共享 (Oversharing) 经由 RAG 或 Copilot 索引泄漏高敏薪酬/并购文档</text>
+
+  <rect x="664" y="530" width="520" height="112" rx="10" fill="#1e293b" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="680" y="554" fill="#fb923c" font-size="13.5" font-weight="800">4. 持续监控与运营：DEFENDExtend  ──►  Sentinel + Tetragon eBPF + Security Copilot</text>
+  <text x="680" y="576" fill="#cbd5e1" font-size="11.5">• DEFEND 侧：Sentinel SIEM 汇聚 Defender XDR + Purview 信号，SOAR 剧本自动遏制</text>
+  <text x="680" y="595" fill="#cbd5e1" font-size="11.5">• Agent 架构侧：Cilium Tetragon eBPF 亚毫秒 (&lt;0.3ms) 内核态拦截 + OpenTelemetry 追踪</text>
+  <text x="680" y="614" fill="#fed7aa" font-size="11">• 黄金运营准则：先在 DEFENDComplete 降噪收敛，再接入 Sentinel 与 Security Copilot</text>
+
+  <!-- Connecting Arrows Between Left and Right -->
+  <line x1="596" y1="218" x2="640" y2="218" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrCyan)"/>
+  <line x1="596" y1="336" x2="640" y2="336" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrCyan)"/>
+  <line x1="596" y1="458" x2="640" y2="458" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrCyan)"/>
+  <line x1="596" y1="586" x2="640" y2="586" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrCyan)"/>
+</svg>

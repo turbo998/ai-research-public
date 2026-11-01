@@ -1,0 +1,6 @@
+test_id,perturbation,original_result,perturbed_result,delta_pts
+R1_CONTROL_ORDER_REVERSAL,Reverse 20 control IDs (LZ-P5-04 -> LZ-P1-01),100.0% (Act automatically),100.0% (Act automatically),0.0
+R2_SMB_SUITE_EQUIVALENCE,Swap M365_E5 with M365_Business_Premium or Defender+Purview Suite,PASS (100.0%),PASS (100.0%),0.0
+R3_FRAGMENTED_UI_SHADOW_AI,Keep 20/20 controls but set copilot_as_ui_unified=False (Slide 6),PASS (Act automatically),BLOCKED (Send to a human),-100.0
+R4_DROP_ENTRA_AGENT_ID,Remove LZ-P2-01 (Entra Agent ID) from 20/20 baseline,100.0% (Q4 PASS),95.0% (Q4 FAIL / Hold),-5.0
+R5_DROP_UNETHICAL_CLASSIFIER,Remove LZ-P5-02 (Slide 18 Contoso/Zava kickback detector),100.0% (Q3 PASS),95.0% (Q3 FAIL / Hold),-5.0

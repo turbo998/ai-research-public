@@ -1,0 +1,365 @@
+{
+  "metadata": {
+    "title": "DEFEND Partner Playbook: A tiered managed security and compliance framework for Microsoft 365 Business Premium",
+    "classification": "partner_developed_service_framework_not_microsoft_sku",
+    "total_slides": 53,
+    "total_chapters": 11,
+    "pptx_size_bytes": 11425905,
+    "pptx_sha256": "0298c3bb248a0465d9a1c250ccb1fd1eb631ef5787137d6bbb9a3fc07babad46",
+    "zero_trust_dimensions": [
+      "Identity",
+      "Devices",
+      "Applications",
+      "Data",
+      "Infrastructure",
+      "Networks",
+      "AI"
+    ],
+    "defend_tiers": [
+      "DEFENDBase",
+      "DEFENDSecurity",
+      "DEFENDCompliance",
+      "DEFENDComplete",
+      "DEFENDExtend"
+    ],
+    "purview_as_a_service_tiers": [
+      "Tier 1 — Data Protect",
+      "Tier 2 — Data Govern",
+      "Tier 3 — Data Control",
+      "Tier 4 — Data Assure"
+    ]
+  },
+  "exit_criteria_counts": {
+    "by_tier": {
+      "DEFENDBase": 11,
+      "DEFENDSecurity": 12,
+      "DEFENDCompliance": 11,
+      "DEFENDComplete": 8,
+      "DEFENDExtend": 9
+    },
+    "total_table_rows": 51,
+    "composite_prerequisite_rows": 3,
+    "atomic_control_rows": 48
+  },
+  "licensing_coverage": {
+    "defender_table_rows": 21,
+    "purview_table_rows": 20,
+    "total_capability_rows": 41,
+    "defender_suite_coverage": {
+      "business_standard": {
+        "count": 2,
+        "total": 21,
+        "pct": 9.5
+      },
+      "business_premium": {
+        "count": 8,
+        "total": 21,
+        "pct": 38.1
+      },
+      "with_defender_suite": {
+        "count": 21,
+        "total": 21,
+        "pct": 100.0
+      }
+    },
+    "purview_suite_coverage": {
+      "business_standard": {
+        "count": 3,
+        "total": 20,
+        "pct": 15.0
+      },
+      "business_premium": {
+        "count": 7,
+        "total": 20,
+        "pct": 35.0
+      },
+      "with_purview_suite": {
+        "count": 20,
+        "total": 20,
+        "pct": 100.0
+      }
+    },
+    "tier_bundle_coverage": {
+      "Business_Standard": {
+        "count": 5,
+        "total": 41,
+        "pct": 12.2
+      },
+      "DEFENDBase_Business_Premium": {
+        "count": 15,
+        "total": 41,
+        "pct": 36.6
+      },
+      "DEFENDSecurity_BP_plus_Defender": {
+        "count": 28,
+        "total": 41,
+        "pct": 68.3
+      },
+      "DEFENDCompliance_BP_plus_Purview": {
+        "count": 28,
+        "total": 41,
+        "pct": 68.3
+      },
+      "DEFENDComplete_BP_plus_Both_Suites": {
+        "count": 41,
+        "total": 41,
+        "pct": 100.0
+      }
+    }
+  },
+  "smb_partner_toolkit_catalog": {
+    "toolkit_name": "Microsoft Security Partner Toolkit for SMB — Accelerate Security and AI Readiness Engagements",
+    "lifecycle_stages_count": 5,
+    "core_aka_ms_links_count": 6,
+    "core_assets": [
+      {
+        "stage": "1. Initial Customer Conversations",
+        "name": "Industry-Specific Information Protection One-Pagers",
+        "short_url": "https://aka.ms/MIP-Industry-OnePagers",
+        "resolved_target": "Industry-Specific Information Protection Guides.zip (7 PDFs, 14 pages)",
+        "industries": [
+          "Consumer Goods SMB",
+          "Education SMB (New)",
+          "Financial Services / Insurance SMB",
+          "Healthcare SMB",
+          "Manufacturing / Distribution SMB",
+          "Nonprofit SMB (New)",
+          "Professional Services SMB"
+        ],
+        "pages_total": 14,
+        "service_motion_days": [
+          30,
+          60,
+          90
+        ]
+      },
+      {
+        "stage": "2. Discovery & Scoping",
+        "name": "Data Security Guided Assistant",
+        "short_url": "https://aka.ms/DataSecurityAssistant",
+        "resolved_target": "https://microsoft.github.io/DataSecurityGuidedAssistant/",
+        "github_repo": "https://github.com/microsoft/DataSecurityGuidedAssistant",
+        "version": "v2.0.1572",
+        "entry_workflows": [
+          "Labeling Tool",
+          "DLP Tool",
+          "Combined Flow"
+        ],
+        "supported_label_models": [
+          "8-tier DEFEND model",
+          "4-tier simplified model"
+        ],
+        "supported_industries_count": 8,
+        "supported_regions_count": 8,
+        "supported_license_tiers_count": 6
+      },
+      {
+        "stage": "3. Proposal Development",
+        "name": "Microsoft Purview Data Security SOW Generator",
+        "short_url": "https://aka.ms/SOW-Generator",
+        "resolved_target": "https://microsoft.github.io/SOWGenerator/",
+        "github_repo": "https://github.com/microsoft/SOWGenerator",
+        "license": "MIT",
+        "modular_workstreams_total": 22,
+        "priority_1_foundation_count": 9,
+        "priority_2_intermediate_count": 1,
+        "priority_3_advanced_and_ai_count": 12,
+        "ai_and_extended_dlp_workstreams": [
+          "DLP for Endpoints",
+          "DLP for Teams",
+          "DLP for Copilot (2-rule SIT + Sensitivity Label simulation)",
+          "DLP for Microsoft Edge / Inline Web Traffic (blocks unmanaged AI apps like ChatGPT/Gemini)",
+          "Activate DSPM (Data Security Posture Management)"
+        ]
+      },
+      {
+        "stage": "4. Planning & Implementation",
+        "name": "Best Practice Security Deployment Guides for SMB",
+        "short_url": "https://aka.ms/Security_SMBDeploymentGuides",
+        "resolved_target": "Best Practice Security Deployment Guides for SMB.zip (6 PDFs, 360 pages)",
+        "guides_count": 6,
+        "pages_total": 360,
+        "guides": [
+          {
+            "title": "Data Security Deployment Guide for Small Business",
+            "pages": 92,
+            "updated": "2026-06-24"
+          },
+          {
+            "title": "Identity Protection Best Practice Deployment",
+            "pages": 90,
+            "updated": "2026-03-06"
+          },
+          {
+            "title": "Email & App + Collaboration Protection Best Practice Deployment",
+            "pages": 52,
+            "updated": "2026-03-16"
+          },
+          {
+            "title": "Device Security Best Practice Deployment",
+            "pages": 51,
+            "updated": "2026-03-16"
+          },
+          {
+            "title": "Device Management Best Practice Deployment",
+            "pages": 40,
+            "updated": "2026-03-16"
+          },
+          {
+            "title": "SaaS Security Best Practice Deployment",
+            "pages": 35,
+            "updated": "2026-03-16"
+          }
+        ]
+      },
+      {
+        "stage": "5. Deployment & Configuration",
+        "name": "PowerShell Deployment Scripts (SMBBestPracticeTool)",
+        "short_url": "https://aka.ms/Deploy-Scripts",
+        "resolved_target": "https://microsoft.github.io/BestPractice_Deploy-Scripts/",
+        "github_repo": "https://github.com/microsoft/BestPractice_Deploy-Scripts",
+        "runtime_requirement": "PowerShell 7+ (pwsh.exe)",
+        "workload_toolkits_count": 4,
+        "workload_toolkits": [
+          "Products/Purview",
+          "Products/Entra",
+          "Products/Intune",
+          "Products/Defender"
+        ],
+        "entra_report_only_ca_templates_count": 13,
+        "intune_baseline_tasks_count": 6
+      },
+      {
+        "stage": "Umbrella Playbook & Feedback",
+        "name": "Security Partner Toolkit Playbook & Survey",
+        "short_url": "https://aka.ms/SecurityPartnerToolkit_Playbook",
+        "survey_url": "https://aka.ms/SecurityPartnerToolkit-Survey",
+        "resolved_target": "Partner Security Toolkit for Enabling SMB.pdf"
+      }
+    ],
+    "defend_aligned_8_label_taxonomy": [
+      {
+        "order": 1,
+        "label": "PUBLIC",
+        "encryption": false,
+        "external_sharing": true,
+        "lob_exception": false
+      },
+      {
+        "order": 2,
+        "label": "GENERAL",
+        "encryption": false,
+        "external_sharing": true,
+        "lob_exception": false,
+        "default_for": "email"
+      },
+      {
+        "order": 3,
+        "label": "CONFIDENTIAL \\ ALL EMPLOYEES",
+        "encryption": true,
+        "external_sharing": false,
+        "lob_exception": false,
+        "default_for": "files_and_sites"
+      },
+      {
+        "order": 4,
+        "label": "CONFIDENTIAL \\ SPECIFIC PEOPLE",
+        "encryption": true,
+        "external_sharing": true,
+        "lob_exception": false
+      },
+      {
+        "order": 5,
+        "label": "CONFIDENTIAL \\ INTERNAL EXCEPTION",
+        "encryption": false,
+        "external_sharing": false,
+        "lob_exception": true,
+        "review_cadence_days": 90
+      },
+      {
+        "order": 6,
+        "label": "HIGHLY CONFIDENTIAL \\ ALL EMPLOYEES",
+        "encryption": true,
+        "external_sharing": false,
+        "lob_exception": false
+      },
+      {
+        "order": 7,
+        "label": "HIGHLY CONFIDENTIAL \\ SPECIFIC PEOPLE",
+        "encryption": true,
+        "external_sharing": true,
+        "lob_exception": false
+      },
+      {
+        "order": 8,
+        "label": "HIGHLY CONFIDENTIAL \\ INTERNAL EXCEPTION",
+        "encryption": false,
+        "external_sharing": false,
+        "lob_exception": true,
+        "review_cadence_days": 90
+      }
+    ]
+  },
+  "reference_full_deployment_evaluation": {
+    "DEFENDBase": {
+      "tier": "DEFENDBase",
+      "total_criteria": 11,
+      "implemented_count": 11,
+      "risk_accepted_count": 0,
+      "unsatisfied_count": 0,
+      "composite_prerequisites_met": true,
+      "governance_rule_passed": true,
+      "readiness_score_pct": 100.0,
+      "action": "Act automatically",
+      "blocking_reasons": []
+    },
+    "DEFENDSecurity": {
+      "tier": "DEFENDSecurity",
+      "total_criteria": 12,
+      "implemented_count": 12,
+      "risk_accepted_count": 0,
+      "unsatisfied_count": 0,
+      "composite_prerequisites_met": true,
+      "governance_rule_passed": true,
+      "readiness_score_pct": 100.0,
+      "action": "Act automatically",
+      "blocking_reasons": []
+    },
+    "DEFENDCompliance": {
+      "tier": "DEFENDCompliance",
+      "total_criteria": 11,
+      "implemented_count": 11,
+      "risk_accepted_count": 0,
+      "unsatisfied_count": 0,
+      "composite_prerequisites_met": true,
+      "governance_rule_passed": true,
+      "readiness_score_pct": 100.0,
+      "action": "Act automatically",
+      "blocking_reasons": []
+    },
+    "DEFENDComplete": {
+      "tier": "DEFENDComplete",
+      "total_criteria": 8,
+      "implemented_count": 8,
+      "risk_accepted_count": 0,
+      "unsatisfied_count": 0,
+      "composite_prerequisites_met": true,
+      "governance_rule_passed": true,
+      "readiness_score_pct": 100.0,
+      "action": "Act automatically",
+      "blocking_reasons": []
+    },
+    "DEFENDExtend": {
+      "tier": "DEFENDExtend",
+      "total_criteria": 9,
+      "implemented_count": 9,
+      "risk_accepted_count": 0,
+      "unsatisfied_count": 0,
+      "composite_prerequisites_met": true,
+      "governance_rule_passed": true,
+      "readiness_score_pct": 100.0,
+      "action": "Act automatically",
+      "blocking_reasons": []
+    }
+  }
+}

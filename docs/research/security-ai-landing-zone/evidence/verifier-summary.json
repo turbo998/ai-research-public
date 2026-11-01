@@ -1,0 +1,290 @@
+{
+  "study_id": "security-ai-landing-zone",
+  "parent_study_id": "defend-partner-playbook",
+  "deck_metadata": {
+    "file_name": "Frontier Security Deck-10.26 final.pptx",
+    "file_size_bytes": 15233523,
+    "sha256": "f82c91ebd5e9a3be3c0a95402dfa3fc483089dfb3e4bcd719609f4341d6864df",
+    "total_slides": 42,
+    "tracks": [
+      "Security for AI (Slides 5-23)",
+      "AI for Security / Frontier SOC (Slides 24-32)",
+      "Partner Playbook & Toolkit (Slides 34-42)"
+    ],
+    "ai_threat_case_study": {
+      "slide": "Slides 3-4",
+      "incident": "Monterrey, Mexico Municipal Water & Drainage Utility ICS Intrusion (Jan 2026, Campaign Dec 2025 - Feb 2026)",
+      "threat_intel_sources": [
+        "Dragos",
+        "Gambit Security"
+      ],
+      "ai_generated_loc": 17000,
+      "ai_generated_modules": 49,
+      "dual_model_division": "Claude (intrusion planning, tool dev, problem-solving) + GPT (victim data processing, structured reporting)"
+    },
+    "frontier_soc_kpis": {
+      "slide": 24,
+      "reduced_exposures": {
+        "value": 847,
+        "delta_7d_pct": 18.0
+      },
+      "active_investigations": {
+        "value": 41,
+        "delta_7d_pct": 12.0
+      },
+      "enriched_indicators": {
+        "value": 124,
+        "delta_7d_pct": 18.0
+      },
+      "disrupted_attacks": {
+        "value": 23,
+        "delta_7d_pct": 31.0
+      }
+    },
+    "mdash_metrics": {
+      "slide": 27,
+      "stage": "Private Preview",
+      "specialized_agents_min": 100,
+      "architecture": "Multi-model (Frontier models + Microsoft first-party models) end-to-end vulnerability discovery, validation, and exploitability proof"
+    },
+    "isoc_defender_roadmap": {
+      "slides": "Slides 28-32, 36",
+      "eligible_licenses": [
+        "Microsoft Defender Suite",
+        "Microsoft 365 E5",
+        "Microsoft 365 E7 (Frontier Suite)"
+      ],
+      "available_now": [
+        "Case Management",
+        "SOAR Playbook Builder",
+        "Workbooks",
+        "UEBA",
+        "Autonomous Attack Disruption",
+        "Built-in SIEM"
+      ],
+      "coming_nov_2026": [
+        "90-Day Data Retention",
+        "Content Hub + CI/CD",
+        "Threat Intelligence Platform",
+        "SOC Optimization",
+        "Project Perception GA"
+      ]
+    }
+  },
+  "counts": {
+    "total_slides": 42,
+    "pre_scale_mandatory_questions": 6,
+    "discovery_opener_questions": 5,
+    "landing_zone_pillars": 5,
+    "landing_zone_atomic_controls": 20,
+    "qualifying_agent365_license_paths": 7,
+    "unified_security_graph_tables": 22,
+    "evaluated_scenarios": 6,
+    "unit_tests_passed": 6
+  },
+  "scenarios": [
+    {
+      "scenario_id": "SCEN-01-E7-FRONTIER-FULL",
+      "label": "M365 E7 Frontier Suite + Full 5-Pillar Landing Zone + ISOC",
+      "license_bundle": "M365_E7_Frontier_Suite",
+      "agent365_prerequisite_met": true,
+      "e7_frontier_suite_active": true,
+      "copilot_as_ui_unified": true,
+      "satisfied_controls": 20,
+      "total_controls": 20,
+      "overall_readiness_pct": 100.0,
+      "pre_scale_questions_answered": 6,
+      "discovery_assessment_triggered": false,
+      "week3_fte_gate_passed": true,
+      "week4_5_agent_launch_allowed": true,
+      "isoc_eligible": true,
+      "recommended_partner_phase": "Phase 3: Operate (Managed Frontier SOC + ISOC + Week 4-5 3-Agent Production Launch)",
+      "action_gate": "Act automatically",
+      "blocking_reasons": [],
+      "expected_outcome": "Week 3 FTE Gate PASS -> Week 4-5 3-Agent Launch Approved (Phase 3 Operate)",
+      "latency_ms": 0.0564
+    },
+    {
+      "scenario_id": "SCEN-02-E5-NEAR-READY-MISSING-P4",
+      "label": "M365 E5 + 18/20 Controls (Missing Endpoint Shadow Block & ISOC Link)",
+      "license_bundle": "M365_E5",
+      "agent365_prerequisite_met": true,
+      "e7_frontier_suite_active": false,
+      "copilot_as_ui_unified": true,
+      "satisfied_controls": 18,
+      "total_controls": 20,
+      "overall_readiness_pct": 90.0,
+      "pre_scale_questions_answered": 5,
+      "discovery_assessment_triggered": true,
+      "week3_fte_gate_passed": false,
+      "week4_5_agent_launch_allowed": false,
+      "isoc_eligible": true,
+      "recommended_partner_phase": "Phase 2: Build (Complete Remaining Week 3 Landing Zone Controls Before Agent Launch)",
+      "action_gate": "Confirm",
+      "blocking_reasons": [
+        "LANDING_ZONE_INCOMPLETE: 2/20 Secure AI Landing Zone controls missing (LZ-P4-03, LZ-P4-04)"
+      ],
+      "expected_outcome": "Week 3 FTE Gate HOLD (90.0%) -> Complete LZ-P4-03/04 Before Agent Launch (Phase 2 Build)",
+      "latency_ms": 0.04
+    },
+    {
+      "scenario_id": "SCEN-03-BP-DEFEND-COMPLETE-BRIDGE",
+      "label": "SMB Business Premium + Defender & Purview Suites + Full 20/20 Controls",
+      "license_bundle": "Defender_Suite_plus_Purview_Suite",
+      "agent365_prerequisite_met": true,
+      "e7_frontier_suite_active": false,
+      "copilot_as_ui_unified": true,
+      "satisfied_controls": 20,
+      "total_controls": 20,
+      "overall_readiness_pct": 100.0,
+      "pre_scale_questions_answered": 6,
+      "discovery_assessment_triggered": false,
+      "week3_fte_gate_passed": true,
+      "week4_5_agent_launch_allowed": true,
+      "isoc_eligible": true,
+      "recommended_partner_phase": "Phase 3: Operate (Managed Frontier SOC + ISOC + Week 4-5 3-Agent Production Launch)",
+      "action_gate": "Act automatically",
+      "blocking_reasons": [],
+      "expected_outcome": "Week 3 FTE Gate PASS (100.0%) -> DEFENDComplete Tenant Ready for Agent 365 & ISOC",
+      "latency_ms": 0.04
+    },
+    {
+      "scenario_id": "SCEN-04-FRAGMENTED-UI-SHADOW-AI",
+      "label": "M365 E7 Tenant with 20/20 Controls but Fragmented Entry (No Copilot as UI)",
+      "license_bundle": "M365_E7_Frontier_Suite",
+      "agent365_prerequisite_met": true,
+      "e7_frontier_suite_active": true,
+      "copilot_as_ui_unified": false,
+      "satisfied_controls": 20,
+      "total_controls": 20,
+      "overall_readiness_pct": 100.0,
+      "pre_scale_questions_answered": 6,
+      "discovery_assessment_triggered": true,
+      "week3_fte_gate_passed": false,
+      "week4_5_agent_launch_allowed": false,
+      "isoc_eligible": true,
+      "recommended_partner_phase": "Phase 1: Assess (Run 5-Question Discovery & Landing Zone Gap Assessment)",
+      "action_gate": "Send to a human",
+      "blocking_reasons": [
+        "SHADOW_AI_BLOCK: Copilot as the UI for AI is not unified; fragmented entry points create un-audited Shadow AI (Slide 6)"
+      ],
+      "expected_outcome": "BLOCKED by Slide 6 Anti-Pattern: Fragmented Entry = Un-Audited Shadow AI",
+      "latency_ms": 0.04
+    },
+    {
+      "scenario_id": "SCEN-05-UNBUILT-LANDING-ZONE-WK4",
+      "label": "Customer Attempting Week 4-5 3-Agent Launch with Only 12/20 Controls (60%)",
+      "license_bundle": "M365_E5",
+      "agent365_prerequisite_met": true,
+      "e7_frontier_suite_active": false,
+      "copilot_as_ui_unified": true,
+      "satisfied_controls": 12,
+      "total_controls": 20,
+      "overall_readiness_pct": 60.0,
+      "pre_scale_questions_answered": 4,
+      "discovery_assessment_triggered": true,
+      "week3_fte_gate_passed": false,
+      "week4_5_agent_launch_allowed": false,
+      "isoc_eligible": true,
+      "recommended_partner_phase": "Phase 1: Assess (Run 5-Question Discovery & Landing Zone Gap Assessment)",
+      "action_gate": "Send to a human",
+      "blocking_reasons": [
+        "LANDING_ZONE_INCOMPLETE: 8/20 Secure AI Landing Zone controls missing (LZ-P4-01, LZ-P4-02, LZ-P4-03, LZ-P4-04, LZ-P5-01...)"
+      ],
+      "expected_outcome": "BLOCKED by Slide 5 Hard Rule: Unbuilt Week 3 Landing Zone Halts Week 4-5 Production Launch",
+      "latency_ms": 0.04
+    },
+    {
+      "scenario_id": "SCEN-06-NO-AGENT365-PREREQ-SKU",
+      "label": "M365 Business Standard Tenant (No E5/BP or Defender+Purview Suite Prerequisite)",
+      "license_bundle": "M365_Business_Standard_Only",
+      "agent365_prerequisite_met": false,
+      "e7_frontier_suite_active": false,
+      "copilot_as_ui_unified": true,
+      "satisfied_controls": 4,
+      "total_controls": 20,
+      "overall_readiness_pct": 20.0,
+      "pre_scale_questions_answered": 2,
+      "discovery_assessment_triggered": true,
+      "week3_fte_gate_passed": false,
+      "week4_5_agent_launch_allowed": false,
+      "isoc_eligible": false,
+      "recommended_partner_phase": "Phase 1: Assess (Run 5-Question Discovery & Landing Zone Gap Assessment)",
+      "action_gate": "Send to a human",
+      "blocking_reasons": [
+        "LICENSE_BLOCK: 'M365_Business_Standard_Only' does not satisfy Microsoft Agent 365 prerequisite licensing (Slide 23)",
+        "FTE_GATE1_BLOCK: Week 1-2 Gate 1 (5-10 quantifiable outcomes + executive sponsorship) not met (Slide 5)",
+        "LANDING_ZONE_INCOMPLETE: 16/20 Secure AI Landing Zone controls missing (LZ-P2-01, LZ-P2-02, LZ-P2-03, LZ-P2-04, LZ-P3-01...)"
+      ],
+      "expected_outcome": "BLOCKED by Slide 23 License Rule + Slide 5 Gate 1 -> Trigger Phase 1 Assess & SKU Upgrade",
+      "latency_ms": 0.04
+    }
+  ],
+  "robustness_checks": [
+    {
+      "test_id": "R1_CONTROL_ORDER_REVERSAL",
+      "perturbation": "Reverse 20 control IDs (LZ-P5-04 -> LZ-P1-01)",
+      "original_result": "100.0% (Act automatically)",
+      "perturbed_result": "100.0% (Act automatically)",
+      "delta_pts": 0.0
+    },
+    {
+      "test_id": "R2_SMB_SUITE_EQUIVALENCE",
+      "perturbation": "Swap M365_E5 with M365_Business_Premium or Defender+Purview Suite",
+      "original_result": "PASS (100.0%)",
+      "perturbed_result": "PASS (100.0%)",
+      "delta_pts": 0.0
+    },
+    {
+      "test_id": "R3_FRAGMENTED_UI_SHADOW_AI",
+      "perturbation": "Keep 20/20 controls but set copilot_as_ui_unified=False (Slide 6)",
+      "original_result": "PASS (Act automatically)",
+      "perturbed_result": "BLOCKED (Send to a human)",
+      "delta_pts": -100.0
+    },
+    {
+      "test_id": "R4_DROP_ENTRA_AGENT_ID",
+      "perturbation": "Remove LZ-P2-01 (Entra Agent ID) from 20/20 baseline",
+      "original_result": "100.0% (Q4 PASS)",
+      "perturbed_result": "95.0% (Q4 FAIL / Hold)",
+      "delta_pts": -5.0
+    },
+    {
+      "test_id": "R5_DROP_UNETHICAL_CLASSIFIER",
+      "perturbation": "Remove LZ-P5-02 (Slide 18 Contoso/Zava kickback detector)",
+      "original_result": "100.0% (Q3 PASS)",
+      "perturbed_result": "95.0% (Q3 FAIL / Hold)",
+      "delta_pts": -5.0
+    }
+  ],
+  "batch_latency_ms": [
+    {
+      "load_tier": "Tier 1: Single Tenant (1x20 Controls)",
+      "tenant_count": 1,
+      "primary_verifier_ms": 0.04,
+      "baseline_script_ms": 12.5,
+      "repeats": 5
+    },
+    {
+      "load_tier": "Tier 2: FTE Sprint Cohort (10 Tenants)",
+      "tenant_count": 10,
+      "primary_verifier_ms": 0.21,
+      "baseline_script_ms": 118.4,
+      "repeats": 5
+    },
+    {
+      "load_tier": "Tier 3: CSP Partner Portfolio (100 Tenants)",
+      "tenant_count": 100,
+      "primary_verifier_ms": 1.89,
+      "baseline_script_ms": 1140.0,
+      "repeats": 5
+    },
+    {
+      "load_tier": "Tier 4: Regional ISOC Fleet (1,000 Tenants)",
+      "tenant_count": 1000,
+      "primary_verifier_ms": 18.42,
+      "baseline_script_ms": 11480.0,
+      "repeats": 5
+    }
+  ]
+}

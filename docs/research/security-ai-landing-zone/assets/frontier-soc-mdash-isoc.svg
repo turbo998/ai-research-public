@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgSoc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0F292E"/>
+    </linearGradient>
+    <linearGradient id="mdashGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4C1D95"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="isocBanner" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#065F46"/>
+      <stop offset="50%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" rx="16" fill="url(#bgSoc)"/>
+  <rect x="16" y="16" width="1168" height="728" rx="12" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="36" y="48" fill="#2DD4BF" font-size="12" font-weight="700" letter-spacing="1.5">AI FOR SECURITY · FRONTIER SOC ARCHITECTURE (SLIDES 3–4, 24–32)</text>
+  <text x="36" y="74" fill="#F8FAFC" font-size="22" font-weight="800">Frontier SOC: Red/Blue/Green Agent Teams, MDASH (100+ Agents) &amp; ISOC in Defender</text>
+  <text x="36" y="96" fill="#94A3B8" font-size="12.5">Countering AI-Driven Attacks (17,000 LOC / 49 Modules in Hours) with Autonomous Multi-Model Agentic Defense over Unified Security Graphs</text>
+
+  <!-- Row 1: Threat Driver + 4 Frontier SOC Operational KPI Cards (Slide 24) -->
+  <rect x="36" y="112" width="340" height="92" rx="10" fill="#450A0A" fill-opacity="0.7" stroke="#F87171" stroke-width="1.5"/>
+  <text x="52" y="134" fill="#FCA5A5" font-size="11" font-weight="800" letter-spacing="1">AI THREAT VELOCITY (SLIDES 3–4)</text>
+  <text x="52" y="154" fill="#FFFFFF" font-size="12" font-weight="700">Monterrey ICS Campaign (Jan 2026)</text>
+  <text x="52" y="172" fill="#FECACA" font-size="11">• ~17,000 LOC across 49 polymorphic modules</text>
+  <text x="52" y="190" fill="#FECACA" font-size="11">• Dual-LLM ops engine (days/weeks → hours)</text>
+
+  <!-- KPI 1 -->
+  <rect x="392" y="112" width="184" height="92" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="408" y="134" fill="#7DD3FC" font-size="11" font-weight="700">Exposure Management</text>
+  <text x="408" y="168" fill="#F8FAFC" font-size="28" font-weight="800">847</text>
+  <text x="478" y="166" fill="#34D399" font-size="12" font-weight="700">↑ 18% (7d)</text>
+  <text x="408" y="190" fill="#94A3B8" font-size="11">Reduced Exposures</text>
+
+  <!-- KPI 2 -->
+  <rect x="590" y="112" width="184" height="92" rx="10" fill="#0F172A" stroke="#818CF8" stroke-width="1.5"/>
+  <text x="606" y="134" fill="#A5B4FC" font-size="11" font-weight="700">Threat Investigations</text>
+  <text x="606" y="168" fill="#F8FAFC" font-size="28" font-weight="800">41</text>
+  <text x="656" y="166" fill="#34D399" font-size="12" font-weight="700">↑ 12% (7d)</text>
+  <text x="606" y="190" fill="#94A3B8" font-size="11">Active Investigations</text>
+
+  <!-- KPI 3 -->
+  <rect x="788" y="112" width="184" height="92" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="804" y="134" fill="#D8B4FE" font-size="11" font-weight="700">Threat Intelligence</text>
+  <text x="804" y="168" fill="#F8FAFC" font-size="28" font-weight="800">124</text>
+  <text x="874" y="166" fill="#34D399" font-size="12" font-weight="700">↑ 18% (7d)</text>
+  <text x="804" y="190" fill="#94A3B8" font-size="11">Enriched Indicators</text>
+
+  <!-- KPI 4 -->
+  <rect x="986" y="112" width="178" height="92" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1002" y="134" fill="#6EE7B7" font-size="11" font-weight="700">Attack Disruption</text>
+  <text x="1002" y="168" fill="#F8FAFC" font-size="28" font-weight="800">23</text>
+  <text x="1050" y="166" fill="#34D399" font-size="12" font-weight="700">↑ 31% (7d)</text>
+  <text x="1002" y="190" fill="#94A3B8" font-size="11">Disrupted Attacks</text>
+
+  <!-- Row 2: Red / Blue / Green Agent Teams Across Full Threat Lifecycle (Slide 25) -->
+  <rect x="36" y="218" width="1128" height="172" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.2"/>
+  <text x="54" y="240" fill="#F8FAFC" font-size="13" font-weight="800" letter-spacing="0.8">MULTI-AGENT, MULTI-MODEL WORKFLOW ACROSS THE FULL THREAT LIFECYCLE (SLIDE 25)</text>
+
+  <!-- Red Team Agent -->
+  <rect x="54" y="252" width="352" height="124" rx="8" fill="#0F172A" stroke="#F43F5E" stroke-width="1.5"/>
+  <rect x="54" y="252" width="352" height="30" rx="8" fill="#9F1239"/>
+  <text x="230" y="272" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="800">1. SIMULATE ATTACK · RED TEAM AGENT</text>
+  <text x="68" y="300" fill="#FDA4AF" font-size="11" font-weight="700">Master Exploitable Weaknesses Ahead of Attackers</text>
+  <text x="68" y="320" fill="#CBD5E1" font-size="11">• Map Attack Paths &amp; Identify Critical Choke Points</text>
+  <text x="68" y="338" fill="#CBD5E1" font-size="11">• Vulnerability Code Scanning &amp; Exploit Verification</text>
+  <text x="68" y="356" fill="#CBD5E1" font-size="11">• Uncover Detection Gaps → Output: Discovered Gaps</text>
+
+  <!-- Blue Team Agent -->
+  <rect x="424" y="252" width="352" height="124" rx="8" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="424" y="252" width="352" height="30" rx="8" fill="#1D4ED8"/>
+  <text x="600" y="272" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="800">2. DETECT &amp; TRIAGE · BLUE TEAM AGENT</text>
+  <text x="438" y="300" fill="#93C5FD" font-size="11" font-weight="700">Surface Real Threats &amp; Eliminate Alert Noise</text>
+  <text x="438" y="320" fill="#CBD5E1" font-size="11">• Operationalize Threat Intelligence in Real Time</text>
+  <text x="438" y="338" fill="#CBD5E1" font-size="11">• Reconstruct Attack Timelines &amp; Automated Alert Triage</text>
+  <text x="438" y="356" fill="#CBD5E1" font-size="11">• Close Coverage Gaps → Output: Triaged Threats</text>
+
+  <!-- Green Team Agent -->
+  <rect x="794" y="252" width="352" height="124" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="794" y="252" width="352" height="30" rx="8" fill="#047857"/>
+  <text x="970" y="272" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="800">3. REMEDIATE &amp; HARDEN · GREEN TEAM AGENT</text>
+  <text x="808" y="300" fill="#6EE7B7" font-size="11" font-weight="700">Pinpoint Root Cause &amp; Safest Remediation</text>
+  <text x="808" y="320" fill="#CBD5E1" font-size="11">• Analyze Security Posture &amp; Validate Exposure Surface</text>
+  <text x="808" y="338" fill="#CBD5E1" font-size="11">• Prioritize Remediation Actions by Business Impact</text>
+  <text x="808" y="356" fill="#CBD5E1" font-size="11">• Harden Security Posture Continuously</text>
+
+  <!-- Row 3: Unified Security & Exposure Graph (Slide 26) + MDASH (Slide 27) -->
+  <rect x="36" y="402" width="660" height="150" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="54" y="426" fill="#38BDF8" font-size="12" font-weight="800" letter-spacing="0.8">UNIFIED SECURITY &amp; EXPOSURE GRAPH CONTEXT (SLIDE 26)</text>
+  <text x="54" y="446" fill="#E2E8F0" font-size="11.5" font-weight="600">Graphs: Attack Graph · Lateral Movement · Process Tree · Identity Graph · Exposure Graph · Agent Exposure</text>
+  <text x="54" y="468" fill="#94A3B8" font-size="11">• <tspan fill="#7DD3FC" font-weight="600">Endpoint &amp; Process Tables</tspan>: DeviceInfo, DeviceProcessEvents, DeviceLogonEvents, DeviceNetworkEvents, DeviceRegistryEvents</text>
+  <text x="54" y="486" fill="#94A3B8" font-size="11">• <tspan fill="#A5B4FC" font-weight="600">Identity &amp; Principal Tables</tspan>: SignInLogs, IdentityLogonEvents, IdentityDirectoryEvents, IdentityInfo, AADServicePrincipalSignIn</text>
+  <text x="54" y="504" fill="#94A3B8" font-size="11">• <tspan fill="#D8B4FE" font-weight="600">XDR, Cloud &amp; Email Tables</tspan>: AlertInfo, AlertEvidence, SecurityIncident, EmailEvents, ARGResources, BehaviorAnalytics</text>
+  <text x="54" y="522" fill="#94A3B8" font-size="11">• <tspan fill="#6EE7B7" font-weight="600">Exposure &amp; Red Team Tables</tspan>: ExposureGraphNodes, ExposureGraphEdges, RedTeamOperations</text>
+  <text x="54" y="540" fill="#CBD5E1" font-size="10.5">Sources: Defender for Endpoint · Entra ID · Microsoft Sentinel · Azure Resource Manager · UEBA · Exposure Mgmt · Threat Intel</text>
+
+  <!-- MDASH Box (Slide 27) -->
+  <rect x="712" y="402" width="452" height="150" rx="10" fill="url(#mdashGrad)" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="730" y="426" fill="#DDD6FE" font-size="12" font-weight="800" letter-spacing="1">MDASH · MULTI-MODEL AGENTIC SECURITY (SLIDE 27)</text>
+  <text x="730" y="452" fill="#FFFFFF" font-size="20" font-weight="800">100+ Specialized AI Agents</text>
+  <rect x="1020" y="434" width="126" height="24" rx="12" fill="#4C1D95" stroke="#C4B5FD" stroke-width="1"/>
+  <text x="1083" y="450" text-anchor="middle" fill="#EDE9FE" font-size="10.5" font-weight="700">Private Preview</text>
+  <text x="730" y="476" fill="#E0E7FF" font-size="11.5">• <tspan font-weight="700">Multi-Model</tspan>: Frontier models + Microsoft first-party models</text>
+  <text x="730" y="496" fill="#E0E7FF" font-size="11.5">• <tspan font-weight="700">End-to-End</tspan>: Vulnerability discovery → validation → exploitability proof</text>
+  <text x="730" y="516" fill="#E0E7FF" font-size="11.5">• <tspan font-weight="700">Extensible</tspan>: Native integration with Microsoft Defender</text>
+  <text x="730" y="538" fill="#C4B5FD" font-size="11" font-weight="700">Shift from "Copilot Assistant" to "Autonomous Collaborative Security System"</text>
+
+  <!-- Row 4: ISOC in Microsoft Defender (Slides 28–32, 36) -->
+  <rect x="36" y="566" width="1128" height="162" rx="10" fill="url(#isocBanner)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="54" y="590" fill="#A7F3D0" font-size="12" font-weight="800" letter-spacing="1.2">INTEGRATED SECURITY OPERATIONS CENTER (ISOC) IN MICROSOFT DEFENDER (SLIDES 28–32, 36)</text>
+  <text x="54" y="610" fill="#FFFFFF" font-size="12.5" font-weight="700">Eligible for Microsoft Defender Suite, Microsoft 365 E5, and Microsoft 365 E7 Customers — Built-in SIEM without Separate Deployment</text>
+
+  <!-- Left sub-box: Available Now -->
+  <rect x="54" y="622" width="536" height="92" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#2DD4BF" stroke-width="1.2"/>
+  <text x="70" y="642" fill="#2DD4BF" font-size="11.5" font-weight="800">AVAILABLE NOW IN DEFENDER (DAY-1 VALUE FOR E5 / E7)</text>
+  <text x="70" y="662" fill="#E2E8F0" font-size="11">• <tspan font-weight="700">Case Management</tspan> (aka.ms/caseindefender) &amp; Unified 1P + 3P Data Investigation</text>
+  <text x="70" y="680" fill="#E2E8F0" font-size="11">• <tspan font-weight="700">SOAR Playbook Builder</tspan>, Workbooks &amp; Built-in <tspan font-weight="700">UEBA / SIEM Analytics</tspan></text>
+  <text x="70" y="698" fill="#E2E8F0" font-size="11">• <tspan font-weight="700">Autonomous Defense</tspan>: Disrupt multi-stage ransomware attacks within minutes</text>
+
+  <!-- Right sub-box: Coming November 2026 -->
+  <rect x="608" y="622" width="538" height="92" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#60A5FA" stroke-width="1.2"/>
+  <text x="624" y="642" fill="#60A5FA" font-size="11.5" font-weight="800">COMING NOVEMBER 2026 · AGENTIC SOC READINESS &amp; GTM MOTION</text>
+  <text x="624" y="662" fill="#E2E8F0" font-size="11">• <tspan font-weight="700" fill="#FDE68A">90-Day Data Retention</tspan> · Content Hub + CI/CD · Threat Intelligence Platform · SOC Optimization</text>
+  <text x="624" y="680" fill="#E2E8F0" font-size="11">• <tspan font-weight="700" fill="#34D399">Project Perception General Availability (GA)</tspan></text>
+  <text x="624" y="698" fill="#93C5FD" font-size="11">• Partner GTM (Slide 36): Target Defender Suite &amp; E5/E7 without Sentinel; drive ME3→E5/E7 upsell</text>
+</svg>

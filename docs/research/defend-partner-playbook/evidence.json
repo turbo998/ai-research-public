@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "topic": "defend-partner-playbook",
+  "generated_at": "2026-11-01",
+  "provenance": "static_contract_verified",
+  "independently_reproduced": true,
+  "primary_sources": [
+    {
+      "id": "S1",
+      "type": "partner_playbook_deck",
+      "title": "DEFEND Partner Playbook: A tiered managed security and compliance framework for Microsoft 365 Business Premium",
+      "publisher": "Microsoft Corporation (UK&I Partner Solution Architecture)",
+      "copyright_year": 2026,
+      "slides_count": 53,
+      "chapters_count": 11,
+      "file_size_bytes": 11425905,
+      "sha256": "0298c3bb248a0465d9a1c250ccb1fd1eb631ef5787137d6bbb9a3fc07babad46",
+      "disclaimer": "The DEFEND framework and appendix blueprints are partner-delivered service constructs, not Microsoft products, SKUs, official licensing bundles or mandated offerings. Partners remain responsible for validating licensing, claims, evidence, pricing and third-party permissions before external use."
+    },
+    {
+      "id": "S2",
+      "type": "microsoft_learn_platform_references",
+      "slide_number": 53,
+      "urls": [
+        "https://learn.microsoft.com/microsoft-365/business-premium/",
+        "https://learn.microsoft.com/defender-business/",
+        "https://learn.microsoft.com/mem/intune/",
+        "https://learn.microsoft.com/defender-office-365/",
+        "https://learn.microsoft.com/en-us/defender-endpoint/",
+        "https://learn.microsoft.com/defender-endpoint/defender-endpoint-plan-1-2"
+      ]
+    },
+    {
+      "id": "S3",
+      "type": "microsoft_learn_governance_references",
+      "slide_number": 53,
+      "urls": [
+        "https://learn.microsoft.com/en-us/microsoft-365/lighthouse/m365-lighthouse-overview?view=o365-worldwide",
+        "https://learn.microsoft.com/microsoft-365/lighthouse/",
+        "https://aka.ms/intunemultitenant",
+        "https://learn.microsoft.com/purview/dlp-learn-about-dlp",
+        "https://aka.ms/DataSecurityHandbook",
+        "https://learn.microsoft.com/security/zero-trust/"
+      ]
+    },
+    {
+      "id": "S4",
+      "type": "smb_security_partner_toolkit",
+      "title": "Microsoft Security Partner Toolkit for SMB — Accelerate Security and AI Readiness Engagements",
+      "canonical_short_links": [
+        "https://aka.ms/MIP-Industry-OnePagers",
+        "https://aka.ms/DataSecurityAssistant",
+        "https://aka.ms/SOW-Generator",
+        "https://aka.ms/Security_SMBDeploymentGuides",
+        "https://aka.ms/Deploy-Scripts",
+        "https://aka.ms/SecurityPartnerToolkit_Playbook",
+        "https://aka.ms/SecurityPartnerToolkit-Survey"
+      ],
+      "resolved_github_repositories": [
+        "https://github.com/microsoft/DataSecurityGuidedAssistant",
+        "https://github.com/microsoft/SOWGenerator",
+        "https://github.com/microsoft/BestPractice_Deploy-Scripts"
+      ],
+      "resolved_github_pages_apps": [
+        "https://microsoft.github.io/DataSecurityGuidedAssistant/",
+        "https://microsoft.github.io/SOWGenerator/",
+        "https://microsoft.github.io/BestPractice_Deploy-Scripts/"
+      ],
+      "catalog": {
+        "toolkit_name": "Microsoft Security Partner Toolkit for SMB — Accelerate Security and AI Readiness Engagements",
+        "lifecycle_stages_count": 5,
+        "core_aka_ms_links_count": 6,
+        "core_assets": [
+          {
+            "stage": "1. Initial Customer Conversations",
+            "name": "Industry-Specific Information Protection One-Pagers",
+            "short_url": "https://aka.ms/MIP-Industry-OnePagers",
+            "resolved_target": "Industry-Specific Information Protection Guides.zip (7 PDFs, 14 pages)",
+            "industries": [
+              "Consumer Goods SMB",
+              "Education SMB (New)",
+              "Financial Services / Insurance SMB",
+              "Healthcare SMB",
+              "Manufacturing / Distribution SMB",
+              "Nonprofit SMB (New)",
+              "Professional Services SMB"
+            ],
+            "pages_total": 14,
+            "service_motion_days": [
+              30,
+              60,
+              90
+            ]
+          },
+          {
+            "stage": "2. Discovery & Scoping",
+            "name": "Data Security Guided Assistant",
+            "short_url": "https://aka.ms/DataSecurityAssistant",
+            "resolved_target": "https://microsoft.github.io/DataSecurityGuidedAssistant/",
+            "github_repo": "https://github.com/microsoft/DataSecurityGuidedAssistant",
+            "version": "v2.0.1572",
+            "entry_workflows": [
+              "Labeling Tool",
+              "DLP Tool",
+              "Combined Flow"
+            ],
+            "supported_label_models": [
+              "8-tier DEFEND model",
+              "4-tier simplified model"
+            ],
+            "supported_industries_count": 8,
+            "supported_regions_count": 8,
+            "supported_license_tiers_count": 6
+          },
+          {
+            "stage": "3. Proposal Development",
+            "name": "Microsoft Purview Data Security SOW Generator",
+            "short_url": "https://aka.ms/SOW-Generator",
+            "resolved_target": "https://microsoft.github.io/SOWGenerator/",
+            "github_repo": "https://github.com/microsoft/SOWGenerator",
+            "license": "MIT",
+            "modular_workstreams_total": 22,
+            "priority_1_foundation_count": 9,
+            "priority_2_intermediate_count": 1,
+            "priority_3_advanced_and_ai_count": 12,
+            "ai_and_extended_dlp_workstreams": [
+              "DLP for Endpoints",
+              "DLP for Teams",
+              "DLP for Copilot (2-rule SIT + Sensitivity Label simulation)",
+              "DLP for Microsoft Edge / Inline Web Traffic (blocks unmanaged AI apps like ChatGPT/Gemini)",
+              "Activate DSPM (Data Security Posture Management)"
+            ]
+          },
+          {
+            "stage": "4. Planning & Implementation",
+            "name": "Best Practice Security Deployment Guides for SMB",
+            "short_url": "https://aka.ms/Security_SMBDeploymentGuides",
+            "resolved_target": "Best Practice Security Deployment Guides for SMB.zip (6 PDFs, 360 pages)",
+            "guides_count": 6,
+            "pages_total": 360,
+            "guides": [
+              {
+                "title": "Data Security Deployment Guide for Small Business",
+                "pages": 92,
+                "updated": "2026-06-24"
+              },
+              {
+                "title": "Identity Protection Best Practice Deployment",
+                "pages": 90,
+                "updated": "2026-03-06"
+              },
+              {
+                "title": "Email & App + Collaboration Protection Best Practice Deployment",
+                "pages": 52,
+                "updated": "2026-03-16"
+              },
+              {
+                "title": "Device Security Best Practice Deployment",
+                "pages": 51,
+                "updated": "2026-03-16"
+              },
+              {
+                "title": "Device Management Best Practice Deployment",
+                "pages": 40,
+                "updated": "2026-03-16"
+              },
+              {
+                "title": "SaaS Security Best Practice Deployment",
+                "pages": 35,
+                "updated": "2026-03-16"
+              }
+            ]
+          },
+          {
+            "stage": "5. Deployment & Configuration",
+            "name": "PowerShell Deployment Scripts (SMBBestPracticeTool)",
+            "short_url": "https://aka.ms/Deploy-Scripts",
+            "resolved_target": "https://microsoft.github.io/BestPractice_Deploy-Scripts/",
+            "github_repo": "https://github.com/microsoft/BestPractice_Deploy-Scripts",
+            "runtime_requirement": "PowerShell 7+ (pwsh.exe)",
+            "workload_toolkits_count": 4,
+            "workload_toolkits": [
+              "Products/Purview",
+              "Products/Entra",
+              "Products/Intune",
+              "Products/Defender"
+            ],
+            "entra_report_only_ca_templates_count": 13,
+            "intune_baseline_tasks_count": 6
+          },
+          {
+            "stage": "Umbrella Playbook & Feedback",
+            "name": "Security Partner Toolkit Playbook & Survey",
+            "short_url": "https://aka.ms/SecurityPartnerToolkit_Playbook",
+            "survey_url": "https://aka.ms/SecurityPartnerToolkit-Survey",
+            "resolved_target": "Partner Security Toolkit for Enabling SMB.pdf"
+          }
+        ],
+        "defend_aligned_8_label_taxonomy": [
+          {
+            "order": 1,
+            "label": "PUBLIC",
+            "encryption": false,
+            "external_sharing": true,
+            "lob_exception": false
+          },
+          {
+            "order": 2,
+            "label": "GENERAL",
+            "encryption": false,
+            "external_sharing": true,
+            "lob_exception": false,
+            "default_for": "email"
+          },
+          {
+            "order": 3,
+            "label": "CONFIDENTIAL \\ ALL EMPLOYEES",
+            "encryption": true,
+            "external_sharing": false,
+            "lob_exception": false,
+            "default_for": "files_and_sites"
+          },
+          {
+            "order": 4,
+            "label": "CONFIDENTIAL \\ SPECIFIC PEOPLE",
+            "encryption": true,
+            "external_sharing": true,
+            "lob_exception": false
+          },
+          {
+            "order": 5,
+            "label": "CONFIDENTIAL \\ INTERNAL EXCEPTION",
+            "encryption": false,
+            "external_sharing": false,
+            "lob_exception": true,
+            "review_cadence_days": 90
+          },
+          {
+            "order": 6,
+            "label": "HIGHLY CONFIDENTIAL \\ ALL EMPLOYEES",
+            "encryption": true,
+            "external_sharing": false,
+            "lob_exception": false
+          },
+          {
+            "order": 7,
+            "label": "HIGHLY CONFIDENTIAL \\ SPECIFIC PEOPLE",
+            "encryption": true,
+            "external_sharing": true,
+            "lob_exception": false
+          },
+          {
+            "order": 8,
+            "label": "HIGHLY CONFIDENTIAL \\ INTERNAL EXCEPTION",
+            "encryption": false,
+            "external_sharing": false,
+            "lob_exception": true,
+            "review_cadence_days": 90
+          }
+        ]
+      }
+    }
+  ],
+  "verified_counts": {
+    "total_slides": 53,
+    "total_chapters": 11,
+    "zero_trust_dimensions": 7,
+    "defend_service_tiers": 5,
+    "purview_service_tiers": 4,
+    "defender_comparison_rows_slides_10_11": 21,
+    "purview_comparison_rows_slides_13_14": 20,
+    "total_capability_comparison_rows": 41,
+    "exit_criteria_rows_slides_35_39": {
+      "DEFENDBase_Slide35": 11,
+      "DEFENDSecurity_Slide36": 12,
+      "DEFENDCompliance_Slide37": 11,
+      "DEFENDComplete_Slide38": 8,
+      "DEFENDExtend_Slide39": 9,
+      "total_rows": 51,
+      "atomic_controls": 48,
+      "composite_prerequisites": 3
+    },
+    "smb_partner_toolkit_counts": {
+      "lifecycle_stages": 5,
+      "core_aka_ms_assets": 6,
+      "industry_one_pagers_pdfs": 7,
+      "industry_one_pagers_pages": 14,
+      "defend_aligned_sensitivity_labels": 8,
+      "lob_internal_exception_labels": 2,
+      "sow_generator_modular_workstreams": 22,
+      "deployment_guides_pdfs": 6,
+      "deployment_guides_pages": 360,
+      "powershell_7_workload_toolkits": 4,
+      "entra_report_only_ca_templates": 13
+    }
+  }
+}
