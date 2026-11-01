@@ -1,0 +1,615 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>Gemini 4 Carbon &amp; 20-Model Frontier Coding / Cybersecurity Benchmark (Supplement 6)</title><style>*{box-sizing:border-box}body{margin:0;padding:2rem 1rem;background:#e2e8f0;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}.deck-wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:2.2rem}.report-card{background:#f8fafc;border-radius:18px;overflow:hidden;box-shadow:0 16px 40px rgba(15,23,42,.12);border:1px solid #cbd5e1;min-height:1025px;display:flex;flex-direction:column}.card-accent-bar{height:10px;background:linear-gradient(90deg,#6366f1 0%,#4f46e5 55%,#2563eb 100%)}.card-inner{padding:2.4rem 2.8rem 1.8rem;flex:1;display:flex;flex-direction:column;justify-content:space-between}.card-eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.12em;color:#4f46e5;text-transform:uppercase;margin-bottom:.55rem}.card-headline{font-size:2.35rem;line-height:1.12;font-weight:800;margin:0 0 .65rem;letter-spacing:-.02em;color:#0f172a}.grad-text{background:linear-gradient(90deg,#3b82f6,#4f46e5);-webkit-background-clip:text;background-clip:text;color:transparent}.card-subtitle{font-size:1.08rem;line-height:1.45;color:#475569;margin:0 0 1.2rem}.card-canvas{flex:1;display:flex;flex-direction:column;justify-content:center;gap:1rem}.quote-box,.callout-box{background:#eef2f6;border-radius:12px;padding:1rem 1.25rem;font-size:.98rem;line-height:1.48;color:#1e293b}.stack-list{display:flex;flex-direction:column;gap:.85rem}.decision-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:.95rem 1.15rem}.decision-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.75rem}.field-name{font-weight:700;font-size:1rem}.type-pill{background:#e2e8f0;color:#475569;font-size:.75rem;padding:.12rem .45rem;border-radius:6px;font-weight:600}.question-sub{font-size:.84rem;color:#64748b;margin-top:.15rem}.action-pill{font-size:.76rem;font-weight:700;padding:.22rem .6rem;border-radius:999px;white-space:nowrap}.pill-auto{background:#dcfce7;color:#15803d}.pill-confirm{background:#fef3c7;color:#b45309}.pill-human{background:#fee2e2;color:#b91c1c}.decision-main{font-size:1.18rem;margin:.45rem 0 .55rem}.conf-muted{font-size:.88rem;color:#64748b;font-weight:600}.dist-row{display:grid;grid-template-columns:170px 1fr 54px;align-items:center;gap:.6rem;font-size:.84rem;margin:.24rem 0}.dist-track{background:#e2e8f0;height:9px;border-radius:999px;overflow:hidden}.dist-fill{background:linear-gradient(90deg,#4f46e5,#6366f1);height:100%;border-radius:999px}.dist-pct{text-align:right;font-variant-numeric:tabular-nums;color:#334155}.clean-table{width:100%;border-collapse:collapse;font-size:.95rem;background:transparent}.clean-table th{font-size:.75rem;letter-spacing:.08em;color:#64748b;text-align:left;padding:.55rem .4rem;border-bottom:1px solid #cbd5e1}.clean-table td{padding:.62rem .4rem;border-bottom:1px solid #e2e8f0;vertical-align:top}.sc-col{font-weight:600;color:#1e293b}.act-col,.num-col{text-align:right;font-variant-numeric:tabular-nums}.act-auto{color:#15803d;font-weight:700}.act-confirm{color:#b45309;font-weight:700}.act-human{color:#b91c1c;font-weight:700}.miss-mark{color:#dc2626;font-weight:800}.code-dark{background:#0f172a;color:#e2e8f0;padding:1.1rem 1.3rem;border-radius:12px;font-size:.84rem;line-height:1.45;overflow-x:auto;margin:0}.code-transition{color:#4f46e5;font-weight:700;font-size:.95rem;padding:.15rem 0}.hl-answer{color:#fbbf24;font-weight:700}.rob-main{font-weight:600;color:#0f172a}.rob-sub{font-size:.8rem;color:#64748b}.lat-list{display:flex;flex-direction:column;gap:1rem}.lat-title{font-weight:700;font-size:1.02rem;margin-bottom:.35rem}.lat-row{display:flex;align-items:center;gap:.65rem;margin:.28rem 0}.lat-tag{width:95px;font-size:.85rem;color:#64748b}.lat-bar{height:22px;border-radius:6px}.lat-blue{background:#2563eb}.lat-gray{background:#cbd5e1}.lat-val{font-size:.92rem;font-variant-numeric:tabular-nums}.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}.fit-card{border-radius:14px;padding:1.25rem 1.4rem;font-size:1rem;line-height:1.6}.fit-good{background:#ecfdf5;border:1px solid #a7f3d0}.fit-bad{background:#fff1f2;border:1px solid #fecdd3}.fit-head{font-weight:800;font-size:1.12rem;margin-bottom:.5rem}.dark-footer-box{background:#0f172a;color:#f8fafc;border-radius:14px;padding:1.25rem 1.5rem;font-size:1rem;line-height:1.5}.dark-repo{color:#38bdf8;font-family:ui-monospace,Consolas,monospace;margin-bottom:0}.workbench-shell{background:#fff;border:1px solid #cbd5e1;border-radius:14px;overflow:hidden}.wb-topbar{background:linear-gradient(90deg,#3b82f6,#6366f1);color:#fff;padding:.75rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}.wb-sub{font-size:.76rem;opacity:.92}.wb-status{background:rgba(15,23,42,.28);font-size:.74rem;padding:.25rem .6rem;border-radius:999px;white-space:nowrap}.wb-grid{display:grid;grid-template-columns:220px 1fr;gap:.85rem;padding:.9rem}.wb-col-title{font-size:.78rem;font-weight:700;color:#475569;text-transform:uppercase;margin-bottom:.4rem}.wb-item{font-size:.8rem;padding:.38rem .5rem;border-radius:6px;background:#f8fafc;border:1px solid #e2e8f0;margin-bottom:.32rem}.wb-note{font-size:.73rem;color:#64748b;margin-top:.55rem;line-height:1.38}.wb-metrics{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.55rem}.wb-metric{font-size:.74rem;background:#f1f5f9;padding:.2rem .5rem;border-radius:6px;color:#334155;font-weight:600}.card-footer{border-top:1px solid #cbd5e1;padding-top:.9rem;margin-top:1.2rem;display:flex;justify-content:space-between;font-size:.86rem;color:#64748b}@media print{body{background:#fff;padding:0}.deck-wrap{gap:0}.report-card{box-shadow:none;page-break-after:always;border:none}}</style></head><body><main class="deck-wrap"><article class="report-card" id="card-1"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">HANDS-ON · 20-MODEL CODING AGENT + GEMINI 4 CARBON CYBER &amp; LONG-HORIZON</div><h2 class="card-headline">Gemini 4 Carbon hits #1 on 15/17 benchmarks &amp; <span class="grad-text">0.0% Gray Swan IPI ASR at $2 / $10</span></h2><p class="card-subtitle">Supplement 6 expands our 19-model Copilot CLI Coding Agent matrix (209 runs across 11 A1–C4 tasks, zero prior score drift) to a 20-model frontier view by incorporating Google DeepMind&#x27;s Gemini 4 Carbon (2026-10-28, Fairwind Preview) across 17 official coding, long-horizon, science, and cybersecurity benchmarks.</p></header><div class="card-canvas"><div class="workbench-shell"><div class="wb-topbar"><div><strong>Dual-Track 20-Model Coding Agent &amp; Gemini 4 Carbon Cyber Defense Workbench</strong><div class="wb-sub">A System One decision & benchmark view: structured state, calibrated confidence bands, zero fabricated coordinates</div></div><span class="wb-status">20-Model Roster (209 CLI runs + Carbon 17-Benchmark Audit) · anonymized_reported</span></div><div class="wb-grid"><div class="wb-col-left"><div class="wb-col-title">Scenarios</div><div class="wb-item">Track A · 20-Model Coding Roster: 19 CLI GA models (209 runs, 1,310 hidden tests) + Carbon (#20 Fairwind)</div><div class="wb-item">Track B · SWE &amp; Terminal Leap: AA Index 59 (#1), SWE-sweep 9.6% (#1, 2.23x Argon), TB 4.0 65.2% (#1)</div><div class="wb-item">Track B · Long-Horizon &amp; 1M Context: ALE v1.1 77.4% (#1), Vending-Bench 2 $16,484 (#1), GraphWalks 96.2% (#1)</div><div class="wb-item">Track C · Cyber Defense Lifecycle: SEC-bench Pro 88.2% (#1), ExploitGym 54.8%/53.5% (#1), CWE-bench 71.0% (#1)</div><div class="wb-item">Track D · Adversarial Safety: Gray Swan IPI k=15 0.0% ASR (#1 of 13) &amp; TB 4.0 0.0% Successful Cheating</div><div class="wb-note">Gating: Act automatically if #1 on official suite or 1,310/1,310 hidden pass &amp; CLI mean &gt;= 98.45; Confirm if #2–#4 or Fairwind Preview pending public CLI; Send to a human if IPI ASR &gt; 15% or hidden &lt; 1,260.</div></div><div class="wb-col-right"><div class="wb-metrics"><span class="wb-metric">Carbon: #1 on 15/17 · $2/$10 ($0.10 cache)</span><span class="wb-metric">SEC-bench Pro: 88.2% (#1) · ExploitGym: 54.8%</span><span class="wb-metric">Gray Swan IPI (k=15): 0.0% ASR (#1 of 13)</span><span class="wb-metric">SWE-sweep: 9.6% (2.23x Argon) · TB 4.0: 65.2%</span></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">gemini_4_carbon_cyber_and_horizon_lead</span> <span class="type-pill">score</span><div class="question-sub">How does Gemini 4 Carbon perform across the 17 official coding, long-horizon, and cybersecurity benchmarks?</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>#1 on 15/17 benchmarks · 88.2% SEC-bench Pro · 54.8% ExploitGym · 96.2% GraphWalks</strong><span class="conf-muted"> · closest to "Matches Gemini 4 Argon&#x27;s exact token pricing ($2/$10, 95% cache discount = $0.10/M) with zero price premium" · confidence 0.962</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">GraphWalks 256k-1M BFS F1 (96.2% · #1)</span><div class="dist-track"><div class="dist-fill" style="width:96.2%"></div></div><span class="dist-pct">96.2%</span></div><div class="dist-row"><span class="dist-label">SEC-bench Pro 183 JS tasks (88.2% · #1)</span><div class="dist-track"><div class="dist-fill" style="width:88.2%"></div></div><span class="dist-pct">88.2%</span></div><div class="dist-row"><span class="dist-label">Agents&#x27; Last Exam v1.1 5h (77.4% · #1)</span><div class="dist-track"><div class="dist-fill" style="width:77.4%"></div></div><span class="dist-pct">77.4%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">gray_swan_ipi_and_alignment_guarantee</span> <span class="type-pill">choice</span><div class="question-sub">Does Carbon&#x27;s offensive/defensive cyber jump increase indirect prompt injection or reward-hacking risk?</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>0.0% Gray Swan IPI ASR (k=15) · 0.0% TB 4.0 Cheating · -80% Misalignment Alerts</strong><span class="conf-muted"> · closest to "Outperforms Argon (0.7%), Opus 5.5 / Fable 5.1 (1.0%), GPT-6 Astra (8.5%), and Kimi K3 (52.7% ASR)" · confidence 1.0</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">Gemini 4 Carbon IPI Defense Rate (100.0%)</span><div class="dist-track"><div class="dist-fill" style="width:100.0%"></div></div><span class="dist-pct">100.0%</span></div><div class="dist-row"><span class="dist-label">Claude Opus 5.5 / Fable 5.1 Defense Rate (99.0%)</span><div class="dist-track"><div class="dist-fill" style="width:99.0%"></div></div><span class="dist-pct">99.0%</span></div><div class="dist-row"><span class="dist-label">GPT-6 Astra IPI Defense Rate (91.5%)</span><div class="dist-track"><div class="dist-fill" style="width:91.5%"></div></div><span class="dist-pct">91.5%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">track_a_20_model_cli_positioning</span> <span class="type-pill">noul</span><div class="question-sub">Which models lead the 20-Model Copilot CLI Coding Agent roster while Carbon is in Fairwind Preview?</div></div><span class="action-pill pill-confirm">Confirm</span></div><div class="decision-main"><strong>Fable 5.1 (99.77 #1) · Haiku 5.5 (99.24, $0.33) · Sonnet 5.5 (21.7m) · Argon (1310/1310, $2.82)</strong><span class="conf-muted"> · closest to "Astra leads FrontierSWE 2 (65.5% vs Carbon 61.2%); Opus 5.5 leads OSWorld-2.1 (87.2% vs Carbon 81.5%)" · P(true) = 0.986</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">Fable 5.1 CLI 11-task mean (99.77/100)</span><div class="dist-track"><div class="dist-fill" style="width:99.8%"></div></div><span class="dist-pct">99.8%</span></div><div class="dist-row"><span class="dist-label">Claude Haiku 5.5 CLI mean (99.24/100 · $0.33)</span><div class="dist-track"><div class="dist-fill" style="width:99.2%"></div></div><span class="dist-pct">99.2%</span></div><div class="dist-row"><span class="dist-label">Gemini 4 Argon CLI mean (98.59/100 · $2.82)</span><div class="dist-track"><div class="dist-fill" style="width:98.6%"></div></div><span class="dist-pct">98.6%</span></div></div></div></div></div></div><div class="callout-box"><strong>Cost-Matched Generational Step Change (anonymized_reported, independently_reproduced=false).</strong> Gemini 4 Carbon keeps Gemini 4 Argon&#x27;s exact token pricing ($2.00/M input, $10.00/M output, $0.10/M cached input) while delivering +9 pts on AA Index v5.0 (59 vs 50), 2.23x SWE-sweep (9.6% vs 4.3%), +8.1 pts on Terminal-Bench 4.0 (65.2% vs 57.1%), +12.8 pts on ExploitGym 10h (54.8% vs 42.0%), and 0.0% Gray Swan IPI attack success rate.</div></div><footer class="card-footer"><span><strong>Gemini 4 Carbon &amp; 20-Model Frontier Coding / Cybersecurity Benchmark (Supplement 6)</strong> · anonymized_reported</span><span>1 / 7</span></footer></div></article><article class="report-card" id="card-2"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">SCENARIO: END-TO-END CYBER DEFENSE &amp; LONG-HORIZON AGENT EVALUATION</div><h2 class="card-headline">Carbon sweeps SEC-bench Pro (88.2%), ExploitGym (54.8%), CWE-bench (71.0%) &amp; Gray Swan IPI (0.0%).</h2></header><div class="card-canvas"><div class="quote-box">"DeepMind&#x27;s 2026-10-28 Gemini 4 Carbon evaluation report tests the complete defensive security lifecycle (vulnerability discovery -&gt; PoC exploit verification -&gt; root-cause patching) alongside 5-hour to 1-year agent horizons and 13-model indirect prompt injection stress tests at k=15 attempts."</div><div class="stack-list"><div class="decision-card"><div class="decision-head"><div><span class="field-name">coding_and_long_horizon_leap</span> <span class="type-pill">score</span><div class="question-sub">Coding &amp; Long-Horizon Agents: Gemini 4 Carbon vs Argon, GPT-6 Astra &amp; Claude Opus 5.5</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>AA Index 59 (#1, +9) · SWE-sweep 9.6% (#1, 2.23x) · TB 4.0 65.2% (#1) · ALE 77.4% (#1)</strong><span class="conf-muted"> · closest to "Vending-Bench 2 hits $16,484 (#1, +$2,766/+20.2% vs Argon); GraphWalks hits 96.2% (#1, +12.0 pts)" · confidence 0.962</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">GraphWalks 256k-1M BFS F1 (96.2% · #1)</span><div class="dist-track"><div class="dist-fill" style="width:96.2%"></div></div><span class="dist-pct">96.2%</span></div><div class="dist-row"><span class="dist-label">RiemannBench Mathematical Research (80.0% · #1)</span><div class="dist-track"><div class="dist-fill" style="width:80.0%"></div></div><span class="dist-pct">80.0%</span></div><div class="dist-row"><span class="dist-label">Agents&#x27; Last Exam v1.1 5h Window (77.4% · #1)</span><div class="dist-track"><div class="dist-fill" style="width:77.4%"></div></div><span class="dist-pct">77.4%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">cyber_defense_lifecycle_sweep</span> <span class="type-pill">choice</span><div class="question-sub">Cyber Defense Lifecycle: SEC-bench Pro (183 JS tasks), ExploitGym (Causal) &amp; CWE-bench (Pass@1)</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>SEC-bench Pro 88.2% (#1) · ExploitGym 54.8% 10h / 53.5% 6h (#1) · CWE-bench 71.0% (#1)</strong><span class="conf-muted"> · closest to "Carbon&#x27;s 6h capped ExploitGym (53.5%) beats uncapped GPT-6 Astra (42.4%) by +11.1 pts; &gt;10x Chrome patch quality" · confidence 0.882</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">SEC-bench Pro Pass@1 (88.2% vs Astra 85.4%)</span><div class="dist-track"><div class="dist-fill" style="width:88.2%"></div></div><span class="dist-pct">88.2%</span></div><div class="dist-row"><span class="dist-label">CWE-bench Pass@1 (71.0% vs Astra/Argon/Grok 68.0%)</span><div class="dist-track"><div class="dist-fill" style="width:71.0%"></div></div><span class="dist-pct">71.0%</span></div><div class="dist-row"><span class="dist-label">ExploitGym 10h Causal Pass Rate (54.8% vs Astra 42.4%)</span><div class="dist-track"><div class="dist-fill" style="width:54.8%"></div></div><span class="dist-pct">54.8%</span></div></div></div><div class="decision-card"><div class="decision-head"><div><span class="field-name">adversarial_ipi_and_anti_cheating</span> <span class="type-pill">noul</span><div class="question-sub">Adversarial Robustness: Gray Swan Indirect Prompt Injection (k=15) &amp; Terminal-Bench 4.0 Cheating</div></div><span class="action-pill pill-auto">Act automatically</span></div><div class="decision-main"><strong>0.0% Gray Swan IPI ASR (0 hijacks in 15 tries) · 0.0% TB 4.0 Cheating (0.4% attempts)</strong><span class="conf-muted"> · closest to "-80% high-severity live coding misalignment alerts; -50% unsupported claims (~2x cut); -26% overreach" · P(true) = 1.0</span></div><div class="dist-list"><div class="dist-row"><span class="dist-label">Carbon IPI Resistance @ k=15 (100% - 0.0% ASR)</span><div class="dist-track"><div class="dist-fill" style="width:100.0%"></div></div><span class="dist-pct">100.0%</span></div><div class="dist-row"><span class="dist-label">GPT-6 Astra IPI Resistance @ k=15 (100% - 8.5% ASR)</span><div class="dist-track"><div class="dist-fill" style="width:91.5%"></div></div><span class="dist-pct">91.5%</span></div><div class="dist-row"><span class="dist-label">Kimi K3 IPI Resistance @ k=15 (100% - 52.7% ASR)</span><div class="dist-track"><div class="dist-fill" style="width:47.3%"></div></div><span class="dist-pct">47.3%</span></div></div></div></div><div class="callout-box"><strong>High SWE coding scores do NOT imply prompt-injection safety: Grok 4.6 (51.8% ASR) and Kimi K3 (52.7% ASR) are hijacked over half the time at k=15.</strong> Even GPT-6 Astra (8.5% ASR) and GPT-6.1 Sol (8.6% ASR) suffer ~1-in-12 hijacks at k=15 attempts, whereas Gemini 4 Carbon achieves 0.0% ASR alongside Argon (0.7%) and Opus 5.5 / Fable 5.1 (1.0%).</div></div><footer class="card-footer"><span><strong>Gemini 4 Carbon &amp; 20-Model Frontier Coding / Cybersecurity Benchmark (Supplement 6)</strong> · anonymized_reported</span><span>2 / 7</span></footer></div></article><article class="report-card" id="card-3"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">WHAT I TESTED</div><h2 class="card-headline">17 official Gemini 4 Carbon benchmarks + Gray Swan IPI + 20-Model CLI matrix</h2></header><div class="card-canvas"><table class="clean-table"><thead><tr><th>SCENARIO</th><th>QUESTION</th><th>DECIDER'S ANSWER</th><th class="act-col">ACTION</th></tr></thead><tbody><tr><td class="sc-col">General &amp; Enterprise</td><td>AA Index v5.0 (Artificial Analysis Intelligence Index v5.0 (with tools))</td><td><strong>Carbon 59 (#1) vs Argon 50 (+9) | Opus 5.5 58 | Astra 57 | Fable 5.1 49</strong> (59%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Vals Index v2.2 (Enterprise Finance, Legal &amp; Coding Multimodal Index)</td><td><strong>Carbon 70.4% (#1) vs Argon 69.2% (+1.2 pt) | Astra 65.0% | Opus 5.5 70.2%</strong> (70%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Software Engineering &amp; Terminal</td><td>SWE-sweep (mini-swe-agent multi-PR subtask reward)</td><td><strong>Carbon 9.6% (#1) vs Argon 4.3% (+5.3 pt) | Astra 9.5% | Opus 5.5 3.6%</strong> (10%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>FrontierSWE 2 (Proximal hard repository-level software engineering)</td><td><strong>Carbon 61.2% (#3) vs Argon 55.0% (+6.2 pt) | Astra 65.5% | Opus 5.5 62.3%</strong> (61%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>Terminal-Bench 4.0 (AA) (Artificial Analysis standardized terminal agent suite)</td><td><strong>Carbon 65.2% (#1) vs Argon 57.1% (+8.1 pt) | Astra 59.1% | Opus 5.5 59.6%</strong> (65%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Long-Horizon &amp; Computer Use</td><td>Agents&#x27; Last Exam v1.1 (122 tasks, ALE-Claw harness, 5-hour window)</td><td><strong>Carbon 77.4% (#1) vs Argon 69.0% (+8.4 pt) | Astra 73.1% | Opus 5.5 71.6%</strong> (77%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>OSWorld-2.1 (82-task offline GUI subset, max@3)</td><td><strong>Carbon 81.5% (#2) vs Argon 74.7% (+6.8 pt) | Astra 80.9% | Opus 5.5 87.2%</strong> (82%) <span class="miss-mark">✕</span></td><td class="act-col act-confirm">Confirm</td></tr><tr><td class="sc-col"></td><td>AutomationBench (Zapier private enterprise workflow automation set)</td><td><strong>Carbon 53.9% (#1) vs Argon 51.3% (+2.6 pt) | Astra 41.4% | Opus 5.5 42.5%</strong> (54%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Vending-Bench 2 (Andon Labs long-horizon business simulation bank balance ($))</td><td><strong>Carbon $16,484 (#1) vs Argon $13,718 (+$2,766) | Astra $15,515 | Opus 5.5 $9,235</strong> (96%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Visual, Spatial &amp; Long-Context</td><td>Chartography (Surge complex chart reasoning (no tools))</td><td><strong>Carbon 72.5% (#1) vs Argon 71.6% (+0.9 pt) | Astra 71.0% | Opus 5.5 66.3%</strong> (72%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Blueprint-Bench 2 (Andon Labs structural blueprint similarity)</td><td><strong>Carbon 58.6% (#1) vs Argon 54.4% (+4.2 pt) | Astra 49.7% | Opus 5.5 51.2%</strong> (59%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>GraphWalks (256k to 1M tokens, 200 problems, BFS F1)</td><td><strong>Carbon 96.2% (#1) vs Argon 84.2% (+12.0 pt) | Astra 71.8% | Opus 5.5 66.8%</strong> (96%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Math &amp; Scientific Reasoning</td><td>RiemannBench (Surge frontier mathematical research benchmark)</td><td><strong>Carbon 80.0% (#1) vs Argon 76.0% (+4.0 pt) | Astra 72.0% | Opus 5.5 69.6%</strong> (80%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>Terminal-Bench-Science 0.1 (AA) (Artificial Analysis scientific terminal computing)</td><td><strong>Carbon 64.8% (#1) vs Argon 52.9% (+11.9 pt) | Astra 63.3% | Opus 5.5 59.0%</strong> (65%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Cybersecurity Defense Lifecycle</td><td>CWE-bench (Collinear Pass@1 vulnerability remediation across CWEs)</td><td><strong>Carbon 71.0% (#1) vs Argon 68.0% (+3.0 pt) | Astra 68.0% | Opus 5.5 67.0%</strong> (71%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>ExploitGym (Causal Pass Rate (10h cap; 6h cap: Carbon 53.5% vs Argon 39.5%))</td><td><strong>Carbon 54.8% (#1) vs Argon 42.0% (+12.8 pt) | Astra 42.4% | Opus 5.5 34.5%</strong> (55%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col"></td><td>SEC-bench Pro (183 real-world JS engine security tasks, Pass@1)</td><td><strong>Carbon 88.2% (#1) vs Argon 83.4% (+4.8 pt) | Astra 85.4% | Opus 5.5 —</strong> (88%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Safety · Gray Swan IPI (k=15)</td><td>Indirect Prompt Injection ASR @ k=15 (Lower is better · 13 models)</td><td><strong>Carbon 0.0% (#1) &lt; Argon 0.7% &lt; Opus/Fable 1.0% &lt; Astra 8.5% &lt; Kimi K3 52.7%</strong> (100%)</td><td class="act-col act-auto">Auto</td></tr><tr><td class="sc-col">Track A · 20-Model Coding CLI</td><td>19 CLI GA Models (209 runs, 0 drift) + Gemini 4 Carbon (#20 Fairwind)</td><td><strong>Fable 99.77 (#1) · Haiku 5.5 99.24 ($0.33) · Argon 98.59 (1310/1310, $2.82) · Carbon $2/$10</strong> (99%)</td><td class="act-col act-auto">Auto</td></tr></tbody></table><div class="callout-box"><strong>15 of 17 official benchmarks rank #1 for Gemini 4 Carbon at Argon&#x27;s exact $2/$10 ($0.10 cached) pricing.</strong> Carbon leads AA Index v5.0 (59), Vals Index v2.2 (70.4%), SWE-sweep (9.6%), TB 4.0 (65.2%), ALE v1.1 (77.4%), AutomationBench (53.9%), Vending-Bench 2 ($16,484), Chartography (72.5%), Blueprint-Bench 2 (58.6%), GraphWalks (96.2%), RiemannBench (80.0%), TB-Science (64.8%), CWE-bench (71.0%), ExploitGym (54.8%), and SEC-bench Pro (88.2%).</div><div class="callout-box"><strong>Only 2 non-#1 rows (✕) in the 17-benchmark matrix: FrontierSWE 2 (#3 at 61.2%) and OSWorld-2.1 (#2 at 81.5%).</strong> GPT-6 Astra holds #1 on FrontierSWE 2 (65.5%) and Claude Opus 5.5 holds #1 on GUI OSWorld-2.1 (87.2%), though Carbon still advances +6.2 pts and +6.8 pts over Gemini 4 Argon on those two suites.</div></div><footer class="card-footer"><span><strong>Gemini 4 Carbon &amp; 20-Model Frontier Coding / Cybersecurity Benchmark (Supplement 6)</strong> · anonymized_reported</span><span>3 / 7</span></footer></div></article><article class="report-card" id="card-4"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">UNDER THE HOOD</div><h2 class="card-headline">20-Model Roster Contract &amp; Cyber Defense / Safety Invariant Verifier</h2></header><div class="card-canvas"><pre class="code-dark">{
+  &quot;track_a_copilot_cli_20_model_roster&quot;: {
+    &quot;commit&quot;: &quot;a191383571a13143685fd6f7787512c4e281a9ba&quot;,
+    &quot;cli_ga_models&quot;: 19,
+    &quot;fairwind_preview_model&quot;: &quot;gemini-4-carbon (#20)&quot;,
+    &quot;prior_model_score_drifts&quot;: 0,
+    &quot;gemini_4_argon_cli&quot;: {
+      &quot;rank&quot;: 10,
+      &quot;mean&quot;: 98.59,
+      &quot;hidden&quot;: &quot;1310/1310&quot;,
+      &quot;cost_usd&quot;: 2.82
+    }
+  },
+  &quot;gemini_4_carbon_official_contract&quot;: {
+    &quot;release_date&quot;: &quot;2026-10-28&quot;,
+    &quot;pricing_per_1m_usd&quot;: {
+      &quot;input&quot;: 2.0,
+      &quot;output&quot;: 10.0,
+      &quot;cached_input&quot;: 0.1,
+      &quot;cache_write&quot;: 0.0
+    },
+    &quot;cyber_lifecycle&quot;: {
+      &quot;sec_bench_pro&quot;: 88.2,
+      &quot;exploitgym_10h&quot;: 54.8,
+      &quot;exploitgym_6h&quot;: 53.5,
+      &quot;cwe_bench&quot;: 71.0
+    },
+    &quot;alignment&quot;: {
+      &quot;gray_swan_ipi_k15_asr&quot;: 0.0,
+      &quot;tb4_cheating_success&quot;: 0.0,
+      &quot;misalignment_delta_pct&quot;: -80.0
+    }
+  }
+}</pre><div class="code-transition">↓ Deterministic Verifier (simulator/gemini4_carbon_20model_verifier.py) ↓</div><pre class="code-dark">[VERIFIED] Roster = 20 models (19 CLI GA with 0 score drift + 1 Fairwind Preview: gemini-4-carbon)
+[VERIFIED] Pricing Parity: Carbon ($2.00/$10.00/$0.10) == Argon ($2.00/$10.00/$0.10) — 0% token price premium
+[VERIFIED] Carbon #1 Ranks = 15/17; SWE-sweep = 9.6% vs Argon 4.3% (2.23x); GraphWalks = 96.2% (+12.0 pt)
+[VERIFIED] Cyber Lifecycle: SEC-bench Pro 88.2% (#1/8), ExploitGym 54.8%/53.5% (#1-#2/10), CWE-bench 71.0% (#1/11)
+[VERIFIED] Safety: Gray Swan IPI k=15 ASR = 0.0% (#1/13 vs Kimi K3 52.7%); TB 4.0 Cheating = 0.0% (0.4% attempts)
+<span class="hl-answer">&lt;answer&gt;</span>ALL_20_MODEL_AND_GEMINI_4_CARBON_ASSERTIONS_VERIFIED&lt;/answer&gt;</pre><div class="callout-box"><strong>Zero Fabricated Coordinates Policy:</strong> Because Gemini 4 Carbon is currently in phased rollout via DeepMind&#x27;s Fairwind Program and not yet on public Copilot CLI /models, we never synthesize or guess an 11-task A1–C4 CLI score; we bind exact measured CLI bundles and official DeepMind evaluation tables.</div></div><footer class="card-footer"><span><strong>Gemini 4 Carbon &amp; 20-Model Frontier Coding / Cybersecurity Benchmark (Supplement 6)</strong> · anonymized_reported</span><span>4 / 7</span></footer></div></article><article class="report-card" id="card-5"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">ROBUSTNESS CHECK</div><h2 class="card-headline">Generational step changes (Argon -&gt; Carbon) &amp; Gray Swan k=15 IPI resilience</h2><p class="card-subtitle">Evaluating Gemini 4 Carbon&#x27;s gains over Gemini 4 Argon across multi-PR SWE, 1M-token graphs, time-capped exploit synthesis, 5-hour agent workflows, and 15-attempt indirect prompt injection.</p></header><div class="card-canvas"><table class="clean-table"><thead><tr><th>QUESTION / ANSWER</th><th class="num-col">ORIGINAL</th><th class="num-col">REVERSED</th><th class="num-col">CHANGE (PTS)</th></tr></thead><tbody><tr><td><div class="rob-main">SWE-sweep (mini-swe-agent multi-PR subtask reward · Argon -&gt; Carbon)</div><div class="rob-sub">Argon 4.3% -&gt; Carbon 9.6% (#1, +5.3 pts, 2.23x Argon; beats GPT-6 Astra 9.5% &amp; Opus 5.5 3.6%)</div></td><td class="num-col">4.3%</td><td class="num-col">9.6%</td><td class="num-col">+5.3</td></tr><tr><td><div class="rob-main">GraphWalks (256k–1M context, 200 problems, BFS F1 · Argon -&gt; Carbon)</div><div class="rob-sub">Argon 84.2% -&gt; Carbon 96.2% (#1, +12.0 pts; +24.4 pts over GPT-6 Astra 71.8%)</div></td><td class="num-col">84.2%</td><td class="num-col">96.2%</td><td class="num-col">+12.0</td></tr><tr><td><div class="rob-main">ExploitGym Causal Pass Rate (10h Cap · Argon -&gt; Carbon)</div><div class="rob-sub">Argon 42.0% (10h) / 39.5% (6h) -&gt; Carbon 54.8% (10h) / 53.5% (6h) (#1; beats uncapped Astra 42.4%)</div></td><td class="num-col">42.0%</td><td class="num-col">54.8%</td><td class="num-col">+12.8</td></tr><tr><td><div class="rob-main">Terminal-Bench 4.0 &amp; Terminal-Bench-Science 0.1 (AA · Argon -&gt; Carbon)</div><div class="rob-sub">TB 4.0: 57.1% -&gt; 65.2% (#1, +8.1 pts) | TB-Science: 52.9% -&gt; 64.8% (#1, +11.9 pts)</div></td><td class="num-col">57.1%</td><td class="num-col">65.2%</td><td class="num-col">+8.1</td></tr><tr><td><div class="rob-main">Agents&#x27; Last Exam v1.1 (122 tasks, ALE-Claw, 5h window · Argon -&gt; Carbon)</div><div class="rob-sub">Argon 69.0% -&gt; Carbon 77.4% (#1, +8.4 pts; beats GPT-6 Astra 73.1% &amp; Claude Opus 5.5 71.6%)</div></td><td class="num-col">69.0%</td><td class="num-col">77.4%</td><td class="num-col">+8.4</td></tr><tr><td><div class="rob-main">Gray Swan IPI Defense Rate (100% - ASR @ k=15 · Astra/Kimi vs Carbon)</div><div class="rob-sub">Carbon 0.0% ASR (100% defense) vs Argon 0.7%, Opus/Fable 1.0%, Astra 8.5%, Grok 4.6 51.8%, Kimi K3 52.7%</div></td><td class="num-col">91.5%</td><td class="num-col">100.0%</td><td class="num-col">+8.5</td></tr><tr><td><div class="rob-main">FrontierSWE 2 (61.2% #3 vs Astra 65.5%) &amp; OSWorld-2.1 (81.5% #2 vs Opus 5.5 87.2%)</div><div class="rob-sub">Carbon gains +6.2 pts on FrontierSWE 2 and +6.8 pts on OSWorld-2.1 vs Argon, but Astra/Opus retain #1</div></td><td class="num-col">55.0%</td><td class="num-col">61.2%</td><td class="num-col">+6.2</td></tr></tbody></table><div class="callout-box"><strong>Simultaneous capability &amp; alignment improvements without safety regression:</strong> While doubling SWE-sweep (2.23x) and jumping +14.0 pts on 6h ExploitGym, Carbon reduces high-severity live coding misalignment alerts by 80%, cuts unsupported claims by 50% (~2x), and drops IPI ASR from 0.7% to 0.0%.</div></div><footer class="card-footer"><span><strong>Gemini 4 Carbon &amp; 20-Model Frontier Coding / Cybersecurity Benchmark (Supplement 6)</strong> · anonymized_reported</span><span>5 / 7</span></footer></div></article><article class="report-card" id="card-6"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">LATENCY</div><h2 class="card-headline">Track A 11-task API inference vs wall time across top 8 CLI models (seconds)</h2><p class="card-subtitle">Blue bars (&#x27;Batched&#x27; slot) show pure API inference seconds; gray bars (&#x27;One by one*&#x27; slot) show total 11-task wall-clock seconds across #1 Sonnet 5.5 (995/1301s), #2 HydraFusion (1034/1444s), #3 GPT-6.1 Sol (1348/1645s), #4 Opus 5.5 (1570/1909s), #5 Astra (1617/1960s), #6 Haiku 5.5 (1852/2104s), #7 Argon (2512/2710s), #8 Fable 5.1 (2210/3355s).</p></header><div class="card-canvas"><div class="lat-list"><div class="lat-group"><div class="lat-title">1 question</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:23.1%"></div><strong class="lat-val">995 ms</strong></div></div><div class="lat-group"><div class="lat-title">2 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:24.0%"></div><strong class="lat-val">1034 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:33.6%"></div><strong class="lat-val">1444 ms</strong></div></div><div class="lat-group"><div class="lat-title">3 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:31.3%"></div><strong class="lat-val">1348 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:38.2%"></div><strong class="lat-val">1645 ms</strong></div></div><div class="lat-group"><div class="lat-title">4 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:36.5%"></div><strong class="lat-val">1570 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:44.4%"></div><strong class="lat-val">1909 ms</strong></div></div><div class="lat-group"><div class="lat-title">5 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:37.6%"></div><strong class="lat-val">1617 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:45.6%"></div><strong class="lat-val">1960 ms</strong></div></div><div class="lat-group"><div class="lat-title">6 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:43.1%"></div><strong class="lat-val">1852 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:48.9%"></div><strong class="lat-val">2104 ms</strong></div></div><div class="lat-group"><div class="lat-title">7 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:58.4%"></div><strong class="lat-val">2512 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:63.0%"></div><strong class="lat-val">2710 ms</strong></div></div><div class="lat-group"><div class="lat-title">8 questions</div><div class="lat-row"><span class="lat-tag">Batched</span><div class="lat-bar lat-blue" style="width:51.4%"></div><strong class="lat-val">2210 ms</strong></div><div class="lat-row"><span class="lat-tag">One by one*</span><div class="lat-bar lat-gray" style="width:78.0%"></div><strong class="lat-val">3355 ms</strong></div></div></div><div class="callout-box"><strong>Token-economics continuity from Argon ($2.82 for 11 CLI tasks) to Carbon ($2/$10, $0.10 cached):</strong> On Track A, Gemini 4 Argon finished all 11 tasks (1,310/1,310 hidden tests) in 2,710s (45.2m) for $2.82 thanks to 95% cache read discounts and $0/M cache writes — the exact billing structure Carbon inherits.</div></div><footer class="card-footer"><span><strong>Gemini 4 Carbon &amp; 20-Model Frontier Coding / Cybersecurity Benchmark (Supplement 6)</strong> · anonymized_reported</span><span>6 / 7</span></footer></div></article><article class="report-card" id="card-7"><div class="card-accent-bar"></div><div class="card-inner"><header class="card-header"><div class="card-eyebrow">MY TAKE</div><h2 class="card-headline">Where Gemini 4 Carbon &amp; the 20-Model Roster fit in production engineering</h2></header><div class="card-canvas"><div class="fit-grid"><div class="fit-card fit-good"><div class="fit-head">✅ Good fit</div><ul><li>Gemini 4 Carbon ($2/$10, Fairwind -&gt; GA): Automated vulnerability discovery, PoC verification, root-cause patching (88.2% SEC-bench Pro, 54.8% ExploitGym), and untrusted-input agent pipelines requiring 0.0% IPI ASR</li><li>Long-Horizon &amp; 1M-Context Graph/Science Agents: 5-hour autonomous workflows (77.4% ALE v1.1), 256k–1M context reasoning (96.2% GraphWalks), and scientific terminal execution (64.8% TB-Science)</li><li>Claude Haiku 5.5 ($0.33, 99.24) &amp; GPT-6.1 Sol ($1.71, 60 rds): Immediate GA high-ROI Copilot CLI workhorses for daily repo maintenance and CI auto-repair</li><li>Claude Fable 5.1 (99.77) &amp; Sonnet 5.5 (99.00, 21.7m): Flagship precision ceiling and fastest full-pass (1,310/1,310) interactive coding experience</li></ul></div><div class="fit-card fit-bad"><div class="fit-head">⛔ Not for</div><ul><li>Assuming Gemini 4 Carbon is already selectable on public Copilot CLI /models today (currently gated by DeepMind&#x27;s Fairwind Program for cyber defenders; use Argon/Sonnet/Sol on public CLI until GA)</li><li>Deploying high-ASR models (Grok 4.6 51.8%, Kimi K3 52.7%, GLM 5.3 31.5%) in unguarded agents that ingest untrusted web pages, issues, or 3rd-party logs without an IPI firewall</li><li>Expecting Carbon to beat Claude Opus 5.5 on raw desktop GUI clicking (OSWorld-2.1: Opus 5.5 87.2% vs Carbon 81.5%) or GPT-6 Astra on FrontierSWE 2 (65.5% vs 61.2%)</li><li>Treating single-run (repeat=1) &lt;1.0 pt score gaps on Track A as statistically significant without hidden-test and cost normalization</li></ul></div></div><div class="dark-footer-box"><p>Provenance: anonymized_reported (independently_reproduced=false) + Offline Verifier Suite (unit tests passing).</p><p class="dark-repo">Sources: blog.google Gemini 4 Carbon (2026-10-28) · gemini_4_carbon_model_evaluation.pdf · satomic/copilot-benchmark@a1913835</p></div></div><footer class="card-footer"><span><strong>Gemini 4 Carbon &amp; 20-Model Frontier Coding / Cybersecurity Benchmark (Supplement 6)</strong> · anonymized_reported</span><span>7 / 7</span></footer></div></article><details><summary>Exact card deck data</summary><pre>{
+  &quot;carbon_official_benchmark_audit&quot;: {
+    &quot;agents_last_exam_delta_pts&quot;: 8.4,
+    &quot;cwe_bench_delta_pts&quot;: 3.0,
+    &quot;exploitgym_10h_delta_pts&quot;: 12.8,
+    &quot;exploitgym_6h_delta_pts&quot;: 14.0,
+    &quot;graphwalks_delta_pts&quot;: 12.0,
+    &quot;non_rank_1_benchmarks&quot;: {
+      &quot;FrontierSWE 2&quot;: 3,
+      &quot;OSWorld-2.1&quot;: 2
+    },
+    &quot;rank_1_benchmarks&quot;: [
+      &quot;AA Index v5.0&quot;,
+      &quot;Vals Index v2.2&quot;,
+      &quot;SWE-sweep&quot;,
+      &quot;Terminal-Bench 4.0 (AA)&quot;,
+      &quot;Agents&#x27; Last Exam v1.1&quot;,
+      &quot;AutomationBench&quot;,
+      &quot;Vending-Bench 2&quot;,
+      &quot;Chartography&quot;,
+      &quot;Blueprint-Bench 2&quot;,
+      &quot;GraphWalks&quot;,
+      &quot;RiemannBench&quot;,
+      &quot;Terminal-Bench-Science 0.1 (AA)&quot;,
+      &quot;CWE-bench&quot;,
+      &quot;ExploitGym&quot;,
+      &quot;SEC-bench Pro&quot;
+    ],
+    &quot;rank_1_count&quot;: 15,
+    &quot;sec_bench_pro_delta_pts&quot;: 4.8,
+    &quot;swe_sweep_delta_pts&quot;: 5.3,
+    &quot;swe_sweep_ratio_x&quot;: 2.23,
+    &quot;terminal_bench_4_delta_pts&quot;: 8.1,
+    &quot;total_benchmarks_audited&quot;: 17,
+    &quot;vending_bench_2_delta_usd&quot;: 2766,
+    &quot;vending_bench_2_gain_pct&quot;: 20.2,
+    &quot;webdev_arena_delta_elo&quot;: 89
+  },
+  &quot;cards&quot;: [
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Gemini 4 Carbon keeps Gemini 4 Argon&#x27;s exact token pricing ($2.00/M input, $10.00/M output, $0.10/M cached input) while delivering +9 pts on AA Index v5.0 (59 vs 50), 2.23x SWE-sweep (9.6% vs 4.3%), +8.1 pts on Terminal-Bench 4.0 (65.2% vs 57.1%), +12.8 pts on ExploitGym 10h (54.8% vs 42.0%), and 0.0% Gray Swan IPI attack success rate.&quot;,
+          &quot;lead&quot;: &quot;Cost-Matched Generational Step Change (anonymized_reported, independently_reproduced=false).&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;HANDS-ON · 20-MODEL CODING AGENT + GEMINI 4 CARBON CYBER &amp; LONG-HORIZON&quot;,
+      &quot;headline_Gradient&quot;: &quot;0.0% Gray Swan IPI ASR at $2 / $10&quot;,
+      &quot;headline_prefix&quot;: &quot;Gemini 4 Carbon hits #1 on 15/17 benchmarks &amp; &quot;,
+      &quot;kind&quot;: &quot;overview&quot;,
+      &quot;subtitle&quot;: &quot;Supplement 6 expands our 19-model Copilot CLI Coding Agent matrix (209 runs across 11 A1–C4 tasks, zero prior score drift) to a 20-model frontier view by incorporating Google DeepMind&#x27;s Gemini 4 Carbon (2026-10-28, Fairwind Preview) across 17 official coding, long-horizon, science, and cybersecurity benchmarks.&quot;,
+      &quot;workbench&quot;: {
+        &quot;bands_note&quot;: &quot;Gating: Act automatically if #1 on official suite or 1,310/1,310 hidden pass &amp; CLI mean &gt;= 98.45; Confirm if #2–#4 or Fairwind Preview pending public CLI; Send to a human if IPI ASR &gt; 15% or hidden &lt; 1,260.&quot;,
+        &quot;decisions&quot;: [
+          {
+            &quot;action&quot;: &quot;Act automatically&quot;,
+            &quot;closest_label&quot;: &quot;Matches Gemini 4 Argon&#x27;s exact token pricing ($2/$10, 95% cache discount = $0.10/M) with zero price premium&quot;,
+            &quot;confidence&quot;: 0.962,
+            &quot;distribution_pct&quot;: {
+              &quot;Agents&#x27; Last Exam v1.1 5h (77.4% · #1)&quot;: 77.4,
+              &quot;GraphWalks 256k-1M BFS F1 (96.2% · #1)&quot;: 96.2,
+              &quot;SEC-bench Pro 183 JS tasks (88.2% · #1)&quot;: 88.2
+            },
+            &quot;field&quot;: &quot;gemini_4_carbon_cyber_and_horizon_lead&quot;,
+            &quot;question&quot;: &quot;How does Gemini 4 Carbon perform across the 17 official coding, long-horizon, and cybersecurity benchmarks?&quot;,
+            &quot;question_type&quot;: &quot;score&quot;,
+            &quot;selected_answer&quot;: &quot;#1 on 15/17 benchmarks · 88.2% SEC-bench Pro · 54.8% ExploitGym · 96.2% GraphWalks&quot;
+          },
+          {
+            &quot;action&quot;: &quot;Act automatically&quot;,
+            &quot;closest_label&quot;: &quot;Outperforms Argon (0.7%), Opus 5.5 / Fable 5.1 (1.0%), GPT-6 Astra (8.5%), and Kimi K3 (52.7% ASR)&quot;,
+            &quot;confidence&quot;: 1.0,
+            &quot;distribution_pct&quot;: {
+              &quot;Claude Opus 5.5 / Fable 5.1 Defense Rate (99.0%)&quot;: 99.0,
+              &quot;GPT-6 Astra IPI Defense Rate (91.5%)&quot;: 91.5,
+              &quot;Gemini 4 Carbon IPI Defense Rate (100.0%)&quot;: 100.0
+            },
+            &quot;field&quot;: &quot;gray_swan_ipi_and_alignment_guarantee&quot;,
+            &quot;question&quot;: &quot;Does Carbon&#x27;s offensive/defensive cyber jump increase indirect prompt injection or reward-hacking risk?&quot;,
+            &quot;question_type&quot;: &quot;choice&quot;,
+            &quot;selected_answer&quot;: &quot;0.0% Gray Swan IPI ASR (k=15) · 0.0% TB 4.0 Cheating · -80% Misalignment Alerts&quot;
+          },
+          {
+            &quot;action&quot;: &quot;Confirm&quot;,
+            &quot;closest_label&quot;: &quot;Astra leads FrontierSWE 2 (65.5% vs Carbon 61.2%); Opus 5.5 leads OSWorld-2.1 (87.2% vs Carbon 81.5%)&quot;,
+            &quot;confidence&quot;: 0.986,
+            &quot;distribution_pct&quot;: {
+              &quot;Claude Haiku 5.5 CLI mean (99.24/100 · $0.33)&quot;: 99.2,
+              &quot;Fable 5.1 CLI 11-task mean (99.77/100)&quot;: 99.8,
+              &quot;Gemini 4 Argon CLI mean (98.59/100 · $2.82)&quot;: 98.6
+            },
+            &quot;field&quot;: &quot;track_a_20_model_cli_positioning&quot;,
+            &quot;question&quot;: &quot;Which models lead the 20-Model Copilot CLI Coding Agent roster while Carbon is in Fairwind Preview?&quot;,
+            &quot;question_type&quot;: &quot;noul&quot;,
+            &quot;selected_answer&quot;: &quot;Fable 5.1 (99.77 #1) · Haiku 5.5 (99.24, $0.33) · Sonnet 5.5 (21.7m) · Argon (1310/1310, $2.82)&quot;
+          }
+        ],
+        &quot;metrics&quot;: [
+          &quot;Carbon: #1 on 15/17 · $2/$10 ($0.10 cache)&quot;,
+          &quot;SEC-bench Pro: 88.2% (#1) · ExploitGym: 54.8%&quot;,
+          &quot;Gray Swan IPI (k=15): 0.0% ASR (#1 of 13)&quot;,
+          &quot;SWE-sweep: 9.6% (2.23x Argon) · TB 4.0: 65.2%&quot;
+        ],
+        &quot;scenarios&quot;: [
+          &quot;Track A · 20-Model Coding Roster: 19 CLI GA models (209 runs, 1,310 hidden tests) + Carbon (#20 Fairwind)&quot;,
+          &quot;Track B · SWE &amp; Terminal Leap: AA Index 59 (#1), SWE-sweep 9.6% (#1, 2.23x Argon), TB 4.0 65.2% (#1)&quot;,
+          &quot;Track B · Long-Horizon &amp; 1M Context: ALE v1.1 77.4% (#1), Vending-Bench 2 $16,484 (#1), GraphWalks 96.2% (#1)&quot;,
+          &quot;Track C · Cyber Defense Lifecycle: SEC-bench Pro 88.2% (#1), ExploitGym 54.8%/53.5% (#1), CWE-bench 71.0% (#1)&quot;,
+          &quot;Track D · Adversarial Safety: Gray Swan IPI k=15 0.0% ASR (#1 of 13) &amp; TB 4.0 0.0% Successful Cheating&quot;
+        ],
+        &quot;status_pill&quot;: &quot;20-Model Roster (209 CLI runs + Carbon 17-Benchmark Audit) · anonymized_reported&quot;,
+        &quot;title&quot;: &quot;Dual-Track 20-Model Coding Agent &amp; Gemini 4 Carbon Cyber Defense Workbench&quot;
+      }
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Even GPT-6 Astra (8.5% ASR) and GPT-6.1 Sol (8.6% ASR) suffer ~1-in-12 hijacks at k=15 attempts, whereas Gemini 4 Carbon achieves 0.0% ASR alongside Argon (0.7%) and Opus 5.5 / Fable 5.1 (1.0%).&quot;,
+          &quot;lead&quot;: &quot;High SWE coding scores do NOT imply prompt-injection safety: Grok 4.6 (51.8% ASR) and Kimi K3 (52.7% ASR) are hijacked over half the time at k=15.&quot;
+        }
+      ],
+      &quot;decisions&quot;: [
+        {
+          &quot;action&quot;: &quot;Act automatically&quot;,
+          &quot;closest_label&quot;: &quot;Vending-Bench 2 hits $16,484 (#1, +$2,766/+20.2% vs Argon); GraphWalks hits 96.2% (#1, +12.0 pts)&quot;,
+          &quot;confidence&quot;: 0.962,
+          &quot;distribution_pct&quot;: {
+            &quot;Agents&#x27; Last Exam v1.1 5h Window (77.4% · #1)&quot;: 77.4,
+            &quot;GraphWalks 256k-1M BFS F1 (96.2% · #1)&quot;: 96.2,
+            &quot;RiemannBench Mathematical Research (80.0% · #1)&quot;: 80.0
+          },
+          &quot;field&quot;: &quot;coding_and_long_horizon_leap&quot;,
+          &quot;question&quot;: &quot;Coding &amp; Long-Horizon Agents: Gemini 4 Carbon vs Argon, GPT-6 Astra &amp; Claude Opus 5.5&quot;,
+          &quot;question_type&quot;: &quot;score&quot;,
+          &quot;selected_answer&quot;: &quot;AA Index 59 (#1, +9) · SWE-sweep 9.6% (#1, 2.23x) · TB 4.0 65.2% (#1) · ALE 77.4% (#1)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Act automatically&quot;,
+          &quot;closest_label&quot;: &quot;Carbon&#x27;s 6h capped ExploitGym (53.5%) beats uncapped GPT-6 Astra (42.4%) by +11.1 pts; &gt;10x Chrome patch quality&quot;,
+          &quot;confidence&quot;: 0.882,
+          &quot;distribution_pct&quot;: {
+            &quot;CWE-bench Pass@1 (71.0% vs Astra/Argon/Grok 68.0%)&quot;: 71.0,
+            &quot;ExploitGym 10h Causal Pass Rate (54.8% vs Astra 42.4%)&quot;: 54.8,
+            &quot;SEC-bench Pro Pass@1 (88.2% vs Astra 85.4%)&quot;: 88.2
+          },
+          &quot;field&quot;: &quot;cyber_defense_lifecycle_sweep&quot;,
+          &quot;question&quot;: &quot;Cyber Defense Lifecycle: SEC-bench Pro (183 JS tasks), ExploitGym (Causal) &amp; CWE-bench (Pass@1)&quot;,
+          &quot;question_type&quot;: &quot;choice&quot;,
+          &quot;selected_answer&quot;: &quot;SEC-bench Pro 88.2% (#1) · ExploitGym 54.8% 10h / 53.5% 6h (#1) · CWE-bench 71.0% (#1)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Act automatically&quot;,
+          &quot;closest_label&quot;: &quot;-80% high-severity live coding misalignment alerts; -50% unsupported claims (~2x cut); -26% overreach&quot;,
+          &quot;confidence&quot;: 1.0,
+          &quot;distribution_pct&quot;: {
+            &quot;Carbon IPI Resistance @ k=15 (100% - 0.0% ASR)&quot;: 100.0,
+            &quot;GPT-6 Astra IPI Resistance @ k=15 (100% - 8.5% ASR)&quot;: 91.5,
+            &quot;Kimi K3 IPI Resistance @ k=15 (100% - 52.7% ASR)&quot;: 47.3
+          },
+          &quot;field&quot;: &quot;adversarial_ipi_and_anti_cheating&quot;,
+          &quot;question&quot;: &quot;Adversarial Robustness: Gray Swan Indirect Prompt Injection (k=15) &amp; Terminal-Bench 4.0 Cheating&quot;,
+          &quot;question_type&quot;: &quot;noul&quot;,
+          &quot;selected_answer&quot;: &quot;0.0% Gray Swan IPI ASR (0 hijacks in 15 tries) · 0.0% TB 4.0 Cheating (0.4% attempts)&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;SCENARIO: END-TO-END CYBER DEFENSE &amp; LONG-HORIZON AGENT EVALUATION&quot;,
+      &quot;headline&quot;: &quot;Carbon sweeps SEC-bench Pro (88.2%), ExploitGym (54.8%), CWE-bench (71.0%) &amp; Gray Swan IPI (0.0%).&quot;,
+      &quot;kind&quot;: &quot;deep_dive&quot;,
+      &quot;quote&quot;: &quot;DeepMind&#x27;s 2026-10-28 Gemini 4 Carbon evaluation report tests the complete defensive security lifecycle (vulnerability discovery -&gt; PoC exploit verification -&gt; root-cause patching) alongside 5-hour to 1-year agent horizons and 13-model indirect prompt injection stress tests at k=15 attempts.&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Carbon leads AA Index v5.0 (59), Vals Index v2.2 (70.4%), SWE-sweep (9.6%), TB 4.0 (65.2%), ALE v1.1 (77.4%), AutomationBench (53.9%), Vending-Bench 2 ($16,484), Chartography (72.5%), Blueprint-Bench 2 (58.6%), GraphWalks (96.2%), RiemannBench (80.0%), TB-Science (64.8%), CWE-bench (71.0%), ExploitGym (54.8%), and SEC-bench Pro (88.2%).&quot;,
+          &quot;lead&quot;: &quot;15 of 17 official benchmarks rank #1 for Gemini 4 Carbon at Argon&#x27;s exact $2/$10 ($0.10 cached) pricing.&quot;
+        },
+        {
+          &quot;body&quot;: &quot;GPT-6 Astra holds #1 on FrontierSWE 2 (65.5%) and Claude Opus 5.5 holds #1 on GUI OSWorld-2.1 (87.2%), though Carbon still advances +6.2 pts and +6.8 pts over Gemini 4 Argon on those two suites.&quot;,
+          &quot;lead&quot;: &quot;Only 2 non-#1 rows (✕) in the 17-benchmark matrix: FrontierSWE 2 (#3 at 61.2%) and OSWorld-2.1 (#2 at 81.5%).&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;WHAT I TESTED&quot;,
+      &quot;headline&quot;: &quot;17 official Gemini 4 Carbon benchmarks + Gray Swan IPI + 20-Model CLI matrix&quot;,
+      &quot;kind&quot;: &quot;scorecard&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 59 (#1) vs Argon 50 (+9) | Opus 5.5 58 | Astra 57 | Fable 5.1 49&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;AA Index v5.0 (Artificial Analysis Intelligence Index v5.0 (with tools))&quot;,
+          &quot;reported_probability_pct&quot;: 59,
+          &quot;scenario&quot;: &quot;General &amp; Enterprise&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 70.4% (#1) vs Argon 69.2% (+1.2 pt) | Astra 65.0% | Opus 5.5 70.2%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Vals Index v2.2 (Enterprise Finance, Legal &amp; Coding Multimodal Index)&quot;,
+          &quot;reported_probability_pct&quot;: 70,
+          &quot;scenario&quot;: &quot;General &amp; Enterprise&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 9.6% (#1) vs Argon 4.3% (+5.3 pt) | Astra 9.5% | Opus 5.5 3.6%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;SWE-sweep (mini-swe-agent multi-PR subtask reward)&quot;,
+          &quot;reported_probability_pct&quot;: 10,
+          &quot;scenario&quot;: &quot;Software Engineering &amp; Terminal&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 61.2% (#3) vs Argon 55.0% (+6.2 pt) | Astra 65.5% | Opus 5.5 62.3%&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;FrontierSWE 2 (Proximal hard repository-level software engineering)&quot;,
+          &quot;reported_probability_pct&quot;: 61,
+          &quot;scenario&quot;: &quot;Software Engineering &amp; Terminal&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 65.2% (#1) vs Argon 57.1% (+8.1 pt) | Astra 59.1% | Opus 5.5 59.6%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Terminal-Bench 4.0 (AA) (Artificial Analysis standardized terminal agent suite)&quot;,
+          &quot;reported_probability_pct&quot;: 65,
+          &quot;scenario&quot;: &quot;Software Engineering &amp; Terminal&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 77.4% (#1) vs Argon 69.0% (+8.4 pt) | Astra 73.1% | Opus 5.5 71.6%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Agents&#x27; Last Exam v1.1 (122 tasks, ALE-Claw harness, 5-hour window)&quot;,
+          &quot;reported_probability_pct&quot;: 77,
+          &quot;scenario&quot;: &quot;Long-Horizon &amp; Computer Use&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Confirm&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 81.5% (#2) vs Argon 74.7% (+6.8 pt) | Astra 80.9% | Opus 5.5 87.2%&quot;,
+          &quot;pointed_right_way&quot;: false,
+          &quot;question&quot;: &quot;OSWorld-2.1 (82-task offline GUI subset, max@3)&quot;,
+          &quot;reported_probability_pct&quot;: 82,
+          &quot;scenario&quot;: &quot;Long-Horizon &amp; Computer Use&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 53.9% (#1) vs Argon 51.3% (+2.6 pt) | Astra 41.4% | Opus 5.5 42.5%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;AutomationBench (Zapier private enterprise workflow automation set)&quot;,
+          &quot;reported_probability_pct&quot;: 54,
+          &quot;scenario&quot;: &quot;Long-Horizon &amp; Computer Use&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon $16,484 (#1) vs Argon $13,718 (+$2,766) | Astra $15,515 | Opus 5.5 $9,235&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Vending-Bench 2 (Andon Labs long-horizon business simulation bank balance ($))&quot;,
+          &quot;reported_probability_pct&quot;: 96,
+          &quot;scenario&quot;: &quot;Long-Horizon &amp; Computer Use&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 72.5% (#1) vs Argon 71.6% (+0.9 pt) | Astra 71.0% | Opus 5.5 66.3%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Chartography (Surge complex chart reasoning (no tools))&quot;,
+          &quot;reported_probability_pct&quot;: 72,
+          &quot;scenario&quot;: &quot;Visual, Spatial &amp; Long-Context&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 58.6% (#1) vs Argon 54.4% (+4.2 pt) | Astra 49.7% | Opus 5.5 51.2%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Blueprint-Bench 2 (Andon Labs structural blueprint similarity)&quot;,
+          &quot;reported_probability_pct&quot;: 59,
+          &quot;scenario&quot;: &quot;Visual, Spatial &amp; Long-Context&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 96.2% (#1) vs Argon 84.2% (+12.0 pt) | Astra 71.8% | Opus 5.5 66.8%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;GraphWalks (256k to 1M tokens, 200 problems, BFS F1)&quot;,
+          &quot;reported_probability_pct&quot;: 96,
+          &quot;scenario&quot;: &quot;Visual, Spatial &amp; Long-Context&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 80.0% (#1) vs Argon 76.0% (+4.0 pt) | Astra 72.0% | Opus 5.5 69.6%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;RiemannBench (Surge frontier mathematical research benchmark)&quot;,
+          &quot;reported_probability_pct&quot;: 80,
+          &quot;scenario&quot;: &quot;Math &amp; Scientific Reasoning&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 64.8% (#1) vs Argon 52.9% (+11.9 pt) | Astra 63.3% | Opus 5.5 59.0%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Terminal-Bench-Science 0.1 (AA) (Artificial Analysis scientific terminal computing)&quot;,
+          &quot;reported_probability_pct&quot;: 65,
+          &quot;scenario&quot;: &quot;Math &amp; Scientific Reasoning&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 71.0% (#1) vs Argon 68.0% (+3.0 pt) | Astra 68.0% | Opus 5.5 67.0%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;CWE-bench (Collinear Pass@1 vulnerability remediation across CWEs)&quot;,
+          &quot;reported_probability_pct&quot;: 71,
+          &quot;scenario&quot;: &quot;Cybersecurity Defense Lifecycle&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 54.8% (#1) vs Argon 42.0% (+12.8 pt) | Astra 42.4% | Opus 5.5 34.5%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;ExploitGym (Causal Pass Rate (10h cap; 6h cap: Carbon 53.5% vs Argon 39.5%))&quot;,
+          &quot;reported_probability_pct&quot;: 55,
+          &quot;scenario&quot;: &quot;Cybersecurity Defense Lifecycle&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 88.2% (#1) vs Argon 83.4% (+4.8 pt) | Astra 85.4% | Opus 5.5 —&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;SEC-bench Pro (183 real-world JS engine security tasks, Pass@1)&quot;,
+          &quot;reported_probability_pct&quot;: 88,
+          &quot;scenario&quot;: &quot;Cybersecurity Defense Lifecycle&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Carbon 0.0% (#1) &lt; Argon 0.7% &lt; Opus/Fable 1.0% &lt; Astra 8.5% &lt; Kimi K3 52.7%&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;Indirect Prompt Injection ASR @ k=15 (Lower is better · 13 models)&quot;,
+          &quot;reported_probability_pct&quot;: 100,
+          &quot;scenario&quot;: &quot;Safety · Gray Swan IPI (k=15)&quot;
+        },
+        {
+          &quot;action&quot;: &quot;Auto&quot;,
+          &quot;decider_answer&quot;: &quot;Fable 99.77 (#1) · Haiku 5.5 99.24 ($0.33) · Argon 98.59 (1310/1310, $2.82) · Carbon $2/$10&quot;,
+          &quot;pointed_right_way&quot;: true,
+          &quot;question&quot;: &quot;19 CLI GA Models (209 runs, 0 drift) + Gemini 4 Carbon (#20 Fairwind)&quot;,
+          &quot;reported_probability_pct&quot;: 99,
+          &quot;scenario&quot;: &quot;Track A · 20-Model Coding CLI&quot;
+        }
+      ]
+    },
+    {
+      &quot;bottom_code&quot;: &quot;[VERIFIED] Roster = 20 models (19 CLI GA with 0 score drift + 1 Fairwind Preview: gemini-4-carbon)\n[VERIFIED] Pricing Parity: Carbon ($2.00/$10.00/$0.10) == Argon ($2.00/$10.00/$0.10) — 0% token price premium\n[VERIFIED] Carbon #1 Ranks = 15/17; SWE-sweep = 9.6% vs Argon 4.3% (2.23x); GraphWalks = 96.2% (+12.0 pt)\n[VERIFIED] Cyber Lifecycle: SEC-bench Pro 88.2% (#1/8), ExploitGym 54.8%/53.5% (#1-#2/10), CWE-bench 71.0% (#1/11)\n[VERIFIED] Safety: Gray Swan IPI k=15 ASR = 0.0% (#1/13 vs Kimi K3 52.7%); TB 4.0 Cheating = 0.0% (0.4% attempts)\n&lt;answer&gt;ALL_20_MODEL_AND_GEMINI_4_CARBON_ASSERTIONS_VERIFIED&lt;/answer&gt;&quot;,
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;Because Gemini 4 Carbon is currently in phased rollout via DeepMind&#x27;s Fairwind Program and not yet on public Copilot CLI /models, we never synthesize or guess an 11-task A1–C4 CLI score; we bind exact measured CLI bundles and official DeepMind evaluation tables.&quot;,
+          &quot;lead&quot;: &quot;Zero Fabricated Coordinates Policy:&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;UNDER THE HOOD&quot;,
+      &quot;headline&quot;: &quot;20-Model Roster Contract &amp; Cyber Defense / Safety Invariant Verifier&quot;,
+      &quot;kind&quot;: &quot;protocol&quot;,
+      &quot;top_code&quot;: &quot;{\n  \&quot;track_a_copilot_cli_20_model_roster\&quot;: {\n    \&quot;commit\&quot;: \&quot;a191383571a13143685fd6f7787512c4e281a9ba\&quot;,\n    \&quot;cli_ga_models\&quot;: 19,\n    \&quot;fairwind_preview_model\&quot;: \&quot;gemini-4-carbon (#20)\&quot;,\n    \&quot;prior_model_score_drifts\&quot;: 0,\n    \&quot;gemini_4_argon_cli\&quot;: {\n      \&quot;rank\&quot;: 10,\n      \&quot;mean\&quot;: 98.59,\n      \&quot;hidden\&quot;: \&quot;1310/1310\&quot;,\n      \&quot;cost_usd\&quot;: 2.82\n    }\n  },\n  \&quot;gemini_4_carbon_official_contract\&quot;: {\n    \&quot;release_date\&quot;: \&quot;2026-10-28\&quot;,\n    \&quot;pricing_per_1m_usd\&quot;: {\n      \&quot;input\&quot;: 2.0,\n      \&quot;output\&quot;: 10.0,\n      \&quot;cached_input\&quot;: 0.1,\n      \&quot;cache_write\&quot;: 0.0\n    },\n    \&quot;cyber_lifecycle\&quot;: {\n      \&quot;sec_bench_pro\&quot;: 88.2,\n      \&quot;exploitgym_10h\&quot;: 54.8,\n      \&quot;exploitgym_6h\&quot;: 53.5,\n      \&quot;cwe_bench\&quot;: 71.0\n    },\n    \&quot;alignment\&quot;: {\n      \&quot;gray_swan_ipi_k15_asr\&quot;: 0.0,\n      \&quot;tb4_cheating_success\&quot;: 0.0,\n      \&quot;misalignment_delta_pct\&quot;: -80.0\n    }\n  }\n}&quot;,
+      &quot;transition&quot;: &quot;↓ Deterministic Verifier (simulator/gemini4_carbon_20model_verifier.py) ↓&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;While doubling SWE-sweep (2.23x) and jumping +14.0 pts on 6h ExploitGym, Carbon reduces high-severity live coding misalignment alerts by 80%, cuts unsupported claims by 50% (~2x), and drops IPI ASR from 0.7% to 0.0%.&quot;,
+          &quot;lead&quot;: &quot;Simultaneous capability &amp; alignment improvements without safety regression:&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;ROBUSTNESS CHECK&quot;,
+      &quot;headline&quot;: &quot;Generational step changes (Argon -&gt; Carbon) &amp; Gray Swan k=15 IPI resilience&quot;,
+      &quot;kind&quot;: &quot;robustness&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 5.3,
+          &quot;original_pct&quot;: 4.3,
+          &quot;reversed_pct&quot;: 9.6,
+          &quot;scenario&quot;: &quot;SWE-sweep (mini-swe-agent multi-PR subtask reward · Argon -&gt; Carbon)&quot;,
+          &quot;selected_option&quot;: &quot;Argon 4.3% -&gt; Carbon 9.6% (#1, +5.3 pts, 2.23x Argon; beats GPT-6 Astra 9.5% &amp; Opus 5.5 3.6%)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 12.0,
+          &quot;original_pct&quot;: 84.2,
+          &quot;reversed_pct&quot;: 96.2,
+          &quot;scenario&quot;: &quot;GraphWalks (256k–1M context, 200 problems, BFS F1 · Argon -&gt; Carbon)&quot;,
+          &quot;selected_option&quot;: &quot;Argon 84.2% -&gt; Carbon 96.2% (#1, +12.0 pts; +24.4 pts over GPT-6 Astra 71.8%)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 12.8,
+          &quot;original_pct&quot;: 42.0,
+          &quot;reversed_pct&quot;: 54.8,
+          &quot;scenario&quot;: &quot;ExploitGym Causal Pass Rate (10h Cap · Argon -&gt; Carbon)&quot;,
+          &quot;selected_option&quot;: &quot;Argon 42.0% (10h) / 39.5% (6h) -&gt; Carbon 54.8% (10h) / 53.5% (6h) (#1; beats uncapped Astra 42.4%)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 8.1,
+          &quot;original_pct&quot;: 57.1,
+          &quot;reversed_pct&quot;: 65.2,
+          &quot;scenario&quot;: &quot;Terminal-Bench 4.0 &amp; Terminal-Bench-Science 0.1 (AA · Argon -&gt; Carbon)&quot;,
+          &quot;selected_option&quot;: &quot;TB 4.0: 57.1% -&gt; 65.2% (#1, +8.1 pts) | TB-Science: 52.9% -&gt; 64.8% (#1, +11.9 pts)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 8.4,
+          &quot;original_pct&quot;: 69.0,
+          &quot;reversed_pct&quot;: 77.4,
+          &quot;scenario&quot;: &quot;Agents&#x27; Last Exam v1.1 (122 tasks, ALE-Claw, 5h window · Argon -&gt; Carbon)&quot;,
+          &quot;selected_option&quot;: &quot;Argon 69.0% -&gt; Carbon 77.4% (#1, +8.4 pts; beats GPT-6 Astra 73.1% &amp; Claude Opus 5.5 71.6%)&quot;
+        },
+        {
+          &quot;answer_held&quot;: true,
+          &quot;change_pts&quot;: 8.5,
+          &quot;original_pct&quot;: 91.5,
+          &quot;reversed_pct&quot;: 100.0,
+          &quot;scenario&quot;: &quot;Gray Swan IPI Defense Rate (100% - ASR @ k=15 · Astra/Kimi vs Carbon)&quot;,
+          &quot;selected_option&quot;: &quot;Carbon 0.0% ASR (100% defense) vs Argon 0.7%, Opus/Fable 1.0%, Astra 8.5%, Grok 4.6 51.8%, Kimi K3 52.7%&quot;
+        },
+        {
+          &quot;answer_held&quot;: false,
+          &quot;change_pts&quot;: 6.2,
+          &quot;original_pct&quot;: 55.0,
+          &quot;reversed_pct&quot;: 61.2,
+          &quot;scenario&quot;: &quot;FrontierSWE 2 (61.2% #3 vs Astra 65.5%) &amp; OSWorld-2.1 (81.5% #2 vs Opus 5.5 87.2%)&quot;,
+          &quot;selected_option&quot;: &quot;Carbon gains +6.2 pts on FrontierSWE 2 and +6.8 pts on OSWorld-2.1 vs Argon, but Astra/Opus retain #1&quot;
+        }
+      ],
+      &quot;subtitle&quot;: &quot;Evaluating Gemini 4 Carbon&#x27;s gains over Gemini 4 Argon across multi-PR SWE, 1M-token graphs, time-capped exploit synthesis, 5-hour agent workflows, and 15-attempt indirect prompt injection.&quot;
+    },
+    {
+      &quot;callouts&quot;: [
+        {
+          &quot;body&quot;: &quot;On Track A, Gemini 4 Argon finished all 11 tasks (1,310/1,310 hidden tests) in 2,710s (45.2m) for $2.82 thanks to 95% cache read discounts and $0/M cache writes — the exact billing structure Carbon inherits.&quot;,
+          &quot;lead&quot;: &quot;Token-economics continuity from Argon ($2.82 for 11 CLI tasks) to Carbon ($2/$10, $0.10 cached):&quot;
+        }
+      ],
+      &quot;eyebrow&quot;: &quot;LATENCY&quot;,
+      &quot;headline&quot;: &quot;Track A 11-task API inference vs wall time across top 8 CLI models (seconds)&quot;,
+      &quot;kind&quot;: &quot;latency&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;batched_median_ms&quot;: 995,
+          &quot;one_by_one_estimated_ms&quot;: 1301,
+          &quot;question_count&quot;: 1,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1034,
+          &quot;one_by_one_estimated_ms&quot;: 1444,
+          &quot;question_count&quot;: 2,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1348,
+          &quot;one_by_one_estimated_ms&quot;: 1645,
+          &quot;question_count&quot;: 3,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1570,
+          &quot;one_by_one_estimated_ms&quot;: 1909,
+          &quot;question_count&quot;: 4,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1617,
+          &quot;one_by_one_estimated_ms&quot;: 1960,
+          &quot;question_count&quot;: 5,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 1852,
+          &quot;one_by_one_estimated_ms&quot;: 2104,
+          &quot;question_count&quot;: 6,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 2512,
+          &quot;one_by_one_estimated_ms&quot;: 2710,
+          &quot;question_count&quot;: 7,
+          &quot;runs&quot;: 11
+        },
+        {
+          &quot;batched_median_ms&quot;: 2210,
+          &quot;one_by_one_estimated_ms&quot;: 3355,
+          &quot;question_count&quot;: 8,
+          &quot;runs&quot;: 11
+        }
+      ],
+      &quot;subtitle&quot;: &quot;Blue bars (&#x27;Batched&#x27; slot) show pure API inference seconds; gray bars (&#x27;One by one*&#x27; slot) show total 11-task wall-clock seconds across #1 Sonnet 5.5 (995/1301s), #2 HydraFusion (1034/1444s), #3 GPT-6.1 Sol (1348/1645s), #4 Opus 5.5 (1570/1909s), #5 Astra (1617/1960s), #6 Haiku 5.5 (1852/2104s), #7 Argon (2512/2710s), #8 Fable 5.1 (2210/3355s).&quot;
+    },
+    {
+      &quot;dark_box&quot;: {
+        &quot;lead&quot;: &quot;Provenance: anonymized_reported (independently_reproduced=false) + Offline Verifier Suite (unit tests passing).&quot;,
+        &quot;repo&quot;: &quot;Sources: blog.google Gemini 4 Carbon (2026-10-28) · gemini_4_carbon_model_evaluation.pdf · satomic/copilot-benchmark@a1913835&quot;
+      },
+      &quot;eyebrow&quot;: &quot;MY TAKE&quot;,
+      &quot;good_fit&quot;: [
+        &quot;Gemini 4 Carbon ($2/$10, Fairwind -&gt; GA): Automated vulnerability discovery, PoC verification, root-cause patching (88.2% SEC-bench Pro, 54.8% ExploitGym), and untrusted-input agent pipelines requiring 0.0% IPI ASR&quot;,
+        &quot;Long-Horizon &amp; 1M-Context Graph/Science Agents: 5-hour autonomous workflows (77.4% ALE v1.1), 256k–1M context reasoning (96.2% GraphWalks), and scientific terminal execution (64.8% TB-Science)&quot;,
+        &quot;Claude Haiku 5.5 ($0.33, 99.24) &amp; GPT-6.1 Sol ($1.71, 60 rds): Immediate GA high-ROI Copilot CLI workhorses for daily repo maintenance and CI auto-repair&quot;,
+        &quot;Claude Fable 5.1 (99.77) &amp; Sonnet 5.5 (99.00, 21.7m): Flagship precision ceiling and fastest full-pass (1,310/1,310) interactive coding experience&quot;
+      ],
+      &quot;headline&quot;: &quot;Where Gemini 4 Carbon &amp; the 20-Model Roster fit in production engineering&quot;,
+      &quot;kind&quot;: &quot;takeaways&quot;,
+      &quot;not_for&quot;: [
+        &quot;Assuming Gemini 4 Carbon is already selectable on public Copilot CLI /models today (currently gated by DeepMind&#x27;s Fairwind Program for cyber defenders; use Argon/Sonnet/Sol on public CLI until GA)&quot;,
+        &quot;Deploying high-ASR models (Grok 4.6 51.8%, Kimi K3 52.7%, GLM 5.3 31.5%) in unguarded agents that ingest untrusted web pages, issues, or 3rd-party logs without an IPI firewall&quot;,
+        &quot;Expecting Carbon to beat Claude Opus 5.5 on raw desktop GUI clicking (OSWorld-2.1: Opus 5.5 87.2% vs Carbon 81.5%) or GPT-6 Astra on FrontierSWE 2 (65.5% vs 61.2%)&quot;,
+        &quot;Treating single-run (repeat=1) &lt;1.0 pt score gaps on Track A as statistically significant without hidden-test and cost normalization&quot;
+      ]
+    }
+  ],
+  &quot;cli_pareto_frontier&quot;: [
+    &quot;Fable 5.1&quot;,
+    &quot;Opus 5.5&quot;,
+    &quot;Haiku 5.5&quot;,
+    &quot;Sonnet 5.5&quot;,
+    &quot;GPT-6.1 Sol&quot;,
+    &quot;GPT-6 Luna&quot;
+  ],
+  &quot;cybersecurity_and_safety_audit&quot;: {
+    &quot;cwe_bench&quot;: {
+      &quot;entries_count&quot;: 11,
+      &quot;lead_vs_fable_5_1_pts&quot;: 13.0,
+      &quot;lead_vs_opus_5_5_pts&quot;: 4.0,
+      &quot;lead_vs_second_pts&quot;: 3.0,
+      &quot;leader&quot;: &quot;Gemini 4 Carbon&quot;,
+      &quot;leader_score_pct&quot;: 71.0,
+      &quot;tied_second_models_at_68_pct&quot;: [
+        &quot;Grok 4.7&quot;,
+        &quot;Gemini 4 Argon&quot;,
+        &quot;GPT-6 Astra&quot;
+      ]
+    },
+    &quot;exploitgym&quot;: {
+      &quot;astra_no_cap_pct&quot;: 42.4,
+      &quot;carbon_10h_lead_vs_astra_no_cap_pts&quot;: 12.4,
+      &quot;carbon_6h_lead_vs_astra_no_cap_pts&quot;: 11.1,
+      &quot;carbon_6h_lead_vs_opus_5_5_6h_pts&quot;: 19.0,
+      &quot;entries_count&quot;: 10,
+      &quot;leader_10h_pct&quot;: 54.8,
+      &quot;leader_6h_pct&quot;: 53.5
+    },
+    &quot;gray_swan_ipi&quot;: {
+      &quot;argon_asr_pct&quot;: 0.7,
+      &quot;carbon_asr_pct&quot;: 0.0,
+      &quot;entries_count&quot;: 13,
+      &quot;fable_5_1_asr_pct&quot;: 1.0,
+      &quot;gpt6_1_sol_asr_pct&quot;: 8.6,
+      &quot;gpt6_astra_asr_pct&quot;: 8.5,
+      &quot;kimi_k3_asr_pct&quot;: 52.7,
+      &quot;opus_5_5_asr_pct&quot;: 1.0,
+      &quot;zero_asr_models&quot;: [
+        &quot;Gemini 4 Carbon&quot;
+      ]
+    },
+    &quot;sec_bench_pro&quot;: {
+      &quot;entries_count&quot;: 8,
+      &quot;lead_vs_argon_pts&quot;: 4.8,
+      &quot;lead_vs_astra_pts&quot;: 2.8,
+      &quot;lead_vs_deepseek_v4_pro_pts&quot;: 31.8,
+      &quot;leader&quot;: &quot;Gemini 4 Carbon&quot;,
+      &quot;leader_score_pct&quot;: 88.2
+    }
+  },
+  &quot;deck_title&quot;: &quot;Gemini 4 Carbon &amp; 20-Model Frontier Coding / Cybersecurity Benchmark (Supplement 6)&quot;,
+  &quot;independently_reproduced&quot;: false,
+  &quot;provenance&quot;: &quot;anonymized_reported&quot;,
+  &quot;report_id&quot;: &quot;gemini-4-carbon-and-20-model-benchmark&quot;,
+  &quot;schema_version&quot;: 1,
+  &quot;source_binding&quot;: {
+    &quot;cli_evaluated_models&quot;: 19,
+    &quot;gemini_4_carbon_blog&quot;: &quot;https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/&quot;,
+    &quot;gemini_4_carbon_evaluation_pdf&quot;: &quot;https://storage.googleapis.com/deepmind-media/gemini/gemini_4_carbon_model_evaluation.pdf&quot;,
+    &quot;hidden_assertions_per_model&quot;: 1310,
+    &quot;pinned_commit&quot;: &quot;a191383571a13143685fd6f7787512c4e281a9ba&quot;,
+    &quot;release_date&quot;: &quot;2026-10-28&quot;,
+    &quot;scored_non_reference_runs&quot;: 209,
+    &quot;total_roster_models&quot;: 20,
+    &quot;upstream_coding_repo&quot;: &quot;satomic/copilot-benchmark&quot;
+  }
+}</pre></details></main></body></html>

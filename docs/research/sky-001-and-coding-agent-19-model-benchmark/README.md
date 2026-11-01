@@ -1,6 +1,6 @@
 # SKY-001 工程世界模型与 Coding Agent 十九模型基准深度评测（增补报告 5：`Claude Haiku 5.5` 与 `Gemini 4 Argon` 加入后的全景对比）
 
-> **English Version**: [`README.en.md`](README.en.md) · **7-Card 4:5 视觉评测报告**: [`test-report.md`](test-report.md)（中文） / [`test-report.en.md`](test-report.en.md)（English） / [`test-report-cards.html`](test-report-cards.html)（CSP 自包含交互式卡片）
+> **English Version**: [`README.en.md`](README.en.md) · **🆕 后续增补报告 6 (`Gemini 4 Carbon` 20 模型全景与网安评测)**: [`../gemini-4-carbon-and-20-model-benchmark/README.md`](../gemini-4-carbon-and-20-model-benchmark/README.md) · **7-Card 4:5 视觉评测报告**: [`test-report.md`](test-report.md)（中文） / [`test-report.en.md`](test-report.en.md)（English） / [`test-report-cards.html`](test-report-cards.html)（CSP 自包含交互式卡片）
 > **结构化数据与证据锁**: [`report.json`](report.json) · [`evidence.json`](evidence.json) · [`evidence/verifier-summary.json`](evidence/verifier-summary.json) · **方法论审查**: [`review.md`](review.md)
 > **可运行离线验证套件**: [`simulator/sky001_and_19model_verifier.py`](simulator/sky001_and_19model_verifier.py) · [`simulator/test_sky001_and_19model_verifier.py`](simulator/test_sky001_and_19model_verifier.py)
 

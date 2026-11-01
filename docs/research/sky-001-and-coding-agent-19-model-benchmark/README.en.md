@@ -1,6 +1,6 @@
 # SKY-001 Engineering World Model & Coding Agent 19-Model Benchmark Deep Dive (Supplement 5: Adding `Claude Haiku 5.5` & `Gemini 4 Argon`)
 
-> **中文版**: [`README.md`](README.md) · **7-Card 4:5 Visual Benchmark Report**: [`test-report.en.md`](test-report.en.md) (English) / [`test-report.md`](test-report.md) (中文) / [`test-report-cards.html`](test-report-cards.html) (Self-contained CSP HTML Deck)
+> **中文版**: [`README.md`](README.md) · **🆕 Next: Supplement 6 (`Gemini 4 Carbon` 20-Model & Cybersecurity Benchmark)**: [`../gemini-4-carbon-and-20-model-benchmark/README.en.md`](../gemini-4-carbon-and-20-model-benchmark/README.en.md) · **7-Card 4:5 Visual Benchmark Report**: [`test-report.en.md`](test-report.en.md) (English) / [`test-report.md`](test-report.md) (中文) / [`test-report-cards.html`](test-report-cards.html) (Self-contained CSP HTML Deck)
 > **Structured Data & Evidence Lock**: [`report.json`](report.json) · [`evidence.json`](evidence.json) · [`evidence/verifier-summary.json`](evidence/verifier-summary.json) · **Methodology Audit**: [`review.md`](review.md)
 > **Runnable Offline Verification Suite**: [`simulator/sky001_and_19model_verifier.py`](simulator/sky001_and_19model_verifier.py) · [`simulator/test_sky001_and_19model_verifier.py`](simulator/test_sky001_and_19model_verifier.py)
 

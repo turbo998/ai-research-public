@@ -1,5 +1,10 @@
 # 第三方声明
 
+## Gemini 4 Carbon 网安/长程智能体与 Coding Agent 二十模型基准深度评测（增补报告 6）
+
+- **Google DeepMind (`Gemini 4 Carbon`)**：基于公开技术文章 `https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/` 与官方评测报告 `https://storage.googleapis.com/deepmind-media/gemini/gemini_4_carbon_model_evaluation.pdf`（`2026-10-28`）中披露的 17 项核心基准、网安防御子榜单与 Gray Swan IPI 对抗指标进行独立算术核验与架构评述（[`docs/research/gemini-4-carbon-and-20-model-benchmark/`](docs/research/gemini-4-carbon-and-20-model-benchmark/README.md)，标注 `anonymized_reported`, `independently_reproduced=false`），不代表获得 Fairwind Program 闭源模型权重或私有评测集许可。
+- **[`satomic/copilot-benchmark`](https://github.com/satomic/copilot-benchmark/tree/a191383571a13143685fd6f7787512c4e281a9ba)**：固定 commit `a191383571a13143685fd6f7787512c4e281a9ba`。本库保留去标识化后的 19 个公开 Copilot CLI 模型统计汇总并与第 20 模型 `Gemini 4 Carbon` 对齐分析，不重分发完整上游运行工作区文件。
+
 ## SKY-001 工程世界模型与 Coding Agent 十九模型基准深度评测（增补报告 5）
 
 - **[`satomic/copilot-benchmark`](https://github.com/satomic/copilot-benchmark/tree/a191383571a13143685fd6f7787512c4e281a9ba)**：固定 commit `a191383571a13143685fd6f7787512c4e281a9ba`（`2026-10-15T08:28:58Z`）。本库收录去标识化后的 19 模型统计汇总、帕累托前沿分析与原创离线验证脚本（[`docs/research/sky-001-and-coding-agent-19-model-benchmark/`](docs/research/sky-001-and-coding-agent-19-model-benchmark/README.md)，标注 `anonymized_reported`, `independently_reproduced=false`），不重分发完整上游运行工作区文件。
