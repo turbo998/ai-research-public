@@ -1,0 +1,13 @@
+scenario,question,decider_answer,reported_probability_pct,pointed_right_way,action
+S1 · Sequential Pipeline,3-stage typed Executor chain + shared WorkflowContext?,MAF Pass (3/3 stages),98,True,Auto
+S1 · Concurrent Fan-Out/In,Parallel Doc + Video + Web Agent synthesis (Slide 24)?,3-way parallel (186ms),96,True,Auto
+S2 · Dynamic Handoff,Route E-22 Wi-Fi fault to IoTHardwareDiagnosticAgent?,IoTHardwareDiagnosticAgent,95,True,Auto
+S2 · Group Chat Consensus,Executor + Reviewer + Auditor 3-round convergence?,Converged (95%),95,True,Auto
+S3 · Magentic Task Ledger,Open-ended goal loop + 3-fact ledger completion?,Ledger 3/3 complete,94,True,Auto
+S4 · Graph Superstep Recovery,Crash at Superstep 8 -> exact JSON checkpoint resume?,14.2ms zero-loss resume,99,True,Auto
+S5 · Middleware L1 (AgentRun),Strip indirect prompt injection before model call?,Sanitized in RunAsync,97,True,Auto
+S5 · Middleware L2 (Function),Auto-redact SSN PII + pause ungrounded tool call?,SSN redacted + HITL pause,96,True,Auto
+S5 · Middleware L3 (IChatClient),Transport token ledger + prefix cache interception?,Tracked + cache hit,95,True,Auto
+S6 · Hosted & Local MCP,mcp.ai.azure.com OBO + APIM Zero-Trust tool gate?,7 tools × 8 providers,93,True,Auto
+S6 · A2A v1.0 JWS Discovery,Verify JWS Agent Card & reject endpoint tampering?,Valid + tamper blocked,98,True,Auto
+S7 · Ungrounded Handoff Probe,Execute technician dispatch to hallucinated city?,✕ Blocked (52% < 0.90),52,False,Confirm

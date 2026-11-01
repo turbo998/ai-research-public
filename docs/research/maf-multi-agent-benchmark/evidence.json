@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "topic": "maf-multi-agent-benchmark",
+  "title": "Microsoft Agent Framework (MAF v1.0) vs. 6 Mainstream Frameworks: Multi-Agent Orchestration, 3-Layer Middleware & MCP/A2A v1.0 Benchmark",
+  "cutoff_date": "2026-11-01",
+  "provenance": "measured",
+  "independently_reproduced": true,
+  "primary_sources": [
+    {
+      "id": "SRC-FOUNDRY-DECK-53",
+      "type": "official_architecture_specification",
+      "title": "How to build Agent with Foundry (53-Slide Architecture Deck, Chinese Edition)",
+      "slides_covered": "Slides 1-53 (Foundry Agent Service GA, Assistants API retired 2026-08-26, Semantic Kernel + AutoGen -> MAF unification, AIAgent/IChatClient/AgentSession, 3-Layer Middleware Pipeline, Graph Workflow Executors/Edges/Checkpoints, 5 Multi-Agent Orchestration Modes, Declarative YAML, Hosted/Local MCP, Linux Foundation A2A v1.0 JWS Cards, Golden Path Architecture)"
+    },
+    {
+      "id": "SRC-MAF-BENCHMARK-SUITE",
+      "type": "deterministic_local_harness",
+      "path": "benchmark/run_benchmark.py",
+      "unit_tests": "benchmark/test_maf_benchmark.py",
+      "scenarios": 7,
+      "decisions": 12,
+      "perturbation_probes": 6,
+      "latency_tiers": [1, 3, 8, 16]
+    }
+  ],
+  "artifacts": [
+    "README.md",
+    "README.en.md",
+    "test-report.md",
+    "test-report.en.md",
+    "test-report-cards.html",
+    "cards.html",
+    "index.html",
+    "report.json",
+    "evidence/test-report.json",
+    "evidence/test-scenarios.csv",
+    "evidence/test-robustness.csv",
+    "evidence/test-batch-latency.csv",
+    "evidence/framework-comparison.csv"
+  ]
+}

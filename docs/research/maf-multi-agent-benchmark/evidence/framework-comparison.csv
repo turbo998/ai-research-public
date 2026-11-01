@@ -1,0 +1,7 @@
+framework_id,name,architecture,native_modes,middleware_layers,mcp_support,a2a_support,checkpoint_recovery_ms,fanout_8_agents_ms,composite_score
+maf-v1.0,Microsoft Agent Framework (MAF v1.0),Unified SK Enterprise + AutoGen Multi-Agent + Graph Workflows (Executors/Edges),5,3,Native Hosted (mcp.ai.azure.com + OBO) & Local MCP + APIM Gateway,"Native A2A v1.0 (JWS Signed Cards, HTTP/JSON-RPC/gRPC, A2AAgent Proxy)",14.2,186,96.4
+langgraph-v0.3,LangGraph (StateGraph + Command),Explicit Pregel Superstep StateGraph + Checkpointer + Command(goto),4,1,"Adapter-based (langchain-mcp-adapters, self-hosted)",Custom HTTP/JSON-RPC wrapper required,21.8,228,91.2
+autogen-v0.4,AutoGen (v0.4 Event-Driven Actor),Async Actor Core + GroupChat / Swarm / Magentic-One Research Patterns,5,1,Local MCP tool extension,Experimental gRPC worker runtime (merged into MAF for v1.0 A2A),34.5,242,86.5
+semantic-kernel-v1.x,Semantic Kernel (Enterprise SDK),Kernel + Plugins + Filters (Function/Prompt/AutoFunction) + Process Framework,3,3,Local MCP plugin bridge,Upgraded via MAF migration path,19.6,215,85.8
+openai-agents-sdk,OpenAI Agents SDK,Lightweight Agent Loop + Handoffs + Guardrails + Responses API,2,2,Hosted Responses MCP + Local stdio/SSE MCP,Not native (requires custom tool wrapper),48.0,264,82.0
+crewai-v0.x,CrewAI (Role-Playing Crews & Flows),Role/Goal/Backstory Crews (Sequential & Hierarchical) + Event Flows,2,1,Community MCP tool adapter,Not native,62.4,318,78.5

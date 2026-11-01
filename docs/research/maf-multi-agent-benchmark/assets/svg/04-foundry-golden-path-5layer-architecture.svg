@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="50%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bg4)" rx="16"/>
+
+  <text x="40" y="42" fill="#FBBF24" font-size="13" font-weight="800" letter-spacing="1.5">ARCHITECTURE ATLAS · 04 / 04 · SLIDES 32, 45, 51 &amp; 53</text>
+  <text x="40" y="72" fill="#F8FAFC" font-size="24" font-weight="800">Microsoft Foundry "Golden Path" &amp; 5-Layer MAF Enterprise Integration Architecture</text>
+  <text x="40" y="96" fill="#94A3B8" font-size="13.5">Local-first prototyping on laptop → zero-rewrite deployment to Foundry Agent Service, ACA, AKS, or Azure Durable Functions</text>
+
+  <!-- 5 Horizontal Integration Layers (Slide 53) + Golden Path Topology (Slide 45) -->
+  <!-- Layer 1: Channels, Identity & Ingress -->
+  <rect x="40" y="118" width="1120" height="92" rx="12" fill="#131D35" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="56" y="134" width="230" height="60" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+  <text x="72" y="158" fill="#38BDF8" font-size="12.5" font-weight="800">L1 · CHANNELS &amp; CLIENT SDK</text>
+  <text x="72" y="178" fill="#CBD5E1" font-size="11">Slide 45 &amp; 53 Connectors</text>
+  <text x="306" y="154" fill="#F8FAFC" font-size="13" font-weight="700">FoundryChatClient · FoundryResponsesClient · AIProjectClient · Azure Bot Service · AG-UI</text>
+  <text x="306" y="176" fill="#94A3B8" font-size="12">Wire-compatible with OpenAI SDK · Auth via AzureCliCredential, ManagedIdentityCredential, or Entra Agent ID OBO</text>
+  <text x="306" y="194" fill="#6EE7B7" font-size="11.5" font-weight="700">Channels: Microsoft Teams, Copilot Studio, Web/Mobile Apps, GitHub &amp; VS Code</text>
+
+  <!-- Layer 2: Hosted Agents & Compute Runtimes -->
+  <rect x="40" y="224" width="1120" height="104" rx="12" fill="#131D35" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="56" y="240" width="230" height="72" rx="8" fill="#0F172A" stroke="#3B82F6"/>
+  <text x="72" y="266" fill="#60A5FA" font-size="12.5" font-weight="800">L2 · HOSTED AGENTS &amp; RUNTIME</text>
+  <text x="72" y="286" fill="#CBD5E1" font-size="11">Local-First, Cloud-Agnostic</text>
+  <text x="72" y="302" fill="#34D399" font-size="10.5" font-weight="700">Zero-Rewrite Migration</text>
+  <rect x="306" y="240" width="265" height="72" rx="8" fill="#1E293B" stroke="#60A5FA"/>
+  <text x="320" y="262" fill="#FFFFFF" font-size="12.5" font-weight="700">Foundry Hosted Agents</text>
+  <text x="320" y="282" fill="#CBD5E1" font-size="11">Managed Responses API runtime,</text>
+  <text x="320" y="298" fill="#CBD5E1" font-size="11">BYO VNet &amp; 4 MCP Auth modes</text>
+  <rect x="585" y="240" width="275" height="72" rx="8" fill="#1E293B" stroke="#34D399"/>
+  <text x="599" y="262" fill="#FFFFFF" font-size="12.5" font-weight="700">ACA / AKS Containers &amp; Durable</text>
+  <text x="599" y="282" fill="#CBD5E1" font-size="11">MAF Multi-Agent Orchestrator in ACA/AKS</text>
+  <text x="599" y="298" fill="#CBD5E1" font-size="11">or Serverless Durable Functions</text>
+  <rect x="874" y="240" width="268" height="72" rx="8" fill="#1E293B" stroke="#C084FC"/>
+  <text x="888" y="262" fill="#FFFFFF" font-size="12.5" font-weight="700">Cross-Cloud Portability</text>
+  <text x="888" y="282" fill="#CBD5E1" font-size="11">Same MAF code runs on AWS Bedrock</text>
+  <text x="888" y="298" fill="#CBD5E1" font-size="11">AgentCore &amp; Vertex AI Agent Engine</text>
+
+  <!-- Layer 3: Foundry Tools, Grounding & MCP Catalog -->
+  <rect x="40" y="342" width="1120" height="104" rx="12" fill="#131D35" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="358" width="230" height="72" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="72" y="384" fill="#34D399" font-size="12.5" font-weight="800">L3 · TOOLS, MCP &amp; GROUNDING</text>
+  <text x="72" y="404" fill="#CBD5E1" font-size="11">Slides 15–22 &amp; 45</text>
+  <text x="306" y="368" fill="#F8FAFC" font-size="13" font-weight="700">Hosted MCP (mcp.ai.azure.com) · Local MCP · A2A v1.0 Server · OpenAPI 3.0 · 1,400+ Logic Apps</text>
+  <text x="306" y="392" fill="#CBD5E1" font-size="12">• Enterprise Grounding: Azure AI Search, SharePoint (OBO), Microsoft Fabric Data Agent, Bing Web Search</text>
+  <text x="306" y="414" fill="#CBD5E1" font-size="12">• Code &amp; Execution: Sandboxed Code Interpreter, Azure Functions, Azure AI Content Understanding (Image/Video)</text>
+  <text x="306" y="434" fill="#6EE7B7" font-size="11.5" font-weight="700">Declarative YAML Agents (`kind: Prompt`) with explicit per-tool Human Approval rules</text>
+
+  <!-- Layer 4: BYO State, Session Storage & Memory -->
+  <rect x="40" y="460" width="1120" height="100" rx="12" fill="#131D35" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="56" y="476" width="230" height="68" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+  <text x="72" y="502" fill="#FBBF24" font-size="12.5" font-weight="800">L4 · BYO STORAGE &amp; MEMORY</text>
+  <text x="72" y="522" fill="#CBD5E1" font-size="11">Slides 8, 35, 45 &amp; 51</text>
+  <text x="306" y="486" fill="#F8FAFC" font-size="13" font-weight="700">BYO Enterprise Data Sovereignty + Pluggable Short/Long-Term Memory</text>
+  <text x="306" y="510" fill="#CBD5E1" font-size="12">• Golden Path BYO Resources: Azure Cosmos DB (Thread/Checkpoint Store) · Azure Storage (Files) · AI Search (Index) · Key Vault</text>
+  <text x="306" y="532" fill="#CBD5E1" font-size="12">• Memory Lifecycle: AgentSession JSON Serialization + Foundry Memory Service (Extract → Consolidate → Retrieve) + Redis/Qdrant/Mem0</text>
+
+  <!-- Layer 5: Models, Trust, Observability & Continuous Evaluation -->
+  <rect x="40" y="574" width="1120" height="96" rx="12" fill="#131D35" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="56" y="590" width="230" height="64" rx="8" fill="#0F172A" stroke="#EC4899"/>
+  <text x="72" y="616" fill="#F472B6" font-size="12.5" font-weight="800">L5 · MODELS, RAI &amp; EVALS (GA)</text>
+  <text x="72" y="636" fill="#CBD5E1" font-size="11">Slides 4, 6, 36 &amp; 53</text>
+  <text x="306" y="600" fill="#F8FAFC" font-size="13" font-weight="700">11,000+ Foundry Models (GPT-6.1 Sol, GPT-6 Astra, Llama, Mistral, Cohere, Fine-Tuned/Distilled SLMs)</text>
+  <text x="306" y="624" fill="#CBD5E1" font-size="12">• Guardrails: Azure AI Content Safety filters, Entra ID RBAC, Private VNet isolation, Cost &amp; Token Governance</text>
+  <text x="306" y="646" fill="#FBCFE8" font-size="11.5" font-weight="700">• GA Observability: OpenTelemetry distributed traces → Foundry Dashboard + Groundedness/Safety Evaluators + Azure Monitor</text>
+</svg>

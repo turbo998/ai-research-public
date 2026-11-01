@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg3)" rx="16"/>
+
+  <text x="40" y="42" fill="#38BDF8" font-size="13" font-weight="800" letter-spacing="1.5">ARCHITECTURE ATLAS · 03 / 04 · SLIDES 12, 15, 48 &amp; 52</text>
+  <text x="40" y="72" fill="#F8FAFC" font-size="24" font-weight="800">Open Protocol Interoperability: MCP v1.0 (Agent ↔ Tool) &amp; A2A v1.0 (Agent ↔ Agent)</text>
+  <text x="40" y="96" fill="#94A3B8" font-size="13.5">GA in Foundry Agent Service · Assistants API retired 2026-08-26 · Full Responses API, Activity Protocol, MCP &amp; Linux Foundation A2A v1.0</text>
+
+  <!-- Left Half: MCP v1.0 Architecture (Slide 48 & 52) -->
+  <rect x="40" y="120" width="545" height="520" rx="14" fill="#131D35" stroke="#3B82F6" stroke-width="2"/>
+  <rect x="40" y="120" width="545" height="50" rx="14" fill="#1D4ED8"/>
+  <text x="62" y="151" fill="#FFFFFF" font-size="17" font-weight="800">MCP v1.0 — Model Context Protocol (Agent ↔ Tool)</text>
+
+  <!-- Mode A: Hosted MCP -->
+  <rect x="62" y="188" width="500" height="145" rx="10" fill="#0F172A" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="80" y="214" fill="#38BDF8" font-size="13.5" font-weight="800">1. Hosted MCP Tools (Foundry Managed — mcp.ai.azure.com)</text>
+  <text x="80" y="238" fill="#E2E8F0" font-size="12">• Zero local process management; cloud-hosted by Microsoft Foundry</text>
+  <text x="80" y="258" fill="#E2E8F0" font-size="12">• Native support in Responses API &amp; Foundry Agent Service providers</text>
+  <text x="80" y="278" fill="#E2E8F0" font-size="12">• Catalog includes Azure DevOps MCP, SharePoint Grounding, Fabric Data Agent</text>
+  <rect x="80" y="292" width="464" height="28" rx="6" fill="#1E293B"/>
+  <text x="92" y="310" fill="#6EE7B7" font-size="11.5" font-weight="700">4 Auth Modes: Key · Entra Agent Identity · Managed Identity · OAuth OBO Passthrough</text>
+
+  <!-- Mode B: Local MCP + APIM Gateway -->
+  <rect x="62" y="348" width="500" height="145" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="80" y="374" fill="#34D399" font-size="13.5" font-weight="800">2. Local / Self-Hosted MCP Tools + APIM Zero-Trust Gateway</text>
+  <text x="80" y="398" fill="#E2E8F0" font-size="12">• Connects to any MCP server over stdio or Streamable HTTP/SSE</text>
+  <text x="80" y="418" fill="#E2E8F0" font-size="12">• Universal compatibility: works across all 8+ IChatClient providers</text>
+  <text x="80" y="438" fill="#E2E8F0" font-size="12">• Azure API Management (APIM) acts as Zero-Trust MCP Gateway</text>
+  <rect x="80" y="452" width="464" height="28" rx="6" fill="#1E293B"/>
+  <text x="92" y="470" fill="#93C5FD" font-size="11.5" font-weight="700">7 Tool Classes × 8+ Providers (AOAI, Resp, Foundry, Claude, Ollama, Copilot)</text>
+
+  <!-- Agent-as-Tool Composition -->
+  <rect x="62" y="508" width="500" height="112" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="80" y="534" fill="#FBBF24" font-size="13.5" font-weight="800">3. Hierarchical Agent-as-Tool Composition (Slide 46 &amp; 48)</text>
+  <text x="80" y="558" fill="#F8FAFC" font-size="12">• C# .NET: agent.AsAIFunction()   |   Python: agent.as_tool()</text>
+  <text x="80" y="578" fill="#CBD5E1" font-size="12">• Wraps any specialist AIAgent (with its own tools/session) as a typed</text>
+  <text x="80" y="596" fill="#CBD5E1" font-size="12">  function tool for parent orchestrators + L2 HITL tool approval gates.</text>
+
+  <!-- Right Half: A2A v1.0 Architecture (Slide 52) -->
+  <rect x="615" y="120" width="545" height="520" rx="14" fill="#131D35" stroke="#10B981" stroke-width="2"/>
+  <rect x="615" y="120" width="545" height="50" rx="14" fill="#059669"/>
+  <text x="637" y="151" fill="#FFFFFF" font-size="17" font-weight="800">A2A Protocol v1.0 — Agent2Agent (Linux Foundation)</text>
+
+  <!-- JWS Signed Agent Cards -->
+  <rect x="637" y="188" width="500" height="135" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="655" y="214" fill="#6EE7B7" font-size="13.5" font-weight="800">1. Cryptographically Signed Agent Cards (JWS Trust Anchor)</text>
+  <text x="655" y="238" fill="#E2E8F0" font-size="12">• Standardized JSON metadata at /.well-known/agent-card.json</text>
+  <text x="655" y="258" fill="#E2E8F0" font-size="12">• Advertises capability discovery, input/output modalities &amp; skill schemas</text>
+  <text x="655" y="278" fill="#E2E8F0" font-size="12">• JWS digital signatures prevent endpoint spoofing &amp; MITM card tampering</text>
+  <text x="655" y="302" fill="#34D399" font-size="11.5" font-weight="700">Benchmark Verified: 100% detection of tampered A2A endpoint signatures</text>
+
+  <!-- 3 Equivalent Protocol Bindings + Enterprise Security -->
+  <rect x="637" y="338" width="500" height="140" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="655" y="364" fill="#38BDF8" font-size="13.5" font-weight="800">2. Three Equivalent Transport Bindings &amp; Enterprise Auth</text>
+  <rect x="655" y="378" width="145" height="34" rx="6" fill="#1E293B" stroke="#60A5FA"/>
+  <text x="678" y="400" fill="#FFFFFF" font-size="12" font-weight="700">HTTP / REST</text>
+  <rect x="814" y="378" width="145" height="34" rx="6" fill="#1E293B" stroke="#60A5FA"/>
+  <text x="832" y="400" fill="#FFFFFF" font-size="12" font-weight="700">JSON-RPC 2.0</text>
+  <rect x="973" y="378" width="145" height="34" rx="6" fill="#1E293B" stroke="#60A5FA"/>
+  <text x="1018" y="400" fill="#FFFFFF" font-size="12" font-weight="700">gRPC</text>
+  <text x="655" y="436" fill="#E2E8F0" font-size="12">• Multi-tenant isolation + OAuth 2.0 (PKCE, Device Code) + mutual TLS (mTLS)</text>
+  <text x="655" y="458" fill="#94A3B8" font-size="11.5">• Linux Foundation TSC: Microsoft, Google, AWS, Cisco, IBM, Salesforce, SAP, ServiceNow</text>
+
+  <!-- MAF A2AAgent Proxy -->
+  <rect x="637" y="494" width="500" height="126" rx="10" fill="#1E293B" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="655" y="520" fill="#D8B4FE" font-size="13.5" font-weight="800">3. MAF A2AAgent Proxy — Cross-Cloud &amp; Cross-Framework Federation</text>
+  <text x="655" y="544" fill="#F8FAFC" font-size="12">• Wraps any remote A2A endpoint as a native local AIAgent instance</text>
+  <text x="655" y="564" fill="#CBD5E1" font-size="12">• Seamless federation across Foundry Agent Service, Copilot Studio,</text>
+  <text x="655" y="584" fill="#CBD5E1" font-size="12">  LangGraph, CrewAI, AWS Bedrock AgentCore, and Google Vertex AI Agent Engine</text>
+  <text x="655" y="606" fill="#6EE7B7" font-size="11.5" font-weight="700">Inbound &amp; Outbound A2A v1.0 Endpoints GA in Foundry Agent Service</text>
+</svg>

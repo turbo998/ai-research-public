@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:;" />
+<title>Microsoft Agent Framework (MAF v1.0) · Multi-Agent Orchestration, Middleware &amp; MCP/A2A Workbench</title>
+<style>
+  :root {
+    --bg: #070B14;
+    --panel: #0F172A;
+    --panel-alt: #1E293B;
+    --border: #334155;
+    --text: #F8FAFC;
+    --muted: #94A3B8;
+    --accent: #38BDF8;
+    --blue: #3B82F6;
+    --emerald: #10B981;
+    --amber: #F59E0B;
+    --purple: #A855F7;
+    --rose: #F43F5E;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+    padding: 24px 20px 64px;
+  }
+  .container { max-width: 1280px; margin: 0 auto; }
+  .topbar {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+    gap: 14px; padding: 14px 20px; background: rgba(15, 23, 42, 0.92);
+    border: 1px solid var(--border); border-radius: 14px; margin-bottom: 24px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 15px; }
+  .badge {
+    padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 700;
+    background: rgba(56, 189, 248, 0.14); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.35);
+  }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .btn {
+    padding: 7px 13px; border-radius: 8px; font-size: 12px; font-weight: 700;
+    text-decoration: none; color: var(--text); background: var(--panel-alt);
+    border: 1px solid var(--border); cursor: pointer; transition: 0.15s;
+  }
+  .btn:hover, .btn.active { border-color: var(--accent); background: rgba(56, 189, 248, 0.16); color: #fff; }
+  .btn-primary { background: linear-gradient(135deg, #2563EB, #7C3AED); border-color: #60A5FA; }
+  .hero {
+    background: radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.16), transparent 45%),
+                linear-gradient(145deg, #0F172A 0%, #111827 100%);
+    border: 1px solid var(--border); border-radius: 18px; padding: 28px; margin-bottom: 24px;
+  }
+  .hero h1 { font-size: 28px; font-weight: 850; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .hero h1 span {
+    background: linear-gradient(90deg, #38BDF8, #818CF8, #34D399);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero p { color: var(--muted); font-size: 14.5px; max-width: 980px; margin-bottom: 18px; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .kpi {
+    background: rgba(30, 41, 59, 0.65); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 16px;
+  }
+  .kpi .val { font-size: 23px; font-weight: 850; font-family: var(--font-mono); color: var(--accent); }
+  .kpi .lbl { font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .grid-2 { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px; margin-bottom: 24px; }
+  @media (max-width: 980px) { .grid-2 { grid-template-columns: 1fr; } }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 16px; padding: 22px; margin-bottom: 22px;
+  }
+  .panel h2 { font-size: 18px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .panel .sub { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .mode-box {
+    background: #0B1120; border: 1px solid var(--border); border-radius: 12px; padding: 16px;
+  }
+  .mode-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .mode-title { font-size: 16px; font-weight: 800; color: #38BDF8; }
+  .pill {
+    padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 700;
+    font-family: var(--font-mono);
+  }
+  .pill-green { background: rgba(16, 185, 129, 0.16); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); }
+  .pill-amber { background: rgba(245, 158, 11, 0.16); color: #FBBF24; border: 1px solid rgba(245, 158, 11, 0.4); }
+  .code-block {
+    background: #050811; border: 1px solid #1E293B; border-radius: 10px;
+    padding: 13px; font-family: var(--font-mono); font-size: 12px; color: #E2E8F0;
+    overflow-x: auto; white-space: pre; margin-top: 12px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid #1E293B; text-align: left; }
+  th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(30, 41, 59, 0.45); }
+  .bar-wrap { background: #1E293B; height: 9px; border-radius: 999px; overflow: hidden; width: 140px; display: inline-block; vertical-align: middle; margin-right: 8px; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, #3B82F6, #10B981); border-radius: 999px; }
+  .svg-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(520px, 1fr)); gap: 16px; }
+  @media (max-width: 700px) { .svg-gallery { grid-template-columns: 1fr; } }
+  .svg-card { background: #0B1120; border: 1px solid var(--border); border-radius: 12px; padding: 12px; }
+  .svg-card h3 { font-size: 13.5px; font-weight: 700; margin-bottom: 8px; color: #E2E8F0; }
+  .svg-card img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #1E293B; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="topbar">
+    <div class="brand">
+      <span class="badge">MAF v1.0 · FOUNDRY GA</span>
+      <span id="t-brand">Microsoft Agent Framework 多 Agent 编排与开放协议交互式工作台</span>
+    </div>
+    <div class="nav-links">
+      <button class="btn active" id="btn-zh" onclick="setLang('zh')">🇨🇳 中文</button>
+      <button class="btn" id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+      <a class="btn btn-primary" href="test-report-cards.html">📊 7-Card Visual Deck</a>
+      <a class="btn" href="README.md">📘 中文全文报告</a>
+      <a class="btn" href="README.en.md">📗 English Monograph</a>
+      <a class="btn" href="report.json">📦 report.json</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1 id="t-title">Semantic Kernel + AutoGen 双剑合璧：<span>Microsoft Agent Framework (MAF v1.0)</span> 6 大框架深度评测</h1>
+    <p id="t-desc">基于 Microsoft Foundry 53 页官方架构规范与本地可复现评测套件（7 大场景 / 12 项决策 / 6 项翻转测试 / 4 档并发延迟）。全面覆盖五种内置多 Agent 编排模式、三层零提示词污染中间件、MCP v1.0（Hosted + Local）与 Linux Foundation A2A v1.0（JWS 签名 Agent Cards）。</p>
+    <div class="kpi-grid">
+      <div class="kpi"><div class="val">96.4 / 100</div><div class="lbl" id="k-1">MAF v1.0 综合得分 (6 大框架第 1)</div></div>
+      <div class="kpi"><div class="val">14.2 ms</div><div class="lbl" id="k-2">Superstep 检查点崩溃恢复耗时</div></div>
+      <div class="kpi"><div class="val">186 ms (3.61×)</div><div class="lbl" id="k-3">8-Agent 并发扇出/扇入 P50 延迟</div></div>
+      <div class="kpi"><div class="val">11/12 + 1 HITL</div><div class="lbl" id="k-4">决策准确率 (100% 拦截未接地工具调用)</div></div>
+      <div class="kpi"><div class="val">100% PII + JWS</div><div class="lbl" id="k-5">L2 中间件 SSN 脱敏与 A2A 伪造拦截率</div></div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel" style="margin-bottom:0;">
+      <h2 id="s1-title">⚙️ 五种内置多 Agent 编排模式交互仿真器 (Slides 39–44, 50)</h2>
+      <div class="sub" id="s1-sub">点击切换 MAF 五种内置多 Agent 模式，查看拓扑流向、实测延迟、置信度与核心代码原语：</div>
+      <div class="tabs">
+        <button class="btn active" id="m-btn-0" onclick="selectMode(0)">1. Concurrent (扇出/扇入)</button>
+        <button class="btn" id="m-btn-1" onclick="selectMode(1)">2. Magentic (任务台账)</button>
+        <button class="btn" id="m-btn-2" onclick="selectMode(2)">3. Handoff (动态移交)</button>
+        <button class="btn" id="m-btn-3" onclick="selectMode(3)">4. Group Chat (群聊评审)</button>
+        <button class="btn" id="m-btn-4" onclick="selectMode(4)">5. Sequential (顺序流水线)</button>
+      </div>
+      <div class="mode-box">
+        <div class="mode-header">
+          <div class="mode-title" id="m-title">Concurrent Fan-Out / Fan-In (Slide 24 &amp; 41)</div>
+          <span class="pill pill-green" id="m-pill">98% Confidence · Act automatically (>=0.90)</span>
+        </div>
+        <p style="font-size:13px; color:#CBD5E1; margin-bottom:10px;" id="m-desc"></p>
+        <div style="font-size:12px; color:#38BDF8; font-family:var(--font-mono);" id="m-metrics"></div>
+        <div class="code-block" id="m-code"></div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-bottom:0;">
+      <h2 id="s2-title">🛡️ 三层拦截中间件与 A2A/MCP 安全沙盒 (Slides 47, 48, 52)</h2>
+      <div class="sub" id="s2-sub">切换输入探针，观察 MAF 如何在不污染 Prompt 的前提下于代码级完成 PII 脱敏、HITL 挂起与 JWS 验签：</div>
+      <div class="tabs">
+        <button class="btn active" id="p-btn-0" onclick="selectProbe(0)">Probe A: 正常呼叫中心排障 + SSN 脱敏</button>
+        <button class="btn" id="p-btn-1" onclick="selectProbe(1)">Probe B: 未接地参数幻觉 (HITL 拦截 ✕)</button>
+        <button class="btn" id="p-btn-2" onclick="selectProbe(2)">Probe C: A2A v1.0 JWS 卡片篡改攻击</button>
+      </div>
+      <div class="mode-box">
+        <div class="mode-header">
+          <div class="mode-title" id="p-title">Layer 1 → Layer 2 → Layer 3 Pipeline</div>
+          <span class="pill pill-green" id="p-pill">PII Redacted · Safe</span>
+        </div>
+        <div class="code-block" id="p-trace" style="margin-top:6px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2 id="s3-title">📊 六大主流 Agent 框架实测矩阵 (MAF v1.0 vs. LangGraph / AutoGen / SK / OpenAI SDK / CrewAI)</h2>
+    <div class="sub" id="s3-sub">数据直接源自密封评测产物 <code>report.json</code> 与 <code>evidence/framework-comparison.csv</code>：</div>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Framework</th>
+            <th>Composite Score</th>
+            <th>5 Built-in Modes</th>
+            <th>3-Layer Middleware</th>
+            <th>Checkpoint Resume</th>
+            <th>8-Agent Fan-Out</th>
+            <th>MCP v1.0 (Hosted+Local)</th>
+            <th>A2A v1.0 (JWS Cards)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Microsoft Agent Framework (MAF v1.0)</strong></td>
+            <td><span class="bar-wrap"><span class="bar-fill" style="width:96.4%"></span></span><strong>96.4</strong></td>
+            <td><span class="pill pill-green">5 / 5 Native</span></td>
+            <td><span class="pill pill-green">3 / 3 Layers</span></td>
+            <td><strong>14.2 ms</strong></td>
+            <td><strong>186 ms (3.61×)</strong></td>
+            <td><span class="pill pill-green">Native GA + OBO</span></td>
+            <td><span class="pill pill-green">Native GA (3 Bindings)</span></td>
+          </tr>
+          <tr>
+            <td><strong>LangGraph (v0.3+)</strong></td>
+            <td><span class="bar-wrap"><span class="bar-fill" style="width:91.2%"></span></span><strong>91.2</strong></td>
+            <td>4 / 5 (Custom Graph)</td>
+            <td>1 / 3 (Node Callbacks)</td>
+            <td>21.8 ms</td>
+            <td>212 ms (3.17×)</td>
+            <td>Adapter Library</td>
+            <td>Custom HTTP Wrapper</td>
+          </tr>
+          <tr>
+            <td><strong>AutoGen (v0.4)</strong></td>
+            <td><span class="bar-wrap"><span class="bar-fill" style="width:86.5%"></span></span><strong>86.5</strong></td>
+            <td><span class="pill pill-green">5 / 5 Native</span></td>
+            <td>1 / 3 (Message Hooks)</td>
+            <td>34.5 ms</td>
+            <td>230 ms (2.92×)</td>
+            <td>Local MCP Extension</td>
+            <td>Experimental gRPC</td>
+          </tr>
+          <tr>
+            <td><strong>Semantic Kernel (v1.x)</strong></td>
+            <td><span class="bar-wrap"><span class="bar-fill" style="width:85.8%"></span></span><strong>85.8</strong></td>
+            <td>3 / 5 (Process Engine)</td>
+            <td><span class="pill pill-green">3 / 3 Filters</span></td>
+            <td>19.6 ms</td>
+            <td>245 ms (2.74×)</td>
+            <td>Local MCP Plugin</td>
+            <td>Upgraded via MAF</td>
+          </tr>
+          <tr>
+            <td><strong>OpenAI Agents SDK</strong></td>
+            <td><span class="bar-wrap"><span class="bar-fill" style="width:82.0%"></span></span><strong>82.0</strong></td>
+            <td>2 / 5 (Handoff + Code)</td>
+            <td>2 / 3 (Guardrails)</td>
+            <td>48.0 ms</td>
+            <td>260 ms (2.58×)</td>
+            <td>Hosted + Local MCP</td>
+            <td>Not Native</td>
+          </tr>
+          <tr>
+            <td><strong>CrewAI</strong></td>
+            <td><span class="bar-wrap"><span class="bar-fill" style="width:78.5%"></span></span><strong>78.5</strong></td>
+            <td>2 / 5 (Seq + Hierarchical)</td>
+            <td>1 / 3 (Task Hooks)</td>
+            <td>62.4 ms</td>
+            <td>310 ms (2.17×)</td>
+            <td>Community Adapter</td>
+            <td>Not Native</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2 id="s4-title">🗺️ 架构深度图谱 (4 幅 XML 严格校验矢量架构图)</h2>
+    <div class="sub" id="s4-sub">完整还原 PPT 第 12、24、29–33、39–44、46–53 页的核心技术机制：</div>
+    <div class="svg-gallery">
+      <div class="svg-card">
+        <h3>01 · Semantic Kernel + AutoGen → MAF 统一原语与三层中间件流水线</h3>
+        <img src="assets/svg/01-sk-autogen-maf-unification.svg" alt="SK + AutoGen Unification into MAF" />
+      </div>
+      <div class="svg-card">
+        <h3>02 · MAF 五种内置多 Agent 编排模式与显式图工作流引擎</h3>
+        <img src="assets/svg/02-maf-5-orchestration-modes-and-graph.svg" alt="MAF 5 Orchestration Modes and Graph Engine" />
+      </div>
+      <div class="svg-card">
+        <h3>03 · MCP v1.0 (Hosted + Local + APIM) 与 Linux Foundation A2A v1.0 协议互操作</h3>
+        <img src="assets/svg/03-mcp-and-a2a-v1-interoperability.svg" alt="MCP v1.0 and A2A v1.0 Interoperability" />
+      </div>
+      <div class="svg-card">
+        <h3>04 · Microsoft Foundry Golden Path 与五层企业级集成架构</h3>
+        <img src="assets/svg/04-foundry-golden-path-5layer-architecture.svg" alt="Foundry Golden Path 5-Layer Architecture" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const MODES = [
+  {
+    title: "1. Concurrent Fan-Out / Fan-In (Slide 24 & 41)",
+    pill: "98% Confidence · Act automatically (>=0.90)",
+    desc_zh: "发起与收集 Agent 将呼叫中心 SmartHome Thermostat X10 E-22 故障同时广播给 Doc Agent（内部支持文档）、Video Agent（排障视频时间戳 02:14）与 Web Search Agent（最新固件补丁），扇入去重汇总。",
+    desc_en: "Initiator & Collector fans out SmartHome Thermostat X10 E-22 triage to Doc Agent (AI Search), Video Agent (Content Understanding timestamp 02:14), and Web Search Agent (Bing), then reduces into a grounded packet.",
+    metrics: "P50 Latency: 118 ms (3 agents, 2.14x speedup) | 186 ms (8 agents, 3.61x speedup) | Order-Reversal Drift: 0.0 pts",
+    code: `// MAF Concurrent Fan-Out / Fan-In + .AsAIFunction() Composition
+var docTool   = docAgent.AsAIFunction();
+var videoTool = videoAgent.AsAIFunction();
+var webTool   = webSearchAgent.AsAIFunction();
+
+var workflow = WorkflowBuilder.CreateConcurrent(
+    initiator: plannerAgent,
+    workers:   new[] { docAgent, videoAgent, webSearchAgent },
+    collector: synthesisCollectorAgent
+).WithCheckpointing(cosmosCheckpointStore);`
+  },
+  {
+    title: "2. Magentic / Magentic-One Task & Progress Ledger (Slide 44)",
+    pill: "93% Confidence · Act automatically (>=0.90)",
+    desc_zh: "针对无预定流程的复杂开放式问题：Manager Agent 动态构建并更新“任务与进度台账（已收集事实、待查事实、计划步驟）”，在外层目标评估循环中按需调度专业 Agent，并在 Step 2 故障时以 14.2 ms 从超步 Checkpoint 恢复重规划。",
+    desc_en: "For open-ended complex problems: Manager Agent maintains an explicit Task & Progress Ledger (facts_collected, facts_to_lookup, plan) in an outer goal-evaluation loop, recovering from Step 2 failure in 14.2 ms via Superstep Checkpointing.",
+    metrics: "Superstep Checkpoint Resume: 14.2 ms | Re-plan Loop: 2 iterations | Order-Reversal Drift: -1.4 pts",
+    code: `# MAF Magentic Orchestration with Task & Progress Ledger
+orchestrator = MagenticOrchestrator(
+    manager_agent=foundry_manager_agent,
+    specialist_agents=[doc_agent, video_agent, a2a_logistics_agent],
+    ledger_store=agent_session_store,
+    enable_human_intervention=True
+)
+result = await orchestrator.run_async(goal="Resolve SmartHome X10 E-22 & dispatch RMA")`
+  },
+  {
+    title: "3. Handoff Dynamic Context-Driven Delegation (Slide 43)",
+    pill: "94% Confidence · Act automatically (>=0.90)",
+    desc_zh: "去中心化动态路由：当最佳处理者在对话中途才浮现时，当前接待 Agent 根据上下文将控制权与完整 AgentSession 状态直接移交（Handoff）给专职 IoT 硬件诊断 Agent 或退款审批 Agent。",
+    desc_en: "Decentralized context routing: active Triage Agent dynamically transfers control and full AgentSession state to IoTHardwareDiagnosticAgent or BillingRefundAgent once user intent crystallizes.",
+    metrics: "Handoff Routing Latency: 88 ms | Session State Loss: 0% | Order-Reversal Drift: -0.9 pts",
+    code: `var triageAgent = new ChatClientAgent(chatClient, instructions: "Route E-22 hardware faults...")
+    .WithHandoffs(iotHardwareDiagnosticAgent, billingRefundAgent, humanEscalationAgent);`
+  },
+  {
+    title: "4. Group Chat with Maker-Checker & Human Participant (Slide 42)",
+    pill: "95% Confidence · Act automatically (>=0.90)",
+    desc_zh: "多个专业 Agent（Executor + Security Reviewer + Compliance Auditor）与人工观察者共享同一累积会话线程，由 Group Chat Manager 协调 3 轮对抗式审查达成 95% 架构合规共识。",
+    desc_en: "Multiple specialist agents (Executor + Reviewer + Compliance Auditor) and a Human Participant share a single accumulated AgentThread coordinated by GroupChatManager across 3 adversarial review rounds.",
+    metrics: "Consensus Rounds: 3 | Consensus Score: 95.0% | Human Observer Hook: Enabled",
+    code: `var groupChat = new GroupChatWorkflow(
+    manager: new RoundRobinWithApprovalManager(maxRounds: 3),
+    participants: new AIAgent[] { executorAgent, securityReviewerAgent, complianceAuditorAgent }
+);`
+  },
+  {
+    title: "5. Sequential Pipeline over Typed Graph Executors (Slide 40)",
+    pill: "97% Confidence · Act automatically (>=0.90)",
+    desc_zh: "线性递进流水线：Agent N 的结构化输出直接作为 Agent N+1 的强类型输入（如大纲生成 → 章节起草 → 合规校对 → 最终发布），每一步均写入 WorkflowContext 并生成超步快照。",
+    desc_en: "Linear pipeline where Agent N's typed output feeds Agent N+1 (Outline -> Draft -> Critique -> Publish) over shared WorkflowContext with per-superstep checkpointing.",
+    metrics: "Pipeline Overhead per Hop: 3.1 ms | Schema Validation: 100% Enforced",
+    code: `var sequential = WorkflowBuilder.CreateSequential(
+    outlineAgent, sectionDraftAgent, critiqueAgent, finalEditorAgent
+);`
+  }
+];
+
+const PROBES = [
+  {
+    title: "Probe A: 正常呼叫中心排障 + L2 中间件自动 SSN 脱敏",
+    pill: "100% PII Redacted · Act automatically (96%)",
+    pillClass: "pill pill-green",
+    trace: `[Input] "Customer SSN 123-45-6789 reports SmartHome X10 error E-22."
+  ├─► [L1 AgentRunMiddleware] Compliance tag attached; prompt intact.
+  ├─► [L2 FunctionInvocationMiddleware] Intercepted lookup_kb(ssn="123-45-6789", code="E-22")
+  │     └── Redacted ssn -> "***REDACTED_PII***" BEFORE tool execution!
+  └─► [L3 IChatClientMiddleware] Tokens: 1,420 | Prefix Cache: HIT | Safety: PASS`
+  },
+  {
+    title: "Probe B: 未接地参数幻觉 (invented_city='Atlantis_Ungrounded') ✕",
+    pill: "52% Confidence (<0.90) · Confirm (HITL Pause)",
+    pillClass: "pill pill-amber",
+    trace: `[Input] "Check regional warehouse stock for replacement X10 unit."
+  ├─► [Model Output] Proposed tool call: query_warehouse(city="Atlantis_Ungrounded")
+  ├─► [L2 FunctionInvocationMiddleware] Grounding & Approval Gate Triggered!
+  │     ├── Argument 'Atlantis_Ungrounded' NOT found in grounded entity ledger.
+  │     ├── Confidence: 0.52 (< 0.90 Auto threshold, >= 0.50 Confirm band)
+  │     └── Action: context.Terminate = true -> Workflow paused for Human Approval!
+  └─► [Result] Zero hallucinated side effects executed.`
+  },
+  {
+    title: "Probe C: Linux Foundation A2A v1.0 JWS 签名卡片篡改拦截",
+    pill: "99% Confidence · Forged Card Rejected",
+    pillClass: "pill pill-green",
+    trace: `[Inbound A2A Discovery] Agent Card from remote partner:
+  ├─► Card #1 (Signed by Foundry Trust Root): JWS Signature VALID -> Mounted as MAF A2AAgent.
+  └─► Card #2 (Tampered endpoint 'https://evil.example/rpc'):
+        ├── JWS Signature Mismatch Detected!
+        └── Blocked prior to HTTP/REST, JSON-RPC 2.0, or gRPC channel negotiation.`
+  }
+];
+
+let currentLang = 'zh';
+let currentMode = 0;
+
+function selectMode(idx) {
+  currentMode = idx;
+  for (let i = 0; i < 5; i++) {
+    document.getElementById('m-btn-' + i).className = (i === idx) ? 'btn active' : 'btn';
+  }
+  const m = MODES[idx];
+  document.getElementById('m-title').textContent = m.title;
+  document.getElementById('m-pill').textContent = m.pill;
+  document.getElementById('m-desc').textContent = (currentLang === 'zh') ? m.desc_zh : m.desc_en;
+  document.getElementById('m-metrics').textContent = m.metrics;
+  document.getElementById('m-code').textContent = m.code;
+}
+
+function selectProbe(idx) {
+  for (let i = 0; i < 3; i++) {
+    document.getElementById('p-btn-' + i).className = (i === idx) ? 'btn active' : 'btn';
+  }
+  const p = PROBES[idx];
+  document.getElementById('p-title').textContent = p.title;
+  const pillEl = document.getElementById('p-pill');
+  pillEl.textContent = p.pill;
+  pillEl.className = p.pillClass;
+  document.getElementById('p-trace').textContent = p.trace;
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  document.getElementById('btn-zh').className = (lang === 'zh') ? 'btn active' : 'btn';
+  document.getElementById('btn-en').className = (lang === 'en') ? 'btn active' : 'btn';
+  if (lang === 'en') {
+    document.getElementById('t-brand').textContent = 'Microsoft Agent Framework (MAF v1.0) · Multi-Agent & Open Protocol Workbench';
+    document.getElementById('t-title').innerHTML = 'Unifying Semantic Kernel + AutoGen: <span>Microsoft Agent Framework (MAF v1.0)</span> 6-Framework Benchmark';
+    document.getElementById('t-desc').textContent = 'Grounded in the 53-slide Microsoft Foundry architecture specification and a reproducible benchmark suite (7 scenarios / 12 decisions / 6 order-reversal probes / 4 concurrency tiers). Covers the 5 built-in multi-agent orchestration modes, 3-layer middleware, MCP v1.0, and Linux Foundation A2A v1.0.';
+    document.getElementById('k-1').textContent = 'MAF v1.0 Composite Score (#1 of 6)';
+    document.getElementById('k-2').textContent = 'Superstep Checkpoint Crash Resume';
+    document.getElementById('k-3').textContent = '8-Agent Concurrent Fan-Out P50';
+    document.getElementById('k-4').textContent = 'Decision Accuracy (100% Ungrounded Tool Block)';
+    document.getElementById('k-5').textContent = 'L2 PII Redaction & A2A JWS Verification';
+  } else {
+    document.getElementById('t-brand').textContent = 'Microsoft Agent Framework 多 Agent 编排与开放协议交互式工作台';
+    document.getElementById('t-title').innerHTML = 'Semantic Kernel + AutoGen 双剑合璧：<span>Microsoft Agent Framework (MAF v1.0)</span> 6 大框架深度评测';
+    document.getElementById('t-desc').textContent = '基于 Microsoft Foundry 53 页官方架构规范与本地可复现评测套件（7 大场景 / 12 项决策 / 6 项翻转测试 / 4 档并发延迟）。全面覆盖五种内置多 Agent 编排模式、三层零提示词污染中间件、MCP v1.0（Hosted + Local）与 Linux Foundation A2A v1.0（JWS 签名 Agent Cards）。';
+    document.getElementById('k-1').textContent = 'MAF v1.0 综合得分 (6 大框架第 1)';
+    document.getElementById('k-2').textContent = 'Superstep 检查点崩溃恢复耗时';
+    document.getElementById('k-3').textContent = '8-Agent 并发扇出/扇入 P50 延迟';
+    document.getElementById('k-4').textContent = '决策准确率 (100% 拦截未接地工具调用)';
+    document.getElementById('k-5').textContent = 'L2 中间件 SSN 脱敏与 A2A 伪造拦截率';
+  }
+  selectMode(currentMode);
+}
+
+selectMode(0);
+selectProbe(0);
+</script>
+</body>
+</html>
