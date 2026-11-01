@@ -144,6 +144,26 @@ class TestDefendTierReadinessVerifier(unittest.TestCase):
         self.assertEqual(len(labels), 8)
         self.assertEqual(sum(1 for lbl in labels if lbl["lob_exception"]), 2)
 
+    def test_six_workload_technical_guides_coverage(self) -> None:
+        guides = SMB_PARTNER_TOOLKIT_CATALOG["core_assets"][3]["guides"]
+        workload_pages = {g["workload_id"]: g["pages"] for g in guides}
+        self.assertEqual(
+            workload_pages,
+            {
+                "W1": 90,  # Identity & Access Controls + Identity Protection
+                "W2": 92,  # Data Security & AI Guardrails
+                "W3": 52,  # Email, App & Collaboration Protection
+                "W4": 51,  # Device Security
+                "W5": 40,  # Device Enrollment & Management
+                "W6": 35,  # SaaS Security
+            },
+        )
+        for guide in guides:
+            self.assertGreaterEqual(len(guide["core_controls"]), 5)
+        labels = SMB_PARTNER_TOOLKIT_CATALOG["defend_aligned_8_label_taxonomy"]
+        self.assertEqual([lbl["priority_index"] for lbl in labels], list(range(8)))
+
+
 
 if __name__ == "__main__":
     unittest.main()

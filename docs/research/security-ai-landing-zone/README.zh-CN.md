@@ -211,40 +211,40 @@ Frontier SOC 采用**多 Agent、多模型工作流（Multi-Agent, Multi-Model W
 
 ---
 
-## 4. Partner Playbook：5 个发现问题、“评估→建设→运营”标准服务与 SMB 工具包联动 (Slides 34–42)
+## 4. 工程落地方法论：5 个技术差距探针、“评估→建设→运营”标准工程闭环与 6 大工作负载技术联动 (Slides 34–42)
 
-### 4.1 客户对话开场：5 个发现问题 (Slide 34)
+### 4.1 架构发现探针：5 个核心技术差距问题 (Slide 34)
 
-“**先不讲产品，先让客户意识到差距——任一问题回答‘不确定’，就是 Secure AI Landing Zone 评估的切入点。**”
+“**任一架构探针问题回答‘不确定’，即触发 Secure AI Landing Zone 第一阶段（Phase 1 Assess）技术差距诊断。**”
 
-| 序号 | 客户对话开场发现问题（Slide 34 原文） | 对应控制域与微软方案锚点 | 验证器触发规则 |
+| 序号 | 架构发现技术探针（Slide 34） | 对应控制域与微软方案锚点 | 验证器触发规则 |
 | :---: | :--- | :--- | :--- |
-| **1** | **您的组织里现在有多少个 Agent？谁创建的、谁负责？** | 可见与治理｜`Microsoft Agent 365` | 回答“不确定” → 触发 Phase 1 **Assess**（Agent 与影子 AI 盘点） |
-| **2** | **Copilot 能看到的数据，都已经分类和打标签了吗？** | 数据安全｜`Microsoft Purview` | 回答“不确定” → 触发 Phase 1 **Assess**（Copilot 数据过度共享评估） |
-| **3** | **Agent 用的是谁的身份？权限会过期吗？** | 身份与访问｜`Microsoft Entra Agent ID` | 回答“不确定” → 触发 Phase 1 **Assess**（身份与权限爆炸半径评估） |
-| **4** | **如果某个 Agent 被提示注入攻击，SOC 能看到并阻断吗？** | 威胁防护｜`Microsoft Defender + ISOC` | 回答“不确定” → 触发 Phase 2 **Build**（Defender AI 运行时防护接入 SOC） |
-| **5** | **员工终端上的本地 AI 工具和 Agent，管得住吗？** | 端点与影子 AI｜`Microsoft Defender + Intune` | 回答“不确定” → 触发 Phase 2 **Build**（端点本地 Agent 发现与护栏） |
+| **1** | **组织内当前运行多少个 Agent？创建者与责任人是谁？** | 可见与治理｜`Microsoft Agent 365` | 回答“不确定” → 触发 Phase 1 **Assess**（Agent 与影子 AI 资产盘点） |
+| **2** | **Copilot 可检索的数据是否已完成分类与敏感度标签标记？** | 数据安全｜`Microsoft Purview` | 回答“不确定” → 触发 Phase 1 **Assess**（Copilot 数据过度共享评估） |
+| **3** | **Agent 使用何种身份标识？权限是否配置自动过期策略？** | 身份与访问｜`Microsoft Entra Agent ID` | 回答“不确定” → 触发 Phase 1 **Assess**（身份与权限爆炸半径评估） |
+| **4** | **当某个 Agent 遭受提示注入攻击时，SOC 能否实时检测并阻断？** | 威胁防护｜`Microsoft Defender + ISOC` | 回答“不确定” → 触发 Phase 2 **Build**（Defender AI 运行时防护接入 SOC） |
+| **5** | **员工终端上的本地 AI 工具与本地 Agent 是否受控？** | 端点与影子 AI｜`Microsoft Defender + Intune` | 回答“不确定” → 触发 Phase 2 **Build**（端点本地 Agent 发现与护栏） |
 
-### 4.2 把 Secure AI Landing Zone 做成伙伴的标准服务：Assess → Build → Operate (Slide 35)
+### 4.2 Secure AI Landing Zone 标准三阶段工程架构：Assess → Build → Operate (Slide 35)
 
-合作伙伴可将一次性安全咨询项目转化为可复制的标准化 Offer 与持续托管经常性收入（ARR）：
+将分散的 AI 安全加固整合为可复用的三阶段技术工程流水线，并与父课题 [`../defend-partner-playbook/`](../defend-partner-playbook/index.zh.md) 中的 **6 大工作负载（360 页）最佳实践技术部署指南**及 **5 阶段工程工具链**深度联动：
 
-| 服务阶段 | 核心工作流内容 | 关键标准交付物 | 关联的 Security Partner Toolkit 工具包资产（Slides 39–41） | 核心商机抓手（Commercial Levers） |
+| 工程阶段 | 核心技术工作流内容 | 关键标准技术交付物 | 关联的 Microsoft 产品体系技术工具包资产（Slides 39–41） | 关联的 6 大工作负载技术规范（360 页） |
 | :--- | :--- | :--- | :--- | :--- |
-| **1. 评估 (Assess)** | • Agent 与 AI 应用盘点（含影子 AI）<br/>• Copilot 数据过度共享评估<br/>• 身份与权限风险评估 | **风险清单与 Landing Zone 差距报告** | • `aka.ms/MIP-Industry-OnePagers`（7 份行业双页指南，含新增教育与非营利组织场景）<br/>• `aka.ms/DataSecurityAssistant`（敏感度标签与 DLP 向导）<br/>• `aka.ms/SOW-Generator`（22 项服务工作说明书生成） | 付费评估切入 + FTE Offer 立项 |
-| **2. 建设 (Build)**<br/>*(对应 FTE 第 3 周)* | • Entra Agent ID + 条件访问基线<br/>• 敏感度标签、DLP 与 DSPM for AI<br/>• Agent 365 注册表与生命周期策略<br/>• Defender AI 运行时防护接入 SOC | **可上生产的 AI 安全基线** | • `aka.ms/Security_SMBDeploymentGuides`（6 册 360 页最佳实践部署指南）<br/>• `aka.ms/Deploy-Scripts`（跨 Entra/Intune/Defender/Purview 的 PowerShell 自动化部署脚本） | **FTE Offer 第 3 周交付** + **Microsoft Agent 365** 增购 |
-| **3. 运营 (Operate)** | • 新 Agent 准入与定期复核<br/>• AI 安全监控与事件响应（接入 ISOC）<br/>• 合规审计与报告 | **托管服务与续约收入 (MSSP ARR)** | • `aka.ms/ISOCDefender`（ISOC 内置 SIEM/SOAR/UEBA）<br/>• `aka.ms/caseindefender`（Defender 案例管理） | **E5 → E7 升级** + **ME3 → E5 升级** + **托管安全服务** |
+| **1. 评估 (Assess)** | • Agent 与 AI 应用全量盘点（含端点/网络影子 AI）<br/>• Copilot SharePoint 数据过度共享扫描<br/>• 身份与权限爆炸半径风险评估 | **风险登记册与 Landing Zone 架构差距报告** | • `aka.ms/MIP-Industry-OnePagers`（7 大行业 14 页敏感信息类型 SIT 与无加密例外标签矩阵）<br/>• `aka.ms/DataSecurityAssistant`（客户端零遥测标签与 DLP 策略编译器）<br/>• `aka.ms/SOW-Generator`（22 项 P1/P2/P3 技术交付物依赖编排） | **W1 身份保护 (90p)** + **W2 数据安全与 AI 护栏 (92p)** + **W6 SaaS 安全与 OAuth 治理 (35p)** |
+| **2. 建设 (Build)**<br/>*(对应 FTE 第 3 周硬门禁)* | • `Entra Agent ID` + 风险条件访问基线<br/>• 敏感度标签、Copilot/Edge DLP 与 DSPM for AI<br/>• `Agent 365` 注册表与生命周期策略<br/>• Defender AI 运行时防护（Prompt/Tool/MCP）接入 SOC | **可上生产的 AI 安全着陆区基线** | • `aka.ms/Security_SMBDeploymentGuides`（6 册 360 页产品工作负载部署指南）<br/>• `aka.ms/Deploy-Scripts`（跨 Entra/Intune/Defender/Purview 的 PowerShell 7+ 自动化部署与漂移校验脚本） | **W1–W6 全量闭环**（含 10 条 CA 策略、Copilot 双规则 DLP、Teams ZAP、ASR 审计转阻断、Intune 黄金法则） |
+| **3. 运营 (Operate)** | • 新 Agent 准入审批与季度访问复核<br/>• AI 安全持续监控与分钟级自主攻击中断（ISOC）<br/>• 全交互默认审计、不当行为分类与合规电子取证 | **ISOC 持续安全运营与策略漂移治理体系** | • `aka.ms/ISOCDefender`（ISOC 内置 SIEM/SOAR/UEBA 与案例管理）<br/>• `aka.ms/caseindefender`（Defender 跨工作负载案例管理） | **ISOC 内置 SIEM/SOAR/UEBA** + **2026 年 11 月 90 天留存与 Project Perception GA** |
 
-### 4.3 存量客户转化策略与 FY27 伙伴赋能日历 (Slides 36, 38)
+### 4.3 存量租户架构演进路径与技术能力实训矩阵 (Slides 36, 38)
 
-1. **ISOC 商机优先级排序（Slide 36）**：
-   - **首要目标客群**：锁定符合条件的 **Defender Suite、M365 E5 / E7 但尚未部署 Microsoft Sentinel** 的客户。
-   - **向上销售抓手**：利用 ISOC 开箱即用内置 SIEM/SOAR/UEBA 的价值，推动存量 **ME3 客户向 E5/E7 升级（Drive ME3 Upsell）**，并协助现有 Sentinel 客户为 Ignite 预览与 Agentic SOC 演进做好准备。
-2. **Partner AI Frontier Academy | FY27 伙伴培训日历（Slide 38）**：
-   - `2026/11/02`（线下·上海）：*Security: Accelerate CSP Tech Deal Ready*（聚焦客户安全需求挖掘、价值定位、异议处理与商机推进）。
-   - `2026/11/03`（线下·上海）：*Security: Accelerate CSP Project Ready*（聚焦安全解决方案架构、技术部署与项目交付动手实践）。
-   - `2026/11/11`（线上·Teams）：*Security Key Update: AI Security Sharing*（从 AI 安全架构出发，讲解 Agent 365 如何增强智能体可见性、策略控制和风险响应）。
-   - `2026/11/25`（线上·Teams）：*Defender for Cloud 实战：强化多云安全基线与威胁防护*。
+1. **ISOC 架构演进路径（Slide 36）**：
+   - **优先架构升级范围**：针对已具备 **Defender Suite、M365 E5 / E7 许可但尚未部署独立 SIEM（Microsoft Sentinel）** 的租户，直接在 Defender 门户启用 **ISOC 内置 SIEM、SOAR Playbook 生成器、工作簿与 UEBA**，实现零额外部署的跨工作负载与 Agent 统一调查。
+   - **许可与控制平面演进**：从基础 `M365 E3` 架构演进至 `M365 E5 / E7 Frontier Suite`，补齐 `Microsoft Agent 365` 控制平面、`Entra Suite` 与 `Purview Suite` AI 数据护栏，并为 Ignite 预览及 Agentic SOC（红/蓝/绿三色 Agent 协同）做好遥测底座准备。
+2. **AI Frontier 技术架构实训模块（Slide 38）**：
+   - **安全架构设计与差距诊断**：聚焦零信任与 AI 安全需求识别、架构基线对齐与差距收敛。
+   - **安全解决方案工程部署**：聚焦跨 Entra、Defender、Purview、Intune 与 Agent 365 的自动化策略部署与生产环境验证。
+   - **AI Security 架构专题（Agent 365）**：深入解析 `Microsoft Agent 365` 如何强化跨框架智能体可见性、最小权限策略控制与运行时风险响应。
+   - **Defender for Cloud 多云安全实战**：强化多云（Azure / AWS / GCP）工作负载安全基线、CSPM 攻击路径分析与 AI 运行时威胁防护。
 
 ---
 

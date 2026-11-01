@@ -1,52 +1,54 @@
-# DEFEND 合作伙伴指南与微软 SMB 安全合作伙伴工具包深度研究：基于 Microsoft 365 Business Premium 的五层托管安全、Purview AI 治理与全链路自动化交付体系
+# Microsoft 产品体系安全与 AI 就绪工程技术架构实践：基于 M365 Business Premium、Defender/Purview 套件与六大工作负载（360 页）的零信任与 AI 护栏落地指南
 
 > **语言 / Language**: **中文 (当前)** | [English (`README.en.md`)](./README.en.md)  
 > **7-Card 4:5 视觉评测报告**: [中文报告 (`test-report.md`)](./test-report.md) · [English Report (`test-report.en.md`)](./test-report.en.md) · [交互式 HTML 卡片 (`test-report-cards.html`)](./test-report-cards.html) ([中文卡片 (`cards.zh.html`)](./cards.zh.html) | [English Cards (`cards.html`)](./cards.html))  
 > **确定性验证器与数据集**: [`simulator/defend_tier_readiness_verifier.py`](./simulator/defend_tier_readiness_verifier.py) · [`simulator/test_defend_tier_readiness_verifier.py`](./simulator/test_defend_tier_readiness_verifier.py) · [`report.json`](./report.json) · [`evidence.json`](./evidence.json) · [`review.md`](./review.md)  
 > **专项子课题延伸 (`Child Sub-Topic`)**: 🔗 **[Security AI Landing Zone 与 Frontier SOC 深度研究 (`../security-ai-landing-zone/`)](../security-ai-landing-zone/index.zh.md)** ([English](../security-ai-landing-zone/index.md) | [中文 7 卡](../security-ai-landing-zone/cards.zh.html) | [English 7-Card](../security-ai-landing-zone/cards.html)) —— 聚焦 *Security for AI × AI for Security*、Copilot as UI、Microsoft Agent 365 五大安全支柱、M365 E7 Frontier Suite 与 Defender ISOC / MDASH  
-> **所属研究支柱**: Pillar 04 — 零信任治理、红队演练与托管安全服务体系 (Zero-Trust Governance, Red Team & Managed Security)
+> **所属研究支柱**: Pillar 04 — 零信任治理、红队演练与安全运营架构 (Zero-Trust Governance, Red Team & Security Engineering)
 
 ---
 
-## ⚠️ 重要边界声明与合规免责提示 (Important Governance & Commercial Boundary)
+## ⚠️ 重要架构边界声明与免责提示 (Important Architectural & Governance Boundary)
 
-根据《DEFEND Partner Playbook》第 4、8、44、53 页（`© 2026 Microsoft Corporation`）的官方声明：
-1. **非微软官方 SKU**：**DEFEND 框架（`DEFENDBase`、`DEFENDSecurity`、`DEFENDCompliance`、`DEFENDComplete`、`DEFENDExtend`）及其附录中的服务蓝图（SMB 交付蓝图、四层 Purview-as-a-Service 模型）以及 Microsoft Security Partner Toolkit for SMB 均属于合作伙伴交付的服务构建块与运营参考框架 (Partner-Delivered Service Constructs)，并非微软官方产品、SKU、授权捆绑包或强制性商业报价。**
-2. **授权与配置责任**：相关安全与合规能力的实现取决于客户是否持有合格的微软授权（如 Microsoft 365 Business Premium、Microsoft Defender Suite 附加组件、Microsoft Purview Suite 附加组件、Microsoft Sentinel 消费计费等）以及合作伙伴是否完成显式的策略配置与运营接管。合作伙伴在对外发布商业提案或营销材料前，必须独立核实最新的 Microsoft Product Terms、授权规则与服务声明。
-3. **隐私与脱敏声明**：本研究档案已对原始演示文稿及邮件材料中的所有个人作者署名、邮箱地址、电话号码及 Outlook SafeLinks 追踪参数完成 100% 脱敏剥离，仅保留公开可验证的技术架构、官方 `aka.ms` 链接与微软开源代码库结构。
+根据《DEFEND Partner Playbook》第 4、8、44、53 页（`© 2026 Microsoft Corporation`）及《Partner Security Toolkit for Enabling SMB》（10 页技术总览）的官方工程边界声明：
+1. **参考工程架构而非独立 SKU**：**DEFEND 五层安全架构（`DEFENDBase`、`DEFENDSecurity`、`DEFENDCompliance`、`DEFENDComplete`、`DEFENDExtend`）、四层 Purview-for-AI 数据治理模型以及 Microsoft Security Engineering Toolkit 均属于可复用的安全与合规参考架构与工程交付构建块 (Technical Reference Architectures & Engineering Constructs)，并非独立的微软产品或 SKU。**
+2. **授权与显式策略配置责任**：所有安全控制与 AI 护栏能力的生效，均取决于目标租户是否具备对应的微软平台授权（Microsoft 365 Business Premium、Microsoft Defender Suite、Microsoft Purview Suite、Microsoft Sentinel）以及是否按技术规范完成显式策略下发、模拟验证与持续漂移监控。
+3. **纯技术研究与脱敏声明**：本研究严格聚焦于 **Microsoft 产品体系的工程技术架构、控制平面交互、策略编译器、360 页六大工作负载部署规范与 PowerShell 7+ 自动化机制**；已剥离原始材料中的所有个人署名、邮箱、电话及追踪令牌，仅保留公开可验证的技术参数、官方 `aka.ms` 链接与微软开源代码库结构。
 
 ---
 
-## 1. 执行摘要：从“战略分层 (`DEFEND Playbook`)”到“工程落地 (`Security Partner Toolkit for SMB`)”
+## 1. 执行摘要：从“五层零信任顶层架构 (`DEFEND`)”到“六大工作负载工程实现 (`360p Guides + pwsh 7+`)”
 
-在中小型企业（SMB，通常为 1–300 席位）市场中，管理服务提供商（MSP）与安全服务合作伙伴面临三大核心结构性痛点（Slides 3, 6）：
-- **静默配置漂移与基线缺失**：大量客户虽已采购 Microsoft 365 Business Premium，但未强制启用 MFA、条件访问（Conditional Access）、Intune 设备合规、BitLocker 或阻止旧版身份验证（Legacy Authentication），导致已付费的安全价值长期闲置。
-- **Copilot 与生成式 AI 带来的敏感数据过曝风险**：客户迫切希望引入 Microsoft 365 Copilot 或使用网页端生成式 AI（如 ChatGPT、Gemini），但缺乏敏感度标签、自动分类、端点/聊天 DLP 与 AI 数据安全态势管理（DSPM for AI），极易触发内部越权检索（Oversharing）或外部 Shadow AI 泄密。
-- **过早接入 SIEM 引发的 SOC 告警海啸**：部分合作伙伴在未完成基础身份、终端与数据策略调优前，直接将客户接入 Microsoft Sentinel，导致海量未降噪的原始遥测淹没分析师，推高日志摄取成本并引发告警疲劳（Alert Fatigue）。
+在实际生产租户（特别是基于 Microsoft 365 Business Premium 构建的现代企业与多租户环境）中，安全工程团队普遍面临三大结构性技术瓶颈（Slides 3, 6）：
+- **静默配置漂移与控制平面能力闲置**：租户虽已分配 Microsoft 365 Business Premium 许可证，但未强制启用抗钓鱼 MFA、条件访问（Conditional Access）、Intune 设备合规、BitLocker 全盘加密或阻止旧版身份验证（Legacy Authentication），导致底层平台控制项处于未激活状态。
+- **Copilot 与生成式 AI 引发的 RAG 越权检索与未受管 Web AI 泄密**：在启用 Microsoft 365 Copilot 或允许员工访问第三方网页端生成式 AI（如 ChatGPT、Gemini、DeepSeek）时，若缺乏敏感度标签优先级体系、客户端/服务端自动分类、端点/Teams/Copilot/Edge 内联 DLP 与 AI 数据安全态势管理（DSPM for AI），极易触发内部 RAG 过度共享（Oversharing）或外部未受管 AI 粘贴泄密。
+- **未降噪遥测直接接入 SIEM 引发的告警风暴**：在未完成基础身份、终端 ASR、邮件反钓鱼与数据策略调优前，直接将原始遥测接入 Microsoft Sentinel，会导致海量低信噪比事件淹没安全运营中心（SOC）并推高日志摄取开销。
 
-本研究将两套高度互补的微软官方合作伙伴资产融合为统一的**“战略 + 执行”双引擎架构**：
-1. **战略与治理引擎 ——《DEFEND Partner Playbook》（11 章 / 53 页 PPTX，SHA-256: `0298c3bb248a0465...`）**：定义了以 **Microsoft 365 Business Premium** 为底座的 **5 层阶梯式托管安全模型**、横跨 **41 项平台能力**的授权阶梯矩阵、**51 项强制层级准出标准（Exit Criteria）**、**Slide 40 硬性治理铁律**，以及针对 Copilot/AI 准备度的 **4 层 Purview-as-a-Service 数据治理蓝图**。
-2. **全链路执行引擎 ——《Microsoft Security Partner Toolkit for SMB》（5 大交付阶段 / 6 大 `aka.ms` 核心资产）**：提供了可直接用于客户交付的 **7 份行业信息保护一页纸（14 页 PDF，含 8 级 DEFEND 敏感度标签体系与 LOB 免加密异常分支）**、**数据安全引导助手 (`microsoft/DataSecurityGuidedAssistant` v2.0.1572)**、**Purview SOW 工作说明书生成器 (`microsoft/SOWGenerator`，含 22 项模块化服务)**、**6 本最佳实践安全部署指南（总计 360 页 PDF）**，以及 **PowerShell 7+ 幂等自动化部署脚本 (`microsoft/BestPractice_Deploy-Scripts` / `SMBBestPracticeTool`)**。
+本研究将四套高度互补的微软官方技术资产融合为统一的**“顶层控制状态机 + 六大工作负载全栈实现”技术工程体系**：
+1. **五层安全状态机与治理门禁 ——《DEFEND Architecture Playbook》（11 章 / 53 页 PPTX，SHA-256: `0298c3bb248a0465...`）**：定义了以 **Microsoft 365 Business Premium** 为基准底座的 **5 层递进式安全控制模型**、横跨 **41 项平台能力**的许可证能力矩阵、**51 项强制层级准出检查项（Exit Criteria）**、**Slide 40 硬性治理公理**，以及面向 Copilot/AI 就绪的 **4 层 Purview 数据治理架构**。
+2. **五阶段技术工程流水线 ——《Partner Security Toolkit for Enabling SMB.pdf》（10 页，2026-09-22 更新）**：将多产品协同工程拆解为 **垂直行业数据分类 → 纯前端策略与分类法编译 (`v2.0.1572`) → 22 项模块化工作流拆解 → 6 大工作负载门户与 PowerShell 实施手册 → PowerShell 7+ 幂等自动化下发与配置漂移校验**。
+3. **七大受监管垂直行业信息保护规范 ——《Industry-Specific Information Protection Guides.zip》（7 本 PDF / 14 页）**：定义了各垂直行业的内置敏感信息类型（SIT）、自定义正则/EDM 标识符、30/60/90 天实施路径，以及解决 ERP/EHR/SIS/MES 批处理加密冲突的 **8 级 DEFEND 敏感度标签分类法（含第 5 级与第 8 级 `INTERNAL EXCEPTION` 免加密受控子标签）**。
+4. **六大工作负载步进式技术部署指南 ——《Best Practice Security Deployment Guides for SMB.zip》（6 本 PDF / 总计 360 页）与 `SMBBestPracticeTool`（PowerShell 7+）**：完整覆盖 **身份保护（90 页）**、**数据安全与 AI 护栏（92 页）**、**邮件与协作保护（52 页）**、**终端设备安全（51 页）**、**设备注册与管理（40 页）** 与 **SaaS 云应用安全（35 页）** 的每一项门户路径、协议参数、PowerShell 命令与安全门禁。
 
 ![DEFEND 5-Tier Architecture Overview](./assets/overview.svg)
 
 ---
 
-## 2. 《DEFEND Partner Playbook》全景架构拆解（11 章 / 53 页逐章映射）
+## 2. 《DEFEND Architecture Playbook》全景技术拆解（11 章 / 53 页逐章映射）
 
-| 章节 | 页码范围 | 章节标题 | 核心架构产出与关键机制 |
+| 章节 | 页码范围 | 章节标题 | 核心技术架构产出与控制机制 |
 | :---: | :---: | :--- | :--- |
-| **Ch 01** | Slides 1–7 | **Welcome to the DEFEND Partner Playbook** | 定义 DEFEND 五层架构（`DEFENDBase` → `DEFENDSecurity` / `DEFENDCompliance` → `DEFENDComplete` → `DEFENDExtend`）、MSP 四大核心收益（标准化交付、附加组件升级路径、降低配置漂移、提升续约率）及非官方 SKU 边界声明 |
+| **Ch 01** | Slides 1–7 | **Welcome to the DEFEND Architecture** | 定义 DEFEND 五层架构（`DEFENDBase` → `DEFENDSecurity` / `DEFENDCompliance` → `DEFENDComplete` → `DEFENDExtend`）、四大工程目标（消除配置漂移、分层启用套件能力、统一跨租户基线、降低告警噪音）及架构边界声明 |
 | **Ch 02** | Slides 8–16 | **Licensing Building Blocks** | 拆解 **Microsoft 365 Business Premium** 核心底座、**Defender Suite** 附加组件（21 项能力对比表，Slides 10–11）、**Purview Suite** 附加组件（20 项能力对比表，Slides 13–14）与 **Microsoft Sentinel** SIEM/SOAR 扩展 |
-| **Ch 03** | Slides 17–20 | **Start with Security Posture (Zero Trust Assessment)** | 强制要求在报价或配置前执行 **Microsoft Zero Trust Assessment（零信任评估）**，覆盖 **7 大评估维度**：`Identity`、`Devices`、`Applications`、`Data`、`Infrastructure`、`Networks`、`AI` |
+| **Ch 03** | Slides 17–20 | **Start with Security Posture (Zero Trust Assessment)** | 强制要求在策略设计前执行 **Microsoft Zero Trust Assessment（零信任技术姿态评估）**，覆盖 **7 大评估维度**：`Identity`、`Devices`、`Applications`、`Data`、`Infrastructure`、`Networks`、`AI` |
 | **Ch 04** | Slides 21–24 | **Core Operating Foundations (Lighthouse & Intune)** | 明确两大运营底座职责边界：**M365 Lighthouse**（基于 GDAP 的多租户基线可见性与漂移监控，**绝非 SOC/SIEM 或 Intune 替代品**）与 **Microsoft Intune Plan 1**（权威的设备合规强制执行引擎） |
-| **Ch 05** | Slides 25–31 | **The DEFEND Service Model** | 逐层定义五大服务层级的目标客户画像、核心交付成果、商业价值与升级触发条件 |
-| **Ch 06** | Slides 32–33 | **Mapping Capabilities Across Tiers** | 构建横跨身份、设备、邮件协作、数据保护、合规治理、SIEM/SOC 的跨层级责任推进矩阵 |
-| **Ch 07** | Slides 34–40 | **Tier Exit Criteria & Governance Rules** | 制定 **51 项强制准出检查表（48 项原子控制 + 3 项跨层复合门禁，Slides 35–39）** 与 **Slide 40 治理铁律**（未满足准出或未签署正式风险接受严禁跨层；未完成 `DEFENDComplete` 严禁激活 `DEFENDExtend`） |
-| **Ch 08** | Slides 41–42 | **Partner Readiness & Implementation Checklist** | 从商业包装（服务目录、SLA、风险接受流程）、技术就绪（GDAP、Lighthouse、Intune、LLD 低层设计）到运营就绪（告警路由、QBR 季度复盘）的上线清单 |
-| **Ch 09** | Slides 43–46 | **Appendix A — Partner Offer Blueprint (SMB)** | 面向中小企业的标准化一页纸商业架构蓝图，明确每一层级的“包含服务 (Included)”与“明确排除项 (Excluded)”以防止范围蔓延 (Scope Creep) |
-| **Ch 10** | Slides 47–51 | **Appendix B — Purview-as-a-Service Blueprint** | 将合规与 AI 数据治理拆解为 **4 个递进式服务层级**：`Tier 1 Data Protect` → `Tier 2 Data Govern` → `Tier 3 Data Control (AI Ready)` → `Tier 4 Data Assure (Managed)` |
-| **Ch 11** | Slides 52–53 | **Summary, Next Steps & Official References** | 汇总合作伙伴落地路线图与 12 条微软官方 Microsoft Learn / `aka.ms` 权威参考链接 |
+| **Ch 05** | Slides 25–31 | **The DEFEND Service Model** | 逐层定义五大安全层级的技术适用场景、必配控制项、平台遥测要求与演进触发条件 |
+| **Ch 06** | Slides 32–33 | **Mapping Capabilities Across Tiers** | 构建横跨身份、设备、邮件协作、数据保护、合规治理、SIEM/SOC 的跨层级控制平面推进矩阵 |
+| **Ch 07** | Slides 34–40 | **Tier Exit Criteria & Governance Rules** | 制定 **51 项强制准出检查表（48 项原子控制 + 3 项跨层复合门禁，Slides 35–39）** 与 **Slide 40 治理铁律**（未满足准出或未签署正式补偿控制风险接受严禁跨层；未完成 `DEFENDComplete` 严禁激活 `DEFENDExtend`） |
+| **Ch 08** | Slides 41–42 | **Technical & Operational Readiness Checklist** | 从治理架构（SLA、风险接受与例外复核）、技术底座（GDAP、Lighthouse、Intune、LLD 低层设计）到运营闭环（告警路由、季度态势复盘）的就绪清单 |
+| **Ch 09** | Slides 43–46 | **Appendix A — Technical Scope Boundary Blueprint** | 明确每一层级的“已包含控制项 (Included Controls)”与“明确排除项 (Excluded Controls)”，防止跨层配置混乱与未受控变更 |
+| **Ch 10** | Slides 47–51 | **Appendix B — Purview-for-AI 4-Tier Architecture** | 将合规与 AI 数据治理拆解为 **4 个递进式技术层级**：`Tier 1 Data Protect` → `Tier 2 Data Govern` → `Tier 3 Data Control (AI Ready)` → `Tier 4 Data Assure (Continuous Operations)` |
+| **Ch 11** | Slides 52–53 | **Summary, Implementation Roadmap & Official References** | 汇总工程实施路线图与 12 条微软官方 Microsoft Learn / `aka.ms` 权威技术文档链接 |
 
 ---
 
@@ -120,7 +122,7 @@
 ## 4. 零信任姿态评估与双核心运营底座 (Chapters 03–04 · Slides 17–24)
 
 ### 4.1 Phase 0：Microsoft 零信任评估的 7 大核心维度 (Slides 17–20)
-Playbook 强调：**“永远以安全姿态发现作为起点，而非直接推销许可证 (Start with Security Posture, Not Licensing)”**。通过运行官方零信任评估工具，合作伙伴可在单一视图中获取覆盖 **7 大维度**的实证基线差距：
+架构规范强调：**“永远以零信任技术姿态评估作为起点，而非单纯叠加许可证 (Start with Security Posture, Not Licensing)”**。通过运行官方零信任评估工具，安全工程团队可在单一视图中获取覆盖 **7 大维度**的实证基线差距：
 1. **Identity（身份）**：MFA 覆盖率、特权账户数量、旧版认证残留、条件访问策略缺口。
 2. **Devices（设备）**：Intune 纳管率、不合规设备放行风险、BitLocker 加密状态、操作系统补丁水位。
 3. **Applications（应用）**：OAuth 第三方应用授权风险、Shadow IT 云应用暴露面。
@@ -220,35 +222,35 @@ Slide 40 定义了两条不可妥协的工程治理公理：
 
 ---
 
-## 6. 附录 B 深潜：4 层 Purview-as-a-Service 与 Copilot / AI 数据治理蓝图 (Chapter 10 · Slides 47–51)
+## 6. 附录 B 深潜：4 层 Purview 数据治理架构与 Copilot / AI 准备度工程 (Chapter 10 · Slides 47–51)
 
-针对合作伙伴普遍面临的“Purview 组件过多、难以向中小企业解释清楚商业价值”的挑战，Playbook 附录 B 将数据安全与合规能力重构为 **4 个递进式服务包**，把“合规负担”转化为“安全启用 Microsoft 365 Copilot 的前置赋能器”：
+针对多组件数据安全体系在工程落地中的依赖耦合挑战，附录 B 将 Microsoft Purview 数据安全与合规能力解构为 **4 个递进式技术架构层**，使数据分类、DLP 与内部风险控制直接成为安全启用 Microsoft 365 Copilot 的前置工程基座：
 
-| 服务层级 | 英文名称 | 授权需求 | 敏感度标签能力 | DLP 覆盖范围 | 审计与电子发现 | 内部风险与 AI 治理 (DSPM for AI / Copilot) |
+| 技术层级 | 英文名称 | 授权需求 | 敏感度标签能力 | DLP 覆盖范围 | 审计与电子发现 | 内部风险与 AI 治理 (DSPM for AI / Copilot) |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Tier 1** | **Data Protect** *(基线数据保护)* | Business Premium | 手动、默认与强制标签 | 邮件 (Exchange) 与文件 (SharePoint/OneDrive) | 基础版（90 天审计、标准 eDiscovery） | 不包含 IRM；基于 Compliance Manager 完成基础自评 |
+| **Tier 1** | **Data Protect** *(基线数据保护)* | Business Premium | 手动、默认与强制标签 | 邮件 (Exchange) 与文件 (SharePoint/OneDrive) | 基础版（180 天审计、标准 eDiscovery） | 不包含 IRM；基于 Compliance Manager 完成基础自评 |
 | **Tier 2** | **Data Govern** *(自动化分类与治理)* | BP + **Purview Suite** | **自动敏感度标签**（基于内容与分类器） | 扩展至 **终端 (Endpoint DLP)**、**Teams 聊天**与云应用 | **高级版 (Audit & eDiscovery Premium)** | **启用 Insider Risk Management**；自动化合规持续评估 |
 | **Tier 3** | **Data Control** *(Copilot 与 AI 准备度)* | BP + **Purview Suite** | **AI 关联标签**与可训练分类器驱动 | **+ AI 交互面 (DLP for Microsoft 365 Copilot)** | AI 提示词/响应取证搜索与高价值审计事件 | **启用 DSPM for AI + Adaptive Protection**，治理 Copilot 过曝风险 |
-| **Tier 4** | **Data Assure** *(全托管持续合规)* | BP + Purview + **合作伙伴托管服务** | 合作伙伴全生命周期代管与异常复核 | + 持续策略调优与新型外发通道封堵 | 托管合规报告、法务保全与监管协查代办 | 托管内部风险研判、月度姿态报告与季度治理委员会复盘 |
+| **Tier 4** | **Data Assure** *(持续合规运营态)* | BP + Purview + **持续安全运营** | 全生命周期标签治理与异常复核 | + 持续策略调优与新型外发通道封堵 | 合规审计报告、法律保全与取证协查流水线 | 持续内部风险研判、月度姿态评估与季度策略漂移复盘 |
 
 ---
 
-## 7. Microsoft Security Partner Toolkit for SMB —— 五阶段全链路执行与 6 大官方链接资产深度拆解
+## 7. Microsoft 产品体系安全与 AI 就绪工程流水线 —— 五阶段技术编排与 6 大官方技术资产深度拆解
 
-如果说《DEFEND Partner Playbook》定义了五层托管安全的**顶层设计（What & Why）**，那么 **《Microsoft Security Partner Toolkit for SMB — Accelerate Security and AI Readiness Engagements》** 则提供了从首次客户拜访、范围界定、SOW 报价、详细规划到 PowerShell 7+ 自动化脚本落地的**完整工程工具箱（How）**。
+如果说《DEFEND Architecture Playbook》定义了五层零信任安全的**顶层状态机（What & Why）**，那么 **《Partner Security Toolkit for Enabling SMB.pdf》（10 页，2026-09-22 更新）** 及其关联的 6 大官方技术资产则提供了从垂直行业数据分类、纯前端策略编译、22 项工程工作流定义、360 页六大工作负载实施手册到 PowerShell 7+ 幂等部署与漂移校验的**完整技术工程工具箱（How）**。
 
 ![SMB Partner Toolkit 5-Stage Lifecycle](./assets/partner-toolkit-lifecycle.svg)
 
-### 7.1 客户交付全生命周期与 6 大官方 `aka.ms` 链接解析总表
+### 7.1 五阶段技术工程流水线与 6 大官方 `aka.ms` 技术资产解析总表
 
-| 交付阶段 (Lifecycle Stage) | 核心工具包资产名称 | 官方短链 (`aka.ms`) | 解析后目标地址 / 微软官方开源仓库 | 资产形态与实测规模 |
+| 工程阶段 (Engineering Pipeline Stage) | 核心技术资产名称 | 官方短链 (`aka.ms`) | 解析后目标地址 / 微软官方开源仓库 | 资产形态与实测规模 |
 | :--- | :--- | :--- | :--- | :--- |
-| **Stage 1: 初次客户沟通**<br>*(Initial Conversations)* | **行业特定信息保护一页纸**<br>*(Industry-Specific IP One-Pagers)* | `https://aka.ms/MIP-Industry-OnePagers` | `Industry-Specific Information Protection Guides.zip` (`1.01 MB`) | **7 份双页行业指南 PDF（共 14 页）**：覆盖消费品、教育 [新增]、金融保险、医疗、制造分销、非营利 [新增]、专业服务；含 30/60/90 天路线图与 **8 级 DEFEND 敏感度标签体系** |
-| **Stage 2: 发现与范围界定**<br>*(Discovery & Scoping)* | **数据安全引导助手**<br>*(Data Security Guided Assistant)* | `https://aka.ms/DataSecurityAssistant` | 在线应用: `https://microsoft.github.io/DataSecurityGuidedAssistant/`<br>开源仓库: `https://github.com/microsoft/DataSecurityGuidedAssistant` (`v2.0.1572`) | 纯前端零后端交互式决策树（单文件 `570 KB`，严格 CSP），包含 **Labeling Tool**、**DLP Tool** 与 **Combined Flow**，支持 8 大行业、8 大地区、6 档授权与 8 级/4 级标签模型切换及 Word/CSV 导出 |
-| **Stage 3: 方案与报价生成**<br>*(Proposal Development)* | **Purview 数据安全 SOW 生成器**<br>*(Purview SOW Generator)* | `https://aka.ms/SOW-Generator` | 在线应用: `https://microsoft.github.io/SOWGenerator/`<br>开源仓库: `https://github.com/microsoft/SOWGenerator` (MIT License) | 浏览器端多步骤工作说明书（SOW）生成器，涵盖 **22 项模块化服务**（Priority 1 基础 9 项、Priority 2 进阶 1 项、Priority 3 高阶与 AI 护栏 12 项）+ 托管服务目录与加密 JSON 导出 |
-| **Stage 4: 规划与实施手册**<br>*(Planning & Implementation)* | **SMB 最佳实践安全部署指南**<br>*(Security SMB Deployment Guides)* | `https://aka.ms/Security_SMBDeploymentGuides` | `Best Practice Security Deployment Guides for SMB.zip` (`31.82 MB`) | **6 本完整技术部署手册 PDF（总计 360 页）**：数据安全（92 页）、身份保护（90 页）、邮件与协作（52 页）、设备安全（51 页）、设备管理（40 页）、SaaS 安全（35 页） |
-| **Stage 5: 自动化部署配置**<br>*(Deployment & Configuration)* | **PowerShell 最佳实践部署脚本**<br>*(SMBBestPracticeTool)* | `https://aka.ms/Deploy-Scripts` | 文档门户: `https://microsoft.github.io/BestPractice_Deploy-Scripts/`<br>开源仓库: `https://github.com/microsoft/BestPractice_Deploy-Scripts` | 基于 **PowerShell 7+ (`pwsh.exe`)** 的 4 大工作负载幂等自动化套件（`Products/Purview`、`Products/Entra`、`Products/Intune`、`Products/Defender`），支持 GDAP、`-WhatIf`、安全门禁与 HTML/JSON 报告 |
-| **顶层总览与反馈闭环**<br>*(Umbrella Playbook)* | **SMB 安全合作伙伴工具包总览与问卷** | `https://aka.ms/SecurityPartnerToolkit_Playbook`<br>`https://aka.ms/SecurityPartnerToolkit-Survey` | `Partner Security Toolkit for Enabling SMB.pdf` & Microsoft Customer Voice | 端到端五阶段合作伙伴作战手册与产品团队反馈通道 |
+| **Stage 1: 垂直行业分类与 SIT 映射**<br>*(Vertical Data Classification)* | **行业特定信息保护技术指南**<br>*(Industry-Specific IP Guides)* | `https://aka.ms/MIP-Industry-OnePagers` | `Industry-Specific Information Protection Guides.zip` (`1.01 MB`) | **7 份双页行业技术指南 PDF（共 14 页）**：覆盖消费品、教育、金融保险、医疗、制造分销、非营利、专业服务；含 30/60/90 天工程路径与 **8 级 DEFEND 敏感度标签体系** |
+| **Stage 2: 纯前端策略与分类法编译**<br>*(Client-Side Policy Compilation)* | **数据安全引导助手**<br>*(Data Security Guided Assistant)* | `https://aka.ms/DataSecurityAssistant` | 在线应用: `https://microsoft.github.io/DataSecurityGuidedAssistant/`<br>开源仓库: `https://github.com/microsoft/DataSecurityGuidedAssistant` (`v2.0.1572`) | 纯前端零后端交互式策略编译器（单文件 `570 KB`，严格 CSP），包含 **Labeling Tool**、**DLP Tool** 与 **Combined Flow**，支持 8 大行业、8 大地区、6 档授权与 8 级/4 级标签模型切换及配置导出 |
+| **Stage 3: 工程工作流与依赖编排**<br>*(Workstream Scope & RACI)* | **Purview 数据安全工程范围生成器**<br>*(Purview Scope Generator)* | `https://aka.ms/SOW-Generator` | 在线应用: `https://microsoft.github.io/SOWGenerator/`<br>开源仓库: `https://github.com/microsoft/SOWGenerator` (MIT License) | 浏览器端工程范围与依赖生成器，涵盖 **22 项模块化技术工作流**（Priority 1 基础 9 项、Priority 2 进阶 1 项、Priority 3 高阶与 AI 护栏 12 项）与 AES-GCM 加密 JSON 状态导出 |
+| **Stage 4: 六大工作负载实施手册**<br>*(6-Workload Technical Runbooks)* | **最佳实践安全部署技术指南**<br>*(Security Deployment Guides)* | `https://aka.ms/Security_SMBDeploymentGuides` | `Best Practice Security Deployment Guides for SMB.zip` (`31.82 MB`) | **6 本完整技术部署手册 PDF（总计 360 页）**：数据安全（92 页）、身份保护（90 页）、邮件与协作（52 页）、设备安全（51 页）、设备管理（40 页）、SaaS 安全（35 页） |
+| **Stage 5: 幂等自动化下发与漂移检测**<br>*(Idempotent Automation & Drift)* | **PowerShell 最佳实践部署脚本**<br>*(SMBBestPracticeTool)* | `https://aka.ms/Deploy-Scripts` | 文档门户: `https://microsoft.github.io/BestPractice_Deploy-Scripts/`<br>开源仓库: `https://github.com/microsoft/BestPractice_Deploy-Scripts` | 基于 **PowerShell 7+ (`pwsh.exe`)** 的 4 大工作负载幂等自动化套件（`Products/Purview`、`Products/Entra`、`Products/Intune`、`Products/Defender`），支持 GDAP、`-WhatIf`、安全门禁与漂移检测报告 |
+| **Stage 0: 流水线顶层编排规范**<br>*(Pipeline Orchestration Guide)* | **技术工程工具包总览与反馈遥测** | `https://aka.ms/SecurityPartnerToolkit_Playbook`<br>`https://aka.ms/SecurityPartnerToolkit-Survey` | `Partner Security Toolkit for Enabling SMB.pdf` (10 页, 2026-09-22) | 端到端五阶段技术工程编排规范与配置漂移监控说明 |
 
 ---
 
@@ -331,31 +333,148 @@ Slide 40 定义了两条不可妥协的工程治理公理：
 
 ---
 
-### 7.5 资产四深潜：6 本 SMB 最佳实践安全部署指南（总计 360 页 PDF · `aka.ms/Security_SMBDeploymentGuides`）
+### 7.5 资产四深潜：六大工作负载安全部署技术指南（总计 360 页 PDF · `aka.ms/Security_SMBDeploymentGuides`）全栈工程规范
 
-压缩包 `Best Practice Security Deployment Guides for SMB.zip` (`31.82 MB`) 提供了 **6 本总计 360 页的图文步进式工程实施手册**。每本手册均严格遵循 `前置条件 (Prerequisites) → Priority 1 (Must-do 基线必做) → Priority 2 (Enhanced 增强保护) → Priority 3 (Strengthened 强化控制) → Advanced Security (Defender / Purview Suite 高阶升级)` 的统一工程结构：
+压缩包 `Best Practice Security Deployment Guides for SMB.zip` (`31.82 MB`) 提供了 **6 本总计 360 页的步进式工程实施手册**。每本手册均严格遵循 `前置条件与 RBAC 角色 (Prerequisites) → Priority 1 (Must-do 基线必做) → Priority 2 (Enhanced 增强保护) → Priority 3 (Strengthened 强化控制) → Advanced Security (Defender / Purview Suite 高阶升级)` 的统一工程结构：
 
-| 序号 | 部署指南 PDF 名称 | 页数 | 版本日期 | 核心章节与页码分布 | 对应 DEFEND 层级 |
+| 工作负载编号 | 部署指南 PDF 名称 | 页数 | 版本日期 | 核心技术章节与页码分布 | 对应 DEFEND 层级 |
 | :---: | :--- | :---: | :---: | :--- | :--- |
-| **1** | **Data Security Deployment Guide for Small Business** (`Data Security Deployment Guide for Small Business_Final.pdf`) | **92 页** | 2026-06-24 | • **Priority 1 "Good"** (pp. 9–34)：审计开启、敏感度标签、SPO/OD 标签启用、核心 DLP<br>• **Priority 2 "Better"** (pp. 35–41)：保留策略与数据生命周期管理<br>• **Priority 3 "Advanced"** (pp. 42–90)：自动标签、Endpoint DLP、Teams DLP、**DLP for Copilot**、**Edge 内联 Web AI 阻断**、**DSPM for AI**、Insider Risk | `DEFENDBase` → `DEFENDCompliance` & Purview Tiers 1–3 |
-| **2** | **Identity Protection Best Practice Deployment** (`Identity Protection Best Practice Deployment_Final030626.pdf`) | **90 页** | 2026-03-06 | • **Entra ID P1 Priority 1 & 2** (pp. 8–31)：Break-glass 应急账户、MFA、SSPR、阻止旧版认证、基线条件访问<br>• **Entra ID P2 Best Practices** (pp. 32–70)：基于登录风险与用户风险的 CA、**PIM 特权身份管理**、访问评审<br>• **Defender for Identity (MDI)** (pp. 71–87)：本地 AD 传感器部署与混合身份威胁检测 | `DEFENDBase` → `DEFENDSecurity` |
-| **3** | **Email & App + Collaboration Protection Best Practice Deployment** (`Email & App + Collaboration Protection Best Practice Deployment_Final030926.pdf`) | **52 页** | 2026-03-16 | • **MDO Plan 1 Priority 1–3 & Advanced** (pp. 9–41)：预设安全策略、反钓鱼 (Anti-Phishing)、Safe Links、Safe Attachments（覆盖邮件、Teams、SharePoint、OneDrive）、SPF/DKIM/DMARC<br>• **MDO Plan 2 Collaboration Security** (pp. 42–51)：自动调查与修复 (AIR)、Threat Explorer 威胁猎寻、Attack Simulation 钓鱼模拟训练 | `DEFENDBase` → `DEFENDSecurity` |
-| **4** | **Device Security Best Practice Deployment** (`Device Security Best Practice Deployment_Final030926.pdf`) | **51 页** | 2026-03-16 | • **Prerequisites & Onboarding** (pp. 8–13)<br>• **Defender for Business Priority 1 & 2** (pp. 14–41)：NGAV 下一代防病毒、ASR 攻击面减少规则、勒索软件防护、网络保护、TVM 漏洞管理<br>• **Defender for Endpoint Plan 2** (pp. 42–52)：高级狩猎、6 个月告警保留、威胁情报分析 | `DEFENDBase` → `DEFENDSecurity` |
-| **5** | **Device Management Best Practice Deployment** (`Device Management Best Practice Deployment_Final030726.pdf`) | **40 页** | 2026-03-16 | • **Mobility Management Approach** (p. 7)<br>• **Intune Priority 1–3 Tasks** (pp. 8–37)：设备注册限制、默认与自定义合规策略、MAM 应用保护策略、BitLocker 加密、Windows 更新环、M365 应用部署<br>• **Device-Based Conditional Access** (p. 38) | `DEFENDBase` |
-| **6** | **SaaS Security Best Practice Deployment** (`SaaS Security Best Practice Deployment_Final030926.pdf`) | **35 页** | 2026-03-16 | • **Shadow IT Discovery via MDE** (pp. 9–13)：打通 MDE 与 Defender for Cloud Apps 自动发现影子应用<br>• **App Discovery & OAuth Governance** (pp. 14–25)：应用发现告警、高权限 OAuth 应用审计与吊销<br>• **Cross-SaaS Data & Threat Protection** (pp. 26–34)：跨 SaaS 敏感数据防护与异常会话阻断 | `DEFENDSecurity` → `DEFENDComplete` |
+| **Workload 1** | **Identity Protection Best Practice Deployment** (`Identity Protection Best Practice Deployment_Final030626.pdf`) | **90 页** | 2026-03-06 | • **Entra ID P1 Priority 1 & 2** (pp. 8–31)：Break-glass 应急账户 (FIDO2/Passkey)、无密码与抗钓鱼 MFA、10 套零信任 CA 模板、SSPR + 密码写回、最小权限 RBAC/TAP<br>• **Entra ID P2 风险控制与身份治理** (pp. 32–70)：独立的登录风险与用户风险 CA 策略、**PIM 角色与组即时激活 (JIT)**、季度访问评审 (`Auto-apply` 自动撤销)、权利管理访问包 (Access Packages)<br>• **Defender for Identity (MDI)** (pp. 71–87)：DC/ADFS/ADCS 传感器静默安装、`Set-MDIConfiguration`、gMSA 目录服务账户、NNR 网络名称解析 (TCP 135/UDP 137/TCP 3389) | `DEFENDBase` → `DEFENDSecurity` |
+| **Workload 2** | **Data Security Deployment Guide for Small Business** (`Data Security Deployment Guide for Small Business_Final.pdf`) | **92 页** | 2026-06-24 | • **Priority 1 "Good"** (pp. 9–34)：统一审计日志、现代标签组方案、8 级敏感度标签优先级 (`0..7`)、SPO/OD 协同编辑与容器同步 (`Execute-AzureAdLabelSync`)、按工作负载拆分的模拟 DLP<br>• **Priority 2 "Better"** (pp. 35–41)：静态范围 vs **自适应范围 (Adaptive Scopes)** 保留策略、离职非活动邮箱、**7 年默认保留存储与法务风险修正（建议从 2 年起步）**<br>• **Priority 3 "Best"** (pp. 42–90)：Endpoint DLP、Teams DLP、**DLP for M365 Copilot（双规则 SIT+标签阻断）**、**Edge 内联 Web AI 阻断**、客户端/服务端自动标签、仅在线解密 (`Allow offline access = Never`)、Custom SIT/EDM、**DSPM for AI**、**Insider Risk + Adaptive Protection** | `DEFENDBase` → `DEFENDCompliance` & Purview Tiers 1–3 |
+| **Workload 3** | **Email & App + Collaboration Protection Best Practice Deployment** (`Email & App + Collaboration Protection Best Practice Deployment_Final030926.pdf`) | **52 页** | 2026-03-16 | • **MDO Plan 1 Priority 1–3** (pp. 9–41)：SPF (`-all`)/DKIM (2048-bit)/DMARC (`p=quarantine/reject` 含停放域名)、Standard/Strict 预设安全策略、反钓鱼仿冒保护、Safe Links/Safe Attachments（含 SPO/OD/Teams 全局开关）、**禁用出站自动外部转发 (`Off`)**、Teams 禁用第三方云盘与 **Teams ZAP 零日自动清除**<br>• **MDO Plan 2 协作安全** (pp. 42–51)：优先账户标记、**7 类钓鱼模拟训练（含二维码钓鱼与 OAuth 授权诱骗）**、AIR 自动调查修复、Threat Explorer 狩猎 | `DEFENDBase` → `DEFENDSecurity` |
+| **Workload 4** | **Device Security Best Practice Deployment** (`Device Security Best Practice Deployment_Final030926.pdf`) | **51 页** | 2026-03-16 | • **Defender for Business Priority 1 & 2** (pp. 8–43)：Intune-MDE 连接器、防篡改保护 (`Tamper Protection = On`)、静默 BitLocker 加密 (`TPM 2.0 + XTS-AES`)、内置自动攻击中断 (Automatic Attack Disruption)、**ASR 规则先审计 (`RuleMode=2`) 后阻断 (`RuleMode=1`)**（强制阻断 LSASS 凭据转储、WMI 持久化、易受攻击签名驱动）、**MDE 设备风险评分 = `Clear (Secure)` 联动 Intune 合规与 Entra CA**<br>• **Defender for Endpoint Plan 2** (pp. 44–51)：**租户订阅状态显式切换 (`Defender for Business -> MDE P2`)**、SOC 级 RBAC 设备组与 5 级自动化修复权限 | `DEFENDBase` → `DEFENDSecurity` |
+| **Workload 5** | **Device Management Best Practice Deployment** (`Device Management Best Practice Deployment_Final030726.pdf`) | **40 页** | 2026-03-16 | • **MDM vs MAM 架构矩阵** (pp. 7–14)：企业设备 MDM 自动注册 vs 个人 BYOD MAM 应用保护（**明确标注 Windows Information Protection [WIP] 已退役，由 Purview MIP/Endpoint DLP 替代**）、**默认合规策略加固 (`Mark devices with no compliance policy assigned = Not compliant`)**<br>• **Intune Priority 2 & 3** (pp. 15–38)：平台注册限制（阻止个人设备 MDM 注册）、MAM 核心应用数据隔离（阻断 iCloud/iTunes 备份与跨非受管应用拷贝）、Windows 10/11 合规策略、**针对 Intune 注册服务主体 (`d4ebce55-015a-49b5-a083-c84d1797ae8c`) 的每次必验 MFA 条件访问策略** | `DEFENDBase` |
+| **Workload 6** | **SaaS Security Best Practice Deployment** (`SaaS Security Best Practice Deployment_Final030926.pdf`) | **35 页** | 2026-03-16 | • **Shadow IT 持续发现与终端拦截** (pp. 9–18)：一键开启 **MDE + Defender for Cloud Apps 集成**（无需防火墙日志即可评估 **31,000+ 云应用与 90+ 风险指标**），将 `Unsanctioned`（未批准）应用同步至 MDE 网络保护直接阻断<br>• **OAuth 应用治理与跨 SaaS DLP** (pp. 19–34)：**App Governance** 审计高权限/过度授权/闲置 Graph API 应用并支持自动禁用 (`Disable app`)、SSPM 云姿态评分、跨 SaaS 文件 DLP 与条件访问应用控制（CA App Control）实时会话代理、Entra ID 用户名脱敏富化 | `DEFENDSecurity` → `DEFENDComplete` |
 
 ---
 
-### 7.6 资产五深潜：PowerShell 7+ 自动化部署工具包 `SMBBestPracticeTool` (`aka.ms/Deploy-Scripts`)
+#### 7.5.1 Workload 1 深度技术解析：身份访问控制与身份保护（`Identity Protection Best Practice Deployment`，90 页）
 
-开源仓库 `https://github.com/microsoft/BestPractice_Deploy-Scripts`（文档门户 `https://microsoft.github.io/BestPractice_Deploy-Scripts/`）将上述 360 页指南中的基础配置转化为可重复、可审计、幂等的 **PowerShell 7+ (`pwsh.exe`)** 自动化工程代码：
+1. **Entra ID P1 基线与硬化控制（pp. 8–31）**：
+   - **应急访问账户（Emergency Access / Break-Glass Accounts，pp. 12–13）**：必须创建至少 **2 个纯云端（`*.onmicrosoft.com`）永久 Global Administrator 账户**，与员工个人账户及联邦认证（AD FS / PTA / PHS）完全解耦；强制绑定硬件 **FIDO2 安全密钥或 Passkey**（无移动设备依赖），并在所有条件访问（CA）策略与 PIM 策略中配置显式排除，同时监控其登录日志（正常状态下登录次数应为 `0`）。
+   - **抗钓鱼无密码认证与数字匹配（pp. 14–20）**：在 `Entra Admin Center > Protection > Authentication methods > Policies > Microsoft Authenticator` 中启用 `Enable = All users`、`Authentication mode = Any`（同时激活无密码电话登录与推送数字匹配），并在 Azure/Entra/Intune 管理门户强制多因素认证（`aka.ms/mfaforazure`）。
+   - **10 套内置零信任条件访问模板的分阶段上线策略（pp. 21–25）**：
+     - **立即启用（`On`）的 7 条模板**：`Require multifactor authentication for admins`、`Block legacy authentication`、`Require multifactor authentication for all users`、`Require multifactor authentication for guest access`、`Require multifactor authentication for Azure management`、`Block access for unknown or unsupported device platform`。
+     - **先以仅报告模式（`Report-Only`）部署的 4 条模板**：`Securing security info registration`（待定义可信命名网络位置与临时访问通行证 TAP 后切换为 `On`）、`No persistent browser session`（待设备注册就绪后切换为 `On`）、`Require approved client apps or app protection policies`（待 Intune MAM 策略下发后切换为 `On`）、`Require compliant or Microsoft Entra hybrid joined device or MFA for all users`。
+   - **自助密码重置（SSPR）与最小权限架构（pp. 26–31）**：开启 `Self service password reset enabled = All`（混合环境通过 Entra Connect 启用密码写回 Password Writeback）；强制管理员使用**独立、无邮件许可证的专用特权账号**（防钓鱼邮件直接命中管理员信箱），为 Global Admin 强制绑定 FIDO2 Authentication Strength，并启用 **Admin Consent Workflow（管理员同意工作流）** 拦截高危第三方 OAuth 权限申请。
 
-1. **核心运行时与多租户安全架构**：
-   - **强制 PowerShell 7+ 运行时**：在 Windows PowerShell 5.1 下会立即主动报错退出（因为 Exchange Online v3 REST 与 Microsoft.Graph SDK 依赖 .NET Core 连接池与现代 TLS API），同时通过 `Import-Module Microsoft.Online.SharePoint.PowerShell -UseWindowsPowerShell` 将旧版 SharePoint 模块隔离在隐藏的 PS 5.1 子进程中，彻底避免 MSAL DLL 程序集冲突。
-   - **原生支持 MSP GDAP 委派管理**：支持直接管理员模式（`-TenantAdminUpn`）与合作伙伴委派模式（`-DelegatedOrganization <customer.onmicrosoft.com>`），并在每次写入前通过 `Get-MgOrganization` 校验目标租户身份。
+2. **Entra ID P2 风险驱动条件访问与身份治理（Defender Suite，pp. 32–70）**：
+   - **风险登录与风险用户的解耦建模（pp. 37–41）**：指南明确要求**绝不能将用户风险（User Risk）与登录风险（Sign-in Risk）合并在同一条 CA 策略中**，必须分别创建两条独立策略并同时包含无密码用户（Passwordless users）：
+     - **User Risk CA Policy（pp. 37–38）**：触发条件 `User risk = High` $\rightarrow$ 授权控制 `Grant access` + 勾选 **`Require risk remediation`**（系统自动联动要求 `Authentication strength (MFA)` + 安全密码重置）+ 会话控制 `Sign-in frequency = Every time`（先 `Report-only` 验证后切 `On`）。
+     - **Sign-In Risk CA Policy（pp. 39–41）**：触发条件 `Sign-in risk = High and Medium` $\rightarrow$ 授权控制 `Grant access` + `Require authentication strength (Multifactor authentication)` + 会话控制 `Sign-in frequency = Every time`。
+   - **特权身份管理（PIM for Entra Roles & PIM for Groups，pp. 44–55）**：
+     - 将所有日常管理员从常驻 `Active` 转化为按需激活的 `Eligible` 状态（仅保留 2 个 Break-glass 账户为 `Permanent Active`）。
+     - 角色激活参数加固：`Activation maximum duration = 1–8 hours`（Owner 权限设置更短窗口）、`On activation, require = Azure MFA or Microsoft Entra Conditional Access authentication context`、勾选 `Require justification on activation` 与 `Require approval to activate`。
+     - **PIM for Groups（pp. 49–53）**：通过纯云端可分配角色的安全组（`isAssignableToRole = true`，一旦纳入 PIM 管理即不可逆）实现多角色打包即时提权（JIT）。
+   - **季度访问评审（Access Reviews，pp. 56–62）与权利管理访问包（Entitlement Management Access Packages，pp. 63–70）**：
+     - 针对含外部访客（Guests）的所有 Microsoft 365 组、敏感安全组、核心企业应用及 PIM 特权角色配置季度自动评审；强制开启 **`Auto-apply results to resource = Enabled`**、**`If reviewers don't respond = Remove access`** 以及辅助决策信号 **`No sign-in within 30 days`** 与 **`User-to-group affiliation`**。
+     - 通过 Catalog（目录）将安全组、应用、SharePoint 站点及 **服务主体/智能体 API 权限（Application API Permissions）** 封装为 **Access Packages**，区分内部员工与外部合作方审批流，强制填写业务申请理由并配置 **30 天或 90 天自动到期回收（Never Indefinite）**。
+
+3. **Microsoft Defender for Identity 混合 AD 纵深防御（Defender Suite，pp. 71–87）**：
+   - **传感器静默部署与自动审计下发**：在所有域控制器（DC）、AD FS、AD CS 与 Entra Connect 服务器部署 MDI 传感器（`Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Key>"`）；MDI Sensor `v3.x` 支持自动配置 Windows 高级安全审计策略，而 `v2.x` 通过 PowerShell 模块 `DefenderForIdentity` 执行 `Set-MDIConfiguration -Mode Domain -Configuration All` 与 `Test-MDIConfiguration` 开启 NTLM（Event 8004）、目录服务变更（Event 4662）、安全组变更（4728/4732/4756）与 SAM-R 查询审计。
+   - **gMSA 目录服务账户与 NNR 网络名称解析（pp. 80–84）**：优先使用组托管服务账户（`gMSA`）作为 Directory Service Account；开启 **NNR（Network Name Resolution，基于 RPC TCP 135、NetBIOS UDP 137 与 RDP TCP 3389）** 将原始网络层 IP 流量精确关联至域内计算机实体，从而实时检测 `DCSync` 域控复制攻击、横向移动路径（Lateral Movement Paths）与 Kerberos 票据伪造，并配置 Honeytoken 诱饵账户（一旦产生认证即触发高危告警）。
+
+---
+
+#### 7.5.2 Workload 2 深度技术解析：数据安全与生成式 AI 护栏（`Data Security Deployment Guide for Small Business`，92 页 + 7 大行业指南 14 页）
+
+1. **Priority 1 ("Good") — 审计、现代敏感度标签组与基础模拟 DLP（pp. 9–34）**：
+   - **统一审计日志校验（pp. 9–12）**：通过 Exchange Online PowerShell 运行 `Get-AdminAuditLogConfig | Format-List UnifiedAuditLogIngestionEnabled` 确认返回 `True`（否则执行 `Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true`），确保所有文件、标签与 AI 交互事件写入 Purview 审计管道（标准保留 180 天，Audit Premium 扩展至 1 年+）。
+   - **现代敏感度标签架构（Modern Label Scheme，pp. 13–21）**：自 2025 年 10 月起新建租户默认启用 **Label Groups（标签组）** 模型——顶层标签组仅作为逻辑分类容器（不挂载任何加密或水印策略），实际保护策略全部定义在二级子标签上；**标签表顺序（Priority Index `0..7`）直接决定保护强度优先级**（序号 `0` 为最低限制 `Public`，最大序号 `7` 为最高限制 `Highly Confidential`，当自动分类命中多个规则时系统自动采用序号更高的强保护标签）。
+   - **LOB 免加密异常子标签（`INTERNAL EXCEPTION`）的底层工程机制（p. 15 & 7 份行业指南）**：
+     - 当对 `Confidential` 或 `Highly Confidential` 文件启用 Azure RMS AES-256 加密时，许多无头（Headless）企业后台服务——如医疗行业的 EHR/HL7 接口与器械校准包、金融行业的每日贷款/理赔批处理与核心银行导入、制造行业的 CAD/PLM/MES 机台解析器、教育行业的 SIS 学生系统批量导入、消费品行业的 EDI/ERP 订单同步——因未集成 MIP SDK 解密令牌而直接报错中断。
+     - **`CONFIDENTIAL \ INTERNAL EXCEPTION`（第 5 级）** 与 **`HIGHLY CONFIDENTIAL \ INTERNAL EXCEPTION`（第 8 级）** 在文件 OpenXML/PDF 属性中写入完整的 `MSIP_Label_<GUID>_Enabled=true` 明文分类元数据与视觉页眉/页脚/水印，**显式关闭 Azure RMS 内容加密（`Encryption = Disabled`）以保证 LOB 批处理无损读取，但同时在 Purview DLP、Endpoint DLP、Teams DLP 与 DLP for M365 Copilot 中将其绑定为高敏感拦截对象**（禁止外部共享、禁止匿名链接、禁止非受管终端拷贝、限制 Copilot RAG 检索），并强制执行 90 天季度异常复核。
+   - **SharePoint/OneDrive 加密文件协同编辑与容器同步（pp. 26–28）**：在 Purview 开启 `Process content in encrypted Office files for OneDrive and SharePoint`，并通过 `Connect-AzureAD` 运行 `Execute-AzureAdLabelSync` 将容器级敏感度标签同步至 Microsoft Entra ID，从而允许在创建 Microsoft Teams 团队、M365 组与 SharePoint 站点时直接强制继承隐私级别（`Public` vs `Private`）、外部访客开关与非受管设备访问控制。
+   - **按工作负载独立编排的基础 DLP 策略（pp. 29–34）**：指南强调必须为 **Exchange 邮件**、**SharePoint 站点**与 **OneDrive 账户**分别创建独立的 Custom DLP 策略（避免单一混合策略导致排查困难），触发条件设为 `Content is shared from Microsoft 365 with people outside my organization` + `Sensitivity label = Confidential \ All Employees`，动作设为 `Block only people outside your organization` + 开启 Policy Tips，并强制以 **Simulation Mode（模拟模式，15–30 天无修改自动转生产或人工签字准出）** 启动。
+
+2. **Priority 2 ("Better") — 静态范围 vs 自适应范围（Adaptive Scopes）保留策略与 7 年默认风险修正（pp. 35–41）**：
+   - **自适应范围（Adaptive Scopes，pp. 37–41）**：不同于静态勾选站点或邮箱，Adaptive Scopes 基于 Entra ID 属性（如 `Department -eq 'Legal'` 或 `Department -eq 'Finance'` 或 `JobTitle -eq 'Executive'`）或 SharePoint 站点属性动态计算策略作用范围，并自动为离职员工创建 **Inactive Mailboxes（非活动保留邮箱）**。
+   - **7 年默认保留期的存储膨胀与法务电子发现风险（p. 40 关键工程警告）**：Purview 保留模板默认将保留周期设为 **7 年（Retain items for a specific period = 7 years）**。若直接按默认值全租户下发，会导致 SharePoint/Exchange 存储配额因历史离职人员与归档附件激增而耗尽，并在诉讼电子发现（eDiscovery）中显著扩大企业法定披露义务面。工程最佳实践要求**常规邮件保留策略从 2 年起步（Retain only，到期不自动删除）**，仅对受法规强制约束的财务/医疗/法务子集通过 Adaptive Scope 应用长周期保留。
+
+3. **Priority 3 ("Best") — Purview Suite 全栈扩展、Copilot/Edge 双重 AI 护栏与自适应保护（pp. 42–90）**：
+   - **Endpoint DLP（pp. 43–47）与 Teams DLP（pp. 48–52）**：在 `Locations = Devices` 中针对 `Confidential \ All Employees` 及以上文件审计或阻断 `Copy to clipboard`、`Copy to a removable USB device`、`Copy to a network share` 与 `Print`；在 `Locations = Teams chat and channel messages` 中实时拦截外部访客（External users）会话中的敏感标签文件与 SIT 发送。
+   - **DLP for Microsoft 365 Copilot & Copilot Chat 双规则工程实现（pp. 53–57）**：
+     - 在 Purview DLP 创建自定义策略并仅勾选 **`Microsoft 365 Copilot and Copilot Chat`** 位置，构建两条正交防御规则：
+       - **Rule 1（Prompt SIT 实时拦截规则）**：条件 `Content contains -> Sensitive info types`（如 Credit Card Number、U.S./U.K. Bank Account、SSN/National ID），实时拦截在 Copilot 提示词中输入高危金融/个人隐私凭据。
+       - **Rule 2（Sensitivity Label RAG 检索隔离规则）**：条件 `Content contains -> Sensitivity labels`（勾选 `Confidential \ Specific People`、`Highly Confidential \ *`，或高安全部门的 `Confidential \ All Employees`），执行动作 **`Restrict Copilot from processing content`**，在推理检索（RAG Grounding）阶段直接在 Graph 语义索引层剥离高密文档，防止 Copilot 将受限文档摘要输出给提问者。
+   - **DLP for Microsoft Edge / Inline Web Traffic（p. 72 & SOW Priority 3）**：通过 Edge for Business 浏览器内联策略，阻止用户（特别是被标记为高风险的用户）将含敏感信息或高密标签的数据粘贴、拖拽或上传至未受管的第三方生成式 AI 站点（ChatGPT、Gemini、DeepSeek 等）。
+   - **客户端/服务端自动标签（pp. 58–61）与仅在线解密（`Allow offline access = Never`，pp. 62–63）**：对高密级标签设置 `Allow offline access = Never`，强制每次打开文档时实时向 Entra ID 请求 RMS 解密令牌，彻底杜绝文档被下载至本地后离线打开或设备丢失泄密。
+   - **自定义敏感信息类型（Custom SITs，pp. 64–67）**：支持克隆内置 SIT 调优误报，或通过 **正则表达式（如员工号 `EMP-[0-9]{6}`）**、**关键字列表/字典（如绝密项目代号 `Project Falcon`）**、**校验和函数（Luhn 算法）**、**字符邻近窗口（Character Proximity，默认 300 字符）**、**精确数据匹配（EDM）** 与 **文档指纹（Document Fingerprinting）** 构建高置信度（High Confidence = 85%+）检测器。
+   - **AI 数据安全态势管理（DSPM，pp. 68–73）**：一键完成 Purview DSPM 启用，系统每周自动针对 Copilot 访问的所有 SharePoint 站点执行 **Data Risk Assessment（过度共享风险扫描）**，并提供一键激活的预置修复策略（*Block elevated risk users from pasting or uploading sensitive info on AI sites*、*Block sensitive info from AI apps in Edge*、*Protect items with sensitive labels from M365 Copilot and agent process*）。
+   - **内部风险管理（IRM）与自适应保护（Adaptive Protection，pp. 74–86）**：开启 IRM Analytics 扫描后部署 `Data leaks` 快速策略并启用 **Adaptive Protection Quick Setup**（经过 72 小时行为基线建模），系统根据离职倾向、批量下载、外发频次将用户实时划分为 **`Elevated`（高风险）**、**`Moderate`（中风险）** 与 **`Minor`（低风险）** 三档，并自动下发 3 条联动策略：
+     1. **Teams + Exchange 动态 DLP**：对 `Elevated` 用户立即执行硬阻断（Block）。
+     2. **Devices 终端动态 DLP**：对 `Elevated` 用户阻断 USB/打印/剪贴板，对 `Moderate/Minor` 用户执行审计告警。
+     3. **Entra ID P2 动态条件访问策略**：当用户触发内部高风险时实时限制其会话或强制重认证。
+
+---
+
+#### 7.5.3 Workload 3 深度技术解析：邮件、应用与协作保护（`Email & App + Collaboration Protection Best Practice Deployment`，52 页）
+
+1. **Defender for Office 365 Plan 1 纵深加固（pp. 9–41）**：
+   - **DNS 邮件身份认证三件套（pp. 9–14）**：所有外发域名及**停放域名（Parked Domains）**必须配置 `SPF`（以 `-all` 硬拒绝收尾）、`DKIM`（在 `security.microsoft.com/dkimv2` 启用 2048-bit CNAME 密钥轮换）与 `DMARC`（从 `p=none` 演进至 `p=quarantine; pct=100` 乃至 `p=reject`）。
+   - **Standard / Strict 预设安全策略与反钓鱼仿冒保护（pp. 15–20）**：启用 EOP 反垃圾/反恶意软件、MDO Anti-Phishing（高管与核心域名仿冒保护 Impersonation Protection、邮箱智能 Mailbox Intelligence、欺骗情报 Spoof Intelligence）、**Safe Links**（跨邮件、Microsoft Teams 与 Office 客户端的实时点击时 URL 重写与引爆检查）以及 **Safe Attachments**（沙箱动态引爆 `Dynamic Delivery` 或 `Block`）。
+   - **阻断攻击者邮箱自动外发规则与配置漂移分析（pp. 24–28）**：在 `Outbound spam filter policy (Default)` 中将 **`Automatic forwarding rules` 显式配置为 `Off — Forwarding is disabled`**，彻底封死攻击者攻陷单个邮箱后通过隐藏收件箱转发规则静默窃取邮件的路径；定期运行 **Configuration Analyzer** 检测当前策略相对 Standard/Strict 基线的配置漂移。
+   - **Microsoft Teams 协作面收敛与零日自动清除（ZAP for Teams，pp. 29–37）**：在 Teams Admin Center 关闭未受管第三方云存储（`Files > Citrix/DropBox/Box/Google Drive/Egnyte = Off`）；在 `security.microsoft.com/securitysettings/teamsProtectionPolicy` 开启 **Zero-hour auto purge (ZAP) for Teams**（对已发送的恶意文件与钓鱼消息在 Teams 聊天中实时溯源撤回并移入管理员隔离区）；并在 `Safe Attachments > Global settings` 中开启 **`Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams`**。
+2. **Defender for Office 365 Plan 2 主动狩猎与模拟演练（Defender Suite，pp. 42–51）**：
+   - **Priority Account Protection（p. 43）**：为高管、财务审批人与核心研发人员打上 `Priority account` 标签，启用差异化高敏告警与专属威胁过滤。
+   - **7 类社会工程学钓鱼模拟训练（Attack Simulation Training，pp. 44–46）**：周期性运行覆盖 7 大攻击载荷的自动化演练：**Credential Harvest（凭据收割）**、**Malware Attachment（恶意附件）**、**Link in Attachment（附件内嵌链接）**、**Link to Malware（恶意软件链接）**、**Drive-by URL（路过式下载）**、**OAuth Consent Grant（恶意 OAuth 应用授权诱骗）** 与 **How-to Guide**，并重点启用 **QR Code Phishing（二维码钓鱼/Quishing）** 模板，对中招员工自动派发靶向微课程。
+   - **自动调查与响应（AIR，pp. 48–49）与 Threat Explorer 跨租户威胁狩猎（pp. 50–51）**：当单封钓鱼邮件触发告警时，AIR 自动聚类同源邮件簇、关联点击用户、排查可疑收件箱转发规则并一键从所有受害者邮箱中硬删除恶意载荷。
+
+---
+
+#### 7.5.4 Workload 4 深度技术解析：终端设备安全与 EDR/ASR 闭环（`Device Security Best Practice Deployment`，51 页）
+
+1. **Defender for Business 终端硬化与自动攻击中断（pp. 8–43）**：
+   - **Intune-MDE 连接器与防篡改保护（pp. 10–19）**：在 Intune 与 Defender 门户打通服务连接器（开启 `Connect Windows/Android/iOS devices to Microsoft Defender for Endpoint` 与 `Enable Windows/Mobile devices compliance`），强制 `Tamper Protection = On`（防止本地管理员权限的勒索软件卸载或停用 Defender 传感器），并将 `Cloud-delivered protection level` 设为 `High` + 开启 `Block at First Sight (BAFS)`。
+   - **静默 BitLocker 全盘加密与自动攻击中断（pp. 24–29）**：通过 Intune Endpoint Security Disk Encryption 策略配置 `Require Device Encryption = Enabled` 与 `Allow Warning For Other Disk Encryption = Disabled`（基于 TPM 2.0 + XTS-AES 实现零用户弹窗静默加密）；内置启用 **Automatic Attack Disruption（自动攻击中断）**，当 XDR 图谱高置信度识别出人工操作的勒索软件或横向移动时，毫秒级自动在网络层隔离受感染终端并挂起关联被盗账户。
+   - **攻击面减少（ASR）规则的分阶段审计与强制阻断（pp. 32–38）**：指南严禁未经评估直接全量开启 ASR Block，强制要求先以 **`Audit` 模式（`RuleMode=2`）** 运行并在 `ASR Rules Report` 中完成业务兼容性排除，随后切入 **`Block` 模式（`RuleMode=1`）**。其中 Standard Protection 必须优先强制阻断三大高危技术动作：
+     1. **`Block credential stealing from the Windows local security authority subsystem (lsass.exe)`**（阻断 Mimikatz 等工具转储 LSASS 内存凭据）；
+     2. **`Block persistence through WMI event subscription`**（阻断通过 WMI 事件订阅驻留后门）；
+     3. **`Block abuse of exploited vulnerable signed drivers`**（阻断 BYOVD 自带易受攻击签名驱动提权并致盲 EDR）。
+   - **MDE 设备风险评分联动 Intune 合规与 Entra 条件访问（pp. 39–43）**：在 Intune 合规策略中设置 `Microsoft Defender for Endpoint -> Require the device to be at or under the machine risk score = Clear (Secure)`；一旦终端触发中/高危 EDR 告警，其风险评分高于 `Clear`，Intune 立即将其标记为 `Non-compliant`，Entra ID 条件访问策略随之在数分钟内阻断该设备对 Exchange、SharePoint、Teams 及 Copilot 的全部令牌刷新。
+2. **Defender for Endpoint Plan 2 升级中的关键租户订阅状态陷阱（Defender Suite，pp. 44–51）**：
+   - **混合授权下的门户降级陷阱（pp. 46–47 关键工程提示）**：当租户在 Microsoft 365 Business Premium（含 Defender for Business）基础上采购了 **Defender Suite / Defender for Endpoint Plan 2** 附加组件时，**租户默认仍停留在简化的 Defender for Business 门户模式**！工程团队必须前往 `Microsoft Defender Portal > System > Settings > Endpoints > General > Subscription state`，确认或申请切换为 **`Microsoft Defender for Endpoint Plan 2`**。
+   - **SOC 级 RBAC 设备组与 5 级自动化修复权限（pp. 48–51）**：切换至 MDE P2 后，在 `security.microsoft.com/securitysettings/endpoints/machine_groups` 解锁按高管终端、生产服务器、标准办公本划分的 **Device Groups（设备组）**，并可按组精细配置 5 档 AIR 自动化修复级别：`No automated response`、`Semi — require approval for all folders`、`Semi — require approval for non-temp folders`、`Semi — require approval for system folders` 直至 **`Full — remediate threats automatically`**（推荐作为生产默认档位）。
+
+---
+
+#### 7.5.5 Workload 5 深度技术解析：设备注册与移动应用管理（`Device Management Best Practice Deployment`，40 页）
+
+1. **MDM vs MAM 架构解耦与 WIP 退役迁移（pp. 7–14）**：
+   - **企业设备走 MDM、个人 BYOD 走 MAM**：企业资产通过 Windows Autopilot、Apple Business Manager (ABM + APNs 证书) 与 Android Enterprise Managed Google Play 执行全设备注册（MDM）；个人自带设备（BYOD）不注册进 MDM，而是通过 **Intune App Protection Policies (MAM)** 在应用容器层实现企业数据加密、防拷贝与选择性擦除（Selective Wipe）。
+   - **Windows Information Protection (WIP) 正式退役说明（p. 10）**：指南明确指出微软已正式弃用并退役 Windows Information Protection (WIP)，所有 Windows 端数据防泄漏必须迁移至 **Microsoft Purview Information Protection（敏感度标签加密）+ Purview Endpoint DLP**。
+   - **默认合规策略防绕过加固（p. 14）**：在 `Intune Admin Center > Endpoint security > Device compliance > Compliance policy settings` 中，必须将 **`Mark devices with no compliance policy assigned` 显式设为 `Not compliant`（不合规）**——若保持默认的 `Compliant`，任何漏配策略的新注册设备都将直接绕过条件访问门禁！
+2. **平台注册限制、MAM 核心策略与注册时强制 MFA（pp. 15–38）**：
+   - **阻断个人设备混入企业 MDM（pp. 15–17）**：在 `Enrollment device platform restrictions` 中，针对采用 MAM 模式的平台将 **`Personally-owned` 显式设为 `Block`**，仅允许 Corporate 硬件哈希/序列号注册。
+   - **MAM 核心应用数据边界（pp. 18–23）**：针对 Core Microsoft Apps 配置 `Backup org data to iTunes and iCloud backups = Block`、`Send org data to other apps = Policy managed apps`、`Save copies of org data = Block`、`Restrict cut, copy, and paste between other apps = Policy managed apps with paste in`，并启用越狱/Root 检测立即擦除。
+   - **Windows 10/11 硬件安全合规策略（pp. 24–27）**：强制校验 `Require BitLocker = Require`、`Require Secure Boot on the device = Require`、`Require code integrity = Require`、TPM、Windows Firewall 以及 Microsoft Defender Antimalware 实时保护与病毒库时效。
+   - **针对 Intune 注册服务主体的专用 MFA 条件访问策略（pp. 35–38）**：创建专门针对云应用 **`Microsoft Intune Enrollment`（App ID: `d4ebce55-015a-49b5-a083-c84d1797ae8c`；若新租户中未显示该服务主体，需通过 Graph PowerShell `New-MgServicePrincipal -AppId d4ebce55-015a-49b5-a083-c84d1797ae8c` 实例化）** 的条件访问策略，要求 `Grant = Require multifactor authentication` 且 `Sign-in frequency = Every time`。
+
+---
+
+#### 7.5.6 Workload 6 深度技术解析：SaaS 云应用安全与 OAuth 治理（`SaaS Security Best Practice Deployment`，35 页）
+
+1. **MDE + Defender for Cloud Apps (MDA) 零设备影子 IT 与 Shadow AI 持续发现（pp. 9–18）**：
+   - **一键打通终端网络遥测（pp. 9–10）**：在 `Microsoft Defender Portal > Settings > Endpoints > General > Advanced features` 中开启 **`Microsoft Defender for Cloud Apps = On`**。无需部署企业边界防火墙日志收集器，所有办公网与远程居家办公的 Windows/macOS 终端流量即刻自动上传至 MDA，并对照微软云应用目录中的 **31,000+ 款云应用（含各类生成式 AI 工具）与 90+ 项合规/安全风险因子** 进行自动评分。
+   - **异常流量告警与终端内联封禁（pp. 14–18）**：启用内置的 **Cloud Discovery Anomaly Detection** 策略（检测单日异常大体积上传至未知云盘或生成式 AI 站点）；管理员将高危应用标记为 **`Unsanctioned`（未批准）** 后，MDE Network Protection 自动在终端网卡驱动层阻断对该域名的访问。
+2. **OAuth 应用治理（App Governance）与跨 SaaS 会话代理控制（pp. 19–34）**：
+   - **高权限 Graph API / OAuth 应用审计与自动熔断（pp. 19–25）**：在 `Settings > Cloud Apps > App Governance` 激活应用治理（最长 10 小时完成租户图谱初始化），实时盘点 `Highly Privileged`（如拥有 `Mail.ReadWrite`、`Files.ReadWrite.All`、`Directory.ReadWrite.All` 权限）、`Overprivileged`（申请了高危权限但近 90 天未使用）及访问了 Purview 敏感标签数据的第三方 OAuth 应用；启用预置机器学习异常检测策略，并创建自定义 OAuth 策略将修复动作设为 **`Disable app`**（先在 Audit 模式验证后转生产自动熔断）。
+   - **跨 SaaS 敏感文件 DLP、SSPM 与实时会话代理（pp. 26–32）**：通过 API **App Connectors** 接入受管 SaaS 平台，开启 **SaaS Security Posture Management (SSPM)** 评分；在 `Settings > Cloud Apps > Information Protection > Files` 中勾选 `Enable file monitoring` 创建跨云文件 DLP 策略；并结合 **Conditional Access App Control（条件访问应用控制反向代理）** 部署实时 **Session Policies（会话策略）**，在非受管设备上动态拦截敏感文件的下载、打印或复制。
+   - **Entra ID 用户名富化与 SecOps 三级运营节奏（pp. 33–35）**：开启 `Enrich discovered user identifiers with Microsoft Entra ID usernames` 将底层网络日志关联至真实身份，并执行 **每日（Daily：高危 OAuth/会话告警处置）→ 每周（Weekly：新发现 Shadow AI/IT 应用评级与封禁）→ 每月（Monthly：过度授权 OAuth 应用清理与 SSPM 复盘）** 的标准化工程闭环。
+
+---
+
+### 7.6 资产五深潜：PowerShell 7+ 自动化部署与漂移检测工具包 `SMBBestPracticeTool` (`aka.ms/Deploy-Scripts`)
+
+开源仓库 `https://github.com/microsoft/BestPractice_Deploy-Scripts`（文档门户 `https://microsoft.github.io/BestPractice_Deploy-Scripts/`）将上述 360 页指南中的基础配置转化为可重复、可审计、幂等的 **PowerShell 7+ (`pwsh.exe`)** 自动化工程代码，并在《Partner Security Toolkit for Enabling SMB.pdf》（2026-09-22 更新）中新增了 **配置漂移检测（Configuration Drift Detection）** 能力：
+
+1. **核心运行时、多租户安全架构与漂移检测**：
+   - **强制 PowerShell 7+ 运行时与子进程隔离**：在 Windows PowerShell 5.1 下会立即主动报错退出（Exchange Online v3 REST 与 Microsoft.Graph SDK 依赖 .NET Core 连接池与现代 TLS API），同时通过 `Import-Module Microsoft.Online.SharePoint.PowerShell -UseWindowsPowerShell` 将旧版 SharePoint 模块隔离在隐藏的 PS 5.1 子进程中，彻底避免 MSAL DLL 程序集冲突。
+   - **原生支持 GDAP 委派管理**：支持直接管理员模式（`-TenantAdminUpn`）与多租户委派模式（`-DelegatedOrganization <customer.onmicrosoft.com>`），并在每次写入前通过 `Get-MgOrganization` 校验目标租户身份。
+   - **预部署意图计划（Deployment Plans）与租户漂移验证报告（Tenant Validation Reports）**：在 `Products/Purview` 中支持在任意变更前生成 **Deployment Plan（预部署计划）**，并在部署后随时运行 **Tenant Validation Report（租户验证报告）**，将租户当前线上标签/DLP/审计对象与基线 JSON 定义逐字段比对，自动识别被人为篡改或漂移的策略项。
    - **全局 `-WhatIf`、瞬态重试与 HTML/JSON 证据包**：所有变更均封装在 `Invoke-WithTransientRetry.ps1` 中，执行后执行回读校验（Post-Write Readback Verification），并自动生成 `Reports/<product>-run-report.html` 与 `.json` 审计证据包。
 2. **四大产品线自动化套件与安全门禁 (`Safety Gates`)**：
-   - **`Products/Purview/` (`Deploy-PurviewBestPractice.ps1`)**：幂等部署敏感度标签与核心 DLP 策略；仓库内随附 **《Day-30 DLP 模拟准出手册》(`docs/DLP-Simulation-Exit-Runbook.md`)**、**《7 年默认保留风险提示》(`docs/Retention-Default-Risk.md`)** 与 **《终端用户推广邮件模板 (`T-7` / `T-0` / `T+30`)》**，强制要求经过 30 天模拟期与误报清理后方可切入生产阻断。
+   - **`Products/Purview/` (`Deploy-PurviewBestPractice.ps1`)**：幂等部署敏感度标签与核心 DLP 策略；仓库内随附 **《Day-30 DLP 模拟准出手册》(`docs/DLP-Simulation-Exit-Runbook.md`)**、**《7 年默认保留风险提示》(`docs/Retention-Default-Risk.md`)** 与 **《终端用户推广通知模板 (`T-7` / `T-0` / `T+30`)》**，强制要求经过 30 天模拟期与误报清理后方可切入生产阻断。
    - **`Products/Entra/` (`Deploy-EntraBestPractice.ps1`)**：内置 **13 个标准化条件访问 JSON 策略模板**（阻止设备代码流 `block-device-code-flow.json`、阻止旧版认证 `block-legacy-authentication.json`、阻止不受支持设备平台、禁止持久化浏览器会话、保护安全信息注册、要求批准的客户端应用、要求合规设备或 MFA、要求管理门户 MFA、要求管理员 MFA、要求全员 MFA、要求 Azure 管理平面 MFA、要求访客 MFA、要求管理员使用抗钓鱼 MFA `require-phishing-resistant-mfa-admins.json`）。**关键安全门禁：全部 13 条策略默认以 `Report-Only`（仅报告模式）创建，脚本在写入前强制检查是否存在真实的永久 Global Administrator 应急（Break-Glass）排除账户，且绝不自动关闭 Security Defaults。**
    - **`Products/Intune/` (`Deploy-IntuneBestPractice.ps1`)**：自动化 6 项基线设备任务，并将可能影响生产访问的高风险变更（默认合规策略、设备注册限制、关联 CA 策略）锁定在显式的 `-IncludeHighRisk` 开关之后。
    - **`Products/Defender/` (`Deploy-DefenderBestPractice.ps1`)**：默认执行只读预检（`Setup-DefenderPreflight.ps1`、权限规划与配置差距分析），并提供经过试点验证的 **ASR 攻击面减少规则 Audit（审计模式）下发通道**（`DefenderAsrConfiguration.ps1` + `DefenderSafetyGates.ps1`），将具有潜在业务中断风险的强制阻断保留为 `GuidedOnly` 人工受控变更。

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "report_id": "defend-partner-playbook",
-  "deck_title": "DEFEND Partner Playbook & Security Partner Toolkit for SMB: 5-Tier Security, Purview AI Governance & 360p/pwsh7 Execution",
+  "deck_title": "Microsoft Product Security & AI Readiness Engineering: DEFEND 5-Tier Architecture, Purview AI Guardrails & 360p/pwsh7 Implementation",
   "provenance": "static_contract_verified",
   "independently_reproduced": true,
   "source_binding": {
@@ -14,6 +14,7 @@
     "exit_criteria_atomic_controls": 48,
     "capability_comparison_rows": 41,
     "smb_toolkit_aka_ms_links": 6,
+    "smb_toolkit_playbook_pages": 10,
     "smb_toolkit_industry_one_pagers_pages": 14,
     "smb_toolkit_sow_workstreams": 22,
     "smb_toolkit_deployment_guides_pages": 360,
@@ -22,28 +23,28 @@
   "cards": [
     {
       "kind": "overview",
-      "eyebrow": "HANDS-ON · DEFEND 5-TIER PLAYBOOK (53 SLIDES) + SMB SECURITY PARTNER TOOLKIT (6 ASSETS)",
+      "eyebrow": "HANDS-ON · MICROSOFT PRODUCT SECURITY & AI READINESS ENGINEERING (53 SLIDES · 360P GUIDES · PWSH 7+)",
       "headline_prefix": "Business Premium Covers 36.6% (15/41) of Controls — ",
-      "headline_Gradient": "DEFEND 5-Tier & SMB Toolkit Reach 100% E5-Grade Parity",
-      "subtitle": "Combining the 53-slide DEFEND Partner Playbook (5 service tiers, 51 exit gates, 4-tier Purview-for-AI) with the 6-asset Security Partner Toolkit for SMB (7 industry one-pagers, Data Security Assistant, 22-service SOW Generator, 360-page Deployment Guides, and 4 PowerShell 7+ toolkits).",
+      "headline_Gradient": "DEFEND 5-Tier & 6-Workload Engineering Reach 100% Parity",
+      "subtitle": "Synthesizing the 53-slide DEFEND 5-Tier Architecture (51 exit gates, 4-tier Purview-for-AI) with the 6-Workload Technical Deployment Guides (360 pages), 7 Regulated Vertical IP Guides (14 pages), client-side policy compilers, and 4 PowerShell 7+ automation toolkits.",
       "workbench": {
-        "title": "DEFEND & SMB Toolkit Verifier Workbench (53 Slides · 41 Capabilities · 51 Gates · 360p Guides · 4 pwsh7 Toolkits)",
-        "status_pill": "Playbook SHA256: 0298c3bb + 6 SMB Toolkit Assets · 7/7 Unit Tests PASS",
+        "title": "Microsoft Security & AI Readiness Verifier Workbench (53 Slides · 41 Capabilities · 51 Gates · 360p Guides · 4 pwsh7 Toolkits)",
+        "status_pill": "Playbook SHA256: 0298c3bb + 384p Technical Guides · 8/8 Unit Tests PASS",
         "scenarios": [
-          "Stage 1 & Phase 0 Discovery: 7-Dim Zero Trust Assessment + 7 Industry One-Pagers (14p, 30/60/90d motion, 8-Label Taxonomy)",
-          "Stage 2 & 3 Scoping/Proposal: Data Security Assistant (v2.0.1572) + Purview SOW Generator (22 modular workstreams: P1 9, P2 1, P3 12)",
-          "Tier 1 DEFENDBase (11 checks): Operationalize Business Premium (15/41 = 36.6%) via SMBBestPracticeTool (13 CA JSONs, 6 Intune tasks)",
-          "Tier 2A DEFENDSecurity (12 checks): + Defender Suite -> 21/21 (100%) Defender rows + Identity (90p), Email (52p), Device (51p), SaaS (35p) guides",
+          "Stage 1 Vertical SIT & Taxonomy: 7-Dim Zero Trust Assessment + 7 Regulated Vertical Guides (14p, 8-Label Taxonomy + INTERNAL EXCEPTION)",
+          "Stage 2 & 3 Policy Compilation: Data Security Assistant (v2.0.1572, strict CSP) + Purview Scope Generator (22 workstreams: P1 9, P2 1, P3 12)",
+          "Tier 1 DEFENDBase (11 checks): Harden Business Premium (15/41 = 36.6%) via SMBBestPracticeTool (13 Report-Only CA JSONs, 6 Intune baselines)",
+          "Tier 2A DEFENDSecurity (12 checks): + Defender Suite -> 21/21 (100%) Defender rows + Identity (90p), Email (52p), Device (51p), SaaS (35p) runbooks",
           "Tier 2B DEFENDCompliance (11 checks): + Purview Suite -> 20/20 (100%) Purview rows + Data Security Guide (92p) & Day-30 DLP Exit Runbook",
           "Purview Tier 3 Data Control (AI Ready): DLP for Copilot (2-rule SIT+Label sim) + Edge Inline Web DLP (ChatGPT/Gemini) + Activate DSPM",
           "Tier 3 Complete (8 checks) -> Tier 4 Extend (9 checks): 41/41 (100%) capabilities + noise tuning before Sentinel SIEM/SOAR & Security Copilot"
         ],
-        "bands_note": "Slide 40 Governance Rule + Toolkit Safety Gates: Act automatically when 100% of tier criteria are met; Confirm on signed 90-day risk acceptance or LOB INTERNAL EXCEPTION labels; Human when any gate is unmet.",
+        "bands_note": "Slide 40 Governance Rule + Engineering Safety Gates: Act automatically when 100% of tier criteria are met; Confirm on signed 90-day risk acceptance or LOB INTERNAL EXCEPTION labels; Human when any gate is unmet.",
         "metrics": [
           "BP Baseline vs Complete: 15/41 (36.6%) -> 41/41 (100%)",
           "Mandatory Exit Gates: 51 (48 Atomic + 3 Composite)",
-          "SMB Toolkit Guides: 6 PDFs (360 Pages) + 7 One-Pagers (14p)",
-          "Automation & SOW: 22 SOW Services + 4 pwsh7 Toolkits"
+          "Technical Manuals: 6 PDFs (360p) + 7 Verticals (14p) + 10p Pipeline",
+          "Automation & Workstreams: 22 Purview Workstreams + 4 pwsh7 Toolkits"
         ],
         "decisions": [
           {
@@ -92,15 +93,15 @@
       },
       "callouts": [
         {
-          "lead": "Strategy + Execution Boundary: DEFEND (53 slides) + SMB Toolkit (6 aka.ms assets) are partner service accelerators, NOT Microsoft SKUs.",
-          "body": "Capabilities require eligible licensing (Business Premium + Defender/Purview Suites + Sentinel), explicit configuration via the 360-page guides / PowerShell 7+ toolkits, and partner-validated commercial terms."
+          "lead": "Architecture + Execution Boundary: DEFEND (53 slides) + Technical Toolkit (6 aka.ms assets) are reference blueprints, NOT SKUs.",
+          "body": "Capabilities require eligible licensing (Business Premium + Defender/Purview Suites + Sentinel) and explicit technical implementation via the 360-page runbooks and PowerShell 7+ toolkits."
         }
       ]
     },
     {
       "kind": "deep_dive",
-      "eyebrow": "SCENARIO: END-TO-END SMB TOOLKIT EXECUTION & AI READINESS (5 STAGES · 6 ASSETS)",
-      "headline": "From 7 Industry One-Pagers & 8-Label Taxonomy to 22 SOW Services & pwsh 7+ Automation.",
+      "eyebrow": "SCENARIO: 6-WORKLOAD TECHNICAL IMPLEMENTATION & AI READINESS (360P GUIDES · 14P VERTICALS)",
+      "headline": "From 7 Regulated Vertical Taxonomies & LOB Exceptions to 6-Workload Runbooks & pwsh 7+.",
       "quote": "No customer should progress between DEFEND tiers without meeting the exit criteria or formally accepting residual risk through documented governance. DEFENDExtend must not be activated unless DEFENDComplete controls are in place. — DEFEND Partner Playbook, Chapter 07 (Slide 40)",
       "decisions": [
         {
@@ -363,22 +364,22 @@
     {
       "kind": "takeaways",
       "eyebrow": "MY TAKE",
-      "headline": "Operationalizing DEFEND + SMB Security Partner Toolkit for Copilot & AI Readiness",
+      "headline": "Engineering Microsoft Product Security & AI Readiness Across 6 Workloads",
       "good_fit": [
-        "M365 Business Premium MSP Catalogs: Standardize 5 outcome-based tiers (Base -> Extend) + 22 modular SOW workstreams",
-        "Pre-Copilot & Shadow AI Governance: Deploy Purview Tier 3 (DLP for Copilot 2-rule sim + Edge Inline Web DLP + DSPM) first",
-        "8-Label DEFEND Taxonomy with LOB Exception Sub-Labels: Use INTERNAL EXCEPTION (5 & 8) when encryption breaks ERP/EHR/SIS",
-        "Idempotent Multi-Tenant Automation: Use PowerShell 7+ SMBBestPracticeTool (13 Report-Only CA JSONs, GDAP, Day-30 DLP Exit Runbook)"
+        "M365 Zero-Trust Baseline Engineering: Implement 5 deterministic tiers (Base -> Extend) + 22 modular Purview workstreams",
+        "Pre-Copilot & Shadow AI Data Guardrails: Enforce Purview Tier 3 (DLP for Copilot 2-rule sim + Edge Inline Web DLP + DSPM)",
+        "8-Label DEFEND Taxonomy with LOB Exception Sub-Labels: Apply INTERNAL EXCEPTION (5 & 8) when encryption breaks ERP/EHR/SIS",
+        "Idempotent Multi-Tenant Automation: Execute PowerShell 7+ SMBBestPracticeTool (13 Report-Only CA JSONs, GDAP, Day-30 DLP Exit Runbook)"
       ],
       "not_for": [
-        "Positioning DEFEND or the SMB Toolkit as official Microsoft SKUs (they are partner service frameworks; validate Product Terms)",
+        "Treating reference architecture blueprints as automatic license entitlements without explicit policy configuration",
         "Treating M365 Lighthouse as a SOC/SIEM replacement or device authority (Intune enforces devices; Sentinel/XDR handle SOC detection)",
         "Activating DEFENDExtend (Microsoft Sentinel) before completing DEFENDComplete and tuning Defender/Purview alert noise",
         "Running SMBBestPracticeTool on Windows PowerShell 5.1 or flipping CA/DLP policies to Block without Report-Only & Day-30 simulation"
       ],
       "dark_box": {
-        "lead": "Provenance: static_contract_verified (53 slides, 41 capabilities, 51 exit gates, 6 Toolkit assets, 360p guides; 7/7 tests PASS).",
-        "repo": "Source: DEFEND Partner Playbook (SHA256: 0298c3bb248a0465) + SMB Security Partner Toolkit · docs/research/defend-partner-playbook/"
+        "lead": "Provenance: static_contract_verified (53 slides, 41 capabilities, 51 exit gates, 6 Toolkit assets, 360p guides; 8/8 tests PASS).",
+        "repo": "Source: DEFEND Architecture Playbook (SHA256: 0298c3bb248a0465) + 384p Technical Deployment Guides · docs/research/defend-partner-playbook/"
       }
     }
   ],
@@ -486,54 +487,54 @@
     {
       "name": "smb_partner_toolkit_six_asset_matrix",
       "columns": [
-        "Engagement Stage",
-        "Toolkit Asset",
+        "Technical Pipeline Stage",
+        "Engineering Toolkit Asset",
         "Canonical Link",
         "Resolved Target / OSS Repo",
-        "Verified Technical Scope"
+        "Verified Technical Engineering Scope"
       ],
       "rows": [
         [
-          "1. Initial Conversations",
-          "Industry Info Protection One-Pagers",
+          "Stage 1: Vertical SIT & Taxonomy",
+          "Industry Info Protection Guides",
           "https://aka.ms/MIP-Industry-OnePagers",
           "Industry-Specific Information Protection Guides.zip",
-          "7 two-page PDFs (14p): Consumer Goods, Education [New], FSI, Healthcare, Mfg, Nonprofit [New], Prof Services; 30/60/90d motion + 8-label taxonomy"
+          "7 technical guides (14p): Consumer Goods, Education, FSI, Healthcare, Mfg, Nonprofit, Prof Services; 30/60/90d pipeline + 8-label taxonomy"
         ],
         [
-          "2. Discovery & Scoping",
+          "Stage 2: Policy Compilation",
           "Data Security Guided Assistant",
           "https://aka.ms/DataSecurityAssistant",
           "microsoft/DataSecurityGuidedAssistant (v2.0.1572)",
-          "Client-side Labeling + DLP + Combined flows across 8 industries, 8 regions, 6 license tiers, 8-tier vs 4-tier label models"
+          "Zero-backend client-side Labeling + DLP + Combined policy compiler across 8 industries, 8 regions, 6 license tiers, 8-tier vs 4-tier label models"
         ],
         [
-          "3. Proposal Development",
-          "Purview Data Security SOW Generator",
+          "Stage 3: Workstream Scope",
+          "Purview Data Security Scope Generator",
           "https://aka.ms/SOW-Generator",
           "microsoft/SOWGenerator (MIT)",
           "22 modular workstreams: P1 Foundation (9), P2 Intermediate (1), P3 Advanced & AI (12 incl. Copilot DLP, Edge Inline Web DLP & DSPM)"
         ],
         [
-          "4. Planning & Implementation",
-          "Security SMB Deployment Guides",
+          "Stage 4: 6-Workload Runbooks",
+          "Security Deployment Guides (360p)",
           "https://aka.ms/Security_SMBDeploymentGuides",
           "Best Practice Security Deployment Guides for SMB.zip",
-          "6 PDF manuals totaling 360 pages: Data Security (92p), Identity (90p), Email (52p), Device Security (51p), Device Mgmt (40p), SaaS (35p)"
+          "6 technical manuals (360p): Data Security (92p), Identity (90p), Email (52p), Device Security (51p), Device Mgmt (40p), SaaS (35p)"
         ],
         [
-          "5. Deployment & Config",
+          "Stage 5: Idempotent Automation",
           "PowerShell Deployment Scripts",
           "https://aka.ms/Deploy-Scripts",
           "microsoft/BestPractice_Deploy-Scripts",
-          "PowerShell 7+ SMBBestPracticeTool across Purview, Entra (13 Report-Only CA JSONs), Intune (6 baselines) & Defender (ASR Audit)"
+          "PowerShell 7+ SMBBestPracticeTool across Purview (drift validation), Entra (13 Report-Only CA JSONs), Intune (6 baselines) & Defender (ASR Audit)"
         ],
         [
-          "Umbrella Playbook",
-          "Partner Security Toolkit Playbook",
+          "Stage 0: Pipeline Orchestration",
+          "Technical Engineering Toolkit Guide",
           "https://aka.ms/SecurityPartnerToolkit_Playbook",
-          "Partner Security Toolkit for Enabling SMB.pdf",
-          "End-to-end 5-stage orchestration guide & partner feedback loop (aka.ms/SecurityPartnerToolkit-Survey)"
+          "Partner Security Toolkit for Enabling SMB.pdf (10p)",
+          "End-to-end 5-stage technical engineering orchestration & drift validation pipeline (updated Sept 22, 2026)"
         ]
       ],
       "unit": "smb_toolkit_assets"
@@ -606,45 +607,45 @@
     }
   },
   "smb_partner_toolkit_catalog": {
-    "toolkit_name": "Microsoft Security Partner Toolkit for SMB — Accelerate Security and AI Readiness Engagements",
+    "toolkit_name": "Microsoft Product Ecosystem Security & AI Readiness Technical Engineering Toolkit (M365 Business Premium + Defender & Purview Suites)",
     "lifecycle_stages_count": 5,
     "core_aka_ms_links_count": 6,
     "core_assets": [
       {
-        "stage": "1. Initial Customer Conversations",
-        "name": "Industry-Specific Information Protection One-Pagers",
+        "stage": "Stage 1: Vertical Data Classification & SIT Architecture",
+        "name": "Industry-Specific Information Protection Technical Reference Guides",
         "short_url": "https://aka.ms/MIP-Industry-OnePagers",
         "resolved_target": "Industry-Specific Information Protection Guides.zip (7 PDFs, 14 pages)",
         "industries": [
-          "Consumer Goods SMB",
-          "Education SMB (New)",
-          "Financial Services / Insurance SMB",
-          "Healthcare SMB",
-          "Manufacturing / Distribution SMB",
-          "Nonprofit SMB (New)",
-          "Professional Services SMB"
+          "Consumer Goods",
+          "Education (FERPA/COPPA/SIS)",
+          "Financial Services & Insurance (GLBA/PCI-DSS/SOX)",
+          "Healthcare (HIPAA/HITECH/EHR)",
+          "Manufacturing & Distribution (CAD/BOM/MES/ITAR)",
+          "Nonprofit (Donor PII/Grant Stewardship)",
+          "Professional Services (M&A/Privileged Work Product)"
         ],
         "pages_total": 14,
-        "service_motion_days": [
+        "deployment_phases_days": [
           30,
           60,
           90
         ]
       },
       {
-        "stage": "2. Discovery & Scoping",
-        "name": "Data Security Guided Assistant",
+        "stage": "Stage 2: Client-Side Policy & Taxonomy Compilation",
+        "name": "Data Security Guided Assistant (Client-Side Policy Compiler)",
         "short_url": "https://aka.ms/DataSecurityAssistant",
         "resolved_target": "https://microsoft.github.io/DataSecurityGuidedAssistant/",
         "github_repo": "https://github.com/microsoft/DataSecurityGuidedAssistant",
         "version": "v2.0.1572",
         "entry_workflows": [
-          "Labeling Tool",
-          "DLP Tool",
-          "Combined Flow"
+          "Labeling Decision Engine",
+          "DLP Policy Compiler",
+          "Combined Taxonomy-to-DLP Pipeline"
         ],
         "supported_label_models": [
-          "8-tier DEFEND model",
+          "8-tier DEFEND model (with INTERNAL EXCEPTION)",
           "4-tier simplified model"
         ],
         "supported_industries_count": 8,
@@ -652,8 +653,8 @@
         "supported_license_tiers_count": 6
       },
       {
-        "stage": "3. Proposal Development",
-        "name": "Microsoft Purview Data Security SOW Generator",
+        "stage": "Stage 3: Workstream Scope & Dependency Specification",
+        "name": "Microsoft Purview Data Security Engineering Scope Generator",
         "short_url": "https://aka.ms/SOW-Generator",
         "resolved_target": "https://microsoft.github.io/SOWGenerator/",
         "github_repo": "https://github.com/microsoft/SOWGenerator",
@@ -663,55 +664,105 @@
         "priority_2_intermediate_count": 1,
         "priority_3_advanced_and_ai_count": 12,
         "ai_and_extended_dlp_workstreams": [
-          "DLP for Endpoints",
-          "DLP for Teams",
-          "DLP for Copilot (2-rule SIT + Sensitivity Label simulation)",
-          "DLP for Microsoft Edge / Inline Web Traffic (blocks unmanaged AI apps like ChatGPT/Gemini)",
-          "Activate DSPM (Data Security Posture Management)"
+          "DLP for Endpoints (USB, clipboard, network share, print restrictions)",
+          "DLP for Teams (external chat & channel SIT/label inspection)",
+          "DLP for Copilot (Rule 1 Prompt SIT gate + Rule 2 Sensitivity Label RAG grounding gate in simulation mode)",
+          "DLP for Microsoft Edge / Inline Web Traffic (blocks sensitive paste/upload to unmanaged GenAI domains)",
+          "Activate DSPM (weekly Copilot SharePoint/OneDrive/Fabric oversharing risk assessment)"
         ]
       },
       {
-        "stage": "4. Planning & Implementation",
-        "name": "Best Practice Security Deployment Guides for SMB",
+        "stage": "Stage 4: Multi-Workload Technical Implementation Manuals",
+        "name": "Best Practice Security Deployment Guides (6 Workloads)",
         "short_url": "https://aka.ms/Security_SMBDeploymentGuides",
         "resolved_target": "Best Practice Security Deployment Guides for SMB.zip (6 PDFs, 360 pages)",
         "guides_count": 6,
         "pages_total": 360,
         "guides": [
           {
-            "title": "Data Security Deployment Guide for Small Business",
-            "pages": 92,
-            "updated": "2026-06-24"
-          },
-          {
-            "title": "Identity Protection Best Practice Deployment",
+            "workload_id": "W1",
+            "title": "Identity & Access Controls + Identity Protection (Entra ID P1, Entra ID P2, Defender for Identity)",
             "pages": 90,
-            "updated": "2026-03-06"
+            "updated": "2026-03-06",
+            "core_controls": [
+              "2+ cloud-only *.onmicrosoft.com Break-Glass accounts (FIDO2/Passkey, excluded from CA & PIM)",
+              "Authenticator passwordless phone sign-in + number matching + 10 Zero Trust CA templates",
+              "Entra ID P2 separate User Risk (High -> Password reset + MFA) & Sign-in Risk (Med/High -> MFA) CA policies",
+              "PIM JIT role & group activation (Active -> Eligible, 1-8h window, MFA/Auth Context, justification, approval)",
+              "Quarterly Access Reviews (Auto-apply remove access, 30-day inactivity helper) & Entitlement Access Packages",
+              "Defender for Identity DC sensors (v3.x/v2.x), gMSA DSA, SAM-R/NTLM auditing & NNR (TCP 135/UDP 137/TCP 3389)"
+            ]
           },
           {
-            "title": "Email & App + Collaboration Protection Best Practice Deployment",
+            "workload_id": "W2",
+            "title": "Data Security Deployment Best Practice (Business Premium + Purview Suite)",
+            "pages": 92,
+            "updated": "2026-06-24",
+            "core_controls": [
+              "Unified Audit Log + Modern Label Scheme (8-Label taxonomy ordered 0..N by restrictiveness)",
+              "Default Email label (GENERAL) + Default Document/Site label (CONFIDENTIAL \\ ALL EMPLOYEES) + SPO/OD co-authoring",
+              "INTERNAL EXCEPTION sub-labels (#5 & #8: metadata + watermark + DLP block + Copilot exclusion without RMS encryption)",
+              "Static vs Adaptive Scope retention policies + 2-year baseline vs 7-year default storage/legal liability control",
+              "Per-workload DLP (EXO, SPO, OD, Devices, Teams, Copilot 2-rule SIT+Label, Edge Inline Web AI) in 15-30d simulation",
+              "Client/Service Auto-Labeling, Online-Only Encryption (Allow offline access = Never), DSPM for AI, IRM & Adaptive Protection"
+            ]
+          },
+          {
+            "workload_id": "W3",
+            "title": "Email & App + Collaboration Protection (Defender for Office 365 Plan 1 & Plan 2)",
             "pages": 52,
-            "updated": "2026-03-16"
+            "updated": "2026-03-16",
+            "core_controls": [
+              "SPF (-all), DKIM (2048-bit CNAME), DMARC (p=quarantine/reject across active & parked domains)",
+              "Standard/Strict Preset Security Policies, Anti-Phishing impersonation, Safe Links & Safe Attachments (Email/SPO/OD/Teams)",
+              "Outbound Anti-Spam external auto-forwarding disabled (Off) + Configuration Analyzer drift monitoring",
+              "Teams third-party cloud storage blocked + Teams Admin Quarantine & Zero-Hour Auto-Purge (ZAP)",
+              "MDO P2 Priority Account protection, Attack Simulation (7 payloads incl. QR codes & OAuth consent), AIR & Threat Explorer"
+            ]
           },
           {
-            "title": "Device Security Best Practice Deployment",
+            "workload_id": "W4",
+            "title": "Device Security Best Practice Deployment (Defender for Business & Defender for Endpoint Plan 2)",
             "pages": 51,
-            "updated": "2026-03-16"
+            "updated": "2026-03-16",
+            "core_controls": [
+              "Intune-MDE connector onboarding, Tamper Protection = On, Cloud-delivered protection = High, Block at First Sight",
+              "Silent BitLocker encryption (TPM 2.0 + XTS-AES, Allow Warning For Other Disk Encryption = Disabled) & Automatic Attack Disruption",
+              "ASR rules staged Audit (RuleMode=2) -> Block (RuleMode=1) (LSASS credential dump, WMI persistence, vulnerable signed drivers)",
+              "Intune MDE Machine Risk Score = Clear (Secure) wired to Entra Conditional Access (Require compliant device)",
+              "Tenant Subscription State upgrade (Defender for Business -> MDE P2) + RBAC Device Groups (5 remediation levels)"
+            ]
           },
           {
-            "title": "Device Management Best Practice Deployment",
+            "workload_id": "W5",
+            "title": "Device Enrollment & Management Best Practice (Microsoft Intune Plan 1)",
             "pages": 40,
-            "updated": "2026-03-16"
+            "updated": "2026-03-16",
+            "core_controls": [
+              "MDM (corporate Autopilot/ABM/Managed Google Play) vs MAM App Protection Policies (BYOD without device enrollment)",
+              "Default Compliance Policy hardened: Mark devices with no compliance policy assigned = Not compliant",
+              "Device Platform Enrollment Restrictions blocking personal Windows/macOS/iOS/Android enrollment under MAM",
+              "MAM Core Apps protection (Block iCloud/iTunes backup, restrict data transfer to policy-managed apps, block Save As)",
+              "Require MFA for Intune Enrollment CA policy targeting App ID d4ebce55-015a-49b5-a083-c84d1797ae8c (Every time)"
+            ]
           },
           {
-            "title": "SaaS Security Best Practice Deployment",
+            "workload_id": "W6",
+            "title": "SaaS Security Best Practice Deployment (Defender for Cloud Apps & App Governance)",
             "pages": 35,
-            "updated": "2026-03-16"
+            "updated": "2026-03-16",
+            "core_controls": [
+              "1-click MDE + Defender for Cloud Apps Shadow IT discovery (>31,000 cloud apps scored across >90 risk factors)",
+              "Cloud Discovery & Anomaly Detection policies with endpoint blocking (Unsanctioned tag -> MDE Network Protection)",
+              "OAuth App Governance (auditing Highly Privileged/Overprivileged/Unused Graph API apps + Auto-Disable in Audit mode)",
+              "App Connectors, SSPM posture scoring, MDA File DLP policies & Conditional Access App Control session proxy",
+              "Entra ID Username Enrichment for discovery logs & Daily/Weekly/Monthly SecOps operational cadence"
+            ]
           }
         ]
       },
       {
-        "stage": "5. Deployment & Configuration",
+        "stage": "Stage 5: Idempotent PowerShell 7+ Automation & Drift Verification",
         "name": "PowerShell Deployment Scripts (SMBBestPracticeTool)",
         "short_url": "https://aka.ms/Deploy-Scripts",
         "resolved_target": "https://microsoft.github.io/BestPractice_Deploy-Scripts/",
@@ -725,19 +776,24 @@
           "Products/Defender"
         ],
         "entra_report_only_ca_templates_count": 13,
-        "intune_baseline_tasks_count": 6
+        "intune_baseline_tasks_count": 6,
+        "purview_drift_capabilities": [
+          "Deployment Plans (pre-deployment intent)",
+          "Tenant Validation Reports (object drift detection)"
+        ]
       },
       {
-        "stage": "Umbrella Playbook & Feedback",
-        "name": "Security Partner Toolkit Playbook & Survey",
+        "stage": "Stage 0: End-to-End Engineering Pipeline Specification",
+        "name": "Security Partner Toolkit Technical Overview & Feedback Telemetry",
         "short_url": "https://aka.ms/SecurityPartnerToolkit_Playbook",
         "survey_url": "https://aka.ms/SecurityPartnerToolkit-Survey",
-        "resolved_target": "Partner Security Toolkit for Enabling SMB.pdf"
+        "resolved_target": "Partner Security Toolkit for Enabling SMB.pdf (10 pages, updated Sept 22, 2026)"
       }
     ],
     "defend_aligned_8_label_taxonomy": [
       {
         "order": 1,
+        "priority_index": 0,
         "label": "PUBLIC",
         "encryption": false,
         "external_sharing": true,
@@ -745,6 +801,7 @@
       },
       {
         "order": 2,
+        "priority_index": 1,
         "label": "GENERAL",
         "encryption": false,
         "external_sharing": true,
@@ -753,6 +810,7 @@
       },
       {
         "order": 3,
+        "priority_index": 2,
         "label": "CONFIDENTIAL \\ ALL EMPLOYEES",
         "encryption": true,
         "external_sharing": false,
@@ -761,6 +819,7 @@
       },
       {
         "order": 4,
+        "priority_index": 3,
         "label": "CONFIDENTIAL \\ SPECIFIC PEOPLE",
         "encryption": true,
         "external_sharing": true,
@@ -768,6 +827,7 @@
       },
       {
         "order": 5,
+        "priority_index": 4,
         "label": "CONFIDENTIAL \\ INTERNAL EXCEPTION",
         "encryption": false,
         "external_sharing": false,
@@ -776,6 +836,7 @@
       },
       {
         "order": 6,
+        "priority_index": 5,
         "label": "HIGHLY CONFIDENTIAL \\ ALL EMPLOYEES",
         "encryption": true,
         "external_sharing": false,
@@ -783,6 +844,7 @@
       },
       {
         "order": 7,
+        "priority_index": 6,
         "label": "HIGHLY CONFIDENTIAL \\ SPECIFIC PEOPLE",
         "encryption": true,
         "external_sharing": true,
@@ -790,6 +852,7 @@
       },
       {
         "order": 8,
+        "priority_index": 7,
         "label": "HIGHLY CONFIDENTIAL \\ INTERNAL EXCEPTION",
         "encryption": false,
         "external_sharing": false,

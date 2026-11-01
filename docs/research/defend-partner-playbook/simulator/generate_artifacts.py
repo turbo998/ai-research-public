@@ -265,54 +265,54 @@ def build_report_json() -> dict:
         {
             "name": "smb_partner_toolkit_six_asset_matrix",
             "columns": [
-                "Engagement Stage",
-                "Toolkit Asset",
+                "Technical Pipeline Stage",
+                "Engineering Toolkit Asset",
                 "Canonical Link",
                 "Resolved Target / OSS Repo",
-                "Verified Technical Scope",
+                "Verified Technical Engineering Scope",
             ],
             "rows": [
                 [
-                    "1. Initial Conversations",
-                    "Industry Info Protection One-Pagers",
+                    "Stage 1: Vertical SIT & Taxonomy",
+                    "Industry Info Protection Guides",
                     "https://aka.ms/MIP-Industry-OnePagers",
                     "Industry-Specific Information Protection Guides.zip",
-                    "7 two-page PDFs (14p): Consumer Goods, Education [New], FSI, Healthcare, Mfg, Nonprofit [New], Prof Services; 30/60/90d motion + 8-label taxonomy",
+                    "7 technical guides (14p): Consumer Goods, Education, FSI, Healthcare, Mfg, Nonprofit, Prof Services; 30/60/90d pipeline + 8-label taxonomy",
                 ],
                 [
-                    "2. Discovery & Scoping",
+                    "Stage 2: Policy Compilation",
                     "Data Security Guided Assistant",
                     "https://aka.ms/DataSecurityAssistant",
                     "microsoft/DataSecurityGuidedAssistant (v2.0.1572)",
-                    "Client-side Labeling + DLP + Combined flows across 8 industries, 8 regions, 6 license tiers, 8-tier vs 4-tier label models",
+                    "Zero-backend client-side Labeling + DLP + Combined policy compiler across 8 industries, 8 regions, 6 license tiers, 8-tier vs 4-tier label models",
                 ],
                 [
-                    "3. Proposal Development",
-                    "Purview Data Security SOW Generator",
+                    "Stage 3: Workstream Scope",
+                    "Purview Data Security Scope Generator",
                     "https://aka.ms/SOW-Generator",
                     "microsoft/SOWGenerator (MIT)",
                     "22 modular workstreams: P1 Foundation (9), P2 Intermediate (1), P3 Advanced & AI (12 incl. Copilot DLP, Edge Inline Web DLP & DSPM)",
                 ],
                 [
-                    "4. Planning & Implementation",
-                    "Security SMB Deployment Guides",
+                    "Stage 4: 6-Workload Runbooks",
+                    "Security Deployment Guides (360p)",
                     "https://aka.ms/Security_SMBDeploymentGuides",
                     "Best Practice Security Deployment Guides for SMB.zip",
-                    "6 PDF manuals totaling 360 pages: Data Security (92p), Identity (90p), Email (52p), Device Security (51p), Device Mgmt (40p), SaaS (35p)",
+                    "6 technical manuals (360p): Data Security (92p), Identity (90p), Email (52p), Device Security (51p), Device Mgmt (40p), SaaS (35p)",
                 ],
                 [
-                    "5. Deployment & Config",
+                    "Stage 5: Idempotent Automation",
                     "PowerShell Deployment Scripts",
                     "https://aka.ms/Deploy-Scripts",
                     "microsoft/BestPractice_Deploy-Scripts",
-                    "PowerShell 7+ SMBBestPracticeTool across Purview, Entra (13 Report-Only CA JSONs), Intune (6 baselines) & Defender (ASR Audit)",
+                    "PowerShell 7+ SMBBestPracticeTool across Purview (drift validation), Entra (13 Report-Only CA JSONs), Intune (6 baselines) & Defender (ASR Audit)",
                 ],
                 [
-                    "Umbrella Playbook",
-                    "Partner Security Toolkit Playbook",
+                    "Stage 0: Pipeline Orchestration",
+                    "Technical Engineering Toolkit Guide",
                     "https://aka.ms/SecurityPartnerToolkit_Playbook",
-                    "Partner Security Toolkit for Enabling SMB.pdf",
-                    "End-to-end 5-stage orchestration guide & partner feedback loop (aka.ms/SecurityPartnerToolkit-Survey)",
+                    "Partner Security Toolkit for Enabling SMB.pdf (10p)",
+                    "End-to-end 5-stage technical engineering orchestration & drift validation pipeline (updated Sept 22, 2026)",
                 ],
             ],
             "unit": "smb_toolkit_assets",
@@ -322,7 +322,7 @@ def build_report_json() -> dict:
     return {
         "schema_version": 1,
         "report_id": "defend-partner-playbook",
-        "deck_title": "DEFEND Partner Playbook & Security Partner Toolkit for SMB: 5-Tier Security, Purview AI Governance & 360p/pwsh7 Execution",
+        "deck_title": "Microsoft Product Security & AI Readiness Engineering: DEFEND 5-Tier Architecture, Purview AI Guardrails & 360p/pwsh7 Implementation",
         "provenance": "static_contract_verified",
         "independently_reproduced": True,
         "source_binding": {
@@ -335,6 +335,7 @@ def build_report_json() -> dict:
             "exit_criteria_atomic_controls": 48,
             "capability_comparison_rows": 41,
             "smb_toolkit_aka_ms_links": 6,
+            "smb_toolkit_playbook_pages": 10,
             "smb_toolkit_industry_one_pagers_pages": 14,
             "smb_toolkit_sow_workstreams": 22,
             "smb_toolkit_deployment_guides_pages": 360,
@@ -343,35 +344,35 @@ def build_report_json() -> dict:
         "cards": [
             {
                 "kind": "overview",
-                "eyebrow": "HANDS-ON · DEFEND 5-TIER PLAYBOOK (53 SLIDES) + SMB SECURITY PARTNER TOOLKIT (6 ASSETS)",
+                "eyebrow": "HANDS-ON · MICROSOFT PRODUCT SECURITY & AI READINESS ENGINEERING (53 SLIDES · 360P GUIDES · PWSH 7+)",
                 "headline_prefix": "Business Premium Covers 36.6% (15/41) of Controls — ",
-                "headline_Gradient": "DEFEND 5-Tier & SMB Toolkit Reach 100% E5-Grade Parity",
+                "headline_Gradient": "DEFEND 5-Tier & 6-Workload Engineering Reach 100% Parity",
                 "subtitle": (
-                    "Combining the 53-slide DEFEND Partner Playbook (5 service tiers, 51 exit gates, 4-tier Purview-for-AI) with the "
-                    "6-asset Security Partner Toolkit for SMB (7 industry one-pagers, Data Security Assistant, 22-service SOW Generator, "
-                    "360-page Deployment Guides, and 4 PowerShell 7+ toolkits)."
+                    "Synthesizing the 53-slide DEFEND 5-Tier Architecture (51 exit gates, 4-tier Purview-for-AI) with the "
+                    "6-Workload Technical Deployment Guides (360 pages), 7 Regulated Vertical IP Guides (14 pages), "
+                    "client-side policy compilers, and 4 PowerShell 7+ automation toolkits."
                 ),
                 "workbench": {
-                    "title": "DEFEND & SMB Toolkit Verifier Workbench (53 Slides · 41 Capabilities · 51 Gates · 360p Guides · 4 pwsh7 Toolkits)",
-                    "status_pill": "Playbook SHA256: 0298c3bb + 6 SMB Toolkit Assets · 7/7 Unit Tests PASS",
+                    "title": "Microsoft Security & AI Readiness Verifier Workbench (53 Slides · 41 Capabilities · 51 Gates · 360p Guides · 4 pwsh7 Toolkits)",
+                    "status_pill": "Playbook SHA256: 0298c3bb + 384p Technical Guides · 8/8 Unit Tests PASS",
                     "scenarios": [
-                        "Stage 1 & Phase 0 Discovery: 7-Dim Zero Trust Assessment + 7 Industry One-Pagers (14p, 30/60/90d motion, 8-Label Taxonomy)",
-                        "Stage 2 & 3 Scoping/Proposal: Data Security Assistant (v2.0.1572) + Purview SOW Generator (22 modular workstreams: P1 9, P2 1, P3 12)",
-                        "Tier 1 DEFENDBase (11 checks): Operationalize Business Premium (15/41 = 36.6%) via SMBBestPracticeTool (13 CA JSONs, 6 Intune tasks)",
-                        "Tier 2A DEFENDSecurity (12 checks): + Defender Suite -> 21/21 (100%) Defender rows + Identity (90p), Email (52p), Device (51p), SaaS (35p) guides",
+                        "Stage 1 Vertical SIT & Taxonomy: 7-Dim Zero Trust Assessment + 7 Regulated Vertical Guides (14p, 8-Label Taxonomy + INTERNAL EXCEPTION)",
+                        "Stage 2 & 3 Policy Compilation: Data Security Assistant (v2.0.1572, strict CSP) + Purview Scope Generator (22 workstreams: P1 9, P2 1, P3 12)",
+                        "Tier 1 DEFENDBase (11 checks): Harden Business Premium (15/41 = 36.6%) via SMBBestPracticeTool (13 Report-Only CA JSONs, 6 Intune baselines)",
+                        "Tier 2A DEFENDSecurity (12 checks): + Defender Suite -> 21/21 (100%) Defender rows + Identity (90p), Email (52p), Device (51p), SaaS (35p) runbooks",
                         "Tier 2B DEFENDCompliance (11 checks): + Purview Suite -> 20/20 (100%) Purview rows + Data Security Guide (92p) & Day-30 DLP Exit Runbook",
                         "Purview Tier 3 Data Control (AI Ready): DLP for Copilot (2-rule SIT+Label sim) + Edge Inline Web DLP (ChatGPT/Gemini) + Activate DSPM",
                         "Tier 3 Complete (8 checks) -> Tier 4 Extend (9 checks): 41/41 (100%) capabilities + noise tuning before Sentinel SIEM/SOAR & Security Copilot",
                     ],
                     "bands_note": (
-                        "Slide 40 Governance Rule + Toolkit Safety Gates: Act automatically when 100% of tier criteria are met; "
+                        "Slide 40 Governance Rule + Engineering Safety Gates: Act automatically when 100% of tier criteria are met; "
                         "Confirm on signed 90-day risk acceptance or LOB INTERNAL EXCEPTION labels; Human when any gate is unmet."
                     ),
                     "metrics": [
                         "BP Baseline vs Complete: 15/41 (36.6%) -> 41/41 (100%)",
                         "Mandatory Exit Gates: 51 (48 Atomic + 3 Composite)",
-                        "SMB Toolkit Guides: 6 PDFs (360 Pages) + 7 One-Pagers (14p)",
-                        "Automation & SOW: 22 SOW Services + 4 pwsh7 Toolkits",
+                        "Technical Manuals: 6 PDFs (360p) + 7 Verticals (14p) + 10p Pipeline",
+                        "Automation & Workstreams: 22 Purview Workstreams + 4 pwsh7 Toolkits",
                     ],
                     "decisions": [
                         {
@@ -420,18 +421,18 @@ def build_report_json() -> dict:
                 },
                 "callouts": [
                     {
-                        "lead": "Strategy + Execution Boundary: DEFEND (53 slides) + SMB Toolkit (6 aka.ms assets) are partner service accelerators, NOT Microsoft SKUs.",
+                        "lead": "Architecture + Execution Boundary: DEFEND (53 slides) + Technical Toolkit (6 aka.ms assets) are reference blueprints, NOT SKUs.",
                         "body": (
-                            "Capabilities require eligible licensing (Business Premium + Defender/Purview Suites + Sentinel), "
-                            "explicit configuration via the 360-page guides / PowerShell 7+ toolkits, and partner-validated commercial terms."
+                            "Capabilities require eligible licensing (Business Premium + Defender/Purview Suites + Sentinel) and "
+                            "explicit technical implementation via the 360-page runbooks and PowerShell 7+ toolkits."
                         ),
                     }
                 ],
             },
             {
                 "kind": "deep_dive",
-                "eyebrow": "SCENARIO: END-TO-END SMB TOOLKIT EXECUTION & AI READINESS (5 STAGES · 6 ASSETS)",
-                "headline": "From 7 Industry One-Pagers & 8-Label Taxonomy to 22 SOW Services & pwsh 7+ Automation.",
+                "eyebrow": "SCENARIO: 6-WORKLOAD TECHNICAL IMPLEMENTATION & AI READINESS (360P GUIDES · 14P VERTICALS)",
+                "headline": "From 7 Regulated Vertical Taxonomies & LOB Exceptions to 6-Workload Runbooks & pwsh 7+.",
                 "quote": (
                     "No customer should progress between DEFEND tiers without meeting the exit criteria or formally accepting "
                     "residual risk through documented governance. DEFENDExtend must not be activated unless DEFENDComplete "
@@ -614,22 +615,22 @@ def build_report_json() -> dict:
             {
                 "kind": "takeaways",
                 "eyebrow": "MY TAKE",
-                "headline": "Operationalizing DEFEND + SMB Security Partner Toolkit for Copilot & AI Readiness",
+                "headline": "Engineering Microsoft Product Security & AI Readiness Across 6 Workloads",
                 "good_fit": [
-                    "M365 Business Premium MSP Catalogs: Standardize 5 outcome-based tiers (Base -> Extend) + 22 modular SOW workstreams",
-                    "Pre-Copilot & Shadow AI Governance: Deploy Purview Tier 3 (DLP for Copilot 2-rule sim + Edge Inline Web DLP + DSPM) first",
-                    "8-Label DEFEND Taxonomy with LOB Exception Sub-Labels: Use INTERNAL EXCEPTION (5 & 8) when encryption breaks ERP/EHR/SIS",
-                    "Idempotent Multi-Tenant Automation: Use PowerShell 7+ SMBBestPracticeTool (13 Report-Only CA JSONs, GDAP, Day-30 DLP Exit Runbook)",
+                    "M365 Zero-Trust Baseline Engineering: Implement 5 deterministic tiers (Base -> Extend) + 22 modular Purview workstreams",
+                    "Pre-Copilot & Shadow AI Data Guardrails: Enforce Purview Tier 3 (DLP for Copilot 2-rule sim + Edge Inline Web DLP + DSPM)",
+                    "8-Label DEFEND Taxonomy with LOB Exception Sub-Labels: Apply INTERNAL EXCEPTION (5 & 8) when encryption breaks ERP/EHR/SIS",
+                    "Idempotent Multi-Tenant Automation: Execute PowerShell 7+ SMBBestPracticeTool (13 Report-Only CA JSONs, GDAP, Day-30 DLP Exit Runbook)",
                 ],
                 "not_for": [
-                    "Positioning DEFEND or the SMB Toolkit as official Microsoft SKUs (they are partner service frameworks; validate Product Terms)",
+                    "Treating reference architecture blueprints as automatic license entitlements without explicit policy configuration",
                     "Treating M365 Lighthouse as a SOC/SIEM replacement or device authority (Intune enforces devices; Sentinel/XDR handle SOC detection)",
                     "Activating DEFENDExtend (Microsoft Sentinel) before completing DEFENDComplete and tuning Defender/Purview alert noise",
                     "Running SMBBestPracticeTool on Windows PowerShell 5.1 or flipping CA/DLP policies to Block without Report-Only & Day-30 simulation",
                 ],
                 "dark_box": {
-                    "lead": "Provenance: static_contract_verified (53 slides, 41 capabilities, 51 exit gates, 6 Toolkit assets, 360p guides; 7/7 tests PASS).",
-                    "repo": "Source: DEFEND Partner Playbook (SHA256: 0298c3bb248a0465) + SMB Security Partner Toolkit · docs/research/defend-partner-playbook/",
+                    "lead": "Provenance: static_contract_verified (53 slides, 41 capabilities, 51 exit gates, 6 Toolkit assets, 360p guides; 8/8 tests PASS).",
+                    "repo": "Source: DEFEND Architecture Playbook (SHA256: 0298c3bb248a0465) + 384p Technical Deployment Guides · docs/research/defend-partner-playbook/",
                 },
             },
         ],
@@ -641,35 +642,35 @@ def build_report_json() -> dict:
 
 def build_report_zh_json(en_report: dict) -> dict:
     zh = json.loads(json.dumps(en_report))
-    zh["deck_title"] = "DEFEND 合作伙伴指南与 SMB 安全工具包：五层托管安全、Purview AI 治理与 360 页/pwsh7 自动化验证"
+    zh["deck_title"] = "Microsoft 产品体系安全与 AI 就绪工程技术架构：DEFEND 五层架构、Purview AI 护栏与 360 页/pwsh7 落地实践"
     c = zh["cards"]
-    c[0]["eyebrow"] = "深度实测 · DEFEND 五层架构 (53 页) + SMB 安全合作伙伴工具包 (6 大核心资产)"
+    c[0]["eyebrow"] = "深度实测 · MICROSOFT 产品体系安全与 AI 就绪工程 (53 页架构 + 360 页部署指南 + PWSH 7+)"
     c[0]["headline_prefix"] = "Business Premium 仅覆盖 36.6% (15/41) 高阶能力 — "
-    c[0]["headline_Gradient"] = "DEFEND 五层模型与 SMB 工具包实现 100% E5 级对齐"
+    c[0]["headline_Gradient"] = "DEFEND 五层架构与六大工作负载实现 100% E5 级对齐"
     c[0]["subtitle"] = (
-        "结合 53 页《DEFEND 合作伙伴指南》（5 层服务架构、51 项准出关卡、4 层 Purview-for-AI 蓝图）与 6 大 SMB 安全合作伙伴工具包资产"
-        "（7 份行业一页纸、数据安全引导助手、22 项 SOW 生成器、360 页部署指南与 4 套 PowerShell 7+ 自动化脚本）。"
+        "融合 53 页《DEFEND 五层安全架构》（51 项准出关卡、4 层 Purview-for-AI 蓝图）与 6 大工作负载安全部署技术指南（360 页 PDF）、"
+        "7 大受监管行业信息保护指南（14 页 PDF）、纯前端策略编译器及 4 套 PowerShell 7+ 自动化脚本。"
     )
-    c[1]["eyebrow"] = "场景深潜：SMB 工具包五阶段全链路执行与 Copilot/Shadow AI 治理"
-    c[1]["headline"] = "从 7 大行业 8 级敏感度标签（含 LOB 免加密异常分支）到 22 项 SOW 与 pwsh 7+ 自动化落地。"
+    c[1]["eyebrow"] = "场景深潜：六大工作负载技术部署（360 页）与 Copilot/Shadow AI 治理"
+    c[1]["headline"] = "从 7 大行业 8 级敏感度标签（含 LOB 免加密异常分支）到 22 项工程工作流与 pwsh 7+ 幂等部署。"
     c[2]["eyebrow"] = "全量评估矩阵 · WHAT I TESTED"
-    c[2]["headline"] = "横跨 41 项授权能力、51 项准出关卡与 6 大 SMB 工具包资产的 9 大验证场景"
+    c[2]["headline"] = "横跨 41 项授权能力、51 项准出关卡与 6 大工程工具包资产的 9 大技术验证场景"
     c[3]["eyebrow"] = "底层契约 · UNDER THE HOOD"
-    c[3]["headline"] = "确定性层级准出验证器、Slide 40 治理铁律与 SMB 工具包安全门禁契约"
+    c[3]["headline"] = "确定性层级准出验证器、Slide 40 治理铁律与工程工具包安全门禁契约"
     c[4]["eyebrow"] = "鲁棒性检验 · ROBUSTNESS CHECK"
     c[4]["headline"] = "5 大演进跳变下的套件能力跃迁 (+61.9 ~ +65.0 pts) 与治理门禁敏感度"
     c[5]["eyebrow"] = "能力覆盖对比 · LATENCY / SCALING"
     c[5]["headline"] = "六大安全与合规域能力覆盖率对比：Business Premium 基线 vs 完整套件 (千分比 ‰)"
     c[6]["eyebrow"] = "架构师建议 · MY TAKE"
-    c[6]["headline"] = "将 DEFEND 与 SMB 工具包转化为可审计的托管安全与 Copilot AI 准备度服务"
+    c[6]["headline"] = "跨六大工作负载落地 Microsoft 产品体系零信任安全与 Copilot AI 准备度工程"
     c[6]["good_fit"] = [
-        "M365 Business Premium MSP 服务目录标准化：构建 Base -> Extend 五层结果导向架构与 22 项模块化 SOW 工作流",
+        "M365 零信任基线工程化：落地 Base -> Extend 五层确定性准出控制与 22 项模块化 Purview 工程工作流",
         "Copilot 与 Shadow AI 双重数据护栏：上线前部署 Purview Tier 3（Copilot 双规则模拟 DLP + Edge 内联网页 DLP + DSPM）",
         "8 级 DEFEND 敏感度标签体系：针对 ERP/EHR/SIS 加密破坏场景启用 INTERNAL EXCEPTION（第 5/8 级）仅标记不加密分支与 90 天复核",
-        "幂等多租户自动化交付：使用 PowerShell 7+ SMBBestPracticeTool（13 个仅报告 CA 模板、GDAP 委派、30 天 DLP 模拟准出手册）",
+        "幂等多租户自动化部署：使用 PowerShell 7+ SMBBestPracticeTool（13 个仅报告 CA 模板、GDAP 委派、30 天 DLP 模拟准出手册）",
     ]
     c[6]["not_for"] = [
-        "严禁将 DEFEND 或 SMB 工具包包装为微软官方 SKU 或授权捆绑包（属于合作伙伴服务参考架构，需校验 Product Terms）",
+        "严禁将参考架构等同于自动生效的默认保护（所有能力必须结合合格授权并完成显式策略下发与回读校验）",
         "严禁将 M365 Lighthouse 当作 SOC/SIEM 平台或设备策略下发引擎（Intune 负责设备强制执行，Sentinel/XDR 负责检测响应）",
         "严禁在未完成 DEFENDComplete 与告警降噪前直接开启 DEFENDExtend（Microsoft Sentinel）",
         "严禁在 Windows PowerShell 5.1 下运行自动化工具，或跳过 Report-Only 与 30 天 DLP 模拟期直接开启强制阻断",

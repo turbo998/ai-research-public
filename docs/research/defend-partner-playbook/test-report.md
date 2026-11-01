@@ -1,8 +1,8 @@
-# DEFEND 合作伙伴指南与 SMB 安全合作伙伴工具包：五层托管安全、Purview AI 治理与 360 页/pwsh7 自动化验证报告 (7-Card 4:5 Visual Report)
+# Microsoft 产品体系安全与 AI 就绪工程技术架构：DEFEND 五层模型、Purview AI 治理与 6 大工作负载（360 页）自动化验证报告 (7-Card 4:5 Visual Report)
 
 > **语言 / Language**: **中文 (当前)** | [English (`test-report.en.md`)](./test-report.en.md) · **交互式 7 卡视觉面板**: [`test-report-cards.html`](./test-report-cards.html) ([中文卡片 `cards.zh.html`](./cards.zh.html) | [英文卡片 `cards.html`](./cards.html)) · **深度技术专著**: [`README.md`](./README.md) ([English `README.en.md`](./README.en.md))  
-> **数据溯源状态 (`provenance`)**: `static_contract_verified` (`independently_reproduced = true`) · **主文档指纹**: `DEFEND Partner Playbook.pptx` (`11,425,905` bytes, SHA-256: `0298c3bb248a0465d9a1c250ccb1fd1eb631ef5787137d6bbb9a3fc07babad46`) + **Microsoft Security Partner Toolkit for SMB** (6 大官方 `aka.ms` 核心资产、7 份行业一页纸、360 页部署指南、3 个微软官方 GitHub 开源仓库)  
-> **重要边界声明 (Slides 4, 8, 44, 53)**: DEFEND 框架、附录蓝图及 SMB 合作伙伴工具包均属于**合作伙伴交付的服务构建块与运营参考模型 (Partner-Delivered Service Constructs)**，**并非**微软官方 SKU、产品或强制捆绑包。所有个人信息 (PII) 与邮件追踪参数均已脱敏剥离。
+> **数据溯源状态 (`provenance`)**: `static_contract_verified` (`independently_reproduced = true`) · **主文档指纹**: `DEFEND Partner Playbook.pptx` (`11,425,905` bytes, SHA-256: `0298c3bb248a0465d9a1c250ccb1fd1eb631ef5787137d6bbb9a3fc07babad46`) + **Microsoft 产品体系安全部署工程工具包** (6 大官方 `aka.ms` 核心技术资产、7 份行业信息保护指南 [14 页]、6 本工作负载安全部署指南 [360 页]、10 页五阶段技术流水线规范、3 个微软官方 GitHub 开源仓库)  
+> **架构边界声明 (Slides 4, 8, 44, 53)**: DEFEND 框架与配套工程工具包均属于**安全工程架构与策略基线参考模型**，**并非**微软官方独立 SKU。所有个人信息 (PII) 与邮件追踪参数均已脱敏剥离。
 
 ---
 
@@ -138,7 +138,7 @@ assert not (target_tier == "DEFENDExtend" and not tier_passed["DEFENDComplete"])
 
 | ✅ 强烈推荐适用场景 (`Good Fit`) | ⛔ 严禁混用与反模式 (`Not For`) |
 | :--- | :--- |
-| **1. M365 Business Premium MSP 服务目录标准化**：以 `DEFENDBase → Security / Compliance → Complete → Extend` 五层模型与 `SOWGenerator` 的 **22 项模块化服务**构建标准化交付目录、SLA 与低层设计 (LLD)。 | **1. 严禁将 DEFEND 或 SMB 工具包宣传为微软官方 SKU**：它们是合作伙伴服务构建块与运营参考框架，外部报价前必须核对最新 Microsoft Product Terms 与授权说明。 |
-| **2. Copilot 与 Shadow AI 双重数据护栏建设**：在启用 M365 Copilot 前，通过 Purview Tier 3 (`Data Control`) 落地 **Copilot 双规则模拟 DLP** + **Edge 内联网页 DLP（阻断向 ChatGPT/Gemini 粘贴敏感数据）** + **Activate DSPM**。 | **2. 严禁混淆 M365 Lighthouse、Intune 与 Sentinel 的职责边界**：Lighthouse 仅负责基于 GDAP 的跨租户基线可见性（非 SOC/SIEM，亦不替代 Intune 设备强制执行或 Entra ID P2 PIM）。 |
-| **3. 8 级敏感度标签与 LOB 免加密异常闭环**：使用 7 份行业一页纸中的 `CONFIDENTIAL \ INTERNAL EXCEPTION`（第 5 级）与 `HIGHLY CONFIDENTIAL \ INTERNAL EXCEPTION`（第 8 级）解决 ERP/EHR/SIS 加密破坏问题，并绑定 90 天复核。 | **3. 严禁违反 Slide 40 铁律提前开启 `DEFENDExtend` (Sentinel)**：在未完成 `DEFENDComplete`（42 项累计关卡）与告警降噪前接入 Sentinel，只会制造高昂日志成本与 SOC 告警疲劳。 |
-| **4. 幂等多租户自动化基线交付**：依托 `SMBBestPracticeTool`（PowerShell 7+、GDAP 支持、13 个仅报告 CA 模板、Break-Glass 校验、30 天 DLP 模拟准出手册）与 **360 页部署指南**实现可审计交付。 | **4. 严禁在 Windows PowerShell 5.1 下运行自动化脚本或跳过模拟期**：切勿跳过 CA `Report-Only` 观察期或 30 天 DLP 模拟验证直接开启生产环境硬阻断。 |
+| **1. M365 Business Premium 零信任五层工程架构标准化**：以 `DEFENDBase → Security / Compliance → Complete → Extend` 五层模型与 `SOWGenerator` 的 **22 项 P1/P2/P3 技术交付模块**构建标准化工程基线与低层设计 (LLD)。 | **1. 严禁将 DEFEND 参考架构等同于微软单一产品 SKU**：各层级技术控制项需严格核对最新 Microsoft Product Terms 与租户实际授权状态。 |
+| **2. Copilot 与 Shadow AI 双重数据护栏建设**：在启用 M365 Copilot 前，通过 Purview Tier 3 (`Data Control`) 落地 **Copilot 双规则模拟 DLP（Prompt SIT + Label RAG 隔离）** + **Edge 内联网页 DLP（阻断向 ChatGPT/Gemini/DeepSeek 粘贴敏感数据）** + **Activate DSPM**。 | **2. 严禁混淆 M365 Lighthouse、Intune 与 Sentinel 的职责边界**：Lighthouse 仅负责基于 GDAP 的跨租户基线可见性（非 SOC/SIEM，亦不替代 Intune 设备强制执行或 Entra ID P2 PIM）。 |
+| **3. 8 级敏感度标签（`0..7` 优先级）与 LOB 免加密异常闭环**：使用 7 份行业指南中的 `CONFIDENTIAL \ INTERNAL EXCEPTION`（#5）与 `HIGHLY CONFIDENTIAL \ INTERNAL EXCEPTION`（#8）写入 `MSIP_Label_<GUID>_Enabled=true` 明文元数据，解决 ERP/EHR/SIS 加密破坏问题并绑定 90 天复核。 | **3. 严禁违反 Slide 40 铁律提前开启 `DEFENDExtend` (Sentinel)**：在未完成 `DEFENDComplete`（42 项累计关卡）与告警降噪前接入 Sentinel，只会制造高昂日志成本与 SOC 告警风暴。 |
+| **4. 6 大工作负载（360 页）与幂等多租户自动化基线交付**：依托 `SMBBestPracticeTool`（PowerShell 7+、GDAP 支持、13 个仅报告 CA 模板、Break-Glass 校验、30 天 DLP 模拟准出手册、租户漂移验证报告）实现可审计工程交付。 | **4. 严禁在 Windows PowerShell 5.1 下运行自动化脚本或跳过模拟期**：切勿跳过 CA `Report-Only` 观察期、ASR `Audit (RuleMode=2)` 或 30 天 DLP 模拟验证直接开启生产环境硬阻断。 |

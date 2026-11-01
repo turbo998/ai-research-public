@@ -90,14 +90,14 @@
 
 ---
 
-## Card 7 (`7 / 7` · `MY TAKE`) — 适用边界与伙伴商业化总结
+## Card 7 (`7 / 7` · `MY TAKE`) — 适用边界与三阶段工程流水线总结
 
-### 核心发现：把第 3 周 Landing Zone 与 ISOC 打造为伙伴“评估→建设→运营”标准服务飞轮
+### 核心发现：以第 3 周 Landing Zone 与 ISOC 构建“评估→建设→运营”三阶段安全工程闭环
 
 - **✅ Good Fit（强烈推荐适用）**：
   - 在 4–6 周 FTE 转型冲刺第 3 周强制落地 Secure AI Landing Zone + Copilot as UI。
   - 利用 Agent 365 统一纳管 Foundry、Copilot Studio、LangChain、CrewAI、LlamaIndex、Vertex AI、Bedrock 与终端本地影子 Agent。
-  - 针对无 Sentinel 的 Defender Suite 与 M365 E5/E7 存量客户切入 ISOC 安全运营并推动 ME3→E5/E7 升级。
+  - 针对尚未部署独立 SIEM (Sentinel) 的 Defender Suite 与 M365 E5/E7 租户直接启用 ISOC 内置 SIEM/SOAR/UEBA，并完成 E3→E5/E7 控制平面演进。
 - **⛔ Not For（明确禁止或不适用）**：
   - 未完成第 3 周安全底座即在生产环境裸奔上线第 4–5 周 Agent。
   - 绕过 Copilot 统一入口、允许分散登录与无审计的影子 AI 模式。

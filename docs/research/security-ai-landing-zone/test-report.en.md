@@ -90,14 +90,14 @@
 
 ---
 
-## Card 7 (`7 / 7` · `MY TAKE`) — Good Fit vs Not For & Readiness
+## Card 7 (`7 / 7` · `MY TAKE`) — Good Fit vs Not For & Architectural Readiness
 
-### Finding: Operationalize Week 3 Landing Zone & ISOC as a Repeatable Assess → Build → Operate Service Flywheel
+### Finding: Operationalize Week 3 Landing Zone & ISOC as a Repeatable Assess → Build → Operate Engineering Pipeline
 
 - **✅ Good Fit**:
   - Enforcing Week 3 Secure AI Landing Zone + Copilot as UI during 4–6 week FTE Transformation Sprints before launching 3 production Agents in Weeks 4–5.
   - Governing multi-platform agents (Foundry, Copilot Studio, LangChain, CrewAI, LlamaIndex, Vertex AI, Bedrock) and local endpoint Shadow Agents via Microsoft Agent 365.
-  - Engaging eligible Defender Suite and M365 E5/E7 customers without Sentinel using ISOC in Defender to drive ME3→E5/E7 upsell and managed SOC ARR.
+  - Activating ISOC in Defender (built-in SIEM/SOAR/UEBA) for eligible Defender Suite and M365 E5/E7 tenants without Sentinel, and evolving E3 architectures to E5/E7 + Agent 365.
 - **⛔ Not For**:
   - Launching production Agents in Weeks 4–5 without completing Week 3 Landing Zone controls.
   - Allowing fragmented AI entry points outside Copilot as UI (creating un-audited Shadow AI).

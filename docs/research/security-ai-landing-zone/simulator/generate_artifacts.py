@@ -749,10 +749,10 @@ def render_html_deck(lang: str, report_data: Dict[str, object]) -> str:
     <div>
       <div class="card-top">
         <span>7 / 7 · MY TAKE</span>
-        <span>GOOD FIT VS NOT FOR &amp; PARTNER GTM READINESS</span>
+        <span>GOOD FIT VS NOT FOR &amp; ARCHITECTURAL READINESS</span>
       </div>
       <h2 class="headline">
-        {('研究结论：<span class="grad">把第 3 周 Landing Zone 与 ISOC</span> 打造为伙伴“评估→建设→运营”标准服务飞轮' if is_zh else 'Executive Takeaway: <span class="grad">Operationalize Week 3 Landing Zone &amp; ISOC</span> as an Assess → Build → Operate Service Flywheel')}
+        {('研究结论：<span class="grad">以第 3 周 Landing Zone 与 ISOC</span> 构建“评估→建设→运营”三阶段安全工程流水线' if is_zh else 'Executive Takeaway: <span class="grad">Operationalize Week 3 Landing Zone &amp; ISOC</span> as an Assess → Build → Operate Engineering Pipeline')}
       </h2>
       <div class="grid-2">
         <div class="panel" style="border-color:#059669; background:rgba(6, 78, 59, 0.25);">
@@ -760,8 +760,8 @@ def render_html_deck(lang: str, report_data: Dict[str, object]) -> str:
           <ul>
             <li>• <b>{('4–6 周 FTE 转型冲刺 (Slide 5)' if is_zh else '4–6 Week FTE Transformation Sprints (Slide 5)')}</b>: {('在第 3 周强制落地 Secure AI Landing Zone + Copilot as UI，作为第 4–5 周上线 3 个生产级 Agent 的硬性前置门禁。' if is_zh else 'Enforcing Week 3 Secure AI Landing Zone + Copilot as UI as the mandatory precondition before launching 3 production Agents in Weeks 4–5.')}</li>
             <li>• <b>{('多平台与影子 Agent 统一纳管 (Slides 10, 20)' if is_zh else 'Multi-Platform & Shadow Agent Governance (Slides 10, 20)')}</b>: {('通过 Agent 365 统一纳管 Foundry、Copilot Studio、LangChain、CrewAI、LlamaIndex、Vertex AI、AWS Bedrock 及终端 CLI/IDE/Claw 本地 Agent。' if is_zh else 'Unifying Foundry, Copilot Studio, LangChain, CrewAI, LlamaIndex, Vertex AI, AWS Bedrock, and local CLI/IDE/Claw agents in Agent 365 Registry.')}</li>
-            <li>• <b>{('E5/E7 与 Defender Suite 存量客户转化 (Slide 36)' if is_zh else 'E5/E7 & Defender Suite Installed-Base Upsell (Slide 36)')}</b>: {('针对尚未部署 Sentinel 的合资格 Defender Suite 及 M365 E5/E7 客户，利用内置 SIEM/SOAR/UEBA 的 ISOC 启动安全运营服务并拉动 ME3→E5/E7 升级。' if is_zh else 'Prioritizing eligible Defender Suite and E5/E7 customers without Sentinel to activate ISOC and drive ME3→E5/E7 + Agent 365 upsell.')}</li>
-            <li>• <b>{('DEFEND 五级演进无缝衔接' if is_zh else 'Seamless Bridge from SMB DEFEND Playbook')}</b>: {('已达标 DEFENDComplete（Business Premium + Defender & Purview Suites）的客户天然满足 Slide 23 Agent 365 前置许可。' if is_zh else 'Tenants at DEFENDComplete (Business Premium + Defender & Purview Suites) natively satisfy Slide 23 Agent 365 licensing prerequisites.')}</li>
+            <li>• <b>{('E5/E7 与 Defender Suite 存量租户 ISOC 架构启用 (Slide 36)' if is_zh else 'E5/E7 & Defender Suite ISOC Architecture Activation (Slide 36)')}</b>: {('针对尚未部署独立 SIEM (Sentinel) 的 Defender Suite 及 M365 E5/E7 租户，直接启用内置 SIEM/SOAR/UEBA 的 ISOC 并完成 E3→E5/E7 控制平面演进。' if is_zh else 'Enabling built-in SIEM/SOAR/UEBA via ISOC in Defender for eligible Defender Suite and E5/E7 tenants without Sentinel, evolving E3 architectures to E5/E7 + Agent 365.')}</li>
+            <li>• <b>{('DEFEND 五级架构与 6 大工作负载（360 页）无缝衔接' if is_zh else 'Seamless Bridge from DEFEND Playbook & 6-Workload (360p) Guides')}</b>: {('已达标 DEFENDComplete（Business Premium + Defender & Purview Suites）的租户天然满足 Slide 23 Agent 365 前置许可。' if is_zh else 'Tenants at DEFENDComplete (Business Premium + Defender & Purview Suites) natively satisfy Slide 23 Agent 365 licensing prerequisites.')}</li>
           </ul>
         </div>
         <div class="panel" style="border-color:#e11d48; background:rgba(136, 19, 55, 0.25);">
