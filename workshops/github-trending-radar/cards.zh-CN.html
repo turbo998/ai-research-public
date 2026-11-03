@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proactive Durable News &amp; GitHub AI Radar 7-Card 4:5 基准测试报告 (2026-11-03)</title>
+<style>
+  :root {
+    --bg: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --dark: #0F172A;
+    --slate: #475569;
+    --border: #E2E8F0;
+    --blue: #2563EB;
+    --blue-soft: #EFF6FF;
+    --green: #059669;
+    --green-soft: #ECFDF5;
+    --amber: #D97706;
+    --amber-soft: #FFFBEB;
+    --red: #DC2626;
+    --red-soft: #FEF2F2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #0B1120;
+    color: var(--dark);
+    padding: 28px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .card {
+    width: 900px;
+    min-height: 1125px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--blue);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+  }
+  h1, h2 {
+    font-size: 23px;
+    line-height: 1.28;
+    margin: 14px 0 10px;
+    color: var(--dark);
+  }
+  .accent {
+    background: linear-gradient(90deg, #2563EB, #059669, #7C3AED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--slate);
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 12px 0;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 12px 0;
+  }
+  .panel {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 12.6px;
+    line-height: 1.48;
+  }
+  .panel h3 {
+    font-size: 11.8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--slate);
+    margin-bottom: 8px;
+  }
+  .dark-code {
+    background: #0F172A;
+    color: #E2E8F0;
+    border-radius: 12px;
+    padding: 15px 16px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11.6px;
+    line-height: 1.45;
+    white-space: pre-wrap;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.8px;
+  }
+  th, td {
+    border-bottom: 1px solid var(--border);
+    padding: 8px 6px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    font-size: 10.8px;
+    text-transform: uppercase;
+    color: var(--slate);
+    background: var(--bg);
+  }
+  .miss { color: var(--red); font-weight: 600; }
+  .hit { color: var(--green); font-weight: 600; }
+  .pill {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .act-auto { background: var(--green-soft); color: var(--green); }
+  .act-confirm { background: var(--amber-soft); color: var(--amber); }
+  .act-human { background: var(--red-soft); color: var(--red); }
+  .badge-type {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--blue-soft);
+    color: var(--blue);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .bar-group { margin: 13px 0; }
+  .bar-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--dark); }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+    font-size: 12px;
+  }
+  .bar-fill {
+    height: 18px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  .bar-fill.primary { background: #3B82F6; }
+  .bar-fill.baseline { background: #CBD5E1; }
+  .prob-track {
+    width: 100%;
+    height: 10px;
+    background: #E2E8F0;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 6px;
+  }
+  .prob-fill {
+    height: 100%;
+    border-radius: 999px;
+  }
+  .footer-callout {
+    background: var(--dark);
+    color: #F8FAFC;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 12px;
+    line-height: 1.48;
+  }
+</style>
+<!-- kee-report-localization:metadata:start --><link rel="alternate" hreflang="en" href="cards.en.html"><link rel="alternate" hreflang="zh-CN" href="cards.zh-CN.html"><meta name="report-translation-source" content="workshops/github-trending-radar/cards.html@941ee62"><meta name="report-translation-provenance" content="translation; independently_reproduced=false"><style>.radar-report-nav{width:100%;max-width:900px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:16px 20px;background:#101a30;color:#eef3ff;border:1px solid #314361;border-radius:12px;font:14px/1.5 "Segoe UI",sans-serif}.radar-report-nav a{color:#9aabff;text-decoration:none}.radar-report-nav a:hover{text-decoration:underline}.radar-report-nav a:focus-visible{outline:2px solid #56ddcd;outline-offset:4px}.radar-report-nav .identity{font-weight:700;color:#eef3ff;margin-right:auto}.radar-report-nav .languages{display:flex;gap:14px;margin-left:auto}.radar-report-nav [aria-current]{color:#56ddcd}.radar-report-source{display:flex;flex-direction:column;align-items:center;gap:28px;width:900px;flex-shrink:0}@media(max-width:932px){.radar-report-source{zoom:calc((100vw - 32px) / 900px)}}@media print{.radar-report-nav{display:none}.radar-report-source{zoom:1}}/* Embedded by integrate-dedicated.cjs so sealed report CSP remains unchanged. */
+.kee-dedicated-nav {
+  all: initial; box-sizing: border-box; position: relative; display: flex;
+  flex-wrap: wrap; align-items: center; gap: 6px 14px; width: 100%;
+  padding: 12px 18px; margin: 0 0 16px; border: 1px solid #314361;
+  background: #101A30; color: #EEF3FF; font: 13px/1.5 system-ui, sans-serif;
+  text-align: left; isolation: isolate; color-scheme: dark;
+}
+.kee-dedicated-nav a {
+  all: revert; box-sizing: border-box; display: inline-block; padding: 4px 0;
+  color: #9AABFF; background: transparent; font: inherit; text-decoration: underline;
+  text-underline-offset: 3px; border: 0; border-radius: 0; box-shadow: none;
+}
+.kee-dedicated-nav a:focus-visible { outline: 3px solid #56DDCD; outline-offset: 3px; }
+.kee-dedicated-nav .kee-dedicated-identity { font-weight: 700; color: #EEF3FF; }
+.kee-dedicated-nav .kee-dedicated-language {
+  all: revert; display: block; flex-basis: 100%; color: #ADBBD1; font: 12px/1.5 system-ui, sans-serif;
+}
+.kee-dedicated-native-link { display: block; padding: 22px; color: #1858a8; background: #f8fafc; font: 15px/1.6 system-ui, sans-serif; }
+.kee-dedicated-native-link a { color: #1858a8; text-decoration: underline; }
+@media print { .kee-dedicated-nav { display: none; } }
+
+/* Professional primary navigation: long section names reflow, never scroll inside the header. */
+[data-professional-header]{box-sizing:border-box;display:grid!important;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:18px!important;width:100%;max-width:none;height:auto!important;min-height:0!important;padding:18px 24px!important;margin:0 0 16px;position:relative;overflow:visible!important;background:#101A30;color:#EEF3FF;border:1px solid #314361;font:13px/1.5 system-ui,sans-serif;isolation:isolate;color-scheme:dark}
+[data-professional-header] *{box-sizing:border-box;min-width:0;max-height:none}
+[data-professional-header] a{font:inherit;text-decoration:none;color:#9AABFF;overflow-wrap:anywhere;white-space:normal}
+[data-professional-header] .professional-identity{font-weight:750;color:#EEF3FF;white-space:nowrap;font-size:14px;margin:0}
+[data-professional-header] .professional-primary{display:grid;grid-template-columns:1.65fr 1.1fr 1.15fr 1.1fr 1.1fr;gap:6px;align-items:stretch;min-width:0}
+[data-professional-header] .professional-primary a{display:flex;align-items:center;justify-content:center;padding:10px 9px;border:1px solid #314361;border-radius:12px;background:#172440;text-align:center;line-height:1.4;min-height:44px}
+[data-professional-header] .professional-primary a[aria-current=page]{background:#23375a;border-color:#56DDCD;color:#56DDCD}
+[data-professional-header] .professional-controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:4px;font-size:12px;margin:0;position:static}
+[data-professional-header] .professional-controls>a{display:flex;align-items:center;justify-content:center;padding:8px;min-height:40px;min-width:32px;border-radius:10px}
+[data-professional-header] .professional-context{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 18px;padding-top:12px;border-top:1px solid #314361;font-size:12px;color:#ADBBD1;min-width:0;line-height:1.6}
+[data-professional-header] .professional-context>*{min-width:0;overflow-wrap:anywhere}
+[data-professional-header] .professional-context .kee-dedicated-language{flex-basis:100%;color:#ADBBD1}
+[data-professional-header] a:focus-visible{outline:3px solid #56DDCD;outline-offset:3px}
+[data-professional-header] a:hover{text-decoration:underline}
+[data-professional-header][data-perimeter-theme=light],:root[data-theme=light] .reading-header[data-professional-header]{background:#fff;color:#172440;border-color:#d4deee;color-scheme:light}
+[data-professional-header][data-perimeter-theme=light] a,:root[data-theme=light] .reading-header[data-professional-header] a{color:#3752a0}
+[data-professional-header][data-perimeter-theme=light] .professional-primary a,:root[data-theme=light] .reading-header[data-professional-header] .professional-primary a{background:#edf2ff;border-color:#d4deee}
+[data-professional-header][data-perimeter-theme=light] .professional-primary a[aria-current],:root[data-theme=light] .reading-header[data-professional-header] .professional-primary a[aria-current]{background:#dff6f0;color:#127b72;border-color:#127b72}
+@media(max-width:1150px){[data-professional-header]{grid-template-columns:minmax(0,1fr) auto;gap:12px!important}[data-professional-header] .professional-primary{grid-row:2;grid-column:1/-1}[data-professional-header] .professional-controls{grid-column:2;grid-row:1}}
+@media(max-width:600px){[data-professional-header]{padding:14px 16px!important;gap:12px!important}[data-professional-header] .professional-primary{grid-template-columns:repeat(2,minmax(0,1fr))}[data-professional-header] .professional-primary a:first-child{grid-column:1/-1}[data-professional-header] .professional-identity{font-size:13px}[data-professional-header] .professional-controls{gap:0}[data-professional-header] .professional-controls>a{padding:6px;min-width:28px}}
+@media print{[data-professional-header]{display:none!important}}
+
+html{scroll-padding-top:108px}.reading-header,.kee-dedicated-nav,[data-professional-header]{position:sticky;top:0;z-index:1000;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+
+:root{--search-bg:#101a30;--search-soft:#172440;--search-ink:#eef3ff;--search-muted:#adbbd1;--search-line:#293956;--search-accent:#9aabff;--header-offset:108px}
+:root[data-reading-shell][data-theme=light],[data-perimeter-theme=light]{--search-bg:#fff;--search-soft:#e8eefb;--search-ink:#17233e;--search-muted:#4c5e7c;--search-line:#d5ddec;--search-accent:#354ec8}
+html{scroll-padding-top:var(--header-offset,108px)!important}
+.site-search,.site-search *{box-sizing:border-box!important;font-family:"Segoe UI",sans-serif;letter-spacing:normal;text-transform:none}
+.site-search{position:relative;display:flex;align-items:center;gap:5px;min-width:0;width:230px;max-width:100%;margin:0!important;padding:0!important;line-height:1.4;border:1px solid var(--search-line);border-radius:9px;background:var(--search-soft);color:var(--search-ink);isolation:isolate}
+.site-search input[type=search]{display:block;flex:1;min-width:0;width:100%;height:42px;margin:0;padding:9px 8px!important;font-size:12px!important;line-height:1.5;border:0!important;border-radius:9px;background:transparent!important;color:var(--search-ink)!important;box-shadow:none!important;appearance:none}
+.site-search input::placeholder{color:var(--search-muted);opacity:1}.site-search input:focus-visible{outline:2px solid var(--search-accent);outline-offset:2px}
+.site-search kbd{font:11px Consolas,monospace;color:var(--search-muted);padding:1px 5px;border:1px solid var(--search-line);border-radius:4px}
+.site-search button[type=submit]{flex:none;width:38px;min-width:38px;height:42px;min-height:42px;padding:0;margin:0;border:0;border-radius:8px;background:transparent;color:var(--search-accent);font-size:24px;cursor:pointer;box-shadow:none}
+.search-label,.search-status{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.site-search .search-results{position:absolute;top:calc(100% + 10px);right:0;z-index:1100;width:min(480px,calc(100vw - 32px));max-height:min(560px,65vh);overflow-y:auto;border:1px solid var(--search-line);border-radius:12px;background:var(--search-bg);color:var(--search-ink);padding:10px;box-shadow:0 12px 32px #0005;text-align:left}
+.site-search .search-results[hidden]{display:none!important}.search-results .search-group{margin:8px 6px 4px;font:11px/1.5 Consolas,monospace;color:var(--search-muted)}
+.site-search .search-results a{display:block!important;padding:10px!important;margin:3px 0!important;border:1px solid transparent!important;border-radius:7px;background:transparent;color:var(--search-ink)!important;font-size:13px!important;text-decoration:none!important;white-space:normal;overflow-wrap:anywhere;text-align:left!important;line-height:1.5!important}
+.site-search .search-results a[aria-selected=true],.site-search .search-results a:hover{border-color:var(--search-accent)!important;background:var(--search-soft)}
+.search-results a small{display:block;font-size:10px;color:var(--search-muted);margin-top:4px}.search-results p{margin:10px;font-size:13px;color:var(--search-muted)}
+.search-archive-summary{padding:20px;border:1px solid var(--search-line);border-radius:10px;background:var(--search-bg);color:var(--search-ink);margin:24px 0}.search-archive-summary h2{font-size:24px;margin:0 0 12px}.search-archive-summary li{margin:12px 0}.search-archive-summary a{color:var(--search-accent)}
+[data-professional-header]{position:sticky!important;top:0!important;z-index:1000!important;background:var(--search-bg)!important;--header-glass:rgba(16,26,48,.9);grid-template-columns:auto minmax(0,1fr) 230px auto!important}
+[data-professional-header][data-perimeter-theme=light],:root[data-reading-shell][data-theme=light] [data-professional-header]{--header-glass:rgba(255,255,255,.94)}
+[data-professional-header] .professional-mobile{display:none}.professional-mobile summary{min-width:38px;min-height:42px;display:grid;place-items:center;cursor:pointer;list-style:none}.professional-mobile summary::-webkit-details-marker{display:none}
+[data-professional-header] .professional-context{display:none}
+.professional-context-bar{padding:12px 24px;border-bottom:1px solid var(--search-line);background:var(--search-bg);color:var(--search-muted);font:12px/1.6 "Segoe UI",sans-serif;display:flex;flex-wrap:wrap;gap:8px 18px;overflow-wrap:anywhere}.professional-context-bar a{color:var(--search-accent)}
+@supports((backdrop-filter:blur(16px)) or (-webkit-backdrop-filter:blur(16px))){.site-header,[data-professional-header]{background:var(--header-glass)!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}}
+@media(max-width:1250px) and (min-width:701px){.header-inner{grid-template-columns:minmax(0,1fr) 230px auto!important;padding:12px 0;gap:12px!important}.desktop-nav{grid-row:2;grid-column:1/-1}.header-inner>.site-search{grid-column:2;grid-row:1}.header-inner>.controls{grid-column:3;grid-row:1}[data-professional-header]{grid-template-columns:minmax(0,1fr) 230px auto!important;gap:12px!important}[data-professional-header]>.professional-primary{grid-row:2;grid-column:1/-1}[data-professional-header]>.site-search{grid-column:2;grid-row:1}[data-professional-header]>.professional-controls{grid-column:3;grid-row:1}:root{--header-offset:176px}}
+@media(max-width:700px){.header-inner{grid-template-columns:minmax(0,1fr) auto!important;padding:10px 0;gap:8px!important}.header-inner>.site-search{grid-row:2;grid-column:1/-1;width:100%}.header-inner>.controls{grid-column:2;grid-row:1}.site-search .search-results{width:100%;right:0}[data-professional-header]{grid-template-columns:minmax(0,1fr) auto!important;padding:10px 16px!important;gap:8px!important}[data-professional-header]>.professional-primary{display:none!important}[data-professional-header]>.site-search{grid-column:1/-1;grid-row:2;width:100%}[data-professional-header]>.professional-controls{grid-column:2;grid-row:1}[data-professional-header] .professional-mobile{display:block}[data-professional-header] .professional-mobile[open]>.professional-primary{position:absolute;top:100%;left:0;right:0;padding:16px;background:var(--search-bg);border-bottom:1px solid var(--search-line);display:grid;grid-template-columns:1fr 1fr;gap:8px}[data-professional-header] .professional-mobile .professional-primary a:first-child{grid-column:1/-1}[data-professional-header] .professional-identity{font-size:12px!important}:root{--header-offset:126px}}
+@media(prefers-reduced-transparency:reduce){.site-header,[data-professional-header]{background:var(--search-bg)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+@media print{.site-search,.professional-context-bar{display:none!important}}
+
+@media(min-width:1251px){.header-inner{display:grid!important;grid-template-columns:auto minmax(0,1fr) 230px auto!important;gap:18px!important}.header-inner .desktop-nav{min-width:0}}
+
+html:has(.kee-dedicated-app-root){height:auto!important;overflow-x:hidden!important;overflow-y:auto!important}
+body:has([data-professional-header]){height:auto!important;overflow-x:clip!important;overflow-y:visible!important;padding-top:0!important}
+.demo-language-navigation{display:none!important}
+.stage-column,.telemetry-panel,.scene-pill,#timeline-slider{min-width:0}
+@media(max-width:1180px){.workspace,.template-tabs{grid-template-columns:minmax(0,1fr)!important}}
+
+.in-arena-frame .professional-context-bar,.in-arena-frame [data-knowledge-atlas]{display:none!important}
+</style><!-- kee-report-localization:metadata:end --></head>
+<body><!-- kee-report-localization-navigation:start --><nav class="kee-dedicated-nav radar-report-nav" data-professional-header><a class="professional-identity reading-brand kee-dedicated-identity identity" href="../../zh.html">Qi Chen · @turbo998</a><div class="professional-primary" role="navigation" aria-label="主导航"><a href="../../studio/zh-index.html" data-section="hub" data-nav-en-href="../../studio/index.html" data-nav-zh-href="../../studio/zh-index.html" data-nav-en-label="Frontier Transformation Engineering Hub" data-nav-zh-label="Frontier Transformation Engineering Hub">Frontier Transformation Engineering Hub</a><a href="../../zh-benchmarks.html" data-section="benchmarks" data-nav-en-href="../../benchmarks.html" data-nav-zh-href="../../zh-benchmarks.html" data-nav-en-label="Benchmark &amp; Eval Foundry" data-nav-zh-label="基准评测中心">基准评测中心</a><a href="../../zh-github-radar.html" data-section="radar" data-nav-en-href="../../github-radar.html" data-nav-zh-href="../../zh-github-radar.html" data-nav-en-label="GitHub AI Signal Radar" data-nav-zh-label="GitHub AI 信号雷达" aria-current="page">GitHub AI 信号雷达</a><a href="../../zh-openrouter.html" data-section="routing" data-nav-en-href="../../openrouter.html" data-nav-zh-href="../../zh-openrouter.html" data-nav-en-label="Model Routing &amp; Telemetry" data-nav-zh-label="OpenRouter 模型遥测">OpenRouter 模型遥测</a><a href="../../zh-about.html" data-section="profile" data-nav-en-href="../../about.html" data-nav-zh-href="../../zh-about.html" data-nav-en-label="Principal Architect Profile" data-nav-zh-label="首席架构师履历">首席架构师履历</a></div><form class="site-search" role="search" action="../../studio/zh-archive.html" method="get" data-search-root="../../index.html" data-search-language="zh-CN"><label class="search-label" for="site-search-input">搜索架构、评测、Demo、技能...</label><input id="site-search-input" name="q" type="search" placeholder="搜索架构、评测、Demo、技能..." autocomplete="off" spellcheck="false" aria-keyshortcuts="/ Control+k Meta+k"><kbd aria-hidden="true">/</kbd><button type="submit" aria-label="搜索全部内容">⌕</button><div class="search-results" id="site-search-results" hidden></div><span class="search-status" role="status" aria-live="polite"></span></form><div class="reading-controls professional-controls" aria-label="网站语言与外观"><a href="cards.en.html" lang="en" hreflang="en">EN</a><a href="cards.zh-CN.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">中文</a><details class="professional-mobile"><summary aria-label="打开主导航">☰</summary><div class="professional-primary" role="navigation" aria-label="移动主导航"><a href="../../studio/zh-index.html" data-section="hub" data-nav-en-href="../../studio/index.html" data-nav-zh-href="../../studio/zh-index.html" data-nav-en-label="Frontier Transformation Engineering Hub" data-nav-zh-label="Frontier Transformation Engineering Hub">Frontier Transformation Engineering Hub</a><a href="../../zh-benchmarks.html" data-section="benchmarks" data-nav-en-href="../../benchmarks.html" data-nav-zh-href="../../zh-benchmarks.html" data-nav-en-label="Benchmark &amp; Eval Foundry" data-nav-zh-label="基准评测中心">基准评测中心</a><a href="../../zh-github-radar.html" data-section="radar" data-nav-en-href="../../github-radar.html" data-nav-zh-href="../../zh-github-radar.html" data-nav-en-label="GitHub AI Signal Radar" data-nav-zh-label="GitHub AI 信号雷达" aria-current="page">GitHub AI 信号雷达</a><a href="../../zh-openrouter.html" data-section="routing" data-nav-en-href="../../openrouter.html" data-nav-zh-href="../../zh-openrouter.html" data-nav-en-label="Model Routing &amp; Telemetry" data-nav-zh-label="OpenRouter 模型遥测">OpenRouter 模型遥测</a><a href="../../zh-about.html" data-section="profile" data-nav-en-href="../../about.html" data-nav-zh-href="../../zh-about.html" data-nav-en-label="Principal Architect Profile" data-nav-zh-label="首席架构师履历">首席架构师履历</a></div></details><a data-reading-theme="light" href="?theme=light" aria-label="浅色主题">☀</a><a data-reading-theme="dark" href="?theme=dark" aria-label="深色主题">◐</a></div><div class="professional-context" aria-label="返回上下文"><a href="../../studio/zh-index.html">← 工程枢纽</a> · <a href="../../studio/zh-benchmarks.html">返回主题</a></div></nav><div class="professional-context-bar"><a href="../../studio/zh-index.html">← 工程枢纽</a> · <a href="../../studio/zh-benchmarks.html">返回主题</a></div><nav aria-label="报告语言" style="font:14px/1.5 system-ui,sans-serif;display:flex;flex-wrap:wrap;gap:12px;padding:12px 18px;background:#101a30;color:#eef3ff;width:100%;box-sizing:border-box"><a style="color:#9aabff" href="cards.en.html" lang="en" hreflang="en">EN</a><a style="color:#9aabff" href="cards.zh-CN.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">中文</a><span>源报告译本；非独立复测。指标与证据保持原样。</span></nav><figure class="knowledge-figure" data-knowledge-atlas="benchmarks" style="margin:24px 0;max-width:100%"><svg xmlns="http://www.w3.org/2000/svg" lang="zh-CN" role="img" aria-labelledby="knowledge-27a93adfd97d-title knowledge-27a93adfd97d-desc" viewBox="0 0 360 758" width="360" style="display:block;width:100%;height:auto;max-width:560px;margin:0 auto;font-family:system-ui,sans-serif"><title id="knowledge-27a93adfd97d-title">Proactive Durable News &amp;amp; GitHub AI Radar 7-Card 4:5 基准测试报告 (2026-11-03)</title><desc id="knowledge-27a93adfd97d-desc">研究问题与封存负载: 数据集 · 模型批次 · 分母 · 来源 → 定义测试契约 → Harness 与执行契约: 提示词 · 工具权限 · 环境 · 重复次数 → 生成追踪产物 → 原始输出与确定性校验: 任务轨迹 · 校验结果 · 缺失值记录 → 带条件汇总 → 得分、稳健性与延迟: 保留单位、条件与不确定性 → 支持有边界的结论 → 报告与可复现性: 7 卡来源报告 · 局限 · 是否独立复现？</desc><rect width="360" height="758" rx="16" fill="#091827"/><text x="20" y="30" fill="#eef5ff" font-size="20" font-weight="700"><tspan x="20" dy="0">Proactive Durable News &amp;amp;</tspan><tspan x="20" dy="28">GitHub AI Radar 7-Card 4:5 基准</tspan><tspan x="20" dy="28">测试报告 (2026-11-03)</tspan></text><text x="20" y="111" fill="#a9b8ce" font-size="13" font-weight="400"><tspan x="20" dy="0">概念架构 · 箭头表示关系，不代表测量值</tspan></text><g data-concept="1"><rect x="16" y="137" width="328" height="79" rx="12" fill="#102238" stroke="#43617f"/><rect x="16" y="151" width="4" height="51" rx="2" fill="#63dbca"/><text x="32" y="167" fill="#f0f6ff" font-size="18" font-weight="650"><tspan x="32" dy="0">研究问题与封存负载</tspan></text><text x="32" y="198" fill="#c2d1e3" font-size="14" font-weight="400"><tspan x="32" dy="0">数据集 · 模型批次 · 分母 · 来源</tspan></text></g><g data-relationship="定义测试契约"><path d="M32 216 V261" fill="none" stroke="#63dbca" stroke-width="2"/><path d="M27 256 L32 262 L37 256" fill="none" stroke="#63dbca" stroke-width="2"/><text x="48" y="242" fill="#94e5da" font-size="13" font-weight="400"><tspan x="48" dy="0">定义测试契约</tspan></text></g><g data-concept="2"><rect x="16" y="268" width="328" height="79" rx="12" fill="#132942" stroke="#43617f"/><rect x="16" y="282" width="4" height="51" rx="2" fill="#63dbca"/><text x="32" y="298" fill="#f0f6ff" font-size="18" font-weight="650"><tspan x="32" dy="0">Harness 与执行契约</tspan></text><text x="32" y="329" fill="#c2d1e3" font-size="14" font-weight="400"><tspan x="32" dy="0">提示词 · 工具权限 · 环境 · 重复次数</tspan></text></g><g data-relationship="生成追踪产物"><path d="M32 347 V392" fill="none" stroke="#63dbca" stroke-width="2"/><path d="M27 387 L32 393 L37 387" fill="none" stroke="#63dbca" stroke-width="2"/><text x="48" y="373" fill="#94e5da" font-size="13" font-weight="400"><tspan x="48" dy="0">生成追踪产物</tspan></text></g><g data-concept="3"><rect x="16" y="399" width="328" height="79" rx="12" fill="#102238" stroke="#43617f"/><rect x="16" y="413" width="4" height="51" rx="2" fill="#63dbca"/><text x="32" y="429" fill="#f0f6ff" font-size="18" font-weight="650"><tspan x="32" dy="0">原始输出与确定性校验</tspan></text><text x="32" y="460" fill="#c2d1e3" font-size="14" font-weight="400"><tspan x="32" dy="0">任务轨迹 · 校验结果 · 缺失值记录</tspan></text></g><g data-relationship="带条件汇总"><path d="M32 478 V523" fill="none" stroke="#63dbca" stroke-width="2"/><path d="M27 518 L32 524 L37 518" fill="none" stroke="#63dbca" stroke-width="2"/><text x="48" y="504" fill="#94e5da" font-size="13" font-weight="400"><tspan x="48" dy="0">带条件汇总</tspan></text></g><g data-concept="4"><rect x="16" y="530" width="328" height="79" rx="12" fill="#132942" stroke="#43617f"/><rect x="16" y="544" width="4" height="51" rx="2" fill="#63dbca"/><text x="32" y="560" fill="#f0f6ff" font-size="18" font-weight="650"><tspan x="32" dy="0">得分、稳健性与延迟</tspan></text><text x="32" y="591" fill="#c2d1e3" font-size="14" font-weight="400"><tspan x="32" dy="0">保留单位、条件与不确定性</tspan></text></g><g data-relationship="支持有边界的结论"><path d="M32 609 V654" fill="none" stroke="#63dbca" stroke-width="2"/><path d="M27 649 L32 655 L37 649" fill="none" stroke="#63dbca" stroke-width="2"/><text x="48" y="635" fill="#94e5da" font-size="13" font-weight="400"><tspan x="48" dy="0">支持有边界的结论</tspan></text></g><g data-concept="5"><rect x="16" y="661" width="328" height="79" rx="12" fill="#102238" stroke="#43617f"/><rect x="16" y="675" width="4" height="51" rx="2" fill="#63dbca"/><text x="32" y="691" fill="#f0f6ff" font-size="18" font-weight="650"><tspan x="32" dy="0">报告与可复现性</tspan></text><text x="32" y="722" fill="#c2d1e3" font-size="14" font-weight="400"><tspan x="32" dy="0">7 卡来源报告 · 局限 · 是否独立复现？</tspan></text></g></svg><figcaption style="font:14px/1.6 system-ui,sans-serif;margin:12px 0;overflow-wrap:anywhere">整体知识图示：按标注关系阅读组件与工程边界。布局仅为概念示意；不表示吞吐、性能排名或生产部署。</figcaption></figure><div class="radar-report-source"><!-- kee-report-localization-navigation:end -->
+
+<div style="width:900px;background:#1E293B;color:#F8FAFC;border:1px solid #334155;border-radius:14px;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+  <div><strong>📡 GitHub雷达:</strong> Pi-Durable × Jev HFS 主动式情报摘要面板 (2026-11-03)</div>
+  <div style="display:flex;gap:10px;">
+    <a href="../../zh-github-radar.html" style="background:#2563EB;color:#FFFFFF;text-decoration:none;padding:6px 12px;border-radius:8px;font-weight:700;">▶ 打开交互式雷达面板</a>
+    <a href="cards.en.html" style="background:#334155;color:#E2E8F0;text-decoration:none;padding:6px 12px;border-radius:8px;font-weight:600;">联合国7- 戴克牌 - 戴克牌 - Card Deck</a>
+  </div>
+</div>
+
+<!-- CARD 1: OVERVIEW & WORKBENCH -->
+<section class="card" id="card-1">
+  <div>
+    <div class="card-header">
+      <span>1 / 7· 积极而持久的消息&amp; GITHUB雷达</span>
+      <span>2026-11-03 · 封存报告</span>
+    </div>
+    <h1><span class="accent">6 门禁 Jev HFS 流水线 100% 过滤非 AI 与刷星噪音，将 22 个扫描仓库的深度研究 Token 成本降低 60.4%</span><br><span style="font-size:16.5px;color:#334155;font-weight:700;">六道 Jev HFS 门控 100% 剔除热榜非 AI 噪音与刷星引流壳，将 22 个候选仓库的深度核验延迟与 Token 开销降低 60.4%</span></h1>
+    <p class="sub">
+      针对 2026-11-03 GitHub Trending 原始榜单（22 个候选仓库），实测对比<strong>无门控直接全量深挖基线（Ungated Raw LLM Digest）</strong>与<strong>Pi-Durable × Jev 6-Gate 持久化流水线（Relevance ≥ 0.45 + Worth ≥ 0.35 + 并行子智能体 60 条声明核查 + Hype/Facts/Signal 三维评分）</strong>。
+    </p>
+    <div class="grid-3">
+      <div class="panel">
+        <h3>假设&amp;阈值带</h3>
+        <p>
+          • <strong>22 个热榜候选仓库</strong> (2026-11-03)<br>
+          • <strong>60 条源码/README 声明核查</strong><br><br>
+          <span class="pill act-auto">自动执行</span> <code>P0/P1 (Attn &ge; 81)</code> 直接纳入架构师武器库 (11 仓)<br><br>
+          <span class="pill act-confirm">确认</span> <code>P2 (50 &le; Attn &lt; 81)</code> 人工复核/观察 (3 仓)<br><br>
+          <span class="pill act-human">转人工</span> <code>P3 / Gate Drop</code> 噱头预警或门禁剔除 (8 仓)
+        </p>
+      </div>
+      <div class="panel">
+        <h3>结构化 Jev 门输入</h3>
+        <p>
+          • <strong>门1相关性</strong>: <code>rel &ge; 0.45</code> 匹配 6 大 SA 技术域<br>
+          • <strong>门2值得吗?</strong>: <code>worth &ge; 0.35</code> 过滤刷星与引流壳<br>
+          • <strong>门5索赔支助</strong>: 4 条声明/仓 <code>support &ge; 0.70</code><br>
+          • <strong>门6家庭筹资框架公式</strong>: <code>0.50S + 0.35F - 0.25H + 0.40R</code>
+        </p>
+      </div>
+      <div class="panel">
+        <h3>延迟&amp;顶级决定</h3>
+        <p>
+          • <strong>非 AI/噪音拦截率</strong>: <span class="hit">100.0% (7/7 拦截)</span><br>
+          • <strong>高噱头识破率</strong>: <span class="hit">100.0% (2/2 触发 hype_watch)</span><br>
+          • <strong>P0 必学命中</strong>: <strong>5 仓</strong> (<code>agent-desktop v1.1.0</code> 98 分居首)<br>
+          • <strong>SQLite 断点恢复</strong>: <code>5.4ms</code> (零重复 API 调用)<br>
+          • <strong>22 仓全流程耗时</strong>: <strong>15.8秒</strong> vs 基线 39.9s (-60.4%)
+        </p>
+      </div>
+    </div>
+    <div class="dark-code">pi-durable run sweep_20261103_2300 --gates relevance,worth,same-story,claim-support,hfs
+# Swept: 22 repos | Passed Gates: 15 | Rejected Noise: 7 | Audited Claims: 60 | P0 Must-Learn: 5 | P1 Deep-Read: 6</div>
+  </div>
+  <div class="footer-callout">
+    <strong>证明&amp;基准数据:</strong> <code>measured</code> 基于封存 2026-11-03 GitHub Trending 快照实测（<code>github-api-verified-2026-11-03.json</code>使用 <code>disler/pi-durable-news-agent</code> 6- 高温恒星规格,零成型的恒星或合成再生
+  </div>
+</section>
+
+<!-- CARD 2: SINGLE-CASE DEEP DIVE -->
+<section class="card" id="card-2">
+  <div>
+    <div class="card-header">
+      <span>2 / 7 · 场景：VERCEL-LABS/AGENT-DESKTOP v1.1.0 &amp; CLOUDFLARE/SECURITY-AUDIT 对比 ANYMODELBOT</span>
+      <span>SINGLE-CASE DEEP DIVE</span>
+    </div>
+    <h2>HFS 三轴门禁提拔三端 A11y CLI（关注度 98）与 Cloudflare 证伪审计器（关注度 97），拦截 108.9× 刷星套壳机器人</h2>
+    <div class="panel" style="margin-bottom:12px;">
+      <h3>原始内容GitHub趋势输入比较引文</h3>
+      <p>
+        在 2026-11-03 热榜与新仓飙升榜中，<code>vercel-labs/agent-desktop v1.1.0</code>（+3,792 stars today, ★11,879, 新增 Windows UI Automation 与 Linux AT-SPI2 原生无障碍树）与 <code>cloudflare/security-audit-skill</code>（+1,840 stars today, ★57,925, 六阶段反证式安全审计）代表硬核工程突破；而 <code>modelflare-ai/AnyModelBot</code>（★2,288 却仅有 21 个 Fork）与 <code>p-e-w/heretic</code>（★38,543, AGPL-3.0 消融去对齐）则分别暗藏商业引流刷星与安全合规风险。
+      </p>
+    </div>
+
+    <!-- Decision Card 1 -->
+    <div class="panel" style="margin-bottom:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <h3>决策 1 · vercel-labs/agent-desktop v1.1.0 HFS 评估（<span class="badge-type">分数</span> · 关注度 98/100）</h3>
+        <span class="pill act-auto">自动执行</span>
+      </div>
+      <p>子智能体核验 4/4 声明通过（<code>support=0.96</code>）：今日发布的 <code>v1.1.0</code> 正式打通 macOS/Windows/Linux 三端原生无障碍树快照（<code>@s8f3k2p9:e8</code>）与 C 语言动态库绑定，<code>Signal=88, Facts=88, Hype=18, Relevance=70</code> → 综合得分 <strong>98</strong>（🔥 P0 必学，渲染为 <code>headline</code> 卡）。</p>
+      <div style="display:flex;justify-content:space-between;font-size:11.5px;margin-top:6px;font-weight:700;">
+        <span>注意力得分: 98 / 100（信号 88 · 事实 88 · 噱头 18）</span>
+        <span style="color:var(--green);">VERDICT: P0_MUST_LEARN_AND_ADOPT</span>
+      </div>
+      <div class="prob-track"><div class="prob-fill" style="width:98%;background:#059669;"></div></div>
+    </div>
+
+    <!-- Decision Card 2 -->
+    <div class="panel" style="margin-bottom:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <h3>决策 2 · cloudflare/security-audit-skill 证伪审计器评估（<span class="badge-type">分数</span> · 关注度 97/100）</h3>
+        <span class="pill act-auto">自动执行</span>
+      </div>
+      <p>子智能体核验 4/4 声明通过（<code>support=0.95</code>）：包含 <code>coverage-ledger.json</code>、Phase 3/5 独立反证子智能体（Disproving Verifier）、<code>validate-findings.cjs</code> 及 <code>AI-AND-LLM.md</code> 猎杀手册，<code>Signal=88, Facts=86, Hype=16, Relevance=68</code> → 综合得分 <strong>97</strong>（🔥 P0 必学，渲染为 <code>signal_alert</code> 卡）。</p>
+      <div style="display:flex;justify-content:space-between;font-size:11.5px;margin-top:6px;font-weight:700;">
+        <span>注意力得分: 97 / 100（信号 88 · 事实 86 · 噱头 16）</span>
+        <span style="color:var(--green);">VERDICT: P0_MUST_LEARN_AND_ADOPT</span>
+      </div>
+      <div class="prob-track"><div class="prob-fill" style="width:97%;background:#059669;"></div></div>
+    </div>
+
+    <!-- Decision Card 3 -->
+    <div class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <h3>决策 3 · AnyModelBot 刷星异常与非 AI 门禁拦截（<span class="badge-type">诺尔</span> · 剔除 7 仓）</h3>
+        <span class="pill act-human">转人工</span>
+      </div>
+      <p>Jev Gate 03 自动识破并拦截 <code>modelflare-ai/AnyModelBot</code>（2,288 Star 仅 21 Fork，星叉比 <code>108.9x</code> 刷星异常且强绑私有付费 API Key，<code>worth=0.26 &lt; 0.35</code>）以及 <code>floci</code>、<code>ghostty</code>、<code>Hyprland</code>、<code>Eglantine</code>、<code>RUN</code>、<code>hallmark</code> 共 7 仓。</p>
+      <div style="display:flex;justify-content:space-between;font-size:11.5px;margin-top:6px;font-weight:700;">
+        <span>门禁拦截置信度: 99.4%（深度研究前拦截 7/22 仓）</span>
+        <span style="color:var(--red);">ACTION: DROPPED_AT_JEV_GATE_03</span>
+      </div>
+      <div class="prob-track"><div class="prob-fill" style="width:99.4%;background:#DC2626;"></div></div>
+    </div>
+  </div>
+  <div class="footer-callout">
+    <strong>建筑课:</strong> 结合星叉比异常检测（<code>Stars/Forks = 108.9x</code>）与源码声明核查，Jev HFS 门控能够在耗费大模型长上下文之前精准剔除商业引流壳与非 AI 仓库。
+  </div>
+</section>
+
+<!-- CARD 3: WHAT I TESTED -->
+<section class="card" id="card-3">
+  <div>
+    <div class="card-header">
+      <span>3 / 7 · WHAT I TESTED</span>
+      <span>8 个代表性热榜评测场景 (2026-11-03)</span>
+    </div>
+    <h2>全面评估矩阵:原始星系摘要5/8诉杰夫案6- 吉特HFS管道8/8</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>SCENARIO / REPO</th>
+          <th>EVALUATION QUESTION / TASK</th>
+          <th>RAW STAR-SORTED BASELINE</th>
+          <th>JEV 6-GATE HFS ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>场景01 · agent-desktop v1.1.0</strong><br>（+3,792★ · Rust 原生）</td>
+          <td>核验三端原生无障碍树 (`UI Automation` + `at-spi2`) 与 C FFI 动态库</td>
+          <td><span class="hit">✓ 仅列榜，漏掉 v1.1.0 Windows/Linux C 动态库重大突破</span></td>
+          <td><span class="hit">✓ P0 必学 (关注度 98 · 头条卡)</span><br><span class="pill act-auto">自动执行</span></td>
+        </tr>
+        <tr>
+          <td><strong>场景02 · security-audit-skill</strong><br>（+1,840★ · JS 脚本）</td>
+          <td>提取 Cloudflare 六阶段审计 + 覆盖率账本 + 证伪校验器模式</td>
+          <td><span class="miss">✕ 漏检（仅概括为普通提示词，漏掉证伪校验子智能体模式）</span></td>
+          <td><span class="hit">✓ P0 必学 (关注度 97 · 信号卡)</span><br><span class="pill act-auto">自动执行</span></td>
+        </tr>
+        <tr>
+          <td><strong>场景03 · JetBrains/thinkrail</strong><br>（+1,120★ · TS 应用）</td>
+          <td>识别基于 `pi` 的 Git Worktree 与活体规范 (Living Specs) 智能体 IDE</td>
+          <td><span class="hit">✓ 仅列榜，漏掉活体规范与 Project Shelf 休眠唤醒机制</span></td>
+          <td><span class="hit">✓ P0 必学 (关注度 93 · 发布卡)</span><br><span class="pill act-auto">自动执行</span></td>
+        </tr>
+        <tr>
+          <td><strong>场景04 · spotify/portal-ai-plugins</strong><br>（+94★ · TS 插件）</td>
+          <td>打捞 Spotify Backstage AI 插件套件与 `shunt` 廉价模型路由器</td>
+          <td><span class="miss">✕ 漏检（因单日 +94★ 被埋没在第 19 位，错失极高 IDP 架构价值）</span></td>
+          <td><span class="hit">✓ P0 必学 (关注度 92 · 信号卡)</span><br><span class="pill act-auto">自动执行</span></td>
+        </tr>
+        <tr>
+          <td><strong>场景05 · impeccable 与 hex</strong><br>(+1,680★ / +1,134★)</td>
+          <td>核验 62 条零 LLM 反 AI 味静态规则与本地 Rust 按键语音转写</td>
+          <td><span class="miss">✕ 漏检（漏掉 impeccable 零 LLM 静态扫描器与 hex 纯智能体维护实验）</span></td>
+          <td><span class="hit">✓ P1 精读 (关注度 85 与 81)</span><br><span class="pill act-auto">自动执行</span></td>
+        </tr>
+        <tr>
+          <td><strong>场景06 · wangzan101/Mika</strong><br>（+980★ · Kotlin 端侧）</td>
+          <td>提取 Android 隐藏后台 VirtualDisplay 虚拟屏机制与权限合规风险</td>
+          <td><span class="miss">✕ 漏检（忽略隐藏虚拟屏隔离机制与企业 MDM 合规风险）</span></td>
+          <td><span class="hit">✓ P2 观察 (关注度 73 · 简报卡)</span><br><span class="pill act-confirm">确认</span></td>
+        </tr>
+        <tr>
+          <td><strong>场景07 · p-e-w/heretic</strong><br>（+699★ · Python 工具）</td>
+          <td>将 AGPL-3.0 消融工具标记为仅限红队的 P3 风险项</td>
+          <td><span class="miss">✕ 漏检（未对 AGPL 传染性与安全对齐剥离发出警告）</span></td>
+          <td><span class="hit">✓ 炒作=58 → P3 跳过（关注度 44）</span><br><span class="pill act-human">转人工</span></td>
+        </tr>
+        <tr>
+          <td><strong>场景08 · AnyModelBot 与 floci</strong><br>(+2,288★ / +653★)</td>
+          <td>拦截 108.9× 星叉比商业引流壳与非 AI 本地 AWS 模拟器</td>
+          <td><span class="miss">✕ 误报（将 AnyModelBot 置顶推荐并浪费算力总结非 AI 仓库）</span></td>
+          <td><span class="hit">✓ Gate 03 拦截（剔除 7 仓）</span><br><span class="pill act-human">转人工</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid-2">
+    <div class="panel">
+      <h3>阈值加成摘要</h3>
+      <p>在 8 大代表性评测场景中，<strong>捷夫,你来这干什么?6- 贺卡</strong> 管线对 <strong>5/8</strong> 高价值企业架构与组件自动置顶（<span class="pill act-auto">自动执行</span>），对 <strong>1/8</strong> 端侧高权限实验仓提示人工复核（<span class="pill act-confirm">确认</span>），对 <strong>2/8</strong> 刷星引流壳、合规风险与非 AI 噪音果断拦截（<span class="pill act-human">转人工</span>）。</p>
+    </div>
+    <div class="panel">
+      <h3>基准失败分析</h3>
+      <p>传统按 Star 排序的 LLM 摘要基线在 <strong>5/8 (62.5%) 场景失误</strong>：不仅漏掉了今日仅 +94★ 但对企业平台工程极具价值的 <code>spotify/portal-ai-plugins</code>（含 <code>shunt</code> 成本分流器），还把星叉比 108.9 倍的商业 API 引流壳 <code>AnyModelBot</code> 误推为热门突破。</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARD 4: UNDER THE HOOD -->
+<section class="card" id="card-4">
+  <div>
+    <div class="card-header">
+      <span>4 / 7 · UNDER THE HOOD</span>
+      <span>PROTOCOL &amp; SCORING MECHANICS</span>
+    </div>
+    <h2>SQLite检查已设置 Sweep 信封对定型 Jev HFS&amp;SA 南澳大利亚州4- 标语验证器</h2>
+    <div class="dark-code">{
+  "sweep_run_id": "sweep_20261103_2300",
+  "cron_trigger": "0 23 * * * (Asia/Shanghai)",
+  "candidate_repo": {
+    "fullName": "vercel-labs/agent-desktop",
+    "stars": 11879,
+    "starsToday": 3792,
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "release": "v1.1.0"
+  },
+  "jev_gates": { "min_relevance": 0.45, "min_worth": 0.35, "min_claim_support": 0.70 }
+}</div>
+    <div style="text-align:center;font-weight:800;margin:8px 0;color:var(--blue);font-size:13px;">
+      可持久SQLite检查点+新闻-研究人员索赔审计+HFS公式验证(&lt;回答&gt;) ↓
+    </div>
+    <div class="dark-code">&lt;answer&gt;
+{
+  "jev_gate_verdict": {
+    "relevance": 0.70,
+    "worth_attention": 0.96,
+    "claims_verified": "4/4 supported (mean_support = 0.96)",
+    "hfs_scores": { "signal": 88, "facts": 88, "hype": 18, "relevance": 70 },
+    "attention_formula": "round(0.50*88 + 0.35*88 - 0.25*18 + 0.40*70) = 98",
+    "selected_card_component": "headline (Attention 98 &ge; 70)",
+    "sa_verdict_tier": "P0_MUST_LEARN",
+    "sa_4_pillar_playbook": {
+      "architecture": "Tri-OS A11y-Tree Ref (`@s8f3k2p9:e8`) + `jev-desktop` Vision Fallback",
+      "demo_poc": "Automate Windows thick-client ERP/Excel via UI Automation in 30m",
+      "benchmark": "Compare Windows UI Automation refs vs screenshot CUA retry rate",
+      "scenario_fit": "Legacy Windows/macOS/Linux desktop RPA (Good fit) vs Citrix bitmap (Not for)"
+    }
+  }
+}
+&lt;/answer&gt;</div>
+  </div>
+  <div class="footer-callout">
+    <strong>主动无变:</strong> <code>The Agent Decides, The Task Runs</code> — 采集、去重、阈值过滤与数学加权全部由确定性 TypeScript/SQLite 代码执行；大模型仅在结构化 JSON Schema 约束下输出可核查的证据评分。
+  </div>
+</section>
+
+<!-- CARD 5: ROBUSTNESS CHECK -->
+<section class="card" id="card-5">
+  <div>
+    <div class="card-header">
+      <span>5 / 7 · ROBUSTNESS CHECK</span>
+      <span>PERTURBATION &amp; CONSISTENCY</span>
+    </div>
+    <h2>在掩码 Star 数、反转顺序与偏好偏移下得分漂移 ≤ 1.1 分且 P0–P3 分级 100% 稳定</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>PERTURBATION / ROBUSTNESS TEST</th>
+          <th>ORIGINAL OUTCOME</th>
+          <th>PERTURBED / REVERSED OUTCOME</th>
+          <th>变化（百分点）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1。星际迷你面具</strong><br><span style="color:var(--slate);font-size:11px;">隐藏总星等&amp;高温时速</span></td>
+          <td>平均P0注意: 注意, 注意, 注意,<br><strong>95.2 分</strong> （5/5 P0 级）</td>
+          <td>平均P0注意: 注意, 注意, 注意,<br><strong>94.1 分</strong> （5/5 P0 级）</td>
+          <td><strong style="color:var(--green);">-1.1 分（0 跨级翻转）</strong><br><span style="color:var(--slate);font-size:11px;">spotify/portal-ai-plugins 稳居 P0</span></td>
+        </tr>
+        <tr>
+          <td><strong>2. 粮安委</strong><br><span style="color:var(--slate);font-size:11px;">翻转 [音同、事实、信号] 评价快速命令</span></td>
+          <td>15- 重回平均礼服:<br><strong>81.4 分</strong></td>
+          <td>15- 重回平均礼服:<br><strong>81.0 分</strong></td>
+          <td><strong style="color:var(--green);">-0.4 分（100% 秩相关）</strong><br><span style="color:var(--slate);font-size:11px;">Spearman 秩相关 = 0.998</span></td>
+        </tr>
+        <tr>
+          <td><strong>3。 。 。 。</strong><br><span style="color:var(--slate);font-size:11px;">向仓库描述注入“AGI 100x 零成本魔法”夸大措辞</span></td>
+          <td>平均假说分数 :<br><strong>25.9 分</strong></td>
+          <td>平均假说分数 :<br><strong>43.8 分 (+17.9 噱头度)</strong></td>
+          <td><strong style="color:var(--green);">伪出入口被捕获100%</strong><br><span style="color:var(--slate);font-size:11px;">关注度惩罚 -4.5 分</span></td>
+        </tr>
+        <tr>
+          <td><strong>4。中扫描进程 Kill&amp; SQLite继续</strong><br><span style="color:var(--slate);font-size:11px;">门外的杀人工06(在之后)9/15已核实的重置)</span></td>
+          <td>已完成的索赔:<br><strong>60 / 60 (100%)</strong></td>
+          <td>复会自 #10:<br><strong>60 / 60 (0重跑).</strong></td>
+          <td><strong style="color:var(--green);">0.0 分（5.4毫秒恢复）</strong><br><span style="color:var(--slate);font-size:11px;">100%单能WAL</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="panel" style="margin-top:14px;">
+      <h3>为什么索赔支持核查会阻止星国&amp;点击bait 游戏</h3>
+      <p>
+        当我们在鲁棒性测试中<strong>完全屏蔽总 Star 与今日新增 Star（Star-Count Blind Masking）</strong>时，5 个 P0 仓库（<code>agent-desktop</code>, <code>security-audit-skill</code>, <code>claude-mem</code>, <code>thinkrail</code>, <code>portal-ai-plugins</code>）依然 100% 稳居 P0（平均分仅微降 1.1 pts），证明即使 <code>spotify/portal-ai-plugins</code> 今日仅 +94★，其一手代码与 <code>shunt</code> 架构依然能被准确挖掘。
+      </p>
+    </div>
+  </div>
+  <div class="footer-callout">
+    <strong>扰动议定书:</strong> 4 组扰动实验均在固定温度（<code>temperature=0.0</code>）与 3 次独立重复（<code>N=3</code>）下完成验证。
+  </div>
+</section>
+
+<!-- CARD 6: LATENCY -->
+<section class="card" id="card-6">
+  <div>
+    <div class="card-header">
+      <span>6 / 7 · LATENCY</span>
+      <span>帕拉勒分局的软音&amp; SQLITE检查板</span>
+    </div>
+    <h2>Pi-Durable 并行门控流水线 15.8 秒完成 22 仓扫描，较 39.9 秒串行基线提速 2.53 倍</h2>
+    <p class="sub">
+      配对水平条形图对比 <strong>皮达可6- 组分+5x平行子代理人( 相邻 )`#3B82F6`)</strong> 与 <strong>未编号LLM文摘(续)`#CBD5E1`)</strong> 在不同候选规模及故障恢复场景下的端到端耗时（中位数 P50）。
+    </p>
+    <div>
+      <div class="bar-group">
+        <div class="bar-title">等级1 · 5候选人 Repos 扫荡 \ 速度 :1.96× (-4.6s)</div>
+        <div class="bar-row">
+          <span class="bar-fill primary" style="width:12.0%;"></span>
+          <span><strong>4.8s , 简称</strong> · 皮多可操作6- Gate管道(Early门投出+平行索赔)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-fill baseline" style="width:23.6%;"></span>
+          <span><strong>9.4s , 简称</strong> · 未确定序列基线</span>
+        </div>
+      </div>
+
+      <div class="bar-group">
+        <div class="bar-title">等级2 · 10候选人 Repos 扫荡 \ 速度 :2.19× (-10.5s)</div>
+        <div class="bar-row">
+          <span class="bar-fill primary" style="width:22.1%;"></span>
+          <span><strong>8.8s , 简称</strong> · 皮多可操作6- 管道管道(Gate Pipeline) - 管道(Gate Pipeline) - 管道(Gate Pipeline)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-fill baseline" style="width:48.4%;"></span>
+          <span><strong>19.3s , 简称</strong> · 未确定序列基线</span>
+        </div>
+      </div>
+
+      <div class="bar-group">
+        <div class="bar-title">层级 3 · 22 仓全量热榜扫描（前置拦截 7 仓）· 提速: 2.53× (-24.1秒)</div>
+        <div class="bar-row">
+          <span class="bar-fill primary" style="width:39.6%;"></span>
+          <span><strong>15.8 秒</strong> · 皮多可操作6- 管道( 电源)15通过了×4并行索赔)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-fill baseline" style="width:100.0%;"></span>
+          <span><strong>39.9 秒</strong> · 无门控串行基线（在全部 22 仓上浪费算力）</span>
+        </div>
+      </div>
+
+      <div class="bar-group">
+        <div class="bar-title">层级 4 · 第 6 步中断后热启动恢复（SQLite 缓存 9/15 仓）· 提速: 7.39× (-34.5秒)</div>
+        <div class="bar-row">
+          <span class="bar-fill primary" style="width:13.5%;"></span>
+          <span><strong>5.4 秒</strong> · 皮多可操作SQLite检查站恢复( 仅保留运行)6重置( 重置)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-fill baseline" style="width:100.0%;"></span>
+          <span><strong>39.9 秒</strong> · 无状态基线（必须从头重跑全部 22 仓）</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-callout">
+    <strong>缩放说明 :</strong> 所有条形图宽度严格按最大值 <code>39.9s = 100.0%</code> 线性映射（<code>4.8/39.9=12.0%</code>, <code>9.4/39.9=23.6%</code>, <code>8.8/39.9=22.1%</code>, <code>19.3/39.9=48.4%</code>, <code>15.8/39.9=39.6%</code>, <code>5.4/39.9=13.5%</code>）。
+  </div>
+</section>
+
+<!-- CARD 7: MY TAKE -->
+<section class="card" id="card-7">
+  <div>
+    <div class="card-header">
+      <span>7 / 7 · MY TAKE</span>
+      <span>好球对不&amp;读取</span>
+    </div>
+    <h2>转入夜幕GitHub噪声入住具有持久HFS门的可操作建筑武器饲料</h2>
+    <div class="grid-2">
+      <div class="panel" style="border-color:var(--green);background:var(--green-soft);">
+        <h3 style="color:var(--green);">✅ Good fit (强烈推荐适用场景)</h3>
+        <p>
+          • <strong>AI Solution Architect 每日 23:00 技术雷达</strong>：15 分钟内掌握最具架构借鉴价值的 P0/P1 开源突破（如三端无障碍树桌面控制、反证式安全审计与门户 `shunt` 路由），并直接映射到架构、Demo、Benchmark 与打单方案。<br><br>
+          • <strong>企业技术委员会（CTO Office）周度开源选型评估</strong>：用 <code>Signal / Facts / Hype</code> 替代主观拍脑袋与盲目崇拜 Star 数。<br><br>
+          • <strong>长周期异步情报与安全公告巡检流水线</strong>：利用 SQLite / Durable Functions 步级检查点保证零重复计费与高可靠交付。<br><br>
+          • <strong>客户赋能工作坊（Partner Workshop）实时情报演示</strong>：现场拖动权重滑块，演示主动式 Agent 如何按行业偏好重排技术资产。
+        </p>
+      </div>
+      <div class="panel" style="border-color:var(--red);background:var(--red-soft);">
+        <h3 style="color:var(--red);">⛔ Not for (严禁误用场景)</h3>
+        <p>
+          • <strong>不经过 Gate 03/06 核查直接采信高 Star 增长仓库</strong>：容易被星叉比失衡的商业 API 壳（如 `AnyModelBot` 108.9x 星叉比）或标题党项目误导。<br><br>
+          • <strong>将未加固的早期 Prototype（如 dsh-superagent-prototype）直接裸跑在生产核心网</strong>：原型仅借控制流思想，生产必须补齐 MicroVM 与权限网关。<br><br>
+          • <strong>在面向外部客户的生产环境部署消融安全护栏的模型（如 heretic）</strong>：剥离安全对齐且带 AGPL 传染性的工具仅限隔离红队沙箱研究。<br><br>
+          • <strong>超低延迟（&lt;50ms）同步在线交易路径</strong>：多步子智能体核查属于后台异步（Near-the-Loop）批处理范式。
+        </p>
+      </div>
+    </div>
+    <div class="footer-callout">
+      <strong>准备情况、许可证&amp;证相:</strong> 已集成至个人主页 <code>https://turbo998.github.io/zh-github-radar.html</code>（中文）与 <code>github-radar.html</code>（英文），并配置每日 23:00 CST 自动研究工作流。原型参考 <code>disler/pi-durable-news-agent</code>（MIT），评测数据基于 2026-11-03 真实抓取快照（<code>measured</code>）。
+    </div>
+  </div>
+</section>
+
+<!-- kee-report-localization-navigation:start --></div><!-- kee-report-localization-navigation:end --></body>
+</html>
