@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#091326" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="940" fill="url(#bgGrad)" rx="18" />
+  <rect x="16" y="16" width="1408" height="908" fill="none" stroke="#1E293B" stroke-width="2" rx="14" />
+
+  <!-- Header Banner -->
+  <rect x="36" y="32" width="1368" height="92" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5" />
+  <rect x="36" y="32" width="8" height="92" rx="4" fill="url(#accentGrad)" />
+  <text x="64" y="64" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38BDF8" letter-spacing="1.5">PROACTIVE AGENT = DURABLE AGENT + CRON (23:00 CST) + SANDBOX · PI-DURABLE × JEV HFS</text>
+  <text x="64" y="96" font-family="Segoe UI, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#F8FAFC">AI Solution Architect 主动式情报摘要面板 &amp; GitHub AI 最热榜单雷达 (2026-11-05)</text>
+
+  <!-- Right Header KPI Badges -->
+  <rect x="980" y="48" width="128" height="60" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+  <text x="1044" y="73" font-family="Consolas, monospace" font-size="18" font-weight="800" fill="#38BDF8" text-anchor="middle">24 → 15</text>
+  <text x="1044" y="94" font-family="Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Jev 门控入围仓库</text>
+
+  <rect x="1120" y="48" width="128" height="60" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1" />
+  <text x="1184" y="73" font-family="Consolas, monospace" font-size="18" font-weight="800" fill="#10B981" text-anchor="middle">6 P0 · 6 P1</text>
+  <text x="1184" y="94" font-family="Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">架构师必学与精读</text>
+
+  <rect x="1260" y="48" width="128" height="60" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1" />
+  <text x="1324" y="73" font-family="Consolas, monospace" font-size="18" font-weight="800" fill="#F59E0B" text-anchor="middle">60 Claims</text>
+  <text x="1324" y="94" font-family="Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">一手源码核验 (0.91)</text>
+
+  <!-- STAGE 1: 6-Gate Pipeline Bar -->
+  <text x="36" y="154" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#94A3B8">01 · PI-DURABLE SQLITE CHECKPOINTED SWEEP &amp; 6-GATE JEV FILTERING PIPELINE (SWEEP_20261105_2300)</text>
+
+  <!-- Gate Boxes -->
+  <g transform="translate(36, 166)">
+    <rect x="0" y="0" width="162" height="72" rx="8" fill="#1E293B" stroke="#334155" />
+    <text x="12" y="22" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#38BDF8">STEP 1 · CRON TICK</text>
+    <text x="12" y="42" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">23:08 CST 唤醒</text>
+    <text x="12" y="60" font-family="Consolas, monospace" font-size="10.5" fill="#94A3B8">SQLite WAL 5.1ms 恢复</text>
+
+    <rect x="172" y="0" width="162" height="72" rx="8" fill="#1E293B" stroke="#334155" />
+    <text x="184" y="22" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#38BDF8">STEP 2 · GATHER</text>
+    <text x="184" y="42" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">24 个原始热榜仓</text>
+    <text x="184" y="60" font-family="Consolas, monospace" font-size="10.5" fill="#94A3B8">Daily + Weekly + API</text>
+
+    <rect x="344" y="0" width="162" height="72" rx="8" fill="#1E293B" stroke="#EF4444" />
+    <text x="356" y="22" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#EF4444">STEP 3 · JEV GATE</text>
+    <text x="356" y="42" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">拦截 9 个噪音/黑产</text>
+    <text x="356" y="60" font-family="Consolas, monospace" font-size="10.5" fill="#FCA5A5">rel≥0.45 · worth≥0.35</text>
+
+    <rect x="516" y="0" width="162" height="72" rx="8" fill="#1E293B" stroke="#334155" />
+    <text x="528" y="22" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#38BDF8">STEP 4 · DEDUPE</text>
+    <text x="528" y="42" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">同源故事聚类</text>
+    <text x="528" y="60" font-family="Consolas, monospace" font-size="10.5" fill="#94A3B8">4 组横向技术簇对比</text>
+
+    <rect x="688" y="0" width="162" height="72" rx="8" fill="#1E293B" stroke="#334155" />
+    <text x="700" y="22" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#38BDF8">STEP 5 · RANK</text>
+    <text x="700" y="42" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">六大主题权重排序</text>
+    <text x="700" y="60" font-family="Consolas, monospace" font-size="10.5" fill="#94A3B8">Freshness 24h = 1.0</text>
+
+    <rect x="860" y="0" width="162" height="72" rx="8" fill="#1E293B" stroke="#10B981" />
+    <text x="872" y="22" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#10B981">STEP 6 · SUBAGENTS</text>
+    <text x="872" y="42" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">60 条源码声明核查</text>
+    <text x="872" y="60" font-family="Consolas, monospace" font-size="10.5" fill="#6EE7B7">Mean Support = 0.91</text>
+
+    <rect x="1032" y="0" width="162" height="72" rx="8" fill="#1E293B" stroke="#8B5CF6" />
+    <text x="1044" y="22" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#C4B5FD">STEP 7 · HFS SCORE</text>
+    <text x="1044" y="42" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Hype/Facts/Signal</text>
+    <text x="1044" y="60" font-family="Consolas, monospace" font-size="10.5" fill="#C4B5FD">Attention 51–99 分</text>
+
+    <rect x="1204" y="0" width="164" height="72" rx="8" fill="#1E293B" stroke="#38BDF8" />
+    <text x="1216" y="22" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#38BDF8">STEP 8 · UI CARDS</text>
+    <text x="1216" y="42" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">8 类生成式卡片</text>
+    <text x="1216" y="60" font-family="Consolas, monospace" font-size="10.5" fill="#94A3B8">SA 四维落地指南</text>
+  </g>
+
+  <!-- STAGE 2: Left Panel (Top 15 HFS Leaderboard) + Right Panel (SA 4-Pillar & P0-P3 Quadrant) -->
+  <text x="36" y="270" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#94A3B8">02 · TOP 15 TRENDING AI REPOSITORIES — HFS TRI-AXIAL SCORES &amp; SA VERDICT MATRIX (2026-11-05)</text>
+  <text x="900" y="270" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#94A3B8">03 · AI SOLUTION ARCHITECT 4-PILLAR ACTION PLAYBOOK</text>
+
+  <!-- Left Table Card -->
+  <rect x="36" y="282" width="840" height="618" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5" />
+  <rect x="36" y="282" width="840" height="34" rx="12" fill="#1E293B" />
+  <text x="52" y="304" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#94A3B8">#  REPOSITORY (LANGUAGE)                TODAY      SIGNAL  FACTS  HYPE  ATTN  CARD TYPE      SA TIER</text>
+
+  <!-- 15 Rows -->
+  <g font-family="Consolas, monospace" font-size="11.5">
+    <!-- Row 1 -->
+    <text x="52" y="338" fill="#F8FAFC" font-weight="700">01 NVIDIA/auto-ontology (Python)</text>
+    <text x="320" y="338" fill="#10B981" font-weight="700">+2,707★</text>
+    <rect x="390" y="327" width="54" height="12" rx="3" fill="#10B981" /><text x="447" y="338" fill="#10B981">90</text>
+    <rect x="475" y="327" width="53" height="12" rx="3" fill="#3B82F6" /><text x="530" y="338" fill="#3B82F6">89</text>
+    <rect x="558" y="327" width="10" height="12" rx="3" fill="#F59E0B" /><text x="578" y="338" fill="#F59E0B">16</text>
+    <text x="615" y="338" fill="#38BDF8" font-weight="800">99</text>
+    <text x="655" y="338" fill="#E2E8F0">headline</text>
+    <text x="755" y="338" fill="#EF4444" font-weight="700">🔥 P0 必学</text>
+
+    <!-- Row 2 -->
+    <text x="52" y="375" fill="#F8FAFC" font-weight="700">02 vercel-labs/agent-desktop (Rust)</text>
+    <text x="320" y="375" fill="#10B981" font-weight="700">+2,173★</text>
+    <rect x="390" y="364" width="53" height="12" rx="3" fill="#10B981" /><text x="447" y="375" fill="#10B981">88</text>
+    <rect x="475" y="364" width="55" height="12" rx="3" fill="#3B82F6" /><text x="532" y="375" fill="#3B82F6">91</text>
+    <rect x="558" y="364" width="9" height="12" rx="3" fill="#F59E0B" /><text x="578" y="375" fill="#F59E0B">15</text>
+    <text x="615" y="375" fill="#38BDF8" font-weight="800">98</text>
+    <text x="655" y="375" fill="#E2E8F0">headline</text>
+    <text x="755" y="375" fill="#EF4444" font-weight="700">🔥 P0 必学</text>
+
+    <!-- Row 3 -->
+    <text x="52" y="412" fill="#F8FAFC" font-weight="700">03 vercel-labs/agent-browser (Rust)</text>
+    <text x="320" y="412" fill="#10B981" font-weight="700">+181★</text>
+    <rect x="390" y="401" width="52" height="12" rx="3" fill="#10B981" /><text x="447" y="412" fill="#10B981">87</text>
+    <rect x="475" y="401" width="54" height="12" rx="3" fill="#3B82F6" /><text x="531" y="412" fill="#3B82F6">90</text>
+    <rect x="558" y="401" width="8" height="12" rx="3" fill="#F59E0B" /><text x="578" y="412" fill="#F59E0B">14</text>
+    <text x="615" y="412" fill="#38BDF8" font-weight="800">97</text>
+    <text x="655" y="412" fill="#E2E8F0">signal_alert</text>
+    <text x="755" y="412" fill="#EF4444" font-weight="700">🔥 P0 必学</text>
+
+    <!-- Row 4 -->
+    <text x="52" y="449" fill="#F8FAFC" font-weight="700">04 microsoft/VibeVoice (Python)</text>
+    <text x="320" y="449" fill="#10B981" font-weight="700">+214★</text>
+    <rect x="390" y="438" width="52" height="12" rx="3" fill="#10B981" /><text x="447" y="449" fill="#10B981">86</text>
+    <rect x="475" y="438" width="54" height="12" rx="3" fill="#3B82F6" /><text x="531" y="449" fill="#3B82F6">90</text>
+    <rect x="558" y="438" width="10" height="12" rx="3" fill="#F59E0B" /><text x="578" y="449" fill="#F59E0B">16</text>
+    <text x="615" y="449" fill="#38BDF8" font-weight="800">96</text>
+    <text x="655" y="449" fill="#E2E8F0">signal_alert</text>
+    <text x="755" y="449" fill="#EF4444" font-weight="700">🔥 P0 必学</text>
+
+    <!-- Row 5 -->
+    <text x="52" y="486" fill="#F8FAFC" font-weight="700">05 pingdotgg/t3code (TypeScript)</text>
+    <text x="320" y="486" fill="#10B981" font-weight="700">+1,983★</text>
+    <rect x="390" y="475" width="52" height="12" rx="3" fill="#10B981" /><text x="447" y="486" fill="#10B981">86</text>
+    <rect x="475" y="475" width="52" height="12" rx="3" fill="#3B82F6" /><text x="530" y="486" fill="#3B82F6">87</text>
+    <rect x="558" y="475" width="11" height="12" rx="3" fill="#F59E0B" /><text x="578" y="486" fill="#F59E0B">18</text>
+    <text x="615" y="486" fill="#38BDF8" font-weight="800">94</text>
+    <text x="655" y="486" fill="#E2E8F0">signal_alert</text>
+    <text x="755" y="486" fill="#EF4444" font-weight="700">🔥 P0 必学</text>
+
+    <!-- Row 6 -->
+    <text x="52" y="523" fill="#F8FAFC" font-weight="700">06 github/spec-kit (Python)</text>
+    <text x="320" y="523" fill="#10B981" font-weight="700">+750★</text>
+    <rect x="390" y="512" width="50" height="12" rx="3" fill="#10B981" /><text x="447" y="523" fill="#10B981">84</text>
+    <rect x="475" y="512" width="53" height="12" rx="3" fill="#3B82F6" /><text x="530" y="523" fill="#3B82F6">89</text>
+    <rect x="558" y="512" width="10" height="12" rx="3" fill="#F59E0B" /><text x="578" y="523" fill="#F59E0B">16</text>
+    <text x="615" y="523" fill="#38BDF8" font-weight="800">93</text>
+    <text x="655" y="523" fill="#E2E8F0">release</text>
+    <text x="755" y="523" fill="#EF4444" font-weight="700">🔥 P0 必学</text>
+
+    <!-- Row 7 -->
+    <text x="52" y="560" fill="#E2E8F0">07 max-sixty/worktrunk (Rust)</text>
+    <text x="320" y="560" fill="#10B981">+546★</text>
+    <rect x="390" y="549" width="49" height="12" rx="3" fill="#10B981" /><text x="447" y="560" fill="#10B981">81</text>
+    <rect x="475" y="549" width="51" height="12" rx="3" fill="#3B82F6" /><text x="530" y="560" fill="#3B82F6">85</text>
+    <rect x="558" y="549" width="8" height="12" rx="3" fill="#F59E0B" /><text x="578" y="560" fill="#F59E0B">14</text>
+    <text x="615" y="560" fill="#38BDF8" font-weight="700">90</text>
+    <text x="655" y="560" fill="#E2E8F0">release</text>
+    <text x="755" y="560" fill="#3B82F6" font-weight="700">⚡ P1 精读</text>
+
+    <!-- Row 8 -->
+    <text x="52" y="597" fill="#E2E8F0">08 D4Vinci/Scrapling (Python)</text>
+    <text x="320" y="597" fill="#10B981" font-weight="700">+1,661★</text>
+    <rect x="390" y="586" width="47" height="12" rx="3" fill="#10B981" /><text x="447" y="597" fill="#10B981">79</text>
+    <rect x="475" y="586" width="52" height="12" rx="3" fill="#3B82F6" /><text x="530" y="597" fill="#3B82F6">86</text>
+    <rect x="558" y="586" width="13" height="12" rx="3" fill="#F59E0B" /><text x="578" y="597" fill="#F59E0B">22</text>
+    <text x="615" y="597" fill="#38BDF8" font-weight="700">87</text>
+    <text x="655" y="597" fill="#E2E8F0">fact_check</text>
+    <text x="755" y="597" fill="#3B82F6" font-weight="700">⚡ P1 精读</text>
+
+    <!-- Row 9 -->
+    <text x="52" y="634" fill="#E2E8F0">09 google/skills (Python)</text>
+    <text x="320" y="634" fill="#10B981">+199★</text>
+    <rect x="390" y="623" width="47" height="12" rx="3" fill="#10B981" /><text x="447" y="634" fill="#10B981">78</text>
+    <rect x="475" y="623" width="50" height="12" rx="3" fill="#3B82F6" /><text x="530" y="634" fill="#3B82F6">83</text>
+    <rect x="558" y="623" width="11" height="12" rx="3" fill="#F59E0B" /><text x="578" y="634" fill="#F59E0B">18</text>
+    <text x="615" y="634" fill="#38BDF8" font-weight="700">86</text>
+    <text x="655" y="634" fill="#E2E8F0">fact_check</text>
+    <text x="755" y="634" fill="#3B82F6" font-weight="700">⚡ P1 精读</text>
+
+    <!-- Row 10 -->
+    <text x="52" y="671" fill="#E2E8F0">10 southleft/figma-console-mcp (TS)</text>
+    <text x="320" y="671" fill="#10B981">+242★</text>
+    <rect x="390" y="660" width="46" height="12" rx="3" fill="#10B981" /><text x="447" y="671" fill="#10B981">76</text>
+    <rect x="475" y="660" width="49" height="12" rx="3" fill="#3B82F6" /><text x="530" y="671" fill="#3B82F6">82</text>
+    <rect x="558" y="660" width="10" height="12" rx="3" fill="#F59E0B" /><text x="578" y="671" fill="#F59E0B">16</text>
+    <text x="615" y="671" fill="#38BDF8" font-weight="700">85</text>
+    <text x="655" y="671" fill="#E2E8F0">quote</text>
+    <text x="755" y="671" fill="#3B82F6" font-weight="700">⚡ P1 精读</text>
+
+    <!-- Row 11 -->
+    <text x="52" y="708" fill="#E2E8F0">11 mattpocock/skills (Shell)</text>
+    <text x="320" y="708" fill="#10B981" font-weight="700">+2,053★</text>
+    <rect x="390" y="697" width="45" height="12" rx="3" fill="#10B981" /><text x="447" y="708" fill="#10B981">75</text>
+    <rect x="475" y="697" width="47" height="12" rx="3" fill="#3B82F6" /><text x="530" y="708" fill="#3B82F6">79</text>
+    <rect x="558" y="697" width="14" height="12" rx="3" fill="#F59E0B" /><text x="578" y="708" fill="#F59E0B">24</text>
+    <text x="615" y="708" fill="#38BDF8" font-weight="700">82</text>
+    <text x="655" y="708" fill="#E2E8F0">quote</text>
+    <text x="755" y="708" fill="#3B82F6" font-weight="700">⚡ P1 精读</text>
+
+    <!-- Row 12 -->
+    <text x="52" y="745" fill="#E2E8F0">12 Thysrael/Horizon (Python)</text>
+    <text x="320" y="745" fill="#10B981">+490★</text>
+    <rect x="390" y="734" width="44" height="12" rx="3" fill="#10B981" /><text x="447" y="745" fill="#10B981">73</text>
+    <rect x="475" y="734" width="46" height="12" rx="3" fill="#3B82F6" /><text x="530" y="745" fill="#3B82F6">77</text>
+    <rect x="558" y="734" width="12" height="12" rx="3" fill="#F59E0B" /><text x="578" y="745" fill="#F59E0B">20</text>
+    <text x="615" y="745" fill="#38BDF8" font-weight="700">81</text>
+    <text x="655" y="745" fill="#E2E8F0">thread_pulse</text>
+    <text x="755" y="745" fill="#3B82F6" font-weight="700">⚡ P1 精读</text>
+
+    <!-- Row 13 -->
+    <text x="52" y="782" fill="#CBD5E1">13 scenario-labs/skills (Python)</text>
+    <text x="320" y="782" fill="#10B981">+674★</text>
+    <rect x="390" y="771" width="41" height="12" rx="3" fill="#10B981" /><text x="447" y="782" fill="#10B981">69</text>
+    <rect x="475" y="771" width="45" height="12" rx="3" fill="#3B82F6" /><text x="530" y="782" fill="#3B82F6">75</text>
+    <rect x="558" y="771" width="16" height="12" rx="3" fill="#F59E0B" /><text x="580" y="782" fill="#F59E0B">26</text>
+    <text x="615" y="782" fill="#94A3B8" font-weight="700">76</text>
+    <text x="655" y="782" fill="#94A3B8">brief</text>
+    <text x="755" y="782" fill="#F59E0B" font-weight="700">👀 P2 观察</text>
+
+    <!-- Row 14 -->
+    <text x="52" y="819" fill="#CBD5E1">14 ConardLi/garden-skills (JS)</text>
+    <text x="320" y="819" fill="#10B981">+181★</text>
+    <rect x="390" y="808" width="40" height="12" rx="3" fill="#10B981" /><text x="447" y="819" fill="#10B981">66</text>
+    <rect x="475" y="808" width="44" height="12" rx="3" fill="#3B82F6" /><text x="530" y="819" fill="#3B82F6">73</text>
+    <rect x="558" y="808" width="16" height="12" rx="3" fill="#F59E0B" /><text x="580" y="819" fill="#F59E0B">26</text>
+    <text x="615" y="819" fill="#94A3B8" font-weight="700">73</text>
+    <text x="655" y="819" fill="#94A3B8">brief</text>
+    <text x="755" y="819" fill="#F59E0B" font-weight="700">👀 P2 观察</text>
+
+    <!-- Row 15 -->
+    <text x="52" y="856" fill="#94A3B8">15 Usagi-org/ai-goofish-monitor</text>
+    <text x="320" y="856" fill="#94A3B8">+242★</text>
+    <rect x="390" y="845" width="28" height="12" rx="3" fill="#64748B" /><text x="447" y="856" fill="#94A3B8">46</text>
+    <rect x="475" y="845" width="37" height="12" rx="3" fill="#64748B" /><text x="530" y="856" fill="#94A3B8">62</text>
+    <rect x="558" y="845" width="29" height="12" rx="3" fill="#EF4444" /><text x="593" y="856" fill="#EF4444">48</text>
+    <text x="615" y="856" fill="#EF4444" font-weight="700">51</text>
+    <text x="655" y="856" fill="#FCA5A5">hype_watch</text>
+    <text x="755" y="856" fill="#94A3B8" font-weight="700">🛡️ P3 预警</text>
+  </g>
+
+  <text x="52" y="886" font-family="Consolas, monospace" font-size="11" fill="#64748B">* Formula: Attention = round(0.50*Signal + 0.35*Facts - 0.25*Hype + 0.40*Relevance) | Rejected by Gate 3: floci, DiscImageStudio, lz4, wifit3, immich, rustdesk, clash-verge-rev, Google_AI_Pro_ZeroCost, nvzhuang</text>
+
+  <!-- Right Panel: 4 Pillars of Daily SA Work -->
+  <g transform="translate(896, 282)">
+    <rect x="0" y="0" width="508" height="146" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" />
+    <text x="20" y="28" font-family="Segoe UI, sans-serif" font-size="15" font-weight="800" fill="#38BDF8">🏗️ 1. 架构设计借鉴 (Architecture Design)</text>
+    <text x="20" y="54" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 语义本体接地层：NVIDIA/auto-ontology 五步 SQL 列接地 + MCP 暴露</text>
+    <text x="20" y="78" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• Rust 双端无障碍树 CUA：agent-desktop v1.2.0 + agent-browser v0.41.2</text>
+    <text x="20" y="102" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 流式说话人分离与端侧量化：microsoft/VibeVoice (1.58GB BitNet + vLLM)</text>
+    <text x="20" y="126" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 跨端控制面与双向设计 MCP：t3code v0.1.7 + figma-console-mcp v1.46.0</text>
+
+    <rect x="0" y="158" width="508" height="146" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5" />
+    <text x="20" y="186" font-family="Segoe UI, sans-serif" font-size="15" font-weight="800" fill="#10B981">🎮 2. 客户 Demo 与 PoC 开发 (Customer Demos)</text>
+    <text x="20" y="212" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 复杂 BI 零幻觉查询：演示 auto-ontology 对比裸 Schema Text-to-SQL</text>
+    <text x="20" y="236" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 跨桌面+浏览器联动：演示 @e1 引用协议自动录入无 API 财务客户端</text>
+    <text x="20" y="260" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 无 GPU 笔记本实时会议纪要：演示 VibeVoice-ASR-BitNet 3 核 CPU 实时分离</text>
+    <text x="20" y="284" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 手机端远程审批编码 Agent：演示 T3 Code 移动端审批高风险 Schema Diff</text>
+
+    <rect x="0" y="316" width="508" height="146" rx="12" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5" />
+    <text x="20" y="344" font-family="Segoe UI, sans-serif" font-size="15" font-weight="800" fill="#C4B5FD">📊 3. Benchmark 基准测试 (Benchmarking)</text>
+    <text x="20" y="370" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 本体层 SQL 对照：auto-ontology-eval Control vs Treatment 准确率提升</text>
+    <text x="20" y="394" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 双端 CUA Token 压缩：agent-desktop/browser vs 纯截图循环 (-86% Token)</text>
+    <text x="20" y="418" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 流式语音分离基准：VibeVoice-ASR-Streaming-7B 抢话 DER 与首字延迟</text>
+    <text x="20" y="442" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 自适应 DOM 愈合压测：Scrapling v0.5.1 较 BS4 提速 774× 与改版召回率</text>
+
+    <rect x="0" y="474" width="508" height="144" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5" />
+    <text x="20" y="502" font-family="Segoe UI, sans-serif" font-size="15" font-weight="800" fill="#FBBF24">💼 4. 适用业务场景方案 (Business Playbooks)</text>
+    <text x="20" y="528" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 金融/零售湖仓智能体：NVIDIA/auto-ontology + Microsoft Fabric IQ</text>
+    <text x="20" y="552" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 涉密内网实时双录与转写：VibeVoice-ASR-BitNet CPU 离线部署方案</text>
+    <text x="20" y="576" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 企业前端反 AI Slop 治理：figma-console-mcp DTCG Token + impeccable</text>
+    <text x="20" y="600" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#E2E8F0">• 合规红线排雷：拦截 Google_AI_Pro 薅羊毛脚本与闲鱼注入 Cookie 爬虫</text>
+  </g>
+</svg>
