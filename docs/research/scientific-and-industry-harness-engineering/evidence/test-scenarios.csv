@@ -1,0 +1,13 @@
+scenario_id,scenario,question,answer,confidence,action,correct
+S01,HLE Bio/Med (n=152),GPT-4.1 w/ CLIO vs Base GPT-4.1 (no tools)?,22.37% vs 8.55% (+161.64% rel),0.96,Act automatically,True
+S02,HLE Bio/Med vs o3,GPT-4.1 w/ CLIO vs OpenAI o3 (high / low)?,22.37% vs 13.81% / 11.18% (+8.56 pts),0.94,Act automatically,True
+S03,ALE Physical Sciences (5h),Discovery (CLIO+Multi-Model) vs Claude Code Opus 5?,75.2% vs 66.6% (+8.6% / +18.3% vs Codex),0.97,Act automatically,True
+S04,ALE Health & Life Sci (5h),Discovery CLIO vs Codex (GPT-5.6 Sol) across 2 domains?,61.6% (+4.4%) & 64.6% (+3.8%),0.93,Act automatically,True
+S05,AORFB Round 1-3 Triage,Compound 3 (5-benzylphosphonate) measured E_red shift?,-0.895 V vs -0.762 V (+133 mV / ~130 mV),0.95,Act automatically,True
+S06,Calibrated Deference (E_red),Graphormer ~2.7 V discrepancy (-1.998 V vs +0.7 V note)?,Rank-order salvage R2 -> Gate excluded R3,0.92,Act automatically,True
+S07,Retrosynthesis Scaffold Check,Did CLIO catch RetroChimera quinoline substitution on Cmpd 3?,✕ Missed scaffold swap (2-step pred vs 5-step real),0.34,Send to a human,False
+S08,CV Split-Wave Diagnostics,"3-run consensus on scan-rate, cation swap & [OH-] tests?",3/3 consensus -> Li+/Na+ confirms K+ ion pairing,0.95,Act automatically,True
+S09,Sulfonate Redesign (Cmpd 20),Replace phosphonate with sulfonate to restore reversibility?,"E_red -0.854 V (+92 mV), |i_ox/i_red| 0.18->0.38",0.94,Act automatically,True
+S10,Grey-Box vs Black-Box (500 evals),CLIO Top-10 mean fitness with domain knowledge vs ExLLM?,0.578 vs 0.543 (+14.7% Grey-Box jump),0.91,Act automatically,True
+S11,pH 14 Real-World Trap,ExLLM amine candidates (S1-S3) vs CLIO acidic anions in 1M KOH?,CLIO 56-57.9 mM soluble vs ExLLM <1 mM,0.98,Act automatically,True
+S12,Cognition Retry Loop Gate,3 consecutive attempts with identical validation gaps?,Escalate to Needs User Attention (halt loop),0.88,Confirm,True

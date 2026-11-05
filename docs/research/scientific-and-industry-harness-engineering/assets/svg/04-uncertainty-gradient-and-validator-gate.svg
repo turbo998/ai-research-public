@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="Segoe UI, Inter, system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <marker id="mGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+    <marker id="mAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="mRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F43F5E"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg4)"/>
+
+  <text x="40" y="42" fill="#C084FC" font-size="13" font-weight="700" letter-spacing="1.5">OBSERVABILITY &amp; GOVERNANCE · UNCERTAINTY GRADIENTS &amp; SEPARATED VALIDATION</text>
+  <text x="40" y="72" fill="#F8FAFC" font-size="23" font-weight="800">Internal Uncertainty Trajectory Law (dU/dt) &amp; Zero-Self-Grading Validation State Machine</text>
+  <text x="40" y="96" fill="#94A3B8" font-size="13">Combining arXiv:2508.02789 Section 5.2.1 (Fig. 6) with Microsoft Discovery Task Lifecycle &amp; 3-Strike Circuit Breaker</text>
+
+  <!-- Left Panel: Uncertainty Gradient Chart -->
+  <rect x="35" y="120" width="560" height="465" rx="10" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+  <text x="55" y="148" fill="#38BDF8" font-size="14" font-weight="800">1. CLIO INTERNAL UNCERTAINTY TRAJECTORY LAW (ARXIV:2508.02789 FIG. 6)</text>
+  <text x="55" y="168" fill="#94A3B8" font-size="11">Self-assessed uncertainty U(t) across normalized thinking steps t in [0, 1]</text>
+
+  <!-- Chart Axes -->
+  <rect x="85" y="190" width="480" height="240" fill="#0F172A" stroke="#1E293B"/>
+  <line x1="85" y1="190" x2="85" y2="430" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="85" y1="430" x2="565" y2="430" stroke="#64748B" stroke-width="1.5"/>
+
+  <!-- Grid Lines -->
+  <line x1="85" y1="250" x2="565" y2="250" stroke="#1E293B" stroke-dasharray="4,4"/>
+  <line x1="85" y1="310" x2="565" y2="310" stroke="#1E293B" stroke-dasharray="4,4"/>
+  <line x1="85" y1="370" x2="565" y2="370" stroke="#1E293B" stroke-dasharray="4,4"/>
+
+  <text x="50" y="200" fill="#94A3B8" font-size="10">0.80</text>
+  <text x="50" y="254" fill="#94A3B8" font-size="10">0.60</text>
+  <text x="50" y="314" fill="#94A3B8" font-size="10">0.40</text>
+  <text x="50" y="374" fill="#94A3B8" font-size="10">0.20</text>
+  <text x="50" y="430" fill="#94A3B8" font-size="10">0.00</text>
+
+  <text x="85" y="448" fill="#94A3B8" font-size="10">t=0.0</text>
+  <text x="200" y="448" fill="#94A3B8" font-size="10">t=0.25</text>
+  <text x="315" y="448" fill="#94A3B8" font-size="10">t=0.50</text>
+  <text x="430" y="448" fill="#94A3B8" font-size="10">t=0.75</text>
+  <text x="535" y="448" fill="#94A3B8" font-size="10">t=1.0</text>
+
+  <!-- Curve 1: Incorrect Oscillating Trajectory (Red) -->
+  <polyline fill="none" stroke="#F43F5E" stroke-width="2.5" points="95,346 170,262 245,337 320,238 395,325 470,217 550,202"/>
+  <text x="370" y="210" fill="#F43F5E" font-size="11" font-weight="700">Incorrect: dU/dt &gt; 0 + Oscillation</text>
+
+  <!-- Curve 2: Correct Spike Mitigated by Child Channel (Blue) -->
+  <polyline fill="none" stroke="#38BDF8" stroke-width="2.5" points="95,334 190,226 285,295 380,355 465,388 550,403"/>
+  <!-- Triangle at Spike -->
+  <polygon points="190,214 182,230 198,230" fill="#FBBF24"/>
+  <text x="204" y="226" fill="#FBBF24" font-size="10" font-weight="700">▲ Spawn Clean-Context Child Channel</text>
+
+  <!-- Curve 3: Correct Monotonic Convergence (Green) -->
+  <polyline fill="none" stroke="#10B981" stroke-width="2.5" points="95,304 190,337 285,367 380,388 465,400 550,409"/>
+  <text x="315" y="418" fill="#10B981" font-size="11" font-weight="700">Correct: dU/dt &lt; 0 (Monotonic Decay)</text>
+
+  <!-- Legend / Telemetry Rules -->
+  <rect x="55" y="465" width="520" height="102" rx="6" fill="#1E293B"/>
+  <text x="70" y="486" fill="#F8FAFC" font-size="12" font-weight="700">Prompt-Free Harness Telemetry Signals:</text>
+  <text x="70" y="506" fill="#10B981" font-size="11">• Green / Blue (dU/dt &lt; 0): Allow autonomous progression or spawn clean child channel at ▲ spike.</text>
+  <text x="70" y="526" fill="#F43F5E" font-size="11">• Red (dU/dt &gt; 0 or ≥3 sign reversals): High-risk failure signature — halt &amp; trigger human review.</text>
+  <text x="70" y="546" fill="#38BDF8" font-size="11">• Dynamic Completion T(s)=0: Unlocks only after coverage &amp; uncertainty thresholds are met.</text>
+
+  <!-- Right Panel: Discovery Task & Separated Validation State Machine -->
+  <rect x="615" y="120" width="550" height="465" rx="10" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+  <text x="635" y="148" fill="#10B981" font-size="14" font-weight="800">2. SEPARATED VALIDATOR &amp; 3-STRIKE CIRCUIT BREAKER (MS LEARN)</text>
+  <text x="635" y="168" fill="#94A3B8" font-size="11">&quot;The agent that did the work never grades its own output&quot; (Dedicated Validator Process)</text>
+
+  <!-- State Nodes -->
+  <rect x="645" y="195" width="130" height="50" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="690" y="218" fill="#F8FAFC" font-size="13" font-weight="700">New</text>
+  <text x="662" y="234" fill="#94A3B8" font-size="10">Deps satisfied</text>
+
+  <line x1="775" y1="220" x2="815" y2="220" stroke="#10B981" stroke-width="2" marker-end="url(#mGreen)"/>
+
+  <rect x="820" y="195" width="150" height="50" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="860" y="218" fill="#38BDF8" font-size="13" font-weight="700">Executing</text>
+  <text x="838" y="234" fill="#CBD5E1" font-size="10">Worker Agent + Tools</text>
+
+  <line x1="970" y1="220" x2="1005" y2="220" stroke="#10B981" stroke-width="2" marker-end="url(#mGreen)"/>
+
+  <rect x="1010" y="195" width="135" height="50" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.8"/>
+  <text x="1042" y="218" fill="#C084FC" font-size="13" font-weight="700">Validating</text>
+  <text x="1022" y="234" fill="#CBD5E1" font-size="10">Independent gpt-5.4</text>
+
+  <!-- Validator Outcomes -->
+  <rect x="645" y="285" width="225" height="68" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="662" y="308" fill="#6EE7B7" font-size="13" font-weight="700">Complete (Terminal)</text>
+  <text x="662" y="326" fill="#D1FAE5" font-size="11">All validation requirements met</text>
+  <text x="662" y="342" fill="#A7F3D0" font-size="10">Result + .csv/.json/.py verified</text>
+
+  <rect x="900" y="285" width="245" height="68" rx="8" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="916" y="308" fill="#FCD34D" font-size="13" font-weight="700">Incomplete (Active Retry)</text>
+  <text x="916" y="326" fill="#FDE68A" font-size="11">Identical gap streak &lt; 3 attempts</text>
+  <text x="916" y="342" fill="#FBBF24" font-size="10">Slow Thinking spawns targeted child task</text>
+
+  <rect x="645" y="375" width="225" height="72" rx="8" fill="#4C0519" stroke="#F43F5E" stroke-width="1.5"/>
+  <text x="662" y="398" fill="#FDA4AF" font-size="13" font-weight="700">Needs User Attention</text>
+  <text x="662" y="416" fill="#FFE4E6" font-size="11">3-Strike Circuit Breaker Triggered!</text>
+  <text x="662" y="434" fill="#FB7185" font-size="10">≥3 attempts with same unresolved gap</text>
+
+  <rect x="900" y="375" width="245" height="72" rx="8" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+  <text x="916" y="398" fill="#CBD5E1" font-size="13" font-weight="700">On Hold / Failed / Removed</text>
+  <text x="916" y="416" fill="#94A3B8" font-size="11">Paused by cognition, terminal error,</text>
+  <text x="916" y="434" fill="#94A3B8" font-size="10">or pruned when branch superseded</text>
+
+  <!-- Calibration Warning Box -->
+  <rect x="645" y="465" width="500" height="102" rx="6" fill="#1E293B" stroke="#38BDF8"/>
+  <text x="662" y="486" fill="#38BDF8" font-size="12" font-weight="700">Validation Requirement Calibration Spectrum (Microsoft Learn Trust Guide):</text>
+  <text x="662" y="506" fill="#F43F5E" font-size="11">• Too Loose (&quot;Give a good answer&quot;): Premature false Complete on shallow output.</text>
+  <text x="662" y="526" fill="#FBBF24" font-size="11">• Overly Strict (&quot;0.01 kcal/mol with lab proof&quot;): Exhausts 3 retries → Needs User Attention.</text>
+  <text x="662" y="546" fill="#10B981" font-size="11">• Well-Calibrated: Specifies verifiable artifacts &amp; ranges (what to contain, not how).</text>
+</svg>

@@ -1,0 +1,502 @@
+{
+  "report_id": "microsoft-discovery-clio-industry-harness-2026",
+  "title_zh": "Microsoft Discovery 与 CLIO 自适应科学推理深度研究：面向行业场景的 Harness Engineering 十大设计范式",
+  "title_en": "Microsoft Discovery & CLIO Self-Adaptive Reasoning Study: 10 Harness Engineering Design Principles for Industry Scenarios",
+  "provenance": "anonymized_reported + static_contract_verified",
+  "independently_reproduced": false,
+  "sources": [
+    "https://www.microsoft.com/en-us/research/blog/self-adaptive-reasoning-for-science/",
+    "https://arxiv.org/abs/2508.02789",
+    "https://learn.microsoft.com/en-us/azure/microsoft-discovery/concept-discovery-engine",
+    "https://techcommunity.microsoft.com/blog/microsoft-discovery-blog/adaptive-by-design-how-microsoft-discovery-explores-science/4552705",
+    "https://arxiv.org/abs/2606.02618v1"
+  ],
+  "hle_biomed_summary": {
+    "total_questions": 152,
+    "gpt41_base_correct": 13,
+    "gpt41_base_pct": 8.55,
+    "o3_low_correct": 17,
+    "o3_low_pct": 11.18,
+    "o3_high_correct": 21,
+    "o3_high_pct": 13.81,
+    "gpt41_clio_reported_correct": 34,
+    "gpt41_clio_subtable_sum": 35,
+    "gpt41_clio_pct": 22.37,
+    "net_gain_vs_gpt41_pts": 13.82,
+    "relative_gain_vs_gpt41_pct": 161.64,
+    "net_gain_vs_o3_high_pts": 8.56,
+    "relative_gain_vs_o3_high_pct": 61.98,
+    "ablation_loop_recursion_gain_pts": 5.92,
+    "ablation_graph_drift_gain_pts": 7.9,
+    "immunology_gpt4o_gain_pts": 13.6,
+    "immunology_more_thinking_avg_pct": 22.5
+  },
+  "hle_biomed_categories": [
+    {
+      "category": "Bio/Med - Genetics",
+      "total": 27,
+      "o3_high": 0,
+      "o3_low": 2,
+      "gpt41_base": 2,
+      "gpt41_clio": 7
+    },
+    {
+      "category": "Bio/Med - Biology",
+      "total": 31,
+      "o3_high": 3,
+      "o3_low": 1,
+      "gpt41_base": 0,
+      "gpt41_clio": 8
+    },
+    {
+      "category": "Bio/Med - Ecology",
+      "total": 20,
+      "o3_high": 5,
+      "o3_low": 2,
+      "gpt41_base": 3,
+      "gpt41_clio": 7
+    },
+    {
+      "category": "Bio/Med - Neuroscience",
+      "total": 17,
+      "o3_high": 3,
+      "o3_low": 5,
+      "gpt41_base": 2,
+      "gpt41_clio": 4
+    },
+    {
+      "category": "Bio/Med - Biochemistry",
+      "total": 16,
+      "o3_high": 3,
+      "o3_low": 1,
+      "gpt41_base": 1,
+      "gpt41_clio": 2
+    },
+    {
+      "category": "Bio/Med - Microbiology",
+      "total": 9,
+      "o3_high": 0,
+      "o3_low": 1,
+      "gpt41_base": 2,
+      "gpt41_clio": 1
+    },
+    {
+      "category": "Bio/Med - Immunology",
+      "total": 8,
+      "o3_high": 1,
+      "o3_low": 1,
+      "gpt41_base": 1,
+      "gpt41_clio": 2
+    },
+    {
+      "category": "Bio/Med - Molecular Biology",
+      "total": 8,
+      "o3_high": 1,
+      "o3_low": 0,
+      "gpt41_base": 0,
+      "gpt41_clio": 1
+    },
+    {
+      "category": "Bio/Med - Computational Biology",
+      "total": 7,
+      "o3_high": 0,
+      "o3_low": 0,
+      "gpt41_base": 0,
+      "gpt41_clio": 1
+    },
+    {
+      "category": "Bio/Med - Biophysics",
+      "total": 4,
+      "o3_high": 2,
+      "o3_low": 2,
+      "gpt41_base": 2,
+      "gpt41_clio": 1
+    },
+    {
+      "category": "Bio/Med - Bioinformatics",
+      "total": 3,
+      "o3_high": 2,
+      "o3_low": 1,
+      "gpt41_base": 0,
+      "gpt41_clio": 1
+    },
+    {
+      "category": "Bio/Med - Genomics",
+      "total": 1,
+      "o3_high": 0,
+      "o3_low": 0,
+      "gpt41_base": 0,
+      "gpt41_clio": 0
+    },
+    {
+      "category": "Bio/Med - Physiology",
+      "total": 1,
+      "o3_high": 1,
+      "o3_low": 1,
+      "gpt41_base": 0,
+      "gpt41_clio": 0
+    }
+  ],
+  "ale_benchmarks": [
+    {
+      "domain": "Physical Sciences",
+      "discovery_clio_pct": 75.2,
+      "competitor_name": "Claude Code (Opus 5)",
+      "competitor_pct": 66.6,
+      "delta_vs_top_competitor_pts": 8.6,
+      "delta_vs_single_model_codex_pts": 18.3
+    },
+    {
+      "domain": "Health & Medicine",
+      "discovery_clio_pct": 61.6,
+      "competitor_name": "Codex (GPT-5.6 Sol)",
+      "competitor_pct": 57.2,
+      "delta_vs_top_competitor_pts": 4.4,
+      "delta_vs_single_model_codex_pts": 4.4
+    },
+    {
+      "domain": "Life Sciences",
+      "discovery_clio_pct": 64.6,
+      "competitor_name": "Codex (GPT-5.6 Sol)",
+      "competitor_pct": 60.8,
+      "delta_vs_top_competitor_pts": 3.8,
+      "delta_vs_single_model_codex_pts": 3.8
+    }
+  ],
+  "aorfb_molecules": [
+    {
+      "compound_id": "1",
+      "label": "Baseline Disulfonate BzC (1)",
+      "origin": "Literature Baseline (Singh et al.)",
+      "e_red_pred_v_she": -1.6,
+      "e_red_meas_v_she": -0.762,
+      "solubility_ph7_pred_mm": 52.5,
+      "solubility_koh_meas_mm": "500",
+      "solubility_koh_numeric_mm": 500.0,
+      "peak_current_ratio_iox_ired": 0.52,
+      "charge_ratio_qox_qred": 0.79,
+      "reversible_at_ph14": true,
+      "notes": "Mixed sulfonate baseline; single oxidation return wave (114 mV peak separation)."
+    },
+    {
+      "compound_id": "3",
+      "label": "5-Benzylphosphonate BzC (3)",
+      "origin": "CLIO Round 1-3 Top Candidate",
+      "e_red_pred_v_she": -2.04,
+      "e_red_meas_v_she": -0.895,
+      "solubility_ph7_pred_mm": 20.4,
+      "solubility_koh_meas_mm": "57.9",
+      "solubility_koh_numeric_mm": 57.9,
+      "peak_current_ratio_iox_ired": 0.18,
+      "charge_ratio_qox_qred": 0.92,
+      "reversible_at_ph14": false,
+      "notes": "+133 mV (~130 mV) redox improvement vs 1, but unexpected split oxidation wave (P1/P2) at pH 14 due to phosphonate-K+ ion pairing."
+    },
+    {
+      "compound_id": "20",
+      "label": "Benzylsulfonate BzC (20)",
+      "origin": "CLIO Calibrated Deference Redesign",
+      "e_red_pred_v_she": -2.0,
+      "e_red_meas_v_she": -0.854,
+      "solubility_ph7_pred_mm": 14.5,
+      "solubility_koh_meas_mm": "56.0",
+      "solubility_koh_numeric_mm": 56.0,
+      "peak_current_ratio_iox_ired": 0.38,
+      "charge_ratio_qox_qred": 0.84,
+      "reversible_at_ph14": true,
+      "notes": "Maintains +92 mV (~90 mV) redox improvement vs 1; suppresses cation-pairing split peak (90 mV separation); clean UV-Vis SEC reversibility."
+    },
+    {
+      "compound_id": "S1",
+      "label": "ExLLM Amine Derivative (S1)",
+      "origin": "ExLLM Evolutionary Optimizer (2500 evals)",
+      "e_red_pred_v_she": -1.87,
+      "e_red_meas_v_she": -0.774,
+      "solubility_ph7_pred_mm": 4.27,
+      "solubility_koh_meas_mm": "<1",
+      "solubility_koh_numeric_mm": 0.5,
+      "peak_current_ratio_iox_ired": 0.65,
+      "charge_ratio_qox_qred": 0.79,
+      "reversible_at_ph14": true,
+      "notes": "Relies on amine protonation (soluble at pH 7, insoluble <1 mM at pH 14 KOH); negligible E_red gain (-12 mV)."
+    },
+    {
+      "compound_id": "S2",
+      "label": "ExLLM Amine Derivative (S2)",
+      "origin": "ExLLM Evolutionary Optimizer (2500 evals)",
+      "e_red_pred_v_she": -1.84,
+      "e_red_meas_v_she": -0.794,
+      "solubility_ph7_pred_mm": 6.03,
+      "solubility_koh_meas_mm": "<1",
+      "solubility_koh_numeric_mm": 0.5,
+      "peak_current_ratio_iox_ired": 0.65,
+      "charge_ratio_qox_qred": 1.24,
+      "reversible_at_ph14": true,
+      "notes": "Partially soluble <1 mM in 1 M KOH; modest -32 mV E_red shift."
+    },
+    {
+      "compound_id": "S3",
+      "label": "ExLLM Scaffold-Hop (S3)",
+      "origin": "ExLLM Evolutionary Optimizer (2500 evals)",
+      "e_red_pred_v_she": -1.7,
+      "e_red_meas_v_she": -0.987,
+      "solubility_ph7_pred_mm": 4.9,
+      "solubility_koh_meas_mm": "<1",
+      "solubility_koh_numeric_mm": 0.5,
+      "peak_current_ratio_iox_ired": 0.48,
+      "charge_ratio_qox_qred": 0.42,
+      "reversible_at_ph14": false,
+      "notes": "Insoluble <1 mM in 1 M KOH and ~1300 mV peak separation (electrochemically irreversible)."
+    }
+  ],
+  "pmo_black_grey_table_s4": [
+    {
+      "condition": "Black-box",
+      "algorithm": "ExLLM",
+      "top1_mean": 0.586,
+      "top1_std": 0.032,
+      "top10_mean": 0.525,
+      "top10_std": 0.011
+    },
+    {
+      "condition": "Black-box",
+      "algorithm": "CLIO",
+      "top1_mean": 0.544,
+      "top1_std": 0.065,
+      "top10_mean": 0.504,
+      "top10_std": 0.059
+    },
+    {
+      "condition": "Black-box",
+      "algorithm": "CLIO (efficiency)",
+      "top1_mean": 0.541,
+      "top1_std": 0.062,
+      "top10_mean": 0.503,
+      "top10_std": 0.049
+    },
+    {
+      "condition": "Grey-box",
+      "algorithm": "ExLLM",
+      "top1_mean": 0.607,
+      "top1_std": 0.025,
+      "top10_mean": 0.543,
+      "top10_std": 0.008
+    },
+    {
+      "condition": "Grey-box",
+      "algorithm": "CLIO",
+      "top1_mean": 0.599,
+      "top1_std": 0.095,
+      "top10_mean": 0.578,
+      "top10_std": 0.103
+    },
+    {
+      "condition": "Grey-box",
+      "algorithm": "CLIO (efficiency)",
+      "top1_mean": 0.602,
+      "top1_std": 0.066,
+      "top10_mean": 0.567,
+      "top10_std": 0.061
+    }
+  ],
+  "calibrated_deference_trace": [
+    {
+      "round_index": 1,
+      "discrepancy_v": 2.698,
+      "directional_consistency": true,
+      "trust_state": "UNCRITICAL_ACCEPTANCE",
+      "use_in_hard_gate": true,
+      "use_for_ranking": true
+    },
+    {
+      "round_index": 2,
+      "discrepancy_v": 2.698,
+      "directional_consistency": true,
+      "trust_state": "RANK_ORDER_SALVAGE",
+      "use_in_hard_gate": false,
+      "use_for_ranking": true
+    },
+    {
+      "round_index": 3,
+      "discrepancy_v": 2.698,
+      "directional_consistency": true,
+      "trust_state": "GATE_EXCLUDED_CALIBRATION_FIRST",
+      "use_in_hard_gate": false,
+      "use_for_ranking": true
+    }
+  ],
+  "uncertainty_trajectories": {
+    "converged": {
+      "initial_u": 0.62,
+      "final_u": 0.16,
+      "gradient_du_dt": -0.116,
+      "sign_oscillations": 0,
+      "regime": "NEGATIVE_GRADIENT_CONVERGED",
+      "action": "Act automatically"
+    },
+    "spike_mitigated": {
+      "initial_u": 0.45,
+      "final_u": 0.18,
+      "gradient_du_dt": -0.104,
+      "sign_oscillations": 1,
+      "regime": "NEGATIVE_GRADIENT_CONVERGED",
+      "action": "Act automatically"
+    },
+    "oscillating_failure": {
+      "initial_u": 0.38,
+      "final_u": 0.86,
+      "gradient_du_dt": 0.0629,
+      "sign_oscillations": 4,
+      "regime": "HIGH_UNCERTAINTY_OSCILLATION",
+      "action": "Send to a human"
+    }
+  },
+  "evaluation_matrix_12": [
+    {
+      "scenario_id": "S01",
+      "scenario": "HLE Bio/Med (n=152)",
+      "question": "GPT-4.1 w/ CLIO vs Base GPT-4.1 (no tools)?",
+      "answer": "22.37% vs 8.55% (+161.64% rel)",
+      "confidence": 0.96,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S02",
+      "scenario": "HLE Bio/Med vs o3",
+      "question": "GPT-4.1 w/ CLIO vs OpenAI o3 (high / low)?",
+      "answer": "22.37% vs 13.81% / 11.18% (+8.56 pts)",
+      "confidence": 0.94,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S03",
+      "scenario": "ALE Physical Sciences (5h)",
+      "question": "Discovery (CLIO+Multi-Model) vs Claude Code Opus 5?",
+      "answer": "75.2% vs 66.6% (+8.6% / +18.3% vs Codex)",
+      "confidence": 0.97,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S04",
+      "scenario": "ALE Health & Life Sci (5h)",
+      "question": "Discovery CLIO vs Codex (GPT-5.6 Sol) across 2 domains?",
+      "answer": "61.6% (+4.4%) & 64.6% (+3.8%)",
+      "confidence": 0.93,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S05",
+      "scenario": "AORFB Round 1-3 Triage",
+      "question": "Compound 3 (5-benzylphosphonate) measured E_red shift?",
+      "answer": "-0.895 V vs -0.762 V (+133 mV / ~130 mV)",
+      "confidence": 0.95,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S06",
+      "scenario": "Calibrated Deference (E_red)",
+      "question": "Graphormer ~2.7 V discrepancy (-1.998 V vs +0.7 V note)?",
+      "answer": "Rank-order salvage R2 -> Gate excluded R3",
+      "confidence": 0.92,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S07",
+      "scenario": "Retrosynthesis Scaffold Check",
+      "question": "Did CLIO catch RetroChimera quinoline substitution on Cmpd 3?",
+      "answer": "✕ Missed scaffold swap (2-step pred vs 5-step real)",
+      "confidence": 0.34,
+      "action": "Send to a human",
+      "correct": false
+    },
+    {
+      "scenario_id": "S08",
+      "scenario": "CV Split-Wave Diagnostics",
+      "question": "3-run consensus on scan-rate, cation swap & [OH-] tests?",
+      "answer": "3/3 consensus -> Li+/Na+ confirms K+ ion pairing",
+      "confidence": 0.95,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S09",
+      "scenario": "Sulfonate Redesign (Cmpd 20)",
+      "question": "Replace phosphonate with sulfonate to restore reversibility?",
+      "answer": "E_red -0.854 V (+92 mV), |i_ox/i_red| 0.18->0.38",
+      "confidence": 0.94,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S10",
+      "scenario": "Grey-Box vs Black-Box (500 evals)",
+      "question": "CLIO Top-10 mean fitness with domain knowledge vs ExLLM?",
+      "answer": "0.578 vs 0.543 (+14.7% Grey-Box jump)",
+      "confidence": 0.91,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S11",
+      "scenario": "pH 14 Real-World Trap",
+      "question": "ExLLM amine candidates (S1-S3) vs CLIO acidic anions in 1M KOH?",
+      "answer": "CLIO 56-57.9 mM soluble vs ExLLM <1 mM",
+      "confidence": 0.98,
+      "action": "Act automatically",
+      "correct": true
+    },
+    {
+      "scenario_id": "S12",
+      "scenario": "Cognition Retry Loop Gate",
+      "question": "3 consecutive attempts with identical validation gaps?",
+      "answer": "Escalate to Needs User Attention (halt loop)",
+      "confidence": 0.88,
+      "action": "Confirm",
+      "correct": true
+    }
+  ],
+  "robustness_checks": [
+    {
+      "probe": "HLE Bio/Med Thinking Depth (GPT-4.1)",
+      "baseline_or_original": "8.55% (Base No-Tool) / 14.47% (Loop Only)",
+      "perturbed_or_upgraded": "22.37% (+GraphRAG & DRIFT Reduction)",
+      "delta_points": "+13.82 pts (+7.90 pts from Graph)"
+    },
+    {
+      "probe": "HLE Immunology Model Agnosticism (GPT-4o)",
+      "baseline_or_original": "<2.0% Base GPT-4o on HLE scale",
+      "perturbed_or_upgraded": "+13.60% w/ CLIO (22.5% Immunology n=5 avg)",
+      "delta_points": "+13.60 pts"
+    },
+    {
+      "probe": "PMO 500-Eval Regime Shift (CLIO Top-1)",
+      "baseline_or_original": "0.544 ± 0.065 (Black-box opaque score)",
+      "perturbed_or_upgraded": "0.599 ± 0.095 (Grey-box domain targets)",
+      "delta_points": "+0.055 (+10.11%)"
+    },
+    {
+      "probe": "PMO 500-Eval Regime Shift (CLIO Mean Top-10)",
+      "baseline_or_original": "0.504 ± 0.059 (Black-box opaque score)",
+      "perturbed_or_upgraded": "0.578 ± 0.103 (Grey-box domain targets)",
+      "delta_points": "+0.074 (+14.68%)"
+    },
+    {
+      "probe": "PMO 500-Eval Regime Shift (ExLLM Mean Top-10)",
+      "baseline_or_original": "0.525 ± 0.011 (Black-box NSGA-II + LLM)",
+      "perturbed_or_upgraded": "0.543 ± 0.008 (Grey-box prompt templates)",
+      "delta_points": "+0.018 (+3.43%)"
+    },
+    {
+      "probe": "LLM Rate-Limit Perturbation (AORFB Library Enum)",
+      "baseline_or_original": "40-60 member library enumeration throttled",
+      "perturbed_or_upgraded": "Autonomous pivot to 6-candidate micro-batches",
+      "delta_points": "100% campaign continuity"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "study_id": "scientific-and-industry-harness-engineering-2026",
+  "title": "Scientific Discovery & Industry Scenario Harness Engineering: From Microsoft Discovery & CLIO to Calibrated Deference",
+  "provenance": "anonymized_reported",
+  "independently_reproduced": false,
+  "deterministic_verifier_status": "6/6 unit tests passed (simulator/test_clio_industry_harness_verifier.py)",
+  "primary_sources": [
+    {
+      "id": "ref_1",
+      "title": "Self-adaptive reasoning for science",
+      "venue": "Microsoft Research Blog (Aug 2025)",
+      "url": "https://www.microsoft.com/en-us/research/blog/self-adaptive-reasoning-for-science/",
+      "key_findings": [
+        "Introduces CLIO (Cognitive Loop via In-Situ Optimization) to make scientific reasoning transparent, steerable, and model-agnostic.",
+        "Achieves 22.37% accuracy on HLE Biology & Medicine with GPT-4.1 (no external tools), more than doubling base GPT-4.1 (8.55%) and outperforming o3 (high) (13.81%)."
+      ]
+    },
+    {
+      "id": "ref_2",
+      "title": "Self-Adaptive Reasoning Models for Science (CLIO v1)",
+      "venue": "arXiv:2508.02789",
+      "url": "https://arxiv.org/html/2508.02789",
+      "key_findings": [
+        "Algorithm 1: Recursive cognition with semantic initialization s_0, branching factor b, max depth D, clean-context thought channels, and dynamic registration of Completion T(s)=0.",
+        "Algorithm 2: GraphRAG unsupervised hierarchical community clustering + DRIFT Search reduction across M runs.",
+        "Ablation on HLE Bio/Med (n=152): Base GPT-4.1 = 8.55% (13/152); Cognitive Loop alone = 14.47% (+5.92%); + GraphRAG/DRIFT = 22.37% (34/152 reported total; 35/152 sum of 13 subcategory rows, +7.90% additional).",
+        "Section 5.2.1 (Fig. 6): Correct answers show negative uncertainty gradient (dU/dt < 0) or spikes resolved via child channels; incorrect answers show positive dU/dt or high-frequency oscillations."
+      ]
+    },
+    {
+      "id": "ref_3",
+      "title": "Microsoft Discovery Engine, Cognition, Tasks & Trust Investigation Patterns",
+      "venue": "Microsoft Learn Documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/microsoft-discovery/concept-discovery-engine",
+      "key_findings": [
+        "Two-module cognitive architecture: Thinking module (Fast thinking, Slow thinking, Warmup cycle) and Acting module (supercomputer containerized execution, Bookshelf RAG).",
+        "Task lifecycle: Active (New -> Executing -> Validating -> Incomplete / On Hold) and Terminal (Complete, Needs User Attention, Failed, Removed).",
+        "Separated Validation Iron Law: 'The agent that did the work never grades its own output.' Dedicated validator (gpt-5.4) inspects text results and file assets (.md, .csv, .json, .txt, .py, .yaml).",
+        "Retry Loop Protection: Halts automatic retries and transitions to Needs User Attention after >= 3 attempts with identical unresolved validation gaps."
+      ]
+    },
+    {
+      "id": "ref_4",
+      "title": "Adaptive by Design: How Microsoft Discovery Explores Science",
+      "venue": "Microsoft TechCommunity Discovery Blog (2026)",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-discovery-blog/adaptive-by-design-how-microsoft-discovery-explores-science/4552705",
+      "key_findings": [
+        "Built on GitHub Copilot as the base harness, layering CLIO mode for scientific ideation/reflection + Regret Reflection + dynamic multi-model switching (GPT-5.6 Sol default + fallback models on false rejections).",
+        "Agent's Last Exam (ALE) benchmark (152 public tasks, 13 domains, 5-hour time limit, Pass@1): Physical Sciences 75.2% (vs Opus 5 66.6% [+8.6%], vs Codex GPT-5.6 Sol 56.9% [+18.3%]); Health & Medicine 61.6% (vs 57.2% [+4.4%]); Life Sciences 64.6% (vs 60.8% [+3.8%])."
+      ]
+    },
+    {
+      "id": "ref_5",
+      "title": "Closed-Loop Molecular Design with Calibrated Deference (CLIO v2)",
+      "venue": "arXiv:2606.02618v1",
+      "url": "https://arxiv.org/abs/2606.02618v1",
+      "key_findings": [
+        "Upgrades belief-state graph to an online persistent memory structure across design rounds, warm-started from thematic abstractions of Accepted/Refuted/Open hypotheses.",
+        "Three specialist subagents: SmallMoleculeDesignAndGenerationAgent, FitnessFunctionAgent (Graphormer E_red, Graphormer logS, RDKit SAscore), RetrosynthesisAnalysisAgent (RetroChimera + QFANG + Deep Research).",
+        "Three Episodes of Calibrated Deference: (1) Graded distrust of Graphormer E_red (~2.7 V offset on parent benzo[c]cinnoline: -1.998 V vs +0.7 V note), salvaging rank-order and excluding E_red from Round 3 hard gate; (2) Runtime downshift from 40-60 batch to 6-candidate micro-batches under LLM rate limits; (3) Epistemic framing of Compound 3 (-0.895 V vs SHE, +133 mV gain, split oxidation wave |i_ox/i_red|=0.18) via 9 experiments across 3 tiers, confirming phosphonate-K+ ion pairing and redesigning benzylsulfonate Compound 20 (-0.854 V, +92 mV gain, |i_ox/i_red|=0.38).",
+        "Supplementary S5-S6 (Tables S4 & S5): In 500-eval PMO tests (n=6), shifting from black-box to grey-box boosts CLIO Top-1 by +10.1% (0.544 -> 0.599) and Mean Top-10 by +14.7% (0.504 -> 0.578), beating ExLLM (0.543). In 2,500-eval wet-lab tests, ExLLM candidates S1/S2/S3 (<1 mM) failed in 1 M KOH (pH 14) due to amine deprotonation, whereas CLIO achieved 56-57.9 mM.",
+        "Section S2.4 Failure Mode: CLIO missed RetroChimera substituting 2-(bromomethyl)quinoline for benzo[c]cinnoline on Compound 3 (predicting 2 steps vs actual 5 steps)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific &amp; Industry Scenario Harness Engineering Workbench · Microsoft Discovery &amp; CLIO</title>
+  <style>
+    :root {
+      --bg: #070B14;
+      --panel: #0F172A;
+      --card: #1E293B;
+      --border: #334155;
+      --text: #F8FAFC;
+      --muted: #94A3B8;
+      --blue: #38BDF8;
+      --indigo: #6366F1;
+      --green: #10B981;
+      --amber: #F59E0B;
+      --red: #F43F5E;
+      --purple: #A855F7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+      padding-bottom: 64px;
+    }
+    header {
+      background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--blue);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+    .nav-links a {
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 14px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid var(--border);
+    }
+    .nav-links a:hover { border-color: var(--blue); }
+    h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    .subtitle { color: var(--muted); font-size: 14.5px; max-width: 980px; }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .kpi-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .kpi-label { font-size: 11.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+    .kpi-val { font-size: 26px; font-weight: 800; margin: 4px 0; color: var(--blue); }
+    .kpi-sub { font-size: 12px; color: #CBD5E1; }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin: 26px 0 20px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .tab-btn {
+      background: var(--panel);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 13.5px;
+      font-weight: 700;
+      transition: all 0.15s;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: #1E293B;
+      color: var(--text);
+      border-color: var(--blue);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+    @media (max-width: 960px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    .panel-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+    .panel-box h2 { font-size: 18px; font-weight: 800; margin-bottom: 12px; color: var(--blue); }
+    .panel-box h3 { font-size: 15px; font-weight: 700; margin: 12px 0 8px; color: #E2E8F0; }
+
+    .control-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .control-row label { font-size: 13px; font-weight: 600; color: #CBD5E1; display: flex; justify-content: space-between; }
+    input[type="range"], select {
+      width: 100%;
+      padding: 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 13px;
+    }
+    .status-banner {
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-top: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #1E293B; color: var(--blue); font-size: 11.5px; text-transform: uppercase; }
+    .svg-showcase img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 18px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .pill-green { background: rgba(16,185,129,0.2); color: #34D399; border: 1px solid #10B981; }
+    .pill-amber { background: rgba(245,158,11,0.2); color: #FBBF24; border: 1px solid #F59E0B; }
+    .pill-red { background: rgba(244,63,94,0.2); color: #FB7185; border: 1px solid #F43F5E; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="top-bar">
+      <div class="badge-row">
+        <span class="badge">arXiv:2508.02789 (CLIO v1)</span>
+        <span class="badge">arXiv:2606.02618v1 (Calibrated Deference)</span>
+        <span class="badge">Microsoft Discovery Engine &amp; ALE Benchmark</span>
+        <span class="badge">6/6 Deterministic Unit Tests Passing</span>
+      </div>
+      <div class="nav-links">
+        <a href="./cards.zh.html">7-Card 评测卡片 (中文)</a>
+        <a href="./cards.html">7-Card Deck (EN)</a>
+        <a href="./README.md">中文研究专著</a>
+        <a href="./README.en.md">English Monograph</a>
+      </div>
+    </div>
+    <h1>科学发现与行业场景 Harness Engineering 交互式架构工作台</h1>
+    <p class="subtitle">
+      从 Microsoft Discovery 与 CLIO 自适应推理到校准遵从（Calibrated Deference）：探索当工具失准（~2.7 V 偏移）、目标异构、物理工况未建模（pH 14 氧化波分裂）时，企业级行业 Agent Harness 的 5 层架构与 10 大设计法则。
+    </p>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">HLE Bio/Med (无外部工具 Pass@1)</div>
+        <div class="kpi-val">22.37% (34/152)</div>
+        <div class="kpi-sub">GPT-4.1 + CLIO vs 8.55% 基座 (+161.6%) · 超 o3-high (13.81%)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">ALE 物理科学 (5 小时限时协议)</div>
+        <div class="kpi-val" style="color:var(--green);">75.2% (#1)</div>
+        <div class="kpi-sub">Copilot Base Harness + CLIO · 超 Opus 5 (+8.6%) &amp; Codex (+18.3%)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">AORFB 负一极湿实验闭环</div>
+        <div class="kpi-val" style="color:var(--purple);">-0.854 V (+92 mV)</div>
+        <div class="kpi-sub">Cmpd 3 (-0.895V) 诊断修复至 Cmpd 20，|i_ox/i_red| 0.18 &rarr; 0.38</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">PMO 灰盒优化 &amp; pH 14 鲁棒性</div>
+        <div class="kpi-val" style="color:var(--amber);">+14.7% Top-10</div>
+        <div class="kpi-sub">CLIO 57.9 mM 完胜 ExLLM 黑盒胺基陷阱 (&lt;1 mM 沉淀)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('tab-sim')">1. 校准遵从与门控仿真器 (Calibrated Deference Simulator)</button>
+    <button class="tab-btn" onclick="switchTab('tab-unc')">2. 不确定性梯度 dU/dt 与 3 振验证状态机</button>
+    <button class="tab-btn" onclick="switchTab('tab-principles')">3. 行业 Harness 10 大设计要点与 4 大垂直行业蓝图</button>
+    <button class="tab-btn" onclick="switchTab('tab-diagrams')">4. 架构全图集 (4 张 SVG 蓝图)</button>
+  </div>
+
+  <!-- TAB 1: CALIBRATED DEFERENCE SIMULATOR -->
+  <section id="tab-sim" class="tab-panel active">
+    <div class="grid-2">
+      <div class="panel-box">
+        <h2>交互式校准遵从（Calibrated Deference）与多目标门控仿真</h2>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">
+          复现 <code>arXiv:2606.02618v1</code> 方程 S1&ndash;S5 与 Round 1&rarr;Round 3 的工具信任状态机。调节锚点误差、分子性质与母核校验开关，观察 Harness 决策变化。
+        </p>
+
+        <div class="control-row">
+          <label><span>预设真实实验分子 / 场景选择</span><span id="preset-label">Compound 20 (Benzylsulfonate)</span></label>
+          <select id="mol-preset" onchange="applyPreset()">
+            <option value="cmpd20">Compound 20 · 苄基磺酸盐 (最终重设计冠军: -0.854V, |i_ox/i_red|=0.38)</option>
+            <option value="cmpd3">Compound 3 · 5-苄基膦酸盐 (Round 3 冠军: 预测 -2.04V, 实测 -0.895V, 氧化波分裂)</option>
+            <option value="cmpd1">Compound 1 · 文献双磺酸基线 (-0.762V, 500 mM)</option>
+            <option value="exllm">ExLLM S1/S2/S3 · 黑盒胺基陷阱 (pH 7 预测高溶, pH 14 &lt;1 mM 沉淀!)</option>
+            <option value="retro_swap">RetroChimera 漏洞 · 2-(溴甲基)喹啉母核偷换 (虚报 2 步 vs 实际 5 步)</option>
+          </select>
+        </div>
+
+        <div class="control-row">
+          <label><span>Graphormer 母体锚点绝对偏差 |&Delta;E_anchor| (V)</span><span id="val-anchor">2.698 V</span></label>
+          <input type="range" id="in-anchor" min="0.05" max="3.00" step="0.05" value="2.698" oninput="runDeferenceSim()" />
+        </div>
+
+        <div class="control-row">
+          <label><span>取代基方向秩相关度 (Spearman &rho;)</span><span id="val-rho">0.86</span></label>
+          <input type="range" id="in-rho" min="0.0" max="1.0" step="0.05" value="0.86" oninput="runDeferenceSim()" />
+        </div>
+
+        <div class="control-row">
+          <label><span>候选分子预测 E_red (V vs SHE)</span><span id="val-ered">-1.92 V</span></label>
+          <input type="range" id="in-ered" min="-2.30" max="-0.20" step="0.02" value="-1.92" oninput="runDeferenceSim()" />
+        </div>
+
+        <div class="control-row">
+          <label><span>预测溶解度 logS (需考虑 pH 14 电离态)</span><span id="val-logs">-1.65</span></label>
+          <input type="range" id="in-logs" min="-3.50" max="0.00" step="0.05" value="-1.65" oninput="runDeferenceSim()" />
+        </div>
+
+        <div class="control-row">
+          <label><span>合成可及性 SAscore (阈值 &le; 3.5)</span><span id="val-sa">2.55</span></label>
+          <input type="range" id="in-sa" min="1.50" max="4.50" step="0.05" value="2.55" oninput="runDeferenceSim()" />
+        </div>
+
+        <div class="control-row">
+          <label><span>RDKit SMARTS 苯并[c]噌啉母核等价性校验</span><span id="val-core">PASS (True)</span></label>
+          <select id="in-core" onchange="runDeferenceSim()">
+            <option value="1">PASS · 保持苯并[c]噌啉核心骨架 (Core Preserved)</option>
+            <option value="0">FAIL · 检测到 RetroChimera 偷换为喹啉骨架 (Scaffold Swap!)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <h2>Harness 决策输出与方程 S1&ndash;S5 评分拆解</h2>
+        <div id="sim-output" class="status-banner"></div>
+
+        <h3>对比：静态盲信流水线 vs. CLIO 校准遵从 Harness</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>评估维度</th>
+              <th>静态盲信流水线 (Static Pipeline)</th>
+              <th>CLIO 校准遵从 + 结构门控</th>
+            </tr>
+          </thead>
+          <tbody id="sim-table-body"></tbody>
+        </table>
+
+        <h3>AORFB 真实湿实验演进对照表 (arXiv:2606.02618v1 Table 1 &amp; S5)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>分子</th>
+              <th>E_red 预测 / 实测</th>
+              <th>1 M KOH 溶解度</th>
+              <th>|i_ox/i_red| 可逆性</th>
+              <th>关键机理状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Cmpd 1 (基线)</strong></td>
+              <td>-1.60 V / <strong>-0.762 V</strong></td>
+              <td>500.0 mM</td>
+              <td>0.52 (单波)</td>
+              <td>文献双磺酸对照基准</td>
+            </tr>
+            <tr>
+              <td><strong>Cmpd 3 (膦酸盐)</strong></td>
+              <td>-2.04 V / <strong>-0.895 V (+133 mV)</strong></td>
+              <td>57.9 mM</td>
+              <td><span class="pill pill-red">0.18 (P1/P2 双峰)</span></td>
+              <td>pH 14 下 -PO3^2- 与 K+ 紧密离子对分裂</td>
+            </tr>
+            <tr>
+              <td><strong>Cmpd 20 (磺酸盐)</strong></td>
+              <td>-1.92 V / <strong>-0.854 V (+92 mV)</strong></td>
+              <td>56.0 mM</td>
+              <td><span class="pill pill-green">0.38 (单峰翻倍修复)</span></td>
+              <td>弱配位单阴离子 -SO3^- 消除阳离子分裂</td>
+            </tr>
+            <tr>
+              <td><strong>ExLLM S1&ndash;S3</strong></td>
+              <td>黑盒高分 / 无法测定</td>
+              <td><span class="pill pill-red">&lt; 1.0 mM (沉淀)</span></td>
+              <td>不溶失效</td>
+              <td>碱性胺基钻 pH 7 预测器空子，在 pH 14 去质子化</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 2: UNCERTAINTY GRADIENT & VALIDATOR -->
+  <section id="tab-unc" class="tab-panel">
+    <div class="grid-2">
+      <div class="panel-box">
+        <h2>内部不确定性梯度定律 (dU/dt) 实时诊断器</h2>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">
+          基于 <code>arXiv:2508.02789</code> Section 5.2.1 (Fig. 6)：选择不同的认知不确定性轨迹，观察 Harness 如何通过斜率与符号反转次数（&Omega;）进行免提示词（Prompt-Free）干预。
+        </p>
+        <div class="control-row">
+          <label><span>选择推理不确定性轨迹模式</span></label>
+          <select id="unc-mode" onchange="runUncertaintySim()">
+            <option value="converging">模式 A · 单调收敛轨迹 (dU/dt &lt; 0: 0.48 &rarr; 0.36 &rarr; 0.25 &rarr; 0.16 &rarr; 0.11 &rarr; 0.08)</option>
+            <option value="spike">模式 B · 矛盾尖峰 + 干净上下文子通道消解 (▲ Spike 0.30 &rarr; 0.68 &rarr; 0.24 &rarr; 0.09)</option>
+            <option value="oscillating">模式 C · 恶性高频震荡轨迹 (dU/dt &gt; 0 &amp; &Omega;&ge;3: 0.28 &rarr; 0.56 &rarr; 0.31 &rarr; 0.64 &rarr; 0.35 &rarr; 0.71)</option>
+          </select>
+        </div>
+        <div id="unc-output" class="status-banner"></div>
+      </div>
+
+      <div class="panel-box">
+        <h2>Microsoft Discovery 独立验证与 3 振熔断状态机</h2>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">
+          基于 Microsoft Learn 官方文档：<em>&ldquo;The agent that did the work never grades its own output.&rdquo;</em> 模拟连续重试时的验证缺口指纹追踪。
+        </p>
+        <div class="control-row">
+          <label><span>模拟任务验证需求校准度与重试序列</span></label>
+          <select id="val-mode" onchange="runValidatorSim()">
+            <option value="calibrated">良校准契约 · 第 1 次缺口 [missing_cation_control] &rarr; 第 2 次补齐通过 (Complete)</option>
+            <option value="strict_loop">过严/卡死契约 · 连续 3 次残留相同缺口 [0.01_kcal_precision_unmet] &rarr; 触发 3 振熔断!</option>
+            <option value="loose">过松契约 (&ldquo;Give a good answer&rdquo;) &rarr; 警告：缺乏可验证文件资产指标，易发生假阳性通过</option>
+          </select>
+        </div>
+        <div id="val-output" class="status-banner"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 3: 10 PRINCIPLES & 4 VERTICALS -->
+  <section id="tab-principles" class="tab-panel">
+    <div class="panel-box">
+      <h2>行业场景 Harness Engineering 十大核心设计要点（10 Core Design Principles）</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:6%;">#</th>
+            <th style="width:24%;">设计要点名称</th>
+            <th style="width:26%;">文献来源与算法锚点</th>
+            <th style="width:44%;">行业场景架构落地指南</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>01</strong></td>
+            <td><strong>校准遵从状态机</strong><br/>(Calibrated Deference)</td>
+            <td><code>arXiv:2606.02618v1</code> Sec 3.2 &amp; Fig. S1 (~2.7 V E_red 偏移)</td>
+            <td>每次调用行业预测器时混入已知参考锚点；若绝对标度失准但局部秩相关有效，将其移出硬门控并降级为软排序特征。</td>
+          </tr>
+          <tr>
+            <td><strong>02</strong></td>
+            <td><strong>三层异构目标编排</strong><br/>(Tri-Tier Objectives)</td>
+            <td><code>arXiv:2606.02618v1</code> Sec 2.1 &amp; Table S5 (ExLLM pH 14 沉淀)</td>
+            <td>解耦数值预测（Tier A）、带确定性结构校验的流程步数（Tier B）与自然语言物理/合规极端工况推演（Tier C），粉碎 Goodhart 刷分陷阱。</td>
+          </tr>
+          <tr>
+            <td><strong>03</strong></td>
+            <td><strong>干净上下文递归分支</strong><br/>(Clean-Context Channels)</td>
+            <td><code>arXiv:2508.02789</code> Alg 1 (+5.92% HLE) &amp; 动态 T(s)=0</td>
+            <td>在正交假设、高噪声中间排障或切换专业 Persona 时派生干净上下文子通道；在覆盖率达标前隐藏 <code>Completion</code> 终止函数。</td>
+          </tr>
+          <tr>
+            <td><strong>04</strong></td>
+            <td><strong>在线持久化信念状态图</strong><br/>(Warm-Start Belief Graph)</td>
+            <td><code>arXiv:2508.02789</code> Alg 2 (+7.90%) &amp; <code>2606.02618v1</code> Sec 4.1</td>
+            <td>跨轮次维护 Accepted / Refuted / Open 假设图谱，用 GraphRAG + DRIFT 社区聚类提纯，新轮次仅以主题抽象热启动。</td>
+          </tr>
+          <tr>
+            <td><strong>05</strong></td>
+            <td><strong>不确定性梯度实时熔断</strong><br/>(dU/dt Telemetry)</td>
+            <td><code>arXiv:2508.02789</code> Sec 5.2.1 &amp; Fig. 6</td>
+            <td>实时计算自评不确定性斜率 dU/dt 与符号反转次数；尖峰时派生子通道（▲），高频震荡时免提示词自动冻结并升级人工。</td>
+          </tr>
+          <tr>
+            <td><strong>06</strong></td>
+            <td><strong>执行与验证彻底分离</strong><br/>(Separated Validator)</td>
+            <td>Microsoft Learn <code>concept-tasks-investigations</code></td>
+            <td>坚守“执行 Agent 绝不自我打分”铁律；由独立模型部署（如 <code>gpt-5.4</code>）直接读取存储层 <code>.csv/.json/.py</code> 核验结果。</td>
+          </tr>
+          <tr>
+            <td><strong>07</strong></td>
+            <td><strong>连续 3 次相同缺陷熔断</strong><br/>(3-Strike Circuit Breaker)</td>
+            <td>Microsoft Learn <code>concept-trust-basic-investigation-patterns</code></td>
+            <td>对比历次验证未通过的规范化缺陷指纹；一旦连续 &ge;3 次残留相同缺口，立即停止重试并转入 <code>Needs User Attention</code>。</td>
+          </tr>
+          <tr>
+            <td><strong>08</strong></td>
+            <td><strong>后悔反思与多模型路由</strong><br/>(Regret + Multi-Model)</td>
+            <td>MS TechCommunity ALE Blog (物理科学 75.2%, +18.3%)</td>
+            <td>基于 GitHub Copilot 基础 Harness，将失败尝试沉淀为反事实约束（Regret Reflection），遇伪拒绝或停滞时动态切换模型池。</td>
+          </tr>
+          <tr>
+            <td><strong>09</strong></td>
+            <td><strong>运行时微批次优雅降级</strong><br/>(Micro-Batch Resilience)</td>
+            <td><code>arXiv:2606.02618v1</code> Sec 3.2 (40&ndash;60 &rarr; 6 微批次)</td>
+            <td>向认知层暴露 API 限流与服务健康信号，支持自主缩小批处理粒度（6 分子微批次）或启用替代启发式规则。</td>
+          </tr>
+          <tr>
+            <td><strong>10</strong></td>
+            <td><strong>共识机理与最小判别实验</strong><br/>(Consensus Diagnostics)</td>
+            <td><code>arXiv:2606.02618v1</code> Table 2 &amp; S2 (9 项实验 &rarr; Cmpd 20)</td>
+            <td>针对未建模物理/生产回归，启动多路并行 CLIO 运行生成 Tier 1&ndash;3 假设，优先执行全票标星（&starf;）的正交证伪实验后再重设计。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TAB 4: SVG DIAGRAMS -->
+  <section id="tab-diagrams" class="tab-panel svg-showcase">
+    <div class="panel-box">
+      <h2>1. Microsoft Discovery &amp; CLIO 五层行业 Harness 参考架构</h2>
+      <img src="./assets/svg/01-clio-discovery-5layer-architecture.svg" alt="5-Layer Architecture" />
+      <h2>2. 校准遵从（Calibrated Deference）与 AORFB 分子设计闭环全景</h2>
+      <img src="./assets/svg/02-calibrated-deference-aorfb-loop.svg" alt="Calibrated Deference Loop" />
+      <h2>3. 行业 Harness 十大设计原则与四大垂直行业映射矩阵</h2>
+      <img src="./assets/svg/03-industry-harness-10-principles-matrix.svg" alt="10 Principles Matrix" />
+      <h2>4. 内部不确定性梯度定律 (dU/dt) 与独立验证三振熔断状态机</h2>
+      <img src="./assets/svg/04-uncertainty-gradient-and-validator-gate.svg" alt="Uncertainty Gradient and Validator Gate" />
+    </div>
+  </section>
+</main>
+
+<script>
+  function switchTab(id) {
+    document.querySelectorAll('.tab-panel').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+
+  function clip01(x) { return Math.max(0.0, Math.min(1.0, x)); }
+
+  function applyPreset() {
+    const p = document.getElementById('mol-preset').value;
+    if (p === 'cmpd20') {
+      document.getElementById('in-anchor').value = 2.698;
+      document.getElementById('in-rho').value = 0.86;
+      document.getElementById('in-ered').value = -1.92;
+      document.getElementById('in-logs').value = -1.65;
+      document.getElementById('in-sa').value = 2.55;
+      document.getElementById('in-core').value = "1";
+      document.getElementById('preset-label').textContent = "Compound 20 (Benzylsulfonate)";
+    } else if (p === 'cmpd3') {
+      document.getElementById('in-anchor').value = 2.698;
+      document.getElementById('in-rho').value = 0.86;
+      document.getElementById('in-ered').value = -2.04;
+      document.getElementById('in-logs').value = -1.69;
+      document.getElementById('in-sa').value = 2.62;
+      document.getElementById('in-core').value = "1";
+      document.getElementById('preset-label').textContent = "Compound 3 (5-Benzylphosphonate)";
+    } else if (p === 'cmpd1') {
+      document.getElementById('in-anchor').value = 0.25;
+      document.getElementById('in-rho').value = 0.90;
+      document.getElementById('in-ered').value = -0.76;
+      document.getElementById('in-logs').value = -0.30;
+      document.getElementById('in-sa').value = 2.40;
+      document.getElementById('in-core').value = "1";
+      document.getElementById('preset-label').textContent = "Compound 1 (Disulfonate Baseline)";
+    } else if (p === 'exllm') {
+      document.getElementById('in-anchor').value = 2.698;
+      document.getElementById('in-rho').value = 0.86;
+      document.getElementById('in-ered').value = -1.05;
+      document.getElementById('in-logs').value = -3.30; // Deprotonated amine at pH 14!
+      document.getElementById('in-sa').value = 2.80;
+      document.getElementById('in-core').value = "1";
+      document.getElementById('preset-label').textContent = "ExLLM S1-S3 (Amine Trap at pH 14)";
+    } else if (p === 'retro_swap') {
+      document.getElementById('in-anchor').value = 2.698;
+      document.getElementById('in-rho').value = 0.86;
+      document.getElementById('in-ered').value = -2.04;
+      document.getElementById('in-logs').value = -1.69;
+      document.getElementById('in-sa').value = 2.62;
+      document.getElementById('in-core').value = "0";
+      document.getElementById('preset-label').textContent = "RetroChimera Quinoline Swap";
+    }
+    runDeferenceSim();
+  }
+
+  function runDeferenceSim() {
+    const anchorErr = parseFloat(document.getElementById('in-anchor').value);
+    const rho = parseFloat(document.getElementById('in-rho').value);
+    const ered = parseFloat(document.getElementById('in-ered').value);
+    const logs = parseFloat(document.getElementById('in-logs').value);
+    const sa = parseFloat(document.getElementById('in-sa').value);
+    const coreOk = document.getElementById('in-core').value === "1";
+
+    document.getElementById('val-anchor').textContent = anchorErr.toFixed(3) + " V";
+    document.getElementById('val-rho').textContent = rho.toFixed(2);
+    document.getElementById('val-ered').textContent = ered.toFixed(2) + " V";
+    document.getElementById('val-logs').textContent = logs.toFixed(2);
+    document.getElementById('val-sa').textContent = sa.toFixed(2);
+    document.getElementById('val-core').textContent = coreOk ? "PASS (True)" : "FAIL (Quinoline Swap!)";
+
+    const sEred = clip01((-0.3 - ered) / 0.9);
+    const sLogs = clip01((logs + 2.0) / 2.0);
+    const sSa = clip01((3.5 - sa) / 2.5);
+    const sSteps = 0.60; // 2 steps = 0.60
+
+    const staticEredGate = (ered >= -1.2 && ered <= -0.3);
+    const staticLogsGate = (logs >= -2.0);
+    const staticSaGate = (sa <= 3.5);
+    const staticPass = staticEredGate && staticLogsGate && staticSaGate;
+
+    // Calibrated Deference logic
+    let trustState = "TRUSTED_HARD_GATE";
+    let useEredHardGate = true;
+    if (anchorErr > 0.5) {
+      if (rho >= 0.6) {
+        trustState = "RANK_ORDER_SALVAGED_EXCLUDE_HARD_GATE (校准遵从：保留软排序，解除 E_red 硬门控)";
+        useEredHardGate = false;
+      } else {
+        trustState = "REJECTED_UNRELIABLE (锚点失准且无序关系，禁用该工具)";
+        useEredHardGate = false;
+      }
+    }
+
+    const clioLogsGate = (logs >= -2.5);
+    const clioSaGate = (sa <= 3.5);
+    const clioPass = (useEredHardGate ? staticEredGate : true) && clioLogsGate && clioSaGate && coreOk;
+
+    const rawMean = 0.25 * (sEred + sLogs + sSa + sSteps);
+    const staticJ = staticPass ? rawMean : 0.0;
+    const clioJ = clioPass ? rawMean : 0.0;
+
+    const out = document.getElementById('sim-output');
+    out.innerHTML = `
+      <div><strong>工具信任状态 (Deference State):</strong> <span style="color:var(--blue);">${trustState}</span></div>
+      <div style="margin-top:6px;">
+        <strong>静态硬门控得分 J_static(m):</strong> <code>${staticJ.toFixed(4)}</code> (${staticPass ? 'PASS' : 'REJECTED'}) &nbsp;|&nbsp;
+        <strong>CLIO 校准遵从 + 结构门控得分 J_clio(m):</strong> <code style="color:var(--green);font-size:15px;">${clioJ.toFixed(4)}</code>
+        (${clioPass ? '<span class="pill pill-green">SELECTED FOR WET-LAB</span>' : '<span class="pill pill-red">BLOCKED BY GATE</span>'})
+      </div>
+    `;
+
+    document.getElementById('sim-table-body').innerHTML = `
+      <tr>
+        <td><strong>E_red 门控决策</strong></td>
+        <td>${staticEredGate ? '<span class="pill pill-green">通过 [-1.2, -0.3V]</span>' : '<span class="pill pill-red">误杀! 盲信失准预测值 ' + ered.toFixed(2) + 'V</span>'}</td>
+        <td>${useEredHardGate ? '启用硬门控' : '<span class="pill pill-amber">已解除硬门控 (抢救局部排序 s_Ered=' + sEred.toFixed(2) + ')</span>'}</td>
+      </tr>
+      <tr>
+        <td><strong>pH 14 溶解度门控</strong></td>
+        <td>预测器仅按 pH 7 打分 (易放行碱性胺基 ExLLM S1-S3)</td>
+        <td>${clioLogsGate ? '<span class="pill pill-green">通过 pH 14 阴离子电离核验 (logS=' + logs.toFixed(2) + ')</span>' : '<span class="pill pill-red">拦截! pH 14 下去质子化沉淀 (&lt;1 mM)</span>'}</td>
+      </tr>
+      <tr>
+        <td><strong>SMARTS 母核不变量校验</strong></td>
+        <td>未检查 (漏检 RetroChimera 偷换喹啉母核)</td>
+        <td>${coreOk ? '<span class="pill pill-green">通过 RDKit SMARTS 母核等价性断言</span>' : '<span class="pill pill-red">强制拦截! 发现起始原料母核被偷换为喹啉</span>'}</td>
+      </tr>
+    `;
+  }
+
+  function runUncertaintySim() {
+    const mode = document.getElementById('unc-mode').value;
+    const box = document.getElementById('unc-output');
+    if (mode === 'converging') {
+      box.innerHTML = `<span class="pill pill-green">dU/dt = -0.080 (&lt; 0) · 符号反转 &Omega; = 0</span><br/><br/>
+      <strong>诊断结论：</strong>不确定性随证据积累单调下降（0.48 &rarr; 0.08）。认知状态健康，允许动态注册 <code>Completion T(s)=0</code> 并自动收敛输出。`;
+    } else if (mode === 'spike') {
+      box.innerHTML = `<span class="pill pill-amber">检测到局部矛盾尖峰 (0.30 &rarr; 0.68) · 已派生干净子通道 (▲) · 最终 dU/dt = -0.042</span><br/><br/>
+      <strong>诊断结论：</strong>在 t=0.25 遇到关键机理冲突，CLIO 立即开启全新干净上下文子通道（Clean-Context Child Channel）独立攻克该子问题，避免污染主干上下文，不确定性迅速回落至 0.09。`;
+    } else {
+      box.innerHTML = `<span class="pill pill-red">dU/dt = +0.086 (&gt; 0) · 符号反转次数 &Omega; = 5 (&ge; 3 高频震荡!)</span><br/><br/>
+      <strong>诊断结论：</strong>轨迹在冲突假设间剧烈反复横跳（0.28 &rarr; 0.56 &rarr; 0.31 &rarr; 0.64 &rarr; 0.35 &rarr; 0.71）。符合 <code>arXiv:2508.02789</code> Fig. 6 典型错误特征！Harness 立即执行 <strong>Prompt-Free 自动熔断</strong>，禁用 <code>Completion</code> 并推送人类专家编辑信念节点。`;
+    }
+  }
+
+  function runValidatorSim() {
+    const mode = document.getElementById('val-mode').value;
+    const box = document.getElementById('val-output');
+    if (mode === 'calibrated') {
+      box.innerHTML = `<span class="pill pill-green">最终状态: Complete (通过独立验证进程 gpt-5.4 核验)</span><br/><br/>
+      <strong>状态机轨迹：</strong><code>New &rarr; Executing &rarr; Validating &rarr; Incomplete (Attempt 1: 缺失阳离子对照数据) &rarr; Slow Thinking 补充子任务 &rarr; Validating &rarr; Complete</code>。<br/>
+      验证器独立读取了存储层生成的 <code>.csv</code> 与 <code>.json</code> 实验数据并确认达标。`;
+    } else if (mode === 'strict_loop') {
+      box.innerHTML = `<span class="pill pill-red">最终状态: Needs User Attention (触发连续 3 次相同缺陷熔断!)</span><br/><br/>
+      <strong>状态机轨迹：</strong>Attempt 1 缺口 <code>[0.01_kcal_precision_unmet]</code> &rarr; Attempt 2 缺口 <code>[0.01_kcal_precision_unmet]</code> &rarr; Attempt 3 缺口 <code>[0.01_kcal_precision_unmet]</code>。<br/>
+      <strong>熔断原因：</strong>验证需求设定了当前半经验/ML 工具无法企及的过严精度，连续 3 次残留完全相同的未闭环缺口，认知引擎自动停止空转并请求用户校准验证需求。`;
+    } else {
+      box.innerHTML = `<span class="pill pill-amber">校准警告: TOO_LOOSE (验证需求过松风险)</span><br/><br/>
+      <strong>审计结论：</strong>验证需求仅包含模糊定性描述（&ldquo;Give a good answer&rdquo;），未指定可验证的文件要素或数值边界。根据 Microsoft Learn Trust 指南，这会导致浅层表面回答在第 1 轮即被误判为 <code>Complete</code>。建议补充明确的输出契约要素。`;
+    }
+  }
+
+  applyPreset();
+  runUncertaintySim();
+  runValidatorSim();
+</script>
+</body>
+</html>

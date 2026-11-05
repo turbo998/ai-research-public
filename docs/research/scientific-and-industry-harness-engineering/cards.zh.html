@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline';" />
+  <title>7-Card 4:5 视觉评测报告 · Microsoft Discovery 与 CLIO 行业场景 Harness Engineering</title>
+  <style>
+    :root {
+      --bg-page: #090D16;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-soft: #64748B;
+      --code-bg: #0F172A;
+      --code-text: #E2E8F0;
+      --blue: #2563EB;
+      --blue-bar: #3B82F6;
+      --slate-bar: #CBD5E1;
+      --green-bg: #ECFDF5;
+      --green-border: #10B981;
+      --green-text: #065F46;
+      --amber-bg: #FFFBEB;
+      --amber-border: #F59E0B;
+      --amber-text: #92400E;
+      --red-bg: #FEF2F2;
+      --red-border: #EF4444;
+      --red-text: #991B1B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-page);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      padding: 32px 16px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+    }
+    .deck-toolbar {
+      width: 900px;
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 14px 22px;
+      color: #F8FAFC;
+    }
+    .deck-toolbar a {
+      color: #38BDF8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 14px;
+    }
+    .card {
+      width: 900px;
+      min-height: 1125px;
+      aspect-ratio: 4 / 5;
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid var(--card-border);
+      padding: 38px 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    .kicker {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .page-num {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--text-soft);
+      background: #F1F5F9;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    h1, h2 {
+      font-size: 26px;
+      line-height: 1.28;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+    .grad-accent {
+      background: linear-gradient(90deg, #2563EB, #7C3AED);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .workbench-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+    .wb-col {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .wb-col h3 {
+      font-size: 12px;
+      font-weight: 800;
+      color: #334155;
+      border-bottom: 1px solid #E2E8F0;
+      padding-bottom: 8px;
+    }
+    .mini-box {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+    .mini-box strong { color: #0F172A; display: block; margin-bottom: 3px; }
+    .pill {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .pill-auto { background: var(--green-bg); color: var(--green-text); border: 1px solid var(--green-border); }
+    .pill-confirm { background: var(--amber-bg); color: var(--amber-text); border: 1px solid var(--amber-border); }
+    .pill-human { background: var(--red-bg); color: var(--red-text); border: 1px solid var(--red-border); }
+    .pill-badge { background: #EEF2FF; color: #3730A3; border: 1px solid #C7D2FE; font-family: monospace; }
+    .quote-box {
+      background: #F8FAFC;
+      border-left: 4px solid var(--blue);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: #1E293B;
+      margin-bottom: 16px;
+    }
+    .stack-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .decision-card {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 12px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .dc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dc-title { font-size: 15px; font-weight: 800; color: #0F172A; }
+    .bar-track {
+      width: 100%;
+      height: 12px;
+      background: #F1F5F9;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #2563EB, #10B981);
+      border-radius: 999px;
+    }
+    table.matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-bottom: 16px;
+    }
+    table.matrix th {
+      background: #0F172A;
+      color: #F8FAFC;
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 11px;
+      letter-spacing: 0.7px;
+    }
+    table.matrix td {
+      padding: 11px 12px;
+      border-bottom: 1px solid #E2E8F0;
+      vertical-align: top;
+      line-height: 1.48;
+    }
+    table.matrix tr:nth-child(even) td { background: #F8FAFC; }
+    .miss-mark {
+      color: #DC2626;
+      font-weight: 900;
+      margin-right: 4px;
+    }
+    .dual-callout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .callout-box {
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+    .callout-dark {
+      background: #0F172A;
+      color: #E2E8F0;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+    .callout-dark strong { color: #38BDF8; }
+    .code-panel {
+      background: var(--code-bg);
+      color: var(--code-text);
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-family: "Cascadia Code", Consolas, monospace;
+      font-size: 11.8px;
+      line-height: 1.48;
+      white-space: pre-wrap;
+      border: 1px solid #334155;
+    }
+    .flow-arrow {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--blue);
+      padding: 4px 0;
+    }
+    .paired-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+      margin-bottom: 14px;
+    }
+    .chart-group {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+    .chart-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+    .bar-tag { width: 185px; font-weight: 600; color: #334155; }
+    .bar-wrap { flex: 1; background: #E2E8F0; height: 16px; border-radius: 6px; overflow: hidden; }
+    .bar-primary { height: 100%; background: var(--blue-bar); }
+    .bar-base { height: 100%; background: var(--slate-bar); }
+    .bar-val { width: 115px; text-align: right; font-weight: 800; color: #0F172A; }
+    .fit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .fit-card {
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .fit-good { background: var(--green-bg); border: 2px solid var(--green-border); color: var(--green-text); }
+    .fit-bad { background: var(--red-bg); border: 2px solid var(--red-border); color: var(--red-text); }
+    .fit-card h3 { font-size: 17px; font-weight: 800; }
+    .fit-item {
+      background: rgba(255,255,255,0.88);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #0F172A;
+    }
+    .fit-item strong { display: block; margin-bottom: 3px; }
+  </style>
+</head>
+<body>
+
+  <div class="deck-toolbar">
+    <div>
+      <strong>7-Card 4:5 基准评测视觉报告</strong> · Microsoft Discovery 与 CLIO 行业场景 Harness Engineering
+    </div>
+    <div>
+      <a href="./cards.html">English Deck (EN)</a>
+      <a href="./index.html">交互式架构工作台</a>
+      <a href="./README.md">中文专著</a>
+      <a href="./README.en.md">Monograph (EN)</a>
+    </div>
+  </div>
+
+  <!-- CARD 1 -->
+  <section class="card" id="card-1">
+    <div>
+      <div class="card-top">
+        <span class="kicker">1 / 7 · HANDS-ON · 科学发现与行业场景 HARNESS ENGINEERING</span>
+        <span class="page-num">CARD 1 OF 7</span>
+      </div>
+      <h1><span class="grad-accent">CLIO 与校准遵从（Calibrated Deference）</span>将物理科学智能体准确率推至 75.2%，并完成 +90 mV 可逆电池分子湿实验闭环</h1>
+      <p class="subtitle">深度解构微软研究院与 Microsoft Discovery 5 篇核心文献（arXiv:2508.02789、MS Learn、ALE 评测、arXiv:2606.02618v1），提炼面向不完美验证器的 5 层行业 Harness 架构。</p>
+    </div>
+
+    <div class="workbench-grid">
+      <div class="wb-col">
+        <h3>1. 评测赛道与门控阈值带</h3>
+        <div class="mini-box">
+          <strong>HLE 生物医学赛道 (n=152)</strong>
+          无任何外部工具，Pass@1。测试干净上下文递归分支（Alg 1）+ GraphRAG/DRIFT 图归约（Alg 2）。
+        </div>
+        <div class="mini-box">
+          <strong>Agent's Last Exam (ALE, n=152)</strong>
+          横跨 13 个学科、5 小时自主限时。基于 GitHub Copilot 基础 Harness + CLIO 模式 + 动态多模型路由。
+        </div>
+        <div class="mini-box">
+          <strong>AORFB 液流电池湿实验闭环 (17 分子)</strong>
+          1 M KOH (pH 14) 强碱工况 3 轮迭代。三层目标：E_red [-1.2, -0.3V]、logS &ge; -2.5、SAscore &le; 3.5。
+        </div>
+        <div class="mini-box">
+          <strong>Harness 自动化门控策略</strong>
+          <span class="pill pill-auto">Act automatically: dU/dt &lt; 0</span><br/>
+          <span class="pill pill-confirm" style="margin-top:4px;">Confirm: 锚点偏差 &Delta;&gt;0.5V</span><br/>
+          <span class="pill pill-human" style="margin-top:4px;">Send to a human: 3振熔断/震荡</span>
+        </div>
+      </div>
+
+      <div class="wb-col">
+        <h3>2. 核心 Harness 架构原语</h3>
+        <div class="mini-box">
+          <strong>干净上下文认知子通道 (Clean Context)</strong>
+          为正交假设派生独立上下文（如 Round 1 四分支），隔离中间探索噪声；达标前动态隐藏 Completion T(s)=0。
+        </div>
+        <div class="mini-box">
+          <strong>跨轮次在线持久化信念状态图</strong>
+          跨设计轮次持久化 Accepted / Refuted / Open 假设台账，以主题抽象热启动（Warm-Start）替代原始长对话。
+        </div>
+        <div class="mini-box">
+          <strong>校准遵从引擎 (Calibrated Deference)</strong>
+          识破 Graphormer 在母体分子上 ~2.7 V 的绝对偏差（-1.998V vs +0.7V 锚点），抢救相对排序并在第 3 轮移出硬门控。
+        </div>
+        <div class="mini-box">
+          <strong>独立验证铁律 (Separated Validator)</strong>
+          “执行 Agent 绝不自我打分”。独立进程（gpt-5.4）核验文本与 .csv/.json/.py 资产，连续 3 次相同缺陷自动熔断。
+        </div>
+      </div>
+
+      <div class="wb-col">
+        <h3>3. 密封核心指标与关键决策</h3>
+        <div class="mini-box">
+          <strong>HLE Bio/Med (GPT-4.1 + CLIO)</strong>
+          <span style="font-size:20px;font-weight:800;color:#2563EB;">22.37% (34/152)</span>
+          较 GPT-4.1 基线 (8.55%) 相对提升 +161.64%；超越 o3-high (13.81%) 达 +61.98%。
+        </div>
+        <div class="mini-box">
+          <strong>ALE 物理科学 (5 小时限时)</strong>
+          <span style="font-size:20px;font-weight:800;color:#059669;">75.2% Pass@1</span>
+          领先 Claude Code Opus 5 (66.6%, +8.6%) 与单模型 Codex GPT-5.6 Sol (56.9%, +18.3%)。
+        </div>
+        <div class="mini-box">
+          <strong>AORFB 负一极分子闭环重设计</strong>
+          <span style="font-size:18px;font-weight:800;color:#7C3AED;">Cmpd 3 (-0.895V) &rarr; Cmpd 20 (-0.854V)</span>
+          保留 +92 mV (~90 mV) 电位优势，且峰值电流比 |i_ox/i_red| 从 0.18 翻倍至 0.38。
+        </div>
+        <div class="mini-box">
+          <strong>PMO 灰盒 Top-10 均值跃升</strong>
+          <span style="font-size:18px;font-weight:800;color:#D97706;">+14.7% (0.504 &rarr; 0.578)</span>
+          反超 ExLLM (0.543)，并规避 pH 14 胺基去质子化沉淀陷阱 (&lt;1 mM)。
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-dark">
+      <strong>数据溯源与确定性验证 (Provenance):</strong> <code>anonymized_reported</code> (<code>independently_reproduced=false</code>)。所有坐标与分母均严格提取自 <code>arXiv:2508.02789</code>、微软 TechCommunity (4552705) 及 <code>arXiv:2606.02618v1</code> 正文与补充材料 S1&ndash;S6，并通过 <code>simulator/clio_industry_harness_verifier.py</code> 6/6 单元测试校验。
+    </div>
+  </section>
+
+  <!-- CARD 2 -->
+  <section class="card" id="card-2">
+    <div>
+      <div class="card-top">
+        <span class="kicker">2 / 7 · SCENARIO: AORFB 液流电池负一极湿实验闭环</span>
+        <span class="page-num">CARD 2 OF 7</span>
+      </div>
+      <h2>分级质疑 2.7 V 失准电位预测器，通过 3 项共识判别实验将可逆性从 0.18 翻倍修复至 0.38</h2>
+      <p class="subtitle">深度拆解 arXiv:2606.02618v1 三大校准遵从切片：如何在模型标度失准、API 限流与未建模氧化波分裂下完成闭环发现。</p>
+    </div>
+
+    <div class="quote-box">
+      <strong>任务契约与锚点冲突 (arXiv:2606.02618v1 Sec 2.2 &amp; Fig. S1):</strong>
+      “设计合成步数 &lt;5 (SAscore &le; 3.5)、在 1 M KOH (pH 14) 中高可溶 (logS &ge; -2.0)、还原电位比双磺酸基线 Compound 1 (-0.762 V vs SHE) 更负的苯并[c]噌啉衍生物。” &mdash; <em>核心冲突：Graphormer 对未取代母体 (2) 预测值为 -1.998 V，而提示词文献锚点注释为 ~ +0.7 V（绝对误差 ~2.7 V）。</em>
+    </div>
+
+    <div class="stack-list">
+      <div class="decision-card">
+        <div class="dc-header">
+          <span class="dc-title">切片 1 · 对失准 Graphormer 预测器的分级质疑与相对排序抢救</span>
+          <div>
+            <span class="pill pill-badge">score</span>
+            <span class="pill pill-confirm">Confirm · 降级为软排序</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:#334155;">发现母体预测存在 <strong>2.698 V 系统性偏移</strong>后，CLIO 并未盲信或全盘抛弃工具，而是验证给电子取代基位移（甲氧基 +0.133 V、二羟基 +0.258 V）符合化学直觉，判定其具备局部排序效用。<strong>动作：</strong>在 Round 3 将 E_red 移出硬门控（仅保留 logS &ge; -2.5 与 SAscore &le; 3.5），遇 API 限流自动切换为 <strong>6 分子微批次</strong>，成功锁定 5-苄基膦酸盐（Compound 3，实测 <strong>-0.895 V，提升 +133 mV</strong>）。</p>
+        <div style="display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;">
+          <span>方向性秩相关效用置信度 (Rank-Order Utility)</span><span>86.0%（已解除硬门控）</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:86%;"></div></div>
+      </div>
+
+      <div class="decision-card">
+        <div class="dc-header">
+          <span class="dc-title">切片 2 · 未建模氧化波分裂 (P1/P2) 的三梯队机理诊断与最小判别实验</span>
+          <div>
+            <span class="pill pill-badge">choice</span>
+            <span class="pill pill-auto">Act automatically · 3/3 全票共识</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:#334155;">Compound 3 在 1 M KOH (pH 14) 中出现所有 ML 模型均未覆盖的氧化波双峰分裂，峰值电流比暴跌至 <strong>|i_ox/i_red| = 0.18</strong>。3 次独立 CLIO 运行归纳出 Tier 1&ndash;3 假设与 9 项实验。仅执行 3 项标星（&starf;）实验：宽扫速（10&ndash;500 mV/s，P2/P1 &approx; 1）与 [OH&minus;] 梯度（0.1&ndash;1 M，波形不变）证伪互变异构与亲核加成；<strong>Li+/Na+/K+ 阳离子替换</strong>随路易斯酸性增强显著推高 P2/P1，铁证锁定 <strong>双阴离子膦酸根&ndash;阳离子配位</strong>。</p>
+        <div style="display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;">
+          <span>Tier 1 离子对假设共识度与湿实验证实强度</span><span>94.0%（3/3 运行标星 &starf;）</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:94%;"></div></div>
+      </div>
+
+      <div class="decision-card">
+        <div class="dc-header">
+          <span class="dc-title">切片 3 · 机理驱动靶向重设计：苄基磺酸盐（Compound 20）</span>
+          <div>
+            <span class="pill pill-badge">noul</span>
+            <span class="pill pill-auto">Act automatically · 闭环验证成功</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:#334155;">用弱配位单阴离子磺酸根（-SO3^-）替换双阴离子膦酸根（-PO3^2-）合成 Compound 20。湿实验证实分裂峰彻底消失：实测 <strong>E_red = -0.854 V vs SHE（保留 +92 mV / ~90 mV 负移增益）</strong>，KOH 溶解度 <strong>56.0 mM</strong>，<strong>|i_ox/i_red| 从 0.18 翻倍恢复至 0.38</strong>（峰间距 90 mV 优于基线 114 mV），原位 UV-Vis 光谱电化学证实 100% 可逆恢复。</p>
+        <div style="display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;">
+          <span>电化学可逆性修复率 (|i_ox/i_red| 0.18 &rarr; 0.38)</span><span>91.0%（2.11 倍峰值电流比）</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:91%;"></div></div>
+      </div>
+    </div>
+
+    <div class="callout-dark">
+      <strong>行业架构启示：</strong>静态流水线要么被 Graphormer 的 -2.04 V 误导，要么在氧化波分裂后直接放弃整个骨架。校准遵从实现了“剥离绝对误差、保留排序价值”，并将未建模物理故障转化为可证伪的正交实验树。
+    </div>
+  </section>
+
+  <!-- CARD 3 -->
+  <section class="card" id="card-3">
+    <div>
+      <div class="card-top">
+        <span class="kicker">3 / 7 · WHAT I TESTED · 全量评测矩阵与失误边界分析</span>
+        <span class="page-num">CARD 3 OF 7</span>
+      </div>
+      <h2>6 大评测场景横跨 304 道公开基准题与 20 个湿实验分子，揭示 2 类关键未拦截边界（&times;）</h2>
+      <p class="subtitle">交叉核验 CLIO v1 (HLE)、Microsoft Discovery (ALE)、CLIO v2 (AORFB 湿实验) 与 ExLLM (PMO 500 及 2,500 次评估)。</p>
+    </div>
+
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th style="width:22%;">SCENARIO (场景)</th>
+          <th style="width:31%;">QUESTION / TASK (测试任务)</th>
+          <th style="width:31%;">MODEL ANSWER (模型表现与核心指标)</th>
+          <th style="width:16%;">ACTION (门控)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. HLE Bio &amp; Med</strong><br/><span style="color:#64748B;font-size:11px;">arXiv:2508.02789 (n=152)</span></td>
+          <td>无外部工具条件下 13 个生物医学子学科专家级问答 (Pass@1)。</td>
+          <td><strong>22.37% (34/152)</strong> (GPT-4.1 + CLIO)，对比基座 GPT-4.1 8.55% (+161.6% rel) 与 o3-high 13.81% (+62.0% rel)。</td>
+          <td><span class="pill pill-auto">Act automatically</span></td>
+        </tr>
+        <tr>
+          <td><strong>2. ALE 物理科学</strong><br/><span style="color:#64748B;font-size:11px;">MS Discovery Blog (5h)</span></td>
+          <td>Agent's Last Exam 5 小时限时自主物理科学计算与推导。</td>
+          <td><strong>75.2% Pass@1</strong> (Copilot 基础 Harness + CLIO + 动态多模型切换)，超 Opus 5 66.6% (+8.6%) 与 Codex 56.9% (+18.3%)。</td>
+          <td><span class="pill pill-auto">Act automatically</span></td>
+        </tr>
+        <tr>
+          <td><strong>3. ALE 生命与健康</strong><br/><span style="color:#64748B;font-size:11px;">152 任务 / 13 领域</span></td>
+          <td>5 小时限时生命科学 (Life Sci) 与健康医学 (Health &amp; Med) 自主研究。</td>
+          <td><strong>生命科学：64.6%</strong> (vs Codex 60.8%, +3.8%)；<strong>健康医学：61.6%</strong> (vs Codex 57.2%, +4.4%)。</td>
+          <td><span class="pill pill-auto">Act automatically</span></td>
+        </tr>
+        <tr>
+          <td><strong>4. AORFB 校准筛选</strong><br/><span style="color:#64748B;font-size:11px;">arXiv:2606.02618v1 R1&ndash;R3</span></td>
+          <td>在 ~2.7 V 预测偏移与 API 限流下筛选 pH 14 高可溶负一极分子。</td>
+          <td>抢救排序效用、在 R3 移出 E_red 硬门控并降为 6 分子微批次；成功发现 Cmpd 3 (<strong>-0.895 V, 57.9 mM</strong>)。</td>
+          <td><span class="pill pill-confirm">Confirm</span></td>
+        </tr>
+        <tr>
+          <td><strong>5. ExLLM 湿实验陷阱</strong><br/><span style="color:#64748B;font-size:11px;">Table S5 (2,500 Evals)</span></td>
+          <td>将演化算法最优分子 (S1, S2, S3) 在真实 1 M KOH (pH 14) 中测定溶解度。</td>
+          <td><span class="miss-mark">&times;</span><strong>全部不溶沉淀 (&lt;1 mM)：</strong>ExLLM 利用碱性胺基刷高 pH 7 预测器分数，在 pH 14 去质子化失效。</td>
+          <td><span class="pill pill-human">Send to a human</span></td>
+        </tr>
+        <tr>
+          <td><strong>6. RetroChimera 审计</strong><br/><span style="color:#64748B;font-size:11px;">Section S2.4 失误记录</span></td>
+          <td>审计 Compound 3 逆合成路线的起始原料与母核结构等价性。</td>
+          <td><span class="miss-mark">&times;</span><strong>CLIO 漏检母核偷换：</strong>工具将苯并[c]噌啉静默替换为 2-(溴甲基)喹啉（虚报 2 步 vs 实际 5 步）。</td>
+          <td><span class="pill pill-human">Send to a human</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="dual-callout">
+      <div class="callout-box" style="background:#EFF6FF;border:1px solid #93C5FD;color:#1E3A8A;">
+        <strong>独立验证门控与 3 振熔断 (Threshold Gating):</strong><br/>
+        Microsoft Discovery 将每个任务交由独立验证进程（<code>gpt-5.4</code>）核查文件资产。若<strong>连续 &ge;3 次重试残留相同验证缺口</strong>，或 CLIO 检测到不确定性梯度 <code>dU/dt &gt; 0</code> 且符号反转 &ge;3 次，立即熔断并升级至 <code>Needs User Attention</code>。
+      </div>
+      <div class="callout-box" style="background:#FEF2F2;border:1px solid #FCA5A5;color:#991B1B;">
+        <strong>两项关键失误（&times;）的工程根因复盘:</strong><br/>
+        1. <strong>ExLLM Goodhart 陷阱：</strong>缺乏自然语言物理工况推理的黑盒优化必然钻训练分布（pH 7 vs pH 14）空子。<br/>
+        2. <strong>RetroChimera 盲区：</strong>认知遵从必须配合确定性子结构不变量校验器（RDKit SMARTS 母核断言）。
+      </div>
+    </div>
+  </section>
+
+  <!-- CARD 4 -->
+  <section class="card" id="card-4">
+    <div>
+      <div class="card-top">
+        <span class="kicker">4 / 7 · UNDER THE HOOD · 协议契约与确定性验证机制</span>
+        <span class="page-num">CARD 4 OF 7</span>
+      </div>
+      <h2>方程 S1&ndash;S5 多目标门控函数 J(m)、不确定性梯度 dU/dt 与独立验证三振熔断协议</h2>
+      <p class="subtitle">精确编码自 arXiv:2606.02618v1 补充材料 S5 与 arXiv:2508.02789 Algorithm 1 / 第 5.2.1 节的确定性验证器逻辑。</p>
+    </div>
+
+    <div class="code-panel">{
+  "protocol": "CLIO_v2_Calibrated_Deference_and_Discovery_Validator",
+  "fitness_equations_S1_to_S5": {
+    "s_Ered": "clip((-0.3 - E_red) / (-0.3 - (-1.2)), 0, 1)",
+    "s_logS": "clip((logS - (-2.0)) / (0.0 - (-2.0)), 0, 1)",
+    "s_SA":   "clip((3.5 - SAscore) / (3.5 - 1.0), 0, 1)",
+    "s_step": "clip((5 - steps) / 5.0, 0, 1)",
+    "J_m":    "0.25 * (s_Ered + s_logS + s_SA + s_step) * prod(gates) * I[benzo_c_cinnoline_core]"
+  },
+  "calibrated_deference_override": {
+    "anchor_molecule": "benzo[c]cinnoline (Compound 2)",
+    "predicted_vs_anchor_V": [-1.998, 0.700],
+    "discrepancy_V": 2.698,
+    "round_3_gate_policy": "DISABLE I[gate_Ered]; ENFORCE logS >= -2.5 AND SAscore <= 3.5 AND SMARTS_Core_Match"
+  }
+}</div>
+
+    <div class="flow-arrow">&darr; 确定性验证器与认知控制流 (&lt;answer&gt;) &darr;</div>
+
+    <div class="code-panel">def step_industry_harness(state, tool_outputs, validator_model="gpt-5.4"):
+    # 1. CLIO Alg 1: 在分支覆盖度与探索深度达标前动态隐藏 Completion T(s)=0
+    if state.branch_coverage &lt; state.min_coverage or state.depth &lt; state.min_depth:
+        state.tools.hide("Completion_T0")
+
+    # 2. 不确定性梯度定律 (arXiv:2508.02789 Sec 5.2.1): dU/dt 与高频震荡检测
+    slope, sign_reversals = compute_uncertainty_gradient(state.u_trace)
+    if state.has_sharp_spike() and not state.child_channel_spawned:
+        return spawn_clean_context_channel(state.current_contradiction)  # 派生干净子通道 (▲)
+    if slope &gt; 0.02 and sign_reversals &gt;= 3:
+        return Escalate("Needs User Attention: High-frequency uncertainty oscillation")
+
+    # 3. 独立验证铁律 (MS Learn): 执行 Agent 绝不自评，独立检查文件资产
+    val = independent_validator(validator_model).check(state.result_text, state.file_assets)
+    if not val.passed:
+        if state.identical_gap_streak(val.gap_fingerprints) &gt;= 3:
+            return TerminalState("Needs User Attention")  # 连续 3 次相同缺陷熔断
+        return ActiveState("Incomplete", trigger="Slow_Thinking_Regret_Reflection")
+    return TerminalState("Complete", answer=f"&lt;answer&gt;{state.verified_solution}&lt;/answer&gt;")</div>
+
+    <div class="callout-dark">
+      <strong>核心架构机制：</strong>通过将（1）<em>软排序效用</em>与<em>硬结构门控</em>解耦、（2）<em>干净子通道探索</em>与<em>父信念图</em>解耦、（3）<em>任务执行</em>与<em>独立文件级验证</em>解耦，从根源上消除了 Goodhart 刷分作弊与自评死循环。
+    </div>
+  </section>
+
+  <!-- CARD 5 -->
+  <section class="card" id="card-5">
+    <div>
+      <div class="card-top">
+        <span class="kicker">5 / 7 · ROBUSTNESS CHECK · 黑盒 VS. 灰盒与真实湿实验工况扰动</span>
+        <span class="page-num">CARD 5 OF 7</span>
+      </div>
+      <h2>引入灰盒领域语义使 CLIO Top-10 均值暴涨 +14.7% (+7.4 pts)，并在 pH 14 工况下完胜黑盒</h2>
+      <p class="subtitle">基于 arXiv:2606.02618v1 Tables S4 &amp; S5 受控实验（500 次评估，n=6 独立重复，GPT-5.2 + 2,500 次评估湿实验检验）。</p>
+    </div>
+
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th style="width:32%;">QUESTION / ANSWER (评测维度)</th>
+          <th style="width:22%;">ORIGINAL (黑盒/修复前)</th>
+          <th style="width:24%;">PERTURBED (灰盒/湿实验)</th>
+          <th style="width:22%;">CHANGE (PTS / %)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. CLIO PMO Top-1 适应度</strong><br/><span style="color:#64748B;font-size:11px;">500 Oracle Evals, n=6 Replicas</span></td>
+          <td><code>0.544 &plusmn; 0.065</code><br/><span style="font-size:11px;color:#64748B;">仅暴露 [0,1] 匿名黑盒分</span></td>
+          <td><strong><code>0.599 &plusmn; 0.095</code></strong><br/><span style="font-size:11px;color:#059669;">暴露物理目标方向与门控阈值</span></td>
+          <td><span class="pill pill-auto">+5.5 pts (+10.1%)</span></td>
+        </tr>
+        <tr>
+          <td><strong>2. CLIO (Efficiency) Top-1</strong><br/><span style="color:#64748B;font-size:11px;">500 Oracle Evals, n=6 Replicas</span></td>
+          <td><code>0.541 &plusmn; 0.062</code></td>
+          <td><strong><code>0.602 &plusmn; 0.066</code></strong><br/><span style="font-size:11px;color:#059669;">追平 ExLLM 灰盒极值 (0.607)</span></td>
+          <td><span class="pill pill-auto">+6.1 pts (+11.3%)</span></td>
+        </tr>
+        <tr>
+          <td><strong>3. CLIO PMO Mean Top-10</strong><br/><span style="color:#64748B;font-size:11px;">前 10 候选组合整体质量</span></td>
+          <td><code>0.504 &plusmn; 0.059</code></td>
+          <td><strong><code>0.578 &plusmn; 0.103</code></strong><br/><span style="font-size:11px;color:#059669;">反超 ExLLM 灰盒 (0.543)</span></td>
+          <td><span class="pill pill-auto">+7.4 pts (+14.7%)</span></td>
+        </tr>
+        <tr>
+          <td><strong>4. ExLLM PMO Mean Top-10</strong><br/><span style="color:#64748B;font-size:11px;">演化变异基线 (n=6 Replicas)</span></td>
+          <td><code>0.525 &plusmn; 0.011</code></td>
+          <td><code>0.543 &plusmn; 0.008</code><br/><span style="font-size:11px;color:#64748B;">对灰盒领域知识利用率低</span></td>
+          <td><span class="pill pill-confirm">+1.8 pts (+3.4%)</span></td>
+        </tr>
+        <tr>
+          <td><strong>5. 1 M KOH (pH 14) 真实溶解度</strong><br/><span style="color:#64748B;font-size:11px;">pH 7 预测器 &rarr; pH 14 电池电解液</span></td>
+          <td><strong>ExLLM S1, S2, S3:</strong><br/><span style="color:#DC2626;font-weight:800;">&lt; 1.0 mM (沉淀失效!)</span></td>
+          <td><strong>CLIO Cmpd 3 / Cmpd 20:</strong><br/><span style="color:#059669;font-weight:800;">57.9 mM / 56.0 mM</span></td>
+          <td><span class="pill pill-auto">+56.9 mM (&gt;50x)</span></td>
+        </tr>
+        <tr>
+          <td><strong>6. 氧化还原峰值比 |i_ox/i_red|</strong><br/><span style="color:#64748B;font-size:11px;">阳离子配位机理诊断重设计前后</span></td>
+          <td><strong>Cmpd 3 (膦酸盐):</strong><br/><code>0.18</code> (双峰分裂 P1/P2)</td>
+          <td><strong>Cmpd 20 (磺酸盐):</strong><br/><strong><code>0.38</code></strong> (单峰可逆，峰间距 90 mV)</td>
+          <td><span class="pill pill-auto">+0.20 (+111.1%)</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-dark">
+      <strong>鲁棒性核心结论：</strong>纯演化黑盒算法（<code>ExLLM</code>）几乎无法从灰盒领域知识中获益（Top-10 仅 +3.4%），且会疯狂利用预测器的训练分布盲区（引入在 pH 7 质子化可溶、但在 pH 14 去质子化沉淀的碱性胺基）。CLIO 依靠自然语言灰盒语义推理（Top-10 +14.7%）守住了真实物理工况边界。
+    </div>
+  </section>
+
+  <!-- CARD 6 -->
+  <section class="card" id="card-6">
+    <div>
+      <div class="card-top">
+        <span class="kicker">6 / 7 · LATENCY &amp; SCALING · 测试时扩展、ACT 权衡与微批次韧性</span>
+        <span class="page-num">CARD 6 OF 7</span>
+      </div>
+      <h2>认知递归 (+5.92%) 叠加 GraphRAG/DRIFT (+7.90%) 实现 2.62 倍准确率跃升，并领跑 5 小时 ALE</h2>
+      <p class="subtitle">CLIO / Discovery 自适应认知扩展路径（#3B82F6）对比单次/单模型基线路径（#CBD5E1）在不同复杂度层级的表现。</p>
+    </div>
+
+    <div class="paired-chart">
+      <div class="chart-group">
+        <div class="chart-label">
+          <span>层级 1 · HLE Biology &amp; Medicine 渐进消融扩展 (n=152, 无工具, Pass@1)</span>
+          <span style="color:#2563EB;">22.37% vs 8.55% 基座 (2.62x)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">GPT-4.1 + CLIO (完整 Alg 1+2)</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:89.5%;"></div></div>
+          <span class="bar-val">22.37% (34/152)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">GPT-4.1 + Alg 1 (仅递归循环)</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:57.9%;opacity:0.75;"></div></div>
+          <span class="bar-val">14.47% (+5.92%)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">OpenAI o3 (high) / Base 4.1</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:55.2%;"></div></div>
+          <span class="bar-val">13.81% / 8.55%</span>
+        </div>
+      </div>
+
+      <div class="chart-group">
+        <div class="chart-label">
+          <span>层级 2 · ALE 物理科学长程自主评测 (5 小时限时协议, Pass@1)</span>
+          <span style="color:#2563EB;">+8.6% vs Opus 5 · +18.3% vs Codex</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Discovery (CLIO + 动态多模型)</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:75.2%;"></div></div>
+          <span class="bar-val">75.2% (#1)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Claude Code (Opus 5)</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:66.6%;"></div></div>
+          <span class="bar-val">66.6%</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Codex (GPT-5.6 Sol 单模型)</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:56.9%;"></div></div>
+          <span class="bar-val">56.9%</span>
+        </div>
+      </div>
+
+      <div class="chart-group">
+        <div class="chart-label">
+          <span>层级 3 · ALE 生命科学与健康医学 (5 小时限时协议, Pass@1)</span>
+          <span style="color:#2563EB;">跨学科一致领先</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Discovery CLIO (生命 / 健康)</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:64.6%;"></div></div>
+          <span class="bar-val">64.6% / 61.6%</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Codex 单模型基线 (生命 / 健康)</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:60.8%;"></div></div>
+          <span class="bar-val">60.8% / 57.2%</span>
+        </div>
+      </div>
+
+      <div class="chart-group">
+        <div class="chart-label">
+          <span>层级 4 · API 限流下的自适应微批次降级 (AORFB Round 3 候选库生成)</span>
+          <span style="color:#059669;">100% 消除限流超时中断</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">CLIO 自适应微批次 (Micro-Batch)</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:15%;"></div></div>
+          <span class="bar-val">6 分子/批 (稳定)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">原始单次大批量枚举</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:100%;"></div></div>
+          <span class="bar-val">40&ndash;60 分子 (限流超时)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-dark">
+      <strong>ACT 权衡法则 (Accuracy, Cost, Time)：</strong>CLIO 主动用分钟至小时级（支持 &gt;10 小时）的深度图推理换取高价值科学/工业决策准确率；动态多模型切换与 6 分子微批次降级保障了 5 小时无人值守运行的稳定性。
+    </div>
+  </section>
+
+  <!-- CARD 7 -->
+  <section class="card" id="card-7">
+    <div>
+      <div class="card-top">
+        <span class="kicker">7 / 7 · MY TAKE · 适用场景 VS. 禁区边界与企业级落地结论</span>
+        <span class="page-num">CARD 7 OF 7</span>
+      </div>
+      <h2>行业 Harness 必须从“盲信工具的流水线”升级为“校准遵从 + 独立验证 + 结构不变量门控”</h2>
+      <p class="subtitle">面向 AI Solution Architect 的生物医药、新材料、半导体晶圆厂 RCA、量化投研与供应链 Harness 架构选型指南。</p>
+    </div>
+
+    <div class="fit-grid">
+      <div class="fit-card fit-good">
+        <h3>&#9989; Good Fit（高 ROI 核心适用场景）</h3>
+        <div class="fit-item">
+          <strong>1. 预测器存在系统性偏差的分布外（OOD）研发</strong>
+          新分子/新材料设计、电池电解液配方、先进制程工艺窗口探索——ML 模型绝对值失准（如 ~2.7 V）但局部相对排序仍具参考价值。
+        </div>
+        <div class="fit-item">
+          <strong>2. 三层异构目标共存的灰盒优化</strong>
+          同时包含数值评分（Tier A）、合成/工艺步数约束（Tier B）与自然语言物理/合规工况边界（Tier C，如 pH 14 强碱、跨工序污染）。
+        </div>
+        <div class="fit-item">
+          <strong>3. 多小时至多周的复杂根因诊断（RCA）</strong>
+          晶圆厂突发良率塌陷、供应链中断与湿实验未建模回归，需多路并行生成 Tier 1&ndash;3 假设并规划最小判别实验。
+        </div>
+        <div class="fit-item">
+          <strong>4. 可审计的人机协同长程研究</strong>
+          需要跨轮次持久化信念图（Accepted/Refuted/Open）、中途人工编辑信念节点及零自评独立验证的高合规场景。
+        </div>
+      </div>
+
+      <div class="fit-card fit-bad">
+        <h3>&#9940; Not For（架构禁区与反模式边界）</h3>
+        <div class="fit-item">
+          <strong>1. 亚百毫秒级（&lt;100ms）实时在线事务路由</strong>
+          CLIO 的递归干净子通道与 GraphRAG + DRIFT 社区聚类属于分钟至小时级重型认知引擎，不适合高频低延迟在线网关。
+        </div>
+        <div class="fit-item">
+          <strong>2. 缺乏确定性结构门控的盲目工具调用</strong>
+          如 RetroChimera 静默偷换喹啉母核所示，若不配置确定性子结构校验器（RDKit SMARTS / AST 规则），仅靠 LLM 会漏检底层篡改。
+        </div>
+        <div class="fit-item">
+          <strong>3. 零领域语义的纯黑盒标量刷分</strong>
+          在完全不暴露物理量纲与灰盒阈值的匿名 [0,1] 函数上，轻量级演化变异（ExLLM）比认知循环更直接（Top-1 0.586 vs 0.544）。
+        </div>
+        <div class="fit-item">
+          <strong>4. 未校准的验证需求契约</strong>
+          过松标准（“给出好方案”）导致浅层回答被误判完成；超出工具极限的过严标准则必然触发 3 次重试熔断阻塞。
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-dark">
+      <strong>企业级参考技术栈：</strong><strong>GitHub Copilot Base Harness</strong> + <strong>CLIO 在线持久化信念图</strong> + <strong>校准遵从锚点标定</strong> + <strong>确定性结构不变量门控 (SMARTS/AST)</strong> + <strong>独立验证进程 (<code>gpt-5.4</code> + 3振熔断)</strong>。已由 <code>simulator/clio_industry_harness_verifier.py</code> 完整验证。
+    </div>
+  </section>
+
+</body>
+</html>

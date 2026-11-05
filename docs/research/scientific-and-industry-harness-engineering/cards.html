@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline';" />
+  <title>7-Card 4:5 Benchmark Report · Microsoft Discovery &amp; CLIO Industry Harness Engineering</title>
+  <style>
+    :root {
+      --bg-page: #090D16;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-soft: #64748B;
+      --code-bg: #0F172A;
+      --code-text: #E2E8F0;
+      --blue: #2563EB;
+      --blue-bar: #3B82F6;
+      --slate-bar: #CBD5E1;
+      --green-bg: #ECFDF5;
+      --green-border: #10B981;
+      --green-text: #065F46;
+      --amber-bg: #FFFBEB;
+      --amber-border: #F59E0B;
+      --amber-text: #92400E;
+      --red-bg: #FEF2F2;
+      --red-border: #EF4444;
+      --red-text: #991B1B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-page);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 32px 16px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+    }
+    .deck-toolbar {
+      width: 900px;
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 14px 22px;
+      color: #F8FAFC;
+    }
+    .deck-toolbar a {
+      color: #38BDF8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 14px;
+    }
+    .card {
+      width: 900px;
+      min-height: 1125px;
+      aspect-ratio: 4 / 5;
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid var(--card-border);
+      padding: 38px 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    .kicker {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .page-num {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--text-soft);
+      background: #F1F5F9;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    h1, h2 {
+      font-size: 27px;
+      line-height: 1.24;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      letter-spacing: -0.4px;
+    }
+    .grad-accent {
+      background: linear-gradient(90deg, #2563EB, #7C3AED);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .workbench-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+    .wb-col {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .wb-col h3 {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #334155;
+      border-bottom: 1px solid #E2E8F0;
+      padding-bottom: 8px;
+    }
+    .mini-box {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    .mini-box strong { color: #0F172A; display: block; margin-bottom: 3px; }
+    .pill {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .pill-auto { background: var(--green-bg); color: var(--green-text); border: 1px solid var(--green-border); }
+    .pill-confirm { background: var(--amber-bg); color: var(--amber-text); border: 1px solid var(--amber-border); }
+    .pill-human { background: var(--red-bg); color: var(--red-text); border: 1px solid var(--red-border); }
+    .pill-badge { background: #EEF2FF; color: #3730A3; border: 1px solid #C7D2FE; font-family: monospace; }
+    .quote-box {
+      background: #F8FAFC;
+      border-left: 4px solid var(--blue);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: #1E293B;
+      margin-bottom: 16px;
+    }
+    .stack-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .decision-card {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 12px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .dc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dc-title { font-size: 15px; font-weight: 800; color: #0F172A; }
+    .bar-track {
+      width: 100%;
+      height: 12px;
+      background: #F1F5F9;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #2563EB, #10B981);
+      border-radius: 999px;
+    }
+    table.matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-bottom: 16px;
+    }
+    table.matrix th {
+      background: #0F172A;
+      color: #F8FAFC;
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 11px;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+    }
+    table.matrix td {
+      padding: 11px 12px;
+      border-bottom: 1px solid #E2E8F0;
+      vertical-align: top;
+      line-height: 1.42;
+    }
+    table.matrix tr:nth-child(even) td { background: #F8FAFC; }
+    .miss-mark {
+      color: #DC2626;
+      font-weight: 900;
+      margin-right: 4px;
+    }
+    .dual-callout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .callout-box {
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    .callout-dark {
+      background: #0F172A;
+      color: #E2E8F0;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+    .callout-dark strong { color: #38BDF8; }
+    .code-panel {
+      background: var(--code-bg);
+      color: var(--code-text);
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-family: "Cascadia Code", Consolas, monospace;
+      font-size: 11.8px;
+      line-height: 1.48;
+      white-space: pre-wrap;
+      border: 1px solid #334155;
+    }
+    .flow-arrow {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--blue);
+      padding: 4px 0;
+    }
+    .paired-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+      margin-bottom: 14px;
+    }
+    .chart-group {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+    .chart-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+    .bar-tag { width: 175px; font-weight: 600; color: #334155; }
+    .bar-wrap { flex: 1; background: #E2E8F0; height: 16px; border-radius: 6px; overflow: hidden; }
+    .bar-primary { height: 100%; background: var(--blue-bar); }
+    .bar-base { height: 100%; background: var(--slate-bar); }
+    .bar-val { width: 110px; text-align: right; font-weight: 800; color: #0F172A; }
+    .fit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .fit-card {
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .fit-good { background: var(--green-bg); border: 2px solid var(--green-border); color: var(--green-text); }
+    .fit-bad { background: var(--red-bg); border: 2px solid var(--red-border); color: var(--red-text); }
+    .fit-card h3 { font-size: 17px; font-weight: 800; }
+    .fit-item {
+      background: rgba(255,255,255,0.85);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: #0F172A;
+    }
+    .fit-item strong { display: block; margin-bottom: 3px; }
+  </style>
+</head>
+<body>
+
+  <div class="deck-toolbar">
+    <div>
+      <strong>7-Card 4:5 Benchmark Deck</strong> · Microsoft Discovery &amp; CLIO Industry Harness Engineering
+    </div>
+    <div>
+      <a href="./cards.zh.html">切换中文卡片 (ZH)</a>
+      <a href="./index.html">Interactive Workbench</a>
+      <a href="./README.en.md">Monograph (EN)</a>
+      <a href="./README.md">中文专著</a>
+    </div>
+  </div>
+
+  <!-- CARD 1 -->
+  <section class="card" id="card-1">
+    <div>
+      <div class="card-top">
+        <span class="kicker">1 / 7 · HANDS-ON · SCIENTIFIC &amp; INDUSTRY HARNESS ENGINEERING</span>
+        <span class="page-num">CARD 1 OF 7</span>
+      </div>
+      <h1><span class="grad-accent">CLIO &amp; Calibrated Deference</span> Push Physical Sciences Accuracy to 75.2% &amp; Close a +90 mV Wet-Lab Battery Loop</h1>
+      <p class="subtitle">Synthesizing 5 Microsoft Research &amp; Discovery publications (arXiv:2508.02789, MS Learn, ALE Blog, arXiv:2606.02618v1) into a verifiable 5-Layer Industry Harness Architecture.</p>
+    </div>
+
+    <div class="workbench-grid">
+      <div class="wb-col">
+        <h3>1. Benchmarks &amp; Threshold Bands</h3>
+        <div class="mini-box">
+          <strong>HLE Biology &amp; Medicine (n=152)</strong>
+          No external tools, Pass@1. Tests recursive clean-context branching (Alg 1) + GraphRAG/DRIFT (Alg 2).
+        </div>
+        <div class="mini-box">
+          <strong>Agent's Last Exam (ALE, n=152)</strong>
+          13 domains, 5-hour autonomous budget. GitHub Copilot base harness + CLIO mode + dynamic multi-model switching.
+        </div>
+        <div class="mini-box">
+          <strong>AORFB Wet-Lab Campaign (17 mols)</strong>
+          3 design rounds in 1 M KOH (pH 14). Tri-tier targets: E_red [-1.2, -0.3V], logS &ge; -2.5, SAscore &le; 3.5.
+        </div>
+        <div class="mini-box">
+          <strong>Harness Gate Thresholds</strong>
+          <span class="pill pill-auto">Act: dU/dt &lt; 0 &amp; Pass</span><br/>
+          <span class="pill pill-confirm" style="margin-top:4px;">Confirm: Anchor &Delta;&gt;0.5V</span><br/>
+          <span class="pill pill-human" style="margin-top:4px;">Human: 3-Strike / Osc</span>
+        </div>
+      </div>
+
+      <div class="wb-col">
+        <h3>2. Structured Harness Primitives</h3>
+        <div class="mini-box">
+          <strong>Clean-Context Thought Channels</strong>
+          Spawns isolated child contexts for orthogonal hypotheses (4 branches in Round 1); hides Completion T(s)=0 until coverage threshold met.
+        </div>
+        <div class="mini-box">
+          <strong>Warm-Start Online Belief Graph</strong>
+          Persists Accepted, Refuted &amp; Open hypotheses across rounds; seeds next round with thematic abstractions, not raw chat logs.
+        </div>
+        <div class="mini-box">
+          <strong>Calibrated Deference Engine</strong>
+          Detects Graphormer ~2.7 V offset on parent benzo[c]cinnoline (-1.998V vs +0.7V anchor); salvages rank-order &amp; excludes E_red from Round 3 hard gate.
+        </div>
+        <div class="mini-box">
+          <strong>Separated Validator (gpt-5.4)</strong>
+          &ldquo;The agent that did the work never grades its own output.&rdquo; Inspects text + .csv/.json/.py assets; halts after 3 identical gaps.
+        </div>
+      </div>
+
+      <div class="wb-col">
+        <h3>3. Sealed KPIs &amp; Top Decisions</h3>
+        <div class="mini-box">
+          <strong>HLE Bio/Med (GPT-4.1 + CLIO)</strong>
+          <span style="font-size:20px;font-weight:800;color:#2563EB;">22.37% (34/152)</span>
+          +161.64% rel over GPT-4.1 (8.55%); +61.98% rel over o3-high (13.81%).
+        </div>
+        <div class="mini-box">
+          <strong>ALE Physical Sciences (5h Limit)</strong>
+          <span style="font-size:20px;font-weight:800;color:#059669;">75.2% Pass@1</span>
+          Beats Claude Code Opus 5 (66.6%, +8.6%) &amp; Codex GPT-5.6 Sol (56.9%, +18.3%).
+        </div>
+        <div class="mini-box">
+          <strong>AORFB Negolyte Redesign</strong>
+          <span style="font-size:18px;font-weight:800;color:#7C3AED;">Cmpd 3 (-0.895V) &rarr; Cmpd 20 (-0.854V)</span>
+          Retains +92 mV (~90 mV) shift while doubling |i_ox/i_red| from 0.18 to 0.38.
+        </div>
+        <div class="mini-box">
+          <strong>Grey-Box PMO Top-10 Gain</strong>
+          <span style="font-size:18px;font-weight:800;color:#D97706;">+14.7% (0.504 &rarr; 0.578)</span>
+          Surpasses ExLLM (0.543) &amp; avoids pH 14 amine precipitation (&lt;1 mM).
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-dark">
+      <strong>Provenance &amp; Verification:</strong> <code>anonymized_reported</code> (<code>independently_reproduced=false</code>). All quantitative metrics are extracted from published tables in <code>arXiv:2508.02789</code>, MS TechCommunity (4552705), and <code>arXiv:2606.02618v1</code> (main text + Supplementary S1&ndash;S6), and verified by <code>simulator/clio_industry_harness_verifier.py</code> (6/6 unit tests passing).
+    </div>
+  </section>
+
+  <!-- CARD 2 -->
+  <section class="card" id="card-2">
+    <div>
+      <div class="card-top">
+        <span class="kicker">2 / 7 · SCENARIO: AORFB NEGOLYTE CLOSED-LOOP CAMPAIGN</span>
+        <span class="page-num">CARD 2 OF 7</span>
+      </div>
+      <h2>Graded Distrust of a 2.7 V Miscalibrated Predictor + 3 Consensus Tests Doubled Reversibility (0.18 &rarr; 0.38)</h2>
+      <p class="subtitle">Deep dive into arXiv:2606.02618v1: How CLIO navigated an offset ML predictor, LLM rate-limit throttling, and an unmodeled pH 14 split oxidation wave.</p>
+    </div>
+
+    <div class="quote-box">
+      <strong>Campaign Task Prompt &amp; Anchor Conflict (arXiv:2606.02618v1 Sec 2.2 &amp; Fig. S1):</strong>
+      &ldquo;Design synthetically accessible (&lt;5 steps, SAscore &le; 3.5), water-soluble (logS &ge; -2.0 in 1 M KOH, pH 14) benzo[c]cinnoline derivatives with E_red more negative than disulfonate baseline 1 (-0.762 V vs SHE).&rdquo; &mdash; <em>Conflict: Graphormer predicted -1.998 V for unsubstituted core 2 vs. prompt anchor note ~ +0.7 V (~2.7 V discrepancy).</em>
+    </div>
+
+    <div class="stack-list">
+      <div class="decision-card">
+        <div class="dc-header">
+          <span class="dc-title">Episode 1 · Graded Distrust &amp; Rank-Order Salvage of Graphormer E_red</span>
+          <div>
+            <span class="pill pill-badge">score</span>
+            <span class="pill pill-confirm">Confirm · Soft Rank Only</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:#334155;">Detected <strong>2.698 V anchor offset</strong> (-1.998 V vs +0.7 V note). Verified directional substituent shifts (+0.133 V methoxy, +0.258 V dihydroxy) matched electron-donating intuition. <strong>Action:</strong> Excluded E_red from Round 3 hard gate (kept logS &ge; -2.5, SAscore &le; 3.5); downshifted 40&ndash;60 batch to <strong>6-candidate micro-batches</strong> under rate limits; converged on 5-benzylphosphonate (Compound 3, measured <strong>-0.895 V, +133 mV gain</strong>).</p>
+        <div style="display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;">
+          <span>Directional Rank-Order Confidence</span><span>86.0% (Hard Gate Disabled)</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:86%;"></div></div>
+      </div>
+
+      <div class="decision-card">
+        <div class="dc-header">
+          <span class="dc-title">Episode 2 · Mechanistic Triage of Unmodeled Split Oxidation Wave (P1/P2)</span>
+          <div>
+            <span class="pill pill-badge">choice</span>
+            <span class="pill pill-auto">Act automatically · 3/3 Consensus</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:#334155;">Compound 3 suffered a split oxidation wave in 1 M KOH (pH 14) with poor peak ratio <strong>|i_ox/i_red| = 0.18</strong> (vs 0.52 baseline). Across 3 parallel CLIO runs, 9 experiments across 3 tiers were proposed. Three starred (&starf;) experiments executed: scan-rate (10&ndash;500 mV/s, P2/P1 &approx; 1) &amp; [OH&minus;] (0.1&ndash;1 M, invariant) refuted tautomerization &amp; nucleophilic attack; <strong>Li+/Na+/K+ cation swap</strong> increased P2/P1 with harder cations, proving <strong>dianionic phosphonate&ndash;K+ ion pairing</strong>.</p>
+        <div style="display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;">
+          <span>Tier 1 Hypothesis Consensus &amp; Experimental Confirmation</span><span>94.0% (3/3 Runs Starred &starf;)</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:94%;"></div></div>
+      </div>
+
+      <div class="decision-card">
+        <div class="dc-header">
+          <span class="dc-title">Episode 3 · Targeted Redesign: Benzylsulfonate (Compound 20)</span>
+          <div>
+            <span class="pill pill-badge">noul</span>
+            <span class="pill pill-auto">Act automatically · Loop Closed</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:#334155;">Replaced dianionic phosphonate (-PO3^2-) with weakly coordinating monoanionic sulfonate (-SO3^-). Wet-lab CV in 1 M KOH showed a single clean oxidation wave: <strong>E_red = -0.854 V vs SHE (+92 mV / ~90 mV improvement over baseline 1)</strong>, KOH solubility <strong>56.0 mM</strong>, <strong>|i_ox/i_red| doubled from 0.18 to 0.38</strong> (90 mV peak separation vs 114 mV baseline), and 100% reversible UV-Vis SEC spectra.</p>
+        <div style="display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;">
+          <span>Electrochemical Reversibility Recovery (|i_ox/i_red| 0.18 &rarr; 0.38)</span><span>91.0% (2.11x Peak Current Ratio)</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:91%;"></div></div>
+      </div>
+    </div>
+
+    <div class="callout-dark">
+      <strong>Industry Harness Takeaway:</strong> A static workflow would have either discarded Compound 3 due to Graphormer's -2.04 V prediction or abandoned the scaffold after the split oxidation wave. Calibrated Deference separated <em>scale error</em> from <em>rank utility</em> and turned an unmodeled physical anomaly into a falsifiable 3-experiment diagnostic tree.
+    </div>
+  </section>
+
+  <!-- CARD 3 -->
+  <section class="card" id="card-3">
+    <div>
+      <div class="card-top">
+        <span class="kicker">3 / 7 · WHAT I TESTED · FULL EVALUATION MATRIX</span>
+        <span class="page-num">CARD 3 OF 7</span>
+      </div>
+      <h2>6 Evaluation Suites Across 304 Tasks &amp; 20 Wet-Lab Compounds Expose 2 Unchecked Boundaries (&times;)</h2>
+      <p class="subtitle">Cross-validating CLIO v1 (HLE), Microsoft Discovery (ALE), CLIO v2 (AORFB wet-lab), and ExLLM (PMO 500 &amp; 2,500 oracle evaluations).</p>
+    </div>
+
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th style="width:22%;">SCENARIO</th>
+          <th style="width:31%;">QUESTION / TASK</th>
+          <th style="width:31%;">MODEL ANSWER &amp; METRICS</th>
+          <th style="width:16%;">ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. HLE Bio &amp; Med</strong><br/><span style="color:#64748B;font-size:11px;">arXiv:2508.02789 (n=152)</span></td>
+          <td>Expert scientific QA across 13 subdisciplines without external tools (Pass@1).</td>
+          <td><strong>22.37% (34/152)</strong> with GPT-4.1 + CLIO vs. 8.55% base GPT-4.1 (+161.6% rel) and 13.81% o3 (high) (+62.0% rel).</td>
+          <td><span class="pill pill-auto">Act automatically</span></td>
+        </tr>
+        <tr>
+          <td><strong>2. ALE Physical Sci</strong><br/><span style="color:#64748B;font-size:11px;">MS Discovery Blog (5h)</span></td>
+          <td>Autonomous multi-hour physical sciences problem solving on Agent's Last Exam.</td>
+          <td><strong>75.2% Pass@1</strong> (Copilot harness + CLIO + dynamic model switch) vs. 66.6% Opus 5 (+8.6%) &amp; 56.9% Codex (+18.3%).</td>
+          <td><span class="pill pill-auto">Act automatically</span></td>
+        </tr>
+        <tr>
+          <td><strong>3. ALE Bio &amp; Health</strong><br/><span style="color:#64748B;font-size:11px;">152 Tasks / 13 Domains</span></td>
+          <td>5-hour autonomous investigations in Life Sciences and Health &amp; Medicine.</td>
+          <td><strong>Life Sci: 64.6%</strong> (vs 60.8% Codex, +3.8%); <strong>Health &amp; Med: 61.6%</strong> (vs 57.2% Codex, +4.4%).</td>
+          <td><span class="pill pill-auto">Act automatically</span></td>
+        </tr>
+        <tr>
+          <td><strong>4. AORFB Calibration</strong><br/><span style="color:#64748B;font-size:11px;">arXiv:2606.02618v1 R1&ndash;R3</span></td>
+          <td>Screen benzo[c]cinnolines under ~2.7 V E_red offset and LLM rate-limit throttling.</td>
+          <td>Salvaged rank-order, removed E_red hard gate in R3, switched to 6-mol micro-batches; found Cmpd 3 (<strong>-0.895 V, 57.9 mM</strong>).</td>
+          <td><span class="pill pill-confirm">Confirm</span></td>
+        </tr>
+        <tr>
+          <td><strong>5. ExLLM Wet-Lab Trap</strong><br/><span style="color:#64748B;font-size:11px;">Table S5 (2,500 Evals)</span></td>
+          <td>Synthesize &amp; test top evolutionary black-box candidates (S1, S2, S3) in 1 M KOH (pH 14).</td>
+          <td><span class="miss-mark">&times;</span><strong>Insoluble (&lt;1 mM in 1 M KOH):</strong> ExLLM gamed neutral-pH logS predictor with amines that deprotonated at pH 14.</td>
+          <td><span class="pill pill-human">Send to a human</span></td>
+        </tr>
+        <tr>
+          <td><strong>6. RetroChimera Audit</strong><br/><span style="color:#64748B;font-size:11px;">Section S2.4 Failure Mode</span></td>
+          <td>Audit retrosynthesis route &amp; starting scaffold fidelity for Compound 3.</td>
+          <td><span class="miss-mark">&times;</span><strong>Missed Scaffold Swap:</strong> RetroChimera substituted 2-(bromomethyl)quinoline for benzo[c]cinnoline (2 vs 5 actual steps).</td>
+          <td><span class="pill pill-human">Send to a human</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="dual-callout">
+      <div class="callout-box" style="background:#EFF6FF;border:1px solid #93C5FD;color:#1E3A8A;">
+        <strong>Threshold Gating &amp; 3-Strike Circuit Breaker:</strong><br/>
+        Microsoft Discovery routes every task to an independent Validator (<code>gpt-5.4</code>). If the same validation gap persists for <strong>&ge;3 consecutive attempts</strong>, or if CLIO detects positive uncertainty slope (<code>dU/dt &gt; 0</code>) with &ge;3 sign reversals, retries halt and escalate to <code>Needs User Attention</code>.
+      </div>
+      <div class="callout-box" style="background:#FEF2F2;border:1px solid #FCA5A5;color:#991B1B;">
+        <strong>Failure Analysis of the 2 Misses (&times;):</strong><br/>
+        1. <strong>ExLLM Goodhart Failure:</strong> Scalar optimization without natural-language regime reasoning fails when oracle training conditions (pH 7) diverge from deployment (pH 14).<br/>
+        2. <strong>RetroChimera Blind Spot:</strong> LLM deference must be backed by deterministic SMARTS/scaffold equivalence gates.
+      </div>
+    </div>
+  </section>
+
+  <!-- CARD 4 -->
+  <section class="card" id="card-4">
+    <div>
+      <div class="card-top">
+        <span class="kicker">4 / 7 · UNDER THE HOOD · PROTOCOL &amp; SCORING MECHANICS</span>
+        <span class="page-num">CARD 4 OF 7</span>
+      </div>
+      <h2>Equations S1&ndash;S5 Multi-Objective Gating J(m), Uncertainty Gradient dU/dt &amp; Separated Validator</h2>
+      <p class="subtitle">Exact mathematical contract from arXiv:2606.02618v1 Sec S5 and arXiv:2508.02789 Algorithm 1 / Sec 5.2.1 encoded in our deterministic verifier.</p>
+    </div>
+
+    <div class="code-panel">{
+  "protocol": "CLIO_v2_Calibrated_Deference_and_Discovery_Validator",
+  "fitness_equations_S1_to_S5": {
+    "s_Ered": "clip((-0.3 - E_red) / (-0.3 - (-1.2)), 0, 1)",
+    "s_logS": "clip((logS - (-2.0)) / (0.0 - (-2.0)), 0, 1)",
+    "s_SA":   "clip((3.5 - SAscore) / (3.5 - 1.0), 0, 1)",
+    "s_step": "clip((5 - steps) / 5.0, 0, 1)",
+    "J_m":    "0.25 * (s_Ered + s_logS + s_SA + s_step) * prod(gates) * I[benzo_c_cinnoline_core]"
+  },
+  "calibrated_deference_override": {
+    "anchor_molecule": "benzo[c]cinnoline (Compound 2)",
+    "predicted_vs_anchor_V": [-1.998, 0.700],
+    "discrepancy_V": 2.698,
+    "round_3_gate_policy": "DISABLE I[gate_Ered]; ENFORCE logS >= -2.5 AND SAscore <= 3.5 AND SMARTS_Core_Match"
+  }
+}</div>
+
+    <div class="flow-arrow">&darr; Deterministic Verifier &amp; Cognitive Control Loop (&lt;answer&gt;) &darr;</div>
+
+    <div class="code-panel">def step_industry_harness(state, tool_outputs, validator_model="gpt-5.4"):
+    # 1. CLIO Alg 1: Withhold Completion T(s)=0 until coverage &amp; depth thresholds met
+    if state.branch_coverage &lt; state.min_coverage or state.depth &lt; state.min_depth:
+        state.tools.hide("Completion_T0")
+
+    # 2. Uncertainty Gradient Law (arXiv:2508.02789 Sec 5.2.1): dU/dt &amp; Oscillation Check
+    slope, sign_reversals = compute_uncertainty_gradient(state.u_trace)
+    if state.has_sharp_spike() and not state.child_channel_spawned:
+        return spawn_clean_context_channel(state.current_contradiction)  # Triangle marker
+    if slope &gt; 0.02 and sign_reversals &gt;= 3:
+        return Escalate("Needs User Attention: High-frequency uncertainty oscillation")
+
+    # 3. Separated Validation Iron Law (MS Learn): Worker never grades its own output
+    val = independent_validator(validator_model).check(state.result_text, state.file_assets)
+    if not val.passed:
+        if state.identical_gap_streak(val.gap_fingerprints) &gt;= 3:
+            return TerminalState("Needs User Attention")  # 3-Strike Circuit Breaker
+        return ActiveState("Incomplete", trigger="Slow_Thinking_Regret_Reflection")
+    return TerminalState("Complete", answer=f"&lt;answer&gt;{state.verified_solution}&lt;/answer&gt;")</div>
+
+    <div class="callout-dark">
+      <strong>Why This Protocol Works:</strong> Separating (1) <em>soft rank-order scoring</em> from <em>hard structural gates</em>, (2) <em>clean child contexts</em> from <em>parent belief graphs</em>, and (3) <em>worker execution</em> from <em>independent file-level validation</em> eliminates both Goodhart reward hacking and infinite self-grading loops.
+    </div>
+  </section>
+
+  <!-- CARD 5 -->
+  <section class="card" id="card-5">
+    <div>
+      <div class="card-top">
+        <span class="kicker">5 / 7 · ROBUSTNESS CHECK · BLACK-BOX VS. GREY-BOX &amp; WET-LAB REGIME SHIFT</span>
+        <span class="page-num">CARD 5 OF 7</span>
+      </div>
+      <h2>Grey-Box Domain Semantics Boosted CLIO Top-10 by +14.7% (+7.4 pts) &amp; Prevented pH 14 Precipitation</h2>
+      <p class="subtitle">Controlled comparison from arXiv:2606.02618v1 Tables S4 &amp; S5 (500 oracle evaluations, n=6 replicas, GPT-5.2 + 2,500-eval wet-lab validation).</p>
+    </div>
+
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th style="width:32%;">QUESTION / METRIC</th>
+          <th style="width:22%;">ORIGINAL (BLACK-BOX)</th>
+          <th style="width:24%;">PERTURBED (GREY-BOX / LAB)</th>
+          <th style="width:22%;">CHANGE (PTS / %)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. CLIO PMO Top-1 Fitness</strong><br/><span style="color:#64748B;font-size:11px;">500 Oracle Evals, n=6 Replicas</span></td>
+          <td><code>0.544 &plusmn; 0.065</code><br/><span style="font-size:11px;color:#64748B;">Opaque [0,1] scores only</span></td>
+          <td><strong><code>0.599 &plusmn; 0.095</code></strong><br/><span style="font-size:11px;color:#059669;">Domain targets &amp; thresholds</span></td>
+          <td><span class="pill pill-auto">+5.5 pts (+10.1%)</span></td>
+        </tr>
+        <tr>
+          <td><strong>2. CLIO (Efficiency) Top-1</strong><br/><span style="color:#64748B;font-size:11px;">500 Oracle Evals, n=6 Replicas</span></td>
+          <td><code>0.541 &plusmn; 0.062</code></td>
+          <td><strong><code>0.602 &plusmn; 0.066</code></strong><br/><span style="font-size:11px;color:#059669;">Matches ExLLM (0.607)</span></td>
+          <td><span class="pill pill-auto">+6.1 pts (+11.3%)</span></td>
+        </tr>
+        <tr>
+          <td><strong>3. CLIO PMO Mean Top-10</strong><br/><span style="color:#64748B;font-size:11px;">Portfolio Quality Across Top 10</span></td>
+          <td><code>0.504 &plusmn; 0.059</code></td>
+          <td><strong><code>0.578 &plusmn; 0.103</code></strong><br/><span style="font-size:11px;color:#059669;">Beats ExLLM Grey-Box (0.543)</span></td>
+          <td><span class="pill pill-auto">+7.4 pts (+14.7%)</span></td>
+        </tr>
+        <tr>
+          <td><strong>4. ExLLM PMO Mean Top-10</strong><br/><span style="color:#64748B;font-size:11px;">Evolutionary Mutation Baseline</span></td>
+          <td><code>0.525 &plusmn; 0.011</code></td>
+          <td><code>0.543 &plusmn; 0.008</code><br/><span style="font-size:11px;color:#64748B;">Marginal benefit from domain info</span></td>
+          <td><span class="pill pill-confirm">+1.8 pts (+3.4%)</span></td>
+        </tr>
+        <tr>
+          <td><strong>5. Wet-Lab KOH Solubility</strong><br/><span style="color:#64748B;font-size:11px;">pH 7 Oracle &rarr; pH 14 Electrolyte</span></td>
+          <td><strong>ExLLM S1, S2, S3:</strong><br/><span style="color:#DC2626;font-weight:800;">&lt; 1.0 mM (Insoluble!)</span></td>
+          <td><strong>CLIO Cmpd 3 / Cmpd 20:</strong><br/><span style="color:#059669;font-weight:800;">57.9 mM / 56.0 mM</span></td>
+          <td><span class="pill pill-auto">+56.9 mM (&gt;50x)</span></td>
+        </tr>
+        <tr>
+          <td><strong>6. Redox Peak Ratio |i_ox/i_red|</strong><br/><span style="color:#64748B;font-size:11px;">Before vs. After Cation Diagnosis</span></td>
+          <td><strong>Cmpd 3 (Phosphonate):</strong><br/><code>0.18</code> (Split wave P1/P2)</td>
+          <td><strong>Cmpd 20 (Sulfonate):</strong><br/><strong><code>0.38</code></strong> (Single clean wave, 90 mV sep)</td>
+          <td><span class="pill pill-auto">+0.20 (+111.1%)</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-dark">
+      <strong>Key Robustness Insight:</strong> Pure evolutionary optimizers (<code>ExLLM</code>) treat grey-box and black-box tasks almost identically (+3.4% Top-10) and aggressively exploit oracle blind spots (attaching basic amines that score well at pH 7 but fail at pH 14). CLIO leverages domain semantics (+14.7% Top-10) to reason about unmodeled operating conditions.
+    </div>
+  </section>
+
+  <!-- CARD 6 -->
+  <section class="card" id="card-6">
+    <div>
+      <div class="card-top">
+        <span class="kicker">6 / 7 · LATENCY &amp; SCALING · ACT TRADEOFF &amp; ABLATION BARS</span>
+        <span class="page-num">CARD 6 OF 7</span>
+      </div>
+      <h2>Recursive Cognition (+5.92%) + GraphRAG/DRIFT (+7.90%) Deliver 2.62x HLE Gain &amp; Lead 5h ALE</h2>
+      <p class="subtitle">Paired comparison of CLIO / Discovery cognitive scaling (#3B82F6) vs. single-pass / single-model baselines (#CBD5E1) across complexity tiers.</p>
+    </div>
+
+    <div class="paired-chart">
+      <div class="chart-group">
+        <div class="chart-label">
+          <span>Tier 1 · HLE Biology &amp; Medicine Ablation (n=152, No Tools, Pass@1)</span>
+          <span style="color:#2563EB;">22.37% vs 8.55% Base (2.62x)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">GPT-4.1 + CLIO (Full Alg 1+2)</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:89.5%;"></div></div>
+          <span class="bar-val">22.37% (34/152)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">GPT-4.1 + Alg 1 (Loop Only)</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:57.9%;opacity:0.75;"></div></div>
+          <span class="bar-val">14.47% (+5.92%)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">OpenAI o3 (high) / Base 4.1</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:55.2%;"></div></div>
+          <span class="bar-val">13.81% / 8.55%</span>
+        </div>
+      </div>
+
+      <div class="chart-group">
+        <div class="chart-label">
+          <span>Tier 2 · ALE Physical Sciences (5-Hour Autonomous Protocol, Pass@1)</span>
+          <span style="color:#2563EB;">+8.6% vs Opus 5 · +18.3% vs Codex</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Discovery (CLIO + Multi-Model)</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:75.2%;"></div></div>
+          <span class="bar-val">75.2% (#1)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Claude Code (Opus 5)</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:66.6%;"></div></div>
+          <span class="bar-val">66.6%</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Codex (GPT-5.6 Sol Single)</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:56.9%;"></div></div>
+          <span class="bar-val">56.9%</span>
+        </div>
+      </div>
+
+      <div class="chart-group">
+        <div class="chart-label">
+          <span>Tier 3 · ALE Life Sciences &amp; Health/Medicine (5-Hour Protocol, Pass@1)</span>
+          <span style="color:#2563EB;">Consistent Multi-Domain Lead</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Discovery CLIO (Life / Health)</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:64.6%;"></div></div>
+          <span class="bar-val">64.6% / 61.6%</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Codex Baseline (Life / Health)</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:60.8%;"></div></div>
+          <span class="bar-val">60.8% / 57.2%</span>
+        </div>
+      </div>
+
+      <div class="chart-group">
+        <div class="chart-label">
+          <span>Tier 4 · Rate-Limit Resilient Batch Sizing (AORFB Round 3 Candidate Generation)</span>
+          <span style="color:#059669;">Autonomous Downshift Under Throttling</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">CLIO Adaptive Micro-Batch</span>
+          <div class="bar-wrap"><div class="bar-primary" style="width:15%;"></div></div>
+          <span class="bar-val">6 mols / batch (OK)</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-tag">Naive Monolithic Library Call</span>
+          <div class="bar-wrap"><div class="bar-base" style="width:100%;"></div></div>
+          <span class="bar-val">40&ndash;60 mols (Timeout)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-dark">
+      <strong>ACT Framing (Accuracy, Cost, Time):</strong> CLIO explicitly trades sub-second chat latency for multi-minute to multi-hour (>10h supported) epistemic depth. Dynamic model switching + micro-batching prevent rate-limit stalls and false rejections over 5-hour autonomous runs.
+    </div>
+  </section>
+
+  <!-- CARD 7 -->
+  <section class="card" id="card-7">
+    <div>
+      <div class="card-top">
+        <span class="kicker">7 / 7 · MY TAKE · GOOD FIT VS. NOT FOR &amp; PRODUCTION READINESS</span>
+        <span class="page-num">CARD 7 OF 7</span>
+      </div>
+      <h2>Industry Harnesses Must Pair Cognitive Calibrated Deference with Separated Validation &amp; Structural Oracles</h2>
+      <p class="subtitle">Actionable architectural verdict for AI Solution Architects building enterprise R&amp;D, manufacturing, finance, and operations harnesses.</p>
+    </div>
+
+    <div class="fit-grid">
+      <div class="fit-card fit-good">
+        <h3>&#9989; Good Fit (High ROI Industry Scenarios)</h3>
+        <div class="fit-item">
+          <strong>1. Out-of-Distribution R&amp;D with Imperfect Models</strong>
+          Molecular/materials design, battery electrolytes, and novel semiconductor nodes where ML predictors have systematic offsets (~2.7 V) but useful local rank order.
+        </div>
+        <div class="fit-item">
+          <strong>2. Tri-Tier Grey-Box Enterprise Optimization</strong>
+          Problems combining numerical scores (Tier A), multi-step process routes (Tier B), and natural-language physical/regulatory regimes (Tier C, e.g., pH 14 KOH, fab contamination).
+        </div>
+        <div class="fit-item">
+          <strong>3. Multi-Hour to Multi-Week Root-Cause Triage</strong>
+          Fab yield crashes, grid/supply-chain disruptions, and clinical trial anomalies needing parallel hypothesis generation (Tiers 1&ndash;3) and minimum discriminating experiments.
+        </div>
+        <div class="fit-item">
+          <strong>4. Auditable Human&ndash;AI Shared Investigations</strong>
+          Workflows requiring a persistent online belief graph (Accepted/Refuted/Open), mid-stream expert belief editing, and zero self-grading validation.
+        </div>
+      </div>
+
+      <div class="fit-card fit-bad">
+        <h3>&#9940; Not For (Anti-Patterns &amp; Hard Boundaries)</h3>
+        <div class="fit-item">
+          <strong>1. Sub-100ms Real-Time Transactional Routing</strong>
+          CLIO spawns recursive clean-context channels and runs GraphRAG + DRIFT clustering; use lightweight distilled routers for sub-second inline traffic.
+        </div>
+        <div class="fit-item">
+          <strong>2. Unchecked Structural Synthesis Without SMARTS/AST Gates</strong>
+          As shown by RetroChimera's quinoline core swap on Compound 3, LLM deference alone can miss silent structural substitutions without a deterministic invariant checker.
+        </div>
+        <div class="fit-item">
+          <strong>3. Purely Opaque [0,1] Black-Box Number Crunching</strong>
+          When zero domain physics, units, or thresholds are exposed, lightweight evolutionary mutation (ExLLM) reaches higher single-point black-box maxima (0.586 vs 0.544).
+        </div>
+        <div class="fit-item">
+          <strong>4. Uncalibrated Validation Prompts</strong>
+          Vague requirements (&ldquo;give a good answer&rdquo;) cause premature false completion; impossible precision demands trigger 3-strike circuit breaker stalls.
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-dark">
+      <strong>Production Readiness &amp; Reference Stack:</strong> Combine <strong>GitHub Copilot Base Harness</strong> + <strong>CLIO Recursive Belief Graph</strong> + <strong>Calibrated Deference Anchor Checks</strong> + <strong>Deterministic Structural Invariants (RDKit/AST)</strong> + <strong>Separated Validator (<code>gpt-5.4</code> with 3-strike escalation)</strong>. Verified by <code>simulator/clio_industry_harness_verifier.py</code>.
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" font-family="Segoe UI, Inter, system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F43F5E"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="660" fill="url(#bg2)"/>
+
+  <text x="40" y="42" fill="#F59E0B" font-size="13" font-weight="700" letter-spacing="1.5">CALIBRATED DEFERENCE IN ACTION · AORFB NEGOLYTE CLOSED-LOOP CAMPAIGN (ARXIV:2606.02618V1)</text>
+  <text x="40" y="72" fill="#F8FAFC" font-size="23" font-weight="800">How CLIO Diagnosed a 2.7 V Predictor Error &amp; Repaired an Unmodeled Reversibility Failure</text>
+  <text x="40" y="96" fill="#94A3B8" font-size="13">17 Candidates · 3 Design Rounds · 9 Discriminating Diagnostics · +130 mV Initial Shift → +90 mV Reversible Sulfonate Solution</text>
+
+  <!-- Stage 1 -->
+  <rect x="35" y="125" width="265" height="235" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="35" y="125" width="265" height="32" rx="10" fill="#0284C7"/>
+  <text x="50" y="146" fill="#FFFFFF" font-size="13" font-weight="700">ROUND 1 · 4-BRANCH DIVERGE</text>
+  <text x="50" y="178" fill="#F8FAFC" font-size="12" font-weight="700">Parent: Benzo[c]cinnoline (2)</text>
+  <text x="50" y="198" fill="#CBD5E1" font-size="11">Baseline Disulfonate (1): E_red = -0.762 V</text>
+  <text x="50" y="222" fill="#38BDF8" font-size="11" font-weight="600">4 Parallel Clean-Context Channels:</text>
+  <text x="50" y="242" fill="#CBD5E1" font-size="11">• B1: Electron-donating (-OH) → Cmpd 4</text>
+  <text x="50" y="260" fill="#CBD5E1" font-size="11">• B2: Aza ring insertions → Cmpds 10–14</text>
+  <text x="50" y="278" fill="#94A3B8" font-size="11">• B3: Small scaffold hops → Pruned</text>
+  <text x="50" y="296" fill="#10B981" font-size="11" font-weight="600">• B4: Non-conjugated anionic solubilizer</text>
+  <text x="50" y="316" fill="#10B981" font-size="11">→ Cmpd 3 logS: -3.11 → -1.69 (Selected)</text>
+  <text x="50" y="344" fill="#FBBF24" font-size="10">Tool State: Uncritical Acceptance of E_red</text>
+
+  <line x1="300" y1="242" x2="328" y2="242" stroke="#38BDF8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Stage 2 -->
+  <rect x="332" y="125" width="275" height="235" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="332" y="125" width="275" height="32" rx="10" fill="#D97706"/>
+  <text x="347" y="146" fill="#FFFFFF" font-size="13" font-weight="700">ROUND 2–3 · GRADED DISTRUST</text>
+  <text x="347" y="178" fill="#FBBF24" font-size="12" font-weight="700">Detects ~2.7 V Predictor Miscalibration</text>
+  <text x="347" y="198" fill="#CBD5E1" font-size="11">Graphormer predicts -1.998 V vs +0.7 V note</text>
+  <text x="347" y="220" fill="#10B981" font-size="11" font-weight="600">Calibrated Deference State Pivot:</text>
+  <text x="347" y="240" fill="#CBD5E1" font-size="11">1. Salvage rank-order (+0.133V/+0.258V)</text>
+  <text x="347" y="258" fill="#CBD5E1" font-size="11">2. Gate on logS ≥ -2.5 &amp; SAscore ≤ 3.5</text>
+  <text x="347" y="276" fill="#F43F5E" font-size="11" font-weight="600">3. Exclude E_red from Round 3 Hard Gate!</text>
+  <text x="347" y="298" fill="#38BDF8" font-size="11">4. Rate-limit hit → 6-candidate micro-batch</text>
+  <text x="347" y="320" fill="#F8FAFC" font-size="11" font-weight="700">Converges on 5-Benzylphosphonate (3)</text>
+  <text x="347" y="344" fill="#10B981" font-size="11" font-weight="700">Measured E_red = -0.895 V (+130 mV gain!)</text>
+
+  <line x1="607" y1="242" x2="635" y2="242" stroke="#F43F5E" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- Stage 3 -->
+  <rect x="639" y="125" width="265" height="235" rx="10" fill="#1E293B" stroke="#F43F5E" stroke-width="1.5"/>
+  <rect x="639" y="125" width="265" height="32" rx="10" fill="#E11D48"/>
+  <text x="654" y="146" fill="#FFFFFF" font-size="13" font-weight="700">WET-LAB SURPRISE &amp; DIAGNOSIS</text>
+  <text x="654" y="178" fill="#FDA4AF" font-size="12" font-weight="700">Unmodeled Split Oxidation Wave (P1/P2)</text>
+  <text x="654" y="198" fill="#CBD5E1" font-size="11">Cmpd 3 at pH 14: |i_ox/i_red| drops to 0.18</text>
+  <text x="654" y="218" fill="#94A3B8" font-size="10">(Zero ML predictors encode pH 14 speciation)</text>
+  <text x="654" y="240" fill="#38BDF8" font-size="11" font-weight="600">3 Parallel CLIO Runs → Tiered Hypotheses:</text>
+  <text x="654" y="258" fill="#CBD5E1" font-size="11">• H1 (Tier 3): Direct OH- attack → Refuted</text>
+  <text x="654" y="276" fill="#CBD5E1" font-size="11">• H2 (Tier 2): Tautomerization → No rate dep</text>
+  <text x="654" y="294" fill="#10B981" font-size="11" font-weight="700">• H3 (Tier 1): Phosphonate–K+ ion pairing</text>
+  <text x="654" y="316" fill="#FBBF24" font-size="11">Starred Test: Li+/Na+ swap increases P2/P1!</text>
+  <text x="654" y="344" fill="#10B981" font-size="10">Confirms dianionic (-2) cation association</text>
+
+  <line x1="904" y1="242" x2="932" y2="242" stroke="#10B981" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+  <!-- Stage 4 -->
+  <rect x="936" y="125" width="230" height="235" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="936" y="125" width="230" height="32" rx="10" fill="#059669"/>
+  <text x="951" y="146" fill="#FFFFFF" font-size="13" font-weight="700">SULFONATE REDESIGN (20)</text>
+  <text x="951" y="178" fill="#6EE7B7" font-size="12" font-weight="700">Mechanistic Prescription</text>
+  <text x="951" y="198" fill="#CBD5E1" font-size="11">Swap dianionic phosphonate for</text>
+  <text x="951" y="216" fill="#CBD5E1" font-size="11">monoanionic benzylsulfonate (20)</text>
+  <text x="951" y="242" fill="#10B981" font-size="12" font-weight="700">Experimental Verification:</text>
+  <text x="951" y="262" fill="#F8FAFC" font-size="11">• E_red = -0.854 V (+90 mV vs 1)</text>
+  <text x="951" y="280" fill="#F8FAFC" font-size="11">• |i_ox/i_red| = 0.38 (2.1x Cmpd 3)</text>
+  <text x="951" y="298" fill="#F8FAFC" font-size="11">• KOH Solubility = 56.0 mM</text>
+  <text x="951" y="316" fill="#38BDF8" font-size="11">• UV-Vis SEC: 100% clean recovery</text>
+  <text x="951" y="344" fill="#10B981" font-size="10" font-weight="700">Design–Make–Test–Redesign Closed!</text>
+
+  <!-- Bottom Comparison Panel: CLIO vs ExLLM (Why Pure Black-Box Optimizers Fail in Industry) -->
+  <rect x="35" y="385" width="1130" height="245" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="415" fill="#38BDF8" font-size="14" font-weight="800">WHY INDUSTRY HARNESSES NEED EPISTEMIC REASONING: CLIO vs. ExLLM EVOLUTIONARY OPTIMIZER (TABLES S4 &amp; S5)</text>
+
+  <!-- Left Box: Controlled 500-Eval Benchmark -->
+  <rect x="58" y="432" width="525" height="178" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="456" fill="#F8FAFC" font-size="13" font-weight="700">1. Black-Box vs. Grey-Box Regime Shift (500 Oracle Evals, n=6 Replicas)</text>
+  <text x="76" y="480" fill="#94A3B8" font-size="11">• Black-Box (Opaque [0,1] Scores Only): ExLLM leads Top-1 (0.586 vs 0.544)</text>
+  <text x="76" y="500" fill="#10B981" font-size="11" font-weight="700">• Grey-Box (Domain Targets &amp; Thresholds Provided — Realistic Enterprise Mode):</text>
+  <text x="92" y="520" fill="#F8FAFC" font-size="11">- CLIO Top-1 jumps +10.1% (0.544 → 0.599, matching ExLLM 0.607)</text>
+  <text x="92" y="540" fill="#38BDF8" font-size="11" font-weight="700">- CLIO Mean Top-10 jumps +14.7% (0.504 → 0.578), beating ExLLM (0.543)!</text>
+  <text x="76" y="568" fill="#FBBF24" font-size="11">Key Insight: Evolutionary search is blind to domain semantics; CLIO diagnoses</text>
+  <text x="76" y="586" fill="#FBBF24" font-size="11">which specific property is the bottleneck and plans falsifiable structural edits.</text>
+
+  <!-- Right Box: Wet-Lab Reality Check -->
+  <rect x="608" y="432" width="535" height="178" rx="8" fill="#1E293B" stroke="#F43F5E"/>
+  <text x="626" y="456" fill="#FDA4AF" font-size="13" font-weight="700">2. Wet-Lab Reality Check: Goodhart's Law Trap in ExLLM (2,500 Evals)</text>
+  <text x="626" y="480" fill="#CBD5E1" font-size="11">• ExLLM optimized the neutral-pH logS predictor by attaching basic amine groups.</text>
+  <text x="626" y="500" fill="#F43F5E" font-size="11" font-weight="700">• Fatal Real-World Failure: Battery operates in 1 M KOH (pH 14)!</text>
+  <text x="642" y="520" fill="#CBD5E1" font-size="11">- At pH 14, amines are neutral → ExLLM S1, S2, S3 solubility &lt; 1 mM (insoluble!)</text>
+  <text x="642" y="540" fill="#10B981" font-size="11" font-weight="700">- CLIO reasoned in natural language: chose acidic anions deprotonated at pH 14</text>
+  <text x="642" y="560" fill="#10B981" font-size="11">  → Cmpd 3 (57.9 mM) &amp; Cmpd 20 (56.0 mM) achieved &gt;50x higher KOH solubility!</text>
+  <text x="626" y="586" fill="#38BDF8" font-size="11">• Audit Lesson: CLIO missed RetroChimera's quinoline swap → Needs Structural Oracle Gate.</text>
+</svg>

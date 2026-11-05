@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" font-family="Segoe UI, Inter, system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="640" fill="url(#bg3)"/>
+
+  <text x="40" y="42" fill="#38BDF8" font-size="13" font-weight="700" letter-spacing="1.5">PARADIGM SHIFT · FROM SOFTWARE CODING HARNESS TO INDUSTRY DISCOVERY HARNESS</text>
+  <text x="40" y="72" fill="#F8FAFC" font-size="23" font-weight="800">10 Harness Engineering Design Principles &amp; 4 Industry Vertical Blueprints</text>
+  <text x="40" y="96" fill="#94A3B8" font-size="13">Translating Microsoft Discovery &amp; CLIO Primitives to Bio/Materials, Quant Finance, Semiconductor Fab RCA &amp; Supply Chain</text>
+
+  <!-- Top Comparison: Software Harness vs Industry Discovery Harness -->
+  <rect x="35" y="118" width="550" height="175" rx="10" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+  <text x="55" y="144" fill="#94A3B8" font-size="14" font-weight="800">TRADITIONAL CODING HARNESS (SWE / COMPILER ORACLE)</text>
+  <text x="55" y="170" fill="#CBD5E1" font-size="12">1. Oracle Reality: Deterministic compiler / unit test (100% ground truth)</text>
+  <text x="55" y="192" fill="#CBD5E1" font-size="12">2. Time Horizon: Seconds to minutes; interactive chat loop</text>
+  <text x="55" y="214" fill="#CBD5E1" font-size="12">3. Memory Model: Sliding context window or verbatim file grep</text>
+  <text x="55" y="236" fill="#CBD5E1" font-size="12">4. Failed Attempts: Discarded via git reset / branch pruning</text>
+  <text x="55" y="258" fill="#CBD5E1" font-size="12">5. Stopping Rule: Agent self-declares task_complete when tests pass</text>
+  <text x="55" y="280" fill="#FBBF24" font-size="11">ALE Physical Sciences Score (Single-Model Coding Harness): 56.9% – 66.6%</text>
+
+  <rect x="615" y="118" width="550" height="175" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.8"/>
+  <text x="635" y="144" fill="#10B981" font-size="14" font-weight="800">INDUSTRY DISCOVERY HARNESS (CLIO + DISCOVERY ENGINE)</text>
+  <text x="635" y="170" fill="#F8FAFC" font-size="12">1. Oracle Reality: Imperfect / miscalibrated ML models + unmodeled physics</text>
+  <text x="635" y="192" fill="#F8FAFC" font-size="12">2. Time Horizon: Hours to weeks; async Shared Session Task DAG</text>
+  <text x="635" y="214" fill="#F8FAFC" font-size="12">3. Memory Model: Online Belief-State Graph + GraphRAG DRIFT reduction</text>
+  <text x="635" y="236" fill="#F8FAFC" font-size="12">4. Failed Attempts: Preserved via Regret Reflection to steer next round</text>
+  <text x="635" y="258" fill="#F8FAFC" font-size="12">5. Stopping Rule: Separated Validator + dU/dt Oscillation Escalation</text>
+  <text x="635" y="280" fill="#10B981" font-size="11" font-weight="700">ALE Physical Sciences Score (Discovery + CLIO + Multi-Model): 75.2% (+18.3%)</text>
+
+  <!-- 4 Industry Vertical Cards -->
+  <rect x="35" y="315" width="270" height="290" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="35" y="315" width="270" height="34" rx="10" fill="#0284C7"/>
+  <text x="50" y="337" fill="#FFFFFF" font-size="13" font-weight="700">1. BIO &amp; NEW MATERIALS R&amp;D</text>
+  <text x="50" y="370" fill="#38BDF8" font-size="12" font-weight="700">Imperfect Oracle Challenge:</text>
+  <text x="50" y="388" fill="#CBD5E1" font-size="11">ML property predictors off by &gt;2V</text>
+  <text x="50" y="404" fill="#CBD5E1" font-size="11">in novel chemotypes; pH/solvent shift.</text>
+  <text x="50" y="430" fill="#10B981" font-size="12" font-weight="700">Harness Design Pattern:</text>
+  <text x="50" y="448" fill="#CBD5E1" font-size="11">• Anchor-calibrated rank-order salvage</text>
+  <text x="50" y="466" fill="#CBD5E1" font-size="11">• Hard SMARTS + Scaffold invariants</text>
+  <text x="50" y="484" fill="#CBD5E1" font-size="11">• 3-Run consensus diagnostic design</text>
+  <text x="50" y="502" fill="#CBD5E1" font-size="11">• Warm-start belief graph across</text>
+  <text x="50" y="518" fill="#CBD5E1" font-size="11">  wet-lab synthesis rounds</text>
+  <rect x="50" y="542" width="240" height="46" rx="6" fill="#1E293B"/>
+  <text x="62" y="560" fill="#FBBF24" font-size="11" font-weight="700">Proven KPI (AORFB):</text>
+  <text x="62" y="578" fill="#F8FAFC" font-size="11">+90 mV reversible, 56 mM KOH</text>
+
+  <rect x="322" y="315" width="270" height="290" rx="10" fill="#0F172A" stroke="#A855F7" stroke-width="1.5"/>
+  <rect x="322" y="315" width="270" height="34" rx="10" fill="#7E22CE"/>
+  <text x="337" y="337" fill="#FFFFFF" font-size="13" font-weight="700">2. QUANT FINANCE &amp; RISK</text>
+  <text x="337" y="370" fill="#C084FC" font-size="12" font-weight="700">Imperfect Oracle Challenge:</text>
+  <text x="337" y="388" fill="#CBD5E1" font-size="11">Factor models break during macro</text>
+  <text x="337" y="404" fill="#CBD5E1" font-size="11">regime shifts; backtest overfitting.</text>
+  <text x="337" y="430" fill="#10B981" font-size="12" font-weight="700">Harness Design Pattern:</text>
+  <text x="337" y="448" fill="#CBD5E1" font-size="11">• Graded Deference on VaR/Alpha tools</text>
+  <text x="337" y="466" fill="#CBD5E1" font-size="11">• Parallel hypothesis channels for</text>
+  <text x="337" y="484" fill="#CBD5E1" font-size="11">  macro / liquidity / credit regimes</text>
+  <text x="337" y="502" fill="#CBD5E1" font-size="11">• Separated Risk Validator Agent</text>
+  <text x="337" y="518" fill="#CBD5E1" font-size="11">• dU/dt oscillation halts auto-trade</text>
+  <rect x="337" y="542" width="240" height="46" rx="6" fill="#1E293B"/>
+  <text x="349" y="560" fill="#C084FC" font-size="11" font-weight="700">Governance Guardrail:</text>
+  <text x="349" y="578" fill="#F8FAFC" font-size="11">Zero self-graded portfolio execution</text>
+
+  <rect x="609" y="315" width="270" height="290" rx="10" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="609" y="315" width="270" height="34" rx="10" fill="#D97706"/>
+  <text x="624" y="337" fill="#FFFFFF" font-size="13" font-weight="700">3. SEMICONDUCTOR &amp; FAB RCA</text>
+  <text x="624" y="370" fill="#FBBF24" font-size="12" font-weight="700">Imperfect Oracle Challenge:</text>
+  <text x="624" y="388" fill="#CBD5E1" font-size="11">TCAD/litho simulators miss chamber</text>
+  <text x="624" y="404" fill="#CBD5E1" font-size="11">wall drift &amp; cross-tool contamination.</text>
+  <text x="624" y="430" fill="#10B981" font-size="12" font-weight="700">Harness Design Pattern:</text>
+  <text x="624" y="448" fill="#CBD5E1" font-size="11">• Tier 1/2/3 root-cause hypotheses</text>
+  <text x="624" y="466" fill="#CBD5E1" font-size="11">• Prioritize minimum-wafer split-lot</text>
+  <text x="624" y="484" fill="#CBD5E1" font-size="11">  discriminating metrology tests</text>
+  <text x="624" y="502" fill="#CBD5E1" font-size="11">• Regret ledger across wafer lots</text>
+  <text x="624" y="518" fill="#CBD5E1" font-size="11">• 3-strike loop escalation to PE</text>
+  <rect x="624" y="542" width="240" height="46" rx="6" fill="#1E293B"/>
+  <text x="636" y="560" fill="#FBBF24" font-size="11" font-weight="700">Diagnostic Efficiency:</text>
+  <text x="636" y="578" fill="#F8FAFC" font-size="11">3/3 consensus test prioritization</text>
+
+  <rect x="896" y="315" width="270" height="290" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="896" y="315" width="270" height="34" rx="10" fill="#059669"/>
+  <text x="911" y="337" fill="#FFFFFF" font-size="13" font-weight="700">4. SUPPLY CHAIN &amp; OPS</text>
+  <text x="911" y="370" fill="#6EE7B7" font-size="12" font-weight="700">Imperfect Oracle Challenge:</text>
+  <text x="911" y="388" fill="#CBD5E1" font-size="11">ERP lead-time &amp; demand predictors</text>
+  <text x="911" y="404" fill="#CBD5E1" font-size="11">fail under tariff/port/geopolitical shock.</text>
+  <text x="911" y="430" fill="#10B981" font-size="12" font-weight="700">Harness Design Pattern:</text>
+  <text x="911" y="448" fill="#CBD5E1" font-size="11">• Grey-box OR solver + LLM constraints</text>
+  <text x="911" y="466" fill="#CBD5E1" font-size="11">• Natural-language contract &amp; customs</text>
+  <text x="911" y="484" fill="#CBD5E1" font-size="11">  feasibility audit (Tier B/C)</text>
+  <text x="911" y="502" fill="#CBD5E1" font-size="11">• Shared Session Task DAG for</text>
+  <text x="911" y="518" fill="#CBD5E1" font-size="11">  multi-day vendor negotiation</text>
+  <rect x="911" y="542" width="240" height="46" rx="6" fill="#1E293B"/>
+  <text x="923" y="560" fill="#10B981" font-size="11" font-weight="700">Grey-Box Advantage:</text>
+  <text x="923" y="578" fill="#F8FAFC" font-size="11">+14.7% Top-10 portfolio quality</text>
+</svg>

@@ -1,0 +1,7 @@
+compound_id,label,origin,e_red_pred_v_she,e_red_meas_v_she,solubility_ph7_pred_mm,solubility_koh_meas_mm,solubility_koh_numeric_mm,peak_current_ratio_iox_ired,charge_ratio_qox_qred,reversible_at_ph14,notes
+1,Baseline Disulfonate BzC (1),Literature Baseline (Singh et al.),-1.6,-0.762,52.5,500,500.0,0.52,0.79,True,Mixed sulfonate baseline; single oxidation return wave (114 mV peak separation).
+3,5-Benzylphosphonate BzC (3),CLIO Round 1-3 Top Candidate,-2.04,-0.895,20.4,57.9,57.9,0.18,0.92,False,"+133 mV (~130 mV) redox improvement vs 1, but unexpected split oxidation wave (P1/P2) at pH 14 due to phosphonate-K+ ion pairing."
+20,Benzylsulfonate BzC (20),CLIO Calibrated Deference Redesign,-2.0,-0.854,14.5,56.0,56.0,0.38,0.84,True,Maintains +92 mV (~90 mV) redox improvement vs 1; suppresses cation-pairing split peak (90 mV separation); clean UV-Vis SEC reversibility.
+S1,ExLLM Amine Derivative (S1),ExLLM Evolutionary Optimizer (2500 evals),-1.87,-0.774,4.27,<1,0.5,0.65,0.79,True,"Relies on amine protonation (soluble at pH 7, insoluble <1 mM at pH 14 KOH); negligible E_red gain (-12 mV)."
+S2,ExLLM Amine Derivative (S2),ExLLM Evolutionary Optimizer (2500 evals),-1.84,-0.794,6.03,<1,0.5,0.65,1.24,True,Partially soluble <1 mM in 1 M KOH; modest -32 mV E_red shift.
+S3,ExLLM Scaffold-Hop (S3),ExLLM Evolutionary Optimizer (2500 evals),-1.7,-0.987,4.9,<1,0.5,0.48,0.42,False,Insoluble <1 mM in 1 M KOH and ~1300 mV peak separation (electrochemically irreversible).
