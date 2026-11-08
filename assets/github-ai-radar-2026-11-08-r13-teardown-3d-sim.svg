@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg13" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent13" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg13)"/>
+  <rect x="32" y="24" width="1136" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="32" y="24" width="1136" height="6" rx="3" fill="url(#accent13)"/>
+
+  <!-- Header -->
+  <text x="56" y="64" fill="#FDBA74" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">ROUND 13 DEEP DIVE · ELVAROFFICIAL/TEARDOWN v1.0.0 · INTERACTIVE 3D MACHINE SIMULATOR SKILL</text>
+  <text x="56" y="96" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">Teardown 3D Machine Simulator Skill vs. Freehand Three.js &amp; Blender Pre-Render</text>
+  <text x="56" y="122" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">Archived Search API Snapshot (b63e1547...): 2,633 Total Stars (~293★/day lifecycle avg, measured; stars_today: not_measured) · MIT License · Three.js 0.186.1 + Playwright</text>
+
+  <!-- Left Column: 5-Module Architecture & Dual-Target Pipeline -->
+  <rect x="56" y="142" width="540" height="334" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="76" y="172" fill="#FDBA74" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">1. First-Principles 5-Module Contract (Zero Drift &amp; Zero Collisions)</text>
+
+  <rect x="76" y="188" width="500" height="82" rx="8" fill="#0F172A" stroke="#F97316" stroke-width="1.2"/>
+  <text x="92" y="210" fill="#FED7AA" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700">Stage 1: kin.js Pure-Math Kinematics (Zero Three.js Imports)</text>
+  <text x="92" y="230" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Real physical units (e.g., Cessna 32 teeth × 4mm module = 128mm pitch dia, 201mm stroke)</text>
+  <text x="92" y="248" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Single scalar input drives every mesh pose &amp; HUD gauge — zero keyframe/chart drift</text>
+
+  <rect x="76" y="280" width="500" height="88" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="92" y="302" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700">Stage 2: Pure render(t) Dual-Target Build (live.js + film.js + score.py)</text>
+  <text x="92" y="322" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">• sims/build.mjs: ~800 KB (&lt;1 MB) offline HTML, kit/warm.js shader precompile, TIERS iGPU</text>
+  <text x="92" y="340" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• sims/capture.mjs + run_sfx.py: 1080p 60fps MP4 + 48kHz -14 LUFS audio on timeline.json</text>
+
+  <rect x="76" y="378" width="500" height="82" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+  <text x="92" y="400" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700">Stage 3: Contact-Sheet Visual Review Gate (--stills beats + sheet.mjs)</text>
+  <text x="92" y="420" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Renders 4-column contact sheet 0.3s after every timeline beat (t=) for agent vision check</text>
+  <text x="92" y="438" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Eliminates GTAO cutaway ghosts (gtao.normalMaterial) &amp; Windows ANGLE smoothstep bugs</text>
+
+  <!-- Right Column: Closed-Form FinOps & SA Hours Model -->
+  <rect x="616" y="142" width="528" height="334" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="636" y="172" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">2. Closed-Form 12-Simulator/Mo FinOps &amp; SA Time Model</text>
+  <text x="636" y="192" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">synthetic, independently_reproduced=false · $3/1M in, $15/1M out · External 3D/Unity seats: not_measured</text>
+
+  <!-- Bar 1: Path A -->
+  <text x="636" y="222" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path A: Freehand LLM Three.js (10 rounds/sim = 120 rounds/mo)</text>
+  <rect x="636" y="230" width="440" height="24" rx="5" fill="#EF4444"/>
+  <text x="646" y="247" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">$37.80/mo API ($16.20 in + $21.60 out) · 72.0h/mo SA Debugging</text>
+
+  <!-- Bar 2: Path B -->
+  <text x="636" y="280" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path B: LLM Spec + Manual Blender/Unity Rigging (4 rounds/sim = 48/mo)</text>
+  <rect x="636" y="288" width="92" height="24" rx="5" fill="#F59E0B"/>
+  <text x="738" y="305" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">$7.92/mo API ($3.60 in + $4.32 out) · 96.0h/mo Manual 3D</text>
+
+  <!-- Bar 3: Path C -->
+  <text x="636" y="338" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path C: elvarofficial/teardown v1.0.0 (2 rounds/sim = 24 rounds/mo)</text>
+  <rect x="636" y="346" width="34" height="24" rx="5" fill="#10B981"/>
+  <text x="680" y="363" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">$2.88/mo API ($1.44 in + $1.44 out) · 12.0h/mo SA Review (-92.38% API)</text>
+
+  <!-- Formula Verification Box -->
+  <rect x="636" y="386" width="488" height="74" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="652" y="408" fill="#FDBA74" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">Closed-Form Component Audit (Output Counted Strictly Once):</text>
+  <text x="652" y="427" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Path A: 120×($0.1350+$0.1800) = $37.80/mo | Path C: 24×($0.0600+$0.0600) = $2.88/mo</text>
+  <text x="652" y="445" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">• Net Savings (Path C vs A): -$34.92/mo (-$419.04/yr, -92.38% API) &amp; -60.0h/mo (-83.33% SA hrs)</text>
+
+  <!-- Bottom Selection Guide Banner -->
+  <rect x="56" y="494" width="1088" height="134" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="76" y="522" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">3. AI Solution Architect Decision Matrix &amp; 30-Minute Quickstart</text>
+  <text x="76" y="546" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">✅ Good Fit (Use teardown v1.0.0):</text>
+  <text x="315" y="546" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">Hardware/mechanism cutaways (engines, linkages, pumps, valves) needing &lt;1MB offline HTML + 1080p 60fps scored MP4.</text>
+  <text x="76" y="572" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">⛔ Not For (Use stack-diagram / Blender):</text>
+  <text x="348" y="572" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">2D cloud/software architecture diagrams (use stack-diagram/Mermaid) or sub-mm CAD STEP surface tolerance checks.</text>
+  <text x="76" y="602" fill="#93C5FD" font-family="monospace" font-size="12.5">CLI: node sims/build.mjs v8-live &amp;&amp; node sims/capture.mjs v8-film --size 1600x900 --dpr 1.2 --stills beats --cols 4 --out beats.png</text>
+</svg>

@@ -438,6 +438,24 @@
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/stack-diagram-official-icons-vs-mermaid-svg-selection-faq.md",
       "conditions_and_scope": "Closed-form synthetic API-only and SA formatting-hour model verified by component-level assertions in tests/radar-integration.cjs."
+    },
+    {
+      "claim_id": "CLAIM-R13-01",
+      "repo": "elvarofficial/teardown",
+      "metric": "elvarofficial/teardown v1.0.0 (MIT license, created 2026-10-30, 9-day breakout in archived evidence/search-new-repos-2026-11-08-raw.json [sha256: b63e1547...] with 2,633 total stars / 2,643 live REST stars, ~293 stars/day creation-to-date lifecycle velocity, measured; stars_today: not_measured): 5-module separation (kin.js pure-math kinematics with zero three.js imports, engine.js procedural geometry, stage.js + kit/warm.js parallel shader precompile + TIERS iGPU scaling, console.js 1600x900 HUD, film.js/live.js/score.py pure render(t)); sims/build.mjs (esbuild 0.28.1 + three 0.186.1) bundling ~800 KB (<1 MB) offline HTML with 25s idle auto-tour handover; sims/capture.mjs (Playwright 1.58.2) rendering 1920x1080 60fps MP4 and --stills beats 4-column contact sheets (+0.3s after each beat); and run_sfx.py synthesizing 48 kHz procedural audio mastered to -14 LUFS on timeline.json",
+      "provenance_type": "measured",
+      "independently_reproduced": true,
+      "primary_source_url": "https://github.com/elvarofficial/teardown/blob/main/SKILL.md",
+      "conditions_and_scope": "Repository metadata, package.json, and SKILL.md verified directly via GitHub REST API and archived Search API JSON (LF sha256: b63e1547...)."
+    },
+    {
+      "claim_id": "CLAIM-R13-02",
+      "repo": "elvarofficial/teardown",
+      "metric": "Closed-form 12 interactive 3D machine simulators/mo model ($3.00/1M in, $15.00/1M out counted once, API-only; external 3D contractors & commercial Unity/engine seats: not_measured): Path A Freehand LLM Three.js (120 rounds [12x10] x [0.045M in ($0.1350) + 0.012M out ($0.1800) = $0.3150] = $37.80/mo API-only [$16.20 in + $21.60 out, 72.0h/mo debugging]) vs Path B LLM Spec + Manual Blender/Unity Rigging (48 rounds [12x4] x [0.025M in ($0.0750) + 0.006M out ($0.0900) = $0.1650] = $7.92/mo API-only [$3.60 in + $4.32 out, 96.0h/mo manual 3D]) vs Path C elvarofficial/teardown v1.0.0 (24 rounds [12x2] x [0.020M in ($0.0600) + 0.004M out ($0.0600) = $0.1200] = $2.88/mo API-only [$1.44 in + $1.44 out, 12.0h/mo review], saving $34.92/mo [$419.04/yr, -92.38% API-only] and 60.0h/mo [-83.33%] SA 3D debugging vs Path A)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/teardown-3d-machine-simulator-vs-freehand-threejs-selection-faq.md",
+      "conditions_and_scope": "Closed-form synthetic API-only and SA 3D engineering-hour model verified by component-level assertions in tests/radar-integration.cjs."
     }
   ]
 }
