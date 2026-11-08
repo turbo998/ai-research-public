@@ -1,6 +1,6 @@
 {
-  "audit_version": "2.0.0",
-  "generated_at_cst": "2026-11-09T00:50:30+08:00",
+  "audit_version": "2.1.0",
+  "generated_at_cst": "2026-11-09T02:18:00+08:00",
   "raw_trending_html_evidence": {
     "repo_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
     "session_file_path": "C:\\Users\\qichen2\\.copilot\\session-state\\65338eeb-a3ec-438e-850a-17323a84e519\\files\\trending-daily-2026-11-08-raw.html",
@@ -9,6 +9,13 @@
     "archived_snapshot_cst": "2026-11-09T00:49:45+08:00",
     "byte_length": 521428,
     "sha256": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0"
+  },
+  "raw_track_b_search_api_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json",
+    "source_query": "gh api \"/search/repositories?q=created:>=2026-10-29+stars:>500&sort=stars&order=desc&per_page=15\"",
+    "captured_at_cst": "2026-11-09T02:02:10+08:00",
+    "sha256_lf": "b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1",
+    "metric_definition": "avg_stars_per_day = stargazers_count / max(1, days_since_created_at); stars_today = not_measured"
   },
   "parsed_daily_trending_rows": [
     {
@@ -237,11 +244,11 @@
     {
       "claim_id": "CLAIM-NVKE-02",
       "repo": "dsx-ai-factory/nvke",
-      "metric": "Illustrative bare-metal failure distribution (~85% below OS), ~90s NVSentinel node replacement target, and 64-node (512x H200) annual TCO savings model (~$111,900/yr)",
+      "metric": "Closed-form 64-node (512x H200 @ $2.20/GPU-hr = $1,126.40/cluster-hr) annual availability recovery model: 69 cluster-hours maintenance saved ($77,721.60/yr) + 78 hardware events on 128-GPU jobs ($281.60/hr, MTTR 1.58h -> 0.025h saving $34,155.26/yr) = $111,876.86/yr (~$111.9k/yr)",
       "provenance_type": "synthetic",
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/nvke-vs-aks-gpu-cluster-selection-faq.md",
-      "conditions_and_scope": "Architect parametric TCO & MTTR model constructed under explicit assumptions ($3.50/GPU-hr internal depreciation, 4-5hr manual RMA vs automated drain/provision, 18 major XID/link incidents/year); not a measured hardware benchmark."
+      "conditions_and_scope": "Architect closed-form TCO & MTTR model constructed under explicit assumptions ($2.20/GPU-hr depreciation+power, 6 maintenance windows/yr, 78 hardware incidents/yr); not a measured hardware benchmark."
     },
     {
       "claim_id": "CLAIM-BC-01",
@@ -255,7 +262,7 @@
     {
       "claim_id": "CLAIM-BC-02",
       "repo": "ranxianglei/billion-context",
-      "metric": "1,500-item 5-arm benchmark: ContextBench Utilized F1=0.3097 (#1, -58.3% cost vs full $4.61 vs $11.05), LongMemEval-S 79.20% vs best RAG 62.60% (-71.1% cost), MemoryAgentBench 1.48M TTL 100% survival (30x steady-state compression, verbatim AR drop 69.0% -> 27.0%)",
+      "metric": "1,500-item 5-arm benchmark: ContextBench Utilized F1=0.3097 (#1, -58.3% cost vs full $4.61 vs $11.05), LongMemEval-S 79.20% vs best RAG 62.60% (-71.1% cost, $2.30 vs $7.97), MemoryAgentBench 1.48M TTL 100% survival (30x steady-state compression, verbatim AR drop 69.0% -> 27.0%)",
       "provenance_type": "anonymized_reported",
       "independently_reproduced": false,
       "primary_source_url": "https://github.com/ranxianglei/billion-context/blob/main/benchmarks/third-party-1500/README.md",
@@ -264,38 +271,47 @@
     {
       "claim_id": "CLAIM-BC-03",
       "repo": "ranxianglei/billion-context",
-      "metric": "20-engineer team 50-turn coding session monthly FinOps worked example: Path A (Full + /compact modeled at ~38% [35%–45%] cache hit rate = $16,579/mo) vs Path B (Vector-Rerank RAG modeled at ~22% [15%–30%] cache hit rate = $12,056/mo) vs Path C (billion-context reversible folding modeled at 96% cache hit rate = $3,432/mo, -$13,147/mo or -$157,764/yr, -79.3%)",
+      "metric": "Closed-Form Input-Only Prefill Sensitivity Formula (1,760 sessions/mo x 4.5M input/session, $3.00/1M uncached input, $0.30/1M cached input): Path A (38% cache: 2.79M uncached + 1.71M cached = $8.8830/session -> $15,634.08/mo input-only) vs Path C (96% cache: 0.18M uncached + 4.32M cached = $1.8360/session -> $3,231.36/mo input-only, saving $12,402.72/mo or $148,832.64/yr [-79.33%] input-only); Path B RAG input & output/total bills explicitly marked not_measured (prior unparameterized $9.42/$6.85/$1.95 -> $16,579/$12,056/$3,432 totals formally retracted)",
       "provenance_type": "synthetic",
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/context-folding-vs-compact-rag-selection-faq.md",
-      "conditions_and_scope": "Architect parametric FinOps calculation assuming 20 engineers, 4 sessions/day, 22 workdays, 4.5M cumulative input tokens/session, $3.00/1M uncached input, and $0.30/1M cached input; the ~38% (/compact) and ~22% (RAG) cache hit rates are parametric boundary estimates for prefix-mutating workflows, not universal measured figures."
+      "conditions_and_scope": "Closed-form input-only sensitivity formula verified in tests/radar-integration.cjs; output tokens, RAG top-k truncation ratios, and total bills are marked not_measured without fabricating back-calculated token counts."
     },
     {
       "claim_id": "CLAIM-R3-01",
       "repo": "meta/astryx & pbakaus/impeccable",
-      "metric": "meta/astryx v0.7.11 (41 components, 5 presets, @astryxdesign/cli) and pbakaus/impeccable v2.1.1 (20 skills, 84 anti-slop sub-checks); PoC frontend visual debt & rework parametric model (3.2x iteration cycles -> 1.1x, ~68% savings)",
+      "metric": "meta/astryx v0.7.11 (41 components, 5 presets, @astryxdesign/cli) and pbakaus/impeccable v2.1.1 (20 skills, 84 anti-slop sub-checks); closed-form 12-screen / 72-turn UI token model: Path A Raw Tailwind (6,400 x 72 = 460.8k tokens, $1.68) vs Path B Astryx CLI (1,450 x 72 = 104.4k tokens, $0.39) vs Path C Astryx + Impeccable (1,850 x 72 = 133.2k tokens, $0.51, -71.1% token reduction)",
       "provenance_type": "synthetic",
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.md",
-      "conditions_and_scope": "Component/skill counts verified directly from repository source trees (measured); enterprise PoC rework reduction (3.2x -> 1.1x) is an architect parametric workflow estimate (synthetic, independently_reproduced=false)."
+      "conditions_and_scope": "Component/skill counts verified directly from repository source trees (measured); 12-screen / 72-turn token model is a closed-form synthetic calculation."
     },
     {
       "claim_id": "CLAIM-R4-01",
       "repo": "milind-soni/OpenMausBot & KKKKhazix/agent-autoloop",
-      "metric": "OpenMausBot v0.1.149 4-container Docker Compose stack with per-contact isolated workspace and desktop VNC (3000/9990/9991/9992); agent-autoloop ~1,850 LOC zero-dependency Python kernel with 4 systems mechanisms and 200,000-step deterministic SQLite state-machine crash-recovery simulation in tests/test_core.py",
-      "provenance_type": "measured",
-      "independently_reproduced": true,
-      "primary_source_url": "https://github.com/KKKKhazix/agent-autoloop/blob/main/tests/test_core.py",
-      "conditions_and_scope": "Source code inspection of OpenMausBot docker-compose.yml / packages/ and agent-autoloop autoloop/core.py, runner.py, cli.py, and tests/test_core.py."
+      "metric": "OpenMausBot v0.1.149 local-first desktop app + per-bot VM desktop; agent-autoloop ~1,850 LOC zero-dependency Node 24 TypeScript kernel with M5 Pro reported benchmarks (88.78ms cold start, 59.94 MB idle RSS, 170.49 MB RSS at 1,000 long-polls, 2,394 writes/s, 1.82ms dispatch p99) and 200,000-step deterministic crash/network sim (node sim/random.ts 24301 200000)",
+      "provenance_type": "anonymized_reported",
+      "independently_reproduced": false,
+      "primary_source_url": "https://github.com/KKKKhazix/agent-autoloop/blob/main/docs/protocol.md",
+      "conditions_and_scope": "Source code and protocol documentation verified via GitHub REST API (measured); M5 Pro latency/RSS benchmarks are upstream author-reported (anonymized_reported, independently_reproduced=false)."
     },
     {
       "claim_id": "CLAIM-R4-02",
       "repo": "milind-soni/OpenMausBot & KKKKhazix/agent-autoloop",
-      "metric": "20-Workflow Unattended Enterprise Agent Ops FinOps & Security Risk worked example: Path A (Raw Foreground CLI = $1,796/mo) vs Path B (Always-On Full Desktop VM Fleet = $2,320/mo) vs Path C (Hybrid Autoloop + Ephemeral VM = $392/mo, -$1,928/mo, -83.1%)",
+      "metric": "Closed-form 15-engineer / 30-rule / 120 daily events / 40 daily HITL approvals worked example: 18 resident CLI processes x 250 MB = 4,500 MB (4.5 GB RAM) vs 59.94–170.49 MB RAM (>96% RAM reduction) in agent-autoloop zero-cost suspend, plus 40 waits/day x 22 workdays = 880 waits/mo x 15% drop rate = 132 reruns/mo x $3.18/rerun = $419.76/mo (~$420/mo) wasted token reruns avoided",
       "provenance_type": "synthetic",
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/multi-agent-sandbox-workbench-vs-cli-selection-faq.md",
-      "conditions_and_scope": "Architect parametric FinOps calculation for 20 unattended workflows (16 headless CLI + 4 GUI/Browser workflows) across 22 workdays assuming $80/hr engineer recovery time and $96/mo 4-vCPU/8GB cloud VM instance pricing."
+      "conditions_and_scope": "Closed-form synthetic worked example verified in tests/radar-integration.cjs."
+    },
+    {
+      "claim_id": "CLAIM-R5-01",
+      "repo": "vercel-labs/agent-browser, vercel-labs/agent-desktop & anthropics/skills",
+      "metric": "Closed-form 25-workflow x 20 runs/day x 22 workdays = 11,000 CUA runs/mo input-side token model (50% cache hit = $1.65/1M input): Path A Raw Playwright DOM + 30 MCP Schemas (50,000 x 15 = 750,000 tokens/run = $1.2375/run -> $13,612.50/mo) vs Path B Vision CUA (10,200 x 21 = 214,200 tokens/run = $0.35343/run -> $3,887.73/mo) vs Path C agent-browser + agent-desktop + SKILL.md Thin Stub (1,550 x 15 = 23,250 tokens/run = $0.0383625/run -> $421.99/mo, saving $13,190.51/mo [-96.90%] input-side; output/total marked not_measured)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/agent-browser-desktop-a11y-vs-playwright-vision-selection-faq.md",
+      "conditions_and_scope": "Closed-form input-side token sensitivity formula verified in tests/radar-integration.cjs; output tokens and total bills are marked not_measured."
     }
   ]
 }

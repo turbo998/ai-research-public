@@ -128,14 +128,14 @@
     Gate 4 (#1335): Armed parent-PID watchdog (no orphans)
   </text>
   <rect x="838" y="568" width="542" height="80" rx="8" fill="#1E293B" stroke="#475569"/>
-  <text x="854" y="592" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">
-    🧮 20人团队 50轮重构月度账单推演 [synthetic · 参数化 FinOps 算例]
+  <text x="854" y="590" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5" font-weight="700">
+    🧮 固定 4.5M 输入×1,760会话/月 仅输入闭式公式 [synthetic · 总账单/RAG=not_measured]
   </text>
-  <text x="854" y="614" fill="#CBD5E1" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
-    Path A (/compact 38% cache): $16,579/mo | Path B (RAG): $12,056/mo
+  <text x="854" y="612" fill="#CBD5E1" font-family="Consolas, PingFang SC, monospace" font-size="11">
+    Input-Only: A=$8.8830($15,634.08/mo) | C=$1.8360($3,231.36/mo, -$12,402.72/mo)
   </text>
-  <text x="854" y="636" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="11.5" font-weight="700">
-    Path C (billion-context 96% cache): $3,432/mo (-79.3% / 省 $13,147)
+  <text x="854" y="634" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="11" font-weight="700">
+    Prior $16,579/$12,056/$3,432 total retracted; end-to-end: ContextBench -58.3%, LME -71.1%
   </text>
 
   <!-- Row 3: Dual-Track Golden Architecture & SA Production Checklist -->

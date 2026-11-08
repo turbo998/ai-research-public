@@ -12,18 +12,19 @@
       "independently_reproduced": true,
       "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
       "raw_html_sha256": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
-      "audit_json_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-audit.json",
-      "audit_json_sha256": "b887b85823bdc5cc4846804d27a1424df3d010d7c5f2966b77d2af3568f212e4"
+      "raw_search_api_evidence_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json",
+      "raw_search_api_sha256": "b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1",
+      "audit_json_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-audit.json"
     },
     "upstream_repo_performance_and_benchmark_claims": {
       "provenance": "anonymized_reported",
       "independently_reproduced": false,
-      "note": "Covers author-reported claims in READMEs/papers (e.g., billion-context 174,327 calls, 95%–97% KV prefix-cache hit rate, ~5x cost reduction, ContextBench F1=0.3097, LongMemEval-S 79.20% vs 62.60%, and NVKE mock-NICo 6C/12G / NVSentinel architecture targets). Not re-executed on paid multi-GPU clusters or 1,500-item API runs during this shift."
+      "note": "Covers author-reported claims in READMEs/papers (e.g., billion-context 174,327 calls, 95%–97% KV prefix-cache hit rate, ~5x cost reduction, ContextBench F1=0.3097, LongMemEval-S 79.20% vs 62.60%, agent-autoloop M5 Pro 59.94 MB idle RSS / 2,394 writes/s / 1.82ms p99, and NVKE mock-NICo 6C/12G / NVSentinel architecture targets). Not re-executed on paid multi-GPU clusters or 1,500-item API runs during this shift."
     },
     "architect_tco_and_finops_worked_examples": {
       "provenance": "synthetic",
       "independently_reproduced": false,
-      "note": "Covers parametric TCO/MTTR, FinOps, Frontend Token, and Wait-State RAM calculations in Round 1 (64-node 512xH200 ~$111.9k/yr availability model, ~85% below-OS failure ratio, <90s quarantine target), Round 2 (20-engineer 4x50-turn daily sessions monthly token spend $16,579 at 38% cache hit vs $12,056 RAG at 22% vs $3,432 billion-context at 96%, saving $13,147/mo / -79.3%), Round 3 (12-screen / 72-turn UI token model: 460.8k vs 104.4k vs 133.2k tokens), and Round 4 (15-engineer / 30-rule / 40 daily HITL approvals wait-state RAM model: ~4.5 GB resident CLI processes vs ~60-170 MB zero-cost suspend kernel, >96% reduction)."
+      "note": "All synthetic worked examples enforce 100% closed-form parametric reproducibility from explicitly listed input variables (verified in tests/radar-integration.cjs): Round 1 (64-node 512xH200 @ $2.20/GPU-hr = $1,126.40/cluster-hr; 69h maintenance saved = $77,721.60/yr + 78x128-GPU fault MTTR saved = $34,155.26/yr -> $111,876.86/yr total), Round 2 (closed-form Input-Only Prefill Sensitivity at 1,760 sessions/mo x 4.5M input/session: Path A 38% cache = $8.8830/session [$15,634.08/mo input-only] vs Path C 96% cache = $1.8360/session [$3,231.36/mo input-only], saving $12,402.72/mo input-only [-79.33%]; output/total bills and Path B RAG input are explicitly marked not_measured and prior unparameterized $16,579/$12,056/$3,432 totals are formally retracted), Round 3 (12-screen / 72-turn UI token model: 460.8k vs 104.4k vs 133.2k tokens), Round 4 (15-engineer / 30-rule / 40 daily HITL approvals: 18x250 MB = 4.5 GB RAM -> 59.94-170.49 MB RAM [>96% reduction] + 40x22x0.15x$3.18 = $419.76/mo dropped-session rerun waste), and Round 5 (11,000 15-step CUA runs/mo at $1.65/1M input: Path A 0.75M = $13,612.50/mo vs Path B 0.2142M = $3,887.73/mo vs Path C 0.02325M = $421.99/mo, saving $13,190.51/mo [-96.90%] input-side; output/total marked not_measured)."
     }
   },
   "standalone_faq_guides": [
@@ -60,7 +61,16 @@
       "zh_path": "workshops/github-trending-radar/docs/multi-agent-sandbox-workbench-vs-cli-selection-faq.md",
       "en_path": "workshops/github-trending-radar/docs/multi-agent-sandbox-workbench-vs-cli-selection-faq.en.md",
       "svg_path": "assets/github-ai-radar-2026-11-08-r4-sandbox-autoloop.svg",
+      "immutable_round_commit_sha": "c13bcf5974feb97ce78fad034ba0175c185ca9e8",
       "primary_repos": ["milind-soni/OpenMausBot", "KKKKhazix/agent-autoloop"]
+    },
+    {
+      "round": 5,
+      "topic": "Browser & Desktop Computer-Use Architecture Selection: agent-browser + agent-desktop Accessibility-Tree CLI vs. Raw Playwright DOM / Vision Screenshot CUA",
+      "zh_path": "workshops/github-trending-radar/docs/agent-browser-desktop-a11y-vs-playwright-vision-selection-faq.md",
+      "en_path": "workshops/github-trending-radar/docs/agent-browser-desktop-a11y-vs-playwright-vision-selection-faq.en.md",
+      "svg_path": "assets/github-ai-radar-2026-11-08-r5-browser-desktop-a11y.svg",
+      "primary_repos": ["vercel-labs/agent-browser", "vercel-labs/agent-desktop", "anthropics/skills"]
     }
   ],
   "framework": {
@@ -280,12 +290,15 @@
         "created_at": "2026-10-31",
         "age_days": 8,
         "stars_total": 22088,
+        "stars_total_search_api": 22299,
         "stars_today": "not_measured",
-        "stars_today_source": "not_measured (GitHub REST Search API created:>2026-10-25 returns total stargazers_count; 24h delta not scraped)",
+        "stars_today_source": "not_measured (GitHub REST Search API created:>=2026-10-29 returns total stargazers_count; 24h delta not scraped)",
+        "raw_search_json_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json",
+        "raw_search_json_sha256_lf": "b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1",
         "scraped_at_cst": "2026-11-08T23:52:10+08:00",
         "stars_per_day": 2761,
         "language": "Rust",
-        "license": "Custom",
+        "license": "NOASSERTION",
         "sa_tier": "P1",
         "summary": "Local workspace combining documents, canvases, code, and agents in one high-speed Rust shell."
       },
@@ -295,8 +308,11 @@
         "created_at": "2026-10-31",
         "age_days": 8,
         "stars_total": 21107,
+        "stars_total_search_api": 21148,
         "stars_today": "not_measured",
-        "stars_today_source": "not_measured (GitHub REST Search API created:>2026-10-25 returns total stargazers_count; 24h delta not scraped)",
+        "stars_today_source": "not_measured (GitHub REST Search API created:>=2026-10-29 returns total stargazers_count; 24h delta not scraped)",
+        "raw_search_json_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json",
+        "raw_search_json_sha256_lf": "b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1",
         "scraped_at_cst": "2026-11-08T23:52:10+08:00",
         "stars_per_day": 2638,
         "language": "TypeScript",
@@ -310,14 +326,17 @@
         "created_at": "2026-11-03",
         "age_days": 5,
         "stars_total": 4072,
+        "stars_total_search_api": 4085,
         "stars_today": "not_measured",
-        "stars_today_source": "not_measured (GitHub REST Search API created:>2026-10-25 returns total stargazers_count; 24h delta not scraped)",
+        "stars_today_source": "not_measured (GitHub REST Search API created:>=2026-10-29 returns total stargazers_count; 24h delta not scraped)",
+        "raw_search_json_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json",
+        "raw_search_json_sha256_lf": "b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1",
         "scraped_at_cst": "2026-11-08T23:52:10+08:00",
         "stars_per_day": 814,
         "language": "TypeScript",
         "license": "MIT",
         "sa_tier": "P0",
-        "summary": "Goal-driven persistent reflection, self-verification, and auto-retry loop plugin for Claude Code & OpenClaw."
+        "summary": "Zero-dependency (~1,850 LOC) headless event autoloop kernel with zero-cost suspend on ask cards and 8-hop TTL breaker."
       },
       {
         "rank": 4,
@@ -325,14 +344,17 @@
         "created_at": "2026-10-29",
         "age_days": 10,
         "stars_total": 7708,
+        "stars_total_search_api": 7722,
         "stars_today": "not_measured",
-        "stars_today_source": "not_measured (GitHub REST Search API created:>2026-10-25 returns total stargazers_count; 24h delta not scraped)",
+        "stars_today_source": "not_measured (GitHub REST Search API created:>=2026-10-29 returns total stargazers_count; 24h delta not scraped)",
+        "raw_search_json_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json",
+        "raw_search_json_sha256_lf": "b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1",
         "scraped_at_cst": "2026-11-08T23:52:10+08:00",
         "stars_per_day": 771,
         "language": "Kotlin",
-        "license": "Apache-2.0",
+        "license": "NOASSERTION",
         "sa_tier": "P1",
-        "summary": "Android native Accessibility Service GUI mobile agent requiring zero PC/ADB tethering."
+        "summary": "Android native Accessibility Service GUI mobile agent operating on a hidden background virtual screen."
       },
       {
         "rank": 5,
@@ -340,14 +362,34 @@
         "created_at": "2026-10-29",
         "age_days": 10,
         "stars_total": 4092,
+        "stars_total_search_api": 4246,
         "stars_today": "not_measured",
-        "stars_today_source": "not_measured (GitHub REST Search API created:>2026-10-25 returns total stargazers_count; 24h delta not scraped)",
+        "stars_today_source": "not_measured (GitHub REST Search API created:>=2026-10-29 returns total stargazers_count; 24h delta not scraped)",
+        "raw_search_json_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json",
+        "raw_search_json_sha256_lf": "b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1",
         "scraped_at_cst": "2026-11-08T23:52:10+08:00",
         "stars_per_day": 409,
         "language": "Python",
-        "license": "Apache-2.0",
+        "license": "NOASSERTION",
         "sa_tier": "P1",
-        "summary": "Reasoning-augmented long video understanding framework with adaptive keyframe Ground-then-Reason pipeline."
+        "summary": "Shot-by-shot video reverse-engineering skill for Claude Code & Codex."
+      }
+    ],
+    "reclassified_or_unverified_track_b_entries": [
+      {
+        "full_name": "vercel-labs/agent-desktop",
+        "created_at": "2026-02-19",
+        "stars_total": 19505,
+        "stars_today": "not_measured",
+        "latest_release": "v1.2.0",
+        "status": "reclassified_as_established_repo",
+        "note": "Verified via GitHub REST API (19,505 stars, 1,443 forks, Apache-2.0, v1.2.0, created_at 2026-02-19); evaluated in Round 5 Selection FAQ alongside vercel-labs/agent-browser, not classified as a newly created 10-day Track B repo."
+      },
+      {
+        "full_name": "uniswap/v4-skills",
+        "stars_today": "not_measured",
+        "status": "unverified_http_404",
+        "note": "Returned HTTP 404 on GitHub REST API verification during shift; excluded from confirmed Track B leaderboard."
       }
     ]
   },
@@ -357,7 +399,7 @@
       "priority": "P0_IMMEDIATE",
       "repo": "dsx-ai-factory/nvke",
       "version": "v0.23.1",
-      "velocity": "+345★ today (★724, +91% 24h surge)",
+      "velocity": "+345★ today (★724, +91% 24h surge, measured)",
       "core_value": "Enterprise bare-metal GPU Kubernetes management plane (CAPNICo + TPM/SPIFFE + OVN-K8s + NKTP + NVSentinel)",
       "next_action": "Run GPU-free mock-NICo quickstart on a 6C/12G VM to capture NVSentinel GPU self-healing and TPM/SPIFFE attestation topology for Sovereign AI / AI Factory customer briefings."
     },
@@ -366,8 +408,8 @@
       "priority": "P0_IMMEDIATE",
       "repo": "ranxianglei/billion-context",
       "version": "v0.1.213",
-      "velocity": "+460★ today (★4,922)",
-      "core_value": "Model-driven reversible context compression proxy (acp-kernel) with 95-97% KV prefix cache hits & 5x token savings",
+      "velocity": "+460★ today (★4,922, measured)",
+      "core_value": "Model-driven reversible context compression proxy (acp-kernel) with 95-97% KV prefix cache hits & ~5x token savings (anonymized_reported, independently_reproduced=false)",
       "next_action": "Insert acp-kernel proxy ahead of Claude Code / OpenAI gateway and benchmark KV cache hit rate, token bill, and LongMemEval accuracy on 30-step coding tasks."
     },
     {
@@ -375,8 +417,8 @@
       "priority": "P0_THIS_WEEK",
       "repo": "meta/astryx",
       "version": "v0.7.11",
-      "velocity": "+863★ today (★15,468, Top 3 velocity)",
-      "core_value": "Meta React 19 + StyleX design system (150+ accessible components, 7 themes, swizzle, @astryxdesign/cli)",
+      "velocity": "+863★ today (★15,468, Top 2 AI 24h velocity, measured)",
+      "core_value": "Meta React 19 + StyleX design system (41 components, 5 presets, swizzle, @astryxdesign/cli) + pbakaus/impeccable anti-slop harness",
       "next_action": "Mount @astryxdesign/cli in Executive AI Portal PoCs so coding agents inspect schemas before generating UI, eliminating CSS hallucinations."
     },
     {
@@ -384,18 +426,18 @@
       "priority": "P0_THIS_WEEK",
       "repo": "milind-soni/OpenMausBot",
       "version": "v0.1.149",
-      "velocity": "+1,437★ today (★17,821, #1 24h velocity)",
-      "core_value": "Contact-as-Agent multi-sandbox desktop workbench with KKKKhazix/agent-autoloop (+814★/d) reflection loop",
-      "next_action": "Adopt the Contact-as-Agent UX and per-contact container approval gate + Goal->Verify->Retry autoloop for enterprise multi-agent workbench demos."
+      "velocity": "+1,437★ today (★17,821, #1 AI 24h velocity, measured)",
+      "core_value": "Contact-as-Agent multi-sandbox desktop workbench paired with KKKKhazix/agent-autoloop (4,072★/5d, ~814★/d lifecycle avg; stars_today: not_measured) headless event kernel",
+      "next_action": "Adopt the Contact-as-Agent UX and per-contact VM approval gate + agent-autoloop zero-cost suspend on ask cards for enterprise multi-agent workbench demos."
     },
     {
       "task_id": "SA-ACT-05",
       "priority": "P0_BASELINE",
       "repo": "vercel-labs/agent-browser",
       "version": "v0.41.2",
-      "velocity": "+812★ today (★47,323)",
-      "core_value": "Rust A11y Tree (@e1) headless browser CLI + Anthropic official SKILL.md standard (★189,255)",
-      "next_action": "Enforce agent-browser @e1 snapshots as the default Web Agent execution layer and validate all internal SKILL.md manifests."
+      "velocity": "+812★ today (★47,388, measured)",
+      "core_value": "Rust A11y Tree (@e1) headless browser CLI + vercel-labs/agent-desktop (v1.2.0, ★19,505, stars_today: not_measured) + Anthropic official SKILL.md standard (+793★ today, ★189,330)",
+      "next_action": "Enforce agent-browser + agent-desktop @e1 accessibility snapshots and SKILL.md progressive disclosure as the default CUA execution layer (Round 5 Selection FAQ)."
     }
   ],
   "rejected_candidates": [

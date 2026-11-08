@@ -178,7 +178,7 @@ Per `KKKKhazix/agent-autoloop`'s published benchmark suite on an **Apple M5 Pro 
 | :--- | :--- | :--- | :--- |
 | **Resident Agent Subprocesses During Approval Waits** | **15–20 resident CLI processes** hanging on stdin/polling | **0 resident agent processes** (immediate `exit(0)` on `ask`; only 1 `~60 MB` kernel process) | 15 desktop clients + on-demand Cloud/Local VMs |
 | **Average Idle Host RAM Consumed** | `18 processes × 250 MB ≈ 4.5 GB RAM` | **`~60 MB – 170 MB RAM`** (**>96% RAM reduction** during HITL waits) | `~600 MB – 1.5 GB RAM` per workstation (for full GUI + live VM screen preview) |
-| **Wasted Token Re-Runs from Dropped Sessions** | ~`15%` of long waits fail or drop context (~**$420/mo** wasted token re-runs) | **Near-zero full re-runs** (`--resume` session continuation + receipt-only rewrite on malformed JSON) | Local `~/.openmausbot` state persistence across app restarts |
+| **Wasted Token Re-Runs from Dropped Sessions** | `40 waits/day × 22 workdays = 880 waits/mo × 15% drop rate = 132 re-runs/mo × $3.18/re-run = $419.76/mo` (~**`$420/mo`** wasted token re-runs, `synthetic`) | **Near-zero full re-runs** (`--resume` session continuation + receipt-only rewrite on malformed JSON) | Local `~/.openmausbot` state persistence across app restarts |
 | **Prompt Injection & Runaway Loop Exposure** | **High** (shell string interpolation + unbounded retry scripts) | **Very Low** (file-isolated payloads + protocol rejection of `cwd`/`agent`/`access` + **8-hop hard breaker**) | **Controlled** (Permission Broker inline cards + isolated VM desktop boundary) |
 
 ---

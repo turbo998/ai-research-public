@@ -34,31 +34,31 @@ $$\text{Proactive Agent} = \text{Durable Agent (SQLite Checkpointed)} + \text{Cr
 > - **Round 2 FAQ**：[长会话 Coding Agent 上下文架构选型 FAQ：`billion-context` 可逆折叠 vs `/compact` vs 向量 RAG (`docs/context-folding-vs-compact-rag-selection-faq.md`)](docs/context-folding-vs-compact-rag-selection-faq.md)（[EN](docs/context-folding-vs-compact-rag-selection-faq.en.md) · [Round 2 SVG](../../assets/github-ai-radar-2026-11-08-r2-context-folding.svg)）
 > - **Round 3 FAQ**：[AI 辅助前端工程选型 FAQ：`meta/astryx` CLI vs `pbakaus/impeccable` 反 Slop 审计 vs 裸写 Tailwind/shadcn (`docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.md`)](docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.md)（[EN](docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.en.md) · [Round 3 SVG](../../assets/github-ai-radar-2026-11-08-r3-agent-ui-harness.svg)）
 > - **Round 4 FAQ**：[多智能体 VM 工作台 vs 无头事件自循环内核 vs 原生单终端 CLI 选型 FAQ：`OpenMausBot` vs `agent-autoloop` (`docs/multi-agent-sandbox-workbench-vs-cli-selection-faq.md`)](docs/multi-agent-sandbox-workbench-vs-cli-selection-faq.md)（[EN](docs/multi-agent-sandbox-workbench-vs-cli-selection-faq.en.md) · [Round 4 SVG](../../assets/github-ai-radar-2026-11-08-r4-sandbox-autoloop.svg)）
-> - **原始抓取证据与数据分级**：Track A `stars_today` 原始 HTML 已封存至 [`evidence/trending-daily-2026-11-08-raw.html`](evidence/trending-daily-2026-11-08-raw.html)（`sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`）；Track B 新仓仅报告建仓生命周期日均（`stars_today = not_measured`）；外部论文/基准指标标注为 `anonymized_reported (independently_reproduced=false)`，架构师 TCO/FinOps 算例标注为 `synthetic (independently_reproduced=false)`。
+> - **Round 5 FAQ**：[Web 与桌面智能体操控架构选型 FAQ：`agent-browser` + `agent-desktop` 无障碍树 CLI vs 原生 Playwright DOM / 纯视觉截图 CUA (`docs/agent-browser-desktop-a11y-vs-playwright-vision-selection-faq.md`)](docs/agent-browser-desktop-a11y-vs-playwright-vision-selection-faq.md)（[EN](docs/agent-browser-desktop-a11y-vs-playwright-vision-selection-faq.en.md) · [Round 5 SVG](../../assets/github-ai-radar-2026-11-08-r5-browser-desktop-a11y.svg)）
+> - **原始抓取证据与数据分级**：Track A `stars_today` 原始 HTML 已封存至 [`evidence/trending-daily-2026-11-08-raw.html`](evidence/trending-daily-2026-11-08-raw.html)（`sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`）；Track B 新仓 REST Search API 响应已封存至 [`evidence/search-new-repos-2026-11-08-raw.json`](evidence/search-new-repos-2026-11-08-raw.json)（`sha256: b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1`），仅报告建仓生命周期日均（`stars_today = not_measured`）；外部论文/基准指标标注为 `anonymized_reported (independently_reproduced=false)`，架构师 TCO/FinOps 算例严格执行闭式公式可复算门禁并标注为 `synthetic (independently_reproduced=false)`。
 
-### 2.1 Track A — 24h 单日新增 Star 飙升最快榜（Daily Star Surge Top 9）
+### 2.1 Track A — 24h 单日新增 Star 飙升最快已核验榜（100% 对应归档原始 HTML `353914ef...`）
 
-| 飙升排名 | 仓库 (`owner/repo`) | 24h 新增 Star | 总 Star / 相对增幅 | 大白话一句话：为什么今天突然爆火？ | SA 关注优先级 |
+| 飙升排名 | 仓库 (`owner/repo`) | 24h 新增 Star (`measured`) | 原始 HTML 总 Star (API 总 Star) | 大白话一句话：为什么今天突然爆火？（区分事实证据 vs 架构师推断） | SA 关注优先级 |
 | :---: | :--- | :---: | :---: | :--- | :---: |
-| **🚀 #1** | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) | **+1,437 ★/24h** | 17,821 (+8.8%) | **“微信聊天框式”多 Agent 桌面客户端**：左侧每个联系人都是拥有独立虚拟机/容器沙盒的本地 Claude/Codex Agent，开源复刻 Grok Bot 体验 | 🔥 **P0 重点跟进** |
-| **🚀 #2** | [`Albert-Weasker/niubigeo`](https://github.com/Albert-Weasker/niubigeo) | **+1,307 ★/24h** | 10,139 (+14.8%) | **AI 搜索引擎品牌曝光度（GEO）扫描仪**：踩中营销焦虑痛点，但含付费 SaaS 引流漏斗（`Hype=54`） | 🛡️ **P3 警惕引流** |
-| **🚀 #3** | [`meta/astryx`](https://github.com/meta/astryx) | **+863 ★/24h** | 15,468 (+5.9%) | **Meta 内部打磨 8 年、支撑 13,000+ 应用的 React 19 + StyleX 设计系统首次开源**：自带 `@astryxdesign/cli` 专供 Coding Agent 零幻觉写 UI | 🔥 **P0 立即试用** |
-| **🚀 #4** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | **+812 ★/24h** | 47,323 (+1.7%) | **Rust 编写的 Agent 专用无头浏览器 CLI**：将上万行 HTML 压成 `@e1` 无障碍树引用，省下 85%+ Token | 🔥 **P0 生产标配** |
-| **🚀 #5** | [`anthropics/skills`](https://github.com/anthropics/skills) | **+793 ★/24h** | 189,255 (+0.4%) | **Anthropic 官方 Agent 技能包规范总仓**：逼近 19 万 Star，确立跨平台 `SKILL.md` 事实标准 | 🔥 **P0 架构基线** |
-| **🚀 #6** | [`jub0t/Concat`](https://github.com/jub0t/Concat) | **+491 ★/24h** | 15,593 (+3.3%) | **Rust 本地优先视频剪辑器**：原生内置 JSON-RPC 与 MCP Server，让 Agent 直接通过 API 剪视频 | ⚡ **P1 视觉实验室关注** |
-| **🚀 #7** | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | **+460 ★/24h** | 4,922 (+10.3%) | **模型主动可逆上下文压缩代理 (`acp-kernel`)**：保住 95–97% KV Cache 命中率、省 5 倍 Token，登顶 ContextBench | 🔥 **P0 强烈推荐实测** |
-| **🚀 #8** | [`herdrdev/herdr`](https://github.com/herdrdev/herdr) | **+374 ★/24h** | 49,302 (+0.8%) | **专为 Coding Agent 打造的 Rust 终端复用器**：解决并行跑 5 个 Agent 时的终端会话保持与状态观测 | ⚡ **P1 研发提效** |
-| **🚀 #9** | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) | **+345 ★/24h** | 724 (**单日暴涨 +91%**) | **NVIDIA Kubernetes Engine 开源裸金属多租户 GPU K8s 管控面**：支持在无 GPU 的 6C/12G 虚拟机上用 `mock-NICo` 完整演练 | 🔥 **P0 今日榜首深拆** |
+| **🚀 #1** | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) | **+1,437 ★/24h**<br/>*(DOM Article #3)* | 17,935 (17,961) | **“微信聊天框式”多 Agent 桌面客户端**：发布 `v0.1.149`，每个联系人运行在独立 VM/容器桌面沙盒中并带 Permission Broker 审批门禁 | 🔥 **P0 重点跟进** |
+| **🚀 #2** | [`meta/astryx`](https://github.com/meta/astryx) | **+863 ★/24h**<br/>*(DOM Article #6)* | 15,751 (15,759) | **Meta 官方开源 React 19 + StyleX 设计系统 (`v0.7.11`)**：含 41 个组件、5 套预设与 `@astryxdesign/cli` 命令行内省，根治 AI Slop 界面 | 🔥 **P0 立即试用** |
+| **🚀 #3** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | **+812 ★/24h**<br/>*(DOM Article #5)* | 47,388 (47,420) | **Rust 编写的 Agent 专用无头浏览器 CLI (`v0.41.2`)**：将上万行 HTML 压成 `@e1` 无障碍树引用，省下 85%+ 输入 Token | 🔥 **P0 生产标配** |
+| **🚀 #4** | [`anthropics/skills`](https://github.com/anthropics/skills) | **+793 ★/24h**<br/>*(DOM Article #7)* | 189,330 (189,381) | **Anthropic 官方 Agent 技能包规范总仓**：突破 18.9 万 Star，确立跨平台 `SKILL.md` 渐进式披露事实标准 | 🔥 **P0 架构基线** |
+| **🚀 #5** | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | **+460 ★/24h**<br/>*(DOM Article #9)* | 4,979 (4,979) | **模型主动可逆上下文压缩代理 (`acp-kernel v0.1.213`)**：保住 95–97% KV Cache 命中率、省 5 倍 Token（`anonymized_reported`） | 🔥 **P0 强烈推荐实测** |
+| **🚀 #6** | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) | **+345 ★/24h**<br/>*(DOM Article #2)* | 751 (752) | **开源裸金属多租户 GPU K8s 管控面 (`v0.23.1`)**：支持在无 GPU 的 6C/12G 虚拟机上用 `mock-NICo` 完整演练 | 🔥 **P0 今日榜首深拆** |
 
-### 2.2 Track B — 近 5–10 天新建黑马仓库「日均增长斜率」最快榜
+> *注：归档原始 HTML 另含 `#7 anthropics/claude-quickstarts` (`+28★ today`, DOM Article #4) 与 `#8 google-deepmind/mujoco` (`+26★ today`, DOM Article #8)。早先瞬态轮换条目（`GoogleCloudPlatform/generative-ai`、`Albert-Weasker/niubigeo`、`jub0t/Concat`、`herdrdev/herdr`）未出现在已落盘归档的原始 HTML `353914ef...` 中，其 `stars_today` 统一标为 `not_measured` 并排除在已确认 Track A 单日增量榜之外。*
 
-| 斜率排名 | 仓库 (`owner/repo`) | 创建日期 (天数) | 当前总 Star | 日均爆发斜率 | 大白话定位与架构师吸收要点 | SA 评级 |
+### 2.2 Track B — 近 5–10 天新建黑马仓库「生命周期日均增长率」榜（`stars_today = not_measured`）
+
+| 斜率排名 | 仓库 (`owner/repo`) | 创建日期 (天数) | 当前总 Star | 建仓生命周期日均（`stars_today: not_measured`） | 大白话定位与架构师吸收要点 | SA 评级 |
 | :---: | :--- | :---: | :---: | :---: | :--- | :---: |
-| **⚡ #1** | [`storytold/craft-anything`](https://github.com/storytold/craft-anything) | `2026-10-31` (8天) | **22,088** | **+2,761 ★/天** | Rust 高性能全能创作工作台：把文档、画布、代码与本地 Agent 融进同一个原生外壳 | ⚡ **P1 交互参考** |
-| **⚡ #2** | [`deepseek-ai/dsh-superagent-prototype`](https://github.com/deepseek-ai/dsh-superagent-prototype) | `2026-10-31` (8天) | **21,107** | **+2,638 ★/天** | DeepSeek 官方 Cordis 微内核自治 SuperAgent 原型底座，插件化挂载工具与子智能体 | 🔥 **P0 架构精读** |
-| **⚡ #3** | [`KKKKhazix/agent-autoloop`](https://github.com/KKKKhazix/agent-autoloop) | `2026-11-03` (5天) | **4,072** | **+814 ★/天** | 目标驱动持续反思、自验证与自动重试闭环插件（支持 Claude Code 与 OpenClaw） | 🔥 **P0 闭环借鉴** |
-| **⚡ #4** | [`wangzan101/Mika`](https://github.com/wangzan101/Mika) | `2026-10-29` (10天) | **7,708** | **+771 ★/天** | 免连电脑/免 ADB 的纯端侧 Android 无障碍服务（AccessibilityService）手机 GUI Agent | ⚡ **P1 移动端 CUA** |
-| **⚡ #5** | [`JuneYaooo/rea-video`](https://github.com/JuneYaooo/rea-video) | `2026-10-29` (10天) | **4,092** | **+409 ★/天** | 推理增强长视频理解框架：先稀疏检索关键帧锚点，再做局部精细化推理（Ground-then-Reason） | ⚡ **P1 多模态借鉴** |
+| **⚡ #1** | [`storytold/craft-anything`](https://github.com/storytold/craft-anything) | `2026-10-31` (8天) | **22,088** (API: 22,299) | **建仓日均 ≈ 2,761 ★/天 · 今日新增: `not_measured`** | Rust 高性能全能创作工作台：把文档、画布、代码与本地 Agent 融进同一个原生外壳 | ⚡ **P1 交互参考** |
+| **⚡ #2** | [`deepseek-ai/dsh-superagent-prototype`](https://github.com/deepseek-ai/dsh-superagent-prototype) | `2026-10-31` (8天) | **21,107** (API: 21,148) | **建仓日均 ≈ 2,638 ★/天 · 今日新增: `not_measured`** | DeepSeek 官方 Cordis 微内核自治 SuperAgent 原型底座，插件化挂载工具与子智能体 | 🔥 **P0 架构精读** |
+| **⚡ #3** | [`KKKKhazix/agent-autoloop`](https://github.com/KKKKhazix/agent-autoloop) | `2026-11-03` (5天) | **4,072** (API: 4,085) | **建仓日均 ≈ 814 ★/天 · 今日新增: `not_measured`** | 零依赖无头事件自循环内核（~1,850 行 TS），提问即 `exit(0)` 零消耗挂起 + 飞书/企微卡片续接 | 🔥 **P0 闭环借鉴** |
+| **⚡ #4** | [`wangzan101/Mika`](https://github.com/wangzan101/Mika) | `2026-10-29` (10天) | **7,708** (API: 7,722) | **建仓日均 ≈ 771 ★/天 · 今日新增: `not_measured`** | 免连电脑/免 ADB 的纯端侧 Android 后台虚拟屏幕无障碍 GUI Agent | ⚡ **P1 移动端 CUA** |
+| **⚡ #5** | [`JuneYaooo/rea-video`](https://github.com/JuneYaooo/rea-video) | `2026-10-29` (10天) | **4,092** (API: 4,246) | **建仓日均 ≈ 409 ★/天 · 今日新增: `not_measured`** | 短视频逐镜头逆向拆解与复刻引擎（Claude Code / Codex 插件） | ⚡ **P1 多模态借鉴** |
 
 ---
 

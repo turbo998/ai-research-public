@@ -7,7 +7,9 @@
 > 🛡️ **数据来源、归属核验与证据分级声明（Provenance & Attribution Disclosure）**：
 > - **`measured`（本班次一手实测抓取）**：`ranxianglei/billion-context` GitHub Daily Trending 单日增量 `+460 stars today` 与总 Star `4,922`（封存原始 HTML 证据：[`workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html`](../evidence/trending-daily-2026-11-08-raw.html)，`sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`）、REST API 元数据（`v0.1.213`，MIT，独立开发者 `ranxianglei` 仓库）及 `docs/technical-notes.md` 源码机制核验。
 > - **`anonymized_reported`（`independently_reproduced=false`，上游作者论文与基准报告数据）**：① 「4.5 个月、3 台生产宿主机、174,327 次模型调用、187.6 亿 Input Tokens、95%–97% KV Prefix Cache 命中率、压缩开销 `≤2%`、~5× 降本、8,584–12,049 次调用零窗口越界」引自仓库开源论文 [`paper/model-driven-incremental-hierarchical-compression-training-free-multi-generational-context-management-for-long-lived-coding-agents.md`](https://github.com/ranxianglei/billion-context/blob/main/paper/model-driven-incremental-hierarchical-compression-training-free-multi-generational-context-management-for-long-lived-coding-agents.md)（测试条件：`204,800` Token 窗口模型）；② 「1,500 题三基准五路对比（`ContextBench` F1=`0.3097` #1 降本 `-58.3%`、`LongMemEval-S` `79.20%` vs 最强 RAG `62.60%` 降本 `-71.1%`、`MemoryAgentBench` 1.48M TTL `100%` 存活但静态字面 `AR` 从 `69.0%` 降至 `27.0%`）」引自仓库基准报告 [`benchmarks/third-party-1500/README.md`](https://github.com/ranxianglei/billion-context/blob/main/benchmarks/third-party-1500/README.md)（测试条件：`DeepSeek V4.1 Flash 1017` 输入 `$0.15/1M`、缓存命中 `$0.003/1M`，`Qwen3-Embedding-8B` `$0.01/1M`，`Qwen3-Reranker-4B` `$0.02/1M`，`Pi CLI v0.73.1`）。本班次未重新发起 1,500 题付费 API 跑分。
-> - **`synthetic`（`independently_reproduced=false`，架构师参数化 FinOps 成本推演算例）**：文中「20 人研发团队每天运行 50 轮会话的月度 Token 账单对比（`$16,579/月` vs `$12,056/月` vs `$3,432/月`，节省 `-79.3%`）」为基于公开 API 单价假设的参数化 FinOps 算例。
+> - **`synthetic`（`independently_reproduced=false`，架构师参数化输入侧敏感度公式与可复算审计声明）**：
+>   - ⚠️ **可复算审计与撤回校正声明（02:05 BJT Reproducibility Audit Notice）**：本文件早期版本（commit `c13bcf59...`）第 4 节曾列出「Path A `$9.42/会话 ($16,579/月)`、Path B `$6.85/会话 ($12,056/月)`、Path C `$1.95/会话 ($3,432/月)`，月省 `$13,147/月`」及「行号回溯率 `54% / 61% / 94%+`」。经闭式公式复算审计：在声明参数（`20人 × 4会话/日 × 22日 = 1,760 会话/月`、单会话累计输入 `4.5M Tokens`、未缓存输入 `$3.00/1M`、缓存命中 `$0.30/1M`、输出 `$15.00/1M`）下，**仅输入侧成本**精确值为 Path A（`38%` 缓存）`$8.8830/会话 ($15,634.08/月)`、Path C（`96%` 缓存）`$1.8360/会话 ($3,231.36/月)`；而原表总额因缺少各路径输出 Token 量、摘要压缩 Token 开销及 Path B 向量 RAG Top-K 截断后真实计费输入量（若 Path B 同按 `4.5M` 输入计，仅输入成本即达 `$10.8270/会话`，高于原列示总额 `$6.85`），**未通过闭式可复算验收**。
+>   - 遵循严格工程准则（**绝不倒推虚构 Token 量去凑原数字，也绝不把仅输入复算值冒充总账单替换**）：① **正式撤回不可由声明参数闭式导出的 `$9.42 / $6.85 / $1.95 ($16,579 / $12,056 / $3,432，-$13,147/月)` 总账单结论与 `54% / 61% / 94%+` 回溯率，标为 `not_measured (retracted: unparameterized total bill)`**；② 本轮定量成本结论统一以**上游封存基准报告（`anonymized_reported, independently_reproduced=false`：ContextBench 500 题 `$11.05 -> $4.61 [-58.3%]`、LongMemEval-S 500 题 `$7.97 -> $2.30 [-71.1%]`）**为准；③ 第 4 节仅保留参数 100% 完备、可闭式复算的**「固定 4.5M 输入流下 KV 缓存命中率对输入侧（Input-Only）成本的敏感度公式」**（并明确标注总账单与 Path B 截断输入量为 `not_measured`）。
 
 ---
 
@@ -132,14 +134,26 @@ sequenceDiagram
 
 ## 🧮 定量成本与性能算例 + 7-Card 基准评测核心洞察（Quantitative Example & 7-Card Insights）
 
-### 算例：20 人研发团队每天运行 50 轮重度 Coding Agent 会话的月度 Token 账单对比（`synthetic` 参数化 FinOps 推演，`independently_reproduced=false`）
-假设某 AI 研发团队（20 名工程师）使用支持 200K 窗口的主流编码大模型（标准输入单价 `$3.00 / 1M tokens`，Prefix Cache 命中单价 `$0.30 / 1M tokens`，输出单价 `$15.00 / 1M tokens`），每人每天执行 4 个 50 轮的跨文件重构会话（单会话累计流经 `4.5M` Input Tokens，以下为参数化推演算例 `synthetic`）：
+### 算例：固定 4.5M 输入流下 KV 缓存命中率对输入侧（Input-Only）成本的闭式敏感度公式与可复算审计（`synthetic, independently_reproduced=false`）
 
-| 方案路径 | 平均 Prefix Cache 命中率 | 单会话有效计费输入开销 | 单会话 API 总成本 | 20 人团队月度总账单（22 工作日） | 关键报错行号回溯成功率 |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **路径 A：原生 Full + 频繁 `/compact` 重写** | `38%` | 频繁缓存失效 + 重算 Prefill | `$9.42 / 会话` | **`$16,579 / 月`** | `54%`（摘要抹除行号后需重新 grep） |
-| **路径 B：外部向量 RAG 切片拼接** | `22%` | 动态 Top-K 破坏前缀缓存 | `$6.85 / 会话` | **`$12,056 / 月`** | `61%`（时序因果链断裂） |
-| **路径 C：`billion-context` 可逆分层折叠** | **`96%`** | 稳态窗口压缩 5× + 96% 缓存命中 | **`$1.95 / 会话`** | **`$3,432 / 月`（立省 `$13,147/月`，降幅 `-79.3%`）** | **`94%+`（`search_context` + `decompress` 无损还原）** |
+> ⚠️ **可复算审计与撤回说明（Reproducibility Audit & Retraction Record）**：
+> - **历史版本缺口说明**：早期版本（commit `c13bcf5974feb97ce78fad034ba0175c185ca9e8`）曾列示总账单 `Path A $9.42/会话 ($16,579/月)`、`Path B $6.85/会话 ($12,056/月)`、`Path C $1.95/会话 ($3,432/月)`（差额 `-$13,147/月`）及回溯率 `54% / 61% / 94%+`。由于原表未给出各路径独立的 `billable_output_tokens`、压缩调用额外 Token 以及 Path B 向量检索截断后的真实 `billable_input_tokens`（若 Path B 同取 `4.5M` 输入且缓存命中率 `22%`，则仅输入成本已达 $4.5 \times (0.78 \times \$3.00 + 0.22 \times \$0.30) = \$10.8270/\text{会话}$，高于 `$6.85`），**该总账单算例未通过闭式可复算验收，现予撤回并标记为 `not_measured (retracted: unparameterized total bill)`**。
+> - **闭式可复算原则**：我们不倒推虚构的隐藏 Token 量来凑原数字，也不把“仅输入成本（Input-Only Cost）”冒充为“API 总账单（Total Bill）”。下方仅列出**100% 由显式参数闭式导出的输入侧（Input-Only）敏感度公式**，并将缺少实测参数的输出费用与 Path B 实际输入量明确标为 `not_measured`。
+
+#### 1. 显式参数与闭式公式（Input-Only Closed-Form Formula）
+- 团队会话规模：$20 \text{ 人} \times 4 \text{ 会话/人/天} \times 22 \text{ 工作日/月} = \mathbf{1,760 \text{ 会话/月}}$
+- 单会话固定累计计费输入量（仅针对不截断历史的 Path A 与同规模等效输入流对比的 Path C）：$I = \mathbf{4.5\text{M Input Tokens / 会话}}$
+- 费率假设：未缓存输入 $r_{\text{uncached}} = \$3.00 / \text{1M}$，缓存命中输入 $r_{\text{cached}} = \$0.30 / \text{1M}$（输出单价 $\$15.00 / \text{1M}$，因单会话输出 Token 量与压缩摘要输出量未实测，**输出成本与总账单统一标为 `not_measured`**）
+- 闭式计算公式（四舍五入至美分，精确到小数点后 4 位单会话 / 2 位月度）：
+  $$\text{Uncached\_Input\_M} = I \times (1 - c), \quad \text{Cached\_Input\_M} = I \times c$$
+  $$\text{Input\_Cost}_{\text{session}} = \text{Uncached\_Input\_M} \times \$3.00 + \text{Cached\_Input\_M} \times \$0.30$$
+  $$\text{Input\_Cost}_{\text{month}} = 1,760 \times \text{Input\_Cost}_{\text{session}}$$
+
+| 方案路径 | 缓存命中率假设 $c$ (`synthetic`) | 未缓存计费输入 (`Uncached_M` × `$3.00`) | 缓存命中计费输入 (`Cached_M` × `$0.30`) | 单会话**仅输入**成本 (`Input_Cost_session`) | 1,760 会话/月**仅输入**成本 (`Input_Cost_month`) | 输出成本 / 压缩与检索费 / API 总账单 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **路径 A：固定 4.5M 输入 + 低缓存率 (`c = 38%`)** | `38%` | `2.79M` (`$8.3700`) | `1.71M` (`$0.5130`) | **`$8.8830 / 会话`** | **`$15,634.08 / 月`**（仅输入 `synthetic`） | `not_measured`（原 `$9.42` / `$16,579` 总账单已撤回） |
+| **路径 B：外部向量 RAG 切片拼接 (`c = 22%`)** | `22%` | `not_measured`（Top-K 截断后输入量 `< 4.5M` 未参数化；若按 `4.5M` 计仅输入即达 `$10.8270/会话`） | `not_measured` | `not_measured` | `not_measured` | `not_measured`（原 `$6.85` / `$12,056` 总账单已撤回） |
+| **路径 C：固定 4.5M 输入 + 高缓存率 (`c = 96%`)** | **`96%`** | `0.18M` (`$0.5400`) | `4.32M` (`$1.2960`) | **`$1.8360 / 会话`** | **`$3,231.36 / 月`**（仅输入 `synthetic`；较路径 A 仅输入项差额 `-$12,402.72/月` / `-79.33%`） | `not_measured`（原 `$1.95` / `$3,432` 总账单已撤回；端到端真实成本请以左列上游封存基准 ContextBench `$11.05 -> $4.61 [-58.3%]` 与 LME `$7.97 -> $2.30 [-71.1%]` 为准） |
 
 > 💡 **7-Card 评测报告核心洞察（对应 [`workshops/github-trending-radar/cards.html`](../cards.html) Card 3 / Card 5 / Card 6）**：
 > - **为什么 `billion-context` 在 ContextBench 上既省钱又提分？** 第三方 1,500 题盲测证明，Coding Agent 最大的敌人不是“信息不够”，而是“中间轮次探索失败的工具噪音淹没了真正有效的代码证据”。模型内生 `compress` 将信噪比（Evidence Precision）从 `0.2981` 提升至 **`0.3358`**。

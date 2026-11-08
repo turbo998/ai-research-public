@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg5)"/>
+  <rect x="24" y="20" width="1152" height="680" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="44" y="38" width="210" height="28" rx="14" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="149" y="57" fill="#6EE7B7" font-size="12" font-weight="700" text-anchor="middle">ROUND 5 · BROWSER &amp; DESKTOP CUA</text>
+  <text x="270" y="57" fill="#94A3B8" font-size="12">2026-11-08 Radar · Track A #3 agent-browser (+812★ today) + Track A #4 anthropics/skills (+793★ today) + agent-desktop (v1.2.0)</text>
+
+  <text x="44" y="96" fill="#F8FAFC" font-size="23" font-weight="800">Browser &amp; Desktop CUA Selection: Accessibility-Tree @ref CLI vs. Raw DOM / Vision Screenshot Loop</text>
+  <text x="44" y="120" fill="#CBD5E1" font-size="13">浏览器与操作系统桌面无障碍树（@e1 短句柄 + Web Wrapper 折叠）+ SKILL.md 三层渐进式技能披露 vs. 传统全量 MCP Schema 与视觉截图</text>
+  <rect x="44" y="132" width="1112" height="3" fill="url(#accent5)"/>
+
+  <!-- 3 Architecture Columns -->
+  <!-- Column 1: Path A Raw DOM + Heavy MCP -->
+  <rect x="44" y="150" width="356" height="290" rx="12" fill="#1E1B2E" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="62" y="178" fill="#FCA5A5" font-size="15" font-weight="700">❌ Path A: 40 Preloaded MCPs + Raw DOM</text>
+  <text x="62" y="198" fill="#94A3B8" font-size="12">全量预加载 MCP 工具 Schema + 原始 HTML/UI 树注入</text>
+  <line x1="62" y1="208" x2="382" y2="208" stroke="#334155"/>
+  <text x="62" y="232" fill="#E2E8F0" font-size="12">• 首轮空载工具税: 18,000 Tokens/步 常驻请求头</text>
+  <text x="62" y="256" fill="#E2E8F0" font-size="12">• 单步页面观测: ~32,000 Tokens 冗余 div/CSS</text>
+  <text x="62" y="280" fill="#E2E8F0" font-size="12">• 15 步累计输入: (18k+32k)×15 = 750,000 Tokens</text>
+  <text x="62" y="304" fill="#FCA5A5" font-size="12">• 遮挡盲区: 按钮被弹窗遮挡时 .click() 常假装成功</text>
+  <text x="62" y="328" fill="#FCA5A5" font-size="12">• Electron 桌面: 15 层匿名容器直接耗尽树深预算</text>
+  <rect x="62" y="352" width="320" height="70" rx="8" fill="#0F172A" stroke="#7F1D1D"/>
+  <text x="76" y="376" fill="#FCA5A5" font-size="12" font-weight="700">闭式算例 (11,000 次/月, synthetic):</text>
+  <text x="76" y="396" fill="#F8FAFC" font-size="13" font-weight="700">0.7500M × $1.65 = $1.2375/次 → $13,612.50/月</text>
+  <text x="76" y="413" fill="#94A3B8" font-size="11">单次平均耗时: 63.0s (4.2s/步)</text>
+
+  <!-- Column 2: Path B Full-Screen Vision CUA -->
+  <rect x="422" y="150" width="356" height="290" rx="12" fill="#1E2436" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="440" y="178" fill="#FCD34D" font-size="15" font-weight="700">⚠️ Path B: Full-Screen Vision CUA (x, y)</text>
+  <text x="440" y="198" fill="#94A3B8" font-size="12">每步 1080p 全屏截图 + 多模态视觉坐标推理</text>
+  <line x1="440" y1="208" x2="760" y2="208" stroke="#334155"/>
+  <text x="440" y="232" fill="#E2E8F0" font-size="12">• 单步输入: 8,000 基础 + 2,200 Vision = 10,200 Tokens</text>
+  <text x="440" y="256" fill="#E2E8F0" font-size="12">• 坐标漂移重试: DPI 缩放/滚动致 1.4x 重试 (21 步)</text>
+  <text x="440" y="280" fill="#E2E8F0" font-size="12">• 单次累计输入: 10,200 × 21 = 214,200 Tokens</text>
+  <text x="440" y="304" fill="#FCD34D" font-size="12">• 视觉推理慢: 截图编码 + 坐标预测 ~4.8s/步</text>
+  <text x="440" y="328" fill="#6EE7B7" font-size="12">• 适用边界: 仅纯 WebGL/Canvas 或 Citrix 视频流必选</text>
+  <rect x="440" y="352" width="320" height="70" rx="8" fill="#0F172A" stroke="#78350F"/>
+  <text x="454" y="376" fill="#FCD34D" font-size="12" font-weight="700">闭式算例 (11,000 次/月, synthetic):</text>
+  <text x="454" y="396" fill="#F8FAFC" font-size="13" font-weight="700">0.2142M × $1.65 = $0.35343/次 → $3,887.73/月</text>
+  <text x="454" y="413" fill="#94A3B8" font-size="11">单次平均耗时: 100.8s (21 有效步 × 4.8s)</text>
+
+  <!-- Column 3: Path C agent-browser + agent-desktop + SKILL.md -->
+  <rect x="800" y="150" width="356" height="290" rx="12" fill="#0D2824" stroke="#10B981" stroke-width="2"/>
+  <text x="818" y="178" fill="#6EE7B7" font-size="15" font-weight="700">✅ Path C: A11y @ref CLI + SKILL.md Stub</text>
+  <text x="818" y="198" fill="#A7F3D0" font-size="12">agent-browser (v0.41.2) + agent-desktop (v1.2.0) + skills</text>
+  <line x1="818" y1="208" x2="1138" y2="208" stroke="#065F46"/>
+  <text x="818" y="232" fill="#E2E8F0" font-size="12">• 渐进技能自省: 60-token 薄桩 → 按需加载 600 Tokens</text>
+  <text x="818" y="256" fill="#E2E8F0" font-size="12">• 无障碍树快照: snapshot -i (@e1/@e2) 仅 ~950 Tokens/步</text>
+  <text x="818" y="280" fill="#6EE7B7" font-size="12" font-weight="700">• 15 步累计输入: (600+950)×15 = 23,250 Tokens (-96.9%)</text>
+  <text x="818" y="304" fill="#6EE7B7" font-size="12">• 遮挡硬门禁: 目标被弹窗覆盖/不可见时显式报错拒绝</text>
+  <text x="818" y="328" fill="#6EE7B7" font-size="12">• Web Wrapper 跳过: Chrome_WidgetWin_1 零逻辑深度消耗</text>
+  <rect x="818" y="352" width="320" height="70" rx="8" fill="#064E3B" stroke="#10B981"/>
+  <text x="832" y="376" fill="#A7F3D0" font-size="12" font-weight="700">闭式算例 (11,000 次/月, synthetic):</text>
+  <text x="832" y="396" fill="#FFFFFF" font-size="13" font-weight="800">0.02325M × $1.65 = $0.0383625/次 → $421.99/月</text>
+  <text x="832" y="413" fill="#6EE7B7" font-size="11" font-weight="700">单次耗时: 16.5s (1.1s/步) · 月省 $13,190.51 (-96.90%)</text>
+
+  <!-- Bottom Closed-Form Comparison & Provenance Box -->
+  <rect x="44" y="458" width="1112" height="222" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="486" fill="#38BDF8" font-size="15" font-weight="700">📊 Closed-Form Input Cost &amp; Token Volume Bar Comparison (15-Step Cross-App Workflow × 11,000 Runs/Month, synthetic)</text>
+  <text x="64" y="506" fill="#94A3B8" font-size="12">Formula: Rate_eff = 0.50×$3.00 (uncached) + 0.50×$0.30 (cached) = $1.65/1M input tokens · Monthly_Cost = round(11,000 × Runs_Input_M × $1.65, 2)</text>
+
+  <!-- Bar 1: Path A -->
+  <text x="64" y="538" fill="#FCA5A5" font-size="13" font-weight="700">Path A (Raw DOM + 40 MCPs)</text>
+  <rect x="290" y="522" width="680" height="22" rx="4" fill="#EF4444"/>
+  <text x="980" y="538" fill="#F8FAFC" font-size="13" font-weight="700">$13,612.50 / mo (750,000 tok/run)</text>
+
+  <!-- Bar 2: Path B -->
+  <text x="64" y="574" fill="#FCD34D" font-size="13" font-weight="700">Path B (Vision CUA 1.4x retry)</text>
+  <rect x="290" y="558" width="194" height="22" rx="4" fill="#F59E0B"/>
+  <text x="494" y="574" fill="#F8FAFC" font-size="13" font-weight="700">$3,887.73 / mo (214,200 tok/run, -71.44%)</text>
+
+  <!-- Bar 3: Path C -->
+  <text x="64" y="610" fill="#6EE7B7" font-size="13" font-weight="700">Path C (A11y @ref + Thin Stub)</text>
+  <rect x="290" y="594" width="21" height="22" rx="4" fill="#10B981"/>
+  <text x="321" y="610" fill="#6EE7B7" font-size="13" font-weight="800">$421.99 / mo (23,250 tok/run, -96.90% vs A · Saves $13,190.51/mo)</text>
+
+  <!-- Provenance Footer -->
+  <line x1="64" y1="628" x2="1136" y2="628" stroke="#334155"/>
+  <text x="64" y="648" fill="#CBD5E1" font-size="11.5">• [measured] Track A Raw HTML (sha256: 353914ef...): vercel-labs/agent-browser (+812★ today, 47,388 DOM★, v0.41.2) · anthropics/skills (+793★ today, 189,330 DOM★) · REST API: vercel-labs/agent-desktop (19,505★, v1.2.0, stars_today: not_measured)</text>
+  <text x="64" y="666" fill="#94A3B8" font-size="11.5">• [anonymized_reported, independently_reproduced=false] Rust CDP daemon, covered-element refusal, Chrome_WidgetWin_1 Web Wrapper skip, Surface/Drill-down from upstream README.md &amp; CONCEPTS.md · [synthetic, independently_reproduced=false] 15-step × 11,000 runs/mo closed-form FinOps model</text>
+</svg>
