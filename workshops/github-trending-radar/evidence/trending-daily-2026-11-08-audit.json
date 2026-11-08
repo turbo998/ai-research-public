@@ -366,6 +366,24 @@
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/craft-anything-rust-probe-vs-decompile-selection-faq.md",
       "conditions_and_scope": "Closed-form synthetic API-only and manual QA convergence model verified by component-level input/output assertions in tests/radar-integration.cjs."
+    },
+    {
+      "claim_id": "CLAIM-R9-01",
+      "repo": "wangzan101/Mika",
+      "metric": "wangzan101/Mika v0.1.38 (Apache-2.0, Kotlin :core + :app Gradle modules, Track B #4 created_at 2026-10-29 with 7,722 stars in search-new-repos-2026-11-08-raw.json [7,708 snapshot / ~771 stars/day lifecycle avg, stars_today: not_measured], Android 14+ background VirtualDisplay with independent input focus, 3-tier hybrid perception [Accessibility Tree -> on-device local OCR -> screenshot fallback], 42 built-in app/site markdown playbooks in core/src/main/resources/knowledge/, Termux arm64 Ubuntu/Alpine sandbox, and USB/VPN CLI + Skill + MCP Server computer bridge)",
+      "provenance_type": "measured",
+      "independently_reproduced": true,
+      "primary_source_url": "https://github.com/wangzan101/Mika/blob/main/README.md",
+      "conditions_and_scope": "Repository metadata, LICENSE (Apache-2.0), settings.gradle.kts, docs/features.en.md, docs/computer.en.md, and 42 knowledge/*.md files verified directly via GitHub REST API and archived Search API JSON (LF sha256: b63e1547...)."
+    },
+    {
+      "claim_id": "CLAIM-R9-02",
+      "repo": "wangzan101/Mika",
+      "metric": "Closed-form 2,200 mobile app runs/mo model (100 runs/workday x 22 workdays; $3.00/1M in, $15.00/1M out, API-only; cloud-phone/device infra bills: not_measured): Path A Pure-Vision Cloud-Phone (18 steps/run = 39,600 steps/mo x [0.025M in ($0.0750) + 0.0005M out ($0.0075) = $0.0825/step] = $1.4850/run -> $3,267.00/mo [$2,970.00 in + $297.00 out], 30.0h/mo manual recovery) vs Path B USB ADB/Appium XML+LLM (14 steps/run = 30,800 steps/mo x [0.012M in ($0.0360) + 0.0004M out ($0.0060) = $0.0420/step] = $0.5880/run -> $1,293.60/mo [$1,108.80 in + $184.80 out], 45.0h/mo XPath repair + foreground screen hijack) vs Path C Mika Android 14+ Virtual Display + 42 Knowledge Playbooks (8 steps/run = 17,600 steps/mo x [0.003M in ($0.0090) + 0.0003M out ($0.0045) = $0.0135/step] = $0.1080/run -> $237.60/mo [$158.40 in + $79.20 out], 0.0h routine foreground hijack + 6.0h/mo login/payment handoffs, saving $3,029.40/mo [$36,352.80/yr, -92.73% API-only] and 24.0h/mo [-80.00%] human overhead vs Path A)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/mika-android-virtual-display-agent-vs-adb-selection-faq.md",
+      "conditions_and_scope": "Closed-form synthetic API-only and human-attention model verified by component-level input/output assertions in tests/radar-integration.cjs."
     }
   ]
 }
