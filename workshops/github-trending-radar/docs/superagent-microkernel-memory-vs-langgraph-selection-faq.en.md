@@ -141,11 +141,11 @@ flowchart LR
 
 To evaluate the combined impact of **`dsh-superagent-prototype` (Source admission gate + Subscription fan-out + `person/*` attention filter)** and **`claude-mem` (3-layer progressive disclosure)** on an enterprise engineering org, we define a **100% closed-form reproducible** monthly workload model:
 
-- **Explicit Parameters**:
+- **Explicit Parameters (API-Only Synthetic Model — underlying vector DB/host infrastructure and full customer production bills are explicitly marked `not_measured`)**:
   - Inbound event volume: `E_day = 400` GitHub Issue/PR/comment and Feishu events per workday across `D = 22` workdays/month $\Rightarrow$ **`E_month = 400 × 22 = 8,800` events/month**;
   - Event mix: `25%` require multi-turn coding ticket execution (**`T_month = 2,200` tickets/month**), while `75%` are follow-up comments on subscribed threads, CI status notifications, or non-actionable chat noise (**`N_month = 6,600` events/month**);
-  - LLM pricing assumptions: `$3.00 / 1M` uncached input tokens (`p_in`) and `$15.00 / 1M` output tokens (`p_out`);
-  - Engineering human attention valuation: `$100.00 / hour` (`w_eng`, reported in a separate column from API spend and never conflated with token bills).
+  - LLM pricing assumptions: `$3.00 / 1M` uncached input tokens (`p_in`) and `$15.00 / 1M` output tokens (`p_out`), with input and output components computed separately and output counted strictly once;
+  - Engineering human attention valuation: `$100.00 / hour` (`w_eng`, reported in a separate column from API-only spend and never conflated with token bills; infrastructure and full production bills: `not_measured`).
 - **Closed-Form Equations (rounded to 2 decimal places)**:
   - **Path A (Unfiltered Webhook + LLM Router on All Events + Cold-Loading 5 Raw Session Transcripts per Ticket)**:
     - Routing spend: All `8,800` events invoke an LLM router node (`0.020M` input + `0.001M` output $\Rightarrow 0.020 × $3.00 + 0.001 × $15.00 = $0.0750/event`) $\Rightarrow$ **`Router_Cost_A = 8,800 × $0.0750 = $660.00 / month`**;

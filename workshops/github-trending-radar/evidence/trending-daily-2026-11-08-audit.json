@@ -189,7 +189,7 @@
       "owner_type": "Organization",
       "pushed_at": "2026-11-03T09:29:14Z",
       "stargazers_count": 21133,
-      "official_affiliation_status": "verified_official_org (deepseek-ai)"
+      "official_affiliation_status": "upstream_research_prototype_under_org (deepseek-ai; README states: Research prototype for reference only, not an official DeepSeek product)"
     },
     "Albert-Weasker/niubigeo": {
       "created_at": "2026-09-03T15:55:54Z",
@@ -325,11 +325,29 @@
     {
       "claim_id": "CLAIM-R6-02",
       "repo": "deepseek-ai/dsh-superagent-prototype & thedotmack/claude-mem",
-      "metric": "Closed-form 400 events/day x 22 workdays = 8,800 events/mo (2,200 executed tickets + 6,600 follow-up/noise events; $3/1M in, $15/1M out): Path A Unfiltered Webhook + Raw 5-Session Dump (8,800x$0.0750=$660.00 + 2,200x$0.4200=$924.00 -> $1,584.00/mo API, 110.0h/mo attention) vs Path B 50% Regex + Vector RAG Top-15 (4,400x$0.0750=$330.00 + 2,200x$0.1500=$330.00 -> $660.00/mo API, 66.0h/mo attention) vs Path C dsh-superagent Subscription Fan-Out + claude-mem 3-Layer Disclosure (2,200x$0.0300=$66.00 + 2,200x$0.0420=$92.40 -> $158.40/mo API [-$1,425.60/mo, -90.00%], 22.0h/mo attention [-88.0h/mo, -80.00%])",
+      "metric": "API-only synthetic model (infrastructure & full customer bills: not_measured) for 400 events/day x 22 workdays = 8,800 events/mo (2,200 executed tickets + 6,600 follow-up/noise events; $3.00/1M in, $15.00/1M out): Path A = 8,800x(0.020x$3.00+0.001x$15.00)[$660.00] + 2,200x(0.120x$3.00+0.004x$15.00)[$924.00] = $1,584.00/mo API-only ($1,320.00 in + $264.00 out; 110.0h/mo attention) vs Path B = 4,400x$0.0750[$330.00] + 2,200x(0.040x$3.00+0.002x$15.00)[$330.00] = $660.00/mo API-only ($528.00 in + $132.00 out; 66.0h/mo attention) vs Path C = 2,200x(0.008x$3.00+0.0004x$15.00)[$66.00] + 2,200x(0.010x$3.00+0.0008x$15.00)[$92.40] = $158.40/mo API-only ($118.80 in + $39.60 out; -$1,425.60/mo, -$17,107.20/yr, -90.00%), 22.0h/mo attention (-88.0h/mo, -80.00%)",
       "provenance_type": "synthetic",
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/superagent-microkernel-memory-vs-langgraph-selection-faq.md",
-      "conditions_and_scope": "Closed-form parametric FinOps and human-attention model verified by automated assertions in tests/radar-integration.cjs."
+      "conditions_and_scope": "Closed-form parametric API-only FinOps and human-attention model verified by component-level input/output assertions in tests/radar-integration.cjs; infrastructure/vector DB hosting and full customer production bills are marked not_measured."
+    },
+    {
+      "claim_id": "CLAIM-R7-01",
+      "repo": "vercel-labs/json-render & anthropics/claude-quickstarts",
+      "metric": "json-render v0.22.0 (Apache-2.0, 30 packages in monorepo, defineCatalog Zod guardrails, flat {root, elements} spec, createSpecStreamCompiler RFC 6902 JSON Patch streaming, 11 renderers); claude-quickstarts (MIT, Track A DOM article #4 +28 stars today / 19,274 DOM stars, 12 blueprints including copilot-kit-ag-ui, knowledge-wiki [$16-$19 build -> ~15x cheaper queries], daily-brief with networking: limited + empty allowed_hosts)",
+      "provenance_type": "anonymized_reported",
+      "independently_reproduced": false,
+      "primary_source_url": "https://github.com/vercel-labs/json-render/blob/main/README.md",
+      "conditions_and_scope": "Repository metadata, package counts, and Track A DOM badge verified directly (measured); knowledge-wiki token/cost benchmark ($16-$19 build, ~15x cheaper queries) is upstream author-reported in anthropics/claude-quickstarts/managed-agents/knowledge-wiki/README.md (anonymized_reported, independently_reproduced=false)."
+    },
+    {
+      "claim_id": "CLAIM-R7-02",
+      "repo": "vercel-labs/json-render & anthropics/claude-quickstarts",
+      "metric": "Closed-form 50 analysts x 8 queries/day x 22 workdays = 8,800 queries/mo model ($1.65/1M blended input, $15.00/1M output): Path A Raw JSX + Raw Corpus (0.040Mx1.25=0.050M in [$0.08250] + 0.0032Mx1.25=0.0040M out [$0.06000] = $0.14250/query -> $1,254.00/mo [$726.00 in + $528.00 out]) vs Path B Custom Tool JSON + Raw Corpus (0.032Mx1.05=0.0336M in [$0.05544] + 0.0012Mx1.05=0.00126M out [$0.01890] = $0.07434/query -> $654.19/mo [$487.872 in + $166.32 out]) vs Path C json-render + knowledge-wiki (0.0040M in [$0.00660] + 0.00045M out [$0.00675] = $0.01335/query -> $117.48/mo API [$58.08 in + $59.40 out] + 2x$16.00 Wiki build [$32.00/mo] = $149.48/mo, saving $1,104.52/mo [-88.08%] and -88.75% output tokens/query; break-even 124 queries per $16 build)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/generative-ui-catalog-vs-raw-code-streaming-selection-faq.md",
+      "conditions_and_scope": "Closed-form synthetic FinOps model verified by component-level input/output assertions in tests/radar-integration.cjs."
     }
   ]
 }

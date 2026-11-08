@@ -123,11 +123,11 @@
 
   <!-- Formula Summary Box -->
   <rect x="76" y="522" width="1128" height="52" rx="8" fill="#1E293B"/>
-  <text x="92" y="544" fill="#93C5FD" font-family="Consolas, PingFang SC, monospace" font-size="12">
-    Path A = 8,800×$0.0750 ($660.00) + 2,200×$0.4200 ($924.00) = $1,584.00/mo | Path B = 4,400×$0.0750 ($330.00) + 2,200×$0.1500 ($330.00) = $660.00/mo
+  <text x="92" y="544" fill="#93C5FD" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    API-Only Formula (infra/full bill: not_measured): Path A = 8,800×(0.020×$3+0.001×$15)[$660.00] + 2,200×(0.120×$3+0.004×$15)[$924.00] = $1,584.00/mo
   </text>
-  <text x="92" y="564" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12">
-    Path C = 2,200×$0.0300 ($66.00 Eval) + 2,200×$0.0420 ($92.40 3-Layer Mem) = $158.40/mo | Attention: 2,200×0.05h=110.0h vs 2,200×0.01h=22.0h (-88.0h/mo)
+  <text x="92" y="564" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Path B = 4,400×$0.0750[$330] + 2,200×(0.040×$3+0.002×$15)[$330] = $660.00/mo | Path C = 2,200×(0.008×$3+0.0004×$15)[$66] + 2,200×(0.010×$3+0.0008×$15)[$92.40] = $158.40/mo
   </text>
 
   <!-- Footer -->

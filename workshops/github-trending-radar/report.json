@@ -24,7 +24,7 @@
     "architect_tco_and_finops_worked_examples": {
       "provenance": "synthetic",
       "independently_reproduced": false,
-      "note": "All synthetic worked examples enforce 100% closed-form parametric reproducibility from explicitly listed input variables (verified in tests/radar-integration.cjs): Round 1 (64-node 512xH200 @ $2.20/GPU-hr = $1,126.40/cluster-hr; 69h maintenance saved = $77,721.60/yr + 78x128-GPU fault MTTR saved = $34,155.26/yr -> $111,876.86/yr total), Round 2 (closed-form Input-Only Prefill Sensitivity at 1,760 sessions/mo x 4.5M input/session: Path A 38% cache = $8.8830/session [$15,634.08/mo input-only] vs Path C 96% cache = $1.8360/session [$3,231.36/mo input-only], saving $12,402.72/mo input-only [-79.33%]; output/total bills and Path B RAG input are explicitly marked not_measured and prior unparameterized $16,579/$12,056/$3,432 totals are formally retracted), Round 3 (12-screen / 72-turn UI token model: 460.8k vs 104.4k vs 133.2k tokens), Round 4 (15-engineer / 30-rule / 40 daily HITL approvals: 18x250 MB = 4.5 GB RAM -> 59.94-170.49 MB RAM [>96% reduction] + 40x22x0.15x$3.18 = $419.76/mo dropped-session rerun waste), Round 5 (11,000 15-step CUA runs/mo at $1.65/1M input: Path A 0.75M = $13,612.50/mo vs Path B 0.2142M = $3,887.73/mo vs Path C 0.02325M = $421.99/mo, saving $13,190.51/mo [-96.90%] input-side; output/total marked not_measured), and Round 6 (8,800 events/mo = 2,200 tickets + 6,600 follow-up/noise events at $3/1M in, $15/1M out: Path A 8,800x$0.0750 + 2,200x$0.4200 = $1,584.00/mo [110.0h attention] vs Path B 4,400x$0.0750 + 2,200x$0.1500 = $660.00/mo [66.0h attention] vs Path C 2,200x$0.0300 + 2,200x$0.0420 = $158.40/mo [22.0h attention], saving $1,425.60/mo [-90.00%] API and 88.0h/mo [-80.00%] human attention)."
+      "note": "All synthetic worked examples enforce 100% closed-form parametric reproducibility from explicitly listed input variables (verified in tests/radar-integration.cjs): Round 1 (64-node 512xH200 @ $2.20/GPU-hr = $1,126.40/cluster-hr; 69h maintenance saved = $77,721.60/yr + 78x128-GPU fault MTTR saved = $34,155.26/yr -> $111,876.86/yr total), Round 2 (closed-form Input-Only Prefill Sensitivity at 1,760 sessions/mo x 4.5M input/session: Path A 38% cache = $8.8830/session [$15,634.08/mo input-only] vs Path C 96% cache = $1.8360/session [$3,231.36/mo input-only], saving $12,402.72/mo input-only [-79.33%]; output/total bills and Path B RAG input are explicitly marked not_measured and prior unparameterized $16,579/$12,056/$3,432 totals are formally retracted), Round 3 (12-screen / 72-turn UI token model: 460.8k vs 104.4k vs 133.2k tokens), Round 4 (15-engineer / 30-rule / 40 daily HITL approvals: 18x250 MB = 4.5 GB RAM -> 59.94-170.49 MB RAM [>96% reduction] + 40x22x0.15x$3.18 = $419.76/mo dropped-session rerun waste), Round 5 (11,000 15-step CUA runs/mo at $1.65/1M input: Path A 0.75M = $13,612.50/mo vs Path B 0.2142M = $3,887.73/mo vs Path C 0.02325M = $421.99/mo, saving $13,190.51/mo [-96.90%] input-side; output/total marked not_measured), Round 6 (API-only synthetic model [infra/full customer bill: not_measured] for 8,800 events/mo = 2,200 tickets + 6,600 follow-up/noise events at $3/1M in, $15/1M out: Path A 8,800x(0.020x$3+0.001x$15)[$660.00] + 2,200x(0.120x$3+0.004x$15)[$924.00] = $1,584.00/mo [110.0h attention] vs Path B 4,400x$0.0750[$330.00] + 2,200x(0.040x$3+0.002x$15)[$330.00] = $660.00/mo [66.0h attention] vs Path C 2,200x(0.008x$3+0.0004x$15)[$66.00] + 2,200x(0.010x$3+0.0008x$15)[$92.40] = $158.40/mo [22.0h attention], saving $1,425.60/mo [-90.00%] API-only and 88.0h/mo [-80.00%] human attention), and Round 7 (8,800 BI/ops queries/mo at $1.65/1M blended input, $15/1M output: Path A Raw JSX $1,254.00/mo vs Path B Custom Tool JSON $654.19/mo vs Path C json-render + Knowledge Wiki $117.48 API + $32.00 Wiki = $149.48/mo, saving $1,104.52/mo [-88.08%] and -88.75% output tokens/query)."
     }
   },
   "standalone_faq_guides": [
@@ -75,11 +75,20 @@
     },
     {
       "round": 6,
-      "topic": "Autonomous SuperAgent Micro-Kernels & Cross-Session Memory Selection: dsh-superagent-prototype + claude-mem + craft-anything vs. Heavy Workflow Graph Frameworks",
+      "topic": "Autonomous SuperAgent Micro-Kernels & Cross-Session Memory Selection: dsh-superagent-prototype + claude-mem vs. Heavy Workflow Graph Frameworks",
       "zh_path": "workshops/github-trending-radar/docs/superagent-microkernel-memory-vs-langgraph-selection-faq.md",
       "en_path": "workshops/github-trending-radar/docs/superagent-microkernel-memory-vs-langgraph-selection-faq.en.md",
       "svg_path": "assets/github-ai-radar-2026-11-08-r6-superagent-memory.svg",
-      "primary_repos": ["deepseek-ai/dsh-superagent-prototype", "thedotmack/claude-mem", "storytold/craft-anything"]
+      "immutable_round_commit_sha": "83630cf41171859aa3eb7e3b7b4a70ef50868a50",
+      "primary_repos": ["deepseek-ai/dsh-superagent-prototype", "thedotmack/claude-mem"]
+    },
+    {
+      "round": 7,
+      "topic": "Guardrailed Generative UI Component Catalogs & Declarative Managed Agent Blueprints Selection: vercel-labs/json-render + anthropics/claude-quickstarts vs. Raw LLM React Code Streaming",
+      "zh_path": "workshops/github-trending-radar/docs/generative-ui-catalog-vs-raw-code-streaming-selection-faq.md",
+      "en_path": "workshops/github-trending-radar/docs/generative-ui-catalog-vs-raw-code-streaming-selection-faq.en.md",
+      "svg_path": "assets/github-ai-radar-2026-11-08-r7-generative-ui-catalog.svg",
+      "primary_repos": ["vercel-labs/json-render", "anthropics/claude-quickstarts"]
     }
   ],
   "framework": {
@@ -327,7 +336,7 @@
         "language": "TypeScript",
         "license": "MIT",
         "sa_tier": "P0",
-        "summary": "Official DeepSeek Cordis micro-kernel autonomous superagent harness."
+        "summary": "Upstream research prototype under the deepseek-ai org (not an official DeepSeek product): Cordis micro-kernel autonomous superagent harness."
       },
       {
         "rank": 3,

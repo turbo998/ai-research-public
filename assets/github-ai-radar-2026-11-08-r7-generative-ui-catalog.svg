@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent7" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg7)"/>
+  <rect x="28" y="24" width="1224" height="672" rx="18" fill="#0B1325" stroke="#1E293B" stroke-width="2"/>
+  <rect x="28" y="24" width="1224" height="6" rx="3" fill="url(#accent7)"/>
+
+  <!-- Header -->
+  <text x="56" y="68" fill="#F59E0B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">
+    ROUND 7 ARCHITECTURE SELECTION FAQ · 2026-11-08 NIGHT SHIFT · PROVENANCE-VERIFIED
+  </text>
+  <text x="56" y="102" fill="#F8FAFC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="25" font-weight="800">
+    受控 Generative UI 组件目录与托管 Agent 蓝图选型：json-render + claude-quickstarts
+  </text>
+  <text x="56" y="128" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="14">
+    Zod defineCatalog 铁笼 + SpecStream 渐进渲染 + 11 端原生适配 + ant apply 零外网容器 + Knowledge Wiki 一次蒸馏只读挂载
+  </text>
+
+  <!-- 3 Core Pillars -->
+  <rect x="56" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="76" y="176" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
+    1. vercel-labs/json-render (v0.22.0 · Apache-2.0)
+  </text>
+  <text x="76" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    19,445★ Live / 13,800★ Weekly (stars_today: not_measured)
+  </text>
+  <text x="76" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • Zod defineCatalog 锁死可调用组件与白名单 Action
+  </text>
+  <text x="76" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 扁平 { root, elements } Spec (~450 输出 Tokens/次)
+  </text>
+  <text x="76" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • createSpecStreamCompiler 流式增量 Patch + $state/$cond
+  </text>
+  <text x="76" y="288" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    • 1 套 Spec 原生渲染 React/Vue/Svelte/Teams/PDF/Email
+  </text>
+
+  <rect x="452" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="472" y="176" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
+    2. claude-quickstarts: copilot-kit-ag-ui &amp; brief
+  </text>
+  <text x="472" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Track A DOM #4: +28★ today (19,274★ DOM · MIT)
+  </text>
+  <text x="472" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • ant apply 声明式同步 agents/*.md + environments/*.yaml
+  </text>
+  <text x="472" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • claude-lock.json 锁定生产 Agent 与容器整数版本
+  </text>
+  <text x="472" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • networking: limited + 空 allowed_hosts + 禁用 web_fetch
+  </text>
+  <text x="472" y="288" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    • daily-brief 读写分离状态库 + Source Unreadable 显式告警
+  </text>
+
+  <rect x="848" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#10B981" stroke-width="1.5"/>
+  <text x="868" y="176" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
+    3. claude-quickstarts: knowledge-wiki 蒸馏模式
+  </text>
+  <text x="868" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    anonymized_reported (independently_reproduced=false)
+  </text>
+  <text x="868" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 动态工作流：extractor → resolver → analyzer → organizer
+  </text>
+  <text x="868" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 慢变文档库一次蒸馏为带出处 Markdown Wiki (~$16–$19/次)
+  </text>
+  <text x="868" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 跨文档数值冲突（如财报 vs 买方报告 EBITDA）原样并列保留
+  </text>
+  <text x="868" y="288" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    • 后续只读挂载问答：单次成本降至 ~1/15，>124–240 问即回本
+  </text>
+
+  <!-- Closed-Form FinOps Comparison -->
+  <rect x="56" y="344" width="1168" height="246" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="374" fill="#F8FAFC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="700">
+    闭式参数化月度算例（50 分析师×8 问/日×22 日 = 8,800 问/月；50% 缓存输入 $1.65/1M, 输出 $15.00/1M · synthetic, independently_reproduced=false）
+  </text>
+
+  <!-- Path A -->
+  <text x="76" y="412" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    路径 A：裸流式 JSX + 裸搜原文档 (40k In + 3.2k Out × 1.25 重试)
+  </text>
+  <rect x="540" y="396" width="500" height="22" rx="4" fill="#EF4444"/>
+  <text x="1052" y="412" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    $1,254.00/月 ($0.14250/问 · 4,000 有效输出 Tokens)
+  </text>
+
+  <!-- Path B -->
+  <text x="76" y="456" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    路径 B：自定义 Tool JSON + 裸搜原文档 (32k In + 1.2k Out × 1.05 重试)
+  </text>
+  <rect x="540" y="440" width="261" height="22" rx="4" fill="#F59E0B"/>
+  <text x="813" y="456" fill="#FCD34D" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    $654.19/月 ($0.07434/问 · 1,260 有效输出 Tokens)
+  </text>
+
+  <!-- Path C -->
+  <text x="76" y="500" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    路径 C：json-render (450 Out) + knowledge-wiki 只读 (4k In + $32 构建)
+  </text>
+  <rect x="540" y="484" width="60" height="22" rx="4" fill="#10B981"/>
+  <text x="612" y="500" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    $149.48/月 (-$1,104.52/月, -88.08% · 输出 Token -88.75%)
+  </text>
+
+  <!-- Formula Summary Box -->
+  <rect x="76" y="522" width="1128" height="52" rx="8" fill="#1E293B"/>
+  <text x="92" y="544" fill="#93C5FD" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Path A = 8,800 × [(0.040×1.25×$1.65=$0.08250 In) + (0.0032×1.25×$15.00=$0.06000 Out)] = 8,800 × $0.14250 = $1,254.00/mo ($15,048.00/yr)
+  </text>
+  <text x="92" y="564" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Path C = 8,800 × [(0.0040×$1.65=$0.00660 In) + (0.00045×$15.00=$0.00675 Out)] ($117.48) + 2×$16.00 Wiki ($32.00) = $149.48/mo (-$1,104.52/mo)
+  </text>
+
+  <!-- Footer -->
+  <rect x="56" y="608" width="1168" height="64" rx="10" fill="#111C35" stroke="#1E293B" stroke-width="1"/>
+  <text x="76" y="634" fill="#F8FAFC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    架构师选型金律：交付 Git 源码选 Coding Agent；在对话/看板/IM 中实时渲染动态图表选 json-render 受控目录 + claude-quickstarts 蒸馏 Wiki。
+  </text>
+  <text x="76" y="656" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11">
+    Evidence: trending-daily-2026-11-08-raw.html (sha256: 353914ef...) · FAQ: docs/generative-ui-catalog-vs-raw-code-streaming-selection-faq.md
+  </text>
+</svg>
