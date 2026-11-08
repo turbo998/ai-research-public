@@ -23,7 +23,7 @@
     "architect_tco_and_finops_worked_examples": {
       "provenance": "synthetic",
       "independently_reproduced": false,
-      "note": "Covers parametric TCO/MTTR and FinOps calculations in Round 1 (64-node 512xH200 ~$111.9k/yr availability model, ~85% below-OS failure ratio, <90s quarantine target) and Round 2 (20-engineer 50-turn monthly token spend $16,579 vs $3,432)."
+      "note": "Covers parametric TCO/MTTR, FinOps, and Frontend Token calculations in Round 1 (64-node 512xH200 ~$111.9k/yr availability model, ~85% below-OS failure ratio, <90s quarantine target), Round 2 (20-engineer 50-turn monthly token spend $16,579 vs $3,432), and Round 3 (12-screen / 72-turn UI token model: 460.8k vs 104.4k vs 133.2k tokens)."
     }
   },
   "standalone_faq_guides": [
@@ -40,6 +40,13 @@
       "zh_path": "workshops/github-trending-radar/docs/context-folding-vs-compact-rag-selection-faq.md",
       "en_path": "workshops/github-trending-radar/docs/context-folding-vs-compact-rag-selection-faq.en.md",
       "svg_path": "assets/github-ai-radar-2026-11-08-r2-context-folding.svg"
+    },
+    {
+      "round": 3,
+      "topic": "AI-Assisted Frontend Engineering Selection: Agent-Native Design System (meta/astryx CLI) vs. Anti-Slop Design Harness (pbakaus/impeccable) vs. Raw Tailwind/shadcn",
+      "zh_path": "workshops/github-trending-radar/docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.md",
+      "en_path": "workshops/github-trending-radar/docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.en.md",
+      "svg_path": "assets/github-ai-radar-2026-11-08-r3-agent-ui-harness.svg"
     }
   ],
   "framework": {
