@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131C31"/>
+    </linearGradient>
+    <linearGradient id="accent11" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg11)"/>
+  <rect x="24" y="20" width="1152" height="640" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent11)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-08 GITHUB AI RADAR · ROUND 11 STANDALONE SELECTION FAQ · EMBODIED AI &amp; PHYSICS SIMULATION</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">google-deepmind/mujoco v4.0.0: mjbatch.h CPU Thread Pool + MJX/MJWarp GPU + 7 Bundled SKILL.md</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Apache-2.0 · Track A Raw HTML Article #8: +26 stars today (12,869 DOM / 16,331 REST stars, measured) · Released 2026-11-06</text>
+
+  <!-- Left Column: What's New in MuJoCo 4.0 -->
+  <rect x="48" y="132" width="540" height="250" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="68" y="160" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">1. MuJoCo 4.0 Three Core Architecture Upgrades (CLAIM-R11-01)</text>
+
+  <rect x="68" y="174" width="500" height="58" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="82" y="196" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">A. 7 Bundled Agent Skills in pip install mujoco (doc/skills/*/SKILL.md)</text>
+  <text x="82" y="216" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">python · spec_editing · accelerated (MJX/MJWarp) · parity · rendering · studio · gui</text>
+
+  <rect x="68" y="242" width="500" height="62" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="82" y="264" fill="#60A5FA" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">B. Native C Thread-Pool Batch Engine (include/mujoco/mjbatch.h)</text>
+  <text x="82" y="284" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">persistent=0 reuses 1 mjData/thread + compact mjb_state rows; bit-identical at any nthread</text>
+  <text x="82" y="299" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">512 envs on 32 threads: 32×4.0MB + 512×0.015625MB = 136.00 MB vs 2,048.00 MB (-93.36% RAM)</text>
+
+  <rect x="68" y="312" width="500" height="58" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="82" y="334" fill="#C084FC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">C. Speculative Contacts, Elasto-Plasticity &amp; mujoco-core Split</text>
+  <text x="82" y="354" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">&lt;flag speculative="enable"/&gt; + mjSTATE_PLASTIC + numpy-only mujoco-core wheel</text>
+
+  <!-- Right Column: CPU vs GPU Selection Matrix -->
+  <rect x="612" y="132" width="540" height="250" rx="12" fill="#1E293B" stroke="#818CF8" stroke-width="1.2"/>
+  <text x="632" y="160" fill="#818CF8" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">2. Backend Selection: mujoco.batch (CPU) vs. MJX / MJWarp (GPU)</text>
+
+  <rect x="632" y="176" width="500" height="90" rx="8" fill="#0F172A" stroke="#0EA5E9"/>
+  <text x="648" y="198" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Choose mujoco-core + mujoco.batch.Batch (CPU float64) When:</text>
+  <text x="648" y="218" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Parallel rollouts N_env &lt;= 256 (online MPC sampling, mujoco.sysid, CI parity)</text>
+  <text x="648" y="238" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Complex 1D/2D/3D flexcomp deformables with solver="Newton" + discrete integrator</text>
+  <text x="648" y="256" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Zero GPU float32 contact drift; bit-identical trajectories across thread counts</text>
+
+  <rect x="632" y="278" width="500" height="90" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="648" y="300" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Choose MJX (JAX) / MJWarp (CUDA) + mujoco-parity (GPU float32) When:</text>
+  <text x="648" y="320" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Massive RL policy training with N_env &gt;= 1,024–32,768 parallel environments</text>
+  <text x="648" y="340" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Bound nconmax / njmax via doc/skills/accelerated/SKILL.md</text>
+  <text x="648" y="358" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Verify mj_forward (float64) vs. mjw.forward (float32) via doc/skills/parity/SKILL.md</text>
+
+  <!-- Bottom Section: Closed-Form FinOps & Convergence Worked Example -->
+  <rect x="48" y="400" width="1104" height="240" rx="12" fill="#1E293B" stroke="#34D399" stroke-width="1.2"/>
+  <text x="68" y="428" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">3. Closed-Form API-Only FinOps &amp; Debugging Model (CLAIM-R11-02 · 30 Simulation Tasks/Mo · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="448" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Parameters: M_models = 30 tasks/mo · Input $3.00/1M · Output $15.00/1M (counted once) · Cloud GPU/CPU node &amp; physical robot lab bills: not_measured</text>
+
+  <!-- Path A Bar -->
+  <text x="68" y="482" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path A: Raw XML Prompting (240 rounds: 0.060M in + 0.005M out)</text>
+  <rect x="490" y="467" width="460" height="22" rx="4" fill="#EF4444"/>
+  <text x="960" y="483" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$61.20/mo ($43.20 in + $18.00 out) · 90.0h</text>
+
+  <!-- Path B Bar -->
+  <text x="68" y="520" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path B: Generic Doc-RAG (150 rounds: 0.040M in + 0.004M out)</text>
+  <rect x="490" y="505" width="203" height="22" rx="4" fill="#F59E0B"/>
+  <text x="703" y="521" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$27.00/mo ($18.00 in + $9.00 out) · 54.0h</text>
+
+  <!-- Path C Bar -->
+  <text x="68" y="558" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path C: MuJoCo 4.0 7 SKILL.md (60 rounds: 0.012M in + 0.002M out)</text>
+  <rect x="490" y="543" width="30" height="22" rx="4" fill="#10B981"/>
+  <text x="530" y="559" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800">$3.96/mo ($2.16 in + $1.80 out) · 15.0h (-93.53% API / -83.33% hrs)</text>
+
+  <!-- Bottom Summary Callout -->
+  <rect x="68" y="582" width="1064" height="44" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="84" y="609" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="600">Net Impact (Path C vs. Path A): Saves $57.24/mo ($686.88/yr, -93.53% API-only), cuts debugging by 75.0h/mo (-83.33%), &amp; reduces 512-env CPU RAM from 2,048.00 MB to 136.00 MB (-93.36%).</text>
+</svg>

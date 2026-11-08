@@ -402,6 +402,24 @@
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/rea-video-shot-forensics-vs-diffusion-remake-selection-faq.md",
       "conditions_and_scope": "Closed-form synthetic API-only and triage-effort model verified by component-level input/output assertions in tests/radar-integration.cjs."
+    },
+    {
+      "claim_id": "CLAIM-R11-01",
+      "repo": "google-deepmind/mujoco",
+      "metric": "google-deepmind/mujoco v4.0.0 (released 2026-11-06, Apache-2.0, Track A raw HTML article #8 in trending-daily-2026-11-08-raw.html [sha256: 353914ef...] with +26 stars today, 12,869 DOM total stars / 16,331 live REST stars, measured): 7 bundled AI coding agent skills in doc/skills/{accelerated,gui,parity,python,rendering,spec_editing,studio}/SKILL.md shipped inside pip install mujoco under mujoco/doc/; native C thread-pool batch simulation API in include/mujoco/mjbatch.h (mujoco.batch.Batch) with persistent=0 per-thread mjData reuse and bit-identical results at any thread count; split Python wheels (mujoco-core depending only on numpy, mujoco-studio, mujoco); speculative contacts (<flag speculative=\"enable\"/>) and elasto-plasticity (mjData.plastic / mjSTATE_PLASTIC); plus official release note claim of 1.4-3x faster sparse Newton solver on deformable flex models (anonymized_reported, independently_reproduced=false)",
+      "provenance_type": "measured",
+      "independently_reproduced": true,
+      "primary_source_url": "https://github.com/google-deepmind/mujoco/blob/main/include/mujoco/mjbatch.h",
+      "conditions_and_scope": "Repository metadata, v4.0.0 release tag, doc/skills/*/SKILL.md, and include/mujoco/mjbatch.h verified directly via GitHub REST API and archived raw HTML (measured); 1.4-3x sparse Newton flex solver speedup is an upstream release note report (anonymized_reported, independently_reproduced=false)."
+    },
+    {
+      "claim_id": "CLAIM-R11-02",
+      "repo": "google-deepmind/mujoco",
+      "metric": "Closed-form 30 robot/deformable simulation tasks/mo model ($3.00/1M in, $15.00/1M out counted once, API-only; cloud GPU/CPU node & physical robot lab bills: not_measured; plus 512-env CPU batch memory on 32 threads at 4.0 MB/mjData and 0.015625 MB/state row): Path A Raw XML Prompting (240 rounds [30x8] x [0.060M in ($0.1800) + 0.005M out ($0.0750) = $0.2550] = $61.20/mo API-only [$43.20 in + $18.00 out, 90.0h/mo debugging, 512x4.0MB = 2,048.00 MB RAM]) vs Path B Generic Doc-RAG (150 rounds [30x5] x [0.040M in ($0.1200) + 0.004M out ($0.0600) = $0.1800] = $27.00/mo API-only [$18.00 in + $9.00 out, 54.0h/mo debugging]) vs Path C MuJoCo 4.0 7 Bundled SKILL.md + mjbatch.h (60 rounds [30x2] x [0.012M in ($0.0360) + 0.002M out ($0.0300) = $0.0660] = $3.96/mo API-only [$2.16 in + $1.80 out, 15.0h/mo debugging, 32x4.0MB + 512x0.015625MB = 136.00 MB RAM (-93.36%)], saving $57.24/mo [$686.88/yr, -93.53% API-only] and 75.0h/mo [-83.33%] debugging vs Path A)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/mujoco-4-hybrid-sim-agent-skills-selection-faq.md",
+      "conditions_and_scope": "Closed-form synthetic API-only, engineering-hour, and mjbatch.h memory model verified by component-level assertions in tests/radar-integration.cjs."
     }
   ]
 }
