@@ -420,6 +420,24 @@
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/mujoco-4-hybrid-sim-agent-skills-selection-faq.md",
       "conditions_and_scope": "Closed-form synthetic API-only, engineering-hour, and mjbatch.h memory model verified by component-level assertions in tests/radar-integration.cjs."
+    },
+    {
+      "claim_id": "CLAIM-R12-01",
+      "repo": "caru-ini/stack-diagram",
+      "metric": "caru-ini/stack-diagram v0.4.0 (released 2026-11-03, MIT license, bundled SIL OFL 1.1 fonts; created 2026-11-01, 7-day breakout in archived evidence/search-new-repos-2026-11-08-raw.json [sha256: b63e1547...] with 2,114 total stars / 2,121 live REST stars, ~302 stars/day creation-to-date lifecycle velocity, measured; stars_today: not_measured): cascading official icon fetcher (skills/stack-diagram/scripts/fetch_icons.py querying svgl -> devicon -> gilbarbara/logos plus official azure/*, aws/*, gcp/* packages and lucide/* glyphs); 132w x 100h node bounding-box collision geometry (references/geometry.md: 60x60 tile + name at topY+68 + role at topY+86, vertical edges anchored from y1=topY_upper+100+6 to y2=topY_lower-6); Base64 data URI single-file HTML builder (scripts/build.py); and Playwright Chromium 2x light/dark PNG renderer (scripts/render_png.py)",
+      "provenance_type": "measured",
+      "independently_reproduced": true,
+      "primary_source_url": "https://github.com/caru-ini/stack-diagram/blob/main/skills/stack-diagram/references/geometry.md",
+      "conditions_and_scope": "Repository metadata, v0.4.0 release tag, SKILL.md, and references/geometry.md verified directly via GitHub REST API and archived Search API JSON."
+    },
+    {
+      "claim_id": "CLAIM-R12-02",
+      "repo": "caru-ini/stack-diagram",
+      "metric": "Closed-form 40 customer architecture diagrams/mo model ($3.00/1M in, $15.00/1M out counted once, API-only; commercial Visio/Lucidchart licenses & external design agency bills: not_measured): Path A Raw LLM Freehand SVG (240 rounds [40x6] x [0.025M in ($0.0750) + 0.008M out ($0.1200) = $0.1950] = $46.80/mo API-only [$18.00 in + $28.80 out, 60.0h/mo manual fix]) vs Path B Mermaid + Manual Draw.io Redraw (120 rounds [40x3] x [0.015M in ($0.0450) + 0.004M out ($0.0600) = $0.1050] = $12.60/mo API-only [$5.40 in + $7.20 out, 40.0h/mo redraw]) vs Path C caru-ini/stack-diagram (60 rounds [40x1.5] x [0.010M in ($0.0300) + 0.002M out ($0.0300) = $0.0600] = $3.60/mo API-only [$1.80 in + $1.80 out, 8.0h/mo review], saving $43.20/mo [$518.40/yr, -92.31% API-only] and 52.0h/mo [-86.67%] formatting overhead vs Path A)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/stack-diagram-official-icons-vs-mermaid-svg-selection-faq.md",
+      "conditions_and_scope": "Closed-form synthetic API-only and SA formatting-hour model verified by component-level assertions in tests/radar-integration.cjs."
     }
   ]
 }
