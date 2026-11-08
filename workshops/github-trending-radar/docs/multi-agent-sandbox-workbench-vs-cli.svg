@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accEmerald" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="accAmber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="174" height="24" rx="6" fill="#06B6D4" fill-opacity="0.18" stroke="#06B6D4" stroke-width="1"/>
+  <text x="139" y="56" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">ROUND 4 · SELECTION FAQ</text>
+  <text x="242" y="57" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Multi-Agent VM Workbench vs. Headless Event Autoloop vs. Raw CLI</text>
+  <text x="52" y="88" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">milind-soni/OpenMausBot (+1,437★ today [measured])  ×  KKKKhazix/agent-autoloop (4,072★/5d · ~814★/d lifecycle avg [measured] · stars_today: not_measured)</text>
+
+  <!-- Column 1: Raw Foreground CLI -->
+  <rect x="36" y="126" width="356" height="370" rx="14" fill="#1E293B" fill-opacity="0.65" stroke="#475569" stroke-width="1.5"/>
+  <rect x="54" y="144" width="320" height="34" rx="8" fill="#334155"/>
+  <text x="214" y="166" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">PATH A · Raw Foreground CLI (claude / codex)</text>
+
+  <text x="56" y="204" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Human-Babysat Terminal Loop</text>
+  <text x="56" y="225" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Best for 1-on-1 single-repo interactive coding</text>
+  <text x="56" y="245" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Blocks stdin on every confirmation prompt</text>
+  <text x="56" y="265" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Closing window or SSH drop loses execution state</text>
+
+  <rect x="56" y="286" width="316" height="92" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+  <text x="70" y="308" fill="#F87171" font-family="Consolas, monospace" font-size="12" font-weight="700">⚠ Scaling Bottlenecks at 5+ Tasks:</text>
+  <text x="70" y="328" fill="#94A3B8" font-family="Consolas, monospace" font-size="11">• ~150-350 MB RAM per hanging terminal</text>
+  <text x="70" y="346" fill="#94A3B8" font-family="Consolas, monospace" font-size="11">• No isolated VM desktop for GUI/Browser</text>
+  <text x="70" y="364" fill="#94A3B8" font-family="Consolas, monospace" font-size="11">• Vulnerable to webhook prompt injection</text>
+
+  <rect x="56" y="394" width="316" height="84" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="70" y="416" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">When to Choose Path A:</text>
+  <text x="70" y="436" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">Single developer at keyboard fixing bugs or</text>
+  <text x="70" y="454" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">iterating on a local branch in real time.</text>
+
+  <!-- Column 2: OpenMausBot VM Workbench -->
+  <rect x="422" y="126" width="356" height="370" rx="14" fill="#0F172A" stroke="#06B6D4" stroke-width="2"/>
+  <rect x="440" y="144" width="320" height="34" rx="8" fill="url(#accCyan)"/>
+  <text x="600" y="166" fill="#082F49" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800" text-anchor="middle">PATH B · OpenMausBot (Multi-Agent VM App)</text>
+
+  <text x="442" y="204" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Interactive Roster + Isolated VM Desktop</text>
+  <text x="442" y="225" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Track A #1 AI Velocity: +1,437★ today [measured]</text>
+  <text x="442" y="245" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 127.0.0.1 harness + ~/.openmausbot local data</text>
+  <text x="442" y="265" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Per-bot Cloud Linux Desktop / Local VM preview</text>
+
+  <rect x="442" y="286" width="316" height="92" rx="10" fill="#111827" stroke="#0891B2" stroke-width="1"/>
+  <text x="456" y="308" fill="#22D3EE" font-family="Consolas, monospace" font-size="12" font-weight="700">✦ Architecture Highlights [reported]:</text>
+  <text x="456" y="328" fill="#CBD5E1" font-family="Consolas, monospace" font-size="11">• Inline Permission Broker (Allow / Deny)</text>
+  <text x="456" y="346" fill="#CBD5E1" font-family="Consolas, monospace" font-size="11">• Composio 500+ OAuth apps (write-only keys)</text>
+  <text x="456" y="364" fill="#CBD5E1" font-family="Consolas, monospace" font-size="11">• Jev auto-router + 1-file .md team export</text>
+
+  <rect x="442" y="394" width="316" height="84" rx="10" fill="#083344" fill-opacity="0.55" stroke="#06B6D4" stroke-width="1"/>
+  <text x="456" y="416" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">When to Choose Path B:</text>
+  <text x="456" y="436" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="12">Human-present multi-bot collaboration, browser/</text>
+  <text x="456" y="454" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="12">GUI Computer Use &amp; portable team playbooks.</text>
+
+  <!-- Column 3: agent-autoloop Headless Kernel -->
+  <rect x="808" y="126" width="356" height="370" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="2"/>
+  <rect x="826" y="144" width="320" height="34" rx="8" fill="url(#accEmerald)"/>
+  <text x="986" y="166" fill="#022C22" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800" text-anchor="middle">PATH C · agent-autoloop (Headless Kernel)</text>
+
+  <text x="828" y="204" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">3. Zero-Cost Suspend + 4 Kernel Guards</text>
+  <text x="828" y="225" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Track B: 4,072★/5d (~814★/d avg) · today: not_measured</text>
+  <text x="828" y="245" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• ~1,850 LOC zero-dep kernel; exits(0) on ask card</text>
+  <text x="828" y="265" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Feishu/WeCom/Slack card reply triggers --resume</text>
+
+  <rect x="828" y="286" width="316" height="92" rx="10" fill="#111827" stroke="#059669" stroke-width="1"/>
+  <text x="842" y="308" fill="#34D399" font-family="Consolas, monospace" font-size="12" font-weight="700">✦ Kernel Benchmarks &amp; Guards [reported]:</text>
+  <text x="842" y="328" fill="#CBD5E1" font-family="Consolas, monospace" font-size="11">• 59.94 MB idle RSS · 2,394 writes/s · 1.82ms p99</text>
+  <text x="842" y="346" fill="#CBD5E1" font-family="Consolas, monospace" font-size="11">• Instruction-data file split (blocks cwd/agent)</text>
+  <text x="842" y="364" fill="#CBD5E1" font-family="Consolas, monospace" font-size="11">• Immutable 8-hop TTL breaker + 200k crash sim</text>
+
+  <rect x="828" y="394" width="316" height="84" rx="10" fill="#064E3B" fill-opacity="0.55" stroke="#10B981" stroke-width="1"/>
+  <text x="842" y="416" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">When to Choose Path C:</text>
+  <text x="842" y="436" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="12">24/7 Cron/Webhook/Issue/Alert pipelines with</text>
+  <text x="842" y="454" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="12">0 resident agent processes during HITL waits.</text>
+
+  <!-- Bottom Provenance & Quantitative Comparison Strip -->
+  <rect x="36" y="514" width="1128" height="136" rx="14" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+  <rect x="54" y="530" width="230" height="24" rx="6" fill="url(#accAmber)"/>
+  <text x="169" y="546" fill="#111827" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="800" text-anchor="middle">ARCHITECT WORKED EXAMPLE &amp; PROVENANCE</text>
+  <text x="298" y="547" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">15-Engineer Team · 30 Rules · 40 Daily HITL Approvals (3.5h Avg Wait)</text>
+
+  <text x="56" y="578" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• <tspan fill="#34D399" font-weight="700">Wait-State RAM [synthetic]:</tspan> Resident polling scripts consume ~4.5 GB RAM (18 hanging CLI processes) vs. <tspan fill="#6EE7B7" font-weight="700">~60–170 MB RAM (&gt;96% reduction)</tspan> in agent-autoloop zero-cost suspend.</text>
+  <text x="56" y="602" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• <tspan fill="#38BDF8" font-weight="700">Security &amp; Audit Invariants:</tspan> Parameterized file-based event payloads + PR `deliver` config read strictly from `main` + `agent-autoloop why &lt;id&gt;` causal replay.</text>
+  <text x="56" y="626" fill="#94A3B8" font-family="Consolas, monospace" font-size="11">Provenance: Track A stars_today=measured (raw HTML sha256:353914ef...) | Track B avg_stars_per_day=measured, stars_today=not_measured | M5 Pro kernel bench=anonymized_reported (indep_repro=false)</text>
+</svg>

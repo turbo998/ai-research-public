@@ -13,8 +13,8 @@
 
 ## 📌 核心结论速览（Executive Summary）
 
-1. **传统 `/compact` 全量重写摘要正在扼杀 KV Prefix Cache 并制造“排障失忆症”**：在 Claude Code、Copilot CLI、OpenCode、Cursor 等编码智能体的多轮长会话（`>15` 轮工具调用）中，传统宿主内置的 `/compact` 每触发一次就会重写整段历史前缀，导致上游大模型的 **KV Prefix Cache（前缀缓存，单价相差 10×–50×）瞬间失效**（命中率从 `>90%` 暴跌至 `35%–42%`），同时永久抹掉早期报错堆栈的精确文件名与行号。
-2. **多轮编码与跨会话时序推理首选 `billion-context`（模型内生可逆分层折叠）**：`ranxianglei/billion-context`（底盘 `acp-kernel` v0.1.213，MIT，今日 `+460 Stars`）作为透明 HTTP 流重写网关，向模型注入 4 个内生上下文管理工具（`compress`、`decompress`、`search_context`、`acp_status`）。在 58 个真实代码仓的 **ContextBench** 盲测中，它以 **0.3097 Utilized F1 夺得全场第 1**（甚至反超不压缩的 `full` 全量上下文 `0.2928` F1，同时降低 **58.3%** 成本），并在 17.4 万次生产调用中维持 **95%–97% KV Prefix Cache 命中率**。
+1. **传统 `/compact` 全量重写摘要正在扼杀 KV Prefix Cache 并制造“排障失忆症”**：在 Claude Code、Copilot CLI、OpenCode、Cursor 等编码智能体的多轮长会话（`>15` 轮工具调用）中，传统宿主内置的 `/compact` 每触发一次就会重写整段历史前缀，导致上游大模型的 **KV Prefix Cache（前缀缓存，单价相差 10×–50×）在重写点之后失效**（在 50 轮参数化模型 `synthetic, independently_reproduced=false` 下，有效缓存命中率从不重写时的 `>90%` 跌至 `35%–45%` / 算例均值 `38%`，非普适硬件实测），同时永久抹掉早期报错堆栈的精确文件名与行号。
+2. **多轮编码与跨会话时序推理首选 `billion-context`（模型内生可逆分层折叠）**：`ranxianglei/billion-context`（底盘 `acp-kernel` v0.1.213，MIT，今日实测 `+460 Stars` [`measured`]）作为透明 HTTP 流重写网关，向模型注入 4 个内生上下文管理工具（`compress`、`decompress`、`search_context`、`acp_status`）。据上游作者发布的 58 个真实代码仓 **ContextBench** 500 题盲测报告（`anonymized_reported, independently_reproduced=false`，基于 `DeepSeek V4.1 Flash 1017` + `Pi CLI v0.73.1`），它以 **0.3097 Utilized F1 夺得全场第 1**（反超不压缩的 `full` 全量上下文 `0.2928` F1，该 500 题集成本从 `$11.05` 降至 `$4.61`，`-58.3%`），并在上游作者报告的 3 台宿主机、4.5 个月、`174,327` 次调用（`204,800` Token 窗口模型，`anonymized_reported, independently_reproduced=false`）中维持 **95%–97% KV Prefix Cache 命中率**。
 3. **静态字面大海捞针（Verbatim Needle QA）仍需混合 RAG 或显式 `decompress`**：第三方 1,500 题盲测揭示了清晰的物理边界——在 **LongMemEval-S** 跨会话时序推理题上，`billion-context`（`79.7%`）远超向量重排 RAG（`45.1%`）；但在 **MemoryAgentBench** 的静态精确字面单针检索（`AR`）子项上，若不触发 `search_context` + `decompress` 展开原文，纯压缩摘要得分会从 `69.0%` 降至 `27.0%`，此时应采用 **“`billion-context` 会话状态折叠 + `embedding-rerank` 静态知识库检索”** 的双轨架构。
 
 ---
@@ -120,7 +120,7 @@ sequenceDiagram
 | 评估维度 | 模型内生可逆分层折叠 (`billion-context` / `acp-kernel`) | 原生全量上下文 (`Full Context` 无压缩) | 宿主内置 `/compact` (硬阈值全量重写摘要) | 向量切片重排 RAG (`BM25 + Embedding + Reranker`) |
 | :--- | :--- | :--- | :--- | :--- |
 | **核心工作机制** | 代理注入 `compress`/`decompress`/`search_context`，模型自主分段折叠并支持按需无损展开 | 所有历史对话与工具输出原样拼接发送 | 达到窗口阈值（如 80%/95%）时一次性将历史重写为单段摘要 | 将历史消息切块写入向量库，每轮按 Query 召回 Top-K 片段 |
-| **KV Prefix Cache 命中率** | **极高（生产实测 `95%–97%`）**，前缀稳定追加 | 高（`90%–98%`），但超过物理窗口后直接崩溃 | **低（`35%–45%`）**，每次 compact 重写前缀导致缓存雪崩 | **极低（`15%–30%`）**，每轮动态拼接不同 Top-K 切片破坏前缀 |
+| **KV Prefix Cache 命中率** | **极高（上游报告 `95%–97%`，`anonymized_reported`：3 机 17.4 万次调用）**，前缀稳定追加 | 高（窗口内 `90%–98%` `synthetic`），但超过物理窗口后直接崩溃 | **低（参数化算例 `35%–45%` / `38%`，`synthetic`）**，每次 compact 重写前缀导致缓存失效 | **极低（参数化算例 `15%–30%` / `22%`，`synthetic`）**，每轮动态拼接 Top-K 切片破坏前缀 |
 | **ContextBench 多轮编码 F1** | **`0.3097`（全场第 1，Evidence Precision `0.3358`）** | `0.2928`（第 2，受中部工具噪音干扰） | 未进前三（丢失早期文件名与行号细节） | `0.2410 ~ 0.2685`（代码跨文件依赖被切片割裂） |
 | **LongMemEval-S 跨会话准确率** | **`79.20%`（多会话时序推理高达 `79.7%`）** | **`83.20%`**（在 110k 窗口内略优，但成本高 3.5×） | `~64%`（多次摘要后早期时间线坍塌） | 最高仅 **`62.60%`**（多会话时序推理暴跌至 `45.1%`） |
 | **1.48M Token 极限存活率** | **100% 存活（稳态 ~16k Token，`30×` 压缩比）** | **0.00%（199/199 全部 Context Overflow 崩溃）** | 可存活，但经历 7+ 代有损摘要后严重失忆 | 100% 存活（静态字面单针检索 `AR = 69.0%` 最强） |

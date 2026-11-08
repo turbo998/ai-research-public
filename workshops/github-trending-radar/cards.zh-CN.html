@@ -411,7 +411,7 @@ body:has([data-professional-header]){height:auto!important;overflow-x:clip!impor
 # Swept: 25 repos | Passed Gates: 15 | Rejected Noise: 10 | Audited Claims: 60 | P0 Must-Learn: 6 | Fastest-Rising Tracked: 14</div>
   </div>
   <div class="footer-callout">
-    <strong>证明&amp;基准数据:</strong> <code>measured</code> 基于封存 2026-11-08 GitHub Trending 快照实测（<code>report.json</code>）与 <code>disler/pi-durable-news-agent</code> 6-Gate HFS 规范验证。零虚构坐标。
+    <strong>来源分层与证据指纹:</strong> Track A 单日增量（<code>measured</code> · 原始 HTML <code>sha256:353914ef...</code>）；Track B 新仓日均（<code>measured</code> 建仓生命周期均值，<code>stars_today=not_measured</code>）；上游评测声明（<code>anonymized_reported, independently_reproduced=false</code>）；架构师 TCO/FinOps 算例（<code>synthetic, independently_reproduced=false</code>）。
   </div>
 </section>
 
@@ -426,7 +426,7 @@ body:has([data-professional-header]){height:auto!important;overflow-x:clip!impor
     <div class="panel" style="margin-bottom:12px;">
       <h3>原始内容GitHub趋势输入比较引文</h3>
       <p>
-        在 2026-11-08 热榜与飙升榜中，<code>dsx-ai-factory/nvke v0.23.1</code>（+345 stars today, 单日暴涨 +91%, NVIDIA Kubernetes Engine 裸金属多租户 GPU 集群管控面）与 <code>ranxianglei/billion-context v0.1.213</code>（+460 stars today, 模型主动可逆上下文压缩，保住 95–97% KV Cache 命中率）代表极高架构价值；而单日暴涨 +1,307★ 的 <code>Albert-Weasker/niubigeo</code> 实为导流至 <code>niubigeo.ai/pricing</code> 的商业营销漏斗。
+        在 2026-11-08 热榜与飙升榜中，<code>dsx-ai-factory/nvke v0.23.1</code>（Track A 实测 +345 stars today, 单日暴涨 +91%, 位于 <code>dsx-ai-factory</code> 组织下的裸金属多租户 GPU K8s 管控面）与 <code>ranxianglei/billion-context v0.1.213</code>（Track A 实测 +460 stars today, 上游技术报告 <code>anonymized_reported</code> 披露保持 95–97% KV Cache 命中率）代表极高架构价值；而单日暴涨 +1,307★ 的 <code>Albert-Weasker/niubigeo</code> 实为导流至 <code>niubigeo.ai/pricing</code> 的商业营销漏斗。
       </p>
     </div>
 
@@ -436,7 +436,7 @@ body:has([data-professional-header]){height:auto!important;overflow-x:clip!impor
         <h3>决策 1 · dsx-ai-factory/nvke 裸金属 GPU K8s 管控面评估（<span class="badge-type">分数</span> · 关注度 99/100）</h3>
         <span class="pill act-auto">自动执行</span>
       </div>
-      <p>子智能体核验 4/4 声明通过（<code>support=0.97</code>）：打通 <code>CAPNICo + NICo -&gt; NVKR 签名镜像 -&gt; TPM + SPIFFE/SPIRE 证明 -&gt; OVN-Kubernetes -&gt; NKTP/NVSentinel 故障自愈</code> 全链路并提供 6C/12G 免 GPU <code>mock-NICo</code> 演练，<code>Signal=92, Facts=91, Hype=12, Relevance=70</code> → 综合得分 <strong>99</strong>（🔥 P0 必学，渲染为 <code>headline</code> 卡）。</p>
+      <p>子智能体核验 4/4 架构声明通过（<code>support=0.97</code>，上游架构规范 <code>anonymized_reported</code>；仓库归属 <code>dsx-ai-factory</code> 独立组织而非 <code>github.com/NVIDIA</code> 主组织）：打通 <code>CAPNICo + NICo -&gt; NVKR 签名镜像 -&gt; TPM + SPIFFE/SPIRE 证明 -&gt; OVN-Kubernetes -&gt; NKTP/NVSentinel 故障自愈</code> 全链路并提供 6C/12G 免 GPU <code>mock-NICo</code> 演练，综合得分 <strong>99</strong>（🔥 P0 必学 · Round 1 选型 FAQ）。</p>
       <div style="display:flex;justify-content:space-between;font-size:11.5px;margin-top:6px;font-weight:700;">
         <span>注意力得分: 99 / 100（信号 92 · 事实 91 · 噱头 12）</span>
         <span style="color:var(--green);">VERDICT: P0_MUST_LEARN_AND_ADOPT</span>
@@ -450,7 +450,7 @@ body:has([data-professional-header]){height:auto!important;overflow-x:clip!impor
         <h3>决策 2 · ranxianglei/billion-context 可逆上下文压缩评估（<span class="badge-type">分数</span> · 关注度 96/100）</h3>
         <span class="pill act-auto">自动执行</span>
       </div>
-      <p>子智能体核验 4/4 声明通过（<code>support=0.95</code>）：通过透明代理注入 <code>compress</code> / <code>decompress</code> / <code>search_context</code> 工具，仅对过时消息做单点可逆折叠，保持 95–97% KV Cache 命中率并斩获 ContextBench 有效 F1 第一（<code>0.3097</code>，成本 -58.3%），<code>Signal=87, Facts=88, Hype=18, Relevance=66</code> → 综合得分 <strong>96</strong>（🔥 P0 必学，渲染为 <code>signal_alert</code> 卡）。</p>
+      <p>子智能体核验 4/4 声明通过（<code>support=0.95</code>）：通过透明代理注入 <code>compress</code> / <code>decompress</code> / <code>search_context</code> 工具做单点可逆折叠；作者报告（<code>anonymized_reported, independently_reproduced=false</code>）披露保持 95–97% KV Cache 命中率并获 ContextBench 有效 F1 第一（<code>0.3097</code>，成本 -58.3%），综合得分 <strong>96</strong>（🔥 P0 必学 · Round 2 选型 FAQ）。</p>
       <div style="display:flex;justify-content:space-between;font-size:11.5px;margin-top:6px;font-weight:700;">
         <span>注意力得分: 96 / 100（信号 87 · 事实 88 · 噱头 18）</span>
         <span style="color:var(--green);">VERDICT: P0_MUST_LEARN_AND_ADOPT</span>
@@ -514,10 +514,10 @@ body:has([data-professional-header]){height:auto!important;overflow-x:clip!impor
           <td><span class="hit">✓ P0 必学 (关注度 96 · 信号卡)</span><br><span class="pill act-auto">自动执行</span></td>
         </tr>
         <tr>
-          <td><strong>场景04 · OpenMausBot 与 autoloop</strong><br>（+1,437★ / +814★/天）</td>
-          <td>核验“联系人即容器隔离 Agent”桌面架构与目标驱动自验证重试闭环</td>
+          <td><strong>场景04 · OpenMausBot 与 autoloop</strong><br>（+1,437★ / 建仓日均≈814★）</td>
+          <td>核验“联系人即容器隔离 Agent”桌面架构与 5 天新仓 `agent-autoloop`（今日新增 `not_measured`）闭环</td>
           <td><span class="hit">✓ 列榜 OpenMausBot，但漏掉 5 天新仓 `agent-autoloop` 自验证闭环</span></td>
-          <td><span class="hit">✓ P0 必学 (关注度 94 + 飙升榜)</span><br><span class="pill act-auto">自动执行</span></td>
+          <td><span class="hit">✓ P0 必学 (关注度 94 + 新仓黑马)</span><br><span class="pill act-auto">自动执行</span></td>
         </tr>
         <tr>
           <td><strong>场景05 · agent-browser 与 skills</strong><br>（+812★ / +793★）</td>
@@ -742,7 +742,7 @@ body:has([data-professional-header]){height:auto!important;overflow-x:clip!impor
       <div class="panel" style="border-color:var(--green);background:var(--green-soft);">
         <h3 style="color:var(--green);">✅ Good fit (强烈推荐适用场景)</h3>
         <p>
-          • <strong>AI Solution Architect 每日 23:00 技术雷达</strong>：15 分钟内掌握最具架构借鉴价值的 P0/P1 开源突破（如自治语义本体构建 `NVIDIA/auto-ontology`、桌面+Web 双栈无障碍树控制 `agent-desktop v1.2.0` + `agent-browser v0.41.2` 与 `VibeVoice` 7.5Hz 长语音合成），并直接映射到架构、Demo、Benchmark 与打单方案。<br><br>
+          • <strong>AI Solution Architect 每日 23:00 技术雷达与多轮选型 FAQ</strong>：15 分钟内掌握 P0/P1 开源突破（Round 1 裸金属 GPU K8s 管控面 `dsx-ai-factory/nvke` vs AKS/EKS 选型 FAQ；Round 2 可逆上下文折叠 `billion-context` vs `/compact` vs Vector RAG 选型 FAQ；Round 3 Agent 原生前端系统 `meta/astryx` CLI vs `pbakaus/impeccable` 反 Slop 审计 vs 裸写 Tailwind 选型 FAQ；Round 4 多智能体 VM 工作台 `OpenMausBot` vs 无头事件自循环内核 `agent-autoloop` 选型 FAQ），并直接映射到架构、Demo、Benchmark 与打单方案。<br><br>
           • <strong>企业技术委员会（CTO Office）周度开源选型评估</strong>：用 <code>Signal / Facts / Hype</code> 替代主观拍脑袋与盲目崇拜 Star 数。<br><br>
           • <strong>长周期异步情报与安全公告巡检流水线</strong>：利用 SQLite / Durable Functions 步级检查点保证零重复计费与高可靠交付。<br><br>
           • <strong>客户赋能工作坊（Partner Workshop）实时情报演示</strong>：现场拖动权重滑块，演示主动式 Agent 如何按行业偏好重排技术资产。
@@ -759,7 +759,7 @@ body:has([data-professional-header]){height:auto!important;overflow-x:clip!impor
       </div>
     </div>
     <div class="footer-callout">
-      <strong>准备情况、许可证&amp;证相:</strong> 已集成至个人主页 <code>https://turbo998.github.io/zh-github-radar.html</code>（中文）与 <code>github-radar.html</code>（英文），并配置每日 23:00 CST 自动研究工作流。原型参考 <code>disler/pi-durable-news-agent</code>（MIT），评测数据基于 2026-11-08 真实抓取快照（<code>measured</code>）。
+      <strong>准备情况、许可证&amp;证相:</strong> 已集成至个人主页 <code>https://turbo998.github.io/zh-github-radar.html</code>（中文）与 <code>github-radar.html</code>（英文）。原型参考 <code>disler/pi-durable-news-agent</code>（MIT）。数据分级：Track A <code>stars_today</code> 源自原始 HTML <code>evidence/trending-daily-2026-11-08-raw.html</code>（<code>sha256: 353914ef...</code>，<code>measured</code>）；Track B 新仓仅报建仓以来日均（<code>stars_today = not_measured</code>）；上游作者性能声明为 <code>anonymized_reported (independently_reproduced=false)</code>；TCO/FinOps 算例为 <code>synthetic (independently_reproduced=false)</code>。
     </div>
   </div>
 </section>

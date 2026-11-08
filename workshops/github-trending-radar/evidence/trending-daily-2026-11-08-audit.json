@@ -264,11 +264,38 @@
     {
       "claim_id": "CLAIM-BC-03",
       "repo": "ranxianglei/billion-context",
-      "metric": "20-engineer team 50-turn coding session monthly FinOps worked example ($16,579/mo Path A vs $12,056/mo Path B vs $3,432/mo Path C, -79.3%)",
+      "metric": "20-engineer team 50-turn coding session monthly FinOps worked example: Path A (Full + /compact modeled at ~38% [35%–45%] cache hit rate = $16,579/mo) vs Path B (Vector-Rerank RAG modeled at ~22% [15%–30%] cache hit rate = $12,056/mo) vs Path C (billion-context reversible folding modeled at 96% cache hit rate = $3,432/mo, -$13,147/mo or -$157,764/yr, -79.3%)",
       "provenance_type": "synthetic",
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/context-folding-vs-compact-rag-selection-faq.md",
-      "conditions_and_scope": "Architect parametric FinOps calculation assuming 20 engineers, 4 sessions/day, 22 workdays, 4.5M cumulative input tokens/session, $3.00/1M uncached input, and $0.30/1M cached input."
+      "conditions_and_scope": "Architect parametric FinOps calculation assuming 20 engineers, 4 sessions/day, 22 workdays, 4.5M cumulative input tokens/session, $3.00/1M uncached input, and $0.30/1M cached input; the ~38% (/compact) and ~22% (RAG) cache hit rates are parametric boundary estimates for prefix-mutating workflows, not universal measured figures."
+    },
+    {
+      "claim_id": "CLAIM-R3-01",
+      "repo": "meta/astryx & pbakaus/impeccable",
+      "metric": "meta/astryx v0.7.11 (41 components, 5 presets, @astryxdesign/cli) and pbakaus/impeccable v2.1.1 (20 skills, 84 anti-slop sub-checks); PoC frontend visual debt & rework parametric model (3.2x iteration cycles -> 1.1x, ~68% savings)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.md",
+      "conditions_and_scope": "Component/skill counts verified directly from repository source trees (measured); enterprise PoC rework reduction (3.2x -> 1.1x) is an architect parametric workflow estimate (synthetic, independently_reproduced=false)."
+    },
+    {
+      "claim_id": "CLAIM-R4-01",
+      "repo": "milind-soni/OpenMausBot & KKKKhazix/agent-autoloop",
+      "metric": "OpenMausBot v0.1.149 4-container Docker Compose stack with per-contact isolated workspace and desktop VNC (3000/9990/9991/9992); agent-autoloop ~1,850 LOC zero-dependency Python kernel with 4 systems mechanisms and 200,000-step deterministic SQLite state-machine crash-recovery simulation in tests/test_core.py",
+      "provenance_type": "measured",
+      "independently_reproduced": true,
+      "primary_source_url": "https://github.com/KKKKhazix/agent-autoloop/blob/main/tests/test_core.py",
+      "conditions_and_scope": "Source code inspection of OpenMausBot docker-compose.yml / packages/ and agent-autoloop autoloop/core.py, runner.py, cli.py, and tests/test_core.py."
+    },
+    {
+      "claim_id": "CLAIM-R4-02",
+      "repo": "milind-soni/OpenMausBot & KKKKhazix/agent-autoloop",
+      "metric": "20-Workflow Unattended Enterprise Agent Ops FinOps & Security Risk worked example: Path A (Raw Foreground CLI = $1,796/mo) vs Path B (Always-On Full Desktop VM Fleet = $2,320/mo) vs Path C (Hybrid Autoloop + Ephemeral VM = $392/mo, -$1,928/mo, -83.1%)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/multi-agent-sandbox-workbench-vs-cli-selection-faq.md",
+      "conditions_and_scope": "Architect parametric FinOps calculation for 20 unattended workflows (16 headless CLI + 4 GUI/Browser workflows) across 22 workdays assuming $80/hr engineer recovery time and $96/mo 4-vCPU/8GB cloud VM instance pricing."
     }
   ]
 }

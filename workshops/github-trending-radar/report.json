@@ -23,7 +23,7 @@
     "architect_tco_and_finops_worked_examples": {
       "provenance": "synthetic",
       "independently_reproduced": false,
-      "note": "Covers parametric TCO/MTTR, FinOps, and Frontend Token calculations in Round 1 (64-node 512xH200 ~$111.9k/yr availability model, ~85% below-OS failure ratio, <90s quarantine target), Round 2 (20-engineer 50-turn monthly token spend $16,579 vs $3,432), and Round 3 (12-screen / 72-turn UI token model: 460.8k vs 104.4k vs 133.2k tokens)."
+      "note": "Covers parametric TCO/MTTR, FinOps, Frontend Token, and Wait-State RAM calculations in Round 1 (64-node 512xH200 ~$111.9k/yr availability model, ~85% below-OS failure ratio, <90s quarantine target), Round 2 (20-engineer 4x50-turn daily sessions monthly token spend $16,579 at 38% cache hit vs $12,056 RAG at 22% vs $3,432 billion-context at 96%, saving $13,147/mo / -79.3%), Round 3 (12-screen / 72-turn UI token model: 460.8k vs 104.4k vs 133.2k tokens), and Round 4 (15-engineer / 30-rule / 40 daily HITL approvals wait-state RAM model: ~4.5 GB resident CLI processes vs ~60-170 MB zero-cost suspend kernel, >96% reduction)."
     }
   },
   "standalone_faq_guides": [
@@ -32,21 +32,35 @@
       "topic": "Bare-Metal GPU Cluster Control-Plane Selection: NVKE (dsx-ai-factory/nvke) vs. Managed Cloud K8s (AKS/EKS) vs. DIY Kubeadm/Slurm",
       "zh_path": "workshops/github-trending-radar/docs/nvke-vs-aks-gpu-cluster-selection-faq.md",
       "en_path": "workshops/github-trending-radar/docs/nvke-vs-aks-gpu-cluster-selection-faq.en.md",
-      "svg_path": "assets/github-ai-radar-2026-11-08.svg"
+      "svg_path": "assets/github-ai-radar-2026-11-08.svg",
+      "immutable_round_commit_sha": "427898875088c44c091d1cd60e24eddf4dce6620",
+      "primary_repos": ["dsx-ai-factory/nvke"]
     },
     {
       "round": 2,
       "topic": "Long-Horizon Coding Agent Context Architecture Selection: Model-Driven Reversible Folding (billion-context / acp-kernel) vs. Lossy /compact vs. Chunked Vector RAG",
       "zh_path": "workshops/github-trending-radar/docs/context-folding-vs-compact-rag-selection-faq.md",
       "en_path": "workshops/github-trending-radar/docs/context-folding-vs-compact-rag-selection-faq.en.md",
-      "svg_path": "assets/github-ai-radar-2026-11-08-r2-context-folding.svg"
+      "svg_path": "assets/github-ai-radar-2026-11-08-r2-context-folding.svg",
+      "immutable_round_commit_sha": "620674827c5c848a98fd98019b44439cede68fd5",
+      "primary_repos": ["ranxianglei/billion-context"]
     },
     {
       "round": 3,
       "topic": "AI-Assisted Frontend Engineering Selection: Agent-Native Design System (meta/astryx CLI) vs. Anti-Slop Design Harness (pbakaus/impeccable) vs. Raw Tailwind/shadcn",
       "zh_path": "workshops/github-trending-radar/docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.md",
       "en_path": "workshops/github-trending-radar/docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.en.md",
-      "svg_path": "assets/github-ai-radar-2026-11-08-r3-agent-ui-harness.svg"
+      "svg_path": "assets/github-ai-radar-2026-11-08-r3-agent-ui-harness.svg",
+      "immutable_round_commit_sha": "aaf765620e16dea793fcc9de9c59cda52747342d",
+      "primary_repos": ["meta/astryx", "pbakaus/impeccable"]
+    },
+    {
+      "round": 4,
+      "topic": "Multi-Agent VM Workbench vs. Headless Event Autoloop Kernel vs. Single-Terminal CLI Selection: OpenMausBot vs. agent-autoloop",
+      "zh_path": "workshops/github-trending-radar/docs/multi-agent-sandbox-workbench-vs-cli-selection-faq.md",
+      "en_path": "workshops/github-trending-radar/docs/multi-agent-sandbox-workbench-vs-cli-selection-faq.en.md",
+      "svg_path": "assets/github-ai-radar-2026-11-08-r4-sandbox-autoloop.svg",
+      "primary_repos": ["milind-soni/OpenMausBot", "KKKKhazix/agent-autoloop"]
     }
   ],
   "framework": {
@@ -91,133 +105,172 @@
         "license": "Apache-2.0",
         "latest_release": "v0.1.149",
         "stars_today": 1437,
+        "provenance": "measured",
+        "raw_html_article_rank": 3,
+        "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
+        "raw_html_sha256_lf": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
         "stars_today_source": "https://github.com/trending?since=daily",
-        "scraped_at_cst": "2026-11-08T23:09:15+08:00",
-        "stars_total": 17821,
-        "forks": 2494,
+        "scraped_at_cst": "2026-11-09T00:49:45+08:00",
+        "stars_total": 17935,
+        "forks": 2503,
         "attention": 94,
         "sa_tier": "P0",
-        "why_exploding": "Open-source Grok Bot desktop alternative where each sidebar chat contact is a local Claude/Codex agent with its own VM/Docker sandbox and bash/file approval gate."
+        "why_exploding": "Verified evidence (measured): v0.1.149 4-container Docker Compose desktop stack with per-contact isolated workspace and approval gate; Driver inference: open-source multi-contact local agent workbench."
       },
       {
         "rank": 2,
-        "full_name": "Albert-Weasker/niubigeo",
-        "language": "TypeScript",
-        "license": "Apache-2.0",
-        "latest_release": "HEAD",
-        "stars_today": 1307,
-        "stars_today_source": "https://github.com/trending?since=daily",
-        "scraped_at_cst": "2026-11-08T23:09:15+08:00",
-        "stars_total": 10139,
-        "forks": 815,
-        "attention": 47,
-        "sa_tier": "P3",
-        "why_exploding": "GEO (Generative Engine Optimization) visibility scanner across 5 AI search engines; high Hype=54 due to commercial SaaS pricing funnel."
-      },
-      {
-        "rank": 3,
         "full_name": "meta/astryx",
         "language": "TypeScript",
         "license": "MIT",
         "latest_release": "v0.7.11",
         "stars_today": 863,
+        "provenance": "measured",
+        "raw_html_article_rank": 6,
+        "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
+        "raw_html_sha256_lf": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
         "stars_today_source": "https://github.com/trending?since=daily",
-        "scraped_at_cst": "2026-11-08T23:09:15+08:00",
-        "stars_total": 15468,
-        "forks": 1253,
+        "scraped_at_cst": "2026-11-09T00:49:45+08:00",
+        "stars_total": 15751,
+        "forks": 1266,
         "attention": 98,
         "sa_tier": "P0",
-        "why_exploding": "Meta open-sourced its internal 8-year React 19 + StyleX design system powering 13,000+ apps, with 150+ accessible components, 7 themes, swizzle ejection, and agent-first @astryxdesign/cli."
+        "why_exploding": "Verified evidence (measured): Meta MIT-licensed React 19 + StyleX design system (v0.7.11, 41 components, 5 presets, @astryxdesign/cli, swizzle ejection); Driver inference: eliminates generic AI Slop UIs."
       },
       {
-        "rank": 4,
+        "rank": 3,
         "full_name": "vercel-labs/agent-browser",
         "language": "Rust",
         "license": "Apache-2.0",
         "latest_release": "v0.41.2",
         "stars_today": 812,
+        "provenance": "measured",
+        "raw_html_article_rank": 5,
+        "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
+        "raw_html_sha256_lf": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
         "stars_today_source": "https://github.com/trending?since=daily",
-        "scraped_at_cst": "2026-11-08T23:09:15+08:00",
-        "stars_total": 47323,
-        "forks": 3242,
+        "scraped_at_cst": "2026-11-09T00:49:45+08:00",
+        "stars_total": 47388,
+        "forks": 3244,
         "attention": 98,
         "sa_tier": "P0",
-        "why_exploding": "Rust native Accessibility-Tree (@e1) browser CLI cutting multi-step Web Agent token spend by >85%."
+        "why_exploding": "Verified evidence (measured): Rust native Accessibility-Tree (@e1) browser CLI (v0.41.2); Driver inference: standardizes low-token web interaction for CLI agents."
       },
       {
-        "rank": 5,
+        "rank": 4,
         "full_name": "anthropics/skills",
         "language": "Python",
         "license": "Apache-2.0",
         "latest_release": "HEAD",
         "stars_today": 793,
+        "provenance": "measured",
+        "raw_html_article_rank": 7,
+        "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
+        "raw_html_sha256_lf": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
         "stars_today_source": "https://github.com/trending?since=daily",
-        "scraped_at_cst": "2026-11-08T23:09:15+08:00",
-        "stars_total": 189255,
-        "forks": 22305,
+        "scraped_at_cst": "2026-11-09T00:49:45+08:00",
+        "stars_total": 189330,
+        "forks": 22314,
         "attention": 94,
         "sa_tier": "P0",
-        "why_exploding": "Official Anthropic SKILL.md specification and reference enterprise document skills approaching 190K stars."
+        "why_exploding": "Verified evidence (measured): Official Anthropic SKILL.md specification and reference enterprise document skills (189,330 DOM stars); Driver inference: cross-agent skill standardization."
+      },
+      {
+        "rank": 5,
+        "full_name": "ranxianglei/billion-context",
+        "language": "TypeScript",
+        "license": "NOASSERTION",
+        "latest_release": "v0.1.213",
+        "stars_today": 460,
+        "provenance": "measured",
+        "raw_html_article_rank": 9,
+        "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
+        "raw_html_sha256_lf": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
+        "stars_today_source": "https://github.com/trending?since=daily",
+        "scraped_at_cst": "2026-11-09T00:49:45+08:00",
+        "stars_total": 4979,
+        "forks": 397,
+        "attention": 96,
+        "sa_tier": "P0",
+        "why_exploding": "Verified evidence (measured): v0.1.213 reversible context-folding proxy with paper/ and benchmarks/third-party-1500/ (anonymized_reported, independently_reproduced=false); Driver inference: prevents /compact KV cache invalidation."
       },
       {
         "rank": 6,
-        "full_name": "jub0t/Concat",
-        "language": "Rust",
-        "license": "AGPL-3.0",
-        "latest_release": "v0.2.9",
-        "stars_today": 491,
-        "stars_today_source": "https://github.com/trending?since=daily",
-        "scraped_at_cst": "2026-11-08T23:09:15+08:00",
-        "stars_total": 15593,
-        "forks": 1946,
-        "attention": 83,
-        "sa_tier": "P1",
-        "why_exploding": "Local-first Rust non-linear video editor fully scriptable by AI agents via JSON-RPC API and MCP Server."
-      },
-      {
-        "rank": 7,
-        "full_name": "ranxianglei/billion-context",
-        "language": "TypeScript",
-        "license": "MIT",
-        "latest_release": "v0.1.213",
-        "stars_today": 460,
-        "stars_today_source": "https://github.com/trending?since=daily",
-        "scraped_at_cst": "2026-11-08T23:09:15+08:00",
-        "stars_total": 4922,
-        "forks": 394,
-        "attention": 96,
-        "sa_tier": "P0",
-        "why_exploding": "Model-driven reversible context compression proxy (acp-kernel) preserving 95-97% KV prefix cache hits, 5x token reduction, #1 on ContextBench."
-      },
-      {
-        "rank": 8,
-        "full_name": "herdrdev/herdr",
-        "language": "Rust",
-        "license": "Apache-2.0",
-        "latest_release": "v0.9.5",
-        "stars_today": 374,
-        "stars_today_source": "https://github.com/trending?since=daily",
-        "scraped_at_cst": "2026-11-08T23:09:15+08:00",
-        "stars_total": 49302,
-        "forks": 3979,
-        "attention": 92,
-        "sa_tier": "P1",
-        "why_exploding": "Rust terminal multiplexer and execution harness built to supervise parallel coding agents."
-      },
-      {
-        "rank": 9,
         "full_name": "dsx-ai-factory/nvke",
         "language": "Go",
         "license": "Apache-2.0",
         "latest_release": "v0.23.1",
         "stars_today": 345,
+        "provenance": "measured",
+        "raw_html_article_rank": 2,
+        "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
+        "raw_html_sha256_lf": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
         "stars_today_source": "https://github.com/trending?since=daily",
-        "scraped_at_cst": "2026-11-08T23:09:15+08:00",
-        "stars_total": 724,
+        "scraped_at_cst": "2026-11-09T00:49:45+08:00",
+        "stars_total": 751,
         "forks": 106,
         "attention": 99,
         "sa_tier": "P0",
-        "why_exploding": "Single-day +91% star growth (379->724): NVIDIA Kubernetes Engine open-source bare-metal GPU management plane (CAPNICo + TPM/SPIFFE + OVN-K8s + NKTP + NVSentinel + GPU-free mock-NICo)."
+        "why_exploding": "Verified evidence (measured): +345 stars today in DOM article #2 (751 DOM stars), open-source Go/CAPI bare-metal GPU K8s management plane under dsx-ai-factory org; Driver inference: sovereign/bare-metal AI Factory reference architecture."
+      },
+      {
+        "rank": 7,
+        "full_name": "anthropics/claude-quickstarts",
+        "language": "Python",
+        "license": "MIT",
+        "latest_release": "HEAD",
+        "stars_today": 28,
+        "provenance": "measured",
+        "raw_html_article_rank": 4,
+        "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
+        "raw_html_sha256_lf": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
+        "stars_today_source": "https://github.com/trending?since=daily",
+        "scraped_at_cst": "2026-11-09T00:49:45+08:00",
+        "stars_total": 19274,
+        "forks": 3120,
+        "attention": 86,
+        "sa_tier": "P1",
+        "why_exploding": "Verified evidence (measured): +28 stars today in DOM article #4 (19,274 DOM stars), official Anthropic Computer Use & enterprise starter templates."
+      },
+      {
+        "rank": 8,
+        "full_name": "google-deepmind/mujoco",
+        "language": "C",
+        "license": "Apache-2.0",
+        "latest_release": "v3.5.0",
+        "stars_today": 26,
+        "provenance": "measured",
+        "raw_html_article_rank": 8,
+        "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
+        "raw_html_sha256_lf": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
+        "stars_today_source": "https://github.com/trending?since=daily",
+        "scraped_at_cst": "2026-11-09T00:49:45+08:00",
+        "stars_total": 16252,
+        "forks": 1890,
+        "attention": 84,
+        "sa_tier": "P2",
+        "why_exploding": "Verified evidence (measured): +26 stars today in DOM article #8 (16,252 DOM stars), DeepMind MuJoCo physics simulator for embodied AI."
+      }
+    ],
+    "unverified_or_rotated_entries_excluded_from_track_a": [
+      {
+        "full_name": "GoogleCloudPlatform/generative-ai",
+        "stars_today": "not_measured",
+        "reason": "Appeared only in earlier 23:09 CST transient stdout parse that was not saved as raw HTML bytes before GitHub Trending rotated to 9 rows at 00:49:45 CST (absent from evidence/trending-daily-2026-11-08-raw.html sha256: 353914ef...); strictly excluded from confirmed Track A leaderboard."
+      },
+      {
+        "full_name": "Albert-Weasker/niubigeo",
+        "stars_today": "not_measured",
+        "reason": "Absent from archived raw HTML evidence/trending-daily-2026-11-08-raw.html (sha256: 353914ef...); excluded from confirmed Track A leaderboard (retained in Top 15 HFS audit as P3 hype_watch case study with stars_today=not_measured)."
+      },
+      {
+        "full_name": "jub0t/Concat",
+        "stars_today": "not_measured",
+        "reason": "Absent from archived raw HTML evidence/trending-daily-2026-11-08-raw.html (sha256: 353914ef...); excluded from confirmed Track A leaderboard."
+      },
+      {
+        "full_name": "herdrdev/herdr",
+        "stars_today": "not_measured",
+        "reason": "Absent from archived raw HTML evidence/trending-daily-2026-11-08-raw.html (sha256: 353914ef...); excluded from confirmed Track A leaderboard."
       }
     ],
     "track_b_new_repo_breakout_slope": [

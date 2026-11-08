@@ -40,7 +40,7 @@
     • 达到窗口 80% 时一次性重写整段历史前缀
   </text>
   <text x="60" y="228" fill="#FCA5A5" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
-    • 致命缺陷 1：破坏 KV Prefix Cache（命中率跌至 ~38%）
+    • 致命缺陷 1：破坏 KV Prefix Cache（50轮算例跌至 ~38% [synthetic]）
   </text>
   <text x="60" y="254" fill="#FCA5A5" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
     • 致命缺陷 2：单向有损摘要永久抹除早期报错文件名与行号
