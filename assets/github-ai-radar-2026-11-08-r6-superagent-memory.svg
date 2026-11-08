@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131C33"/>
+    </linearGradient>
+    <linearGradient id="accent6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg6)"/>
+  <rect x="28" y="24" width="1224" height="672" rx="18" fill="#0B1325" stroke="#1E293B" stroke-width="2"/>
+  <rect x="28" y="24" width="1224" height="6" rx="3" fill="url(#accent6)"/>
+
+  <!-- Header -->
+  <text x="56" y="68" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">
+    ROUND 6 ARCHITECTURE SELECTION FAQ · 2026-11-08 NIGHT SHIFT · PROVENANCE-VERIFIED
+  </text>
+  <text x="56" y="102" fill="#F8FAFC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="25" font-weight="800">
+    自主 SuperAgent 微内核与三层渐进记忆选型：dsh-superagent + claude-mem + craft-anything
+  </text>
+  <text x="56" y="128" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="14">
+    Source 游标门禁 + Subscription 零 Eval 直通扇出 + person/* 注意力面板 + ~/.claude-mem 三步披露 + Rust 320 净室探针
+  </text>
+
+  <!-- Top 3 Breakout Pillars -->
+  <rect x="56" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#0284C7" stroke-width="1.5"/>
+  <text x="76" y="176" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
+    1. deepseek-ai/dsh-superagent-prototype (v0.1.0)
+  </text>
+  <text x="76" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Track B #2: 21,107★ / 8d ≈ 2,638★/d (stars_today: not_measured)
+  </text>
+  <text x="76" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 6 原语：Source → Trigger → Thread → Eval → Mandate → Ticket
+  </text>
+  <text x="76" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • Subscription 在途工单跟帖零 Eval 直通扇出，绝不越权
+  </text>
+  <text x="76" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 前台 Shell &gt;5s 自动转后台；重试退避 2s → 60s
+  </text>
+  <text x="76" y="288" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    • Web 面板仅显示 person/* 工单（健康工单占 0 像素）
+  </text>
+
+  <rect x="452" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#6366F1" stroke-width="1.5"/>
+  <text x="472" y="176" fill="#818CF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
+    2. thedotmack/claude-mem (v15.12.0 · Apache-2.0)
+  </text>
+  <text x="472" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Weekly Snapshot: 73,659★ (stars_today: not_measured)
+  </text>
+  <text x="472" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 旁路 Observer 提炼 decision / bugfix / security_alert
+  </text>
+  <text x="472" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • Layer 1 启动仅注入 ~2k Token 极简目录 (Compact Index)
+  </text>
+  <text x="472" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • Layer 2/3 按需通过 mem-search 展开 Timeline 与 Details
+  </text>
+  <text x="472" y="288" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    • 原生支持 npx claude-mem install --ide dsh 接入 DSH
+  </text>
+
+  <rect x="848" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#10B981" stroke-width="1.5"/>
+  <text x="868" y="176" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
+    3. storytold/craft-anything (100% Pure Rust)
+  </text>
+  <text x="868" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Track B #1: 22,088★ / 8d ≈ 2,761★/d (stars_today: not_measured)
+  </text>
+  <text x="868" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 320 个双模确定性探针（每个既是 CLI 又是 MCP 工具）
+  </text>
+  <text x="868" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • Study → Build → Check（3 种屏幕宽度/自测）→ Ready
+  </text>
+  <text x="868" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 默认 Clean-Room 模式拒绝读取内部源码，严守合规边界
+  </text>
+  <text x="868" y="288" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    • 显式 --deep 解锁反汇编 / Pseudo-C / Call Graph / Ghidra
+  </text>
+
+  <!-- Closed-Form FinOps & Attention Comparison -->
+  <rect x="56" y="344" width="1168" height="246" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="374" fill="#F8FAFC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    闭式参数化月度算例（8,800 事件/月 = 2,200 执行工单 + 6,600 跟帖/噪音；In $3/1M, Out $15/1M · synthetic, independently_reproduced=false）
+  </text>
+
+  <!-- Path A -->
+  <text x="76" y="412" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    路径 A：无门禁 Webhook + 全量 5 轮历史硬塞 (8,800 路由 + 120k In/单)
+  </text>
+  <rect x="540" y="396" width="500" height="22" rx="4" fill="#EF4444"/>
+  <text x="1052" y="412" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    $1,584.00/月 · 注意力 110.0h/月
+  </text>
+
+  <!-- Path B -->
+  <text x="76" y="456" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    路径 B：50% 正则过滤 + Vector RAG Top-15 切片 (4,400 路由 + 40k In/单)
+  </text>
+  <rect x="540" y="440" width="208" height="22" rx="4" fill="#F59E0B"/>
+  <text x="760" y="456" fill="#FCD34D" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    $660.00/月 · 注意力 66.0h/月
+  </text>
+
+  <!-- Path C -->
+  <text x="76" y="500" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    路径 C：dsh-superagent 扇出 + claude-mem 三层披露 (2,200 Eval + 10k In/单)
+  </text>
+  <rect x="540" y="484" width="50" height="22" rx="4" fill="#10B981"/>
+  <text x="602" y="500" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    $158.40/月 (-$1,425.60/月, -90.00%) · 注意力 22.0h/月 (-88.0h/月, -80.00%)
+  </text>
+
+  <!-- Formula Summary Box -->
+  <rect x="76" y="522" width="1128" height="52" rx="8" fill="#1E293B"/>
+  <text x="92" y="544" fill="#93C5FD" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Path A = 8,800×$0.0750 ($660.00) + 2,200×$0.4200 ($924.00) = $1,584.00/mo | Path B = 4,400×$0.0750 ($330.00) + 2,200×$0.1500 ($330.00) = $660.00/mo
+  </text>
+  <text x="92" y="564" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Path C = 2,200×$0.0300 ($66.00 Eval) + 2,200×$0.0420 ($92.40 3-Layer Mem) = $158.40/mo | Attention: 2,200×0.05h=110.0h vs 2,200×0.01h=22.0h (-88.0h/mo)
+  </text>
+
+  <!-- Footer -->
+  <rect x="56" y="608" width="1168" height="64" rx="10" fill="#111C35" stroke="#1E293B" stroke-width="1"/>
+  <text x="76" y="634" fill="#F8FAFC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    架构师落地口诀：用 dsh-superagent 管住“何时动、何时问人”，用 claude-mem 管住“跨会话按需记忆”，用 craft-anything 管住“净室逆向与3宽度量化验收”。
+  </text>
+  <text x="76" y="656" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11">
+    Evidence: workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json (sha256: b63e1547...) · FAQ: docs/superagent-microkernel-memory-vs-langgraph-selection-faq.md
+  </text>
+</svg>

@@ -312,6 +312,24 @@
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/agent-browser-desktop-a11y-vs-playwright-vision-selection-faq.md",
       "conditions_and_scope": "Closed-form input-side token sensitivity formula verified in tests/radar-integration.cjs; output tokens and total bills are marked not_measured."
+    },
+    {
+      "claim_id": "CLAIM-R6-01",
+      "repo": "deepseek-ai/dsh-superagent-prototype, thedotmack/claude-mem & storytold/craft-anything",
+      "metric": "dsh-superagent-prototype v0.1.0 (Cordis 4.0.5-alpha.1 micro-kernel, 6 domain primitives, 7 ticket stages, >5s shell auto-backgrounding, 2s->60s exponential retry); claude-mem v15.12.0 (3-layer progressive disclosure index->timeline->details, <private> tag redaction, --ide dsh support); craft-anything (100% pure Rust, 320 dual-mode CLI+MCP tools, Clean-Room 3-width visual/layout diff vs Deep disassembly/Ghidra)",
+      "provenance_type": "anonymized_reported",
+      "independently_reproduced": false,
+      "primary_source_url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/001-domain.md",
+      "conditions_and_scope": "Repository metadata and source files verified directly via GitHub REST API and archived Search API JSON (b63e1547...); architectural constants documented from upstream primary docs."
+    },
+    {
+      "claim_id": "CLAIM-R6-02",
+      "repo": "deepseek-ai/dsh-superagent-prototype & thedotmack/claude-mem",
+      "metric": "Closed-form 400 events/day x 22 workdays = 8,800 events/mo (2,200 executed tickets + 6,600 follow-up/noise events; $3/1M in, $15/1M out): Path A Unfiltered Webhook + Raw 5-Session Dump (8,800x$0.0750=$660.00 + 2,200x$0.4200=$924.00 -> $1,584.00/mo API, 110.0h/mo attention) vs Path B 50% Regex + Vector RAG Top-15 (4,400x$0.0750=$330.00 + 2,200x$0.1500=$330.00 -> $660.00/mo API, 66.0h/mo attention) vs Path C dsh-superagent Subscription Fan-Out + claude-mem 3-Layer Disclosure (2,200x$0.0300=$66.00 + 2,200x$0.0420=$92.40 -> $158.40/mo API [-$1,425.60/mo, -90.00%], 22.0h/mo attention [-88.0h/mo, -80.00%])",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/superagent-microkernel-memory-vs-langgraph-selection-faq.md",
+      "conditions_and_scope": "Closed-form parametric FinOps and human-attention model verified by automated assertions in tests/radar-integration.cjs."
     }
   ]
 }
