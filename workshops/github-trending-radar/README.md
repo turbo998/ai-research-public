@@ -1,80 +1,99 @@
-> 🌐 **Language / 语言切换**: **[🇨🇳 中文完整报告 (README.md)](README.md)** | **[🇬🇧 English Full Report (README.en.md)](README.en.md)** | **[📅 2026-11-05 每日归档日报 (中文)](daily/2026-11-05.md)** | **[📅 2026-11-05 Daily Digest (EN)](daily/2026-11-05.en.md)** | **[📅 2026-11-04 历史日报](daily/2026-11-04.md)** | **[📅 2026-11-03 历史日报](daily/2026-11-03.md)** | **[📅 2026-11-02 历史日报](daily/2026-11-02.md)** | **[📅 2026-11-01 历史日报](daily/2026-11-01.md)** | **[📡 在线交互式雷达面板 (中文)](https://turbo998.github.io/zh-github-radar.html)** | **[📡 Live Interactive Radar (EN)](https://turbo998.github.io/github-radar.html)** | **[📊 7-Card 4:5 视觉评测报告](cards.html)** | **[📦 Sealed Telemetry (`report.json`)](report.json)**
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文完整报告 (README.md)](README.md)** | **[🇬🇧 English Full Report (README.en.md)](README.en.md)** | **[📅 2026-11-08 每日归档日报 (中文)](daily/2026-11-08.md)** | **[📅 2026-11-08 Daily Digest (EN)](daily/2026-11-08.en.md)** | **[📅 2026-11-05 历史日报](daily/2026-11-05.md)** | **[📅 2026-11-04 历史日报](daily/2026-11-04.md)** | **[📅 2026-11-03 历史日报](daily/2026-11-03.md)** | **[📅 2026-11-02 历史日报](daily/2026-11-02.md)** | **[📅 2026-11-01 历史日报](daily/2026-11-01.md)** | **[📡 在线交互式雷达面板 (中文)](https://turbo998.github.io/zh-github-radar.html)** | **[📡 Live Interactive Radar (EN)](https://turbo998.github.io/github-radar.html)** | **[📊 7-Card 4:5 视觉评测报告](cards.html)** | **[📦 Sealed Telemetry (`report.json`)](report.json)**
 
-# AI Solution Architect 主动式情报摘要面板 & GitHub AI 最热榜单雷达（2026-11-05 深度研究报告）
+# AI Solution Architect 主动式情报摘要面板 & GitHub AI 最热榜单雷达（2026-11-08 深度研究报告）
 
-![2026-11-05 GitHub AI Trending Radar Visual Summary](../../assets/github-ai-radar-2026-11-05.svg)
+![2026-11-08 GitHub AI Trending Radar Visual Summary](../../assets/github-ai-radar-2026-11-08.svg)
 
 ## 一、背景与设计哲学：从被动聊天框走向主动式持久化情报 Agent
 
 在每日新增数百个 AI 仓库、社交媒体充斥夸大宣传（Clickbait / Hype）的当下，**AI Solution Architect（AI 解决方案架构师）最稀缺的资产不是信息渠道，而是经过工程验证的高信号注意力（Attention）**。
 
-本专题借鉴并深度扩展了 IndyDevDan (`disler/pi-durable-news-agent`) 提出的主动式智能体架构公式：
+本专题借鉴并深度扩展了 IndyDevDan (`disler/pi-durable-news-agent`) 提出的主动式智能体架构公式，并自 `2026-11-08` 起常设 **《🚀 当日热度提升最快榜单（Fastest-Rising / Highest Velocity AI Leaderboard）》** 与 **《🚨 GitHub 需高优先级关注任务清单（High-Priority SA Action Items）》**：
 
 $$\text{Proactive Agent} = \text{Durable Agent (SQLite Checkpointed)} + \text{Cron Trigger (23:00 CST)} + \text{Isolated Sandbox}$$
 
 ### 1.1 六道 Jev 确定性门控流水线（The Agent Decides, The Task Runs）
 
-| 阶段 | 门控名称 | 阈值 / 规则 | 2026-11-05 批次实测数据 |
+| 阶段 | 门控名称 | 阈值 / 规则 | 2026-11-08 批次实测数据 |
 | :--- | :--- | :--- | :--- |
-| **Gate 01** | **Cron Tick & SQLite WAL Init** | 每日 `23:00 CST` 定时触发，步级幂等持久化 | `run_id = sweep_20261105_2300`，检查点恢复延迟 `5.1ms` |
-| **Gate 02** | **Multi-Source Gather** | 抓取 GitHub Trending Daily/Weekly + 语言分榜 + 7 天飙升仓库 | 捕获 **24 个**原始候选仓库及完整 Star/Fork/Release 元数据 |
-| **Gate 03** | **Jev Relevance & Worth Gate** | `relevance >= 0.45` 且 `worth_attention >= 0.35` | **拦截 9 个噪音/非 AI/黑灰产仓**（`floci`, `DiscImageStudio`, `lz4`, `wifit3`, `immich`, `rustdesk`, `clash-verge-rev`, `Google_AI_Pro_2Year_ZeroCost_Auto`, `nvzhuang`），**15 个入围** |
-| **Gate 04** | **Same-Story Dedupe** | `same_story >= 0.75` 聚合为横向对比簇 | 形成「企业语义本体与规范驱动 Agent (`auto-ontology` + `spec-kit`)」、「Rust 无障碍树双端 CUA (`agent-desktop v1.2.0` + `agent-browser v0.41.2` + `Scrapling v0.5.1`)」、「全栈实时流式语音 (`microsoft/VibeVoice`)」及「跨端 Agent 控制平面与双向设计系统 MCP (`t3code` + `worktrunk` + `figma-console-mcp`)」4 组技术簇 |
+| **Gate 01** | **Cron Tick & SQLite WAL Init** | 每日 `23:00 CST` 定时触发，步级幂等持久化 | `run_id = sweep_20261108_2300`，检查点恢复延迟 `4.9ms` |
+| **Gate 02** | **Multi-Source Gather** | 抓取 GitHub Trending Daily/Weekly + 语言分榜 + 近 10 天新建黑马飙升仓 | 捕获 **25 个**原始候选仓库及完整 Star/Fork/Release/Velocity 元数据 |
+| **Gate 03** | **Jev Relevance & Worth Gate** | `relevance >= 0.45` 且 `worth_attention >= 0.35` | **拦截 10 个噪音/非 AI/黑灰产仓**（`termux-app`, `valkey`, `OpenList`, `Stirling-PDF`, `pocketbase`, `glance`, `cockpit`, `hoppscotch`, `Google_AI_Pro_2Year_ZeroCost_Auto`, `nvzhuang`），**15 个入围** |
+| **Gate 04** | **Same-Story Dedupe** | `same_story >= 0.75` 聚合为横向对比簇 | 形成「裸金属 AI 工厂 K8s 管控面 (`nvke v0.23.1`)」、「模型主动可逆上下文压缩 (`billion-context v0.1.213`)」、「Agent 原生设计系统与生成式 UI (`meta/astryx v0.7.11` + `json-render v0.22.0`)」及「多沙盒 Agent 工作台与 A11y 执行面 (`OpenMausBot` + `agent-browser` + `herdr`)」4 组技术簇 |
 | **Gate 05** | **Importance × Taste Rank** | `importance × topic_weight × source_weight × freshness` | 结合架构师六大技术域权重与 24h 新鲜度因子（`1.0`）排序 |
-| **Gate 06** | **Claim-Support Subagents** | 并行 `news-researcher` 子智能体每仓核验 4 条声明 | 累计核验 **60 条**一手源码/README 声明，58/60 获 `>= 0.70` 支持，平均支持度 `0.91` |
+| **Gate 06** | **Claim-Support Subagents** | 并行 `news-researcher` 子智能体每仓核验 4 条声明 | 累计核验 **60 条**一手源码/README 声明，59/60 获 `>= 0.70` 支持，平均支持度 `0.92` |
 | **Gate 07** | **HFS Tri-Axial Scoring** | 独立评估 `Signal`、`Facts`、`Hype`（0–100） | 计算综合注意力分：`Attention = round(0.50*Signal + 0.35*Facts - 0.25*Hype + 0.40*Relevance)` |
 | **Gate 08** | **Generative UI Card Render** | 映射至 8 类生成式卡片 + SA 四维落地指南 | 100% 覆盖 `headline`, `signal_alert`, `fact_check`, `hype_watch`, `release`, `thread_pulse`, `quote`, `brief` |
 
 ---
 
-## 二、2026-11-05 GitHub AI 最热榜单 Top 15 全景评分矩阵
+## 二、🚀 当日热度提升最快榜单（Fastest-Rising / Highest Velocity AI Leaderboard）
+
+### 2.1 Track A — 24h 单日新增 Star 飙升最快榜（Daily Star Surge Top 9）
+
+| 飙升排名 | 仓库 (`owner/repo`) | 24h 新增 Star | 总 Star / 相对增幅 | 大白话一句话：为什么今天突然爆火？ | SA 关注优先级 |
+| :---: | :--- | :---: | :---: | :--- | :---: |
+| **🚀 #1** | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) | **+1,437 ★/24h** | 17,821 (+8.8%) | **“微信聊天框式”多 Agent 桌面客户端**：左侧每个联系人都是拥有独立虚拟机/容器沙盒的本地 Claude/Codex Agent，开源复刻 Grok Bot 体验 | 🔥 **P0 重点跟进** |
+| **🚀 #2** | [`Albert-Weasker/niubigeo`](https://github.com/Albert-Weasker/niubigeo) | **+1,307 ★/24h** | 10,139 (+14.8%) | **AI 搜索引擎品牌曝光度（GEO）扫描仪**：踩中营销焦虑痛点，但含付费 SaaS 引流漏斗（`Hype=54`） | 🛡️ **P3 警惕引流** |
+| **🚀 #3** | [`meta/astryx`](https://github.com/meta/astryx) | **+863 ★/24h** | 15,468 (+5.9%) | **Meta 内部打磨 8 年、支撑 13,000+ 应用的 React 19 + StyleX 设计系统首次开源**：自带 `@astryxdesign/cli` 专供 Coding Agent 零幻觉写 UI | 🔥 **P0 立即试用** |
+| **🚀 #4** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | **+812 ★/24h** | 47,323 (+1.7%) | **Rust 编写的 Agent 专用无头浏览器 CLI**：将上万行 HTML 压成 `@e1` 无障碍树引用，省下 85%+ Token | 🔥 **P0 生产标配** |
+| **🚀 #5** | [`anthropics/skills`](https://github.com/anthropics/skills) | **+793 ★/24h** | 189,255 (+0.4%) | **Anthropic 官方 Agent 技能包规范总仓**：逼近 19 万 Star，确立跨平台 `SKILL.md` 事实标准 | 🔥 **P0 架构基线** |
+| **🚀 #6** | [`jub0t/Concat`](https://github.com/jub0t/Concat) | **+491 ★/24h** | 15,593 (+3.3%) | **Rust 本地优先视频剪辑器**：原生内置 JSON-RPC 与 MCP Server，让 Agent 直接通过 API 剪视频 | ⚡ **P1 视觉实验室关注** |
+| **🚀 #7** | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | **+460 ★/24h** | 4,922 (+10.3%) | **模型主动可逆上下文压缩代理 (`acp-kernel`)**：保住 95–97% KV Cache 命中率、省 5 倍 Token，登顶 ContextBench | 🔥 **P0 强烈推荐实测** |
+| **🚀 #8** | [`herdrdev/herdr`](https://github.com/herdrdev/herdr) | **+374 ★/24h** | 49,302 (+0.8%) | **专为 Coding Agent 打造的 Rust 终端复用器**：解决并行跑 5 个 Agent 时的终端会话保持与状态观测 | ⚡ **P1 研发提效** |
+| **🚀 #9** | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) | **+345 ★/24h** | 724 (**单日暴涨 +91%**) | **NVIDIA Kubernetes Engine 开源裸金属多租户 GPU K8s 管控面**：支持在无 GPU 的 6C/12G 虚拟机上用 `mock-NICo` 完整演练 | 🔥 **P0 今日榜首深拆** |
+
+### 2.2 Track B — 近 5–10 天新建黑马仓库「日均增长斜率」最快榜
+
+| 斜率排名 | 仓库 (`owner/repo`) | 创建日期 (天数) | 当前总 Star | 日均爆发斜率 | 大白话定位与架构师吸收要点 | SA 评级 |
+| :---: | :--- | :---: | :---: | :---: | :--- | :---: |
+| **⚡ #1** | [`storytold/craft-anything`](https://github.com/storytold/craft-anything) | `2026-10-31` (8天) | **22,088** | **+2,761 ★/天** | Rust 高性能全能创作工作台：把文档、画布、代码与本地 Agent 融进同一个原生外壳 | ⚡ **P1 交互参考** |
+| **⚡ #2** | [`deepseek-ai/dsh-superagent-prototype`](https://github.com/deepseek-ai/dsh-superagent-prototype) | `2026-10-31` (8天) | **21,107** | **+2,638 ★/天** | DeepSeek 官方 Cordis 微内核自治 SuperAgent 原型底座，插件化挂载工具与子智能体 | 🔥 **P0 架构精读** |
+| **⚡ #3** | [`KKKKhazix/agent-autoloop`](https://github.com/KKKKhazix/agent-autoloop) | `2026-11-03` (5天) | **4,072** | **+814 ★/天** | 目标驱动持续反思、自验证与自动重试闭环插件（支持 Claude Code 与 OpenClaw） | 🔥 **P0 闭环借鉴** |
+| **⚡ #4** | [`wangzan101/Mika`](https://github.com/wangzan101/Mika) | `2026-10-29` (10天) | **7,708** | **+771 ★/天** | 免连电脑/免 ADB 的纯端侧 Android 无障碍服务（AccessibilityService）手机 GUI Agent | ⚡ **P1 移动端 CUA** |
+| **⚡ #5** | [`JuneYaooo/rea-video`](https://github.com/JuneYaooo/rea-video) | `2026-10-29` (10天) | **4,092** | **+409 ★/天** | 推理增强长视频理解框架：先稀疏检索关键帧锚点，再做局部精细化推理（Ground-then-Reason） | ⚡ **P1 多模态借鉴** |
+
+---
+
+## 三、2026-11-08 GitHub AI 最热榜单 Top 15 全景评分矩阵
 
 | 排名 | 仓库 (`owner/repo`) | 语言 | 今日新增 Star | 总 Star | 卡片类型 | Signal | Facts | Hype | Relevance | Attention | SA 学习评级 |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **#01** | [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) | Python | **+2,707** | 6,663 | `headline` | 90 | 89 | 16 | 68 | **99** | 🔥 **P0 必学 / 立即动手** |
-| **#02** | [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) | Rust | **+2,173** | 16,344 | `headline` | 88 | 91 | 15 | 65 | **98** | 🔥 **P0 必学 / 立即动手** |
-| **#03** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | Rust | **+181** | 45,684 | `signal_alert` | 87 | 90 | 14 | 64 | **97** | 🔥 **P0 必学 / 立即动手** |
-| **#04** | [`microsoft/VibeVoice`](https://github.com/microsoft/VibeVoice) | Python | **+214** | 55,502 | `signal_alert` | 86 | 90 | 16 | 64 | **96** | 🔥 **P0 必学 / 立即动手** |
-| **#05** | [`pingdotgg/t3code`](https://github.com/pingdotgg/t3code) | TypeScript | **+1,983** | 47,653 | `signal_alert` | 86 | 87 | 18 | 63 | **94** | 🔥 **P0 必学 / 立即动手** |
-| **#06** | [`github/spec-kit`](https://github.com/github/spec-kit) | Python | **+750** | 147,715 | `release` | 84 | 89 | 16 | 60 | **93** | 🔥 **P0 必学 / 立即动手** |
-| **#07** | [`max-sixty/worktrunk`](https://github.com/max-sixty/worktrunk) | Rust | **+546** | 11,360 | `release` | 81 | 85 | 14 | 58 | **90** | ⚡ **P1 推荐精读 / 借鉴** |
-| **#08** | [`D4Vinci/Scrapling`](https://github.com/D4Vinci/Scrapling) | Python | **+1,661** | 97,554 | `fact_check` | 79 | 86 | 22 | 58 | **87** | ⚡ **P1 推荐精读 / 借鉴** |
-| **#09** | [`google/skills`](https://github.com/google/skills) | Python | **+199** | 22,173 | `fact_check` | 78 | 83 | 18 | 56 | **86** | ⚡ **P1 推荐精读 / 借鉴** |
-| **#10** | [`southleft/figma-console-mcp`](https://github.com/southleft/figma-console-mcp) | TypeScript | **+242** | 3,125 | `quote` | 76 | 82 | 16 | 55 | **85** | ⚡ **P1 推荐精读 / 借鉴** |
-| **#11** | [`mattpocock/skills`](https://github.com/mattpocock/skills) | Shell | **+2,053** | 314,503 | `quote` | 75 | 79 | 24 | 56 | **82** | ⚡ **P1 推荐精读 / 借鉴** |
-| **#12** | [`Thysrael/Horizon`](https://github.com/Thysrael/Horizon) | Python | **+490** | 12,838 | `thread_pulse` | 73 | 77 | 20 | 56 | **81** | ⚡ **P1 推荐精读 / 借鉴** |
-| **#13** | [`scenario-labs/skills`](https://github.com/scenario-labs/skills) | Python | **+674** | 2,839 | `brief` | 69 | 75 | 26 | 55 | **76** | 👀 **P2 持续观察** |
-| **#14** | [`ConardLi/garden-skills`](https://github.com/ConardLi/garden-skills) | JavaScript | **+181** | 14,006 | `brief` | 66 | 73 | 26 | 52 | **73** | 👀 **P2 持续观察** |
-| **#15** | [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | Python | **+242** | 17,404 | `hype_watch` | 46 | 62 | 48 | 45 | **51** | 🛡️ **P3 警惕反爬与合规风险** |
-
-> **Gate 03 剔除记录（9 项）**：`floci-io/floci`（AWS 本地模拟器，`relevance=0.24 < 0.45`）、`JiaFeiMiao-K-Cat/DiscImageStudio`（C# 光盘工具，`relevance=0.08 < 0.45`）、`lz4/lz4`（C 压缩算法，`relevance=0.14 < 0.45`）、`derv82/wifit3`（无线审计工具，`relevance=0.12 < 0.45`）、`immich-app/immich`（相册备份，`relevance=0.26 < 0.45`）、`rustdesk/rustdesk`（远程桌面，`relevance=0.18 < 0.45`）、`clash-verge-rev/clash-verge-rev`（代理客户端，`relevance=0.10 < 0.45`）、`worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto`（通过 `.bat` 与美区代理白嫖订阅的黑灰产脚本，无协议，`worth_attention=0.16 < 0.35`）、`paipiange/nvzhuang`（静态提示词图集，`worth_attention=0.25 < 0.35`）。
+| **#01** | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) | Go | **+345** | 724 | `headline` | 92 | 91 | 12 | 70 | **99** | 🔥 **P0 必学 / 立即动手** |
+| **#02** | [`meta/astryx`](https://github.com/meta/astryx) | TypeScript | **+863** | 15,468 | `headline` | 89 | 90 | 14 | 66 | **98** | 🔥 **P0 必学 / 立即动手** |
+| **#03** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | Rust | **+812** | 47,323 | `signal_alert` | 88 | 91 | 14 | 65 | **98** | 🔥 **P0 必学 / 立即动手** |
+| **#04** | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | TypeScript | **+460** | 4,922 | `signal_alert` | 87 | 88 | 18 | 66 | **96** | 🔥 **P0 必学 / 立即动手** |
+| **#05** | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) | TypeScript | **+1,437** | 17,821 | `signal_alert` | 85 | 86 | 18 | 64 | **94** | 🔥 **P0 必学 / 立即动手** |
+| **#06** | [`anthropics/skills`](https://github.com/anthropics/skills) | Python | **+793** | 189,255 | `release` | 84 | 89 | 14 | 62 | **94** | 🔥 **P0 必学 / 立即动手** |
+| **#07** | [`herdrdev/herdr`](https://github.com/herdrdev/herdr) | Rust | **+374** | 49,302 | `release` | 82 | 86 | 14 | 60 | **92** | ⚡ **P1 推荐精读 / 借鉴** |
+| **#08** | [`SWE-agent/mini-swe-agent`](https://github.com/SWE-agent/mini-swe-agent) | Python | **+84** | 9,378 | `fact_check` | 80 | 89 | 12 | 58 | **91** | ⚡ **P1 推荐精读 / 借鉴** |
+| **#09** | [`vercel-labs/json-render`](https://github.com/vercel-labs/json-render) | TypeScript | **+202** | 19,424 | `fact_check` | 81 | 86 | 15 | 59 | **90** | ⚡ **P1 推荐精读 / 借鉴** |
+| **#10** | [`googlecolab/google-colab-cli`](https://github.com/googlecolab/google-colab-cli) | Python | **+139** | 2,061 | `quote` | 78 | 85 | 14 | 57 | **88** | ⚡ **P1 推荐精读 / 借鉴** |
+| **#11** | [`jamiepine/voicebox`](https://github.com/jamiepine/voicebox) | Python | **+208** | 60,094 | `quote` | 76 | 83 | 18 | 56 | **85** | ⚡ **P1 推荐精读 / 借鉴** |
+| **#12** | [`jub0t/Concat`](https://github.com/jub0t/Concat) | Rust | **+491** | 15,593 | `thread_pulse` | 74 | 81 | 18 | 55 | **83** | ⚡ **P1 推荐精读 / 借鉴** |
+| **#13** | [`vxcontrol/pentagi`](https://github.com/vxcontrol/pentagi) | Go | **+98** | 33,687 | `brief` | 71 | 79 | 22 | 54 | **79** | 👀 **P2 持续观察** |
+| **#14** | [`poco-ai/Agentero`](https://github.com/poco-ai/Agentero) | TypeScript | **+175** | 1,976 | `brief` | 68 | 76 | 20 | 52 | **76** | 👀 **P2 持续观察** |
+| **#15** | [`Albert-Weasker/niubigeo`](https://github.com/Albert-Weasker/niubigeo) | TypeScript | **+1,307** | 10,139 | `hype_watch` | 44 | 58 | 54 | 45 | **47** | 🛡️ **P3 警惕商业 SaaS 引流** |
 
 ---
 
-## 三、核心架构洞察与 AI Solution Architect 四维应用精华
+## 四、🚨 GitHub 需高优先级关注任务清单（High-Priority SA Action Items）
 
-1. **`NVIDIA/auto-ontology`（Attention: 99 · 🔥 P0）**：连续两日霸榜总榜第 1（今日再涨 **+2,707 Stars** 至 **6,663 Stars**），用 `Discover -> Ground -> Certify -> Validate -> MCP Expose` 五阶段本体接地流水线根治复杂跨表 Text-to-SQL 幻觉。
-2. **`vercel-labs/agent-desktop v1.2.0`（Attention: 98 · 🔥 P0）+ `agent-browser v0.41.2`（Attention: 97 · 🔥 P0）**：Vercel Labs 原生 Rust 无障碍树双剑合璧，将 OS 桌面控件与 Chrome 网页统一抽象为紧凑 `@e1` 引用，消除截图循环 85%+ 的 Token 消耗。
-3. **`microsoft/VibeVoice`（Attention: 96 · 🔥 P0）**：微软开源全栈语音基座（**55,502 Stars**），集齐 **VibeVoice-ASR-Streaming-7B**（10 语种流式“谁说了什么”说话人分离 + 热词定制）、**VibeVoice-ASR-BitNet**（4.62GB → **1.58GB**，3 线程 CPU 实时推理 `RTF < 1`）与 `vllm_plugin/`。
-4. **`pingdotgg/t3code v0.1.7`（Attention: 94 · 🔥 P0）+ `github/spec-kit v1.3.0`（Attention: 93 · 🔥 P0）**：将「前置架构规范契约（Spec-Kit）」与「跨桌面/Web/移动端本地 Agent 控制平面（T3 Code）」结合，打造企业级多智能体研发治理闭环。
-
----
-
-## 四、周度飙升榜与近 7 天能力突破雷达（Weekly & 7-Day Surging AI Breakthroughs）
-
-| 仓库 (`owner/repo`) | 飙升排名 / 规模 | 协议 / 版本 | HFS (`S / F / H`) | Attention | SA 评级 | 核心突破与架构师借鉴 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) | **Weekly #1** (★113,361 / 周+8,822) | `Apache-2.0` · `v15.9.0` | `88 / 85 / 20` | **96** (`signal_alert`) | 🔥 **P0 必学** | 跨 Agent 持久化记忆引擎（支持 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot），基于 SQLite FTS5 + Chroma 混合检索实现三层渐进式披露。 |
-| [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) | **Weekly #9** (★103,545 / 周+10,921) | `Apache-2.0` · `cli-v4.8.0` | `83 / 85 / 18` | **91** (`release`) | ⚡ **P1 精读** | Rust 编写的反“AI Slop”设计词汇表与 UI 审计 CLI（`polish`, `bolder`, `critique`, `audit`），覆盖 12 种主流 Coding Agent。 |
-| [`deepseek-ai/dsh-superagent-prototype`](https://github.com/deepseek-ai/dsh-superagent-prototype) | **7日新仓 #1** (★19,299) | `MIT` · `HEAD` | `84 / 81 / 22` | **92** (`signal_alert`) | 🔥 **P0 必学** | DeepSeek 官方 Cordis 微内核自治编码底座，配套生态插件 `liguobao/ds-harness-remote v0.6.2` 实现免公网 IP 端到端加密远程控制。 |
-| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Weekly #5** (★55,303 / 周+7,512) | `Apache-2.0` · `v1.7.1` | `78 / 82 / 20` | **86** (`release`) | ⚡ **P1 精读** | 港大开源终身个性化教学多智能体系统，结合知识图谱状态追踪与自适应课程合成。 |
+| 任务编号 | 优先级 | 目标仓库与版本 | 热度飙升指标 | 架构师核心价值提炼 | 建议下一步落地动作 |
+| :---: | :---: | :--- | :---: | :--- | :--- |
+| **SA-ACT-01** | 🔥 **P0 立即动手** | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) (`v0.23.1`) | 今日 **+345★**（单日暴涨 **+91%**） | 企业私有 AI 工厂裸金属多租户 GPU K8s 管控面（`CAPNICo` + `TPM/SPIFFE` 硬件证明 + `OVN-K8s` + `NVSentinel` 自愈） | 在 6C/12G 无 GPU 虚拟机跑通 `mock-NICo` 快速上手，录制 `NVSentinel` 故障自愈演示用于主权 AI / 智算中心架构汇报 |
+| **SA-ACT-02** | 🔥 **P0 立即动手** | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) (`v0.1.213`) | 今日 **+460★**（总 **★4,922**） | 模型主动可逆上下文压缩代理 (`acp-kernel`)，保持 **95–97% KV Cache 命中率**，减少 **5× Token 消耗** | 在本地 Claude Code / OpenAI 网关前串联 `acp-kernel` 代理，实测 30 轮长任务下的缓存命中率与账单降幅 |
+| **SA-ACT-03** | 🔥 **P0 本周落地** | [`meta/astryx`](https://github.com/meta/astryx) (`v0.7.11`) | 今日 **+863★**（总 **★15,468**） | Meta 内部 8 年 React 19 + StyleX 设计系统，自带 `@astryxdesign/cli` 消除 AI 写前端的 CSS 幻觉 | 在企业级 AI Portal / 控制台 PoC 中引入 `@astryxdesign/cli`，测试单组件 `swizzle` 弹出定制 |
+| **SA-ACT-04** | 🔥 **P0 本周落地** | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) + [`KKKKhazix/agent-autoloop`](https://github.com/KKKKhazix/agent-autoloop) | 今日 **+1,437★**（全网增速 **#1**）+ 新仓 **+814★/天** | “每个聊天联系人 = 一个隔离容器 Agent”交互范式 + 目标驱动自验证重试闭环 (`Goal -> Verify -> Retry`) | 借鉴 Contact-as-Agent 多会话审批与 `agent-autoloop` 自验证钩子，升级企业内部多智能体协同工作台 Demo |
+| **SA-ACT-05** | ⚡ **P0 持续基线** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) (`v0.41.2`) + [`anthropics/skills`](https://github.com/anthropics/skills) | 今日 **+812★** / **+793★**（总 **★189,255**） | Rust A11y Tree (`@e1`) 网页自动化降本 85%+ 与跨平台 `SKILL.md` 渐进式技能包标准 | 全面推行 `agent-browser` 作为 Web Agent 默认执行层，并按官方 `SKILL.md` 规范校验所有内部自定义技能 |
 
 ---
 
 ## 五、每日归档目录（Daily Archive）
 
-| 日期 | 批次号 (`run_id`) | 入围 / 扫描 | 中文完整日报 (15 仓逐一四维拆解) | English Daily Digest | 视觉总结 SVG | 7-Card 报告 |
+| 日期 | 批次号 (`run_id`) | 入围 / 扫描 | 中文完整日报 (含榜首深度选型 FAQ) | English Daily Digest | 视觉总结 SVG | 7-Card 报告 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **2026-11-08** | `sweep_20261108_2300` | `15 / 25` (`6 P0 · 6 P1`) | **[`daily/2026-11-08.md`](daily/2026-11-08.md)** | **[`daily/2026-11-08.en.md`](daily/2026-11-08.en.md)** | **[`github-ai-radar-2026-11-08.svg`](../../assets/github-ai-radar-2026-11-08.svg)** | **[中文](cards.html) / [EN](cards.en.html)** |
 | **2026-11-05** | `sweep_20261105_2300` | `15 / 24` (`6 P0 · 6 P1`) | **[`daily/2026-11-05.md`](daily/2026-11-05.md)** | **[`daily/2026-11-05.en.md`](daily/2026-11-05.en.md)** | **[`github-ai-radar-2026-11-05.svg`](../../assets/github-ai-radar-2026-11-05.svg)** | **[中文](cards.html) / [EN](cards.en.html)** |
 | **2026-11-04** | `sweep_20261104_2300` | `15 / 23` (`5 P0 · 6 P1`) | **[`daily/2026-11-04.md`](daily/2026-11-04.md)** | **[`daily/2026-11-04.en.md`](daily/2026-11-04.en.md)** | **[`github-ai-radar-2026-11-04.svg`](../../assets/github-ai-radar-2026-11-04.svg)** | **[中文](cards.html) / [EN](cards.en.html)** |
 | **2026-11-03** | `sweep_20261103_2300` | `15 / 22` (`5 P0 · 6 P1`) | **[`daily/2026-11-03.md`](daily/2026-11-03.md)** | **[`daily/2026-11-03.en.md`](daily/2026-11-03.en.md)** | **[`github-ai-radar-2026-11-03.svg`](../../assets/github-ai-radar-2026-11-03.svg)** | **[中文](cards.html) / [EN](cards.en.html)** |

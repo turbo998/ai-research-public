@@ -1,78 +1,99 @@
-> 🌐 **Language / 语言切换**: **[🇨🇳 中文完整报告 (README.md)](README.md)** | **[🇬🇧 English Full Report (README.en.md)](README.en.md)** | **[📅 2026-11-05 Daily Digest (EN)](daily/2026-11-05.en.md)** | **[📅 2026-11-05 每日归档日报 (中文)](daily/2026-11-05.md)** | **[📅 2026-11-04 Archive (EN)](daily/2026-11-04.en.md)** | **[📅 2026-11-03 Archive (EN)](daily/2026-11-03.en.md)** | **[📅 2026-11-02 Archive (EN)](daily/2026-11-02.en.md)** | **[📅 2026-11-01 Archive (EN)](daily/2026-11-01.en.md)** | **[📡 Live Interactive Radar (EN)](https://turbo998.github.io/github-radar.html)** | **[📡 在线交互式雷达面板 (中文)](https://turbo998.github.io/zh-github-radar.html)** | **[📊 7-Card 4:5 Benchmark Deck](cards.en.html)** | **[📦 Sealed Telemetry (`report.json`)](report.json)**
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文完整报告 (README.md)](README.md)** | **[🇬🇧 English Full Report (README.en.md)](README.en.md)** | **[📅 2026-11-08 Daily Digest (EN)](daily/2026-11-08.en.md)** | **[📅 2026-11-08 每日归档日报 (中文)](daily/2026-11-08.md)** | **[📅 2026-11-05 Archive (EN)](daily/2026-11-05.en.md)** | **[📅 2026-11-04 Archive (EN)](daily/2026-11-04.en.md)** | **[📅 2026-11-03 Archive (EN)](daily/2026-11-03.en.md)** | **[📅 2026-11-02 Archive (EN)](daily/2026-11-02.en.md)** | **[📅 2026-11-01 Archive (EN)](daily/2026-11-01.en.md)** | **[📡 Live Interactive Radar (EN)](https://turbo998.github.io/github-radar.html)** | **[📡 在线交互式雷达面板 (中文)](https://turbo998.github.io/zh-github-radar.html)** | **[📊 7-Card 4:5 Benchmark Deck](cards.en.html)** | **[📦 Sealed Telemetry (`report.json`)](report.json)**
 
-# AI Solution Architect Proactive News Desk & GitHub AI Trending Radar (2026-11-05 Deep Research Report)
+# AI Solution Architect Proactive News Desk & GitHub AI Trending Radar (2026-11-08 Deep Research Report)
 
-![2026-11-05 GitHub AI Trending Radar Visual Summary](../../assets/github-ai-radar-2026-11-05.svg)
+![2026-11-08 GitHub AI Trending Radar Visual Summary](../../assets/github-ai-radar-2026-11-08.svg)
 
 ## 1. Architectural Philosophy: From Reactive Chatbots to Proactive Durable Intelligence Agents
 
 In an era where hundreds of AI repositories launch daily amid relentless social media clickbait, **the scarcest asset for an AI Solution Architect (SA) is not raw information access, but verified, high-signal engineering attention**.
 
-This column adapts and extends the proactive agent architecture pioneered by IndyDevDan (`disler/pi-durable-news-agent`):
+This column adapts and extends the proactive agent architecture pioneered by IndyDevDan (`disler/pi-durable-news-agent`), now permanently featuring the **🚀 Fastest-Rising / Highest Velocity AI Leaderboard** and **🚨 High-Priority SA Action Items**:
 
 $$\text{Proactive Agent} = \text{Durable Agent (SQLite Checkpointed)} + \text{Cron Trigger (23:00 CST)} + \text{Isolated Sandbox}$$
 
 ### 1.1 The 6-Gate Jev Deterministic Pipeline (The Agent Decides, The Task Runs)
 
-| Stage | Gate Name | Threshold / Rule | 2026-11-05 Sealed Batch Telemetry |
+| Stage | Gate Name | Threshold / Rule | 2026-11-08 Sealed Batch Telemetry |
 | :--- | :--- | :--- | :--- |
-| **Gate 01** | **Cron Tick & SQLite WAL Init** | Triggered daily at `23:00 CST`, step-level idempotency | `run_id = sweep_20261105_2300`, `5.1ms` checkpoint recovery |
-| **Gate 02** | **Multi-Source Gather** | Sweeps GitHub Trending Daily/Weekly + language feeds + 7-day surging | Captured **24** raw candidate repositories with full velocity metadata |
-| **Gate 03** | **Jev Relevance & Worth Gate** | `relevance >= 0.45` and `worth_attention >= 0.35` | **Rejected 9 noisy/non-AI/grey-hat repos** (`floci`, `DiscImageStudio`, `lz4`, `wifit3`, `immich`, `rustdesk`, `clash-verge-rev`, `Google_AI_Pro_2Year_ZeroCost_Auto`, `nvzhuang`), **15 passed** |
-| **Gate 04** | **Same-Story Dedupe** | `same_story >= 0.75` clustered into comparison groups | Clustered "Enterprise Semantic Ontology & Spec-Driven Agents (`auto-ontology` + `spec-kit`)", "Rust Native Accessibility-Tree Dual-Surface CUA (`agent-desktop v1.2.0` + `agent-browser v0.41.2` + `Scrapling v0.5.1`)", "Frontier Streaming Voice AI (`microsoft/VibeVoice`)", and "Cross-Device Harness Control & Bidirectional Design-System MCP (`t3code` + `worktrunk` + `figma-console-mcp`)" |
+| **Gate 01** | **Cron Tick & SQLite WAL Init** | Triggered daily at `23:00 CST`, step-level idempotency | `run_id = sweep_20261108_2300`, `4.9ms` checkpoint recovery |
+| **Gate 02** | **Multi-Source Gather** | Sweeps GitHub Trending Daily/Weekly + language feeds + 10-day breakout repos | Captured **25** raw candidate repositories with full velocity metadata |
+| **Gate 03** | **Jev Relevance & Worth Gate** | `relevance >= 0.45` and `worth_attention >= 0.35` | **Rejected 10 noisy/non-AI/grey-hat repos** (`termux-app`, `valkey`, `OpenList`, `Stirling-PDF`, `pocketbase`, `glance`, `cockpit`, `hoppscotch`, `Google_AI_Pro_2Year_ZeroCost_Auto`, `nvzhuang`), **15 passed** |
+| **Gate 04** | **Same-Story Dedupe** | `same_story >= 0.75` clustered into comparison groups | Clustered "Bare-Metal AI Factory K8s Control Plane (`nvke v0.23.1`)", "Model-Driven Reversible Context Compression (`billion-context v0.1.213`)", "Agent-First Design Systems & Generative UI (`meta/astryx v0.7.11` + `json-render v0.22.0`)", and "Multi-Sandbox Agent Workbench & A11y Execution (`OpenMausBot` + `agent-browser` + `herdr`)" |
 | **Gate 05** | **Importance × Taste Rank** | `importance × topic_weight × source_weight × freshness` | Prioritized across 6 SA domain weights with 24h freshness factor (`1.0`) |
-| **Gate 06** | **Claim-Support Subagents** | Parallel `news-researcher` subagents verify 4 claims/repo | Audited **60 concrete claims** against primary source trees (58/60 supported `>= 0.70`, mean support `0.91`) |
+| **Gate 06** | **Claim-Support Subagents** | Parallel `news-researcher` subagents verify 4 claims/repo | Audited **60 concrete claims** against primary source trees (59/60 supported `>= 0.70`, mean support `0.92`) |
 | **Gate 07** | **HFS Tri-Axial Scoring** | Independent `Signal`, `Facts`, `Hype` scores (0–100) | `Attention = round(0.50*Signal + 0.35*Facts - 0.25*Hype + 0.40*Relevance)` |
 | **Gate 08** | **Generative UI Card Render** | Maps to 8 generative card types + 4-pillar SA playbook | 100% coverage across `headline`, `signal_alert`, `fact_check`, `hype_watch`, `release`, `thread_pulse`, `quote`, `brief` |
 
 ---
 
-## 2. 2026-11-05 Top 15 GitHub AI Repositories — HFS & SA Verdict Matrix
+## 2. 🚀 Fastest-Rising / Highest Velocity AI Leaderboard (2026-11-08)
+
+### 2.1 Track A — 24h Single-Day Star Surge Leaders
+
+| Velocity Rank | Repository (`owner/repo`) | 24h Star Surge | Total Stars / Relative Gain | Plain-Language Reason Why It Is Exploding Today | SA Priority |
+| :---: | :--- | :---: | :---: | :--- | :---: |
+| **🚀 #1** | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) | **+1,437 ★/24h** | 17,821 (+8.8%) | **Open-Source Grok Bot Desktop Workbench**: Every chat contact in the sidebar is a local Claude/Codex agent with an isolated VM/Docker sandbox and approval gate | 🔥 **P0 Track & Borrow** |
+| **🚀 #2** | [`Albert-Weasker/niubigeo`](https://github.com/Albert-Weasker/niubigeo) | **+1,307 ★/24h** | 10,139 (+14.8%) | **GEO (Generative Engine Optimization) Visibility Scanner**: Viral among marketers, but acts as a commercial SaaS funnel (`Hype=54`) | 🛡️ **P3 Hype Watch** |
+| **🚀 #3** | [`meta/astryx`](https://github.com/meta/astryx) | **+863 ★/24h** | 15,468 (+5.9%) | **Meta's Internal 8-Year React 19 + StyleX Design System (13,000+ Apps)**: Ships with `@astryxdesign/cli` so coding agents write zero-hallucination UI | 🔥 **P0 Immediate Adopt** |
+| **🚀 #4** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | **+812 ★/24h** | 47,323 (+1.7%) | **Rust Accessibility-Tree (`@e1`) Browser CLI**: Cuts Web Agent token spend by >85% | 🔥 **P0 Production Default** |
+| **🚀 #5** | [`anthropics/skills`](https://github.com/anthropics/skills) | **+793 ★/24h** | 189,255 (+0.4%) | **Official Anthropic `SKILL.md` Specification**: Nearing 190K stars as the universal cross-agent skill format | 🔥 **P0 Standard Baseline** |
+| **🚀 #6** | [`jub0t/Concat`](https://github.com/jub0t/Concat) | **+491 ★/24h** | 15,593 (+3.3%) | **Rust Local-First Video Editor with MCP Server**: Allows AI agents to programmatically cut timelines via JSON-RPC | ⚡ **P1 Visual Lab** |
+| **🚀 #7** | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | **+460 ★/24h** | 4,922 (+10.3%) | **Model-Driven Reversible Context Compression Proxy (`acp-kernel`)**: Preserves 95–97% KV prefix cache hits & cuts tokens 5× (#1 on ContextBench) | 🔥 **P0 Must-Test** |
+| **🚀 #8** | [`herdrdev/herdr`](https://github.com/herdrdev/herdr) | **+374 ★/24h** | 49,302 (+0.8%) | **Rust Terminal Multiplexer for Coding Agents**: Supervises parallel agent sessions with durable state | ⚡ **P1 Dev Productivity** |
+| **🚀 #9** | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) | **+345 ★/24h** | 724 (**+91% in 24h**) | **NVIDIA Kubernetes Engine Bare-Metal GPU Management Plane**: Includes a GPU-free `mock-NICo` simulator for any 6C/12G VM | 🔥 **P0 #1 Deep-Dive** |
+
+### 2.2 Track B — Steepest Daily Star Velocity Among 5–10 Day Breakout Repositories
+
+| Slope Rank | Repository (`owner/repo`) | Created (Age) | Total Stars | Daily Star Velocity | Plain-Language Essence & SA Takeaway | SA Tier |
+| :---: | :--- | :---: | :---: | :---: | :--- | :---: |
+| **⚡ #1** | [`storytold/craft-anything`](https://github.com/storytold/craft-anything) | `2026-10-31` (8d) | **22,088** | **+2,761 ★/day** | High-speed Rust workspace uniting docs, canvases, code, and local agents | ⚡ **P1 UX Reference** |
+| **⚡ #2** | [`deepseek-ai/dsh-superagent-prototype`](https://github.com/deepseek-ai/dsh-superagent-prototype) | `2026-10-31` (8d) | **21,107** | **+2,638 ★/day** | Official DeepSeek Cordis micro-kernel autonomous superagent harness | 🔥 **P0 Deep-Read** |
+| **⚡ #3** | [`KKKKhazix/agent-autoloop`](https://github.com/KKKKhazix/agent-autoloop) | `2026-11-03` (5d) | **4,072** | **+814 ★/day** | Goal-driven persistent reflection, self-verification, and auto-retry plugin for Claude Code & OpenClaw | 🔥 **P0 Loop Pattern** |
+| **⚡ #4** | [`wangzan101/Mika`](https://github.com/wangzan101/Mika) | `2026-10-29` (10d) | **7,708** | **+771 ★/day** | On-device Android AccessibilityService GUI mobile agent requiring zero PC/ADB tethering | ⚡ **P1 Mobile CUA** |
+| **⚡ #5** | [`JuneYaooo/rea-video`](https://github.com/JuneYaooo/rea-video) | `2026-10-29` (10d) | **4,092** | **+409 ★/day** | Reasoning-augmented long video understanding with adaptive Ground-then-Reason keyframes | ⚡ **P1 Multimodal** |
+
+---
+
+## 3. 2026-11-08 Top 15 GitHub AI Repositories — HFS & SA Verdict Matrix
 
 | Rank | Repository (`owner/repo`) | Lang | Stars Today | Total Stars | Card Type | Signal | Facts | Hype | Relevance | Attention | SA Verdict Tier |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **#01** | [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) | Python | **+2,707** | 6,663 | `headline` | 90 | 89 | 16 | 68 | **99** | 🔥 **P0 Must-Learn & Adopt** |
-| **#02** | [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) | Rust | **+2,173** | 16,344 | `headline` | 88 | 91 | 15 | 65 | **98** | 🔥 **P0 Must-Learn & Adopt** |
-| **#03** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | Rust | **+181** | 45,684 | `signal_alert` | 87 | 90 | 14 | 64 | **97** | 🔥 **P0 Must-Learn & Adopt** |
-| **#04** | [`microsoft/VibeVoice`](https://github.com/microsoft/VibeVoice) | Python | **+214** | 55,502 | `signal_alert` | 86 | 90 | 16 | 64 | **96** | 🔥 **P0 Must-Learn & Adopt** |
-| **#05** | [`pingdotgg/t3code`](https://github.com/pingdotgg/t3code) | TypeScript | **+1,983** | 47,653 | `signal_alert` | 86 | 87 | 18 | 63 | **94** | 🔥 **P0 Must-Learn & Adopt** |
-| **#06** | [`github/spec-kit`](https://github.com/github/spec-kit) | Python | **+750** | 147,715 | `release` | 84 | 89 | 16 | 60 | **93** | 🔥 **P0 Must-Learn & Adopt** |
-| **#07** | [`max-sixty/worktrunk`](https://github.com/max-sixty/worktrunk) | Rust | **+546** | 11,360 | `release` | 81 | 85 | 14 | 58 | **90** | ⚡ **P1 Deep-Read & Borrow** |
-| **#08** | [`D4Vinci/Scrapling`](https://github.com/D4Vinci/Scrapling) | Python | **+1,661** | 97,554 | `fact_check` | 79 | 86 | 22 | 58 | **87** | ⚡ **P1 Deep-Read & Borrow** |
-| **#09** | [`google/skills`](https://github.com/google/skills) | Python | **+199** | 22,173 | `fact_check` | 78 | 83 | 18 | 56 | **86** | ⚡ **P1 Deep-Read & Borrow** |
-| **#10** | [`southleft/figma-console-mcp`](https://github.com/southleft/figma-console-mcp) | TypeScript | **+242** | 3,125 | `quote` | 76 | 82 | 16 | 55 | **85** | ⚡ **P1 Deep-Read & Borrow** |
-| **#11** | [`mattpocock/skills`](https://github.com/mattpocock/skills) | Shell | **+2,053** | 314,503 | `quote` | 75 | 79 | 24 | 56 | **82** | ⚡ **P1 Deep-Read & Borrow** |
-| **#12** | [`Thysrael/Horizon`](https://github.com/Thysrael/Horizon) | Python | **+490** | 12,838 | `thread_pulse` | 73 | 77 | 20 | 56 | **81** | ⚡ **P1 Deep-Read & Borrow** |
-| **#13** | [`scenario-labs/skills`](https://github.com/scenario-labs/skills) | Python | **+674** | 2,839 | `brief` | 69 | 75 | 26 | 55 | **76** | 👀 **P2 Watchlist / Hold** |
-| **#14** | [`ConardLi/garden-skills`](https://github.com/ConardLi/garden-skills) | JavaScript | **+181** | 14,006 | `brief` | 66 | 73 | 26 | 52 | **73** | 👀 **P2 Watchlist / Hold** |
-| **#15** | [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | Python | **+242** | 17,404 | `hype_watch` | 46 | 62 | 48 | 45 | **51** | 🛡️ **P3 Hype / ToS Risk Watch** |
+| **#01** | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) | Go | **+345** | 724 | `headline` | 92 | 91 | 12 | 70 | **99** | 🔥 **P0 Must-Learn & Adopt** |
+| **#02** | [`meta/astryx`](https://github.com/meta/astryx) | TypeScript | **+863** | 15,468 | `headline` | 89 | 90 | 14 | 66 | **98** | 🔥 **P0 Must-Learn & Adopt** |
+| **#03** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | Rust | **+812** | 47,323 | `signal_alert` | 88 | 91 | 14 | 65 | **98** | 🔥 **P0 Must-Learn & Adopt** |
+| **#04** | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | TypeScript | **+460** | 4,922 | `signal_alert` | 87 | 88 | 18 | 66 | **96** | 🔥 **P0 Must-Learn & Adopt** |
+| **#05** | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) | TypeScript | **+1,437** | 17,821 | `signal_alert` | 85 | 86 | 18 | 64 | **94** | 🔥 **P0 Must-Learn & Adopt** |
+| **#06** | [`anthropics/skills`](https://github.com/anthropics/skills) | Python | **+793** | 189,255 | `release` | 84 | 89 | 14 | 62 | **94** | 🔥 **P0 Must-Learn & Adopt** |
+| **#07** | [`herdrdev/herdr`](https://github.com/herdrdev/herdr) | Rust | **+374** | 49,302 | `release` | 82 | 86 | 14 | 60 | **92** | ⚡ **P1 Deep-Read & Borrow** |
+| **#08** | [`SWE-agent/mini-swe-agent`](https://github.com/SWE-agent/mini-swe-agent) | Python | **+84** | 9,378 | `fact_check` | 80 | 89 | 12 | 58 | **91** | ⚡ **P1 Deep-Read & Borrow** |
+| **#09** | [`vercel-labs/json-render`](https://github.com/vercel-labs/json-render) | TypeScript | **+202** | 19,424 | `fact_check` | 81 | 86 | 15 | 59 | **90** | ⚡ **P1 Deep-Read & Borrow** |
+| **#10** | [`googlecolab/google-colab-cli`](https://github.com/googlecolab/google-colab-cli) | Python | **+139** | 2,061 | `quote` | 78 | 85 | 14 | 57 | **88** | ⚡ **P1 Deep-Read & Borrow** |
+| **#11** | [`jamiepine/voicebox`](https://github.com/jamiepine/voicebox) | Python | **+208** | 60,094 | `quote` | 76 | 83 | 18 | 56 | **85** | ⚡ **P1 Deep-Read & Borrow** |
+| **#12** | [`jub0t/Concat`](https://github.com/jub0t/Concat) | Rust | **+491** | 15,593 | `thread_pulse` | 74 | 81 | 18 | 55 | **83** | ⚡ **P1 Deep-Read & Borrow** |
+| **#13** | [`vxcontrol/pentagi`](https://github.com/vxcontrol/pentagi) | Go | **+98** | 33,687 | `brief` | 71 | 79 | 22 | 54 | **79** | 👀 **P2 Watchlist / Hold** |
+| **#14** | [`poco-ai/Agentero`](https://github.com/poco-ai/Agentero) | TypeScript | **+175** | 1,976 | `brief` | 68 | 76 | 20 | 52 | **76** | 👀 **P2 Watchlist / Hold** |
+| **#15** | [`Albert-Weasker/niubigeo`](https://github.com/Albert-Weasker/niubigeo) | TypeScript | **+1,307** | 10,139 | `hype_watch` | 44 | 58 | 54 | 45 | **47** | 🛡️ **P3 Commercial SaaS Funnel** |
 
 ---
 
-## 3. Core Architectural Takeaways for AI Solution Architects
+## 4. 🚨 High-Priority SA Action Items (Executive Briefing Ready)
 
-1. **`NVIDIA/auto-ontology` (Attention: 99 · 🔥 P0)**: Holds #1 on GitHub Daily Trending for a second straight day (**+2,707 stars today**, **6,663 total**), proving that enterprise Agentic Analytics requires a 5-stage `Discover -> SQL Ground -> Certify -> Validate -> MCP Expose` ontology layer rather than raw schema dumps.
-2. **`vercel-labs/agent-desktop v1.2.0` (Attention: 98 · 🔥 P0) + `agent-browser v0.41.2` (Attention: 97 · 🔥 P0)**: Vercel Labs' dual Rust accessibility-tree CLIs unify native OS desktop automation and Chrome browser automation under compact `@e1` element refs, cutting token overhead by >85%.
-3. **`microsoft/VibeVoice` (Attention: 96 · 🔥 P0)**: Microsoft's 55.5K-star MIT Voice AI stack combines **VibeVoice-ASR-Streaming-7B** (real-time streaming transcription + speaker diarization across 10 languages), **VibeVoice-ASR-BitNet** (4.62 GB → **1.58 GB** with `RTF < 1` on 3 CPU threads), and `vllm_plugin/`.
-4. **`pingdotgg/t3code v0.1.7` (Attention: 94 · 🔥 P0) + `github/spec-kit v1.3.0` (Attention: 93 · 🔥 P0)**: Pair Spec-Kit's pre-flight architectural contracts (`.specify/`) with T3 Code's cross-device desktop/web/mobile control surface to supervise parallel coding agents safely.
-
----
-
-## 4. Weekly & 7-Day Surging AI Breakthroughs (`since=weekly` & `created:>2026-10-28`)
-
-| Repository (`owner/repo`) | Surging Rank / Scale | License / Release | HFS (`S / F / H`) | Attention | SA Tier | Breakthrough & SA Takeaway |
-| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) | **Weekly #1** (★113,361 / +8,822 wk) | `Apache-2.0` · `v15.9.0` | `88 / 85 / 20` | **96** (`signal_alert`) | 🔥 **P0 Must-Learn** | Cross-agent persistent memory engine (`v15.9.0`) with SQLite FTS5 + Chroma hybrid retrieval across Claude Code, OpenClaw, Codex, Gemini, Hermes, and Copilot. |
-| [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) | **Weekly #9** (★103,545 / +10,921 wk) | `Apache-2.0` · `cli-v4.8.0` | `83 / 85 / 18` | **91** (`release`) | ⚡ **P1 Deep-Read** | Rust design-system CLI (`cli-v4.8.0`) providing `polish`, `bolder`, `critique`, and `audit` primitives across 12 coding agents to eliminate AI slop. |
-| [`deepseek-ai/dsh-superagent-prototype`](https://github.com/deepseek-ai/dsh-superagent-prototype) | **7-Day #1** (★19,299) | `MIT` · `HEAD` | `84 / 81 / 22` | **92** (`signal_alert`) | 🔥 **P0 Must-Learn** | Official DeepSeek Cordis micro-kernel autonomous superagent harness with ecosystem remote plugin `liguobao/ds-harness-remote v0.6.2`. |
-| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Weekly #5** (★55,303 / +7,512 wk) | `Apache-2.0` · `v1.7.1` | `78 / 82 / 20` | **86** (`release`) | ⚡ **P1 Deep-Read** | HKUDS lifelong personalized tutoring multi-agent system with knowledge-graph state tracking and adaptive curriculum synthesis. |
+| Task ID | Priority | Target Repository & Version | Velocity Metric | Core SA Value | Recommended Next Action |
+| :---: | :---: | :--- | :---: | :--- | :--- |
+| **SA-ACT-01** | 🔥 **P0 Immediate** | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) (`v0.23.1`) | **+345★ today** (**+91% 24h surge**) | Bare-metal multi-tenant GPU K8s management plane (`CAPNICo` + `TPM/SPIFFE` + `OVN-K8s` + `NVSentinel` auto-remediation) | Run GPU-free `mock-NICo` quickstart on a 6C/12G VM to capture NVSentinel self-healing & TPM/SPIFFE attestation for Sovereign AI customer briefings |
+| **SA-ACT-02** | 🔥 **P0 Immediate** | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) (`v0.1.213`) | **+460★ today** (**★4,922**) | Model-driven reversible context compression proxy (`acp-kernel`) preserving **95–97% KV prefix cache hits** & **5× token reduction** | Insert `acp-kernel` proxy ahead of Claude Code / OpenAI gateway and benchmark KV cache hit rate, token bill, and recall on 30-step coding tasks |
+| **SA-ACT-03** | 🔥 **P0 This Week** | [`meta/astryx`](https://github.com/meta/astryx) (`v0.7.11`) | **+863★ today** (**★15,468**) | Meta's 8-year React 19 + StyleX design system with `@astryxdesign/cli` for zero-hallucination agent UI generation | Mount `@astryxdesign/cli` in Executive AI Portal PoCs and test single-component `swizzle` ejection |
+| **SA-ACT-04** | 🔥 **P0 This Week** | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) + [`KKKKhazix/agent-autoloop`](https://github.com/KKKKhazix/agent-autoloop) | **+1,437★ today** (**#1 24h**) + **+814★/d** | Contact-as-Agent multi-sandbox desktop workbench + goal-driven self-verification retry loop (`Goal -> Verify -> Retry`) | Borrow Contact-as-Agent approval UX and `agent-autoloop` verification hooks for enterprise multi-agent workbench demos |
+| **SA-ACT-05** | ⚡ **P0 Baseline** | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) (`v0.41.2`) + [`anthropics/skills`](https://github.com/anthropics/skills) | **+812★** / **+793★** (**★189,255**) | Rust A11y Tree (`@e1`) headless browser CLI (85%+ token savings) + universal `SKILL.md` progressive skill specification | Enforce `agent-browser` as the default Web Agent execution layer and validate all internal `SKILL.md` manifests |
 
 ---
 
 ## 5. Daily Archive Directory
 
-| Date | Run ID | Passed / Swept | English Daily Digest (Full 15-Repo Breakdown) | 中文完整日报 | Visual Summary SVG | 7-Card Deck |
+| Date | Run ID | Passed / Swept | English Daily Digest (Full 15-Repo Breakdown + Deep-Dive FAQ) | 中文完整日报 | Visual Summary SVG | 7-Card Deck |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **2026-11-08** | `sweep_20261108_2300` | `15 / 25` (`6 P0 · 6 P1`) | **[`daily/2026-11-08.en.md`](daily/2026-11-08.en.md)** | **[`daily/2026-11-08.md`](daily/2026-11-08.md)** | **[`github-ai-radar-2026-11-08.svg`](../../assets/github-ai-radar-2026-11-08.svg)** | **[EN](cards.en.html) / [中文](cards.html)** |
 | **2026-11-05** | `sweep_20261105_2300` | `15 / 24` (`6 P0 · 6 P1`) | **[`daily/2026-11-05.en.md`](daily/2026-11-05.en.md)** | **[`daily/2026-11-05.md`](daily/2026-11-05.md)** | **[`github-ai-radar-2026-11-05.svg`](../../assets/github-ai-radar-2026-11-05.svg)** | **[EN](cards.en.html) / [中文](cards.html)** |
 | **2026-11-04** | `sweep_20261104_2300` | `15 / 23` (`5 P0 · 6 P1`) | **[`daily/2026-11-04.en.md`](daily/2026-11-04.en.md)** | **[`daily/2026-11-04.md`](daily/2026-11-04.md)** | **[`github-ai-radar-2026-11-04.svg`](../../assets/github-ai-radar-2026-11-04.svg)** | **[EN](cards.en.html) / [中文](cards.html)** |
 | **2026-11-03** | `sweep_20261103_2300` | `15 / 22` (`5 P0 · 6 P1`) | **[`daily/2026-11-03.en.md`](daily/2026-11-03.en.md)** | **[`daily/2026-11-03.md`](daily/2026-11-03.md)** | **[`github-ai-radar-2026-11-03.svg`](../../assets/github-ai-radar-2026-11-03.svg)** | **[EN](cards.en.html) / [中文](cards.html)** |
