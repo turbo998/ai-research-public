@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgHve" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#041014"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="arrowEmerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgHve)"/>
+
+  <!-- Header -->
+  <rect x="36" y="22" width="1368" height="84" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="56" fill="#F8FAFC" font-size="22" font-weight="800">Microsoft HVE Core 核心模块架构拆解：四层 AI 工件委托模型、RPI 类型转换与上下文近因退化治理</text>
+  <text x="60" y="84" fill="#94A3B8" font-size="13">microsoft/hve-core @ f425e943bf (v3.3.101) · 69 Custom Agents · 43 Instruction Rules · 93 Executable Skills · 14 Collections</text>
+  <rect x="1146" y="38" width="236" height="48" rx="10" fill="#1E293B" stroke="#10B981"/>
+  <text x="1264" y="59" text-anchor="middle" fill="#34D399" font-size="12" font-weight="800">Context Reset Engineering</text>
+  <text x="1264" y="77" text-anchor="middle" fill="#D1FAE5" font-size="11">/clear + .copilot-tracking/</text>
+
+  <!-- Left Top: 4-Tier AI Artifacts Delegation Model -->
+  <rect x="36" y="124" width="660" height="370" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="154" fill="#34D399" font-size="16" font-weight="800">1. 四层 AI 工件解耦委托模型 (4-Tier AI Artifacts Architecture)</text>
+  <text x="58" y="176" fill="#94A3B8" font-size="11.5">User Request -&gt; Prompts (Entry) -&gt; Agents (Orchestrator) -&gt; Instructions (Standards) + Skills (Scripts)</text>
+
+  <rect x="58" y="194" width="616" height="58" rx="8" fill="#1E293B" stroke="#38BDF8"/>
+  <text x="76" y="218" fill="#38BDF8" font-size="13" font-weight="800">Tier 1 · Prompts (`.github/prompts/{collection}/*.prompt.md`) — 轻量任务入口</text>
+  <text x="76" y="238" fill="#CBD5E1" font-size="11">定义用户交互入口、必填参数 (`input variables`)，通过 `agent:` 字段立即委托给专业 Agent，不承载重逻辑。</text>
+
+  <rect x="58" y="264" width="616" height="66" rx="8" fill="#1E293B" stroke="#10B981"/>
+  <text x="76" y="288" fill="#34D399" font-size="13" font-weight="800">Tier 2 · Custom Agents (`.github/agents/{collection}/*.agent.md` · 69个) — 角色状态机</text>
+  <text x="76" y="308" fill="#CBD5E1" font-size="11">封装角色人设、工具白名单 (`tools[]`)、阶段移交图 (`handoffs[]`) 与模型成本层级 (`Fast 0.25x / Standard 1x / Premium 3x+`)。</text>
+
+  <rect x="58" y="342" width="298" height="134" rx="8" fill="#090D16" stroke="#F59E0B"/>
+  <text x="74" y="366" fill="#FBBF24" font-size="12.5" font-weight="800">Tier 3 · Instructions (43个)</text>
+  <text x="74" y="388" fill="#E2E8F0" font-size="11">`.instructions.md` (`applyTo` Globs)</text>
+  <text x="74" y="408" fill="#94A3B8" font-size="10.5">• 仅当读写匹配文件或目录时自动挂载</text>
+  <text x="74" y="426" fill="#94A3B8" font-size="10.5">• 将任务产物的路径契约写在 applyTo 中</text>
+  <text x="74" y="444" fill="#94A3B8" font-size="10.5">• 避免无关编码规范污染当前会话窗口</text>
+
+  <rect x="376" y="342" width="298" height="134" rx="8" fill="#090D16" stroke="#A855F7"/>
+  <text x="392" y="366" fill="#C084FC" font-size="12.5" font-weight="800">Tier 4 · Skills (93个 SKILL.md)</text>
+  <text x="392" y="388" fill="#E2E8F0" font-size="11">`.github/skills/{collection}/{skill}/`</text>
+  <text x="392" y="408" fill="#94A3B8" font-size="10.5">• 含跨平台可执行脚本 (`.ps1` / `.sh` / `.py`)</text>
+  <text x="392" y="426" fill="#94A3B8" font-size="10.5">• 支持 `/rpi-research` 等直接斜杠命令触发</text>
+  <text x="392" y="444" fill="#94A3B8" font-size="10.5">• 由 `Validate-SkillStructure.ps1` 严格校验</text>
+
+  <!-- Right Top: Context Dilution Math & /clear Mechanism -->
+  <rect x="714" y="124" width="690" height="370" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="736" y="154" fill="#F43F5E" font-size="16" font-weight="800">2. 为什么长会话必然跳步？近因偏差数学模型与 `/clear` 阶段重置</text>
+  <text x="736" y="176" fill="#94A3B8" font-size="11.5">Recency Bias Attention Dilution (3K System Prompt in 10K vs 200K Window) &amp; Disk-Backed Hydration</text>
+
+  <!-- Bar comparison inside Right Top -->
+  <rect x="736" y="194" width="646" height="146" rx="10" fill="#090D16" stroke="#F43F5E"/>
+  <text x="754" y="218" fill="#FB7185" font-size="12.5" font-weight="800">单会话累积退化定律 (Naive Single-Session Attention Dilution = 20.0x 衰减)</text>
+
+  <text x="754" y="246" fill="#E2E8F0" font-size="11.5">10K Token 初始会话 (3K 指令占比 30.0%)：</text>
+  <rect x="1030" y="233" width="300" height="16" rx="4" fill="#1E293B"/>
+  <rect x="1030" y="233" width="240" height="16" rx="4" fill="#10B981"/>
+  <text x="1340" y="246" fill="#10B981" font-size="11.5" font-weight="800">30.0%</text>
+
+  <text x="754" y="274" fill="#E2E8F0" font-size="11.5">50K Token 中期会话 (3K 指令占比 6.0%)：</text>
+  <rect x="1030" y="261" width="300" height="16" rx="4" fill="#1E293B"/>
+  <rect x="1030" y="261" width="48" height="16" rx="4" fill="#F59E0B"/>
+  <text x="1340" y="274" fill="#F59E0B" font-size="11.5" font-weight="800">6.0%</text>
+
+  <text x="754" y="302" fill="#E2E8F0" font-size="11.5">200K Token 实施后会话 (3K 指令仅占 1.5%)：</text>
+  <rect x="1030" y="289" width="300" height="16" rx="4" fill="#1E293B"/>
+  <rect x="1030" y="289" width="12" height="16" rx="4" fill="#F43F5E"/>
+  <text x="1340" y="302" fill="#F43F5E" font-size="11.5" font-weight="800">1.5% (跳步!)</text>
+
+  <text x="754" y="328" fill="#94A3B8" font-size="11">结论：当近期代码 Diff 与报错日志占 98.5% 窗口时，注意力机制被近因 Token 主导，后续需求直接跳过 Research/Plan！</text>
+
+  <rect x="736" y="354" width="646" height="122" rx="10" fill="#090D16" stroke="#10B981"/>
+  <text x="754" y="378" fill="#34D399" font-size="12.5" font-weight="800">HVE Context Engineering 解决方案：阶段间强制 `/clear` + `.copilot-tracking/` 确定性文件交接</text>
+  <text x="754" y="402" fill="#E2E8F0" font-size="11.5">• 拒绝依赖有损自动摘要 (`/compact` 可能丢失关键文件路径与约束)：在每个 RPI 阶段结束时落盘 Markdown 工件。</text>
+  <text x="754" y="424" fill="#E2E8F0" font-size="11.5">• 执行 `/clear` 清空聊天历史后，下一阶段 Agent 仅挂载自身 `3K` 系统指令 + 上一阶段 `4.5K` 磁盘工件，</text>
+  <text x="754" y="446" fill="#34D399" font-size="11.5" font-weight="700">  使系统指令有效权重始终维持在 15.0%–30.0% 黄金区间，且磁盘状态 100% 可被人类工程师与 Git 审计修改。</text>
+
+  <!-- Bottom Full Width: 4-Phase RPI Type-Transformation Pipeline & Vally Governance -->
+  <rect x="36" y="512" width="1368" height="384" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="542" fill="#38BDF8" font-size="16" font-weight="800">3. RPI 四阶段类型转换状态机 (`Uncertainty -&gt; Validated Code`) 与 Vally 自动化评测门禁</text>
+  <text x="58" y="564" fill="#94A3B8" font-size="11.5">Each phase acts as a deterministic type transformer reading &amp; writing `.copilot-tracking/` artifacts separated by `/clear`</text>
+
+  <g transform="translate(58, 584)">
+    <!-- Phase 1 -->
+    <rect x="0" y="0" width="298" height="162" rx="10" fill="#1E293B" stroke="#38BDF8"/>
+    <text x="149" y="24" text-anchor="middle" fill="#38BDF8" font-size="13.5" font-weight="800">Phase 1 · Research (/rpi-research)</text>
+    <text x="149" y="44" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">Uncertainty =&gt; Knowledge</text>
+    <text x="14" y="68" fill="#CBD5E1" font-size="10.5">• Agent: `task-researcher` (只读工具集)</text>
+    <text x="14" y="88" fill="#CBD5E1" font-size="10.5">• 三步深挖：Wider -&gt; Deeper -&gt; Contrarian</text>
+    <text x="14" y="108" fill="#CBD5E1" font-size="10.5">• 严禁输出多套模棱两可方案，必须收敛唯一推荐</text>
+    <text x="14" y="130" fill="#38BDF8" font-size="10.5" font-family="Consolas, monospace">.copilot-tracking/research/*-research.md</text>
+    <text x="14" y="150" fill="#34D399" font-size="10.5" font-weight="700">--&gt; Gate: 人类确认后执行 /clear</text>
+
+    <line x1="298" y1="81" x2="332" y2="81" stroke="#10B981" stroke-width="2.5" marker-end="url(#arrowEmerald)"/>
+
+    <!-- Phase 2 -->
+    <rect x="338" y="0" width="308" height="162" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+    <text x="492" y="24" text-anchor="middle" fill="#FBBF24" font-size="13.5" font-weight="800">Phase 2 · Plan &amp; Critique (/rpi-plan)</text>
+    <text x="492" y="44" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">Knowledge =&gt; Strategy</text>
+    <text x="352" y="68" fill="#CBD5E1" font-size="10.5">• Agent: `task-planner` (缺研究则自动回跳 Phase 1)</text>
+    <text x="352" y="88" fill="#CBD5E1" font-size="10.5">• 内置 `rpi-plan-critique` (PC-xxx 缺陷分类审查)</text>
+    <text x="352" y="108" fill="#CBD5E1" font-size="10.5">• 产出双文件：Checklist 计划 + 行级实施细节</text>
+    <text x="352" y="130" fill="#FBBF24" font-size="10.5" font-family="Consolas, monospace">plans/*-plan.instructions.md + details/</text>
+    <text x="352" y="150" fill="#34D399" font-size="10.5" font-weight="700">--&gt; Gate: 计划签署后执行 /clear</text>
+
+    <line x1="646" y1="81" x2="680" y2="81" stroke="#10B981" stroke-width="2.5" marker-end="url(#arrowEmerald)"/>
+
+    <!-- Phase 3 -->
+    <rect x="686" y="0" width="304" height="162" rx="10" fill="#1E293B" stroke="#10B981"/>
+    <text x="838" y="24" text-anchor="middle" fill="#34D399" font-size="13.5" font-weight="800">Phase 3 · Implement (/rpi-implement)</text>
+    <text x="838" y="44" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">Strategy =&gt; Working Code</text>
+    <text x="700" y="68" fill="#CBD5E1" font-size="10.5">• Agent: `task-implementor` (按阶段派发子Agent)</text>
+    <text x="700" y="88" fill="#CBD5E1" font-size="10.5">• 机械化执行已验证计划，不在实现期重新发散设计</text>
+    <text x="700" y="108" fill="#CBD5E1" font-size="10.5">• 每完成一个 Phase 实时更新变更台账与自检测试</text>
+    <text x="700" y="130" fill="#34D399" font-size="10.5" font-family="Consolas, monospace">.copilot-tracking/changes/*-changes.md</text>
+    <text x="700" y="150" fill="#34D399" font-size="10.5" font-weight="700">--&gt; Gate: 编译测试通过后执行 /clear</text>
+
+    <line x1="990" y1="81" x2="1024" y2="81" stroke="#10B981" stroke-width="2.5" marker-end="url(#arrowEmerald)"/>
+
+    <!-- Phase 4 -->
+    <rect x="1030" y="0" width="294" height="162" rx="10" fill="#1E293B" stroke="#A855F7"/>
+    <text x="1177" y="24" text-anchor="middle" fill="#C084FC" font-size="13.5" font-weight="800">Phase 4 · Review &amp; Challenge</text>
+    <text x="1177" y="44" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">Working Code =&gt; Validated Code</text>
+    <text x="1044" y="68" fill="#CBD5E1" font-size="10.5">• `task-reviewer` 对照 Research/Plan 逐项核验</text>
+    <text x="1044" y="88" fill="#CBD5E1" font-size="10.5">• `task-challenger` 零暗示 What/Why/How 质询</text>
+    <text x="1044" y="108" fill="#CBD5E1" font-size="10.5">• `code-review` 派发 5 个独立视角子智能体并行评审</text>
+    <text x="1044" y="130" fill="#C084FC" font-size="10.5" font-family="Consolas, monospace">.copilot-tracking/reviews/*-review.md</text>
+    <text x="1044" y="150" fill="#34D399" font-size="10.5" font-weight="700">--&gt; Gate: Critical/Major 清零准予合入</text>
+  </g>
+
+  <!-- Bottom Governance Strip -->
+  <rect x="58" y="764" width="1324" height="114" rx="10" fill="#090D16" stroke="#10B981"/>
+  <text x="76" y="790" fill="#34D399" font-size="13" font-weight="800">HVE Core 企业级 AI 工件质量门禁 (`package.json` + `@microsoft/vally-cli v0.6.0`)</text>
+  <text x="76" y="814" fill="#E2E8F0" font-size="11.5">• 静态契约校验：`Validate-MarkdownFrontmatter.ps1` + `Validate-SkillStructure.ps1` + `Test-ModelReferences.ps1` (强制校验 `model-catalog.json` 与子Agent成本层级不超父Agent)。</text>
+  <text x="76" y="836" fill="#E2E8F0" font-size="11.5">• 动态行为评测：`vally eval --suite skill-quality / agent-behavior / script-validation` + `Invoke-BaselineEquivalence.ps1` (验证定制工件对比基线模型的真实增益)。</text>
+  <text x="76" y="858" fill="#E2E8F0" font-size="11.5">• 安全与供应链签名：`Sign-PlannerArtifacts.ps1` (RAI / Security / SSSC 规划工件签名) + `Invoke-ContentModeration.ps1` + `Update-AgentActivationBaseline.ps1`。</text>
+</svg>

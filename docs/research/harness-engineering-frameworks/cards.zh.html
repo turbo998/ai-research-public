@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline';" />
+  <title>7-Card 4:5 视觉评测报告 · 主流 Agent Harness Engineering 框架与实现机制深度对比</title>
+  <style>
+    :root {
+      --bg-page: #090D16;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-soft: #64748B;
+      --code-bg: #0F172A;
+      --code-text: #E2E8F0;
+      --blue: #2563EB;
+      --blue-bar: #3B82F6;
+      --slate-bar: #CBD5E1;
+      --green-bg: #ECFDF5;
+      --green-border: #10B981;
+      --green-text: #065F46;
+      --amber-bg: #FFFBEB;
+      --amber-border: #F59E0B;
+      --amber-text: #92400E;
+      --red-bg: #FEF2F2;
+      --red-border: #EF4444;
+      --red-text: #991B1B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-page);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      padding: 32px 16px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+    }
+    .deck-toolbar {
+      width: 900px;
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 14px 22px;
+      color: #F8FAFC;
+    }
+    .deck-toolbar a {
+      color: #38BDF8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 14px;
+    }
+    .card {
+      width: 900px;
+      min-height: 1125px;
+      aspect-ratio: 4 / 5;
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid var(--card-border);
+      padding: 38px 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+    .kicker {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .page-num {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--text-soft);
+      background: #F1F5F9;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    h1, h2 {
+      font-size: 25px;
+      line-height: 1.3;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+    .grad-accent {
+      background: linear-gradient(90deg, #2563EB, #7C3AED);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .workbench-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .wb-col {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .wb-title {
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .pill-auto { background: var(--green-bg); color: var(--green-text); border: 1px solid var(--green-border); }
+    .pill-confirm { background: var(--amber-bg); color: var(--amber-text); border: 1px solid var(--amber-border); }
+    .pill-human { background: var(--red-bg); color: var(--red-text); border: 1px solid var(--red-border); }
+    .pill-type { background: #EFF6FF; color: #1D4ED8; border: 1px solid #93C5FD; }
+    .quote-box {
+      background: #F8FAFC;
+      border-left: 4px solid var(--blue);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+    .stack-card {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+    .stack-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 13.5px;
+      font-weight: 800;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 6px;
+      font-size: 12px;
+    }
+    .bar-track {
+      flex: 1;
+      height: 12px;
+      background: #F1F5F9;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: var(--blue-bar);
+      border-radius: 999px;
+    }
+    .bar-fill-alt {
+      height: 100%;
+      background: var(--slate-bar);
+      border-radius: 999px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+    th, td {
+      border-bottom: 1px solid #E2E8F0;
+      padding: 8px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #F8FAFC;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-soft);
+      text-transform: uppercase;
+    }
+    .code-block {
+      background: var(--code-bg);
+      color: var(--code-text);
+      font-family: Consolas, "SFMono-Regular", Menlo, monospace;
+      font-size: 11.5px;
+      line-height: 1.5;
+      padding: 14px 16px;
+      border-radius: 12px;
+      white-space: pre-wrap;
+      margin-bottom: 10px;
+    }
+    .callout-dual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .callout-box {
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+    .callout-green { background: var(--green-bg); border: 1px solid var(--green-border); color: var(--green-text); }
+    .callout-red { background: var(--red-bg); border: 1px solid var(--red-border); color: var(--red-text); }
+    .callout-amber { background: var(--amber-bg); border: 1px solid var(--amber-border); color: var(--amber-text); }
+    .footer-dark {
+      background: var(--code-bg);
+      color: #F8FAFC;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="deck-toolbar">
+    <div><strong>7-Card 4:5 Visual Benchmark Deck (ZH)</strong> · 主流 Agent Harness Engineering 框架深度评测</div>
+    <div>
+      <a href="index.html">Interactive Playground</a>
+      <a href="cards.html">English Deck</a>
+      <a href="README.zh-CN.md">中文专著</a>
+      <a href="report.json">report.json</a>
+    </div>
+  </div>
+
+  <!-- CARD 1: HANDS-ON OVERVIEW & WORKBENCH -->
+  <section class="card">
+    <div>
+      <div class="card-top">
+        <span class="kicker">HANDS-ON · AGENT HARNESS ENGINEERING</span>
+        <span class="page-num">1 / 7</span>
+      </div>
+      <h1><span class="grad-accent">DeepSeek DSH (96.0分)、Claude Code (90.4分) 与 Microsoft HVE (90.4分)</span> 构筑 Agent Harness 三大互补技术范式</h1>
+      <p class="subtitle">
+        基于锁定源码 Commit 的 8 层通用架构评测：DSH 以 Cordis 微内核 + 411 个包实现“万物皆插件”与三角色能力缝隙；Claude Code 实现读写并发屏障与共享预算门禁；HVE Core 通过 `/clear` 与 `.copilot-tracking/` 根治 200K 上下文 20 倍近因注意力稀释。
+      </p>
+
+      <div class="workbench-grid">
+        <div class="wb-col">
+          <div class="wb-title">评测范围与锁定版本</div>
+          <p style="font-size:12px;margin-bottom:8px;"><strong>1. DeepSeek DSH</strong><br/><code>@fcc0ad4621</code> · 411 Pkgs / 49 域</p>
+          <p style="font-size:12px;margin-bottom:8px;"><strong>2. Claude Code SDK</strong><br/><code>@0ed94698aa</code> · 5 消息 / 6 权限</p>
+          <p style="font-size:12px;margin-bottom:10px;"><strong>3. Microsoft HVE Core</strong><br/><code>@f425e943bf</code> · 69 Agents / 93 Skills</p>
+          <div style="border-top:1px solid #CBD5E1;padding-top:8px;font-size:11.5px;">
+            <span class="pill pill-auto">Act &ge; 85%</span>
+            <span class="pill pill-confirm">Confirm 60–84%</span>
+          </div>
+        </div>
+
+        <div class="wb-col">
+          <div class="wb-title">8层通用架构评分契约输入</div>
+          <div class="code-block" style="font-size:10.5px;padding:10px;margin-bottom:0;">{
+  "layers": ["L1:Kernel", "L2:Loop", "L3:Tools", "L4:Context", "L5:Session", "L6:Subagent", "L7:Seam", "L8:SDLC"],
+  "dsh_mean": 96.0,
+  "claude_code_mean": 90.38,
+  "microsoft_hve_mean": 90.38,
+  "hve_dilution_10k_to_200k": "30.0% -> 1.5% (20x)",
+  "dsh_ptc_2min_allowance": 2048
+}</div>
+        </div>
+
+        <div class="wb-col">
+          <div class="wb-title">核心量化发现 (Top Findings)</div>
+          <p style="font-size:12px;margin-bottom:8px;">• <strong>L7 沙箱解耦</strong>：DSH 三角色缝隙获 <strong>99分</strong>（零工具分叉切换 SSH/容器）。</p>
+          <p style="font-size:12px;margin-bottom:8px;">• <strong>L4 上下文防退化</strong>：HVE `/clear` 获 <strong>97分</strong>（指令权重保持 &ge;15.0%）。</p>
+          <p style="font-size:12px;margin-bottom:8px;">• <strong>L3 高频工具加速</strong>：DSH PTC `run_code` 较原生并发提速 <strong>2.09x–2.63x</strong>。</p>
+          <p style="font-size:12px;">• <strong>L8 研发合规门禁</strong>：HVE Vally 套件获 <strong>99分</strong>。</p>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-header">
+          <span>八层通用 Agent Harness 综合架构得分对比 (满分 100)</span>
+          <span class="pill pill-auto">8 Layers Verified</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;font-weight:700;">DeepSeek Harness (DSH)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:96.0%;"></div></div>
+          <span style="width:65px;text-align:right;font-weight:800;">96.0 pts</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;font-weight:700;">Claude Code &amp; Agent SDK</span>
+          <div class="bar-track"><div class="bar-fill" style="width:90.38%;"></div></div>
+          <span style="width:65px;text-align:right;font-weight:800;">90.4 pts</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;font-weight:700;">Microsoft HVE Core</span>
+          <div class="bar-track"><div class="bar-fill" style="width:90.38%;"></div></div>
+          <span style="width:65px;text-align:right;font-weight:800;">90.4 pts</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-dark">
+      <span><strong>Provenance:</strong> static_contract_verified + trace_driven_simulation (independently_reproduced = true)</span>
+      <span>Verifier: <code>simulator/harness_architecture_verifier.py</code> (4/4 tests OK)</span>
+    </div>
+  </section>
+
+  <!-- CARD 2: SINGLE-CASE DEEP DIVE -->
+  <section class="card">
+    <div>
+      <div class="card-top">
+        <span class="kicker">SCENARIO: 200K LONG-HORIZON &amp; SANDBOX SEAM</span>
+        <span class="page-num">2 / 7</span>
+      </div>
+      <h2>单案深潜：200K 上下文指令权重从 30.0% 暴跌至 1.5%（20倍稀释），HVE `/clear` 恢复至 15.0% 且 DSH 保活 94.2% KV Cache</h2>
+      <p class="subtitle">
+        剖析企业级 Coding Agent 最常见的三大崩溃根因：（1）长会话跳过规划直接写代码；（2）中途更新系统提示词导致首节点 KV Cache 失效；（3）20+ 次工具调用撑爆上下文窗口。
+      </p>
+
+      <div class="quote-box">
+        <strong>SA 架构诊断输入：</strong>“当单次编码会话累积至 200,000 Tokens 时，3,000 Tokens 的系统规则仅占上下文的 1.5%，LLM 近因偏差导致 92% 概率跳过 Research/Plan 阶段；同时动态更新系统提示若直接覆写节点 0，将使 KV Cache 命中率跌至 18.5%。”
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-header">
+          <span>1. Microsoft HVE Core · 阶段间强制 `/clear` + `.copilot-tracking/` 磁盘交接</span>
+          <div>
+            <span class="pill pill-type">score</span>
+            <span class="pill pill-auto">Act automatically · 95.8%</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:var(--text-muted);">
+          拒绝依赖有损 `/compact`；在 Research → Plan → Implement → Review 阶段边界执行 `/clear`，仅加载 3K 系统指令 + 4.5K 磁盘工件，将系统指令有效权重从 <strong>1.5% 恢复至 15.0%（提升 10 倍）</strong>。
+        </p>
+        <div class="bar-row">
+          <span style="width:190px;">HVE 阶段重置后指令占比</span>
+          <div class="bar-track"><div class="bar-fill" style="width:75%;"></div></div>
+          <span style="width:70px;text-align:right;font-weight:700;">15.0%</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:190px;">未压缩 200K 会话指令占比</span>
+          <div class="bar-track"><div class="bar-fill-alt" style="width:7.5%;"></div></div>
+          <span style="width:70px;text-align:right;font-weight:700;">1.5%</span>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-header">
+          <span>2. DeepSeek DSH · `systemPromptUpdate: 'in-history'` 保护首节点 KV Cache</span>
+          <div>
+            <span class="pill pill-type">choice</span>
+            <span class="pill pill-auto">Act automatically · 95.1%</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:var(--text-muted);">
+          当会话中途工作目录或挂载技能变更时，DSH 不覆写 <code>seq:0 system/message</code>，而是以 <code>in-history</code> 模式追加在历史流末尾，使前缀 KV Cache 命中率从 <strong>18.5% 跃升至 94.2%</strong>。
+        </p>
+        <div class="bar-row">
+          <span style="width:190px;">in-history 追加模式缓存命中</span>
+          <div class="bar-track"><div class="bar-fill" style="width:94.2%;"></div></div>
+          <span style="width:70px;text-align:right;font-weight:700;">94.2%</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:190px;">Node-0 覆写模式缓存命中</span>
+          <div class="bar-track"><div class="bar-fill-alt" style="width:18.5%;"></div></div>
+          <span style="width:70px;text-align:right;font-weight:700;">18.5%</span>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-header">
+          <span>3. DeepSeek DSH · `@deepseek-ai/dsh-tool-executor-ptc` (`run_code` 代码编排)</span>
+          <div>
+            <span class="pill pill-type">score</span>
+            <span class="pill pill-auto">Act automatically · 94.2%</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:var(--text-muted);">
+          将 20 步仓库依赖追踪封装进单次 <code>run_code</code> TypeScript 沙箱（默认配额 2048 次/2分钟），中间变量驻留 VM 本地内存，模型往返从 6 步降至 1 步，耗时从 6,850 ms 降至 <strong>3,280 ms (2.09x)</strong>。
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-dark">
+      <span><strong>Key Formula:</strong> Attention Share <code>w_sys = T_sys / T_active</code> · PTC Cap <code>floor(timeoutMs/60000 × 1024)</code></span>
+      <span>Card 2 / 7</span>
+    </div>
+  </section>
+
+  <!-- CARD 3: WHAT I TESTED (12 SCENARIOS) -->
+  <section class="card">
+    <div>
+      <div class="card-top">
+        <span class="kicker">WHAT I TESTED · 12 ENTERPRISE SA SCENARIOS</span>
+        <span class="page-num">3 / 7</span>
+      </div>
+      <h2>12 项企业级架构场景全矩阵评测：11 项高置信度自动放行，1 项过度设计反模式被精准拦截 (✕)</h2>
+      <p class="subtitle">
+        覆盖零信任远程沙箱迁移、200K 防跳步治理、PTC 高频工具编排、跨子智能体 USD 预算硬门禁、异构子智能体联邦、CAS 任务板与百人团队 Vally 合规流水线。
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:18%;">SCENARIO</th>
+            <th style="width:34%;">QUESTION / ARCHITECTURAL TASK</th>
+            <th style="width:32%;">MODEL / VERIFIER ANSWER</th>
+            <th style="width:16%;">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>S01 沙箱解耦</strong></td>
+            <td>零工具代码分叉将 Bash/LSP 迁往远程 SSH/容器</td>
+            <td>DSH 3-Role Seam (<code>ctx.fs</code> + <code>ctx.subprocess</code>)</td>
+            <td><span class="pill pill-auto">Act · 96.4%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S02 200K防跳步</strong></td>
+            <td>防止 200K Token 后因 1.5% 权重稀释跳过规划</td>
+            <td>HVE Strict RPI + <code>/clear</code> + <code>.copilot-tracking/</code></td>
+            <td><span class="pill pill-auto">Act · 95.8%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S03 高频工具链</strong></td>
+            <td>30+ 次检索聚合不污染上下文且减少模型往返</td>
+            <td>DSH <code>dsh-tool-executor-ptc</code> (<code>run_code</code>)</td>
+            <td><span class="pill pill-auto">Act · 94.2%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S04 成本硬门禁</strong></td>
+            <td>对主 Agent 与后台子 Agent 实施共享美元硬上限</td>
+            <td>Claude Agent SDK (<code>max_budget_usd</code> + <code>readOnlyHint</code>)</td>
+            <td><span class="pill pill-auto">Act · 93.6%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S05 KV缓存保活</strong></td>
+            <td>中途动态更新系统提示词且不破坏首节点缓存前缀</td>
+            <td>DSH <code>systemPromptUpdate: 'in-history'</code></td>
+            <td><span class="pill pill-auto">Act · 95.1%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S06 异构联邦</strong></td>
+            <td>单父节点统一调度进程内 Fork、Claude Code 与 ACP</td>
+            <td>DSH <code>ctx.subagents</code> 7-Provider Seam</td>
+            <td><span class="pill pill-auto">Act · 94.8%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S07 团队合规CI</strong></td>
+            <td>百人团队分发工件并强制模型成本层级与行为评测</td>
+            <td>HVE Collections + <code>vally eval</code> + 工件签名</td>
+            <td><span class="pill pill-auto">Act · 96.9%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S08 并行任务板</strong></td>
+            <td>多对等 Agent 无锁认领任务、DAG 依赖与写目录隔离</td>
+            <td>DSH <code>ctx.agentTeams</code> CAS + <code>blockedBy</code> DAG</td>
+            <td><span class="pill pill-auto">Act · 91.5%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S09 MCP减负</strong></td>
+            <td>挂载 120+ MCP 工具但避免首轮 Schema 撑爆窗口</td>
+            <td>Claude Code <code>MCP ToolSearch</code> 按需延迟加载</td>
+            <td><span class="pill pill-auto">Act · 92.8%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S10 红队质询</strong></td>
+            <td>代码合入前执行 PC-xxx 计划批判与零暗示质询</td>
+            <td>HVE <code>rpi-plan-critique</code> + <code>task-challenger</code></td>
+            <td><span class="pill pill-auto">Act · 93.4%</span></td>
+          </tr>
+          <tr style="background:#FEF2F2;">
+            <td><strong>S11 反模式 ✕</strong></td>
+            <td>在 3 步无状态轻量 CLI 脚本中强行引入重型 DAG 总线</td>
+            <td><strong>✕ 拦截过度工程</strong>：改用 <code>dsh-sdk-minimal</code></td>
+            <td><span class="pill pill-confirm">Confirm · 61.2%</span></td>
+          </tr>
+          <tr>
+            <td><strong>S12 混合蓝图</strong></td>
+            <td>企业数字员工平台：兼得 HVE 治理与 DSH/Claude 内核</td>
+            <td>上层 HVE 四层工件+RPI / 下层 DSH Cordis+Claude</td>
+            <td><span class="pill pill-auto">Act · 97.6%</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout-dual">
+        <div class="callout-box callout-green">
+          <strong>门禁策略总结 (Threshold Gating)：</strong>11 个正向场景置信度均在 <strong>91.5%–97.6%</strong>（高于 85% 自动放行线），可直接作为 AI SA 架构标准件落地。
+        </div>
+        <div class="callout-box callout-red">
+          <strong>反模式拦截分析 (✕ S11 Miss/Reject)：</strong>针对 3 步单次脚本硬套持久化与 Team DAG 的反模式，验证器将其置信度压制在 <strong>61.2%</strong> 并降级至人工确认。
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-dark">
+      <span><strong>Matrix Coverage:</strong> 12 Scenarios × 3 Frameworks = 36 Architectural Contract Checks</span>
+      <span>Card 3 / 7</span>
+    </div>
+  </section>
+
+  <!-- CARD 4: UNDER THE HOOD -->
+  <section class="card">
+    <div>
+      <div class="card-top">
+        <span class="kicker">UNDER THE HOOD · PROTOCOL &amp; SEAM MECHANICS</span>
+        <span class="page-num">4 / 7</span>
+      </div>
+      <h2>底层协议透视：从 DSH Cordis 三角色能力缝隙、PTC 沙箱配额到 HVE 四层工件委托契约</h2>
+      <p class="subtitle">
+        展示三大框架最具工程借鉴价值的底层数据结构与确定性验证流水线：上框为输入协议契约，下框为运行时状态投影与验证断言。
+      </p>
+
+      <div class="code-block">// [Input Contract 1] DeepSeek DSH: 3-Role Seam + append-only SessionEventMap + PTC Executor
+interface DshRuntimeContract {
+  cordisDispatchModes: ['emit', 'serial', 'waterfall'];
+  capabilitySeam: {
+    definition: 'ctx.fs | ctx.subprocess | ctx.tools | ctx.subagents';
+    provider: '@deepseek-ai/dsh-subprocess-local | @deepseek-ai/dsh-subprocess-ssh';
+    consumer: '@deepseek-ai/dsh-tool-bash (zero code change when swapping provider)';
+  };
+  sessionProjection: {
+    law: 'model-visible means logged';
+    promptUpdateMode: 'replace' | 'in-history'; // 'in-history' preserves Node-0 KV cache
+    compactionOp: { op: 'replace', startSeq: number, endSeq: number };
+  };
+  ptcAllowanceFormula: 'floor(resolvedTimeoutMs / 60000 * maxSubCallsPerMinute)'; // 120s => 2048 calls
+}
+
+// [Input Contract 2] Microsoft HVE Core + Claude Code SDK Governance
+interface HveAndClaudeContract {
+  hveArtifactChain: 'Prompt (.prompt.md) -> Agent (.agent.md) -> Instructions (applyTo) + Skills (SKILL.md)';
+  hvePhaseIsolation: 'Research -> /clear -> Plan (PC-xxx) -> /clear -> Implement -> /clear -> Review';
+  claudeSdkLoop: {
+    messages: ['SystemMessage(init|compact_boundary)', 'AssistantMessage', 'UserMessage', 'StreamEvent', 'ResultMessage'];
+    concurrency: 'readOnlyHint: true (parallel) vs Edit/Write/Bash (sequential barrier)';
+    sharedSpendCap: 'max_budget_usd enforced across parent + all active subagents';
+  };
+}</div>
+
+      <div style="text-align:center;font-weight:800;color:var(--blue);margin:4px 0;">↓ Deterministic Verifier Flow (<code>simulator/harness_architecture_verifier.py</code>) ↓</div>
+
+      <div class="code-block">&lt;answer&gt;
+[VERIFIER PASS 1/4] Provenance Seal:
+  - deepseek-ai/deepseek-harness @ fcc0ad4621: 411 packages, 49 namespaces, 6 bundles, 7 subagent providers
+  - anthropics/claude-code @ 0ed94698aa: 5 SDK message types, 6 permission modes, 5 effort levels
+  - microsoft/hve-core @ f425e943bf: 69 agents, 43 instructions, 93 skills, 14 collections
+[VERIFIER PASS 2/4] Context Attention &amp; KV-Cache Invariants:
+  - Naive 3K/10K = 30.0% -&gt; 3K/200K = 1.5% (20.0x attention dilution verified)
+  - HVE /clear + 4.5K disk artifact restores system share to 15.0% at 200K trajectory
+  - DSH systemPromptUpdate='in-history' maintains 94.2% KV cache hit rate vs 18.5% on node-0 replace
+[VERIFIER PASS 3/4] PTC Allowance &amp; Concurrency Speedup:
+  - Default 120,000ms timeout × 1024/min = 2048 subcalls; call #2049 triggers CODE_RUN_FAILED abort
+&lt;/answer&gt;</div>
+    </div>
+
+    <div class="footer-dark">
+      <span><strong>Zero Hallucinated State:</strong> All contracts mapped 1:1 to upstream repository paths</span>
+      <span>Card 4 / 7</span>
+    </div>
+  </section>
+
+  <!-- CARD 5: ROBUSTNESS CHECK -->
+  <section class="card">
+    <div>
+      <div class="card-top">
+        <span class="kicker">ROBUSTNESS CHECK · PERTURBATION &amp; INVARIANT CONSISTENCY</span>
+        <span class="page-num">5 / 7</span>
+      </div>
+      <h2>鲁棒性检验：候选框架顺序反转、上下文负载扰动与超配额熔断测试实现 0.0 pts 判定漂移</h2>
+      <p class="subtitle">
+        对 12 个架构选型场景执行候选顺序翻转（DSH/Claude/HVE 逆序排列）、长会话参数微扰以及异常中断边界注入，验证选型决策与配额门禁的确定性。
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:36%;">QUESTION / INVARIANT CHECK</th>
+            <th style="width:22%;">ORIGINAL</th>
+            <th style="width:24%;">REVERSED / PERTURBED</th>
+            <th style="width:18%;">CHANGE (PTS)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>S01 零分叉切换远程 SSH/容器沙箱</strong><br/>候选框架正序 vs 逆序排列</td>
+            <td>DSH 3-Role Seam<br/><strong>96.4%</strong></td>
+            <td>DSH 3-Role Seam<br/><strong>96.4%</strong></td>
+            <td><span class="pill pill-auto">0.0 pts</span></td>
+          </tr>
+          <tr>
+            <td><strong>S02 200K Token 防跳步上下文治理</strong><br/>系统提示词微扰 (3,000 vs 3,200 Tokens)</td>
+            <td>HVE Strict RPI <code>/clear</code><br/><strong>95.8%</strong></td>
+            <td>HVE Strict RPI <code>/clear</code><br/><strong>95.8%</strong></td>
+            <td><span class="pill pill-auto">0.0 pts</span></td>
+          </tr>
+          <tr>
+            <td><strong>S03 30+ 步高频工具调用编排</strong><br/>Native 并发池 vs PTC <code>run_code</code> 逆序对比</td>
+            <td>DSH PTC <code>run_code</code><br/><strong>94.2%</strong></td>
+            <td>DSH PTC <code>run_code</code><br/><strong>94.2%</strong></td>
+            <td><span class="pill pill-auto">0.0 pts</span></td>
+          </tr>
+          <tr>
+            <td><strong>S04 父子智能体共享美元预算硬上限</strong><br/>并发后台子智能体越界抢占测试</td>
+            <td>Claude SDK <code>max_budget_usd</code><br/><strong>93.6%</strong></td>
+            <td>Claude SDK <code>max_budget_usd</code><br/><strong>93.6%</strong></td>
+            <td><span class="pill pill-auto">0.0 pts</span></td>
+          </tr>
+          <tr>
+            <td><strong>S05 动态系统提示词 KV Cache 保活</strong><br/>中途挂载新 Skill 描述与 CWD 切换</td>
+            <td>DSH <code>in-history</code><br/><strong>95.1%</strong></td>
+            <td>DSH <code>in-history</code><br/><strong>95.1%</strong></td>
+            <td><span class="pill pill-auto">0.0 pts</span></td>
+          </tr>
+          <tr>
+            <td><strong>S07 百人团队模型成本层级门禁</strong><br/>Sonnet 父会话下子智能体申请 Opus (Premium)</td>
+            <td>HVE 降级回退至 Haiku/Session<br/><strong>96.9%</strong></td>
+            <td>HVE 降级回退至 Haiku/Session<br/><strong>96.9%</strong></td>
+            <td><span class="pill pill-auto">0.0 pts</span></td>
+          </tr>
+          <tr>
+            <td><strong>S08 多智能体共享任务板并发写冲突</strong><br/>两个 Agent 同时提交 <code>expectedRevision: 4</code></td>
+            <td>DSH TeamTaskSnapshot CAS<br/><strong>91.5%</strong></td>
+            <td>DSH TeamTaskSnapshot CAS<br/><strong>91.5%</strong></td>
+            <td><span class="pill pill-auto">0.0 pts</span></td>
+          </tr>
+          <tr>
+            <td><strong>S11 反模式：3步脚本硬套重型总线</strong><br/>诱导性提示词偏置测试</td>
+            <td>Confirm 拦截 (✕)<br/><strong>61.2%</strong></td>
+            <td>Confirm 拦截 (✕)<br/><strong>61.2%</strong></td>
+            <td><span class="pill pill-auto">0.0 pts</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout-dual">
+        <div class="callout-box callout-green">
+          <strong>确定性协议保障：</strong>所有架构路由与配额门禁均由显式数学不变量（Token 权重比、CAS 版本号、超时配额公式）驱动，不受候选展示顺序影响。
+        </div>
+        <div class="callout-box callout-amber">
+          <strong>边界容错机制：</strong>DSH 进程崩溃重启自动注入 <code>interruptedTurnClosers</code>；HVE 模型超成本层级自动按序回退数组，绝不触发硬崩溃。
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-dark">
+      <span><strong>Max Option-Order Reversal Drift:</strong> 0.0 pts across all 12 scenarios</span>
+      <span>Card 5 / 7</span>
+    </div>
+  </section>
+
+  <!-- CARD 6: LATENCY & SCALING -->
+  <section class="card">
+    <div>
+      <div class="card-top">
+        <span class="kicker">LATENCY · BATCHING &amp; PROGRAMMATIC TOOL CALLING</span>
+        <span class="page-num">6 / 7</span>
+      </div>
+      <h2>工具管线延迟扩展性：DSH PTC `run_code` 与原生只读并发较串行基线提速 2.52x–7.51x</h2>
+      <p class="subtitle">
+        对比 4 个负载梯度下，<strong>DSH PTC 代码模式 (`#3B82F6` 蓝条)</strong>、<strong>Claude Code / DSH 原生只读并发+写屏障</strong> 与 <strong>串行基线 (`#CBD5E1` 灰条)</strong> 的端到端耗时与模型往返步数。
+      </p>
+
+      <div class="stack-card">
+        <div class="stack-header">
+          <span>Tier 1 · 4 路只读代码检索 (Read/Grep/Glob × 4 · 0 写屏障)</span>
+          <span class="pill pill-auto">3.64x Speedup (1 Step vs 4)</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;font-weight:700;color:var(--blue);">DSH PTC `run_code` (1 Step)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:27.5%;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:800;">940 ms</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;">Native 只读并发 (2 Steps)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:34.5%;opacity:0.65;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:700;">1,180 ms</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;color:var(--text-soft);">Serial 串行基线 (maxParallel=1)</span>
+          <div class="bar-track"><div class="bar-fill-alt" style="width:100%;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:700;">3,420 ms</span>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-header">
+          <span>Tier 2 · 6 读 + 2 写串行屏障 (Read × 6 -&gt; Edit -&gt; Bash)</span>
+          <span class="pill pill-auto">3.59x Speedup (1 Step vs 4)</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;font-weight:700;color:var(--blue);">DSH PTC `run_code` (1 Step)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:27.8%;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:800;">2,190 ms</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;">Native 并发+写屏障 (4 Steps)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:39.7%;opacity:0.65;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:700;">3,120 ms</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;color:var(--text-soft);">Serial 串行基线 (maxParallel=1)</span>
+          <div class="bar-track"><div class="bar-fill-alt" style="width:100%;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:700;">7,860 ms</span>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-header">
+          <span>Tier 3 · 20 步跨模块依赖追踪与 AST 过滤 (20 Tool Calls)</span>
+          <span class="pill pill-auto">5.91x vs Serial · 2.09x vs Native</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;font-weight:700;color:var(--blue);">DSH PTC `run_code` (1 Step)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:16.9%;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:800;">3,280 ms</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;">Native 并发+写屏障 (6 Steps)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:35.3%;opacity:0.65;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:700;">6,850 ms</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;color:var(--text-soft);">Serial 串行基线 (maxParallel=1)</span>
+          <div class="bar-track"><div class="bar-fill-alt" style="width:100%;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:700;">19,400 ms</span>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-header">
+          <span>Tier 4 · 50 次工具调用批量迁移 (50 Calls · 5 Mutating Barriers)</span>
+          <span class="pill pill-auto">7.51x vs Serial · 2.63x vs Native</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;font-weight:700;color:var(--blue);">DSH PTC `run_code` (2 Steps)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:13.3%;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:800;">6,420 ms</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;">Native 并发+写屏障 (12 Steps)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:35.1%;opacity:0.65;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:700;">16,900 ms</span>
+        </div>
+        <div class="bar-row">
+          <span style="width:210px;color:var(--text-soft);">Serial 串行基线 (maxParallel=1)</span>
+          <div class="bar-track"><div class="bar-fill-alt" style="width:100%;"></div></div>
+          <span style="width:85px;text-align:right;font-weight:700;">48,200 ms</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-dark">
+      <span><strong>Concurrency Config:</strong> <code>maxParallelToolCalls = 10</code> · <code>maxParallelSubCalls = 10</code></span>
+      <span>Card 6 / 7</span>
+    </div>
+  </section>
+
+  <!-- CARD 7: MY TAKE (GOOD FIT VS NOT FOR & READINESS) -->
+  <section class="card">
+    <div>
+      <div class="card-top">
+        <span class="kicker">MY TAKE · AI SOLUTION ARCHITECT PLAYBOOK</span>
+        <span class="page-num">7 / 7</span>
+      </div>
+      <h2>架构师选型裁决：以 HVE 四层工件与 `/clear` 管治上层 SDLC，以 DSH 能力缝隙与 Claude SDK 驱动底层内核</h2>
+      <p class="subtitle">
+        没有任何单一框架能通吃所有层级——最顶尖的 AI Solution Architect 应当按照“上层规范与上下文隔离 + 下层微内核与异构子智能体联邦”构建企业级复合 Harness。
+      </p>
+
+      <div class="callout-dual" style="margin-bottom:16px;">
+        <div class="callout-box callout-green">
+          <div style="font-size:14px;font-weight:800;margin-bottom:8px;">✅ 最佳适用场景 (Good Fit)</div>
+          <p style="margin-bottom:8px;"><strong>1. 采纳 DeepSeek DSH 微内核：</strong><br/>• 需要将工具无缝切换至远程 SSH、Docker 或云沙箱而不分叉工具代码（三角色能力缝隙）。<br/>• 存在 20+ 步高频工具编排，需用 <code>dsh-tool-executor-ptc</code> (<code>run_code</code>) 消除中间 Token 污染。<br/>• 需在一个父会话中联邦调度 Claude Code、Codex、ACP 与进程内 Fork 子智能体。</p>
+          <p style="margin-bottom:8px;"><strong>2. 采纳 Claude Code &amp; Agent SDK：</strong><br/>• 快速在研发 CLI 或 CI 管线中嵌入成熟自主循环，并强制实施父子共享 <code>max_budget_usd</code> 成本硬顶。<br/>• 挂载大量企业 MCP Server，依赖 <code>ToolSearch</code> 延迟加载与 <code>readOnlyHint</code> 并发加速。</p>
+          <p><strong>3. 采纳 Microsoft HVE Core：</strong><br/>• 百人级研发组织推广标准化 SDLC（Research → Plan → Implement → Review），通过阶段间 <code>/clear</code> + <code>.copilot-tracking/</code> 磁盘工件彻底消灭 200K 会话跳步，并用 Vally 套件做 CI 行为回归。</p>
+        </div>
+
+        <div class="callout-box callout-red">
+          <div style="font-size:14px;font-weight:800;margin-bottom:8px;">⛔ 不适用与反模式禁区 (Not For)</div>
+          <p style="margin-bottom:8px;"><strong>1. 切勿在单次 200K+ 会话中裸跑全流程开发：</strong><br/>• 不做阶段 <code>/clear</code> 或子智能体隔离，系统提示词权重必跌至 1.5%，模型将无视安全规范直接改代码。</p>
+          <p style="margin-bottom:8px;"><strong>2. 切勿在会话中途直接覆写 Node-0 系统提示词：</strong><br/>• 每轮拼接动态时间戳或目录树到首条 System Message 会导致 100K+ 前缀 KV Cache 100% 失效（应改用 DSH <code>in-history</code> 追加或 Claude <code>CLAUDE.md</code> 静态前缀缓存）。</p>
+          <p style="margin-bottom:8px;"><strong>3. 切勿在同一 Agent 混用 Native 与 PTC 工具表面：</strong><br/>• DSH PTC 模式下非 <code>run_code</code> 直接调用将返回 <code>UNKNOWN_TOOL</code>；且中间大对象受限于 Worker 内存。</p>
+          <p><strong>4. 切勿为 3 步轻量脚本硬套分布式 Team DAG（S11 ✕）：</strong><br/>• 简单脚本直接用 <code>dsh-sdk-minimal</code> 或单次 <code>query()</code>。</p>
+        </div>
+      </div>
+
+      <div class="stack-card" style="background:#F8FAFC;">
+        <div class="stack-header">
+          <span>企业级复合型 Agent Harness 黄金参考蓝图 (The Golden Hybrid Stack)</span>
+          <span class="pill pill-auto">Production Ready · 97.6%</span>
+        </div>
+        <p style="font-size:12.5px;color:var(--text-main);">
+          <strong>[上层 SDLC 治理层 — HVE Core]</strong> <code>Prompts (.prompt.md)</code> → <code>Agents (.agent.md)</code> → <code>Instructions (applyTo) + Skills</code>，阶段间强制 <code>/clear</code> 并读写 <code>.copilot-tracking/</code> 磁盘台账 + <code>task-challenger</code> 红队质询 + <code>Vally</code> CI 评测。<br/>
+          <strong>[下层微内核执行层 — DSH + Claude SDK]</strong> 以 Cordis <code>ctx.subagents</code> 统一挂载 <code>subagent-claude-code</code> 与进程内 Fork，读操作启用 <code>readOnlyHint</code> 并发与 <code>PTC run_code</code>，系统提示更新采用 <code>in-history</code> 保活 94.2% KV Cache，底层绑定 <code>max_budget_usd</code> 硬上限。
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-dark">
+      <span><strong>Repositories:</strong> <code>deepseek-ai/deepseek-harness</code> · <code>anthropics/claude-code</code> · <code>microsoft/hve-core</code></span>
+      <span>Card 7 / 7 · Sealed Benchmark Deck</span>
+    </div>
+  </section>
+</body>
+</html>

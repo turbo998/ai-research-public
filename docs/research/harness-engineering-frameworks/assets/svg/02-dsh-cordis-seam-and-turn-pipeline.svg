@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgDsh" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060B16"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgDsh)"/>
+
+  <!-- Header -->
+  <rect x="36" y="22" width="1368" height="84" rx="14" fill="#0F172A" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="60" y="56" fill="#F8FAFC" font-size="22" font-weight="800">DeepSeek Harness (DSH) 核心模块架构拆解：Cordis 微内核、能力缝隙与 Turn/Step 执行管线</text>
+  <text x="60" y="84" fill="#94A3B8" font-size="13">deepseek-ai/deepseek-harness @ fcc0ad4621 · 411 Packages · 49 Top Namespaces · "Everything Is a Plugin" &amp; "Model-Visible Means Logged"</text>
+  <rect x="1150" y="38" width="230" height="48" rx="10" fill="#1E293B" stroke="#0EA5E9"/>
+  <text x="1265" y="59" text-anchor="middle" fill="#38BDF8" font-size="12" font-weight="800">Cordis Plugin Microkernel</text>
+  <text x="1265" y="77" text-anchor="middle" fill="#CBD5E1" font-size="11">emit · serial · waterfall</text>
+
+  <!-- Section 1: Left Column - 4-Stage Boot Loader & 3-Role Capability Seam -->
+  <rect x="36" y="124" width="430" height="370" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="56" y="154" fill="#38BDF8" font-size="16" font-weight="800">1. 四阶配置装配管线 &amp; 三角色能力缝隙</text>
+  <text x="56" y="176" fill="#94A3B8" font-size="11.5">Boot Loader Layering &amp; 3-Role Capability Seam Pattern</text>
+
+  <!-- 4-stage loader -->
+  <rect x="56" y="192" width="390" height="42" rx="8" fill="#1E293B" stroke="#0EA5E9"/>
+  <text x="72" y="211" fill="#F8FAFC" font-size="12" font-weight="700">Stage 1: Ordered Bundles (dsh-base + web/headless/sdk/acp)</text>
+  <text x="72" y="227" fill="#94A3B8" font-size="10.5">或独立挂载 dsh-sdk-minimal (无内置工具/存储的精简循环)</text>
+
+  <rect x="56" y="242" width="390" height="36" rx="8" fill="#1E293B" stroke="#38BDF8"/>
+  <text x="72" y="264" fill="#E2E8F0" font-size="11.5" font-weight="700">Stage 2–4: Profile Patch =&gt; Home Patch =&gt; CLI --patch</text>
+
+  <!-- 3-Role Seam Diagram -->
+  <rect x="56" y="292" width="390" height="186" rx="10" fill="#090D16" stroke="#475569"/>
+  <text x="72" y="316" fill="#F59E0B" font-size="12.5" font-weight="800">三角色能力缝隙 (3-Role Capability Seam)：零分叉切换沙箱</text>
+
+  <rect x="72" y="330" width="112" height="76" rx="8" fill="#1E293B" stroke="#38BDF8"/>
+  <text x="128" y="352" text-anchor="middle" fill="#38BDF8" font-size="11.5" font-weight="800">1. Definition</text>
+  <text x="128" y="370" text-anchor="middle" fill="#E2E8F0" font-size="10.5">ctx.fs / ctx.tools</text>
+  <text x="128" y="386" text-anchor="middle" fill="#94A3B8" font-size="10">ctx.subprocess</text>
+
+  <rect x="196" y="330" width="112" height="76" rx="8" fill="#1E293B" stroke="#10B981"/>
+  <text x="252" y="352" text-anchor="middle" fill="#10B981" font-size="11.5" font-weight="800">2. Provider</text>
+  <text x="252" y="370" text-anchor="middle" fill="#E2E8F0" font-size="10.5">Local Host OR</text>
+  <text x="252" y="386" text-anchor="middle" fill="#6EE7B7" font-size="10">SSH / Sandbox</text>
+
+  <rect x="320" y="330" width="112" height="76" rx="8" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="376" y="352" text-anchor="middle" fill="#F59E0B" font-size="11.5" font-weight="800">3. Consumer</text>
+  <text x="376" y="370" text-anchor="middle" fill="#E2E8F0" font-size="10.5">Bash / Read / Edit</text>
+  <text x="376" y="386" text-anchor="middle" fill="#94A3B8" font-size="10">PTY / LSP / Grep</text>
+
+  <text x="72" y="430" fill="#CBD5E1" font-size="11">• 替换 ctx.fs + ctx.subprocess Provider，即可将全部工具透明迁移至</text>
+  <text x="72" y="448" fill="#CBD5E1" font-size="11">  远程 SSH 或容器沙箱，上层模型工具 (Consumers) 零代码修改。</text>
+  <text x="72" y="466" fill="#38BDF8" font-size="11" font-weight="700">• 连 dsh-agent-loop 本身也是普通插件，可替换为自定义工作流驱动器。</text>
+
+  <!-- Section 2: Right Top - ReactLoopAgent Turn/Step & Session Event Log -->
+  <rect x="484" y="124" width="920" height="370" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="506" y="154" fill="#38BDF8" font-size="16" font-weight="800">2. ReactLoopAgent 状态机与 Append-Only 会话事件溯源 (ctx.sessions)</text>
+  <text x="506" y="176" fill="#94A3B8" font-size="11.5">Durable SessionEventMap Log · deriveMessages() Pure Projection · KV-Cache Prefix Stability</text>
+
+  <!-- Flow boxes inside Section 2 -->
+  <rect x="506" y="196" width="195" height="90" rx="10" fill="#1E293B" stroke="#38BDF8"/>
+  <text x="603" y="220" text-anchor="middle" fill="#38BDF8" font-size="12.5" font-weight="800">ReactLoopInbox</text>
+  <text x="603" y="240" text-anchor="middle" fill="#E2E8F0" font-size="11">agent/inbox/spliced</text>
+  <text x="603" y="258" text-anchor="middle" fill="#94A3B8" font-size="10.5">Turn 边界原子认领 Prompt</text>
+  <text x="603" y="274" text-anchor="middle" fill="#94A3B8" font-size="10.5">Step 边界认领 Next-Step</text>
+
+  <line x1="701" y1="241" x2="733" y2="241" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <rect x="738" y="196" width="210" height="90" rx="10" fill="#1E293B" stroke="#38BDF8"/>
+  <text x="843" y="220" text-anchor="middle" fill="#38BDF8" font-size="12.5" font-weight="800">Step Preparation</text>
+  <text x="843" y="240" text-anchor="middle" fill="#E2E8F0" font-size="11">ctx.systemPrompt.assemble</text>
+  <text x="843" y="258" text-anchor="middle" fill="#94A3B8" font-size="10.5">agent/pre-step (Compaction)</text>
+  <text x="843" y="274" text-anchor="middle" fill="#94A3B8" font-size="10.5">ctx.llm.prepareCall() + Freeze</text>
+
+  <line x1="948" y1="241" x2="980" y2="241" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <rect x="985" y="196" width="195" height="90" rx="10" fill="#1E293B" stroke="#10B981"/>
+  <text x="1082" y="220" text-anchor="middle" fill="#10B981" font-size="12.5" font-weight="800">Model Stream &amp; Log</text>
+  <text x="1082" y="240" text-anchor="middle" fill="#E2E8F0" font-size="11">request/header + context</text>
+  <text x="1082" y="258" text-anchor="middle" fill="#94A3B8" font-size="10.5">assistant/message (stream)</text>
+  <text x="1082" y="274" text-anchor="middle" fill="#94A3B8" font-size="10.5">tool/call -&gt; tool/result</text>
+
+  <line x1="1180" y1="241" x2="1208" y2="241" stroke="#10B981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <rect x="1213" y="196" width="170" height="90" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="1298" y="220" text-anchor="middle" fill="#F59E0B" font-size="12.5" font-weight="800">Compaction Seam</text>
+  <text x="1298" y="240" text-anchor="middle" fill="#E2E8F0" font-size="11">toolResultPruner 先裁剪</text>
+  <text x="1298" y="258" text-anchor="middle" fill="#94A3B8" font-size="10.5">surfaceOp: replace</text>
+  <text x="1298" y="274" text-anchor="middle" fill="#94A3B8" font-size="10.5">保持 Tool Pairing 平衡</text>
+
+  <!-- Append-Only Event Stream Strip -->
+  <rect x="506" y="304" width="877" height="174" rx="10" fill="#090D16" stroke="#475569"/>
+  <text x="524" y="328" fill="#10B981" font-size="12.5" font-weight="800">Append-Only SessionEventMap 不可变事件流（黄金法则：“模型可见必先记入日志 / Model-Visible Means Logged”）</text>
+  <text x="524" y="352" fill="#38BDF8" font-size="11.5" font-family="Consolas, monospace">[seq:0 system/message] -&gt; [seq:1 turn/start] -&gt; [seq:2 user/message] -&gt; [seq:3 step/start] -&gt; [seq:4 request/header]</text>
+  <text x="524" y="372" fill="#38BDF8" font-size="11.5" font-family="Consolas, monospace">-&gt; [seq:5 assistant/message] -&gt; [seq:6 tool/call] -&gt; [seq:7 tool/result] -&gt; [seq:8 step/end] -&gt; [seq:9 turn/end]</text>
+  <text x="524" y="400" fill="#E2E8F0" font-size="11.5">• KV Cache 极致优化 (`systemPromptUpdate: 'in-history'`)：当工作目录或技能集在会话中途变化时，不覆写 seq:0 系统节点，而是将差异追加</text>
+  <text x="524" y="418" fill="#E2E8F0" font-size="11.5">  为历史流中的一条新消息，避免首节点变更导致整条 100K+ Token 前缀 KV Cache 失效（实测命中率从 18.5% 提升至 94.2%）。</text>
+  <text x="524" y="440" fill="#E2E8F0" font-size="11.5">• 崩溃恢复 (`interruptedTurnClosers`)：进程异常中断重启 Resume 时，由 Agent 层自动补齐未闭合的 turn/step 终止事件，存储层保持纯物理追加。</text>
+  <text x="524" y="460" fill="#94A3B8" font-size="11">• 无状态切换：卸载 `ctx.sessionPersistence` 后退化为纯内存模式 (`dsh-sdk-minimal`)，上层 Agent 与工具无需修改任何代码。</text>
+
+  <!-- Section 3: Bottom Left - 7-Stage Guarded Tool Pipeline & Native vs PTC -->
+  <rect x="36" y="512" width="760" height="384" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="56" y="542" fill="#F59E0B" font-size="16" font-weight="800">3. 七阶受保护工具执行管线 (ctx.tools) 与 Native vs PTC 双引擎</text>
+  <text x="56" y="564" fill="#94A3B8" font-size="11.5">7-Stage Guarded Waterfall Pipeline · dsh-tool-executor-native vs dsh-tool-executor-ptc (run_code)</text>
+
+  <!-- 7 stages boxes -->
+  <g transform="translate(56, 580)">
+    <rect x="0" y="0" width="92" height="58" rx="7" fill="#1E293B" stroke="#38BDF8"/>
+    <text x="46" y="22" text-anchor="middle" fill="#38BDF8" font-size="11" font-weight="700">1. Log Call</text>
+    <text x="46" y="40" text-anchor="middle" fill="#CBD5E1" font-size="9.5">tool/call 落盘</text>
+
+    <rect x="102" y="0" width="98" height="58" rx="7" fill="#1E293B" stroke="#F59E0B"/>
+    <text x="151" y="22" text-anchor="middle" fill="#F59E0B" font-size="11" font-weight="700">2. pre-execute</text>
+    <text x="151" y="40" text-anchor="middle" fill="#CBD5E1" font-size="9.5">Waterfall 策略</text>
+
+    <rect x="210" y="0" width="98" height="58" rx="7" fill="#1E293B" stroke="#F59E0B"/>
+    <text x="259" y="22" text-anchor="middle" fill="#F59E0B" font-size="11" font-weight="700">3. Approval</text>
+    <text x="259" y="40" text-anchor="middle" fill="#CBD5E1" font-size="9.5">ctx.approval</text>
+
+    <rect x="318" y="0" width="98" height="58" rx="7" fill="#1E293B" stroke="#F43F5E"/>
+    <text x="367" y="22" text-anchor="middle" fill="#F43F5E" font-size="11" font-weight="700">4. Guards</text>
+    <text x="367" y="40" text-anchor="middle" fill="#CBD5E1" font-size="9.5">单调前置守卫</text>
+
+    <rect x="426" y="0" width="98" height="58" rx="7" fill="#1E293B" stroke="#10B981"/>
+    <text x="475" y="22" text-anchor="middle" fill="#10B981" font-size="11" font-weight="700">5. execute</text>
+    <text x="475" y="40" text-anchor="middle" fill="#CBD5E1" font-size="9.5">fs/write-intent</text>
+
+    <rect x="534" y="0" width="98" height="58" rx="7" fill="#1E293B" stroke="#38BDF8"/>
+    <text x="583" y="22" text-anchor="middle" fill="#38BDF8" font-size="11" font-weight="700">6. post-exec</text>
+    <text x="583" y="40" text-anchor="middle" fill="#CBD5E1" font-size="9.5">projectContent</text>
+
+    <rect x="642" y="0" width="78" height="58" rx="7" fill="#1E293B" stroke="#10B981"/>
+    <text x="681" y="22" text-anchor="middle" fill="#10B981" font-size="11" font-weight="700">7. Result</text>
+    <text x="681" y="40" text-anchor="middle" fill="#CBD5E1" font-size="9.5">tool/result</text>
+  </g>
+
+  <!-- Native vs PTC comparison boxes -->
+  <rect x="56" y="654" width="350" height="224" rx="10" fill="#090D16" stroke="#38BDF8"/>
+  <text x="72" y="680" fill="#38BDF8" font-size="13" font-weight="800">模式 A: @deepseek-ai/dsh-tool-executor-native</text>
+  <text x="72" y="704" fill="#E2E8F0" font-size="11.5">• 模型直接可见每个工具的 JSON Schema</text>
+  <text x="72" y="726" fill="#E2E8F0" font-size="11.5">• 默认并发池 `maxParallelToolCalls = 10`</text>
+  <text x="72" y="748" fill="#E2E8F0" font-size="11.5">• Parallel-safe 工具并发执行，Exclusive 写工具形成串行屏障</text>
+  <text x="72" y="770" fill="#E2E8F0" font-size="11.5">• 严格按模型请求顺序归并并写入 `tool/result`</text>
+  <text x="72" y="796" fill="#94A3B8" font-size="11">适用：常规 1~5 步工具调用、需逐步推理观察结果的任务</text>
+
+  <rect x="422" y="654" width="354" height="224" rx="10" fill="#090D16" stroke="#F59E0B"/>
+  <text x="438" y="680" fill="#F59E0B" font-size="13" font-weight="800">模式 B: @deepseek-ai/dsh-tool-executor-ptc (run_code)</text>
+  <text x="438" y="704" fill="#E2E8F0" font-size="11.5">• 仅暴露 `run_code` 入口，工具转化为强类型 TS SDK 绑定</text>
+  <text x="438" y="726" fill="#E2E8F0" font-size="11.5">• 在 Node VM/REPL 沙箱内通过 `await Promise.all([tools.x()])` 编排</text>
+  <text x="438" y="748" fill="#E2E8F0" font-size="11.5">• 配额门禁：`floor(timeoutMs/60000 × 1024)` (默认2分钟=2048次)</text>
+  <text x="438" y="770" fill="#E2E8F0" font-size="11.5">• 仅最终 `return`/`console.log` 进入会话，中间结果零上下文污染</text>
+  <text x="438" y="796" fill="#10B981" font-size="11" font-weight="700">实测：20 步仓库审计延迟从 6.85s 降至 3.28s (2.09x 加速)</text>
+
+  <!-- Section 4: Bottom Right - 7 Subagent Providers & Agent Teams DAG -->
+  <rect x="814" y="512" width="590" height="384" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="834" y="542" fill="#10B981" font-size="16" font-weight="800">4. 七大可插拔子智能体后端与 Agent Teams 协同</text>
+  <text x="834" y="564" fill="#94A3B8" font-size="11.5">ctx.subagents (7 Providers) &amp; ctx.agentTeams (CAS DAG Task Board)</text>
+
+  <rect x="834" y="580" width="550" height="156" rx="10" fill="#090D16" stroke="#10B981"/>
+  <text x="850" y="604" fill="#10B981" font-size="12.5" font-weight="800">ctx.subagents 统一契约 (`startActivation` / `ContinuableCreateSpec`)</text>
+  <text x="850" y="628" fill="#E2E8F0" font-size="11.5">1. `subagent-spawn-in-process`：全新空白上下文进程内子智能体 (`seed: []`)</text>
+  <text x="850" y="648" fill="#E2E8F0" font-size="11.5">2. `subagent-fork-in-process`：继承父会话已完成 Turn 历史前缀 (`seed: parentTurns`)</text>
+  <text x="850" y="668" fill="#38BDF8" font-size="11.5" font-weight="700">3. `subagent-claude-code`：通过官方 Claude Agent SDK 驱动真实 Claude Code 子进程</text>
+  <text x="850" y="688" fill="#38BDF8" font-size="11.5" font-weight="700">4. `subagent-codex` / `subagent-acp` / `subagent-dsh-sdk`：跨协议异构 Agent 联邦</text>
+  <text x="850" y="712" fill="#94A3B8" font-size="11">• 支持 `delivery: 'parent' | 'caller'`、`outputSchema` JSON 校验与 `maxDepth` 递归防护</text>
+
+  <rect x="834" y="750" width="550" height="128" rx="10" fill="#090D16" stroke="#38BDF8"/>
+  <text x="850" y="774" fill="#38BDF8" font-size="12.5" font-weight="800">ctx.agentTeams 对等多智能体共享 DAG 任务板</text>
+  <text x="850" y="798" fill="#E2E8F0" font-size="11.5">• `TeamTaskSnapshot`：每次变更递增 `revision`，支持乐观锁 CAS (`expectedRevision`)</text>
+  <text x="850" y="820" fill="#E2E8F0" font-size="11.5">• `blockedBy` 无环 DAG 依赖校验：自动拦截循环依赖，前置未完成时禁止违规认领</text>
+  <text x="850" y="842" fill="#E2E8F0" font-size="11.5">• `writeScopes` 声明式写范围：协调多智能体并行修改不同目录，降低合并冲突</text>
+</svg>

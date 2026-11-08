@@ -1,0 +1,62 @@
+{
+  "study_id": "harness-engineering-frameworks-2026-11",
+  "title_zh": "主流 Agent Harness Engineering 框架与实现机制深度研究：DeepSeek DSH × Claude Code × Microsoft HVE Core",
+  "title_en": "Mainstream Agent Harness Engineering Frameworks & Implementation Mechanisms: DeepSeek DSH × Claude Code × Microsoft HVE Core",
+  "verified_at_utc": "2026-11-08T16:00:00Z",
+  "primary_repositories": [
+    {
+      "id": "DSH",
+      "repo": "deepseek-ai/deepseek-harness",
+      "commit_sha": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "commit_date_utc": "2026-11-04T08:40:00Z",
+      "verified_files": [
+        "docs/architecture.md",
+        "docs/capability-seams.md",
+        "docs/tool-execution-pipeline.md",
+        "docs/agent-lifecycle.md",
+        "docs/subsystems/subagent.md",
+        "docs/subsystems/agent-team.md",
+        "docs/subsystems/session.md",
+        "docs/subsystems/system-prompt.md",
+        "docs/subsystems/compaction.md",
+        "packages/core/agent-loop/README.md",
+        "packages/core/tool-executor-native/README.md",
+        "packages/core/tool-executor-ptc/README.md",
+        "packages/subagent/README.md"
+      ]
+    },
+    {
+      "id": "CLAUDE_CODE",
+      "repo": "anthropics/claude-code",
+      "commit_sha": "0ed94698aa0aeee471465fc9c867c2e8434c4d68",
+      "commit_date_utc": "2026-11-06T17:03:45Z",
+      "verified_files": [
+        "https://code.claude.com/docs/en/agent-sdk/agent-loop",
+        "examples/hooks/bash_command_validator_example.py",
+        "examples/settings/settings-bash-sandbox.json",
+        "examples/settings/settings-hipaa.json",
+        "examples/gateway/aws/README.md",
+        "examples/mdm/README.md"
+      ]
+    },
+    {
+      "id": "HVE_CORE",
+      "repo": "microsoft/hve-core",
+      "commit_sha": "f425e943bf228052a23e6bc4810b5faef030314f",
+      "local_checkout_sha": "c5de2020ca4a28a992913d73dca2aff7a2a310bb",
+      "commit_date_utc": "2026-11-06T23:36:16Z",
+      "verified_files": [
+        "package.json",
+        ".github/CUSTOM-AGENTS.md",
+        "docs/architecture/README.md",
+        "docs/architecture/ai-artifacts.md",
+        "docs/contributing/ai-artifacts-common.md",
+        "docs/rpi/README.md",
+        "docs/rpi/context-engineering.md",
+        "docs/rpi/why-rpi.md"
+      ]
+    }
+  ],
+  "verification_command": "python -m unittest discover -s simulator -p \"test_*.py\" -v",
+  "verification_result": "Ran 4 tests in 0.001s — OK"
+}

@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="dshGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="ccGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="hveGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="hybGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1368" height="86" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="58" fill="#F8FAFC" font-size="23" font-weight="800">主流 Agent Harness Engineering 八层通用参考架构与三大技术流派全景对比</text>
+  <text x="60" y="88" fill="#94A3B8" font-size="13.5">8-Layer Universal Agent Harness Stack: DeepSeek Harness (DSH @fcc0ad46) · Claude Code &amp; Agent SDK (@0ed94698) · Microsoft HVE Core (@f425e943)</text>
+  <rect x="1160" y="42" width="220" height="44" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1270" y="62" text-anchor="middle" fill="#38BDF8" font-size="12" font-weight="700">AI Solution Architect</text>
+  <text x="1270" y="79" text-anchor="middle" fill="#CBD5E1" font-size="11">Module &amp; Seam Blueprint</text>
+
+  <!-- Column Headers -->
+  <rect x="36" y="126" width="236" height="62" rx="10" fill="#1E293B" stroke="#475569"/>
+  <text x="154" y="154" text-anchor="middle" fill="#E2E8F0" font-size="14" font-weight="800">八层通用架构栈 (L1–L8)</text>
+  <text x="154" y="175" text-anchor="middle" fill="#94A3B8" font-size="11.5">Universal Harness Stack</text>
+
+  <rect x="286" y="126" width="362" height="62" rx="10" fill="url(#dshGrad)"/>
+  <text x="467" y="153" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">1. DeepSeek Harness (DSH · 96.0分)</text>
+  <text x="467" y="174" text-anchor="middle" fill="#E0F2FE" font-size="11.5">Cordis 微内核 · 万物皆插件 · 三角色能力缝隙 (411 pkgs)</text>
+
+  <rect x="662" y="126" width="362" height="62" rx="10" fill="url(#ccGrad)"/>
+  <text x="843" y="153" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">2. Claude Code &amp; Agent SDK (90.4分)</text>
+  <text x="843" y="174" text-anchor="middle" fill="#FEF3C7" font-size="11.5">端到端垂直整合循环 · 读写并发屏障 · 三层渐进压缩</text>
+
+  <rect x="1038" y="126" width="366" height="62" rx="10" fill="url(#hveGrad)"/>
+  <text x="1221" y="153" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">3. Microsoft HVE Core (90.4分)</text>
+  <text x="1221" y="174" text-anchor="middle" fill="#D1FAE5" font-size="11.5">约定优于配置 · 四层工件委托链 · RPI 阶段隔离 (/clear)</text>
+
+  <!-- 8 Rows (L1 to L8) -->
+  <!-- L1 -->
+  <g transform="translate(0, 200)">
+    <rect x="36" y="0" width="236" height="66" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+    <text x="52" y="26" fill="#38BDF8" font-size="13" font-weight="800">L1 · 微内核与插件装配层</text>
+    <text x="52" y="47" fill="#94A3B8" font-size="11.5">Kernel &amp; Bundle Composition</text>
+
+    <rect x="286" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#0EA5E9"/>
+    <text x="302" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">Cordis IoC 内核 (Services + Events + Disposers)</text>
+    <text x="302" y="46" fill="#94A3B8" font-size="11.5">6 Bundles (base/web/headless/sdk/acp/minimal) + 3层 Patch</text>
+
+    <rect x="662" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+    <text x="678" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">原生单二进制内核 + TS/Python Agent SDK 封装</text>
+    <text x="678" y="46" fill="#94A3B8" font-size="11.5">.claude-plugin 市场 + settings.json + MCP Server 挂载</text>
+
+    <rect x="1038" y="0" width="366" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+    <text x="1054" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">14 个 Collection 清单驱动的跨宿主编译管线</text>
+    <text x="1054" y="46" fill="#94A3B8" font-size="11.5">collections/*.yml -&gt; Generate-Plugins.ps1 -&gt; VSIX / CLI</text>
+  </g>
+
+  <!-- L2 -->
+  <g transform="translate(0, 276)">
+    <rect x="36" y="0" width="236" height="66" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+    <text x="52" y="26" fill="#38BDF8" font-size="13" font-weight="800">L2 · Turn/Step 认知循环</text>
+    <text x="52" y="47" fill="#94A3B8" font-size="11.5">Agent Loop &amp; State Machine</text>
+
+    <rect x="286" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#0EA5E9"/>
+    <text x="302" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">可插拔 dsh-agent-loop (ReactLoopAgent)</text>
+    <text x="302" y="46" fill="#94A3B8" font-size="11.5">ReactLoopInbox splice 事件 · prepareCall 请求深度冻结</text>
+
+    <rect x="662" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+    <text x="678" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">QueryEngine 五类流式消息循环 + 5档 Effort</text>
+    <text x="678" y="46" fill="#94A3B8" font-size="11.5">System/Assistant/User/Stream/Result + max_budget_usd</text>
+
+    <rect x="1038" y="0" width="366" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+    <text x="1054" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">RPI 四阶段类型转换流水线 + rpi-agent 自治循环</text>
+    <text x="1054" y="46" fill="#94A3B8" font-size="11.5">Uncertainty -&gt; Knowledge -&gt; Strategy -&gt; Code -&gt; Verified</text>
+  </g>
+
+  <!-- L3 -->
+  <g transform="translate(0, 352)">
+    <rect x="36" y="0" width="236" height="66" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+    <text x="52" y="26" fill="#38BDF8" font-size="13" font-weight="800">L3 · 工具管线与并发调度</text>
+    <text x="52" y="47" fill="#94A3B8" font-size="11.5">Tool Pipeline &amp; Concurrency</text>
+
+    <rect x="286" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#0EA5E9"/>
+    <text x="302" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">7阶 Waterfall 守卫管线 + 双执行器 (Native / PTC)</text>
+    <text x="302" y="46" fill="#94A3B8" font-size="11.5">PTC run_code TS 沙箱 (2048 calls/2m, maxParallel=10)</text>
+
+    <rect x="662" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+    <text x="678" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">只读并发 (readOnlyHint) + 状态变更串行屏障</text>
+    <text x="678" y="46" fill="#94A3B8" font-size="11.5">6种 PermissionMode + PreToolUse/PostToolUse 拦截器</text>
+
+    <rect x="1038" y="0" width="366" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+    <text x="1054" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">Frontmatter tools[] 最小权限声明 + 93 项可执行技能</text>
+    <text x="1054" y="46" fill="#94A3B8" font-size="11.5">只读 Research Agent 物理剥离 edit/execute 写工具</text>
+  </g>
+
+  <!-- L4 -->
+  <g transform="translate(0, 428)">
+    <rect x="36" y="0" width="236" height="66" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+    <text x="52" y="26" fill="#38BDF8" font-size="13" font-weight="800">L4 · 上下文工程与防退化</text>
+    <text x="52" y="47" fill="#94A3B8" font-size="11.5">Context &amp; KV-Cache Stability</text>
+
+    <rect x="286" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#0EA5E9"/>
+    <text x="302" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">in-history 提示词追加 (保 94.2% KV Cache 命中)</text>
+    <text x="302" y="46" fill="#94A3B8" font-size="11.5">toolResultPruner 单节点裁剪 + surfaceOp replace 压缩</text>
+
+    <rect x="662" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+    <text x="678" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">CLAUDE.md 前缀缓存 + MCP ToolSearch 按需加载</text>
+    <text x="678" y="46" fill="#94A3B8" font-size="11.5">PreCompact 钩子 + compact_boundary 自动摘要重注入</text>
+
+    <rect x="1038" y="0" width="366" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+    <text x="1054" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">阶段间强制 /clear 消除 20x 近因偏差 (30%-&gt;1.5%)</text>
+    <text x="1054" y="46" fill="#94A3B8" font-size="11.5">applyTo Glob 按需挂载指令 + .copilot-tracking/ 磁盘水合</text>
+  </g>
+
+  <!-- L5 -->
+  <g transform="translate(0, 504)">
+    <rect x="36" y="0" width="236" height="66" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+    <text x="52" y="26" fill="#38BDF8" font-size="13" font-weight="800">L5 · 会话事件溯源与重放</text>
+    <text x="52" y="47" fill="#94A3B8" font-size="11.5">Session Event Log &amp; Replay</text>
+
+    <rect x="286" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#0EA5E9"/>
+    <text x="302" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">Append-Only SessionEventMap (“模型可见即落盘”)</text>
+    <text x="302" y="46" fill="#94A3B8" font-size="11.5">deriveMessages() 纯函数投影 + interruptedTurnClosers</text>
+
+    <rect x="662" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+    <text x="678" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">本地 JSONL 轨迹 + Dual-Write sessionStore 适配器</text>
+    <text x="678" y="46" fill="#94A3B8" font-size="11.5">支持无状态容器跨主机 Resume 与非破坏性 Session Fork</text>
+
+    <rect x="1038" y="0" width="366" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+    <text x="1054" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">Git 可审计的 .copilot-tracking/ 四类结构化台账</text>
+    <text x="1054" y="46" fill="#94A3B8" font-size="11.5">research/ · plans/ · details/ · changes/ · reviews/</text>
+  </g>
+
+  <!-- L6 -->
+  <g transform="translate(0, 580)">
+    <rect x="36" y="0" width="236" height="66" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+    <text x="52" y="26" fill="#38BDF8" font-size="13" font-weight="800">L6 · 子智能体与多Agent协同</text>
+    <text x="52" y="47" fill="#94A3B8" font-size="11.5">Subagents &amp; Agent Teams</text>
+
+    <rect x="286" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#0EA5E9"/>
+    <text x="302" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">7 种 ctx.subagents 后端 + Agent Teams 共享任务板</text>
+    <text x="302" y="46" fill="#94A3B8" font-size="11.5">spawn/fork/acp/claude-code/codex + CAS DAG &amp; writeScopes</text>
+
+    <rect x="662" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+    <text x="678" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">Agent 工具隔离上下文窗口 + Worktree 隔离执行</text>
+    <text x="678" y="46" fill="#94A3B8" font-size="11.5">仅向父窗口返回最终摘要 · 共享总预算与 Effort 覆盖</text>
+
+    <rect x="1038" y="0" width="366" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+    <text x="1054" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">69 个专业角色 Agent + 显式 handoffs[] 状态移交图</text>
+    <text x="1054" y="46" fill="#94A3B8" font-size="11.5">task-challenger 对抗质询 + 5 视角并行 code-review</text>
+  </g>
+
+  <!-- L7 -->
+  <g transform="translate(0, 656)">
+    <rect x="36" y="0" width="236" height="66" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+    <text x="52" y="26" fill="#38BDF8" font-size="13" font-weight="800">L7 · 能力缝隙与远程沙箱</text>
+    <text x="52" y="47" fill="#94A3B8" font-size="11.5">Capability Seams &amp; Sandboxing</text>
+
+    <rect x="286" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#0EA5E9"/>
+    <text x="302" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">三角色能力缝隙 (Definition / Provider / Consumer)</text>
+    <text x="302" y="46" fill="#94A3B8" font-size="11.5">替换 ctx.fs + ctx.subprocess 零改动迁移 Bash/PTY/LSP</text>
+
+    <rect x="662" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+    <text x="678" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">Devcontainer + Egress Firewall + 云端 Gateway</text>
+    <text x="678" y="46" fill="#94A3B8" font-size="11.5">AWS/GCP Terraform 网关 + settings-bash-sandbox/HIPAA</text>
+
+    <rect x="1038" y="0" width="366" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+    <text x="1054" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">Devcontainer 锁文件校验 + 标准 MCP Server 契约</text>
+    <text x="1054" y="46" fill="#94A3B8" font-size="11.5">Test-DevcontainerLockfile.ps1 + GitHub Actions 沙箱</text>
+  </g>
+
+  <!-- L8 -->
+  <g transform="translate(0, 732)">
+    <rect x="36" y="0" width="236" height="66" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+    <text x="52" y="26" fill="#38BDF8" font-size="13" font-weight="800">L8 · 工程治理与评测门禁</text>
+    <text x="52" y="47" fill="#94A3B8" font-size="11.5">SDLC Governance &amp; Evals</text>
+
+    <rect x="286" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#0EA5E9"/>
+    <text x="302" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">411 包契约单测 + PtcDispatchLog 审计类型安全</text>
+    <text x="302" y="46" fill="#94A3B8" font-size="11.5">Config Catalog Schema 强校验 + 严格 Disposal 生命周期</text>
+
+    <rect x="662" y="0" width="362" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+    <text x="678" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">企业级 MDM 策略模板 (macOS plist / Windows ADMX)</text>
+    <text x="678" y="46" fill="#94A3B8" font-size="11.5">managed-settings.json + check_workflow_hardening.py</text>
+
+    <rect x="1038" y="0" width="366" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+    <text x="1054" y="25" fill="#F8FAFC" font-size="12.5" font-weight="700">Vally 三大评测套件 + 模型成本分层校验 + 工件签名</text>
+    <text x="1054" y="46" fill="#94A3B8" font-size="11.5">skill-quality / agent-behavior / baseline-equivalence</text>
+  </g>
+
+  <!-- Bottom Synthesis Banner -->
+  <rect x="36" y="816" width="1368" height="98" rx="14" fill="#0F172A" stroke="url(#hybGrad)" stroke-width="2"/>
+  <text x="60" y="848" fill="#38BDF8" font-size="15.5" font-weight="800">AI Solution Architect 核心架构洞察：从“提示词堆砌”迈向“分层复合型 Harness Engineering”</text>
+  <text x="60" y="874" fill="#E2E8F0" font-size="13">• 上层工程规范层 (借鉴 Microsoft HVE Core)：采用 Prompts -&gt; Agents -&gt; Instructions + Skills 四层解耦与 RPI 阶段间 /clear + 磁盘状态台账，彻底根治 200K 上下文近因退化。</text>
+  <text x="60" y="898" fill="#E2E8F0" font-size="13">• 下层微内核与运行时层 (借鉴 DeepSeek DSH + Claude Code)：以三角色 Capability Seams 隔离远程沙箱，用 PTC run_code 消除高频工具往返，通过 subagent-claude-code 联邦调用并施加硬预算门禁。</text>
+</svg>

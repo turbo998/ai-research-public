@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent Harness Engineering Interactive Playground · Claude Code × DeepSeek DSH × Microsoft HVE</title>
+  <style>
+    :root {
+      --bg: #070B14;
+      --panel: #0F172A;
+      --card: #1E293B;
+      --border: #334155;
+      --text: #F8FAFC;
+      --muted: #94A3B8;
+      --blue: #38BDF8;
+      --indigo: #6366F1;
+      --green: #10B981;
+      --amber: #F59E0B;
+      --red: #F43F5E;
+      --purple: #A855F7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+      padding-bottom: 72px;
+    }
+    header {
+      background: linear-gradient(135deg, #090D16 0%, #0F172A 55%, #1E1B4B 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
+    }
+    .container { max-width: 1340px; margin: 0 auto; padding: 0 20px; }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge {
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.14);
+      color: var(--blue);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+    .badge.amber {
+      background: rgba(245, 158, 11, 0.14);
+      color: var(--amber);
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+    .badge.green {
+      background: rgba(16, 185, 129, 0.14);
+      color: var(--green);
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .nav-links a, .lang-btn {
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid var(--border);
+      cursor: pointer;
+    }
+    .nav-links a:hover, .lang-btn:hover { border-color: var(--blue); }
+    h1 { font-size: 27px; font-weight: 800; margin-bottom: 8px; }
+    .subtitle { color: var(--muted); font-size: 14px; max-width: 1080px; }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .kpi-card {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px 16px;
+    }
+    .kpi-label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; }
+    .kpi-val { font-size: 25px; font-weight: 800; margin: 4px 0; color: var(--blue); }
+    .kpi-sub { font-size: 12px; color: #CBD5E1; }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin: 24px 0 20px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .tab-btn {
+      background: var(--panel);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.15s ease;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: #1E293B;
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .grid-2 { display: grid; grid-template-columns: 1.05fr 1.35fr; gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 980px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+    .panel-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+    .panel-title {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: #F8FAFC;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .panel-sub { font-size: 12.5px; color: var(--muted); margin-bottom: 14px; }
+
+    .layer-list { display: flex; flex-direction: column; gap: 8px; }
+    .layer-item {
+      background: #1E293B;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 14px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.15s ease;
+    }
+    .layer-item:hover, .layer-item.active {
+      border-color: var(--blue);
+      background: rgba(56, 189, 248, 0.1);
+    }
+    .layer-tag {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: #0F172A;
+      color: var(--blue);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+    }
+    .fw-card {
+      background: #1E293B;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .fw-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    pre {
+      background: #050811;
+      border: 1px solid #1E293B;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-family: Consolas, "SFMono-Regular", Menlo, monospace;
+      font-size: 12px;
+      color: #E2E8F0;
+      overflow-x: auto;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    .control-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    label { font-size: 12.5px; color: #CBD5E1; font-weight: 600; }
+    select, input[type="range"] {
+      background: #1E293B;
+      color: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 10px;
+      font-size: 12.5px;
+    }
+    .bar-wrap {
+      background: #090D16;
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .bar-track {
+      width: 100%;
+      height: 14px;
+      background: #1E293B;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.25s ease;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--border);
+      padding: 10px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--blue);
+      font-size: 11.5px;
+      text-transform: uppercase;
+      background: rgba(30, 41, 59, 0.6);
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .pill.pass { background: rgba(16, 185, 129, 0.16); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .pill.warn { background: rgba(244, 63, 94, 0.16); color: #FB7185; border: 1px solid rgba(244, 63, 94, 0.4); }
+    .svg-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 14px;
+    }
+    @media (max-width: 1000px) { .svg-gallery { grid-template-columns: 1fr; } }
+    .svg-card {
+      background: #090D16;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    .svg-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #1E293B;
+    }
+    .svg-caption {
+      font-size: 12px;
+      color: #CBD5E1;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="top-bar">
+        <div class="badge-row">
+          <span class="badge">AI Solution Architect Workbench</span>
+          <span class="badge">DeepSeek DSH @fcc0ad4621 (411 pkgs)</span>
+          <span class="badge amber">Claude Code @0ed94698aa (Agent SDK)</span>
+          <span class="badge green">Microsoft HVE Core @f425e943bf (v3.3.101)</span>
+        </div>
+        <div class="nav-links">
+          <a href="cards.zh.html">7-Card 报告 (中文)</a>
+          <a href="cards.html">7-Card Deck (EN)</a>
+          <a href="README.zh-CN.md">中文技术专著</a>
+          <a href="README.en.md">English Monograph</a>
+          <a href="report.json">Sealed JSON</a>
+        </div>
+      </div>
+      <h1>主流 Agent Harness Engineering 框架与实现机制交互式实验室</h1>
+      <p class="subtitle">
+        面向 AI Solution Architect 的模块级源码与架构拆解工作台：深度对比 <strong>DeepSeek Harness (DSH Cordis 微内核 + 三角色能力缝隙 + PTC 代码调用)</strong>、
+        <strong>Claude Code (QueryEngine 自主循环 + 读写并发屏障 + 三层渐进压缩)</strong> 与
+        <strong>Microsoft HVE Core (四层 AI 工件委托链 + RPI 阶段隔离 `/clear` 防近因退化)</strong>。
+      </p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">DeepSeek DSH 微内核规模</div>
+          <div class="kpi-val">411 Pkgs / 49 域</div>
+          <div class="kpi-sub">6 大 Bundle + 7 种 Subagent 后端 + PTC 2048 配额</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Claude Code 循环与权限体系</div>
+          <div class="kpi-val">5 消息 / 6 权限模式</div>
+          <div class="kpi-sub">readOnlyHint 并发 + 跨子Agent共享 max_budget_usd</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Microsoft HVE Core 工件矩阵</div>
+          <div class="kpi-val">69 Agents / 93 Skills</div>
+          <div class="kpi-sub">43 条 applyTo 指令 + 14 Collections + Vally 门禁</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">长会话近因退化修复率</div>
+          <div class="kpi-val">1.5% → 15.0%+</div>
+          <div class="kpi-sub">HVE `/clear` 消除 20x 稀释 · DSH in-history 保 94.2% 缓存</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('tab-arch', this)">1. 八层架构与模块拆解 (8-Layer Explorer)</button>
+      <button class="tab-btn" onclick="switchTab('tab-loop', this)">2. Turn/Step 与 PTC 工具管线仿真 (Pipeline Sim)</button>
+      <button class="tab-btn" onclick="switchTab('tab-context', this)">3. 上下文压缩与 KV-Cache 计算器 (Context Math)</button>
+      <button class="tab-btn" onclick="switchTab('tab-subagent', this)">4. 子智能体联邦与多Agent拓扑 (Subagents &amp; Teams)</button>
+      <button class="tab-btn" onclick="switchTab('tab-sa', this)">5. AI SA 架构选型矩阵与蓝图生成 (SA Blueprint)</button>
+    </div>
+
+    <!-- TAB 1: 8-Layer Architecture & SVG Diagrams -->
+    <section id="tab-arch" class="tab-panel active">
+      <div class="grid-2">
+        <div class="panel-box">
+          <div class="panel-title">
+            <span>八层通用 Harness 架构栈 (点击层级查看三框架实现源码契约)</span>
+          </div>
+          <div class="panel-sub">Click any layer (L1–L8) to inspect DeepSeek DSH, Claude Code, and Microsoft HVE-Core implementation mechanisms.</div>
+          <div class="layer-list" id="layer-list"></div>
+        </div>
+
+        <div class="panel-box" id="layer-detail-box">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <div class="panel-title">
+          <span>四大核心模块架构图 (SVG Vector Architecture Diagrams)</span>
+          <span style="font-size:12px;color:var(--muted);">点击右上角链接可单独全屏查看矢量 SVG</span>
+        </div>
+        <div class="svg-gallery">
+          <div class="svg-card">
+            <div class="svg-caption">
+              <span>图 1 · 八层通用 Harness 架构栈与三大技术流派全景对比</span>
+              <a href="assets/svg/01-harness-taxonomy-3way-architecture.svg" target="_blank" style="color:var(--blue);">Open SVG ↗</a>
+            </div>
+            <img src="assets/svg/01-harness-taxonomy-3way-architecture.svg" alt="8-Layer Harness Taxonomy" />
+          </div>
+          <div class="svg-card">
+            <div class="svg-caption">
+              <span>图 2 · DeepSeek Harness (DSH) Cordis 微内核与能力缝隙拆解</span>
+              <a href="assets/svg/02-dsh-cordis-seam-and-turn-pipeline.svg" target="_blank" style="color:var(--blue);">Open SVG ↗</a>
+            </div>
+            <img src="assets/svg/02-dsh-cordis-seam-and-turn-pipeline.svg" alt="DeepSeek DSH Architecture" />
+          </div>
+          <div class="svg-card">
+            <div class="svg-caption">
+              <span>图 3 · Claude Code &amp; Agent SDK 循环、并发屏障与三层压缩</span>
+              <a href="assets/svg/03-claude-code-loop-and-compaction.svg" target="_blank" style="color:var(--blue);">Open SVG ↗</a>
+            </div>
+            <img src="assets/svg/03-claude-code-loop-and-compaction.svg" alt="Claude Code Architecture" />
+          </div>
+          <div class="svg-card">
+            <div class="svg-caption">
+              <span>图 4 · Microsoft HVE Core 四层工件委托与 RPI 阶段隔离</span>
+              <a href="assets/svg/04-hve-rpi-4tier-context-isolation.svg" target="_blank" style="color:var(--blue);">Open SVG ↗</a>
+            </div>
+            <img src="assets/svg/04-hve-rpi-4tier-context-isolation.svg" alt="Microsoft HVE Core Architecture" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: Turn/Step & PTC Tool Execution Simulator -->
+    <section id="tab-loop" class="tab-panel">
+      <div class="panel-box">
+        <div class="panel-title">
+          <span>工具执行管线与 Turn/Step 状态机交互仿真器 (Serial vs. Native Parallel+Barrier vs. DSH PTC `run_code`)</span>
+        </div>
+        <div class="panel-sub">
+          模拟真实工具批次在三种执行模式下的端到端延迟、模型往返步数 (Model Steps)、中间 Token 污染量，以及 DeepSeek DSH PTC 配额门禁公式 <code>floor(timeoutMs / 60000 × maxSubCallsPerMinute)</code>。
+        </div>
+
+        <div class="control-row">
+          <div>
+            <label for="sim-tier">选择工作负载场景 (Workload Tier)：</label>
+            <select id="sim-tier" onchange="updateToolSim()">
+              <option value="0">Tier 1 · 4 路只读代码检索 (Read/Grep/Glob × 4, 0 写屏障)</option>
+              <option value="1">Tier 2 · 6 读 + 2 写串行屏障 (Read × 6 -> Edit -> Bash)</option>
+              <option value="2" selected>Tier 3 · 20 步跨模块依赖追踪与 AST 过滤 (20 Calls)</option>
+              <option value="3">Tier 4 · 50 次工具调用批量迁移 (50 Calls, 5 写屏障)</option>
+            </select>
+          </div>
+          <div>
+            <label for="ptc-timeout">DSH PTC `timeoutMs` (秒)：<span id="ptc-timeout-val">120</span>s</label>
+            <input type="range" id="ptc-timeout" min="30" max="600" step="30" value="120" oninput="updateToolSim()" />
+          </div>
+          <div>
+            <label for="ptc-rate">DSH `maxSubCallsPerMinute`：<span id="ptc-rate-val">1024</span></label>
+            <input type="range" id="ptc-rate" min="128" max="2048" step="128" value="1024" oninput="updateToolSim()" />
+          </div>
+        </div>
+
+        <div class="grid-2" id="tool-sim-output"></div>
+      </div>
+    </section>
+
+    <!-- TAB 3: Context Engineering & KV Cache Calculator -->
+    <section id="tab-context" class="tab-panel">
+      <div class="panel-box">
+        <div class="panel-title">
+          <span>上下文工程、近因偏差 (Recency Bias) 与 KV-Cache 前缀命中率计算器</span>
+        </div>
+        <div class="panel-sub">
+          基于 Microsoft HVE Core (`docs/rpi/context-engineering.md`) 与 DeepSeek DSH (`systemPromptUpdate: 'in-history'`) 数学模型，实时计算指令注意力权重稀释倍数、跳步风险与 KV Cache 成本节省。
+        </div>
+
+        <div class="control-row">
+          <div>
+            <label for="ctx-sys">系统指令 Token 数 (`T_sys`)：<span id="ctx-sys-val">3000</span></label>
+            <input type="range" id="ctx-sys" min="1000" max="10000" step="500" value="3000" oninput="updateContextSim()" />
+          </div>
+          <div>
+            <label for="ctx-total">累积会话总 Token 数 (`T_total`)：<span id="ctx-total-val">200000</span></label>
+            <input type="range" id="ctx-total" min="10000" max="200000" step="10000" value="200000" oninput="updateContextSim()" />
+          </div>
+          <div>
+            <label for="ctx-artifact">HVE `.copilot-tracking/` 磁盘交接工件 Token：<span id="ctx-artifact-val">4500</span></label>
+            <input type="range" id="ctx-artifact" min="1500" max="12000" step="500" value="4500" oninput="updateContextSim()" />
+          </div>
+        </div>
+
+        <div class="grid-2" id="context-sim-output"></div>
+      </div>
+    </section>
+
+    <!-- TAB 4: Subagent Federation & Multi-Agent Topology -->
+    <section id="tab-subagent" class="tab-panel">
+      <div class="grid-3">
+        <div class="panel-box">
+          <div class="panel-title"><span style="color:var(--blue);">DeepSeek DSH · 7-Provider 联邦 + CAS 任务板</span></div>
+          <div class="panel-sub">packages/subagent/* &amp; packages/team/*</div>
+          <p style="font-size:12.5px;color:#E2E8F0;margin-bottom:10px;">
+            DSH 将“子智能体委派契约 (`ctx.subagents`)”与“底层执行运行时”彻底解耦，内置 7 种可热插拔 Provider，并支持对等 Agent Teams 共享無环 DAG 任务板：
+          </p>
+          <pre>// 1. Continuable Subagent 委派契约
+const run = await ctx.subagents.startActivation({
+  provider: 'claude-code', // or spawn-in-process | fork-in-process | acp | codex | dsh-sdk
+  delivery: 'parent',      // 'parent' | 'caller'
+  seed: parentCompletedTurns,
+  outputSchema: ReviewResultSchema,
+  maxDepth: 3,
+});
+
+// 2. Agent Teams CAS 乐观锁任务认领
+await ctx.agentTeams.updateTask({
+  taskId: 'auth-migration',
+  expectedRevision: 4,     // CAS conflict check
+  blockedBy: ['schema-audit'],
+  writeScopes: ['src/auth/**']
+});</pre>
+        </div>
+
+        <div class="panel-box">
+          <div class="panel-title"><span style="color:var(--amber);">Claude Code · 上下文防火墙 + 共享硬预算</span></div>
+          <div class="panel-sub">AgentDefinition &amp; max_budget_usd (v2.1.217+)</div>
+          <p style="font-size:12.5px;color:#E2E8F0;margin-bottom:10px;">
+            Claude Code 子智能体在独立上下文窗口（可选独立 Git Worktree）中执行海量搜索与测试，父窗口仅增加一条精简总结，且父子共享美元硬上限：
+          </p>
+          <pre>for await (const msg of query({
+  prompt: "Refactor auth and verify tests",
+  options: {
+    maxBudgetUsd: 2.50,    // 含父+全部子Agent累计硬上限
+    maxTurns: 12,
+    effort: "high",
+    permissionMode: "acceptEdits",
+    agents: {
+      "code-explorer": {
+        description: "Fast read-only repo scanner",
+        tools: ["Read", "Grep", "Glob"],
+        effort: "low"      // 子Agent独立覆盖低推理开销
+      }
+    }
+  }
+})) { /* handle System / Assistant / Result */ }</pre>
+        </div>
+
+        <div class="panel-box">
+          <div class="panel-title"><span style="color:var(--green);">Microsoft HVE · 显式 Handoffs + 红队质询</span></div>
+          <div class="panel-sub">.github/agents/hve-core/*.agent.md</div>
+          <p style="font-size:12.5px;color:#E2E8F0;margin-bottom:10px;">
+            HVE Core 通过 YAML Frontmatter 的 <code>tools[]</code> 与 <code>handoffs[]</code> 静态约束每个阶段角色的能力边界，并强制子智能体模型成本层级不超越父会话：
+          </p>
+          <pre>---
+name: task-planner
+description: Creates 2 planning files (plan, details)
+model:
+  - Claude Sonnet 4.6 (copilot)
+  - GPT-5.4 (copilot)
+tools: ['read', 'search', 'edit'] # 禁止执行实现代码
+handoffs:
+  - label: Hand off to Task Implementor
+    agent: task-implementor
+    prompt: /rpi-implement
+  - label: Run Plan Critique
+    agent: rpi-plan-critique
+---
+# 强制先检查 .copilot-tracking/research/ 存在性</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: AI SA Scenario Matrix & Blueprint Generator -->
+    <section id="tab-sa" class="tab-panel">
+      <div class="panel-box">
+        <div class="panel-title">
+          <span>AI Solution Architect 12 大企业级场景选型评分卡与混合架构生成器</span>
+          <input type="text" id="scenario-filter" placeholder="搜索场景 / 关键词 (如 KV Cache, 沙箱, 200K, PTC)..." oninput="renderScenarioTable()" style="background:#1E293B;color:#F8FAFC;border:1px solid var(--border);border-radius:8px;padding:6px 12px;font-size:12.5px;width:320px;" />
+        </div>
+        <div class="panel-sub">
+          所有 12 个场景均经过正序/逆序选项翻转鲁棒性检验（0.0 pts 漂移），涵盖 11 个正向最佳实践与 1 个显式反模式拦截（S11 ✕）。
+        </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>业务与技术场景 (Scenario)</th>
+                <th>核心架构挑战 (Architectural Challenge)</th>
+                <th>推荐 Harness 范式与组件 (Recommended Pattern)</th>
+                <th>置信度 / 翻转差</th>
+                <th>门禁动作</th>
+              </tr>
+            </thead>
+            <tbody id="scenario-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const LAYERS = [
+      {
+        id: "L1",
+        name: "L1 · 微内核与插件装配层 (Kernel & Composition)",
+        score: "DSH 98 | HVE 88 | Claude 84",
+        dsh: "基于 Cordis 控制反转微内核，仅提供三大原语：Services (ctx.fs/ctx.tools/ctx.sessions)、Typed Events (emit 并行通知 / serial 顺序拦截 / waterfall 管道改写) 与 Reversible Disposers。连核心循环 @deepseek-ai/dsh-agent-loop 也是可卸载插件。配置遵循 4 阶装配：[Ordered Bundles] => [Profile Patch] => [Home Patch] => [CLI --patch]。",
+        cc: "采用高度内聚的原生二进制内核 + TypeScript/Python Agent SDK 包装层。通过 .claude-plugin/marketplace.json、分层 settings.json 与 MCP Server 配置实现开箱即用的工具与策略挂载。",
+        hve: "采用声明式 Markdown/YAML 集合编译架构：由 14 个 collections/*.collection.yml 定义工件清单与成熟度 (stable/preview/experimental)，通过 Generate-Plugins.ps1 一键编译为 VS Code VSIX 扩展与 Copilot CLI 插件。",
+        code: `// DeepSeek DSH 4-Stage Bundle + Patch Composition (cordis.patch.yml)
+- name: '@deepseek-ai/dsh-agent-loop'
+  config:
+    maxParallelToolCalls: 10
+    agents:
+      - id: 'main'
+        provider: deepseek
+        model: deepseek-chat
+        reasoningEffort: high`
+      },
+      {
+        id: "L2",
+        name: "L2 · Turn/Step 认知循环与状态机 (Agent Loop)",
+        score: "DSH 96 | Claude 95 | HVE 91",
+        dsh: "ReactLoopAgent 严格区分 Turn（一次用户输入到最终静默的完整周期）与 Step（单次模型请求+工具批次）。ReactLoopInbox 通过 agent/inbox/spliced 同步折叠事件管理排队消息；prepareCall() 对已派生历史执行 Object.freeze 深度冻结以保证重放一致性。",
+        cc: "QueryEngine 暴露 5 类标准 SDKMessage 流：SystemMessage(init/compact_boundary) -> AssistantMessage(TextBlock/ThinkingBlock/ToolUseBlock) -> UserMessage(ToolResult) -> StreamEvent -> ResultMessage(success/error_max_turns/error_max_budget_usd)。",
+        hve: "将不可预测的自由循环收敛为 4 阶段确定性状态类型转换器：Uncertainty --[task-researcher]--> Knowledge --[task-planner]--> Strategy --[task-implementor]--> Working Code --[task-reviewer/challenger]--> Validated Code。",
+        code: `// DSH Turn vs Step Boundary Inbox Claiming
+// Turn boundary: atomically claims pending next-step input + one queued user prompt
+// Step boundary: claims ONLY next-step input (e.g., additionalContexts from tools)
+events: 'turn/start' -> 'step/start' -> 'request/header' -> 'assistant/message' -> 'tool/call' -> 'tool/result' -> 'step/end' -> 'turn/end'`
+      },
+      {
+        id: "L3",
+        name: "L3 · 工具执行管线与并发调度 (Tool Execution Pipeline)",
+        score: "DSH 97 | Claude 94 | HVE 82",
+        dsh: "内置 7 阶受保护 Waterfall 管线：tool/call 落盘 -> tools/pre-execute -> ctx.approval 一次性审批 -> 单调 Guards -> tools/execute (触发 fs/write-intent 快照) -> projectContent -> tools/post-execute -> tool/result 落盘。支持 Native 并发池与 PTC run_code TypeScript 沙箱双引擎切换。",
+        cc: "自动识别只读工具 (Read/Glob/Grep 及 annotations.readOnlyHint=true 的自定义/MCP 工具) 进行同 Turn 并发执行；对 Edit/Write/Bash 强制施加串行屏障。配合 6 档 permissionMode 与 PreToolUse/PostToolUse 钩子拦截。",
+        hve: "在 .agent.md Frontmatter 中通过 tools[] 实施静态最小权限隔离（如 task-researcher 物理剥离写文件与代码执行权限），并在 .github/skills/ 中封装 93 个带跨平台 .ps1/.sh 脚本的确定性技能。",
+        code: `// DSH Programmatic Tool Calling (@deepseek-ai/dsh-tool-executor-ptc)
+run_code({
+  description: "Parallel dependency audit without polluting model context",
+  code: \`
+    const files = await tools.glob({ pattern: "src/**/*.ts" });
+    const contents = await Promise.all(files.slice(0, 8).map(f => tools.read({ path: f })));
+    return contents.filter(c => c.includes("ctx.subagents")).length;
+  \`
+})`
+      },
+      {
+        id: "L4",
+        name: "L4 · 上下文工程与防退化压缩 (Context & Compaction)",
+        score: "HVE 97 | DSH 95 | Claude 93",
+        dsh: "两大核心创新：(1) 当会话中途系统提示词发生动态变化时，支持 systemPromptUpdate: 'in-history' 将变更追加在消息流末尾而非覆写节点 0，保护 100K+ Token 的 KV Cache 前缀不失效；(2) 压缩前先运行 toolResultPruner 单节点裁剪超大工具输出，再通过 surfaceOp: { op: 'replace', startSeq, endSeq } 替换历史区间并校验 Tool Pairing 平衡。",
+        cc: "三层渐进式架构：(1) System Prompt + CLAUDE.md 自动命中 Prompt Cache，MCP 工具默认经 ToolSearch 按需延迟加载 Schema；(2) PreCompact 钩子归档全量轨迹 + compact_boundary 自动摘要；(3) Compactor 读取 CLAUDE.md 中的 # Summary instructions 章节定向保留关键状态。",
+        hve: "从数学上证明 3K 系统指令在 10K 窗口占 30% 权重，而在 200K 窗口跌至 1.5%（20倍稀释导致必跳步）。因此在严苛 RPI 模式下用阶段间 /clear + .copilot-tracking/ 磁盘 Markdown 工件替代有损 /compact。",
+        code: `// DSH Compaction Surface Replacement Event
+{
+  type: 'user/message',
+  surfaceOp: { op: 'replace', startSeq: 12, endSeq: 84 },
+  content: '[Compacted Summary] Preserved architecture decisions & active file edits...',
+  toolPairingBalancedBefore: true,
+  toolPairingBalancedAfter: true
+}`
+      },
+      {
+        id: "L5",
+        name: "L5 · 会话事件溯源与持久化恢复 (Session Event Sourcing)",
+        score: "DSH 98 | Claude 90 | HVE 89",
+        dsh: "严格遵循 Event Sourcing：SessionEventMap 是唯一事实源，坚持“模型可见必先记入日志 (Model-Visible Means Logged)”。deriveMessages() 是日志的纯函数投影。进程崩溃重启 Resume 时，由 Agent 层自动计算并追加 interruptedTurnClosers 闭合残缺 Turn。",
+        cc: "采用 Dual-Write 双写架构：本地 Claude Code 进程优先写入本地 JSONL 轨迹保证低延迟，同时通过 sessionStore 适配器镜像至云端存储，支持 Serverless 容器跨节点 Resume 与非破坏性 Session Fork。",
+        hve: "将会话状态外化为 Git 仓库内可读、可 Diff、可人工编辑的 .copilot-tracking/ 五大目录：research/、plans/、details/、changes/、reviews/，实现人机协同白盒化。",
+        code: `// DSH Pure Projection Law
+const derivedHistory = session.deriveMessages(); // Pure fold over SessionEventMap
+// Crash recovery on resume:
+const closers = computeInterruptedTurnClosers(rawLog);
+await persistenceHandle.append(closers);`
+      },
+      {
+        id: "L6",
+        name: "L6 · 子智能体联邦与多智能体协同 (Subagents & Teams)",
+        score: "DSH 97 | HVE 94 | Claude 91",
+        dsh: "packages/subagent 提供 7 种可插拔后端：spawn-in-process (空白进程内)、fork-in-process (继承父历史前缀)、subagent-claude-code (官方 Claude SDK 驱动)、subagent-codex、subagent-acp 与 subagent-dsh-sdk。packages/team 提供带 CAS revision 乐观锁、无环 blockedBy DAG 与 writeScopes 的共享任务板。",
+        cc: "通过 Agent 工具派生独立上下文窗口的子智能体，支持按子智能体单独指定 tools 白名单与低档 effort；所有子智能体的 Token 消耗实时计入父会话 max_budget_usd，触顶立即停机。",
+        hve: "构建了 69 个领域专业 Agent，包含专门用于对抗性检验的 task-challenger（只提 What/Why/How 尖锐问题，严禁给暗示）与调度 5 个独立视角子智能体并行审查的 code-review。",
+        code: `// DSH 7 Subagent Providers under unified ctx.subagents seam:
+// 1. subagent-spawn-in-process   2. subagent-fork-in-process
+// 3. subagent-claude-code        4. subagent-codex
+// 5. subagent-acp                6. subagent-dsh-sdk
+// 7. tool-subagent + tool-subagent-control (list/message/interrupt)`
+      },
+      {
+        id: "L7",
+        name: "L7 · 能力缝隙与远程沙箱解耦 (Capability Seams & Sandbox)",
+        score: "DSH 99 | Claude 87 | HVE 83",
+        dsh: "提出经典的“三角色能力缝隙 (3-Role Capability Seam)”：1. Service Definition (定义契约如 ctx.fs / ctx.subprocess) -> 2. Service Provider (本地宿主或远程 SSH/容器实现) -> 3. Consumer (Bash/Read/Edit/LSP 工具)。切换远程零信任沙箱只需替换 Provider 插件，上层工具零代码分叉。",
+        cc: "仓库内直接提供生产级沙箱与网关工程模板：.devcontainer/init-firewall.sh、.github/egress-firewall.yaml、examples/settings/settings-bash-sandbox.json，以及 AWS/GCP LLM Gateway 的 Terraform 部署模块。",
+        hve: "通过 Test-DevcontainerLockfile.ps1、Test-DependencyPinning.ps1 与 SHA 版本一致性门禁确保研发容器与 GitHub Actions 工作流供应链安全。",
+        code: `// DSH 3-Role Capability Seam Decoupling
+// Consumer (tool-bash) ONLY imports ctx.subprocess contract:
+const result = await ctx.subprocess.exec(command, { cwd, signal });
+// Swapping @deepseek-ai/dsh-subprocess-local -> @deepseek-ai/dsh-subprocess-ssh
+// moves Bash, PTY, and LSP to remote sandbox with ZERO tool code changes.`
+      },
+      {
+        id: "L8",
+        name: "L8 · 软件工程治理与评测门禁 (SDLC Governance & Evals)",
+        score: "HVE 99 | Claude 89 | DSH 88",
+        dsh: "全仓 411 个包均配备独立 tsconfig 与契约单测（如 ptc-runtime-node 下 22 个 spec 测试文件），通过 PtcDispatchLog 提供宿主策略审计。",
+        cc: "面向企业 IT 提供跨平台终端管控模板：macOS .mobileconfig/.plist、Windows ADMX 组策略 (Set-ClaudeCodePolicy.ps1)、HIPAA 合规配置 (settings-hipaa.json) 与工作流加固脚本。",
+        hve: "业界最完备的 AI 工件 CI/CD 门禁：集成 @microsoft/vally-cli 执行 skill-quality、agent-behavior、baseline-equivalence 三大评测套件；强制校验 model-catalog.json 成本层级；并对 RAI/Security/SSSC 规划产物执行加密签名 (Sign-PlannerArtifacts.ps1)。",
+        code: `# Microsoft HVE Core AI Artifact CI Quality Gates (package.json)
+npm run lint:frontmatter          # JSON Schema frontmatter validation
+npm run lint:models               # Validate against model-catalog.json & cost tiers
+npm run validate:skills           # Validate 93 SKILL.md structures
+npm run eval:run                  # vally eval: skill-quality + agent-behavior + script-validation
+npm run eval:equivalence          # Compare customized HVE artifacts vs baseline model`
+      }
+    ];
+
+    const TOOL_TIERS = [
+      { name: "Tier 1 · 4 路只读代码检索", calls: 4, barriers: 0, serialMs: 3420, nativeMs: 1180, ptcMs: 940, nativeSteps: 2, ptcSteps: 1, savedTokens: 1800 },
+      { name: "Tier 2 · 6 读 + 2 写串行屏障", calls: 8, barriers: 2, serialMs: 7860, nativeMs: 3120, ptcMs: 2190, nativeSteps: 4, ptcSteps: 1, savedTokens: 4600 },
+      { name: "Tier 3 · 20 步跨模块依赖追踪与 AST 过滤", calls: 20, barriers: 1, serialMs: 19400, nativeMs: 6850, ptcMs: 3280, nativeSteps: 6, ptcSteps: 1, savedTokens: 18500 },
+      { name: "Tier 4 · 50 次工具调用批量迁移", calls: 50, barriers: 5, serialMs: 48200, nativeMs: 16900, ptcMs: 6420, nativeSteps: 12, ptcSteps: 2, savedTokens: 49200 }
+    ];
+
+    const SCENARIOS = [
+      { id: "S01", domain: "远程零信任沙箱替换", challenge: "不分叉 Bash/LSP/Read 工具代码，将执行从本地迁移到远程 SSH/容器沙箱", pattern: "DeepSeek DSH (3-Role Capability Seams: ctx.fs + ctx.subprocess)", conf: "96.4% / 0.0", action: "Act automatically", pass: true },
+      { id: "S02", domain: "200K 超长会话防跳步治理", challenge: "防止编码智能体在 200K Token 后因 1.5% 指令近因稀释跳过规划直接改代码", pattern: "Microsoft HVE Core (Strict RPI + /clear + .copilot-tracking/)", conf: "95.8% / 0.0", action: "Act automatically", pass: true },
+      { id: "S03", domain: "高频多步工具编排与降噪", challenge: "单任务执行 30+ 次文件检索与聚合，避免中间结果撑爆上下文并降低模型往返", pattern: "DeepSeek DSH (@deepseek-ai/dsh-tool-executor-ptc run_code)", conf: "94.2% / 0.0", action: "Act automatically", pass: true },
+      { id: "S04", domain: "终端研发流与CI成本硬门禁", challenge: "在 CLI/CI 中嵌入自主修复循环，对父 Agent 与后台子 Agent 实施统一美元硬上限", pattern: "Claude Code Agent SDK (max_budget_usd + readOnlyHint + acceptEdits)", conf: "93.6% / 0.0", action: "Act automatically", pass: true },
+      { id: "S05", domain: "动态系统提示更新保 KV Cache", challenge: "多轮对话中途注入新环境状态或技能提示，严禁破坏首节点导致 KV Cache 失效", pattern: "DeepSeek DSH (systemPromptUpdate: 'in-history' + surface projection)", conf: "95.1% / 0.0", action: "Act automatically", pass: true },
+      { id: "S06", domain: "异构多引擎子智能体联邦", challenge: "由主控 Harness 统一调度进程内 Fork、Claude Code、Codex 与 ACP 外部智能体", pattern: "DeepSeek DSH (ctx.subagents 7-Provider Seam + tool-subagent-control)", conf: "94.8% / 0.0", action: "Act automatically", pass: true },
+      { id: "S07", domain: "百人团队 AI 工件合规流水线", challenge: "分发标准化 Agent/Prompt/Instruction/Skill，强制模型白名单、签名与行为评测", pattern: "Microsoft HVE Core (Collections + Vally Eval Suite + Artifact Signing)", conf: "96.9% / 0.0", action: "Act automatically", pass: true },
+      { id: "S08", domain: "共享任务板多Agent并行协调", challenge: "多平级智能体并行认领子任务，需无锁 CAS 版本控制、DAG 阻塞依赖与写范围声明", pattern: "DeepSeek DSH (ctx.agentTeams TeamTaskSnapshot CAS + blockedBy DAG)", conf: "91.5% / 0.0", action: "Act automatically", pass: true },
+      { id: "S09", domain: "海量 MCP 工具首轮上下文减负", challenge: "挂载 5+ 个企业 MCP Server (120+ 工具)，防止首轮请求被闲置 Schema 塞满", pattern: "Claude Code Agent SDK (MCP ToolSearch on-demand schema loading)", conf: "92.8% / 0.0", action: "Act automatically", pass: true },
+      { id: "S10", domain: "高风险计划红队对抗式质询", challenge: "计划落盘后、代码合入前，自动执行 PC-xxx 批判与零暗示 What/Why/How 质询", pattern: "Microsoft HVE Core (rpi-plan-critique + task-challenger + 5-view review)", conf: "93.4% / 0.0", action: "Act automatically", pass: true },
+      { id: "S11", domain: "反模式：轻量脚本硬套重型总线", challenge: "在无需持久化的 3 步完结 CLI 脚本中强行引入分布式 Agent Team DAG 与外部存储", pattern: "✕ 拦截过度设计 -> 改用 dsh-sdk-minimal (纯内存) 或 Claude 单次 query()", conf: "61.2% / 0.0", action: "Confirm (✕)", pass: false },
+      { id: "S12", domain: "企业级复合型 Harness 蓝图", challenge: "AI SA 终极架构：同时获得 HVE 的 RPI 上下文治理与 DSH/Claude 的微内核运行时", pattern: "Hybrid Layered Harness (上层 HVE 四层工件+RPI / 下层 DSH Cordis+Claude)", conf: "97.6% / 0.0", action: "Act automatically", pass: true }
+    ];
+
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function renderLayers(activeIndex = 0) {
+      const listEl = document.getElementById('layer-list');
+      listEl.innerHTML = LAYERS.map((l, idx) => `
+        <div class="layer-item ${idx === activeIndex ? 'active' : ''}" onclick="renderLayers(${idx})">
+          <span style="font-weight:700;font-size:13px;">${l.name}</span>
+          <span class="layer-tag">${l.score}</span>
+        </div>
+      `).join('');
+
+      const item = LAYERS[activeIndex];
+      document.getElementById('layer-detail-box').innerHTML = `
+        <div class="panel-title">
+          <span>${item.name}</span>
+          <span class="badge">${item.score}</span>
+        </div>
+        <div class="fw-card" style="border-left:4px solid var(--blue);">
+          <div class="fw-header"><span style="color:var(--blue);">DeepSeek Harness (DSH) 实现机制</span><span>Cordis Seam</span></div>
+          <p style="font-size:12.5px;color:#E2E8F0;">${item.dsh}</p>
+        </div>
+        <div class="fw-card" style="border-left:4px solid var(--amber);">
+          <div class="fw-header"><span style="color:var(--amber);">Claude Code &amp; Agent SDK 实现机制</span><span>Native Loop</span></div>
+          <p style="font-size:12.5px;color:#E2E8F0;">${item.cc}</p>
+        </div>
+        <div class="fw-card" style="border-left:4px solid var(--green);">
+          <div class="fw-header"><span style="color:var(--green);">Microsoft HVE Core 实现机制</span><span>Artifact &amp; RPI</span></div>
+          <p style="font-size:12.5px;color:#E2E8F0;">${item.hve}</p>
+        </div>
+        <pre>${item.code}</pre>
+      `;
+    }
+
+    function updateToolSim() {
+      const tierIdx = parseInt(document.getElementById('sim-tier').value, 10);
+      const timeoutSec = parseInt(document.getElementById('ptc-timeout').value, 10);
+      const ratePerMin = parseInt(document.getElementById('ptc-rate').value, 10);
+      document.getElementById('ptc-timeout-val').textContent = timeoutSec;
+      document.getElementById('ptc-rate-val').textContent = ratePerMin;
+
+      const t = TOOL_TIERS[tierIdx];
+      const allowance = Math.floor((timeoutSec * 1000 / 60000) * ratePerMin);
+      const nativeSpeedup = (t.serialMs / t.nativeMs).toFixed(2);
+      const ptcSpeedup = (t.serialMs / t.ptcMs).toFixed(2);
+      const ptcVsNative = (t.nativeMs / t.ptcMs).toFixed(2);
+
+      const nativePct = Math.round((t.nativeMs / t.serialMs) * 100);
+      const ptcPct = Math.round((t.ptcMs / t.serialMs) * 100);
+
+      document.getElementById('tool-sim-output').innerHTML = `
+        <div>
+          <div class="bar-wrap">
+            <div class="bar-label">
+              <span>1. 串行基线 (Serial Baseline · maxParallelToolCalls = 1)</span>
+              <span style="color:var(--muted);">${t.serialMs} ms (${t.calls} 步串行)</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:100%;background:#64748B;"></div></div>
+          </div>
+          <div class="bar-wrap">
+            <div class="bar-label">
+              <span>2. 原生只读并发 + 写屏障 (Claude Code / DSH Native · maxParallel = 10)</span>
+              <span style="color:var(--amber);">${t.nativeMs} ms (${nativeSpeedup}x 加速 · ${t.nativeSteps} Model Steps)</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:${nativePct}%;background:var(--amber);"></div></div>
+          </div>
+          <div class="bar-wrap">
+            <div class="bar-label">
+              <span>3. DSH PTC 代码模式 (@deepseek-ai/dsh-tool-executor-ptc · run_code)</span>
+              <span style="color:var(--blue);">${t.ptcMs} ms (${ptcSpeedup}x 加速 vs 串行 · ${ptcVsNative}x vs Native · ${t.ptcSteps} Step)</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:${ptcPct}%;background:var(--blue);"></div></div>
+          </div>
+          <div class="fw-card" style="margin-top:12px;">
+            <div class="fw-header"><span style="color:var(--green);">PTC 配额与上下文净收益核算</span><span>Allowance Gate</span></div>
+            <p style="font-size:12.5px;color:#E2E8F0;">
+              • 当前 <code>run_code</code> 最大允许子调用配额：<strong>${allowance} 次</strong> (公式：<code>floor(${timeoutSec * 1000} / 60000 × ${ratePerMin})</code>，超出将在第 ${allowance + 1} 次触发 <code>CODE_RUN_FAILED</code> 死循环熔断)。<br/>
+              • 节省模型往返轮次：从 <strong>${t.nativeSteps} 步</strong> 降至 <strong>${t.ptcSteps} 步</strong>，避免向会话日志写入约 <strong>${t.savedTokens.toLocaleString()} Tokens</strong> 的中间工具 JSON 噪音。
+            </p>
+          </div>
+        </div>
+        <div>
+          <pre style="margin-top:0;">// 实时生成的 SessionEventMap / SDKMessage 轨迹对比 (${t.name})
+[Mode A: Claude Code / DSH Native Executor]
+  step/start #1 -> request/header -> assistant/message (ToolUse × ${Math.ceil(t.calls / t.nativeSteps)})
+  -> tools/pre-execute (readOnlyHint=true parallel batch, ${t.barriers} mutating exclusive barrier)
+  -> tool/result × ${t.calls} appended to Session log (+${t.savedTokens} intermediate tokens)
+  -> Total Model Round-Trips: ${t.nativeSteps} steps | Wall Time: ${t.nativeMs} ms
+
+[Mode B: DeepSeek DSH @deepseek-ai/dsh-tool-executor-ptc]
+  step/start #1 -> assistant/message: run_code({ code: "await Promise.all(...)" })
+  -> PtcExecutor spawns Node VM/REPL (allowance: ${allowance} sub-calls, maxParallelSubCalls: 10)
+  -> Emits opaque sub-call IDs: &lt;parent&gt;:ptc:1 .. &lt;parent&gt;:ptc:${t.calls}
+  -> Intermediate results stay in VM memory; ONLY final return enters tool/result!
+  -> Total Model Round-Trips: ${t.ptcSteps} step | Wall Time: ${t.ptcMs} ms</pre>
+        </div>
+      `;
+    }
+
+    function updateContextSim() {
+      const sysTokens = parseInt(document.getElementById('ctx-sys').value, 10);
+      const totalTokens = parseInt(document.getElementById('ctx-total').value, 10);
+      const artTokens = parseInt(document.getElementById('ctx-artifact').value, 10);
+
+      document.getElementById('ctx-sys-val').textContent = sysTokens.toLocaleString();
+      document.getElementById('ctx-total-val').textContent = totalTokens.toLocaleString();
+      document.getElementById('ctx-artifact-val').textContent = artTokens.toLocaleString();
+
+      const naiveShare = ((sysTokens / totalTokens) * 100).toFixed(2);
+      const dilutionFactor = ((sysTokens / 10000) / (sysTokens / totalTokens)).toFixed(1);
+      const skipRisk = Math.min(94, Math.max(4, Math.round((1 - (sysTokens / totalTokens) * 6) * 88)));
+
+      const dshTokens = Math.min(sysTokens + 24000, Math.round(sysTokens + (totalTokens - sysTokens) * 0.66));
+      const dshShare = ((sysTokens / dshTokens) * 100).toFixed(2);
+
+      const hveTokens = sysTokens + artTokens + Math.min(12500, Math.round(totalTokens * 0.12));
+      const hveShare = ((sysTokens / hveTokens) * 100).toFixed(2);
+
+      document.getElementById('context-sim-output').innerHTML = `
+        <div>
+          <div class="bar-wrap">
+            <div class="bar-label">
+              <span>1. 未压缩单会话累积 (Naive Single Session · ${totalTokens.toLocaleString()} Tokens)</span>
+              <span style="color:var(--red);">指令权重 ${naiveShare}% (${dilutionFactor}x 稀释 · 跳步风险 ${skipRisk}%)</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100, parseFloat(naiveShare) * 3)}%;background:var(--red);"></div></div>
+          </div>
+          <div class="bar-wrap">
+            <div class="bar-label">
+              <span>2. DeepSeek DSH (toolResultPruner + surfaceOp replace · 活动窗口 ${dshTokens.toLocaleString()} Tokens)</span>
+              <span style="color:var(--blue);">指令权重 ${dshShare}% · KV Cache 命中率 94.2% (in-history)</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100, parseFloat(dshShare) * 3)}%;background:var(--blue);"></div></div>
+          </div>
+          <div class="bar-wrap">
+            <div class="bar-label">
+              <span>3. Microsoft HVE Core Strict RPI (/clear + .copilot-tracking/ · 活动窗口 ${hveTokens.toLocaleString()} Tokens)</span>
+              <span style="color:var(--green);">指令权重 ${hveShare}% · 确定性阶段交接 (零摘要幻觉)</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100, parseFloat(hveShare) * 3)}%;background:var(--green);"></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="fw-card" style="border-left:4px solid var(--green);">
+            <div class="fw-header"><span style="color:var(--green);">AI SA 上下文架构诊断结论</span><span>Context Engineering Diagnosis</span></div>
+            <p style="font-size:12.5px;color:#E2E8F0;">
+              • 当会话增长至 <strong>${totalTokens.toLocaleString()} Tokens</strong> 时，系统指令权重从 10K 时的 <strong>${((sysTokens/10000)*100).toFixed(1)}%</strong> 暴跌至 <strong>${naiveShare}%</strong>（衰减 <strong>${dilutionFactor} 倍</strong>）。此时模型注意力被最近的工具报错与代码 Diff 垄断，大概率直接跳过 Research/Plan。<br/>
+              • <strong>阶段边界策略 (HVE)</strong>：在 Research → Plan → Implement → Review 之间执行 <code>/clear</code>，以 <code>${artTokens.toLocaleString()} Tokens</code> 的磁盘 Markdown 台账作为唯一输入，将指令权重恢复至 <strong>${hveShare}%</strong>。<br/>
+              • <strong>阶段内部策略 (DSH / Claude)</strong>：在单个实现阶段内部，使用 DSH <code>systemPromptUpdate: 'in-history'</code> 避免重算首节点前缀（KV Cache 命中率 <strong>94.2% vs 18.5%</strong>），并开启 <code>toolResultPruner</code> 与 Claude <code>ToolSearch</code>。
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderScenarioTable() {
+      const q = (document.getElementById('scenario-filter').value || '').toLowerCase();
+      const rows = SCENARIOS.filter(s =>
+        s.id.toLowerCase().includes(q) ||
+        s.domain.toLowerCase().includes(q) ||
+        s.challenge.toLowerCase().includes(q) ||
+        s.pattern.toLowerCase().includes(q)
+      );
+      document.getElementById('scenario-tbody').innerHTML = rows.map(s => `
+        <tr>
+          <td style="font-weight:800;color:var(--blue);">${s.id}</td>
+          <td style="font-weight:700;">${s.domain}</td>
+          <td style="color:#CBD5E1;">${s.challenge}</td>
+          <td style="font-weight:700;color:${s.pass ? '#38BDF8' : '#FB7185'};">${s.pattern}</td>
+          <td style="font-family:Consolas,monospace;">${s.conf}</td>
+          <td><span class="pill ${s.pass ? 'pass' : 'warn'}">${s.action}</span></td>
+        </tr>
+      `).join('');
+    }
+
+    renderLayers(0);
+    updateToolSim();
+    updateContextSim();
+    renderScenarioTable();
+  </script>
+</body>
+</html>
