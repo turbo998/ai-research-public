@@ -29,6 +29,11 @@ $$\text{Proactive Agent} = \text{Durable Agent (SQLite Checkpointed)} + \text{Cr
 
 ## 2. 🚀 Fastest-Rising / Highest Velocity AI Leaderboard (2026-11-08)
 
+> **📘 Multi-Round Standalone 6-Part Selection FAQs & Sealed Evidence**:
+> - **Round 1 FAQ**: [Bare-Metal GPU Cluster Control-Plane Selection FAQ: NVKE vs. Managed Cloud K8s (AKS/EKS) vs. DIY Kubeadm/Slurm (`docs/nvke-vs-aks-gpu-cluster-selection-faq.en.md`)](docs/nvke-vs-aks-gpu-cluster-selection-faq.en.md) ([ZH](docs/nvke-vs-aks-gpu-cluster-selection-faq.md))
+> - **Round 2 FAQ**: [Long-Horizon Coding Agent Context Architecture Selection FAQ: `billion-context` Reversible Folding vs. `/compact` vs. Chunked Vector RAG (`docs/context-folding-vs-compact-rag-selection-faq.en.md`)](docs/context-folding-vs-compact-rag-selection-faq.en.md) ([ZH](docs/context-folding-vs-compact-rag-selection-faq.md) · [Round 2 SVG](../../assets/github-ai-radar-2026-11-08-r2-context-folding.svg))
+> - **Raw Scrape Evidence & Provenance Classification**: Track A `stars_today` raw HTML is sealed at [`evidence/trending-daily-2026-11-08-raw.html`](evidence/trending-daily-2026-11-08-raw.html) (`sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`); Track B new repos report lifecycle daily averages since creation with `stars_today = not_measured`; external paper/benchmark figures are labeled `anonymized_reported (independently_reproduced=false)` and TCO/FinOps worked examples are labeled `synthetic (independently_reproduced=false)`.
+
 ### 2.1 Track A — 24h Single-Day Star Surge Leaders
 
 | Velocity Rank | Repository (`owner/repo`) | 24h Star Surge | Total Stars / Relative Gain | Plain-Language Reason Why It Is Exploding Today | SA Priority |

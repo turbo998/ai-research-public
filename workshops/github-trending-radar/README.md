@@ -29,6 +29,11 @@ $$\text{Proactive Agent} = \text{Durable Agent (SQLite Checkpointed)} + \text{Cr
 
 ## 二、🚀 当日热度提升最快榜单（Fastest-Rising / Highest Velocity AI Leaderboard）
 
+> **📘 本班次双轮独立六段式选型 FAQ 与证据封存**：
+> - **Round 1 FAQ**：[裸金属 GPU 集群管理面选型 FAQ：NVKE vs 云托管 AKS/EKS vs Kubeadm/Slurm (`docs/nvke-vs-aks-gpu-cluster-selection-faq.md`)](docs/nvke-vs-aks-gpu-cluster-selection-faq.md)（[EN](docs/nvke-vs-aks-gpu-cluster-selection-faq.en.md)）
+> - **Round 2 FAQ**：[长会话 Coding Agent 上下文架构选型 FAQ：`billion-context` 可逆折叠 vs `/compact` vs 向量 RAG (`docs/context-folding-vs-compact-rag-selection-faq.md`)](docs/context-folding-vs-compact-rag-selection-faq.md)（[EN](docs/context-folding-vs-compact-rag-selection-faq.en.md) · [Round 2 SVG](../../assets/github-ai-radar-2026-11-08-r2-context-folding.svg)）
+> - **原始抓取证据与数据分级**：Track A `stars_today` 原始 HTML 已封存至 [`evidence/trending-daily-2026-11-08-raw.html`](evidence/trending-daily-2026-11-08-raw.html)（`sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`）；Track B 新仓仅报告建仓生命周期日均（`stars_today = not_measured`）；外部论文/基准指标标注为 `anonymized_reported (independently_reproduced=false)`，架构师 TCO/FinOps 算例标注为 `synthetic (independently_reproduced=false)`。
+
 ### 2.1 Track A — 24h 单日新增 Star 飙升最快榜（Daily Star Surge Top 9）
 
 | 飙升排名 | 仓库 (`owner/repo`) | 24h 新增 Star | 总 Star / 相对增幅 | 大白话一句话：为什么今天突然爆火？ | SA 关注优先级 |

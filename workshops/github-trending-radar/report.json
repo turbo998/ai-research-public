@@ -3,9 +3,45 @@
   "report_id": "github-ai-trending-radar-2026-11-08",
   "run_id": "sweep_20261108_2300",
   "triggered_at": "2026-11-08T23:06:32+08:00",
-  "verified_at": "2026-11-08T23:48:10+08:00",
-  "provenance": "measured",
-  "independently_reproduced": true,
+  "verified_at": "2026-11-09T00:50:30+08:00",
+  "provenance": "mixed_sealed (measured: GitHub Trending HTML & REST metadata; anonymized_reported: upstream paper/benchmark claims with independently_reproduced=false; synthetic: architect parametric TCO/FinOps models with independently_reproduced=false)",
+  "independently_reproduced": false,
+  "provenance_breakdown": {
+    "repository_metadata_and_trending_badges": {
+      "provenance": "measured",
+      "independently_reproduced": true,
+      "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html",
+      "raw_html_sha256": "353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0",
+      "audit_json_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-08-audit.json",
+      "audit_json_sha256": "b887b85823bdc5cc4846804d27a1424df3d010d7c5f2966b77d2af3568f212e4"
+    },
+    "upstream_repo_performance_and_benchmark_claims": {
+      "provenance": "anonymized_reported",
+      "independently_reproduced": false,
+      "note": "Covers author-reported claims in READMEs/papers (e.g., billion-context 174,327 calls, 95%–97% KV prefix-cache hit rate, ~5x cost reduction, ContextBench F1=0.3097, LongMemEval-S 79.20% vs 62.60%, and NVKE mock-NICo 6C/12G / NVSentinel architecture targets). Not re-executed on paid multi-GPU clusters or 1,500-item API runs during this shift."
+    },
+    "architect_tco_and_finops_worked_examples": {
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "note": "Covers parametric TCO/MTTR and FinOps calculations in Round 1 (64-node 512xH200 ~$111.9k/yr availability model, ~85% below-OS failure ratio, <90s quarantine target) and Round 2 (20-engineer 50-turn monthly token spend $16,579 vs $3,432)."
+    }
+  },
+  "standalone_faq_guides": [
+    {
+      "round": 1,
+      "topic": "Bare-Metal GPU Cluster Control-Plane Selection: NVKE (dsx-ai-factory/nvke) vs. Managed Cloud K8s (AKS/EKS) vs. DIY Kubeadm/Slurm",
+      "zh_path": "workshops/github-trending-radar/docs/nvke-vs-aks-gpu-cluster-selection-faq.md",
+      "en_path": "workshops/github-trending-radar/docs/nvke-vs-aks-gpu-cluster-selection-faq.en.md",
+      "svg_path": "assets/github-ai-radar-2026-11-08.svg"
+    },
+    {
+      "round": 2,
+      "topic": "Long-Horizon Coding Agent Context Architecture Selection: Model-Driven Reversible Folding (billion-context / acp-kernel) vs. Lossy /compact vs. Chunked Vector RAG",
+      "zh_path": "workshops/github-trending-radar/docs/context-folding-vs-compact-rag-selection-faq.md",
+      "en_path": "workshops/github-trending-radar/docs/context-folding-vs-compact-rag-selection-faq.en.md",
+      "svg_path": "assets/github-ai-radar-2026-11-08-r2-context-folding.svg"
+    }
+  ],
   "framework": {
     "reference_repo": "disler/pi-durable-news-agent",
     "formula": "Attention = round(clamp((0.50 * Signal + 0.35 * Facts - 0.25 * Hype + 0.40 * Relevance) * TopicWeight, 0, 100))",

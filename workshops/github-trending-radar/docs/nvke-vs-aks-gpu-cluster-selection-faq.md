@@ -3,10 +3,16 @@
 > **English Edition**: [nvke-vs-aks-gpu-cluster-selection-faq.en.md](nvke-vs-aks-gpu-cluster-selection-faq.en.md)  
 > **关联日报**: [2026-11-08 GitHub AI 最热榜单与情报摘要](../daily/2026-11-08.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
-本文档面向 **AI Solution Architect（AI 解决方案架构师）**，基于 2026-11-08 GitHub 榜首增速冠军 **`dsx-ai-factory/nvke`（NVIDIA Kubernetes Engine，`v0.23.1`，Apache-2.0，单日 Star 暴涨 +91%）** 的一手源码核验，用通俗大白话与第一性原理解答：
+本文档面向 **AI Solution Architect（AI 解决方案架构师）**，基于 2026-11-08 GitHub 榜首增速项目 **`dsx-ai-factory/nvke`（仓库自述为 NVIDIA Kubernetes Engine，`v0.23.1`，Apache-2.0，单日 Star 暴涨 +91% / `+345★ today`）** 的一手源码核验，用通俗大白话与第一性原理解答：
 1. **什么时候应该选 NVKE，什么时候直接用公有云托管 AKS/EKS，什么时候坚持用 Slurm？**
 2. **NVKE 相比传统 Kubeadm + Ansible 拼装脚本，到底在底层解决了哪 4 个致命痛点？**
 3. **如何在无物理 GPU 的开发机上用 `mock-NICo` 在 15 分钟内跑通完整控制面 PoC？**
+
+> 🛡️ **数据来源、归属核验与证据分级声明（Provenance & Attribution Disclosure）**：
+> - **仓库归属核验（Attribution）**：`dsx-ai-factory/nvke` 托管于 GitHub `dsx-ai-factory` 组织（`owner.type: Organization`，README 与 Go 模块自述为 `NVIDIA Kubernetes Engine`，并非托管于 `github.com/NVIDIA` 主官方组织下；官方企业背书标识列为 `unconfirmed_corporate_badge`，技术评估完全基于其开源代码与 CAPI 架构实现）。
+> - **`measured`（本班次一手实测抓取）**：GitHub Daily Trending 单日增量 `+345 stars today` 与总 Star `724`（原始 HTML 证据已封存至 [`workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html`](../evidence/trending-daily-2026-11-08-raw.html)，`sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`）、REST API 元数据（`v0.23.1`，`Apache-2.0`，Go `1.27.3`）。
+> - **`anonymized_reported`（`independently_reproduced=false`，上游仓库文档/源码声明）**：`CAPNICo`、`TPM 2.0 + SPIFFE`、`OVN-K8s + Multus`、`NKTP`、`NVSentinel` 组件架构与 `mock-NICo`（`6 vCPU / 12 GB RAM`）无卡沙盒规格，引自 [`dsx-ai-factory/nvke/blob/main/README.md`](https://github.com/dsx-ai-factory/nvke/blob/main/README.md)；本班次未在真实多机裸金属 GPU 集群上重跑硬件故障注入。
+> - **`synthetic`（`independently_reproduced=false`，架构师参数化 TCO/MTTR 推演算例）**：文中「约 85% 裸金属故障位于 OS 之下」、「NVSentinel `<90s` 自动隔离替换目标」以及第 5.1 节「64 节点（512×H200）年化挽回约 `$111,876`（`$77,721 + $34,155`）有效算力」均为基于显式运维假设的参数化架构算例，绝非物理机房实测跑分。
 
 ---
 
@@ -133,7 +139,9 @@ flowchart LR
 
 ## 5. 🧮 定量算例与 7-Card 评测洞察（Quantitative Example & 7-Card Insights）
 
-### 5.1 64 节点（512 卡 H200）私有智算中心年化有效算力恢复算例
+### 5.1 64 节点（512 卡 H200）私有智算中心年化有效算力恢复算例（`synthetic` 参数化 TCO 推演，`independently_reproduced=false`）
+
+> 📌 **口径说明**：本节为架构师面向客户高管汇报的 **参数化 TCO/MTTR 估算模型（`synthetic`，`independently_reproduced=false`）**，所有假设参数（单卡折旧电费 `$2.20/GPU·h`、年维护窗口 `6 次`、年硬件异常 `78 次`）均显式列出，可根据客户实际机房台账替换；第 3 点引用的 `billion-context` 缓存命中率（`95%–97%`）与 `5.0×` 压缩比属于上游作者报告数据（`anonymized_reported`，`independently_reproduced=false`，出处：`ranxianglei/billion-context/blob/main/paper/`）。
 
 假设某金融/政企客户建设了一座 **64 节点（每节点 8×H200 GPU，共 512 卡）** 的私有训推一体智算中心，单卡等效折旧与机房电费成本约为 **$2.20 / GPU·小时**（集群每小时算力成本 **$1,126.40 / 小时**）：
 

@@ -3,10 +3,16 @@
 > **中文版**: [nvke-vs-aks-gpu-cluster-selection-faq.md](nvke-vs-aks-gpu-cluster-selection-faq.md)  
 > **Daily Digest**: [2026-11-08 GitHub AI Trending Leaderboard & Intelligence Digest](../daily/2026-11-08.en.md) · **7-Card Deck**: [`cards.en.html`](../cards.en.html) · **Interactive Radar**: [`github-radar.html`](../../../github-radar.html)
 
-Written for **AI Solution Architects**, this guide distills primary-source findings from the #1 fastest-accelerating AI infrastructure repository on GitHub (`2026-11-08` sweep) — **`dsx-ai-factory/nvke` (NVIDIA Kubernetes Engine, `v0.23.1`, Apache-2.0, +91% single-day star surge)** — into plain-language, first-principles architectural guidance:
+Written for **AI Solution Architects**, this guide distills primary-source findings from the #1 fastest-accelerating AI infrastructure repository on GitHub (`2026-11-08` sweep) — **`dsx-ai-factory/nvke` (self-described as NVIDIA Kubernetes Engine, `v0.23.1`, Apache-2.0, +91% single-day star surge / `+345★ today`)** — into plain-language, first-principles architectural guidance:
 1. **When should you choose NVKE, when should you stick with managed cloud Kubernetes (Azure AKS / AWS EKS), and when is pure Slurm still the right call?**
 2. **What 4 fatal Day-0/Day-2 bare-metal pain points does NVKE solve compared to DIY Kubeadm + Ansible scripts?**
 3. **How can you validate the entire NVKE control plane in 15 minutes on a standard GPU-free VM using `mock-NICo`?**
+
+> 🛡️ **Provenance, Ownership Verification & Metric Classification Disclosure**:
+> - **Repository Ownership & Affiliation**: `dsx-ai-factory/nvke` is hosted under the `dsx-ai-factory` GitHub organization (`owner.type: Organization`, self-described in README and Go modules as `NVIDIA Kubernetes Engine`, distinct from the primary `github.com/NVIDIA` corporate organization; corporate org badge endorsement is marked `unconfirmed_corporate_badge`, and our evaluation is grounded strictly in its open-source CAPI codebase).
+> - **`measured` (Live-scraped & verified in this shift)**: Daily Trending 24h delta `+345 stars today` and `724` total stars (sealed raw HTML evidence at [`workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html`](../evidence/trending-daily-2026-11-08-raw.html), `sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`) and GitHub REST API metadata (`v0.23.1`, `Apache-2.0`, Go `1.27.3`).
+> - **`anonymized_reported` (`independently_reproduced=false`, upstream repository documentation/source claims)**: Architectural capabilities (`CAPNICo`, `TPM 2.0 + SPIFFE`, `OVN-K8s + Multus`, `NKTP`, `NVSentinel`) and the GPU-free `mock-NICo` VM specification (`6 vCPU / 12 GB RAM`) are sourced from [`dsx-ai-factory/nvke/blob/main/README.md`](https://github.com/dsx-ai-factory/nvke/blob/main/README.md); live multi-node bare-metal GPU fault injection was not re-executed in hardware during this shift.
+> - **`synthetic` (`independently_reproduced=false`, Architect parametric TCO/MTTR model)**: The illustrative `"~85% of bare-metal failure modes live below the OS"`, `"<90s NVSentinel automated quarantine target"`, and Section 5.1 `"64-node (512×H200) annual TCO recovery of ~$111,876 ($77,721 + $34,155)"` are parametric architectural calculations under explicit assumptions, not measured data-center hardware benchmarks.
 
 ---
 
@@ -133,7 +139,9 @@ flowchart LR
 
 ## 5. 🧮 Quantitative ROI Calculation & 7-Card Benchmark Insights
 
-### 5.1 Worked ROI Example: 64-Node (512×H200 GPU) Private AI Factory Availability
+### 5.1 Worked ROI Example: 64-Node (512×H200 GPU) Private AI Factory Availability (`synthetic` Parametric TCO Model, `independently_reproduced=false`)
+
+> 📌 **Provenance Note**: This worked example is an **architect parametric TCO/MTTR model (`synthetic`, `independently_reproduced=false`)** built with explicit, auditable assumptions (`$2.20/GPU-hr`, `6` maintenance windows/year, `78` hardware fault events/year). Item 3 references author-reported production metrics from `ranxianglei/billion-context` (`95%–97%` KV cache hit rate, `5.0×` token reduction; `anonymized_reported`, `independently_reproduced=false`, source: `ranxianglei/billion-context/blob/main/paper/`).
 
 Consider an enterprise operating a **64-node bare-metal cluster (8×H200 GPUs per node = 512 GPUs)** at an amortized hardware + power cost of **$2.20 / GPU-hour** (**$1,126.40 / cluster-hour**):
 
