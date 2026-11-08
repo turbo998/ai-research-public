@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent10" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <style>
+      .t-title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 23px; font-weight: 800; fill: #F8FAFC; }
+      .t-sub { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 13px; font-weight: 500; fill: #94A3B8; }
+      .t-badge { font-family: 'Consolas', 'Courier New', monospace; font-size: 11px; font-weight: 700; fill: #F5D0FE; }
+      .t-sec { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 15px; font-weight: 700; fill: #E2E8F0; }
+      .t-body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 12px; fill: #CBD5E1; }
+      .t-mono { font-family: 'Consolas', 'Courier New', monospace; font-size: 11.5px; fill: #FDE68A; }
+      .t-metric { font-family: 'Consolas', 'Courier New', monospace; font-size: 20px; font-weight: 800; fill: #34D399; }
+      .t-warn { font-family: 'Consolas', 'Courier New', monospace; font-size: 11px; fill: #FCA5A5; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="680" rx="16" fill="url(#bg10)"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent10)"/>
+
+  <!-- Header -->
+  <text x="36" y="56" class="t-title">Round 10 · Shot-by-Shot Video Forensics &amp; Hybrid Remake Router Selection FAQ</text>
+  <text x="36" y="78" class="t-sub">JuneYaooo/rea-video (v0.1.0, Apache-2.0, Track B #5: ~409★/day lifecycle avg, stars_today: not_measured) vs. Blind All-Diffusion Remake</text>
+  <rect x="930" y="36" width="234" height="28" rx="14" fill="#4A044E" stroke="#C084FC" stroke-width="1"/>
+  <text x="944" y="54" class="t-badge">CLAIM-R10-01/02 · VERIFIED</text>
+
+  <!-- Left Column: 4-Stage Pipeline -->
+  <rect x="36" y="98" width="554" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="54" y="124" class="t-sec">1. rea-video (v0.1.0) 4-Stage Deterministic-First Pipeline</text>
+
+  <rect x="54" y="138" width="518" height="64" rx="8" fill="#0F172A" stroke="#A855F7" stroke-width="1"/>
+  <text x="68" y="158" class="t-mono">Stage 1–2: Local Shot Cut + UVR MDX-Net Stems + Pixel Forensics ($0 API)</text>
+  <text x="68" y="176" class="t-body">• Cuts shots + splits vocals.wav / music.wav via onnxruntime UVR MDX-Net (~67 MB)</text>
+  <text x="68" y="193" class="t-body">• Measures AIGC tags, 24fps pull-up (dup_ratio&lt;0.02), dark grain (std&gt;=0.3) &amp; OCR</text>
+
+  <rect x="54" y="212" width="518" height="68" rx="8" fill="#0F172A" stroke="#EC4899" stroke-width="1"/>
+  <text x="68" y="232" class="t-mono">Stage 3: Jump-Cut Grouping vlm_units() + Calibrated Fusion (VLM_WEIGHT=0.7)</text>
+  <text x="68" y="250" class="t-body">• Merges jump-cut pieces of 1 camera setup (TAKE_MAX_S=12.0s, TAKE_MAX_PIECES=8)</text>
+  <text x="68" y="267" class="t-body">• DET_WEIGHT (static_hold 1.6, still_motion 1.4, code_render 1.0) guards hard physics</text>
+
+  <rect x="54" y="290" width="518" height="134" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+  <text x="68" y="310" class="t-mono">Stage 4: Capability-Aware Hybrid Remake Routing (plan.py:LABEL_ROUTE)</text>
+  <text x="68" y="330" class="t-body">• code_render (R01) &amp; screen_capture (R02) -&gt; code_render_spec (Remotion / HTML)</text>
+  <text x="68" y="348" class="t-body">• still_motion (R17) &amp; static_hold (R18) -&gt; local_ffmpeg affine pan/zoom ($0 API)</text>
+  <text x="68" y="366" class="t-body">• ai_video / cg_3d / avatar / live_action -&gt; capsule_cinema shared-set batching</text>
+  <text x="68" y="388" class="t-warn">Reported eval/RESULTS.md (anonymized_reported, independently_reproduced=false):</text>
+  <text x="68" y="406" class="t-body">Offline free tools: 98.9%–99.6% holdout | Re-encoded WeChat + VLM/Agent: 99.6%–100%</text>
+
+  <!-- Right Column: Closed-Form FinOps Model -->
+  <rect x="610" y="98" width="554" height="340" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="628" y="124" class="t-sec">2. Closed-Form API-Only FinOps Model (25 Videos = 500 Shots/mo)</text>
+  <text x="628" y="144" class="t-sub">60% (300) deterministic UI/screen/pan shots + 40% (200) visual shots (100 shared sets)</text>
+
+  <!-- Path A Bar -->
+  <text x="628" y="172" class="t-body">Path A: Dense VLM (500 calls) + Blind All-Diffusion (500 shots × 3 = 1,500 calls)</text>
+  <rect x="628" y="180" width="440" height="24" rx="4" fill="#EF4444"/>
+  <text x="1076" y="197" class="t-mono">$825.00/mo</text>
+  <text x="628" y="218" class="t-sub">VLM: $60.00 in + $15.00 out = $75.00 | Diffusion: 1,500 × $0.50 = $750.00 | 60.0h/mo</text>
+
+  <!-- Path B Bar -->
+  <text x="628" y="246" class="t-body">Path B: Per-Shot VLM (500 calls) + Unbatched Diffusion (350 shots × 2 = 700 calls)</text>
+  <rect x="628" y="254" width="206" height="24" rx="4" fill="#F59E0B"/>
+  <text x="844" y="271" class="t-mono">$387.50/mo</text>
+  <text x="628" y="292" class="t-sub">VLM: $30.00 in + $7.50 out = $37.50 | Diffusion: 700 × $0.50 = $350.00 | 40.0h/mo</text>
+
+  <!-- Path C Bar -->
+  <text x="628" y="320" class="t-body">Path C: rea-video (150 grouped VLM calls + 300 Remotion/ffmpeg + 150 diffusion calls)</text>
+  <rect x="628" y="328" width="45" height="24" rx="4" fill="#10B981"/>
+  <text x="683" y="345" class="t-mono">$84.00/mo (-89.82% API-only)</text>
+  <text x="628" y="366" class="t-sub">VLM: $6.75 in + $2.25 out = $9.00 | Diffusion: 150 × $0.50 = $75.00 | 10.0h/mo (-83.33%)</text>
+
+  <!-- Net Savings Callout -->
+  <rect x="628" y="380" width="518" height="46" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="642" y="400" class="t-metric">-$741.00/mo (-$8,892.00/yr, -89.82% API-only) &amp; -50.0h/mo</text>
+  <text x="642" y="418" class="t-body">Synthetic API-only model (independently_reproduced=false); studio/talent/GPU infra: not_measured</text>
+
+  <!-- Bottom Row: Decision Matrix & Provenance -->
+  <rect x="36" y="454" width="1128" height="198" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="54" y="480" class="t-sec">3. Architect Selection Rules &amp; 4-Tier Provenance Guardrails</text>
+
+  <text x="54" y="506" class="t-mono">✅ Choose JuneYaooo/rea-video (v0.1.0, Apache-2.0) when:</text>
+  <text x="54" y="526" class="t-body">• Deconstructing mixed-media competitor promos / tutorials where UI cards, screen capture, live footage, and AI B-roll are interleaved.</text>
+  <text x="54" y="546" class="t-body">• Routing code_render / screen_capture to Remotion / Playwright ($0 diffusion cost, 100% crisp text) and batching shared camera setups.</text>
+
+  <text x="54" y="576" class="t-mono">⛔ Do NOT use video diffusion on code_render / screen_capture shots, and watch out for:</text>
+  <text x="54" y="596" class="t-body">• rapidocr-onnxruntime pulling GUI opencv-python over opencv-python-headless (use scripts/install_skill.sh to restore headless cv2).</text>
+  <text x="54" y="616" class="t-body">• Provenance: Track B ~409★/day is 10-day creation-to-date mean (4,092★ / 10d, measured); stars_today is not_measured.</text>
+  <text x="54" y="636" class="t-warn">• Copyright guard: Shots classified as film_footage (R21-film-footage) require studio licensing or reshooting before commercial use.</text>
+</svg>

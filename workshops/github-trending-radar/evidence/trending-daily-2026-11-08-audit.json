@@ -384,6 +384,24 @@
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/mika-android-virtual-display-agent-vs-adb-selection-faq.md",
       "conditions_and_scope": "Closed-form synthetic API-only and human-attention model verified by component-level input/output assertions in tests/radar-integration.cjs."
+    },
+    {
+      "claim_id": "CLAIM-R10-01",
+      "repo": "JuneYaooo/rea-video",
+      "metric": "JuneYaooo/rea-video v0.1.0 (Apache-2.0, Python >=3.10, Track B #5 created_at 2026-10-29 with 4,092 stars in search-new-repos-2026-11-08-raw.json [4,246-4,318 REST stars / ~409 stars/day lifecycle avg, stars_today: not_measured]; 11 base LABELS in classify.py with DET_WEIGHT [static_hold: 1.6, still_motion: 1.4, code_render: 1.0, live_action: 0.6, ai_video: 0.6] fused against VLM_WEIGHT = 0.7; jump-cut grouping vlm_units [TAKE_MAX_S = 12.0s, TAKE_MAX_PIECES = 8]; onnxruntime UVR MDX-Net ~67 MB audio stem separation; and LABEL_ROUTE routing code_render/screen_capture to Remotion/code_render_spec and still_motion/static_hold to local_ffmpeg; author-reported eval/RESULTS.md accuracy: 98.9%-99.6% holdout offline free, 88.6% -> 99.6%-100% on re-encoded WeChat videos with VLM/agent review)",
+      "provenance_type": "anonymized_reported",
+      "independently_reproduced": false,
+      "primary_source_url": "https://github.com/JuneYaooo/rea-video/blob/main/rea_video/classify.py",
+      "conditions_and_scope": "Repository metadata, pyproject.toml, pipeline.py, classify.py, plan.py, and capabilities/MATRIX.md verified directly via GitHub REST API (measured); eval/RESULTS.md accuracy figures are author-reported (anonymized_reported, independently_reproduced=false)."
+    },
+    {
+      "claim_id": "CLAIM-R10-02",
+      "repo": "JuneYaooo/rea-video",
+      "metric": "Closed-form 25 mixed product videos/mo = 500 shots/mo model (60% = 300 deterministic code_render/screen_capture/still_motion/static_hold shots + 40% = 200 generative shots grouped into 100 shared-set batches; VLM $3.00/1M in, $15.00/1M out counted once; video diffusion $0.50/call, API-only; studio/talent/GPU infra bills: not_measured): Path A Dense VLM + Blind All-Diffusion (500 VLM calls x [0.040M in ($0.1200) + 0.002M out ($0.0300) = $0.1500] = $75.00/mo [$60.00 in + $15.00 out] + 1,500 diffusion calls [500x3] x $0.50 = $750.00/mo -> $825.00/mo API-only [$33.00/video, 60.0h/mo triage]) vs Path B Unbatched VLM + 350-Shot Diffusion (500 VLM calls x [0.020M in ($0.0600) + 0.001M out ($0.0150) = $0.0750] = $37.50/mo [$30.00 in + $7.50 out] + 700 diffusion calls [350x2] x $0.50 = $350.00/mo -> $387.50/mo API-only [$15.50/video, 40.0h/mo triage]) vs Path C rea-video Forensics + Hybrid Router (150 grouped VLM calls x [0.015M in ($0.0450) + 0.001M out ($0.0150) = $0.0600] = $9.00/mo [$6.75 in + $2.25 out] + 300 deterministic shots to $0 Remotion/local_ffmpeg + 150 diffusion calls [100x1.5] x $0.50 = $75.00/mo -> $84.00/mo API-only [$3.36/video, 10.0h/mo triage], saving $741.00/mo [$8,892.00/yr, -89.82% API-only] and 50.0h/mo [-83.33%] triage vs Path A)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/rea-video-shot-forensics-vs-diffusion-remake-selection-faq.md",
+      "conditions_and_scope": "Closed-form synthetic API-only and triage-effort model verified by component-level input/output assertions in tests/radar-integration.cjs."
     }
   ]
 }
