@@ -315,8 +315,8 @@
     },
     {
       "claim_id": "CLAIM-R6-01",
-      "repo": "deepseek-ai/dsh-superagent-prototype, thedotmack/claude-mem & storytold/craft-anything",
-      "metric": "dsh-superagent-prototype v0.1.0 (Cordis 4.0.5-alpha.1 micro-kernel, 6 domain primitives, 7 ticket stages, >5s shell auto-backgrounding, 2s->60s exponential retry); claude-mem v15.12.0 (3-layer progressive disclosure index->timeline->details, <private> tag redaction, --ide dsh support); craft-anything (100% pure Rust, 320 dual-mode CLI+MCP tools, Clean-Room 3-width visual/layout diff vs Deep disassembly/Ghidra)",
+      "repo": "deepseek-ai/dsh-superagent-prototype & thedotmack/claude-mem",
+      "metric": "dsh-superagent-prototype v0.1.0 (Cordis 4.0.5-alpha.1 micro-kernel, 6 domain primitives, 7 ticket stages, >5s shell auto-backgrounding, 2s->60s exponential retry; upstream research prototype under deepseek-ai org, not an official product); claude-mem v15.12.0 (3-layer progressive disclosure index->timeline->details, <private> tag redaction, --ide dsh support)",
       "provenance_type": "anonymized_reported",
       "independently_reproduced": false,
       "primary_source_url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/001-domain.md",
@@ -348,6 +348,24 @@
       "independently_reproduced": false,
       "primary_source_url": "workshops/github-trending-radar/docs/generative-ui-catalog-vs-raw-code-streaming-selection-faq.md",
       "conditions_and_scope": "Closed-form synthetic FinOps model verified by component-level input/output assertions in tests/radar-integration.cjs."
+    },
+    {
+      "claim_id": "CLAIM-R8-01",
+      "repo": "storytold/craft-anything",
+      "metric": "storytold/craft-anything v0.4.0 (100% pure Rust, edition 2024, rust-version 1.97, MIT OR Apache-2.0, unsafe_code = forbid, 13 workspace crates, 320 dual-mode CLI+MCP tools [300 engine + 20 AI/setup], 923 baseline tests passing, embedded oxc 0.153 / iced-x86 1.21 / yaxpeax-arm 0.5 / wasmparser 0.261, Study -> Build -> Check -> Ready workflow with Clean room vs --deep modes)",
+      "provenance_type": "measured",
+      "independently_reproduced": true,
+      "primary_source_url": "https://github.com/storytold/craft-anything/blob/main/Cargo.toml",
+      "conditions_and_scope": "Workspace Cargo.toml, README.md, docs/STATUS.md, and crate tree verified directly via GitHub REST API and archived Search API JSON (evidence/search-new-repos-2026-11-08-raw.json, LF sha256: b63e1547...)."
+    },
+    {
+      "claim_id": "CLAIM-R8-02",
+      "repo": "storytold/craft-anything",
+      "metric": "Closed-form 40 modules/mo clean-room rebuild & legacy migration convergence model ($3.00/1M in, $15.00/1M out, API-only; host/VM infra bills: not_measured): Path A Blind Screenshot (6 rounds/mod = 240 rounds/mo x [0.050M in ($0.1500) + 0.012M out ($0.1800) = $0.3300/round] = $79.20/mo [$36.00 in + $43.20 out], 100.0h/mo QA) vs Path B Raw Bundle/Decompile (4 rounds/mod = 160 rounds/mo x [0.150M in ($0.4500) + 0.010M out ($0.1500) = $0.6000/round] = $96.00/mo [$72.00 in + $24.00 out], 60.0h/mo QA, fails external clean-room IP) vs Path C craft-anything (2 rounds/mod = 80 rounds/mo x [0.015M in ($0.0450) + 0.008M out ($0.1200) = $0.1650/round] = $13.20/mo [$3.60 in + $9.60 out], 20.0h/mo QA, saving $66.00/mo [-83.33% API-only] and 80.0h/mo [-80.00%] manual QA vs Path A)",
+      "provenance_type": "synthetic",
+      "independently_reproduced": false,
+      "primary_source_url": "workshops/github-trending-radar/docs/craft-anything-rust-probe-vs-decompile-selection-faq.md",
+      "conditions_and_scope": "Closed-form synthetic API-only and manual QA convergence model verified by component-level input/output assertions in tests/radar-integration.cjs."
     }
   ]
 }

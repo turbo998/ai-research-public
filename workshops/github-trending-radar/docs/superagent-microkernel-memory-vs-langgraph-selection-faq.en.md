@@ -1,14 +1,13 @@
-# Autonomous SuperAgent Micro-Kernels & Cross-Session Memory Selection FAQ: `dsh-superagent-prototype` + `claude-mem` + `craft-anything` vs. Heavy Workflow Graph Frameworks (LangGraph / AutoGen)
+# Autonomous SuperAgent Micro-Kernels & Cross-Session Memory Selection FAQ: `dsh-superagent-prototype` + `claude-mem` vs. Heavy Workflow Graph Frameworks (LangGraph / AutoGen)
 
-> **Scope**: Practical architecture and selection guide for AI Solution Architects and Platform Engineering leads building **proactive repository coding agents**, **cross-session persistent memory**, and **clean-room software inspection & verification harnesses**.
+> **Scope**: Practical architecture and selection guide for AI Solution Architects and Platform Engineering leads building **proactive repository coding agents** and **cross-session persistent memory**. (*Note: The independent selection decision for the pure-Rust clean-room software inspection & differential rebuild engine `storytold/craft-anything` is covered in its own dedicated single-decision guide, **Round 8: [`craft-anything-rust-probe-vs-decompile-selection-faq.en.md`](./craft-anything-rust-probe-vs-decompile-selection-faq.en.md)**.*)
 > **Companion Deliverables**: [`workshops/github-trending-radar/daily/2026-11-08.en.md`](../daily/2026-11-08.en.md) · [`workshops/github-trending-radar/cards.en.html`](../cards.en.html) · [`assets/github-ai-radar-2026-11-08-r6-superagent-memory.svg`](../../../assets/github-ai-radar-2026-11-08-r6-superagent-memory.svg)
 > **Raw Scrape Evidence & Provenance Notice**:
 > - **`measured` (Archived GitHub REST Search API JSON + Primary Source Verification)**:
->   - `storytold/craft-anything` (`Apache-2.0 / MIT`, 100% pure Rust, created `2026-10-31T14:50:00Z`, archived in [`workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json`](../evidence/search-new-repos-2026-11-08-raw.json), LF `sha256: b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1`: `22,088` total stars over 8 days [`22,299` in Search API verification], lifecycle average `~2,761★/day`, Track B #1; `stars_today: not_measured`);
->   - `deepseek-ai/dsh-superagent-prototype` (`v0.1.0`, `MIT`, TypeScript, created `2026-10-31T09:32:46Z`, archived in the same Search API snapshot: `21,107` total stars over 8 days [`21,148` in Search API verification], lifecycle average `~2,638★/day`, Track B #2; `stars_today: not_measured`; upstream README explicitly notes *"Research prototype for reference only, not an official DeepSeek product"*);
+>   - `deepseek-ai/dsh-superagent-prototype` (`v0.1.0`, `MIT`, TypeScript, created `2026-10-31T09:32:46Z`, archived in [`workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json`](../evidence/search-new-repos-2026-11-08-raw.json), LF `sha256: b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1`: `21,107` total stars over 8 days [`21,148` in Search API verification], lifecycle average `~2,638★/day`, Track B #2; `stars_today: not_measured`; upstream research prototype under the `deepseek-ai` org, README explicitly notes *"Research prototype for reference only, not an official DeepSeek product"*);
 >   - `thedotmack/claude-mem` (`v15.12.0`, `Apache-2.0`, TypeScript, `73,659` weekly snapshot stars [`114,804` live REST check], `stars_today: not_measured`; supports `npx claude-mem install --ide dsh --dsh-profile tui` for DeepSeek Harness alongside Claude Code, Codex, and OpenCode).
-> - **`anonymized_reported` (`independently_reproduced=false`, Upstream Architecture Docs & Tool Counts)**: The 6 core domain concepts (`Source / Trigger / Thread / Eval / Mandate / Subscription`), 7-stage Ticket state machine, `2s -> 60s` exponential delivery backoff, and `5s` foreground-to-background shell job threshold are verified from [`deepseek-ai/dsh-superagent-prototype/docs/000-philosophy.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/000-philosophy.md) through [`docs/007-architecture.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/007-architecture.md); `craft-anything`'s `320` dual-mode CLI + MCP inspection tools and `Clean room vs Deep` policy gate are verified from [`storytold/craft-anything/README.md`](https://github.com/storytold/craft-anything/blob/main/README.md); `claude-mem`'s 3-step progressive disclosure (`index -> timeline -> details`) and `<private>` secret stripping are verified from [`thedotmack/claude-mem/README.md`](https://github.com/thedotmack/claude-mem/blob/main/README.md).
-> - **`synthetic` (`independently_reproduced=false`, Architect 100% Closed-Form Parametric FinOps & Attention Model)**: Section 4's monthly workload calculation (`8,800` inbound repo/chat events = `2,200` executed tickets + `6,600` non-request/follow-up events, reducing monthly routing + cross-session memory API spend from `$1,584.00/mo -> $158.40/mo` [**`-$1,425.60/mo [-90.00%]`**] and engineering attention interruptions from `110.0h/mo -> 22.0h/mo` [**`-88.0h/mo [-80.00%]`**]) is a deterministic closed-form analytical model verified by automated assertions in `tests/radar-integration.cjs`.
+> - **`anonymized_reported` (`independently_reproduced=false`, Upstream Architecture Docs & Tool Counts)**: The 6 core domain concepts (`Source / Trigger / Thread / Eval / Mandate / Subscription`), 7-stage Ticket state machine, `2s -> 60s` exponential delivery backoff, and `5s` foreground-to-background shell job threshold are verified from [`deepseek-ai/dsh-superagent-prototype/docs/000-philosophy.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/000-philosophy.md) through [`docs/007-architecture.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/007-architecture.md); `claude-mem`'s 3-step progressive disclosure (`index -> timeline -> details`) and `<private>` secret stripping are verified from [`thedotmack/claude-mem/README.md`](https://github.com/thedotmack/claude-mem/blob/main/README.md).
+> - **`synthetic` (`independently_reproduced=false`, Architect 100% Closed-Form Parametric API-Only FinOps & Attention Model)**: Section 4's monthly workload calculation (`8,800` inbound repo/chat events = `2,200` executed tickets + `6,600` non-request/follow-up events, reducing monthly routing + cross-session memory API-only spend from `$1,584.00/mo -> $158.40/mo` [**`-$1,425.60/mo [-90.00% API-only]`**; underlying infrastructure and full customer bills marked `not_measured`] and engineering attention interruptions from `110.0h/mo -> 22.0h/mo` [**`-88.0h/mo [-80.00%]`**]) is a deterministic closed-form analytical model verified by automated assertions in `tests/radar-integration.cjs`.
 
 ---
 
@@ -18,11 +17,11 @@ When enterprise engineering teams wire a coding agent into GitHub Issues/PRs and
 1. **Attention Spam**: Every casual comment or webhook triggers a LangGraph/AutoGen node that runs an LLM call and posts verbose progress updates back into the channel—flooding the entire team's notifications;
 2. **Cross-Session Amnesia**: Every fresh worker session starts from zero, re-reading the same files and repeating mistakes fixed yesterday—or else dumps 5 raw historical transcripts (`~120k` input tokens) into the prompt before doing any real work.
 
-Tonight's top two Track B (10-day new-repo lifecycle velocity) breakouts—**`storytold/craft-anything` (`~2,761★/day`)** and **`deepseek-ai/dsh-superagent-prototype` (`~2,638★/day`)**—paired with weekly heavyweight **`thedotmack/claude-mem` (`v15.12.0`)**, define a **three-layer micro-kernel architecture** for autonomous engineering agents:
+Tonight's Track B #2 breakout **`deepseek-ai/dsh-superagent-prototype` (`~2,638★/day`, an upstream research prototype under `deepseek-ai`)** paired with weekly heavyweight **`thedotmack/claude-mem` (`v15.12.0`)** defines a **two-layer micro-kernel architecture** for autonomous repository agents:
 
 - **When your agent listens 24/7 to GitHub and Feishu/Slack and must protect human attention**: Adopt **`deepseek-ai/dsh-superagent-prototype`**'s **Attention-Conserving Cordis Micro-Kernel**. Its host-enforced `Source` offset cursor and allow-list gate drop unauthorized noise before it enters the domain, its `Subscription` fan-out routes follow-up messages on active threads directly to the running `worker-<ticket_id>` with **zero `Eval` LLM overhead**, and its web panel displays **only tickets in `person/*` stages** (*"A healthy state takes no space"*).
 - **When multi-turn or multi-day tickets suffer from cross-session amnesia**: Attach **`thedotmack/claude-mem`**. A sidecar observer agent captures structured `decision / bugfix / security_alert` observations into `~/.claude-mem`, injects only a **`~2k`-token Layer-1 Compact Index** at session start, and fetches Layer-2 `timeline` and Layer-3 `details` on demand via `mem-search`.
-- **When an agent must study an existing website, desktop app, game, or binary and build a verified replacement**: Use **`storytold/craft-anything`**. Written in 100% pure Rust, it exposes **320 deterministic inspection tools** (each available as both a CLI command and an MCP tool) inside a `Study -> Build -> Check -> Ready` loop, defaulting to **Clean-Room Mode** (refusing internal source/file reads and inspecting only external rendered layout across 3 screen widths, colors, fonts, and self-tests).
+- **When you only need a deterministic, single-run business approval pipeline (without 24/7 repo/IM listening or cross-day ticket memory)**: Use **LangGraph / Azure AI Foundry Workflows** directly. (*For the independent architectural decision on **pure-Rust clean-room software inspection and 3-width differential rebuild verification (`storytold/craft-anything`)**, see **Round 8: [`craft-anything-rust-probe-vs-decompile-selection-faq.en.md`](./craft-anything-rust-probe-vs-decompile-selection-faq.en.md)**.*)
 
 ---
 
@@ -56,14 +55,12 @@ Standard Vector RAG memory fails in two ways:
 
 ---
 
-### Q3: Why did `storytold/craft-anything` surge to `22,088+` stars in 8 days, and what architectural gap do its 320 Rust CLI/MCP tools and `Clean-Room vs Deep` modes solve?
+### Q3: How does `dsh-superagent-prototype`'s 7-stage Ticket state machine integrate with `claude-mem` (`--ide dsh`) to preserve cross-session memory across restarts without spamming humans?
 
-Previously, asking an AI coding agent to *"study how an existing web app, desktop app, or game works and build our own version"* failed either on **verification** (guessing from a single static screenshot with zero responsive/behavioral checks) or on **compliance** (scraping proprietary source code).
-
-`storytold/craft-anything` (100% pure Rust) introduces a deterministic **`Study -> Build -> Check -> Ready`** engine backed by **320 dual-mode CLI + MCP inspection tools**:
-- **Clean-Room Mode (Default, IP-Safe)**: The engine refuses every tool that reads internal code, files, or page source. It inspects only externally observable behavior (rendered layout across **3 screen widths**, computed colors, fonts, spacing, opened menus, and window screenshots).
-- **Deep Mode (Opt-In via `--deep` or `settings_set deep_mode true`)**: For authorized legacy migration and binary security audits, it unlocks built-in disassembly, pseudo-C decompilation, function call graphs, string/hex inspection, and Ghidra integration.
-- **Automated Differential Check (`Checked, not guessed`)**: After the builder agent creates the new project, `craft-anything` automatically compares the build against the original across three screen widths or runs the app/game's self-test, listing exact mismatches for iterative refinement.
+When a complex engineering ticket spans multiple days, human Q&A rounds, CI retries, or server restarts, traditional workflow graphs either replay the entire transcript or lose intermediate debugging context. `dsh-superagent-prototype` ([`docs/003-execution.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/003-execution.md)) and `claude-mem` (`npx claude-mem install --ide dsh --dsh-profile tui`) decouple execution durability from context size:
+- **7-Stage Attention-Conserving State Machine**: Every `Ticket` is in exactly one of seven stages: `waiting`, `working`, `person/delivery`, `person/answer`, `person/review`, `person/blocked`, or `closed`. `waiting` and `working` occupy **0 pixels** on the web Attention Panel; only the four `person/*` stages surface to humans.
+- **Persistent Outbox & `2s -> 60s` Exponential Retry**: Each `worker-<ticket_id>` owns an isolated worktree `<stateDir>/work/<short-name>`. If delivery to a busy worker fails, the kernel retries with exponential backoff starting at **2 seconds** up to **60 seconds** without re-running `MasterAssessor` `Eval`.
+- **Zero-Amnesia Worker Resume via `claude-mem`**: When a worker session resumes on a subsequent day, `claude-mem` injects the `~2k`-token Layer-1 Compact Index of prior decisions and bugfixes into the worker session rather than cold-loading `120k` tokens of raw transcripts. (*Note: When a worker task specifically requires clean-room inspection of external websites or binaries, see the dedicated **Round 8 FAQ on [`storytold/craft-anything`](./craft-anything-rust-probe-vs-decompile-selection-faq.en.md)**.*)
 
 ---
 
@@ -73,20 +70,18 @@ Previously, asking an AI coding agent to *"study how an existing web app, deskto
 
 ```mermaid
 flowchart TD
-    Start["Building an Enterprise Autonomous Coding / Reverse-Engineering Agent"] --> Q1{"What is the primary workload pattern?"}
+    Start["Building an Enterprise Background Coding / Automation Agent"] --> Q1{"What is the primary event & lifecycle pattern?"}
     Q1 -- "24/7 GitHub Repo & Feishu/Slack listener<br/>turning authorized requests into PRs with minimal human interruption" --> Q2{"Does it need persistent memory across sessions/days?"}
-    Q1 -- "Study existing websites / apps / games / legacy binaries<br/>and build a quantitatively verified clean-room or migrated version" --> Craft["Choose storytold/craft-anything<br/>(Pure Rust · 320 CLI+MCP Tools · Study->Build->Check->Ready)"]
-    Q1 -- "Fixed, deterministic multi-step API workflow<br/>(no autonomous repo listening or binary/UI inspection)" --> LangGraph["Choose LangGraph / Azure AI Foundry Workflows<br/>(Explicit DAG State Machine)"]
+    Q1 -- "Fixed, deterministic single-run API workflow<br/>(no autonomous repo listening or attention panel needed)" --> LangGraph["Choose LangGraph / Azure AI Foundry Workflows<br/>(Explicit DAG State Machine)"]
 
     Q2 -- "Yes: iterative multi-session engineering on the same repo" --> SuperStack["Golden Stack: dsh-superagent-prototype (Cordis Micro-Kernel)<br/>+ thedotmack/claude-mem (--ide dsh 3-Layer Progressive Memory)"]
     Q2 -- "No: isolated single-turn tickets" --> DshOnly["Choose dsh-superagent-prototype standalone<br/>(Source Offset Gate + Subscription Fan-Out + 5s Backgrounding)"]
 
-    Craft --> Q3{"What is the IP / source-access boundary?"}
-    Q3 -- "External reference / strict IP clean-room required" --> CleanRoom["Keep Default Clean-Room Mode<br/>(Refuses internal code reads; checks 3 screen widths & visual layout)"]
-    Q3 -- "Owned legacy binary migration / security audit" --> DeepMode["Enable Deep Mode (--deep)<br/>(Unlocks Disassembly / Pseudo-C / Call Graphs / Ghidra)"]
+    SuperStack --> Q3{"How to prevent comment storms & privilege escalation?"}
+    Q3 --> Guard["Enforce Source offset dedup + Thread 1-Eval lock<br/>+ Subscription 0-Eval fan-out + host Mandate allow-list"]
 ```
 
-### 2.2 End-to-End Micro-Kernel Data Flow (`dsh-superagent` + `claude-mem` + `craft-anything`)
+### 2.2 End-to-End Micro-Kernel Data Flow (`dsh-superagent` + `claude-mem`)
 
 ```mermaid
 flowchart LR
@@ -97,10 +92,9 @@ flowchart LR
         Eval -- "Accepted with Mandate" --> Ticket["7-Stage Ticket State Machine"]
     end
 
-    subgraph Exec["2. Isolated Execution & 3-Layer Memory (Worker + claude-mem + craft-anything)"]
-        Ticket -->|Assignment| Worker["DshExecutor: worker-<id><br/>(<stateDir>/work · >5s shell auto-backgrounded)"]
+    subgraph Exec["2. Isolated Execution & 3-Layer Memory (Worker + claude-mem)"]
+        Ticket -->|Assignment (2s->60s backoff)| Worker["DshExecutor: worker-<id><br/>(<stateDir>/work · >5s shell auto-backgrounded)"]
         CMem["claude-mem Sidecar (~/.claude-mem)<br/>Layer 1 Index (~2k tok) -> Timeline -> Details"] <-->|npx claude-mem --ide dsh| Worker
-        CraftMCP["craft-anything 320 CLI/MCP Tools<br/>(Clean-Room 3-Width Check / Deep Disassembly)"] <-->|Study & Check| Worker
     end
 
     subgraph Attention["3. Zero-Noise Human Attention Panel (Panel & Outbox)"]
@@ -113,15 +107,15 @@ flowchart LR
 
 ## 3. Comprehensive Architecture Comparison Matrix
 
-| Evaluation Dimension | Path A: Naïve Webhook + LangGraph/AutoGen + Raw Transcript Dump | Path B: LangGraph + Standard Vector RAG (Top-K Chunk Injection) | Path C (Tonight's Breakout Stack): `dsh-superagent` (Cordis) + `claude-mem` + `craft-anything` |
+| Evaluation Dimension | Path A: Naïve Webhook + LangGraph/AutoGen + Raw Transcript Dump | Path B: LangGraph + Standard Vector RAG (Top-K Chunk Injection) | Path C (Tonight's Ambient Agent Stack): `dsh-superagent` (Cordis) + `claude-mem` |
 | :--- | :--- | :--- | :--- |
-| **Representative Stack** | Custom FastAPI Webhook + LangGraph DAG | LangGraph + Chroma / Milvus Top-K transcript chunks | **`deepseek-ai/dsh-superagent-prototype` (`v0.1.0`) + `thedotmack/claude-mem` (`v15.12.0`) + `storytold/craft-anything` (`Rust`)** |
+| **Representative Stack** | Custom FastAPI Webhook + LangGraph DAG | LangGraph + Chroma / Milvus Top-K transcript chunks | **`deepseek-ai/dsh-superagent-prototype` (`v0.1.0`) + `thedotmack/claude-mem` (`v15.12.0`)** |
 | **Noise Gating & Thread Concurrency** | ❌ Poor (every webhook comment triggers LLM graph routing; concurrent comments cause Git races) | ⚠️ Moderate (requires custom Redis locks; follow-ups still invoke router nodes) | **✅ Deterministic (`Source` offset dedup + `Thread` 1-Eval lock + `Subscription` 0-Eval fan-out to owning worker)** |
 | **Human Attention Conservation** | ❌ Poor (posts verbose intermediate status messages on every step) | ⚠️ Moderate (template notifications without strict attention state machine) | **✅ First-Principles Attention Guard (Panel shows ONLY `person/delivery, answer, review, blocked`; asks one structured question at a time)** |
 | **Long-Running Shell Command Handling** | ❌ Blocks current turn until command exits | ❌ Blocks current turn until command exits | **✅ Foreground shell commands >`5 seconds` automatically move to background jobs so worker receives new messages at next step** |
 | **Cross-Session Memory Token Efficiency** | ❌ Very Low (cold-loads 5 raw transcripts `~120k` input tokens/ticket) | ⚠️ Moderate (injects Top-15 vector chunks `~40k` input tokens/ticket; loses causal chain) | **✅ Very High (`claude-mem` injects `~2k` Layer-1 Index at start + on-demand `mem-search` details, averaging `~10k` input tokens/ticket)** |
-| **UI / Binary Inspection & Verification** | ❌ None (blind LLM generation or ad-hoc Playwright scripts) | ❌ None | **✅ Built-in `craft-anything` 320 Rust CLI/MCP tools (Clean-Room 3-width visual/layout diff + Deep disassembly/Ghidra)** |
-| **License & Maturity** | MIT / High custom maintenance | MIT / Apache-2.0 | **`dsh-superagent` (`MIT` research prototype) · `claude-mem` (`Apache-2.0`) · `craft-anything` (`MIT OR Apache-2.0`)** |
+| **Secret Redaction & Privilege Boundary** | ❌ Raw transcripts persisted to disk risk leaking secrets | ⚠️ Vector chunks lack structured secret stripping | **✅ Host-enforced `Mandate` allow-lists + `claude-mem` `<private>` tag stripping before disk persistence** |
+| **License & Maturity** | MIT / High custom maintenance | MIT / Apache-2.0 | **`dsh-superagent` (`MIT` upstream research prototype) · `claude-mem` (`Apache-2.0`)** |
 
 ---
 
@@ -130,12 +124,11 @@ flowchart LR
 ### 4.1 Primary-Source Verified Metrics (`measured` / `anonymized_reported, independently_reproduced=false`)
 
 1. **Repository Velocity & Scale (`measured`, archived in [`search-new-repos-2026-11-08-raw.json`](../evidence/search-new-repos-2026-11-08-raw.json) and [`trending-daily-2026-11-08-audit.json`](../evidence/trending-daily-2026-11-08-audit.json))**:
-   - `storytold/craft-anything`: Created `2026-10-31` (8 days old), **`22,088`** total stars (`22,299` in Search API verification), creation-to-date lifecycle average **`~2,761★/day`** (`stars_today: not_measured`);
-   - `deepseek-ai/dsh-superagent-prototype`: Created `2026-10-31` (8 days old), **`21,107`** total stars (`21,148` in Search API verification), creation-to-date lifecycle average **`~2,638★/day`** (`stars_today: not_measured`);
+   - `deepseek-ai/dsh-superagent-prototype`: Created `2026-10-31` (8 days old), **`21,107`** total stars (`21,148` in Search API verification), creation-to-date lifecycle average **`~2,638★/day`** (`stars_today: not_measured`; upstream research prototype under the `deepseek-ai` org);
    - `thedotmack/claude-mem`: Version `v15.12.0`, **`73,659`** weekly snapshot total stars (`114,804` live REST verification, `stars_today: not_measured`).
 2. **Architecture Constants from Upstream Source (`anonymized_reported, independently_reproduced=false`)**:
    - `dsh-superagent-prototype`: Input delivery retry starts at **`2 seconds`** and doubles up to **`60 seconds`** (`docs/003-execution.md`); foreground shell commands move to background jobs after **`5 seconds`**; core runtime dependencies are only `proper-lockfile@4.1.2`, `zod@4.4.3`, and `@deepseek-ai/cordis@4.0.5-alpha.1`;
-   - `craft-anything`: Exposes **`320`** dual-mode CLI + MCP inspection tools and verifies builds across **`3` screen widths**.
+   - `claude-mem`: 3-step progressive disclosure (`index -> timeline -> details`) with native `npx claude-mem install --ide dsh --dsh-profile tui` support.
 
 ### 4.2 Architect Closed-Form FinOps & Human Attention Worked Example (`synthetic`, `independently_reproduced=false`)
 
@@ -190,8 +183,7 @@ cd dsh-superagent-prototype
 pnpm install
 pnpm check   # Runs tsc --noEmit && vitest run && tsdown
 
-# Step 3: Run storytold/craft-anything in default Clean-Room mode against a target web app
-# (Verifies 3-width layout inspection and differential check without reading internal source code)
+# Step 3: Simulate subscribed thread follow-ups and >5s shell commands to verify zero-Eval fan-out and person/* panel filtering
 ```
 
 ### 5.2 Production SuperAgent Governance Checklist
@@ -201,4 +193,4 @@ pnpm check   # Runs tsc --noEmit && vitest run && tsdown
 - [ ] **Single-`Eval` Thread Lock & `Subscription` Fan-Out**: Ensure at most 1 `Eval` runs per `Thread` at any time, and that follow-up messages on subscribed threads route directly to the owning `worker-<ticket_id>` without triggering duplicate tickets.
 - [ ] **`5-Second` Foreground Shell Auto-Backgrounding**: Verify that worker sessions move foreground shell commands exceeding `5s` into background jobs so human stop/redirect messages take effect at the next step boundary.
 - [ ] **Cross-Session `<private>` Redaction & Opt-In Cloud Sync**: Confirm `claude-mem` strips `<private>` blocks before disk write, runs with `CLAUDE_MEM_ONLINE_OPTIN=false` in enterprise environments, and injects only the Layer-1 Compact Index (`~2k` tokens) at session start.
-- [ ] **Explicit `Clean-Room` vs. `Deep` Boundary**: Keep `craft-anything` locked to default `Clean room` mode when benchmarking or recreating external software; enable `--deep` (disassembly / Pseudo-C / Ghidra) only on owned legacy binaries or authorized security targets.
+- [ ] **Persistent Outbox (`2s -> 60s` Backoff) & `person/*` Attention Panel**: Confirm `<stateDir>/work/<short-name>` delivery retries exponentially from `2s` up to `60s` across restarts and the web panel renders only `person/*` ticket stages.

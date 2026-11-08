@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#111C33"/>
+    </linearGradient>
+    <linearGradient id="accent8" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg8)"/>
+  <rect x="28" y="24" width="1224" height="672" rx="18" fill="#0B1325" stroke="#1E293B" stroke-width="2"/>
+  <rect x="28" y="24" width="1224" height="6" rx="3" fill="url(#accent8)"/>
+
+  <!-- Header -->
+  <text x="56" y="68" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">
+    ROUND 8 ARCHITECTURE SELECTION FAQ · 2026-11-08 NIGHT SHIFT · PROVENANCE-VERIFIED
+  </text>
+  <text x="56" y="102" fill="#F8FAFC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="25" font-weight="800">
+    软件重建与逆向探针选型：storytold/craft-anything 纯 Rust 320 探针 vs 截图盲写 / 裸反编译
+  </text>
+  <text x="56" y="128" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="14">
+    100% Pure Rust (unsafe_code = &quot;forbid&quot;) · 13 Crates · Study → Build → Check (3-Width Diff) → Ready · Clean-Room vs --deep
+  </text>
+
+  <!-- 3 Architecture Pillars -->
+  <rect x="56" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#10B981" stroke-width="1.5"/>
+  <text x="76" y="176" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
+    1. 320 个双模纯 Rust 确定性探针 (v0.4.0)
+  </text>
+  <text x="76" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Track B #1: 22,088★ / 8d ≈ 2,761★/d (stars_today: not_measured)
+  </text>
+  <text x="76" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 300 引擎探针 + 20 AI/Setup 工具（CLI 与 MCP 双模同源）
+  </text>
+  <text x="76" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 原生拆解 Web / HAR / Electron .asar / .NET / WASM / PE / ELF
+  </text>
+  <text x="76" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 内嵌 oxc 0.153 + iced-x86 1.21 + yaxpeax-arm 0.5
+  </text>
+  <text x="76" y="288" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    • 13 Crates · unsafe_code = &quot;forbid&quot; · 923 基线测试全绿
+  </text>
+
+  <rect x="452" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#0284C7" stroke-width="1.5"/>
+  <text x="472" y="176" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
+    2. Study → Build → Check → Ready 证据账本闭环
+  </text>
+  <text x="472" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    investigation.cany/ + checks/comparison.json
+  </text>
+  <text x="472" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • Study 探针取证消耗 0 LLM Token，结果结构化落盘
+  </text>
+  <text x="472" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • core_evidence_browse 按页读取摘要 (~15k In/轮)，拒绝撑爆上下文
+  </text>
+  <text x="472" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • Check 自动执行 Desktop/Tablet/Mobile 3 宽度差分与自测
+  </text>
+  <text x="472" y="288" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    • 平均收敛轮次从 6 轮降至 2 轮，人工 QA 工时减 80%
+  </text>
+
+  <rect x="848" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#6366F1" stroke-width="1.5"/>
+  <text x="868" y="176" fill="#818CF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
+    3. Clean-Room 净室门禁 vs --deep 深度模式
+  </text>
+  <text x="868" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    IP 合规物理隔离 · 须配合 OpenMausBot OS 沙箱
+  </text>
+  <text x="868" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 默认 Clean room：仅开放布局/视觉/黑盒行为，拒绝读内部源码
+  </text>
+  <text x="868" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 显式 --deep：自有老旧二进制解锁反汇编 / Pseudo-C / Ghidra
+  </text>
+  <text x="868" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    • 进程树 (Process Tree) 自动枚举桌面应用全量弹窗与子窗口
+  </text>
+  <text x="868" y="288" fill="#FCD34D" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    • ⚠️ Clean room 非 OS 沙箱：不可信目标须套 OpenMausBot VM
+  </text>
+
+  <!-- Closed-Form FinOps & QA Convergence Comparison -->
+  <rect x="56" y="344" width="1168" height="246" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="374" fill="#F8FAFC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    闭式参数化月度算例（M_month = 40 个多页面模块重建/迁移；In $3/1M, Out $15/1M · API-Only · synthetic, independently_reproduced=false）
+  </text>
+
+  <!-- Path A -->
+  <text x="76" y="412" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    路径 A：单张截图盲写 + 人工拉窗口排障 (6 轮/模块 = 240 轮/月 · 50k [0.050M] In + 12k [0.012M] Out)
+  </text>
+  <rect x="610" y="396" width="330" height="22" rx="4" fill="#F59E0B"/>
+  <text x="952" y="412" fill="#FCD34D" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    $79.20/月 ($36.00 In+$43.20 Out) · QA 100.0h/月
+  </text>
+
+  <!-- Path B -->
+  <text x="76" y="456" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    路径 B：裸抓混淆 Bundle / 反编译硬塞 (4 轮/模块 = 160 轮/月 · 150k [0.150M] In + 10k [0.010M] Out)
+  </text>
+  <rect x="610" y="440" width="400" height="22" rx="4" fill="#EF4444"/>
+  <text x="1022" y="456" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    $96.00/月 ($72.00 In+$24.00 Out) · 违反外部净室合规
+  </text>
+
+  <!-- Path C -->
+  <text x="76" y="500" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    路径 C：craft-anything 纯 Rust 探针 + 分页账本 + 3 宽度 Check (2 轮 = 80 轮/月 · 15k [0.015M] In + 8k [0.008M] Out)
+  </text>
+  <rect x="610" y="484" width="55" height="22" rx="4" fill="#10B981"/>
+  <text x="677" y="500" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    $13.20/月 ($3.60 In+$9.60 Out · 省 $66.00/月 [-83.33%]) · QA 20.0h/月 (-80.0%)
+  </text>
+
+  <!-- Formula Audit Strip -->
+  <rect x="76" y="524" width="1128" height="48" rx="8" fill="#1E293B"/>
+  <text x="94" y="544" fill="#93C5FD" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    闭式复算 (CLAIM-R8-02): Path A = 240×($0.1500+$0.1800) = $79.20/mo ($36.00 In + $43.20 Out) | Path B = 160×($0.4500+$0.1500) = $96.00/mo ($72.00 In + $24.00 Out)
+  </text>
+  <text x="94" y="563" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Path C = 80×($0.0450+$0.1200) = $13.20/mo ($3.60 In + $9.60 Out) | Δ(A→C) = -$66.00/mo (-83.33% API-only), ΔQA = -80.0h/mo (-80.00%); Infra bill: not_measured
+  </text>
+
+  <!-- Footer -->
+  <text x="56" y="628" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
+    Provenance: Track B search-new-repos-2026-11-08-raw.json (LF sha256: b63e1547...) · Cargo.toml v0.4.0 (measured) · Convergence FinOps math: synthetic, independently_reproduced=false
+  </text>
+  <text x="56" y="654" fill="#64748B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">
+    Deliverable: workshops/github-trending-radar/docs/craft-anything-rust-probe-vs-decompile-selection-faq.md &amp; .en.md · https://turbo998.github.io/github-radar.html
+  </text>
+</svg>

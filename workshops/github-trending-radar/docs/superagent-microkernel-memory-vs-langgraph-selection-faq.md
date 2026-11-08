@@ -1,14 +1,13 @@
-# 自主 SuperAgent 微内核与跨会话记忆选型 FAQ：`dsh-superagent-prototype` + `claude-mem` + `craft-anything` vs 重型工作流图框架（LangGraph / AutoGen）
+# 自主 SuperAgent 微内核与跨会话记忆选型 FAQ：`dsh-superagent-prototype` + `claude-mem` vs 重型工作流图框架（LangGraph / AutoGen）
 
-> **适用范围**：面向需要构建**仓库级主动式研发智能体（Proactive Repo SuperAgent）**、**跨会话持久记忆（Cross-Session Persistent Memory）**与**净室逆向/验收引擎（Clean-Room Inspection & Verification）**的 AI 解决方案架构师（AI Solution Architect）与平台工程负责人。
+> **适用范围**：面向需要构建**仓库级主动式研发智能体（Proactive Repo SuperAgent）**与**跨会话持久记忆（Cross-Session Persistent Memory）**的 AI 解决方案架构师（AI Solution Architect）与平台工程负责人。（注：关于纯 Rust 净室软件探针与差异化重构验收引擎 `storytold/craft-anything` 的独立架构选型，已拆分为独立单决策专题 **Round 8：[`craft-anything-rust-probe-vs-decompile-selection-faq.md`](./craft-anything-rust-probe-vs-decompile-selection-faq.md)**。）
 > **关联评测产物**：[`workshops/github-trending-radar/daily/2026-11-08.md`](../daily/2026-11-08.md) · [`workshops/github-trending-radar/cards.html`](../cards.html) · [`assets/github-ai-radar-2026-11-08-r6-superagent-memory.svg`](../../../assets/github-ai-radar-2026-11-08-r6-superagent-memory.svg)
 > **原始抓取证据与 Provenance 声明**：
 > - **`measured`（GitHub REST Search API 原始快照 + 一手源码核验）**：
->   - `storytold/craft-anything`（`Apache-2.0 / MIT`，100% 纯 Rust，建仓于 `2026-10-31T14:50:00Z`，封存快照检索见 [`workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json`](../evidence/search-new-repos-2026-11-08-raw.json)，LF `sha256: b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1`：建仓 8 天总 Star `22,088` [检索复核 `22,299`]，生命周期日均 `≈ 2,761★/天`，赛道 B 第 1 名；`stars_today: not_measured`）；
->   - `deepseek-ai/dsh-superagent-prototype`（`v0.1.0`，`MIT`，TypeScript，建仓于 `2026-10-31T09:32:46Z`，同份封存 Search API 快照：建仓 8 天总 Star `21,107` [检索复核 `21,148`]，生命周期日均 `≈ 2,638★/天`，赛道 B 第 2 名；`stars_today: not_measured`；官方 README 明确标注 *"Research prototype for reference only, not an official DeepSeek product"*）；
+>   - `deepseek-ai/dsh-superagent-prototype`（`v0.1.0`，`MIT`，TypeScript，建仓于 `2026-10-31T09:32:46Z`，封存 Search API 快照见 [`workshops/github-trending-radar/evidence/search-new-repos-2026-11-08-raw.json`](../evidence/search-new-repos-2026-11-08-raw.json)，LF `sha256: b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1`：建仓 8 天总 Star `21,107` [检索复核 `21,148`]，生命周期日均 `≈ 2,638★/天`，赛道 B 第 2 名；`stars_today: not_measured`；系 `deepseek-ai` 组织下开源的上游研究原型，README 明确标注 *"Research prototype for reference only, not an official DeepSeek product"*）；
 >   - `thedotmack/claude-mem`（`v15.12.0`，`Apache-2.0`，TypeScript，周榜总 Star `73,659` [实时 REST 复核 `114,804`]，`stars_today: not_measured`；支持 `npx claude-mem install --ide dsh --dsh-profile tui` 接入 DeepSeek Harness 及 Claude Code / Codex / OpenCode）。
-> - **`anonymized_reported`（`independently_reproduced=false`，一手源码架构文档与工具计数）**：`dsh-superagent-prototype` 的 6 核心领域概念（`Source / Trigger / Thread / Eval / Mandate / Subscription`）与 7 阶段工单状态机核验自 [`docs/000-philosophy.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/000-philosophy.md) 至 [`docs/007-architecture.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/007-architecture.md)；`craft-anything` 的 `320` 个 CLI + MCP 双模探针工具与 `Clean room vs Deep` 门控核验自 [`storytold/craft-anything/README.md`](https://github.com/storytold/craft-anything/blob/main/README.md)；`claude-mem` 的 `index -> timeline -> details` 三层渐进检索与 `<private>` 脱敏机制核验自 [`thedotmack/claude-mem/README.md`](https://github.com/thedotmack/claude-mem/blob/main/README.md)。
-> - **`synthetic`（`independently_reproduced=false`，架构师 100% 闭式参数化成本与注意力算例）**：第 4 节中每月 `8,800` 个仓库/IM 事件（`2,200` 个有效执行工单 + `6,600` 个非请求/噪音跟帖）下的路由 + 跨会话记忆 API 成本（`$1,584.00/月 -> $158.40/月`，节省 **`$1,425.60/月 [-90.00%]`**）与工程师注意力耗时（`110.0h/月 -> 22.0h/月`，节省 **`88.0h/月 [-80.00%]`**）为显式参数闭式推导的架构师理论模型，已在 `tests/radar-integration.cjs` 内置自动化数学断言校验。
+> - **`anonymized_reported`（`independently_reproduced=false`，一手源码架构文档与工具计数）**：`dsh-superagent-prototype` 的 6 核心领域概念（`Source / Trigger / Thread / Eval / Mandate / Subscription`）与 7 阶段工单状态机核验自 [`docs/000-philosophy.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/000-philosophy.md) 至 [`docs/007-architecture.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/007-architecture.md)；`claude-mem` 的 `index -> timeline -> details` 三层渐进检索与 `<private>` 脱敏机制核验自 [`thedotmack/claude-mem/README.md`](https://github.com/thedotmack/claude-mem/blob/main/README.md)。
+> - **`synthetic`（`independently_reproduced=false`，架构师 100% 闭式参数化 API-Only 成本与注意力算例）**：第 4 节中每月 `8,800` 个仓库/IM 事件（`2,200` 个有效执行工单 + `6,600` 个非请求/噪音跟帖）下的路由 + 跨会话记忆纯 API 成本（`$1,584.00/月 -> $158.40/月`，节省 **`$1,425.60/月 [-90.00% API-only]`**；底层基础设施与全量生产总账单标为 `not_measured`）与工程师注意力耗时（`110.0h/月 -> 22.0h/月`，节省 **`88.0h/月 [-80.00%]`**）为显式参数闭式推导的架构师理论模型，已在 `tests/radar-integration.cjs` 内置自动化数学断言校验。
 
 ---
 
@@ -18,11 +17,11 @@
 1. **“群聊噪音轰炸（Attention Spam）”**：只要有人在 Issue 或群里说话，Webhook 就无脑拉起 LangGraph/AutoGen 图节点去跑大模型、发长篇进度刷屏，全组工程师的注意力被机器人废话彻底淹没；
 2. **“跨会话失忆症（Cross-Session Amnesia）”**：每次新开 Worker 会话，Agent 都要从零重新 `grep` 同样的文件、踩昨天刚修过的坑；如果把前 5 次会话全文硬塞进 Prompt，每单还没干活就先烧掉 `120k` 输入 Token。
 
-今晚赛道 B（近 10 天新建黑马生命周期日均榜）前两名 **`storytold/craft-anything`（日均 `≈ 2,761★/天`）** 与 **`deepseek-ai/dsh-superagent-prototype`（日均 `≈ 2,638★/天`）**，加上周榜霸榜项目 **`thedotmack/claude-mem`（`v15.12.0`）**，共同给出了下一代企业级自主 SuperAgent 的**三层微内核标准答案**：
+今晚赛道 B（近 10 天新建黑马生命周期日均榜）第 2 名 **`deepseek-ai/dsh-superagent-prototype`（日均 `≈ 2,638★/天`，`deepseek-ai` 组织下开源的上游研究原型）** 配合周榜霸榜项目 **`thedotmack/claude-mem`（`v15.12.0`）**，给出了下一代企业级常驻研发 SuperAgent 的**双层微内核标准答案**：
 
 - **如果你要让 Agent 7×24 监听 GitHub 仓库与飞书群，且绝不能打扰工程师**：借鉴 **`deepseek-ai/dsh-superagent-prototype`** 的**“注意力守恒微内核（Cordis Micro-Kernel）”**。它用宿主级 `Source` 游标与白名单门禁过滤掉非授权噪音，用 `Subscription` 将已有工单跟帖零成本路由给在途 `worker-<ticket_id>`（完全绕过 `Eval` 评估开销），且 Web 面板**只展示处于 `person/*`（需人类回答/审批/排障）阶段的工单**——健康运行的工单占零像素（*"A healthy state takes no space"*）。
 - **如果你要解决多轮/跨天工单的“失忆症”且不想付全量历史 Token 税**：挂载 **`thedotmack/claude-mem`**。它通过旁路 Observer 采集每次会话的 `decision / bugfix / security_alert`，在新会话启动时**只注入约 `2k` Token 的超薄目录索引（Layer 1 `index`）**，仅当 Agent 按需调用 `mem-search` 时才展开 `timeline`（Layer 2）与 `details`（Layer 3）。
-- **如果你要让 Agent 逆向理解现有网站/桌面应用/二进制并重写出可验收的新工程**：使用 **`storytold/craft-anything`**。它用 100% 纯 Rust 提供了 **320 个既是 CLI 又是 MCP 的确定性探针工具**，默认开启 **Clean-Room（净室模式，禁止读取原项目源码，仅测量多分辨率渲染布局/字体/配色并自动做像素与自测比对）**，彻底解决传统生成式编程“写完从不对比原版、合规边界不清”的痛点。
+- **如果你只需要跑固定步骤的确定性单次业务审批流（无需 7×24 监听仓库/IM 或跨天工单记忆）**：直接使用 **LangGraph / Azure AI Foundry Workflows** 显式状态机即可，无需引入常驻事件游标与跨会话记忆微内核。（若你的场景是**纯 Rust 净室软件逆向探针与 3 宽度差异化重构验收**，请直接阅读独立专题 **Round 8：[`craft-anything-rust-probe-vs-decompile-selection-faq.md`](./craft-anything-rust-probe-vs-decompile-selection-faq.md)**。）
 
 ---
 
@@ -56,16 +55,12 @@
 
 ---
 
-### Q3：`storytold/craft-anything` 为什么能在建仓 8 天内冲上 `22,088+` Star？它的 `Clean-Room vs Deep` 引擎和 320 个 CLI/MCP 工具解决了什么工程难题？
+### Q3：`dsh-superagent-prototype` 的 7 阶段工单状态机如何与 `claude-mem`（`--ide dsh`）协同运作，在进程重启与多天挂起时既不丢记忆、又不打扰工程师？
 
-以前让 Coding Agent “参考某网站或某桌面软件做一个我们自己的版本”，通常只有两条死路：
-- **死路 A（盲盒截图生成）**：丢一张截图给大模型，生成的网页只有一个静态空壳，响应式断点全崩、交互菜单点不开，且没有任何自动化手段量化“生成的版本和原版到底差在哪”；
-- **死路 B（直接扒源码侵权风险）**：让 Agent 直接爬对方混淆后的 JS 或反编译二进制，不仅极易陷入屎山代码迷宫，还会触发严重的知识产权污染。
-
-`storytold/craft-anything`（100% 纯 Rust 编写）把软件理解与复刻变成了一条 **`Study -> Build -> Check -> Ready` 四步闭环流水线**，并内置了 **320 个“一鱼两吃”（既是命令行 CLI 又是标准 MCP 工具）的确定性探针**：
-- **Clean-Room 净室模式（默认开启，合规安全）**：引擎在宿主层面**拒绝一切读取目标内部源码、文件或页面 Source 的工具调用**，只允许使用外部可观测探针（在 3 种屏幕宽度下测量真实渲染布局、计算字号/间距/色板、点击展开菜单截图、对比交互状态），从根源上保证生成代码属于 Clean-Room 独立实现。
-- **Deep 深度逆向模式（显式开关 `--deep` / `settings_set deep_mode true`）**：面向企业内部遗留系统迁移或安全审计，解锁内置反汇编、伪 C 代码（Pseudo-C）、函数调用图（Call Graph）、字符串/Hex 追踪以及 Ghidra 联动引擎。
-- **Check 量化验收闭环（Checked, not guessed）**：每次构建完成后，引擎自动在 3 种屏幕分辨率下对比原版与新构建版本的布局差异、运行游戏/应用的自检测试（Self-test），列出“哪些页面还不一致、相似度多少”，驱动 Coding Agent 定向返工直到达标。
+当一张跨天复杂工单经历多次人工问答、CI 报错重跑甚至服务器重启时，传统状态图往往要重放整条会话日志或丢失中间排障上下文。`dsh-superagent-prototype`（[`docs/003-execution.md`](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/003-execution.md)）与 `claude-mem`（`npx claude-mem install --ide dsh --dsh-profile tui`）通过**“7 阶段状态机 + 指数退避重投 + 旁路三层记忆”**实现解耦：
+- **7 阶段严格状态收敛**：每张 `Ticket` 仅处于 `waiting`（等待投递）、`working`（Worker 后台静默执行）、`person/delivery`（成果待审）、`person/answer`（单问题待答）、`person/review`（权限/高危操作待批）、`person/blocked`（环境故障待排障）或 `closed` 七个阶段之一。前两个阶段在 Web 注意力面板上占 **0 像素**，只有进入 `person/*` 四阶段才向人类浮出。
+- **持久化 Outbox 与 `2s -> 60s` 指数退避重投**：每个 `worker-<ticket_id>` 绑定独立工作区 `<stateDir>/work/<short-name>`；若目标会话正忙或投递中断，内核从 **2 秒**起步指数翻倍退避至上限 **60 秒**自动重投，无需重新触发 `MasterAssessor` `Eval`。
+- **与 `claude-mem` 跨会话记忆无缝衔接**：当 Worker 会话因跨天挂起或上下文切换重新拉起时，`claude-mem` 自动将前序轮次的架构决策与 Bug 修复摘要以 `~2k` Token 的 Layer 1 Index 注入该 Worker，避免重新冷读 `120k` 原始会话历史。（注：若 Worker 的任务是对外部网站/二进制做净室探针重构，可按需通过 MCP 挂载独立专题 **Round 8 [`storytold/craft-anything`](./craft-anything-rust-probe-vs-decompile-selection-faq.md)** 的确定性探针。）
 
 ---
 
@@ -75,20 +70,18 @@
 
 ```mermaid
 flowchart TD
-    Start["需要构建企业级自主研发 / 逆向复刻 Agent 系统"] --> Q1{"核心任务形态是什么？"}
-    Q1 -- "7x24 监听 GitHub Repo / 飞书群<br/>自动接单、建分支、提 PR 并严格保护工程师注意力" --> Q2{"是否需要跨会话记住历史架构决策与排障经验？"}
-    Q1 -- "理解现有网站 / 桌面软件 / 游戏 / 遗留二进制<br/>并构建可量化对比验收的新工程" --> Craft["选用 storytold/craft-anything<br/>(纯 Rust 320 CLI+MCP 探针 · Study->Build->Check->Ready)"]
-    Q1 -- "固定步骤的确定性数据/审批流水线<br/>(无需仓库级自主接单或 UI/二进制探针)" --> LangGraph["选用 LangGraph / Azure AI Foundry Workflows<br/>(显式状态机 DAG 编排)"]
+    Start["需要构建企业级后台研发 / 自动化 Agent 系统"] --> Q1{"核心任务触发与生命周期形态？"}
+    Q1 -- "7x24 监听 GitHub Repo / 飞书群<br/>自动接单、建分支、提 PR 并严格保护工程师注意力" --> Q2{"是否需要跨会话/跨天记住历史架构决策与排障经验？"}
+    Q1 -- "固定步骤的确定性单次数据/审批流水线<br/>(无需仓库级全天候自主接单或注意力面板)" --> LangGraph["选用 LangGraph / Azure AI Foundry Workflows<br/>(显式状态机 DAG 编排)"]
 
     Q2 -- "是：多轮/跨天持续迭代同一代码库" --> SuperStack["黄金组合：dsh-superagent-prototype (Cordis 微内核)<br/>+ thedotmack/claude-mem (--ide dsh 三层渐进记忆)"]
     Q2 -- "否：单次独立短工单" --> DshOnly["选用 dsh-superagent-prototype 独立运行<br/>(Source 游标门禁 + Subscription 扇出 + 5s 后台化)"]
 
-    Craft --> Q3{"合规与源码访问边界要求？"}
-    Q3 -- "外部竞品对标 / 严禁接触原版源码" --> CleanRoom["保持默认 Clean-Room 模式<br/>(拒绝读取内部代码，仅测3宽度布局/视觉/交互)"]
-    Q3 -- "自有遗留系统迁移 / 二进制安全审计" --> DeepMode["显式开启 Deep 模式 (--deep)<br/>(启用反汇编 / Pseudo-C / Call Graph / Ghidra)"]
+    SuperStack --> Q3{"如何在多并发评论下防雪崩与防越权？"}
+    Q3 --> Guard["启用 Source 游标去重 + Thread 单 Eval 锁<br/>+ Subscription 在途工单 0-Eval 扇出 + 宿主 Mandate 白名单"]
 ```
 
-### 2.2 `dsh-superagent` + `claude-mem` + `craft-anything` 协同微内核数据流
+### 2.2 `dsh-superagent` + `claude-mem` 协同微内核数据流
 
 ```mermaid
 flowchart LR
@@ -99,10 +92,9 @@ flowchart LR
         Eval -- "授权通过 (附 Mandate)" --> Ticket["Ticket 7阶段状态机"]
     end
 
-    subgraph Exec["2. 隔离执行与三层记忆 (Worker + claude-mem + craft-anything)"]
-        Ticket -->|Assignment| Worker["DshExecutor: worker-<id><br/>(<stateDir>/work · >5s 命令自动转后台)"]
+    subgraph Exec["2. 隔离执行与三层记忆 (Worker + claude-mem)"]
+        Ticket -->|Assignment (2s->60s 退避)| Worker["DshExecutor: worker-<id><br/>(<stateDir>/work · >5s 命令自动转后台)"]
         CMem["claude-mem Sidecar (~/.claude-mem)<br/>Layer 1 Index (~2k tok) -> Timeline -> Details"] <-->|npx claude-mem --ide dsh| Worker
-        CraftMCP["craft-anything 320 CLI/MCP 探针<br/>(Clean-Room 3宽度验收 / Deep 逆向)"] <-->|Study & Check| Worker
     end
 
     subgraph Attention["3. 零噪音人类注意力面板 (Panel & Outbox)"]
@@ -115,15 +107,15 @@ flowchart LR
 
 ## 3. 同类方案全维度选型对比矩阵
 
-| 评估维度 | 方案 A：传统 Webhook + LangGraph/AutoGen + 全量历史拼接 | 方案 B：LangGraph + 传统外部向量库 RAG（Top-K 切片注入） | 方案 C（今晚黑马黄金栈）：`dsh-superagent` (Cordis) + `claude-mem` + `craft-anything` |
+| 评估维度 | 方案 A：传统 Webhook + LangGraph/AutoGen + 全量历史拼接 | 方案 B：LangGraph + 传统外部向量库 RAG（Top-K 切片注入） | 方案 C（今晚常驻研发微内核栈）：`dsh-superagent` (Cordis) + `claude-mem` |
 | :--- | :--- | :--- | :--- |
-| **代表项目与版本** | 自建 FastAPI Webhook + LangGraph DAG | LangGraph + Chroma / Milvus Top-K 历史对话检索 | **`deepseek-ai/dsh-superagent-prototype` (`v0.1.0`) + `thedotmack/claude-mem` (`v15.12.0`) + `storytold/craft-anything` (`Rust`)** |
+| **代表项目与版本** | 自建 FastAPI Webhook + LangGraph DAG | LangGraph + Chroma / Milvus Top-K 历史对话检索 | **`deepseek-ai/dsh-superagent-prototype` (`v0.1.0`) + `thedotmack/claude-mem` (`v15.12.0`)** |
 | **噪音过滤与线程并发控制** | ❌ 差（每条群消息/Webhook 都触发图节点推理，并发消息易产生 Git 冲突） | ⚠️ 一般（需手写 Redis 锁与正则过滤，在途工单追问仍需重跑路由节点） | **✅ 极强（`Source` 游标去重 + `Thread` 单 Eval 锁 + `Subscription` 在途工单零 Eval 直通扇出）** |
 | **人类注意力保护机制** | ❌ 差（每步状态变更都在群里刷屏，工程师被废话淹没） | ⚠️ 一般（依靠固定模板通知，无严格状态机约束） | **✅ 第一性原理级保护（Web 面板仅显示 `person/delivery, answer, review, blocked`；一次只问一个结构化问题）** |
 | **长耗时 Shell 阻塞处理** | ❌ 阻塞当前 Turn，长编译期间无法接收人类新指令 | ❌ 阻塞当前 Turn，需额外编写异步队列 | **✅ 前台命令超过 `5 秒` 自动迁入后台 Job，Worker 在下一 Step 立即接收人类新消息** |
 | **跨会话记忆 Token 效率** | ❌ 极差（冷加载前 5 轮原始记录约 `120k` Token/工单） | ⚠️ 中等（固定塞入 Top-15 向量切片约 `40k` Token/工单，易丢失因果链） | **✅ 极高（`claude-mem` 启动仅注入 `~2k` Index，按需 `mem-search` 展开 Details，平均仅 `~10k` 输入 Token/工单）** |
-| **UI / 二进制逆向与量化验收** | ❌ 无（纯靠 LLM 盲写或手工跑截图脚本） | ❌ 无 | **✅ 内置 `craft-anything` 320 个 Rust CLI/MCP 探针（Clean-Room 3 宽度像素/布局验收 + Deep 反汇编/Ghidra）** |
-| **开源协议与定位** | MIT / 自建维护成本高 | MIT / Apache-2.0 | **`dsh-superagent` (`MIT` 研究原型) · `claude-mem` (`Apache-2.0`) · `craft-anything` (`MIT OR Apache-2.0`)** |
+| **脱敏与权限隔离治理** | ❌ 历史记录原样落盘，易泄漏临时 Token | ⚠️ 向量切片缺乏细粒度标签剥离 | **✅ `dsh-superagent` 宿主强制 `Mandate` + `claude-mem` 落盘前自动剥离 `<private>` 隐私块** |
+| **开源协议与定位** | MIT / 自建维护成本高 | MIT / Apache-2.0 | **`dsh-superagent` (`MIT` 上游研究原型) · `claude-mem` (`Apache-2.0`)** |
 
 ---
 
@@ -132,12 +124,11 @@ flowchart LR
 ### 4.1 一手源码核验的确定性指标（`measured` / `anonymized_reported, independently_reproduced=false`）
 
 1. **GitHub 爆发增速与体量（`measured`，封存证据见 [`search-new-repos-2026-11-08-raw.json`](../evidence/search-new-repos-2026-11-08-raw.json) 与 [`trending-daily-2026-11-08-audit.json`](../evidence/trending-daily-2026-11-08-audit.json)）**：
-   - `storytold/craft-anything`：建仓 8 天（`2026-10-31`）总 Star **`22,088`**（Search API 复核 **`22,299`**），建仓以来生命周期日均 **`≈ 2,761★/天`**（`stars_today: not_measured`）；
-   - `deepseek-ai/dsh-superagent-prototype`：建仓 8 天（`2026-10-31`）总 Star **`21,107`**（Search API 复核 **`21,148`**），建仓以来生命周期日均 **`≈ 2,638★/天`**（`stars_today: not_measured`）；
+   - `deepseek-ai/dsh-superagent-prototype`：建仓 8 天（`2026-10-31`）总 Star **`21,107`**（Search API 复核 **`21,148`**），建仓以来生命周期日均 **`≈ 2,638★/天`**（`stars_today: not_measured`；`deepseek-ai` 组织下开源的上游研究原型）；
    - `thedotmack/claude-mem`：版本 `v15.12.0`，周榜快照总 Star **`73,659`**（实时 REST 复核 **`114,804`**，`stars_today: not_measured`）。
 2. **源码架构硬指标（`anonymized_reported, independently_reproduced=false`）**：
    - `dsh-superagent-prototype`：重试退避从 **`2 秒`** 起步指数翻倍至上限 **`60 秒`**（`docs/003-execution.md`）；前台 Shell 命令超过 **`5 秒`** 自动转入后台；核心运行依赖仅 `proper-lockfile@4.1.2` + `zod@4.4.3` + `@deepseek-ai/cordis@4.0.5-alpha.1`；
-   - `craft-anything`：内置 **`320` 个** CLI/MCP 双模工具，在 **`3` 种屏幕宽度**下执行自动对比验收。
+   - `claude-mem`：三层渐进式检索（`index -> timeline -> details`），支持 `npx claude-mem install --ide dsh --dsh-profile tui` 原生挂载。
 
 ### 4.2 架构师闭式参数化 FinOps 与工程师注意力算例（`synthetic`, `independently_reproduced=false`）
 
@@ -192,8 +183,7 @@ cd dsh-superagent-prototype
 pnpm install
 pnpm check   # 依次运行 tsc --noEmit, vitest run 与 tsdown 构建
 
-# Step 3: 使用 storytold/craft-anything 在默认 Clean-Room 模式下对目标站点执行 3 宽度布局探针检查
-# (验证 320 个 CLI/MCP 探针在不读取原站源码的前提下输出布局与视觉差异报告)
+# Step 3: 模拟在途工单跟帖与 >5s Shell 后台化，验证 Subscription 零 Eval 直通扇出与 person/* 注意力面板过滤
 ```
 
 ### 5.2 生产级主动式研发 SuperAgent 上线核验清单
@@ -203,4 +193,4 @@ pnpm check   # 依次运行 tsc --noEmit, vitest run 与 tsdown 构建
 - [ ] **同线程单 `Eval` 串行锁与 `Subscription` 直通扇出**：确认同一 Issue/PR `Thread` 同一时刻最多运行 1 个 `Eval`；已在途工单的后续人类追问与 CI 报错直接通过 `Subscription` 扇出给对应 `worker-<ticket_id>`，不重复创建新 Ticket。
 - [ ] **长耗时命令 `5 秒` 自动后台化**：确认 Worker 执行器的 Shell 工具已启用 `>5s` 自动转后台 Job 机制，保证在长编译或集成测试期间人类发出的停止/转向指令能在下一 Step 立即生效。
 - [ ] **跨会话记忆 `<private>` 脱敏与三层披露**：确认 `claude-mem` 已开启 `<private>` 标签过滤并关闭未授权公网同步（`CLAUDE_MEM_ONLINE_OPTIN=false`），新会话启动仅注入 Layer 1 Index（`~2k` Tokens）。
-- [ ] **净室合规边界（Clean-Room vs Deep Mode）**：确认在面向外部产品做参考重构时强制锁定 `craft-anything` 的默认 `Clean room` 模式；仅在对自有产权遗留代码或授权二进制做逆向迁移时才通过 `--deep` 开启反汇编与 Ghidra 探针。
+- [ ] **Outbox 指数退避（`2s -> 60s`）与状态机恢复**：确认 `worker-<ticket_id>` 独立工作区 `<stateDir>/work/<short-name>` 的投递队列在繁忙或重启后按 `2s -> 60s` 指数退避自动重投，且 Web 面板仅展示 `person/*` 阶段工单。

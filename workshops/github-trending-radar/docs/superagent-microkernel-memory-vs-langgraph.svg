@@ -21,10 +21,10 @@
     ROUND 6 ARCHITECTURE SELECTION FAQ · 2026-11-08 NIGHT SHIFT · PROVENANCE-VERIFIED
   </text>
   <text x="56" y="102" fill="#F8FAFC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="25" font-weight="800">
-    自主 SuperAgent 微内核与三层渐进记忆选型：dsh-superagent + claude-mem + craft-anything
+    自主 SuperAgent 微内核与三层渐进记忆选型：dsh-superagent-prototype + claude-mem
   </text>
   <text x="56" y="128" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="14">
-    Source 游标门禁 + Subscription 零 Eval 直通扇出 + person/* 注意力面板 + ~/.claude-mem 三步披露 + Rust 320 净室探针
+    Source 游标门禁 + Subscription 零 Eval 直通扇出 + person/* 注意力面板 + ~/.claude-mem 三步披露（净室探针见 Round 8）
   </text>
 
   <!-- Top 3 Breakout Pillars -->
@@ -45,7 +45,7 @@
     • 前台 Shell &gt;5s 自动转后台；重试退避 2s → 60s
   </text>
   <text x="76" y="288" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
-    • Web 面板仅显示 person/* 工单（健康工单占 0 像素）
+    • 上游研究原型 (not official product) · 仅显示 person/*
   </text>
 
   <rect x="452" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#6366F1" stroke-width="1.5"/>
@@ -70,22 +70,22 @@
 
   <rect x="848" y="148" width="376" height="175" rx="12" fill="#111C35" stroke="#10B981" stroke-width="1.5"/>
   <text x="868" y="176" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="700">
-    3. storytold/craft-anything (100% Pure Rust)
+    3. 7阶段注意力状态机与跨会话恢复 (Cordis + DSH)
   </text>
   <text x="868" y="198" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12">
-    Track B #1: 22,088★ / 8d ≈ 2,761★/d (stars_today: not_measured)
+    waiting / working 占 0 像素 · 仅 person/* 提醒人类
   </text>
   <text x="868" y="222" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
-    • 320 个双模确定性探针（每个既是 CLI 又是 MCP 工具）
+    • 7阶段：waiting, working, person/(delivery|answer|review|blocked)
   </text>
   <text x="868" y="244" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
-    • Study → Build → Check（3 种屏幕宽度/自测）→ Ready
+    • Outbox 指数退避 (2s → 60s)，跨进程重启不重放历史事件
   </text>
   <text x="868" y="266" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13">
-    • 默认 Clean-Room 模式拒绝读取内部源码，严守合规边界
+    • &lt;private&gt; 隐私标签落盘前自动剥离 + 宿主 Mandate 白名单
   </text>
   <text x="868" y="288" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
-    • 显式 --deep 解锁反汇编 / Pseudo-C / Call Graph / Ghidra
+    • 独立 Rust 探针选型已拆至 Round 8 (craft-anything)
   </text>
 
   <!-- Closed-Form FinOps & Attention Comparison -->
