@@ -664,5 +664,29 @@
       "hours_saved_vs_path_a": "54.0",
       "efficiency_multiplier": "9.60x"
     }
+  },
+  "round_2026_11_09_r24_reanimate_pika_h3_finops_audit": {
+    "claim_id": "CLAIM-20261109-R24-REANIMATE-PIKA-H3",
+    "scope": "Synthetic 20 interactive web animations + 150 768p 12-ref audio-video clips/mo (hosted 4K API upscaling & local GPU hardware: not_measured)",
+    "animations_per_month": 20,
+    "clips_per_month": 150,
+    "path_a_blind_screenshot_plus_50step_silent": {
+      "ui_tokens_and_manual_tuning_usd": "5,870.00",
+      "video_diffusion_retries_usd": "630.00",
+      "manual_foley_sync_labor_usd": "1,625.00",
+      "monthly_total_usd": "8,125.00",
+      "labor_hours": "115.0"
+    },
+    "path_b_reanimate_virtual_clock_plus_pika_h3_flex": {
+      "reanimate_loop_and_review_usd": "720.00",
+      "six_step_local_gpu_usd": "45.00",
+      "synced_stereo_audio_qa_usd": "130.00",
+      "monthly_total_usd": "895.00",
+      "labor_hours": "12.0",
+      "savings_vs_path_a_usd": "7,230.00",
+      "savings_vs_path_a_pct": "88.98%",
+      "hours_saved_vs_path_a": "103.0",
+      "efficiency_multiplier": "9.08x"
+    }
   }
 }

@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg24" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1024"/>
+    </linearGradient>
+    <linearGradient id="accent24" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="raGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#28102A"/>
+      <stop offset="100%" stop-color="#140815"/>
+    </linearGradient>
+    <linearGradient id="pkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F1238"/>
+      <stop offset="100%" stop-color="#10091E"/>
+    </linearGradient>
+    <linearGradient id="finGrad24" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg24)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent24)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#F472B6" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 24 DEEP DIVE · VIRTUAL-CLOCK UI MOTION CLONING &amp; 6-STEP AUDIO-VIDEO INFERENCE</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">NiazMorshed2007/reanimate + Pika-Labs/Pika-H3-Flex vs. Blind Screenshot Coding &amp; 50-Step Diffusion</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Virtual-Clock WebGL/CSS Diff Loop (≤80ms / ≤2% Pixel Mismatch) + 6-Step 12-Ref Synced Audio-Video LoRAs (-88.98% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#EC4899" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">REANIMATE VERIFICATION GATE</text>
+    <text x="16" y="50" fill="#F472B6" font-family="system-ui, sans-serif" font-size="22" font-weight="800">≤80ms · ≤2% Pixel</text>
+    <text x="200" y="49" fill="#FBCFE8" font-family="system-ui, sans-serif" font-size="11">Virtual Clock</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">PIKA-H3-FLEX SAMPLING</text>
+    <text x="300" y="50" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="22" font-weight="800">6 Steps · 12 Refs</text>
+    <text x="488" y="49" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="11">Synced Stereo</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">DUAL ADAPTER PRECISION</text>
+    <text x="584" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">bf16 fl2va | fp32 ref</text>
+    <text x="786" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">SHA256 Pinned</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-88.98% ($7,230.00/mo)</text>
+  </g>
+
+  <!-- Left Column: NiazMorshed2007/reanimate -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#raGrad)" stroke="#EC4899" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#F472B6" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. NiazMorshed2007/reanimate (1,482★ · 135★/d)</text>
+    <text x="20" y="52" fill="#FBCFE8" font-family="system-ui, sans-serif" font-size="12">Frame-by-Frame UI &amp; WebGL Motion Reverse-Engineering</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="88" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">1. Record on Deterministic Virtual Clock</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Captures CSS, Web Animations API &amp; per-frame bbox</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Traces Canvas/WebGL/WebGPU shaders, uniforms &amp; draws</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Works on live URLs, .mp4, .gif, or Lottie files (Bun 1.1+)</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="192" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">2. Spec Table → Build in Native Stack</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• One row per element/property: start, duration, from→to,</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">  easing family, stagger (marks unread frames w/ "?")</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Generates CSS, Framer Motion, GSAP, Three.js, or WebGPU</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="300" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">3. Verify &amp; Repeat (2-5 Rounds Until Match)</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Moves the same: trigger, order, stagger, timing ≤ 80 ms</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Looks the same: ≤ 2% mean pixel mismatch (417/417 frames)</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Replays identical pointer path (0.4 px tilt accuracy)</text>
+  </g>
+
+  <!-- Center Column: Pika-Labs/Pika-H3-Flex -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#pkGrad)" stroke="#8B5CF6" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. Pika-Labs/Pika-H3-Flex (v0.1.0 · 1,742★)</text>
+    <text x="20" y="52" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="12">6-Step Video + Synced Stereo Audio &amp; 12 Omni-References</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
+    <text x="30" y="88" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="12" font-weight="700">6-Step Generation w/ Synchronized Stereo Audio</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Post-trained on MiniMaxAI/MiniMax-H3 (42ed227e...)</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Native 480p / 768p local output w/ mixed stereo audio</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Cuts 50-step diffusion sampling overhead by 8.3x</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
+    <text x="30" y="192" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Dual SHA256-Pinned Adapters &amp; Numerics Policy</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• fl2va (8ed6115d...): First/Last Frame (bf16_conditioning)</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• ref2va (eef684ba...): Up to 12 Refs (fp32_conditioning)</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Prevents fp16/bf16 precision collapse across 12 refs</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
+    <text x="30" y="300" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Local Draft Iteration → Hosted 4K &amp; Stems API</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Iterate camera choreography locally at 480p/768p</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Optional Pika API for 1080p/2K/4K &amp; isolated audio stems</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Python 3.12 + PyTorch 2.13+cu129 + PEFT 0.20 (Apache-2.0)</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad24)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">20 Web UI Animations + 150 12-Ref Audio-Video Clips/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Blind Screenshot UI + 50-Step Video-Only</text>
+    <text x="30" y="106" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Blind UI Tokens + Manual Tuning (90.0h):  $5,870.00/mo</text>
+    <text x="30" y="122" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 50-Step Video Retries (150 × 3.5 × $1.20): $630.00/mo</text>
+    <text x="30" y="138" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Manual Foley Audio Sync (25.0h @$65/h):  $1,625.00/mo</text>
+    <text x="30" y="166" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $8,125.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="200" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="220" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: reanimate Virtual-Clock + Pika-H3-Flex</text>
+    <text x="30" y="238" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 5-Stage Loop Tokens ($70) + Review (10h):  $720.00/mo</text>
+    <text x="30" y="254" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 6-Step Local GPU Inference (150 × $0.30):   $45.00/mo</text>
+    <text x="30" y="270" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Synced Stereo Audio QA (2.0h @$65/h):      $130.00/mo</text>
+    <text x="30" y="298" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $895.00 / month (-88.98%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="332" width="328" height="44" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="352" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $7,230.00/mo (9.08x · 103.0h Saved)</text>
+    <text x="30" y="368" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · 4K API=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Use reanimate for deterministic CSS/WebGL/WebGPU UI motion cloning; use Pika-H3-Flex for 6-step 12-ref audio-video shots.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: GitHub Breakout New Repos 2026-11-09 · Primary Source Verified (reanimate &amp; Pika-H3-Flex release.json)</text>
+</svg>
