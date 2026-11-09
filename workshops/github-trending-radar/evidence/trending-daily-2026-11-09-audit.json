@@ -288,5 +288,33 @@
       "hours_saved_vs_path_a": "60.0",
       "hours_saved_pct": "80.00%"
     }
+  },
+  "round_2026_11_09_r9_companyos_t3code_finops_audit": {
+    "claim_id": "CLAIM-20261109-R9-COMPANYOS-T3CODE",
+    "scope": "Synthetic 50-sandbox + 10,000-webhook/mo compute & API model (external SaaS seat subscriptions: not_measured)",
+    "sandboxes_count": 50,
+    "webhooks_per_month": 10000,
+    "path_a_always_on_vms_unfiltered": {
+      "vm_compute_usd": "3,600.00",
+      "webhook_api_usd": "900.00",
+      "monthly_total_usd": "4,500.00",
+      "ops_hours": "60.0"
+    },
+    "path_b_always_on_vms_keyword_filter": {
+      "vm_compute_usd": "3,600.00",
+      "webhook_api_usd": "450.00",
+      "monthly_total_usd": "4,050.00",
+      "ops_hours": "40.0"
+    },
+    "path_c_companyos_auto_sleep_plus_t3code": {
+      "vm_compute_usd": "600.00",
+      "webhook_api_usd": "225.00",
+      "monthly_total_usd": "825.00",
+      "ops_hours": "12.0",
+      "savings_vs_path_a_usd": "3,675.00",
+      "savings_vs_path_a_pct": "81.67%",
+      "hours_saved_vs_path_a": "48.0",
+      "hours_saved_pct": "80.00%"
+    }
   }
 }
