@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg15" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B192C"/>
+    </linearGradient>
+    <linearGradient id="accent15" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="abGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2239"/>
+      <stop offset="100%" stop-color="#051321"/>
+    </linearGradient>
+    <linearGradient id="mkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+    <linearGradient id="finGrad15" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F1235"/>
+      <stop offset="100%" stop-color="#11091D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg15)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent15)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 15 DEEP DIVE · WEB &amp; MOBILE GUI AGENT AUTOMATION ARCHITECTURE</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">vercel-labs/agent-browser (v0.41.2) + wangzan101/Mika vs. Vision Pixel-Guessing &amp; Foreground Phone Farms</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Rust CDP Daemon w/ @e1 A11y Snapshot Refs + On-Device Android Background VirtualDisplay via Wireless Debugging (-93.21% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">AGENT-BROWSER SNAPSHOT REFS</text>
+    <text x="16" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-84.0% Step Tokens</text>
+    <text x="200" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">@e1 A11y Tree</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">MIKA BACKGROUND DISPLAY</text>
+    <text x="300" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">0 Foreground Lock</text>
+    <text x="480" y="49" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="11">Android 12+ ADB</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">OCCLUSION &amp; HITL SAFETY</text>
+    <text x="584" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">25% → 3% Retries</text>
+    <text x="772" y="49" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="11">Banner/Pay Gate</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#C084FC" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-93.21% ($3,262.24/mo)</text>
+  </g>
+
+  <!-- Left Column: vercel-labs/agent-browser -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#abGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. vercel-labs/agent-browser (v0.41.2 · +914★)</text>
+    <text x="20" y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">Native Rust Browser Automation CLI &amp; CDP Daemon</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Compact Accessibility Snapshot w/ @e1 Refs</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• agent-browser snapshot -i → - link "Learn" [ref=e1]</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• agent-browser click @e1 (1 short shell call per step)</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Shrinks step context from ~18K vision/DOM to 2.4K tokens</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="192" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Strict Hit-Target &amp; Banner Occlusion Gate</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Fails fast if target is hidden, disabled, off-viewport,</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">  or covered by a cookie/consent banner</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Prevents silent no-op clicks; supports role/name finders</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="300" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Multi-Engine Persistent CDP Daemon (Rust)</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Per --session daemon w/ 1-hour idle auto-shutdown</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Engines: Chrome for Testing, Lightpanda, Obscura, iOS</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• AES-GCM encrypted session state &amp; axe-core a11y audit</text>
+  </g>
+
+  <!-- Center Column: wangzan101/Mika -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#mkGrad)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. wangzan101/Mika (7,874★ · 716★/day #B4)</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">On-Device Android Background VirtualDisplay Agent (Kotlin)</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="88" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Hidden Background Screen (VirtualDisplay)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Runs WeChat, Xiaohongshu, Amazon on a separate screen</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• User keeps full foreground phone control simultaneously</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Optional floating PIP preview + instant touch-to-pause</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">PC-Free Wireless Debugging Loopback Setup</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• One-time Android 12+ Wireless Debugging pairing on phone</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Zero PC or USB cable required after initial pairing</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Auto-reconnects helper (:core + :app Gradle modules)</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="300" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Payment/Auth HITL Pause &amp; Skill Distillation</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Stops before checkout, login, or CAPTCHA for user takeover</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Distills completed trajectories into reusable local skills</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• 100% on-device data (zero proprietary Mika cloud server)</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad15)" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#C084FC" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#E9D5FF" font-family="system-ui, sans-serif" font-size="12">3,000 GUI Workflows/Mo (24,000 Steps: Web + Mobile)</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Vision Screenshots + Foreground Phone</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Vision/DOM Step Tokens (24,000 steps):  $1,200.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Occlusion/Coord Retries (25% = 6,000):    $300.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Foreground Phone Lock (50.0h @$40/h):   $2,000.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $3,500.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: agent-browser @e1 + Mika VirtualDisplay</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Compact @e1 / UI Tree (24,000 steps):     $192.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Occlusion-Gated Retries (3% = 720):         $5.76/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Checkout HITL Handoff Only (1.0h @$40/h):  $40.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $237.76 / month (-93.21%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#11091D" stroke="#C084FC" stroke-width="1"/>
+    <text x="30" y="354" fill="#E9D5FF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $3,262.24/mo (14.72x · 49.0h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Handset HW=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Use vercel-labs/agent-browser (@e1 A11y refs) for web portals; use wangzan101/Mika (background VirtualDisplay) for mobile-only super-apps.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: Track A trending-daily-2026-11-09-raw.html (fb22bae9...) + Track B search-new-repos-2026-11-09-raw.json (2daee440...) · Primary Source Verified</text>
+</svg>

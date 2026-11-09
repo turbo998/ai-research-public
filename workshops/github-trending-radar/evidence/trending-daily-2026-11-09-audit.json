@@ -446,5 +446,29 @@
       "hours_saved_vs_path_a": "24.0",
       "efficiency_multiplier": "6.31x"
     }
+  },
+  "round_2026_11_09_r15_mika_agent_browser_finops_audit": {
+    "claim_id": "CLAIM-20261109-R15-MIKA-AGENT-BROWSER",
+    "scope": "Synthetic 3,000 GUI workflows/mo (24,000 base steps across web & Android; physical handset hardware & proxy bandwidth: not_measured)",
+    "workflows_per_month": 3000,
+    "steps_per_month": 24000,
+    "path_a_vision_screenshots_plus_foreground_phone": {
+      "base_step_token_usd": "1,200.00",
+      "occlusion_retry_usd": "300.00",
+      "foreground_lock_labor_usd": "2,000.00",
+      "monthly_total_usd": "3,500.00",
+      "locked_hours": "50.0"
+    },
+    "path_b_agent_browser_e1_plus_mika_virtualdisplay": {
+      "base_step_token_usd": "192.00",
+      "occlusion_retry_usd": "5.76",
+      "checkout_hitl_labor_usd": "40.00",
+      "monthly_total_usd": "237.76",
+      "locked_hours": "1.0",
+      "savings_vs_path_a_usd": "3,262.24",
+      "savings_vs_path_a_pct": "93.21%",
+      "hours_saved_vs_path_a": "49.0",
+      "efficiency_multiplier": "14.72x"
+    }
   }
 }
