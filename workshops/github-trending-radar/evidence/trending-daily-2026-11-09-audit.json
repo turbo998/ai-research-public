@@ -736,5 +736,30 @@
       "hours_saved_vs_path_a": "47.0",
       "efficiency_multiplier": "9.91x"
     }
+  },
+  "round_2026_11_09_r27_pinky_poki_finops_audit": {
+    "claim_id": "CLAIM-20261109-R27-PINKY-POKI",
+    "poki_loopback": "10.7.0.1",
+    "scope": "Synthetic 2,000 real-device iOS/Android runs (200 device-hours)/mo (physical test handsets & optional $99/yr Apple Dev fee: not_measured)",
+    "runs_per_month": 2000,
+    "device_hours_per_month": 200,
+    "path_a_cloud_farm_plus_unprotected_appium": {
+      "cloud_device_farm_usd": "1,200.00",
+      "unapproved_click_rollback_labor_usd": "1,800.00",
+      "wda_tunnel_maintenance_labor_usd": "1,800.00",
+      "monthly_total_usd": "4,800.00",
+      "labor_hours": "60.0"
+    },
+    "path_b_pinky_gateway_plus_poki_loopback": {
+      "local_device_farm_usd": "0.00",
+      "gateway_blocked_incident_labor_usd": "45.00",
+      "automated_setup_labor_usd": "240.00",
+      "monthly_total_usd": "285.00",
+      "labor_hours": "4.75",
+      "savings_vs_path_a_usd": "4,515.00",
+      "savings_vs_path_a_pct": "94.06%",
+      "hours_saved_vs_path_a": "55.25",
+      "efficiency_multiplier": "16.84x"
+    }
   }
 }
