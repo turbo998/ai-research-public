@@ -419,5 +419,32 @@
       "savings_vs_path_a_pct": "72.04%",
       "efficiency_multiplier": "3.58x"
     }
+  },
+  "round_2026_11_09_r14_opencut_infinite_canvas_finops_audit": {
+    "claim_id": "CLAIM-20261109-R14-OPENCUT-INFINITE-CANVAS",
+    "loopback_endpoint": "127.0.0.1:17371",
+    "scope": "Synthetic 60 multi-scene videos/mo (720 shot orchestrations + 60 exports; base generative API for accepted shots & GPU depreciation: not_measured)",
+    "videos_per_month": 60,
+    "shots_per_month": 720,
+    "path_a_linear_chat_plus_cloud_nle": {
+      "orchestration_token_usd": "226.80",
+      "wasted_regeneration_usd": "72.00",
+      "cloud_nle_seats_and_export_usd": "402.00",
+      "manual_alignment_labor_usd": "1,800.00",
+      "monthly_total_usd": "2,500.80",
+      "labor_hours": "30.0"
+    },
+    "path_b_infinite_canvas_plus_local_opencut": {
+      "orchestration_token_usd": "21.60",
+      "wasted_regeneration_usd": "14.50",
+      "cloud_nle_seats_and_export_usd": "0.00",
+      "manual_alignment_labor_usd": "360.00",
+      "monthly_total_usd": "396.10",
+      "labor_hours": "6.0",
+      "savings_vs_path_a_usd": "2,104.70",
+      "savings_vs_path_a_pct": "84.16%",
+      "hours_saved_vs_path_a": "24.0",
+      "efficiency_multiplier": "6.31x"
+    }
   }
 }
