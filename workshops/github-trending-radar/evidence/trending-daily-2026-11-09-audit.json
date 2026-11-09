@@ -133,5 +133,39 @@
       "hours_saved_pct": "85.00%",
       "validators": ["validate-coverage-ledger.cjs", "validate-findings.cjs"]
     }
+  },
+  "round_2026_11_09_r4_worktrunk_plannotator_finops_audit": {
+    "claim_id": "CLAIM-20261109-R4-WORKTRUNK-PLANNOTATOR",
+    "scope": "API-only synthetic model + 8-worktree local disk footprint (workstation hardware & CI runner bills: not_measured)",
+    "tasks_per_month": 800,
+    "worktrees_per_machine": 8,
+    "disk_raw_gb": "28.00",
+    "disk_cow_gb": "4.55",
+    "disk_saved_pct": "83.75%",
+    "path_a_raw_worktree_terminal_scroll": {
+      "rounds": 2400,
+      "monthly_input_usd": "216.00",
+      "monthly_output_usd": "108.00",
+      "monthly_total_api_usd": "324.00",
+      "context_switch_hours": "64.0"
+    },
+    "path_b_post_push_web_pr": {
+      "rounds": 1600,
+      "monthly_input_usd": "120.00",
+      "monthly_output_usd": "60.00",
+      "monthly_total_api_usd": "180.00",
+      "context_switch_hours": "40.0"
+    },
+    "path_c_worktrunk_plus_plannotator": {
+      "rounds": 880,
+      "monthly_input_usd": "39.60",
+      "monthly_output_usd": "19.80",
+      "monthly_total_api_usd": "59.40",
+      "context_switch_hours": "12.0",
+      "savings_vs_path_a_usd": "264.60",
+      "savings_vs_path_a_pct": "81.67%",
+      "hours_saved_vs_path_a": "52.0",
+      "hours_saved_pct": "81.25%"
+    }
   }
 }

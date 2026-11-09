@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgR4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accR4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgR4)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accR4)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="22.5" font-weight="800">
+    2026-11-09 ROUND 4 SELECTION FAQ · WORKTRUNK (v0.81.0) + PLANNOTATOR (v0.28.56) PARALLEL AGENT LOOP
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    max-sixty/worktrunk (12,222★, +2,313★/wk) + backnotprop/plannotator (9,936★) vs. Raw git worktree &amp; Terminal Scrollback
+  </text>
+  <rect x="1150" y="54" width="228" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1264" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">-83.75% DISK (CoW)</text>
+  <text x="1264" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-81.67% REWORK API</text>
+
+  <!-- Left Panel: Worktrunk Parallel Git Worktree Engine -->
+  <rect x="40" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    1. MAX-SIXTY/WORKTRUNK (v0.81.0): ZERO-FRICTION GIT WORKTREES
+  </text>
+  <rect x="60" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="214" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • One-Command Provision &amp; Agent Launch: wt switch -c -x claude feat
+  </text>
+  <text x="76" y="244" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • wt step copy-ignored: APFS/btrfs/XFS Copy-on-Write shares target/ &amp; node_modules/
+  </text>
+  <text x="76" y="274" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • 8 Concurrent Worktrees Disk: 28.00 GB (raw copy) → 4.55 GB (-83.75% SSD saved)
+  </text>
+  <text x="76" y="304" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • hash_port Template Filter: Deterministic unique dev-server port per worktree
+  </text>
+  <text x="76" y="334" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • wt list --full &amp; wt merge: Live CI status, AI branch summaries &amp; 1-step cleanup
+  </text>
+  <text x="76" y="364" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    • Windows Compatibility: Ships git-wt alias via Winget to avoid wt.exe conflict
+  </text>
+  <rect x="76" y="386" width="598" height="80" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="92" y="410" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12" font-weight="700">
+    Plain git: git worktree add -b feat ../repo.feat &amp;&amp; cd ../repo.feat &amp;&amp; npm i &amp;&amp; claude
+  </text>
+  <text x="92" y="438" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="12" font-weight="700">
+    Worktrunk: wt switch -c -x claude feat  (&lt;2s ready with CoW build cache + unique port)
+  </text>
+
+  <!-- Right Panel: Plannotator Inbox & Multi-Agent HITL Annotation -->
+  <rect x="730" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="750" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    2. BACKNOTPROP/PLANNOTATOR (v0.28.56): NON-BLOCKING HITL INBOX
+  </text>
+  <rect x="750" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="766" y="214" fill="#60A5FA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • plannotator inbox: Unified local review queue across 9 AI coding agents
+  </text>
+  <text x="766" y="244" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • Supported Agents: Claude Code, Codex, Copilot CLI, Gemini CLI, OpenCode, Pi, Kiro
+  </text>
+  <text x="766" y="274" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • Annotate Plans, Specs &amp; Live HTML (--render-html) before code is written
+  </text>
+  <text x="766" y="304" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • Multi-VCS Code Review: Git, GitButler stacks, Jujutsu (jj), Perforce (p4), PRs/MRs
+  </text>
+  <text x="766" y="334" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • Herdr Annotate &amp; plannotator-tui: Terminal-native markdown/reply annotation
+  </text>
+  <rect x="766" y="362" width="598" height="104" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+  <text x="782" y="388" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    Why Pre-Code Plan Annotation Beats Post-Push PR Review:
+  </text>
+  <text x="782" y="412" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.8">
+    • Catching a flawed schema assumption in Plan Mode costs 1.10 rounds vs. 3.00 rounds of
+  </text>
+  <text x="782" y="434" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.8">
+    • unanchored terminal prose corrections after the agent has already modified 15 files.
+  </text>
+
+  <!-- Bottom Panel: Closed-Form FinOps & Disk Worked Example -->
+  <rect x="40" y="520" width="1360" height="360" rx="14" fill="#111827" stroke="#34D399" stroke-width="1.5"/>
+  <text x="60" y="552" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. CLOSED-FORM FINOPS, DISK &amp; CONTEXT-SWITCH MODEL (800 TASKS/MO · 8 WORKTREES/MACHINE · API-ONLY SYNTHETIC)
+  </text>
+  <text x="60" y="576" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Pricing: $3.00 / 1M input, $15.00 / 1M output (counted once) | Workstation hardware &amp; CI runner bills: not_measured (independently_reproduced=false)
+  </text>
+
+  <rect x="60" y="594" width="1320" height="82" rx="10" fill="#1E293B"/>
+  <text x="80" y="620" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path A (Raw git worktree + Terminal Scroll) : 28.00 GB disk | 2,400 rounds/mo (800×3.00) × ($0.0900 in + $0.0450 out) = $324.00/mo ($216.00 in + $108.00 out) | 64.0h/mo
+  </text>
+  <text x="80" y="646" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path B (Shell Aliases + Post-Push Web PR)   : 28.00 GB disk | 1,600 rounds/mo (800×2.00) × ($0.0750 in + $0.0375 out) = $180.00/mo ($120.00 in + $60.00 out)  | 40.0h/mo
+  </text>
+  <text x="80" y="668" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path C (worktrunk CoW + plannotator inbox)  : 4.55 GB disk  | 880 rounds/mo   (800×1.10) × ($0.0450 in + $0.0225 out) = $59.40/mo  ($39.60 in + $19.80 out)   | 12.0h/mo
+  </text>
+
+  <!-- Visual Comparison Bars -->
+  <rect x="60" y="692" width="1320" height="168" rx="10" fill="#0F172A" stroke="#1E293B"/>
+  <text x="80" y="722" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path A Raw Worktree ($324.00/mo | 28.00 GB | 64.0h)
+  </text>
+  <rect x="480" y="707" width="680" height="20" rx="5" fill="#EF4444"/>
+  <text x="1172" y="722" fill="#FCA5A5" font-family="Consolas, monospace" font-size="12" font-weight="700">100.0% Baseline</text>
+
+  <text x="80" y="762" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path B Post-Push PR ($180.00/mo | 28.00 GB | 40.0h)
+  </text>
+  <rect x="480" y="747" width="378" height="20" rx="5" fill="#F59E0B"/>
+  <text x="870" y="762" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">55.56% (-$144.00/mo)</text>
+
+  <text x="80" y="802" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path C worktrunk + plannotator ($59.40/mo | 4.55 GB | 12.0h)
+  </text>
+  <rect x="480" y="787" width="125" height="20" rx="5" fill="#10B981"/>
+  <text x="618" y="802" fill="#34D399" font-family="Consolas, monospace" font-size="12.2" font-weight="700">
+    18.33% → Saves $264.60/mo (-81.67% API-only), 52.0h/mo (-81.25%) &amp; 23.45 GB (-83.75%) disk
+  </text>
+
+  <text x="80" y="842" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Verified in tests/radar-integration.cjs | Commands: wt switch -c -x claude feat | plannotator inbox | wt merge
+  </text>
+</svg>
