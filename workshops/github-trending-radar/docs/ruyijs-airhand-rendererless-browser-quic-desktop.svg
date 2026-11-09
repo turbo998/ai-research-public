@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg30" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1410"/>
+    </linearGradient>
+    <linearGradient id="accent30" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="ryGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2B1408"/>
+      <stop offset="100%" stop-color="#150A04"/>
+    </linearGradient>
+    <linearGradient id="ahGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2239"/>
+      <stop offset="100%" stop-color="#05121E"/>
+    </linearGradient>
+    <linearGradient id="finGrad30" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg30)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent30)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#FB923C" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 30 DEEP DIVE · RENDERERLESS FIREFOX JS ENGINE &amp; 120FPS QUIC REMOTE DESKTOP</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">cutetailbud/ff-ruyijs (v0.3.6) + sqlpxc/airhand (v0.2.2) vs. Heavy Chromium &amp; Legacy VNC</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Firefox 159 SpiderMonkey + Necko/NSS 3.131 (38 Contexts · 0 Renderer) + 7ms AV1 120FPS QUIC+BBR Desktop (-86.87% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#F97316" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">RUYIJS FIREFOX 159 ENGINE</text>
+    <text x="16" y="50" fill="#FB923C" font-family="system-ui, sans-serif" font-size="22" font-weight="800">38 Contexts · ~42 MB</text>
+    <text x="205" y="49" fill="#FED7AA" font-family="system-ui, sans-serif" font-size="11">0 GPU/Layout</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">AIRHAND AV1 GPU ENCODE</text>
+    <text x="300" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">~7 ms / Frame · 120fps</text>
+    <text x="502" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">QUIC + BBR</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#A78BFA" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">IN-FLIGHT FRAME CAP</text>
+    <text x="584" y="50" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="22" font-weight="800">≈ RTT × fps + 2</text>
+    <text x="774" y="49" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="11">0 Idle Bytes</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-86.87% ($4,248.00/mo)</text>
+  </g>
+
+  <!-- Left Column: cutetailbud/ff-ruyijs -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#ryGrad)" stroke="#F97316" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FB923C" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. cutetailbud/ff-ruyijs (v0.3.6 · 1,188★)</text>
+    <text x="20" y="52" fill="#FED7AA" font-family="system-ui, sans-serif" font-size="12">Rendererless Firefox 159 SpiderMonkey + Necko for Python</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#EA580C" stroke-width="1"/>
+    <text x="30" y="88" fill="#FDBA74" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Authentic Firefox 159 Internals (Zero Impersonation)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Real SpiderMonkey JS engine + 38 native Web API contexts</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Genuine Necko network stack + NSS 3.131 + Neqo HTTP/3</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• No window, no layout engine &amp; no GPU renderer overhead</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#EA580C" stroke-width="1"/>
+    <text x="30" y="192" fill="#FDBA74" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Process-Isolated Contexts &amp; Offline Flow Replay</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Each Context runs in its own isolated OS process &amp; proxy</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Persistent JS world w/ zero cross-session state leakage</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Captures &amp; replays entire JS/network flows 100% offline</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#EA580C" stroke-width="1"/>
+    <text x="30" y="300" fill="#FDBA74" font-family="system-ui, sans-serif" font-size="12" font-weight="700">~42 MB SHA256-Pinned PyPI Wheels (Win/Mac/Linux)</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• pip install ruyijs (Python 3.10+ on Win x64, Mac arm64,</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">  and Linux manylinux_2_39_x86_64 w/ FreeType/HarfBuzz)</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Cuts 500-worker cluster RAM from 8 nodes to 2 nodes</text>
+  </g>
+
+  <!-- Center Column: sqlpxc/airhand -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#ahGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. sqlpxc/airhand (v0.2.2 · 980★ · Rust MIT)</text>
+    <text x="20" y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">120 FPS QUIC + BBR Hardware-Encoded Remote Desktop</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">~7 ms Hardware AV1/HEVC &amp; Desynchronized Canvas</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• NVENC / Quick Sync / AMF / VideoToolbox / MediaCodec</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Zero B-frames; 4K→1080p AV1 encode in ~7 ms on RTX</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Draws to desynchronized canvas (0 vsync wait) + local cursor</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="192" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">QUIC + BBR Split Queues &amp; In-Flight Frame Cap</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Separate queues for control, Opus audio &amp; video</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Caps frames in flight (≈ RTT × fps + 2); skips stale frames</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• 0 frames sent when screen is still; unfocused tabs drop to 5fps</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="300" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Windows System Service (UAC/Lock) &amp; Multi-Screen</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Controls Windows lock screen, pre-login &amp; UAC prompts</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Multi-tab console + multi-screen wall + Docker web client</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• 1-command self-hosted byte-forwarding relay (MIT)</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad30)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">500 Concurrent JS Workers + 30 Remote Takeover Hosts</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: 500 Full Chromium VMs + Commercial RMM</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 8× 32GB Nodes for 500 Chromiums:         $1,440.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Commercial Remote Desktop (30 × $25):      $750.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• WAF Block &amp; Lag Triage (45.0h @$60/h):   $2,700.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $4,890.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: ruyiJS v0.3.6 + Airhand v0.2.2 Relay</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 2× 32GB Nodes for 500 ruyiJS Contexts:     $360.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Self-Hosted Airhand Relay Container:        $12.00/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Residual Maintenance (4.5h @$60/h):        $270.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $642.00 / month (-86.87%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="354" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $4,248.00/mo (7.62x · 40.5h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Proxies=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Run headless JS/API automation in ruyiJS (0 renderer); use Airhand 120FPS QUIC console for visual desktop takeovers.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: GitHub Breakout New Repos 2026-11-09 · Primary Source Verified (ruyijs v0.3.6 &amp; airhand v0.2.2)</text>
+</svg>

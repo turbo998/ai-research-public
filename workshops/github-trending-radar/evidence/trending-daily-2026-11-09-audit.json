@@ -809,5 +809,30 @@
       "hours_saved_vs_path_a": "260.0",
       "efficiency_multiplier": "16.36x"
     }
+  },
+  "round_2026_11_09_r30_ruyijs_airhand_finops_audit": {
+    "claim_id": "CLAIM-20261109-R30-RUYIJS-AIRHAND",
+    "firefox_version": "159",
+    "scope": "Synthetic 500 concurrent JS workers + 30 remote desktop hosts/mo (commercial closed-source ruyiJS OEM license & residential proxy bandwidth: not_measured)",
+    "js_workers": 500,
+    "remote_hosts": 30,
+    "path_a_full_chromium_plus_commercial_rmm": {
+      "chromium_vm_nodes_usd": "1,440.00",
+      "commercial_rmm_seats_usd": "750.00",
+      "bot_block_and_uac_triage_labor_usd": "2,700.00",
+      "monthly_total_usd": "4,890.00",
+      "labor_hours": "45.0"
+    },
+    "path_b_ruyijs_v036_plus_airhand_v022": {
+      "ruyijs_vm_nodes_usd": "360.00",
+      "airhand_relay_container_usd": "12.00",
+      "residual_maintenance_labor_usd": "270.00",
+      "monthly_total_usd": "642.00",
+      "labor_hours": "4.5",
+      "savings_vs_path_a_usd": "4,248.00",
+      "savings_vs_path_a_pct": "86.87%",
+      "hours_saved_vs_path_a": "40.5",
+      "efficiency_multiplier": "7.62x"
+    }
   }
 }
