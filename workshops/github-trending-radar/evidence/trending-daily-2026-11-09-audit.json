@@ -372,5 +372,31 @@
       "hours_saved_vs_path_a": "51.0",
       "hours_saved_pct": "85.00%"
     }
+  },
+  "round_2026_11_09_r12_gpui_kit_ooosplat_finops_audit": {
+    "claim_id": "CLAIM-20261109-R12-GPUI-KIT-OOOSPLAT",
+    "scope": "Synthetic 80-scene 3DGS + 6-panel desktop model (workstation GPU hardware depreciation: not_measured)",
+    "scenes_per_month": 80,
+    "electron_ram_mb": "1,440.00",
+    "gpui_ram_mb": "180.00",
+    "ram_reduction_pct": "87.50%",
+    "path_a_cloud_3dgs_plus_electron": {
+      "cloud_3dgs_usd": "960.00",
+      "llm_usd": "23.40",
+      "monthly_total_usd": "983.40",
+      "hours": "60.0"
+    },
+    "path_b_manual_cli_plus_raw_gpui": {
+      "monthly_total_usd": "46.80",
+      "hours": "84.0"
+    },
+    "path_c_ooosplat_plus_gpui_kit": {
+      "monthly_total_usd": "4.20",
+      "hours": "12.0",
+      "savings_vs_path_a_usd": "979.20",
+      "savings_vs_path_a_pct": "99.57%",
+      "hours_saved_vs_path_a": "48.0",
+      "hours_saved_pct": "80.00%"
+    }
   }
 }

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgR12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accR12" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgR12)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accR12)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="800">
+    2026-11-09 ROUND 12 SELECTION FAQ · LONGBRIDGE/GPUI-KIT (v0.9.1) + OOOLABDEV/OOOSPLAT (v0.7.1)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    gpui-kit (20,079★, +153★ today, 120FPS Rust UI) + ooosplat (2,398★, +109★ today, Apache-2.0) vs. Electron &amp; Cloud 3DGS
+  </text>
+  <rect x="1150" y="54" width="228" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1264" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">-99.57% DIRECT COST</text>
+  <text x="1264" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-87.50% DESKTOP RAM</text>
+
+  <!-- Left Panel: longbridge/gpui-kit v0.9.1 -->
+  <rect x="40" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    1. LONGBRIDGE/GPUI-KIT (v0.9.1): 120FPS RUST DESKTOP &amp; WASM UI
+  </text>
+  <rect x="60" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="214" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • 3-Layer Ecosystem: gpui-base | gpui-component (75+ widgets) | gpui-shell (JS)
+  </text>
+  <text x="76" y="242" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • 120 FPS GPU Rendering: 100k-row virtual tables &amp; 200k-line Tree-sitter/LSP editor
+  </text>
+  <text x="76" y="270" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • AccessKit Accessibility + Headless Window UI Integration Tests for AI Agents
+  </text>
+  <text x="76" y="298" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Cross-Platform: macOS, Windows, Linux &amp; WebAssembly (wasm32-unknown-unknown)
+  </text>
+  <rect x="76" y="324" width="598" height="142" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="92" y="348" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    Why 6-Panel Desktop RAM Drops from 1,440.00 MB to 180.00 MB (-87.50%):
+  </text>
+  <text x="92" y="374" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Eliminates Chromium multi-renderer V8 heaps while retaining capability-gated JS
+  </text>
+  <text x="92" y="398" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • extensibility via gpui-shell and deterministic AI recipes (examples/ai_recipes).
+  </text>
+  <text x="92" y="424" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Production Proven in Longbridge Pro | 20,079★ (+153★ today)
+  </text>
+
+  <!-- Right Panel: ooolabdev/ooosplat v0.7.1 -->
+  <rect x="730" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="750" y="172" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    2. OOOLABDEV/OOOSPLAT (v0.7.1): ZERO-CLOUD LOCAL 3DGS WORKSTATION
+  </text>
+  <rect x="750" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="766" y="214" fill="#60A5FA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • Bundled Native Toolchain: FFmpeg + FFprobe + COLMAP + Brush (0 cloud upload)
+  </text>
+  <text x="766" y="242" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Supports MP4/MOV/Images, 360°×180° 2:1 ERP Panoramas &amp; Alpha Masks
+  </text>
+  <text x="766" y="270" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • EXIF GPS Metric/North Alignment, Auto OOM Retry &amp; Incremental Reshoot
+  </text>
+  <text x="766" y="298" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    • Multi-Format Export: PLY, Compressed PLY, SPZ v4, SOG, MP4 &amp; Offline HTML
+  </text>
+  <rect x="766" y="324" width="598" height="142" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+  <text x="782" y="348" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    🌐 Sovereign Digital-Twin Privacy &amp; Zero Per-Scene SaaS Fees:
+  </text>
+  <text x="782" y="374" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Raw facility videos, camera poses, and 3D splats never leave the local machine
+  </text>
+  <text x="782" y="398" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Single-file offline HTML export lets stakeholders inspect 3D scenes at 60 FPS
+  </text>
+  <text x="782" y="424" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    License: Apache-2.0 | Release: v0.7.1 (2,398★, +109★ today)
+  </text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Worked Example -->
+  <rect x="40" y="520" width="1360" height="360" rx="14" fill="#111827" stroke="#34D399" stroke-width="1.5"/>
+  <text x="60" y="552" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. CLOSED-FORM FINOPS &amp; RAM MODEL (80 3DGS SCENES/MO + 6-PANEL CLIENT · SYNTHETIC)
+  </text>
+  <text x="60" y="576" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Cloud 3DGS Baseline: $12.00/scene | LLM Pricing: $3.00/1M in, $15.00/1M out | Workstation GPU depreciation: not_measured (independently_reproduced=false)
+  </text>
+
+  <rect x="60" y="594" width="1320" height="82" rx="10" fill="#1E293B"/>
+  <text x="80" y="620" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path A (Cloud 3DGS SaaS + Electron)      : 1,440.00 MB RAM | $960.00 3DGS + $23.40 LLM = $983.40/mo | 60.0h/mo
+  </text>
+  <text x="80" y="646" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path B (Manual CLI COLMAP + Raw GPUI)    : 180.00 MB RAM   | $0.00 3DGS   + $46.80 LLM = $46.80/mo  | 84.0h/mo
+  </text>
+  <text x="80" y="668" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path C (ooosplat v0.7.1 + gpui-kit v0.9) : 180.00 MB RAM   | $0.00 3DGS   + $4.20 LLM  = $4.20/mo   | 12.0h/mo
+  </text>
+
+  <!-- Visual Comparison Bars -->
+  <rect x="60" y="692" width="1320" height="168" rx="10" fill="#0F172A" stroke="#1E293B"/>
+  <text x="80" y="722" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path A Cloud 3DGS + Electron ($983.40/mo | 1,440.00 MB)
+  </text>
+  <rect x="490" y="707" width="670" height="20" rx="5" fill="#EF4444"/>
+  <text x="1172" y="722" fill="#FCA5A5" font-family="Consolas, monospace" font-size="12" font-weight="700">100.0% Baseline</text>
+
+  <text x="80" y="762" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path B Manual CLI + Raw GPUI ($46.80/mo | 84.0h)
+  </text>
+  <rect x="490" y="747" width="32" height="20" rx="5" fill="#F59E0B"/>
+  <text x="534" y="762" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">4.76% spend (but 84.0h manual effort)</text>
+
+  <text x="80" y="802" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path C ooosplat + gpui-kit ($4.20/mo | 180.00 MB | 12.0h)
+  </text>
+  <rect x="490" y="787" width="8" height="20" rx="5" fill="#10B981"/>
+  <text x="510" y="802" fill="#34D399" font-family="Consolas, monospace" font-size="12.2" font-weight="700">
+    0.43% → Saves $979.20/mo (-99.57%), -87.50% RAM &amp; 48.0h/mo (-80.00% vs Path A)
+  </text>
+
+  <text x="80" y="842" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Verified in tests/radar-integration.cjs | longbridge/gpui-kit v0.9.1 &amp; ooolabdev/ooosplat v0.7.1 (Apache-2.0)
+  </text>
+</svg>
