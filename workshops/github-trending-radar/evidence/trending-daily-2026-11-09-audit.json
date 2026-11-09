@@ -167,5 +167,33 @@
       "hours_saved_vs_path_a": "52.0",
       "hours_saved_pct": "81.25%"
     }
+  },
+  "round_2026_11_09_r5_voxcpm2_tts_finops_audit": {
+    "claim_id": "CLAIM-20261109-R5-VOXCPM2-TTS",
+    "scope": "Synthetic 50M-char (1,000-hour 48kHz speech/mo) synthesis model (CDN egress & object storage bills: not_measured)",
+    "chars_per_month": 50000000,
+    "audio_hours_per_month": 1000,
+    "gpu_hourly_rate_usd": 0.80,
+    "path_a_commercial_cloud_tts_api": {
+      "rate_per_1m_chars_usd": "180.00",
+      "monthly_total_usd": "9,000.00",
+      "post_processing_hours": "24.0"
+    },
+    "path_b_unbatched_pytorch_tts": {
+      "combined_rtf": 0.36,
+      "provisioned_gpu_hours": "900.0",
+      "monthly_total_usd": "720.00",
+      "post_processing_hours": "30.0"
+    },
+    "path_c_voxcpm2_vllm_omni": {
+      "native_48khz_rtf": 0.13,
+      "provisioned_gpu_hours": "162.5",
+      "monthly_total_usd": "130.00",
+      "post_processing_hours": "6.0",
+      "savings_vs_path_a_usd": "8,870.00",
+      "savings_vs_path_a_pct": "98.56%",
+      "savings_vs_path_b_usd": "590.00",
+      "savings_vs_path_b_pct": "81.94%"
+    }
   }
 }

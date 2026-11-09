@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgR5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accR5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgR5)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accR5)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="22.5" font-weight="800">
+    2026-11-09 ROUND 5 SELECTION FAQ · OPENBMB/VOXCPM2 (v2.0.3) TOKENIZER-FREE 48kHz TTS
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    42,057★ (+423★ today, Apache-2.0) | 2B MiniCPM-4 Diffusion-AR + AudioVAE V2 (16kHz→48kHz) + vLLM-Omni / Nano-vLLM (RTF ~0.13)
+  </text>
+  <rect x="1150" y="54" width="228" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1264" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">-98.56% vs CLOUD API</text>
+  <text x="1264" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-81.94% vs PYTORCH</text>
+
+  <!-- Left Panel: Tokenizer-Free Diffusion-AR & AudioVAE V2 -->
+  <rect x="40" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    1. TOKENIZER-FREE DIFFUSION-AR &amp; AUDIOVAE V2 (16kHz → 48kHz)
+  </text>
+  <rect x="60" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="214" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • Bypasses Discrete VQ Codec Tokens: Zero quantization loss on sighs/dialects
+  </text>
+  <text x="76" y="244" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • 2B Backbone (MiniCPM-4) trained on &gt;2M hours across 30 languages + 9 dialects
+  </text>
+  <text x="76" y="274" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    • AudioVAE V2 Asymmetric Design: 16kHz reference input → 48kHz studio output
+  </text>
+  <text x="76" y="304" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12" font-weight="700">
+    • 3 Modes: Voice Design | Controllable Cloning | Ultimate Continuation Cloning
+  </text>
+  <rect x="76" y="328" width="598" height="138" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="92" y="352" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    3-Tier Production &amp; Edge Serving Ecosystem:
+  </text>
+  <text x="92" y="376" fill="#CBD5E1" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    1) vLLM-Omni       : vllm serve openbmb/VoxCPM2 --omni (/v1/audio/speech + PagedAttention)
+  </text>
+  <text x="92" y="400" fill="#CBD5E1" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    2) Nano-vLLM-VoxCPM: RTX 4090 RTF ~0.13 (vs ~0.30 standard PyTorch, 2.31× speedup)
+  </text>
+  <text x="92" y="424" fill="#CBD5E1" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    3) llama.cpp-omni  : BaseLM (F16/Q8_0) + Acoustic GGUF on CPU / Metal / Vulkan
+  </text>
+
+  <!-- Right Panel: License Governance & Dialect Matrix -->
+  <rect x="730" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="750" y="172" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    2. OPEN-SOURCE LICENSE GOVERNANCE &amp; DIALECT COVERAGE
+  </text>
+  <rect x="750" y="188" width="630" height="150" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="766" y="212" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    ⚖️ Enterprise License Redlines (Apache-2.0 vs. MIT vs. AGPL-3.0)
+  </text>
+  <text x="766" y="238" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    ✅ OpenBMB/VoxCPM2 (v2.0.3) : Apache-2.0 (Safe for proprietary commercial SaaS)
+  </text>
+  <text x="766" y="264" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    ✅ jamiepine/voicebox       : MIT (Safe desktop multi-engine DAW + local REST)
+  </text>
+  <text x="766" y="290" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    ⛔ debpalash/VoiceStudio    : AGPL-3.0 (Viral network copyleft + Pro/Cloud funnel)
+  </text>
+  <text x="766" y="316" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    • Always audit SPDX licenses before wrapping trending TTS repos as internal microservices
+  </text>
+
+  <rect x="750" y="352" width="630" height="132" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="766" y="376" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    🌍 30 Languages + 9 Chinese Dialects (Zero Language Tag Required)
+  </text>
+  <text x="766" y="402" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">
+    • Dialects: 四川话, 粤语, 吴语, 东北话, 河南话, 陕西话, 山东话, 天津话, 闽南话
+  </text>
+  <text x="766" y="428" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">
+    • Optional word/character timestamps via pip install "voxcpm[timestamps]"
+  </text>
+  <text x="766" y="454" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Technical Report: arXiv:2606.06928 | Weights: huggingface.co/openbmb/VoxCPM2
+  </text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Worked Example -->
+  <rect x="40" y="520" width="1360" height="360" rx="14" fill="#111827" stroke="#34D399" stroke-width="1.5"/>
+  <text x="60" y="552" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. CLOSED-FORM FINOPS &amp; THROUGHPUT MODEL (50M CHARS = 1,000 HRS 48kHz SPEECH/MO · SYNTHETIC)
+  </text>
+  <text x="60" y="576" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Cloud GPU: $0.80 / GPU-hr | Commercial Cloning API: $180.00 / 1M chars | CDN &amp; storage bills: not_measured (independently_reproduced=false)
+  </text>
+
+  <rect x="60" y="594" width="1320" height="82" rx="10" fill="#1E293B"/>
+  <text x="80" y="620" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path A (Commercial Voice-Cloning API)      : 50M chars × $180.00/1M = $9,000.00/mo | 24.0h/mo 48kHz resampling &amp; dialect retakes
+  </text>
+  <text x="80" y="646" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path B (Unbatched PyTorch RTF 0.36 × 2.50) : 900.0 GPU-hrs × $0.80  = $720.00/mo   | 30.0h/mo external upsampler &amp; artifact ops
+  </text>
+  <text x="80" y="668" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path C (VoxCPM2 + vLLM-Omni RTF 0.13 × 1.25): 162.5 GPU-hrs × $0.80 = $130.00/mo   | 6.0h/mo native 48kHz quality review
+  </text>
+
+  <!-- Visual Comparison Bars -->
+  <rect x="60" y="692" width="1320" height="168" rx="10" fill="#0F172A" stroke="#1E293B"/>
+  <text x="80" y="722" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path A Commercial API ($9,000.00/mo | 24.0h)
+  </text>
+  <rect x="460" y="707" width="700" height="20" rx="5" fill="#EF4444"/>
+  <text x="1172" y="722" fill="#FCA5A5" font-family="Consolas, monospace" font-size="12" font-weight="700">100.0% Baseline</text>
+
+  <text x="80" y="762" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path B Unbatched PyTorch ($720.00/mo | 30.0h)
+  </text>
+  <rect x="460" y="747" width="56" height="20" rx="5" fill="#F59E0B"/>
+  <text x="528" y="762" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">8.00% (-$8,280.00/mo vs Path A)</text>
+
+  <text x="80" y="802" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path C VoxCPM2 + vLLM-Omni ($130.00/mo | 6.0h)
+  </text>
+  <rect x="460" y="787" width="14" height="20" rx="5" fill="#10B981"/>
+  <text x="486" y="802" fill="#34D399" font-family="Consolas, monospace" font-size="12.2" font-weight="700">
+    1.44% → Saves $8,870.00/mo (-98.56% vs Path A) &amp; $590.00/mo (-81.94% vs Path B) + 24.0h/mo (-80.00%)
+  </text>
+
+  <text x="80" y="842" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Verified in tests/radar-integration.cjs | Serving: vllm serve openbmb/VoxCPM2 --omni --port 8000
+  </text>
+</svg>
