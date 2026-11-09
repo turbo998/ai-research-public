@@ -257,5 +257,36 @@
       "hours_saved_vs_path_a": "80.0",
       "hours_saved_pct": "83.33%"
     }
+  },
+  "round_2026_11_09_r8_deeptutor_noir_finops_audit": {
+    "claim_id": "CLAIM-20261109-R8-DEEPTUTOR-NOIR",
+    "scope": "API-only synthetic model for 2,000 onboarding sessions + 100 APK audits/mo (container host & mobile test device bills: not_measured)",
+    "sessions_per_month": 2000,
+    "apk_audits_per_month": 100,
+    "path_a_chat_rag_plus_apk_dump": {
+      "rounds": 9000,
+      "monthly_input_usd": "810.00",
+      "monthly_output_usd": "270.00",
+      "monthly_total_api_usd": "1,080.00",
+      "triage_hours": "75.0"
+    },
+    "path_b_static_quiz_plus_adb_regex": {
+      "rounds": 4500,
+      "monthly_input_usd": "270.00",
+      "monthly_output_usd": "101.25",
+      "monthly_total_api_usd": "371.25",
+      "triage_hours": "50.0"
+    },
+    "path_c_deeptutor_plus_noir": {
+      "rounds": 2500,
+      "monthly_input_usd": "75.00",
+      "monthly_output_usd": "37.50",
+      "monthly_total_api_usd": "112.50",
+      "triage_hours": "15.0",
+      "savings_vs_path_a_usd": "967.50",
+      "savings_vs_path_a_pct": "89.58%",
+      "hours_saved_vs_path_a": "60.0",
+      "hours_saved_pct": "80.00%"
+    }
   }
 }

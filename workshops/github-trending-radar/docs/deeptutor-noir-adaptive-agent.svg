@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgR8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accR8" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgR8)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accR8)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="800">
+    2026-11-09 ROUND 8 SELECTION FAQ · HKUDS/DEEPTUTOR (v1.7.2) + VERLINTAS/NOIR (v0.4.2)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    DeepTutor (57,478★, +784★ today, Apache-2.0) + NOIR (3,148★ in 9d, MIT) vs. Generic Chat RAG &amp; Full-APK LLM Decompile
+  </text>
+  <rect x="1150" y="54" width="228" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1264" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">-89.58% API COST</text>
+  <text x="1264" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-80.00% TRIAGE HRS</text>
+
+  <!-- Left Panel: HKUDS/DeepTutor v1.7.2 -->
+  <rect x="40" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    1. HKUDS/DEEPTUTOR (v1.7.2): 4-ENGINE RAG &amp; L1/L2/L3 MEMORY
+  </text>
+  <rect x="60" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="214" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • 4 Pluggable Knowledge Engines: LlamaIndex | PageIndex | GraphRAG | LightRAG
+  </text>
+  <text x="76" y="242" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Inspectable 3-Tier Memory Graph: L1 Traces → L2 Facts → L3 Synthesis
+  </text>
+  <text x="76" y="270" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Shared-Context Modes (:3782): Chat, Quiz, Visualize, Mastery Path, Reading
+  </text>
+  <text x="76" y="298" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Live Partner Subagents: Claude Code, Codex, Grok CLI, Gemini, Kimi, opencode
+  </text>
+  <rect x="76" y="324" width="598" height="142" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="92" y="348" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    Why Inspectable L1/L2/L3 Memory Beats Stateless Chat RAG:
+  </text>
+  <text x="92" y="374" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Learners and instructors can audit &amp; edit exact mastery facts in the Memory Graph
+  </text>
+  <text x="92" y="398" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Mastery Path gates tool &amp; chapter progression until prerequisite concepts pass
+  </text>
+  <text x="92" y="424" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Docker: docker run -p 127.0.0.1:3782:3782 ghcr.io/hkuds/deeptutor:latest | arXiv:2604.26962
+  </text>
+
+  <!-- Right Panel: Verlintas/NOIR v0.4.2 -->
+  <rect x="730" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="750" y="172" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    2. VERLINTAS/NOIR (v0.4.2): ZERO-NETWORK ADB PRIVACY AUDITOR
+  </text>
+  <rect x="750" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="766" y="214" fill="#60A5FA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • On-Device DEX URL Extraction: unzip + strings in phone shell (returns KB, not GB)
+  </text>
+  <text x="766" y="242" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Correlates 12 Sensitive Permission Types × Telemetry/Ad Domains × Shared UIDs
+  </text>
+  <text x="766" y="270" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Binary AXML Manifest Audit: Unprotected exported components &amp; cleartext HTTP
+  </text>
+  <text x="766" y="298" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Targeted noir deep (jadx): Hunts Runtime.exec, DexClassLoader &amp; MediaProjection
+  </text>
+  <rect x="766" y="324" width="598" height="142" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+  <text x="782" y="348" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    🛡️ Zero-Cloud, Root-Free &amp; 100% Reversible Remediation:
+  </text>
+  <text x="782" y="374" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • 100% offline deterministic analysis ($0 LLM token spend for 100+ APK fleet scans)
+  </text>
+  <text x="782" y="398" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Every remediation generates an explicit rollback command file before execution
+  </text>
+  <text x="782" y="424" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Commands: noir doctor | noir setup | noir | noir deep | noir deepscan --purge
+  </text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Worked Example -->
+  <rect x="40" y="520" width="1360" height="360" rx="14" fill="#111827" stroke="#34D399" stroke-width="1.5"/>
+  <text x="60" y="552" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. CLOSED-FORM FINOPS &amp; TRIAGE MODEL (2,000 SESSIONS + 100 APK AUDITS/MO · API-ONLY SYNTHETIC)
+  </text>
+  <text x="60" y="576" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Pricing: $3.00 / 1M input, $15.00 / 1M output (counted once) | Container host &amp; mobile test device bills: not_measured (independently_reproduced=false)
+  </text>
+
+  <rect x="60" y="594" width="1320" height="82" rx="10" fill="#1E293B"/>
+  <text x="80" y="620" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path A (Generic Chat RAG + LLM APK Dump) : 9,000 rounds/mo (8k+1k) × ($0.0900 in + $0.0300 out) = $1,080.00/mo ($810.00 in + $270.00 out) | 75.0h/mo
+  </text>
+  <text x="80" y="646" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path B (Static Quizzes + ADB Regex)      : 4,500 rounds/mo         × ($0.0600 in + $0.0225 out) = $371.25/mo   ($270.00 in + $101.25 out) | 50.0h/mo
+  </text>
+  <text x="80" y="668" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path C (DeepTutor v1.7.2 + NOIR v0.4.2)  : 2,500 rounds/mo ($0 APK)× ($0.0300 in + $0.0150 out) = $112.50/mo   ($75.00 in + $37.50 out)   | 15.0h/mo
+  </text>
+
+  <!-- Visual Comparison Bars -->
+  <rect x="60" y="692" width="1320" height="168" rx="10" fill="#0F172A" stroke="#1E293B"/>
+  <text x="80" y="722" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path A Chat RAG + APK Dump ($1,080.00/mo | 75.0h)
+  </text>
+  <rect x="470" y="707" width="690" height="20" rx="5" fill="#EF4444"/>
+  <text x="1172" y="722" fill="#FCA5A5" font-family="Consolas, monospace" font-size="12" font-weight="700">100.0% Baseline</text>
+
+  <text x="80" y="762" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path B Static + ADB Regex ($371.25/mo | 50.0h)
+  </text>
+  <rect x="470" y="747" width="237" height="20" rx="5" fill="#F59E0B"/>
+  <text x="719" y="762" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">34.38% (-$708.75/mo)</text>
+
+  <text x="80" y="802" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path C DeepTutor + NOIR ($112.50/mo | 15.0h)
+  </text>
+  <rect x="470" y="787" width="72" height="20" rx="5" fill="#10B981"/>
+  <text x="554" y="802" fill="#34D399" font-family="Consolas, monospace" font-size="12.2" font-weight="700">
+    10.42% → Saves $967.50/mo (-89.58% API-only, $11,610.00/yr) &amp; 60.0h/mo (-80.00% triage)
+  </text>
+
+  <text x="80" y="842" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Verified in tests/radar-integration.cjs | DeepTutor v1.7.2 (Apache-2.0) &amp; Verlintas/NOIR v0.4.2 (MIT)
+  </text>
+</svg>
