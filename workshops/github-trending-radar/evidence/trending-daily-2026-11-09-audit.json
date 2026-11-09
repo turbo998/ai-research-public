@@ -688,5 +688,29 @@
       "hours_saved_vs_path_a": "103.0",
       "efficiency_multiplier": "9.08x"
     }
+  },
+  "round_2026_11_09_r25_flashprove_minicpm_ocr_finops_audit": {
+    "claim_id": "CLAIM-20261109-R25-FLASHPROVE-MINICPM-OCR",
+    "scope": "Synthetic 100,000 document pages + 10,000 audited inference replies/mo (prover-side dedicated H100 80GB hardware: not_measured)",
+    "pages_per_month": 100000,
+    "audited_replies_per_month": 10000,
+    "path_a_slow_ocr_plus_10pct_qa_plus_redundant_h100": {
+      "ocr_compute_usd": "600.00",
+      "blind_10pct_qa_labor_usd": "10,000.00",
+      "redundant_h100_audit_usd": "800.00",
+      "monthly_total_usd": "11,400.00",
+      "qa_hours": "250.0"
+    },
+    "path_b_minicpm_ocr_jev_plus_flashprove_cp_verify": {
+      "ocr_dspark_compute_usd": "120.00",
+      "jev_region_qa_labor_usd": "600.00",
+      "cpu_cp_verify_usd": "15.00",
+      "monthly_total_usd": "735.00",
+      "qa_hours": "15.0",
+      "savings_vs_path_a_usd": "10,665.00",
+      "savings_vs_path_a_pct": "93.55%",
+      "hours_saved_vs_path_a": "235.0",
+      "efficiency_multiplier": "15.51x"
+    }
   }
 }

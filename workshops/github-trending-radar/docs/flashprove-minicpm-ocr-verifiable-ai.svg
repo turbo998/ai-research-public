@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg25" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#141E28"/>
+    </linearGradient>
+    <linearGradient id="accent25" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="fpGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#291A08"/>
+      <stop offset="100%" stop-color="#140D04"/>
+    </linearGradient>
+    <linearGradient id="mcGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2239"/>
+      <stop offset="100%" stop-color="#05121E"/>
+    </linearGradient>
+    <linearGradient id="finGrad25" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg25)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent25)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 25 DEEP DIVE · ZERO-KNOWLEDGE INFERENCE PROOFS &amp; REGION-VERIFIED OCR</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">anthropics/FlashProve (v0.16.0) + OpenBMB/MiniCPM-OCR (1.0 + Jev) vs. Blind API Trust &amp; Raw OCR</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Lean 4 Verified ZK Inference Proofs (cp_verify &lt;2s on CPU) + 1.3B DSpark OCR w/ Jev Region Judge (-93.55% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">FLASHPROVE LEAN 4 SOUNDNESS</text>
+    <text x="16" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">q/2^124 + 2^-101</text>
+    <text x="200" y="49" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="11">&lt;2s CPU Verify</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">MINICPM-OCR 1.0 (1.3B) SOTA</text>
+    <text x="300" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">93.68 · 1.2 pages/s</text>
+    <text x="498" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">3.62x MinerU</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#A78BFA" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">MINICPM-OCR JEV JUDGE</text>
+    <text x="584" y="50" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Region-Level Gate</text>
+    <text x="774" y="49" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="11">-94% QA Hours</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-93.55% ($10,665/mo)</text>
+  </g>
+
+  <!-- Left Column: anthropics/FlashProve -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#fpGrad)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. anthropics/FlashProve (v0.16.0 · 997★)</text>
+    <text x="20" y="52" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12">Zero-Knowledge Proofs of AI Inference (Lean 4 + H100)</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="88" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Commit → Prove → Verify Without Weight Leakage</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Binds provider to 1 secret weight set via commitment ID</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Proves Llama 4 Maverick (1,024 ctx) on 1× H100 (110 tok/s)</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Anyone verifies w/ cp_verify on &lt;2 GB CPU in &lt;2 seconds</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">6 Theorems Formally Verified in Lean 4 (THEOREM.md)</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• sound: cheat probability ≤ q/2^124 + 2^-101</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• completeOnCanServe: false reject ≤ 2^-40</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• zeroKnowledgeOnCanServe: ≤ 2^-154 up to 688,127 replies</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="300" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">4-Route Agent Execution Ladder (Non-Root)</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Route 1 (Verify stored proof) &amp; Route 2 (Toy CPU proofs)</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Route 3 (8L/Full synthetic H100) &amp; Route 4 (Llama 4 232GB)</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Catches silent model downgrade / quantization substitution</text>
+  </g>
+
+  <!-- Center Column: OpenBMB/MiniCPM-OCR -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#mcGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. OpenBMB/MiniCPM-OCR (v1.0.5 SDK · 863★)</text>
+    <text x="20" y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">1.3B SOTA Document Parsing + MiniCPM-OCR Jev Judge</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">MiniCPM-OCR 1.0 (1.3B · Real5-OmniDocBench 93.68)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Parses text, tables, formulas, charts &amp; seals on curved scans</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• DSpark-BF16 / GGUF boosts throughput +55% (1.2 pages/s)</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• 1.49x faster than PaddleOCR-VL-1.6; 3.62x vs MinerU2.5 Pro</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="192" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">MiniCPM-OCR Jev Region-Level Correctness Judge</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Evaluates OCR output at the individual region level</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Separates reliable regions from problematic blocks</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Works across any upstream OCR/parsing model</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="300" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Day-1 vLLM, SGLang, llama.cpp, Ollama &amp; Offline iOS</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• pip SDK 1.0.5 w/ auto orientation &amp; --split-images</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Runs 100% offline on iOS devices or Docker vLLM</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Apache-2.0 open source w/ Claude/Codex SKILL.md</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad25)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">100,000 Document Pages + 10,000 Audited Replies/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Heavy VLM OCR + 10% Blind QA + Re-Run Audit</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Unaccelerated OCR GPU/API (100K pages):     $600.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Blind 10% Page QA (250.0h @$40/h):      $10,000.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Redundant H100 Re-Execution (10K):         $800.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $11,400.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: MiniCPM-OCR + Jev + FlashProve cp_verify</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 1.3B DSpark + Jev Inference (100K pages):  $120.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 1.5% Jev Region Triage (15.0h @$40/h):     $600.00/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• CPU cp_verify (&lt;2s × 10K proofs):           $15.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $735.00 / month (-93.55%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="354" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $10,665.00/mo (15.51x · 235.0h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Prover H100=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Parse docs w/ MiniCPM-OCR 1.0 + Jev region judge; verify third-party LLM integrity on CPU w/ FlashProve cp_verify.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: GitHub Breakout New Repos 2026-11-09 · Primary Source Verified (FlashProve v0.16.0 &amp; MiniCPM-OCR 1.0.5)</text>
+</svg>
