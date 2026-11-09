@@ -227,5 +227,35 @@
       "hours_saved_vs_path_a": "51.0",
       "hours_saved_pct": "85.00%"
     }
+  },
+  "round_2026_11_09_r7_floorplan_unslop_finops_audit": {
+    "claim_id": "CLAIM-20261109-R7-FLOORPLAN-UNSLOP",
+    "scope": "API-only synthetic model for 16 vibe-coded prototypes/mo (external design retainers & paid image-gen API bills: not_measured)",
+    "apps_per_month": 16,
+    "path_a_blind_reads_freeform_ui": {
+      "rounds": 192,
+      "monthly_input_usd": "25.92",
+      "monthly_output_usd": "23.04",
+      "monthly_total_api_usd": "48.96",
+      "remediation_hours": "96.0"
+    },
+    "path_b_static_ast_manual_css": {
+      "rounds": 96,
+      "monthly_input_usd": "8.64",
+      "monthly_output_usd": "7.20",
+      "monthly_total_api_usd": "15.84",
+      "remediation_hours": "64.0"
+    },
+    "path_c_floorplan_plus_unslop": {
+      "rounds": 48,
+      "monthly_input_usd": "2.88",
+      "monthly_output_usd": "2.16",
+      "monthly_total_api_usd": "5.04",
+      "remediation_hours": "16.0",
+      "savings_vs_path_a_usd": "43.92",
+      "savings_vs_path_a_pct": "89.71%",
+      "hours_saved_vs_path_a": "80.0",
+      "hours_saved_pct": "83.33%"
+    }
   }
 }
