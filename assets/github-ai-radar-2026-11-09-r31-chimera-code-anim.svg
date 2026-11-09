@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg31" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent31" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg31)"/>
+  <rect x="30" y="24" width="1140" height="627" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="30" y="24" width="1140" height="6" rx="3" fill="url(#accent31)"/>
+
+  <!-- Header -->
+  <text x="56" y="64" fill="#38BDF8" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-09 ROUND 31 (GLOBAL R44) · ARTICULATORY FDTD VOCAL SYNTHESIS &amp; DETERMINISTIC CODE ANIMATION</text>
+  <text x="56" y="96" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, sans-serif" font-size="23" font-weight="800">chimera-vocal-synth (Rust/Wasm FDTD) + code-animation-prompts (341 Styles): 90.00% FinOps Savings</text>
+  <text x="56" y="120" fill="#94A3B8" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13.5">Zero-Sample 96/192kHz Branched Airway Acoustics + Progressive 341-Style Index &amp; Deterministic t-Clock MP4 Renderer</text>
+
+  <!-- Left Panel: chimera-vocal-synth -->
+  <rect x="56" y="142" width="528" height="318" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+  <rect x="74" y="158" width="220" height="24" rx="6" fill="#0369A1"/>
+  <text x="86" y="175" fill="#E0F2FE" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" font-weight="700">1. jamesondh/chimera-vocal-synth (MIT)</text>
+  <text x="308" y="175" fill="#7DD3FC" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" font-weight="600">1,149 ★ · Rust → Wasm AudioWorklet + CLI</text>
+
+  <text x="74" y="204" fill="#F1F5F9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14.5" font-weight="700">Branched Staggered-Grid FDTD Airway (Zero Samples)</text>
+  <text x="74" y="226" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12.5">• Simulates Lungs, Glottis / 2-Voice Songbird Syrinx, Nasal Tract, Sinuses &amp; Lips</text>
+  <text x="74" y="246" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12.5">• Exact Quadratic Borda–Carnot Expansion Loss + Yielding Mass-Spring Walls</text>
+  <text x="74" y="266" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12.5">• Internal 96 kHz (human) / 192 kHz (birds) leapfrog solver + H(f) chain-matrix oracle</text>
+  <text x="74" y="286" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12.5">• Modes: Speak (CMUdict/IPA), Sing (MusicXML), Beatbox, Bestiary &amp; ~60 Hz Telemetry</text>
+
+  <rect x="74" y="304" width="492" height="138" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="90" y="326" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">Acoustic Verification &amp; Live 60Hz Telemetry Contract:</text>
+  <text x="90" y="348" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">• Continuity: (V/ρc²) dp/dt = ΣU_in - ΣU_out - U_wall - dV/dt (clicks/bursts)</text>
+  <text x="90" y="368" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">• Turbulence: Re = |U|·d_h/(A·ν) dipole source + incisor obstacle sibilants</text>
+  <text x="90" y="388" fill="#34D399" font-family="Consolas, monospace" font-size="11.5">• CLI Oracles: `chimera-cli compare csd` (singing) &amp; `compare tsp` (23 speakers)</text>
+  <text x="90" y="408" fill="#FBBF24" font-family="Consolas, monospace" font-size="11.5">• Zero Cloud TTS API Cost: $0.00/mo in-browser Wasm + 60Hz formant stream</text>
+  <text x="90" y="428" fill="#CBD5E1" font-family="Consolas, monospace" font-size="11">  (Studio 2-mass vocal fold &amp; full-app EQ chain parity: not_measured)</text>
+
+  <!-- Right Panel: code-animation-prompts -->
+  <rect x="616" y="142" width="528" height="318" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="634" y="158" width="246" height="24" rx="6" fill="#047857"/>
+  <text x="646" y="175" fill="#D1FAE5" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" font-weight="700">2. XiaoyeCodes/code-animation-prompts</text>
+  <text x="892" y="175" fill="#6EE7B7" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" font-weight="600">880 ★ · 341 Styles + 196 Stills Skill</text>
+
+  <text x="634" y="204" fill="#F1F5F9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14.5" font-weight="700">Progressive 341-Style Index + Deterministic t-Clock Video Export</text>
+  <text x="634" y="226" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12.5">• 341 Markdown Style Prompts across 10 Series (196 with reference stills, 145 text)</text>
+  <text x="634" y="246" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12.5">• Progressive Retrieval (`references/catalog.json` + `styles.py search/show`)</text>
+  <text x="634" y="266" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12.5">• Separates Primary Art Style (K/Z/R), Motion/Narrative (M), and Layout (H)</text>
+  <text x="634" y="286" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12.5">• Deterministic Time Interface (`t` seconds + seeded RNG) → `render_video.py` MP4</text>
+
+  <rect x="634" y="304" width="492" height="138" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="650" y="326" fill="#34D399" font-family="Consolas, monospace" font-size="12" font-weight="700">Blind Prompting &amp; Screen Recording vs. Skill Pipeline:</text>
+  <text x="650" y="348" fill="#F87171" font-family="Consolas, monospace" font-size="11.5">• Legacy Screen Capture: rAF jitter, dropped frames, 341-file context overflow</text>
+  <text x="650" y="368" fill="#34D399" font-family="Consolas, monospace" font-size="11.5">• Catalog Index Lookup: ~1.2K tokens loaded on-demand via `styles.py show B3`</text>
+  <text x="650" y="388" fill="#38BDF8" font-family="Consolas, monospace" font-size="11.5">• Frame-Exact Stepping: `t = frame / 30` (1920x1080@30fps) + audio track mux</text>
+  <text x="650" y="408" fill="#FBBF24" font-family="Consolas, monospace" font-size="11.5">• First-/Mid-/End-Frame QA: Checks font load, overflow, black frames &amp; motion</text>
+  <text x="650" y="428" fill="#CBD5E1" font-family="Consolas, monospace" font-size="11">  (Third-party reference still commercial licensing: not_measured)</text>
+
+  <!-- Bottom FinOps Comparison Bar -->
+  <rect x="56" y="478" width="1088" height="150" rx="12" fill="#090D16" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="504" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, sans-serif" font-size="15" font-weight="700">Closed-Form Monthly FinOps Benchmark (100k Interactive Voice Minutes + 100 Stylized 1080p Code-Animated Videos/Mo)</text>
+
+  <!-- Path A Bar -->
+  <text x="76" y="534" fill="#FCA5A5" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" font-weight="700">Path A (Cloud Voice/SFX API + Blind Screen-Record):</text>
+  <rect x="435" y="519" width="520" height="22" rx="4" fill="#EF4444"/>
+  <text x="965" y="535" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$6,700.00/mo (80.0h labor)</text>
+  <text x="435" y="554" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">Voice API $1,500.00 + Style/rAF Re-Renders $3,900.00 (60.0h) + Manual Lip/Formant Sync $1,300.00 (20.0h)</text>
+
+  <!-- Path B Bar -->
+  <text x="76" y="586" fill="#6EE7B7" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" font-weight="700">Path B (chimera-vocal-synth Wasm + 341-Style Skill):</text>
+  <rect x="435" y="571" width="52" height="22" rx="4" fill="#10B981"/>
+  <text x="498" y="587" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$670.00/mo (10.0h labor) → Save $6,030.00/mo (-90.00% / 10.00x)</text>
+  <text x="435" y="608" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">CI Runner $20.00 + Deterministic t-Clock QA $520.00 (8.0h) + 60Hz Formant Binding $130.00 (2.0h) · CLAIM-20261109-R31-CHIMERA-ANIM</text>
+</svg>
