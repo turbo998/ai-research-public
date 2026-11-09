@@ -590,5 +590,29 @@
       "hours_saved_vs_path_a": "54.0",
       "efficiency_multiplier": "6.64x"
     }
+  },
+  "round_2026_11_09_r21_autoloop_janestreet_finops_audit": {
+    "claim_id": "CLAIM-20261109-R21-AUTOLOOP-JANESTREET",
+    "scope": "Synthetic 1,200 background CLI tasks + 400 mastery drills/mo (enterprise IM workspace licenses & workstation electricity: not_measured)",
+    "background_tasks_per_month": 1200,
+    "drills_per_month": 400,
+    "path_a_polling_loops_plus_lecture_prompts": {
+      "polling_and_rerun_token_usd": "648.00",
+      "terminal_babysitting_labor_usd": "6,000.00",
+      "post_onboarding_rework_labor_usd": "2,400.00",
+      "monthly_total_usd": "9,048.00",
+      "labor_hours": "140.0"
+    },
+    "path_b_agent_autoloop_plus_socratic_tutor": {
+      "exit_on_ask_token_usd": "144.00",
+      "exception_card_labor_usd": "360.00",
+      "verified_drill_rework_labor_usd": "300.00",
+      "monthly_total_usd": "804.00",
+      "labor_hours": "11.0",
+      "savings_vs_path_a_usd": "8,244.00",
+      "savings_vs_path_a_pct": "91.11%",
+      "hours_saved_vs_path_a": "129.0",
+      "efficiency_multiplier": "11.25x"
+    }
   }
 }
