@@ -614,5 +614,31 @@
       "hours_saved_vs_path_a": "129.0",
       "efficiency_multiplier": "11.25x"
     }
+  },
+  "round_2026_11_09_r22_gputaskman_kiri_finops_audit": {
+    "claim_id": "CLAIM-20261109-R22-GPUTASKMAN-KIRI",
+    "scope": "Synthetic 25-engineer local AI & container sandbox model (15,000 sandbox runs + 200 VRAM debugs/mo; workstation hardware depreciation: not_measured)",
+    "engineers": 25,
+    "sandbox_runs_per_month": 15000,
+    "vram_incidents_per_month": 200,
+    "kiri_api_startup_ms": "2.55",
+    "path_a_docker_desktop_plus_blind_nvidiasmi": {
+      "docker_desktop_seats_usd": "600.00",
+      "vm_thrash_and_boot_labor_usd": "812.50",
+      "blind_vram_triage_labor_usd": "3,250.00",
+      "monthly_total_usd": "4,662.50",
+      "labor_hours": "62.5"
+    },
+    "path_b_kiri_v020_plus_gputaskman_v034": {
+      "kiri_seats_usd": "0.00",
+      "clone3_and_sleep_labor_usd": "97.50",
+      "gputaskman_json_triage_labor_usd": "325.00",
+      "monthly_total_usd": "422.50",
+      "labor_hours": "6.5",
+      "savings_vs_path_a_usd": "4,240.00",
+      "savings_vs_path_a_pct": "90.94%",
+      "hours_saved_vs_path_a": "56.0",
+      "efficiency_multiplier": "11.04x"
+    }
   }
 }

@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg22" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0C1E28"/>
+    </linearGradient>
+    <linearGradient id="accent22" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="gtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2239"/>
+      <stop offset="100%" stop-color="#05121E"/>
+    </linearGradient>
+    <linearGradient id="krGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+    <linearGradient id="finGrad22" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#271B08"/>
+      <stop offset="100%" stop-color="#140E04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg22)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent22)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 22 DEEP DIVE · LLM KV-CACHE VRAM PROFILING &amp; 2.55MS RUST CONTAINER RUNTIME</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">shanselman/gputaskman (v0.3.4) + libracoder/kiri (v0.2.0) vs. Blind nvidia-smi &amp; Docker Desktop</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Weights/KV-Cache/Shared-RAM WDDM Attribution + 10MB Kernel / 900KB PID-1 Rust Agent w/ 2.55ms clone3 (-90.94% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">GPUTASKMAN LLM BREAKDOWN</text>
+    <text x="16" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Weights | KV | Spill</text>
+    <text x="205" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">WDDM/NVML</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">KIRI CONTAINER STARTUP</text>
+    <text x="300" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">2.55 ms (83.5x)</text>
+    <text x="488" y="49" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="11">vs 213ms DD</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#A78BFA" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">KIRI GUEST &amp; IDLE FOOTPRINT</text>
+    <text x="584" y="50" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="22" font-weight="800">15MB Daemon · 60s</text>
+    <text x="782" y="49" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="11">0.15s Wake</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-90.94% ($4,240.00/mo)</text>
+  </g>
+
+  <!-- Left Column: shanselman/gputaskman -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#gtGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. shanselman/gputaskman (v0.3.4 · 1,434★)</text>
+    <text x="20" y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">htop for Inside Your GPU: Weights, KV Cache &amp; WDDM Spill</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">3-Way LLM Buffer Attribution (Weights / KV / Compute)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Correlates process VRAM w/ GGUF/safetensors model files</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Separates Model Weights vs. KV Cache vs. Compute</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Exposes Windows WDDM Shared GPU Memory RAM spillover</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="192" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Strict Evidence Gate (Measured vs. Estimated)</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Device &amp; process counters labeled as true measurements</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Refuses false attribution from idle CUDA DLLs or mmap</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Supports --once &amp; --json for automated agent health checks</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="300" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Cross-Platform &amp; Portable Zero-Python Builds</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Windows (NVIDIA/AMD WDDM + ARM64), Linux/WSL, macOS</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Install via uv tool install gputaskman (gtm) or ZIP</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Textual 8.2.8 TUI + nvidia-ml-py 13.615 + psutil 7.2</text>
+  </g>
+
+  <!-- Center Column: libracoder/kiri -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#krGrad)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. libracoder/kiri (v0.2.0 · 1,358★ · 194★/d)</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">Tiny Rust Container Runtime for Mac, Windows &amp; Linux</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="88" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">No runc, No shim, No dockerd (2.55 ms Startup)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Custom 10 MB Linux kernel + ~900 KB Rust PID 1 agent</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Spawns containers via single clone3 into namespaces/cgroup</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• 2.55 ms API (14.2 ms CLI) vs 213 ms Docker Desktop</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">15 MB Daemon, 60s Auto-Sleep &amp; 0.15s Wake</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• VM sleeps after 60s idle; wakes in 0.15s on command</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Frees host RAM so local LLMs avoid WDDM swap thrashing</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Rust 2024 edition w/ unsafe_op_in_unsafe_fn = "deny"</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="300" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Drop-In Docker Context, Local HTTPS &amp; K8s</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Works w/ docker, compose, buildx &amp; Rosetta amd64</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Auto HTTPS domains (http://&lt;name&gt;.kiri.local) &amp; kiri k8s</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• One-command migration via kiri import (Apache-2.0)</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad22)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12">25 Engineers · 15,000 Sandbox Runs + 200 VRAM Debugs/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Docker Desktop Business + Blind nvidia-smi</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Docker Desktop Seats (25 × $24.00):       $600.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• VM RAM Thrash &amp; Boot Wait (12.5h):        $812.50/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Blind VRAM Spill Triage (50.0h @$65/h): $3,250.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $4,662.50 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: Kiri v0.2.0 (Apache-2.0) + gputaskman</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Kiri Apache-2.0 Seats (25 seats):           $0.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 2.55ms clone3 &amp; 60s Sleep (1.5h):          $97.50/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• gputaskman --json Attribution (5.0h):     $325.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $422.50 / month (-90.94%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#140E04" stroke="#FBBF24" stroke-width="1"/>
+    <text x="30" y="354" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $4,240.00/mo (11.04x · 56.0h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Workstation HW=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Profile LLM Weights/KV-Cache/WDDM spillover with gputaskman; run 2.55ms agent sandboxes via libracoder/kiri.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: GitHub Breakout New Repos 2026-11-09 · Primary Source Verified (gputaskman v0.3.4 &amp; kiri v0.2.0)</text>
+</svg>
