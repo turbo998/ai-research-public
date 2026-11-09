@@ -496,5 +496,27 @@
       "hours_saved_vs_path_a": "50.0",
       "efficiency_multiplier": "6.38x"
     }
+  },
+  "round_2026_11_09_r17_claude_quickstarts_anymodelbot_finops_audit": {
+    "claim_id": "CLAIM-20261109-R17-CLAUDE-QUICKSTARTS-ANYMODELBOT",
+    "scope": "Synthetic 1,500 deal-room queries + 200 Sentry autofix runs + 15 seats/mo (external Sentry/Linear SaaS licenses & host VM compute: not_measured)",
+    "queries_per_month": 1500,
+    "sentry_issues_per_month": 200,
+    "seats": 15,
+    "path_a_raw_corpus_rag_plus_uncapped_autofix_plus_3_subs": {
+      "deal_room_qa_usd": "303.75",
+      "sentry_autofix_usd": "510.00",
+      "multi_vendor_seats_usd": "900.00",
+      "monthly_total_usd": "1,713.75"
+    },
+    "path_b_knowledge_wiki_plus_capped_autofix_plus_anymodelbot": {
+      "deal_room_qa_usd": "70.50",
+      "sentry_autofix_usd": "315.00",
+      "pay_per_use_seats_usd": "180.00",
+      "monthly_total_usd": "565.50",
+      "savings_vs_path_a_usd": "1,148.25",
+      "savings_vs_path_a_pct": "67.00%",
+      "efficiency_multiplier": "3.03x"
+    }
   }
 }

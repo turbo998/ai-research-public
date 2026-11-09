@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg17" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C16"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#191124"/>
+    </linearGradient>
+    <linearGradient id="accent17" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="cqGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#291A09"/>
+      <stop offset="100%" stop-color="#140D04"/>
+    </linearGradient>
+    <linearGradient id="ambGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2239"/>
+      <stop offset="100%" stop-color="#05121F"/>
+    </linearGradient>
+    <linearGradient id="finGrad17" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg17)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent17)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 17 DEEP DIVE · MANAGED AGENT BLUEPRINTS &amp; LOCAL-FIRST MULTI-MODEL GATEWAY</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">anthropics/claude-quickstarts (+560★) + modelflare-ai/AnyModelBot (v0.1.30) vs. Ad-Hoc RAG &amp; Seat Lock-In</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Distilled Knowledge-Wiki + Air-Gapped Vault Sentry-Autofix + Local DSH-Runtime &amp; Magpie 70+ Model Gateway (-67.00% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">KNOWLEDGE-WIKI DISTILLATION</text>
+    <text x="16" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-76.8% Q&amp;A Cost</text>
+    <text x="195" y="49" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="11">1-Pass Consolidate</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SENTRY-AUTOFIX SANDBOX</text>
+    <text x="300" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">No-WAN + Spend Cap</text>
+    <text x="500" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">External Vault</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#A78BFA" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">ANYMODELBOT MAGPIE GATEWAY</text>
+    <text x="584" y="50" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="22" font-weight="800">70+ Models · 13 Prov</text>
+    <text x="784" y="49" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="11">DSH Runtime</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-67.00% ($1,148.25/mo)</text>
+  </g>
+
+  <!-- Left Column: anthropics/claude-quickstarts -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#cqGrad)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. anthropics/claude-quickstarts (+560★ #V6)</text>
+    <text x="20" y="52" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12">15 Official Reference Architectures &amp; Managed Agents</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="88" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">managed-agents/knowledge-wiki (EDGAR Deal Room)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Distills raw corpus ONCE into versioned memory-store wiki</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 3-step workflow: extract → resolve → consolidate</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Shrinks per-question context from 60K to 8K tokens</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">managed-agents/sentry-autofix &amp; daily-brief</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Credentials stay in external Vault; sandbox has NO internet</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Hard per-session spend cap + failing-test reproduction gate</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Dual memory stores (read-only prefs + RW bookmark ledger)</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="300" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">20260801 Toolsets &amp; 9-Tool Sessions MCP Server</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• computer_toolset_20260801 &amp; browser_toolset_20260801</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• mcp-server-typescript: 9 tools w/ wait_for_idle + allowlist</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Stateless Linear/Slack webhooks via session.status_idled</text>
+  </g>
+
+  <!-- Center Column: modelflare-ai/AnyModelBot -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#ambGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. modelflare-ai/AnyModelBot (v0.1.30 · #B19)</text>
+    <text x="20"Y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">Local-First Multi-Model Super Agent (2,742★ · 211★/day)</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Built-In Magpie Gateway (13 Providers · 70+ Models)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Routes across GPT, Claude, Gemini, Grok, DeepSeek, Kimi, GLM</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Supports BYO official vendor API keys or pay-per-use routing</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Eliminates $60/seat/mo multi-vendor subscription lock-in</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="192" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">DeepSeek Harness (dsh-runtime) &amp; Workspace Fence</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Each bot has its own persona, default model, memory &amp; dir</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Prompts user approval before stepping outside workspace</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Bundles CUA computer-use driver across Win/Mac/Linux</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="300" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">WeChat iLink, Feishu, TG, Slack &amp; Discord Channels</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Native weixin:login iLink + Feishu + Telegram + Slack</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Runs background cron rules &amp; only interrupts when needed</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Chats, memories, files &amp; keys stay 100% on local disk</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad17)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">1,500 Deal-Room Queries + 200 Sentry Fixes + 15 Seats</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Raw-Corpus RAG + Uncapped Bot + 3-Sub Seats</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Raw Corpus Q&amp;A (1,500 × 60K in):          $303.75/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Uncapped Sentry Loops (200 issues):        $510.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Multi-Vendor Pro Seats (15 × $60):         $900.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $1,713.75 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: Knowledge-Wiki + Sentry Cap + AnyModelBot</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Distilled Wiki ($12 + 1,500 × 8K in):       $70.50/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Spend-Capped Sentry Autofix ($2 cap):      $315.00/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Pay-Per-Use Magpie Gateway (15 seats):     $180.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $565.50 / month (-67.00%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="354" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $1,148.25/mo (3.03x Efficiency)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · SaaS=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Adopt claude-quickstarts managed-agents blueprints for cloud workflows; deploy AnyModelBot for local multi-model WeChat/Feishu bots.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: Track A trending-daily-2026-11-09-raw.html (fb22bae9...) + Track B search-new-repos-2026-11-09-raw.json (2daee440...) · Primary Source Verified</text>
+</svg>
