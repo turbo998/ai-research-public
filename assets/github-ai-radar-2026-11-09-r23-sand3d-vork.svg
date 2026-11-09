@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg23" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#181028"/>
+    </linearGradient>
+    <linearGradient id="accent23" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="sdGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#221138"/>
+      <stop offset="100%" stop-color="#11081C"/>
+    </linearGradient>
+    <linearGradient id="vkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2239"/>
+      <stop offset="100%" stop-color="#05121E"/>
+    </linearGradient>
+    <linearGradient id="finGrad23" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg23)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent23)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#C084FC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 23 DEEP DIVE · LLM-NATIVE 3D CAD MODELING &amp; HEADLESS RUST/SLANG VFX ENGINE</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">Sandflow-ai/sand3d + voyager-so/vork (v0.3.0) vs. Raw Blender bpy &amp; Heavy GUI Renderers</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">3,600-Token Named-Part DSL (4.0x Shorter than bpy) + 2,500-Token Rust/Slang/wgpu Engine (1M Birds in 97s · -89.59% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SAND3D TOKEN COMPACTNESS</text>
+    <text x="16" y="50" fill="#C084FC" font-family="system-ui, sans-serif" font-size="22" font-weight="800">4.0x Fewer Tokens</text>
+    <text x="202" y="49" fill="#E9D5FF" font-family="system-ui, sans-serif" font-size="11">3.6K API Spec</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">VORK CORE API &amp; SHADERS</text>
+    <text x="300" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">~2,500 Tokens</text>
+    <text x="480" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">Rust + Slang</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">1M-BIRD FLOCK RENDER (L4)</text>
+    <text x="584" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">97s vs 13-18m</text>
+    <text x="772" y="49" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="11">8-11x Faster</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-89.59% ($3,510.00/mo)</text>
+  </g>
+
+  <!-- Left Column: Sandflow-ai/sand3d -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#sdGrad)" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#C084FC" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. Sandflow-ai/sand3d (1,603★ · 267★/d)</text>
+    <text x="20" y="52" fill="#E9D5FF" font-family="system-ui, sans-serif" font-size="12">3D Modeling in Python Built for LLMs (over bpy 4.5 / 5.2)</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#9333EA" stroke-width="1"/>
+    <text x="30" y="88" fill="#D8B4FE" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Named Topological Addressing (Zero Index Math)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Primitives: profiles, solids, edits, frames, joints, assemblies</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Reaches parts, edges &amp; faces by semantic name</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Eliminates LLM vertex-index &amp; coordinate hallucinations</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#9333EA" stroke-width="1"/>
+    <text x="30" y="192" fill="#D8B4FE" font-family="system-ui, sans-serif" font-size="12" font-weight="700">2x to 6x Token Compression &amp; 3.6K Full API Spec</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 4.0x fewer tokens than raw Blender Python (bpy)</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 2.3x fewer than CadQuery; 6.0x fewer than FeatureScript</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Entire API fits in ~3,600 tokens (llms.txt) in one prompt</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#9333EA" stroke-width="1"/>
+    <text x="30" y="300" fill="#D8B4FE" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Bit-for-Bit Deterministic Mesh &amp; LTS Matrix</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Same Python program builds identical mesh bit-for-bit</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Pins Python 3.11 (bpy 4.5 LTS) &amp; Python 3.13 (bpy 5.2 LTS)</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Apache-2.0 open source w/ Hugging Face datasets</text>
+  </g>
+
+  <!-- Center Column: voyager-so/vork -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#vkGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. voyager-so/vork (v0.3.0 · 1,271★ · 318★/d)</text>
+    <text x="20" y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">Headless Rust + Slang 3D &amp; VFX Engine for Agents</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Agent-Written Shaders, Ray Queries &amp; Physics</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Core API fits in ~2,500 tokens (scene.json / .ts / .py)</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Agents write custom Slang GPU shaders mid-shot</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Two-stage profiles: --profile std/draft → std/final</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="192" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Patched wgpu on Vulkan &amp; Metal (Cargo.toml)</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Vendor wgpu returns Device::poll loss as error (no panic)</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Preserves invariant positions in Metal passthrough shaders</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Bounds OpenEXR DWA chunk sizes before memory allocation</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="300" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">1,000,000-Bird Murmuration in 97s on 1× L4 GPU</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 192 frames @ 1080p in 97s vs 13-18 min EEVEE (8-11x)</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 1.1x-2.3x faster than EEVEE on default stills &amp; movies</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Zero GUI editor overhead; CLI inspect-and-revise loop</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad23)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">300 Articulated 3D Assets + 120 VFX Shots (192f)/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Raw Blender bpy + Unoptimized EEVEE</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Raw bpy LLM Tokens (300 × $0.460):         $138.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Slow EEVEE GPU &amp; Crash Retries (120):      $180.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 3D Index &amp; Shader Fix Labor (60.0h):     $3,600.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $3,918.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: sand3d Named DSL + vork v0.3.0 Engine</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Compact DSL Tokens (300 × $0.080):          $24.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Fast Rust/Slang GPU Render (120 shots):     $24.00/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Automated Draft-to-Final QA (6.0h):        $360.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $408.00 / month (-89.59%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="354" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $3,510.00/mo (9.60x · 54.0h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · DCC SaaS=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Author articulated 3D geometry in sand3d (3.6K-token named DSL); render GPU shaders &amp; VFX in voyager-so/vork.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: GitHub Breakout New Repos 2026-11-09 · Primary Source Verified (sand3d bpy 4.5/5.2 &amp; vork v0.3.0)</text>
+</svg>

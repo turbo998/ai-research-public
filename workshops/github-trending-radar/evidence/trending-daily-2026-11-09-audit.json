@@ -640,5 +640,29 @@
       "hours_saved_vs_path_a": "56.0",
       "efficiency_multiplier": "11.04x"
     }
+  },
+  "round_2026_11_09_r23_sand3d_vork_finops_audit": {
+    "claim_id": "CLAIM-20261109-R23-SAND3D-VORK",
+    "scope": "Synthetic 300 articulated 3D assets + 120 192-frame VFX shots/mo (commercial Maya/Houdini licenses & offline render farms: not_measured)",
+    "assets_per_month": 300,
+    "vfx_shots_per_month": 120,
+    "path_a_raw_bpy_plus_unoptimized_eevee": {
+      "llm_token_usd": "138.00",
+      "gpu_render_and_retry_usd": "180.00",
+      "manual_ta_remediation_labor_usd": "3,600.00",
+      "monthly_total_usd": "3,918.00",
+      "labor_hours": "60.0"
+    },
+    "path_b_sand3d_dsl_plus_vork_v030": {
+      "llm_token_usd": "24.00",
+      "gpu_render_and_retry_usd": "24.00",
+      "automated_draft_final_labor_usd": "360.00",
+      "monthly_total_usd": "408.00",
+      "labor_hours": "6.0",
+      "savings_vs_path_a_usd": "3,510.00",
+      "savings_vs_path_a_pct": "89.59%",
+      "hours_saved_vs_path_a": "54.0",
+      "efficiency_multiplier": "9.60x"
+    }
   }
 }
