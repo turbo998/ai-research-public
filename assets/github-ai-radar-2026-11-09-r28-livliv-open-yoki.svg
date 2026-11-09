@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg28" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1028"/>
+    </linearGradient>
+    <linearGradient id="accent28" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="lvGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2239"/>
+      <stop offset="100%" stop-color="#05121E"/>
+    </linearGradient>
+    <linearGradient id="ykGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A1026"/>
+      <stop offset="100%" stop-color="#150813"/>
+    </linearGradient>
+    <linearGradient id="finGrad28" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg28)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent28)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 28 DEEP DIVE · 30KB WEBGL2 2.5D AVATAR PLAYER &amp; SINGLE-SERVER AI LIVESTREAM HOST</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">livliv-dev/player (v0.3.0) + jacke-pp/open-yoki (v150) vs. Cloud Pixel-Streaming &amp; Heavy OBS Rigs</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Zero-Dep ~30KB WebGL2 Core (.livliv/VRM/PNGTuber + Lazy MediaPipe) + Bicameral Fast-Mouth/Slow-Heart RTMP Host (-90.83% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">LIVLIV WEBGL2 CORE SIZE</text>
+    <text x="16" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">~30 KB Gzipped</text>
+    <text x="195" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">21 Characters</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#EC4899" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">UNIFIED AVATAR FORMATS</text>
+    <text x="300" y="50" fill="#F472B6" font-family="system-ui, sans-serif" font-size="22" font-weight="800">LivLiv | VRM | PNG</text>
+    <text x="492" y="49" fill="#FBCFE8" font-family="system-ui, sans-serif" font-size="11">6 Sub-Exports</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#A78BFA" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">OPEN-YOKI BICAMERAL HOST</text>
+    <text x="584" y="50" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Fast Mouth + Heart</text>
+    <text x="782" y="49" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="11">1-Server RTMP</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-90.83% ($5,995.00/mo)</text>
+  </g>
+
+  <!-- Left Column: livliv-dev/player -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#lvGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. livliv-dev/player (v0.3.0 · 1,393★ · 232★/d)</text>
+    <text x="20" y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">Lightweight 2.5D WebGL2 Character Player (Apache-2.0)</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Zero-Dep ~30 KB Gzipped WebGL2 Core</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Tree-shakable (sideEffects: false) w/ 6 subpath exports</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Lazy-loads @mediapipe/tasks-vision &amp; @pixiv/three-vrm</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• 21 featured characters in characters/ ready to deploy</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="192" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Unified API for .livliv (v4), VRM &amp; PNGTuber</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Player + BodyPlayer + VrmBody + PngBody on 1 interface</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• JSON-Schema validated model.json v4 (backward-compat v3)</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Enforces strict sandbox limits on untrusted model files</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="300" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Browser-Native Lip Sync &amp; Webcam Tracking</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• createSpeech(player) drives mouthOpen (0..1) from audio</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• startFaceTracking(player) binds MediaPipe webcam pose</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Smoke-tested across Chromium, Firefox &amp; WebKit</text>
+  </g>
+
+  <!-- Center Column: jacke-pp/open-yoki -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#ykGrad)" stroke="#EC4899" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#F472B6" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. jacke-pp/open-yoki (v150 · 1,698★ · MIT)</text>
+    <text x="20" y="52" fill="#FBCFE8" font-family="system-ui, sans-serif" font-size="12">Single-Server 24/7 Autonomous AI Live-Stream Host</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="88" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Bicameral Architecture: Fast Mouth + Slow Heart</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Fast Mouth (DeepSeek): replies in seconds w/ fillers</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Slow Heart (Claude CLI / DeepSeek): plain Markdown folder</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Tracks mood, diary, regular viewers &amp; autonomous posts</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="192" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Headless Chrome 16:9 Compositor + FFmpeg RTMP</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Renders avatar, captions, market panels &amp; gift alerts</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Triggers action clips on cue (bigmoves.mjs) + radio.mjs</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Streams to any RTMP target &amp; self-hosted web room</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="300" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Bidirectional World Door (town.mjs) &amp; Omnichannel</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Syncs lived experiences via app/server/town.mjs</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Autonomous social posting (ops/square_post.py &amp; xreply.mjs)</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Connects Telegram fan/operator groups (tg.mjs, family.mjs)</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad28)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">500K Web Avatar Views + 2 24/7 Live Channels/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Cloud Avatar SaaS + OBS GPU VMs + Ops</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Cloud WebRTC Avatar (750K min × $0.004):  $3,000.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 2 Windows OBS/Unity GPU VMs (2 × $450):     $900.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Stream Moderation &amp; Social Ops (60.0h):   $2,700.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $6,600.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: livliv/player 30KB + open-yoki 1-Server</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 30KB Client WebGL2 Static CDN (500K):        $15.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 2 Single-Server Hosts + LLM Tokens:         $320.00/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Autonomous Heart Oversight (6.0h @$45/h):   $270.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $605.00 / month (-90.83%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="354" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $5,995.00/mo (10.91x · 54.0h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Art/TTS=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Embed ~30KB @livliv-dev/player for client WebGL2 avatars; run 24/7 autonomous RTMP streams on 1 server w/ open-yoki.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: GitHub Breakout New Repos 2026-11-09 · Primary Source Verified (@livliv-dev/player v0.3.0 &amp; open-yoki v150)</text>
+</svg>

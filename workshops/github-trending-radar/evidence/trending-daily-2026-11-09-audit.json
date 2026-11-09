@@ -761,5 +761,29 @@
       "hours_saved_vs_path_a": "55.25",
       "efficiency_multiplier": "16.84x"
     }
+  },
+  "round_2026_11_09_r28_livliv_open_yoki_finops_audit": {
+    "claim_id": "CLAIM-20261109-R28-LIVLIV-OPEN-YOKI",
+    "scope": "Synthetic 500,000 web avatar sessions (750K min) + 2 24/7 livestream channels/mo (custom character art & commercial voice-cloning APIs: not_measured)",
+    "web_sessions_per_month": 500000,
+    "livestream_channels": 2,
+    "path_a_cloud_webrtc_plus_obs_gpu_vms": {
+      "cloud_webrtc_avatar_usd": "3,000.00",
+      "obs_gpu_vms_usd": "900.00",
+      "stream_moderation_labor_usd": "2,700.00",
+      "monthly_total_usd": "6,600.00",
+      "labor_hours": "60.0"
+    },
+    "path_b_livliv_player_30kb_plus_open_yoki": {
+      "static_cdn_webgl2_usd": "15.00",
+      "single_server_hosts_and_llm_usd": "320.00",
+      "autonomous_heart_oversight_labor_usd": "270.00",
+      "monthly_total_usd": "605.00",
+      "labor_hours": "6.0",
+      "savings_vs_path_a_usd": "5,995.00",
+      "savings_vs_path_a_pct": "90.83%",
+      "hours_saved_vs_path_a": "54.0",
+      "efficiency_multiplier": "10.91x"
+    }
   }
 }
