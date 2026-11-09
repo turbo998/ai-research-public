@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgR3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accR3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgR3)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accR3)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="23" font-weight="800">
+    2026-11-09 ROUND 3 SELECTION FAQ · CLOUDFLARE/SECURITY-AUDIT-SKILL vs. SAST &amp; PROMPT REVIEW
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    67,590★ (+10,600★/wk, MIT) | 6-Phase coverage-ledger.json + Adversarial Disproval Subagents + validate-findings.cjs 3-State Schema
+  </text>
+  <rect x="1150" y="54" width="228" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1264" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">-88.33% API COST</text>
+  <text x="1264" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-85.00% TRIAGE HRS</text>
+
+  <!-- Left Panel: 6-Phase Adversarial Audit Pipeline -->
+  <rect x="40" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    1. CLOUDFLARE 6-PHASE ADVERSARIAL AUDIT &amp; DUAL VALIDATORS
+  </text>
+  <rect x="60" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="214" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    Phase 1 Reconnaissance     → architecture.md + coverage-ledger.json (validate-coverage-ledger.cjs)
+  </text>
+  <text x="76" y="244" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12.2">
+    Phase 2 Coverage Hunting   → Isolated Hunters + 11 Attack Guides + Coverage Critics
+  </text>
+  <text x="76" y="274" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    Phase 3 Disproval Verifier → Fresh subagent tries to DISPROVE every candidate finding
+  </text>
+  <text x="76" y="304" fill="#60A5FA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    Phase 4 Structured Output  → confirmed | needs_validation (no severity) | rejected
+  </text>
+  <text x="76" y="334" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="12.2">
+    Phase 5 Record Verifier    → Fresh subagent verifies exact source lines &amp; validate-findings.cjs
+  </text>
+  <text x="76" y="364" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    Phase 6 Additive Reports   → REPORT.md + FINDINGS-DETAIL.md + NEEDS-VALIDATION.md
+  </text>
+  <rect x="76" y="384" width="598" height="84" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="92" y="408" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    Why Confirmation Bias Disappears:
+  </text>
+  <text x="92" y="430" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.8">
+    • Hunters and Disproval Verifiers run in separate contexts; unresolved facts go to needs_validation
+  </text>
+  <text x="92" y="452" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.8">
+    • Additive multi-run ledger carries forward verified unchanged files, auditing only deltas &amp; gaps
+  </text>
+
+  <!-- Right Panel: 11 Specialized Hunting Playbooks -->
+  <rect x="730" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="750" y="172" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    2. 11 DOMAIN HUNTING PLAYBOOKS &amp; DEFENSE-IN-DEPTH MATRIX
+  </text>
+  <rect x="750" y="188" width="630" height="160" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="766" y="212" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    📚 Bundled Attack-Class Playbooks in skills/security-audit/
+  </text>
+  <text x="766" y="236" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    • AI-AND-LLM.md (Prompt injection, tool hijacking, unsafe output handling)
+  </text>
+  <text x="766" y="258" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    • RESOURCE-EXHAUSTION-AND-AVAILABILITY.md (Denial-of-Wallet, queue/worker exhaustion)
+  </text>
+  <text x="766" y="280" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    • DATA-ISOLATION-AND-LIFECYCLE.md (Cross-tenant cache, vector search, export/backup leaks)
+  </text>
+  <text x="766" y="302" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    • WEB-PROTOCOL-AND-AUTH.md | CLIENT-SIDE.md | SUPPLY-CHAIN-AND-RELEASE.md
+  </text>
+  <text x="766" y="324" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    • CLOUD-AND-DEPLOYMENT.md | PROTOCOLS-RPC-AND-MESSAGING.md | MEMORY-SAFETY-AND-BINARY.md
+  </text>
+
+  <rect x="750" y="360" width="630" height="124" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="766" y="384" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    🧭 Enterprise DevSecOps Layering (SAST + PR Bot + security-audit-skill)
+  </text>
+  <text x="766" y="408" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">
+    • Every Commit (&lt;60s) : Semgrep / CodeQL for deterministic AST &amp; secret patterns
+  </text>
+  <text x="766" y="432" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">
+    • Pre-Release / AI Audit: cloudflare/security-audit-skill in network-disabled OS sandbox
+  </text>
+  <text x="766" y="456" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Install: npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit
+  </text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Worked Example -->
+  <rect x="40" y="520" width="1360" height="360" rx="14" fill="#111827" stroke="#34D399" stroke-width="1.5"/>
+  <text x="60" y="552" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. CLOSED-FORM FINOPS &amp; APPSEC TRIAGE MODEL (20 REPOSITORIES/MO · API-ONLY SYNTHETIC)
+  </text>
+  <text x="60" y="576" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Pricing: $3.00 / 1M input, $15.00 / 1M output (counted once) | Commercial SAST seat licenses &amp; CI runner bills: not_measured (independently_reproduced=false)
+  </text>
+
+  <rect x="60" y="594" width="1320" height="82" rx="10" fill="#1E293B"/>
+  <text x="80" y="620" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    Path A (Unledgered Whole-Repo LLM Prompt) : 300 rounds/mo (20×15) × ($0.1800 in + $0.0600 out) = $72.00/mo ($54.00 in + $18.00 out) | 80.0h/mo false-positive triage
+  </text>
+  <text x="80" y="646" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    Path B (Static SAST + Ad-Hoc LLM Triage)  : 200 rounds/mo (20×10) × ($0.1200 in + $0.0450 out) = $33.00/mo ($24.00 in + $9.00 out)  | 50.0h/mo manual triage
+  </text>
+  <text x="80" y="668" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    Path C (cloudflare/security-audit-skill)  : 80 rounds/mo  (20×4)  × ($0.0750 in + $0.0300 out) = $8.40/mo  ($6.00 in + $2.40 out)   | 12.0h/mo verified review
+  </text>
+
+  <!-- Visual Comparison Bars -->
+  <rect x="60" y="692" width="1320" height="168" rx="10" fill="#0F172A" stroke="#1E293B"/>
+  <text x="80" y="722" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path A Unledgered Prompt ($72.00/mo | 80.0h)
+  </text>
+  <rect x="440" y="707" width="720" height="20" rx="5" fill="#EF4444"/>
+  <text x="1172" y="722" fill="#FCA5A5" font-family="Consolas, monospace" font-size="12" font-weight="700">100.0% Baseline</text>
+
+  <text x="80" y="762" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path B SAST + Ad-Hoc LLM ($33.00/mo | 50.0h)
+  </text>
+  <rect x="440" y="747" width="330" height="20" rx="5" fill="#F59E0B"/>
+  <text x="782" y="762" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">45.83% (-$39.00/mo)</text>
+
+  <text x="80" y="802" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path C security-audit-skill ($8.40/mo | 12.0h)
+  </text>
+  <rect x="440" y="787" width="84" height="20" rx="5" fill="#10B981"/>
+  <text x="536" y="802" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="700">
+    11.67% → Saves $63.60/mo (-88.33% API-only, $763.20/yr) &amp; 68.0h/mo (-85.00% AppSec triage)
+  </text>
+
+  <text x="80" y="842" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Verified in tests/radar-integration.cjs | Validators: validate-coverage-ledger.cjs &amp; validate-findings.cjs
+  </text>
+</svg>
