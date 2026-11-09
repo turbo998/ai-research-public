@@ -195,5 +195,37 @@
       "savings_vs_path_b_usd": "590.00",
       "savings_vs_path_b_pct": "81.94%"
     }
+  },
+  "round_2026_11_09_r6_ruview_ha_mcp_finops_audit": {
+    "claim_id": "CLAIM-20261109-R6-RUVIEW-HA-MCP",
+    "scope": "API-only synthetic model for 50 rooms / 6,000 checks/mo (ESP32/camera hardware & Home Assistant host bills: not_measured)",
+    "rooms_count": 50,
+    "checks_per_month": 6000,
+    "entities_per_node": 21,
+    "path_a_vision_vlm_cameras": {
+      "rounds": 12000,
+      "monthly_input_usd": "900.00",
+      "monthly_output_usd": "180.00",
+      "monthly_total_api_usd": "1,080.00",
+      "ops_hours": "60.0"
+    },
+    "path_b_raw_iot_dump": {
+      "rounds": 9000,
+      "monthly_input_usd": "405.00",
+      "monthly_output_usd": "135.00",
+      "monthly_total_api_usd": "540.00",
+      "ops_hours": "36.0"
+    },
+    "path_c_ruview_plus_ha_mcp": {
+      "rounds": 1500,
+      "monthly_input_usd": "18.00",
+      "monthly_output_usd": "13.50",
+      "monthly_total_api_usd": "31.50",
+      "ops_hours": "9.0",
+      "savings_vs_path_a_usd": "1,048.50",
+      "savings_vs_path_a_pct": "97.08%",
+      "hours_saved_vs_path_a": "51.0",
+      "hours_saved_pct": "85.00%"
+    }
   }
 }
