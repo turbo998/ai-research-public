@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 980" width="1440" height="980">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="velGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="980" fill="url(#bgGrad)"/>
+  <rect x="20" y="20" width="1400" height="940" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Top Header Banner -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentGrad)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="24.5" font-weight="800">
+    GITHUB AI TRENDING &amp; FASTEST-RISING INTELLIGENCE RADAR · 2026-11-09
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    Run: sweep_20261109_2300 (23:09 CST) | Raw HTML sha256: fb22bae9... | Search JSON sha256: 2daee440... | 6-Gate HFS + Velocity
+  </text>
+  <rect x="1150" y="54" width="228" height="52" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="1264" y="76" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="700">25 SWEPT → 15 PASSED</text>
+  <text x="1264" y="96" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="12" font-weight="700">6 P0 · 6 P1 · 2 P2 · 1 P3</text>
+
+  <!-- Row 1: 6-Gate Pipeline & Fastest-Rising Velocity Leaderboard -->
+  <rect x="40" y="142" width="460" height="250" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="700">
+    1. PI-DURABLE 6-GATE DETERMINISTIC FUNNEL
+  </text>
+  <rect x="60" y="186" width="420" height="38" rx="8" fill="#1E293B"/>
+  <text x="74" y="210" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12" font-weight="700">Gate 1-2 Gather &amp; Relevance (&gt;=0.45): 25 → 17 (-8 non-AI)</text>
+  <rect x="60" y="232" width="420" height="38" rx="8" fill="#1E293B"/>
+  <text x="74" y="256" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12" font-weight="700">Gate 3 Worth &amp; Dedupe (&gt;=0.35): 17 → 15 (-2 static gallery)</text>
+  <rect x="60" y="278" width="420" height="38" rx="8" fill="#1E293B"/>
+  <text x="74" y="302" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12" font-weight="700">Gate 4-5 Primary Source Claims: 59/60 verified (mean 0.93)</text>
+  <rect x="60" y="324" width="420" height="52" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="74" y="346" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="12" font-weight="700">Gate 6 HFS Scoring &amp; 8/8 Generative UI Card Catalog</text>
+  <text x="74" y="365" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.5">Token Budget Saved: 64.0% | SQLite WAL Recovery: 4.8ms</text>
+
+  <!-- Right Box: Fastest-Rising / Highest Velocity AI Leaderboard -->
+  <rect x="518" y="142" width="882" height="250" rx="14" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="538" y="154" width="280" height="24" rx="6" fill="url(#velGrad)"/>
+  <text x="678" y="171" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="800">
+    🚀 当日热度提升最快榜单 (VELOCITY 11-09)
+  </text>
+  <text x="832" y="171" fill="#FDE68A" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    Track A: 24h 单日实测增量 (fb22bae9...) × Track B: 新仓生命周期日均 (2daee440...)
+  </text>
+
+  <!-- Track A: 24h Star Surge -->
+  <rect x="538" y="188" width="415" height="188" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="554" y="210" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">🔥 Track A: 24h 单日新增 Star 飙升王 (measured DOM)</text>
+  <text x="554" y="236" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">1. meta/astryx               +3,324★/24h (★18,835) [🔥P0]</text>
+  <text x="554" y="254" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11">   Meta React 19 + StyleX 设计系统 v0.7.11，单日暴涨超 3300★</text>
+  <text x="554" y="278" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">2. milind-soni/OpenMausBot   +1,589★/24h (★19,342) [🔥P0]</text>
+  <text x="554" y="296" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11">   联系人式多 Agent 桌面客户端 + 独立容器沙盒 VM 与权限网关</text>
+  <text x="554" y="320" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">3. anthropics/skills         +1,052★/24h (★190,390)[🔥P0]</text>
+  <text x="554" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11">   Anthropic 官方 SKILL.md 渐进披露规范，总 Star 突破 19 万</text>
+  <text x="554" y="362" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">4. vercel-labs/agent-browser +914★/24h   (★48,224) [🔥P0]</text>
+
+  <!-- Track B: 6-11 Day Breakout Slope -->
+  <rect x="967" y="188" width="415" height="188" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="983" y="210" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">⚡ Track B: 近6–11天新仓生命周期日均 (stars_today: not_measured)</text>
+  <text x="983" y="236" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.5">1. storytold/craft-anything  avg≈2,664★/d (9天★23,976 | today:N/M)</text>
+  <text x="983" y="254" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11">   纯 Rust 320 净室二进制探针与软件重建工作台 [⚡P1]</text>
+  <text x="983" y="278" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.5">2. dsh-superagent-prototype  avg≈2,406★/d (9天★21,651 | today:N/M)</text>
+  <text x="983" y="296" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11">   deepseek-ai 组织上游 Cordis 微内核自治 Agent 原型 [🔥P0]</text>
+  <text x="983" y="320" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.5">3. heydamir/unslop           avg≈1,137★/d (11天★12,502| today:N/M)</text>
+  <text x="983" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11">   将 Vibe-Coded AI 模板界面重构为专业设计的 Claude Skill [⚡P1]</text>
+  <text x="983" y="362" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.5">4. KKKKhazix/agent-autoloop  avg≈709★/d   (6天★4,255  | today:N/M)</text>
+
+  <!-- Row 2: Top 15 AI Repositories HFS Matrix -->
+  <rect x="40" y="408" width="1360" height="276" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="438" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    2. TOP 15 AI REPOSITORIES HFS MATRIX &amp; PLAIN-LANGUAGE SA VERDICT (2026-11-09)
+  </text>
+
+  <!-- Left Column: #01 - #06 (P0 Must-Learn) -->
+  <rect x="60" y="452" width="650" height="214" rx="10" fill="#0F172A" stroke="#059669" stroke-width="1.2"/>
+  <text x="78" y="476" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">
+    🔥 P0 必学 / 立即动手 (Must-Learn &amp; Adopt Now — Attention 94–99)
+  </text>
+  <text x="78" y="502" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    #01 garrytan/gbrain           [Att:99 | S:92 F:91 H:12] ★31.9k (+215)  :: 四层混合图谱记忆大脑 (R@5 0.6626→0.7241)
+  </text>
+  <text x="78" y="528" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    #02 meta/astryx               [Att:98 | S:90 F:91 H:14] ★18.8k (+3324) :: Meta React19+StyleX 设计系统 + CLI
+  </text>
+  <text x="78" y="554" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    #03 NVIDIA/auto-ontology      [Att:97 | S:89 F:90 H:12] ★10.9k (+9.3k/w):: 企业数据语义本体层 + NIM Text-to-SQL
+  </text>
+  <text x="78" y="580" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    #04 vercel-labs/agent-browser [Att:96 | S:88 F:91 H:14] ★48.2k (+914)  :: Rust 无障碍树 @e1 网页自动化 CLI
+  </text>
+  <text x="78" y="606" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    #05 milind-soni/OpenMausBot   [Att:95 | S:86 F:87 H:16] ★19.3k (+1589) :: 联系人式多智能体聊天桌面 + 独立沙盒 VM
+  </text>
+  <text x="78" y="632" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    #06 anthropics/skills         [Att:94 | S:84 F:89 H:14] ★190k (+1052)  :: 官方 SKILL.md 渐进加载规范与文档引擎
+  </text>
+
+  <!-- Right Column: #07 - #15 -->
+  <rect x="730" y="452" width="650" height="214" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="748" y="476" fill="#60A5FA" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">
+    ⚡ P1 推荐精读 (#07-#12) · 👀 P2 观察 (#13-#14) · 🛡️ P3 警惕噱头 (#15)
+  </text>
+  <text x="748" y="500" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    #07 ranxianglei/billion-context  [Att:93] ★5.6k (+764)  :: 可逆上下文折叠代理 (95-97% KV 缓存保活)
+  </text>
+  <text x="748" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    #08 cloudflare/security-audit-skill[Att:92]★67.6k      :: 6 阶段覆盖账本 + 独立反证安全审计 Skill
+  </text>
+  <text x="748" y="544" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    #09 google-deepmind/mujoco       [Att:91] ★16.8k (+579) :: MuJoCo 4.0 混合仿真 + 内置 7 大 SKILL.md
+  </text>
+  <text x="748" y="566" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    #10 OpenBMB/VoxCPM               [Att:89] ★42.1k (+423) :: VoxCPM2 2B 无词元扩散自回归 48kHz TTS
+  </text>
+  <text x="748" y="588" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    #11 anthropics/claude-quickstarts[Att:87] ★19.8k (+560) :: 官方托管 Agent 与 Computer Use 生产蓝图
+  </text>
+  <text x="748" y="610" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    #12 ruvnet/RuView                [Att:85] ★103k (+203)  :: ESP32 WiFi CSI 无摄像头空间姿态与生命体征感知
+  </text>
+  <text x="748" y="632" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    #13 ha-mcp [Att:79 👀P2] · #14 daily_stock_analysis [Att:75 👀P2] · #15 AnyModelBot [Att:45 🛡️P3 API网关引流]
+  </text>
+
+  <!-- Row 3: Round 1 Deep-Dive FAQ (gbrain Selection Tree & FinOps) & High-Priority SA Action Items -->
+  <rect x="40" y="700" width="675" height="240" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="728" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="800">
+    3. Round 1 深度选型 FAQ：garrytan/gbrain 四层混合图谱记忆 vs 向量 RAG vs MEMORY.md
+  </text>
+  <rect x="60" y="742" width="635" height="58" rx="8" fill="#1E293B"/>
+  <text x="74" y="762" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">
+    Q1/Q2 为什么单靠向量 RAG 必丢多跳关系？gbrain 如何实现 $0 写入抽边与防长文霸屏？
+  </text>
+  <text x="74" y="784" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">
+    • pgvector HNSW + BM25 + Page-Level RRF (主块聚票) + 0-LLM 本地确定性建边 BFS 图遍历 (R@5: 0.6626 → 0.7241)
+  </text>
+  <rect x="60" y="808" width="635" height="64" rx="8" fill="#1E293B"/>
+  <text x="74" y="828" fill="#60A5FA" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">
+    5.1 闭式 FinOps 算例 (3,000 查询/月 + 1,500 写入/月, API-only synthetic, 宿主/SaaS 标 not_measured)
+  </text>
+  <text x="74" y="848" fill="#CBD5E1" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Path A 静态 MEMORY.md ($675.00/月, 45.0h) | Path B 重型 LLM 抽图 GraphRAG ($387.00/月, 24.0h)
+  </text>
+  <text x="74" y="864" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="11.2" font-weight="700">
+    Path C garrytan/gbrain ($114.00/月, 6.0h) → 净省 $561.00/月 (-83.11% API-only) &amp; 39.0h/月 (-86.67%)
+  </text>
+  <text x="60" y="922" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    一条命令跨智能体共享: gbrain mcp expose (Tailscale / --funnel) 同时服务 Claude Code, Codex, OpenClaw
+  </text>
+
+  <!-- Right Box: High-Priority SA Action Items -->
+  <rect x="733" y="700" width="667" height="240" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="753" y="728" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    4. 🚨 GitHub 需高优先级关注任务清单 (High-Priority SA Action Items)
+  </text>
+  <text x="753" y="754" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    [SA-ACT-01] garrytan/gbrain v0.60.623.0  → 部署 Postgres+pgvector 验证 0-LLM 建边与 gbrain mcp expose
+  </text>
+  <text x="753" y="782" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    [SA-ACT-02] meta/astryx (+3,324★ today)  → 接入 @astryxdesign/cli 消除企业 PoC 前端 AI Slop 界面
+  </text>
+  <text x="753" y="810" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    [SA-ACT-03] NVIDIA/auto-ontology (周榜#1)→ 跑通 WideWorldImporters 语义目录与确定性 Text-to-SQL
+  </text>
+  <text x="753" y="838" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    [SA-ACT-04] cloudflare/security-audit    → 引入 6 阶段 coverage-ledger.json 改造安全审计流水线
+  </text>
+  <text x="753" y="866" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    [SA-ACT-05] OpenBMB/VoxCPM2 v2.0.3       → 评估 2B 无词元扩散自回归 48kHz 语音克隆 (RTF ~0.13)
+  </text>
+  <text x="753" y="894" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    [SA-ACT-06] worktrunk + plannotator      → 组合 wt switch 并行分支与浏览器 Plan/Diff 批注闭环
+  </text>
+  <text x="753" y="922" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Provenance: Track A measured (fb22bae9...) | Track B lifecycle avg (stars_today: not_measured)
+  </text>
+</svg>

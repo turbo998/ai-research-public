@@ -1,0 +1,70 @@
+{
+  "audit_version": "2.2.0",
+  "generated_at_cst": "2026-11-09T23:38:00+08:00",
+  "raw_trending_html_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-09-raw.html",
+    "source_url": "https://github.com/trending?since=daily",
+    "scraped_at_cst": "2026-11-09T23:09:10+08:00",
+    "sha256_lf": "fb22bae9432a6108065aabd68b480fe1d8db159a7ce5dbd89e95a332e9285b61"
+  },
+  "raw_track_b_search_api_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-09-raw.json",
+    "source_query": "gh api \"search/repositories?q=created:>2026-10-26+stars:>150&sort=stars&order=desc&per_page=30\"",
+    "captured_at_cst": "2026-11-09T23:09:20+08:00",
+    "sha256_lf": "2daee4405350717685dd14d5a19186f1b6821216642daab97e6d6605723783e5",
+    "metric_definition": "stars_per_day = round(stars_total / age_days); stars_today = not_measured"
+  },
+  "parsed_daily_trending_rows": [
+    { "trending_rank": 1, "full_name": "anthropics/skills", "stars_today_measured": 1052, "stars_total_in_trending_dom": 190390 },
+    { "trending_rank": 2, "full_name": "meta/astryx", "stars_today_measured": 3324, "stars_total_in_trending_dom": 18835 },
+    { "trending_rank": 3, "full_name": "sherlock-project/sherlock", "stars_today_measured": 4294, "stars_total_in_trending_dom": 106282, "gate_status": "rejected_gate_02_non_ai" },
+    { "trending_rank": 4, "full_name": "google-deepmind/mujoco", "stars_today_measured": 579, "stars_total_in_trending_dom": 16773 },
+    { "trending_rank": 5, "full_name": "anthropics/claude-quickstarts", "stars_today_measured": 560, "stars_total_in_trending_dom": 19814 },
+    { "trending_rank": 6, "full_name": "garrytan/gbrain", "stars_today_measured": 215, "stars_total_in_trending_dom": 31944 },
+    { "trending_rank": 7, "full_name": "vercel-labs/agent-browser", "stars_today_measured": 914, "stars_total_in_trending_dom": 48224 },
+    { "trending_rank": 8, "full_name": "ruvnet/RuView", "stars_today_measured": 203, "stars_total_in_trending_dom": 103233 },
+    { "trending_rank": 9, "full_name": "ZhuLinsen/daily_stock_analysis", "stars_today_measured": 505, "stars_total_in_trending_dom": 68571 },
+    { "trending_rank": 10, "full_name": "homeassistant-ai/ha-mcp", "stars_today_measured": 31, "stars_total_in_trending_dom": 5654 },
+    { "trending_rank": 11, "full_name": "milind-soni/OpenMausBot", "stars_today_measured": 1589, "stars_total_in_trending_dom": 19342 }
+  ],
+  "round_2026_11_09_r1_gbrain_finops_audit": {
+    "claim_id": "CLAIM-20261109-R1-GBRAIN",
+    "scope": "API-only synthetic model (Postgres/Tailscale/hosted SaaS infrastructure bills: not_measured)",
+    "queries_per_month": 3000,
+    "local_writes_per_month": 1500,
+    "input_rate_per_1m": 3.00,
+    "output_rate_per_1m": 15.00,
+    "path_a_static_memory_md": {
+      "rounds": 4500,
+      "input_tokens_m_per_round": "0.040",
+      "output_tokens_m_per_round": "0.002",
+      "monthly_input_usd": "540.00",
+      "monthly_output_usd": "135.00",
+      "monthly_total_api_usd": "675.00",
+      "curation_hours": "45.0"
+    },
+    "path_b_heavy_llm_graphrag": {
+      "write_extraction_usd": "90.00",
+      "query_rounds": 3600,
+      "query_usd": "297.00",
+      "monthly_total_api_usd": "387.00",
+      "curation_hours": "24.0"
+    },
+    "path_c_gbrain_hybrid_graph": {
+      "local_put_page_llm_usd": "0.00",
+      "dream_cycle_monthly_usd": "15.00",
+      "query_rounds": 3000,
+      "input_tokens_m_per_round": "0.006",
+      "output_tokens_m_per_round": "0.001",
+      "query_usd": "99.00",
+      "monthly_total_api_usd": "114.00",
+      "curation_hours": "6.0",
+      "savings_vs_path_a_usd": "561.00",
+      "savings_vs_path_a_pct": "83.11%",
+      "hours_saved_vs_path_a": "39.0",
+      "hours_saved_pct": "86.67%",
+      "brainbench_r_at_5_baseline": "0.6626",
+      "brainbench_r_at_5_relational": "0.7241"
+    }
+  }
+}

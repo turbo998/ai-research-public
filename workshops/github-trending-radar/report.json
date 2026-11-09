@@ -142,8 +142,44 @@
       "en_path": "workshops/github-trending-radar/docs/teardown-3d-machine-simulator-vs-freehand-threejs-selection-faq.en.md",
       "svg_path": "assets/github-ai-radar-2026-11-08-r13-teardown-3d-sim.svg",
       "primary_repos": ["elvarofficial/teardown"]
+    },
+    {
+      "round": 14,
+      "shift_date": "2026-11-09",
+      "shift_round": 1,
+      "topic": "Agent Brain & Hybrid Graph Memory Selection: garrytan/gbrain v0.60.623.0 (pgvector HNSW + BM25 + Page-Level RRF + Zero-LLM Deterministic Graph Walk) vs. Naive Vector RAG vs. Static MEMORY.md",
+      "zh_path": "workshops/github-trending-radar/docs/gbrain-hybrid-graph-memory-vs-vector-rag-selection-faq.md",
+      "en_path": "workshops/github-trending-radar/docs/gbrain-hybrid-graph-memory-vs-vector-rag-selection-faq.en.md",
+      "svg_path": "assets/github-ai-radar-2026-11-09.svg",
+      "primary_repos": ["garrytan/gbrain"]
     }
   ],
+  "fastest_rising_leaderboard_2026_11_09": {
+    "raw_html_evidence_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-09-raw.html",
+    "raw_html_sha256_lf": "fb22bae9432a6108065aabd68b480fe1d8db159a7ce5dbd89e95a332e9285b61",
+    "raw_search_json_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-09-raw.json",
+    "raw_search_json_sha256_lf": "2daee4405350717685dd14d5a19186f1b6821216642daab97e6d6605723783e5",
+    "track_a_24h_star_surge": [
+      { "rank": 1, "full_name": "meta/astryx", "stars_today": 3324, "stars_total": 18835, "provenance": "measured", "sa_tier": "P0" },
+      { "rank": 2, "full_name": "milind-soni/OpenMausBot", "stars_today": 1589, "stars_total": 19342, "provenance": "measured", "sa_tier": "P0" },
+      { "rank": 3, "full_name": "anthropics/skills", "stars_today": 1052, "stars_total": 190390, "provenance": "measured", "sa_tier": "P0" },
+      { "rank": 4, "full_name": "vercel-labs/agent-browser", "stars_today": 914, "stars_total": 48224, "provenance": "measured", "sa_tier": "P0" },
+      { "rank": 5, "full_name": "google-deepmind/mujoco", "stars_today": 579, "stars_total": 16773, "provenance": "measured", "sa_tier": "P1" },
+      { "rank": 6, "full_name": "anthropics/claude-quickstarts", "stars_today": 560, "stars_total": 19814, "provenance": "measured", "sa_tier": "P1" },
+      { "rank": 7, "full_name": "ZhuLinsen/daily_stock_analysis", "stars_today": 505, "stars_total": 68571, "provenance": "measured", "sa_tier": "P2" },
+      { "rank": 8, "full_name": "garrytan/gbrain", "stars_today": 215, "stars_total": 31944, "provenance": "measured", "sa_tier": "P0" }
+    ],
+    "track_b_new_repo_breakout_slope": [
+      { "rank": 1, "full_name": "storytold/craft-anything", "created_at": "2026-10-31", "age_days": 9, "stars_total": 23976, "stars_total_search_api": 23976, "stars_per_day": 2664, "stars_today": "not_measured", "sa_tier": "P1" },
+      { "rank": 2, "full_name": "deepseek-ai/dsh-superagent-prototype", "created_at": "2026-10-31", "age_days": 9, "stars_total": 21651, "stars_total_search_api": 21651, "stars_per_day": 2406, "stars_today": "not_measured", "sa_tier": "P0" },
+      { "rank": 3, "full_name": "heydamir/unslop", "created_at": "2026-10-29", "age_days": 11, "stars_total": 12502, "stars_total_search_api": 12502, "stars_per_day": 1137, "stars_today": "not_measured", "sa_tier": "P1" },
+      { "rank": 4, "full_name": "wangzan101/Mika", "created_at": "2026-10-29", "age_days": 11, "stars_total": 7874, "stars_total_search_api": 7874, "stars_per_day": 716, "stars_today": "not_measured", "sa_tier": "P1" },
+      { "rank": 5, "full_name": "KKKKhazix/agent-autoloop", "created_at": "2026-11-03", "age_days": 6, "stars_total": 4255, "stars_total_search_api": 4255, "stars_per_day": 709, "stars_today": "not_measured", "sa_tier": "P0" },
+      { "rank": 6, "full_name": "patch-gg/pixelfx", "created_at": "2026-10-30", "age_days": 10, "stars_total": 6256, "stars_total_search_api": 6256, "stars_per_day": 626, "stars_today": "not_measured", "sa_tier": "P2" },
+      { "rank": 7, "full_name": "JuneYaooo/rea-video", "created_at": "2026-10-29", "age_days": 11, "stars_total": 5232, "stars_total_search_api": 5232, "stars_per_day": 476, "stars_today": "not_measured", "sa_tier": "P1" },
+      { "rank": 8, "full_name": "Verlintas/NOIR", "created_at": "2026-10-31", "age_days": 9, "stars_total": 3148, "stars_total_search_api": 3148, "stars_per_day": 350, "stars_today": "not_measured", "sa_tier": "P2" }
+    ]
+  },
   "framework": {
     "reference_repo": "disler/pi-durable-news-agent",
     "formula": "Attention = round(clamp((0.50 * Signal + 0.35 * Facts - 0.25 * Hype + 0.40 * Relevance) * TopicWeight, 0, 100))",
@@ -949,6 +985,15 @@
     }
   ],
   "archives": [
+    {
+      "date": "2026-11-09",
+      "run_id": "sweep_20261109_2300",
+      "passed": 15,
+      "swept": 25,
+      "daily_md": "daily/2026-11-09.md",
+      "daily_en_md": "daily/2026-11-09.en.md",
+      "svg": "../../assets/github-ai-radar-2026-11-09.svg"
+    },
     {
       "date": "2026-11-08",
       "run_id": "sweep_20261108_2300",
