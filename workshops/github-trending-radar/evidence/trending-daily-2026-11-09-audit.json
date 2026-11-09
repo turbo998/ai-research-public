@@ -785,5 +785,29 @@
       "hours_saved_vs_path_a": "54.0",
       "efficiency_multiplier": "10.91x"
     }
+  },
+  "round_2026_11_09_r29_idol_hairdeck_finops_audit": {
+    "claim_id": "CLAIM-20261109-R29-IDOL-HAIRDECK",
+    "max_gaussians": "1,048,576",
+    "scope": "Synthetic 500 3D props + 80 rigged VRM hairstyles/mo (base character body modeling & workstation GPU hardware: not_measured)",
+    "props_per_month": 500,
+    "hairstyles_per_month": 80,
+    "path_a_cloud_3d_api_plus_manual_hair_rigging": {
+      "cloud_3d_prop_api_usd": "3,000.00",
+      "manual_hair_rigging_labor_usd": "15,400.00",
+      "monthly_total_usd": "18,400.00",
+      "labor_hours": "280.0"
+    },
+    "path_b_idol_3dgs_plus_hairdeck_vrm": {
+      "local_idol_gpu_usd": "15.00",
+      "local_hairdeck_gpu_usd": "10.00",
+      "vrm_attachment_qa_labor_usd": "1,100.00",
+      "monthly_total_usd": "1,125.00",
+      "labor_hours": "20.0",
+      "savings_vs_path_a_usd": "17,275.00",
+      "savings_vs_path_a_pct": "93.89%",
+      "hours_saved_vs_path_a": "260.0",
+      "efficiency_multiplier": "16.36x"
+    }
   }
 }

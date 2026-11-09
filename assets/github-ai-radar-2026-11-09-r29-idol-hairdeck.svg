@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg29" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1428"/>
+    </linearGradient>
+    <linearGradient id="accent29" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="idGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#291A08"/>
+      <stop offset="100%" stop-color="#140D04"/>
+    </linearGradient>
+    <linearGradient id="hdGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#28102A"/>
+      <stop offset="100%" stop-color="#140815"/>
+    </linearGradient>
+    <linearGradient id="finGrad29" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg29)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent29)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 29 DEEP DIVE · SINGLE-IMAGE 1M-GAUSSIAN 3DGS &amp; SPRING-BONE HAIR CARDS</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">speridlabs/idol-sdk + hyz317/HairDeck vs. Cloud 3D APIs &amp; Manual Hair-Card Rigging</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">&lt;2s 1,048,576-Gaussian Object Reconstruction (7.2 GB VRAM) + 1-Token-Per-Card Set/Chain Diffusion w/ VRM Bones (-93.89% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">IDOL 1-IMAGE TO 3DGS SPEED</text>
+    <text x="16" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">&lt; 2s · 7.2 GB VRAM</text>
+    <text x="200" y="49" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="11">1M Gaussians</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#EC4899" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">IDOL ARCHITECTURE</text>
+    <text x="300" y="50" fill="#F472B6" font-family="system-ui, sans-serif" font-size="22" font-weight="800">370M DiT + DINOv3</text>
+    <text x="492" y="49" fill="#FBCFE8" font-family="system-ui, sans-serif" font-size="11">+ FLUX.2 VAE</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">HAIRDECK VRM RIGGING</text>
+    <text x="584" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">1 Card = 1 Token</text>
+    <text x="774" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">Spring Bones</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-93.89% ($17,275/mo)</text>
+  </g>
+
+  <!-- Left Column: speridlabs/idol-sdk -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#idGrad)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. speridlabs/idol-sdk (941★ · Apache-2.0)</text>
+    <text x="20" y="52" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12">Single Image to 1,048,576 3D Gaussians in Under 2s</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="88" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">DINOv3 ViT-H+ &amp; FLUX.2 VAE Dual Conditioning</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• BiRefNet auto-removes background &amp; frames object</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 370M DiT + 288M Decoder synthesizes unseen backsides</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Outputs 32,768 to 1,048,576 Gaussians (standard .ply)</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Consumer 7.2 GB VRAM &amp; Dual Domain Modes</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Runs in &lt;2s on consumer GPUs after torch.compile warmup</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• --mode real (photographs) vs --mode synthetic (renders)</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Supports CUDA, Apple MPS &amp; CPU (bf16 or fp32 DINOv3)</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="300" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Deterministic Seed &amp; Camera Pose Export</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Same --seed 42 produces identical 3D object</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Exports &lt;name&gt;.ply, &lt;name&gt;_input.png &amp; _camera.json</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Euler 50-step sampler w/ cfg=3.0 &amp; rescale_t=3.0</text>
+  </g>
+
+  <!-- Center Column: hyz317/HairDeck -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#hdGrad)" stroke="#EC4899" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#F472B6" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. hyz317/HairDeck (1,034★ · arXiv:2610.40599)</text>
+    <text x="20" y="52" fill="#FBCFE8" font-family="system-ui, sans-serif" font-size="12">Animation-Ready Stylized Hair Cards &amp; VRM Spring Bones</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="88" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Card VAE + Conditional Set Diffusion Transformer</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Encodes each discrete hair card as a single token</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Generates whole hairstyle jointly w/ per-card UV coords</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Eliminates fused "helmet-blob" meshes from naive 3D gen</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="192" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Chain Diffusion for Spring-Bone Physics &amp; VRM</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Synthesizes skeletal bone chains + skinning weights</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Color model predicts two-tone gradients &amp; accessories</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Exports directly to .glb or rigged .vrm avatar</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="300" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Cross-Platform CUDA, Windows Offload &amp; Mac MPS</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Runs on Linux CUDA, Windows (auto offload) &amp; Apple MPS</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• No CUDA or Triton required on Apple Silicon Macs</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Apache-2.0 open source (Tsinghua + CMU + CUHK)</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad29)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">500 3D Props + 80 Rigged VRM Hairstyles/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Cloud 3D Prop API + Manual Hair Rigging</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Cloud 3D Prop API (500 × $6.00):         $3,000.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Manual Hair Cards &amp; Bones (280.0h):     $15,400.00/mo</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">  (80 hairstyles × 3.5h/each @ $55/hr)</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $18,400.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: Local Idol 3DGS + HairDeck VRM Pipeline</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Local Idol &lt;2s GPU Compute (500 props):     $15.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Local HairDeck GPU Compute (80 styles):      $10.00/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• VRM Hair Attachment QA (20.0h @$55/h):    $1,100.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $1,125.00 / month (-93.89%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="354" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $17,275.00/mo (16.36x · 260.0h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Base Body=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Use speridlabs/idol-sdk for &lt;2s single-image 3DGS objects; use hyz317/HairDeck for UV-mapped VRM hair cards w/ spring bones.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: GitHub Breakout New Repos 2026-11-09 · Primary Source Verified (idol-sdk &amp; HairDeck arXiv:2610.40599)</text>
+</svg>
