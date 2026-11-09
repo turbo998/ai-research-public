@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg16" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1A1025"/>
+    </linearGradient>
+    <linearGradient id="accent16" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="rvGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#211238"/>
+      <stop offset="100%" stop-color="#11091E"/>
+    </linearGradient>
+    <linearGradient id="mjGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2239"/>
+      <stop offset="100%" stop-color="#061320"/>
+    </linearGradient>
+    <linearGradient id="finGrad16" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg16)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent16)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#A78BFA" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 16 DEEP DIVE · SHOT-BY-SHOT VIDEO FORENSICS &amp; CONTACT PHYSICS SIMULATION</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">JuneYaooo/rea-video (v0.1.0) + google-deepmind/mujoco (v4.0.1) vs. Dense VLM &amp; Blind Video Diffusion</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Local OpenCV + UVR MDX-Net (67MB ONNX) Shot Forensics + MuJoCo v4.0.1 / MJX GPU Contact Dynamics (-84.34% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">REA-VIDEO VLM ESCALATION</text>
+    <text x="16" y="50" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-80.9% VLM Cost</text>
+    <text x="195" y="49" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="11">67MB MDX-Net</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">MUJOCO V4.0.1 + MJX ENGINE</text>
+    <text x="300" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">15 → 2 Gen Passes</text>
+    <text x="492" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">USD + Filament</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SHOT MODALITY FORENSICS</text>
+    <text x="584" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Film | AI | Code UI</text>
+    <text x="772" y="49" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="11">12 Light Rigs</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-84.34% ($3,279.00/mo)</text>
+  </g>
+
+  <!-- Left Column: JuneYaooo/rea-video -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#rvGrad)" stroke="#8B5CF6" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. JuneYaooo/rea-video (v0.1.0 · 476★/d #B7)</text>
+    <text x="20" y="52" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="12">Shot-by-Shot Video Forensics &amp; Remake Blueprint CLI</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
+    <text x="30" y="88" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="12" font-weight="700">4-Way Production Modality Classifier (classify.py)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Per-shot verdict: Live Action | AI Video | Code UI | Mixed</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Detects 12 lighting setups, camera moves &amp; color grade</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Escalates only uncertain shots (20%) to VLM (vlm.py)</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
+    <text x="30" y="192" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Local ONNX Stem Separation &amp; OCR (stems.py)</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• UVR MDX-Net (~67 MB ONNX model) splits vocal/music</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• rapidocr-onnxruntime + opencv-python-headless</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Eliminates $0.50/video cloud audio stem API bills</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#7C3AED" stroke-width="1"/>
+    <text x="30" y="300" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Executable Remake Plan &amp; HTML Report (remake.py)</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Splits blueprint into Film vs. Batch AI Gen vs. Code</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Reverse-engineers per-shot prompts &amp; BPM audio sync</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Links directly into ~/.claude, ~/.codex, ~/.agents</text>
+  </g>
+
+  <!-- Center Column: google-deepmind/mujoco -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#mjGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. google-deepmind/mujoco (v4.0.1 · +579★)</text>
+    <text x="20" y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">Multi-Joint Dynamics with Contact &amp; MJX GPU Physics</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Preallocated C/C++ Contact Solver (v4.0.1)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Built-in XML &amp; OpenUSD (MUJOCO_WITH_USD) compiler</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Exact articulated joint &amp; frictional contact physics</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Zero interpenetration or floating-limb hallucinations</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="192" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">MJX JAX Batch GPU &amp; Analytic Policy Gradients</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• mjx/ runs thousands of parallel physics rollouts on GPU</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Differentiable physics via training_apg.ipynb (APG)</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Cuts physical motion synthesis from 15 to 2 passes</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="300" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Filament PBR, Unity Plugin &amp; WASM Studio</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• MUJOCO_USE_FILAMENT for physically based rendering</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Browser WebAssembly viewer (live.mujoco.org / wasm/)</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Exports ground-truth depth/pose maps for video conditioning</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad16)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">200 Reference Videos + 40 Contact Physics Sequences/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Dense VLM Upload + Blind Video Diffusion</text>
+    <text x="30" y="106" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Full-Video VLM Tokens (200 videos):        $68.00/mo</text>
+    <text x="30" y="122" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Cloud Audio Stem API (200 × $0.50):       $100.00/mo</text>
+    <text x="30" y="138" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Blind Physics Diffusion (40 × 15 tries):  $720.00/mo</text>
+    <text x="30" y="154" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Manual Forensics &amp; Fix Labor (60.0h):   $3,000.00/mo</text>
+    <text x="30" y="176" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Path A Total: $3,888.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="200" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="220" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: rea-video Local ONNX + MuJoCo v4.0.1</text>
+    <text x="30" y="238" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Selective 20% VLM Escalation (200 vids):   $13.00/mo</text>
+    <text x="30" y="254" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Local UVR MDX-Net 67MB ONNX Stems:          $0.00/mo</text>
+    <text x="30" y="270" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• MuJoCo-Conditioned Gen (40 × 2 tries):     $96.00/mo</text>
+    <text x="30" y="286" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Automated Blueprint Labor (10.0h):        $500.00/mo</text>
+    <text x="30" y="308" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Path B Total: $609.00 / month (-84.34%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="332" width="328" height="44" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="352" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $3,279.00/mo (6.38x · 50.0h Saved)</text>
+    <text x="30" y="368" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Robot HW=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Deconstruct reference videos locally with rea-video (OpenCV + 67MB MDX-Net); ground contact motion in MuJoCo v4.0.1 / MJX before rendering.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: Track A trending-daily-2026-11-09-raw.html (fb22bae9...) + Track B search-new-repos-2026-11-09-raw.json (2daee440...) · Primary Source Verified</text>
+</svg>

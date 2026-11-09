@@ -470,5 +470,31 @@
       "hours_saved_vs_path_a": "49.0",
       "efficiency_multiplier": "14.72x"
     }
+  },
+  "round_2026_11_09_r16_mujoco_rea_video_finops_audit": {
+    "claim_id": "CLAIM-20261109-R16-MUJOCO-REA-VIDEO",
+    "scope": "Synthetic 200 reference videos + 40 contact physics sequences/mo (physical robot actuators & cluster GPU depreciation: not_measured)",
+    "videos_per_month": 200,
+    "sequences_per_month": 40,
+    "path_a_dense_vlm_plus_blind_diffusion": {
+      "vlm_token_usd": "68.00",
+      "cloud_stem_api_usd": "100.00",
+      "blind_diffusion_usd": "720.00",
+      "manual_remediation_labor_usd": "3,000.00",
+      "monthly_total_usd": "3,888.00",
+      "labor_hours": "60.0"
+    },
+    "path_b_rea_video_onnx_plus_mujoco_v401": {
+      "vlm_token_usd": "13.00",
+      "cloud_stem_api_usd": "0.00",
+      "mujoco_conditioned_gen_usd": "96.00",
+      "automated_blueprint_labor_usd": "500.00",
+      "monthly_total_usd": "609.00",
+      "labor_hours": "10.0",
+      "savings_vs_path_a_usd": "3,279.00",
+      "savings_vs_path_a_pct": "84.34%",
+      "hours_saved_vs_path_a": "50.0",
+      "efficiency_multiplier": "6.38x"
+    }
   }
 }
