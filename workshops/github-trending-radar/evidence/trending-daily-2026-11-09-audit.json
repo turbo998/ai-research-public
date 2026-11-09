@@ -344,5 +344,33 @@
       "hours_saved_vs_path_a": "60.0",
       "hours_saved_pct": "83.33%"
     }
+  },
+  "round_2026_11_09_r11_scrapling_pr_agent_finops_audit": {
+    "claim_id": "CLAIM-20261109-R11-SCRAPLING-PR-AGENT",
+    "scope": "API-only synthetic model for 5,000 web jobs + 1,000 PR reviews/mo (proxy bandwidth & CI runner bills: not_measured)",
+    "web_jobs_per_month": 5000,
+    "prs_per_month": 1000,
+    "path_a_raw_html_plus_multi_turn_pr": {
+      "web_usd": "675.00",
+      "pr_usd": "600.00",
+      "monthly_total_api_usd": "1,275.00",
+      "maintenance_hours": "60.0"
+    },
+    "path_b_static_css_plus_uncompressed_pr": {
+      "web_usd": "135.00",
+      "pr_usd": "225.00",
+      "monthly_total_api_usd": "360.00",
+      "maintenance_hours": "45.0"
+    },
+    "path_c_scrapling_plus_pr_agent": {
+      "web_usd": "9.75",
+      "pr_usd": "42.00",
+      "monthly_total_api_usd": "51.75",
+      "maintenance_hours": "9.0",
+      "savings_vs_path_a_usd": "1,223.25",
+      "savings_vs_path_a_pct": "95.94%",
+      "hours_saved_vs_path_a": "51.0",
+      "hours_saved_pct": "85.00%"
+    }
   }
 }

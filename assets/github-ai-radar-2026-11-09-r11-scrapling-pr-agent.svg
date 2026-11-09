@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgR11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accR11" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgR11)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accR11)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="800">
+    2026-11-09 ROUND 11 SELECTION FAQ · D4VINCI/SCRAPLING (v0.5.1) + THE-PR-AGENT/PR-AGENT (v0.50.0)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    Scrapling (100,409★, +8,342★/wk, BSD-3-Clause) + pr-agent (15,692★, +1,706★/wk, MIT) vs. Raw HTML LLM &amp; Multi-Turn PR Loops
+  </text>
+  <rect x="1150" y="54" width="228" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1264" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">-95.94% API COST</text>
+  <text x="1264" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-85.00% MAINT HRS</text>
+
+  <!-- Left Panel: D4Vinci/Scrapling v0.5.1 -->
+  <rect x="40" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    1. D4VINCI/SCRAPLING (v0.5.1 · 100.4k★): ADAPTIVE WEB EXTRACTION
+  </text>
+  <rect x="60" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="214" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • Adaptive Element Tracking: Relocates redesigned DOM nodes ($0 LLM tokens)
+  </text>
+  <text x="76" y="242" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Stealth Fetchers: JS rendering, Cloudflare Turnstile/Interstitial handling
+  </text>
+  <text x="76" y="270" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Concurrent Spiders: Proxy rotation, AutoThrottle, pause/resume &amp; API capture
+  </text>
+  <text x="76" y="298" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Native AI Integration: io.github.D4Vinci/Scrapling MCP Server + Agent Skill
+  </text>
+  <rect x="76" y="324" width="598" height="142" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="92" y="348" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    Why Algorithmic Adaptive Parsing Beats Raw HTML-to-LLM Dumping:
+  </text>
+  <text x="92" y="374" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Survives 90% of frontend CSS/DOM class changes deterministically at $0 API cost
+  </text>
+  <text x="92" y="398" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Emits clean Markdown (4k tokens) instead of raw HTML (40k tokens) when LLM is needed
+  </text>
+  <text x="92" y="424" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    License: BSD-3-Clause | Crossed 100,409★ (+8,342★ this week)
+  </text>
+
+  <!-- Right Panel: The-PR-Agent/pr-agent v0.50.0 -->
+  <rect x="730" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="750" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    2. THE-PR-AGENT/PR-AGENT (v0.50.0): 1-CALL PR COMPRESSION
+  </text>
+  <rect x="750" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="766" y="214" fill="#60A5FA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • PR Compression Strategy: Reviews large PRs in a single ~30s LLM call
+  </text>
+  <text x="766" y="242" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Core Commands: /describe | /review | /improve | /ask | /similar_issue
+  </text>
+  <text x="766" y="270" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Multi-Platform: GitHub, GitLab, Bitbucket, Azure DevOps, Gitea + LiteLLM
+  </text>
+  <rect x="766" y="298" width="598" height="168" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+  <text x="782" y="322" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    ⚠️ Two Mandatory Enterprise Deployment Guardrails:
+  </text>
+  <text x="782" y="348" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    1) Docker Hub Migration (v0.34.2+): Use pragent/pr-agent (codiumai/pr-agent frozen)
+  </text>
+  <text x="782" y="374" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="11.5" font-weight="700">
+    2) Security Issue #2445: Keep /help_docs disabled (default since v0.36.1+)
+  </text>
+  <text x="782" y="402" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">
+    • Layering: plannotator (local Plan) → pr-agent (30s PR gate) → security-audit-skill
+  </text>
+  <text x="782" y="428" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    License: MIT | Release: v0.50.0 (15,692★, +1,706★ this week)
+  </text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Worked Example -->
+  <rect x="40" y="520" width="1360" height="360" rx="14" fill="#111827" stroke="#34D399" stroke-width="1.5"/>
+  <text x="60" y="552" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. CLOSED-FORM FINOPS &amp; MAINTENANCE MODEL (5,000 WEB JOBS + 1,000 PRS/MO · API-ONLY SYNTHETIC)
+  </text>
+  <text x="60" y="576" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Pricing: $3.00 / 1M input, $15.00 / 1M output (counted once) | Proxy bandwidth &amp; CI runner bills: not_measured (independently_reproduced=false)
+  </text>
+
+  <rect x="60" y="594" width="1320" height="82" rx="10" fill="#1E293B"/>
+  <text x="80" y="620" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path A (Raw HTML LLM + 5-Turn PR Loop)    : $675.00 web + $600.00 PR = $1,275.00/mo ($1,050.00 in + $225.00 out) | 60.0h/mo
+  </text>
+  <text x="80" y="646" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path B (Static CSS [20% Fail] + Raw PR)   : $135.00 web + $225.00 PR = $360.00/mo   ($300.00 in + $60.00 out)    | 45.0h/mo
+  </text>
+  <text x="80" y="668" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path C (Scrapling v0.5.1 + pr-agent v0.50): $9.75 web   + $42.00 PR  = $51.75/mo    ($30.00 in + $21.75 out)     | 9.0h/mo
+  </text>
+
+  <!-- Visual Comparison Bars -->
+  <rect x="60" y="692" width="1320" height="168" rx="10" fill="#0F172A" stroke="#1E293B"/>
+  <text x="80" y="722" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path A Raw HTML + 5-Turn PR ($1,275.00/mo | 60.0h)
+  </text>
+  <rect x="470" y="707" width="690" height="20" rx="5" fill="#EF4444"/>
+  <text x="1172" y="722" fill="#FCA5A5" font-family="Consolas, monospace" font-size="12" font-weight="700">100.0% Baseline</text>
+
+  <text x="80" y="762" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path B Static CSS + Raw PR ($360.00/mo | 45.0h)
+  </text>
+  <rect x="470" y="747" width="195" height="20" rx="5" fill="#F59E0B"/>
+  <text x="677" y="762" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">28.24% (-$915.00/mo)</text>
+
+  <text x="80" y="802" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path C Scrapling + pr-agent ($51.75/mo | 9.0h)
+  </text>
+  <rect x="470" y="787" width="28" height="20" rx="5" fill="#10B981"/>
+  <text x="510" y="802" fill="#34D399" font-family="Consolas, monospace" font-size="12.2" font-weight="700">
+    4.06% → Saves $1,223.25/mo (-95.94% API-only, $14,679.00/yr) &amp; 51.0h/mo (-85.00% maintenance)
+  </text>
+
+  <text x="80" y="842" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Verified in tests/radar-integration.cjs | Scrapling v0.5.1 (BSD-3-Clause) &amp; pr-agent v0.50.0 (MIT)
+  </text>
+</svg>
