@@ -316,5 +316,33 @@
       "hours_saved_vs_path_a": "48.0",
       "hours_saved_pct": "80.00%"
     }
+  },
+  "round_2026_11_09_r10_claude_plugins_pixelfx_finops_audit": {
+    "claim_id": "CLAIM-20261109-R10-CLAUDE-PLUGINS-PIXELFX",
+    "scope": "API-only synthetic model for 40 plugins + 60 VFX assets/mo (external art contractor retainers: not_measured)",
+    "plugins_count": 40,
+    "vfx_assets_per_month": 60,
+    "pixelfx_effects_count": 244,
+    "path_a_unpinned_plus_sprite_diffusion": {
+      "rounds": 480,
+      "llm_usd": "86.40",
+      "diffusion_usd": "36.00",
+      "monthly_total_api_usd": "122.40",
+      "debugging_hours": "72.0"
+    },
+    "path_b_manual_copy_plus_scratch_shaders": {
+      "rounds": 300,
+      "monthly_total_api_usd": "45.00",
+      "debugging_hours": "48.0"
+    },
+    "path_c_sha_pinned_plus_pixelfx": {
+      "rounds": 120,
+      "monthly_total_api_usd": "9.00",
+      "debugging_hours": "12.0",
+      "savings_vs_path_a_usd": "113.40",
+      "savings_vs_path_a_pct": "92.65%",
+      "hours_saved_vs_path_a": "60.0",
+      "hours_saved_pct": "83.33%"
+    }
   }
 }

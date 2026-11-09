@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgR10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accR10" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgR10)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accR10)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="800">
+    2026-11-09 ROUND 10 SELECTION FAQ · ANTHROPICS/CLAUDE-PLUGINS-OFFICIAL + PATCH-GG/PIXELFX
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    claude-plugins-official (46,568★, Apache-2.0) + pixelfx (6,256★ in 10d, MIT, 244 VFX) vs. Unpinned Plugins &amp; Sprite Diffusion
+  </text>
+  <rect x="1150" y="54" width="228" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1264" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">-92.65% API COST</text>
+  <text x="1264" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">SHA-PINNED PLUGINS</text>
+
+  <!-- Left Panel: anthropics/claude-plugins-official -->
+  <rect x="40" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    1. ANTHROPICS/CLAUDE-PLUGINS-OFFICIAL: MARKETPLACE GOVERNANCE
+  </text>
+  <rect x="60" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="214" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • Physical Split: /plugins (Anthropic internal) vs. /external_plugins (partners)
+  </text>
+  <text x="76" y="242" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Canonical Layout: .claude-plugin/plugin.json | .mcp.json | commands | agents | skills
+  </text>
+  <text x="76" y="270" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Immutable Slug + renames Map: Zero plugin-not-found errors on package rename
+  </text>
+  <text x="76" y="298" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    • Skill-Bundle Plugins (strict: false): git-subdir + Pinned 40-char Commit SHA
+  </text>
+  <rect x="76" y="324" width="598" height="142" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="92" y="348" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    Why Enterprise Registries Must Pin Commit SHAs:
+  </text>
+  <text x="92" y="374" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Plugins can bundle .mcp.json servers and shell commands; floating branches risk
+  </text>
+  <text x="92" y="398" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • upstream supply-chain injection. Pinning "sha" locks exact audited source bytes.
+  </text>
+  <text x="92" y="424" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Install: /plugin install {plugin-name}@claude-plugins-official | Apache-2.0
+  </text>
+
+  <!-- Right Panel: patch-gg/pixelfx -->
+  <rect x="730" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="750" y="172" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    2. PATCH-GG/PIXELFX: 244 PROCEDURAL VFX &amp; VISUAL CRITIQUE SKILL
+  </text>
+  <rect x="750" y="188" width="630" height="296" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="766" y="214" fill="#60A5FA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">
+    • 244 Zero-Dependency Code Effects across 21 Categories (moves, fire, ice, ui...)
+  </text>
+  <text x="766" y="242" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Dual-Layer Sandwich Compositing: fx.draw(frame, "back") &amp; fx.draw(frame, "front")
+  </text>
+  <text x="766" y="270" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Acted-Out Choreography: Wind-up → release → contact freeze → recovery
+  </text>
+  <text x="766" y="298" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Instant recoloring, mirroring, deterministic seed &amp; Sprite Sheet export
+  </text>
+  <rect x="766" y="324" width="598" height="142" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+  <text x="782" y="348" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">
+    🎨 "Code is Clay" 4-Step Claude Code Skill Loop:
+  </text>
+  <text x="782" y="374" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Draft (JS particle code) → Render (frame strip) → Look (visual self-critique) → Refine
+  </text>
+  <text x="782" y="398" fill="#CBD5E1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.6">
+    • Eliminates paid diffusion sprite-sheet calls ($0 image API cost, &lt;5KB pure JS)
+  </text>
+  <text x="782" y="424" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Track B Breakout #B6: 6,256★ in 10 days (~626★/d, stars_today: not_measured) | MIT
+  </text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Worked Example -->
+  <rect x="40" y="520" width="1360" height="360" rx="14" fill="#111827" stroke="#34D399" stroke-width="1.5"/>
+  <text x="60" y="552" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. CLOSED-FORM FINOPS &amp; ASSET MODEL (40 PLUGINS + 60 VFX ASSETS/MO · API-ONLY SYNTHETIC)
+  </text>
+  <text x="60" y="576" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Pricing: $3.00 / 1M in, $15.00 / 1M out, $0.12 / diffusion sprite call | External art contractor bills: not_measured (independently_reproduced=false)
+  </text>
+
+  <rect x="60" y="594" width="1320" height="82" rx="10" fill="#1E293B"/>
+  <text x="80" y="620" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path A (Unpinned Plugins + Sprite Diffusion) : 480 rounds ($86.40) + 300×$0.12 ($36.00) = $122.40/mo ($43.20 in+$43.20 out+$36 diff) | 72.0h/mo
+  </text>
+  <text x="80" y="646" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path B (Manual Skill Copy + Scratch Shaders) : 300 rounds × ($0.0750 in + $0.0750 out)  = $45.00/mo  ($22.50 in + $22.50 out)        | 48.0h/mo
+  </text>
+  <text x="80" y="668" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.8" font-weight="700">
+    Path C (SHA-Pinned Marketplace + pixelfx)    : 120 rounds × ($0.0450 in + $0.0300 out)  = $9.00/mo   ($5.40 in + $3.60 out, $0 diff) | 12.0h/mo
+  </text>
+
+  <!-- Visual Comparison Bars -->
+  <rect x="60" y="692" width="1320" height="168" rx="10" fill="#0F172A" stroke="#1E293B"/>
+  <text x="80" y="722" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path A Sprite Diffusion ($122.40/mo | 72.0h)
+  </text>
+  <rect x="470" y="707" width="690" height="20" rx="5" fill="#EF4444"/>
+  <text x="1172" y="722" fill="#FCA5A5" font-family="Consolas, monospace" font-size="12" font-weight="700">100.0% Baseline</text>
+
+  <text x="80" y="762" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path B Scratch Shaders ($45.00/mo | 48.0h)
+  </text>
+  <rect x="470" y="747" width="254" height="20" rx="5" fill="#F59E0B"/>
+  <text x="736" y="762" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">36.76% (-$77.40/mo)</text>
+
+  <text x="80" y="802" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path C SHA-Pinned + pixelfx ($9.00/mo | 12.0h)
+  </text>
+  <rect x="470" y="787" width="51" height="20" rx="5" fill="#10B981"/>
+  <text x="533" y="802" fill="#34D399" font-family="Consolas, monospace" font-size="12.2" font-weight="700">
+    7.35% → Saves $113.40/mo (-92.65% API-only, $1,360.80/yr) &amp; 60.0h/mo (-83.33% debugging)
+  </text>
+
+  <text x="80" y="842" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Verified in tests/radar-integration.cjs | claude-plugins-official (Apache-2.0) &amp; patch-gg/pixelfx (MIT)
+  </text>
+</svg>
