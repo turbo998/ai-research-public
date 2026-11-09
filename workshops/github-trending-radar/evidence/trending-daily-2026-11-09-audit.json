@@ -566,5 +566,29 @@
       "hours_saved_vs_path_a": "28.0",
       "efficiency_multiplier": "13.74x"
     }
+  },
+  "round_2026_11_09_r20_sapper_v2_sherlock_finops_audit": {
+    "claim_id": "CLAIM-20261109-R20-SAPPER-V2-SHERLOCK",
+    "scope": "Synthetic 40 8-hour unattended ASM campaigns + 1,000 OSINT identity sweeps/mo (target range VM hosting & Tor/SOCKS proxy pools: not_measured)",
+    "campaigns_per_month": 40,
+    "osint_sweeps_per_month": 1000,
+    "path_a_flat_swarm_plus_llm_osint": {
+      "campaign_token_usd": "4,080.00",
+      "llm_osint_usd": "650.00",
+      "poisoned_graph_triage_labor_usd": "4,500.00",
+      "monthly_total_usd": "9,230.00",
+      "triage_hours": "60.0"
+    },
+    "path_b_sapper_v2_3layer_plus_sherlock_v0162": {
+      "campaign_token_usd": "920.00",
+      "sherlock_osint_ingest_usd": "20.00",
+      "watchdog_supervision_labor_usd": "450.00",
+      "monthly_total_usd": "1,390.00",
+      "triage_hours": "6.0",
+      "savings_vs_path_a_usd": "7,840.00",
+      "savings_vs_path_a_pct": "84.94%",
+      "hours_saved_vs_path_a": "54.0",
+      "efficiency_multiplier": "6.64x"
+    }
   }
 }

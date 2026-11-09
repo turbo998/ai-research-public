@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg20" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1A0F1E"/>
+    </linearGradient>
+    <linearGradient id="accent20" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="spGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2B1118"/>
+      <stop offset="100%" stop-color="#16080C"/>
+    </linearGradient>
+    <linearGradient id="shGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#271B08"/>
+      <stop offset="100%" stop-color="#140E04"/>
+    </linearGradient>
+    <linearGradient id="finGrad20" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg20)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent20)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 20 DEEP DIVE · LAYERED FACT-INTENT SWARM &amp; DETERMINISTIC OSINT RECON</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">N1nEmAn/sapper-v2 (nvwabase) + sherlock-project/sherlock (v0.16.2) vs. Flat ReAct Swarms</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">3-Layer Fact-Intent Graph (Title/Summary/Evidence · 1B vs 4.5B Tokens) + 4-Min Scout &amp; 400+ Site OSINT (-84.94% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">REPORTED ARENA EFFICIENCY</text>
+    <text x="16" y="50" fill="#F87171" font-family="system-ui, sans-serif" font-size="22" font-weight="800">1B vs 4.5B (-77.8%)</text>
+    <text x="205" y="49" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="11">85 Flags / 8h</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">3-LAYER FACT-INTENT GRAPH</text>
+    <text x="300" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Title→Sum→Evidence</text>
+    <text x="502" y="49" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="11">nvwabase CLI</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SHERLOCK DETERMINISTIC OSINT</text>
+    <text x="584" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">+4,294★ · 400+ Sites</text>
+    <text x="782" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">v0.16.2 Async</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-84.94% ($7,840.00/mo)</text>
+  </g>
+
+  <!-- Left Column: N1nEmAn/sapper-v2 -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#spGrad)" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#F87171" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. N1nEmAn/sapper-v2 (1,757★ · 176★/d #B30)</text>
+    <text x="20" y="52" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="12">Commander-Scout-Soldier-General Legion &amp; nvwabase</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#DC2626" stroke-width="1"/>
+    <text x="30" y="88" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">3-Layer Fact-Intent Graph (nvwabase · Zero Deps)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Layers: Title → Summary → Evidence Document</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• CLI: nvwabase fact / intent --from f001 / dispatch reason</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Prevents single bad fact from poisoning worker swarm</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#DC2626" stroke-width="1"/>
+    <text x="30" y="192" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">4-Minute Scout Triage &amp; Role Division (SKILL.md)</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Scout runs 4-min recon to classify target difficulty</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Routes easy targets to Soldiers, hard targets to Generals</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Swappable CLI (Claude/Codex/DeepSeek) &amp; model per role</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#DC2626" stroke-width="1"/>
+    <text x="30" y="300" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Self-Healing Watchdog &amp; Commander Succession</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Auto-replaces context-saturated Soldiers via tmux</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Commander writes handover doc &amp; spawns own successor</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Auto key-pool rotation (SAPPER_KEY_POOL) on quota death</text>
+  </g>
+
+  <!-- Center Column: sherlock-project/sherlock -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#shGrad)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. sherlock-project/sherlock (v0.16.2 · +4,294★)</text>
+    <text x="20" y="52" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12">Deterministic Concurrent OSINT Reconnaissance CLI (MIT)</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="88" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">400+ Network Concurrent Probing (requests-futures)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Async HTTP sweeps across 400+ social &amp; dev platforms</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Schema-validated site manifest (jsonschema + rstr)</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Replaces $0.65/target LLM browser OSINT with $0 Python</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Tor Circuit &amp; SOCKS Proxy Isolation (stem + PySocks)</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Built-in Tor controller integration (stem &gt;= 1.8.0)</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• SOCKS4/5 proxy routing via PySocks &amp; certifi TLS</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Prevents rate-limit bans during external ASM sweeps</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+    <text x="30" y="300" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Structured JSON/CSV/XLSX Export into Fact Graph</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Exports structured results via pandas + openpyxl</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Feeds directly into nvwabase fact as Scout layer-1 data</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Zero LLM hallucination on account existence checks</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad20)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">40 8-Hour ASM Campaigns + 1,000 OSINT Sweeps/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Flat Shared-Memory Swarm + LLM OSINT</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Flat Swarm Tokens (40 × 90M in/3M out):    $4,080.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• LLM Browser OSINT (1,000 × $0.65):          $650.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Poisoned-Graph Triage (60.0h @$75/h):     $4,500.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $9,230.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: sapper-v2 3-Layer Graph + sherlock v0.16.2</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 3-Layer Graph Swarm (40 × 20M in/0.75M):    $920.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• sherlock OSINT + Fact Ingest (1,000):        $20.00/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Watchdog Self-Healing Supervision (6.0h):   $450.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $1,390.00 / month (-84.94%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="354" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $7,840.00/mo (6.64x · 54.0h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Range VM=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Run sherlock v0.16.2 as deterministic OSINT Scout; orchestrate long-horizon swarms via sapper-v2 / nvwabase 3-layer fact-intent graph.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: Track A trending-daily-2026-11-09-raw.html (fb22bae9...) + Track B search-new-repos-2026-11-09-raw.json (2daee440...) · Primary Source Verified</text>
+</svg>
