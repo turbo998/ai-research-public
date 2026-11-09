@@ -518,5 +518,29 @@
       "savings_vs_path_a_pct": "67.00%",
       "efficiency_multiplier": "3.03x"
     }
+  },
+  "round_2026_11_09_r18_animated_shorts_cinecode_finops_audit": {
+    "claim_id": "CLAIM-20261109-R18-ANIMATED-SHORTS-CINECODE",
+    "scope": "Synthetic 24 vertical shorts (60s) + 8 long documentaries (10m) = 6,240 finished sec/mo (optional commercial TTS API & local PC amortization: not_measured)",
+    "finished_seconds_per_month": 6240,
+    "videos_per_month": 32,
+    "path_a_diffusion_api_plus_manual_rework": {
+      "diffusion_generation_usd": "3,744.00",
+      "style_rework_labor_usd": "1,760.00",
+      "manual_audio_timing_labor_usd": "1,760.00",
+      "monthly_total_usd": "7,264.00",
+      "labor_hours": "64.0"
+    },
+    "path_b_animated_shorts_plus_cinecode": {
+      "code_authoring_llm_usd": "144.00",
+      "early_gate_qa_labor_usd": "220.00",
+      "auto_words_lufs_labor_usd": "220.00",
+      "monthly_total_usd": "584.00",
+      "labor_hours": "8.0",
+      "savings_vs_path_a_usd": "6,680.00",
+      "savings_vs_path_a_pct": "91.96%",
+      "hours_saved_vs_path_a": "56.0",
+      "efficiency_multiplier": "12.44x"
+    }
   }
 }

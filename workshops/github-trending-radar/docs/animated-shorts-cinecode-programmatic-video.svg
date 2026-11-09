@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg18" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E112A"/>
+    </linearGradient>
+    <linearGradient id="accent18" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="casGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2B1408"/>
+      <stop offset="100%" stop-color="#160A04"/>
+    </linearGradient>
+    <linearGradient id="ccGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#28102A"/>
+      <stop offset="100%" stop-color="#140816"/>
+    </linearGradient>
+    <linearGradient id="finGrad18" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg18)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent18)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#FB923C" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 18 DEEP DIVE · PROGRAMMATIC CODE-DRIVEN VIDEO &amp; 2.5D REMOTION SHORTS</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">mromidev/claude-animated-shorts + sarpstar/cinecode vs. Diffusion Video Slot-Machine</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">@remotion/three 2K Vertical 2.5D Shorts (7 Visual Reports) + Headless Chrome Code Films (-14 LUFS · -91.96% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#F97316" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">VIDEO DIFFUSION API COST</text>
+    <text x="16" y="50" fill="#FB923C" font-family="system-ui, sans-serif" font-size="22" font-weight="800">$0.00 / Frame</text>
+    <text x="186" y="49" fill="#FED7AA" font-family="system-ui, sans-serif" font-size="11">100% Local GPU</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#EC4899" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">2.5D REMOTION EXPORT</text>
+    <text x="300" y="50" fill="#F472B6" font-family="system-ui, sans-serif" font-size="22" font-weight="800">1440x2560 (2K)</text>
+    <text x="480" y="49" fill="#FBCFE8" font-family="system-ui, sans-serif" font-size="11">1,200 Ref Frames</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">CINECODE AUDIO MASTERING</text>
+    <text x="584" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-14 LUFS · 2-Scene</text>
+    <text x="782" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">Early Gate</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-91.96% ($6,680.00/mo)</text>
+  </g>
+
+  <!-- Left Column: mromidev/claude-animated-shorts -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#casGrad)" stroke="#F97316" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FB923C" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. claude-animated-shorts (2,542★ · 318★/d)</text>
+    <text x="20" y="52" fill="#FED7AA" font-family="system-ui, sans-serif" font-size="12">2D Characters in a 3D World (@remotion/three + FFmpeg)</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#EA580C" stroke-width="1"/>
+    <text x="30" y="88" fill="#FDBA74" font-family="system-ui, sans-serif" font-size="12" font-weight="700">8-Beat Story Formula &amp; words.json Sync (story.ts)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 55-70s @ ~3.7 words/s: Hook → Setting → Escalation →</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">  Snap → Deadpan → Analogy → Consequence → Callback</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Word-timed SHOTS, XFADE, FLASH_AT &amp; gliding CAMS</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#EA580C" stroke-width="1"/>
+    <text x="30" y="192" fill="#FDBA74" font-family="system-ui, sans-serif" font-size="12" font-weight="700">7 Measured Visual Reports &amp; 1,200 Reference Frames</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Reports: motion, depth, textures, characters, lighting,</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">  ink outlines &amp; color grade (STYLE_BIBLE.md)</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• 38 full-size 540x960 stills + 20×60 contact sheets</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#EA580C" stroke-width="1"/>
+    <text x="30" y="300" fill="#FDBA74" font-family="system-ui, sans-serif" font-size="12" font-weight="700">2K Vertical Export &amp; Synthesized Audio Mix</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 1080x1920 @ 30fps → 1440x2560 (--scale 1.3333)</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Standard mix: Music +3 dB, SFX -6 dB, Voice 0 dB</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Set REMOTION_TMP on large drive (~1.3 GB public/ copy)</text>
+  </g>
+
+  <!-- Center Column: sarpstar/cinecode -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#ccGrad)" stroke="#EC4899" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#F472B6" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. sarpstar/cinecode (1,829★ · 305★/d #B28)</text>
+    <text x="20" y="52" fill="#FBCFE8" font-family="system-ui, sans-serif" font-size="12">Code-Rendered Short Films &amp; 10-Min+ Documentaries</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="88" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">8 Visual Mediums Rendered in Headless Chrome</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 3D real light, 2D animation, paint, ink, paper, clay,</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">  motion graphics, or pixel art (Three.js + FFmpeg)</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Self-drawing maps, counters &amp; rebuilt historical scenes</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="192" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Look-Board &amp; 2-Scene Early Approval Gate</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Crosses user prompt w/ real museum/historical artifacts</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• De-duplicates against all previously generated films</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Renders &amp; locks first 2 scenes BEFORE full film build</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+    <text x="30" y="300" fill="#F9A8D4" font-family="system-ui, sans-serif" font-size="12" font-weight="700">10-Min+ Act Structure &amp; -14 LUFS Broadcast Master</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Researched script w/ source citations &amp; curiosity map</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Blends open-archive photos/maps w/ procedural code</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Masters audio to -14 LUFS w/ automatic credits file</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad18)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">24 Story Shorts (60s) + 8 Long Documentaries (10m)/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Diffusion Video API + Manual AE Rework</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Diffusion Gen (6,240s × 4x × $0.15):    $3,744.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Unapproved Style Rebuilds (32.0h):      $1,760.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Manual Timing &amp; Audio Mix (32.0h):      $1,760.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $7,264.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: claude-animated-shorts + cinecode</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Local Three.js/Remotion + Code LLM:       $144.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 2-Scene Gate &amp; 7-Report QA (4.0h):        $220.00/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Auto words.json &amp; -14 LUFS Mix (4.0h):    $220.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $584.00 / month (-91.96%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#041510" stroke="#34D399" stroke-width="1"/>
+    <text x="30" y="354" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $6,680.00/mo (12.44x · 56.0h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Paid TTS=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Use claude-animated-shorts for 55-70s 2.5D vertical stories; use cinecode for multi-style short films &amp; 10-min+ YouTube explainers.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: Track B search-new-repos-2026-11-09-raw.json (sha256: 2daee4405350717685dd14d5a19186f1b6821216642daab97e6d6605723783e5) · Primary Source Verified</text>
+</svg>
