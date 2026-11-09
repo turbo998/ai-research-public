@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg13" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accent13" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="dexGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041711"/>
+    </linearGradient>
+    <linearGradient id="dsaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0C223D"/>
+      <stop offset="100%" stop-color="#071526"/>
+    </linearGradient>
+    <linearGradient id="finGrad13" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#271B09"/>
+      <stop offset="100%" stop-color="#171005"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg13)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent13)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 13 DEEP DIVE · FINANCIAL RESEARCH AGENTS &amp; DETERMINISTIC GUARDRAILS</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">virattt/dexter (v1.0.6) + ZhuLinsen/daily_stock_analysis vs. Uncompacted ReAct &amp; Unchecked Stock Bots</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Per-Turn Microcompact (8-Call / 80K-Token Trigger) + JSONL Scratchpad Loop Guard + Dual Macro/Phase Post-LLM Guardrails (-72.0% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">MICROCOMPACT TOKEN SAVINGS</text>
+    <text x="16" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-64.2% Input Tokens</text>
+    <text x="202" y="49" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="11">Keep=4 / 80K</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SCRATCHPAD LOOP PREVENTION</text>
+    <text x="300" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">maxCalls=3 · Sim≥0.7</text>
+    <text x="502" y="49" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="11">JSONL Audit</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#A78BFA" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">POST-LLM REGIME GUARDRAIL</text>
+    <text x="584" y="50" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Score≤52 · Buy→Hold</text>
+    <text x="774" y="49" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="11">Lookback=16</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-72.0% ($2,783.75/mo)</text>
+  </g>
+
+  <!-- Left Column: virattt/dexter -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#dexGrad)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. virattt/dexter (v1.0.6 · +263★ Today)</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">Interactive Deep Financial Research Agent (Bun + TS)</text>
+
+    <rect x="18" y="68" width="329" height="86" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="88" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Zero-LLM Per-Turn Microcompact (microcompact.ts)</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• COUNT_TRIGGER_THRESHOLD = 8, COUNT_KEEP_RECENT = 4</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• TOKEN_TRIGGER_THRESHOLD = 80,000 (~3.5 chars/tok)</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Replaces old 10-K/10-Q bodies w/ [Old tool result...]</text>
+
+    <rect x="18" y="166" width="329" height="86" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="186" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Append-Only JSONL Scratchpad &amp; Loop Guard</text>
+    <text x="30" y="206" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• .dexter/scratchpad/&lt;ts&gt;-&lt;md5_12&gt;.jsonl untouched</text>
+    <text x="30" y="224" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• maxCallsPerTool = 3, similarityThreshold = 0.7</text>
+    <text x="30" y="242" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• DEFAULT_MAX_ITERATIONS = 10, OVERFLOW_KEEP = 3</text>
+
+    <rect x="18" y="264" width="329" height="108" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="284" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">13 Structured SEC &amp; Fundamental Tools</text>
+    <text x="30" y="304" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Filings &amp; Statements: read_filings (10-K/10-Q/8-K),</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">  get_financials, segments, key-ratios, earnings</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Ownership &amp; Flows: insider_trades, institutional_holdings,</text>
+    <text x="30" y="354" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">  beneficial_ownership, screen-stocks, stock-price</text>
+  </g>
+
+  <!-- Center Column: ZhuLinsen/daily_stock_analysis -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#dsaGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. ZhuLinsen/daily_stock_analysis (+332★)</text>
+    <text x="20" y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">Scheduled Multi-Market Pipeline &amp; Post-LLM Guardrails</text>
+
+    <rect x="18" y="68" width="329" height="86" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">6 Markets × 15 Data Providers × 15 YAML Strategies</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Markets: A-Share, HK, US, JP, KR, TW + ETFs</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Adapters: AkShare, Tushare, Futu, Longbridge, yfinance</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• YAML: chan_theory, wave_theory, shrink_pullback, etc.</text>
+
+    <rect x="18" y="166" width="329" height="100" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="186" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Guardrail #1: Daily Market Context Regime Gate</text>
+    <text x="30" y="206" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Detects: high_risk, market_cooling, low_position_cap</text>
+    <text x="30" y="224" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Multilingual negation window: _NEGATION_LOOKBACK = 16</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Enforces: decision_type="hold", advice="观望/Watch",</text>
+    <text x="30" y="258" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">  _GUARDRAIL_SENTIMENT_SCORE ≤ 52, confidence downgrade</text>
+
+    <rect x="18" y="278" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="298" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Guardrail #2: Trading Phase &amp; Partial-Bar Gate</text>
+    <text x="30" y="318" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Tracks INTRADAY_PHASES vs premarket / non_trading</text>
+    <text x="30" y="336" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Blocks post-market recap hallucination on is_partial_bar</text>
+    <text x="30" y="354" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Blocks "buy now / 立即买入" when CORE_DATA_BLOCKS degrade</text>
+  </g>
+
+  <!-- Right Column: FinOps Comparison & Architecture Synergy -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad13)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12">1,000 Deep Research Runs + 2,000 Watchlist Evals / Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: Uncompacted ReAct + Unchecked Bot</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Deep Research (950K in + 12K out/run): $2,495.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Runaway Tool Retry Loops (22% rate):    $209.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• False Buy Triage (14.5% = 290 alerts): $1,160.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $3,864.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: dexter Microcompact + DSA Guardrails</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Deep Research (340K in + 12K out/run):   $970.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Scratchpad Loop Guard (1.5% rate):        $14.25/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Dual Regime/Phase Gate (1.2% = 24):       $96.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $1,080.25 / month (-72.04%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#271B09" stroke="#FBBF24" stroke-width="1"/>
+    <text x="30" y="354" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $2,783.75/mo (3.58x Efficiency)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Terminal=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Use virattt/dexter for interactive ad-hoc deep 10-K/10-Q/ownership research; use ZhuLinsen/daily_stock_analysis for scheduled watchlist sweeps with post-LLM guardrails.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: Measured Track A trending-daily-2026-11-09-raw.html (sha256: fb22bae9432a6108065aabd68b480fe1d8db159a7ce5dbd89e95a332e9285b61) · Primary Source Verified</text>
+</svg>

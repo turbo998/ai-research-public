@@ -398,5 +398,26 @@
       "hours_saved_vs_path_a": "48.0",
       "hours_saved_pct": "80.00%"
     }
+  },
+  "round_2026_11_09_r13_dexter_daily_stock_finops_audit": {
+    "claim_id": "CLAIM-20261109-R13-DEXTER-DAILY-STOCK",
+    "scope": "Synthetic 1,000 deep research runs + 2,000 watchlist evaluations/mo (Bloomberg/FactSet terminal licenses & brokerage execution slippage: not_measured)",
+    "deep_runs_per_month": 1000,
+    "watchlist_evals_per_month": 2000,
+    "path_a_uncompacted_react_plus_unchecked_bot": {
+      "deep_research_token_usd": "2,495.00",
+      "retry_loop_waste_usd": "209.00",
+      "false_alert_triage_usd": "1,160.00",
+      "monthly_total_usd": "3,864.00"
+    },
+    "path_b_dexter_microcompact_plus_dsa_guardrails": {
+      "deep_research_token_usd": "970.00",
+      "retry_loop_waste_usd": "14.25",
+      "false_alert_triage_usd": "96.00",
+      "monthly_total_usd": "1,080.25",
+      "savings_vs_path_a_usd": "2,783.75",
+      "savings_vs_path_a_pct": "72.04%",
+      "efficiency_multiplier": "3.58x"
+    }
   }
 }
