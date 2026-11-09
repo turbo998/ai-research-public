@@ -542,5 +542,29 @@
       "hours_saved_vs_path_a": "56.0",
       "efficiency_multiplier": "12.44x"
     }
+  },
+  "round_2026_11_09_r19_cicada_global_law_finops_audit": {
+    "claim_id": "CLAIM-20261109-R19-CICADA-GLOBAL-LAW",
+    "scope": "Synthetic 400h multilingual calls (20 seats) + 600 statutory briefs/mo (external Westlaw/LexisNexis licenses & local SSD storage: not_measured)",
+    "call_hours_per_month": 400,
+    "briefs_per_month": 600,
+    "path_a_meeting_bot_saas_plus_unversioned_rag": {
+      "meeting_seats_and_interp_usd": "1,320.00",
+      "statutory_rag_token_usd": "99.00",
+      "anachronism_rework_labor_usd": "2,700.00",
+      "monthly_total_usd": "4,119.00",
+      "rework_hours": "30.0"
+    },
+    "path_b_cicada_v170_plus_global_law_mcp": {
+      "cicada_llm_notes_usd": "100.00",
+      "statutory_mcp_token_usd": "19.80",
+      "anachronism_rework_labor_usd": "180.00",
+      "monthly_total_usd": "299.80",
+      "rework_hours": "2.0",
+      "savings_vs_path_a_usd": "3,819.20",
+      "savings_vs_path_a_pct": "92.72%",
+      "hours_saved_vs_path_a": "28.0",
+      "efficiency_multiplier": "13.74x"
+    }
   }
 }
