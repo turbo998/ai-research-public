@@ -66,5 +66,39 @@
       "brainbench_r_at_5_baseline": "0.6626",
       "brainbench_r_at_5_relational": "0.7241"
     }
+  },
+  "round_2026_11_09_r2_auto_ontology_finops_audit": {
+    "claim_id": "CLAIM-20261109-R2-AUTO-ONTOLOGY",
+    "scope": "API-only synthetic model (database warehouse compute & NIM GPU node bills: not_measured)",
+    "queries_per_month": 4000,
+    "tables_count": 250,
+    "input_rate_per_1m": 3.00,
+    "output_rate_per_1m": 15.00,
+    "path_a_raw_ddl_text2sql": {
+      "rounds": 10000,
+      "monthly_input_usd": "1,500.00",
+      "monthly_output_usd": "300.00",
+      "monthly_total_api_usd": "1,800.00",
+      "triage_hours": "80.0"
+    },
+    "path_b_naive_table_rag": {
+      "rounds": 6400,
+      "monthly_input_usd": "384.00",
+      "monthly_output_usd": "144.00",
+      "monthly_total_api_usd": "528.00",
+      "triage_hours": "48.0"
+    },
+    "path_c_nvidia_auto_ontology": {
+      "monthly_compile_usd": "24.00",
+      "query_rounds": 4200,
+      "query_usd": "126.00",
+      "monthly_total_api_usd": "150.00",
+      "triage_hours": "12.0",
+      "savings_vs_path_a_usd": "1,650.00",
+      "savings_vs_path_a_pct": "91.67%",
+      "hours_saved_vs_path_a": "68.0",
+      "hours_saved_pct": "85.00%",
+      "wwi_sample_answer_usd": "588.80"
+    }
   }
 }

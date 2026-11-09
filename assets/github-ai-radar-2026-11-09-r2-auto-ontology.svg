@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgR2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accR2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgR2)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accR2)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="23.5" font-weight="800">
+    2026-11-09 ROUND 2 SELECTION FAQ · NVIDIA/AUTO-ONTOLOGY vs. RAW TEXT-TO-SQL &amp; TABLE-RAG
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    Weekly #1 (+9,327★/wk, 10,868★ total, Apache-2.0) | Postgres+pgvector Semantic Catalog + 5-Role NIM Triplets + MCP &amp; 3 Bundled SKILL.mds
+  </text>
+  <rect x="1150" y="54" width="228" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1264" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">-91.67% API COST</text>
+  <text x="1264" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-85.00% TRIAGE HRS</text>
+
+  <!-- Left Panel: Why Raw Schema Text-to-SQL Fails vs Auto-Ontology 4-Step Pipeline -->
+  <rect x="40" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    1. FIRST PRINCIPLES: WHY RAW DDL TEXT-TO-SQL FAILS vs. AUTO-ONTOLOGY
+  </text>
+
+  <rect x="60" y="188" width="630" height="128" rx="10" fill="#1E293B" stroke="#DC2626" stroke-width="1.2"/>
+  <text x="76" y="212" fill="#FCA5A5" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">
+    ❌ Path A: Raw 250-Table CREATE TABLE DDL Prompting (Unreliable Analytics)
+  </text>
+  <text x="76" y="236" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • 5-Hop Join Blindness: Confuses postalcityid vs. deliverycityid across 5 tables
+  </text>
+  <text x="76" y="258" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Metric Drift: Guesses revenue column differently across turns; zero lineage
+  </text>
+  <text x="76" y="280" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • Silent Hallucination: Invents fake SQL when asked about absent advertising data
+  </text>
+  <text x="76" y="302" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    • Cost: 10,000 rounds/mo (2.50x retries) = $1,800.00/mo API + 80.0h engineer triage
+  </text>
+
+  <rect x="60" y="330" width="630" height="154" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="76" y="354" fill="#6EE7B7" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">
+    ✅ Path C: NVIDIA/auto-ontology Semantic Compilation &amp; 4-Step Execution
+  </text>
+  <text x="76" y="378" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    1) Ingestion Worker (:3002) + pii_detection → Postgres + pgvector (:5432)
+  </text>
+  <text x="76" y="400" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    2) Term Resolution: Invoice Line (revenue), Stock Item, State Province
+  </text>
+  <text x="76" y="422" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    3) 5-Hop Join Walk: invoicelines → invoices → customers → cities → stateprovinces
+  </text>
+  <text x="76" y="444" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    4) Filter Grounding ('USB food flash drive - sushi roll') → $588.80 (3 invoice lines)
+  </text>
+  <text x="76" y="468" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">
+    • Exposes via mcp/auto_ontology_mcp + 3 Bundled SKILL.mds + Better Auth / Vault
+  </text>
+
+  <!-- Right Panel: 5-Role NIM Model Triplets & Selection Matrix -->
+  <rect x="730" y="142" width="670" height="360" rx="14" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="750" y="172" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="700">
+    2. 5-ROLE NIM MODEL TRIPLETS &amp; ARCHITECTURAL BOUNDARIES
+  </text>
+  <rect x="750" y="188" width="630" height="145" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="766" y="212" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    ⚙️ Decoupled Model Triplets (&lt;PREFIX&gt;_ENDPOINT / _API_KEY / _MODEL)
+  </text>
+  <text x="766" y="236" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • REASONING     : Main Chat / Complex NL-to-SQL (nemotron-3.5-lightning-30b-a3b)
+  </text>
+  <text x="766" y="258" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • NON_REASONING : High-throughput lightweight entity &amp; metadata extraction
+  </text>
+  <text x="766" y="280" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • EMBED         : Schema &amp; value embeddings (nvidia/nemotron-3-embed-1b)
+  </text>
+  <text x="766" y="302" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8">
+    • RERANK        : Precision term reranking (llama-nemotron-rerank-vl-1b-v2)
+  </text>
+  <text x="766" y="322" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    • DEFAULT_MODELS: Shared fallback triplet; backward-compatible with NVIDIA_API_KEY
+  </text>
+
+  <rect x="750" y="346" width="630" height="138" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="766" y="370" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700">
+    🧭 Three-Way Selection Boundary (gbrain vs. auto-ontology vs. Fabric IQ)
+  </text>
+  <text x="766" y="394" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">
+    • Unstructured Docs / Meetings / People Graph → Choose garrytan/gbrain (Round 1 FAQ)
+  </text>
+  <text x="766" y="418" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">
+    • Self-Hosted / Multi-DB Relational SQL &amp; MCP Agents → Choose NVIDIA/auto-ontology
+  </text>
+  <text x="766" y="442" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">
+    • Consolidated Azure OneLake + Power BI DirectLake → Choose Microsoft Fabric IQ
+  </text>
+  <text x="766" y="466" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.2">
+    Bundled Skills: nvidia-ontology-setup | nvidia-ontology-management | nvidia-ontology-query
+  </text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Worked Example -->
+  <rect x="40" y="520" width="1360" height="360" rx="14" fill="#111827" stroke="#34D399" stroke-width="1.5"/>
+  <text x="60" y="552" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. CLOSED-FORM FINOPS &amp; DATA-ENGINEER TRIAGE MODEL (4,000 QUERIES/MO · 250 TABLES · API-ONLY SYNTHETIC)
+  </text>
+  <text x="60" y="576" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="12">
+    Pricing: $3.00 / 1M input, $15.00 / 1M output (counted once) | Warehouse compute &amp; NIM GPU host bills: not_measured (independently_reproduced=false)
+  </text>
+
+  <rect x="60" y="594" width="1320" height="82" rx="10" fill="#1E293B"/>
+  <text x="80" y="620" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    Path A (Raw 250-Table DDL Prompting) : 10,000 rounds/mo (4,000 × 2.50) × ($0.1500 in + $0.0300 out) = $1,800.00/mo ($1,500.00 in + $300.00 out) | 80.0h/mo triage
+  </text>
+  <text x="80" y="646" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    Path B (Naive Vector Table-RAG)       : 6,400 rounds/mo  (4,000 × 1.60) × ($0.0600 in + $0.0225 out) = $528.00/mo   ($384.00 in + $144.00 out)   | 48.0h/mo triage
+  </text>
+  <text x="80" y="668" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="700">
+    Path C (NVIDIA/auto-ontology)         : $24.00 compile (4×$6.00) + 4,200 rounds × ($0.0150 in + $0.0150 out) [$126.00] = $150.00/mo ($77.40 in + $72.60 out) | 12.0h/mo
+  </text>
+
+  <!-- Visual Comparison Bars -->
+  <rect x="60" y="692" width="1320" height="168" rx="10" fill="#0F172A" stroke="#1E293B"/>
+  <text x="80" y="722" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path A Raw DDL ($1,800.00/mo | 80.0h)
+  </text>
+  <rect x="420" y="707" width="760" height="20" rx="5" fill="#EF4444"/>
+  <text x="1192" y="722" fill="#FCA5A5" font-family="Consolas, monospace" font-size="12" font-weight="700">100.0% Baseline</text>
+
+  <text x="80" y="762" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path B Table-RAG ($528.00/mo | 48.0h)
+  </text>
+  <rect x="420" y="747" width="223" height="20" rx="5" fill="#F59E0B"/>
+  <text x="655" y="762" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">29.33% (-$1,272.00/mo)</text>
+
+  <text x="80" y="802" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    Path C auto-ontology ($150.00/mo | 12.0h)
+  </text>
+  <rect x="420" y="787" width="63" height="20" rx="5" fill="#10B981"/>
+  <text x="495" y="802" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="700">
+    8.33% → Saves $1,650.00/mo (-91.67% API-only, $19,800.00/yr) &amp; 68.0h/mo (-85.00% data-engineer triage)
+  </text>
+
+  <text x="80" y="842" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    Verified in tests/radar-integration.cjs | Walked Example: WideWorldImporters 'USB food flash drive - sushi roll' in PA ($588.80, 3 invoice lines)
+  </text>
+</svg>
