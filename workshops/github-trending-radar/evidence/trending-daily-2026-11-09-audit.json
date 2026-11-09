@@ -712,5 +712,29 @@
       "hours_saved_vs_path_a": "235.0",
       "efficiency_multiplier": "15.51x"
     }
+  },
+  "round_2026_11_09_r26_llama_modchip_satmux_finops_audit": {
+    "claim_id": "CLAIM-20261109-R26-LLAMA-MODCHIP-SATMUX",
+    "scope": "Synthetic 8-node 284B/256K fleet + 4,000 high-RTT sync bursts/mo (airline/maritime satellite Wi-Fi access passes: not_measured)",
+    "nodes": 8,
+    "sync_bursts_per_month": 4000,
+    "path_a_cloud_gpu_nodes_plus_raw_443": {
+      "cloud_gpu_nodes_usd": "9,600.00",
+      "uncached_reprefill_usd": "680.00",
+      "pep_reset_retry_labor_usd": "3,250.00",
+      "monthly_total_usd": "13,530.00",
+      "retry_hours": "50.0"
+    },
+    "path_b_cpu_64gb_modchip_plus_satmux_8444": {
+      "cpu_64gb_nodes_usd": "1,120.00",
+      "dev_shm_restore_usd": "40.00",
+      "satmux_vm_and_wait_usd": "205.00",
+      "monthly_total_usd": "1,365.00",
+      "retry_hours": "3.0",
+      "savings_vs_path_a_usd": "12,165.00",
+      "savings_vs_path_a_pct": "89.91%",
+      "hours_saved_vs_path_a": "47.0",
+      "efficiency_multiplier": "9.91x"
+    }
   }
 }

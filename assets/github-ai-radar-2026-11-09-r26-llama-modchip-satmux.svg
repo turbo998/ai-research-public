@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg26" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1F1D"/>
+    </linearGradient>
+    <linearGradient id="accent26" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="lmGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06281E"/>
+      <stop offset="100%" stop-color="#041510"/>
+    </linearGradient>
+    <linearGradient id="smGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2239"/>
+      <stop offset="100%" stop-color="#05121E"/>
+    </linearGradient>
+    <linearGradient id="finGrad26" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#271B08"/>
+      <stop offset="100%" stop-color="#140E04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg26)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent26)"/>
+
+  <!-- Header -->
+  <text x="36" y="44" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-09 GITHUB AI RADAR · ROUND 26 DEEP DIVE · ZERO-GPU 284B CPU MOE INFERENCE &amp; 1-RTT SATELLITE MULTIPLEXING</text>
+  <text x="36" y="76" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">synchopate/llama-modchip (v2.4.0) + Th0rgal/satmux vs. Cloud H100 Clusters &amp; Raw :443 PEP</text>
+  <text x="36" y="102" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="14">284B DeepSeek-V4 in 57.61 GiB CPU RAM (13.1ms /dev/shm Restore) + 12-Pipe :8444 BBR 1-RTT Relay (-89.91% Cost)</text>
+
+  <!-- KPI Strip -->
+  <g transform="translate(36, 118)">
+    <rect x="0" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">284B MOE ON 64GB CPU (0 GPU)</text>
+    <text x="16" y="50" fill="#34D399" font-family="system-ui, sans-serif" font-size="22" font-weight="800">44.4 pp · 14.7 tg</text>
+    <text x="200" y="49" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="11">57.61 GiB RSS</text>
+
+    <rect x="284" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">/DEV/SHM KV &amp; L3 DRAFTER</text>
+    <text x="300" y="50" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="800">13.1 ms · 1.64 MB</text>
+    <text x="492" y="49" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">Stockfish-PVS</text>
+
+    <rect x="568" y="0" width="268" height="66" rx="10" fill="#1E293B" stroke="#A78BFA" stroke-width="1.2"/>
+    <text x="584" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SATMUX 6-ORIGIN GEO BURST</text>
+    <text x="584" y="50" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="22" font-weight="800">19.13s → 5.35s (3.6x)</text>
+    <text x="786" y="49" fill="#DDD6FE" font-family="system-ui, sans-serif" font-size="11">0/6 Failed</text>
+
+    <rect x="852" y="0" width="276" height="66" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="868" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SYNTHETIC FINOPS SAVING</text>
+    <text x="868" y="50" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="22" font-weight="800">-89.91% ($12,165/mo)</text>
+  </g>
+
+  <!-- Left Column: synchopate/llama-modchip -->
+  <g transform="translate(36, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#lmGrad)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1. synchopate/llama-modchip (v2.4.0 · 755★)</text>
+    <text x="20" y="52" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12">CPU-First 284B &amp; 30B Sparse MoE on 16-64 GB RAM</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="88" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">284.33B DeepSeek-V4-Flash in 57.61 GiB VmRSS</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 1.71 bpw GGUF (56.56 GiB) fits in 64 GB RAM @ 256K ctx</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 44.36 tok/s prefill &amp; 9.1-14.7 tok/s decode (16C Zen 5)</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Zero GPUs required &amp; zero NVMe swap thrashing</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Stockfish-PVS v2 Drafter (1.64 MB L3 Resident)</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Speculative drafter fits inside 1.64 MB CPU L3 cache</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Never evicts routed MoE experts from DDR5 bandwidth</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Nemotron-3.5-30B-A3B reaches 25-111.6 tok/s (432MB KV)</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+    <text x="30" y="300" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">13.1 ms /dev/shm KV Restore &amp; SwiGLU-H2</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Restores Claude Code / agent KV slots in 13.1 ms</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• AVX-512BW _1x8 register tiling + ARM64 NEON/SVE</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Apache-2.0 open source w/ full technical paper</text>
+  </g>
+
+  <!-- Center Column: Th0rgal/satmux -->
+  <g transform="translate(418, 202)">
+    <rect x="0" y="0" width="365" height="390" rx="12" fill="url(#smGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2. Th0rgal/satmux (1,003★ · Zero-Dep Python)</text>
+    <text x="20" y="52" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">1-RTT BBR + zlib Multiplexer for GEO Satellite Wi-Fi</text>
+
+    <rect x="18" y="68" width="329" height="92" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="88" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">12 Persistent :8444 BBR Carrier Pipes</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Bypasses cabin :53 DNS &amp; :443 split-TCP proxy (PEP)</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Eliminates TCP RESET &amp; TLS timeouts on GitHub/PyPI</text>
+    <text x="30" y="144" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• Least-byte-load stream scheduling prevents HOL block</text>
+
+    <rect x="18" y="172" width="329" height="96" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="192" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">0-RTT CONNECT (:8080) &amp; 1-RTT Ground Fetch (:8081)</text>
+    <text x="30" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 0-RTT sends FT_OPEN + TLS ClientHello in 1 burst</text>
+    <text x="30" y="230" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 1-RTT runs DNS/TLS1.3 on 2ms fiber + zlib compression</text>
+    <text x="30" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• BLAKE2b-512 stream cipher + HMAC-SHA256 frame auth</text>
+
+    <rect x="18" y="280" width="329" height="94" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="300" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Measured Inmarsat GX Ka-Band (~620ms RTT)</text>
+    <text x="30" y="320" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 6-Origin burst: 19.13s (3/6 failed) → 5.35s (0/6 failed)</text>
+    <text x="30" y="338" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 3.6x faster overall w/ -76% TTFB; 5.2x on MDN Docs</text>
+    <text x="30" y="356" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">• 0600 Unix socket routes git &amp; Go gh CLI seamlessly</text>
+  </g>
+
+  <!-- Right Column: Closed-Form FinOps Comparison -->
+  <g transform="translate(800, 202)">
+    <rect x="0" y="0" width="364" height="390" rx="12" fill="url(#finGrad26)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3. Closed-Form FinOps Benchmark</text>
+    <text x="20" y="52" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12">8 284B/256K Nodes + 4,000 High-RTT Sync Bursts/Mo</text>
+
+    <!-- Path A Box -->
+    <rect x="18" y="68" width="328" height="122" rx="8" fill="#1E1B18" stroke="#EF4444" stroke-width="1.2"/>
+    <text x="30" y="88" fill="#F87171" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path A: 8 Cloud GPU Nodes + Raw :443 GEO Link</text>
+    <text x="30" y="108" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 8 Multi-GPU Nodes (8 × $1,200.00):        $9,600.00/mo</text>
+    <text x="30" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Uncached KV Re-Prefill Compute:             $680.00/mo</text>
+    <text x="30" y="144" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• PEP Reset Retry Wait (50.0h @$65/h):     $3,250.00/mo</text>
+    <text x="30" y="170" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path A Total: $13,530.00 / month</text>
+
+    <!-- Path B Box -->
+    <rect x="18" y="202" width="328" height="122" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="30" y="222" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Path B: 8 64GB CPU Nodes + satmux :8444 Relay</text>
+    <text x="30" y="242" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 8 64GB DDR5 CPU Nodes (8 × $140.00):      $1,120.00/mo</text>
+    <text x="30" y="260" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• 13.1ms /dev/shm KV Slot Restore:             $40.00/mo</text>
+    <text x="30" y="278" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• satmux VM ($10) + Residual Wait (3.0h):     $205.00/mo</text>
+    <text x="30" y="304" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Path B Total: $1,365.00 / month (-89.91%)</text>
+
+    <!-- Verdict Banner -->
+    <rect x="18" y="334" width="328" height="42" rx="8" fill="#140E04" stroke="#FBBF24" stroke-width="1"/>
+    <text x="30" y="354" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Net Savings: $12,165.00/mo (9.91x · 47.0h Saved)</text>
+    <text x="30" y="370" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Synthetic model (independently_reproduced=false) · Wi-Fi Pass=not_measured</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="36" y="610" width="1128" height="48" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="54" y="632" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">AI SA Pattern: Run 284B/30B MoEs on 64GB CPU w/ llama-modchip; tunnel high-RTT satellite git/API traffic through satmux :8444.</text>
+  <text x="54" y="649" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Provenance: GitHub Breakout New Repos 2026-11-09 · Primary Source Verified (llama-modchip v2.4.0 &amp; satmux)</text>
+</svg>
