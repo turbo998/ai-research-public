@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR11" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR11)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR11)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="800">
+    2026-11-11 ROUND 11 · AUTO-ONTOLOGY-MCP (SQLITE + OBSIDIAN WIKI) + DOWNLOAD-ANYTHING (DA)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    gogoymh/auto-ontology-mcp (★361 · BYO Client LLM · validate_sql) × nengong/download-anything (★219 · ffprobe/pypdf Integrity)
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">0 NIM SERVER NEEDED</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-85.92% KNOWLEDGE TCO</text>
+
+  <!-- Row 1: Dual Breakdown -->
+  <rect x="40" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 零服务端语义本体与知识库：gogoymh/auto-ontology-mcp (★361)
+  </text>
+  <text x="60" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 架构痛点：原版 NVIDIA/auto-ontology 需部署 Next.js + FastAPI + Postgres 并配置 전용 NIM 端点</text>
+  <text x="60" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 语言步下放客户端：借用 Claude Code / Codex / OpenClaw 自身模型做抽取与写 SQL，服务端仅用本地 SQLite</text>
+  <text x="60" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 8 类静默 SQL 错误拦截：validate_sql + check_answerable + find_join_path 拦截一对多扇出膨胀与错连</text>
+  <text x="60" y="272" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 升级替代 Karpathy LLM Wiki：事实进 SQL 表可求和过滤，概念建有向边，export_wiki 一键导出 Obsidian</text>
+  <rect x="60" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="76" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么说「Text-to-SQL 最可怕的是静默算错 (Fails Quietly)」？</text>
+  <text x="76" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">裸模型把 products 连上 order_lines 和 product_tags 在同一个 SELECT 里 SUM，导致每多 1 个标签</text>
+  <text x="76" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">营收就翻一倍！auto-ontology-mcp 的 validate_sql 当场发出 Fan-Out 警告并强制拆分为独立子查询！</text>
+  <text x="76" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">当问及数据库中不存在的指标 (如 ROAS 广告回报率)，check_answerable 明确拒答而非乱凑字段</text>
+
+  <rect x="732" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="752" y="172" fill="#C4B5FD" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. 全平台多轨验证归档网关：nengong/download-anything (★219)
+  </text>
+  <text x="752" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 核心痛点：给 Agent 扔一条带口令的分享文案或网盘链接，普通脚本要么解析失败，要么把 403 HTML 当 PDF 存下</text>
+  <text x="752" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 脏口令与追踪码剥离：自动清洗表情/推广前缀，精准提取 URL、网盘提取码、DOI、ISBN 与 MD5</text>
+  <text x="752" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 主文件 + 六件套结构化伴生落盘：自动同步提取 .srt 字幕、cover.jpg、audio.mp3、citation.bib 与本地化配图</text>
+  <text x="752" y="272" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 四重底层容器完整性核验：ffprobe (音视频双轨与时长) + pypdf + Pillow + zipfile，严防残损文件入库</text>
+  <rect x="752" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="768" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">黄金搭档：Download Anything (采集净化) → Auto Ontology MCP (本体入库)</text>
+  <text x="768" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">1. download-anything 把外部视频/论文/网盘报告清洗校验后落盘为带 citation.bib 与 .md 的干净原件；</text>
+  <text x="768" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">2. auto-ontology-mcp 读取原件，将定量数据写入 SQLite 受控事实表、把核心观点建为双链概念页，</text>
+  <text x="768" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">3. 原件保留在 Obsidian Vault，随时执行 SQL 聚合与原句溯源，彻底解决 Karpathy LLM Wiki 算不准数的短板！</text>
+
+  <!-- Row 2: Pipeline -->
+  <rect x="40" y="428" width="1360" height="196" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="458" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. 个人与团队知识工程全链路：多源脏链接净化校验 → 本体双层建模 (SQL事实 + 概念图) → Obsidian 导出与受控查询
+  </text>
+
+  <rect x="60" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="500" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">1. 口令剥离与多轨校验采集</text>
+  <text x="76" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">download-anything (CLI &amp; Skill)</text>
+  <text x="76" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">识别 URL/DOI/ISBN/提取码，落盘</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">.srt/.bib 并经 ffprobe/pypdf 验真</text>
+
+  <rect x="401" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="500" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">2. 本地 SQLite 本体与关系剖析</text>
+  <text x="417" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">set_relationship(is_default=true)</text>
+  <text x="417" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">区分 billing_city 与 delivery_city</text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">提取字段值域 (0..0.3 vs 20%) 与主外键</text>
+
+  <rect x="742" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="500" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">3. 可回答性门禁与 SQL 防扇出校验</text>
+  <text x="758" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">check_answerable + validate_sql</text>
+  <text x="758" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">拦截伪外键重合与一对多 SUM 膨胀，</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">强制子查询先行聚合再关联</text>
+
+  <rect x="1083" y="476" width="297" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="500" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">4. Obsidian 双链导出与原文溯源</text>
+  <text x="1099" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">export_wiki → Obsidian [[links]]</text>
+  <text x="1099" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">定量事实走 SQL 精确统计，定性概念</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">带原文引用与 Obsidian 图谱双向同步</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="642" width="1360" height="238" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="672" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. 闭式 FinOps 算例：25 人团队语义 SQL 问答 + 月采集归档 1,500 份多源文献/音视频 (synthetic, Obsidian 许可: not_measured)
+  </text>
+  <rect x="60" y="690" width="1320" height="170" rx="10" fill="#1E293B"/>
+  <text x="80" y="720" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (独立托管 Postgres/NIM + 裸 Text-to-SQL 扇出排障 + 手工清洗下载): $680.00 服务 + $2,250.00 (30h) + $1,650.00 (22h) = $4,580.00/月
+  </text>
+  <text x="80" y="754" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (纯 Markdown LLM Wiki 无 SQL 校验 + 散装下载脚本): $180.00 API + $1,500.00 (20h) + $1,050.00 (14h @$75/h) = $2,730.00/月
+  </text>
+  <text x="80" y="788" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (auto-ontology-mcp 本地 SQLite + download-anything 校验归档): $45.00 增量Token + $375.00 (5h) + $225.00 (3h) = $645.00/月
+  </text>
+  <text x="80" y="818" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $3,935.00/月 (-85.92%, 年省 $47,220.00) | SQL 错数核对与素材清洗工时从 52.0h 降至 8.0h (-44.0h/月, -84.62%)
+  </text>
+  <text x="80" y="846" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    快速体验: auto-ontology-mcp demo (11表零售库 + Obsidian 知识库联查) | python3 skills/download-anything/scripts/install.py
+  </text>
+</svg>

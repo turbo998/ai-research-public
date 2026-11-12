@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgR9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#121E36"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentR9" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bgR9)"/>
+  <rect x="28" y="24" width="1144" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="28" y="24" width="1144" height="6" rx="3" fill="url(#accentR9)"/>
+
+  <text x="54" y="66" fill="#FBBF24" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-12 NIGHT SHIFT · ROUND 9 (CUMULATIVE R108) · RUST LIVE JIT RUNTIME &amp; MULTI-DOT PI AGENT WORKBENCH FAQ</text>
+  <text x="54" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22.5" font-weight="800">makepad/relax (210★ 0-Dep Rust JIT) + 2SinceJuly/SkyDot (122★ Pi Agent Workbench)</text>
+  <text x="54" y="124" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5">11s vs 3m Cold 3D Build, 1.15s Warm Start &amp; State-Preserving Hot Patch · 4-Layer ACL Isolated Multi-Dot Pi Runtime · -88.41% TCO</text>
+
+  <!-- Left Card: makepad/relax -->
+  <rect x="52" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="74" y="178" fill="#FBBF24" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">1. makepad/relax (210★ in 1d · Rust · 438k Lines · 0 crates.io Deps)</text>
+  <text x="74" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Live Rust Compiler &amp; JIT Runtime (Runs Cargo Packages While Building)</text>
+
+  <rect x="74" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="238" fill="#FBBF24" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">11s Cold / 1.15s Warm First Frame on Large 3D Game (vs ~3 min `rustc`)</text>
+  <text x="88" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Compiles each function on first call with no `rustc`, LLVM, or linker in the loop</text>
+  <text x="88" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Small app starts in 3.7s cold / 0.41s warm on M4 MacBook; 92 tests re-run in 2.2s on save</text>
+
+  <rect x="74" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">State-Preserving Live Function Patching &amp; Background Borrow Check</text>
+  <text x="88" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Patches edited function bodies directly into the running process without losing runtime state</text>
+  <text x="88" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Type-checks each function before execution and runs the borrow checker in the background</text>
+
+  <rect x="74" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="396" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Honest Engineering Tradeoff Disclosure (`1.12×` x64 / `1.24×` arm64)</text>
+  <text x="88" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Explicitly scoped for fast dev iteration (ship production releases with `cargo build --release`)</text>
+  <text x="88" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">`relax inspect &lt;pid&gt; memory/code` monitors JIT cache growth across Linux x86-64 &amp; macOS arm64</text>
+
+  <!-- Right Card: 2SinceJuly/SkyDot -->
+  <rect x="613" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="635" y="178" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">2. 2SinceJuly/SkyDot (122★ in 2d · TypeScript / React 19 · MIT)</text>
+  <text x="635" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Self-Hosted Multi-User Pi Agent Runtime Workbench with 4-Layer ACLs</text>
+
+  <rect x="635" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="238" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Strict 4-Boundary Isolation: Backend, Runner, Workspace &amp; Renderer</text>
+  <text x="649" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Electron Renderer holds zero direct DB, filesystem, credential, Docker, or shell privileges</text>
+  <text x="649" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Passing one layer never grants automatic cross-workspace file, memory, or secret access</text>
+
+  <rect x="635" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Named "Dot" Identities, Governed Group Chats &amp; Idempotent Reconnect</text>
+  <text x="649" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Configure each Dot's prompt, model, thinking level, Skills, MCPs &amp; Host/non-root Docker Runner</text>
+  <text x="649" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Reconnecting/refreshing reads state without re-submitting tasks; explicit `SKYDOT_BOT_HANDOFFS`</text>
+
+  <rect x="635" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="396" fill="#A855F7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Evidence-Linked Goals, Versioned Plugin Snapshots &amp; Feishu/Telegram</text>
+  <text x="649" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Goals bind formal sessions, approvals &amp; execution evidence rather than passive todo cards</text>
+  <text x="649" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Unified Web/PWA/Electron UI with Langfuse + OpenTelemetry observability &amp; Feishu connectors</text>
+
+  <!-- Bottom FinOps Comparison Strip -->
+  <rect x="52" y="488" width="1096" height="140" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <text x="74" y="516" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261112-R9-RELAX-SKYDOT · 1,800 Rust Dev Iterations + 20 Multi-Dot Workspaces/Mo)</text>
+
+  <rect x="74" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#EF4444"/>
+  <text x="90" y="552" fill="#FCA5A5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path A: Cold `rustc` Rebuilds + Unisolated UI</text>
+  <text x="90" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$6,040.00 / mo</text>
+  <text x="90" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$1,720.00 CI/API + $4,320.00 labor (48.0h @ $90/h)</text>
+
+  <rect x="424" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="440" y="552" fill="#FCD34D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path B: Manual Restart Loops + Single-User CLI</text>
+  <text x="440" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$3,040.00 / mo (-49.67%)</text>
+  <text x="440" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$880.00 compute + $2,160.00 labor (24.0h @ $90/h)</text>
+
+  <rect x="774" y="530" width="352" height="82" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="790" y="552" fill="#6EE7B7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path C: makepad/relax JIT + SkyDot Workbench</text>
+  <text x="790" y="574" fill="#ECFDF5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$700.00 / mo (-88.41% · Save $5,340.00/mo)</text>
+  <text x="790" y="596" fill="#A7F3D0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$250.00 API + $450.00 labor (5.0h) · Release CI/Storage: not_measured</text>
+</svg>

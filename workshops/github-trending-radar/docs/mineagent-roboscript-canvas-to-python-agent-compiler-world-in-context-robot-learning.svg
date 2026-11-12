@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg25" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent25" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg25)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accent25)" rx="3"/>
+
+  <text x="40" y="58" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-12 GITHUB AI RADAR · ROUND 25 (CUMULATIVE R124) ARCHITECTURE SELECTION FAQ</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">Canvas-to-Python Agent Compiler &amp; 1-Demo World In-Context Learning</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">YT-Proteus-bot/MineAgent (110-Node Canvas -&gt; Standalone Python) + ArcheOne-AI/RoboScript (arXiv:2611.12885 WICL 83.4% on RoboTwin 2.0)</text>
+
+  <!-- Left Card: YT-Proteus-bot/MineAgent -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="168" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">1. YT-Proteus-bot/MineAgent (173★ · Apache-2.0 · Canvas Compiler)</text>
+  <text x="60" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Compiles Visual Canvas to Standalone Python Project: 110 node types &amp;</text>
+  <text x="60" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  33 reasoning templates compile into projects/&lt;canvas&gt;/ with zero lock-in</text>
+  <text x="60" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• First-Class Org Hierarchy &amp; Delegation: ctx.superior, ctx.subordinates,</text>
+  <text x="60" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  ctx.peers, and ctx.delegate() across react / plan_execute / reflexion</text>
+  <text x="60" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Encrypted Key Isolation &amp; Mock LLM Harness: Keys stay in SQLite &amp; inject</text>
+  <text x="60" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  via MINEAGENT_KEY_&lt;id&gt;; tools/mock_llm.py runs offline on port 8012</text>
+  <rect x="60" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="76" y="344" fill="#7DD3FC" font-family="Consolas, monospace" font-size="12">React Flow Canvas (110 Nodes, 33 Modes) -&gt; Save (Ctrl+S)</text>
+  <text x="76" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; Compile Standalone Python Project in projects/&lt;canvas&gt;/</text>
+  <text x="76" y="388" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12">-&gt; Inject ctx.delegate() + Encrypted MINEAGENT_KEY_&lt;node_id&gt;</text>
+  <text x="76" y="410" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">-&gt; Live Node-Pulse Token Stream + tools/mock_llm.py --port 8012</text>
+
+  <!-- Right Card: ArcheOne-AI/RoboScript -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="635" y="168" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">2. ArcheOne-AI/RoboScript (120★ · Apache-2.0 · arXiv:2611.12885)</text>
+  <text x="635" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• World In-Context Learning (WICL): Learn manipulation in Task Memory</text>
+  <text x="635" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  from 1 demonstration via simulator rehearsal with 0 gradient updates</text>
+  <text x="635" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• 83.4% Mean Success on RoboTwin 2.0 (50 Bimanual Tasks): Beats strongest</text>
+  <text x="635" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  50-demo trained policy (61.7%) by +21.7 pts; randomized: 83.6% -&gt; 83.2%</text>
+  <text x="635" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Sim-to-Real Without Re-Rehearsal: ALOHA Task Memories run on dual-arm</text>
+  <text x="635" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  PiPER via parameter remapping + cuRobo / GroundingDINO / SAM 3 services</text>
+  <rect x="635" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="651" y="344" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">1 Demo -&gt; Build Skills -&gt; Rehearse in World (wicl / rsi) -&gt; Task Memory</text>
+  <text x="651" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; Agent Plane (Real Sensor Scope) vs Control Plane (Ground Truth)</text>
+  <text x="651" y="388" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12">-&gt; RoboTwin 2.0: 83.4% (1 demo, 0 grad) vs 61.7% (50-demo policy)</text>
+  <text x="651" y="410" fill="#93C5FD" font-family="Consolas, monospace" font-size="12">-&gt; Parameter Remap ALOHA -&gt; Real Dual-Arm PiPER + quickstart_mock</text>
+
+  <!-- Bottom Card: FinOps Closed-Form Model -->
+  <rect x="40" y="468" width="1120" height="182" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="498" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Model (25 Multi-Agent &amp; Embodied Manipulation Tasks/Mo · $100.00/hr · Physical Robot Hardware: not_measured)</text>
+
+  <text x="60" y="530" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path A (Locked Low-Code + 50-Demo SFT Policy):</text>
+  <text x="395" y="530" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$2,600.00 GPU/teleop + $5,000.00 labor (50.0h) = $7,600.00/mo</text>
+  <rect x="860" y="516" width="275" height="16" rx="4" fill="#EF4444"/>
+
+  <text x="60" y="564" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path B (Manual Graph Code + 10-Demo Scripts):</text>
+  <text x="395" y="564" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$1,240.00 API/sim    + $2,500.00 labor (25.0h) = $3,740.00/mo</text>
+  <rect x="860" y="550" width="135" height="16" rx="4" fill="#F59E0B"/>
+
+  <text x="60" y="598" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path C (MineAgent Compiler + RoboScript WICL):</text>
+  <text x="395" y="598" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$280.00 WICL/API     + $500.00 labor (5.0h)    = $780.00/mo</text>
+  <rect x="860" y="584" width="28" height="16" rx="4" fill="#10B981"/>
+
+  <text x="60" y="632" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Net Verified Savings (Path C vs Path A): $6,820.00 / month (-89.74% TCO · $81,840.00/yr · 45.0h/mo saved [-90.00%])</text>
+</svg>

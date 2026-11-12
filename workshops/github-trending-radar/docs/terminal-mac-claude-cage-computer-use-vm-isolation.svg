@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR22" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR22" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR22)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR22)" rx="3"/>
+
+  <!-- Header -->
+  <text x="40" y="58" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-11 NIGHT SHIFT · ROUND 22 (CUMULATIVE R67) · COMPUTER-USE GUEST VMs &amp; FAIL-CLOSED WORKBENCHES</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800">govijr/terminal-mac (LZ4 Shared-Mem Guest Mac) + Lee-xeo/Claude-Cage (Fail-Closed VM)</text>
+  <text x="40" y="115" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="14">ScreenCaptureKit 30fps LZ4 Shared-Memory MCP + Stable TCC Code Identity + gvisor-tap-vsock/Mihomo Fail-Closed Gate (-86.37% Cost)</text>
+
+  <!-- Left Panel: govijr/terminal-mac -->
+  <rect x="40" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="56" y="152" width="215" height="24" rx="6" fill="#0C4A6E"/>
+  <text x="66" y="169" fill="#7DD3FC" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">APPLE VIRTUALIZATION · SWIFT 6</text>
+  <text x="282" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">govijr/terminal-mac (2,593★ · MCP)</text>
+
+  <rect x="56" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="208" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Zero Host Cursor/Clipboard Hijacking &amp; Guest-Only TCC Grants</text>
+  <text x="70" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Separate 64 GiB sparse macOS guest via com.apple.security.virtualization</text>
+  <text x="70" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Screen Recording &amp; Accessibility granted only inside guest; 7 MCP tools</text>
+
+  <rect x="56" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="296" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. ScreenCaptureKit Delta Stream (&lt;=30fps) via LZ4 Shared Memory</text>
+  <text x="70" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Streams only on screen change; stops 15s after viewer exits (0% idle cost)</text>
+  <text x="70" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Lossless LZ4 pixels via shared memory to Ghostty / Kitty (bypasses PTY)</text>
+
+  <rect x="56" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="384" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Stable Code Signing Identity Preserves TCC Across 30s Auto-Updates</text>
+  <text x="70" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• TerminalMacGuest.app auto-updates within 30s from /Volumes/My Shared Files</text>
+  <text x="70" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Unchanging certificate keeps macOS TCC approvals intact across rebuilds</text>
+
+  <!-- Right Panel: Lee-xeo/Claude-Cage -->
+  <rect x="615" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#F43F5E" stroke-width="1.5"/>
+  <rect x="631" y="152" width="215" height="24" rx="6" fill="#881337"/>
+  <text x="641" y="169" fill="#FDA4AF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">FAIL-CLOSED VM · MIT</text>
+  <text x="858" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">Lee-xeo/Claude-Cage (2,703★ · Go/Lima)</text>
+
+  <rect x="631" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="208" fill="#FB7185" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. gvisor-tap-vsock + Mihomo Fail-Closed Network Isolation</text>
+  <text x="645" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Zero direct-connection fallback: guest stays offline if proxy/checks fail</text>
+  <text x="645" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Allows IPv4 TCP + proxied DNS only; blocks public UDP/IPv6/ICMP &amp; host LAN</text>
+
+  <rect x="631" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="296" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. Cross-OS Guests (macOS / Hyper-V Win11 / Debian) &amp; Fingerprint Sync</text>
+  <text x="645" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Auto-syncs guest timezone &amp; locale to proxy exit IP; zero host SSH/cookie leak</text>
+  <text x="645" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Bundles terminal, code-server, noVNC browser &amp; selective sshocker/SFTP mounts</text>
+
+  <rect x="631" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="384" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Multi-Subscription Quota Pool, Mobile Handoff &amp; Tailscale</text>
+  <text x="645" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Manages multiple Claude Code subscriptions &amp; switches accounts on history</text>
+  <text x="645" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Android/iPhone pairing for remote tool approvals + optional Tailscale mesh</text>
+
+  <!-- Bottom FinOps Comparison Panel -->
+  <rect x="40" y="472" width="1120" height="178" rx="12" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="60" y="500" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261111-R22-CLAUDECAGE-TERMINALMAC · 16-Eng Team · 800 Computer-Use Sessions/Mo)</text>
+  <text x="60" y="520" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">Synthetic benchmark model ($85/hr senior systems/QA engineer rate; host Mac/PC hardware &amp; account subscriptions: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="60" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#EF4444"/>
+  <text x="76" y="556" fill="#FCA5A5" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path A: Cloud Mac Rental + Host Hijacking</text>
+  <text x="76" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">Cloud VMs (8x$180): $1,440.00 | Labor (48.0h): $4,080.00</text>
+  <text x="76" y="600" fill="#F87171" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $5,520.00 / mo</text>
+  <text x="76" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Steals host mouse/clipboard; TCC grants lost on every rebuild</text>
+
+  <!-- Path B -->
+  <rect x="425" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="441" y="556" fill="#FCD34D" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path B: Generic VNC VMs + Unisolated Proxy</text>
+  <text x="441" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">VM Overhead: $760.00 | Labor (25.0h): $2,125.00</text>
+  <text x="441" y="600" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $2,885.00 / mo (-47.74%)</text>
+  <text x="441" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Slow PTY screenshot polling; direct-connect fallback leaks IP</text>
+
+  <!-- Path C -->
+  <rect x="790" y="534" width="350" height="98" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="2"/>
+  <text x="806" y="556" fill="#6EE7B7" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path C: terminal-mac + Claude-Cage (Best)</text>
+  <text x="806" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">Sparse Local VMs: $200.00 | Labor (6.5h): $552.50</text>
+  <text x="806" y="600" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $752.50 / mo (Saves $4,767.50 · -86.37%)</text>
+  <text x="806" y="618" fill="#A7F3D0" font-family="Inter, system-ui, sans-serif" font-size="11">$57,210.00/yr saved · -86.46% eng hours · LZ4 shm &amp; fail-closed</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg20" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accent20" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg20)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accent20)" rx="3"/>
+
+  <text x="40" y="58" fill="#F59E0B" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-12 GITHUB AI RADAR · ROUND 20 (CUMULATIVE R119) ARCHITECTURE SELECTION FAQ</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">Resident Claude -p Stream-JSON Pipeline &amp; Xcode 27 Dual-Exec ACP Isolation</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Saekisui/claude-p-pipeline (Resident stream-json + Billing Guard) + yusuke-114/claude-xcode-agent (Dual-Exec ACP Settings Isolator)</text>
+
+  <!-- Left Card: Saekisui/claude-p-pipeline -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="60" y="168" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">1. Saekisui/claude-p-pipeline (95★ · Claude Code 2.1.282)</text>
+  <text x="60" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Resident Bidirectional stream-json Process: 1 resident claude -p per window</text>
+  <text x="60" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  with turn gatekeeper, SSE + heartbeat, and ordered DB persistence on tab close</text>
+  <text x="60" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• API Billing Guard &amp; Hot Persona Swap: Strips ANTHROPIC_API_KEY automatically</text>
+  <text x="60" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  to prevent pay-as-you-go leakage; uses --system-prompt-snapshot off + --resume</text>
+  <text x="60" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• 26-Chapter Manual + 6-Item Upgrade Smoke Suite: npm run smoke verifies CLI</text>
+  <text x="60" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  flags across Claude Code upgrades on an isolated port using haiku</text>
+  <rect x="60" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="76" y="344" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">env -u ANTHROPIC_API_KEY claude -p (Bidirectional stream-json)</text>
+  <text x="76" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; Turn Gatekeeper + SSE Heartbeat + --system-prompt-snapshot off</text>
+  <text x="76" y="388" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12">-&gt; --resume Reconcile (Truncation / Cold Rebuild / Fork) + MCP ID</text>
+  <text x="76" y="410" fill="#93C5FD" font-family="Consolas, monospace" font-size="12">-&gt; npm run smoke (6-check upgrade harness on 127.0.0.1:3456)</text>
+
+  <!-- Right Card: yusuke-114/claude-xcode-agent -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="635" y="168" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">2. yusuke-114/claude-xcode-agent (73★ · MIT · Xcode 27 ACP)</text>
+  <text x="635" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Solves Two Xcode 27 GUI ACP Pain Points: GUI launch lacks shell env for API</text>
+  <text x="635" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  keys/gateways, and claude-agent-acp hardcodes --setting-sources user,project,local</text>
+  <text x="635" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Dual-Role exec Trampoline (claude-acp.sh): Runs ① as agent (loads config.json,</text>
+  <text x="635" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  sets CLAUDE_CODE_EXECUTABLE to self) and ② as claude (rewrites setting-sources)</text>
+  <text x="635" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Zero Wrapper Process &amp; Pure ACP stdout: Both roles use exec; swaps setting</text>
+  <text x="635" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  sources to project,local so ~/.claude/settings.json never pollutes Xcode</text>
+  <rect x="635" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="651" y="344" fill="#7DD3FC" font-family="Consolas, monospace" font-size="12">Xcode 27 GUI -&gt; claude-acp.sh ① (load config.json, exec ACP adapter)</text>
+  <text x="651" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; ACP adapter spawns CLAUDE_CODE_EXECUTABLE -&gt; claude-acp.sh ②</text>
+  <text x="651" y="388" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12">-&gt; Rewrite --setting-sources project,local + inject MCP servers</text>
+  <text x="651" y="410" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">-&gt; exec real claude (0 wrapper PIDs, pure ACP stdout)</text>
+
+  <!-- Bottom Card: FinOps Closed-Form Model -->
+  <rect x="40" y="468" width="1120" height="182" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="498" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Model (18 macOS / Full-Stack AI Devs · $95.00/hr · Enterprise Max/Gateway Base Seats: not_measured)</text>
+
+  <text x="60" y="530" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path A (API Key Leak + Global Settings Crash):</text>
+  <text x="395" y="530" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$2,040.00 API leak + $4,180.00 labor (44.0h) = $6,220.00/mo</text>
+  <rect x="860" y="516" width="270" height="16" rx="4" fill="#EF4444"/>
+
+  <text x="60" y="564" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path B (Cold Spawn -p + Manual JSON Edits):</text>
+  <text x="395" y="564" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$960.00 API/cache + $2,090.00 labor (22.0h)  = $3,050.00/mo</text>
+  <rect x="860" y="550" width="132" height="16" rx="4" fill="#F59E0B"/>
+
+  <text x="60" y="598" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path C (claude-p-pipeline + claude-xcode-agent):</text>
+  <text x="395" y="598" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$210.00 API/cache + $380.00 labor (4.0h)     = $590.00/mo</text>
+  <rect x="860" y="584" width="26" height="16" rx="4" fill="#10B981"/>
+
+  <text x="60" y="632" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Net Verified Savings (Path C vs Path A): $5,630.00 / month (-90.51% TCO · $67,560.00/yr · 40.0h/mo saved [-90.91%])</text>
+</svg>

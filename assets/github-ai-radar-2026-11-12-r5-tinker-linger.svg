@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgR5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#121E36"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentR5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bgR5)"/>
+  <rect x="28" y="24" width="1144" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="28" y="24" width="1144" height="6" rx="3" fill="url(#accentR5)"/>
+
+  <text x="54" y="66" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-12 NIGHT SHIFT · ROUND 5 (CUMULATIVE R104) · SESSION-TRANSCRIPT SFT &amp; 12GB-VRAM 125B LOCAL AGENT FAQ</text>
+  <text x="54" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22.5" font-weight="800">drost-ai/tinker-ai-skill (317★ Tess-4.5 Recipe) + simplexai-labs/linger (PolyStrata 125B)</text>
+  <text x="54" y="124" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5">9-Step Per-Session Anonymized SFT &amp; Continuation Compaction Bridge · PolyStrata GPU/RAM/SSD MoE Offloading (45.5 tok/s on RTX 3060 12GB) · -89.01% TCO</text>
+
+  <!-- Left Card: drost-ai/tinker-ai-skill -->
+  <rect x="52" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="74" y="178" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">1. drost-ai/tinker-ai-skill (317★ · Python · MIT · Tess-4.5 Recipe)</text>
+  <text x="74" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">9-Step Pipeline Distilling Claude Code Sessions into a Local GGUF</text>
+
+  <rect x="74" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="238" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Per-Session Randomized Identity Anonymization (Zero Fake-World Memorization)</text>
+  <text x="88" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Replaces credentials by value &amp; generates distinct random usernames/paths/orgs per session</text>
+  <text x="88" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Prevents the fine-tuned model from memorizing and asserting a single static dummy identity</text>
+
+  <rect x="74" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="314" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Continuation Compaction Bridge, Full Tool Schemas &amp; Preserved Thinking</text>
+  <text x="88" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Slices with the real tokenizer, never splits tool calls from results &amp; injects compaction bridges</text>
+  <text x="88" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Keeps system prompt, tool schemas &amp; historical `<think>` blocks on every row to prevent regression</text>
+
+  <rect x="74" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="396" fill="#F59E0B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Behavioural Sampling Check &amp; Training-Matched `serve_gguf.sh`</text>
+  <text x="88" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Judges checkpoints by sampled behaviour rather than NLL loss curve (catches silent collapses)</text>
+  <text x="88" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Exports GGUF + vision projector + EAGLE-3 draft head with matched `llama.cpp` chat templates</text>
+
+  <!-- Right Card: simplexai-labs/linger -->
+  <rect x="613" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="635" y="178" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">2. simplexai-labs/linger (105★ · TypeScript · PolyStrata Engine)</text>
+  <text x="635" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Open-Source Personal Agent Running 125B MoE on a 12 GB Consumer GPU</text>
+
+  <rect x="635" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="238" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">PolyStrata 3-Tier Expert Hierarchy: 12GB VRAM + 64GB RAM + NVMe SSD</text>
+  <text x="649" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Runs 125B `Qwen3.8-Flash-Next` (55 GB 3-bit file) without an 80 GB H100</text>
+  <text x="649" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Hot experts in 12GB GPU, warm in 64GB RAM, cold on SSD → 45.5 tok/s on RTX 3060 (179 on 5090)</text>
+
+  <rect x="635" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Cross-App Local Context, Shared Wiki Memory &amp; `team.md` Squads</text>
+  <text x="649" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Searches authorized Files, Mail, Calendar, Slack &amp; Docs locally to synthesize project briefs</text>
+  <text x="649" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Compiles one `team.md` contract followed by research, copy, and visual sub-agents</text>
+
+  <rect x="635" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="396" fill="#A855F7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Proactive "Another Me" with Negative-Feedback Preference Learning</text>
+  <text x="649" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Watches inbox/calendar/files in the background and surfaces finished drafts for approval</text>
+  <text x="649" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Every human "not now" dismissal updates its interruption threshold and local wiki memory</text>
+
+  <!-- Bottom FinOps Comparison Strip -->
+  <rect x="52" y="488" width="1096" height="140" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <text x="74" y="516" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261112-R5-TINKER-LINGER · 1 Monthly SFT Run + 15 Local 125B Personal Agents)</text>
+
+  <rect x="74" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#EF4444"/>
+  <text x="90" y="552" fill="#FCA5A5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path A: Naive Chat SFT + Cloud 80GB H100s</text>
+  <text x="90" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$6,460.00 / mo</text>
+  <text x="90" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$2,320.00 GPU/API + $4,140.00 labor (46.0h @ $90/h)</text>
+
+  <rect x="424" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="440" y="552" fill="#FCD34D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path B: Uncompacted SFT + 8B Local Models</text>
+  <text x="440" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$3,260.00 / mo (-49.54%)</text>
+  <text x="440" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$1,100.00 compute + $2,160.00 labor (24.0h @ $90/h)</text>
+
+  <rect x="774" y="530" width="352" height="82" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="790" y="552" fill="#6EE7B7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path C: tinker-ai-skill + Linger PolyStrata</text>
+  <text x="790" y="574" fill="#ECFDF5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$710.00 / mo (-89.01% · Save $5,750.00/mo)</text>
+  <text x="790" y="596" fill="#A7F3D0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$260.00 Tinker LoRA + $450.00 labor (5.0h) · PC Hardware: not_measured</text>
+</svg>

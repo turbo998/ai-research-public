@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR16" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR16" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR16)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR16)" rx="3"/>
+
+  <!-- Header -->
+  <text x="40" y="58" fill="#FB7185" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-11 NIGHT SHIFT · ROUND 16 (CUMULATIVE R61) · 6-STEP JOINT VIDEO+AUDIO &amp; MULTI-SHOT CONTINUITY</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800">Video-Rebirth/hyperflow-h3-flash (13.7B 6-Step) + KadoBOT/ComfyUI-H3-Continuity-Studio</text>
+  <text x="40" y="115" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="14">Two-Time (t, r) Flow Distillation (8.3x Fewer NFE) + 9.1GB GGUF / W8A8 INT8 convrot + Cross-Angle Memory &amp; h3c-mcp (-86.16% Cost)</text>
+
+  <!-- Left Panel: HyperFlow-H3-Flash -->
+  <rect x="40" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#F43F5E" stroke-width="1.5"/>
+  <rect x="56" y="152" width="215" height="24" rx="6" fill="#881337"/>
+  <text x="66" y="169" fill="#FDA4AF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">6-STEP DISTILL · 8.3x FEWER NFE</text>
+  <text x="282" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">Video-Rebirth/hyperflow-h3-flash (127★)</text>
+
+  <rect x="56" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="208" fill="#FB7185" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Two-Time (t, r) Embedder &amp; CFG-Free 4–8 Step Schedule (CFG = 1)</text>
+  <text x="70" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Cuts MiniMax-H3 13.7B from 50 NFE (25 steps x 2 CFG) to 6 NFE (6 steps x 1 CFG)</text>
+  <text x="70" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Joint 720p 24fps video (5–15s) + 32 kHz stereo audio across t2va, fl2va, ref2va (12 refs)</text>
+
+  <rect x="56" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="296" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. 9.1 GB Q4_K_M GGUF for Consumer 24GB RTX GPUs (3090 / 4090 / 5090)</text>
+  <text x="70" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Runs in ComfyUI (--fast-disk on 16GB RAM), Unsloth Studio &amp; stable-diffusion.cpp</text>
+  <text x="70" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Paired with 15.7GB qwen3vl_32b_minimax_h3_nvfp4_awq text encoder + 32-bit matmul split</text>
+
+  <rect x="56" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="384" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. W8A8 INT8 convrot (~16 GB) with Triton &amp; Multi-GPU Context Parallelism</text>
+  <text x="70" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Never downloads 62GB bf16 base transformer; supports video+audio ref2va inputs</text>
+  <text x="70" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Scales across 1–8 H100/H200/B200 GPUs (FlashAttention-3) or 24GB+ RTX GPUs</text>
+
+  <!-- Right Panel: ComfyUI-H3-Continuity-Studio -->
+  <rect x="615" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="631" y="152" width="215" height="24" rx="6" fill="#4C1D95"/>
+  <text x="641" y="169" fill="#C4B5FD" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">MULTI-SHOT STUDIO + MCP</text>
+  <text x="858" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">KadoBOT/ComfyUI-H3-Continuity-Studio (94★)</text>
+
+  <rect x="631" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="208" fill="#A78BFA" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Multi-Shot Timeline Studio &amp; Cross-Angle Visual Memory</text>
+  <text x="645" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Preserves character/scene identity across camera angle cuts and shot joins</text>
+  <text x="645" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Integrates MiniMax H3 Context Windows &amp; CONTINUITY-CHECK join inspection</text>
+
+  <rect x="631" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="296" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. Qwen Story Studio &amp; Still-Image Subgraph Integration</text>
+  <text x="645" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Structured shot-by-shot narrative planning (examples/h3_story_studio.json)</text>
+  <text x="645" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Optional base-en.txt &amp; ref-en.txt prompt guides in h3_continuity/h3_guide/</text>
+
+  <rect x="631" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="384" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Standalone h3c-mcp Server for Codex &amp; Claude Code Automation</text>
+  <text x="645" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• uv run --project .../mcp_adapter h3c-mcp --studio-url http://127.0.0.1:8188 --check</text>
+  <text x="645" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Exposes 7 MCP skills, revision snapshots &amp; submission receipts without browser sync</text>
+
+  <!-- Bottom FinOps Comparison Panel -->
+  <rect x="40" y="472" width="1120" height="178" rx="12" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="60" y="500" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261111-R16-HYPERFLOW-CONTINUITY · 500 Multi-Shot 60s Sequences / 3,000 Shots/Mo)</text>
+  <text x="60" y="520" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">Synthetic benchmark model ($3.20/hr 80GB GPU vs $2.20/hr blended INT8/RTX, TD rate $75/hr; external Story LLM &amp; music licensing: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="60" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#EF4444"/>
+  <text x="76" y="556" fill="#FCA5A5" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path A: Base 62GB bf16 (50 NFE) + Manual Stitch</text>
+  <text x="76" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">GPU Compute (750h): $2,400.00 | Labor (44.0h): $3,300.00</text>
+  <text x="76" y="600" fill="#F87171" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $5,700.00 / mo</text>
+  <text x="76" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Requires 80GB VRAM; severe cross-angle drift &amp; manual seams</text>
+
+  <!-- Path B -->
+  <rect x="425" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="441" y="556" fill="#FCD34D" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path B: HyperFlow 6-Step CLI Only (No Studio)</text>
+  <text x="441" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">GPU Compute (160h): $512.00 | Labor (28.0h): $2,100.00</text>
+  <text x="441" y="600" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $2,612.00 / mo (-54.18%)</text>
+  <text x="441" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Fast per-clip generation, but manual multi-shot splicing remains</text>
+
+  <!-- Path C -->
+  <rect x="790" y="534" width="350" height="98" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="2"/>
+  <text x="806" y="556" fill="#6EE7B7" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path C: HyperFlow-Flash + Continuity Studio</text>
+  <text x="806" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">GPU Compute (120h): $264.00 | Labor (7.0h): $525.00</text>
+  <text x="806" y="600" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $789.00 / mo (Saves $4,911.00 · -86.16%)</text>
+  <text x="806" y="618" fill="#A7F3D0" font-family="Inter, system-ui, sans-serif" font-size="11">$58,932.00/yr saved · -84.09% TD hours · h3c-mcp automated</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg43" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#111E34"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent43" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg43)"/>
+  <rect x="28" y="24" width="1144" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="28" y="24" width="1144" height="6" rx="3" fill="url(#accent43)"/>
+
+  <text x="54" y="66" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-11 NIGHT SHIFT · ROUND 43 (CUMULATIVE R88) · PER-PROJECT AGENT VM &amp; DESKTOP VM ARCHITECTURE FAQ</text>
+  <text x="54" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="800">devvmhq/devvm (556★ Per-Project Lima VM) + tobi/wrapvm (357★ XFCE + CDP Desktop VM)</text>
+  <text x="54" y="124" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5">Auto-Detected Toolchains &amp; Isolated Agent Logins · Smolfile/Containerfile XFCE + voxl:6080 + agent-browser &amp; AT-SPI agent-desktop · -87.78% TCO</text>
+
+  <!-- Left Card: devvmhq/devvm -->
+  <rect x="52" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="74" y="178" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">1. devvmhq/devvm (556★ · Go / Lima 2.2+ · Minisign Verified)</text>
+  <text x="74" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">"One VM for Every Project": Auto-Toolchain Detection &amp; Agent Store Isolation</text>
+
+  <rect x="74" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="238" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Sub-Second Cached Base Image &amp; Same-Path Folder Mounting</text>
+  <text x="88" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Builds base Lima/QEMU/KVM image once; subsequent per-project VMs boot in seconds</text>
+  <text x="88" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Mounts only the project directory at the identical host path without exposing `$HOME`</text>
+
+  <rect x="74" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Auto-Detected Toolchains &amp; Composable Layers (`docker` / `nix` / `desktop`)</text>
+  <text x="88" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Inspects project manifests (`package.json`, `Cargo.toml`, etc.) to provision exact toolchains</text>
+  <text x="88" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Supports built-in `docker`, `nix`, `desktop` layers &amp; custom `devvm layer new` + network tiers</text>
+
+  <rect x="74" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="396" fill="#A855F7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Dedicated Agent Credential Store (`devvm agent login` &amp; `import`)</text>
+  <text x="88" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Runs Claude Code, Codex, opencode &amp; pi with isolated logins, skills &amp; MCP servers</text>
+  <text x="88" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Minisign-verified releases (`RWSjzFsn...`) + `devvm doctor` preflight diagnostics</text>
+
+  <!-- Right Card: tobi/wrapvm -->
+  <rect x="613" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="635" y="178" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">2. tobi/wrapvm (357★ · Containerfile + Smolfile · by @tobi)</text>
+  <text x="635" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Headed XFCE Desktop VM with Shared Chrome CDP, AT-SPI &amp; Audio</text>
+
+  <rect x="635" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="238" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Xvfb `:1` + XFCE Desktop Streamed via `voxl` on Port `6080`</text>
+  <text x="649" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Boots as a `smolvm` microVM (`./wrapvm`) or Docker/Podman container (`ghcr.io/tobi/wrapvm:desktop`)</text>
+  <text x="649" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">`wrap-desktop url` prints password-protected browser viewer link with live PulseAudio stream</text>
+
+  <rect x="635" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="314" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Pre-Wired `agent-browser` (CDP `:9222`) &amp; `agent-desktop` (AT-SPI)</text>
+  <text x="649" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Persistent sandboxed Google Chrome on CDP 9222/9223 with `{"headed": true, "autoConnect": true}`</text>
+  <text x="649" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Pairs `vercel-labs/agent-browser` + `vercel-labs/agent-desktop` (AT-SPI accessibility tree)</text>
+
+  <rect x="635" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="396" fill="#F59E0B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Built-In `~/.agents/skills` (`desktop` &amp; `browser`) &amp; FFmpeg Audio Capture</text>
+  <text x="649" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Ships ready-to-use `desktop` &amp; `browser` skills + PulseAudio null sink recordable by `ffmpeg`</text>
+  <text x="649" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Clear shell prompt (`[vm:&lt;machine&gt;]` or `[container:&lt;host&gt;]`) prevents host/guest confusion</text>
+
+  <!-- Bottom FinOps Comparison Strip -->
+  <rect x="52" y="488" width="1096" height="140" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <text x="74" y="516" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261111-R43-DEVVM-WRAPVM · 45 Multi-Repo &amp; Headed GUI Agent Sandboxes/Mo)</text>
+
+  <rect x="74" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#EF4444"/>
+  <text x="90" y="552" fill="#FCA5A5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path A: Bare Host Run + Cloud VDI Desktops</text>
+  <text x="90" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$5,730.00 / mo</text>
+  <text x="90" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$1,680.00 VDI/tokens + $4,050.00 labor (45.0h @ $90/h)</text>
+
+  <rect x="424" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="440" y="552" fill="#FCD34D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path B: Raw DevContainers + Headless Browser</text>
+  <text x="440" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$2,890.00 / mo (-49.56%)</text>
+  <text x="440" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$820.00 compute + $2,070.00 labor (23.0h @ $90/h)</text>
+
+  <rect x="774" y="530" width="352" height="82" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="790" y="552" fill="#6EE7B7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path C: devvm (Lima) + tobi/wrapvm (XFCE)</text>
+  <text x="790" y="574" fill="#ECFDF5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$700.00 / mo (-87.78% · Save $5,030.00/mo)</text>
+  <text x="790" y="596" fill="#A7F3D0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$250.00 compute + $450.00 labor (5.0h) · Bare-metal hosts: not_measured</text>
+</svg>

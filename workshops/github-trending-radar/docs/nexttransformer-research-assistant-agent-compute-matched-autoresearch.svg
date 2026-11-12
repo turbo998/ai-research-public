@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg36" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#111C33"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent36" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg36)"/>
+  <rect x="28" y="24" width="1144" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="28" y="24" width="1144" height="6" rx="3" fill="url(#accent36)"/>
+
+  <text x="54" y="66" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-11 NIGHT SHIFT · ROUND 36 (CUMULATIVE R81) · TRANSFORMER LAB &amp; AUTORESEARCH ARCHITECTURE FAQ</text>
+  <text x="54" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="800">NextTransformer (±1% Compute-Matched 49B Zoo) + Research-Assistant-Agent (12-Agent DAG)</text>
+  <text x="54" y="124" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5">4.672 GFLOPs/tok (±1% Admission) · 1.38x Exact Fused Shell · Opus AttnRes-Canon · Hidden-Holdout AutoResearch &amp; Claim-Evidence Graph · -86.91% TCO</text>
+
+  <!-- Left Card: Interactive-Active-AI/NextTransformer -->
+  <rect x="52" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="74" y="178" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">1. Interactive-Active-AI/NextTransformer (404★ · PyTorch 2.9.1)</text>
+  <text x="74" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Compute-Matched Pretraining Protocol, 36-Model Zoo &amp; Autonomous Agent Arena</text>
+
+  <rect x="74" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="238" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Strict Compute-Matched Protocol (49.152B Tokens · 4.672 GFLOPs/tok)</text>
+  <text x="88" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Pinned ClimbMix · 32,768 vocab · 2,048 ctx · 46,875 updates · ±1% admission / ±2% run audit</text>
+  <text x="88" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Evaluated on 189 validation BPB points + full CORE-22 at 6 checkpoints across 38 runs</text>
+
+  <rect x="74" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="314" fill="#A855F7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">7 Architecture Families &amp; Agent-Discovered AttnRes-Canon</text>
+  <text x="88" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Residual (AttnRes, HC, mHC, AttnRes-Canon found by Opus) · Looped (Huginn, Ouro, MoR)</text>
+  <text x="88" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Sparse (NSA, MoBA, DSA) · Linear (GDN, KDA, GLA, RetNet) · Hybrid (GDN-SWA, KDA-MLA-NoPE)</text>
+
+  <rect x="74" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="396" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">ResearchBoost-Agent 1.38x Exact Fused Speedups &amp; Multimodal Track</text>
+  <text x="88" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">PR #26 `--speedups exact` reproduces default path bit-for-bit at 1.38x speed on 1x8-GPU node</text>
+  <text x="88" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">NextTransformer-V (8,192-ctx SigLIP2 interleaved) + 200B/400B Scaling RFC + Arena v2 MCP Gym</text>
+
+  <!-- Right Card: zzp1221/Research-Assistant-Agent -->
+  <rect x="613" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="635" y="178" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">2. zzp1221/Research-Assistant-Agent (195★ · Go 1.27.3 v0.9.0)</text>
+  <text x="635" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Paper Reproduction, Hidden-Holdout AutoResearch &amp; Claim-Evidence Graph</text>
+
+  <rect x="635" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="238" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">L0–L4 Complexity Router, Immutable r1/r2 DAG &amp; 12 Specialized Agents</text>
+  <text x="649" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Routes across Librarian, Benchmark, Research Coding, AutoResearch, Ablation ToT, Visual Verifier</text>
+  <text x="649" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Typed `ResearchContext` + `InputBindings` + optimistic-locked DAG revision gate before execution</text>
+
+  <rect x="635" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Isolated Go Sandbox, EnvironmentManifest &amp; Hidden-Holdout AutoResearch</text>
+  <text x="649" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Docker/Native/VM sandbox seals image digest, pip freeze &amp; dataset SHA-256 (`confirm_important`)</text>
+  <text x="649" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Frozen ResearchSpec + UCB/Top-K Beam/UCT search + real execution Keep/Reject on hidden holdout</text>
+
+  <rect x="635" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="396" fill="#F59E0B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Honest `PlanOutcome` Semantics &amp; Claim-by-Claim Evidence Rubric</text>
+  <text x="649" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Strictly separates `completed / partial / smoke / mock / blocked / failed / needs_review`</text>
+  <text x="649" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Binds every paper claim to real artifacts + `manifest.json`/`checksums.sha256` &amp; PaperPage Wiki</text>
+
+  <!-- Bottom FinOps Comparison Strip -->
+  <rect x="52" y="488" width="1096" height="140" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <text x="74" y="516" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261111-R36-NEXTTRANSFORMER-RESEARCHAGENT · 12 Pretraining Ablations + 40 Paper Repro Runs/Mo)</text>
+
+  <rect x="74" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#EF4444"/>
+  <text x="90" y="552" fill="#FCA5A5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path A: Drifted FLOPs + Unverified Agent Scripts</text>
+  <text x="90" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$7,030.00 / mo</text>
+  <text x="90" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$2,350.00 wasted compute + $4,680.00 labor (52.0h @ $90/h)</text>
+
+  <rect x="424" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="440" y="552" fill="#FCD34D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path B: Basic Trainer + Single-Agent Notebook</text>
+  <text x="440" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$3,640.00 / mo (-48.22%)</text>
+  <text x="440" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$1,120.00 compute + $2,520.00 labor (28.0h @ $90/h)</text>
+
+  <rect x="774" y="530" width="352" height="82" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="790" y="552" fill="#6EE7B7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path C: NextTransformer + Research-Assistant-Agent</text>
+  <text x="790" y="574" fill="#ECFDF5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$920.00 / mo (-86.91% · Save $6,110.00/mo)</text>
+  <text x="790" y="596" fill="#A7F3D0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$380.00 compute + $540.00 labor (6.0h) · 200B+ cluster: not_measured</text>
+</svg>

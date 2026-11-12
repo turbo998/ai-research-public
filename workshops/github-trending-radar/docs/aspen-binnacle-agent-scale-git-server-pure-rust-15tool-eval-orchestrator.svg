@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg23" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent23" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg23)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accent23)" rx="3"/>
+
+  <text x="40" y="58" fill="#FB923C" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-12 GITHUB AI RADAR · ROUND 23 (CUMULATIVE R122) ARCHITECTURE SELECTION FAQ</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">Agent-Scale 567 Pushes/s Git Server &amp; 15-Tool Pure-Rust Eval Kit</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">reason-machines/aspen (Pando/Origin-Style S3 Pack + Postgres CAS Git) + TechTideOhio/binnacle (Zero-FFI 15-Crate TideOS Eval Orchestrator)</text>
+
+  <!-- Left Card: reason-machines/aspen -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#F97316" stroke-width="1.5"/>
+  <text x="60" y="168" fill="#FB923C" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">1. reason-machines/aspen (121★ · Apache-2.0 · Pre-Alpha Rust)</text>
+  <text x="60" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• 567 Pushes/sec to One Repo (p50=208ms, p99=314ms, 30ms visibility):</text>
+  <text x="60" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  4.7x faster than published 120 pushes/s on S3 Standard + 4-core Postgres</text>
+  <text x="60" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Per-Branch Causal CAS &amp; Trunk-Only Advertisement: Pushes to different</text>
+  <text x="60" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  agent branches never block each other; zero repo-wide lock or local disk repo</text>
+  <text x="60" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Self-Contained Immutable S3 Packs + LSM Compaction: Never unpacks or</text>
+  <text x="60" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  recompresses; streams stitched packs or aspen-express packfile-uri links</text>
+  <rect x="60" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="76" y="344" fill="#FDBA74" font-family="Consolas, monospace" font-size="12">1,000 Agents Push -&gt; Advertise Trunk Only + Per-Branch Postgres CAS</text>
+  <text x="76" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; Complete Thin Pack into Self-Contained Immutable S3 Object</text>
+  <text x="76" y="388" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12">-&gt; Geometric LSM-Level Compaction (Skip-List O(log N) Fetch Plan)</text>
+  <text x="76" y="410" fill="#7DD3FC" font-family="Consolas, monospace" font-size="12">-&gt; 567 pushes/s sustained (p50 208ms, p99 314ms, aspen dev SQLite)</text>
+
+  <!-- Right Card: TechTideOhio/binnacle -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="635" y="168" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">2. TechTideOhio/binnacle (85★ · MIT · Zero-FFI Pure Rust)</text>
+  <text x="635" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Unified 15-Tool TideOS Eval Orchestrator: Zero Python/C FFI; discovers</text>
+  <text x="635" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  standalone Rust binaries via binnacle doctor &amp; emits standard JSON envelopes</text>
+  <text x="635" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Mathematically Bounded Rigor: keel (LCS trajectory, 14 vs 3 step cost),</text>
+  <text x="635" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  temper (pass@k vs pass^k), gavel (Rogan-Gladen debiasing), plumb (McNemar)</text>
+  <text x="635" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Non-Compensatory CI Gate &amp; Closed Loop: weir blocks category regressions,</text>
+  <text x="635" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  tare enforces CPST Pareto bounds, tether harvests SimHash-deduped failures</text>
+  <rect x="635" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="651" y="344" fill="#7DD3FC" font-family="Consolas, monospace" font-size="12">binnacle doctor -&gt; reval / gild / tessel / assay / tide-rill</text>
+  <text x="651" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; keel (LCS trajectory) + temper (pass^k) + parley + gavel + poise</text>
+  <text x="651" y="388" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12">-&gt; plumb (SplitMix64 BCa CI &amp; McNemar) + weir + eddy (CUSUM) + tare</text>
+  <text x="651" y="410" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">-&gt; Fail-Closed Verdict -&gt; tether capture (SimHash Gold Set Harvest)</text>
+
+  <!-- Bottom Card: FinOps Closed-Form Model -->
+  <rect x="40" y="468" width="1120" height="182" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="498" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Model (250 Concurrent Coding Agents &amp; CI Eval Pipelines · $100.00/hr · S3 Egress &amp; Enterprise Git Seats: not_measured)</text>
+
+  <text x="60" y="530" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path A (Disk Git Locks + Python LLM Judges):</text>
+  <text x="395" y="530" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$2,450.00 CI/judge + $4,800.00 labor (48.0h) = $7,250.00/mo</text>
+  <rect x="860" y="516" width="275" height="16" rx="4" fill="#EF4444"/>
+
+  <text x="60" y="564" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path B (Git Mirrors + Uncalibrated Pytest):</text>
+  <text x="395" y="564" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$1,180.00 CI/judge + $2,400.00 labor (24.0h) = $3,580.00/mo</text>
+  <rect x="860" y="550" width="136" height="16" rx="4" fill="#F59E0B"/>
+
+  <text x="60" y="598" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path C (aspen 567 push/s + binnacle 15-Tool):</text>
+  <text x="395" y="598" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$275.00 S3/eval    + $500.00 labor (5.0h)    = $775.00/mo</text>
+  <rect x="860" y="584" width="29" height="16" rx="4" fill="#10B981"/>
+
+  <text x="60" y="632" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Net Verified Savings (Path C vs Path A): $6,475.00 / month (-89.31% TCO · $77,700.00/yr · 43.0h/mo saved [-89.58%])</text>
+</svg>

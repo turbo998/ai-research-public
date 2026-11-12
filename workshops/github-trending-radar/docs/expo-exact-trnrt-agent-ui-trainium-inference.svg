@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR4)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR4)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="800">
+    2026-11-11 ROUND 4 · EXPO/EXACT (AGENT-NATIVE 4-HOST UI) + RUNANYWHEREAI/TRNRT (TRAINIUM2 1M)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    expo/exact (★2,721 · Rust · 100ms p50 boot · 10-op virtual clock) × trnrt (★1,264 · NKI Megakernels · 3.57M TPM · $0.040/1M spot)
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">10-OP AGENT CLOCK</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-82.57% PLATFORM TCO</text>
+
+  <!-- Row 1: Dual Deep-Dive Architecture Comparison -->
+  <rect x="40" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 客户端变革：expo/exact (★2,721 · Rust 跨四端 Agent-Native UI 运行时)
+  </text>
+  <text x="60" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 声明式 Contract 语言：一份 app.contract 编译为紧凑 Plan，彻底告别 WebView 与 JS 桥</text>
+  <text x="60" y="224" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 四端原生绘制：Web (~20KB ES Module) · macOS (AppKit) · iOS (UIKit) · Linux (GPU Painter)</text>
+  <text x="60" y="248" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 首像素零 JS 执行：TS 编译期转 Hermes 字节码并在首帧后加载，冷启动 &amp; 热重载 100ms p50</text>
+  <text x="60" y="272" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 10 动作虚拟时钟驱动 (scripts/agent.mjs)：tree·screenshot·tap·type·state·layout·logs·clock·prefer·perf</text>
+  <rect x="60" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="76" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么专为 AI Agent 而生？「时钟归 Agent 所有 (clock +60000 / clock settle)」</text>
+  <text x="76" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">传统 E2E 测试靠 sleep(2000) 等动画结束极易偶发失败；exact 在两次操作间冻结时间，</text>
+  <text x="76" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">Agent 发送 clock +60000 瞬间快进 60 秒并读取确定性状态，一份 app.test.contract 四端通用！</text>
+  <text x="76" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">RealWorld Conduit 实测 (anonymized_reported): 26 KB 代码 vs React 81 KB，比 React SSR 水合快 ~300ms</text>
+
+  <rect x="732" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="752" y="172" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. 算力底座变革：RunanywhereAI/trnrt (★1,264 · AWS Trainium2 百万上下文推理引擎)
+  </text>
+  <text x="752" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 单台 trn2.48xlarge 双引擎架构：每引擎跨 32 逻辑 NeuronCores (8 颗 Trainium2, LNC=2) 张量并行</text>
+  <text x="752" y="224" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• NKI Layer Megakernels：每半层融合成 1 个超级算子 (KDA Attention + DSA + mHC + MoE FFN)</text>
+  <text x="752" y="248" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 1,048,576 (1M) 上下文 + 双层前缀缓存：FP8 256-token KV 页基数树 + 每 Rank 4GiB 主机内存卸载</text>
+  <text x="752" y="272" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 离线 CPU 预编译 (Offline Compile)：普通 x86 主机编译 157 张计算图，推理机零编译秒级拉起</text>
+  <rect x="752" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="768" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">SemiAnalysis AgentX 基准实测 (GLM-5.3-Flash · 32 并发 Coding Agents · 1M 上下文):</text>
+  <text x="768" y="338" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">• Batch 12 峰值吞吐: 3.57M tokens/min (59,516 tok/s/box) | Batch-8 解码步: 32.2ms → 24.0ms (-25.47%)</text>
+  <text x="768" y="358" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">• 成本击穿底线: Capacity Block ($35.76/h) = $0.167 / 1M tokens | Spot ($8.60/h) = $0.040 / 1M tokens</text>
+  <text x="768" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">• 确定性校验 (tools/graph_equiv.py): 32 Rank × 157 图 100% EQUAL，384/384 请求字节级完全一致</text>
+
+  <!-- Row 2: End-to-End Architecture Flow -->
+  <rect x="40" y="428" width="1360" height="196" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="458" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. 端到端协同流：从 Trainium2 百万上下文 Coding Agent 推理到 Exact 四端原生确定性交付
+  </text>
+
+  <rect x="60" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="500" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">STAGE 1: 离线编译与会话亲和路由</text>
+  <text x="76" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">x86 CPU (neuronx-cc 2.27) → 157 Graphs</text>
+  <text x="76" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">Session-Affine Router 将同一 Agent 会话</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">锁定至同一 TP=32 引擎，最大化命中</text>
+  <text x="76" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">FP8 HBM + 4GiB/rank Host 前缀缓存</text>
+
+  <rect x="401" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="500" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">STAGE 2: NKI 算子融合极速生成</text>
+  <text x="417" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">KDA + Fused DSA + mHC + MoE FFN</text>
+  <text x="417" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">在 1M 上下文下输出紧凑 Contract 视图</text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">(app.contract) 与业务逻辑 (app.ts)，</text>
+  <text x="417" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">整套应用代码轻松装入单次上下文窗口</text>
+
+  <rect x="742" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="500" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">STAGE 3: Contract 编译与原生渲染</text>
+  <text x="758" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">contract build --json (99ms 热更新)</text>
+  <text x="758" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">Rust Layout Kernel 按 CSS 规则计算盒模型，</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">直接驱动 DOM / AppKit / UIKit / GPU，</text>
+  <text x="758" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">首帧前 0 字节业务 JS 运行</text>
+
+  <rect x="1083" y="476" width="297" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="500" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">STAGE 4: 虚拟时钟四端自动验收</text>
+  <text x="1099" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">bun scripts/agent.mjs web/macos/ios</text>
+  <text x="1099" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">通过 tap / type / clock +60000 / state</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">零延迟抖动跑通 app.test.contract，</text>
+  <text x="1099" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">源码行级 Source Map 精准回溯任何节点</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="642" width="1360" height="238" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="672" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. 闭式 FinOps 算例：月消耗 1,500M (15亿) Agent Tokens + 四端应用 40 套 E2E 维护 (synthetic, Apple 账号/真机架费: not_measured)
+  </text>
+  <rect x="60" y="690" width="1320" height="170" rx="10" fill="#1E293B"/>
+  <text x="80" y="720" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (商用云 API @$1.20/1M + React Native/Electron 多端桥接与 sleep 测试维护): $1,800.00 Token + $4,800.00 (64.0h @$75/h) = $6,600.00/月
+  </text>
+  <text x="80" y="754" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (普通自建 GPU 推理 @$0.45/1M + 传统跨端 WebView 壳维护): $675.00 Token + $2,700.00 (36.0h @$75/h) = $3,375.00/月
+  </text>
+  <text x="80" y="788" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (trnrt Trainium2 Capacity Block @$0.167/1M + expo/exact 单一 Contract &amp; 虚拟时钟测试): $250.50 Token + $900.00 (12.0h) = $1,150.50/月
+  </text>
+  <text x="80" y="818" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $5,449.50/月 (-82.57%, 年省 $65,394.00；若用 Spot @$0.040/1M 仅 $60.00 Token/月) | 跨端工程工时省 52.0h/月 (-81.25%)
+  </text>
+  <text x="80" y="846" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    快速验证: bun scripts/exact.mjs setup &amp;&amp; bun scripts/exact.mjs new myapp | trnrt: tools/graph_equiv.py (157/157 EQUAL, 384/384 byte-identical)
+  </text>
+</svg>

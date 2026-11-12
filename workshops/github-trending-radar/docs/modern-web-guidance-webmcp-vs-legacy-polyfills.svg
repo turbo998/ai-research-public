@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR3)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR3)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="22.5" font-weight="800">
+    2026-11-11 ROUND 3 · GOOGLECHROME/MODERN-WEB-GUIDANCE-SRC (BASELINE + WEBMCP + BUILT-IN AI)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    Daily Trending DOM #3 (+133★ today · ★1,515) | Stewarded by Chrome, Edge, Firefox &amp; MDN | Chromium 146+ WebMCP &amp; Playwright Evals
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="700">18 DOMAIN GUIDES</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="12" font-weight="700">-85.20% WEB AI COST</text>
+
+  <!-- Row 1: Why LLMs Emit Legacy 2020 Web Bloat vs Modern Web Guidance -->
+  <rect x="40" y="142" width="440" height="260" rx="14" fill="#111827" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#F87171" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 裸大模型默认输出 (2020 历史语料惯性陷阱)
+  </text>
+  <text x="60" y="202" fill="#FCA5A5" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 弹层定位：手写百行 JS getBoundingClientRect + Popper.js</text>
+  <text x="60" y="228" fill="#FCA5A5" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 状态切换：引入重型动画库，缺乏 View Transitions 与 Top-Layer</text>
+  <text x="60" y="254" fill="#FCA5A5" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 网页接 Agent：靠外部 Playwright 爬 DOM 或截图猜坐标，极易崩</text>
+  <text x="60" y="280" fill="#FCA5A5" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 端侧小任务：连简单摘要/语种检测都发回云端消耗昂贵 LLM API</text>
+  <rect x="60" y="302" width="400" height="80" rx="8" fill="#1E293B"/>
+  <text x="74" y="328" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">后果：+185 KB 冗余 Polyfill 包体积 + 键盘无障碍缺失</text>
+  <text x="74" y="350" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">前端工程师每月耗费 48.0h 修补焦点逃逸、层级遮挡与 INP 卡顿</text>
+
+  <rect x="500" y="142" width="440" height="260" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="520" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. 四大浏览器官方现代 Web 平台技能 (Baseline)
+  </text>
+  <text x="520" y="202" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 权威共建：Chrome + Edge + Firefox + MDN 领域 ATL 联合签署</text>
+  <text x="520" y="228" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 原生组件：Popover API + CSS Anchor Positioning + &lt;dialog&gt;</text>
+  <text x="520" y="254" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 现代 CSS/UX：Container Queries, subgrid, oklch, :user-invalid</text>
+  <text x="520" y="280" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 存量扫描：npx modern-web-guidance@latest legacy-scan .</text>
+  <rect x="520" y="302" width="400" height="80" rx="8" fill="#1E293B"/>
+  <text x="534" y="328" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">Outcome-Based Playwright Evals 校准剪枝：</text>
+  <text x="534" y="350" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">实测 Claude Code / Codex / Jetski / Antigravity，剔除已知常识省 Token</text>
+
+  <rect x="960" y="142" width="440" height="260" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="980" y="172" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    3. 浏览器原生 WebMCP + Built-in AI 端侧革命
+  </text>
+  <text x="980" y="202" fill="#A7F3D0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 声明式 WebMCP：&lt;form toolname="..." tooldescription="..."&gt;</text>
+  <text x="980" y="228" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 命令式 WebMCP：document.modelContext.registerTool + AbortSignal</text>
+  <text x="980" y="254" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 框架强制规范：React/Vue useWebMCP · Angular ExperimentalWebMcp</text>
+  <text x="980" y="280" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 端侧 Built-in AI：本地 Summarizer / Translator / LanguageDetector</text>
+  <rect x="980" y="302" width="400" height="80" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="994" y="328" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">核心突破：网页自身即 MCP 工具注册表 (Chromium 146+)！</text>
+  <text x="994" y="350" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.5">无需后端 SSE/stdio MCP Server，UI 状态更新完成后确定性返回</text>
+
+  <!-- Row 2: WebMCP & Legacy-Scan Pipeline -->
+  <rect x="40" y="420" width="1360" height="210" rx="14" fill="#111827" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="60" y="450" fill="#C4B5FD" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. WebMCP (document.modelContext) 八大强制实现契约与四步现代化流水线
+  </text>
+
+  <rect x="60" y="470" width="315" height="138" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="495" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">STEP 1: 存量扫描与按需检索</text>
+  <text x="76" y="518" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.3">npx modern-web-guidance@latest legacy-scan .</text>
+  <text x="76" y="540" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.3">npx modern-web-guidance@latest search/retrieve</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">定位过时 JS 弹层/动画/表单校验，按需拉取</text>
+  <text x="76" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">经过 Playwright 评测去冗余的高密度指南</text>
+
+  <rect x="401" y="470" width="315" height="138" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="495" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">STEP 2: 声明式表单工具暴露</text>
+  <text x="417" y="518" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.3">&lt;form toolname="create-event"</text>
+  <text x="417" y="538" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.3">      tooldescription="..."&gt;</text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">浏览器自动从表单控件提取 JSON Schema，</text>
+  <text x="417" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">零 JS 胶水代码将普通网页表单变为 Agent 工具</text>
+
+  <rect x="742" y="470" width="315" height="138" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="495" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">STEP 3: 命令式动态工具与生命周期</text>
+  <text x="758" y="518" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.3">if (document.modelContext) registerTool(...)</text>
+  <text x="758" y="538" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.3">annotations: { readOnlyHint: true }</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">强制使用 AbortController.abort() 卸载工具</text>
+  <text x="758" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">(严禁直接调 unregisterTool)，等 UI 更新后再 resolve</text>
+
+  <rect x="1083" y="470" width="297" height="138" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="495" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">STEP 4: 端侧 Built-in AI 零成本推理</text>
+  <text x="1099" y="518" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.3">Summarizer / Translator / Detector</text>
+  <text x="1099" y="538" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.3">+ scheduler.yield() 保 INP 流畅</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">把网页摘要、多语种翻译与语种识别卸载</text>
+  <text x="1099" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">到浏览器内置模型，云端 Token 账单归零</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="648" width="1360" height="232" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="678" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    5. 闭式 FinOps 算例：月交付 30 个 Web 模块 + 50,000 次浏览器 Agent 交互 (synthetic, CDN/云主机费: not_measured)
+  </text>
+  <rect x="60" y="694" width="1320" height="166" rx="10" fill="#1E293B"/>
+  <text x="80" y="724" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (裸 LLM 写过时 Polyfill + 外部 DOM/截图爬虫 + 云端摘要 API): $3,360.00 (48.0h 返工) + $900.00 + $200.00 = $4,460.00/月
+  </text>
+  <text x="80" y="758" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (普通静态 CSS Prompt 规则，无 WebMCP 与端侧 Built-in AI): $1,960.00 (28.0h 返工) + $900.00 + $200.00 = $3,060.00/月
+  </text>
+  <text x="80" y="792" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (modern-web-guidance + 原生 WebMCP + Built-in AI): $560.00 (8.0h 审核 @ $70/h) + $100.00 (WebMCP) + $0.00 (端侧AI) = $660.00/月
+  </text>
+  <text x="80" y="822" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $3,800.00/月 (-85.20%, 年省 $45,600.00) | 前端返工工时从 48.0h 降至 8.0h (-40.0h/月, -83.33%)
+  </text>
+  <text x="80" y="848" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    一键接入: npx modern-web-guidance@latest install | 存量现代化体检: npx modern-web-guidance@latest legacy-scan .
+  </text>
+</svg>

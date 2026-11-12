@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg26" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accent26" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg26)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accent26)" rx="3"/>
+
+  <text x="40" y="58" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-12 GITHUB AI RADAR · ROUND 26 (CUMULATIVE R125) ARCHITECTURE SELECTION FAQ</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">Physical AI Quota/Permission Desk Panel &amp; Human-Always-Pays MCP</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">ersinkoc/phonebox (113 Widgets, Claude/Codex/AGY Quotas &amp; Allow/Deny Deck) + NJohansen/handle-mcp (ADR-0001 Zero-Checkout Cart MCP)</text>
+
+  <!-- Left Card: ersinkoc/phonebox -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="60" y="168" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">1. ersinkoc/phonebox (246★ · MIT · .NET 10 + Android 9+)</text>
+  <text x="60" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Zero-Cloud USB / Wi-Fi / Tailscale Desk Panel: 113 widgets &amp; 30 templates</text>
+  <text x="60" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  (including 58 Control Deck widgets in v0.8-0.9 for Podman, OBS, displays)</text>
+  <text x="60" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Claude Code, Codex &amp; Native Antigravity (agy) Quotas: Burn-rate forecast,</text>
+  <text x="60" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  session tokens/context/tools, and zero fake unused-quota on missing reads</text>
+  <text x="60" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Physical Allow / Deny Permission Prompts: Phone buzzes &amp; auto-switches</text>
+  <text x="60" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  page when Claude Code waits for approval or CI review requests arrive</text>
+  <rect x="60" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="76" y="344" fill="#C4B5FD" font-family="Consolas, monospace" font-size="12">.\scripts\install.ps1 -Apk -Autostart (.NET 10 Agent + Android 9+)</text>
+  <text x="76" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; Track Claude + Codex + Native agy Quotas &amp; Burn-Rate Forecast</text>
+  <text x="76" y="388" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12">-&gt; Rule Engine Switches Page on AI Session Blocked -&gt; Allow / Deny</text>
+  <text x="76" y="410" fill="#7DD3FC" font-family="Consolas, monospace" font-size="12">-&gt; 113 Widgets (Podman, CPU/GPU, PR CI Status) over USB/Tailscale</text>
+
+  <!-- Right Card: NJohansen/handle-mcp -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="635" y="168" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">2. NJohansen/handle-mcp (133★ · MIT · ADR-0001 Human Pays)</text>
+  <text x="635" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Architectural Absence of Payment Code (ADR-0001): It can never order or</text>
+  <text x="635" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  pay; checkout code does not exist and a CI test fails if it ever appears</text>
+  <text x="635" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Multi-Store Basket &amp; Delivery Optimization: compare_basket prices pack</text>
+  <text x="635" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  sizes, weekly offers, minimum orders &amp; delivery fees across 3 chains</text>
+  <text x="635" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Strict Write-Tool Scope &amp; Privacy Telemetry: Only set_cart_quantities &amp;</text>
+  <text x="635" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  add_recipe_to_cart write; HANDLE_TELEMETRY=0 or nearest-50kr bucket</text>
+  <rect x="635" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="651" y="344" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12">claude mcp add handle -- uvx handle-mcp@latest</text>
+  <text x="651" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; Read-Only: search_products / list_offers / compare_basket</text>
+  <text x="651" y="388" fill="#93C5FD" font-family="Consolas, monospace" font-size="12">-&gt; Write-Only Cart: set_cart_quantities / add_recipe_to_cart</text>
+  <text x="651" y="410" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">-&gt; ADR-0001 CI Guard: Zero Order/Payment Code -&gt; Human Pays</text>
+
+  <!-- Bottom Card: FinOps Closed-Form Model -->
+  <rect x="40" y="468" width="1120" height="182" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="498" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Model (30 AI Dev Seats &amp; Procurement Workflows · $95.00/hr · Dedicated Hardware &amp; Basket Spend: not_measured)</text>
+
+  <text x="60" y="530" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path A (Blocked Prompts + Auto-Pay Rollbacks):</text>
+  <text x="395" y="530" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$1,980.00 quota/err + $4,180.00 labor (44.0h) = $6,160.00/mo</text>
+  <rect x="860" y="516" width="275" height="16" rx="4" fill="#EF4444"/>
+
+  <text x="60" y="564" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path B (Tab Polling + Single-Store Cart):</text>
+  <text x="395" y="564" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$950.00 quota/API   + $2,090.00 labor (22.0h) = $3,040.00/mo</text>
+  <rect x="860" y="550" width="135" height="16" rx="4" fill="#F59E0B"/>
+
+  <text x="60" y="598" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path C (PhoneBox Panel + handle-mcp ADR-0001):</text>
+  <text x="395" y="598" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$215.00 local/MCP   + $380.00 labor (4.0h)    = $595.00/mo</text>
+  <rect x="860" y="584" width="26" height="16" rx="4" fill="#10B981"/>
+
+  <text x="60" y="632" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Net Verified Savings (Path C vs Path A): $5,565.00 / month (-90.34% TCO · $66,780.00/yr · 40.0h/mo saved [-90.91%])</text>
+</svg>

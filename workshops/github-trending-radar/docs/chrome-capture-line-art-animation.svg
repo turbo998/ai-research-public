@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR7" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR7)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR7)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="800">
+    2026-11-11 ROUND 7 · PAULIRISH/CHROME-CAPTURE (M153 AV1 120FPS) + LINE-ART-ANIMATION (SVG GAIT)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    paulirish/chrome-capture (★301 · Page.startScreenRecording · 17ms stop) × JDhruv14/line-art-animation (★388 · gait.ts/ink.ts)
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">223.5× FASTER STOP</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-82.72% CAPTURE &amp; ANIM TCO</text>
+
+  <!-- Row 1: Dual Deep-Dive -->
+  <rect x="40" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 浏览器录制革命：paulirish/chrome-capture (★301 · Chrome 153+ 原生无 ffmpeg 录制)
+  </text>
+  <text x="60" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 十年历史包袱：2013 年的 Page.startScreencast 每帧转 JPEG → Base64 塞 JSON → 等 ACK → 喂给 ffmpeg</text>
+  <text x="60" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• Chrome M153 新原语 (Page.startScreenRecording)：Compositor 共享内存直通进程外 AV1 编码器</text>
+  <text x="60" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 零 ffmpeg 依赖 + 原生内录：实时写入 libaom AV1 + 48kHz 立体声 Opus 音轨，返回 IO.StreamHandle</text>
+  <text x="60" y="272" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 最高 2160p @ 120fps：无头模式锁 60fps (Metal GPU 加速)，ProMotion 有头模式锁 120Hz CVDisplayLink</text>
+  <rect x="60" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="76" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">M4 Max 实测对比 (6.4s 1280x800 UI 交互回放 · anonymized_reported):</text>
+  <text x="76" y="338" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">• Stop 收尾耗时: 3,800 ms (ffmpeg flush) → 17 ms (提速 223.5 倍！2160p 下 20.5s → 91ms)</text>
+  <text x="76" y="358" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">• WebSocket 流量: 10.5 MB (Base64 JPEG) → 450 KB (-95.71%) | 墙钟总耗时: 21s → 11s (-47.62%)</text>
+  <text x="76" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">• 画质与体积双赢: PSNR 32 dB → 34 dB | 文件大小 480 KB → 330 KB | 支持 await using startRecording</text>
+
+  <rect x="732" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="752" y="172" fill="#C4B5FD" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. 程序化手绘步态动画：JDhruv14/line-art-animation (★388 · 4 模块零依赖 SVG 引擎)
+  </text>
+  <text x="752" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 核心痛点：让 LLM 裸写人物行走 SVG 必定出现“太空步滑步 (Foot Sliding)”与僵硬火柴人线条</text>
+  <text x="752" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• gait.ts 生物力学步态求解器：支撑脚按 walk.speed 反向精确滑移防打滑 + 摆动脚最小急动度轨迹</text>
+  <text x="752" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• ink.ts 手绘钢笔质感：围绕关节曲线绘制两条开放式钢笔描边 (Open Pen Strokes) + 衣摆随膝踝开合</text>
+  <text x="752" y="272" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• motion.ts &amp; daynight.ts：弹簧/钟摆/鼠标风场物理 + ?tau=0.5 昼夜调色板与 ?debug&amp;capture 逐帧捕获</text>
+  <rect x="752" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="768" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么 gait() 是“求解器 (Solver)”而不是死板关键帧？</text>
+  <text x="768" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">脚跟在迈步前自然剥离地面 (Heel peel-off)，胯部高度由双腿几何可达性实时反推（单腿跨步抬升、</text>
+  <text x="768" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">双脚着地微沉），且配备 scripts/clip.ts 自动测量参考视频步态周期与足部暗斑轨迹！</text>
+  <text x="768" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">渐进式审批工作流: Agent 先画单个人物供用户确认，逐帧校验无误后再构建完整街景并渲染 1080p 视频</text>
+
+  <!-- Row 2: Pipeline -->
+  <rect x="40" y="428" width="1360" height="196" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="458" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. 现代 Web 视觉与自动化取证管线：参考视频步态提取 → 4 模块 SVG 求解 → Chrome M153 共享内存直出 MP4
+  </text>
+
+  <rect x="60" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="500" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">1. 参考视频重采样与步态测量</text>
+  <text x="76" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">node scripts/clip.ts period / blobs</text>
+  <text x="76" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">消除社交媒体可变帧率 (VFR) 抖动，</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">自动测算运动循环周期与落脚点标尺</text>
+
+  <rect x="401" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="500" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">2. 四模块零依赖 SVG 物理合成</text>
+  <text x="417" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">ink.ts + gait.ts + motion.ts + daynight.ts</text>
+  <text x="417" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">开放式双描边肢体 + 最小急动度步态 +</text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">风场弹簧响应，矢量无限缩放且支持鼠标交互</text>
+
+  <rect x="742" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="500" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">3. 实时 Compositor 共享内存编码</text>
+  <text x="758" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">Page.startScreenRecording (M153+)</text>
+  <text x="758" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">告别 Base64 JPEG 阻塞，由进程外服务</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">实时编码 60–120fps AV1 + 48kHz Opus</text>
+
+  <rect x="1083" y="476" width="297" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="500" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">4. 17ms 瞬时落盘与 Playwright 挂载</text>
+  <text x="1099" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">screenRecordingFixture({auto: true})</text>
+  <text x="1099" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">配合 page.screencast.showActions() 原生</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">捕获光标与点击光环，17ms 瞬时收尾归档</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="642" width="1360" height="238" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="672" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. 闭式 FinOps 算例：月跑 15,000 次带录屏 E2E 测试 + 制作 20 个交互式产品动效场景 (synthetic, 存储/CDN费: not_measured)
+  </text>
+  <rect x="60" y="690" width="1320" height="170" rx="10" fill="#1E293B"/>
+  <text x="80" y="720" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (旧 startScreencast+ffmpeg 21s/次 + 手工关键帧/视频扩散返工): $42.00 CI + $1,125.00 (15h) + $3,300.00 (44h) = $4,467.00/月 (59.0h)
+  </text>
+  <text x="80" y="754" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (旧录屏管线 + 裸 LLM 手写无求解器 SVG 滑步返工): $42.00 CI + $900.00 (12h) + $1,950.00 (26h @$75/h) = $2,892.00/月 (38.0h)
+  </text>
+  <text x="80" y="788" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (chrome-capture 11s/次 17ms收尾 + line-art-animation 四模块步态引擎): $22.00 CI + $150.00 (2h) + $600.00 (8h) = $772.00/月 (10.0h)
+  </text>
+  <text x="80" y="818" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $3,695.00/月 (-82.72%, 年省 $44,340.00) | 视觉动效与测试录屏维护工时从 59.0h 降至 10.0h (-49.0h/月, -83.05%)
+  </text>
+  <text x="80" y="846" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    一键体验: npx chrome-capture https://... demo.mp4 4s | git clone https://github.com/JDhruv14/line-art-animation ~/.claude/skills/
+  </text>
+</svg>

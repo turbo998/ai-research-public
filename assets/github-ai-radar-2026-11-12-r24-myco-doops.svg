@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg24" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accent24" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg24)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accent24)" rx="3"/>
+
+  <text x="40" y="58" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-12 GITHUB AI RADAR · ROUND 24 (CUMULATIVE R123) ARCHITECTURE SELECTION FAQ</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">Cross-Machine Agent Mycelium Hub &amp; Gateway-First SSH-Less Ops Plane</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">chenhg5/myco (Zero-Inbound-Port Cloud-to-Local &amp; Teammate Agent Hub) + symansun/doops (Reverse-WS Ops Gateway + doagent ACP)</text>
+
+  <!-- Left Card: chenhg5/myco -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="168" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">1. chenhg5/myco (77★ · MIT · Go Cross-Machine Agent Hub)</text>
+  <text x="60" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Cloud Agent Reaches Local Machine (0 Inbound Ports): claude.ai or VPS</text>
+  <text x="60" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  agents invoke your laptop shell or local Claude Code/Codex with full audit</text>
+  <text x="60" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Agent-to-Teammate Delegation: Delegate tasks directly to a colleague's</text>
+  <text x="60" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  agent with caller identity attribution &amp; owner-scoped permission bounds</text>
+  <text x="60" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• One-Line Self-Hosted Hub: install-hub.sh --domain auto + signed macOS</text>
+  <text x="60" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  DMG, Windows preview, and Linux CLI uniting all personal &amp; team agents</text>
+  <rect x="60" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="76" y="344" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12">bash install-hub.sh --domain auto -&gt; Outbound Node Registration</text>
+  <text x="76" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; Cloud Agent -&gt; Hub -&gt; Local Shell / Local Claude Code / Codex</text>
+  <text x="76" y="388" fill="#93C5FD" font-family="Consolas, monospace" font-size="12">-&gt; Cross-Teammate Agent Task Handoff (Sender Identity Preserved)</text>
+  <text x="76" y="410" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">-&gt; Zero Inbound Ports on Dev Machine + Every Command Recorded</text>
+
+  <!-- Right Card: symansun/doops -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="635" y="168" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">2. symansun/doops (48★ · MIT · Go 1.24 + Next.js 16 Ops)</text>
+  <text x="635" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Gateway-First Reverse WebSocket (:42222): doops-agent connects outbound</text>
+  <text x="635" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  to /v1/agent/connect by cluster/instance; daily ops require zero SSH</text>
+  <text x="635" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Git HTTP &amp; COS Workspace Sync: push/pull via COS snapshots or</text>
+  <text x="635" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  /v1/git/&lt;cluster&gt;/&lt;instance&gt;/&lt;session&gt;.git into /root/ws/&lt;session&gt;</text>
+  <text x="635" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• doagent ACP (:9000) &amp; Structured Helm Release: ask --apply executes</text>
+  <text x="635" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  verified Helm/credential releases + DoSql/DoWeb/K8s read-only audit</text>
+  <rect x="635" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="651" y="344" fill="#7DD3FC" font-family="Consolas, monospace" font-size="12">doops-agent -&gt; Reverse WS /v1/agent/connect (cluster/instance)</text>
+  <text x="651" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; /v1/rpc &amp; /v1/git/&lt;cluster&gt;/&lt;instance&gt;/&lt;session&gt;.git Sync</text>
+  <text x="651" y="388" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12">-&gt; doagent ACP (:9000) + DoSql / DoWeb / K8s Read-Only Inspection</text>
+  <text x="651" y="410" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">-&gt; ask --apply Structured Helm Release + SQLite Audit Ledger</text>
+
+  <!-- Bottom Card: FinOps Closed-Form Model -->
+  <rect x="40" y="468" width="1120" height="182" rx="12" fill="#0F172A" stroke="#A855F7" stroke-width="1.5"/>
+  <text x="60" y="498" fill="#C084FC" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Model (60 Dev/Ops Nodes &amp; Cross-Machine Agent Seats · $95.00/hr · Cloud VPS &amp; Bastion Licenses: not_measured)</text>
+
+  <text x="60" y="530" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path A (Human Copy-Paste + Ad-Hoc SSH):</text>
+  <text x="395" y="530" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$2,060.00 API/relay + $4,370.00 labor (46.0h) = $6,430.00/mo</text>
+  <rect x="860" y="516" width="275" height="16" rx="4" fill="#EF4444"/>
+
+  <text x="60" y="564" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path B (Inbound SSH Tunnels + Raw PTYs):</text>
+  <text x="395" y="564" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$980.00 API/tunnel  + $2,090.00 labor (22.0h) = $3,070.00/mo</text>
+  <rect x="860" y="550" width="131" height="16" rx="4" fill="#F59E0B"/>
+
+  <text x="60" y="598" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path C (myco Hub + doops Gateway Plane):</text>
+  <text x="395" y="598" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$230.00 RPC/ACP     + $380.00 labor (4.0h)    = $610.00/mo</text>
+  <rect x="860" y="584" width="26" height="16" rx="4" fill="#10B981"/>
+
+  <text x="60" y="632" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Net Verified Savings (Path C vs Path A): $5,820.00 / month (-90.51% TCO · $69,840.00/yr · 42.0h/mo saved [-91.30%])</text>
+</svg>

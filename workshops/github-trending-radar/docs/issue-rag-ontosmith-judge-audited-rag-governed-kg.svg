@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR26" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR26" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR26)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR26)" rx="3"/>
+
+  <!-- Header -->
+  <text x="40" y="58" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-11 NIGHT SHIFT · ROUND 26 (CUMULATIVE R71) · JUDGE-AUDITED RAG &amp; EVIDENCE-GATED KNOWLEDGE GRAPHS</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800">zaxiu88888/issue-rag (4-Axis Judge Audit) + Dongbumlee/ontosmith (Jev-Gated Neo4j KG)</text>
+  <text x="40" y="115" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="14">Leave-One-Issue-Out Eval (κ=0.816, 2.3x–5.2x Interval) + Flat Ontology Contract, Jev Decision Gate &amp; Pre-Priced Ledger (-85.42% Cost)</text>
+
+  <!-- Left Panel: zaxiu88888/issue-rag -->
+  <rect x="40" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="56" y="152" width="215" height="24" rx="6" fill="#0C4A6E"/>
+  <text x="66" y="169" fill="#7DD3FC" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">4-AXIS JUDGE AUDIT · n=95</text>
+  <text x="282" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">zaxiu88888/issue-rag (284★ · Python)</text>
+
+  <rect x="56" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="208" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Maintainer Ground-Truth Mining &amp; Leave-One-Issue-Out</text>
+  <text x="70" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Pre-screens bot pollution (vitejs/vite 20% bot OK vs vercel/ai 84% bot rejected)</text>
+  <text x="70" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Fetches --mode per-issue to block PR noise; excludes source issue in recall</text>
+
+  <rect x="56" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="296" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. Reports Interval (2.3x–5.2x) &amp; Audits the Grader (κ = 0.816)</text>
+  <text x="70" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Closed-book 0.221 -&gt; BM25 0.700 (3.2x deepseek-chat; 2.3x reasoner; 5.2x human)</text>
+  <text x="70" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• BM25 (0.700) vs Hybrid+Rerank (0.679) spread &lt;0.03 is within grader noise</text>
+
+  <rect x="56" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="384" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Exposes the RAG Fabrication Paradox (1.1% -&gt; 20.0%)</text>
+  <text x="70" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Retrieval shifts failures from "honest I don't know" to confident wrong versions</text>
+  <text x="70" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Rubric ③ scores fabricated version/API/path as strictly incorrect (0.0), never partial</text>
+
+  <!-- Right Panel: Dongbumlee/ontosmith -->
+  <rect x="615" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="631" y="152" width="215" height="24" rx="6" fill="#78350F"/>
+  <text x="641" y="169" fill="#FDE68A" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">JEV JUDGE + NEO4J · PYPI</text>
+  <text x="858" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">Dongbumlee/ontosmith (269★ · Python)</text>
+
+  <rect x="631" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="208" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Flat Extraction Contract (No Unmeasurable OWL Hierarchies)</text>
+  <text x="645" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Closed inventory of entity/relation types, boundary examples &amp; value attributes</text>
+  <text x="645" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Human approves hash-pinned ontology pack before any graph build starts</text>
+
+  <rect x="631" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="296" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. 8-Stage Pipeline: Proposers Propose, Jev Judges (p_true)</text>
+  <text x="645" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• ingest -&gt; NER/roster -&gt; candidates (2-pass residual) -&gt; gates -&gt; route -&gt; write</text>
+  <text x="645" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Every Neo4j triple carries exact [quote] evidence span, doc_id, tier &amp; p_true</text>
+
+  <rect x="631" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="384" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Deterministic Keyless Profile, Pre-Priced Ledger &amp; Replay</text>
+  <text x="645" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• ontosmith profile runs keyless ($0.0000); live builds price before spending</text>
+  <text x="645" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• replay_scores.py verifies audit-corrected scoring &amp; ceiling-adjusted recall</text>
+
+  <!-- Bottom FinOps Comparison Panel -->
+  <rect x="40" y="472" width="1120" height="178" rx="12" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="60" y="500" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261111-R26-ISSUERAG-ONTOSMITH · 8 SDK Repos + 20 Domain KG Builds/Mo)</text>
+  <text x="60" y="520" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">Synthetic benchmark model ($85/hr senior AI/data engineer rate; Neo4j Community host &amp; GitHub Enterprise seats: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="60" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#EF4444"/>
+  <text x="76" y="556" fill="#FCA5A5" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path A: Unaudited Rerank + Freeform KG</text>
+  <text x="76" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">GPU/API Spend: $1,920.00 | Labor (46.0h): $3,910.00</text>
+  <text x="76" y="600" fill="#F87171" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $5,830.00 / mo</text>
+  <text x="76" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Chases &lt;0.03 grader noise; ungrounded triples &amp; bot-polluted evals</text>
+
+  <!-- Path B -->
+  <rect x="425" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="441" y="556" fill="#FCD34D" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path B: Vanilla Vector RAG (No Jev Gate)</text>
+  <text x="441" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">Compute/API Spend: $880.00 | Labor (25.0h): $2,125.00</text>
+  <text x="441" y="600" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $3,005.00 / mo (-48.46%)</text>
+  <text x="441" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Unchecked 20%+ fabrication rate; ontology schema drift</text>
+
+  <!-- Path C -->
+  <rect x="790" y="534" width="350" height="98" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="2"/>
+  <text x="806" y="556" fill="#6EE7B7" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path C: issue-rag + OntoSmith (Best)</text>
+  <text x="806" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">BM25 + Pre-Priced Jev KG: $340.00 | Labor (6.0h): $510.00</text>
+  <text x="806" y="600" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $850.00 / mo (Saves $4,980.00 · -85.42%)</text>
+  <text x="806" y="618" fill="#A7F3D0" font-family="Inter, system-ui, sans-serif" font-size="11">$59,760.00/yr saved · -86.96% eng hours · Span-grounded &amp; audited</text>
+</svg>

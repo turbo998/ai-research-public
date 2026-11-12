@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg28" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accent28" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg28)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accent28)" rx="3"/>
+
+  <text x="40" y="58" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-12 GITHUB AI RADAR · ROUND 28 (CUMULATIVE R127) ARCHITECTURE SELECTION FAQ</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">70M-Record Local Open-Data MCP &amp; Anti-Poisoning Dual-Memory Agent</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">wendersoon/radar-cnpj-mcp (70M Receita Federal CNPJ Local Index MCP) + shany9200/Three (Human-Only Lessons + AST-Verified SELF_EDIT)</text>
+
+  <!-- Left Card: wendersoon/radar-cnpj-mcp -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="168" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">1. wendersoon/radar-cnpj-mcp (133★ · MIT · Node 20+ MCP)</text>
+  <text x="60" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• 70M+ Establishments Compiled Locally: Pulls ~7GB Receita Federal ZIPs</text>
+  <text x="60" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  and builds a 1.9GB UF-filtered local DB (SP+AC in ~33m) w/ ms queries</text>
+  <text x="60" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Semantic CNAE &amp; MEI Disaggregation: Translates natural language into</text>
+  <text x="60" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  exact CNAE codes (e.g., 4520-0/01), separating MEI vs microempresas</text>
+  <text x="60" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Zero Data Redistribution &amp; 5 Typed Tools: buscar_empresas, contar_</text>
+  <text x="60" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  empresas, buscar_cnae, buscar_municipio, detalhar_empresa + CSV export</text>
+  <rect x="60" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="76" y="344" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12">npx -y radar-cnpj-mcp baixar --ufs SP,MG (~7GB -&gt; 1.9GB local DB)</text>
+  <text x="76" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; claude mcp add radar-cnpj -- npx -y radar-cnpj-mcp</text>
+  <text x="76" y="388" fill="#93C5FD" font-family="Consolas, monospace" font-size="12">-&gt; buscar_cnae -&gt; contar_empresas / buscar_empresas (MEI split)</text>
+  <text x="76" y="410" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">-&gt; Millisecond Local Queries + Excel-Ready CSV (Zero SaaS Quota)</text>
+
+  <!-- Right Card: shany9200/Three -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="635" y="168" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">2. shany9200/Three (93★ · MIT · Termux Self-Extending Agent)</text>
+  <text x="635" y="192" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Anti-Poisoning Dual-Layer Memory: Separates Three_memory.log (principles</text>
+  <text x="635" y="212" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  written ONLY by humans) from Three_diary.md (recent session facts)</text>
+  <text x="635" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• 3-Step Dynamic Tag Registry: Autonomous handler(text) -&gt; register(</text>
+  <text x="635" y="256" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  "TAG_NAME", handler) -&gt; verify without touching main loop structure</text>
+  <text x="635" y="280" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• AST-Validated SELF_EDIT &amp; Auto-Backup: Backs up Three.py, validates</text>
+  <text x="635" y="300" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">  Python AST syntax, and rolls back automatically on failure in Termux</text>
+  <rect x="635" y="320" width="505" height="110" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="651" y="344" fill="#FDE68A" font-family="Consolas, monospace" font-size="12">Boot: Load Full Three_memory.log (Human-Only) + Tail Three_diary.md</text>
+  <text x="651" y="366" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">-&gt; Define handler(text) + register("TAG_NAME", handler) + Verify</text>
+  <text x="651" y="388" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12">-&gt; SELF_EDIT: Auto-Backup Three.py -&gt; ast.parse Check -&gt; Rollback</text>
+  <text x="651" y="410" fill="#7DD3FC" font-family="Consolas, monospace" font-size="12">-&gt; Runs on Android Termux (Python 3 + requests only, Container Rec.)</text>
+
+  <!-- Bottom Card: FinOps Closed-Form Model -->
+  <rect x="40" y="468" width="1120" height="182" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="498" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Model (35 B2B Open-Data Pipelines &amp; Edge Agent Extensions/Mo · $95.00/hr · Commercial Lead SaaS: not_measured)</text>
+
+  <text x="60" y="530" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path A (Metered B2B API + Memory Poisoning):</text>
+  <text x="395" y="530" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$2,010.00 API/waste + $4,180.00 labor (44.0h) = $6,190.00/mo</text>
+  <rect x="860" y="516" width="275" height="16" rx="4" fill="#EF4444"/>
+
+  <text x="60" y="564" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path B (Raw 7GB CSV Grep + Unchecked Edit):</text>
+  <text x="395" y="564" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$960.00 API/retry   + $2,090.00 labor (22.0h) = $3,050.00/mo</text>
+  <rect x="860" y="550" width="135" height="16" rx="4" fill="#F59E0B"/>
+
+  <text x="60" y="598" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Path C (radar-cnpj-mcp + Three Dual-Memory):</text>
+  <text x="395" y="598" fill="#F8FAFC" font-family="Consolas, monospace" font-size="14">$205.00 local/API   + $380.00 labor (4.0h)    = $585.00/mo</text>
+  <rect x="860" y="584" width="26" height="16" rx="4" fill="#10B981"/>
+
+  <text x="60" y="632" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Net Verified Savings (Path C vs Path A): $5,605.00 / month (-90.55% TCO · $67,260.00/yr · 40.0h/mo saved [-90.91%])</text>
+</svg>
