@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg52" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad52" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad52" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg52)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="172" height="26" rx="6" fill="url(#emeraldGrad52)"/>
+  <text x="130" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-13 · ROUND 52 (R180)</text>
+  <text x="232" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">`3.8×–13×` Heterogeneous GPU Robot Physics Solver &amp; Reactive Event-Driven Agent Harness</text>
+  <text x="232" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">skild-ai/steel (Skild AI + NVIDIA Newton Solver · 3.8x Geomean / 13x Mixed Batch vs PhysX) + pmndrs/pine (Event-Subscribed Reactive Agent TUI)</text>
+
+  <!-- Left Panel: skild-ai/steel -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="58" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🤖 skild-ai/steel (★ 194 | Skild AI + NVIDIA | Linux Foundation Newton Solver)</text>
+
+  <!-- 2 KPI Cards -->
+  <rect x="46" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">3.8× Geomean vs PhysX</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Across 20 robot-learning benchmarks</text>
+  <text x="173" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">with lower GPU memory footprint</text>
+
+  <rect x="314" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Up to 13× Mixed Batches</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Heterogeneous robots &amp; tasks in 1 batch</text>
+  <text x="441" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">+ `steel-webgpu` browser playground</text>
+
+  <!-- Steel Mechanics -->
+  <rect x="46" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="280" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Scalable Manipulation Simulation Inside `newton-physics/newton` (`Apache-2.0`):</text>
+  <text x="60" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Heterogeneous Multi-Task Batching (`13×`): Foundation robot models train across diverse</text>
+  <text x="60" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   morphologies simultaneously; Steel avoids PhysX's uniform-scene warp divergence bottleneck.</text>
+  <text x="60" y="344" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">2. Rigid + Deformable Coupling (`Steel Shelf`): Runnable scenes covering robot arms, grippers,</text>
+  <text x="60" y="363" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   stacks, cloth, cables, and closed-loop mechanisms with live tuning &amp; 3D replay tutorials.</text>
+  <text x="60" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ cd steel/examples &amp;&amp; uv sync &amp;&amp; uv run python -m shelf play</text>
+  <text x="60" y="409" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">• Agent-Friendly Scene Authoring: Coding agents can inspect &amp; compose `shelf` scenes directly.</text>
+  <text x="60" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Upstreamed in `newton/_src/solvers/steel` with WebGPU browser port (`skild-ai/steel-webgpu`).</text>
+
+  <!-- Right Panel: pmndrs/pine -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#083344"/>
+  <text x="644" y="144" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🌲 pmndrs/pine (★ 176 | Poimandres | Reactive Event-Driven Agent Harness)</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="632" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Typed `*.ts` Event Stimuli</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Folders, MQTT, FTP, Webhooks, Telegram</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">&amp; hardware MCPs (e.g. Flipper Zero)</text>
+
+  <rect x="900" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">0 Configs + BM25 Self-Docs</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Admin tool calls configure MCPs/skills</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">On-demand BM25 manual saves context</text>
+
+  <!-- Pine Architecture -->
+  <rect x="632" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="280" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Why Reactive Event Subscriptions Beat Polling Loops &amp; Config Files:</text>
+  <text x="646" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Event-Driven Wakeups: Tell the agent "Watch `~/documents/scans`, extract payment details on</text>
+  <text x="646" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   every new file"—it registers a schema-validated `*.ts` event source &amp; sleeps at 0 token cost.</text>
+  <text x="646" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Zero Manual Config Editing + BM25 Self-Discovery: Main agent sets up sub-agents, MCPs,</text>
+  <text x="646" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   and schedules via admin tools; looks up internal APIs via a built-in BM25 manual on demand.</text>
+  <text x="646" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ npm install -g @pmndrs/pine &amp;&amp; pine init</text>
+  <text x="646" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Kitty-Protocol Desktop TUI (Ghostty): Clickable tabs, inline video/images, drag-and-drop &amp; `/goal`.</text>
+  <text x="646" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Native macOS computer-use &amp; Linux `safe` mode sandbox (Docker image provided for Windows).</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261113-R52-STEEL-PINE · 30 Robot Sim Campaigns + 20 Event Automations/Mo · r = $105/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Uniform PhysX Batches + Polling Agents</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• GPU Sim &amp; Polling Token Spend: $2,640.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Batch/Config Labor (38.0h × $105): $3,990.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $6,630.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Single-Task Sim + SaaS Webhook Flows</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• GPU &amp; SaaS Workflow Spend: $1,280.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Porting/Maint Labor (18.0h × $105): $1,890.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $3,170.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: Steel + Pine (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• GPU &amp; Token Spend: $195.00 / mo | Labor (3.5h): $367.50</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $562.50 / mo (-91.52% | Save $6,067.50/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $72,810.00/yr · Base GPU nodes &amp; robots: not_measured</text>
+</svg>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg47" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad47" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad47" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg47)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="172" height="26" rx="6" fill="url(#cyanGrad47)"/>
+  <text x="130" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-13 · ROUND 47 (R175)</text>
+  <text x="232" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Evidenced 3D Codebase City (`.drawio`/Mermaid) &amp; 4s Safe-Flag Reboot Agent Resumer</text>
+  <text x="232" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">azerturk/kodyurd (v0.6.0 PlayCanvas 86-GLB Code City &amp; Scenario Replay) + Heretikio/herdr-wake (4s Boot Resume w/ `restore_bypass = false` Guard)</text>
+
+  <!-- Left Panel: azerturk/kodyurd -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#083344"/>
+  <text x="58" y="144" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🏙️ azerturk/kodyurd (★ 137 | +137/d | v0.6.0 Evidenced 3D Code City)</text>
+
+  <!-- 2 KPI Cards -->
+  <rect x="46" y="168" width="254" height="76" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">86 Bundled GLBs + PlayCanvas</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Walkable modules w/ 2–10 lessons/run</text>
+  <text x="173" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Exportable static ZIP city bundle</text>
+
+  <rect x="314" y="168" width="254" height="76" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Mermaid &amp; `.drawio` Evidence</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Component, behavior &amp; data views</text>
+  <text x="441" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Jumps to validated line in editor</text>
+
+  <!-- Kodyurd Architecture -->
+  <rect x="46" y="256" width="522" height="194" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="278" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">From Local Repo Scan to Playable Architecture Replay (`node:sqlite` + Zod):</text>
+  <text x="60" y="301" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Local-First Scan &amp; Brief: Scans repo locally; uses Claude Code, Codex CLI, or Anthropic API</text>
+  <text x="60" y="320" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   to generate Zod-validated Scene JSON buildings for targeted architectural briefs.</text>
+  <text x="60" y="342" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">2. Bidirectional Diagram Studio: Inspect/edit component, behavior &amp; data diagrams; import/export</text>
+  <text x="60" y="361" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   directly as Mermaid text or `.drawio` (`diagrams.net`) files backed by source line excerpts.</text>
+  <text x="60" y="383" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">3. Replay Scenario &amp; Learn Mode: Playable end-to-end execution traces + tours, practice &amp; exams</text>
+  <text x="60" y="402" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   with an included `examples/harbor-desk` reference microservice walkthrough.</text>
+  <text x="60" y="426" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Saved cities persist in `node:sqlite` (`npm run doctor` &amp; static HTTP ZIP export).</text>
+
+  <!-- Right Panel: Heretikio/herdr-wake -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">⏰ Heretikio/herdr-wake (★ 135 | +135/d | Rust 4s Reboot Session Resumer)</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="632" y="168" width="254" height="76" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Resumes Within 4 Seconds</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Restores Claude, Codex, Pi &amp; OpenCode</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">after reboot via `herdr-wake shell`</text>
+
+  <rect x="900" y="168" width="254" height="76" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">`restore_bypass = false`</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Strips `--yolo` &amp; skip-permission flags</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">across 4 agent CLIs on unattended wake</text>
+
+  <!-- Herdr-Wake Mechanics -->
+  <rect x="632" y="256" width="522" height="194" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="278" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">How `herdr-wake` Prevents Unattended Post-Reboot `--yolo` Disasters:</text>
+  <text x="646" y="301" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Boot Service + Shell Handover: Sets `herdr-core` shell to `herdr-wake shell`, resuming</text>
+  <text x="646" y="320" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   recorded sessions within 4s of first connection (or at boot) and falling back cleanly to `real_shell`.</text>
+  <text x="646" y="342" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Surgical Bypass-Flag Sanitizer (`restore_bypass = false`):</text>
+  <text x="646" y="361" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">   • Claude Code: Drops `--dangerously-skip-permissions`, unsafe `--permission-mode` &amp; `--allowedTools`</text>
+  <text x="646" y="380" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">   • Codex: Drops `--yolo`, `--dangerously-bypass-approvals-and-sandbox` &amp; non-`workspace-write` `-s`</text>
+  <text x="646" y="399" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">   • Pi &amp; OpenCode: Drops `-a` / `--approve` and `--auto` / `--yolo`</text>
+  <text x="646" y="423" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Includes `herdr-wake doctor` &amp; 60s hot-reload recovery if binary is ever moved.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261113-R47-KODYURD-HERDRWAKE · 12 Onboardings + 45 Host Reboots/Mo · r = $95/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Stale Wiki Tours + Manual Reboot Recovery</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Re-Contexting Token Spend: $1,280.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Onboard/Reboot Labor (40.0h × $95): $3,800.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $5,080.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Static Call-Graphs + Raw History Replay</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Token &amp; Compute Spend: $740.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Cleanup/Triage Labor (19.0h × $95): $1,805.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,545.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: kodyurd + herdr-wake (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Token &amp; Compute Spend: $145.00 / mo | Labor (3.5h): $332.50</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $477.50 / mo (-90.60% | Save $4,602.50/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $55,230.00/yr · Base Claude/Codex/Tripo API: not_measured</text>
+</svg>

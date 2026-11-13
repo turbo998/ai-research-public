@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg54" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad54" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad54" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg54)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="172" height="26" rx="6" fill="url(#emeraldGrad54)"/>
+  <text x="130" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-13 · ROUND 54 (R182)</text>
+  <text x="232" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Zero-Dep Read-Only Validator Ops (`solana-vigil`) &amp; `$3` Arduino OBD-I Agent Bridge</text>
+  <text x="232" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">ValidatorStack/solana-vigil (CGO_ENABLED=0 Go Stdlib · 14 Read-Only Subcommands) + MZULALI/xj-scanner ($3 Nano OBD-I Bridge &amp; `.claude/skills/`)</text>
+
+  <!-- Left Panel: ValidatorStack/solana-vigil -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="58" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🛡️ ValidatorStack/solana-vigil (★ 230 | 0-Dep Go Stdlib | Read-Only Ops)</text>
+
+  <!-- 2 Pillar Boxes -->
+  <rect x="46" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">0 Keys Opened (`stat` Only)</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">`CGO_ENABLED=0` static Go stdlib</text>
+  <text x="173" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Honest `unknown` on missing RPC fields</text>
+
+  <rect x="314" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">14 Alpenglow-Aware Tools</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">`score`, `plan-restart`, `audit`, `fleet`</text>
+  <text x="441" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Bounded-cardinality Prometheus exporter</text>
+
+  <!-- Vigil Mechanics -->
+  <rect x="46" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="280" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Why Read-Only By Construction Matters on High-Value Validator Nodes:</text>
+  <text x="60" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Zero Supply-Chain or Key-Exfil Risk: Built strictly with Go's standard library (`0` third-party</text>
+  <text x="60" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   dependencies); `vigil keys` uses `stat` only to check permissions/age without opening keyfiles.</text>
+  <text x="60" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Advisory Leader-Free Restart Planner (`vigil plan-restart`): Finds safe slot windows between</text>
+  <text x="60" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   leader duties so kernel/validator upgrades never drop block production or rewards.</text>
+  <text x="60" y="385" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Full-Stack Audit: Checks VAT runway, BLS registration, sysctl/NIC/time drift &amp; disk growth slope.</text>
+  <text x="60" y="407" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ vigil check &amp;&amp; vigil score &amp;&amp; vigil plan-restart &amp;&amp; vigil audit</text>
+  <text x="60" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Built-in alert storm suppression (sustained-failure thresholds, deduplication &amp; escalation).</text>
+
+  <!-- Right Panel: MZULALI/xj-scanner -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#451A03"/>
+  <text x="644" y="144" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🚙 MZULALI/xj-scanner (★ 209 | $3 Arduino Nano OBD-I Bridge + Claude Skills)</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="632" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">$3 Arduino Nano vs $1,500 DRB-II</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Reads 1991–95 Jeep SBEC (pre-OBD-II)</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">`xj_bridge` + `xj_sniff` wiring debugger</text>
+
+  <rect x="900" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Disassembled SBEC + `--cli DEMO`</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Exact fuel-trim scaling from ROM</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">`.claude/skills/` guided agent playbooks</text>
+
+  <!-- XJ-Scanner Mechanics -->
+  <rect x="632" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="280" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Bridging Legacy Pre-1996 Embedded ECUs into Modern Coding Agents:</text>
+  <text x="60" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" transform="translate(586,0)">1. Pre-OBD-II Hardware Bridge: 1991–95 Chrysler/Jeep SBEC computers use a proprietary 6-pin</text>
+  <text x="646" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   serial protocol that modern OBD-II dongles cannot read; a `$3` ATmega328 Arduino Nano bridges it.</text>
+  <text x="646" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. ROM-Verified Scaling &amp; Electrical Safety: Settles fuel-trim formulas directly from disassembled</text>
+  <text x="646" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   SBEC firmware (`AR1972/jeep_2.5L`) and enforces cavity multimeter checks before wiring.</text>
+  <text x="646" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ .venv/bin/python pc/xj_scan.py --cli DEMO   # or --cli auto with key ON</text>
+  <text x="646" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. `.claude/skills/` Playbooks: Step-by-step agent skills for fault codes, live logs &amp; actuator tests.</text>
+  <text x="646" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Includes `tools/` to summarize logs, sweep every parameter, and verify ECU part numbers.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261113-R54-VIGIL-XJSCANNER · 10 Validator Nodes + 25 Embedded ECU Audits/Mo · r = $105/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Blind Restarts + Vintage DRB-II Scanners</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Missed-Slot &amp; Scanner Spend: $2,480.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Ops/Debug Labor (36.0h × $105): $3,780.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $6,260.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Cloud Dashboards + Raw Logic Analyzers</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• SaaS &amp; Tool Spend: $1,190.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Drift/Hex Labor (18.0h × $105): $1,890.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $3,080.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: solana-vigil + xj-scanner (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Infra &amp; Hardware Spend: $160.00 / mo | Labor (3.5h): $367.50</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $527.50 / mo (-91.57% | Save $5,732.50/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $68,790.00/yr · Base bare-metal &amp; vehicles: not_measured</text>
+</svg>

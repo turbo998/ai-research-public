@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgR163" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#141F35"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentR163" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bgR163)"/>
+  <rect x="28" y="24" width="1144" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="28" y="24" width="1144" height="6" rx="3" fill="url(#accentR163)"/>
+
+  <text x="54" y="66" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-13 NIGHT SHIFT · ROUND 35 (CUMULATIVE R163) · IN-PROCESS LIVE GAME RUNTIME &amp; UNREAL ENGINE TESTING MCP FAQ</text>
+  <text x="54" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="800">Krixx1337/ReAgentLive (Live C++ Runtime MCP) + SternI/FortniteMCP (In-Process UE MCP)</text>
+  <text x="54" y="124" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5">Millisecond `ue_find / touches / trial` Self-Restoring Writes · Game-Thread `ProcessEvent`, Tracked Undo Patches &amp; `http_mcp` Sidecar · -90.43% TCO</text>
+
+  <!-- Left Card: Krixx1337/ReAgentLive -->
+  <rect x="52" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="74" y="178" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">1. Krixx1337/ReAgentLive (12★ · C++ · MIT · Windows x64)</text>
+  <text x="74" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">"Let Your AI Agent Look Inside a Running Game" (Live In-Process MCP)</text>
+
+  <rect x="74" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="238" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Millisecond Live Queries (`ue_find`, `ue_get`, `ue_each`)</text>
+  <text x="88" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Finds live objects &amp; reads fields across all instances in the exact same tick</text>
+  <text x="88" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Eliminates hours of static disassembler waiting and manual memory scanning</text>
+
+  <rect x="74" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">`touches` Write-Tracing &amp; Self-Restoring `trial` Mutations</text>
+  <text x="88" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">`touches` pinpoints the exact function (`Game.exe+0x...`) modifying a field</text>
+  <text x="88" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">`trial` asks human permission, holds a test value for N seconds &amp; restores automatically</text>
+
+  <rect x="74" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="396" fill="#F59E0B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Zero-Rebuild Patch Offset &amp; Signature Verification</text>
+  <text x="88" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Verifies offsets and byte signatures directly against live process memory</text>
+  <text x="88" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Agent-driven setup (`docs/agent-setup.md`) for Claude Code, Codex &amp; Cursor</text>
+
+  <!-- Right Card: SternI/FortniteMCP -->
+  <rect x="613" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="635" y="178" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">2. SternI/FortniteMCP (11★ · C++ · MIT · Offline/Private UE MCP)</text>
+  <text x="635" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">In-Process Unreal Engine Reflection, `ProcessEvent` &amp; API Sidecar</text>
+
+  <rect x="635" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="238" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Game-Thread `ProcessEvent` Dispatch &amp; Full UE Reflection</text>
+  <text x="649" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">`StaticFindObject`, `GetObjectsOfClass`, `FNamePool` &amp; typed/raw `ProcessEvent`</text>
+  <text x="649" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Dispatches engine calls safely on the game thread with fast path &amp; timeouts</text>
+
+  <rect x="635" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="314" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Tracked Undo Patches, Runtime Layout Auto-Tuning &amp; Self-Eject</text>
+  <text x="649" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">IDA-style pattern scanning, tracked allocations/undo patches &amp; clean DLL self-eject</text>
+  <text x="649" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Strictly scoped to local offline/private builds you own (`127.0.0.1` loopback)</text>
+
+  <rect x="635" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="396" fill="#A855F7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Companion `http_mcp/` HTTPS/WebSocket/JWT Research Sidecar</text>
+  <text x="649" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Local `mitmproxy` server (`:8080` &amp; `:26065/mcp`) for traffic capture &amp; replay</text>
+  <text x="649" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Inspects WebSocket frames, HAR/curl exports &amp; JWT tokens alongside engine state</text>
+
+  <!-- Bottom FinOps Comparison Strip -->
+  <rect x="52" y="488" width="1096" height="140" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <text x="74" y="516" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261113-R35-REAGENTLIVE-FORTNITEMCP · 80 UE Runtime QA &amp; Patch Suites/Mo)</text>
+
+  <rect x="74" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#EF4444"/>
+  <text x="90" y="552" fill="#FCA5A5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path A: Static Dumps + Crash-Prone Raw Writes</text>
+  <text x="90" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$5,380.00 / mo</text>
+  <text x="90" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$1,580.00 token/crash + $3,800.00 labor (38.0h @ $100/h)</text>
+
+  <rect x="424" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="440" y="552" fill="#FCD34D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path B: Out-of-Process Poller Without Game Thread</text>
+  <text x="440" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$2,720.00 / mo (-49.44%)</text>
+  <text x="440" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$720.00 token/runner + $2,000.00 labor (20.0h @ $100/h)</text>
+
+  <rect x="774" y="530" width="352" height="82" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="790" y="552" fill="#6EE7B7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path C: ReAgentLive + FortniteMCP In-Process</text>
+  <text x="790" y="574" fill="#ECFDF5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$515.00 / mo (-90.43% · Save $4,865.00/mo)</text>
+  <text x="790" y="596" fill="#A7F3D0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$165.00 token + $350.00 labor (3.5h) · GPU rigs: not_measured</text>
+</svg>

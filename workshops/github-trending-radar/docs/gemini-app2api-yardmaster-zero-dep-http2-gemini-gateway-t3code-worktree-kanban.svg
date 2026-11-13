@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg46" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="blueGrad46" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad46" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg46)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="172" height="26" rx="6" fill="url(#blueGrad46)"/>
+  <text x="130" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-13 · ROUND 46 (R174)</text>
+  <text x="232" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">0-Dep HTTP/2 Gemini-to-OpenAI Gateway &amp; T3 Code Worktree Kanban Orchestrator</text>
+  <text x="232" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">ShawTim/gemini-app2api (Node 22+ 0-Dep Robin HTTP/2 `/v1/responses` Gateway) + ApostPap/yardmaster (Path-Disjoint Worktree Kanban &amp; AI Review Loop)</text>
+
+  <!-- Left Panel: ShawTim/gemini-app2api -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#1E1B4B"/>
+  <text x="58" y="144" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">⚡ ShawTim/gemini-app2api (★ 212 | +212/d | 0-Dep Native HTTP/2 Gateway)</text>
+
+  <!-- 2 Comparison Boxes -->
+  <rect x="46" y="168" width="254" height="94" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="173" y="188" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">❌ Cookie Scrapers / Consumer UI</text>
+  <text x="58" y="209" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Headless Puppeteer &amp; CAPTCHA breakage</text>
+  <text x="58" y="228" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Stream resets drop 3,000+B of code</text>
+  <text x="58" y="247" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">• Unvalidated regex tool calls</text>
+
+  <rect x="314" y="168" width="254" height="94" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="441" y="188" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">✅ Gemini App2API (Node 22+ 0-Dep)</text>
+  <text x="326" y="209" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Direct `node:http2` Robin `ProcessQuery`</text>
+  <text x="326" y="228" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Completion Contract saves partial code</text>
+  <text x="326" y="247" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">• `/v1/chat/completions` &amp; `/v1/responses`</text>
+
+  <!-- Gateway Architecture -->
+  <rect x="46" y="274" width="522" height="176" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="296" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Engineering-Grade Harness Features (`0` Production npm Dependencies):</text>
+  <text x="60" y="319" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Schema-Validated Function Tools: Validates JSON Schema args &amp; Responses `type: "namespace"`</text>
+  <text x="60" y="338" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   groups before emission; caller executes tools locally in Cursor, Cline, Roo Code, or Codex CLI.</text>
+  <text x="60" y="360" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">2. Multi-Account Rolling Window Pool: Soft session affinity + official usage bars + failover.</text>
+  <text x="60" y="382" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">3. Stream-Reset Completion Contract: Prevents agents from discarding 3,000+ streamed bytes</text>
+  <text x="60" y="401" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   or looping infinitely when upstream HTTP/2 streams reset mid-turn.</text>
+  <text x="60" y="424" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• `0700`/`0600` state files, `scrypt` admin auth, SHA-256 API keys &amp; SSRF-guarded image upload.</text>
+
+  <!-- Right Panel: ApostPap/yardmaster -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🚂 ApostPap/yardmaster (★ 141 | +141/d | T3 Code Worktree Kanban)</text>
+
+  <!-- 2 KPI Cards -->
+  <rect x="632" y="168" width="254" height="76" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">3–40 Path-Scoped Tasks</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Parallel scheduler avoids overlapping</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">file paths across git worktrees</text>
+
+  <rect x="900" y="168" width="254" height="76" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">1–10 AI Reviewer Score</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">`maxFixRounds` loop + auto-approve</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">`git merge --no-ff` unblocks dependents</text>
+
+  <!-- Yardmaster Pipeline -->
+  <rect x="632" y="256" width="522" height="194" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="278" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">7-Stage Autonomous T3 Code Orchestration (`http://127.0.0.1:4417`):</text>
+  <text x="646" y="301" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Thread Context Import: Reads top 25 relevant T3 threads + root repo into shared Board Brief.</text>
+  <text x="646" y="321" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">2. Plan Decomposition: Planner proposes 3–40 tasks w/ milestones, dependencies &amp; touched paths.</text>
+  <text x="646" y="341" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Conflict-Free Auto-Run: Launches Ready tasks in isolated git worktrees only if paths don't collide.</text>
+  <text x="646" y="361" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">4. Separate AI Reviewer &amp; Risk Gate: Runs up to `maxFixRounds` fix loops, scores review need</text>
+  <text x="646" y="380" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   (1–10), and auto-merges (`git merge --no-ff`) low-risk tasks so downstream tasks start immediately.</text>
+  <text x="646" y="403" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ pnpm dev:fake   # Zero-token FakeT3Client w/ real worktrees &amp; commits for testing</text>
+  <text x="646" y="425" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• One-click "Run project" per task worktree to preview any branch before merging.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261113-R46-GEMINIAPP2API-YARDMASTER · 18 Devs · 120 Feature Plans/Mo · r = $95/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Pay-Per-Token + Manual Thread Merges</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• API Overage &amp; Retry Spend: $1,820.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Merge/Review Labor (36.0h × $95): $3,420.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $5,240.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Browser Scrapers + Ad-Hoc Worktrees</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Scraper VM &amp; Retry Spend: $890.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Maint/Merge Labor (18.0h × $95): $1,710.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,600.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: gemini-app2api + yardmaster (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Infra &amp; Retry Spend: $155.00 / mo | Labor (3.5h): $332.50</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $487.50 / mo (-90.70% | Save $4,752.50/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $57,030.00/yr · Base Gemini/T3 subs: not_measured</text>
+</svg>

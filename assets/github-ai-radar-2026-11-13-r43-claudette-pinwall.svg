@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg43" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="indigoGrad43" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad43" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg43)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="172" height="26" rx="6" fill="url(#indigoGrad43)"/>
+  <text x="130" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-13 · ROUND 43 (R171)</text>
+  <text x="232" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Remote-Brain / Local-Tool SSH Claude Proxy &amp; Element-Pinned MCP Review Wall</text>
+  <text x="232" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">oshinop/claudette (Drop-in `claude` over SSH w/ Local File/Build Execution) + dungnguyenv/pinwall (v1→v2 DOM-Pinned Review Wall &amp; OAuth MCP)</text>
+
+  <!-- Left Panel: oshinop/claudette -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#1E1B4B"/>
+  <text x="58" y="144" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🛰️ oshinop/claudette (★ 241 | +120/d | Rust Split-Execution `claude` Proxy)</text>
+
+  <!-- Split Architecture Boxes -->
+  <rect x="46" y="168" width="248" height="122" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="170" y="188" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">💻 Local Machine (`~/bin/claude`)</text>
+  <text x="58" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• 0 Claude Code install or login needed</text>
+  <text x="58" y="229" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Tools run on local files, builds &amp; git</text>
+  <text x="58" y="248" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• 0 local telemetry emitted</text>
+  <text x="58" y="268" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">• Works w/ T3 Code, Paseo, Zed ACP</text>
+
+  <rect x="320" y="168" width="248" height="122" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="444" y="188" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">🖥️ Remote Host (`CLAUDETTE_HOST=mini`)</text>
+  <text x="332" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Hosts actual Claude Code &amp; auth state</text>
+  <text x="332" y="229" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Survives laptop sleep &amp; Wi-Fi drops</text>
+  <text x="332" y="248" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Shares 1 login across magpie/Codex</text>
+  <text x="332" y="268" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">• Multi-thread agent offload on Mac mini</text>
+
+  <!-- Setup & Protocol Flow -->
+  <rect x="46" y="302" width="522" height="148" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="324" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Why Symlink Drop-In Beats Full Remote SSH / rsync:</text>
+  <text x="60" y="347" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ CLAUDETTE_HOST=mini sh install.sh &amp;&amp; claudette +doctor</text>
+  <text x="60" y="368" fill="#FDE68A" font-family="Consolas, monospace" font-size="11">$ ln -s "$(command -v claudette)" ~/bin/claude   # Transparent to IDEs &amp; SDKs</text>
+  <text x="60" y="392" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Reverse-mounts local workspace &amp; tool execution back over SSH frame channel</text>
+  <text x="60" y="413" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Keeps local macOS/Windows/Linux toolchains, simulator &amp; localhost servers intact</text>
+  <text x="60" y="434" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Static Rust 1.88 + cargo-zigbuild binaries (`darwin/linux` `arm64/x64`)</text>
+
+  <!-- Right Panel: dungnguyenv/pinwall -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">📌 dungnguyenv/pinwall (★ 183 | +91/d | Element-Pinned MCP Review Wall)</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="632" y="168" width="254" height="72" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">DOM Element &amp; Selection Pins</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Pins follow elements across v1 → v2</text>
+  <text x="759" y="227" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Phone / Tablet / Desktop responsive widths</text>
+
+  <rect x="900" y="168" width="254" height="72" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+  <text x="1027" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">OAuth MCP + 1-Time Upload URLs</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">No long-lived secrets in agent shell</text>
+  <text x="1027" y="227" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">OIDC SSO (Zitadel, Keycloak, Google) + Helm</text>
+
+  <!-- Closed-Loop Sequence -->
+  <rect x="632" y="252" width="522" height="198" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="274" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Closed-Loop Visual Artifact Review (`v1 → Pin → MCP Read → v2 Resolve`):</text>
+  <text x="646" y="297" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Agent publishes HTML page, multi-page static site, or Markdown doc over MCP</text>
+  <text x="646" y="318" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">2. Reviewer clicks headline/button/card to pin threaded remarks on immutable `v1`</text>
+  <text x="646" y="339" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Agent reads open comments via MCP with exact DOM selector, text quote &amp; version</text>
+  <text x="646" y="360" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">4. Agent publishes `v2` &amp; marks threads Resolved; open browser tab live-switches to `v2`</text>
+  <text x="646" y="384" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Side-by-side, overlay, or file-by-file version comparison with synced scrolling</text>
+  <text x="646" y="405" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Self-hosted single container (0 telemetry), password/expiry share links &amp; Claude Code skill</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261113-R43-CLAUDETTE-PINWALL · 15 Dev Workstations + 160 UI Reviews/Mo · r = $95/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Local Agent Drain + Screenshot Ping-Pong</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Cloud VM &amp; Token Spend: $1,380.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Eng/Review Labor (40.0h × $95): $3,800.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $5,180.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Full Remote Devboxes + SaaS Previews</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Cloud VM &amp; Token Spend: $840.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Eng/Review Labor (19.0h × $95): $1,805.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,645.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: claudette + pinwall (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Infra &amp; Token Spend: $150.00 / mo | Labor (3.5h): $332.50</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $482.50 / mo (-90.69% | Save $4,697.50/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $56,370.00/yr · Base Claude sub &amp; Mac mini: not_measured</text>
+</svg>

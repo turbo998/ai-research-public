@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgR129" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#121E36"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentR129" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bgR129)"/>
+  <rect x="28" y="24" width="1144" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="28" y="24" width="1144" height="6" rx="3" fill="url(#accentR129)"/>
+
+  <text x="54" y="66" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-13 NIGHT SHIFT · ROUND 1 (CUMULATIVE R129) · DETERMINISTIC×AGENT CODE REVIEW &amp; DEVTOOLS MCP FAQ</text>
+  <text x="54" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="800">alibaba/open-code-review (50.3k★ v1.13.9 #1) + ChromeDevTools/chrome-devtools-mcp (55.3k★)</text>
+  <text x="54" y="124" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5">Smart File Bundling + ~1/9 Tokens on AACR-Bench (200 PRs/1,505 Issues) + Delegation Mode · Live Chrome Trace &amp; Source-Map MCP · -88.57% TCO</text>
+
+  <!-- Left Card: alibaba/open-code-review -->
+  <rect x="52" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="74" y="178" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">1. alibaba/open-code-review (50,309★ · Apache-2.0 · DOM #1)</text>
+  <text x="74" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Deterministic Engineering × Agent Hybrid CLI (`ocr` v1.13.9)</text>
+
+  <rect x="74" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="238" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Hard Engineering Constraints: Smart Bundling &amp; Rule Matching</text>
+  <text x="88" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Deterministic file selection &amp; smart bundling run isolated sub-agents per review unit</text>
+  <text x="88" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Independent positioning &amp; reflection modules eliminate line-number drift &amp; false alarms</text>
+
+  <rect x="74" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="314" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">AACR-Bench Verified: Higher Precision/F1 at ~1/9 Token Cost</text>
+  <text x="88" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Validated across 50 OSS repos, 200 real PRs, 10 languages &amp; 1,505 ground-truth defects</text>
+  <text x="88" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">v1.13.9 records excluded files in run coverage (#1901) &amp; enforces per-request tool schemas</text>
+
+  <rect x="74" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="396" fill="#A855F7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Zero-API-Key Delegation Mode &amp; Full-File `ocr scan`</text>
+  <text x="88" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">`ocr delegate` lets Claude Code / Codex / Cursor / OpenCode run reviews using host auth</text>
+  <text x="88" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">`ocr scan` audits entire directories without git diff + browser Session Viewer replay</text>
+
+  <!-- Right Card: ChromeDevTools/chrome-devtools-mcp -->
+  <rect x="613" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="635" y="178" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">2. ChromeDevTools/chrome-devtools-mcp (55,291★ · v1.13.0)</text>
+  <text x="635" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Official Chrome DevTools MCP Server &amp; CLI for Coding Agents</text>
+
+  <rect x="635" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="238" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Live Performance Traces &amp; CrUX Field Data Correlation</text>
+  <text x="649" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Records real DevTools traces &amp; extracts actionable LCP/INP/CLS performance insights</text>
+  <text x="649" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Pairs lab trace metrics with Chrome User Experience Report (`--no-performance-crux` opt-out)</text>
+
+  <rect x="635" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Source-Mapped Console Stack Traces &amp; Network Forensics</text>
+  <text x="649" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Resolves minified bundle errors directly back to TypeScript/React source lines automatically</text>
+  <text x="649" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Inspects live network payloads, headers, status codes &amp; DOM state in one MCP turn</text>
+
+  <rect x="635" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="396" fill="#F59E0B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Deterministic Puppeteer Auto-Wait &amp; Dual MCP/CLI Surface</text>
+  <text x="649" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Eliminates flaky `sleep()` calls by awaiting browser action settlement via Puppeteer</text>
+  <text x="649" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Works across Copilot, Claude, Cursor &amp; Antigravity against Chrome / Chrome for Testing</text>
+
+  <!-- Bottom FinOps Comparison Strip -->
+  <rect x="52" y="488" width="1096" height="140" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <text x="74" y="516" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261113-R1-OCR-DEVTOOLS · 30 Engineers / 600 PRs + 200 Runtime Bugs per Month)</text>
+
+  <rect x="74" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#EF4444"/>
+  <text x="90" y="552" fill="#FCA5A5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path A: Raw General Agent PR Review + Manual DevTools</text>
+  <text x="90" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$6,300.00 / mo</text>
+  <text x="90" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$1,620.00 API + $4,680.00 labor (52.0h @ $90/h)</text>
+
+  <rect x="424" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="440" y="552" fill="#FCD34D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path B: Static SAST + Basic Screenshot Scripts</text>
+  <text x="440" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$3,260.00 / mo (-48.25%)</text>
+  <text x="440" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$740.00 API + $2,520.00 labor (28.0h @ $90/h)</text>
+
+  <rect x="774" y="530" width="352" height="82" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="790" y="552" fill="#6EE7B7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path C: OpenCodeReview v1.13.9 + DevTools MCP</text>
+  <text x="790" y="574" fill="#ECFDF5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$720.00 / mo (-88.57% · Save $5,580.00/mo)</text>
+  <text x="790" y="596" fill="#A7F3D0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$180.00 API + $540.00 labor (6.0h) · CI/APM: not_measured</text>
+</svg>

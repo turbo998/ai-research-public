@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgR146" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#121E36"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentR146" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bgR146)"/>
+  <rect x="28" y="24" width="1144" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="28" y="24" width="1144" height="6" rx="3" fill="url(#accentR146)"/>
+
+  <text x="54" y="66" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-13 NIGHT SHIFT · ROUND 18 (CUMULATIVE R146) · AGENT-ADAPTIVE LLM SERVING &amp; 321B FP8 CUA MODEL FAQ</text>
+  <text x="54" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="800">mit-han-lab/EvolvingInfra (arXiv:2611.12304) + sii-nex/Nex-N2.6 (321B FP8 OSWorld 83.0)</text>
+  <text x="54" y="124" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5">Online Prefill/Decode Switching + Sub-Agent/Compaction KV Eviction (14× P95 TTFT, 2.7× Tput) · 90% Less Reasoning Repetition &amp; 100% Tool Adherence · -88.22% TCO</text>
+
+  <!-- Left Card: mit-han-lab/EvolvingInfra -->
+  <rect x="52" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="74" y="178" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">1. mit-han-lab/EvolvingInfra (23★ · arXiv:2611.12304 · MIT)</text>
+  <text x="74" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Purely Online Agent-Adaptive LLM Serving on Up to 256 GB300 GPUs</text>
+
+  <rect x="74" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="238" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">4.1× Lower E2E Latency, 14× Lower P95 TTFT &amp; 2.7× Throughput</text>
+  <text x="88" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Benchmarked vs NVIDIA Dynamo across Putnam (Math), Claude Code &amp; OSWorld</text>
+  <text x="88" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Adapts purely online with zero offline profiling on H200, B300 &amp; GB300 (`v0.1.0`)</text>
+
+  <rect x="74" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="314" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Restart-Free Prefill/Decode Switching &amp; Shared Host-RAM KV Pool</text>
+  <text x="88" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Decouples compute allocation from KV management; switches roles in seconds</text>
+  <text x="88" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Planner predicts sub-agent &amp; context-compaction prefill/decode load shifts</text>
+
+  <rect x="74" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="396" fill="#A855F7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Agent-Aware Distributed KV Eviction (Compaction &amp; Sub-Agents)</text>
+  <text x="88" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Immediately evicts KV from histories replaced by compaction or finished sub-agents</text>
+  <text x="88" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Agent-native repo (`AGENTS.md` + `skills/README.md`) + HF `evolving-infra-traces`</text>
+
+  <!-- Right Card: sii-nex/Nex-N2.6 -->
+  <rect x="613" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="635" y="178" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">2. sii-nex/Nex-N2.6 (23★ · ~321B FP8 · GLM-5.3-Flash Base)</text>
+  <text x="635" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Multimodal Agentic Model for Computer Use &amp; Long-Horizon Workflows</text>
+
+  <rect x="635" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="238" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">90% Relative Reduction in Repetitive Reasoning (16.0% → 1.6%)</text>
+  <text x="649" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Eliminates circular `<think>` loops on long-horizon multi-step tool trajectories</text>
+  <text x="649" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Validated on internal known-issue checkpoint-replay evaluations vs Nex-N2.5-Pro</text>
+
+  <rect x="635" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">100% Tool-List Adherence &amp; 83.0 on OSWorld</text>
+  <text x="649" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Never hallucinates undeclared tool names (100% tool-list adherence in eval)</text>
+  <text x="649" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Scores 83.0 on OSWorld (up from 78.0 GLM-5.3-Flash) &amp; 84.1 on Terminal-Bench 2.1</text>
+
+  <rect x="635" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="396" fill="#F59E0B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Production-Ready ~321B FP8 Weights (`nex-agi/Nex-N2.6`)</text>
+  <text x="649" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Open-weight FP8 export on Hugging Face + live API on OpenRouter &amp; MOSS</text>
+  <text x="649" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Pairs naturally with EvolvingInfra for high-throughput CUA &amp; coding clusters</text>
+
+  <!-- Bottom FinOps Comparison Strip -->
+  <rect x="52" y="488" width="1096" height="140" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <text x="74" y="516" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261113-R18-EVOLVINGINFRA-NEXN26 · 32-GPU Pool / 250k Agent Sessions/Mo)</text>
+
+  <rect x="74" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#EF4444"/>
+  <text x="90" y="552" fill="#FCA5A5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path A: Static P/D Split + 16% Repetition Loops</text>
+  <text x="90" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$9,000.00 / mo</text>
+  <text x="90" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$4,600.00 GPU waste + $4,400.00 labor (40.0h @ $110/h)</text>
+
+  <rect x="424" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="440" y="552" fill="#FCD34D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path B: Offline Profiling + Unaligned Base Model</text>
+  <text x="440" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$4,650.00 / mo (-48.33%)</text>
+  <text x="440" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$2,450.00 GPU + $2,200.00 labor (20.0h @ $110/h)</text>
+
+  <rect x="774" y="530" width="352" height="82" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="790" y="552" fill="#6EE7B7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path C: EvolvingInfra v0.1.0 + Nex-N2.6 FP8</text>
+  <text x="790" y="574" fill="#ECFDF5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$1,060.00 / mo (-88.22% · Save $7,940.00/mo)</text>
+  <text x="790" y="596" fill="#A7F3D0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$620.00 GPU + $440.00 labor (4.0h) · Lease/Switch: not_measured</text>
+</svg>

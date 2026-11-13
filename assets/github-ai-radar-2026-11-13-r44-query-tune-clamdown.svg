@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg44" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad44" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad44" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg44)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="172" height="26" rx="6" fill="url(#emeraldGrad44)"/>
+  <text x="130" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-13 · ROUND 44 (R172)</text>
+  <text x="232" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Read-Only SQL Caller/Plan Audit Skill &amp; Closed-Lid MacBook Agent Thermal Watchdog</text>
+  <text x="232" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">kbdevs/query-tune (543.00ms → 25.20ms SQL Caller/Access-Path Audit) + delef/ClamDown (50°C–75°C Fan Curve &amp; Root Watchdog for Closed MacBooks)</text>
+
+  <!-- Left Panel: kbdevs/query-tune -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="58" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🗄️ kbdevs/query-tune (★ 166 | +166/d | Read-Only SQL &amp; Caller Audit Skill)</text>
+
+  <!-- Benchmark Callouts -->
+  <rect x="46" y="168" width="254" height="82" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">543.00ms → 25.20ms (-95.4%)</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Up to 99% latency drop across 11 paths</text>
+  <text x="173" y="229" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">8 MySQL clients · 50 paired blocks/cell</text>
+
+  <rect x="314" y="168" width="254" height="82" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Zero-Row / Zero-Secret Read-Only</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Audits code, schemas, indexes &amp; plans</text>
+  <text x="441" y="229" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">No row content or credentials collected</text>
+
+  <!-- 5-Step Audit Contract -->
+  <rect x="46" y="262" width="522" height="188" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="284" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">5-Pillar SQL Audit Contract (Codex &amp; Claude Code Skill):</text>
+  <text x="60" y="307" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Access Paths: Missing composite-key columns, functions on indexed filters, latest-per-parent</text>
+  <text x="60" y="328" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">2. Repeated Work: N+1 per-row lookups/writes, duplicate state transitions, over-window reads</text>
+  <text x="60" y="349" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Caller &amp; Contract Safety: Preserves tenant boundaries, collation, cursors, visibility &amp; locks</text>
+  <text x="60" y="370" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">4. Honest Tradeoff Reporting: Separates schema DDL, extra write cost &amp; small-case regressions</text>
+  <text x="60" y="394" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ cp -R query-tune/skills/query-tune ~/.claude/skills/  # or ~/.codex/skills/</text>
+  <text x="60" y="416" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Reports first without running locking queries or mutating files until explicitly instructed</text>
+
+  <!-- Right Panel: delef/ClamDown -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#083344"/>
+  <text x="644" y="144" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">💻 delef/ClamDown (★ 158 | +158/d | Closed-Lid MacBook Agent Guard)</text>
+
+  <!-- Comparison vs caffeinate -->
+  <rect x="632" y="168" width="254" height="96" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="759" y="189" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">❌ `caffeinate` / Dummy HDMI Plug</text>
+  <text x="644" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• `caffeinate` ignored when lid closes</text>
+  <text x="644" y="229" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Closed MacBook keeps fans near idle!</text>
+  <text x="644" y="248" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">• Thermal throttling &amp; 0% battery drain</text>
+
+  <rect x="900" y="168" width="254" height="96" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="1027" y="189" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">✅ ClamDown + Root Watchdog</text>
+  <text x="912" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Stays awake w/ lid closed + locks screen</text>
+  <text x="912" y="229" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11">• 50 °C → 75 °C Apple Silicon fan curve</text>
+  <text x="912" y="248" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">• Auto cut-off on low battery / high heat</text>
+
+  <!-- Thermal & Watchdog Details -->
+  <rect x="632" y="276" width="522" height="174" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="298" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Why Closed-Lid MacBooks Throttle Coding Agents &amp; How ClamDown Fixes It:</text>
+  <text x="646" y="321" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Hidden macOS Quirk: With the lid closed, macOS holds fans near minimum RPM even under heavy</text>
+  <text x="646" y="340" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">  CPU/GPU load, baking the chassis and throttling long Claude Code / Rust / Xcode builds.</text>
+  <text x="646" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">• Dynamic Fan Curve (Only With Lid Closed): Ramps from min RPM at 50 °C to full speed at 75 °C,</text>
+  <text x="646" y="382" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">  then hands fan control back to macOS the instant you open the lid.</text>
+  <text x="646" y="405" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Fail-Safe Root Helper Watchdog: Restores normal sleep, Low Power Mode &amp; fan curves if app crashes.</text>
+  <text x="646" y="426" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Instant screen lock on lid close + timed sessions ("Turn On For") + battery/thermal safety cut-offs.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261113-R44-QUERYTUNE-CLAMDOWN · 20 SQL Audits + 200 Closed-Lid Runs/Mo · r = $100/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Blind ORM Indexing + Interrupted Builds</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Replica &amp; Re-Run Token Spend: $1,540.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• SQL/Build Labor (38.0h × $100): $3,800.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $5,340.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: APM Slow-Log SaaS + Dummy HDMI Plug</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• APM &amp; Re-Run Token Spend: $860.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• SQL/Build Labor (18.0h × $100): $1,800.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,660.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: query-tune + ClamDown (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Compute &amp; Token Spend: $145.00 / mo | Labor (3.5h): $350.00</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $495.00 / mo (-90.73% | Save $4,845.00/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $58,140.00/yr · Base RDS &amp; MacBook capex: not_measured</text>
+</svg>

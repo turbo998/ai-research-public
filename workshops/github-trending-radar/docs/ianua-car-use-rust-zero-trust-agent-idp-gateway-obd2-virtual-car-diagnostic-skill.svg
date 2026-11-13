@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg50" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="indigoGrad50" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad50" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg50)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="172" height="26" rx="6" fill="url(#indigoGrad50)"/>
+  <text x="130" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-13 · ROUND 50 (R178)</text>
+  <text x="232" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Rust Zero-Trust Agent IdP/Gateway &amp; OBD-II Real/Virtual Car Diagnostic Skill</text>
+  <text x="232" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">IanuaIDP/ianua (Per-Agent Identities, Delegated Rights, Spending Caps &amp; 27 Integrations) + october-dev/car-use ($15 OBD-II + Virtual Car Simulator)</text>
+
+  <!-- Left Panel: IanuaIDP/ianua -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#1E1B4B"/>
+  <text x="58" y="144" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🔐 IanuaIDP/ianua (★ 97 | +97/d | Rust Zero-Trust IdP &amp; Governed Agent Platform)</text>
+
+  <!-- 2 Pillar Cards -->
+  <rect x="46" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#6366F1" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">First-Class Agent Identities</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Delegated human rights, spending caps</text>
+  <text x="173" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">&amp; default-deny zero-trust gateway</text>
+
+  <rect x="314" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">27 Service Workflow Crates</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Sandboxed code steps + human approvals</text>
+  <text x="441" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">OIDC / SAML / SCIM + Docker &amp; Helm</text>
+
+  <!-- Ianua Architecture -->
+  <rect x="46" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="280" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Why Unifying IdP + Zero-Trust Gateway Beats Shared Service-Account Keys:</text>
+  <text x="60" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Default-Deny Live Gateway: Sits in front of every internal app; resolves caller identity</text>
+  <text x="60" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   (human or AI agent), queries the Rust policy engine, and refuses on any missing/failed decision.</text>
+  <text x="60" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Scoped Agent Delegation &amp; Spend Caps: Agents never share static admin keys; each run acts</text>
+  <text x="60" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   strictly within the delegated rights of the requesting user, enforced with hard spending caps.</text>
+  <text x="60" y="385" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. DDD Rust Backend (`crates/` + `integrations/`) + Next.js Dashboard + Postgres audit log.</text>
+  <text x="60" y="407" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ git clone https://github.com/IanuaIDP/ianua.git &amp;&amp; cd ianua &amp;&amp; make start</text>
+  <text x="60" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Free to self-host for your organization &amp; customer sign-in (Ianua Source Use License).</text>
+
+  <!-- Right Panel: october-dev/car-use -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🚗 october-dev/car-use (★ 95 | +95/d | OBD-II Real &amp; Virtual Car Skill)</text>
+
+  <!-- 2 Feature Boxes -->
+  <rect x="632" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">DTCs + Freeze-Frame + Live O2</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">`dtcs()`, `freeze_frame()`, `watch(o2)`</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">+ Built-in 0-hardware Virtual Car</text>
+
+  <rect x="900" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Dongle Grader &amp; VIN Inspector</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">`dongle-doctor` grades adapters A–D</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">`inspect --expect-vin` catches fraud</text>
+
+  <!-- Car-Use Mechanics -->
+  <rect x="632" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="280" fill="#38BDFFC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Physical-World Vehicle &amp; Heavy-Equipment Diagnostics for Coding Agents:</text>
+  <text x="646" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Multi-Signal Root-Cause Correlation: Instead of just dumping `P0420`, correlates `dtcs()`</text>
+  <text x="646" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   with `freeze_frame()` (2,210 rpm, 72 km/h, fuel trim) and live `watch(o2)` waveform comparison.</text>
+  <text x="646" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Hardware Quality &amp; Used-Car Fraud Audits: `car-use dongle-doctor` benchmarks cheap ELM327</text>
+  <text x="646" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   clones (Grades A–D); `car-use inspect --expect-vin` flags ECU VIN mismatches &amp; recently</text>
+  <text x="646" y="382" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   cleared readiness monitors before buying a used vehicle or fleet truck.</text>
+  <text x="646" y="405" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ uv tool install car-use &amp;&amp; car-use skill &amp;&amp; car-use doctor</text>
+  <text x="646" y="426" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Works across Claude Code, Codex, OpenClaw &amp; Hermes on cars (1996+), trucks, cranes &amp; generators.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261113-R50-IANUA-CARUSE · 60 Governed Agents + 50 Fleet/OBD Audits/Mo · r = $95/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: SaaS IAM Per-Seat + Shop Scans</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• SaaS IAM &amp; Scan Spend: $2,350.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• IAM/Fleet Labor (38.0h × $95): $3,610.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $5,960.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Legacy OSS IdP + Basic Code Readers</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Infra &amp; Tool Spend: $1,120.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Glue/Diag Labor (18.0h × $95): $1,710.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,830.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: ianua + car-use (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Infra &amp; Token Spend: $175.00 / mo | Labor (3.5h): $332.50</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $507.50 / mo (-91.48% | Save $5,452.50/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $65,430.00/yr · Base K8s nodes &amp; $15 dongle: not_measured</text>
+</svg>

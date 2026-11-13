@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgR155" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#151D36"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentR155" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bgR155)"/>
+  <rect x="28" y="24" width="1144" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="28" y="24" width="1144" height="6" rx="3" fill="url(#accentR155)"/>
+
+  <text x="54" y="66" fill="#F472B6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-13 NIGHT SHIFT · ROUND 27 (CUMULATIVE R155) · 15-ADE OPEN BENCHMARK &amp; 22-AGENT PERSISTENT OBSIDIAN HERDR FAQ</text>
+  <text x="54" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="800">zqkra/ademark (15 ADEs vs Bare CLI) + AgriciDaniel/obsidian-herdr (22 Agents + Undoable Vault)</text>
+  <text x="54" y="124" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5">0.69s–11.4s Cold Start, 134MB–2,334MB RAM &amp; 22.2K–77.0K "hi" Tokens · Persistent Herdr Terminals &amp; Undoable Vault Bridge in Obsidian · -90.68% TCO</text>
+
+  <!-- Left Card: zqkra/ademark -->
+  <rect x="52" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#EC4899" stroke-width="1.5"/>
+  <text x="74" y="178" fill="#F472B6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">1. zqkra/ademark (19★ · TypeScript · Apache-2.0 · ademark.dev)</text>
+  <text x="74" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Open Benchmark of 15 Agentic Development Environments vs Bare CLI</text>
+
+  <rect x="74" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="238" fill="#F472B6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Cold Start (`0.69 s` Bare CLI vs `1.76 s–11.4 s`) &amp; Idle RAM</text>
+  <text x="88" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">5-idle-thread RAM spans `134 MB` (`super.engineering`) to `2,334 MB` (`Emdash`)</text>
+  <text x="88" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Bare CLI uses `1,013 MB` across 5 threads; `super.engineering` wins 4/12 tests</text>
+
+  <rect x="74" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">3.47× Hidden Token Overhead on a Simple `"hi"` Greeting</text>
+  <text x="88" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Sending `"hi"` consumes `22.2K` tokens (`Paseo`) up to `77.0K` tokens (`Emdash`)</text>
+  <text x="88" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Bare CLI sends `38.2K` tokens; exposes hidden wrapper prompt bloat before you buy</text>
+
+  <rect x="74" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="396" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Multi-Agent Orchestrated Build Graded by Hidden Tests</text>
+  <text x="88" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">`Synara` (`5.2 min`) &amp; `super.engineering` (`7.1 min`) pass 100% of hidden tests</text>
+  <text x="88" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Exposes ADEs (`bb`, `Cloudroom`) where 1 lead + 4 workers left `main` unchanged</text>
+
+  <!-- Right Card: AgriciDaniel/obsidian-herdr -->
+  <rect x="613" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="635" y="178" fill="#A78BFA" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">2. AgriciDaniel/obsidian-herdr (18★ · TS · MIT + Apache-2.0)</text>
+  <text x="635" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Persistent 22-Agent `Herdr` Terminals &amp; Undoable Vault Bridge</text>
+
+  <rect x="635" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="238" fill="#A78BFA" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">22 Coding Agents Running Persistently Inside Obsidian</text>
+  <text x="649" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Claude Code, Codex, Hermes, Antigravity, Gemini, OpenCode, Copilot CLI, Devin...</text>
+  <text x="649" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Backed by `Herdr` so closing a tab or reloading Obsidian never kills the session</text>
+
+  <rect x="635" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="314" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Link-Preserving Vault Bridge (CLI + MCP) &amp; 1-Click Undo</text>
+  <text x="649" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Agents edit notes through Obsidian's native API so wikilinks stay 100% intact</text>
+  <text x="649" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Every agent edit is logged in an audit trail and can be rolled back in one click</text>
+
+  <rect x="635" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="396" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Mission Control Sidebar &amp; Optional `See / Act / Check` CUA</text>
+  <text x="649" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Shows working / blocked / done status &amp; unblocks waiting agents in one click</text>
+  <text x="649" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Optional Full-permission UI control (`See` window, `Act` shortcuts, `Check` text)</text>
+
+  <!-- Bottom FinOps Comparison Strip -->
+  <rect x="52" y="488" width="1096" height="140" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <text x="74" y="516" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261113-R27-ADEMARK-OBSIDIANHERDR · 20 Engineers / 5,500 ADE &amp; Vault Sessions/Mo)</text>
+
+  <rect x="74" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#EF4444"/>
+  <text x="90" y="552" fill="#FCA5A5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path A: 77K-Token Bloated ADE + Raw File Edits</text>
+  <text x="90" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$5,390.00 / mo</text>
+  <text x="90" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$1,780.00 token bloat + $3,610.00 labor (38.0h @ $95/h)</text>
+
+  <rect x="424" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="440" y="552" fill="#FCD34D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path B: Bare CLI Only + Manual Vault Copy-Paste</text>
+  <text x="440" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$2,660.00 / mo (-50.65%)</text>
+  <text x="440" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$760.00 token + $1,900.00 labor (20.0h @ $95/h)</text>
+
+  <rect x="774" y="530" width="352" height="82" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="790" y="552" fill="#6EE7B7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path C: ADEMark Winner + obsidian-herdr</text>
+  <text x="790" y="574" fill="#ECFDF5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$502.50 / mo (-90.68% · Save $4,887.50/mo)</text>
+  <text x="790" y="596" fill="#A7F3D0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$170.00 lean token + $332.50 labor (3.5h) · MacBooks: not_measured</text>
+</svg>
