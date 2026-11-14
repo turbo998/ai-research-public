@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg211" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad211" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad211" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg211)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="182" height="26" rx="6" fill="url(#cyanGrad211)"/>
+  <text x="135" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R28 (R211)</text>
+  <text x="240" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">12,022-Image 3-in-1 ComfyUI Character Studio &amp; 8-Hour 1-Prompt Fable 5.2 FPS (`Saltline`)</text>
+  <text x="240" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">anhao/ai-pose-gallery-zh (6,162 Pose/Depth/Costume/Portrait + 5 APIs &amp; `custom_nodes`) + realcodebear/saltline-fable-5.2 (2.7M Out / 445M In Tokens)</text>
+
+  <!-- Left Panel: anhao/ai-pose-gallery-zh -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#083344"/>
+  <text x="58" y="144" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🎨 anhao/ai-pose-gallery-zh (★ 6,522 | 6,162 Records / 12,022 Images + ComfyUI)</text>
+
+  <!-- 2 KPI Boxes -->
+  <rect x="46" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">6,162 Records · 12,022 WebPs</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">1,439 Clay + 1,439 Depth + 3,224 Outfits</text>
+  <text x="173" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">+ 1,499 Portraits (1600×2000 HD)</text>
+
+  <rect x="314" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">5 Protocols + `custom_nodes`</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Gemini 3.1 · GPT Image 2.5 · Qwen 3.0</text>
+  <text x="441" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Seedream 5.0 + Native ComfyUI Plugin</text>
+
+  <!-- ai-pose-gallery-zh Mechanics -->
+  <rect x="46" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="280" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">How `ai-pose-gallery-zh` Unifies 3+N Multi-Reference Character Synthesis:</text>
+  <text x="60" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Clay-to-Depth Instant Toggle: Every 5-angle pose (`288` groups) switches between Clay</text>
+  <text x="60" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   mannequin and ControlNet `Depth` map (`use_depth`), paired with `3,224` outfits &amp; `1,499` faces.</text>
+  <text x="60" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Drop-In ComfyUI Custom Nodes: Clone directly into `ComfyUI/custom_nodes/` to get 4 native</text>
+  <text x="60" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   nodes (Pose, Costume, Portrait, 3-in-1 Recipe) with an in-canvas 6,162-item modal picker.</text>
+  <text x="60" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ cd ComfyUI/custom_nodes &amp;&amp; git clone https://github.com/anhao/ai-pose-gallery-zh.git</text>
+  <text x="60" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. React 19 + TS 7 Web Studio: Synthesizes `1800×1200` reference collages + 12 art presets</text>
+  <text x="60" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">   across Gemini, GPT Image, Bailian Qwen, Volcengine Seedream &amp; local ComfyUI `/prompt`.</text>
+
+  <!-- Right Panel: realcodebear/saltline-fable-5.2 -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🎮 realcodebear/saltline-fable-5.2 (★ 307 | 8-Hr 1-Prompt Claude Fable 5.2 FPS)</text>
+
+  <!-- 2 Feature Boxes -->
+  <rect x="632" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">1 Prompt · ~8 Hours · 0 Feedback</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">~2.7M output / ~445M cached input</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">~$550 retail API run (reported)</text>
+
+  <rect x="900" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">1.4 MB Single `index.html`</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">100% procedural 3D, textures &amp; audio</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">"Gull" drones &amp; "Hound" quadrupeds</text>
+
+  <!-- Saltline Mechanics -->
+  <rect x="632" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="280" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">What Inspecting `Saltline`'s 1.4 MB `index.html` Reveals About Long-Horizon Coding Agents:</text>
+  <text x="646" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Extreme Cache-Read Asymmetry (`445M` In vs `2.7M` Out): Shows a `164:1` input-to-output</text>
+  <text x="646" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   token ratio across 8 hours of autonomous self-playtesting and iterative code refinement.</text>
+  <text x="646" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Zero External Media Assets: Every container-port mesh, rain/puddle shader, procedural</text>
+  <text x="646" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   texture, WebAudio gunshot/rain synthesizer, and enemy state machine lives in 1 HTML file.</text>
+  <text x="646" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ git clone https://github.com/realcodebear/saltline-fable-5.2 &amp;&amp; python3 -m http.server 8731</text>
+  <text x="646" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Clean Local De-Framing: Strips `claude.ai` iframe runtime scripts while preserving 100%</text>
+  <text x="646" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">   of the original Fable 5.2 game code for offline inspection, profiling, and benchmarking.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261114-R28-POSEGALLERY-SALTLINE · 80 Multi-Ref Character Packs + 12 3D Web Prototypes/Mo · r = $100/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Uncached Long-Horizon Runs + Blind Rerolls</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Uncached API &amp; Diffusion Reroll Spend: $1,950.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• ControlNet Prep &amp; 3D Debug (38.0h × $100): $3,800.00</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $5,750.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Separate JP Galleries + Manual Three.js</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Image API &amp; Asset Spend: $910.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Manual Collage &amp; Shader Code (18.5h × $100): $1,850.00</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,760.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: ai-pose-gallery-zh + Saltline Reference (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Cached/Local ComfyUI Spend: $145.00 | Labor (3.5h): $350.00</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $495.00 / mo (-91.39% | Save $5,255.00/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $63,060.00/yr · Local GPU hardware: not_measured</text>
+</svg>

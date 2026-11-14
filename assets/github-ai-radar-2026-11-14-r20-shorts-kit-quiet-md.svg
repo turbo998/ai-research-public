@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg203" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad203" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad203" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg203)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="182" height="26" rx="6" fill="url(#cyanGrad203)"/>
+  <text x="135" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R20 (R203)</text>
+  <text x="240" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Fact-Gated 160-Shot Remotion Promo Kit (`shorts-kit`) &amp; `5.06 ms` 1M-Char `GPUI` Feishu Editor (`Quiet.md`)</text>
+  <text x="240" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">howznguyen/shorts-kit (10 `sk-*` Skills, Fact Linter &amp; 160+ Remotion/Blender Shots) + s1dashu/quiet-md (Rust+GPUI Feishu DocxXML &lt;6ms @ 1M Chars)</text>
+
+  <!-- Left Panel: howznguyen/shorts-kit -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#083344"/>
+  <text x="58" y="144" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🎞️ howznguyen/shorts-kit (★ 141 | 10-Skill Fact-Linted Remotion + Blender Kit)</text>
+
+  <!-- 2 KPI Boxes -->
+  <rect x="46" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Fact Ledger + `SOUL.md`</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Linter blocks unverified script claims</text>
+  <text x="173" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">20 storytelling flows (`docs/flows/`)</text>
+
+  <rect x="314" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">160+ Shots · 122.1K Peak</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">3D Globe/Maps + Blender `bun run model`</text>
+  <text x="441" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">9:16 shorts &amp; 16:9 product launch promos</text>
+
+  <!-- shorts-kit Mechanics -->
+  <rect x="46" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="280" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">How `shorts-kit` Enforces Agency-Grade Rigor for Coding Agents Building Remotion Videos:</text>
+  <text x="60" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Fact-First Linter (`docs/facts/`): No sentence is allowed into a narration script unless</text>
+  <text x="60" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   its underlying claim has a verified fact record; `SOUL.md` tags rules as `[measured]`/`[hard]`.</text>
+  <text x="60" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. 160+ Parameterized Shot Cards &amp; Real-UI Capture: Combines 20 story flows with 3D globes,</text>
+  <text x="60" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   Natural Earth maps, headless Blender (`bun run model`), and deterministic real-UI capture.</text>
+  <text x="60" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ bun run dev gallery   # Browse 160+ shots | sk-pipeline (shorts) &amp; sk-promo (launch ads)</text>
+  <text x="60" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Agency Promo Gates (`sk-promo`): Runs beat-grid animatics (`bun run beats`), 15s/6s</text>
+  <text x="60" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">   cutdowns, Whisper talking-head ingest (`bun run cut`), and stranger comprehension checks.</text>
+
+  <!-- Right Panel: s1dashu/quiet-md -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">📝 s1dashu/quiet-md (★ 1,766 | Rust + `GPUI` Local-First Feishu DocxXML Editor)</text>
+
+  <!-- 2 Feature Boxes -->
+  <rect x="632" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">5.06 ms P50 @ 1M Chars</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">5.78 ms P95 over 549 chapters</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Pure Rust + `GPUI` (0 WebView/Electron)</text>
+
+  <rect x="900" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Native Feishu DocxXML</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Lossless Feishu/Lark Docs structure</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Plain folder `.xml`/`.md` for Git sync</text>
+
+  <!-- Quiet.md Mechanics -->
+  <rect x="632" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="280" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Why `Quiet.md` Solves the Feishu/Lark Rich-Text vs Local Git Markdown Dilemma:</text>
+  <text x="646" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Sub-6ms Frame Time on 1,000,000-Character Docs: Drawn natively on the GPU via Rust +</text>
+  <text x="646" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   Zed's `GPUI`, keeping typing (`5.06 ms` P50 / `5.78 ms` P95) and scrolling under `6 ms`.</text>
+  <text x="646" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Feishu (Lark) DocxXML Fidelity on Local Disk: Stores rich blocks (tables, columns, callouts,</text>
+  <text x="646" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   math, code, to-dos) in Feishu's DocxXML format (`.xml` or `.md`) inside plain local folders.</text>
+  <text x="646" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">Platforms: macOS (Notarized arm64/x64) · Windows (x64) · Linux (x86_64 AppImage)</text>
+  <text x="646" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Zero Cloud Lock-In &amp; 1-Click Migration: Imports existing vaults from Obsidian, Logseq,</text>
+  <text x="646" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">   iA Writer, or Typora without overwriting originals, and syncs cleanly via Git or iCloud.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261114-R20-SHORTSKIT-QUIETMD · 25 Promo/Shorts Videos + 40 Knowledge-Base Seats/Mo · r = $95/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Motion Agency Retainers + Cloud Doc Seats</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Motion Templates &amp; Cloud Doc Seats: $1,760.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Manual Remotion &amp; Doc Format Fix (38.0h × $95): $3,610.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $5,370.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Raw Remotion Scripts + Electron Note Apps</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Asset &amp; Sync Tooling Spend: $840.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Fact-Checking &amp; Feishu Paste Fix (18.0h × $95): $1,710.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,550.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: shorts-kit + Quiet.md (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• TTS/Render Spend: $120.00 / mo | Labor (3.5h): $332.50</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $452.50 / mo (-91.57% | Save $4,917.50/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $59,010.00/yr · Local workstation hardware: not_measured</text>
+</svg>

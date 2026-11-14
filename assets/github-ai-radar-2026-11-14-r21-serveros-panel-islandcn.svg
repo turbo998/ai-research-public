@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg204" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad204" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad204" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg204)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="182" height="26" rx="6" fill="url(#cyanGrad204)"/>
+  <text x="135" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R21 (R204)</text>
+  <text x="240" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Self-Hosted Multi-Server MCP Control Plane (`ServerOS`) &amp; 4-State React Dynamic Island (`islandcn`)</text>
+  <text x="240" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">serveroshq/panel (`serverosd` :8443 Daemon + Built-In MCP Server) + opencoredev/islandcn (`shadcn` 4-State Activity Stack &amp; 9 Presets)</text>
+
+  <!-- Left Panel: serveroshq/panel -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#083344"/>
+  <text x="58" y="144" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🖥️ serveroshq/panel (★ 751 | Self-Hosted Linux Fleet Panel + MCP Server)</text>
+
+  <!-- 2 KPI Boxes -->
+  <rect x="46" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">1-Cmd `serverosd` (:8443)</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Connects VPS across any cloud</text>
+  <text x="173" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Deploy · Stage-to-Prod · Backups</text>
+
+  <rect x="314" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Built-In MCP + Workflows</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">AI assistants manage servers via MCP</text>
+  <text x="441" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Deploy → Check → Promote pipelines</text>
+
+  <!-- ServerOS Mechanics -->
+  <rect x="46" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="280" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">How `ServerOS` Unifies Multi-Vendor Linux VPS Fleets for Humans and AI Agents:</text>
+  <text x="60" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Outbound `serverosd` Architecture: Each Linux machine runs the open-source `serverosd`</text>
+  <text x="60" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   daemon connecting out to your self-hosted panel on port `8443`—servers stay on your account.</text>
+  <text x="60" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Staging Clones &amp; Promote Workflows: Clones any Git/template service into a test environment,</text>
+  <text x="60" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   runs automated `deploy → check → promote` workflows, and aggregates logs/uptime/backups.</text>
+  <text x="60" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ curl -fsSL .../docker/self-hosted/install.sh | sudo bash -s -- --domain=panel.example.com</text>
+  <text x="60" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Native MCP Server + REST API: Exposes fleet operations, status pages, and 2FA RBAC</text>
+  <text x="60" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">   audit logs directly to coding agents and ops assistants without raw SSH key sprawl.</text>
+
+  <!-- Right Panel: opencoredev/islandcn -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🏝️ opencoredev/islandcn (★ 290 | `shadcn` 4-State React Dynamic Island)</text>
+
+  <!-- 2 Feature Boxes -->
+  <rect x="632" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">4 Presentations + Split</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Idle · Compact · The Split · Expanded</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Springs fitted to real frame recordings</text>
+
+  <rect x="900" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">9 Presets + `islandcn-skill`</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Upload · Timer · Call · ETA · Recording</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">`npx shadcn@latest add .../island-core.json`</text>
+
+  <!-- islandcn Mechanics -->
+  <rect x="632" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="280" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Why `islandcn` Excels at Multi-Activity Live Telemetry in React &amp; AI Web Apps:</text>
+  <text x="646" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. True Multi-Activity Stack &amp; "The Split": Unlike single-banner toasts, `island-core` manages</text>
+  <text x="646" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   concurrent ongoing activities (e.g., file upload + voice recording) using the detached split pill.</text>
+  <text x="646" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Imperative Hook API (`useIsland`): Any component calls `island.start({ id, compact, expanded })`,</text>
+  <text x="646" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   `.update()`, and `.end()` with frame-fitted springs, long-press expansion, and reduced motion.</text>
+  <text x="646" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ npx shadcn@latest add https://islandcn.dev/r/island-core.json</text>
+  <text x="646" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. 9 Ready-to-Copy Presets &amp; Agent Skill: Ships single-file presets (upload, timer, call, ETA,</text>
+  <text x="646" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">   recording, nearby transfer, battery) plus `islandcn-skill` for coding agents.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261114-R21-SERVEROS-ISLANDCN · 25 Linux VPS Nodes + 20 React Live-Activity Apps/Mo · r = $100/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Managed PaaS Markup + Custom Status Bars</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• PaaS Per-Seat/Node Markup: $1,820.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• SSH Ops &amp; Custom UI Motion (38.0h × $100): $3,800.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $5,620.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Single-Node Panels + Ad-Hoc Framer Code</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Panel Licenses &amp; Tooling: $880.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Manual Staging &amp; UI Bugs (18.5h × $100): $1,850.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,730.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: ServerOS Panel + islandcn (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Self-Hosted Panel Spend: $135.00 | Labor (3.5h): $350.00</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $485.00 / mo (-91.37% | Save $5,135.00/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $61,620.00/yr · Underlying VPS hardware: not_measured</text>
+</svg>

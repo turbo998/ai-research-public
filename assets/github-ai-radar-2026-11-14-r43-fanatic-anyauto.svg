@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bg226" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan226" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="accentGreen226" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg226)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="232" height="26" rx="6" fill="url(#accentCyan226)"/>
+  <text x="160" y="56" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R43 (R226)</text>
+  <text x="292" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">Fanatic 5MB 8-OEM Laptop EC/WMI Controller &amp; AnyAuto Shizuku Projector</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">Avalanchevonproxy69/fanatic-laptop-control (★ 97 · 5MB Rust 8-Brand Fan/Battery EC) + GitMag/AnyAuto (★ 100 · Root-Free Shizuku Android Auto VirtualDisplay)</text>
+
+  <!-- Left Panel: Fanatic -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#431407"/>
+  <text x="62" y="173" fill="#FB923C" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. fanatic-laptop-control — 5MB Rust 8-OEM Thermal &amp; Battery Engine</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#FB923C" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">8 Native Firmware Backends</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• ASUS `ATKACPI` &amp; Lenovo `GameZone WMI`</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• HP `Omen WMI` &amp; MSI Embedded `EC`</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Dell/Alienware `AWCC` &amp; Acer `WMI`</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Gigabyte `WMI` &amp; `Framework EC`</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Portable ~5 MB Rust Binary · 0 Telemetry</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Monotonic Curves &amp; Battery</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 8-Point Monotonic CPU/GPU Fan Curves</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Unified 60% / 80% / 100% Charge Cap</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Daily Capacity Log &amp; 80%-Health Forecast</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Per-App Profiles (Blender ➔ Performance)</text>
+  <text x="328" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Nighttime Silent Hours Fan Cap</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Replacing 8 Vendor Bloatware Suites (Armoury Crate / Vantage / OMEN)</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. OEM control suites install 1–2 GB of background services, telemetry daemons, and ad popups.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. Single-brand tools (`G-Helper`, `LegionToolkit`) only work on 1 OEM; `Fanatic` abstracts all 8 OEMs.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Enforces monotonic fan-curve safety invariants before writing to EC registers.</text>
+  <text x="62" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Standardize mixed-OEM Windows AI/3D developer laptops on Fanatic (`80%` charge cap).</text>
+
+  <!-- Right Panel: GitMag/AnyAuto -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#064E3B"/>
+  <text x="646" y="173" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. GitMag/AnyAuto — Root-Free Android Auto VirtualDisplay via Shizuku</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">VirtualDisplay Projection</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Runs Unmodified Phone Apps in Car</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Car-Sized `VirtualDisplay` Surface</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Direct Touch + Rotary Knob Pointer</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Left Rail: Back/Apps/Keyboard/Hide</text>
+  <text x="644" y="326" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Coexists with Media Split-Card View</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Zero-Root Shizuku Pipeline</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Powered by `Shizuku` ADB Binder API</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Zero Root / Zero PC Needed (Android 11+)</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `UnknownAuto` Play-Source Installer</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 0 Accounts, 0 Analytics, 0 Cloud Sync</text>
+  <text x="912" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Optional GitHub Release Check Only</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Bypassing Restricted `CarAppService` Templates Without Rooting Devices</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Google's `androidx.car.app` SDK forbids arbitrary custom UIs, browsers, and complex field dashboards.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `AnyAuto` uses `Shizuku` ADB privileges to spawn a car-proportioned `VirtualDisplay` without root.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. `UnknownAuto` sets the installer package metadata so Android Auto accepts the APK without Play Store.</text>
+  <text x="646" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Use `Shizuku` VirtualDisplay + `UnknownAuto` for root-free in-vehicle field dashboards.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="405" height="28" rx="6" fill="url(#accentGreen226)"/>
+  <text x="248" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261114-R43-FANATIC-ANYAUTO</text>
+  <text x="468" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">50 Mixed-OEM Dev Laptops + 8 In-Vehicle Field Apps/Mo · $95/hr Eng Rate · Local Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: 8 OEM Bloat Suites + Custom CarApp SDK</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Battery Swell &amp; Fleet Spend: $1,450.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• CarApp Rewrite &amp; OEM Ops (36.0h): $3,420.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $4,870.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Single-OEM Tools + Rooted Mirroring</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Fleet &amp; Device Spend: $700.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (17.0h): $1,615.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,315.00 / month (-52.46%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: Fanatic 8-OEM (5MB) + AnyAuto Shizuku</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Fleet Maintenance Spend: $75.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.5h @ $95/h): $332.50 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $407.50 / mo (Save $4,462.50 · -91.63%)</text>
+</svg>

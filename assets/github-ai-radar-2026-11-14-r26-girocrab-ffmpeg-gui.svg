@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg209" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad209" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad209" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg209)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="182" height="26" rx="6" fill="url(#cyanGrad209)"/>
+  <text x="135" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R26 (R209)</text>
+  <text x="240" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Rust+SwiftUI SQLCipher FinTS/PSD2 Vault (`GiroCrab`) &amp; Portable 2-File FFmpeg GUI</text>
+  <text x="240" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">GiroCrab/GiroCrab (v0.6.3 XChaCha20+Argon2id `&lt;1ms` @ 30k Txns) + DevedevT/FFmpeg-GUI-Editor-Windows (`.exe`+`libvlc.dll` Lossless Cutter &amp; CLI Gen)</text>
+
+  <!-- Left Panel: GiroCrab/GiroCrab -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#083344"/>
+  <text x="58" y="144" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🦀 GiroCrab/GiroCrab (★ 230 | v0.6.3 | Rust+SwiftUI SQLCipher FinTS/PSD2 Vault)</text>
+
+  <!-- 2 KPI Boxes -->
+  <rect x="46" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">&lt;1 ms @ 30,000+ Txns</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Covering SQLite indexes + optimistic UI</text>
+  <text x="173" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">XChaCha20-Poly1305 &amp; Argon2id vault</text>
+
+  <rect x="314" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">FinTS 3.0 + PSD2 + SEPA</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Direct bank links · 0 cloud intermediary</text>
+  <text x="441" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">MoneyMoney `.sqlite` import + iOS/macOS</text>
+
+  <!-- GiroCrab Mechanics -->
+  <rect x="46" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="280" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">How `GiroCrab` Replaces Paid Banking SaaS with a Zero-Cloud Rust+SwiftUI Vault:</text>
+  <text x="60" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Cryptographic Local Vault (`Schema 12`): Encrypts all accounts and transactions locally</text>
+  <text x="60" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   via SQLCipher (`XChaCha20-Poly1305` + `Argon2id`) with downgrade-protected migrations.</text>
+  <text x="60" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Direct FinTS 3.0 / HBCI &amp; PSD2 Protocols: Connects straight to banks (with TAN-999</text>
+  <text x="60" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   fallback on error `9010`), parses full SEPA Mandate/End-to-End IDs &amp; imports MoneyMoney DBs.</text>
+  <text x="60" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">Platforms: Notarized macOS Apple Silicon (.dmg + Sparkle) &amp; iOS/iPadOS (TestFlight)</text>
+  <text x="60" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Sub-Millisecond Categorization: Covering SQLite indexes and optimistic SwiftUI updates</text>
+  <text x="60" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">   keep rule/category assignment under `1 ms` even on vaults exceeding `30,000` transactions.</text>
+
+  <!-- Right Panel: DevedevT/FFmpeg-GUI-Editor-Windows -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">✂️ DevedevT/FFmpeg-GUI-Editor-Windows (★ 541 | 2-File Portable FFmpeg GUI)</text>
+
+  <!-- 2 Feature Boxes -->
+  <rect x="632" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">2-File Portable `.exe`</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">`FFmpeg-GUI-Editor.exe` + `libvlc.dll`</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">0 install · 0 Python · 6 languages</text>
+
+  <rect x="900" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Lossless Trim + CLI Gen</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Auto black-bar crop &amp; dup-frame drop</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Exports exact FFmpeg CLI &amp; `.bat` scripts</text>
+
+  <!-- FFmpeg GUI Mechanics -->
+  <rect x="632" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="280" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">How `FFmpeg-GUI-Editor-Windows` Bridges Visual Trimming &amp; Batch CLI Automation:</text>
+  <text x="646" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Zero-Install USB/Desktop Portability: Drop `FFmpeg-GUI-Editor.exe` and `libvlc.dll` into</text>
+  <text x="646" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   one folder and run immediately on Windows 10/11 (EN/RU/ZH/DE/FR/IT built in).</text>
+  <text x="646" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Lossless Cut, Auto-Crop &amp; Duplicate Scene/Frame Removal: Trims without re-encoding,</text>
+  <text x="646" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   removes black bars, strips frozen/duplicate frames, keys green screens, and syncs `.srt`.</text>
+  <text x="646" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">Visual GUI Settings → Copy Exact FFmpeg CLI Flags → Export Drag-and-Drop Batch `.bat`</text>
+  <text x="646" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Visual FFmpeg Command &amp; `.bat` Exporter: Lets engineers dial in filters visually,</text>
+  <text x="646" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">   then copy the exact `ffmpeg` CLI flags or export `.bat` scripts for batch pipelines.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261114-R26-GIROCRAB-FFMPEGGUI · 25 Finance/Ops Seats + 120 Video Pre-Processing Batches/Mo · r = $95/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Proprietary Finance SaaS + NLE Re-Encodes</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Banking Subscriptions &amp; NLE Licenses: $1,440.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Manual SEPA Audit &amp; FFmpeg CLI Debug (36.0h × $95): $3,420.00</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $4,860.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: CSV Bank Exports + Trial-and-Error CLI Flags</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Tooling &amp; Storage Spend: $710.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• CSV Reconciliation &amp; Flag Fixes (17.0h × $95): $1,615.00</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,325.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: GiroCrab + FFmpeg-GUI-Editor (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Local Vault &amp; Portable EXE Spend: $95.00 | Labor (3.5h): $332.50</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $427.50 / mo (-91.20% | Save $4,432.50/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $53,190.00/yr · Mac/Windows hardware: not_measured</text>
+</svg>

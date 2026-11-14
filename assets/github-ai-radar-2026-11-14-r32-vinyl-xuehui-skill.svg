@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bg215" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan215" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="accentGreen215" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg215)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="232" height="26" rx="6" fill="url(#accentCyan215)"/>
+  <text x="160" y="56" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R32 (R215)</text>
+  <text x="292" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">vinyl Hertzian AudioWorklet Physics &amp; 317.9-Hour Distilled Agent Skill Router</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">rauchg/vinyl (★ 131 · Zero-Dep 45/45 Groove Lathe + 2-DOF Hertzian Stylus in AudioWorklet/WebGL2) + xuehui-shortvideo-skill (★ 128 · 455 Videos / 317.9h Distilled Skill)</text>
+
+  <!-- Left Panel: rauchg/vinyl -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#451A03"/>
+  <text x="62" y="173" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. rauchg/vinyl — Physical Turntable Simulated from the Groove Up</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">4-Stage Physical Pipeline</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 1. Cut (`cut.js`): 45/45 Groove + RIAA</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 2. Press (`press.js`): Seeded Dust/Warp</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 3. Play (`engine.js`): 2-DOF Hertzian Tip</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 4. Draw (`render.js`): WebGL2 Spiral</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Pre-Cut Storage: 16-bit DPCM in FLAC</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Zero-Dep Browser Engineering</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 0 Dependencies / 0 Bundler (`build.mjs`)</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Oversampled `AudioWorklet` Thread</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 3 Stylus Shapes (Conical/Elliptical/Micro)</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Emergent Pinch Effect &amp; Inner-Groove Loss</text>
+  <text x="328" y="326" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Offline Physics Test &amp; CPU Bench Suite</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Why First-Principles Physical Simulation Beats Fake DSP Filter Overlays</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. No canned crackle loops: a scratch ticks once per revolution because the stylus crosses that coordinate.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. Inner-groove treble loss emerges naturally from slower linear groove velocity near the center label.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Pure ES Modules + Web Workers + AudioWorklet + WebGL2 prove complex sims need zero npm bloat.</text>
+  <text x="62" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Isolate heavy physics in Web Workers/AudioWorklet &amp; verify via headless `npm test` + `bench`.</text>
+
+  <!-- Right Panel: xuehui-shortvideo-skill -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#500724"/>
+  <text x="646" y="173" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. xuehui-shortvideo-skill — 317.9h Video Corpus Distilled into 5.44MB Skill</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Corpus Distillation Metrics</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Source: 455 Videos / 317.9 Hours (ffprobe)</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Coverage: 455 / 455 (100% Transcribed)</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Output: `SKILL.md` + 15 Reference Manuals</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Total Size: 5,704,054 Bytes (~5.44 MB)</text>
+  <text x="644" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 21 Empty/Silent Clips Explicitly Logged</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Problem-Indexed Routing</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Reorganized by Problem, Not Course Chronology</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Explicit Contradiction Index Across Cohorts</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Two-Hop Read: `SKILL.md` ➔ 1 Target Manual</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Avoids Loading Full 5.44 MB Into Context</text>
+  <text x="912" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Preserves Verbatim Quotes for Traceability</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Why Problem-Indexed Skill Distillation Beats Raw Transcript Vector-RAG</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Raw ASR chunks split 40-minute methodology lectures into incoherent fragments and filler words.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. Merging 10+ courses by problem topic surfaces evolving/conflicting advice in a Contradiction Index.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. `SKILL.md` acts as a deterministic routing table so the LLM reads ~15 KB per task instead of 5.44 MB.</text>
+  <text x="646" y="481" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Distill enterprise training video corpora into problem-routed `SKILL.md` + Contradiction Indexes.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="400" height="28" rx="6" fill="url(#accentGreen215)"/>
+  <text x="246" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261114-R32-VINYL-XUEHUISKILL</text>
+  <text x="462" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">600 Domain Corpus Queries + 10 WebAudio/WebGL Apps/Mo · $95/hr Eng Rate · Local Browser GPU: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: Raw 318h ASR RAG + Heavy Web Bundlers</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Noisy RAG Token &amp; DB Spend: $1,590.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• RAG &amp; Bundler Debugging (36.0h): $3,420.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $5,010.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Chronological Notes + Main-Thread Audio</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Token &amp; Hosting Spend: $760.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (17.0h): $1,615.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,375.00 / month (-52.59%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: Problem-Routed Skill + Zero-Dep Worklet</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Two-Hop Skill Token Spend: $105.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.5h @ $95/h): $332.50 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $437.50 / mo (Save $4,572.50 · -91.27%)</text>
+</svg>

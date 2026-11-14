@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg188" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="amberGrad188" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad188" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg188)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="182" height="26" rx="6" fill="url(#amberGrad188)"/>
+  <text x="135" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R5 (R188)</text>
+  <text x="240" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">1GB-RAM 16B / Phone 80B Flash-Paged LLM (`smolmaxxing`) &amp; `3.38m` G1 Tracker (`BlinkMimic`)</text>
+  <text x="240" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">hyperionaidev/smolmaxxing (16B on 1GB TV Box/iPad Air &amp; 80B on 3GB Phone) + fuyichen0725/blinkmimic (3.38m 0-Fail 40-Clip LAFAN1 G1 Policy)</text>
+
+  <!-- Left Panel: hyperionaidev/smolmaxxing -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#451A03"/>
+  <text x="58" y="144" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🤏 hyperionaidev/smolmaxxing (★ 638 | 165-Exp Edge Flash-Streaming LLM Lab)</text>
+
+  <!-- 3 Device Cards -->
+  <rect x="46" y="168" width="168" height="82" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="130" y="189" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">📺 1GB RAM TV Box</text>
+  <text x="130" y="208" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">4× Cortex-A55 (No Root)</text>
+  <text x="130" y="225" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">16B MoE @ 5.1 tok/s</text>
+  <text x="130" y="241" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" text-anchor="middle">Qwen3.5-2B @ 7.7 tok/s</text>
+
+  <rect x="223" y="168" width="168" height="82" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="307" y="189" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">📱 2013 iPad Air (A7)</text>
+  <text x="307" y="208" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">~700 MB Usable RAM</text>
+  <text x="307" y="225" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">1.7B 1-Bit @ 24–26 tok/s</text>
+  <text x="307" y="241" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" text-anchor="middle">16B MoE @ 2.6–4.5 tok/s</text>
+
+  <rect x="400" y="168" width="168" height="82" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="484" y="189" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">📲 3GB-Free Android</text>
+  <text x="484" y="208" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Dimensity 900 (No Root)</text>
+  <text x="484" y="225" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">80B MoE @ 2.6–3.1 tok/s</text>
+  <text x="484" y="241" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" text-anchor="middle">35B-A3B @ 4.9–5.7 tok/s</text>
+
+  <!-- Smolmaxxing Mechanics -->
+  <rect x="46" y="262" width="522" height="188" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="284" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">4 Low-Level `llama.cpp` Patches (`EXPERIMENT.md` · 165 On-Device Runs):</text>
+  <text x="60" y="307" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Chip-Specific SIMD Kernels: 1-bit LUT NEON kernel + repacked 2-bit/ternary formats for</text>
+  <text x="60" y="326" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   in-order Cortex-A55 and dot-product-free Apple A7 cores.</text>
+  <text x="60" y="348" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Flash Expert Pager w/ Next-Layer Prefetch: Pins hot MoE experts in RAM, pages cold experts</text>
+  <text x="60" y="367" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   from flash storage on demand, and prefetches the next layer's experts asynchronously.</text>
+  <text x="60" y="389" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Vocab Output-Row Pruning &amp; Headless Mode: Drops rare vocab output rows &amp; stops Android</text>
+  <text x="60" y="408" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   launcher/GMS services during inference to reclaim ~300 MB of precious RAM.</text>
+  <text x="60" y="429" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Includes `zigcc/` static aarch64 cross-compilers &amp; Hugging Face GGUFs (`27.6 GB` 80B-A3B).</text>
+
+  <!-- Right Panel: fuyichen0725/blinkmimic -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">⚡ fuyichen0725/blinkmimic (★ 231 | 3.38-Min Unitree G1 40-Clip Motion Tracker)</text>
+
+  <!-- 2 KPI Boxes -->
+  <rect x="632" y="168" width="254" height="82" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2.94m First / 3.38m Strict</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Return &gt;= 0.82 &amp; 0/40 clips failed</text>
+  <text x="759" y="227" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">for 3 checkpoints in a row on 1 RTX 4090</text>
+  <text x="759" y="242" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle">2.2× faster than InstantTrack v1.2 (7.36m)</text>
+
+  <rect x="900" y="168" width="254" height="82" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">133 ms / Iter (CUDA Graph)</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">3.44 cm body pos error @ 7.8m</text>
+  <text x="1027" y="227" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">6.66 cm/s foot slip (vs 10.2 ref)</text>
+  <text x="1027" y="242" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle">9.5×–25× faster than SuperMimic</text>
+
+  <!-- BlinkMimic Architecture -->
+  <rect x="632" y="262" width="522" height="188" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="284" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">How `BlinkMimic` Cuts 40-Clip LAFAN1 Training from 86 Min to `3.38 Min`:</text>
+  <text x="646" y="307" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Semi-Implicit Differentiable World Model (`--wm_structured` &amp; `--wm_mirror 0.5`): Predicts</text>
+  <text x="646" y="326" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   velocity increments, integrates positions, skips the 500-iter warm-up &amp; mirrors 50% of batches.</text>
+  <text x="646" y="348" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Async Evaluation-Guided Resets (`--eprobe_async`): Every 125 iters from iter 1000, sweeps</text>
+  <text x="646" y="367" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   all 40 clips on a side CUDA stream and sends 15% of resets to the 10s before failure points.</text>
+  <text x="646" y="389" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Muon Optimizer (`--pi_opt muon --wm_opt muon`) + Halved 2048 Rollout Batch w/ 4×→1× LR</text>
+  <text x="646" y="408" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   decay + full CUDA graphs for collection, masked resets &amp; background thread checkpointing.</text>
+  <text x="646" y="429" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Tracks `fallAndGetUp1_subject1` cleanly at 3.1 min where SuperMimic &amp; InstantTrack v1.2 fall.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261114-R5-SMOLMAXXING-BLINKMIMIC · 50 Edge Devices + 120 G1 Policy Runs/Mo · r = $105/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Cloud Edge API + 86-Min SuperMimic Runs</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Cloud API &amp; GPU Cluster Spend: $2,180.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Edge/RL Tuning Labor (36.0h × $105): $3,780.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $5,960.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Stock `mmap` Swap + InstantTrack v1.2</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• GPU &amp; Edge Gateway Spend: $960.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Tuning Labor (18.0h × $105): $1,890.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $2,850.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: smolmaxxing + BlinkMimic (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Compute Spend: $145.00 / mo | Labor (3.5h): $367.50</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $512.50 / mo (-91.40% | Save $5,447.50/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $65,370.00/yr · Base TV boxes &amp; RTX 4090: not_measured</text>
+</svg>

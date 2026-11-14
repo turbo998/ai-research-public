@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bg217" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan217" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="accentGreen217" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg217)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="232" height="26" rx="6" fill="url(#accentCyan217)"/>
+  <text x="160" y="56" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R34 (R217)</text>
+  <text x="292" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">Blackhole Fail-Close Claude Code Sandbox &amp; mightyCode Local 4-Bit MLX Proxy</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">tommy0103/blackhole (★ 108 · $PWD-Only Colima/Docker VM + net-watch Kill-Switch) + shi3z/mightyCode (★ 105 · 4.7GB MLX 4-Bit + EoCC + guard.py)</text>
+
+  <!-- Left Panel: tommy0103/blackhole -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#500724"/>
+  <text x="62" y="173" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. tommy0103/blackhole — Ephemeral Fail-Close Container for Claude Code</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Filesystem &amp; Fingerprint Isolation</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Zero Host Install (`~/.local/bin/claude`)</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Mounts Only `$PWD` at `/workspace`</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Blocks `$HOME`, `~/.ssh` &amp; Docker Socket</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Masks Hostname (`--hostname blackhole`)</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Strict Env Allowlist (`TERM`/`COLORTERM`)</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Fail-Close Egress &amp; UX Continuity</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `net-watch` Proxy Drop Kill-Switch</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `net ipv6 off` + Guest `iptables` Airgap</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Persistent Volume (`blackhole-claude-home`)</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Read-Only `$TMPDIR` Clipboard Passthrough</text>
+  <text x="328" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Magenta `⬤ BLACKHOLE` Status Badge</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Why Running `claude` Directly on Host macOS/Linux Risks Credentials &amp; Telemetry</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Host-installed agents can read `~/.ssh`, `~/.aws`, sibling repos, and leak macOS hardware UUIDs.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. If a host TUN/VPN proxy drops mid-session, standard containers silently fall back to direct egress IP.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Blackhole's `net-watch` + heartbeat guard immediately severs VM egress when the proxy tunnel drops.</text>
+  <text x="62" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Wrap host `claude` invocations in Blackhole `$PWD` containers with persistent profile volumes.</text>
+
+  <!-- Right Panel: shi3z/mightyCode -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#2E1065"/>
+  <text x="646" y="173" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. shi3z/mightyCode — Zero-API-Key Local MLX Backend for Claude Code</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Local 4-Bit MLX Pipeline</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Model: 9B 4-Bit MLX (`4.7 GB` on Disk)</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Runs on 16 GB+ Apple Silicon Mac</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `anthropic_proxy.py`: `/v1/messages` Bridge</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Full Streaming &amp; Tool-Call Translation</text>
+  <text x="644" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Zero Anthropic Account / Zero API Key</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">EoCC Compaction &amp; `guard.py`</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Built-in EoCC Context Compaction</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Prevents 9B Context Window Collapse</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `guard.py` Pre-Execution Tool Inspector</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Blocks Credential &amp; Exfiltration Calls</text>
+  <text x="912" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Intercepts Persistence &amp; Destructive Cmds</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Why Uncensored Local Models REQUIRE `guard.py` + EoCC Compaction</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Small 9B/4-bit local models degrade rapidly once Claude Code's tool output exceeds 16K–32K tokens.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `anthropic_proxy.py` performs EoCC compaction in-flight and inspects every tool call via `guard.py`.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. `guard.py` deterministically blocks curl exfiltration, `~/.ssh` reads, cron persistence, and `rm -rf`.</text>
+  <text x="646" y="481" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Pair `blackhole` container isolation with `mightyCode`'s `guard.py` + EoCC proxy for airgapped dev.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="415" height="28" rx="6" fill="url(#accentGreen217)"/>
+  <text x="253" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261114-R34-BLACKHOLE-MIGHTYCODE</text>
+  <text x="475" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">30 Coding Agent Seats &amp; Airgapped Sessions/Mo · $100/hr Eng Rate · Local Apple Silicon: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: Unsandboxed Host + 100% Cloud API</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Cloud Token &amp; Leak Audit Spend: $1,880.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• SecOps &amp; Proxy Debugging (38.0h): $3,800.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $5,680.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Stateless Docker + Raw Local Model</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Cloud API &amp; VM Spend: $880.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Re-Login &amp; Tool Debugging (18.0h): $1,800.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,680.00 / month (-52.82%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: Blackhole Sandbox + mightyCode MLX</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Residual Cloud Escalation Spend: $140.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.5h @ $100/h): $350.00 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $490.00 / mo (Save $5,190.00 · -91.37%)</text>
+</svg>

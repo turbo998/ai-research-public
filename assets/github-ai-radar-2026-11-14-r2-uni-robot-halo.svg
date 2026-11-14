@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg185" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="indigoGrad185" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad185" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg185)"/>
+
+  <!-- Header -->
+  <rect x="28" y="20" width="1144" height="74" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="34" width="182" height="26" rx="6" fill="url(#indigoGrad185)"/>
+  <text x="135" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R2 (R185)</text>
+  <text x="240" y="51" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Unified Robot-Use Agent Harness (`v0.2.0`) &amp; Perceptive Humanoid Motion (`HALO`)</text>
+  <text x="240" y="75" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Open-RUA/uni-robot-agent (4-Tool `clean` Baseline, `code_as_policy` &amp; Hybrid Pi0.5) + apple-aiml-research/ml-halo (arXiv:2611.06908 Unitree G1 Stack)</text>
+
+  <!-- Left Panel: Open-RUA/uni-robot-agent -->
+  <rect x="28" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="44" y="122" width="526" height="34" rx="8" fill="#1E1B4B"/>
+  <text x="58" y="144" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🦾 Open-RUA/uni-robot-agent (★ 399 | v0.2.0 | Unified Robot-Use Harness)</text>
+
+  <!-- 2 Pillar Cards -->
+  <rect x="46" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#6366F1" stroke-width="1.2"/>
+  <text x="173" y="190" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">4-Tool `clean` + `code_as_policy`</text>
+  <text x="173" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">`move`, `hold`, `capture_scene`, `finish`</text>
+  <text x="173" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">RGB-only (`--no-depth`) realistic eval</text>
+
+  <rect x="314" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="441" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Direct &amp; Hybrid Pi0.5 Modes</text>
+  <text x="441" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">R1Pro, Unitree G1, Go2 &amp; ARX ONE</text>
+  <text x="441" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Codex, Claude Code, OpenCode &amp; Gemini CLI</text>
+
+  <!-- Uni-Robot-Agent Mechanics -->
+  <rect x="46" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="280" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">4 Core Design Principles for Embodied Agent Harnesses (`MIT`):</text>
+  <text x="60" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Overlapped Reasoning &amp; Execution: Overlaps LLM planning with physical robot tool execution</text>
+  <text x="60" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   while strictly preserving order for operations that share physical robot resources.</text>
+  <text x="60" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Realistic Observation Contract (`--no-depth` &amp; `--no-sam3`): Evaluates agents without</text>
+  <text x="60" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   oracle simulator depth or ground-truth task-verifier leaks, using only RGB + calibration.</text>
+  <text x="60" y="387" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11">$ uni-robot-agent run --integration robodojo --task stack_bowls --tool-profile clean --monitor</text>
+  <text x="60" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Built-In Episode Monitor: Inspect live camera feeds, tool latency &amp; `RunRecord` replays.</text>
+  <text x="60" y="428" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Separates `agent_finished` (self-reported) from `task_success` (environment-verified).</text>
+
+  <!-- Right Panel: apple-aiml-research/ml-halo -->
+  <rect x="614" y="108" width="558" height="356" rx="12" fill="#0B1325" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="122" width="526" height="34" rx="8" fill="#064E3B"/>
+  <text x="644" y="144" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">🍎 apple-aiml-research/ml-halo (★ 379 | arXiv:2611.06908 | Perceptive Humanoid)</text>
+
+  <!-- 2 Feature Boxes -->
+  <rect x="632" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="759" y="190" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">3-Stage Isaac Lab Tracker</text>
+  <text x="759" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Privileged `PreRL` → Multi-Teacher</text>
+  <text x="759" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Distillation → Multi-Critic `PostRL`</text>
+
+  <rect x="900" y="168" width="254" height="78" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1027" y="190" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Co-Served `halo_serve`</text>
+  <text x="1027" y="210" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">`halo_orchestrator` + Motion Generator</text>
+  <text x="1027" y="228" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Real-time C++ Unitree G1 deployment</text>
+
+  <!-- HALO Architecture -->
+  <rect x="632" y="258" width="522" height="192" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="280" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">How `HALO` Transfers Sim-Trained Perceptive Motion to Real Homes:</text>
+  <text x="646" y="303" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">1. Synthetic `datagen/` Pipeline: Combines procedural Infinigen indoor scenes with Kimodo</text>
+  <text x="646" y="322" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">   motions and Isaac/MuJoCo rendering to train both the motion generator and depth tracker.</text>
+  <text x="646" y="344" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">2. Hierarchical Closed Loop (`system/`): `halo_orchestrator` maps language + egocentric RGB</text>
+  <text x="646" y="363" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   into subtasks, co-served on-device via `halo_serve` alongside the motion generator &amp; C++</text>
+  <text x="646" y="382" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700">   low-level tracker (`tracker/deploy_cpp`) over `halo_comm`.</text>
+  <text x="646" y="405" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Real-World Whole-Body Skills: Crawling under tables, sitting on sofas &amp; pushing boxes on G1.</text>
+  <text x="646" y="426" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11">• Unified `run_sim.py` (MuJoCo sim-to-sim) and `run_real.py` (physical Unitree G1) launchers.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="478" width="1144" height="182" rx="12" fill="#0B1325" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="44" y="492" width="1112" height="32" rx="8" fill="#451A03"/>
+  <text x="58" y="513" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">💰 Closed-Form FinOps Audit (CLAIM-20261114-R2-UNIROBOT-HALO · 4 Robots · 60 Sim-to-Real Evals/Mo · r = $110/hr)</text>
+
+  <!-- 3 FinOps Cards -->
+  <rect x="46" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="60" y="557" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Per-Robot Glue + Real-World Mocap</text>
+  <text x="60" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Mocap &amp; GPU Sim Spend: $2,350.00 / mo</text>
+  <text x="60" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Adapter/Sim2Real Labor (42.0h × $110): $4,620.00 / mo</text>
+  <text x="60" y="622" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $6,970.00 / mo</text>
+
+  <rect x="414" y="536" width="352" height="110" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="428" y="557" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Monolithic ROS2 Scripts + Blind Policies</text>
+  <text x="428" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Sim &amp; Token Spend: $1,150.00 / mo</text>
+  <text x="428" y="598" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Integration Labor (20.0h × $110): $2,200.00 / mo</text>
+  <text x="428" y="622" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Total Monthly TCO: $3,350.00 / mo</text>
+
+  <rect x="782" y="536" width="372" height="110" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="796" y="557" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: uni-robot-agent + ml-halo (Recommended)</text>
+  <text x="796" y="579" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Sim &amp; Token Spend: $195.00 / mo | Labor (3.5h): $385.00</text>
+  <text x="796" y="601" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Total TCO: $580.00 / mo (-91.68% | Save $6,390.00/mo)</text>
+  <text x="796" y="623" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Annual Savings: $76,680.00/yr · Base G1/Go2 robot hardware: not_measured</text>
+</svg>

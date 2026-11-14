@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bg231" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan231" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentGreen231" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg231)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="232" height="26" rx="6" fill="url(#accentCyan231)"/>
+  <text x="160" y="56" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-14 · DAYTIME R48 (R231)</text>
+  <text x="292" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">Chaojifeng 148-Effect Video Agent Skill &amp; Freebie-Radar 57-Source AI Triage</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">mileson/chaojifeng-video-content-creator (★ 74 · 4-Gate Video Skill + 148 HTML/GSAP Effects) + ZiChuanLan/freebie-radar (★ 86 · 57 Sources · 21 Categories · 0-Token Reclassify)</text>
+
+  <!-- Left Panel: chaojifeng-video-content-creator -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#500724"/>
+  <text x="62" y="173" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. chaojifeng-video-content-creator — 4-Stage Video Production Skill</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Plan &amp; Word-Level Audio Clean</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Stage 1: BRIEF + A/B-Roll Storyboard</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Stage 2: ASR + Filler/Repeat Removal</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Word-Level Cut + Long-Pause Trim</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Pre-Render Cut-Audio QA Gate</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Enter Pipeline at Any Stage</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">148 HTML/GSAP Effects &amp; QA</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Stage 3: 148 Native HTML/GSAP Effects</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Beat-Synced to Real Subtitle Timestamps</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Hyperframes Overlay + Frame Visual QA</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Stage 4: SRT/ASS + Screen-URL Redaction</text>
+  <text x="328" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• No Auto-Publish (Human Final Gate)</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Why Word-Level Spoken Cleanup + Beat-Synced HTML/GSAP Beats T2V Slop</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Technical creators record real spoken audio/screen demos; they need filler removal, not fake AI avatars.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `chaojifeng` trims spoken stutters at word level, checks audio splices before render, and aligns 148 GSAP FX.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Pre-publish gate checks for sensitive localhost/internal URLs leaked in screen recordings.</text>
+  <text x="62" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Use `npx skills add mileson/chaojifeng-video-content-creator` for spoken tech videos.</text>
+
+  <!-- Right Panel: ZiChuanLan/freebie-radar -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#1E3A8A"/>
+  <text x="646" y="173" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. ZiChuanLan/freebie-radar — 57-Source Multi-Interest AI Triage Radar</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">4-Stage Token-Saving Funnel</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 57 Sources (GitHub/Reddit/Bluesky/TG/RSS)</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 1. Unified Blocklist Pre-Filter (Saves Quota)</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 2. AI 5-Type &amp; 21-Category Semantic Triage</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 3. Acquisition Isolation (Direct vs Lottery)</text>
+  <text x="644" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 4. Multi-Route Instant/Batched TG Push</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Zero-Token Reorg &amp; Stack</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Node.js &gt;=22.5 Native `node:sqlite`</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• React 19 + Vite Dual List/Grid UI</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Zero-Token Historical Reclassification</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Cross-Source Dedup Folding</text>
+  <text x="912" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Zero-Extra-Request Cover Extraction</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Designing Low-Cost Multi-Source Intelligence Aggregators with Node 22.5 SQLite</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Sending raw 57-source feeds straight to an LLM burns 80% of tokens on referral spam and noise.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `freebie-radar` pre-filters via a unified blocklist, then isolates fake/lottery promos from true signal.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Reorganizes historical items across 21 categories with 0 extra LLM tokens using Node 22.5 `node:sqlite`.</text>
+  <text x="646" y="481" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Adopt `Pre-Filter Blocklist ➔ 5-Type AI Triage ➔ 0-Token Reorg` for intelligence radars.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="430" height="28" rx="6" fill="url(#accentGreen231)"/>
+  <text x="261" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261114-R48-CHAOJIFENG-FREEBIERADAR</text>
+  <text x="490" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">20 Spoken Tech Videos + 57-Source (150k Items) Triage/Mo · $95/hr Eng Rate · Local GPU: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: Unfiltered LLM Judge + Manual AE Edits</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Unfiltered Token &amp; SaaS Spend: $1,580.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Audio Cut &amp; Triage Labor (36.0h): $3,420.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $5,000.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Basic RSS Regex + Silence-Only Cutter</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Token &amp; Tooling Spend: $750.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (17.0h): $1,615.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,365.00 / month (-52.70%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: Chaojifeng 148-FX Skill + Freebie-Radar</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Pre-Filtered Token Spend: $95.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.5h @ $95/h): $332.50 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $427.50 / mo (Save $4,572.50 · -91.45%)</text>
+</svg>
