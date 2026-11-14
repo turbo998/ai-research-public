@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg99" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent99a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg99)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="232" height="28" rx="6" fill="url(#accent99a)"/>
+  <text x="168" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R99 (R282)</text>
+  <text x="300" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">Outcrawl Scout (Cloud CAPTCHA Replay Agent) &amp; Kaze (Signed-In Tab-Group MCP Browser)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">outcrawlai/scout (★ 744 · Apache-2.0 · BYO Hands Model + Replay URL) + jackwener/Kaze (★ 210 · Task Tab Groups ⌘E/⌘. + External Agent MCP)</text>
+
+  <!-- Left Card: outcrawlai/scout -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#1E1B4B"/>
+  <text x="72" y="165" fill="#C7D2FE" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🧭 outcrawlai/scout · Cloud Replay &amp; Local Browser Agent</text>
+  <text x="552" y="165" fill="#A5B4FC" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 744 · Apache-2.0</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Dual Execution Target: Outcrawl Stealth Cloud or Local Chromium</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `browser: 'outcrawl'` provides home-like residential trust + CAPTCHA solving</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• One-line switch `browser: { launch: { headless: false } }` runs local Playwright</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. BYO `hands` Model (Any OpenAI Chat Completions Endpoint)</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Configure `SCOUT_HANDS_MODEL`, `SCOUT_BASE_URL` &amp; `SCOUT_API_KEY` freely</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Works with cloud APIs or local open-weight models on your own workstation</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Deterministic Step-by-Step `result.replayUrl` &amp; Partial Recovery</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Every cloud run emits a full visual replay URL (`result.replayUrl`) for audit</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• If blocked, explicitly explains what is missing and returns partial data found</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#6366F1" stroke-width="1"/>
+  <text x="72" y="431" fill="#C7D2FE" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Ideal programmatic SDK (`@outcrawl/scout`) for headless</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">web extraction needing anti-bot bypass and auditable replay URLs.</text>
+
+  <!-- Right Card: jackwener/Kaze -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#083344"/>
+  <text x="648" y="165" fill="#A5F3FC" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🌬️ jackwener/Kaze · Signed-In Tab-Group Agent Browser</text>
+  <text x="1128" y="165" fill="#67E8F9" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 210 · macOS / Win</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Task-Isolated Background Tab Groups (`⌘E`) + Instant Takeover (`⌘.`)</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Agent opens its own named tab group beside yours without stealing focus</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Press `⌘.` to take over anytime; asks confirmation before pay/send/delete</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Full Session Import (Chrome, Arc, Edge, Brave, Safari)</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Brings in tabs, logins, bookmarks, history &amp; extensions on first launch</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Both you and your agents operate inside already-authenticated web sessions</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Auto-Discovered External Agent MCP + Custom Local Gateways</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• One-click MCP link to Claude Code, Codex, Cursor, Gemini CLI &amp; DeepSeek</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Supports custom `/v1/chat/completions` gateways (e.g. local Magpie port 3425)</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1"/>
+  <text x="648" y="431" fill="#A5F3FC" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Solves the "extension steals focus vs cloud is logged out"</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">dilemma with signed-in parallel tab groups and external MCP bridges.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="380" height="26" rx="6" fill="#064E3B"/>
+  <text x="246" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R99-OUTCRAWLSCOUT-KAZE</text>
+  <text x="452" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 Browser Extraction &amp; Signed-In Automation Workflows/Mo · $95/hr · Local Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: CAPTCHA-Blocked Scripts + Focus Hijack</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,390.00 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,780.00 proxy/retry + 38.0h ($3,610.00)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Logged-Out Cloud + Unrecorded Local</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,410.00 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$795.00 proxy/retry + 17.0h ($1,615.00)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: Outcrawl Scout + Kaze Tab-Group MCP</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$417.50 / mo (-92.25% · Save $4,972.50)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$85.00 API/cloud + 3.5h ($332.50) · $59,670/yr</text>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg113" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent113a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg113)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="232" height="28" rx="6" fill="url(#accent113a)"/>
+  <text x="168" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R113 (R296)</text>
+  <text x="300" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">OpenFilm (frame(t) AI Video Studio + NLE Export) &amp; ManimGX (90.6x Rust wgpu Manim Engine)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">openfilm/openfilm (★ 7,060 · One HTML + frame(t) + FCP/Premiere/Resolve Export) + academa-labs/manimgx (★ 2,743 · 90.6x Faster Rust wgpu Manim CE)</text>
+
+  <!-- Left Card: openfilm/openfilm -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#500724"/>
+  <text x="72" y="165" fill="#FBCFE8" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🎬 openfilm/openfilm · One HTML + frame(t) + Studio</text>
+  <text x="552" y="165" fill="#F472B6" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 7,060 · TypeScript</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Zero Framework Lock-In: `film.html` + Pure `frame(t)` Shots</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Each shot draws moment `t` via Three.js, WebGL, Canvas, SVG, CSS or GSAP</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `openfilm look` generates contact sheets or single-frame agent checks</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Bidirectional Browser Studio &amp; Companion Canvas (`⌘E`)</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Move, scale, rotate &amp; restyle DOM layers by hand; edits save back to files</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Free built-in library + BYO keys (ElevenLabs, OpenAI, Google, fal)</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Pro Render Flags &amp; Native Final Cut / Premiere / Resolve Export</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `openfilm render --4k --blur --alpha --loudness=-14`</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Exports editable timelines for Final Cut Pro, Premiere Pro &amp; DaVinci Resolve</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#EC4899" stroke-width="1"/>
+  <text x="72" y="431" fill="#FBCFE8" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Lets coding agents write standard web code (`frame(t)`)</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">while humans edit on a real timeline and export to Premiere/Resolve.</text>
+
+  <!-- Right Card: academa-labs/manimgx -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#082F49"/>
+  <text x="648" y="165" fill="#BAE6FD" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🚀 academa-labs/manimgx · 90.6x Faster Rust wgpu Manim</text>
+  <text x="1128" y="165" fill="#7DD3FC" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 2,743 · Rust/Python</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. `90.6x` Faster Rendering (`36.2s` of `1080p60` Video in `3.08s`)</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Replaces Manim CE's slow CPU Cairo/OpenGL pipeline with Rust + `wgpu`</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Eliminates 5-minute render waits during coding-agent self-check loops</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Drop-In Manim CE Python API Compatibility</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Leverages LLMs' massive pre-training knowledge of Manim Community API</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Renders 2D math proofs, Fourier epicycles, Lorenz attractors &amp; Hopf tori</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Dual Distribution: `pip install manimgx` &amp; Browser `npm` Runtime</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Runs natively on desktop GPUs or directly inside the browser via WASM/wgpu</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Built specifically as an ultra-low-latency animation engine for AI agents</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+  <text x="648" y="431" fill="#BAE6FD" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Keeps the Manim Python syntax every LLM already knows</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">while accelerating 1080p60 3D/math renders by 90.6x on Rust wgpu.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="380" height="26" rx="6" fill="#064E3B"/>
+  <text x="246" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R113-OPENFILM-MANIMGX</text>
+  <text x="452" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 Launch Video NLE Handoff &amp; 3D Math Animation Sprints/Mo · $95/hr · Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: Slow CPU Manim + Locked Code Videos</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,487.50 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,830.00 render/API + 38.5h ($3,657.50)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Raw Frame Scripts + Uneditable MP4s</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,430.00 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$815.00 render/API + 17.0h ($1,615.00)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: OpenFilm Studio + ManimGX 90.6x GPU</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$417.50 / mo (-92.39% · Save $5,070.00)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$85.00 compute/API + 3.5h ($332.50) · $60,840/yr</text>
+</svg>

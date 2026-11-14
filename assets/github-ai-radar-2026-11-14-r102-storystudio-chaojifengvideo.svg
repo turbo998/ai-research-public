@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg102" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent102a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg102)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="232" height="28" rx="6" fill="url(#accent102a)"/>
+  <text x="168" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R102 (R285)</text>
+  <text x="300" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">Story Studio (CapCut Draft + sherpa-onnx Skill) &amp; Chaojifeng Video Design (59 Film Styles)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">konlu/story-studio (★ 1,081 · 370+ Corpus + Coli ASR + pyJianYingDraft) + mileson/chaojifeng-video-design (★ 540 · Source Explainer + 59 Styles)</text>
+
+  <!-- Left Card: konlu/story-studio -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#500724"/>
+  <text x="72" y="165" fill="#FBCFE8" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🎬 konlu/story-studio · Topic-to-JianYing Draft Skill</text>
+  <text x="552" y="165" fill="#F472B6" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 1,081 · Python</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Dual Writing-DNA + 370+ High-Performing Script Corpus</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Built-in Historical Narrative &amp; Biography Legend Writing-DNA modules</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• 3-second golden hooks, pacing rhythm &amp; fact-checking against 370+ scripts</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Doubao V3 TTS / Custom MP3 + Local `Coli` (`sherpa-onnx`) ASR</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Synthesizes expressive narration or ingests your own recorded MP3</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Offline `Coli` (`sherpa-onnx`) computes exact word-level SRT timestamps</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. 3 Reference-Locked Visual Styles + `pyJianYingDraft` Export</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Historical Realism, Impasto Manga &amp; B/W Documentary with ref images</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Generates editable CapCut Pro draft with pan/zoom keyframes &amp; Punch Zoom</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#EC4899" stroke-width="1"/>
+  <text x="72" y="431" fill="#FBCFE8" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Delivers an editable CapCut Pro project (`pyJianYingDraft`)</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">with offline `sherpa-onnx` alignment and pre-keyframed camera motion.</text>
+
+  <!-- Right Card: mileson/chaojifeng-video-design -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#451A03"/>
+  <text x="648" y="165" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🎞️ mileson/chaojifeng-video-design · 59 Film Styles</text>
+  <text x="1128" y="165" fill="#FBBF24" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 540 · HTML/Skill</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Source-Code Product Explainer (`product-source-explainer.md`)</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Reads product source directory directly to build 74.6s vertical launch films</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Enforces User Pain → Product Reveal → Real UI Operation narrative arc</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Music-Driven 3D Worlds &amp; Rap Knowledge Explainers</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `music-driven-world.md` drives 3D math &amp; poetic visuals from audio files</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Encodes technical history into beat-locked rap lyrics, subtitles &amp; HUDs</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. 59 Integrated Lemo-Opuscar Film Style Packs &amp; Offline Gallery</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Ships 59 curated film style rules, source templates &amp; sample videos</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Browse offline via `assets/gallery/index.html` and adapt any style rule</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="648" y="431" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Gives coding agents a 59-style visual language catalog</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">and a repeatable source-code-to-product-film directorial pipeline.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="390" height="26" rx="6" fill="#064E3B"/>
+  <text x="251" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R102-STORYSTUDIO-CHAOJIFENGVIDEO</text>
+  <text x="462" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 CapCut Draft &amp; Source-Driven Product Video Sprints/Mo · $95/hr · Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: Manual CapCut Keyframes + Style Drift</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,370.00 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,760.00 TTS/image/render + 38.0h ($3,610.00)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Guessed SRT Timing + Static Slides</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,357.50 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$790.00 TTS/image/render + 16.5h ($1,567.50)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: Story Studio + Chaojifeng 59 Styles</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$417.50 / mo (-92.23% · Save $4,952.50)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$85.00 TTS/image + 3.5h ($332.50) · $59,430/yr</text>
+</svg>

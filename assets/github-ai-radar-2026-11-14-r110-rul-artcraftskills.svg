@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg110" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent110a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg110)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="256" height="28" rx="6" fill="url(#accent110a)"/>
+  <text x="180" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R110 MILESTONE (R293)</text>
+  <text x="324" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">Rul (.rl 128-Bit Agent Binary Language) &amp; ArtCraft Skills (20 Rust Creative/CAD MCP Skills)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">rul-lang/rul (★ 49 · 5.8ns/inst Safety Check + 6.4µs ELF64 Compile) + midasmatterhorn/artcraft-skills (★ 83 · 20 Evidence-Verified App Skills)</text>
+
+  <!-- Left Card: rul-lang/rul -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#064E3B"/>
+  <text x="72" y="165" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">⚡ rul-lang/rul · 128-Bit Binary Language for AI Agents</text>
+  <text x="552" y="165" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 49 · MIT/Apache-2.0</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Fixed 16-Byte (128-Bit) Binary Instructions (No Text Parsing)</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Packs Operation + 1-Byte CPU SIMD/Multi-Core Hint + Memory Safety Tag</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Eliminates multi-second `rustc`/LLVM parsing and borrow-check latency</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. `5.8 ns/inst` Safety Verification &amp; `6.4 µs` Native ELF64 Emit</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Single forward pass checks ownership, bounds, termination &amp; I/O (&lt;60µs/10k)</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Compiles standalone `628–1,037 B` Linux `x86_64` binaries in `~6.4 µs`</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Human-Auditable via `rul decompile` &amp; Step-Level `rul trace`</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `rul decompile` renders readable `.rls` assembly view anytime</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `rul trace` prints exact `min`, `max`, `sum`, and `NaN` count per step</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="72" y="431" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Radical shift from human text syntax to microsecond-verified</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">128-bit binary kernels with built-in step telemetry (`rul trace`).</text>
+
+  <!-- Right Card: midasmatterhorn/artcraft-skills -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#500724"/>
+  <text x="648" y="165" fill="#FBCFE8" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🎨 midasmatterhorn/artcraft-skills · 20 Creative Suite Skills</text>
+  <text x="1128" y="165" fill="#F472B6" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 83 · SKILL.md</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. 20 Evidence-Verified Skills for the Pure-Rust ArtCraft Suite</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Covers PhotoCraft, VectorCraft, FigCraft, WordCraft, DeckCraft, GridCraft</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Plus PdfCraft, FilmCraft, SoundCraft, CADCraft, SolidCraft &amp; MaterialCraft</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Drives First-Class CLI, MCP, JSON &amp; Omni HTTP Surfaces</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Replaces brittle screen clicking with headless CLI, MCP &amp; Omni HTTP APIs</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Auto-triggers on `.psd`, `.pptx`, `.xlsx`, `.docx`, `.dxf` &amp; PBR workflows</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Cross-Agent `agentskills.io` Standard (`install.sh` / `install.ps1`)</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• One-line install for Claude Code, Codex, OpenCode, Devin, ZCode &amp; Gemini CLI</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Documents exact supported vs. unsupported operations per app honestly</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#EC4899" stroke-width="1"/>
+  <text x="648" y="431" fill="#FBCFE8" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Turns 20 clean-room Rust creative, office, and 3D CAD</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">apps into deterministic MCP/CLI tools for any coding agent.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="380" height="26" rx="6" fill="#064E3B"/>
+  <text x="246" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R110-RUL-ARTCRAFTSKILLS</text>
+  <text x="452" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 Agent Kernel Compilation &amp; Multi-Format Creative/CAD Sprints/Mo · $95/hr · Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: Slow LLVM Builds + GUI Click Scripts</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,370.00 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,760.00 seats/compute + 38.0h ($3,610.00)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Unchecked Kernels + Blind CLI Guesses</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,357.50 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$790.00 compute/token + 16.5h ($1,567.50)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: Rul 6.4µs Binary + 20 ArtCraft Skills</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$412.50 / mo (-92.32% · Save $4,957.50)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$80.00 compute/API + 3.5h ($332.50) · $59,490/yr</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg98" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent98a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="accent98b" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg98)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="232" height="28" rx="6" fill="url(#accent98a)"/>
+  <text x="168" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R98 (R281)</text>
+  <text x="300" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">huashu-motion (ABC Score + Point-to-Edit Films) &amp; claude-video-effects (51 Face-Aware Reels)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">alchaincyf/huashu-motion (★ 2,704 · Score-First + Point-to-Edit Studio) + Vibha-Ramprakash/claude-video-effects (★ 948 · 51 Face-Tracked Effects)</text>
+
+  <!-- Left Card: alchaincyf/huashu-motion -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#451A03"/>
+  <text x="72" y="165" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🎬 alchaincyf/huashu-motion · Score-First &amp; Point-to-Edit</text>
+  <text x="552" y="165" fill="#FBBF24" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 2,704 · MIT</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. ABC Notation Score-First Composer Mode (Zero Audio API Cost)</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Writes plain-text ABC sheet music first; aligns visual cuts to exact beat markers</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Local grand piano/strings/drums (`om samples build`) + frame-exact landing SFX</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Press `C` Point-to-Edit Browser Studio + Inspector Controls</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Click any frame element: sends timestamp + scene + DOM node + source loc + crop</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Agent edits only that spot &amp; refreshes in-place; `⌘Z` undo + direct right-panel inputs</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Works Across Claude Code, Codex &amp; Economy Models</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `npx skills add alchaincyf/huashu-motion` encodes pacing &amp; visual motifs in the skill</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• DeepSeek V4.1 Flash builds a 22s scored film in &lt;30 min for ¥1.95 (99.4% cache hit)</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="72" y="431" fill="#FDE68A" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Best-in-class agent launch-film studio where beat sync is</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">guaranteed by ABC notation and frame edits target exact source lines.</text>
+
+  <!-- Right Card: Vibha-Ramprakash/claude-video-effects -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#2E1065"/>
+  <text x="648" y="165" fill="#DDD6FE" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">✨ Vibha-Ramprakash/claude-video-effects · 51 Reels Effects</text>
+  <text x="1128" y="165" fill="#C4B5FD" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 948 · Python</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. `/effects` Natural-Language Talking-Head Compositing</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Drop a video into Claude Code and type `/effects orbit from 3 to 6 seconds`</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Stack multiple effects (`locked-on`, `orbit`, `spotlight`, `reject-stamp`) in one prompt</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Behind-Your-Head Layers &amp; Face-Occlusion Verification</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Renders 3D-like behind-head layers (`orbit`, `noise`, `backdrop-word`, `shortcut-rain`)</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Samples key frames before final render to fix any overlay covering the speaker's face</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Zero-Config Local FFmpeg + Python Setup Preserving Audio</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Auto-installs `ffmpeg` &amp; Python deps on first run (~2 min) into `~/.claude/skills/effects`</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Outputs `yourvideo_effects.mp4` beside original clip with untouched master audio</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="648" y="431" fill="#DDD6FE" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Replaces hours of After Effects rotoscoping for founder</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">demos and technical reels with face-aware `/effects` commands.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="390" height="26" rx="6" fill="#064E3B"/>
+  <text x="251" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R98-HUASHUMOTION-CLAUDEVIDEOEFFECTS</text>
+  <text x="462" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 Launch Film &amp; Social Reel Sprints/Mo · $95/hr · Local Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: Blind Full-Clip Reruns + Manual AE Roto</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,555.00 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,850.00 render/API + 39.0h ($3,705.00)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Unscored Remotion + Raw FFmpeg Filters</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,482.50 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$820.00 render/API + 17.5h ($1,662.50)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: huashu-motion + claude-video-effects</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$422.50 / mo (-92.39% · Save $5,132.50)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$90.00 render/API + 3.5h ($332.50) · $61,590/yr</text>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg101" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent101a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg101)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="232" height="28" rx="6" fill="url(#accent101a)"/>
+  <text x="168" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R101 (R284)</text>
+  <text x="300" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">Co-op Anything (Reverse-Engineer &amp; Bot-Test Co-op MCP) &amp; Genex Desktop (Multi-Agent Game Engine IDE)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">cranebeaker/coop-anything (★ 2,119 · Co-op Mod Playbook + Bot Testing + Couchlink) + genex-games/genex-desktop (★ 872 · Unreal/Unity/Godot Autonomous Play-Test)</text>
+
+  <!-- Left Card: cranebeaker/coop-anything -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#14B8A6" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#042F2E"/>
+  <text x="72" y="165" fill="#99F6E4" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🎮 cranebeaker/coop-anything · Single-Player to Co-op MCP</text>
+  <text x="552" y="165" fill="#5EEAD4" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 2,119 · Python</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Engine Detection &amp; Reverse-Engineering Playbook via MCP</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `coop-anything` MCP detects game engines from install folders &amp; queries directory</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Guides Claude Code / Codex / Gemini CLI through binary RE &amp; state sync</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Autonomous In-Game Bot Testing &amp; Zero-Port-Forward Steam Netplay</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Agent spawns simulated bots inside the game to verify multiplayer sync loops</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Packages 1-click installers joining over Steam without router port forwarding</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-weight="600" font-size="13.5">3. Couchlink Split-Screen &amp; Proven Classics Catalog</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Integrates `Couchlink` for single-PC multi-instance splitscreen &amp; controller isolation</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Proven on Deus Ex, Ocarina of Time, Fallout: New Vegas, S.T.A.L.K.E.R. &amp; C&amp;C 3</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#14B8A6" stroke-width="1"/>
+  <text x="72" y="431" fill="#99F6E4" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Turns legacy binary reverse-engineering and multiplayer</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">state synchronization into a repeatable MCP + bot-verified loop.</text>
+
+  <!-- Right Card: genex-games/genex-desktop -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#2E1065"/>
+  <text x="648" y="165" fill="#DDD6FE" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🕹️ genex-games/genex-desktop · Multi-Agent Game Studio</text>
+  <text x="1128" y="165" fill="#C4B5FD" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 872 · TypeScript</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Multi-Engine Provisioning &amp; Autonomous Self-Playtesting</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Targets Unreal Engine, Unity, Godot, Roblox Studio &amp; Browser games</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Agent configures the engine, compiles the build &amp; play-tests it autonomously</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Heterogeneous Multi-Agent Hierarchy (Main + Workers + Reviewers)</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Mixes Claude Opus, GPT models &amp; local LLMs across specialized agent roles</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Reuses existing Claude Code or ChatGPT subscriptions without extra API keys</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Integrated Local Blender Plugin &amp; 3D/Audio Tools Router</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Generates 3D meshes locally via Blender plugin or routes to Meshy &amp; Tripo</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Synthesizes game voice/SFX via ElevenLabs &amp; exports to desktop or web</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="648" y="431" fill="#DDD6FE" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Bridges LLM code generation with real game-engine</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">compilation, 3D asset routing, and closed-loop play-testing.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="390" height="26" rx="6" fill="#064E3B"/>
+  <text x="251" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R101-COOPANYTHING-GENEXDESKTOP</text>
+  <text x="462" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 Game Engine Automation, Netcode &amp; Play-Testing Sprints/Mo · $95/hr · Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: Manual RE Hooks + Unverified Engine Code</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,525.00 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,820.00 token/asset + 39.0h ($3,705.00)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Ad-Hoc Mod Scripts + Manual 3D Imports</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,477.50 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$815.00 token/asset + 17.5h ($1,662.50)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: Co-op Anything MCP + Genex Desktop</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$422.50 / mo (-92.35% · Save $5,102.50)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$90.00 API/compute + 3.5h ($332.50) · $61,230/yr</text>
+</svg>

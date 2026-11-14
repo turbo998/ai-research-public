@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg104" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent104a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg104)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="232" height="28" rx="6" fill="url(#accent104a)"/>
+  <text x="168" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R104 (R287)</text>
+  <text x="300" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">Moli OS (6.1 MiB Rust Agent-Native Home Automation) &amp; IDX (Zero-Key Rust Stock Market MCP)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">rudy-io/moli-os (★ 127 · Rust · 17.5 MB Image + Protected-Room Guard + HTTP MCP) + fzn0x/idx (★ 235 · Rust · MIT · CLI/JSON/MCP Market Engine)</text>
+
+  <!-- Left Card: rudy-io/moli-os -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#431407"/>
+  <text x="72" y="165" fill="#FED7AA" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🏠 rudy-io/moli-os · 6.1 MiB Rust Agent IoT Hub</text>
+  <text x="552" y="165" fill="#FB923C" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 127 · Rust</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. 350x Lighter Than Home Assistant (`6.1 MiB` RAM / `17.5 MB` Image)</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `6.1 MiB` container memory (`15.9 MiB` RSS) &amp; `0.36%` idle CPU vs `2.1 GiB` HA</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Supervised drivers restart on panic with backoff; core Hub never goes down</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Protected-Room Guard &amp; Human-Validated Automation Graphs</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Holds agent commands in protected rooms until a human approves</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automation graphs drawn by Moli never activate until exact version is validated</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. 24 Integrations + Embedded Svelte 5 2D/3D Floorplan + HTTP MCP</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Zigbee2MQTT, Hue, Sonos, Tuya, Frigate, Bambu Lab, Klipper, Tapo &amp; more</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Single port serving REST, SSE &amp; Streamable HTTP MCP with host allowlist</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#F97316" stroke-width="1"/>
+  <text x="72" y="431" fill="#FED7AA" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Blueprint for safe physical-world IoT agents—combining</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">6.1 MiB Rust efficiency with protected-room human approval gates.</text>
+
+  <!-- Right Card: fzn0x/idx -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#064E3B"/>
+  <text x="648" y="165" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">📈 fzn0x/idx · Single-Binary Rust Equity CLI &amp; MCP</text>
+  <text x="1128" y="165" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 235 · Rust · MIT</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Tri-Modal Single Binary: Terminal Table CLI + JSON + MCP Server</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `idx stocks quote BBCA,BBRI,TLKM` renders rich box-drawing terminal tables</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `idx -o json` feeds `jq`/scripts; built-in MCP server connects any AI agent</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Zero API Keys &amp; Zero Subscription Fees for IDX / IHSG Data</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Queries prices, OHLC, volume, market cap, trailing P/E &amp; dividend yield</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Supports stock comparison, fundamental analysis &amp; multi-factor screening</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Bilingual Web Terminal (`ihsg.midoriresearch.com`) &amp; Rust Speed</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Companion web terminal in Bahasa Indonesia and English</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Demonstrates the "One Rust Binary = CLI + JSON + MCP" pattern for FinTech</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="648" y="431" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Exemplary single-binary Rust architecture unifying human</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">CLI tables, scriptable JSON output, and keyless Agent MCP access.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="380" height="26" rx="6" fill="#064E3B"/>
+  <text x="246" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R104-MOLIOS-IDX</text>
+  <text x="452" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 Edge IoT Agent &amp; Financial Market MCP Sprints/Mo · $95/hr · Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: 2.1 GiB IoT Hub + Paid Market APIs</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,235.00 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,720.00 infra/API + 37.0h ($3,515.00)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Unguarded YAML + Fragile Scrapers</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,295.00 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$775.00 infra/API + 16.0h ($1,520.00)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: Moli OS 6.1 MiB + IDX Rust CLI/MCP</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$412.50 / mo (-92.12% · Save $4,822.50)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$80.00 infra/API + 3.5h ($332.50) · $57,870/yr</text>
+</svg>

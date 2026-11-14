@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg60" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg60)"/>
+  <g stroke="#1E293B" stroke-width="1" opacity="0.55">
+    <line x1="0" y1="115" x2="1200" y2="115"/>
+    <line x1="0" y1="455" x2="1200" y2="455"/>
+    <line x1="600" y1="115" x2="600" y2="455"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="76" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="53" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">GITHUB AI RADAR · 2026-11-14 ROUND 60 (CUMULATIVE R243) · SPRING BOOT 4.1 HARNESS &amp; NEOVIM AGENT REVIEW</text>
+  <text x="58" y="81" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">sinabs/spring-agent-scope (JDK 25 + AgentScope 2.0 Yoke) + alpcanaydin/rexmod (5-CLI Neovim Review)</text>
+  <rect x="962" y="39" width="180" height="44" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="1052" y="59" text-anchor="middle" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">FINOPS VERIFIED</text>
+  <text x="1052" y="76" text-anchor="middle" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="800">-91.40% ($5,100.00/mo)</text>
+
+  <!-- Left Panel: sinabs/spring-agent-scope -->
+  <rect x="36" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="54" y="146" width="235" height="26" rx="6" fill="#0284C7"/>
+  <text x="171" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">sinabs/spring-agent-scope (★98)</text>
+  <text x="301" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">Java 25 · Spring Boot 4.1 · Yoke</text>
+
+  <text x="54" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Per-Request Ephemeral HarnessAgent Eliminating Singleton Cross-Talk</text>
+
+  <rect x="54" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="234" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. Fresh HarnessAgent per Request + Redis (userId, sessionId) State</text>
+  <text x="70" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Fixes official starter singleton flaw that mixed multi-user sessions in production</text>
+  <text x="70" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Runs on JDK 25 Virtual Threads; auto-compacts long Redis sessions across replicas</text>
+
+  <rect x="54" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="308" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. AG-UI SSE Streaming + Stable [doc-name.md#passage-id] Citations</text>
+  <text x="70" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• POST /api/chat/stream streams reasoning over SSE via AG-UI protocol</text>
+  <text x="70" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Built-in retrieve tool returns deterministic passage IDs + HTTP MCP &amp; 2 sub-agents</text>
+
+  <rect x="54" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. Zero Host Shell/File Exposure &amp; Fail-Fast Prod Startup</text>
+  <text x="70" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Strictly excludes file, shell &amp; raw web tools; timing trace middleware on every call</text>
+  <text x="70" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Pluggable OpenAI/DashScope/DeepSeek/Anthropic/Gemini/Ollama; prod fails if key missing</text>
+
+  <!-- Right Panel: alpcanaydin/rexmod -->
+  <rect x="616" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="634" y="146" width="215" height="26" rx="6" fill="#059669"/>
+  <text x="741" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">alpcanaydin/rexmod (★57)</text>
+  <text x="861" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">Go · MIT · 5 Coding CLIs</text>
+
+  <text x="634" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Per-Turn Working-Tree Snapshot &amp; Side-by-Side Neovim LSP Review</text>
+
+  <rect x="634" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="234" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. Pre-Prompt Tree Snapshot ➔ Exact Last-Turn vs. Branch Diff</text>
+  <text x="650" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Hooks UserPromptSubmit / PreInvocation / Stop across Claude Code, Codex, OpenCode, Pi, agy</text>
+  <text x="650" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Separates exact Last Turn edits from staged/unstaged Uncommitted &amp; Branch diffs</text>
+
+  <rect x="634" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="308" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. Side-by-Side Neovim with On-Demand Mason LSP &amp; Space r Comments</text>
+  <text x="650" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Click any changed file to open Neovim at the exact line with auto-installed Tree-sitter &amp; LSP</text>
+  <text x="650" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Press Space r on a line or selection to attach structured code review comments</text>
+
+  <rect x="634" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. Multi-Agent Tab Routing &amp; rexmod open file:line Skill</text>
+  <text x="650" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Routes comments strictly to the target agent; Info tab tracks plan usage &amp; listening ports</text>
+  <text x="650" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Bundled rexmod skill lets agents open exact file:line in the editor pane for human inspection</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps -->
+  <rect x="36" y="468" width="1128" height="183" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="497" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261114-R60-SPRINGAGENTSCOPE-REXMOD · 18 Java Endpoints &amp; 120 Reviews/Mo · $100/hr)</text>
+  <text x="58" y="516" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">Scope: Enterprise Java agent microservice memory/session-leak remediation &amp; multi-CLI diff review labor (local hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="58" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="74" y="552" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Singleton Agent Starter + Scrollback Review</text>
+  <text x="74" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$5,580.00 / mo</text>
+  <text x="74" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Cloud Compute &amp; Rework Spend: $1,780.00</text>
+  <text x="74" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 38.0h × $100 = $3,800.00</text>
+
+  <!-- Path B -->
+  <rect x="426" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="442" y="552" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Blocking Servlets + Manual git diff Copy</text>
+  <text x="442" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$2,640.00 / mo (-52.69%)</text>
+  <text x="442" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Cloud Compute &amp; Rework Spend: $840.00</text>
+  <text x="442" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 18.0h × $100 = $1,800.00</text>
+
+  <!-- Path C -->
+  <rect x="794" y="530" width="348" height="104" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.8"/>
+  <text x="810" y="552" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: Yoke JDK 25 Harness + rexmod Neovim Loop</text>
+  <text x="810" y="574" fill="#ECFDF5" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$480.00 / mo (-91.40%)</text>
+  <text x="810" y="595" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Compute &amp; Rework Spend: $130.00 | Labor: 3.5h ($350.00)</text>
+  <text x="810" y="613" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Net Savings: $5,100.00/mo ($61,200.00/yr · -34.5h)</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg76" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg76)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FB923C">2026-11-14 NIGHT ROUND 76 (R259) · RUST METASEARCH MCP &amp; 122x TOKEN-COMPRESSED WEB READER</text>
+  <text x="58" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="800" fill="#F8FAFC">sahenjp/RustXNG (★ 973 · SearXNG in Rust) + fatsearch/fatsearch (918 vs 112.5k Tokens): -92.48% TCO</text>
+  <rect x="978" y="40" width="166" height="36" rx="18" fill="#065F46" stroke="#10B981" stroke-width="1.2"/>
+  <text x="1061" y="63" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#A7F3D0">-$5,132.50 / mo</text>
+
+  <!-- Left Card: sahenjp/RustXNG -->
+  <rect x="36" y="128" width="548" height="340" rx="14" fill="#0F172A" stroke="#FB923C" stroke-width="1.5"/>
+  <text x="58" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#FB923C">1. sahenjp/RustXNG (★ 973 · Rust 1.89+ · AGPL-3.0)</text>
+  <text x="58" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">Self-Hosted Rust Metasearch &amp; Grounding Engine with Built-In MCP</text>
+
+  <rect x="58" y="200" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">2 Read-Only Grounding MCP Tools (rustxng mcp)</text>
+  <text x="72" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">search (≤10 ranked results, 500-char snippets) + read_page (≤3 query passages)</text>
+
+  <rect x="58" y="268" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FBBF24">Local Site &amp; Offline Wikipedia Indexing (rustxng-index)</text>
+  <text x="72" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Combines external metasearch providers with local docs.rs &amp; Wikipedia dumps</text>
+
+  <rect x="58" y="336" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">Agent-Deterministic API Filters &amp; SHA-256 Verified Binaries</text>
+  <text x="72" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">strict_engines=1 · include_domains · exclude_domains · time_range · JSON/CSV/RSS</text>
+
+  <text x="58" y="422" font-family="monospace" font-size="12" fill="#FB923C">Server: rustxng --bind 127.0.0.1 --port 29483 | MCP: rustxng mcp</text>
+  <text x="58" y="446" font-family="monospace" font-size="12" fill="#94A3B8">Replaces: Heavy Python SearXNG + Redis/uWSGI multi-container stacks</text>
+
+  <!-- Right Card: fatsearch/fatsearch -->
+  <rect x="616" y="128" width="548" height="340" rx="14" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="638" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#34D399">2. fatsearch/fatsearch (★ 166 · Rust · MIT/Apache-2.0)</text>
+  <text x="638" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">"The ripgrep of Web Searching": Outline-First Reader with Numeric Loss Guard</text>
+
+  <rect x="638" y="200" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">918 Tokens ($0.002) vs Firecrawl 112,517 Tokens ($0.23)</text>
+  <text x="652" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">81x–122x less context on Wikipedia/JS/PDF pages; reads by outline &amp; section ID</text>
+
+  <rect x="638" y="268" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">Deterministic Numeric Loss Guard</text>
+  <text x="652" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Strips menus/banners/footers while counting &amp; preserving every price, date &amp; number</text>
+
+  <rect x="638" y="336" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F472B6">Zero-Context Key Vault (fats setup &lt;provider&gt; on 127.0.0.1)</text>
+  <text x="652" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">One-time 30m loopback token form saves key mode 0600; never touches chat or logs</text>
+
+  <text x="638" y="422" font-family="monospace" font-size="12" fill="#34D399">Bench: Firecrawl 112.5k ($0.23) · Jina 94.4k ($0.19) · FATSEARCH 918 ($0.002)</text>
+  <text x="638" y="446" font-family="monospace" font-size="12" fill="#94A3B8">Install: cargo install fatsearch / npm i -g fatsearch (CLI + MCP)</text>
+
+  <!-- Bottom FinOps Comparison Bar -->
+  <rect x="36" y="486" width="1128" height="162" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">Closed-Form FinOps Audit (CLAIM-20261114-R76-RUSTXNG-FATSEARCH · 25 Pipelines/Mo · $95/hr · hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <text x="58" y="548" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FCA5A5">Path A (Full-Page 112.5k-Token Scrapers + Chat Key Leaks)</text>
+  <rect x="520" y="534" width="460" height="20" rx="5" fill="#EF4444"/>
+  <text x="992" y="549" font-family="monospace" font-size="13" font-weight="700" fill="#FCA5A5">$5,550.00/mo ($1,940.00 + 38.0h = $3,610.00)</text>
+
+  <!-- Path B -->
+  <text x="58" y="582" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FDE047">Path B (Python SearXNG Docker + Jina Reader 94.4k Tokens)</text>
+  <rect x="520" y="568" width="211" height="20" rx="5" fill="#EAB308"/>
+  <text x="743" y="583" font-family="monospace" font-size="13" font-weight="700" fill="#FDE047">$2,542.50/mo ($880.00 + 17.5h = $1,662.50)</text>
+
+  <!-- Path C -->
+  <text x="58" y="616" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6EE7B7">Path C (RustXNG Metasearch MCP + fatsearch 918-Token Reader)</text>
+  <rect x="520" y="602" width="35" height="20" rx="5" fill="#10B981"/>
+  <text x="567" y="617" font-family="monospace" font-size="13" font-weight="700" fill="#6EE7B7">$417.50/mo ($85.00 + 3.5h = $332.50) · Save $5,132.50/mo (-92.48%)</text>
+
+  <text x="58" y="638" font-family="monospace" font-size="11" fill="#64748B">Evidence: trending-daily-2026-11-14-raw.html (sha256: 46ea932ff0f84c19...) · search-new-repos-2026-11-14-raw.json (sha256: a4edf557e9185483...)</text>
+</svg>

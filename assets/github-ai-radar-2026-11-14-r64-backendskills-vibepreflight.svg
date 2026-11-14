@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg64" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg64)"/>
+  <g stroke="#1E293B" stroke-width="1" opacity="0.55">
+    <line x1="0" y1="115" x2="1200" y2="115"/>
+    <line x1="0" y1="455" x2="1200" y2="455"/>
+    <line x1="600" y1="115" x2="600" y2="455"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="76" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="53" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">GITHUB AI RADAR · 2026-11-14 ROUND 64 (CUMULATIVE R247) · PRODUCTION BACKEND SKILLS &amp; VIBE PREFLIGHT</text>
+  <text x="58" y="81" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">globalmpc/backendskills (25/150 ➔ 2/150 Critical Bugs) + globalmpc/vibe-preflight (9-Area Launch Audit)</text>
+  <rect x="962" y="39" width="180" height="44" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="1052" y="59" text-anchor="middle" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">FINOPS VERIFIED</text>
+  <text x="1052" y="76" text-anchor="middle" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="800">-91.43% ($5,230.00/mo)</text>
+
+  <!-- Left Panel: globalmpc/backendskills -->
+  <rect x="36" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="54" y="146" width="235" height="26" rx="6" fill="#0284C7"/>
+  <text x="171" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">globalmpc/backendskills (★57)</text>
+  <text x="301" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">MIT · 150-Run Adversarial Bench</text>
+
+  <text x="54" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Stops Demo-Passing Backend Code From Breaking in Production</text>
+
+  <rect x="54" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="234" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. Critical Mistakes Cut From 25/150 (16.7%) to 2/150 (1.3%)</text>
+  <text x="70" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Sonnet 5.5: 13/75 ➔ 0/75 critical bugs | Haiku 5.5: 12/75 ➔ 2/75 across 15 tasks</text>
+  <text x="70" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Hidden tests: 20 concurrent buyers for 5 items, IDOR reads &amp; mid-deploy schema skew</text>
+
+  <rect x="54" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="308" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. Three Core Skills: api-endpoint · data-integrity · db-migration</text>
+  <text x="70" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Caller-scoped queries, login/costly route rate limits, row locks &amp; idempotency keys</text>
+  <text x="70" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Expand-then-contract migrations, concurrent indexes, lock timeouts &amp; down migrations</text>
+
+  <rect x="54" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. Team Conventions Overlay (30 Misses ➔ 4) &amp; Honest Accounting</text>
+  <text x="70" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• "Make it yours" section enforces team down-migrations &amp; API docs ($0.11 vs $0.06/run)</text>
+  <text x="70" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Works across Claude Code, Codex (AGENTS.md) &amp; Cursor (.cursor/rules/)</text>
+
+  <!-- Right Panel: globalmpc/vibe-preflight -->
+  <rect x="616" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="634" y="146" width="240" height="26" rx="6" fill="#059669"/>
+  <text x="754" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">globalmpc/vibe-preflight (★65)</text>
+  <text x="886" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">MIT · Read-Only Launch Gate</text>
+
+  <text x="634" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">9-Domain Pre-Launch Pilot Checklist for Vibe-Coded Applications</text>
+
+  <rect x="634" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="234" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. Dual Output: Plain-Language report.md + Actionable details.md</text>
+  <text x="650" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Writes to git-ignored .vibe-preflight/ and mutates zero files until explicitly approved</text>
+  <text x="650" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Separates executive risk summary from exact file/line remediation specs for the agent</text>
+
+  <rect x="634" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="308" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. Catches Hallucinated Packages, Uncapped Paid APIs &amp; Fake Data</text>
+  <text x="650" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Detects non-existent AI-hallucinated npm/pip packages &amp; unverified Stripe webhooks</text>
+  <text x="650" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Flags unauthenticated OpenAI/SMS endpoints, unpaginated lists &amp; hardcoded admin stubs</text>
+
+  <rect x="634" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. Docker/Podman/Hosting Traps &amp; Coding-Agent Config Audit</text>
+  <text x="650" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Checks ephemeral disk uploads on Vercel/Fly/Railway, exposed DB ports &amp; root containers</text>
+  <text x="650" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Audits risky allow rules in .claude/settings*.json and plaintext tokens in .mcp.json</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps -->
+  <rect x="36" y="468" width="1128" height="183" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="497" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261114-R64-BACKENDSKILLS-VIBEPREFLIGHT · 50 Backend Releases/Mo · $100/hr)</text>
+  <text x="58" y="516" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">Scope: Production race/migration incident &amp; uncapped API abuse spend + pre-launch audit labor (local hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="58" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="74" y="552" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Raw Vibe-Coded Backend (25/150 Bugs)</text>
+  <text x="74" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$5,720.00 / mo</text>
+  <text x="74" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Incident &amp; API Abuse Spend: $1,920.00</text>
+  <text x="74" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 38.0h × $100 = $3,800.00</text>
+
+  <!-- Path B -->
+  <rect x="426" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="442" y="552" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Static SAST + Manual Launch Checklists</text>
+  <text x="442" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$2,690.00 / mo (-52.97%)</text>
+  <text x="442" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Incident &amp; API Abuse Spend: $890.00</text>
+  <text x="442" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 18.0h × $100 = $1,800.00</text>
+
+  <!-- Path C -->
+  <rect x="794" y="530" width="348" height="104" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.8"/>
+  <text x="810" y="552" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: backendskills (2/150) + vibe-preflight Gate</text>
+  <text x="810" y="574" fill="#ECFDF5" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$490.00 / mo (-91.43%)</text>
+  <text x="810" y="595" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Incident &amp; Token Spend: $140.00 | Labor: 3.5h ($350.00)</text>
+  <text x="810" y="613" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Net Savings: $5,230.00/mo ($62,760.00/yr · -34.5h)</text>
+</svg>

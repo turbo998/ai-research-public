@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg111" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent111a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg111)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="232" height="28" rx="6" fill="url(#accent111a)"/>
+  <text x="168" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R111 (R294)</text>
+  <text x="300" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">microsoft/TokenEconomizer (-30.9% Agent Cost Control) &amp; Folkbench (API Relay Arena &amp; Switch)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">microsoft/TokenEconomizer (★ 6,112 · Apache-2.0 · arXiv:2610.22732) + Folkbench/folkbench (★ 3,766 · Rust · Model Fingerprint Arena &amp; CLI Switch)</text>
+
+  <!-- Left Card: microsoft/TokenEconomizer -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#1E3A8A"/>
+  <text x="72" y="165" fill="#BFDBFE" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">📉 microsoft/TokenEconomizer · Black-Box Cost Control</text>
+  <text x="552" y="165" fill="#93C5FD" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 6,112 · Apache-2.0</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Three Experience-Driven Waste-Elimination Mechanisms</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Micro-Skills (`k=3` sessions): remembers repo commands (`python -m pytest`)</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Tool Pruning (`p=10, m=2, s=5`) &amp; Loop Guard (`c=0.7, r=1` redirect)</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Proven Across 30/30 SWE-Bench Repo × Model Cells</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Cuts mean cost by `18.4%–30.9%` while improving Pass@1 in 4 of 5 pairs</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `-26.1%` cost / `+1.6` Pass@1 on Codex + GPT-5.6 Sol; `-30.9%` on Opus 4.8</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Drop-In Plugin for Claude Code, Codex, Copilot CLI &amp; Pi</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Works without modifying agent internals; experimental OpenCode/Cursor/Hermes</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Auto-drops contradicted micro-skills &amp; restores pruned tools in 1 command</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="72" y="431" fill="#BFDBFE" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: UC Berkeley + Microsoft Research's gold standard for</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">cutting coding-agent token waste by up to 30.9% while lifting Pass@1.</text>
+
+  <!-- Right Card: Folkbench/folkbench -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#064E3B"/>
+  <text x="648" y="165" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">⚖️ Folkbench/folkbench · API Relay Arena &amp; Switch</text>
+  <text x="1128" y="165" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 3,766 · Rust</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Continuous Public Telemetry: Availability, Stability, Latency &amp; Cost</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Benchmarks API relays in real coding session workloads (`folkbench.com`)</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Side-by-side station comparisons for the exact same model ID</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Model Degradation &amp; Fingerprint Integrity Arena ("降智监控")</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Tracks probe consistency rate, token accounting &amp; model fingerprints</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Catches silent model downgrades, fake quantization or prompt-cache stripping</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Native Rust `Folkbench Switch` for Claude Code, Codex &amp; Gemini CLI</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Local Switch desktop/CLI manages endpoint configs across coding agents</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Instant failover when a provider's latency spikes or availability drops</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="648" y="431" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Pairs TokenEconomizer's client-side waste reduction with</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">upstream API fingerprint verification and 1-click CLI endpoint switching.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="390" height="26" rx="6" fill="#064E3B"/>
+  <text x="251" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R111-TOKENECONOMIZER-FOLKBENCH</text>
+  <text x="462" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 Multi-Repo Coding Agent &amp; API Governance Sprints/Mo · $95/hr · Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: Unpruned Tools + Failure Loops + Downgrades</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,595.00 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,890.00 wasted token/API + 39.0h ($3,705.00)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Static CLAUDE.md + Manual Config Edits</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,445.00 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$830.00 token/API + 17.0h ($1,615.00)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: TokenEconomizer + Folkbench Switch</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$417.50 / mo (-92.54% · Save $5,177.50)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$85.00 optimized token + 3.5h ($332.50) · $62,130/yr</text>
+</svg>

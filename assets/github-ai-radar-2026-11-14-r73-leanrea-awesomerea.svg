@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg73" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg73)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#F59E0B">2026-11-14 NIGHT ROUND 73 (R256) · ZERO-MCP REVERSE ENGINEERING SKILL &amp; 5,191-RESOURCE REA CORPUS</text>
+  <text x="58" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="800" fill="#F8FAFC">aicodeking/leanrea (8 KB Zero-MCP Skill: -60% Tokens) + reacher-z/Awesome-REA: -92.32% TCO</text>
+  <rect x="978" y="40" width="166" height="36" rx="18" fill="#065F46" stroke="#10B981" stroke-width="1.2"/>
+  <text x="1061" y="63" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#A7F3D0">-$5,137.50 / mo</text>
+
+  <!-- Left Card: aicodeking/leanrea -->
+  <rect x="36" y="128" width="548" height="340" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="58" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#F59E0B">1. aicodeking/leanrea (★ 4,275 · Python · MIT)</text>
+  <text x="58" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">One 8 KB SKILL.md Replacing 25 MB REA + 207 MCP Tool Definitions</text>
+
+  <rect x="58" y="200" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Eliminates 3.35 MB MCP Tool Schema Tax (400.7k → 34.5k Tokens)</text>
+  <text x="72" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">"Reply OK" context cost drops from $1.60 (207 MCP tools) to $0.09 (0 extra tools)</text>
+
+  <rect x="58" y="268" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34D399">Head-to-Head Benchmark (4 RE Tasks × 3 Reps · Claude Sonnet 5.5)</text>
+  <text x="72" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">388s vs 627s (-38% time) · $2.17 vs $3.36 (-35% cost) · 55 vs 124 turns · 74/75 score</text>
+
+  <rect x="58" y="336" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">Direct Native CLI Recon Over Bloated JSON Wrappers</text>
+  <text x="72" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Electron app.asar: 4.8s &amp; 24 KB (asar+rg) vs 47.9s &amp; 140 MB JSON via REA wrapper</text>
+
+  <text x="58" y="422" font-family="monospace" font-size="12" fill="#F59E0B">Targets: Electron asar · Mach-O .node · Stripped Go · Disassembly IPC</text>
+  <text x="58" y="446" font-family="monospace" font-size="12" fill="#94A3B8">Install: npx skills add aicodeking/leanrea (8 KB SKILL.md, pure Bash)</text>
+
+  <!-- Right Card: reacher-z/Awesome-REA -->
+  <rect x="616" y="128" width="548" height="340" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="638" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#38BDF8">2. reacher-z/Awesome-REA (★ 2,804 · Python · MIT)</text>
+  <text x="638" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">5,191 Source-Reviewed Resources, 4,025 Cases &amp; 442 Papers + JSON API</text>
+
+  <rect x="638" y="200" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">6 Reverse-Engineering Domains in Machine-Readable JSON</text>
+  <text x="652" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Websites · Games · Apps · Native Binaries · Firmware · Communication Protocols</text>
+
+  <rect x="638" y="268" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#A78BFA">Deterministic Build Pipeline &amp; Continuous Discovery Scan</text>
+  <text x="652" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">data/rea-resources.json + tool-resources.json + papers.json → build_readme.py</text>
+
+  <rect x="638" y="336" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F472B6">Queryable Grounding API for Security &amp; Compat Agents</text>
+  <text x="652" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">awesomerea.org/api/ provides instant precedent lookup for unknown binary formats</text>
+
+  <text x="638" y="422" font-family="monospace" font-size="12" fill="#38BDF8">Corpus: 5,191 resources · 4,025 real-world cases · 442 academic papers</text>
+  <text x="638" y="446" font-family="monospace" font-size="12" fill="#94A3B8">Bilingual: README.md + README.zh-CN.md + featured agent benchmarks</text>
+
+  <!-- Bottom FinOps Comparison Bar -->
+  <rect x="36" y="486" width="1128" height="162" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">Closed-Form FinOps Audit (CLAIM-20261114-R73-LEANREA-AWESOMEREA · 25 RE Audits/Mo · $95/hr · hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <text x="58" y="548" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FCA5A5">Path A (207-Tool Heavy MCP Schema + Unguided Binary Recon)</text>
+  <rect x="520" y="534" width="460" height="20" rx="5" fill="#EF4444"/>
+  <text x="992" y="549" font-family="monospace" font-size="13" font-weight="700" fill="#FCA5A5">$5,565.00/mo ($1,860.00 + 39.0h = $3,705.00)</text>
+
+  <!-- Path B -->
+  <text x="58" y="582" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FDE047">Path B (Deferred MCP Tool Search + Ad-Hoc Web Search)</text>
+  <rect x="520" y="568" width="207" height="20" rx="5" fill="#EAB308"/>
+  <text x="739" y="583" font-family="monospace" font-size="13" font-weight="700" fill="#FDE047">$2,502.50/mo ($840.00 + 17.5h = $1,662.50)</text>
+
+  <!-- Path C -->
+  <text x="58" y="616" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6EE7B7">Path C (leanrea 8 KB CLI Skill + Awesome-REA JSON Corpus)</text>
+  <rect x="520" y="602" width="35" height="20" rx="5" fill="#10B981"/>
+  <text x="567" y="617" font-family="monospace" font-size="13" font-weight="700" fill="#6EE7B7">$427.50/mo ($95.00 + 3.5h = $332.50) · Save $5,137.50/mo (-92.32%)</text>
+
+  <text x="58" y="638" font-family="monospace" font-size="11" fill="#64748B">Evidence: trending-daily-2026-11-14-raw.html (sha256: 46ea932ff0f84c19...) · search-new-repos-2026-11-14-raw.json (sha256: a4edf557e9185483...)</text>
+</svg>

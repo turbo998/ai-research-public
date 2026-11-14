@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg84" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg84)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#38BDF8">2026-11-14 NIGHT ROUND 84 (R267) · SWARM COMMUNICATION PROTOCOL (SCP/1) &amp; PI EXTENSION REMOTE</text>
+  <text x="58" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="800" fill="#F8FAFC">scphq/scp (scp/1 Turn-Level Swarm Mesh) + Xpropel/Pi-Remote (★ 330 · pi Extension): -92.01% TCO</text>
+  <rect x="978" y="40" width="166" height="36" rx="18" fill="#065F46" stroke="#10B981" stroke-width="1.2"/>
+  <text x="1061" y="63" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#A7F3D0">-$4,807.50 / mo</text>
+
+  <!-- Left Card: scphq/scp -->
+  <rect x="36" y="128" width="548" height="340" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="58" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#38BDF8">1. scphq/scp (★ 84 · Rust · Apache-2.0 · Protocol scp/1)</text>
+  <text x="58" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">Swarm Communication Protocol Across Harnesses, Machines &amp; Orgs</text>
+
+  <rect x="58" y="200" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Cross-Harness Spawning, Mid-Run Steering &amp; Handbacks</text>
+  <text x="72" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Claude Code orchestrator spawns Codex/OpenCode/pi/Agy workers &amp; steers mid-turn</text>
+
+  <rect x="58" y="268" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34D399">Hibernated Session Wake-On-Message Months Later</text>
+  <text x="72" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Sessions persist and wake with full original context ("Ask the agent that built it")</text>
+
+  <rect x="58" y="336" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FBBF24">Process-Tree Reach, Mutual Consent &amp; Boundary Judge</text>
+  <text x="72" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Hierarchical addressing (&lt;org&gt;/&lt;machine&gt;/&lt;agent&gt;) with optional boundary judge</text>
+
+  <text x="58" y="422" font-family="monospace" font-size="12" fill="#38BDF8">CLI: npm i -g @scp-dev/cli | swarm up | swarm spawn --name w1</text>
+  <text x="58" y="446" font-family="monospace" font-size="12" fill="#94A3B8">Harnesses: Claude Code · Codex · OpenCode · pi · Muse · Agy · Grok</text>
+
+  <!-- Right Card: Xpropel/Pi-Remote -->
+  <rect x="616" y="128" width="548" height="340" rx="14" fill="#0F172A" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="638" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#A78BFA">2. Xpropel/Pi-Remote (★ 330 · TypeScript · MIT)</text>
+  <text x="638" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">Non-Intrusive Multi-Device Browser Mirror on pi's Official Extension API</text>
+
+  <rect x="638" y="200" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Zero Source Patching: Runs on Official pi Extension API</text>
+  <text x="652" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Session stays in local pi terminal; browser mirrors output with incremental catch-up</text>
+
+  <rect x="638" y="268" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">Queue-or-Steer Remote Input &amp; Full Session-Tree Control</text>
+  <text x="652" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Switch model &amp; thinking level, compact context, and create/fork/clone session trees</text>
+
+  <rect x="638" y="336" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F472B6">Multi-Machine Relay &amp; QR Device Linking (attach --link)</text>
+  <text x="652" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Connect Windows, macOS &amp; Linux pi hosts to mobile/desktop browsers via QR code</text>
+
+  <text x="638" y="422" font-family="monospace" font-size="12" fill="#A78BFA">Runtime: Node &gt;= 22.18 · Earendil pi Companion · Bilingual Docs</text>
+  <text x="638" y="446" font-family="monospace" font-size="12" fill="#94A3B8">Guarantees: Confirmed delivery · Incremental reconnect sync</text>
+
+  <!-- Bottom FinOps Comparison Bar -->
+  <rect x="36" y="486" width="1128" height="162" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">Closed-Form FinOps Audit (CLAIM-20261114-R84-SCP-PIREMOTE · 25 Deployments/Mo · $95/hr · hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <text x="58" y="548" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FCA5A5">Path A (Always-On Idle VMs + Lost Session Context Rehydration)</text>
+  <rect x="520" y="534" width="460" height="20" rx="5" fill="#EF4444"/>
+  <text x="992" y="549" font-family="monospace" font-size="13" font-weight="700" fill="#FCA5A5">$5,225.00/mo ($1,710.00 + 37.0h = $3,515.00)</text>
+
+  <!-- Path B -->
+  <text x="58" y="582" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FDE047">Path B (Single-Harness Subagents + Basic WebSocket PTY Wrapper)</text>
+  <rect x="520" y="568" width="208" height="20" rx="5" fill="#EAB308"/>
+  <text x="740" y="583" font-family="monospace" font-size="13" font-weight="700" fill="#FDE047">$2,357.50/mo ($790.00 + 16.5h = $1,567.50)</text>
+
+  <!-- Path C -->
+  <text x="58" y="616" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6EE7B7">Path C (scphq/scp Turn-Level Swarm + Pi-Remote Extension Mirror)</text>
+  <rect x="520" y="602" width="37" height="20" rx="5" fill="#10B981"/>
+  <text x="569" y="617" font-family="monospace" font-size="13" font-weight="700" fill="#6EE7B7">$417.50/mo ($85.00 + 3.5h = $332.50) · Save $4,807.50/mo (-92.01%)</text>
+
+  <text x="58" y="638" font-family="monospace" font-size="11" fill="#64748B">Evidence: trending-daily-2026-11-14-raw.html (sha256: 46ea932ff0f84c19...) · search-new-repos-2026-11-14-raw.json (sha256: a4edf557e9185483...)</text>
+</svg>

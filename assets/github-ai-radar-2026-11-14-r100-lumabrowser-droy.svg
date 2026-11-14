@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg100" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent100a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg100)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="256" height="28" rx="6" fill="url(#accent100a)"/>
+  <text x="180" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R100 MILESTONE (R283)</text>
+  <text x="324" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">LumaBrowser (GPU-Aware Local AI Browser Stack) &amp; Droy (Phone-Resident Android Agent)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">amurgola/LumaBrowser (★ 140 · GPU Fit Badges + llama.cpp/MLX + MCP) + moonoops/Droy (★ 352 · Android 11+ DeepSeek Harness + MemOS)</text>
+
+  <!-- Left Card: amurgola/LumaBrowser -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#064E3B"/>
+  <text x="72" y="165" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🖥️ amurgola/LumaBrowser · Unified Local AI Browser</text>
+  <text x="552" y="165" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 140 · AGPL-3.0</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. GPU-Aware LLM Runtime with Pre-Download Fit &amp; Speed Badges</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Inspects VRAM; runs CUDA 12/13, Vulkan, Apple MLX, ik_llama.cpp &amp; NInfer</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Auto-sizes KV cache, offloads MoE experts to CPU &amp; splits via llama.cpp RPC</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Zero-Redownload Model Linking + Local Multimodal Stack</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Links existing LM Studio, Ollama &amp; Hugging Face cache weights in place</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Bundles Stable Diffusion image/video, TTS, music &amp; dual API (`127.0.0.1:8317`)</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Chromium + Ghostery Ad-Block + MCP / WebDriver / CDP</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Agent opens separate tabs while keeping your tabs untouched</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Exposes MCP server + `luma` CLI for Claude Code, Codex, Cline &amp; OpenCode</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="72" y="431" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Replaces 5 separate local daemons (Ollama + ComfyUI +</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">TTS + WebUI + Playwright) with one hardware-fitted desktop browser.</text>
+
+  <!-- Right Card: moonoops/Droy -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#1E3A8A"/>
+  <text x="648" y="165" fill="#BFDBFE" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">📱 moonoops/Droy · Phone-Resident Android AI Agent</text>
+  <text x="1128" y="165" fill="#93C5FD" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 352 · Android 11+</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Untethered On-Phone DeepSeek Harness + Android Use Tools</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Runtime executes directly on Android ARM64; unplug PC USB after setup</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Inspects UI pages, taps, swipes, types &amp; verifies task completion</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Floating On-Screen Pet HUDs &amp; Human-in-the-Loop 2FA Handoff</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Interactive pet bubbles (black cat, marmot, alpaca) show live step status</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Hands sign-in &amp; verification codes back to you; pause/resume/stop anytime</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Per-Companion Local MemOS Memory + Skills &amp; MCP Extensions</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Isolated local MemOS storage per companion with quiet-hour rules (22:00–09:00)</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Native Kotlin/Compose UI with voice input, notification filter &amp; MCP support</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+  <text x="648" y="431" fill="#BFDBFE" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Frees Android GUI automation from PC USB tethering with</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">on-device DeepSeek Harness, MemOS memory, and safe 2FA handoff.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="380" height="26" rx="6" fill="#064E3B"/>
+  <text x="246" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R100-LUMABROWSER-DROY</text>
+  <text x="452" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 Local Multimodal Browser &amp; Mobile Agent Sprints/Mo · $95/hr · Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: 5 Separate Daemons + Tethered ADB</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,360.00 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,750.00 OOM/cloud retry + 38.0h ($3,610.00)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Unfitted Local LLM + Termux Scripts</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,352.50 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$785.00 OOM/cloud retry + 16.5h ($1,567.50)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: LumaBrowser + Droy On-Device Agent</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$412.50 / mo (-92.30% · Save $4,947.50)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$80.00 API/compute + 3.5h ($332.50) · $59,370/yr</text>
+</svg>

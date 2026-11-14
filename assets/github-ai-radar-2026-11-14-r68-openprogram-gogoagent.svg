@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg68" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg68)"/>
+  <g stroke="#1E293B" stroke-width="1" opacity="0.55">
+    <line x1="0" y1="115" x2="1200" y2="115"/>
+    <line x1="0" y1="455" x2="1200" y2="455"/>
+    <line x1="600" y1="115" x2="600" y2="455"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="76" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="53" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">GITHUB AI RADAR · 2026-11-14 ROUND 68 (CUMULATIVE R251) · SELF-PROGRAMMING DAG &amp; 95-LINE GLASSBOX HARNESS</text>
+  <text x="58" y="81" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">FuzzyKuji/OpenProgram (Self-Programming DAG Classes) + DAgogo04/gogo-agent (95-LOC Loop &amp; Gated Memory)</text>
+  <rect x="962" y="39" width="180" height="44" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="1052" y="59" text-anchor="middle" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">FINOPS VERIFIED</text>
+  <text x="1052" y="76" text-anchor="middle" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="800">-91.43% ($5,175.00/mo)</text>
+
+  <!-- Left Panel: FuzzyKuji/OpenProgram -->
+  <rect x="36" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="54" y="146" width="215" height="26" rx="6" fill="#0284C7"/>
+  <text x="161" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">FuzzyKuji/OpenProgram (★81)</text>
+  <text x="281" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">Python 3.11+ · AGPL-3.0 · Desktop</text>
+
+  <text x="54" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Agents as Self-Programming Python Classes with DAG Context</text>
+
+  <rect x="54" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="234" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. Agentic Function Primitive: self(...) &amp; Live Self-Programming</text>
+  <text x="70" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Agents are ordinary Python classes; control flow, checks &amp; retries are native Python</text>
+  <text x="70" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Agents write new methods into their own class that become tools on the next turn</text>
+
+  <rect x="54" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="308" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. Branch-Isolated DAG Context for Multi-Agent Systems</text>
+  <text x="70" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Every model/tool call is a node in one DAG; sub-agents run on isolated branches</text>
+  <text x="70" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Sub-agents return only final results, preventing intermediate log pollution</text>
+
+  <rect x="54" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. Unified Side-by-Side Workspace (Chat · Files · Terminal · Browser)</text>
+  <text x="70" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Built-in controllable browser + terminal + file tree across macOS/Linux/Windows</text>
+  <text x="70" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Multi-account routing across Anthropic, OpenAI, Gemini &amp; local inference servers</text>
+
+  <!-- Right Panel: DAgogo04/gogo-agent -->
+  <rect x="616" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="634" y="146" width="215" height="26" rx="6" fill="#059669"/>
+  <text x="741" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">DAgogo04/gogo-agent (★58)</text>
+  <text x="861" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">Python · MIT · ~/.gogo/state.db</text>
+
+  <text x="634" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">~95-Line Glass-Box Loop, Gated Tri-Tier Memory &amp; Release Eval Gate</text>
+
+  <rect x="634" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="234" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. ~95-Line Debugger-Friendly Loop + Single SQLite State File</text>
+  <text x="650" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Observe ➔ Reason ➔ Act ➔ Repeat in ~95 lines of plain Python with 0 hidden magic</text>
+  <text x="650" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• All state lives in ~/.gogo/state.db + live trace cockpit on localhost:7777</text>
+
+  <rect x="634" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="308" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. Gated Semantic/Episodic/Procedural Memory &amp; MCP Mirroring</text>
+  <text x="650" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Admission gate decides WHETHER to remember; consolidation pass decides WHAT to keep</text>
+  <text x="650" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Auto-discovers MCP servers exposing memory.remember / memory.search / memory.get</text>
+
+  <rect x="634" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. Built-In Offline + LLM-as-Judge Eval Blocking Regressed Tags</text>
+  <text x="650" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Runs deterministic offline assertions &amp; LLM-as-judge side by side</text>
+  <text x="650" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Release gate blocks git tag creation whenever evaluation scores regress</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps -->
+  <rect x="36" y="468" width="1128" height="183" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="497" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261114-R68-OPENPROGRAM-GOGOAGENT · 40 Agent Apps &amp; Releases/Mo · $100/hr)</text>
+  <text x="58" y="516" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">Scope: Multi-agent linear context pollution token spend &amp; black-box framework debugging / memory bloat labor (local hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="58" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="74" y="552" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: Linear Subagent Dumps + Black-Box Frameworks</text>
+  <text x="74" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$5,660.00 / mo</text>
+  <text x="74" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Token &amp; Memory Bloat Spend: $1,860.00</text>
+  <text x="74" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 38.0h × $100 = $3,800.00</text>
+
+  <!-- Path B -->
+  <rect x="426" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="442" y="552" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Static Tool Lists + Unconsolidated SQLite Logs</text>
+  <text x="442" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$2,670.00 / mo (-52.83%)</text>
+  <text x="442" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Token &amp; Memory Bloat Spend: $870.00</text>
+  <text x="442" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 18.0h × $100 = $1,800.00</text>
+
+  <!-- Path C -->
+  <rect x="794" y="530" width="348" height="104" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.8"/>
+  <text x="810" y="552" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: OpenProgram DAG + gogo-agent Glassbox</text>
+  <text x="810" y="574" fill="#ECFDF5" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$485.00 / mo (-91.43%)</text>
+  <text x="810" y="595" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Token &amp; Eval Spend: $135.00 | Labor: 3.5h ($350.00)</text>
+  <text x="810" y="613" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Net Savings: $5,175.00/mo ($62,100.00/yr · -34.5h)</text>
+</svg>

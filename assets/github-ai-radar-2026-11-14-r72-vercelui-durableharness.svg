@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg72" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg72)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="86" rx="14" fill="#1F2937" stroke="#374151" stroke-width="1.5"/>
+  <text x="58" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#60A5FA">2026-11-14 NIGHT ROUND 72 (R255) · AGENT UI BEHAVIOR PRIMITIVES &amp; DURABLE WORKFLOW HARNESS</text>
+  <text x="58" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="800" fill="#F9FAFB">vercel-labs/ui (@ui-sdk/core 5-Framework Primitives) + vercel-labs/durable-harness: -92.01% TCO</text>
+  <rect x="978" y="40" width="166" height="36" rx="18" fill="#065F46" stroke="#10B981" stroke-width="1.2"/>
+  <text x="1061" y="63" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#A7F3D0">-$4,922.50 / mo</text>
+
+  <!-- Left Card: vercel-labs/ui -->
+  <rect x="36" y="128" width="548" height="340" rx="14" fill="#111827" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="58" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#60A5FA">1. vercel-labs/ui (★ 4,370 · TypeScript · Apache-2.0)</text>
+  <text x="58" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">UI SDK: Composable Behavior Primitives Designed for AI Coding Agents</text>
+
+  <rect x="58" y="200" width="504" height="58" rx="8" fill="#1F2937"/>
+  <text x="72" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F3F4F6">definePrimitive + Composable Behaviors in @ui-sdk/core</text>
+  <text x="72" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1D5DB">createPopup · createSelection · createTypeahead · createFocusRecovery · ARIA</text>
+
+  <rect x="58" y="268" width="504" height="58" rx="8" fill="#1F2937"/>
+  <text x="72" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FBBF24">Write Once, Render Across 5 Frameworks via createParts()</text>
+  <text x="72" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1D5DB">Identical parts API across @ui-sdk/react, vue, svelte, solid, and web</text>
+
+  <rect x="58" y="336" width="504" height="58" rx="8" fill="#1F2937"/>
+  <text x="72" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34D399">First-Class Agent Skill Integration</text>
+  <text x="72" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1D5DB">npx skills add vercel-labs/ui --skill ui-sdk eliminates broken ARIA &amp; focus bugs</text>
+
+  <text x="58" y="422" font-family="monospace" font-size="12" fill="#60A5FA">Core: @ui-sdk/core | Adapters: react · vue · svelte · solid · web</text>
+  <text x="58" y="446" font-family="monospace" font-size="12" fill="#9CA3AF">Solves: Agent-generated UIs failing keyboard nav, focus recovery &amp; dismissal</text>
+
+  <!-- Right Card: vercel-labs/durable-harness -->
+  <rect x="616" y="128" width="548" height="340" rx="14" fill="#111827" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="638" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#A78BFA">2. vercel-labs/durable-harness (★ 313 · TS · Apache-2.0)</text>
+  <text x="638" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">Durable Coding-Agent Harnesses on a Workflow SDK World</text>
+
+  <rect x="638" y="200" width="504" height="58" rx="8" fill="#1F2937"/>
+  <text x="652" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F3F4F6">5 Coding Harnesses Unified on Workflow SDK Event Log</text>
+  <text x="652" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1D5DB">Runs Pi (pi-durable), Claude Code, Codex, OpenCode &amp; libfx fx as durable runs</text>
+
+  <rect x="638" y="268" width="504" height="58" rx="8" fill="#1F2937"/>
+  <text x="652" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">Cross-Machine Turn Resume &amp; Exactly-Once Tool Safety</text>
+  <text x="652" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1D5DB">Crashes mid-turn resume from the event log; non-idempotent tools never run twice</text>
+
+  <rect x="638" y="336" width="504" height="58" rx="8" fill="#1F2937"/>
+  <text x="652" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F472B6">Virtual Workspace in Session Log + withDurableHarness(nextConfig)</text>
+  <text x="652" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1D5DB">virtualEnv() stores files in the session log; auto-discovers module-scope agents</text>
+
+  <text x="638" y="422" font-family="monospace" font-size="12" fill="#A78BFA">Stack: durable-harness · @earendil-works/pi-durable · just-bash</text>
+  <text x="638" y="446" font-family="monospace" font-size="12" fill="#9CA3AF">Route: chatRoute({ open, agent, authorize }) + GATEWAY_PROVIDER</text>
+
+  <!-- Bottom FinOps Comparison Bar -->
+  <rect x="36" y="486" width="1128" height="162" rx="14" fill="#111827" stroke="#4B5563" stroke-width="1.5"/>
+  <text x="58" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#F9FAFB">Closed-Form FinOps Audit (CLAIM-20261114-R72-VERCELUI-DURABLEHARNESS · 25 Deployments/Mo · $95/hr · hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <text x="58" y="548" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FCA5A5">Path A (Ad-Hoc Agent UIs + Non-Durable Session Crash Reruns)</text>
+  <rect x="520" y="534" width="460" height="20" rx="5" fill="#EF4444"/>
+  <text x="992" y="549" font-family="monospace" font-size="13" font-weight="700" fill="#FCA5A5">$5,350.00/mo ($1,740.00 + 38.0h = $3,610.00)</text>
+
+  <!-- Path B -->
+  <text x="58" y="582" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FDE047">Path B (Single-Framework UI Lib + Custom Checkpoint Scripts)</text>
+  <rect x="520" y="568" width="209" height="20" rx="5" fill="#EAB308"/>
+  <text x="741" y="583" font-family="monospace" font-size="13" font-weight="700" fill="#FDE047">$2,435.00/mo ($820.00 + 17.0h = $1,615.00)</text>
+
+  <!-- Path C -->
+  <text x="58" y="616" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6EE7B7">Path C (vercel-labs/ui @ui-sdk + durable-harness World Log)</text>
+  <rect x="520" y="602" width="37" height="20" rx="5" fill="#10B981"/>
+  <text x="569" y="617" font-family="monospace" font-size="13" font-weight="700" fill="#6EE7B7">$427.50/mo ($95.00 + 3.5h = $332.50) · Save $4,922.50/mo (-92.01%)</text>
+
+  <text x="58" y="638" font-family="monospace" font-size="11" fill="#6B7280">Evidence: trending-daily-2026-11-14-raw.html (sha256: 46ea932ff0f84c19...) · search-new-repos-2026-11-14-raw.json (sha256: a4edf557e9185483...)</text>
+</svg>

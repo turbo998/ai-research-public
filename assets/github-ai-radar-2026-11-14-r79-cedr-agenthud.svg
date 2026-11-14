@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg79" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg79)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#34D399">2026-11-14 NIGHT ROUND 79 (R262) · QUOTA-AWARE MULTI-AGENT ROUTER &amp; NOTCH/WATCH AGENT HUD</text>
+  <text x="58" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="800" fill="#F8FAFC">Sheernox/cedr (routes.toml + Review Council) + jazzenchen/agent-hud-open (★ 467): -91.90% TCO</text>
+  <rect x="978" y="40" width="166" height="36" rx="18" fill="#065F46" stroke="#10B981" stroke-width="1.2"/>
+  <text x="1061" y="63" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#A7F3D0">-$4,737.50 / mo</text>
+
+  <!-- Left Card: Sheernox/cedr -->
+  <rect x="36" y="128" width="548" height="340" rx="14" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="58" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#34D399">1. Sheernox/cedr (★ 44 · Rust · Apache-2.0)</text>
+  <text x="58" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">Every Coding Agent, One Control Panel &amp; MCP Server (cedr.dev)</text>
+
+  <rect x="58" y="200" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Headroom-Aware Routing (cedr route pick review.code)</text>
+  <text x="72" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Picks agent/model/effort from routes.toml; routes to plan with most room left</text>
+
+  <rect x="58" y="268" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FBBF24">Multi-Vendor Review Gate (cedr council) &amp; Config Compiler</text>
+  <text x="72" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Merges multi-vendor reviews into one gate; compiles one setup to all agent files</text>
+
+  <rect x="58" y="336" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="72" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">Skill/MCP Pinning + Unified Spend &amp; Plan-Limit Ledger</text>
+  <text x="72" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Pins loaded skills &amp; MCP servers; exposes entire control plane via MCP to agents</text>
+
+  <text x="58" y="422" font-family="monospace" font-size="12" fill="#34D399">CLI: cedr route pick &lt;task&gt; | cedr council | MCP-callable</text>
+  <text x="58" y="446" font-family="monospace" font-size="12" fill="#94A3B8">Solves: Hitting Claude/Codex 5h rate limits while sibling plans sit idle</text>
+
+  <!-- Right Card: jazzenchen/agent-hud-open -->
+  <rect x="616" y="128" width="548" height="340" rx="14" fill="#0F172A" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="638" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#60A5FA">2. jazzenchen/agent-hud-open (★ 467 · Rust + Tauri 2)</text>
+  <text x="638" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">Notch, Display-Edge, iPhone &amp; Apple Watch HUD for 27+ Coding Agents</text>
+
+  <rect x="638" y="200" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">MacBook Notch &amp; Display-Edge Quota Rings + Burn Rates</text>
+  <text x="652" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Red/yellow/green quota glow, 24h token bars, DeepSeek balance &amp; live burn rates</text>
+
+  <rect x="638" y="268" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#A78BFA">Instant "Allow once" Approval &amp; "Return to session" Jump</text>
+  <text x="652" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Approve tool permissions directly from the HUD or Apple Watch and jump back in</text>
+
+  <rect x="638" y="336" width="504" height="58" rx="8" fill="#1E293B"/>
+  <text x="652" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F472B6">Cross-Device Coverage (macOS 14+ · Win/Linux Preview · iOS · Watch)</text>
+  <text x="652" y="379" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CBD5E1">Tracks Claude Code, Codex, and 25+ more coding agents in one unified overlay</text>
+
+  <text x="638" y="422" font-family="monospace" font-size="12" fill="#60A5FA">Stack: Rust + Tauri 2 + App Store iPhone/Apple Watch Companion</text>
+  <text x="638" y="446" font-family="monospace" font-size="12" fill="#94A3B8">Bilingual: English README.md + Chinese README.zh-CN.md</text>
+
+  <!-- Bottom FinOps Comparison Bar -->
+  <rect x="36" y="486" width="1128" height="162" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">Closed-Form FinOps Audit (CLAIM-20261114-R79-CEDR-AGENTHUD · 25 Fleet Cycles/Mo · $95/hr · hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <text x="58" y="548" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FCA5A5">Path A (Single-Plan Quota Exhaustion + Stalled Approvals)</text>
+  <rect x="520" y="534" width="460" height="20" rx="5" fill="#EF4444"/>
+  <text x="992" y="549" font-family="monospace" font-size="13" font-weight="700" fill="#FCA5A5">$5,155.00/mo ($1,640.00 + 37.0h = $3,515.00)</text>
+
+  <!-- Path B -->
+  <text x="58" y="582" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FDE047">Path B (Static Model Aliases + Manual Terminal Polling)</text>
+  <rect x="520" y="568" width="208" height="20" rx="5" fill="#EAB308"/>
+  <text x="740" y="583" font-family="monospace" font-size="13" font-weight="700" fill="#FDE047">$2,337.50/mo ($770.00 + 16.5h = $1,567.50)</text>
+
+  <!-- Path C -->
+  <text x="58" y="616" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6EE7B7">Path C (cedr Headroom Router/Council + Agent HUD Overlay)</text>
+  <rect x="520" y="602" width="37" height="20" rx="5" fill="#10B981"/>
+  <text x="569" y="617" font-family="monospace" font-size="13" font-weight="700" fill="#6EE7B7">$417.50/mo ($85.00 + 3.5h = $332.50) · Save $4,737.50/mo (-91.90%)</text>
+
+  <text x="58" y="638" font-family="monospace" font-size="11" fill="#64748B">Evidence: trending-daily-2026-11-14-raw.html (sha256: 46ea932ff0f84c19...) · search-new-repos-2026-11-14-raw.json (sha256: a4edf557e9185483...)</text>
+</svg>

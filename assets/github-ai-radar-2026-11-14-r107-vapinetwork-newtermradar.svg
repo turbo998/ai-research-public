@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg107" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent107a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg107)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="256" height="28" rx="6" fill="url(#accent107a)"/>
+  <text x="180" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R107 (R290 MILESTONE)</text>
+  <text x="324" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">vAPI Network (x402 USDC Buyer Vault) &amp; new-term-radar (Day-1 AI Term Radar MCP)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">vAPI-Network/vapi-network (★ 4,578 · Non-Custodial x402 Base Client) + zhuyansen/new-term-radar (★ 2,173 · MIT · X/HF/GitHub/Sitemap Day-1 Radar)</text>
+
+  <!-- Left Card: vAPI-Network/vapi-network -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#082F49"/>
+  <text x="72" y="165" fill="#BAE6FD" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">💳 vAPI-Network/vapi-network · x402 Buyer Client</text>
+  <text x="552" y="165" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 4,578 · TypeScript</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. One Non-Custodial Wallet for Every x402 API on Base (USDC)</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Device vault encrypts keys locally (OS keyring or `VAPI_VAULT_PASSWORD`)</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Zero vAPI Call fee; pays providers directly with local `vapi receipts`</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Deterministic Pre-Sign Spend Policy (`--max 0.02`)</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Enforces per-call USDC ceiling before signing any x402 transaction</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Records `builder-code: vapi` &amp; `payment-identifier` on every receipt</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Merged Multi-Catalogue Search + Call / Router / Stake / MCP</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `vapi search` merges x402 catalogues with provenance; ships `SKILL.md`</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Works across terminal CLI, TypeScript SDK, MCP client &amp; Codespaces</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#0EA5E9" stroke-width="1"/>
+  <text x="72" y="431" fill="#BAE6FD" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Replaces 20+ fragmented API keys and monthly subscriptions</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">with buyer-controlled x402 micropayments and local spend policies.</text>
+
+  <!-- Right Card: zhuyansen/new-term-radar -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#064E3B"/>
+  <text x="648" y="165" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">📡 zhuyansen/new-term-radar · Day-1 AI Term Radar MCP</text>
+  <text x="1128" y="165" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 2,173 · Python · MIT</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Captures Steps 1–4 Weeks Before Google Trends (Step 5)</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Step 1: X lab mentions &amp; Hugging Face trending models</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Step 2: Single fast-rising GitHub repos (+800 stars/day breakout detection)</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Competitor Sitemap Diffing &amp; First Search Impressions</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Step 3–4: Monitors directory/competitor sitemaps &amp; early GSC impressions</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Uses Step 5 (Google Trends) purely to backtest and calibrate signal quality</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Official MCP Registry (`io.github.zhuyansen/new-term-radar`) &amp; PyPI</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Published on PyPI, Official MCP Registry, Cursor Directory, LobeHub &amp; ClawHub</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Feeds agents a structured daily keyword &amp; entity table with source trails</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="648" y="431" fill="#A7F3D0" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Detects breakout AI entities (e.g. Strata, Seedance) on</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">Day 1 across X, HF, GitHub, and sitemaps before SEO tools index them.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="390" height="26" rx="6" fill="#064E3B"/>
+  <text x="251" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R107-VAPINETWORK-NEWTERMRADAR</text>
+  <text x="462" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 Agent x402 API Payment &amp; Day-1 AI Term Intelligence Sprints/Mo · $95/hr · Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: 20+ Idle SaaS Keys + Lagging SEO Suites</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,497.50 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,840.00 SaaS/API + 38.5h ($3,657.50)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Custodial Markup + Manual Tab Scans</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,425.00 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$810.00 fees/API + 17.0h ($1,615.00)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: vAPI Network x402 + new-term-radar</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$417.50 / mo (-92.41% · Save $5,080.00)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$85.00 x402/compute + 3.5h ($332.50) · $60,960/yr</text>
+</svg>

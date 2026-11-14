@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg65" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg65)"/>
+  <g stroke="#1E293B" stroke-width="1" opacity="0.55">
+    <line x1="0" y1="115" x2="1200" y2="115"/>
+    <line x1="0" y1="455" x2="1200" y2="455"/>
+    <line x1="600" y1="115" x2="600" y2="455"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="76" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="53" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">GITHUB AI RADAR · 2026-11-14 ROUND 65 (CUMULATIVE R248) · WASM-SQLITE SANDBOX HOST &amp; K8S CRD RECONCILER</text>
+  <text x="58" y="81" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">michaelmagan/spared (Per-App SQLite in Wasm) + TargetReconciliationService (Atomic K8s Rollback)</text>
+  <rect x="962" y="39" width="180" height="44" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="1052" y="59" text-anchor="middle" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">FINOPS VERIFIED</text>
+  <text x="1052" y="76" text-anchor="middle" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="800">-91.37% ($5,190.00/mo)</text>
+
+  <!-- Left Panel: michaelmagan/spared -->
+  <rect x="36" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="54" y="146" width="205" height="26" rx="6" fill="#0284C7"/>
+  <text x="156" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">michaelmagan/spared (★44)</text>
+  <text x="271" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">Rust · Apache-2.0 · wasm32-wasip2</text>
+
+  <text x="54" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Self-Hosted Rust Web App Host Running SQLite Inside Each Wasm Sandbox</text>
+
+  <rect x="54" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="234" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. 2.6x Faster Warm p50 (148 µs vs 388 µs) &amp; 3.0x Lower p99</text>
+  <text x="70" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Benchmarked vs Cloudflare workerd on 4-vCPU VM: p99 @ 16 conn is 5.45ms vs 16.53ms</text>
+  <text x="70" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 0.9 ms idle wake; 4.8x less unreclaimable RAM at 200 apps (108 MiB vs 516 MiB)</text>
+
+  <rect x="54" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="308" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. In-Sandbox SQLite Isolation (wasm32-wasip2 + wasi-sdk 25)</text>
+  <text x="70" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Unlike workerd/Spin/celld (SQLite in host), spared runs SQLite inside each app's Wasm</text>
+  <text x="70" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Pre-compiles SQLite to Wasm once; subsequent Rust app builds take seconds</text>
+
+  <rect x="54" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. Built-In AGENTS.md for Zero-Touch Agent App Deployment</text>
+  <text x="70" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Claude Code / Codex runs spared new ➔ spared test ➔ spared deploy in 1 binary</text>
+  <text x="70" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Ideal for hosting hundreds of isolated AI-generated micro-apps on one Linux VM</text>
+
+  <!-- Right Panel: ATLURI0001/target-reconciliation-service -->
+  <rect x="616" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="634" y="146" width="295" height="26" rx="6" fill="#059669"/>
+  <text x="781" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">TargetReconciliationService (★45)</text>
+  <text x="941" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">Go 1.24+ · Apache-2.0 · K8s CRD</text>
+
+  <text x="634" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Policy-Governed K8s Reliability Reconciler &amp; Atomic Digest Rollback</text>
+
+  <rect x="634" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="234" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. ReliabilityTarget CRD + Uncached K8s Observation &amp; GitOps Fences</text>
+  <text x="650" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Generation-aware Ready/Reconciled conditions, leader election &amp; scoped RBAC</text>
+  <text x="650" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Enforces opt-in &amp; GitOps ownership fences so rollbacks never fight ArgoCD/Flux</text>
+
+  <rect x="634" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="308" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. Digest-Pinned Rollback with UID / resourceVersion Preconditions</text>
+  <text x="650" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Dry-run by default + explicit operator approval + per-target concurrent admission</text>
+  <text x="650" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Atomic UID/resourceVersion/image preconditions + post-rollback readiness check</text>
+
+  <rect x="634" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. PostgreSQL Immutable Audit Timeline &amp; Read-Only Next.js Console</text>
+  <text x="650" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Zero in-memory fallback; records who approved, what evidence justified &amp; outcome</text>
+  <text x="650" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Read-only Next.js/Tailwind console with explicit loading/error/empty/stale states</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps -->
+  <rect x="36" y="468" width="1128" height="183" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="497" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261114-R65-SPARED-TARGETRECONCILIATION · 200 Apps &amp; 30 Rollbacks/Mo · $100/hr)</text>
+  <text x="58" y="516" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">Scope: Multi-tenant micro-app container VM/DB hosting spend &amp; unverified K8s rollback/GitOps drift labor (base server hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="58" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="74" y="552" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: 200 Docker Containers + Manual Rollbacks</text>
+  <text x="74" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$5,680.00 / mo</text>
+  <text x="74" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Hosting &amp; Downtime Spend: $1,880.00</text>
+  <text x="74" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 38.0h × $100 = $3,800.00</text>
+
+  <!-- Path B -->
+  <rect x="426" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="442" y="552" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Host-Shared SQLite + Unfenced Scripts</text>
+  <text x="442" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$2,680.00 / mo (-52.82%)</text>
+  <text x="442" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Hosting &amp; Downtime Spend: $880.00</text>
+  <text x="442" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 18.0h × $100 = $1,800.00</text>
+
+  <!-- Path C -->
+  <rect x="794" y="530" width="348" height="104" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.8"/>
+  <text x="810" y="552" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: spared Wasm Host + TargetReconciliation</text>
+  <text x="810" y="574" fill="#ECFDF5" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$490.00 / mo (-91.37%)</text>
+  <text x="810" y="595" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Hosting &amp; Ops Spend: $140.00 | Labor: 3.5h ($350.00)</text>
+  <text x="810" y="613" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Net Savings: $5,190.00/mo ($62,280.00/yr · -34.5h)</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg61" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg61)"/>
+  <g stroke="#1E293B" stroke-width="1" opacity="0.55">
+    <line x1="0" y1="115" x2="1200" y2="115"/>
+    <line x1="0" y1="455" x2="1200" y2="455"/>
+    <line x1="600" y1="115" x2="600" y2="455"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="76" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="53" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">GITHUB AI RADAR · 2026-11-14 ROUND 61 (CUMULATIVE R244) · DSH MOA+ PEER SWARM &amp; HARNESS EVOLUTION</text>
+  <text x="58" y="81" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">Burns1028/moa-plus (Persistent Peer Workers) + dsh-harness-evolution (Frozen Qwen3-4B Scope-C Evolution)</text>
+  <rect x="962" y="39" width="180" height="44" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="1052" y="59" text-anchor="middle" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">FINOPS VERIFIED</text>
+  <text x="1052" y="76" text-anchor="middle" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="800">-91.47% ($5,415.00/mo)</text>
+
+  <!-- Left Panel: Burns1028/moa-plus -->
+  <rect x="36" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="54" y="146" width="195" height="26" rx="6" fill="#0284C7"/>
+  <text x="151" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Burns1028/moa-plus (★114)</text>
+  <text x="261" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">MIT · v0.2.7/v0.2.8 · DSH Plugin</text>
+
+  <text x="54" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Coordinator + Persistent Peer-Messaging Workers on DeepSeek Harness</text>
+
+  <rect x="54" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="234" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. Direct Worker-to-Worker Communication &amp; Persistent Context</text>
+  <text x="70" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Workers investigate, build, challenge &amp; review in independent persistent sessions</text>
+  <text x="70" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Direct peer message exchange without forcing every packet through Coordinator</text>
+
+  <rect x="54" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="308" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. OS-Level Protected Worker Containment (Seatbelt / bwrap / Win Job)</text>
+  <text x="70" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Enforces macOS Seatbelt, Linux bubblewrap, or Windows Job containment for Workers</text>
+  <text x="70" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Refuses unadapted persistent terminals; supports Git workspace or shared mode</text>
+
+  <rect x="54" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. Reversible 22-Package / 50-Path Native Compatibility Profile</text>
+  <text x="70" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• apply-native-compat.mjs --backup safely patches DSH 0.2.1-rc.3 / 2.0.22-next</text>
+  <text x="70" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• project-mode.mjs setup --dir runs an isolated runtime leaving ~/.dsh untouched</text>
+
+  <!-- Right Panel: HuangShengZeBlueSky/dsh-harness-evolution -->
+  <rect x="616" y="128" width="548" height="314" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="634" y="146" width="295" height="26" rx="6" fill="#059669"/>
+  <text x="781" y="164" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">dsh-harness-evolution (★104 · 36 Profiles)</text>
+  <text x="941" y="164" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">MIT · Qwen3-4B Executor</text>
+
+  <text x="634" y="196" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Evolving Coordinated Hook Harnesses Around a Frozen 4B Model</text>
+
+  <rect x="634" y="212" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="234" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">1. A/B/C Editable Scope Hierarchy &amp; L4 Capability-Guided Search</text>
+  <text x="650" y="253" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Scope A: Skill text only | Scope B: 1 component/round (skill, memory, action check)</text>
+  <text x="650" y="269" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Scope C: Coordinated mechanisms sharing episode-local state across DSH hooks</text>
+
+  <rect x="634" y="286" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="308" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">2. Episode-State Write Receipts Block Premature Submit (DBBench 70.56%)</text>
+  <text x="650" y="327" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Evolved DBBench harness logs DB receipts in episode state &amp; exposes to solver</text>
+  <text x="650" y="343" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Action-check hook blocks duplicate writes &amp; premature completion on frozen Qwen3-4B</text>
+
+  <rect x="634" y="360" width="512" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="650" y="382" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3. Measured Peaks Across 4 Benchmarks Without Weight Fine-Tuning</text>
+  <text x="650" y="401" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">• ALFWorld: 95.41±0.00% | DBBench: 70.56±0.38% | WebShop: 48.17±0.29%</text>
+  <text x="650" y="417" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• OSBench: 41.67±1.84% (C-sol61-narrow v01) across 36 model×scope configurations</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps -->
+  <rect x="36" y="468" width="1128" height="183" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="58" y="497" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261114-R61-MOAPLUS-DSHEVOLUTION · 36 Agent Workflows/Mo · $100/hr)</text>
+  <text x="58" y="516" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">Scope: Large-model fine-tuning GPU/API spend vs. frozen Qwen3-4B evolved harness + multi-agent coordination labor (local hardware: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="58" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="74" y="552" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path A: 70B+ Fine-Tuning + Hub-Bottlenecked Swarm</text>
+  <text x="74" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$5,920.00 / mo</text>
+  <text x="74" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">GPU &amp; Token Spend: $2,120.00</text>
+  <text x="74" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 38.0h × $100 = $3,800.00</text>
+
+  <!-- Path B -->
+  <rect x="426" y="530" width="348" height="104" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="442" y="552" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path B: Scope-A Prompt Tweaks + Uncontained Workers</text>
+  <text x="442" y="574" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$2,780.00 / mo (-53.04%)</text>
+  <text x="442" y="595" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">GPU &amp; Token Spend: $980.00</text>
+  <text x="442" y="613" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Engineering Labor: 18.0h × $100 = $1,800.00</text>
+
+  <!-- Path C -->
+  <rect x="794" y="530" width="348" height="104" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.8"/>
+  <text x="810" y="552" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700">Path C: Scope-C Harness Evolution + MoA+ Peer Workers</text>
+  <text x="810" y="574" fill="#ECFDF5" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">$505.00 / mo (-91.47%)</text>
+  <text x="810" y="595" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">GPU &amp; Token Spend: $155.00 | Labor: 3.5h ($350.00)</text>
+  <text x="810" y="613" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Net Savings: $5,415.00/mo ($64,980.00/yr · -34.5h)</text>
+</svg>

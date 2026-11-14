@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg116" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent116a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg116)"/>
+
+  <!-- Header -->
+  <rect x="36" y="24" width="1128" height="84" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="52" y="40" width="232" height="28" rx="6" fill="url(#accent116a)"/>
+  <text x="168" y="59" fill="#090D16" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2026-11-14 · NIGHT R116 (R299)</text>
+  <text x="300" y="60" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="19" font-weight="700">Mesh Avatar Studio (1-Image 2D Mesh Rigging) &amp; Awesome Short Drama Skills (86 Benchmarked Skills)</text>
+  <text x="52" y="90" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13">shinshin86/mesh-avatar-studio (★ 2,363 · Agent Rigging + Local Mesh Editor) + UnderleveledBuilder/awesome-short-drama-skills (★ 2,321 · Opus+GPT Blind Evals)</text>
+
+  <!-- Left Card: shinshin86/mesh-avatar-studio -->
+  <rect x="36" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="56" y="142" width="512" height="36" rx="8" fill="#500724"/>
+  <text x="72" y="165" fill="#FBCFE8" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🎭 shinshin86/mesh-avatar-studio · 2D Mesh Avatar Rigging</text>
+  <text x="552" y="165" fill="#F472B6" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 2,363 · TypeScript</text>
+
+  <text x="56" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Single Illustration to Animated 2D Mesh Avatar (4-Step Loop)</text>
+  <text x="70" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Agent calibrates zoomed grids, cuts layers &amp; places rig (`docs/agent-guide.md`)</text>
+  <text x="70" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Generates closed-eye/mouth variants &amp; checks poses in Playwright Chromium</text>
+
+  <text x="56" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. Interactive Local Mesh Editor (`127.0.0.1:5173`) &amp; Pose/Lip-Sync QA</text>
+  <text x="70" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Drag mesh control points on each part with live right-pane preview</text>
+  <text x="70" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Built-in Pose Test (head turn/tilt, blink), Kana/Audio Lip-Sync &amp; Overlays</text>
+
+  <text x="56" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. One-Command Codex Automation (`npm run create`) &amp; Web Player</text>
+  <text x="70" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Supports `--random --prompt` character synthesis + `HANDOVER.md` notes</text>
+  <text x="70" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Browser Player drives the rigged 2D mesh via live webcam face &amp; voice</text>
+
+  <rect x="56" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#EC4899" stroke-width="1"/>
+  <text x="72" y="431" fill="#FBCFE8" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Replaces days of manual PSD layer cutting and Live2D</text>
+  <text x="72" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">Cubism rigging with zoomed-grid agent rigging and a local mesh editor.</text>
+
+  <!-- Right Card: UnderleveledBuilder/awesome-short-drama-skills -->
+  <rect x="612" y="124" width="552" height="360" rx="14" fill="#111827" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="632" y="142" width="512" height="36" rx="8" fill="#2E1065"/>
+  <text x="648" y="165" fill="#DDD6FE" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">🎬 awesome-short-drama-skills · 86 Benchmarked Skills</text>
+  <text x="1128" y="165" fill="#C4B5FD" font-family="Consolas, monospace" font-size="13" font-weight="700" text-anchor="end">★ 2,321 · Evals</text>
+
+  <text x="632" y="202" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">1. Blind Opus + GPT Multi-Run Benchmark Tournaments</text>
+  <text x="646" y="223" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Round 1 tests 10 screenwriting skills × 3 runs vs. un-skilled baseline</text>
+  <text x="646" y="242" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Identifies 4 skills (`zenstory-ai`, `Shanyin`, `jtydhr88`, `adoria111`) winning 3/3</text>
+
+  <text x="632" y="274" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">2. End-to-End Short-Drama &amp; Comic-Drama (漫剧) Coverage (86+16)</text>
+  <text x="646" y="295" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Covers topic selection (`Chinese-WebNovel-Skill`), hooks, paywall cliffhangers</text>
+  <text x="646" y="314" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Plus storyboards, character assets &amp; Seedance / Kling / MiniMax prompts</text>
+
+  <text x="632" y="346" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="600">3. Cross-Agent Compatibility &amp; Honest Failure-Mode Disclosures</text>
+  <text x="646" y="367" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Works in Claude Code, Codex, OpenClaw, Qwen, Doubao, WorkBuddy &amp; Trae</text>
+  <text x="646" y="386" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Documents exact caveats (e.g. stripping inline checklists before video gen)</text>
+
+  <rect x="632" y="408" width="512" height="58" rx="8" fill="#1E293B" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="648" y="431" fill="#DDD6FE" font-family="Consolas, monospace" font-size="12" font-weight="700">SA Verdict: Replaces blind skill shopping with Opus+GPT pairwise</text>
+  <text x="648" y="451" fill="#CBD5E1" font-family="Consolas, monospace" font-size="12">blind evaluations across 86 short-drama and Seedance/Kling skills.</text>
+
+  <!-- Bottom FinOps Card -->
+  <rect x="36" y="500" width="1128" height="150" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="56" y="516" width="390" height="26" rx="6" fill="#064E3B"/>
+  <text x="251" y="534" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12.5" font-weight="700" text-anchor="middle">FINOPS AUDIT · CLAIM-20261114-R116-MESHAVATAR-SHORTDRAMASKILLS</text>
+  <text x="462" y="534" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">25 2D Mesh Avatar Rigging &amp; AI Short-Drama Production Sprints/Mo · $95/hr · Hardware: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="56" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="72" y="575" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path A: Manual Live2D Rigging + Unvetted Prompts</text>
+  <text x="72" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$5,420.00 / mo</text>
+  <text x="72" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$1,810.00 rigging/video/API + 38.0h ($3,610.00)</text>
+
+  <!-- Path B -->
+  <rect x="426" y="554" width="348" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="442" y="575" fill="#FDE68A" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path B: Static Lip-Sync + Random Drama Skills</text>
+  <text x="442" y="596" fill="#F8FAFC" font-family="Consolas, monospace" font-size="15" font-weight="700">$2,367.50 / mo</text>
+  <text x="442" y="616" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">$800.00 video/token + 16.5h ($1,567.50)</text>
+
+  <!-- Path C -->
+  <rect x="796" y="554" width="348" height="80" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="812" y="575" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Path C: Mesh Avatar Studio + Benchmarked Drama</text>
+  <text x="812" y="596" fill="#ECFDF5" font-family="Consolas, monospace" font-size="15" font-weight="700">$417.50 / mo (-92.30% · Save $5,002.50)</text>
+  <text x="812" y="616" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">$85.00 compute/API + 3.5h ($332.50) · $60,030/yr</text>
+</svg>
