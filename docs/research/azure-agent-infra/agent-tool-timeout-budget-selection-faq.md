@@ -1,65 +1,60 @@
-# Agent 工具超时预算分配选型 FAQ（静态配比 vs 队列年龄动态配比）
+# Agent 工具超时预算选型 FAQ（Cycle 1806）
 
-> **与 Round20 的关系**：Round20 决策“全局超时 vs 分层预算”；本轮是其子题——分层预算已确定后，工具层预算如何分配（静态配比 vs 动态配比）。
+## 1) 3 分钟结论
+- **工具链失败常由“无预算等待”引发，而不是工具功能缺失。**
+- **推荐：** 全链路超时预算分配 + 分阶段熔断 + 可回退结果策略。
+- **目标：** 降低级联超时和阻塞传播，稳定端到端响应时间。
 
-## 1) 核心结论（先给值班架构师）
-- **高并发生产默认选“队列年龄动态配比”**，可显著降低尾延迟挤压。
-- **静态配比适合低波动链路**，但在突发峰值时容易让关键调用饥饿。
-- **预算策略必须和重试上限、队列背压、熔断门槛联动**，否则只会把失败后移。
+## 2) Q1 / Q2 / Q3
+### Q1：为什么统一超时阈值不可取？
+1) 工具复杂度差异大；
+2) 上游等待会吞噬下游预算；
+3) 失败重试可能放大拥塞。
 
-## 2) Q1 / Q2 / Q3（术语先通俗解释）
-- **静态配比**：每个工具固定拿到 40%/30%/30% 超时预算。
-- **队列年龄动态配比**：排队越久的请求，优先获得更多预算或更快回退。
+### Q2：可落地预算化方案？
+- 一级：请求入口注入总超时预算；
+- 二级：按工具阶段拆分子预算（准备/执行/收尾）；
+- 三级：到达阈值触发熔断或降级结果；
+- 保障：预算消耗与超时原因写入审计账本。
 
-### Q1：为什么“总预算固定”仍会失败？
-第一性原理：同样的总预算，在排队抖动下会被低价值慢调用抢占，关键路径超时概率上升。
+### Q3：如何验证策略有效？
+- 端到端 P95/P99 超时率下降；
+- 工具重试风暴减少；
+- 关键路径成功率提升并可解释。
 
-### Q2：静态配比什么时候够用？
-调用链长度稳定、流量波动小、工具时延分布窄时，静态配比有更低治理成本。
-
-### Q3：动态配比的最小实现要求？
-必须有“队列年龄信号 + 优先级策略 + 回退动作”，并把预算变化写入审计字段。
-
-## 3) Mermaid（预算分配闭环）
+## 3) 架构图
 ```mermaid
 flowchart LR
-  Req[Incoming Request] --> Queue[Queue + Age]
-  Queue --> Alloc{Budget Allocator}
-  Alloc -->|Static| T1[Tool Budget A/B/C Fixed]
-  Alloc -->|Dynamic| T2[Budget by Queue Age & Priority]
-  T1 --> Eval[SLO Evaluation]
-  T2 --> Eval
-  Eval --> Fallback[Retry Cap / Circuit Breaker]
+  I[Request Ingress] --> B[Timeout Budget Allocator]
+  B --> P[Preparation Stage]
+  B --> X[Execution Stage]
+  B --> F[Finalize Stage]
+  X --> C[Circuit Breaker]
+  C --> D[Fallback Result]
+  B --> L[Timeout Ledger]
 ```
 
-## 4) 决策矩阵（本轮子题边界）
-| 维度 | 静态配比 | 队列年龄动态配比 |
-|---|---|---|
-| 配置复杂度 | 低 | 中-高 |
-| 尾延迟抗抖动 | 低 | 高 |
-| 关键路径保障 | 中 | 高 |
-| 审计可解释性 | 中 | 高（需记录预算轨迹） |
-| 适用默认 | 低波动业务 | 多租户高并发业务 |
+## 4) 选型矩阵
+| 维度 | 统一阈值超时 | 预算化超时控制（推荐） |
+|---|---:|---:|
+| 超时可控性 | 低 | 高 |
+| 级联阻塞抑制 | 低 | 高 |
+| 重试风暴风险 | 高 | 低 |
+| 实施复杂度 | 低 | 中 |
+| 审计可解释性 | 中 | 高 |
 
-## 5) 数据证据与可复算算例（含 n/分母/来源）
-> 本节百分比均为 **synthetic_assumed**；生产真实超时链路验证为 **not_measured**。  
-> 合同字段见：`workshops/azure-agent-infra/evidence/cycle-417-benchmark.json` 的 `percentage_contract`。
+## 5) 证据与复算口径
+- 证据文件：
+  - `workshops/azure-agent-infra/evidence/cycle-1806-benchmark.json`
+  - `workshops/azure-agent-infra/evidence/cycle-1806-latency.csv`
+  - `workshops/azure-agent-infra/evidence/cycle-1806-throughput.csv`
+  - `workshops/azure-agent-infra/evidence/cycle-1806-policy.csv`
+- 标签：`measured / synthetic / anonymized_reported`。
+- validation7：双语结构、CSP 自包含、证据轮次一致、可回放链路校验通过。
 
-- 指标 A（静态配比超时率）  
-  - 定义：`n_timeout_static / n_requests`  
-  - 假设：`273/3000 = 9.1%`  
-  - 路径：`percentage_contract.static_allocation_timeout_rate`
-- 指标 B（动态配比超时率）  
-  - 定义：`n_timeout_dynamic / n_requests`  
-  - 假设：`120/3000 = 4.0%`  
-  - 路径：`percentage_contract.dynamic_allocation_timeout_rate`
-- 指标 C（成功率提升）  
-  - 定义：`(n_success_dynamic - n_success_static) / n_requests`  
-  - 假设：`(2880-2727)/3000 = 5.1%`  
-  - 路径：`percentage_contract.dynamic_vs_static_success_gain`
-
-## 6) 生产 Checklist（可上线前置）
-- [ ] 工具预算策略有版本号与回滚版本  
-- [ ] 请求队列年龄可观测且写入 trace 标签  
-- [ ] 重试上限与熔断门槛联动验证完成  
-- [ ] 本轮数据标记 `synthetic_assumed`，生产状态 `not_measured`  
+## 6) 生产检查清单
+- [ ] 入口总预算和子预算拆分已配置。
+- [ ] 熔断阈值与回退策略可灰度切换。
+- [ ] 超时原因分类与账本记录完整。
+- [ ] 重试上限和退避策略已启用。
+- [ ] FAQ/H5/SVG/7-card 与 evidence 轮次一致。
