@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg34" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="accentAmber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg34)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#172554" stroke="#3B82F6" stroke-width="1"/>
+  <text x="162" y="55" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R34 (CUMULATIVE R336)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Garlic LLM (Offline Qwen3.5-9B on PS4 GPU @ 43 tok/s) + c6 (TinyCC Systems C Compiler)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">leonardo-alegria/garlic-llm (★55 · Bare-Metal PM4 · Q4/Q3 -384MiB · 2-Tok MTP · Parakeet/Chatterbox) + c6lang/c6 (★55 · Frame defer/errdefer · .c6 Gate)</text>
+
+  <!-- Left Column: leonardo-alegria/garlic-llm -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentBlue)"/>
+  <text x="62" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🎮 leonardo-alegria/garlic-llm — Offline Qwen3.5-9B on Base PS4 GPU</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Bare-Metal PM4 + GCN OpenCL</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Zero driver ML API; raw PM4 packets</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 2-Token MTP speculative decoding</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• 31–39 tok/s chat · 43 tok/s code</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Hybrid Q4 + Q3 (-384 MiB RAM)</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Q4 (4-bit) most matrices + output head</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Q3 (~3.5b) MLP gate &amp; up projections</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Saves 384 MiB + 4-bit 16K KV cache</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#1D4ED8" stroke-width="1"/>
+  <text x="62" y="346" fill="#60A5FA" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. All-in-One 5.7 GB Offline Multimodal Suite (STT + TTS + MicroPython)</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `qwen3.5-9b-q4s.bin` (4.32 GiB) + `qwen3.5-9b-mtp.bin` (0.20 GiB)</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `parakeet-v3-q4i.bin` (0.33 GiB, 25 langs STT) + `chatterbox` (0.38 GiB, 7 langs TTS)</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Embedded MicroPython executes generated code directly on the PS4</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">BASE PS4 GCN THROUGHPUT (QWEN3.5-9B · 16K CONTEXT)</text>
+  <rect x="62" y="480" width="430" height="18" rx="4" fill="#3B82F6"/>
+  <text x="500" y="494" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">43 tok/s Code (31–39 Chat)</text>
+  <rect x="62" y="508" width="220" height="18" rx="4" fill="#10B981"/>
+  <text x="292" y="522" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12">22 tok/s Live Voice Mode (STT + 9B + TTS resident)</text>
+
+  <!-- Right Column: c6lang/c6 -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentAmber)"/>
+  <text x="686" y="175" fill="#1E1303" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">⚡ c6lang/c6 — Extended TinyCC with Stack-Frame defer/errdefer &amp; .c6 Gate</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Stack-Frame defer &amp; errdefer</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• LIFO cleanup across all exit paths</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `errdefer` runs only on `return err(...)`</text>
+  <text x="684" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• No TLS: works in 512B boot sector</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Pinned Error IDs &amp; .c6 Suffix Gate</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `(area&lt;&lt;27)|(slot&lt;&lt;12)|code` in `errbase.def`</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `.c6` activates `C6_EXT`; `.c` = pure TCC</text>
+  <text x="974" y="289" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Hard compile error on slot collision</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#D97706" stroke-width="1"/>
+  <text x="686" y="346" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Coroutines, Slices, Interfaces, Monomorphized Generics &amp; 91 CTest Suite</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Stackless `async`/`await`/`co`/`task` + OS `spawn` + bounds-checked `T[:]` slices</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Fat-pointer `interface {void *self; const VT *vt;}` + `@T` cycle-checked RC</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• `struct Vect@T` monomorphizes to plain C · 91 CTest regression targets</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">RESOURCE-CLEANUP BOILERPLATE &amp; LEAK RISK IN SYSTEMS C</text>
+  <rect x="686" y="480" width="130" height="18" rx="4" fill="#10B981"/>
+  <text x="826" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">c6 (.c6): 1-Line defer/errdefer · 0 TLS · Instant tcc -run</text>
+  <rect x="686" y="508" width="430" height="18" rx="4" fill="#EF4444"/>
+  <text x="1124" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">N-Exit goto C</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R34-GARLICLLM-C6LANG · 20 Offline Appliances + 15 C Modules/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Cloud Voice/LLM API + Legacy C goto</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Cloud API &amp; Dedicated GPU Spend: $1,980.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• C Leak &amp; OOM Debugging (40.0h × $100): $4,000.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Pure Q4 OOMs on 8GB APUs + multi-exit C leaks</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $5,980.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 40.0 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: CPU llama.cpp 4B + C++ RAII Port</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Hardware &amp; Toolchain Spend: $910.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Porting &amp; Build Maintenance (19.0h × $100): $1,900.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Slow CPU tok/s + loses freestanding C simplicity</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,810.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-53.01% vs Path A (19.0 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: Garlic LLM (PM4 Q4/Q3) + c6 (.c6)</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Offline APU Power &amp; Storage: $100.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated Verification (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,530.00/mo (-92.47%) · $66,360.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $450.00 / mo (-92.47%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 36.5 eng hrs/mo (-91.25% labor)</text>
+</svg>

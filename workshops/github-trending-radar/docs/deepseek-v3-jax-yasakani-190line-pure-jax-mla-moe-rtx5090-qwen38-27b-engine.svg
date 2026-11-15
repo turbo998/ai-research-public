@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgR6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#162442"/>
+    </linearGradient>
+    <linearGradient id="cardR6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bgR6)"/>
+  <rect x="24" y="24" width="1352" height="812" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="92" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="74" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">2026-11-15 NIGHT SHIFT ROUND 6 (CUMULATIVE R308) · CLAIM-20261115-R6-DEEPSEEKJAX-YASAKANI</text>
+  <text x="68" y="104" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">190 行纯 JAX 实现 DeepSeek-V3 与单卡 RTX 5090 极速 Qwen3.8-27B 引擎选型 FAQ</text>
+  <text x="68" y="124" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Vaibhaav-Tiwari/deepseek-v3-jax (★188, MLA 480→144 + 无辅损负载均衡) + yasakani-dev/yasakani (★98, v0.1.4 229k 文档 TTFT 116s→0.37s) · 月省 $5,647.50 (-92.13%)</text>
+
+  <!-- Left Card: Vaibhaav-Tiwari/deepseek-v3-jax -->
+  <rect x="44" y="150" width="644" height="360" rx="14" fill="url(#cardR6)" stroke="#38BDF8" stroke-width="1.3"/>
+  <text x="68" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">1. Vaibhaav-Tiwari/deepseek-v3-jax (★188 · v1.0 · MIT · 190 LOC Pure JAX)</text>
+  <text x="68" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">零 Flax/PyTorch 依赖：在 MacBook Air 上从零训通 MLA + DeepSeekMoE + MTP</text>
+  <text x="68" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 多头潜在注意力 (MLA) + 解耦 RoPE：每层每 Token 缓存从 480 个数压缩至 144 个数 (-70%)</text>
+  <text x="68" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 无辅助损失负载均衡：1 共享专家 + 16 路由专家(Top-4)，专家负载从 0.09–18.6% 收敛至 5.7–6.9%</text>
+  <text x="68" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 多词元预测 (MTP, λ=0.3)：36.2M 总参 / 13.6M 激活，M5 24GB 跑 10.7k tok/s，Loss 5.02→3.51</text>
+  <text x="68" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 39 项单测全绿：巧妙绕开 jax-metal 0.1.1 双轴收缩求导 Bug，代码从头到尾一屏可读</text>
+  <rect x="68" y="330" width="596" height="160" rx="10" fill="#0B1325" stroke="#1E3A8A"/>
+  <text x="86" y="356" fill="#60A5FA" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">DeepSeek-V3 Core Primitives in 190 Lines (deepseek_v3.py):</text>
+  <text x="86" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• KV Cache Compression: MLA 480 -&gt; 144 floats/token/layer + Decoupled RoPE</text>
+  <text x="86" y="408" fill="#34D399" font-family="Consolas, monospace" font-size="12">• Bias-Only MoE Routing: 5.7%–6.9% per expert (vs 0.09%–18.6% w/o bias)</text>
+  <text x="86" y="434" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Validation Loss @ 2k steps: 3.921 (with bias) vs 3.923 (without bias)</text>
+  <text x="86" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">• MTP Next-Next Token Head (λ=0.3) + Sequence Balance Loss (α=1e-4)</text>
+
+  <!-- Right Card: yasakani-dev/yasakani -->
+  <rect x="708" y="150" width="648" height="360" rx="14" fill="url(#cardR6)" stroke="#34D399" stroke-width="1.3"/>
+  <text x="732" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">2. yasakani-dev/yasakani (★98 · v0.1.4 · Apache-2.0 · RTX 5090 Qwen3.8-27B)</text>
+  <text x="732" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">专为单张 RTX 显卡跑 Qwen3.8-27B 定制的专用内核：7 大任务全胜 8 款主流引擎</text>
+  <text x="732" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 64-Token 复制投机校验 (v0.1.4)：代码与 JSONL 编辑提速 1.67×–2.04×，输出逐字完全一致</text>
+  <text x="732" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 229,376-Token 超长文档零重读：连续追问首字延迟 (TTFT) 从 116 秒骤降至 0.37 秒 (-99.68%)</text>
+  <text x="732" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 双档定制压缩权重：Quality (12.37GB, 95.24% Top-1 一致, KL=0.0122) vs Speed (10.31GB)</text>
+  <text x="732" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• OpenAI 兼容服务端：支持 tools 函数调用、多模态图片输入、llama.cpp timings 与 RTX 30/40/50 自检</text>
+  <rect x="732" y="330" width="600" height="160" rx="10" fill="#0B1325" stroke="#065F46"/>
+  <text x="750" y="356" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">YASAKANI v0.1.4 Measured Single-GPU Breakthroughs:</text>
+  <text x="750" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 229,376-Token Doc Follow-Up TTFT: 116.00 s -&gt; 0.37 s (313.5x faster)</text>
+  <text x="750" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Input-Copy Verification Window:  16 tokens -&gt; 64 tokens (1.67x–2.04x edit)</text>
+  <text x="750" y="434" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Quality Model (12.37 GB):        95.24% Top-1 match | KL = 0.0122</text>
+  <text x="750" y="460" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">• Speed Model (10.31 GB):          93.01% Top-1 match | KL = 0.0304 (#1 of 9)</text>
+
+  <!-- Bottom FinOps Box -->
+  <rect x="44" y="528" width="1312" height="286" rx="14" fill="url(#cardR6)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="560" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261115-R6-DEEPSEEKJAX-YASAKANI · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="584" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 12 次 MLA/MoE 架构算子原型验证 + 本地服务 18,000 次 200k+ 长上下文代码/文档编辑请求（时薪 r = $105.00/hr；本地显卡折旧：not_measured）</text>
+
+  <text x="68" y="620" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (云端多卡 PyTorch 试错 + 229k 长文档重复 Prefill API)</text>
+  <rect x="440" y="604" width="613" height="22" rx="5" fill="#EF4444"/>
+  <text x="1065" y="620" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,130.00/mo ($2,140.00 GPU/API + 38.0h × $105 = $3,990.00)</text>
+
+  <text x="68" y="658" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (重型 Flax/Megatron 框架 + 通用未调优本地 GGUF 引擎)</text>
+  <rect x="440" y="642" width="287" height="22" rx="5" fill="#F59E0B"/>
+  <text x="740" y="658" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,870.00/mo ($980.00 compute + 18.0h × $105 = $1,890.00)</text>
+
+  <text x="68" y="696" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (deepseek-v3-jax 190 行净室原型 + YASAKANI v0.1.4 引擎)</text>
+  <rect x="440" y="680" width="48.25" height="22" rx="5" fill="#10B981"/>
+  <text x="500" y="696" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$482.50/mo ($115.00 power/compute + 3.5h × $105 = $367.50) → 净省 $5,647.50/月 (-92.13% / 年省 $67,770.00)</text>
+
+  <line x1="68" y1="720" x2="1332" y2="720" stroke="#334155"/>
+  <text x="68" y="748" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="bold">🎯 ARCHITECT ROLLOUT DIRECTIVE:</text>
+  <text x="68" y="772" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">1. 算法与系统架构师研读或改造 MLA/MoE/MTP 机制时，直接以 deepseek_v3.py (190 行纯函数 + 39 项单测) 作为零框架噪音的第一性原理实验台。</text>
+  <text x="68" y="796" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">2. Windows + RTX 5090/4090 本地 Coding Agent 推理优先挂载 YASAKANI v0.1.4，利用 64-token 投机复制与 0.37s 长文档缓存复用消除本地等待。</text>
+</svg>

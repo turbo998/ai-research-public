@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgR9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#152340"/>
+    </linearGradient>
+    <linearGradient id="cardR9" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bgR9)"/>
+  <rect x="24" y="24" width="1352" height="812" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="92" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="74" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">2026-11-15 NIGHT SHIFT ROUND 9 (CUMULATIVE R311) · CLAIM-20261115-R9-CODINGWORKFLOW-TURNPACK</text>
+  <text x="68" y="104" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">4,500h 三段式编码审查工作流与 Turnpack 原子回滚折返加速 MCP 选型 FAQ</text>
+  <text x="68" y="124" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">vaibhav-space/my-ai-coding-workflow (★187, 10 大工程铁律 + 独立上下文反方批评) + OnlyTerp/turnpack (★57, 6→3 轮次, 23.4s→12.7s) · 月省 $5,285.00 (-91.75%)</text>
+
+  <!-- Left Card: vaibhav-space/my-ai-coding-workflow -->
+  <rect x="44" y="150" width="644" height="360" rx="14" fill="url(#cardR9)" stroke="#38BDF8" stroke-width="1.3"/>
+  <text x="68" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">1. vaibhav-space/my-ai-coding-workflow (★187 · 2026-11-14 · 4,500h Setup)</text>
+  <text x="68" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">沉淀自 4,500+ 小时实战的 10 条防翻车工程铁律与三段式独立审查流水线</text>
+  <text x="68" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 根治自证偏见 (Principle 4)：严禁同一会话自审方案，必须在全新上下文用对抗式提示词挑刺</text>
+  <text x="68" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 根治过度设计 (Ponytail &amp; YAGNI)：禁止模型凭空发明工厂模式与包装层，只写最小手术级代码</text>
+  <text x="68" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• Diff 与退出码是唯一真值 (Principle 5 &amp; 6)：不信对话总结，强制核对 git diff 与真实测试退出码</text>
+  <text x="68" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 确定性算术与爆炸半径门禁 (Principle 8 &amp; 10)：严禁 LLM 心算金额税率；表结构变更需人工签字</text>
+  <rect x="68" y="330" width="596" height="160" rx="10" fill="#0B1325" stroke="#1E3A8A"/>
+  <text x="86" y="356" fill="#60A5FA" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">3-Prompt Adversarial Review Workflow + Curated Skills:</text>
+  <text x="86" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">Prompt 1 [Plan]: Inspect repo &amp; author concrete surgical plan (no edits)</text>
+  <text x="86" y="408" fill="#34D399" font-family="Consolas, monospace" font-size="12">Prompt 2 [Fresh-Context Critic]: Adversarial senior review of the plan</text>
+  <text x="86" y="434" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">Prompt 3 [Execute &amp; Verify]: Apply minimal diff + output test exit codes</text>
+  <text x="86" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">Bundled Skills: Superpowers + Ponytail (anti-bloat) + I Have ADHD</text>
+
+  <!-- Right Card: OnlyTerp/turnpack -->
+  <rect x="708" y="150" width="648" height="360" rx="14" fill="url(#cardR9)" stroke="#34D399" stroke-width="1.3"/>
+  <text x="732" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">2. OnlyTerp/turnpack (★57 · 2026-11-13 · Apache-2.0 · 0-Dep Node 22+ MCP)</text>
+  <text x="732" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">把 6 轮串行工具往返压成 3 轮、测试失败即逐字节自动回滚的本地 MCP</text>
+  <text x="732" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 工具 1 [pack]：单次调用打包正则搜索上下文、多文件函数/行段读取、glob 与 git status（自动脱敏 .env）</text>
+  <text x="732" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 工具 2 [ship]：跨任意多文件修改 + 立即跑测试；全过才保留，任一失败即逐字节还原所有被改文件！</text>
+  <text x="732" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 工具 3 [batch]：在仓库上跑短只读脚本，1 轮回答“40 个文件里谁导出了 X”而非连读 40 次</text>
+  <text x="732" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• Claude Code 2.1.280 实测：轮次 6→3 (-50%)，耗时 23.4s→12.7s (-45.7%)，成本 $0.131→$0.084</text>
+  <rect x="732" y="330" width="600" height="160" rx="10" fill="#0B1325" stroke="#065F46"/>
+  <text x="750" y="356" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">Turnpack Measured Benchmark (Claude Code 2.1.280 + Sonnet 5, n=3):</text>
+  <text x="750" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Model Round Trips:  6 turns (Built-in)  -&gt; 3 turns (Turnpack) [-50.0%]</text>
+  <text x="750" y="408" fill="#34D399" font-family="Consolas, monospace" font-size="12">• Wall-Clock Latency: 23.4 seconds        -&gt; 12.7 seconds       [-45.7%]</text>
+  <text x="750" y="434" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Output Tokens:      2,044 tokens        -&gt; 873 tokens         [-57.3%]</text>
+  <text x="750" y="460" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">• API Cost per Task:  $0.131              -&gt; $0.084             [-35.9%]</text>
+
+  <!-- Bottom FinOps Box -->
+  <rect x="44" y="528" width="1312" height="286" rx="14" fill="url(#cardR9)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="560" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261115-R9-CODINGWORKFLOW-TURNPACK · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="584" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：15 人研发团队每月执行 6,000 次跨文件 Coding Agent 修改与重构任务（时薪 r = $100.00/hr；IDE 基础席位订阅费：not_measured）</text>
+
+  <text x="68" y="620" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (无审查单轮裸写 + 6 轮串行工具且失败留半残工作树)</text>
+  <rect x="440" y="604" width="576" height="22" rx="5" fill="#EF4444"/>
+  <text x="1028" y="620" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,760.00/mo ($1,860.00 tokens/reruns + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="658" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (仅配静态 CLAUDE.md 同会话自审 + 原生细粒度工具)</text>
+  <rect x="440" y="642" width="276" height="22" rx="5" fill="#F59E0B"/>
+  <text x="728" y="658" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,760.00/mo ($910.00 tokens + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="696" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (三段式独立审查工作流 + Turnpack pack/ship/batch MCP)</text>
+  <rect x="440" y="680" width="47.5" height="22" rx="5" fill="#10B981"/>
+  <text x="500" y="696" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$475.00/mo ($125.00 tokens + 3.5h × $100 = $350.00) → 净省 $5,285.00/月 (-91.75% / 年省 $63,420.00)</text>
+
+  <line x1="68" y1="720" x2="1332" y2="720" stroke="#334155"/>
+  <text x="68" y="748" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="bold">🎯 ARCHITECT ROLLOUT DIRECTIVE:</text>
+  <text x="68" y="772" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">1. 团队统一植入 my-ai-coding-workflow 的三段式审查协议与 Ponytail 极简技能，强制在新上下文对方案做对抗式挑刺后再动代码。</text>
+  <text x="68" y="796" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">2. 为 Claude Code / Codex / Cursor 挂载零依赖 Turnpack MCP：用 pack 一轮聚齐上下文，用 ship 保证未过单测的多文件修改自动逐字节回滚。</text>
+</svg>

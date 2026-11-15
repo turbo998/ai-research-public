@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg44" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentCyan44" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald44" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg44)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#083344" stroke="#06B6D4" stroke-width="1"/>
+  <text x="162" y="55" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R44 (CUMULATIVE R346)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">NumPilot (612x Ascend NPU NumPy Migrator) + Alloy (4,096-World Multi-Material Robot Physics)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">DEGger21/numpilot (★44 · 6-Role Ascend NPU Agent · 25.98x Vitamin C DFT · 42.92x Gap Ops) + argonrobotics-ai/alloy (★40 · MuJoCo Warp+VBD+MPM+DFSPH · 5,400 Cards · MCP)</text>
+
+  <!-- Left Column: DEGger21/numpilot -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentCyan44)"/>
+  <text x="62" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">⚡ DEGger21/numpilot — 6-Role NumPy → AsNumpy / Ascend C Migrator</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. 6 Roles &amp; Hash-Bound Receipts</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Analyzer/Planner/Gap Filler/Migrator</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Deterministic numerical verification</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Pinned CANN 9.2.0-beta.2 &amp; SBOM</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Quantum Chem &amp; 150-Case Corpus</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Vitamin C DFT (81,936 pts): 25.98x</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 66 covered cases: 11.06x med (612x max)</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Ascend C gap synthesis (`np.std` 42.9x)</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#0284C7" stroke-width="1"/>
+  <text x="62" y="346" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Strict Claim Boundaries (`model_called` Flag) &amp; CPU/Shim Dev Lane</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Models can propose gap code, but deterministic gates own all pass/fail receipts</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Vitamin C `projected` max error `9.54e-6`, `rho` `1.83e-4`, exact electron count</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• `numpilot doctor --backend npu|shim` supports offline dev without CANN</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">VITAMIN C DFT GRID-DENSITY CHAIN LATENCY (LOWER IS BETTER)</text>
+  <rect x="62" y="480" width="60" height="18" rx="4" fill="#06B6D4"/>
+  <text x="132" y="494" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Ascend NPU Resident: 13.157 ms (25.98x) · Warm E2E: 17.419 ms (19.62x)</text>
+  <rect x="62" y="508" width="440" height="18" rx="4" fill="#475569"/>
+  <text x="510" y="522" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">CPU: 341.750 ms</text>
+
+  <!-- Right Column: argonrobotics-ai/alloy -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentEmerald44)"/>
+  <text x="686" y="175" fill="#06281E" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🌊 argonrobotics-ai/alloy — Multi-Material GPU Physics &amp; `alloy mcp`</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. 4 Coupled Solvers in 1 Loop</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Rigid/Robots: MuJoCo Warp (4,096 worlds)</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Cloth/Soft: Newton VBD · Sand: MPM</text>
+  <text x="684" y="289" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Liquids: DFSPH + elasto-plastic rods</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. 5,400+ Audited Object Cards</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 1,111 YCB/GSO + 1,989 Objaverse</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 1,900 kitchen + 393 Gym-Anything</text>
+  <text x="974" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Flagged 263 mass/size anomalies</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#059669" stroke-width="1"/>
+  <text x="686" y="346" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Built-In 21-Operation `alloy mcp` Server &amp; Documented `known_gaps/`</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `claude mcp add alloy -- alloy mcp`: `compose`, `build`, `step`, `check`, `render`</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Ready RL/IL envs: `Pour-v0` (liquid pouring) &amp; `ClothFold-v0` (HDF5 robomimic)</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Transparently documents every solver limit in `public/keep-in-mind.md`</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">PARALLEL ROBOT ARM WORLDS ON SINGLE NVIDIA GPU (HIGHER IS BETTER)</text>
+  <rect x="686" y="480" width="440" height="18" rx="4" fill="#10B981"/>
+  <text x="1134" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">2,048–4,096</text>
+  <rect x="686" y="508" width="90" height="18" rx="4" fill="#475569"/>
+  <text x="786" y="522" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">CPU Multi-Physics: 1–16 Worlds (Rigid + VBD Cloth + MPM Sand + DFSPH)</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R44-NUMPILOT-ALLOY · 25 NPU Migrations + 60 Multi-Material RL Runs/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Manual Ascend C + Disjoint Simulators</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Cloud Compute &amp; Sim Licenses: $2,150.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Operator &amp; Solver Labor (41.0h × $100): $4,100.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Weeks writing Ascend C gaps + no unified cloth/liquid</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $6,250.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 41.0 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: Unverified LLM Port + CPU Physics</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Compute &amp; Rerun Token Spend: $980.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Drift &amp; Hull Repair Labor (19.0h × $100): $1,900.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Silent float32 numerical drift + unflagged bad object masses</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,880.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-53.92% vs Path A (19.0 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: NumPilot (Receipts) + Alloy (MCP)</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Ascend NPU &amp; Cached Warp GPU: $115.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated Receipt &amp; MCP Ops (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,785.00/mo (-92.56%) · $69,420.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $465.00 / mo (-92.56%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 37.5 eng hrs/mo (-91.46% labor)</text>
+</svg>

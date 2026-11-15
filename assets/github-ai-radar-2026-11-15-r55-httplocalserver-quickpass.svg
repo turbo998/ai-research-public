@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg55" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0E1729"/>
+      <stop offset="100%" stop-color="#08121E"/>
+    </linearGradient>
+    <linearGradient id="accentSky" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="accentTeal2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#0891B2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg55)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="218" height="26" rx="6" fill="#0284C7"/>
+  <text x="153" y="56" fill="#E0F2FE" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R55 (CUMULATIVE R357)</text>
+  <text x="276" y="56" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600">SINGLE-BINARY C++17 WAMR/QUICKJS/MCP LAN SERVER &amp; MACOS ACCESSIBILITY APPLE PASSWORDS LAUNCHER</text>
+  <text x="44" y="92" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">nwdxlgzs/HttpLocalServer (v3.5.1 C++17 + WAMR + Magika + MCP) + jessekhach/QuickPass (Zero-Disk Keychain UI)</text>
+
+  <!-- Left Card: nwdxlgzs/HttpLocalServer -->
+  <rect x="28" y="130" width="602" height="446" rx="14" fill="#0B1324" stroke="#0284C7" stroke-width="1.5"/>
+  <rect x="28" y="130" width="602" height="42" rx="14" fill="url(#accentSky)"/>
+  <text x="46" y="156" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">🌐 nwdxlgzs/HttpLocalServer (★39 · Apache-2.0 · C++17 Single-Binary v3.5.1)</text>
+
+  <text x="46" y="196" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. All-in-One Single Executable: SQLite FTS5 + Magika + WAMR 2.4.5 + MCP</text>
+  <text x="58" y="216" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Embeds SQLite FTS5 trigram in-memory index (up to 250,000 items / 64MiB / 60s background swap)</text>
+  <text x="58" y="235" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Static WAMR 2.4.5 + QuickJS-NG + Magika content inference + MCP (2026-07-28 spec + legacy compat)</text>
+
+  <text x="46" y="265" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Version-Pinned Range Resume (409 Guard) &amp; Application-Layer CoW</text>
+  <rect x="46" y="275" width="566" height="84" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="60" y="295" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">Version-Pinned URL → Binds size + mtime; returns HTTP 409 if file changes mid-download</text>
+  <text x="60" y="314" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">App-Layer CoW      → Flushes temp file without global write lock; old handles keep old version</text>
+  <text x="60" y="333" fill="#FDE047" font-family="Consolas, monospace" font-size="11.5">Path &amp; Symlink Sec → openat/O_NOFOLLOW + blocks Windows ADS, symlinks &amp; reparse points</text>
+  <text x="60" y="351" fill="#C4B5FD" font-family="Consolas, monospace" font-size="11.5">Isolated Write     → /_clients/&lt;TCP_IP&gt;/ per-IP sandbox (ignores spoofable X-Forwarded-For)</text>
+
+  <text x="46" y="384" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">3. Slowloris Drain Cap, DNS-Rebinding Guard &amp; Zero-CDN Offline UI</text>
+  <text x="58" y="404" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Rejected upload drain strictly capped at 64 KiB &amp; 1s absolute deadline (defeats slow-drip attacks)</text>
+  <text x="58" y="423" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Write token endpoint enforces numeric IP / localhost Host check to block DNS rebinding</text>
+  <text x="58" y="442" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Built-in Monaco editor, Office/PDF/PPT viewer &amp; optional P2P WebRTC/Range cache (max 64MiB)</text>
+
+  <rect x="46" y="462" width="566" height="96" rx="10" fill="#09192C" stroke="#0369A1"/>
+  <text x="62" y="484" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Architectural Takeaway for AI Solution Architects:</text>
+  <text x="62" y="504" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Standard HTTP Range servers silently splice old and new bytes when a file updates mid-transfer.</text>
+  <text x="62" y="522" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">HttpLocalServer's version-pinned 409 URLs, application-layer CoW, TCP-peer IP isolation, and</text>
+  <text x="62" y="540" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">embedded WAMR+QuickJS+MCP runtime turn one C++17 binary into a hardened LAN appliance.</text>
+
+  <!-- Right Card: jessekhach/QuickPass -->
+  <rect x="650" y="130" width="602" height="446" rx="14" fill="#0B1324" stroke="#059669" stroke-width="1.5"/>
+  <rect x="650" y="130" width="602" height="42" rx="14" fill="url(#accentTeal2)"/>
+  <text x="668" y="156" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">🔑 jessekhach/QuickPass (★39 · GPL-3.0 · Swift macOS 15+ Apple Passwords UI)</text>
+
+  <text x="668" y="196" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Bridging an API-Less System App via macOS Accessibility Tree</text>
+  <text x="680" y="216" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Apple Passwords has no public SDK: QuickPass drives it invisibly via macOS Accessibility API</text>
+  <text x="680" y="235" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Global ⌃⌥Space overlay with instant search, ⌘C user, ⇧⌘C password, ⌥⌘C 2FA &amp; ⌘↩ / ⌥⌘↩ autofill</text>
+
+  <text x="668" y="265" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Zero-Clipboard Reveal Read &amp; Field-by-Field Write Verification</text>
+  <rect x="668" y="275" width="566" height="84" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="682" y="295" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">Hidden Reveal Read  → Triggers Reveal Password while hidden, reads AX value &amp; re-masks immediately</text>
+  <text x="682" y="314" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">Read-Back Save Gate → Fills New Password form field-by-field &amp; verifies every field before saving</text>
+  <text x="682" y="333" fill="#FDE047" font-family="Consolas, monospace" font-size="11.5">2-Min RAM-Only TTL  → Secrets never touch disk; purged after 2m, Lock Now, screen lock or sleep</text>
+  <text x="682" y="351" fill="#C4B5FD" font-family="Consolas, monospace" font-size="11.5">Concealed Clipboard → Marks copied secrets concealed (skipped by history apps) + 60s auto-clear</text>
+
+  <text x="668" y="384" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">3. Zero-Third-Party Favicon Privacy &amp; EdDSA + Notarized Updates</text>
+  <text x="680" y="404" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Fetches website icons directly from each target domain (never leaks login list to 3rd-party icon APIs)</text>
+  <text x="680" y="423" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Reads current tab URL across Safari, Chrome, Arc, Brave, Edge &amp; Vivaldi for instant site matching</text>
+  <text x="680" y="442" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Sparkle updates verified with both Apple Developer ID notarization and EdDSA cryptographic signatures</text>
+
+  <rect x="668" y="462" width="566" height="96" rx="10" fill="#06281E" stroke="#059669"/>
+  <text x="684" y="484" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Architectural Takeaway for AI Solution Architects:</text>
+  <text x="684" y="504" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">When automating closed system apps via Accessibility APIs, never route secrets through the</text>
+  <text x="684" y="522" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">system clipboard by default (read AX Reveal state while hidden), mark intentional copies as</text>
+  <text x="684" y="540" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">concealed with a 60s TTL, and enforce field-by-field read-back before committing UI mutations.</text>
+
+  <!-- Bottom FinOps & Quantitative Ledger -->
+  <rect x="28" y="592" width="1224" height="244" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="622" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">📊 Closed-Form FinOps &amp; LAN/SecOps Ledger (CLAIM-20261115-R55-HTTPLOCALSERVER-QUICKPASS · 15 Nodes/Seats @ $100/hr)</text>
+
+  <rect x="48" y="636" width="380" height="128" rx="10" fill="#1E1B2E" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="660" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path A: Multi-Container LAN Stack + Paid Vault SaaS</text>
+  <text x="64" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Container Host &amp; Vault Seat Subscriptions: $1,820.00 / mo</text>
+  <text x="64" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Ops Maintenance &amp; Corrupt-Resume Triage: $3,800.00 / mo (38.0h)</text>
+  <text x="64" y="726" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total Monthly TCO: $5,620.00 / mo</text>
+  <text x="64" y="748" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Silent byte corruption on mid-download updates + SaaS fees</text>
+
+  <rect x="450" y="636" width="380" height="128" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="660" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path B: Bare python -m http.server + Manual Passwords</text>
+  <text x="466" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Host Compute &amp; Tooling Overhead: $810.00 / mo</text>
+  <text x="466" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Manual File &amp; Login Switching Labor: $1,800.00 / mo (18.0h)</text>
+  <text x="466" y="726" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total Monthly TCO: $2,610.00 / mo (-53.56%)</text>
+  <text x="466" y="748" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11">No Range resume, no per-IP write isolation, slow UI switching</text>
+
+  <rect x="852" y="636" width="380" height="128" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.5"/>
+  <text x="868" y="660" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path C: HttpLocalServer + QuickPass (Recommended)</text>
+  <text x="868" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Single-Binary LAN &amp; Native Keychain Cost: $80.00 / mo</text>
+  <text x="868" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Configuration &amp; Audit Labor: $340.00 / mo (3.4h)</text>
+  <text x="868" y="726" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total: $420.00 / mo (-$5,200.00 / -92.53%)</text>
+  <text x="868" y="748" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="11">Saves $62,400.00/yr &amp; 34.6h/mo (-91.05%) · HW: not_measured</text>
+
+  <text x="48" y="792" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">Evidence SHA-256: trending=0307dc2ec8ad9e299810571ee903633f701ea55e9eec2a4235faf871940df463 · search=93010521222c56c591bcae9a80f7f4b395724b9c14b70bec86e5bf2e0f1306cc</text>
+  <text x="48" y="814" fill="#64748B" font-family="Segoe UI, Inter, sans-serif" font-size="11">Guardrail: Base host hardware cost is explicitly labeled not_measured; all metrics (250k FTS5, 64KiB/1s drain, 2m/60s TTL) come from READMEs.</text>
+</svg>

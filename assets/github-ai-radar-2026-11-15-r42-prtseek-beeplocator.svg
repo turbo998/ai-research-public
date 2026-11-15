@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg42" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentRed42" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="accentCyan42" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0891B2"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg42)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#450A0A" stroke="#EF4444" stroke-width="1"/>
+  <text x="162" y="55" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R42 (CUMULATIVE R344)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">prtseek (QWB #3 4-Role CTF Agent Workbench) + beep-locator (BeepBeep TDOA Acoustic Array)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">Team-intN18-SoybeanSeclab/prtseek (★54 · 2-6 Parallel Solvers · Stall Checkpoints) + simonw/beep-locator (★50 · BeepBeep Ranging · MDS+SMACOF · Live JS Push)</text>
+
+  <!-- Left Column: Team-intN18-SoybeanSeclab/prtseek -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#EF4444" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentRed42)"/>
+  <text x="62" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🚩 Team-intN18-SoybeanSeclab/prtseek — QWB 2026 #3 4-Role CTF Agent</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. 4-Role Parallel CTF Crew</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `triage` -&gt; `command` -&gt; `solver` -&gt; `writeup`</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `delegate_agents`: 2–6 parallel solvers</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• QWB 2026 #3 (DeepSeek V4.1 Flash)</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Run Ledger &amp; Stall Guards</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Shared whole-round model call budget</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Fixes cross-round token undercounting</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Stall checkpoints + body denoising</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#DC2626" stroke-width="1"/>
+  <text x="62" y="346" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. HTTP Redirect/Response Evidence Capture &amp; Tiered Verification Grading</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Prevents aborted LLM streams from falsely reporting task completion</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Isolates challenge attachments per session &amp; auto-generates EXP + `WRITEUP.md`</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Single Go 1.26.10 binary embedding Node 22 UI (`:8787` / `:18787` + proxy)</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">CTF MULTI-ANGLE EXPLOIT CONVERGENCE &amp; BUDGET CONTROL</text>
+  <rect x="62" y="480" width="430" height="18" rx="4" fill="#10B981"/>
+  <text x="500" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">2–6 Solvers + Shared Cap</text>
+  <rect x="62" y="508" width="160" height="18" rx="4" fill="#EF4444"/>
+  <text x="232" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">Upstream Monolithic Agent: Token Leaks &amp; Aborted-Stream False Positives</text>
+
+  <!-- Right Column: simonw/beep-locator -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentCyan42)"/>
+  <text x="686" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">📡 simonw/beep-locator — BeepBeep Ranging &amp; TDOA Browser Mic Array</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. BeepBeep 2-Way Ranging</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 3+ phones/laptops chirp in turn</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Intra-recording intervals cancel clock</text>
+  <text x="684" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• MDS + SMACOF room layout solver</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Sync Chirp + TDOA Solver</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 60s AudioContext frame ring buffer</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Post-beep sync chirp aligns slices</text>
+  <text x="974" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• TDOA grid search + Gauss-Newton</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#0891B2" stroke-width="1"/>
+  <text x="686" y="346" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Zero-Reload Live ES Module Push (`ctl push`) &amp; Multi-Reflection `/sim`</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `beep-locator ctl push listener myexp exp.js` hot-swaps DSP code live</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automatic fallback to previous module if pushed JS fails to load</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• `/sim?n=5&amp;every=10&amp;bx=3&amp;by=2` tests clock drift, sample skew &amp; echoes</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">DISTRIBUTED AUDIO ARRAY CLOCK-SYNC &amp; HARDWARE REQUIREMENT</text>
+  <rect x="686" y="480" width="90" height="18" rx="4" fill="#06B6D4"/>
+  <text x="786" y="494" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">beep-locator: $0 Browser Phones · 0 Clock Sync Needed · Live JS Hot-Swap</text>
+  <rect x="686" y="508" width="435" height="18" rx="4" fill="#475569"/>
+  <text x="1128" y="522" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">$2,500+ Mic Array</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R42-PRTSEEK-BEEPLOCATOR · 35 CTF/Sec Audits + 20 Acoustic Fault Hunts/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Unbounded Pentest Bot + Acoustic Cam</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Leaked Tokens &amp; Hardware Rental: $1,900.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Manual Triage &amp; Sweeps (39.5h × $100): $3,950.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Cross-round token leaks + hours hunting intermittent beeps</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $5,850.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 39.5 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: Single-Thread Agent + Unsynced Phones</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• API &amp; Tooling Spend: $860.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Stall &amp; Waveform Alignment (18.5h × $100): $1,850.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Serial solver stalls + OS audio latency ruins TDOA</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,710.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-53.68% vs Path A (18.5 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: prtseek (4-Role) + beep-locator (TDOA)</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Shared-Budget DeepSeek &amp; Tunnel: $90.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated Solver &amp; TDOA Ops (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,410.00/mo (-92.48%) · $64,920.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $440.00 / mo (-92.48%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 36.0 eng hrs/mo (-91.14% labor)</text>
+</svg>

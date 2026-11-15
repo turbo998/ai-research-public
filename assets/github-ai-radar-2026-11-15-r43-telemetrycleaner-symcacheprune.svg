@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg43" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentGreen43" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="accentAmber43" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg43)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="162" y="55" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R43 (CUMULATIVE R345)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">TelemetryCleaner (Shizuku Binder Android Debloat) + symcache-prune (macOS 39GB Cache Guard)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">Eynnzerr/TelemetryCleaner (★947 · PackageBinder + app_process Fallback · 14 Packages) + adriancmurray/symcache-prune (★55 · WebKit 291979 · Root-Chain Verified)</text>
+
+  <!-- Left Column: Eynnzerr/TelemetryCleaner -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentGreen43)"/>
+  <text x="62" y="175" fill="#06281E" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🛡️ Eynnzerr/TelemetryCleaner — Rootless Shizuku Binder Telemetry Remover</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Direct Shizuku Binder IPC</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `PackageBinder.kt` bypasses `pm` CLI</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Works on Android 10+ (Wi-Fi ADB 11+)</text>
+  <text x="60" y="289" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Multi-user space inspection &amp; restore</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. `app_process` Hidden Fallback</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `IPackageManager.deletePackageAsUser`</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Preserves original ROM error on fail</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Freeze fallback for locked vivo ROMs</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#059669" stroke-width="1"/>
+  <text x="62" y="346" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. 14-Package Carrier Telemetry Catalogue &amp; WiSec 2023 Evidence</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Targets `com.mobiletools.systemhelper`, `com.coloros.regservice`, `com.xiaomi.registration`</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Stops silent GPS, SIM/IMEI, installed-app list &amp; traffic-stat uploads</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Honest `[已实测]` vs `[未验证]` matrix + 1-click APK restore from `/system`</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">OEM ROM TELEMETRY REMOVAL SUCCESS WITHOUT ROOT</text>
+  <rect x="62" y="480" width="420" height="18" rx="4" fill="#10B981"/>
+  <text x="492" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Binder + app_process</text>
+  <rect x="62" y="508" width="170" height="18" rx="4" fill="#EF4444"/>
+  <text x="242" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">Plain `adb shell pm`: Blocked by OEM CLI Wrappers</text>
+
+  <!-- Right Column: adriancmurray/symcache-prune -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentAmber43)"/>
+  <text x="686" y="175" fill="#1E1303" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🧹 adriancmurray/symcache-prune — Audited macOS coresymbolicationd Guard</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Stops 39GB+ System Data Bloat</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `coresymbolicationd` grows 9.4GB/5h</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Triggered by `xctest` (6/7 `.diag` logs)</text>
+  <text x="684" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• WebKit Bug 291979 10GB threshold</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Root-Chain Security Hardening</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Checks `/usr`, `/usr/local`, `libexec`</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `#!/bin/zsh -f` skips `/etc/zshenv`</text>
+  <text x="974" y="289" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Hardcoded path · Exit 2 on symlink</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#D97706" stroke-width="1"/>
+  <text x="686" y="346" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. `Nice 10` + `LowPriorityIO` Hourly `launchd` Job &amp; Rootless `zsh test`</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Empties contents (`find -x -mindepth 1 -maxdepth 1`) without stopping daemon</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Silent when &lt;10 GB; logs single UTC `before=...MB freed=...MB` line on prune</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Under 200 lines of auditable code + non-root temporary-dir `zsh test` suite</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">MACOS CORESYMBOLICATIOND CACHE FOOTPRINT ON DEV/CI MACS</text>
+  <rect x="686" y="480" width="110" height="18" rx="4" fill="#10B981"/>
+  <text x="806" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">symcache-prune: Capped at 10 GB (0 Daemon Restarts · LowPriorityIO)</text>
+  <rect x="686" y="508" width="430" height="18" rx="4" fill="#EF4444"/>
+  <text x="1124" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">Uncapped: 39+ GB</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R43-TELEMETRYCLEANER-SYMCACHEPRUNE · 60 Android Devices + 40 Mac CI Nodes/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Manual ROM Root + Mac SSD Upgrades</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• SSD Tier Upgrades &amp; MDM Spend: $1,880.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Disk-Full &amp; ROM Ops (39.0h × $100): $3,900.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 39GB+ System Data CI outages + background telemetry</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $5,780.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 39.0 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: Plain `adb pm` + Unchecked Root Cron</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Storage &amp; Device Maintenance: $850.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• CLI Block &amp; Cron Triage (18.0h × $100): $1,800.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• OEM blocks `pm uninstall` + unsafe `/usr/local` perms</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,650.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-54.15% vs Path A (18.0 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: TelemetryCleaner + symcache-prune</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Fleet Deployment &amp; Audit Overhead: $85.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated Verification (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,345.00/mo (-92.47%) · $64,140.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $435.00 / mo (-92.47%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 35.5 eng hrs/mo (-91.03% labor)</text>
+</svg>

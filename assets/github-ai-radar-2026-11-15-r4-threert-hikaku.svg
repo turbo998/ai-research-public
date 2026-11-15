@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgR4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1A2644"/>
+    </linearGradient>
+    <linearGradient id="cardR4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bgR4)"/>
+  <rect x="24" y="24" width="1352" height="812" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="92" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="74" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">2026-11-15 NIGHT SHIFT ROUND 4 (CUMULATIVE R306) · CLAIM-20261115-R4-THREERT-HIKAKU</text>
+  <text x="68" y="104" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">60fps 硬件光追 Three.js 引擎与 100% 端侧 AI 媒体鉴伪插件选型 FAQ：ThreeRT + Hikaku</text>
+  <text x="68" y="124" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">meshy-dev/ThreeRT (★398, 15.5ms ΔE=3.4 vs three.js 34.7ms ΔE=10.1) + hikaku-io/hikaku-extension (★394, C2PA+SwinV2+23MB 复核) · 月省 $5,120.00 (-91.76%)</text>
+
+  <!-- Left Card: meshy-dev/ThreeRT -->
+  <rect x="44" y="150" width="644" height="360" rx="14" fill="url(#cardR4)" stroke="#38BDF8" stroke-width="1.3"/>
+  <text x="68" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">1. meshy-dev/ThreeRT (★398 · 2026-11-10 · MIT · Rust + wgpu + TypeScript)</text>
+  <text x="68" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">保持 three.js API 不变，底层直通 GPU 硬件光线追踪实现 60fps 路径追踪</text>
+  <text x="68" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 零烘焙物理光照：90,000 lux 真实太阳光、漫反射反弹与发光表面，免 Shadow Map/Lightmap</text>
+  <text x="68" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• Lumberyard Bistro 实测 (1280×720)：15.5ms (60fps) 且 ΔE=3.4，碾压 three.js WebGPU (34.7ms, ΔE=10.1)</text>
+  <text x="68" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 三大模块化包：@threert/scene (兼容 three.js) + @threert/gameplay (确定性回放) + @threert/voxel</text>
+  <text x="68" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 双端无损回退：原生客户端走 Metal/Vulkan 硬件 Ray Query；任意普通浏览器自动回退为标准 three.js</text>
+  <rect x="68" y="330" width="596" height="160" rx="10" fill="#0B1325" stroke="#1E3A8A"/>
+  <text x="86" y="356" fill="#60A5FA" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">Bistro Night Benchmark (1280×720 vs 4,096-SPP Reference):</text>
+  <text x="86" y="384" fill="#34D399" font-family="Consolas, monospace" font-size="12">• ThreeRT Live (Rust + wgpu RT):        15.5 ms (60 fps) | ΔE = 3.4 (Best)</text>
+  <text x="86" y="410" fill="#F59E0B" font-family="Consolas, monospace" font-size="12">• three.js r187 WebGPU+SSGI+SSR+TRAA:   34.7 ms (29 fps) | ΔE = 10.1</text>
+  <text x="86" y="436" fill="#EF4444" font-family="Consolas, monospace" font-size="12">• three.js r187 WebGL Tuned:            15.9 ms (60 fps) | ΔE = 12.1</text>
+  <text x="86" y="462" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">*Honest boundary: plain three.js still draws tiny simple scenes in ~1 ms.</text>
+
+  <!-- Right Card: hikaku-io/hikaku-extension -->
+  <rect x="708" y="150" width="648" height="360" rx="14" fill="url(#cardR4)" stroke="#34D399" stroke-width="1.3"/>
+  <text x="732" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">2. hikaku-io/hikaku-extension (★394 · v0.1.0 · Apache-2.0 · MV3 Local AI Flag)</text>
+  <text x="732" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">零云端上传、零账号：在浏览器本地比对元数据声明与双视觉模型的 AI 鉴伪器</text>
+  <text x="732" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 第一层 [元数据声明解析]：本地解析 C2PA、IPTC/XMP/EXIF 及 ComfyUI/A1111/NovelAI 生成参数</text>
+  <text x="732" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 第二层 [截图与扁平图标前置过滤]：单次内存拉取，自动跳过 UI 截图与小图标，免除无效推理开销</text>
+  <text x="732" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 第三层 [端侧 SwinV2 + 视频三帧中位数]：ONNX Runtime WebGPU(fp16)/WASM(uint8) + 视频/GIF 抽帧</text>
+  <text x="732" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 第四层 [23MB 独立二审模型]：按需触发 Community Forensics 二次意见；支持 --offline 离线打包</text>
+  <rect x="732" y="330" width="600" height="160" rx="10" fill="#0B1325" stroke="#065F46"/>
+  <text x="750" y="356" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">Hikaku 4-Stage On-Device Evidence Pipeline:</text>
+  <text x="750" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">1. Read Declarations: C2PA / IPTC / EXIF / A1111 / ComfyUI prompts</text>
+  <text x="750" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">2. Pixel Eligibility Gate: Filter screenshots &amp; flat UI before ONNX load</text>
+  <text x="750" y="434" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">3. Primary Visual Detector: SwinV2 (WebGPU fp16 / WASM uint8, 3-frame video)</text>
+  <text x="750" y="460" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">4. Optional Second Opinion: Pinned 23 MB Community Forensics model</text>
+
+  <!-- Bottom FinOps Box -->
+  <rect x="44" y="528" width="1312" height="286" rx="14" fill="url(#cardR4)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="560" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261115-R4-THREERT-HIKAKU · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="584" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月构建 10 个高拟真 3D 交互场景 + 审查 50,000 张网页/商品图片与视频的 AI 生成溯源（时薪 r = $100.00/hr；工作站显卡与 CDN：not_measured）</text>
+
+  <text x="68" y="620" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (Three.js 手工烘焙光照贴图 + 商业云端 AI 鉴伪 API)</text>
+  <rect x="440" y="604" width="558" height="22" rx="5" fill="#EF4444"/>
+  <text x="1010" y="620" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,580.00/mo ($1,780.00 compute/API + 38.0h × $100 = $3,800.00)</text>
+
+  <text x="68" y="658" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (WebGPU SSGI 手工调参 + 自建后端 ONNX 鉴伪微服务)</text>
+  <rect x="440" y="642" width="268" height="22" rx="5" fill="#F59E0B"/>
+  <text x="720" y="658" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,680.00/mo ($880.00 compute/API + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="696" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (ThreeRT 60fps 硬件光追 + Hikaku 100% 端侧双模鉴伪)</text>
+  <rect x="440" y="680" width="46" height="22" rx="5" fill="#10B981"/>
+  <text x="498" y="696" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$460.00/mo ($110.00 compute + 3.5h × $100 = $350.00) → 净省 $5,120.00/月 (-91.76% / 年省 $61,440.00)</text>
+
+  <line x1="68" y1="720" x2="1332" y2="720" stroke="#334155"/>
+  <text x="68" y="748" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="bold">🎯 ARCHITECT ROLLOUT DIRECTIVE:</text>
+  <text x="68" y="772" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">1. 数字孪生与交互展厅直接采用 @threert/scene 编写标准 three.js 代码，免除离线 Lightmap 烘焙，在客户端实现 60fps (ΔE=3.4) 实时光追与浏览器无缝降级。</text>
+  <text x="68" y="796" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">2. 电商/内容审核团队通过 npm run build -- --offline 打包 Hikaku 浏览器插件，在终端零数据外传前提下完成 C2PA/ComfyUI 元数据与 SwinV2 视觉双重核验。</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgR10" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#182646"/>
+    </linearGradient>
+    <linearGradient id="cardR10" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bgR10)"/>
+  <rect x="24" y="24" width="1352" height="812" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="92" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="74" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">2026-11-15 NIGHT SHIFT ROUND 10 (CUMULATIVE R312) · CLAIM-20261115-R10-TURBOBROWSER-BROWSERHANDS</text>
+  <text x="68" y="104" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">省 98.9% 表单 Token 的批处理浏览器 MCP 与多 Profile 标签组真机 Chrome MCP 选型 FAQ</text>
+  <text x="68" y="124" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Tthanh2k6/turbo-browser-mcp (★88, v0.5.0 407 测, 11→1 轮省 98.9% Token) + 214140846/browser-hands (★24, 450KB 多 Profile 标签组隔离) · 月省 $5,275.00 (-91.90%)</text>
+
+  <!-- Left Card: Tthanh2k6/turbo-browser-mcp -->
+  <rect x="44" y="150" width="644" height="360" rx="14" fill="url(#cardR10)" stroke="#38BDF8" stroke-width="1.3"/>
+  <text x="68" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">1. Tthanh2k6/turbo-browser-mcp (★88 · v0.5.0 · MIT · 407 Passing Tests)</text>
+  <text x="68" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">将 25-33 个细碎浏览器原语折叠为 10 个批处理工具，实测立省 98.9% 累积 Token</text>
+  <text x="68" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 增量 DOM 快照 (onlyChanged: true)：点击后仅返 56 tok 变更行 (vs 3,582 tok 全量 ARIA, 省 98.4%)</text>
+  <text x="68" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 10 字段复杂表单一键填充 (smart_fill_form)：11 轮 72,614 累积 tok → 1 轮 811 tok (7x 提速, 省 98.9%)</text>
+  <text x="68" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 磁盘路径直传文件：48KiB PDF 上传仅耗 85 tok (vs 44,728 tok 内联 Base64, 省 99.8%)</text>
+  <text x="68" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 穿透 React/Shadow DOM/iframe + 默认人工 Submit 拦截门 + preset:turbo 100% 屏蔽媒体流量</text>
+  <rect x="68" y="330" width="596" height="160" rx="10" fill="#0B1325" stroke="#1E3A8A"/>
+  <text x="86" y="356" fill="#60A5FA" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">o200k_base (tiktoken 0.14.0) Measured Scorecard:</text>
+  <text x="86" y="382" fill="#34D399" font-family="Consolas, monospace" font-size="12">• Post-Click Delta Snapshot:  3,582 tok -&gt; 56 tok   (-98.4% vs ARIA)</text>
+  <text x="86" y="408" fill="#34D399" font-family="Consolas, monospace" font-size="12">• 10-Field Form Cumul. Tok:   72,614 tok -&gt; 811 tok (-98.9%, 11-&gt;1 turn)</text>
+  <text x="86" y="434" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 48 KiB PDF Upload Arg:      44,728 tok -&gt; 85 tok  (-99.8% disk path)</text>
+  <text x="86" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">• 6-Step Flow (batch_actions): 6 turns -&gt; 1 turn    (-87.2% cumul. tok)</text>
+
+  <!-- Right Card: 214140846/browser-hands -->
+  <rect x="708" y="150" width="648" height="360" rx="14" fill="url(#cardR10)" stroke="#34D399" stroke-width="1.3"/>
+  <text x="732" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">2. 214140846/browser-hands (★24 · 2026-11-12 · MIT · ~450KB Local Chrome MCP)</text>
+  <text x="732" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">免无头沙盒重登：在日常已登录 Chrome 中按标签组与多 Profile 并发操控</text>
+  <text x="732" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 独立标签组隔离 (Tab Groups)：多个 Agent 同时在各自标签组内干活，彻底杜绝抢焦点与串页</text>
+  <text x="732" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 跨 Chrome Profile 自由切换：识别工作与个人 Profile 登录邮箱，按任务上下文精准切换</text>
+  <text x="732" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• quick_task 极速路由执行器 (0.2–0.5s/步)：小模型代跑固定点击流，stopBefore 硬拦截 Submit/Pay</text>
+  <text x="732" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 16/26 工具兼容 Claude-in-Chrome 原生签名 + CDP C++ 缩放截图不烧 CPU + 会话 GIF 录制</text>
+  <rect x="732" y="330" width="600" height="160" rx="10" fill="#0B1325" stroke="#065F46"/>
+  <text x="750" y="356" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">Browser Hands Multi-Profile &amp; Safety Architecture:</text>
+  <text x="750" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Footprint: Single ~450 KB ~/.thundermcp/thundermcp.mjs + MV3 Extension</text>
+  <text x="750" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Concurrency: N Parallel Agents -&gt; N Isolated Chrome Tab Groups</text>
+  <text x="750" y="434" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">• Fast Delegation: quick_task (0.2–0.5s/step) + stopBefore=["Submit","Pay"]</text>
+  <text x="750" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">• Auditability: Native CDP screenshot scaling + 1-click GIF session recording</text>
+
+  <!-- Bottom FinOps Box -->
+  <rect x="44" y="528" width="1312" height="286" rx="14" fill="url(#cardR10)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="560" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261115-R10-TURBOBROWSER-BROWSERHANDS · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="584" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月执行 8,000 次跨无头 CI 与已登录多账号 SaaS 门户的复杂表单/文件上传浏览器自动化任务（时薪 r = $100.00/hr；宿主机硬件：not_measured）</text>
+
+  <text x="68" y="620" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (传统 33 工具 Playwright MCP 全量重放 ARIA + Base64 上传)</text>
+  <rect x="440" y="604" width="574" height="22" rx="5" fill="#EF4444"/>
+  <text x="1026" y="620" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,740.00/mo ($1,940.00 tokens/VMs + 38.0h × $100 = $3,800.00)</text>
+
+  <text x="68" y="658" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (手写脆弱 Playwright 脚本 + 无标签组隔离抢夺主浏览器)</text>
+  <rect x="440" y="642" width="272" height="22" rx="5" fill="#F59E0B"/>
+  <text x="724" y="658" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,720.00/mo ($920.00 tokens + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="696" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (turbo-browser-mcp 增量批处理 + Browser Hands 标签组)</text>
+  <rect x="440" y="680" width="46.5" height="22" rx="5" fill="#10B981"/>
+  <text x="498" y="696" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$465.00/mo ($115.00 tokens + 3.5h × $100 = $350.00) → 净省 $5,275.00/月 (-91.90% / 年省 $63,300.00)</text>
+
+  <line x1="68" y1="720" x2="1332" y2="720" stroke="#334155"/>
+  <text x="68" y="748" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="bold">🎯 ARCHITECT ROLLOUT DIRECTIVE:</text>
+  <text x="68" y="772" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">1. 无头浏览器自动化与表单压测统一替换上 turbo-browser-mcp：开启 onlyChanged 增量快照与 smart_fill_form，砍掉 98.9% 累积历史重放 Token。</text>
+  <text x="68" y="796" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">2. 需要复用本地已登录 Cookie 与多工作/个人账号的场景挂载 Browser Hands：利用独立 Tab Group 并发隔离与 stopBefore 硬拦截高危提交按钮。</text>
+</svg>

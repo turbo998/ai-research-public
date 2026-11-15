@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR16" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060913"/>
+      <stop offset="55%" stop-color="#0E172A"/>
+      <stop offset="100%" stop-color="#04070E"/>
+    </linearGradient>
+    <linearGradient id="accentForensics" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="accentAmd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR16)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#2E1065" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="199" y="59" fill="#DDD6FE" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R16 · CUMULATIVE R318</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">Checkpoint-Forensics Philox SM Fingerprinting + Inferact AMD MI355X FlyDSL Kernels</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Verifying Training GPU SM Count (G = 2048 × SMs on Untouched Embeddings) + Day-0 vLLM FlyDSL Kernels for AMD gfx950</text>
+
+  <!-- Left Panel: macrogrants/checkpoint-forensics -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentForensics)"/>
+  <text x="58" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. macrogrants/checkpoint-forensics (★17 · Philox SM GPU Fingerprint)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#DDD6FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">First-Principles Discovery: PyTorch CUDA normal_ Stride Reveals Exact SM Count</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• CUDA normal_ launches 2,048 threads/SM; element i is written by thread (i mod 2048×SMs)</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Untrained rare-token embedding rows receive 0 gradients and preserve init weights intact!</text>
+
+  <!-- 3 GPU SM Fingerprints -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#1E1436" stroke="#8B5CF6"/>
+  <text x="152" y="318" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">Hopper (132 SMs)</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">G = 270,336 threads</text>
+  <text x="152" y="362" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">DeepSeek-V3-Base</text>
+  <text x="152" y="382" fill="#DDD6FE" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">seed 953049583 (8/8)</text>
+  <text x="152" y="402" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Median r = 0.999999</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="360" y="318" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">B200/B300 (148 SMs)</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">G = 303,104 threads</text>
+  <text x="360" y="362" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">DeepSeek-V4-Flash / M3</text>
+  <text x="360" y="382" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">461/469 &amp; 17/17 rows</text>
+  <text x="360" y="402" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Median r = 0.999999</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="568" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">GB200/GB300 (152 SMs)</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">G = 311,296 threads</text>
+  <text x="568" y="362" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Kimi-K3 / Ling-3.1-flash</text>
+  <text x="568" y="382" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">13/13 &amp; 384/384 rows</text>
+  <text x="568" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Laptop check in &lt;5s</text>
+
+  <!-- Forensics Workflow Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Deterministic Checkpoint Provenance Protocol (replay.py &amp; gpu_check.py)</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Step 1: Extract dead/untrained token embedding rows (7 MB in rows/)</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Step 2: Sweep SM = 16..256 with Philox stride G = 2048 × SMs</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Step 3: Verify r &gt; 0.9999 vs seed+1 control (~0.00) &amp; runner-up SM (~0.02)</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Step 4: Confirm bit-for-bit on physical H100/B300/GB200 via gpu_check.py</text>
+
+  <!-- Right Panel: Inferact/amd-kernels -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentAmd)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. Inferact/amd-kernels (★16 · MI355X/MI350X gfx950 Day-0 vLLM Kernels)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Architecture: 100% FlyDSL (&gt;=0.5.0) + PyTorch Reference Contract</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Eliminates fragmented HIP/Triton/Gluon glue on AMD Instinct MI355X/MI350X (ROCm 7.2)</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Direct buffer loads, LDS DMA, MFMA matrix cores &amp; inline asm in a single Python DSL</text>
+
+  <!-- 2 Engineering Rules -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#23150B" stroke="#F59E0B"/>
+  <text x="752" y="317" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Rule 3: reference.py Contract</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Single PyTorch ground truth</text>
+  <text x="752" y="360" fill="#FDE68A" font-family="Consolas, monospace" font-size="11.5">Exact rounding &amp; scale layout</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Bit-for-bit reproducibility across</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">runs + CUDA graph padded rows</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#101E29" stroke="#0EA5E9"/>
+  <text x="1064" y="317" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Rule 4: Pre-Serve Warm-Up</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">amd_kernels.warm_up.entry</text>
+  <text x="1064" y="360" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">Parallel worker JIT compile</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Every shape tier compiles during</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">graph capture; 0 live JIT spikes</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Multi-Vendor GPU Strategy: Provenance Audit + Day-0 MI355X Serving</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 1: Audit open-weight model checkpoint lineage via checkpoint-forensics</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 2: Deploy model on AMD MI355X/MI350X (gfx950) with Inferact/amd-kernels</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 3: Verify numerical parity against reference.py over LLC-exceeding inputs</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Eliminates cold-start tail latency &amp; silent FP8/BF16 quantization drift</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R16-CHECKPOINTFORENSICS-AMDKERNELS · 40 Audits + 360 MI355X GPU Hours/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Unverified Weights + Fallback Ops</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$6,280.00/mo ($2,080.00 GPU + 42.0h / $4,200.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Mixed HIP/Triton/Gluon Patchwork</text>
+  <rect x="395" y="716" width="356" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="766" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$3,020.00/mo ($1,020.00 GPU + 20.0h / $2,000.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: Checkpoint-Forensics + AMD-Kernels</text>
+  <rect x="395" y="758" width="58" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="468" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$490.00/mo ($140.00 compute + 3.5h / $350.00) · -92.20%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,790.00/mo (-92.20%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $69,480.00/yr · 38.5h/mo Saved (-91.67%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#8B5CF6"/>
+  <text x="690" y="824" fill="#DDD6FE" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Hardware Fingerprint: G = 2048 × SMs (r &gt; 0.9999)</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">108 (A100) vs 132 (H100) vs 148 (B200) vs 152 (GB200)</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#F59E0B"/>
+  <text x="1130" y="824" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">MI355X Serving: FlyDSL + reference.py + warm_up</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Bit-for-Bit Determinism &amp; LLC-Exceeding Graph Replay</text>
+</svg>

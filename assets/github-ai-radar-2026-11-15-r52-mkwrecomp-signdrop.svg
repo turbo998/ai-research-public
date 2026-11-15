@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg52" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#101829"/>
+      <stop offset="100%" stop-color="#0A111D"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="accentRose" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg52)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="218" height="26" rx="6" fill="#2563EB"/>
+  <text x="153" y="56" fill="#DBEAFE" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R52 (CUMULATIVE R354)</text>
+  <text x="276" y="56" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600">AOT AARCH64→C + SM86→SPIR-V STATIC RECOMPILATION &amp; WINDOWS CLFS .CNPF DEFENSIVE AUDIT</text>
+  <text x="44" y="92" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20.5" font-weight="800">adriadam10/mkw-recomp (★1,101 · 489-Commit AOT Recompiler) + MSNightmare/SignDrop (★422 · CLFS .cnpf Audit)</text>
+
+  <!-- Left Card: adriadam10/mkw-recomp -->
+  <rect x="28" y="130" width="602" height="446" rx="14" fill="#0B1324" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="28" y="130" width="602" height="42" rx="14" fill="url(#accentBlue)"/>
+  <text x="46" y="156" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">🏎️ adriadam10/mkw-recomp (★1,101 · MIT · AArch64→C + NVN2→Vulkan + SM86→SPIR-V)</text>
+
+  <text x="46" y="196" fill="#60A5FA" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Static Recompilation (Zero CPU JIT / Zero GPU Emulation)</text>
+  <text x="58" y="216" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Lifts ARMv8.1–8.3 AArch64 (LSE atomics, CAS, LDAPR) ahead-of-time to native x86-64 / Linux AArch64 C</text>
+  <text x="58" y="235" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Replaces 1,289 nn::* SDK imports by name &amp; 699 NVN2 functions (529 shared + 170 new) over Vulkan 1.3</text>
+
+  <text x="46" y="265" fill="#60A5FA" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. 489-Commit Disciplined AI Agent Engineering &amp; Frame Budget Breakdown</text>
+  <rect x="46" y="275" width="566" height="84" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="60" y="295" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">11,561 SM86 Shaders → Tested offline (SASS → GLSL → SPIR-V) before any GPU game run</text>
+  <text x="60" y="314" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">660M Frame Trace    → ~3ms game logic + ~19ms Vulkan submit record + ~10ms GPU (~32ms)</text>
+  <text x="60" y="333" fill="#FDE047" font-family="Consolas, monospace" font-size="11.5">60 FPS @ 2160p      → 16.7ms on RX 7900 XTX (Win) &amp; RX 9070 XT (Linux RADV)</text>
+  <text x="60" y="351" fill="#C4B5FD" font-family="Consolas, monospace" font-size="11.5">In-Run A/B Gate     → Measures perf inside same run (eliminates 12ms inter-run noise)</text>
+
+  <text x="46" y="384" fill="#60A5FA" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">3. Container Seccomp &amp; Mesh-Shader Fallback Mechanics</text>
+  <text x="58" y="404" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Task/mesh shaders fall back to compute shaders automatically when VK_EXT_mesh_shader is absent</text>
+  <text x="58" y="423" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Linux Docker/Podman requires userfaultfd in seccomp to track dirty game memory pages without slowdown</text>
+  <text x="58" y="442" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Zero copyrighted assets shipped; builds on user's machine from user-owned dump</text>
+
+  <rect x="46" y="462" width="566" height="96" rx="10" fill="#0B1D3A" stroke="#1D4ED8"/>
+  <text x="62" y="484" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Architectural Takeaway for AI Solution Architects:</text>
+  <text x="62" y="504" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">489 reviewed Claude Code commits in 10 days succeeded because of harness engineering: offline verification</text>
+  <text x="62" y="522" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">across all 11,561 shader programs, seconds-long frame-capture backend replay without launching the game,</text>
+  <text x="62" y="540" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">and within-run A/B timing to defeat 12ms run-to-run variance.</text>
+
+  <!-- Right Card: MSNightmare/SignDrop -->
+  <rect x="650" y="130" width="602" height="446" rx="14" fill="#0B1324" stroke="#E11D48" stroke-width="1.5"/>
+  <rect x="650" y="130" width="602" height="42" rx="14" fill="url(#accentRose)"/>
+  <text x="668" y="156" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">🛡️ MSNightmare/SignDrop (★422 · MIT · Windows CLFS .cnpf Mitigation Paradox)</text>
+
+  <text x="668" y="196" fill="#FB7185" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. When a Security Mitigation Introduces a New Attack Surface</text>
+  <text x="680" y="216" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Oct 2025 CLFS authentication mitigation adds .cnpf HMAC files (90-day learning Mode=1 → enforcement Mode=0)</text>
+  <text x="680" y="235" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• In CclfsContainer::Create, opening a .blf log also opens associated AddLogContainer paths &amp; signs empty containers</text>
+
+  <text x="668" y="265" fill="#FB7185" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Privileged Coercion &amp; DACL Inheritance Chain (Defensive Breakdown)</text>
+  <rect x="668" y="275" width="566" height="84" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="682" y="295" fill="#FCA5A5" font-family="Consolas, monospace" font-size="11.5">1. Standard User Setup  → Creates .blf + associated empty container with user-controlled DACL</text>
+  <text x="682" y="314" fill="#FDE047" font-family="Consolas, monospace" font-size="11.5">2. Privileged Coercion  → Triggers ServerMpUpdateEngineSignature + Object Manager symlink</text>
+  <text x="682" y="333" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">3. SYSTEM .cnpf Write   → clfs.sys creates missing .cnpf as SYSTEM but copies original user DACL!</text>
+  <text x="682" y="351" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">4. EDR Self-Defense Gap → File creation originates from AV's own process, bypassing driver filter</text>
+
+  <text x="668" y="384" fill="#FB7185" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">3. Enterprise Blue-Team Detection &amp; Why You Must NOT Blindly Disable CLFS Auth</text>
+  <text x="680" y="404" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Registry check: HKLM\SYSTEM\CurrentControlSet\Services\CLFS\Authentication\Mode (0/1 exposed; 2/3 not)</text>
+  <text x="680" y="423" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Catch-22: Disabling CLFS authentication re-exposes kernel memory corruption vulnerabilities in .blf parsing!</text>
+  <text x="680" y="442" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Defensive priority: Monitor non-system .blf/.cnpf creation + Object Manager symlink joins + ServerMp* RPCs</text>
+
+  <rect x="668" y="462" width="566" height="96" rx="10" fill="#2A0E1B" stroke="#BE123C"/>
+  <text x="684" y="484" fill="#FDA4AF" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Architectural Takeaway for AI Solution Architects:</text>
+  <text x="684" y="504" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Never assume `OBJ_FORCE_ACCESS_CHECK` at initial setup protects lazy side-effect file creation when</text>
+  <text x="684" y="522" fill="#E2E8F0" font-size="11.5" font-family="Segoe UI, Inter, sans-serif">a different privileged caller opens the handle later and inherits the untrusted file's DACL.</text>
+  <text x="684" y="540" fill="#E2E8F0" font-size="11.5" font-family="Segoe UI, Inter, sans-serif">Keep CLFS mitigation active while adding kernel ETW/Sysmon detection on .cnpf creation in protected dirs.</text>
+
+  <!-- Bottom FinOps & Quantitative Ledger -->
+  <rect x="28" y="592" width="1224" height="244" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="622" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">📊 Closed-Form FinOps &amp; Verification Harness Ledger (CLAIM-20261115-R52-MKWRECOMP-SIGNDROP · 8 Workloads/Mo @ $100/hr)</text>
+
+  <rect x="48" y="636" width="380" height="128" rx="10" fill="#1E1B2E" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="660" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path A: Full-Boot GPU Re-Runs + Manual Host Audits</text>
+  <text x="64" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• GPU Test Rig &amp; Audit Compute Cost: $2,020.00 / mo</text>
+  <text x="64" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Shader Debug &amp; SecOps Triage Labor: $4,150.00 / mo (41.5h)</text>
+  <text x="64" y="726" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total Monthly TCO: $6,170.00 / mo</text>
+  <text x="64" y="748" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11">12ms inter-run noise masks regressions; slow GPU boot loops</text>
+
+  <rect x="450" y="636" width="380" height="128" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="660" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path B: Partial Lifter + Blindly Disabling CLFS Auth</text>
+  <text x="466" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• GPU Test Rig &amp; Audit Compute Cost: $910.00 / mo</text>
+  <text x="466" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Shader Debug &amp; SecOps Triage Labor: $1,950.00 / mo (19.5h)</text>
+  <text x="466" y="726" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total Monthly TCO: $2,860.00 / mo (-53.65%)</text>
+  <text x="466" y="748" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Re-exposes kernel .blf memory corruption vulnerabilities</text>
+
+  <rect x="852" y="636" width="380" height="128" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.5"/>
+  <text x="868" y="660" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path C: mkw-recomp Harness + SignDrop Telemetry</text>
+  <text x="868" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Off-GPU CI &amp; Registry/ETW Audit Cost: $95.00 / mo</text>
+  <text x="868" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Harness &amp; Detection Rule Labor: $360.00 / mo (3.6h)</text>
+  <text x="868" y="726" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total: $455.00 / mo (-$5,715.00 / -92.63%)</text>
+  <text x="868" y="748" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="11">Saves $68,580.00/yr &amp; 37.9h/mo (-91.33%) · HW: not_measured</text>
+
+  <text x="48" y="792" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">Evidence SHA-256: trending=0307dc2ec8ad9e299810571ee903633f701ea55e9eec2a4235faf871940df463 · search=93010521222c56c591bcae9a80f7f4b395724b9c14b70bec86e5bf2e0f1306cc</text>
+  <text x="48" y="814" fill="#64748B" font-family="Segoe UI, Inter, sans-serif" font-size="11">Guardrail: Base hardware cost is explicitly labeled not_measured; SignDrop analysis is strictly defensive (monitoring .cnpf creation &amp; CLFS Mode).</text>
+</svg>

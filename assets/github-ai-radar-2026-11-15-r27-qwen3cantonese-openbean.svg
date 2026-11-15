@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR27" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060B14"/>
+      <stop offset="55%" stop-color="#0E172A"/>
+      <stop offset="100%" stop-color="#04070D"/>
+    </linearGradient>
+    <linearGradient id="accentAsr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="accentBean" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR27)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#451A03" stroke="#F59E0B" stroke-width="1"/>
+  <text x="199" y="59" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R27 · CUMULATIVE R329</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">Qwen3-ASR-Cantonese-HK v2.1 (NVFP4/GGUF) + OpenBean Local D3200 Driver &amp; MCP</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">3.89% FLEURS CER · 0.0% Hotword Parrot Rate · 8.4s/2.65h NVFP4 + Zero-Cloud BLE/Wi-Fi Decryption &amp; Read-Only openbean-mcp</text>
+
+  <!-- Left Panel: joe2643/qwen3-asr-cantonese-hk -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentAsr)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. joe2643/qwen3-asr-cantonese-hk (★74 · v2.1 Code-Switch &amp; Hotword ASR)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Breakthrough: Authentic HK Cantonese + English Code-Switching + 0.0% Parroting</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• FLEURS CER 3.89% (vs 20.97% Whisper-v3) · MCE Code-Switch CER 5.52% (vs 11.74% stock)</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• v2.1 cuts short-audio + long-hotword CER from 21.88% to 7.19% with 0.0% parrot rate</text>
+
+  <!-- 3 Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#23150B" stroke="#F59E0B"/>
+  <text x="152" y="318" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. NVFP4 vLLM Speed</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">2.05 GB NVFP4A16</text>
+  <text x="152" y="362" fill="#FDE68A" font-family="Consolas, monospace" font-size="11" text-anchor="middle">2.65h audio in 8.4s</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Single-clip p50 = 0.13s</text>
+  <text x="152" y="402" fill="#F59E0B" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">5x faster than FP8</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="360" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. GGUF Edge / llama.cpp</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">1.7B Q4_K_M: 1.1 GB</text>
+  <text x="360" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11" text-anchor="middle">0.6B Q4_K_M: 397 MB</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">0.45s / 3s clip on CPU</text>
+  <text x="360" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Ships in macOS OraType</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="568" y="318" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. 0.0% Hotword Parrot</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">210-clip stress suite</text>
+  <text x="568" y="362" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Homophone distractors</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">6.54% CER (0.0% parrot)</text>
+  <text x="568" y="402" fill="#818CF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">System-prompt glossary</text>
+
+  <!-- ASR Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">6-Target Deployment Matrix (1.7B v2.1 &amp; 0.6B · SHA-256 Pinned)</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Server GPU: joe2643/Qwen3-ASR-1.7B-Cantonese-HK-NVFP4 (vLLM 0.13s p50)</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Desktop CPU: llama-server -m Qwen3-ASR-1.7B-Cantonese-HK.Q4_K_M.gguf</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Edge 611MB: Qwen3-ASR-0.6B-Cantonese-HK.Q4_K_M.gguf + mmproj-Q8_0.gguf</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• ComfyUI: comfyui/qwen3_asr_1.7b_cantonese_hk_bf16.safetensors</text>
+
+  <!-- Right Panel: imraywang/openbean -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentBean)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. imraywang/openbean (★73 · Local D3200 Driver &amp; Read-Only MCP)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Zero-Cloud Wearable Audio Stack for soundcore Work (D3200 · FW 04.82)</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Direct BLE (2x real-time resumable) + Wi-Fi sync &amp; local decryption on macOS / iOS 26</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Audio never leaves your Mac: sherpa-onnx + SenseVoice-Small + Silero VAD (~250 MB)</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#0A222E" stroke="#06B6D4"/>
+  <text x="752" y="317" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. Heart Mode &amp; Safe Delete</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Dock in case -&gt; auto sync &amp; split</text>
+  <text x="752" y="360" fill="#A5F3FC" font-family="Consolas, monospace" font-size="11.5">Writes daily diary &amp; Obsidian MD</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Deletes from recorder ONLY after</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">complete checked copy is on Mac</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="1064" y="317" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Privacy-Gated openbean-mcp</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">stdio read-only MCP server</text>
+  <text x="1064" y="360" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11.5">List, read &amp; search transcripts</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Heart-mode lifelogs hidden from</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">agents by default unless allowed</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Sovereign Voice Intelligence: Hardware Decryption -&gt; Local ASR -&gt; Agent MCP</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Layer 1 (Hardware): OpenBean pulls &amp; decrypts D3200 audio over BLE/Wi-Fi</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Layer 2 (ASR Engine): Transcribe via local SenseVoice or Qwen3-ASR-Cantonese GGUF</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Layer 3 (Agent Access): Claude Code queries meetings via read-only openbean-mcp</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Zero vendor cloud lock-in, zero firmware modification, zero audio leakage</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R27-QWEN3CANTONESE-OPENBEAN · 18k ASR Hours + 50 Recorders/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Cloud ASR APIs + Vendor Recorder SaaS</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$6,020.00/mo ($2,020.00 SaaS + 40.0h / $4,000.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Stock Whisper-v3 + Manual USB Scripts</text>
+  <rect x="395" y="716" width="349" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="759" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,840.00/mo ($940.00 GPU + 19.0h / $1,900.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: Qwen3-Cantonese v2.1 + OpenBean MCP</text>
+  <rect x="395" y="758" width="56" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="466" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$455.00/mo ($105.00 compute + 3.5h / $350.00) · -92.44%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,565.00/mo (-92.44%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $66,780.00/yr · 36.5h/mo Saved (-91.25%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#F59E0B"/>
+  <text x="690" y="824" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Cantonese-English ASR: 3.89% FLEURS · 5.52% MCE</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">0.0% Hotword Parrot Rate · NVFP4 8.4s / 2.65h Audio</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#06B6D4"/>
+  <text x="1130" y="824" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">OpenBean: BLE/Wi-Fi Local Decrypt + openbean-mcp</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Read-Only Offline MCP · Heart-Mode Opt-In Privacy Gate</text>
+</svg>

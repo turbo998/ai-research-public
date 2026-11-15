@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg45" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentCyan45" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0891B2"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="accentTeal45" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg45)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#083344" stroke="#06B6D4" stroke-width="1"/>
+  <text x="162" y="55" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R45 (CUMULATIVE R347)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">VoxMel-0.6B (1.15% WER Wavelet AR TTS) + Jev-Interaction (System-1 Full-Duplex Voice)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">VoxDance-Lab/VoxMel (★43 · 2-Axis Haar Mel · Frozen-Head GRPO · 0.753 EN SIM) + native-bond-lab/Jev-Interaction (★42 · 0.06 False Pause · 4.61/5 Relevance)</text>
+
+  <!-- Left Column: VoxDance-Lab/VoxMel -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentCyan45)"/>
+  <text x="62" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🎙️ VoxDance-Lab/VoxMel — Wavelet-Factorized Tokenizer-Free AR TTS</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. 2-Axis Haar Wavelet Split</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• No learned acoustic tokenizer</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Coarse-Mel AR @ 46.875 Hz (flow head)</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• 2 NAR residual tiers (time + freq)</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Seed-TTS-eval SOTA (0.6B)</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Base 0.6B: 1.51% EN WER / 0.738 SIM</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• + GRPO: 1.15% EN WER / 0.753 SIM</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• ZH CER 1.17% / SIM 0.776 (100K hrs)</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#0891B2" stroke-width="1"/>
+  <text x="62" y="346" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Residual Isolation Outside AR History &amp; Independent Text/Speaker CFG</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• High-frequency residuals never re-enter AR context (prevents drift)</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Independent `cfg_text_strength=3.5` &amp; `cfg_spk_strength=3.0` + 24kHz Vocos</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• 0.6B model beats CosyVoice 3 (1.1B), Qwen3-TTS (1.7B) &amp; MOSS-TTS (8.0B)</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">SEED-TTS-EVAL ENGLISH WORD ERROR RATE (LOWER IS BETTER)</text>
+  <rect x="62" y="480" width="130" height="18" rx="4" fill="#10B981"/>
+  <text x="202" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">VoxMel-0.6B + GRPO: 1.15% WER (0.753 SIM · 100K hrs)</text>
+  <rect x="62" y="508" width="230" height="18" rx="4" fill="#475569"/>
+  <text x="302" y="522" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">CosyVoice 3 (1.1B): 2.02% WER · Qwen3-TTS (1.7B): 1.66%</text>
+
+  <!-- Right Column: native-bond-lab/Jev-Interaction -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentTeal45)"/>
+  <text x="686" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🗣️ native-bond-lab/Jev-Interaction — System-1 Full-Duplex Turn Judge</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. 5 Explicit Decision Gates</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `turn`, `listen`, `floor`, `cut_in`, `quiet`</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 4 blended paces (normal/patient/...)</text>
+  <text x="684" y="289" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• 8 YAML personas (support, tutor...)</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Full-Duplex-Bench Leader</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• False pause take: 0.06 (vs 0.10/0.12)</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Interruption relevance: 4.61 / 5.0</text>
+  <text x="974" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Talks through `"mm-hm"` backchannels</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#059669" stroke-width="1"/>
+  <text x="686" y="346" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Zero Session Caps (`~200 tok/min`, `$0.002/reply`) &amp; Deterministic Call Replay</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Any STT + Jev + Any LLM + Any TTS (e.g., VoxMel) without vendor lock-in</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Every turn decision logs exact state + choice probabilities for offline replay</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• No 15–60 min Realtime API session limit; 400-sample benchmark costs ~$2</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">FULL-DUPLEX-BENCH V1.0 REAL PAUSES MISTAKEN FOR TURNS (LOWER IS BETTER)</text>
+  <rect x="686" y="480" width="180" height="18" rx="4" fill="#10B981"/>
+  <text x="876" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Jev-Interaction: 0.06 (#1 Zero-Shot · 4.61/5 Relevance)</text>
+  <rect x="686" y="508" width="360" height="18" rx="4" fill="#EF4444"/>
+  <text x="1056" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">GPT-Realtime: 0.12 (Gemini: 0.10)</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R45-VOXMEL-JEVINTERACTION · 40k Duplex Voice Mins + 50 Persona Cycles/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Proprietary Realtime API + Voice SaaS</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Realtime Audio &amp; Cloning SaaS: $2,080.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Black-Box Cutoff Triage (40.0h × $100): $4,000.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Stops within 0.7s on `"mm-hm"` + 15–60m session caps</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $6,080.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 40.0 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: VAD Timer Cascade + 1.7B Codec TTS</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• GPU Serving &amp; Token Spend: $940.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Pause/Codec Tuning (18.5h × $100): $1,850.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Cuts off slow numbers + acoustic tokenizer bottleneck</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,790.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-54.11% vs Path A (18.5 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: Jev-Interaction + VoxMel-0.6B GRPO</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Jev (~200 tok/m) &amp; 0.6B GPU: $105.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• YAML Profile &amp; Replay Ops (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,625.00/mo (-92.52%) · $67,500.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $455.00 / mo (-92.52%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 36.5 eng hrs/mo (-91.25% labor)</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgR12" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#172646"/>
+    </linearGradient>
+    <linearGradient id="cardR12" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bgR12)"/>
+  <rect x="24" y="24" width="1352" height="812" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="92" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="74" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">2026-11-15 NIGHT SHIFT ROUND 12 (CUMULATIVE R314) · CLAIM-20261115-R12-EXECORCHESTRA-COORDINATOR</text>
+  <text x="68" y="104" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">三态生成域异构编排 (ExecOrchestra) 与 Herdr 三并发舰队总管 (Coordinator) 选型 FAQ</text>
+  <text x="68" y="124" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">AgenticOrgLab/ExecOrchestra (★109, Direct/Localized/Extended 三模路由) + petekp/coordinator (★32, 3-Delegate Worktree + fleet-sweep) · 月省 $5,320.00 (-91.88%)</text>
+
+  <!-- Left Card: AgenticOrgLab/ExecOrchestra -->
+  <rect x="44" y="150" width="644" height="360" rx="14" fill="url(#cardR12)" stroke="#38BDF8" stroke-width="1.3"/>
+  <text x="68" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">1. AgenticOrgLab/ExecOrchestra (★109 · 2026-11-12 · Python + Docker + CoEvoke)</text>
+  <text x="68" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">按子任务生成自由度分级路由 Tools / Models / Skills / Agents 的异构编排器</text>
+  <text x="68" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 模式 1 [Direct 直执模式]：计划锁定操作与入参，工具直接执行，零中间 LLM 调用开销</text>
+  <text x="68" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 模式 2 [Localized 局部生成]：模型只写短处理脚本，读写与重计算全部交由确定性工具</text>
+  <text x="68" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 模式 3 [Extended 扩展自治]：仅在需动态判断时开放受限工具集与会话步数上限的 Agent 循环</text>
+  <text x="68" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 配套 CoEvoke 数据集 + Qwen3-Embedding-4B 候选构建 + sgar-runtime:rc1 封印容器运行环境</text>
+  <rect x="68" y="330" width="596" height="160" rx="10" fill="#0B1325" stroke="#1E3A8A"/>
+  <text x="86" y="356" fill="#60A5FA" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">ExecOrchestra 3-Scope Heterogeneous Dispatch:</text>
+  <text x="86" y="382" fill="#34D399" font-family="Consolas, monospace" font-size="12">1. Direct Mode:    Plan -&gt; Deterministic Tool (0 LLM tokens)</text>
+  <text x="86" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">2. Localized Mode: Plan -&gt; 1-Shot Model Script -&gt; Tool I/O &amp; Compute</text>
+  <text x="86" y="434" fill="#F59E0B" font-family="Consolas, monospace" font-size="12">3. Extended Mode:  Plan -&gt; Bounded Agent Loop (Permitted Tools + Cap)</text>
+  <text x="86" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">• Runtime Seal:    sgar-runtime:rc1 + Qwen3-Embedding-4B Candidate Router</text>
+
+  <!-- Right Card: petekp/coordinator -->
+  <rect x="708" y="150" width="648" height="360" rx="14" fill="url(#cardR12)" stroke="#34D399" stroke-width="1.3"/>
+  <text x="732" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">2. petekp/coordinator (★32 · 2026-11-15 · MIT · Claude Code + Herdr + Codex)</text>
+  <text x="732" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">把 1 个 Claude Code 会话变成统管最多 3 路并发 Worktree 子会话的工程经理</text>
+  <text x="732" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 持久化 Markdown Backlog：跨重启记录领域边界、已批准原则、进行中与已完成任务</text>
+  <text x="732" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 3-Delegate 并发硬上限 + PR 数量封顶：每任务独立 Git Worktree + Herdr 标签页 + REPORT.md</text>
+  <text x="732" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• fleet_watch.py 事件唤醒 + 24h 静默休眠：PR 合并/CI 挂掉/子会话提问时自动唤醒总管</text>
+  <text x="732" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 最多 5 题批量请示 + fleet-sweep 防丢代码清理：自动清理已完结分支/标签，未合入变更绝不强删</text>
+  <rect x="732" y="330" width="600" height="160" rx="10" fill="#0B1325" stroke="#065F46"/>
+  <text x="750" y="356" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">Coordinator + Herdr Fleet Lifecycle:</text>
+  <text x="750" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• /coordinator &lt;domain&gt; -&gt; Spawns &lt;=3 Delegates (Git Worktree + Herdr Tab)</text>
+  <text x="750" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• fleet_watch.py -&gt; Wakes on REPORT.md, stuck delegate, or gh PR CI/review</text>
+  <text x="750" y="434" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">• Batched Escalation -&gt; &lt;=5 irreversible questions w/ options &amp; recommendation</text>
+  <text x="750" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">• fleet-sweep -&gt; Prunes finished worktrees/tabs (refuses unmerged data loss)</text>
+
+  <!-- Bottom FinOps Box -->
+  <rect x="44" y="528" width="1312" height="286" rx="14" fill="url(#cardR12)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="560" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261115-R12-EXECORCHESTRA-COORDINATOR · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="584" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月编排 2,400 次多步异构数据处理流水线 + 调度 180 个并发 Git Worktree/PR 编码子任务（时薪 r = $100.00/hr；宿主机硬件：not_measured）</text>
+
+  <text x="68" y="620" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (全步骤无约束 Agent 循环 + 手工盯 10+ 终端标签页)</text>
+  <rect x="440" y="604" width="579" height="22" rx="5" fill="#EF4444"/>
+  <text x="1032" y="620" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,790.00/mo ($1,890.00 tokens + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="658" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (死板静态 DAG + 手写 git worktree 脚本无 PR 唤醒)</text>
+  <rect x="440" y="642" width="276" height="22" rx="5" fill="#F59E0B"/>
+  <text x="728" y="658" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,760.00/mo ($910.00 tokens + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="696" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (ExecOrchestra 三态路由 + Coordinator 3-Delegate 总管)</text>
+  <rect x="440" y="680" width="47" height="22" rx="5" fill="#10B981"/>
+  <text x="500" y="696" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$470.00/mo ($120.00 tokens + 3.5h × $100 = $350.00) → 净省 $5,320.00/月 (-91.88% / 年省 $63,840.00)</text>
+
+  <line x1="68" y1="720" x2="1332" y2="720" stroke="#334155"/>
+  <text x="68" y="748" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="bold">🎯 ARCHITECT ROLLOUT DIRECTIVE:</text>
+  <text x="68" y="772" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">1. 复杂任务编排引入 ExecOrchestra：将确定性步骤锁进 Direct 模式（零 LLM 调用）、代码生成锁进 Localized 模式，仅对模糊探索开启 Extended 模式。</text>
+  <text x="68" y="796" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">2. 多任务并行开发采用 petekp/coordinator + Herdr：通过 3 并发上限、fleet_watch.py 自动跟进 PR 状态，并用 fleet-sweep 安全回收已合并 Worktree。</text>
+</svg>

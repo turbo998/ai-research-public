@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR29" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060A13"/>
+      <stop offset="55%" stop-color="#0E1729"/>
+      <stop offset="100%" stop-color="#04070D"/>
+    </linearGradient>
+    <linearGradient id="accentEnsp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="accentLog" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR29)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1"/>
+  <text x="199" y="59" fill="#BFDBFE" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R29 · CUMULATIVE R331</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">dsh-ensp 17-Tool Huawei eNSP MCP Engine + dsh-runtime-log Bounded JSONL Sink</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">UIPI/Occlusion-Safe eNSP Lab Automation, Idempotent VRP Push &amp; OSPF Polling + 0-Dep Cordis 4.1.0 Rotating WARN/ERROR Logger</text>
+
+  <!-- Left Panel: lizi600jin/dsh-ensp -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentEnsp)"/>
+  <text x="58" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. lizi600jin/dsh-ensp (★83 · CLI + 17-Tool MCP + DSH Network Lab Engine)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Solves 6 Classic Desktop Simulator Traps Across 16 Models &amp; 50 Scenarios</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• 7-check ensp doctor (UIPI SendInput tick, VBox images, DPI anchors &amp; zombie lock cleanup)</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Full 2-router OSPF lab (topo -&gt; boot -&gt; push -&gt; Full convergence) in 128s while minimized</text>
+
+  <!-- 3 Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#101E36" stroke="#3B82F6"/>
+  <text x="152" y="318" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. UIPI &amp; Occlusion Gate</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">WindowFromPoint 5×4 grid</text>
+  <text x="152" y="362" fill="#BFDBFE" font-family="Consolas, monospace" font-size="11" text-anchor="middle">SendInput tick verify</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">ensp images --install</text>
+  <text x="152" y="402" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">125%/150% DPI aware</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="360" y="318" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Idempotent VRP Push</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Prompt-after-echo check</text>
+  <text x="360" y="362" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Skips &quot;already exists&quot;</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">waitForOspfFull polling</text>
+  <text x="360" y="402" fill="#818CF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">48 curated assertions</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="568" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. Ground-Truth .docx</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">ensp report --out .docx</text>
+  <text x="568" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11" text-anchor="middle">display current-config</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Exit 3 on unverified</text>
+  <text x="568" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Records live device truth</text>
+
+  <!-- dsh-ensp Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Deterministic 6-Command Network Lab Pipeline (CLI / 17-Tool MCP)</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• ensp doctor --topology lab.topo   # Verify VBox, RAM, images &amp; UIPI tick</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• ensp preset ospf-single --topo lab.topo &amp;&amp; ensp up lab.topo</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• ensp apply ./configs --topology lab.topo --save &amp;&amp; ensp verify ospf-single</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• ensp report ospf-single --topology lab.topo --out ospf-single.docx</text>
+
+  <!-- Right Panel: WforEvery/dsh-runtime-log -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentLog)"/>
+  <text x="738" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. WforEvery/dsh-runtime-log (★67 · Bounded Rotating JSONL Logger)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Zero-Dependency Cordis 4.1.0 WARN/ERROR Exporter for DSH 0.2.2-rc.1</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Writes host-&lt;pid&gt;-&lt;uuid&gt;.jsonl (5 MiB × 4 segments, 16-run retention) with 0 network calls</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Tested across 20 live Cordis context reloads on Node 24.16.0 / 24.21.0 (Windows x64)</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="752" y="317" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. Ref-Counted Sink &amp; sn Dedup</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">1 shared sink per normalized dir</text>
+  <text x="752" y="360" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11.5">Per-root sequence number (sn)</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Eliminates duplicate fiber writes</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">across 20+ hot context reloads</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#1F160B" stroke="#F59E0B"/>
+  <text x="1064" y="317" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Bounded Queue &amp; Safe Stacks</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">2,000 records / 1 MiB max queue</text>
+  <text x="1064" y="360" fill="#FDE68A" font-family="Consolas, monospace" font-size="11.5">16 KiB max entry + secret redact</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Skips lazy getter Error.stack</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Protects timed-out OS writes</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Defensive Runtime Telemetry Invariants (log-sink.js &amp; retention.js)</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Invariant 1: Never invoke accessor/getter Error.stack -&gt; writes [Stack unavailable]</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Invariant 2: Hostile/invalid config falls back safely to defaults without throwing</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Invariant 3: Close-timeout runs stay in protected set so retention never deletes live IO</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Zero UI/prompt/session intrusion: registers only a pure Cordis logger exporter</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R29-DSHENSP-DSHRUNTIMELOG · 180 eNSP Labs + 60 DSH Seats/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Manual eNSP Clicks + Ephemeral Logs</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,660.00/mo ($1,760.00 VM/sim + 39.0h / $3,900.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Fragile AHK Scripts + Naive File Log</text>
+  <rect x="395" y="716" width="353" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="763" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,700.00/mo ($850.00 sim + 18.5h / $1,850.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: dsh-ensp 17-Tool MCP + dsh-runtime-log</text>
+  <rect x="395" y="758" width="58" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="468" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$445.00/mo ($95.00 compute + 3.5h / $350.00) · -92.14%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,215.00/mo (-92.14%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $62,580.00/yr · 35.5h/mo Saved (-91.03%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#3B82F6"/>
+  <text x="690" y="824" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">dsh-ensp: 16 Device Models · 50 Labs · 17 MCP Tools</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">UIPI Doctor + Idempotent Push + Live-Config .docx Report</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#F59E0B"/>
+  <text x="1130" y="824" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">dsh-runtime-log: 2,000-Rec / 1 MiB Queue · 16 Runs</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Per-Root sn Dedup · Safe Error Stacks · 0 Runtime Deps</text>
+</svg>

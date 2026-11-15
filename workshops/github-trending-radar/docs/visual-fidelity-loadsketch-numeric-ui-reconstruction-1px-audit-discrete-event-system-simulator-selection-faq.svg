@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg47" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentBlue47" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="accentOrange47" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg47)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#172554" stroke="#3B82F6" stroke-width="1"/>
+  <text x="162" y="55" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R47 (CUMULATIVE R349)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">visual-fidelity (1px DOM-Attributed UI Audit) + loadsketch (M/G/c System Design Simulator)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">linggan121/visual-fidelity (★46 · Pixel+1px Box+DOM Attribution · 22 Rules) + minchenlee/loadsketch (★38 · 47 Failure Modes · Terraform Import · 24/25 M/G/c Checks)</text>
+
+  <!-- Left Column: linggan121/visual-fidelity -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentBlue47)"/>
+  <text x="62" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🎯 linggan121/visual-fidelity — 3-Layer Numeric UI Reconstruction Audit</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Pixel + 1px Box + Attribution</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Pixel: structural diff ratio &amp; heatmap</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Geometry: &gt;=1px box drift = FAIL</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Attribution: maps diff pixels to DOM</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Deterministic Verdict Ladder</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Missing evidence -&gt; `UNVERIFIED`</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Image ref -&gt; `READY WITH SUBSTITUTIONS`</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Glyph floor -&gt; `DECLARED FLOOR`</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#2563EB" stroke-width="1"/>
+  <text x="62" y="346" fill="#60A5FA" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. 22 Executable Protocol Rules (`protocol.md`) &amp; Anti-Copy Source Ban</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• 6 CLIs (`probe`), 9 analysis modules &amp; 6 offline unit tests (`verdict.test.mjs`)</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Forbids reading reference site source code (tests reconstruction, not copying)</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Tool-issued verdicts prevent coding agents from self-certifying broken layouts</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">FRONTEND RECONSTRUCTION DEFECT LOCALIZATION PRECISION</text>
+  <rect x="62" y="480" width="430" height="18" rx="4" fill="#3B82F6"/>
+  <text x="500" y="494" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">1px Box + DOM Node</text>
+  <rect x="62" y="508" width="130" height="18" rx="4" fill="#475569"/>
+  <text x="202" y="522" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">Whole-Page Pixel Diff Only: No DOM Blame · Subjective Thresholds</text>
+
+  <!-- Right Column: minchenlee/loadsketch -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentOrange47)"/>
+  <text x="686" y="175" fill="#1E1303" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">⚡ minchenlee/loadsketch — Discrete-Event System &amp; Terraform Simulator</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. M/G/c Validated Engine</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• M/M/1 mean &lt;5%, p99 &lt;10% error</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 24/25 accuracy checks pass</text>
+  <text x="684" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Chronological `"Why it happened"`</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Terraform Plan Importer</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Imports ECS/Lambda/RDS/SQS/Aurora</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 16 component types · 47 examples</text>
+  <text x="974" y="289" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• 8 on-call drills + 3 budget puzzles</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#D97706" stroke-width="1"/>
+  <text x="686" y="346" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Headless CLI (`cli/loadsketch.ts`), 4-Way Diff &amp; Token-Thrifty Agent Skill</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `loadsketch/design@1` &amp; `scenario@1` Zod schemas + `#` hash zero-server share URLs</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Compare up to 4 versions side-by-side under identical seeded traffic</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Claude Code `SKILL.md` + per-component `reference.md` for surgical edits</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">ARCHITECTURE REVIEW COVERAGE (STATIC DIAGRAM VS DISCRETE-EVENT SIM)</text>
+  <rect x="686" y="480" width="440" height="18" rx="4" fill="#10B981"/>
+  <text x="1134" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">47 Scenarios</text>
+  <rect x="686" y="508" width="90" height="18" rx="4" fill="#EF4444"/>
+  <text x="786" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">Static Whiteboard: 0 Retry-Storm / Queue Saturation Visibility</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R47-VISUALFIDELITY-LOADSKETCH · 30 UI Reconstructions + 25 Arch Reviews/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Eyeball UI QA + Staging Load Clusters</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Staging Load Clusters &amp; Outages: $1,960.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Manual CSS &amp; Incident QA (40.0h × $100): $4,000.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Agent self-grades broken UI + retry storms hit prod</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $5,960.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 40.0 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: Raw Pixel Diff + Spreadsheet Capacity</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Compute &amp; Tooling Spend: $880.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Unattributed Diff Triage (18.5h × $100): $1,850.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• No DOM node blame + static math misses retry cascades</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,730.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-54.19% vs Path A (18.5 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: visual-fidelity + loadsketch CLI</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Local Playwright &amp; CLI Sim: $95.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated Verdict &amp; Sim Ops (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,515.00/mo (-92.53%) · $66,180.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $445.00 / mo (-92.53%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 36.5 eng hrs/mo (-91.25% labor)</text>
+</svg>

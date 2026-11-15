@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg51" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0E172A"/>
+      <stop offset="100%" stop-color="#09131E"/>
+    </linearGradient>
+    <linearGradient id="accentViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg51)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="218" height="26" rx="6" fill="#4F46E5"/>
+  <text x="153" y="56" fill="#E0E7FF" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R51 (CUMULATIVE R353)</text>
+  <text x="276" y="56" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600">RESUMABLE COW ZSTD ASSET PIPELINE &amp; STATEFUL PURE-HTTP ONBOARDING PROTOCOL AUDIT</text>
+  <text x="44" y="92" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20.5" font-weight="800">nankhor/kite-pack (CoW ZSTD + AVA1 Resumable Pipeline) + duwqijlk/muse-protocol (Stateful HTTP + vm/wake Gate)</text>
+
+  <!-- Left Card: nankhor/kite-pack -->
+  <rect x="28" y="130" width="602" height="446" rx="14" fill="#0B1324" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="28" y="130" width="602" height="42" rx="14" fill="url(#accentViolet)"/>
+  <text x="46" y="156" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">📦 nankhor/kite-pack (★55 · GPL-3.0 · Rust + Tauri 2 + C kite-helper.elf)</text>
+
+  <text x="46" y="196" fill="#818CF8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Crash-Resumable 5-Step Pipeline &amp; Read-Only Console Telemetry</text>
+  <text x="58" y="216" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• kite-pipeline persists every step transition (pack → trash original → AVA1 send → DLC → cleanup)</text>
+  <text x="58" y="235" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Read-only inspection of /user/appmeta, /user/app, /user/patch &amp; /user/addcont (never blind-sends)</text>
+
+  <text x="46" y="265" fill="#818CF8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Copy-on-Write (CoW) DLC/Backport Folding &amp; Integrity Guard</text>
+  <rect x="46" y="275" width="566" height="84" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="60" y="295" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">CoW Clone         → APFS / btrfs / XFS zero-copy clone before folding addcontN &amp; dlc_emu.ini</text>
+  <text x="60" y="314" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">PS5 Dump Forge    → ZSTD compression (--level fast|medium|max; folder/exfat/ffpkg/ffpfs)</text>
+  <text x="60" y="333" fill="#FDE047" font-family="Consolas, monospace" font-size="11.5">kite-helper.elf   → AVA1 C node on port 9021; writes strictly scoped to /data &amp; /mnt</text>
+  <text x="60" y="351" fill="#C4B5FD" font-family="Consolas, monospace" font-size="11.5">--delete-original → Moves source to Trash ONLY after packed output verified &amp; source unchanged</text>
+
+  <text x="46" y="384" fill="#818CF8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">3. Cross-Platform CLI &amp; Tauri 2 Desktop Architecture</text>
+  <text x="58" y="404" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 6 Rust workspace crates (kite-pipeline, kite-forge, kite-session, kite-ps5, kite-cli) + C helper</text>
+  <text x="58" y="423" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Bundled dlc_emu 0.3 (GPL-3.0) automatically injects fakelib/ modules only when dump lacks its own</text>
+  <text x="58" y="442" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Rejects invalid inputs early (PS4 titles, retail/patch PKGs, standalone DLC, or already-packed dirs)</text>
+
+  <rect x="46" y="462" width="566" height="96" rx="10" fill="#111633" stroke="#4F46E5"/>
+  <text x="62" y="484" fill="#A5B4FC" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Architectural Takeaway for AI Solution Architects:</text>
+  <text x="62" y="504" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">When building multi-enclave edge model/asset distribution pipelines, never mutate golden directories</text>
+  <text x="62" y="522" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">in place: clone via APFS/btrfs/XFS copy-on-write, fold overlays into the clone, checkpoint every</text>
+  <text x="62" y="540" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">pipeline state transition to disk, and pre-query target inventory (/user/appmeta) before streaming.</text>
+
+  <!-- Right Card: duwqijlk/muse-protocol -->
+  <rect x="650" y="130" width="602" height="446" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="650" y="130" width="602" height="42" rx="14" fill="url(#accentEmerald)"/>
+  <text x="668" y="156" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">🔐 duwqijlk/muse-protocol (★952 · Python Pure-HTTP Stateful Protocol Client)</text>
+
+  <text x="668" y="196" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Hidden Server State Gates Uncovered by Packet-Level Diffing</text>
+  <text x="680" y="216" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 11-step state machine: /restart ({resume:false}) → OTP → register-completion → session/bootstrap</text>
+  <text x="680" y="235" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Parses Next Flight dynamic disclosure (HATCH_ROW_v0) + detects resolvedDestination/isGeoGated</text>
+
+  <text x="668" y="265" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Why Naive HTTP Clients Get False "invalid" &amp; 403 Errors</text>
+  <rect x="668" y="275" width="566" height="84" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="682" y="295" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">POST /api/hatch/vm/wake → Mandatory (wake_trigger="mount", away_ms=0) or redeem returns invalid!</text>
+  <text x="682" y="314" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">confirm-otp             → Requires supports_muse_link_transparency: true</text>
+  <text x="682" y="333" fill="#FDE047" font-family="Consolas, monospace" font-size="11.5">accept-tos              → Must echo live Next Flight disclosureText (never hardcoded strings)</text>
+  <text x="682" y="351" fill="#FCA5A5" font-family="Consolas, monospace" font-size="11.5">Memory-Only Tokens      → frl_access_token &amp; hatch_sess (~886 chars) never written to disk</text>
+
+  <text x="668" y="384" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">3. Sticky-Proxy Scheduler &amp; Idempotent OTP Polling (musepy/runner.py)</text>
+  <text x="680" y="404" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Exclusive per-worker sticky proxy claim/release with max_per_ip=6 cap &amp; pre-send 3x proxy retry</text>
+  <text x="680" y="423" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Halts entire batch immediately on post-OTP business rejection or region_waitlist (zero email waste)</text>
+  <text x="680" y="442" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Idempotent OTP poller only accepts 6-digit codes timestamped strictly after send_otp (45s/0.6s)</text>
+
+  <rect x="668" y="462" width="566" height="96" rx="10" fill="#06281E" stroke="#059669"/>
+  <text x="684" y="484" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Architectural Takeaway for AI Solution Architects:</text>
+  <text x="684" y="504" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Modern web backends enforce implicit state-machine preconditions (like requiring vm/wake before</text>
+  <text x="684" y="522" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">invite redemption or echoing RSC/Next Flight dynamic TOS payloads). Pure-HTTP state machines with</text>
+  <text x="684" y="540" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">pre-send vs post-send retry split and in-memory-only credentials eliminate headless browser overhead.</text>
+
+  <!-- Bottom FinOps & Quantitative Ledger -->
+  <rect x="28" y="592" width="1224" height="244" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="622" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">📊 Closed-Form FinOps &amp; Protocol Automation Ledger (CLAIM-20261115-R51-KITEPACK-MUSEPROTOCOL · 10 Workloads/Mo @ $100/hr)</text>
+
+  <rect x="48" y="636" width="380" height="128" rx="10" fill="#1E1B2E" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="660" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path A: Full-Copy Transfers + Headless Browser Grid</text>
+  <text x="64" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Storage, Bandwidth &amp; Browser Compute: $1,940.00 / mo</text>
+  <text x="64" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Retry, Re-Pack &amp; Selector Maintenance: $4,000.00 / mo (40.0h)</text>
+  <text x="64" y="726" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total Monthly TCO: $5,940.00 / mo</text>
+  <text x="64" y="748" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11">2x disk duplication + high RAM Chromium protocol runners</text>
+
+  <rect x="450" y="636" width="380" height="128" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="660" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path B: Ad-Hoc Zstd Scripts + Stateless cURL Loops</text>
+  <text x="466" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Storage, Bandwidth &amp; Runner Compute: $880.00 / mo</text>
+  <text x="466" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Manual Crash Resume &amp; 403 Debugging: $1,900.00 / mo (19.0h)</text>
+  <text x="466" y="726" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total Monthly TCO: $2,780.00 / mo (-53.20%)</text>
+  <text x="466" y="748" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Fails on dynamic Next Flight TOS &amp; missing vm/wake calls</text>
+
+  <rect x="852" y="636" width="380" height="128" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.5"/>
+  <text x="868" y="660" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path C: kite-pack CoW + muse-protocol (Recommended)</text>
+  <text x="868" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Storage, Bandwidth &amp; Pure-HTTP Compute: $95.00 / mo</text>
+  <text x="868" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Pipeline &amp; Protocol Supervision Labor: $350.00 / mo (3.5h)</text>
+  <text x="868" y="726" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total: $445.00 / mo (-$5,495.00 / -92.51%)</text>
+  <text x="868" y="748" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="11">Saves $65,940.00/yr &amp; 36.5h/mo (-91.25%) · HW: not_measured</text>
+
+  <text x="48" y="792" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">Evidence SHA-256: trending=0307dc2ec8ad9e299810571ee903633f701ea55e9eec2a4235faf871940df463 · search=93010521222c56c591bcae9a80f7f4b395724b9c14b70bec86e5bf2e0f1306cc</text>
+  <text x="48" y="814" fill="#64748B" font-family="Segoe UI, Inter, sans-serif" font-size="11">Guardrail: Base device/host hardware cost is explicitly labeled not_measured; muse-protocol is for non-commercial protocol research only.</text>
+</svg>

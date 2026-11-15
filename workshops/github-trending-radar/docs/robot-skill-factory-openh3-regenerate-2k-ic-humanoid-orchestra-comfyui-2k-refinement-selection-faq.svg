@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg40" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentBlue40" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="accentPink40" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DB2777"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg40)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#172554" stroke="#3B82F6" stroke-width="1"/>
+  <text x="162" y="55" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R40 (CUMULATIVE R342)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Robot Skill Factory (Zero-Reset Humanoid ORCHESTRA) + Open-H3-Regenerate-2K-IC ComfyUI</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">IoET-y/robot-skill-factory (★50 · 8192/8192 Pairs · 127k Lineage · 688s-&gt;27s) + slmonker/ComfyUI-OpenH3Regenerate2KIC (★50 · 312-&gt;208 LoRA · up3 2K 124f)</text>
+
+  <!-- Left Column: IoET-y/robot-skill-factory -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentBlue40)"/>
+  <text x="62" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🤖 IoET-y/robot-skill-factory — Recursive Self-Improving Humanoid Control</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. ORCHESTRA Zero-Reset Sim</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 896/896 worlds (7 plans, 0 resets)</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 8,192/8,192 across 256 skill pairs</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• 448/448 walk handovers (0 falls)</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Replay &amp; Regression Gate</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `rsf-bench v0`: 21/37 -&gt; 31/37</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Reuse cuts acquisition 688s -&gt; 27s</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Rejects forgetting (28/32 -&gt; 0/32)</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#2563EB" stroke-width="1"/>
+  <text x="62" y="346" fill="#60A5FA" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. 127,355-File Lineage Audit &amp; 4-Simulator Zero-Shot Transfer (`0.920+`)</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `g1_tracker.lineage.json.gz` audits all 127,355 training clips across 20 runs</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Sim-to-sim on 108 unseen clips: 0.926 mjlab, 0.925 CPU, 0.926 Genesis, 0.920 Isaac</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Claude Haiku 5.5 planner: 59/60 valid plans, 424/424 runs for $0.20 total</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">RSF-BENCH V0 COMPLETION &amp; REPEAT ACQUISITION LATENCY</text>
+  <rect x="62" y="480" width="420" height="18" rx="4" fill="#10B981"/>
+  <text x="492" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">31/37 (27s Reuse)</text>
+  <rect x="62" y="508" width="284" height="18" rx="4" fill="#64748B"/>
+  <text x="356" y="522" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">21/37 Frozen Baseline (688s From-Scratch Training)</text>
+
+  <!-- Right Column: slmonker/ComfyUI-OpenH3Regenerate2KIC -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentPink40)"/>
+  <text x="686" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🎬 slmonker/ComfyUI-OpenH3Regenerate2KIC — 3-Step 2K Video Refinement</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#F9A8D4" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. 312-&gt;208 LoRA Converter</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Fuses q/k/v -&gt; block-diag `qkv_proj`</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Swaps `[value;gate]` -&gt; `[gate;value]`</text>
+  <text x="684" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• 624 tensors · 0 missing mappings</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#F9A8D4" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. 768P Draft -&gt; 2560x1440 (2K)</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 1344x768 124f @ 24fps DMAD 4-step</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 3D latent upscaler + HyperFlow/LMS</text>
+  <text x="974" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• `up3` 3-step sigma grid @ CFG 1</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#DB2777" stroke-width="1"/>
+  <text x="686" y="346" fill="#F472B6" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Fixed-Silence Audio Latent Pinning (`noise_mask=0`) &amp; 3 Ready Workflows</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `Compose Target Latent` binds `silence_audio_124f.safetensors` (`noise_mask=0`)</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Preserves and muxes Stage-1 H3 draft audio cleanly into final 2K MP4</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Validated via `graphToPrompt()` with 0 schema errors &amp; unit tests</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">2K (2560x1440 · 124 FRAMES) DENOISING STEP BUDGET</text>
+  <rect x="686" y="480" width="95" height="18" rx="4" fill="#10B981"/>
+  <text x="792" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Open-H3 2K IC: 4-Step 768P Draft + 3-Step `up3` 2K (7 Steps Total)</text>
+  <rect x="686" y="508" width="430" height="18" rx="4" fill="#EF4444"/>
+  <text x="1124" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">50-Step Native 2K</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R40-ROBOTSKILLFACTORY-OPENH3REGEN2K · 50 RL Campaigns + 400 2K Clips/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Per-Skill RL + Native 50-Step 2K Video</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Cloud GPU RL &amp; 2K Render Spend: $2,120.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Forgetting &amp; LoRA Debug (41.0h × $100): $4,100.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Catastrophic skill forgetting + Diffusers LoRA mismatch</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $6,220.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 41.0 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: Frozen Skills + Pixel-Space Upscaler</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Compute &amp; Storage Spend: $980.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Reset &amp; Artifact Fixes (19.0h × $100): $1,900.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Fails 16/37 unseen tasks + blurry 2K texture details</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,880.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-53.70% vs Path A (19.0 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: Robot Skill Factory + OpenH3 2K IC</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Local Single-GPU (`flock`) Compute: $115.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated Gate &amp; Graph Ops (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,755.00/mo (-92.52%) · $69,060.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $465.00 / mo (-92.52%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 37.5 eng hrs/mo (-91.46% labor)</text>
+</svg>

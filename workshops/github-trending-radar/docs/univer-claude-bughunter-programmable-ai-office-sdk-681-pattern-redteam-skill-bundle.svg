@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgR3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B18"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#172544"/>
+    </linearGradient>
+    <linearGradient id="cardR3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bgR3)"/>
+  <rect x="24" y="24" width="1352" height="812" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="92" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="74" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">2026-11-15 NIGHT SHIFT ROUND 3 (CUMULATIVE R305 MILESTONE) · CLAIM-20261115-R3-UNIVER-BUGHUNTER</text>
+  <text x="68" y="104" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">人机共创可编程 Office 内核与 681 漏洞模式红队技能包选型 FAQ：dream-num/univer + Claude-BugHunter</text>
+  <text x="68" y="124" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Daily Trending #1 (+1,041★ today, ★25,307) + #9 (+124★ today, ★5,992) · Facade/Formula 确定性计算 + 83 技能 4 层外网红队巡检 · 月省 $5,395.00 (-91.75%)</text>
+
+  <!-- Left Card: dream-num/univer -->
+  <rect x="44" y="150" width="644" height="360" rx="14" fill="url(#cardR3)" stroke="#38BDF8" stroke-width="1.3"/>
+  <text x="68" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">1. dream-num/univer (+1,041★ today · ★25,307 · v1.5.0 · Apache-2.0 · Daily #1)</text>
+  <text x="68" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">终结 LLM 算错账的死表格：人机共享 Facade API 与无头公式引擎</text>
+  <text x="68" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 统一 Facade API (univerAPI)：人类鼠标编辑与 AI Agent 调 setValues() 操作同一工作簿</text>
+  <text x="68" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 确定性公式重算与跨特性 Undo/Redo：@univerjs/engine-formula + 过滤区插行联动回滚</text>
+  <text x="68" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 浏览器与 Node.js Headless 双栖：支持无 UI 后台批量计算、JSON 快照持久化 (workbook.save)</text>
+  <text x="68" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 诚实开源边界：Web SDK 核心/Sheets/Docs 为 Apache-2.0；XLSX 导入导出与多人协同属商业扩展</text>
+  <rect x="68" y="330" width="596" height="160" rx="10" fill="#0B1325" stroke="#1E3A8A"/>
+  <text x="86" y="356" fill="#60A5FA" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">Univer Agent-in-the-Sheet Execution Pipeline:</text>
+  <text x="86" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">1. Lifecycle Gate: Wait for LifecycleStages.Steady before Agent edits</text>
+  <text x="86" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">2. Facade Mutation: sheet.getRange('A1:D4').setValues([...,'=B2*C2'])</text>
+  <text x="86" y="434" fill="#34D399" font-family="Consolas, monospace" font-size="12">3. Formula Engine: onCalculationResultApplied() -&gt; exact deterministic total</text>
+  <text x="86" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">4. Snapshot Persistence: workbook.save() -&gt; JSON state (zero LLM math error)</text>
+
+  <!-- Right Card: elementalsouls/Claude-BugHunter -->
+  <rect x="708" y="150" width="648" height="360" rx="14" fill="url(#cardR3)" stroke="#34D399" stroke-width="1.3"/>
+  <text x="732" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">2. elementalsouls/Claude-BugHunter (+124★ today · ★5,992 · v2.1 · MIT)</text>
+  <text x="732" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">提炼自 681 份公开漏洞报告的 83 技能 + 15 斜杠命令外网红队武器库</text>
+  <text x="732" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 四层架构：Think(方法论) → Hunt(58 项 Web/AI/RAG 技能) → Perimeter(边界突破) → Ship(核验)</text>
+  <text x="732" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 覆盖 AI 原生攻击面：内置 hunt-llm-ai、hunt-rag-vector、hunt-graphql、hunt-oauth、m365/okta</text>
+  <text x="732" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 7 问真伪门禁与隐私脱敏：triage-validation 过滤误报 + evidence-hygiene 强制 PII 打码</text>
+  <text x="732" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 一键装入 5 大宿主：Claude Code / OpenCode / Codex CLI / Hermes Agent / AntiGravity + Burp MCP</text>
+  <rect x="732" y="330" width="600" height="160" rx="10" fill="#0B1325" stroke="#065F46"/>
+  <text x="750" y="356" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">4-Layer Red-Team &amp; AI App Security Pipeline:</text>
+  <text x="750" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">Layer 1 [Think]: bb-methodology + redteam-mindset + recon-scope-triage</text>
+  <text x="750" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">Layer 2 [Hunt 58]: hunt-llm-ai / hunt-rag-vector / hunt-idor / hunt-ssrf (681 reports)</text>
+  <text x="750" y="434" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">Layer 3 [Perimeter]: m365-entra-attack / okta-attack / cloud-iam-deep / k8s</text>
+  <text x="750" y="460" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">Layer 4 [Ship]: triage-validation (7-Question Gate) + evidence-hygiene PII redaction</text>
+
+  <!-- Bottom FinOps Box -->
+  <rect x="44" y="528" width="1312" height="286" rx="14" fill="url(#cardR3)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="560" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261115-R3-UNIVER-BUGHUNTER · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="584" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月 15 个内嵌财务/运营电子表格 Agent 场景交付 + 20 次外网与 LLM/RAG 接口上线前红队安全巡检（时薪 r = $100.00/hr；商业扩展授权与外部众测奖金：not_measured）</text>
+
+  <text x="68" y="620" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (LLM 裸算 Markdown 表格 + 散装 Prompt 安全扫描)</text>
+  <rect x="440" y="604" width="588" height="22" rx="5" fill="#EF4444"/>
+  <text x="1040" y="620" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,880.00/mo ($1,880.00 compute/tokens + 40.0h × $100 = $4,000.00)</text>
+
+  <text x="68" y="658" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (只读前端数据网格 + 传统高误报静态 SAST 规则)</text>
+  <rect x="440" y="642" width="278" height="22" rx="5" fill="#F59E0B"/>
+  <text x="730" y="658" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,780.00/mo ($930.00 compute/tokens + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="696" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Univer 公式/Facade 内核 + BugHunter 83 技能)</text>
+  <rect x="440" y="680" width="48.5" height="22" rx="5" fill="#10B981"/>
+  <text x="502" y="696" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$485.00/mo ($135.00 compute/tokens + 3.5h × $100 = $350.00) → 净省 $5,395.00/月 (-91.75% / 年省 $64,740.00)</text>
+
+  <line x1="68" y1="720" x2="1332" y2="720" stroke="#334155"/>
+  <text x="68" y="748" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="bold">🎯 ARCHITECT ROLLOUT DIRECTIVE:</text>
+  <text x="68" y="772" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">1. 凡涉及报价单、财务测算与排期的 Agent 场景，严禁让大模型心算求和——统一嵌入 @univerjs/preset-sheets-core，让 Agent 写公式、由 Univer 引擎确定性重算。</text>
+  <text x="68" y="796" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">2. 上线前使用 Claude-BugHunter (hunt-llm-ai / hunt-rag-vector / hunt-oauth + triage-validation 七问门禁) 对授权测试环境执行自动化攻击链自检。</text>
+</svg>

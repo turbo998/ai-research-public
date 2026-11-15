@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg50" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0D1628"/>
+      <stop offset="100%" stop-color="#08121E"/>
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentAmber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg50)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="218" height="26" rx="6" fill="#0E7490"/>
+  <text x="153" y="56" fill="#E0F2FE" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R50 (CUMULATIVE R352)</text>
+  <text x="276" y="56" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600">AI WORKSTATION TERMINAL ERGONOMICS &amp; GPU DRIVER SSD ENDURANCE GUARD</text>
+  <text x="44" y="92" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="21" font-weight="800">shadowDragons/vsux (Native SwiftUI+GhosttyKit Multi-Project Hub) + candygoogy/atieclxx-fix (662 KB/s → 0 B/s AMD SSD Fix)</text>
+
+  <!-- Left Card: shadowDragons/vsux -->
+  <rect x="28" y="130" width="602" height="446" rx="14" fill="#0B1324" stroke="#0284C7" stroke-width="1.5"/>
+  <rect x="28" y="130" width="602" height="42" rx="14" fill="url(#accentCyan)"/>
+  <text x="46" y="156" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">🍎 shadowDragons/vsux (★49 · MIT · Swift 6.2 + AppKit + GhosttyKit)</text>
+
+  <text x="46" y="196" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Built Around Your Terminal AI Tools (No Built-in Agent Lock-in)</text>
+  <text x="58" y="216" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Native macOS 14+ Apple Silicon app combining SwiftUI + AppKit + SHA-256 pinned GhosttyKit (~123MB)</text>
+  <text x="58" y="235" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Multi-project sidebar + 4-way split PTY terminals + file editor + Git status/diff/stage/worktree</text>
+
+  <text x="46" y="265" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Review-Before-Run Command Library &amp; Hardened Markdown Preview</text>
+  <rect x="46" y="275" width="566" height="84" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="60" y="295" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">Fill Terminal     → Inserts saved command into PTY; human presses Return after review</text>
+  <text x="60" y="314" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">Markdown Preview  → Renders raw HTML as text; blocks remote &amp; out-of-workspace URLs</text>
+  <text x="60" y="333" fill="#FDE047" font-family="Consolas, monospace" font-size="11.5">Quick Tunnel      → Wraps local port via cloudflared with explicit public URL prompt</text>
+  <text x="60" y="351" fill="#C4B5FD" font-family="Consolas, monospace" font-size="11.5">Local Privacy     → ~/Library/Application Support/vsux/ JSON · zero cloud accounts</text>
+
+  <text x="46" y="384" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">3. Shortcuts &amp; Multi-Project Supervision Workflow</text>
+  <text x="58" y="404" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• ⌘N New Window · ⌘T New Tab · ⌘D Split Right · ⌘⇧D Split Down · ⌘⇧F Find · ⇧⌘V Markdown Preview</text>
+  <text x="58" y="423" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Supervise Claude Code / Copilot CLI in one project while background dev services &amp; tests run in another</text>
+  <text x="58" y="442" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Bilingual English &amp; Simplified Chinese UI verified via swift test &amp; check-localizations.py</text>
+
+  <rect x="46" y="462" width="566" height="96" rx="10" fill="#09192C" stroke="#0369A1"/>
+  <text x="62" y="484" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Architectural Takeaway for AI Solution Architects:</text>
+  <text x="62" y="504" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">When running 4–8 parallel CLI coding agents across repos, Electron IDEs bloat RAM while bare terminals</text>
+  <text x="62" y="522" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">lose file/diff/service context. vsux embeds GhosttyKit PTYs with Git diff review, background service</text>
+  <text x="62" y="540" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">logs, and Fill-Terminal human-in-the-loop safety in one native Apple Silicon binary.</text>
+
+  <!-- Right Card: candygoogy/atieclxx-fix -->
+  <rect x="650" y="130" width="602" height="446" rx="14" fill="#0B1324" stroke="#D97706" stroke-width="1.5"/>
+  <rect x="650" y="130" width="602" height="42" rx="14" fill="url(#accentAmber)"/>
+  <text x="668" y="156" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">🛡️ candygoogy/atieclxx-fix (★43 · MIT · PowerShell + Windows ACL Guard)</text>
+
+  <text x="668" y="196" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Root Cause: Missing amdkmpfd Setup Files Trigger 1Hz 677KB Copy Loop</text>
+  <text x="680" y="216" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• atieclxx.exe tries to install amdkmpfd PCI filter driver (.ctz/.itz/.stz removed after Adrenalin 26.3.1)</text>
+  <text x="680" y="235" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Copies 677KB binary every 1s to systemprofile\AppData\Local\AMD\atieclxx.exe → 662 KB/s (40–55 GB/day)</text>
+
+  <text x="668" y="265" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Surgical 1-File SYSTEM ACL Deny vs Dangerous Workarounds</text>
+  <rect x="668" y="275" width="566" height="84" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="682" y="295" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11.5">icacls "...\AMD\atieclxx.exe" /deny *S-1-5-18:(W,D) → 662 KB/s drops to 0 B/s</text>
+  <text x="682" y="314" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">FreeSync / VRR Alive  → Service stays running (PresentMon verified; 3.8KB/14m reboot)</text>
+  <text x="682" y="333" fill="#FCA5A5" font-family="Consolas, monospace" font-size="11.5">Never sc delete       → Deleting amdkmpfd causes INACCESSIBLE_BOOT_DEVICE BSOD!</text>
+  <text x="682" y="351" fill="#FDE047" font-family="Consolas, monospace" font-size="11.5">Adrenalin 26.11.1     → Fixed on RX 7000/9000; RX 6000 &amp; Polaris/Vega still need fix</text>
+
+  <text x="668" y="384" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">3. Self-Verifying 15-Second I/O Probe &amp; Auto-Rollback</text>
+  <text x="680" y="404" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• -Check watches atieclxx.exe I/O write bytes for 15s without admin rights</text>
+  <text x="680" y="423" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• -Fix measures before/after; if writes don't stop or 26.11.1 fixed it, automatically lifts ACL block</text>
+  <text x="680" y="442" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Survives reboots and DDU; prevents 20 TB/year of pointless SSD NAND wear per workstation</text>
+
+  <rect x="668" y="462" width="566" height="96" rx="10" fill="#1E1609" stroke="#B45309"/>
+  <text x="684" y="484" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">Architectural Takeaway for AI Solution Architects:</text>
+  <text x="684" y="504" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Instead of disabling vendor services (breaking VRR/FreeSync), toggling BIOS ReBAR (losing GPU perf),</text>
+  <text x="684" y="522" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">or deleting boot filter drivers (causing BSOD), a targeted DACL deny on *S-1-5-18:(W,D) halts</text>
+  <text x="684" y="540" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">runaway 20 TB/yr SSD wear in place with closed-loop 15s before/after telemetry verification.</text>
+
+  <!-- Bottom FinOps & Quantitative Ledger -->
+  <rect x="28" y="592" width="1224" height="244" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="622" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="800">📊 Closed-Form FinOps &amp; Workstation Reliability Ledger (CLAIM-20261115-R50-VSUX-ATIECLXXFIX · 12 Workstations @ $100/hr)</text>
+
+  <rect x="48" y="636" width="380" height="128" rx="10" fill="#1E1B2E" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="660" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path A: Electron Bloat + Unchecked 55GB/d SSD Wear</text>
+  <text x="64" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Compute, SSD Wear &amp; Tunnel Cost: $1,780.00 / mo</text>
+  <text x="64" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Context-Switch &amp; GPU Ops Labor: $3,850.00 / mo (38.5h)</text>
+  <text x="64" y="726" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total Monthly TCO: $5,630.00 / mo</text>
+  <text x="64" y="748" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11">20 TB/yr SSD wear per PC + FreeSync loss or BSOD risk</text>
+
+  <rect x="450" y="636" width="380" height="128" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="660" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path B: Bare Tmux + Manual ReBAR / Service Toggle</text>
+  <text x="466" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Compute, SSD Wear &amp; Tunnel Cost: $790.00 / mo</text>
+  <text x="466" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Context-Switch &amp; GPU Ops Labor: $1,800.00 / mo (18.0h)</text>
+  <text x="466" y="726" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total Monthly TCO: $2,590.00 / mo (-54.00%)</text>
+  <text x="466" y="748" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Loses GUI Git diff/Markdown preview &amp; ReBAR GPU speed</text>
+
+  <rect x="852" y="636" width="380" height="128" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.5"/>
+  <text x="868" y="660" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">Path C: shadowDragons/vsux + atieclxx-fix (Recommended)</text>
+  <text x="868" y="682" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Compute, SSD Wear &amp; Tunnel Cost: $80.00 / mo</text>
+  <text x="868" y="702" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Context-Switch &amp; GPU Ops Labor: $350.00 / mo (3.5h)</text>
+  <text x="868" y="726" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="800">Total: $430.00 / mo (-$5,200.00 / -92.36%)</text>
+  <text x="868" y="748" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="11">Saves $62,400.00/yr &amp; 35.0h/mo (-90.91%) · HW: not_measured</text>
+
+  <text x="48" y="792" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5">Evidence SHA-256: trending=0307dc2ec8ad9e299810571ee903633f701ea55e9eec2a4235faf871940df463 · search=93010521222c56c591bcae9a80f7f4b395724b9c14b70bec86e5bf2e0f1306cc</text>
+  <text x="48" y="814" fill="#64748B" font-family="Segoe UI, Inter, sans-serif" font-size="11">Guardrail: Base workstation hardware cost is explicitly labeled not_measured; 662 KB/s → 0 B/s (55 GB/d) &amp; GhosttyKit ~123MB come directly from primary READMEs.</text>
+</svg>

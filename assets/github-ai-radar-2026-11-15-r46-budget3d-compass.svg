@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg46" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentPurple46" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentGreen46" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg46)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#2E1065" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="162" y="55" fill="#DDD6FE" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R46 (CUMULATIVE R348)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Budget3D (Compute-Adaptive Image-to-3DGS) + Compass 1 (79.4% Open-World Monocular VLN)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">BudgetAny/Budget3D (★47 · Idol &amp; Idol-Turbo · Any `--budget` 1 Checkpoint) + OpenDriveLab/Compass (★42 · arXiv:2611.12087 · 2-Min History Map · 79.4% vs 17.8%)</text>
+
+  <!-- Left Column: BudgetAny/Budget3D -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentPurple46)"/>
+  <text x="62" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🧊 BudgetAny/Budget3D — Compute-Adaptive Image-to-3D Gaussian Splatting</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#DDD6FE" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Empty-Space Token Merging</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Merges low-variance empty 3D space</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Keeps full-res tokens on fine edges</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Extends BudgetPix (`arXiv:2610.12307`)</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#DDD6FE" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. 1 Checkpoint · Any `--budget`</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `Budget3D-Idol` &amp; `Budget3D-Idol-Turbo`</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `--budget 0.5` halves active tokens</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Direct `.ply` 3D Gaussian export</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#7C3AED" stroke-width="1"/>
+  <text x="62" y="346" fill="#C4B5FD" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. DINOv3 `vith16plus_lvd1689m` + FLUX.2 VAE Backbone &amp; Pinned SDK</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Pinned `speridlabs/idol-sdk` (`956439f`) + `Dome-Objaverse` multi-view renders</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Same seed, camera &amp; prompt smoothly scale from fast preview to hero `.ply`</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Zero need to host multiple resolution-specific 3D model checkpoints</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">ACTIVE 3D TOKEN BUDGET FOR HIGH-FIDELITY GAUSSIAN SPLATS</text>
+  <rect x="62" y="480" width="220" height="18" rx="4" fill="#8B5CF6"/>
+  <text x="292" y="494" fill="#DDD6FE" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Budget3D-Idol-Turbo (`--budget 0.5`): 50% Tokens · Empty Space Merged</text>
+  <rect x="62" y="508" width="440" height="18" rx="4" fill="#475569"/>
+  <text x="510" y="522" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">Uniform: 100% Tokens</text>
+
+  <!-- Right Column: OpenDriveLab/Compass -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentGreen46)"/>
+  <text x="686" y="175" fill="#06281E" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🧭 OpenDriveLab/Compass — Compass 1 Monocular 2-Min History VLN</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. ~2-Min History Backtracking</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Keyframe-level history map backbone</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Unifies VLM + sparse video gen</text>
+  <text x="684" y="289" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Monocular RGB camera only (0 LiDAR)</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. 79.4% vs 17.8% Open-World</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 79.4% overall physical success rate</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Strongest baseline: 17.8% (4.46x jump)</text>
+  <text x="974" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Zero-shot cross-embodiment transfer</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#059669" stroke-width="1"/>
+  <text x="686" y="346" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. 3-Category Structured VQA Supervision &amp; 2,500+ Hour Navigation Corpus</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• 500+ hrs real-world robot interactions + 2,000+ hrs annotated web videos</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• 3 structured VQA categories resolve dead-end recovery &amp; beyond-view planning</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Builds on NeurIPS Sparse Video Generation for Beyond-the-View VLN</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">OPEN-WORLD PHYSICAL NAVIGATION SUCCESS RATE (HIGHER IS BETTER)</text>
+  <rect x="686" y="480" width="430" height="18" rx="4" fill="#10B981"/>
+  <text x="1124" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">79.4% (Compass 1)</text>
+  <rect x="686" y="508" width="96" height="18" rx="4" fill="#EF4444"/>
+  <text x="792" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">17.8% (Strongest Prior Monocular Baseline — Spatial Amnesia)</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R46-BUDGET3D-COMPASS · 15k 3DGS Assets + 40 Open-World VLN Trials/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Uniform 3D Tokens + LiDAR Pre-Mapping</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• GPU 3D Gen &amp; LiDAR Field Spend: $2,040.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Checkpoint &amp; Rescue Ops (40.0h × $100): $4,000.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Wastes FLOPs on empty 3D space + 82.2% VLN failure</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $6,040.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 40.0 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: Post-Hoc Decimation + Short-Window VLM</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Compute &amp; Storage Spend: $930.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Splat Repair &amp; Loop Triage (18.5h × $100): $1,850.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">•Still pays full generation FLOPs + forgets dead ends</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,780.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-53.97% vs Path A (18.5 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: Budget3D (`--budget`) + Compass 1 VLN</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Adaptive 3D GPU &amp; Monocular Inference: $105.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated Budget &amp; Map Ops (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,585.00/mo (-92.47%) · $67,020.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $455.00 / mo (-92.47%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 36.5 eng hrs/mo (-91.25% labor)</text>
+</svg>

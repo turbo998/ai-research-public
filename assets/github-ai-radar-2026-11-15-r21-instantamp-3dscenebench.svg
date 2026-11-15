@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR21" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060A12"/>
+      <stop offset="55%" stop-color="#0E1729"/>
+      <stop offset="100%" stop-color="#04070D"/>
+    </linearGradient>
+    <linearGradient id="accentAmp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="accentScene" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR21)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="199" y="59" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R21 · CUMULATIVE R323</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">InstantAMP 30-Min RTX 5090 Humanoid BPTT + 3DSceneBench Functional MuJoCo Eval</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Differentiable World Model + Dual WGAN-GP Priors for Unitree G1 (JAX + MuJoCo Warp) + 36,871 Physical Functionality Tests</text>
+
+  <!-- Left Panel: RoboticsResearchHubVN/InstantAMP -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentAmp)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. RoboticsResearchHubVN/InstantAMP (★21 · 30-Min G1 Locomotion + Get-Up)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Breakthrough: Analytic BPTT Gradients Through Differentiable World Model + AMP</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Unitree G1 (29 joints, self-collision, 200Hz physics / 50Hz policy) on 1 RTX 5090</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• 48-step (~1s) imagined rollout BPTT + 10% hybrid PPO + 2 WGAN-GP 10-frame discriminators</text>
+
+  <!-- 3 Architectural Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="152" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. World Model BPTT</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">MLP 3×512 (8-step loss)</text>
+  <text x="152" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">48-step BPTT + Critic</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">ODE actor + 10% real PPO</text>
+  <text x="152" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">JAX + MuJoCo Warp</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#0A222E" stroke="#06B6D4"/>
+  <text x="360" y="318" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Dual Gated Priors</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">style_loco + style_getup</text>
+  <text x="360" y="362" fill="#A5F3FC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">tanh((d - mean_d)/5)</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">20% resets start on floor</text>
+  <text x="360" y="402" fill="#22D3EE" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Constant reward slope</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#1F160B" stroke="#F59E0B"/>
+  <text x="568" y="318" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. 30-Min Curve (4096)</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">10m: Get-up (100/117)</text>
+  <text x="568" y="362" fill="#FEF3C7" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">15m: Walk (ep_len 810)</text>
+  <text x="568" y="382" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">30m: ep_len 935 (0.73)</text>
+  <text x="568" y="402" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">60m: ep_len 993 (1% fall)</text>
+
+  <!-- InstantAMP Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Imagined Reward Formulation &amp; Single-GPU Efficiency</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• r = (1 - amp_lerp)·r_task + amp_lerp·dt·(ramp·gate_loco·s_loco + gate_getup·s_getup)</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• gate_loco = moving · (0.25 + track_lin); gate_getup = 1 while robot is down</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 146s JAX compile -&gt; 3.4 iterations/s across 4,096 parallel G1 envs on 1 RTX 5090</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Tracks up to 2.7 m/s with 0.17 m/s median velocity error &amp; push recovery</text>
+
+  <!-- Right Panel: PranaLabs/3DSceneBench -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentScene)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. PranaLabs/3DSceneBench (★21 · Functional MuJoCo World Benchmark)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#DDD6FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Thesis: "Looking Right Is Not Enough — A Solid Mug Holds No Water"</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• 49 Whole-Room Scenes (7 in mini) · 14,219 Objects · 471 Tasks · 36,871 Hidden Tests</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Agents receive posed room images + task list &amp; output MuJoCo scene.xml + nonrigid.json</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#1E1436" stroke="#8B5CF6"/>
+  <text x="752" y="317" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. 3-Score Grading (0-100)</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">1. Appearance (Visual render)</text>
+  <text x="752" y="360" fill="#DDD6FE" font-family="Consolas, monospace" font-size="11.5">2. Geometry (3D layout/scale)</text>
+  <text x="752" y="382" fill="#FDE68A" font-family="Consolas, monospace" font-size="11.5">3. Functionality (Physics/Robot)</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Exposes agent functionality gap</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#23150B" stroke="#F59E0B"/>
+  <text x="1064" y="317" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Interactive Reference Room</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Opens doors &amp; drawers (clearance)</text>
+  <text x="1064" y="360" fill="#FDE68A" font-family="Consolas, monospace" font-size="11.5">Pours water (nonrigid.json)</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11.5">Pushes props &amp; runs robot tasks</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Compares vs Reference Room</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Embodied AI Closed Loop: Functional MuJoCo Worlds + 30-Min Humanoid Policies</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 1: Coding agent synthesizes MuJoCo scene.xml + nonrigid.json from room photos</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 2: 3DSceneBench verifies articulated joints, hollow vessels &amp; collision clearances</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 3: InstantAMP trains Unitree G1 locomotion &amp; fall recovery in 30 mins on 1 GPU</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Eliminates non-interactive "visual shell" scenes &amp; multi-day model-free RL runs</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R21-INSTANTAMP-3DSCENEBENCH · 32 Policies + 28 Sim Worlds/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Multi-Node PPO + Visual-Only QA</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$6,320.00/mo ($2,120.00 GPU + 42.0h / $4,200.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Split Controllers + Static Mesh Check</text>
+  <rect x="395" y="716" width="356" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="766" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$3,040.00/mo ($1,040.00 GPU + 20.0h / $2,000.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: InstantAMP BPTT + 3DSceneBench</text>
+  <rect x="395" y="758" width="57" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="467" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$485.00/mo ($135.00 compute + 3.5h / $350.00) · -92.33%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,835.00/mo (-92.33%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $70,020.00/yr · 38.5h/mo Saved (-91.67%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#06B6D4"/>
+  <text x="690" y="824" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">InstantAMP: 30 Mins on 1 RTX 5090 (JAX + Warp)</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">48-Step World-Model BPTT + Locomotion/Get-Up WGAN-GP</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#8B5CF6"/>
+  <text x="1130" y="824" fill="#DDD6FE" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">3DSceneBench: 49 Scenes · 36,871 Hidden Tests</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Grades Appearance, Geometry &amp; Physical Functionality</text>
+</svg>

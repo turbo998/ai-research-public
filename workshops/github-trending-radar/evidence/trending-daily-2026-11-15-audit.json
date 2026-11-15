@@ -1,0 +1,1734 @@
+{
+  "audit_version": "2.7.0",
+  "generated_at_cst": "2026-11-15T23:18:00+08:00",
+  "raw_trending_html_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-15-raw.html",
+    "source_url": "https://github.com/trending?since=daily",
+    "scraped_at_cst": "2026-11-15T23:12:04+08:00",
+    "sha256_lf": "0307dc2ec8ad9e299810571ee903633f701ea55e9eec2a4235faf871940df463"
+  },
+  "raw_track_b_search_api_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-15-raw.json",
+    "source_query": "gh api \"search/repositories?q=created:>2026-11-08+stars:>40&sort=stars&order=desc&per_page=100\"",
+    "captured_at_cst": "2026-11-15T23:12:06+08:00",
+    "sha256_lf": "93010521222c56c591bcae9a80f7f4b395724b9c14b70bec86e5bf2e0f1306cc",
+    "metric_definition": "stars_per_day = round(stars_total / age_days); stars_today = not_measured"
+  },
+  "parsed_daily_trending_rows": [
+    {
+      "trending_rank": 1,
+      "full_name": "dream-num/univer",
+      "stars_today_measured": 1041,
+      "stars_total_in_trending_dom": 25307
+    },
+    {
+      "trending_rank": 2,
+      "full_name": "ag-ui-protocol/ag-ui",
+      "stars_today_measured": 393,
+      "stars_total_in_trending_dom": 17622
+    },
+    {
+      "trending_rank": 3,
+      "full_name": "google-labs-code/stitch-skills",
+      "stars_today_measured": 248,
+      "stars_total_in_trending_dom": 9097
+    },
+    {
+      "trending_rank": 4,
+      "full_name": "backnotprop/plannotator",
+      "stars_today_measured": 860,
+      "stars_total_in_trending_dom": 11640
+    },
+    {
+      "trending_rank": 5,
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "stars_today_measured": 718,
+      "stars_total_in_trending_dom": 56690
+    },
+    {
+      "trending_rank": 6,
+      "full_name": "alibaba/open-code-review",
+      "stars_today_measured": 688,
+      "stars_total_in_trending_dom": 51781
+    },
+    {
+      "trending_rank": 7,
+      "full_name": "Tencent/LoopForge",
+      "stars_today_measured": 484,
+      "stars_total_in_trending_dom": 1249
+    },
+    {
+      "trending_rank": 8,
+      "full_name": "ggml-org/ggml",
+      "stars_today_measured": 154,
+      "stars_total_in_trending_dom": 15815
+    },
+    {
+      "trending_rank": 9,
+      "full_name": "elementalsouls/Claude-BugHunter",
+      "stars_today_measured": 124,
+      "stars_total_in_trending_dom": 5992
+    },
+    {
+      "trending_rank": 10,
+      "full_name": "GoogleChrome/modern-web-guidance-src",
+      "stars_today_measured": 1220,
+      "stars_total_in_trending_dom": 6790
+    },
+    {
+      "trending_rank": 11,
+      "full_name": "tradermonty/claude-trading-skills",
+      "stars_today_measured": 707,
+      "stars_total_in_trending_dom": 5240
+    },
+    {
+      "trending_rank": 12,
+      "full_name": "NVIDIA/SkillEvaluator",
+      "stars_today_measured": 133,
+      "stars_total_in_trending_dom": 1372
+    }
+  ],
+  "round_2026_11_15_r1_loopforge_skillevaluator_finops_audit": {
+    "claim_id": "CLAIM-20261115-R1-LOOPFORGE-SKILLEVALUATOR",
+    "scope": "Multi-CLI coding-agent requirement delivery & 3-tier Harbor skill validation compute/token spend + broken agent handoff & unverified skill debugging labor synthetic model (base server hardware & GitHub Enterprise seat licenses: not_measured)",
+    "monthly_requirements_delivered": 40,
+    "monthly_skills_audited": 30,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_single_terminal_cli_plus_unverified_skills": {
+      "compute_and_token_usd": "1,920.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,020.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_generic_workflow_builder_plus_static_lint": {
+      "compute_and_token_usd": "960.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,860.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_loopforge_plus_skillevaluator": {
+      "compute_and_token_usd": "140.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "490.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,530.00",
+      "savings_vs_path_a_pct": "91.86%",
+      "annual_savings_vs_path_a_usd": "66,360.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r2_agui_stitchskills_finops_audit": {
+    "claim_id": "CLAIM-20261115-R2-AGUI-STITCHSKILLS",
+    "scope": "Full-stack agentic UI protocol integration & multi-screen design-system/code synchronization compute/token spend + custom SSE glue & UI drift rework labor synthetic model (commercial design seats & cloud hosting: not_measured)",
+    "monthly_agent_features_integrated": 12,
+    "monthly_ui_sync_tasks": 25,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_custom_sse_glue_plus_screenshot_prompting": {
+      "compute_and_token_usd": "1,840.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,740.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_single_vendor_ui_sdk_plus_manual_css_copy": {
+      "compute_and_token_usd": "910.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,760.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_agui_plus_stitchskills": {
+      "compute_and_token_usd": "130.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "480.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,260.00",
+      "savings_vs_path_a_pct": "91.64%",
+      "annual_savings_vs_path_a_usd": "63,120.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r3_univer_bughunter_finops_audit": {
+    "claim_id": "CLAIM-20261115-R3-UNIVER-BUGHUNTER",
+    "scope": "Programmable spreadsheet/document agent workflow & external/AI red-team security validation compute/token spend + LLM formula reconciliation & false-positive triage labor synthetic model (commercial Univer Server/XLSX extensions & external bug-bounty payouts: not_measured)",
+    "monthly_office_workflows": 15,
+    "monthly_redteam_assessments": 20,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_llm_markdown_tables_plus_adhoc_security_prompts": {
+      "compute_and_token_usd": "1,880.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,880.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_readonly_data_grid_plus_generic_sast": {
+      "compute_and_token_usd": "930.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,780.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_univer_plus_claude_bughunter": {
+      "compute_and_token_usd": "135.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "485.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,395.00",
+      "savings_vs_path_a_pct": "91.75%",
+      "annual_savings_vs_path_a_usd": "64,740.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r4_threert_hikaku_finops_audit": {
+    "claim_id": "CLAIM-20261115-R4-THREERT-HIKAKU",
+    "scope": "Interactive 3D scene rendering & web media AI-provenance inspection compute/API spend + manual lightmap baking & compliance triage labor synthetic model (workstation GPUs & CDN bandwidth: not_measured)",
+    "monthly_3d_scenes": 10,
+    "monthly_media_assets_audited": 50000,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_lightmap_baking_plus_cloud_detection_api": {
+      "compute_and_token_usd": "1,780.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,580.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_webgpu_ssgi_tuning_plus_selfhosted_onnx_server": {
+      "compute_and_token_usd": "880.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,680.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_threert_plus_hikaku": {
+      "compute_and_token_usd": "110.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "460.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,120.00",
+      "savings_vs_path_a_pct": "91.76%",
+      "annual_savings_vs_path_a_usd": "61,440.00",
+      "hours_saved_vs_path_a": "34.5",
+      "hours_saved_vs_path_a_pct": "90.79%"
+    }
+  },
+  "round_2026_11_15_r5_peakcut_reatoon_finops_audit": {
+    "claim_id": "CLAIM-20261115-R5-PEAKCUT-REATOON",
+    "scope": "Live-stream/VOD vertical clipping & short-drama shot forensics SaaS/VLM token spend + manual video rough-cut & shot-logging labor synthetic model (studio camera hardware & ad spend: not_measured)",
+    "monthly_stream_hours_clipped": 40,
+    "monthly_drama_episodes_analyzed": 30,
+    "engineer_hourly_rate_usd": 95.0,
+    "path_a_commercial_clipping_saas_plus_manual_shot_logging": {
+      "compute_and_token_usd": "1,740.00",
+      "engineering_labor_usd": "3,610.00",
+      "total_monthly_usd": "5,350.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_cloud_whisper_plus_single_shot_vlm_summary": {
+      "compute_and_token_usd": "860.00",
+      "engineering_labor_usd": "1,710.00",
+      "total_monthly_usd": "2,570.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_peakcut_plus_reatoon": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "332.50",
+      "total_monthly_usd": "427.50",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "4,922.50",
+      "savings_vs_path_a_pct": "92.01%",
+      "annual_savings_vs_path_a_usd": "59,070.00",
+      "hours_saved_vs_path_a": "34.5",
+      "hours_saved_vs_path_a_pct": "90.79%"
+    }
+  },
+  "round_2026_11_15_r6_deepseekjax_yasakani_finops_audit": {
+    "claim_id": "CLAIM-20261115-R6-DEEPSEEKJAX-YASAKANI",
+    "scope": "MLA/MoE architecture prototype R&D & 200k+ long-context code/document editing inference GPU/API spend + distributed framework debugging & prefill wait labor synthetic model (workstation GPU hardware amortization: not_measured)",
+    "monthly_arch_prototypes": 12,
+    "monthly_long_context_edits": 18000,
+    "engineer_hourly_rate_usd": 105.0,
+    "path_a_cloud_multigpu_pytorch_plus_repeated_cloud_prefill": {
+      "compute_and_token_usd": "2,140.00",
+      "engineering_labor_usd": "3,990.00",
+      "total_monthly_usd": "6,130.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_heavy_flax_stack_plus_generic_local_gguf": {
+      "compute_and_token_usd": "980.00",
+      "engineering_labor_usd": "1,890.00",
+      "total_monthly_usd": "2,870.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_deepseek_v3_jax_plus_yasakani": {
+      "compute_and_token_usd": "115.00",
+      "engineering_labor_usd": "367.50",
+      "total_monthly_usd": "482.50",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,647.50",
+      "savings_vs_path_a_pct": "92.13%",
+      "annual_savings_vs_path_a_usd": "67,770.00",
+      "hours_saved_vs_path_a": "34.5",
+      "hours_saved_vs_path_a_pct": "90.79%"
+    }
+  },
+  "round_2026_11_15_r7_tinyvoca_kokorodistill_finops_audit": {
+    "claim_id": "CLAIM-20261115-R7-TINYVOCA-KOKORODISTILL",
+    "scope": "Browser/CPU edge TTS synthesis & lightweight voicepack distillation cloud API/GPU spend + audio buffering & distillation QA labor synthetic model (client browser hardware: not_measured)",
+    "monthly_edge_tts_hours": 2500,
+    "monthly_voicepack_distillations": 4,
+    "engineer_hourly_rate_usd": 95.0,
+    "path_a_commercial_cloud_tts_api_plus_326mb_wasm_teacher": {
+      "compute_and_token_usd": "1,720.00",
+      "engineering_labor_usd": "3,515.00",
+      "total_monthly_usd": "5,235.00",
+      "engineering_hours": "37.0"
+    },
+    "path_b_selfhosted_gpu_tts_plus_ungated_manual_distill": {
+      "compute_and_token_usd": "840.00",
+      "engineering_labor_usd": "1,710.00",
+      "total_monthly_usd": "2,550.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_tinyvoca_plus_kokoro_distill": {
+      "compute_and_token_usd": "80.00",
+      "engineering_labor_usd": "332.50",
+      "total_monthly_usd": "412.50",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "4,822.50",
+      "savings_vs_path_a_pct": "92.12%",
+      "annual_savings_vs_path_a_usd": "57,870.00",
+      "hours_saved_vs_path_a": "33.5",
+      "hours_saved_vs_path_a_pct": "90.54%"
+    }
+  },
+  "round_2026_11_15_r8_scarlet_parallax_finops_audit": {
+    "claim_id": "CLAIM-20261115-R8-SCARLET-PARALLAX",
+    "scope": "Non-destructive dialogue video editing & 39-model multimodal studio generation SaaS/API spend + splice auditioning & asset wrangling labor synthetic model (local disk storage & talent fees: not_measured)",
+    "monthly_interview_edits": 25,
+    "monthly_multimodal_batches": 30,
+    "engineer_hourly_rate_usd": 95.0,
+    "path_a_per_seat_cloud_nle_plus_ungated_agent_media_keys": {
+      "compute_and_token_usd": "1,820.00",
+      "engineering_labor_usd": "3,610.00",
+      "total_monthly_usd": "5,430.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_manual_ffmpeg_scripts_plus_separate_web_generators": {
+      "compute_and_token_usd": "890.00",
+      "engineering_labor_usd": "1,710.00",
+      "total_monthly_usd": "2,600.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_scarlet_plus_parallax": {
+      "compute_and_token_usd": "90.00",
+      "engineering_labor_usd": "332.50",
+      "total_monthly_usd": "422.50",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,007.50",
+      "savings_vs_path_a_pct": "92.22%",
+      "annual_savings_vs_path_a_usd": "60,090.00",
+      "hours_saved_vs_path_a": "34.5",
+      "hours_saved_vs_path_a_pct": "90.79%"
+    }
+  },
+  "round_2026_11_15_r9_codingworkflow_turnpack_finops_audit": {
+    "claim_id": "CLAIM-20261115-R9-CODINGWORKFLOW-TURNPACK",
+    "scope": "Multi-file coding-agent task execution replay/rerun token spend + failed-test worktree revert & over-engineered PR refactoring labor synthetic model (base IDE seat subscriptions: not_measured)",
+    "monthly_coding_tasks": 6000,
+    "team_engineers": 15,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_ungated_prompts_plus_6turn_sequential_tools": {
+      "compute_and_token_usd": "1,860.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,760.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_samesession_selfreview_plus_granular_tools": {
+      "compute_and_token_usd": "910.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,760.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_codingworkflow_plus_turnpack": {
+      "compute_and_token_usd": "125.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "475.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,285.00",
+      "savings_vs_path_a_pct": "91.75%",
+      "annual_savings_vs_path_a_usd": "63,420.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r10_turbobrowser_browserhands_finops_audit": {
+    "claim_id": "CLAIM-20261115-R10-TURBOBROWSER-BROWSERHANDS",
+    "scope": "Multi-field browser form/upload automation replay token & cloud VM spend + selector debugging & SSO maintenance labor synthetic model (base host hardware: not_measured)",
+    "monthly_browser_workflows": 8000,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_standard_33tool_playwright_mcp_plus_base64_uploads": {
+      "compute_and_token_usd": "1,940.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,740.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_custom_playwright_scripts_plus_unisolated_tabs": {
+      "compute_and_token_usd": "920.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,720.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_turbobrowser_plus_browserhands": {
+      "compute_and_token_usd": "115.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "465.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,275.00",
+      "savings_vs_path_a_pct": "91.90%",
+      "annual_savings_vs_path_a_usd": "63,300.00",
+      "hours_saved_vs_path_a": "34.5",
+      "hours_saved_vs_path_a_pct": "90.79%"
+    }
+  },
+  "round_2026_11_15_r11_patchproof_devrescue_finops_audit": {
+    "claim_id": "CLAIM-20261115-R11-PATCHPROOF-DEVRESCUE",
+    "scope": "Go patch differential/fuzz verification & CI failure log triage token/rerun spend + CI log scrolling & bug reproduction labor synthetic model (base CI runner compute: not_measured)",
+    "monthly_go_patches_verified": 450,
+    "monthly_ci_logs_triaged": 3200,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_raw_log_llm_dumps_plus_chat_diff_review": {
+      "compute_and_token_usd": "1,790.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,590.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_standard_gotest_plus_adhoc_regex_scripts": {
+      "compute_and_token_usd": "880.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,680.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_patchproof_plus_devrescue": {
+      "compute_and_token_usd": "110.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "460.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,130.00",
+      "savings_vs_path_a_pct": "91.77%",
+      "annual_savings_vs_path_a_usd": "61,560.00",
+      "hours_saved_vs_path_a": "34.5",
+      "hours_saved_vs_path_a_pct": "90.79%"
+    }
+  },
+  "round_2026_11_15_r12_execorchestra_coordinator_finops_audit": {
+    "claim_id": "CLAIM-20261115-R12-EXECORCHESTRA-COORDINATOR",
+    "scope": "Heterogeneous task workflow orchestration & parallel Git worktree delegate management token/compute spend + multi-tab context thrashing & orphaned worktree cleanup labor synthetic model (base host compute: not_measured)",
+    "monthly_heterogeneous_workflows": 2400,
+    "monthly_worktree_delegates": 180,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_all_extended_agent_loops_plus_uncapped_tabs": {
+      "compute_and_token_usd": "1,890.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,790.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_static_dag_scripts_plus_manual_worktree_scripts": {
+      "compute_and_token_usd": "910.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,760.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_execorchestra_plus_coordinator": {
+      "compute_and_token_usd": "120.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "470.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,320.00",
+      "savings_vs_path_a_pct": "91.88%",
+      "annual_savings_vs_path_a_usd": "63,840.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r13_planrelay_claudecodesketch_finops_audit": {
+    "claim_id": "CLAIM-20261115-R13-PLANRELAY-CLAUDECODESKETCH",
+    "scope": "Agent plan & Git diff review rework token spend + CJK terminal diagram & wireframe fixing labor synthetic model (base host compute: not_measured)",
+    "monthly_plan_diff_reviews": 320,
+    "monthly_terminal_diagrams": 480,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_chat_scroll_lgtm_plus_raw_llm_ascii": {
+      "compute_and_token_usd": "1,690.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,490.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_heavy_saas_pr_portal_plus_browser_draw": {
+      "compute_and_token_usd": "840.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,640.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_planrelay_plus_claude_code_sketch": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,045.00",
+      "savings_vs_path_a_pct": "91.89%",
+      "annual_savings_vs_path_a_usd": "60,540.00",
+      "hours_saved_vs_path_a": "34.5",
+      "hours_saved_vs_path_a_pct": "90.79%"
+    }
+  },
+  "round_2026_11_15_r14_antialgorithm_apiwhereitbreaks_finops_audit": {
+    "claim_id": "CLAIM-20261115-R14-ANTIALGORITHM-APIWHEREITBREAKS",
+    "scope": "UI/SVG mode-collapse rework + Claude API/Relay Prompt Cache miss & SSE/tool_use debugging labor synthetic model (base host compute: not_measured)",
+    "monthly_ui_svg_artifacts": 180,
+    "monthly_api_relay_incidents": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_mode_collapsed_ui_plus_cache_misses": {
+      "compute_and_token_usd": "1,940.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,940.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_paid_ui_kits_plus_cloud_apm": {
+      "compute_and_token_usd": "960.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,860.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_antialgorithm_plus_api_where_it_breaks": {
+      "compute_and_token_usd": "130.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "480.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,460.00",
+      "savings_vs_path_a_pct": "91.92%",
+      "annual_savings_vs_path_a_usd": "65,520.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r15_artexforensics_copperhound_finops_audit": {
+    "claim_id": "CLAIM-20261115-R15-ARTEXFORENSICS-COPPERHOUND",
+    "scope": "AI agent container supply-chain forensic verification + AD/ADCS/Entra/OT attack-graph infra & choke-point remediation labor synthetic model (base host compute: not_measured)",
+    "monthly_container_audits": 60,
+    "monthly_attack_graph_assessments": 24,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_blind_docker_pull_plus_neo4j_jvm_cluster": {
+      "compute_and_token_usd": "1,860.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "5,960.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_cve_scanner_plus_cloud_graph_saas": {
+      "compute_and_token_usd": "940.00",
+      "engineering_labor_usd": "1,950.00",
+      "total_monthly_usd": "2,890.00",
+      "engineering_hours": "19.5"
+    },
+    "path_c_artex_forensics_plus_copperhound": {
+      "compute_and_token_usd": "110.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "460.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,500.00",
+      "savings_vs_path_a_pct": "92.28%",
+      "annual_savings_vs_path_a_usd": "66,000.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r16_checkpointforensics_amdkernels_finops_audit": {
+    "claim_id": "CLAIM-20261115-R16-CHECKPOINTFORENSICS-AMDKERNELS",
+    "scope": "Model checkpoint GPU SM-count provenance audit + AMD MI355X (gfx950) vLLM FlyDSL kernel optimization & debugging labor synthetic model (base host compute: not_measured)",
+    "monthly_checkpoint_audits": 40,
+    "monthly_mi355x_gpu_hours": 360,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_unverified_claims_plus_fallback_ops": {
+      "compute_and_token_usd": "2,080.00",
+      "engineering_labor_usd": "4,200.00",
+      "total_monthly_usd": "6,280.00",
+      "engineering_hours": "42.0"
+    },
+    "path_b_statistical_sampling_plus_mixed_hip_triton": {
+      "compute_and_token_usd": "1,020.00",
+      "engineering_labor_usd": "2,000.00",
+      "total_monthly_usd": "3,020.00",
+      "engineering_hours": "20.0"
+    },
+    "path_c_checkpoint_forensics_plus_amd_kernels": {
+      "compute_and_token_usd": "140.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "490.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,790.00",
+      "savings_vs_path_a_pct": "92.20%",
+      "annual_savings_vs_path_a_usd": "69,480.00",
+      "hours_saved_vs_path_a": "38.5",
+      "hours_saved_vs_path_a_pct": "91.67%"
+    }
+  },
+  "round_2026_11_15_r17_qwenttsneurons_recavsr_finops_audit": {
+    "claim_id": "CLAIM-20261115-R17-QWENTTSNEURONS-RECAVSR",
+    "scope": "Expressive paralinguistic TTS synthesis + 4x 1440p/4K diffusion video super-resolution API/GPU spend & audio retake/video chunk stitching labor synthetic model (base host compute: not_measured)",
+    "monthly_expressive_tts_minutes": 12000,
+    "monthly_4k_vsr_minutes": 600,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_cloud_voice_vsr_apis_plus_lora_stitching": {
+      "compute_and_token_usd": "1,980.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,880.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_prompt_tag_retries_plus_chunked_vae_vsr": {
+      "compute_and_token_usd": "930.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,780.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_qwen_tts_neurons_plus_comfyui_recavsr": {
+      "compute_and_token_usd": "115.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "465.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,415.00",
+      "savings_vs_path_a_pct": "92.09%",
+      "annual_savings_vs_path_a_usd": "64,980.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r18_zimageturbo4gb_onegraphtwoworlds_finops_audit": {
+    "claim_id": "CLAIM-20261115-R18-ZIMAGETURBO4GB-ONEGRAPHTWOWORLDS",
+    "scope": "4GB edge diffusion image synthesis + enterprise GraphRAG Semantic/Property Graph validation cloud GPU/DB spend & rework labor synthetic model (base host compute: not_measured)",
+    "monthly_edge_images": 18000,
+    "monthly_graphrag_schema_cycles": 16,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_cloud_24gb_gpus_plus_unvalidated_graphrag": {
+      "compute_and_token_usd": "1,920.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,920.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_512p_offload_plus_unchecked_cypher": {
+      "compute_and_token_usd": "920.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,820.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_zimage_turbo_4gb_plus_one_graph_two_worlds": {
+      "compute_and_token_usd": "105.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "455.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,465.00",
+      "savings_vs_path_a_pct": "92.31%",
+      "annual_savings_vs_path_a_usd": "65,580.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r19_gamepipeline_shredkit_finops_audit": {
+    "claim_id": "CLAIM-20261115-R19-GAMEPIPELINE-SHREDKIT",
+    "scope": "3D game procedural glTF/level production + 1080x1920@60fps typographic 3D promotional video API/SaaS spend & mesh/video rework labor synthetic model (base host compute: not_measured)",
+    "monthly_3d_game_builds": 12,
+    "monthly_60fps_3d_reels": 80,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_mesh_gen_slop_plus_video_text_retries": {
+      "compute_and_token_usd": "1,840.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "5,940.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_stock_asset_packs_plus_motion_saas": {
+      "compute_and_token_usd": "910.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,810.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_claude_game_pipeline_plus_shred_kit": {
+      "compute_and_token_usd": "110.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "460.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,480.00",
+      "savings_vs_path_a_pct": "92.26%",
+      "annual_savings_vs_path_a_usd": "65,760.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r20_appleflow_clipforge_finops_audit": {
+    "claim_id": "CLAIM-20261115-R20-APPLEFLOW-CLIPFORGE",
+    "scope": "Apple Intelligence/PCC OHTTP split-tunnel fleet maintenance + vertical video Shorts/Reels production SaaS/render spend & rework labor synthetic model (base host compute: not_measured)",
+    "apple_devices_maintained": 85,
+    "monthly_vertical_shorts": 300,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_legacy_mitm_plus_blind_batch_clippers": {
+      "compute_and_token_usd": "1,720.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,520.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_global_vpn_plus_manual_ffmpeg_cuts": {
+      "compute_and_token_usd": "830.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,630.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_appleflow_zero_mitm_plus_clip_forge": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,075.00",
+      "savings_vs_path_a_pct": "91.94%",
+      "annual_savings_vs_path_a_usd": "60,900.00",
+      "hours_saved_vs_path_a": "34.5",
+      "hours_saved_vs_path_a_pct": "90.79%"
+    }
+  },
+  "round_2026_11_15_r21_instantamp_3dscenebench_finops_audit": {
+    "claim_id": "CLAIM-20261115-R21-INSTANTAMP-3DSCENEBENCH",
+    "scope": "Humanoid locomotion/get-up AMP training + whole-room MuJoCo physical functionality grading GPU/sim spend & debugging labor synthetic model (base host compute: not_measured)",
+    "monthly_humanoid_policy_runs": 32,
+    "monthly_sim_world_audits": 28,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_multinode_ppo_plus_visual_only_qa": {
+      "compute_and_token_usd": "2,120.00",
+      "engineering_labor_usd": "4,200.00",
+      "total_monthly_usd": "6,320.00",
+      "engineering_hours": "42.0"
+    },
+    "path_b_split_controllers_plus_static_mesh_checks": {
+      "compute_and_token_usd": "1,040.00",
+      "engineering_labor_usd": "2,000.00",
+      "total_monthly_usd": "3,040.00",
+      "engineering_hours": "20.0"
+    },
+    "path_c_instantamp_plus_3dscenebench": {
+      "compute_and_token_usd": "135.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "485.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,835.00",
+      "savings_vs_path_a_pct": "92.33%",
+      "annual_savings_vs_path_a_usd": "70,020.00",
+      "hours_saved_vs_path_a": "38.5",
+      "hours_saved_vs_path_a_pct": "91.67%"
+    }
+  },
+  "round_2026_11_15_r22_ncnnrust_vauss_finops_audit": {
+    "claim_id": "CLAIM-20261115-R22-NCNNRUST-VAUSS",
+    "scope": "Edge/server Rust vision/OCR inference + 3D Gaussian Splat scene reconstruction & multi-engine export compute spend & debugging labor synthetic model (base host compute: not_measured)",
+    "monthly_inferences": 60000000,
+    "monthly_3d_splat_scenes": 90,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_unpooled_ffi_plus_python_gsplat_mcmc": {
+      "compute_and_token_usd": "1,950.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,950.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_python_onnx_plus_manual_colmap_glue": {
+      "compute_and_token_usd": "940.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,840.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_ncnn_rust_zero_copy_plus_vauss_5x_splat": {
+      "compute_and_token_usd": "110.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "460.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,490.00",
+      "savings_vs_path_a_pct": "92.27%",
+      "annual_savings_vs_path_a_usd": "65,880.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r23_lazydsh_rexdurable_finops_audit": {
+    "claim_id": "CLAIM-20261115-R23-LAZYDSH-REXDURABLE",
+    "scope": "Multi-provider terminal coding harness fleet + post-reboot agent conversation recovery token waste & engineering labor synthetic model (base host compute: not_measured)",
+    "developer_seats": 45,
+    "monthly_terminal_restarts": 220,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_coupled_dsh_plugins_plus_manual_resume": {
+      "compute_and_token_usd": "1,780.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,680.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_single_vendor_cli_plus_tmux_resurrect": {
+      "compute_and_token_usd": "860.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,710.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_lazydsh_43provider_plus_rex_durable": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,235.00",
+      "savings_vs_path_a_pct": "92.17%",
+      "annual_savings_vs_path_a_usd": "62,820.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r24_winampuisdk_defect_finops_audit": {
+    "claim_id": "CLAIM-20261115-R24-WINAMPUISDK-DEFECT",
+    "scope": "Browser-agent UI automation token spend + TypeScript backend/agent workflow error & DI maintenance labor synthetic model (base host compute: not_measured)",
+    "monthly_ui_agent_actions": 450000,
+    "typescript_services_maintained": 35,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_dom_scraping_plus_untyped_try_catch": {
+      "compute_and_token_usd": "1,820.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,720.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_manual_aria_glue_plus_generator_effect": {
+      "compute_and_token_usd": "890.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,740.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_ui_sdk_webmcp_plus_folsom_defect": {
+      "compute_and_token_usd": "100.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "450.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,270.00",
+      "savings_vs_path_a_pct": "92.13%",
+      "annual_savings_vs_path_a_usd": "63,240.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r25_vennvdm_ciproto_finops_audit": {
+    "claim_id": "CLAIM-20261115-R25-VENNVDM-CIPROTO",
+    "scope": "Structured vector routing/scoring/drift decisions + long-horizon multivariate time-series forecasting compute spend & pipeline engineering labor synthetic model (base host compute: not_measured)",
+    "monthly_vector_decisions": 15000000,
+    "monthly_multivariate_forecasts": 2400,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_llm_rereads_plus_short_window_ts": {
+      "compute_and_token_usd": "2,060.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,160.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_bespoke_sklearn_plus_univariate_arima": {
+      "compute_and_token_usd": "980.00",
+      "engineering_labor_usd": "1,950.00",
+      "total_monthly_usd": "2,930.00",
+      "engineering_hours": "19.5"
+    },
+    "path_c_venn_vdm_3mb_plus_ci_proto_2m_ts": {
+      "compute_and_token_usd": "120.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "470.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,690.00",
+      "savings_vs_path_a_pct": "92.37%",
+      "annual_savings_vs_path_a_usd": "68,280.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r26_abyssalgarden_roomatdawn_finops_audit": {
+    "claim_id": "CLAIM-20261115-R26-ABYSSALGARDEN-ROOMATDAWN",
+    "scope": "Interactive 3D web showcase CDN egress + photorealistic 4K HDR10 scene baking & rendering labor synthetic model (base host compute: not_measured)",
+    "monthly_3d_web_pageviews": 500000,
+    "monthly_4k_hdr10_scene_renders": 40,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_150mb_gltf_cdn_plus_manual_uv_bake": {
+      "compute_and_token_usd": "2,040.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "6,040.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_draco_meshes_plus_unbaked_shadows": {
+      "compute_and_token_usd": "950.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,850.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_abyssal_garden_96kb_plus_room_at_dawn": {
+      "compute_and_token_usd": "110.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "460.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,580.00",
+      "savings_vs_path_a_pct": "92.38%",
+      "annual_savings_vs_path_a_usd": "66,960.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r27_qwen3cantonese_openbean_finops_audit": {
+    "claim_id": "CLAIM-20261115-R27-QWEN3CANTONESE-OPENBEAN",
+    "scope": "Cantonese-English code-switching ASR transcription + wearable hardware recorder local sync/decryption & MCP knowledge retrieval synthetic model (base host compute: not_measured)",
+    "monthly_asr_hours": 18000,
+    "wearable_recorder_seats": 50,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_cloud_asr_apis_plus_vendor_recorder_saas": {
+      "compute_and_token_usd": "2,020.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "6,020.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_stock_whisper_plus_manual_usb_scripts": {
+      "compute_and_token_usd": "940.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,840.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_qwen3_cantonese_v21_plus_openbean_mcp": {
+      "compute_and_token_usd": "105.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "455.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,565.00",
+      "savings_vs_path_a_pct": "92.44%",
+      "annual_savings_vs_path_a_usd": "66,780.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r28_banzhangh3_mimvox_finops_audit": {
+    "claim_id": "CLAIM-20261115-R28-BANZHANGH3-MIMVOX",
+    "scope": "Multi-segment HD AI video continuation + 60-language local voice cloning & video redubbing compute spend & drift/retraining labor synthetic model (base host compute: not_measured)",
+    "monthly_multiseg_videos": 160,
+    "monthly_dubbing_projects": 90,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_cloud_24gb_video_plus_saas_dubbing": {
+      "compute_and_token_usd": "2,050.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,150.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_single_pass_oom_plus_raw_rvc_scripts": {
+      "compute_and_token_usd": "960.00",
+      "engineering_labor_usd": "1,950.00",
+      "total_monthly_usd": "2,910.00",
+      "engineering_hours": "19.5"
+    },
+    "path_c_comfyui_banzhang_all_plus_mimvox": {
+      "compute_and_token_usd": "115.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "465.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,685.00",
+      "savings_vs_path_a_pct": "92.44%",
+      "annual_savings_vs_path_a_usd": "68,220.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r29_dshensp_dshruntimelog_finops_audit": {
+    "claim_id": "CLAIM-20261115-R29-DSHENSP-DSHRUNTIMELOG",
+    "scope": "Automated Huawei eNSP network simulation labs + desktop Agent Harness persistent WARN/ERROR logging compute/storage spend & debugging labor synthetic model (base host compute: not_measured)",
+    "monthly_ensp_labs": 180,
+    "dsh_desktop_seats": 60,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_ensp_gui_plus_ephemeral_logs": {
+      "compute_and_token_usd": "1,760.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,660.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_fragile_ahk_scripts_plus_naive_file_log": {
+      "compute_and_token_usd": "850.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,700.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_dsh_ensp_17tool_mcp_plus_dsh_runtime_log": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,215.00",
+      "savings_vs_path_a_pct": "92.14%",
+      "annual_savings_vs_path_a_usd": "62,580.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r30_gezhisheets_zoterointerlinear_finops_audit": {
+    "claim_id": "CLAIM-20261115-R30-GEZHISHEETS-ZOTEROINTERLINEAR",
+    "scope": "Spreadsheet AI extraction/cleaning/Decimal aggregation + Zotero 10/11 bilingual PDF translation SaaS/token spend & manual QA labor synthetic model (base host compute: not_measured)",
+    "monthly_spreadsheet_workflows": 420,
+    "monthly_bilingual_pdf_papers": 650,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_copy_paste_plus_cloud_pdf_saas": {
+      "compute_and_token_usd": "1,850.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,750.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_unchecked_vba_plus_unbatched_translators": {
+      "compute_and_token_usd": "880.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,730.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_gezhi_sheets_plus_zotero_interlinear": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,305.00",
+      "savings_vs_path_a_pct": "92.26%",
+      "annual_savings_vs_path_a_usd": "63,660.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r31_pulseguardrt_loupeosint_finops_audit": {
+    "claim_id": "CLAIM-20261115-R31-PULSEGUARDRT-LOUPEOSINT",
+    "scope": "QNX SDP 8.0 real-time scheduling & mutex trace analysis + OSINT 4-test visual media forensics tool/API spend & triage labor synthetic model (base host compute: not_measured)",
+    "monthly_qnx_trace_audits": 140,
+    "monthly_osint_media_checks": 600,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_trace_grep_plus_cloud_forensics": {
+      "compute_and_token_usd": "1,880.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,880.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_adhoc_matplotlib_plus_split_ela_tools": {
+      "compute_and_token_usd": "910.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,810.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_pulseguard_rt_plus_loupe_osint": {
+      "compute_and_token_usd": "100.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "450.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,430.00",
+      "savings_vs_path_a_pct": "92.35%",
+      "annual_savings_vs_path_a_usd": "65,160.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r32_leapquant_h3imagemlx_finops_audit": {
+    "claim_id": "CLAIM-20261115-R32-LEAPQUANT-H3IMAGEMLX",
+    "scope": "Linear-attention vLLM serving GPU hours + Apple Silicon local 1K-4K image generation & multi-reference editing compute spend & debugging labor synthetic model (base host compute: not_measured)",
+    "monthly_vllm_gpu_hours": 1200,
+    "monthly_apple_silicon_images": 6000,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_fp32_bf16_plus_38gb_comfyui_mps": {
+      "compute_and_token_usd": "2,140.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,240.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_turboquant_plus_unprefetched_stream": {
+      "compute_and_token_usd": "1,010.00",
+      "engineering_labor_usd": "1,950.00",
+      "total_monthly_usd": "2,960.00",
+      "engineering_hours": "19.5"
+    },
+    "path_c_leapquant_vllm_plus_h3_image_mlx": {
+      "compute_and_token_usd": "125.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "475.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,765.00",
+      "savings_vs_path_a_pct": "92.39%",
+      "annual_savings_vs_path_a_usd": "69,180.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r33_browserr_dukoi_finops_audit": {
+    "claim_id": "CLAIM-20261115-R33-BROWSERR-DUKOI",
+    "scope": "Monthly cloud headless browser cluster & VPS edge microservice hosting + CAPTCHA/CGNAT/OEM-kill ops debugging labor synthetic model (base host compute: not_measured)",
+    "monthly_agent_browser_sessions": 25000,
+    "monthly_edge_services": 12,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_cloud_chromium_plus_12_vps": {
+      "compute_and_token_usd": "1,920.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,920.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_docker_playwright_plus_unrooted_termux": {
+      "compute_and_token_usd": "880.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,730.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_browserr_servo_plus_dukoi_android": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,475.00",
+      "savings_vs_path_a_pct": "92.48%",
+      "annual_savings_vs_path_a_usd": "65,700.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r34_garlicllm_c6lang_finops_audit": {
+    "claim_id": "CLAIM-20261115-R34-GARLICLLM-C6LANG",
+    "scope": "Offline edge/appliance multimodal LLM (9B + STT + TTS) deployment hardware & cloud API fallback spend + embedded C resource-leak/memory-bug debugging labor synthetic model (base host compute: not_measured)",
+    "monthly_offline_appliances": 20,
+    "monthly_c_runtime_modules": 15,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_cloud_voice_llm_plus_legacy_c_goto": {
+      "compute_and_token_usd": "1,980.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,980.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_cpu_llamacpp_4b_plus_cpp_raii_port": {
+      "compute_and_token_usd": "910.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,810.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_garlic_llm_pm4_plus_c6_compiler": {
+      "compute_and_token_usd": "100.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "450.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,530.00",
+      "savings_vs_path_a_pct": "92.47%",
+      "annual_savings_vs_path_a_usd": "66,360.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r35_slamdunk_shape_finops_audit": {
+    "claim_id": "CLAIM-20261115-R35-SLAMDUNK-SHAPE",
+    "scope": "Egocentric AR/robotics trajectory ground-truthing & sensor-drift recalibration compute + VM-obfuscated security telemetry analysis & multi-language SDK integration labor synthetic model (base host compute: not_measured)",
+    "monthly_egocentric_vrs_hours": 150,
+    "monthly_vm_kernel_audits": 40,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_cloud_slam_relabel_plus_manual_vm_trace": {
+      "compute_and_token_usd": "2,060.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,160.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_rigid_offline_ba_plus_uncached_ast": {
+      "compute_and_token_usd": "960.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,860.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_slam_dunk_82_4_plus_shape_5lang_sdk": {
+      "compute_and_token_usd": "110.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "460.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,700.00",
+      "savings_vs_path_a_pct": "92.53%",
+      "annual_savings_vs_path_a_usd": "68,400.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r36_zeus_supportagent_finops_audit": {
+    "claim_id": "CLAIM-20261115-R36-ZEUS-SUPPORTAGENT",
+    "scope": "Monthly financial/options analytics SaaS subscriptions & portfolio risk-audit labor + enterprise customer-support RAG/tool-boundary QA & hallucinated-refund incident triage synthetic model (base host compute: not_measured)",
+    "monthly_analyst_seats": 10,
+    "monthly_support_eval_cases": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_10tab_saas_plus_unbounded_bot": {
+      "compute_and_token_usd": "1,860.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,760.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_spreadsheet_scripts_plus_naive_eval": {
+      "compute_and_token_usd": "840.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,640.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_zeus_18tool_mcp_plus_dify_45case_eval": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,315.00",
+      "savings_vs_path_a_pct": "92.27%",
+      "annual_savings_vs_path_a_usd": "63,780.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r37_spec01_mixbar_finops_audit": {
+    "claim_id": "CLAIM-20261115-R37-SPEC01-MIXBAR",
+    "scope": "Custom hardware-style instrument/console UI component engineering & design-system maintenance + macOS workstation per-app audio routing licensing & virtual-driver crash/meeting-audio debugging synthetic model (base host compute: not_measured)",
+    "monthly_instrument_consoles": 8,
+    "monthly_macos_workstations": 35,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_bespoke_ui_plus_paid_virtual_audio_drivers": {
+      "compute_and_token_usd": "1,780.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,580.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_unstyled_primitives_plus_oss_hal_driver": {
+      "compute_and_token_usd": "810.00",
+      "engineering_labor_usd": "1,750.00",
+      "total_monthly_usd": "2,560.00",
+      "engineering_hours": "17.5"
+    },
+    "path_c_spec01_61control_kit_plus_mixbar_process_tap": {
+      "compute_and_token_usd": "90.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "440.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,140.00",
+      "savings_vs_path_a_pct": "92.11%",
+      "annual_savings_vs_path_a_usd": "61,680.00",
+      "hours_saved_vs_path_a": "34.5",
+      "hours_saved_vs_path_a_pct": "90.79%"
+    }
+  },
+  "round_2026_11_15_r38_colabqwen38g4_crommacode_finops_audit": {
+    "claim_id": "CLAIM-20261115-R38-COLABQWEN38G4-CROMMACODE",
+    "scope": "Monthly 96GB Blackwell GPU long-context (262K) model serving + multi-agent parallel coding swarm orchestration & observability debugging labor synthetic model (base host compute: not_measured)",
+    "monthly_gpu_hours_262k": 600,
+    "monthly_swarm_tasks": 80,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_dedicated_96gb_cloud_plus_raw_cli_logs": {
+      "compute_and_token_usd": "2,180.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,280.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_unmanaged_colab_plus_shell_worktrees": {
+      "compute_and_token_usd": "990.00",
+      "engineering_labor_usd": "1,950.00",
+      "total_monthly_usd": "2,940.00",
+      "engineering_hours": "19.5"
+    },
+    "path_c_colab_qwen38_g4_plus_crommacode_swarm": {
+      "compute_and_token_usd": "120.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "470.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,810.00",
+      "savings_vs_path_a_pct": "92.52%",
+      "annual_savings_vs_path_a_usd": "69,720.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r39_bevelos_crate_finops_audit": {
+    "claim_id": "CLAIM-20261115-R39-BEVELOS-CRATE",
+    "scope": "Embedded MCU graphical OS bring-up & power-cut/UI regression testing + mobile/iOS & sandboxed Arm64 Linux VM emulation for on-device AI coding agents synthetic model (base host compute: not_measured)",
+    "monthly_mcu_firmware_releases": 15,
+    "monthly_mobile_arm64_vms": 30,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_mcu_gui_plus_slow_qemu_tcg": {
+      "compute_and_token_usd": "1,940.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,940.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_monolithic_lvgl_plus_unaccelerated_vm": {
+      "compute_and_token_usd": "890.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,740.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_bevel_os_hil_plus_crate_arm64_jit": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,495.00",
+      "savings_vs_path_a_pct": "92.51%",
+      "annual_savings_vs_path_a_usd": "65,940.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r40_robotskillfactory_openh3regen2k_finops_audit": {
+    "claim_id": "CLAIM-20261115-R40-ROBOTSKILLFACTORY-OPENH3REGEN2K",
+    "scope": "Monthly humanoid multi-skill RL policy training & regression verification + 2K (2560x1440) 124-frame AI video generation & LoRA conversion pipeline spend synthetic model (base host compute: not_measured)",
+    "monthly_rl_campaigns": 50,
+    "monthly_2k_video_clips": 400,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_per_skill_rl_plus_native_50step_2k": {
+      "compute_and_token_usd": "2,120.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,220.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_frozen_skills_plus_pixel_upscaler": {
+      "compute_and_token_usd": "980.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,880.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_robot_skill_factory_plus_openh3_2k_ic": {
+      "compute_and_token_usd": "115.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "465.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,755.00",
+      "savings_vs_path_a_pct": "92.52%",
+      "annual_savings_vs_path_a_usd": "69,060.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r41_aaplus_bluewhiteppt_finops_audit": {
+    "claim_id": "CLAIM-20261115-R41-AAPLUS-BLUEWHITEPPT",
+    "scope": "Monthly LLM API vs subscription plan FinOps procurement modeling & Pareto effort benchmarking + technical/academic architecture defense PPTX/DOCX deck production synthetic model (base host compute: not_measured)",
+    "monthly_procurement_evals": 24,
+    "monthly_defense_decks": 30,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_blind_max_api_plus_manual_ppt_rework": {
+      "compute_and_token_usd": "1,820.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,720.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_static_csv_plus_unchecked_python_pptx": {
+      "compute_and_token_usd": "830.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,630.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_aa_plus_pareto_plus_bluewhite_ppt_skills": {
+      "compute_and_token_usd": "85.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "435.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,285.00",
+      "savings_vs_path_a_pct": "92.40%",
+      "annual_savings_vs_path_a_usd": "63,420.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r42_prtseek_beeplocator_finops_audit": {
+    "claim_id": "CLAIM-20261115-R42-PRTSEEK-BEEPLOCATOR",
+    "scope": "Monthly automated security/CTF vulnerability reproduction & writeup generation + lab/datacenter/office acoustic anomaly & hardware-alarm localization ops synthetic model (base host compute: not_measured)",
+    "monthly_ctf_sec_audits": 35,
+    "monthly_acoustic_fault_hunts": 20,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_unbounded_pentest_bot_plus_acoustic_cam": {
+      "compute_and_token_usd": "1,900.00",
+      "engineering_labor_usd": "3,950.00",
+      "total_monthly_usd": "5,850.00",
+      "engineering_hours": "39.5"
+    },
+    "path_b_single_thread_agent_plus_unsynced_phones": {
+      "compute_and_token_usd": "860.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,710.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_prtseek_4role_plus_beep_locator_tdoa": {
+      "compute_and_token_usd": "90.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "440.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,410.00",
+      "savings_vs_path_a_pct": "92.48%",
+      "annual_savings_vs_path_a_usd": "64,920.00",
+      "hours_saved_vs_path_a": "36.0",
+      "hours_saved_vs_path_a_pct": "91.14%"
+    }
+  },
+  "round_2026_11_15_r43_telemetrycleaner_symcacheprune_finops_audit": {
+    "claim_id": "CLAIM-20261115-R43-TELEMETRYCLEANER-SYMCACHEPRUNE",
+    "scope": "Enterprise mobile test-device privacy/telemetry hardening & background battery/traffic audit + macOS CI/developer fleet System Data disk-full outage recovery & SSD over-provisioning synthetic model (base host compute: not_measured)",
+    "monthly_android_devices": 60,
+    "monthly_macos_ci_nodes": 40,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_rom_root_plus_mac_ssd_upgrades": {
+      "compute_and_token_usd": "1,880.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,780.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_plain_adb_pm_plus_unchecked_root_cron": {
+      "compute_and_token_usd": "850.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,650.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_telemetrycleaner_shizuku_plus_symcache_prune": {
+      "compute_and_token_usd": "85.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "435.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,345.00",
+      "savings_vs_path_a_pct": "92.47%",
+      "annual_savings_vs_path_a_usd": "64,140.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r44_numpilot_alloy_finops_audit": {
+    "claim_id": "CLAIM-20261115-R44-NUMPILOT-ALLOY",
+    "scope": "Monthly scientific/quantum-chemistry NumPy-to-Ascend NPU operator migration & verification + multi-material (rigid + cloth + liquid + cable) parallel robot-learning physics simulation synthetic model (base host compute: not_measured)",
+    "monthly_npu_migrations": 25,
+    "monthly_multimaterial_rl_runs": 60,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_ascend_c_plus_disjoint_simulators": {
+      "compute_and_token_usd": "2,150.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,250.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_unverified_llm_port_plus_cpu_physics": {
+      "compute_and_token_usd": "980.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,880.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_numpilot_receipts_plus_alloy_mcp": {
+      "compute_and_token_usd": "115.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "465.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,785.00",
+      "savings_vs_path_a_pct": "92.56%",
+      "annual_savings_vs_path_a_usd": "69,420.00",
+      "hours_saved_vs_path_a": "37.5",
+      "hours_saved_vs_path_a_pct": "91.46%"
+    }
+  },
+  "round_2026_11_15_r45_voxmel_jevinteraction_finops_audit": {
+    "claim_id": "CLAIM-20261115-R45-VOXMEL-JEVINTERACTION",
+    "scope": "Monthly commercial full-duplex realtime voice API minutes & custom zero-shot voice cloning SaaS spend + conversational turn-taking/interruption bug triage & replay QA synthetic model (base host compute: not_measured)",
+    "monthly_duplex_voice_minutes": 40000,
+    "monthly_persona_tuning_cycles": 50,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_proprietary_realtime_api_plus_voice_saas": {
+      "compute_and_token_usd": "2,080.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "6,080.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_vad_timer_cascade_plus_heavy_codec_tts": {
+      "compute_and_token_usd": "940.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,790.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_jev_interaction_plus_voxmel_0_6b_grpo": {
+      "compute_and_token_usd": "105.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "455.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,625.00",
+      "savings_vs_path_a_pct": "92.52%",
+      "annual_savings_vs_path_a_usd": "67,500.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r46_budget3d_compass_finops_audit": {
+    "claim_id": "CLAIM-20261115-R46-BUDGET3D-COMPASS",
+    "scope": "Monthly high-throughput single-image-to-3D Gaussian Splat .ply asset generation GPU compute + open-world embodied robot navigation field-trial recovery & LiDAR/HD-map annotation spend synthetic model (base host compute: not_measured)",
+    "monthly_3dgs_assets": 15000,
+    "monthly_openworld_vln_trials": 40,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_uniform_3d_tokens_plus_lidar_premapping": {
+      "compute_and_token_usd": "2,040.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "6,040.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_posthoc_decimation_plus_short_window_vlm": {
+      "compute_and_token_usd": "930.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,780.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_budget3d_adaptive_plus_compass1_vln": {
+      "compute_and_token_usd": "105.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "455.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,585.00",
+      "savings_vs_path_a_pct": "92.47%",
+      "annual_savings_vs_path_a_usd": "67,020.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r47_visualfidelity_loadsketch_finops_audit": {
+    "claim_id": "CLAIM-20261115-R47-VISUALFIDELITY-LOADSKETCH",
+    "scope": "Monthly frontend UI reconstruction QA & pixel/geometry regression triage + distributed system architecture capacity/retry-storm review & Terraform pre-deploy stress simulation synthetic model (base host compute: not_measured)",
+    "monthly_ui_reconstructions": 30,
+    "monthly_arch_reviews": 25,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_eyeball_ui_qa_plus_staging_load_clusters": {
+      "compute_and_token_usd": "1,960.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,960.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_raw_pixel_diff_plus_spreadsheet_capacity": {
+      "compute_and_token_usd": "880.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,730.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_visual_fidelity_plus_loadsketch_cli": {
+      "compute_and_token_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,515.00",
+      "savings_vs_path_a_pct": "92.53%",
+      "annual_savings_vs_path_a_usd": "66,180.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r48_tally_gawain_finops_audit": {
+    "claim_id": "CLAIM-20261115-R48-TALLY-GAWAIN",
+    "scope": "Monthly CI performance-benchmarking runner compute & flaky-benchmark triage + Python AI-generated codebase type-safety / dict[str, Any] runtime bug debugging synthetic model (base host compute: not_measured)",
+    "monthly_pr_perf_gates": 400,
+    "monthly_python_repo_audits": 60,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_baremetal_runners_plus_slow_type_qa": {
+      "compute_and_token_usd": "1,850.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,750.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_shared_wallclock_plus_function_only_ann": {
+      "compute_and_token_usd": "830.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,630.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_phpstan_tally_plus_gawain_covenant": {
+      "compute_and_token_usd": "85.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "435.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,315.00",
+      "savings_vs_path_a_pct": "92.43%",
+      "annual_savings_vs_path_a_usd": "63,780.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r49_tessery_crossentry_finops_audit": {
+    "claim_id": "CLAIM-20261115-R49-TESSERY-CROSSENTRY",
+    "scope": "Monthly multi-service system scaffolding, Git-synced infrastructure/CRUD codegen & OTel deployment ops + multi-entry AI assistant/agent context synchronization token & manual re-explanation overhead synthetic model (base host compute: not_measured)",
+    "monthly_system_releases": 15,
+    "monthly_context_handoffs": 12000,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_commercial_paas_plus_polling_summary_bot": {
+      "compute_and_token_usd": "1,920.00",
+      "engineering_labor_usd": "3,950.00",
+      "total_monthly_usd": "5,870.00",
+      "engineering_hours": "39.5"
+    },
+    "path_b_oneshot_scaffolder_plus_manual_copypaste": {
+      "compute_and_token_usd": "860.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,710.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_tessery_mcp_plus_cross_entry_continuity": {
+      "compute_and_token_usd": "90.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "440.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,430.00",
+      "savings_vs_path_a_pct": "92.50%",
+      "annual_savings_vs_path_a_usd": "65,160.00",
+      "hours_saved_vs_path_a": "36.0",
+      "hours_saved_vs_path_a_pct": "91.14%"
+    }
+  },
+  "round_2026_11_15_r50_vsux_atieclxxfix_finops_audit": {
+    "claim_id": "CLAIM-20261115-R50-VSUX-ATIECLXXFIX",
+    "scope": "Monthly multi-project AI terminal/Git/service workspace context-switching & memory overhead + Windows AMD Radeon GPU workstation SSD write-endurance degradation (20 TB/year per PC) & FreeSync/VRR troubleshooting ops synthetic model across 12 workstations (base workstation hardware cost: not_measured)",
+    "workstation_count": 12,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_electron_bloat_plus_unchecked_ssd_wear": {
+      "compute_ssd_tunnel_usd": "1,780.00",
+      "engineering_labor_usd": "3,850.00",
+      "total_monthly_usd": "5,630.00",
+      "engineering_hours": "38.5"
+    },
+    "path_b_bare_tmux_plus_manual_rebar_service_toggle": {
+      "compute_ssd_tunnel_usd": "790.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,590.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_vsux_ghosttykit_plus_atieclxx_acl_guard": {
+      "compute_ssd_tunnel_usd": "80.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "430.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,200.00",
+      "savings_vs_path_a_pct": "92.36%",
+      "annual_savings_vs_path_a_usd": "62,400.00",
+      "hours_saved_vs_path_a": "35.0",
+      "hours_saved_vs_path_a_pct": "90.91%"
+    }
+  },
+  "round_2026_11_15_r51_kitepack_museprotocol_finops_audit": {
+    "claim_id": "CLAIM-20261115-R51-KITEPACK-MUSEPROTOCOL",
+    "scope": "Monthly large binary asset ZSTD compression, copy-on-write overlay packaging & crash-resumable Wi-Fi transfer ops + stateful multi-step web onboarding/auth protocol verification & headless browser replacement synthetic model across 10 workloads (base host/device hardware cost: not_measured)",
+    "monthly_workloads": 10,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_full_copy_transfers_plus_headless_browser_grid": {
+      "storage_bandwidth_compute_usd": "1,940.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "5,940.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_adhoc_zstd_scripts_plus_stateless_curl": {
+      "storage_bandwidth_compute_usd": "880.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,780.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_kitepack_cow_pipeline_plus_muse_stateful_http": {
+      "storage_bandwidth_compute_usd": "95.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,495.00",
+      "savings_vs_path_a_pct": "92.51%",
+      "annual_savings_vs_path_a_usd": "65,940.00",
+      "hours_saved_vs_path_a": "36.5",
+      "hours_saved_vs_path_a_pct": "91.25%"
+    }
+  },
+  "round_2026_11_15_r52_mkwrecomp_signdrop_finops_audit": {
+    "claim_id": "CLAIM-20261115-R52-MKWRECOMP-SIGNDROP",
+    "scope": "Monthly AArch64 binary-to-C static recompilation, offline GPU shader translation (11,561 SM86 programs) & deterministic frame-replay verification + Windows kernel clfs.sys .cnpf authentication mode (Mode=0/1) fleet posture audit & EDR self-defense verification synthetic model across 8 workloads (base host/GPU hardware cost: not_measured)",
+    "monthly_workloads": 8,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_full_boot_gpu_reruns_plus_manual_host_audits": {
+      "compute_and_audit_usd": "2,020.00",
+      "engineering_labor_usd": "4,150.00",
+      "total_monthly_usd": "6,170.00",
+      "engineering_hours": "41.5"
+    },
+    "path_b_partial_lifter_plus_disabling_clfs_auth": {
+      "compute_and_audit_usd": "910.00",
+      "engineering_labor_usd": "1,950.00",
+      "total_monthly_usd": "2,860.00",
+      "engineering_hours": "19.5"
+    },
+    "path_c_mkwrecomp_offgpu_harness_plus_signdrop_etw_audit": {
+      "compute_and_audit_usd": "95.00",
+      "engineering_labor_usd": "360.00",
+      "total_monthly_usd": "455.00",
+      "engineering_hours": "3.6",
+      "savings_vs_path_a_usd": "5,715.00",
+      "savings_vs_path_a_pct": "92.63%",
+      "annual_savings_vs_path_a_usd": "68,580.00",
+      "hours_saved_vs_path_a": "37.9",
+      "hours_saved_vs_path_a_pct": "91.33%"
+    }
+  },
+  "round_2026_11_15_r53_gestaltx_erosioncn_finops_audit": {
+    "claim_id": "CLAIM-20261115-R53-GESTALTX-EROSIONCN",
+    "scope": "Monthly iOS/iPadOS 26.x-27.x mobile device configuration auditing, worse_query sandbox container boundary verification & anti-brick MobileGestalt backup/recovery lab ops synthetic model across 10 mobile QA/security devices (base iPhone/iPad test device hardware cost: not_measured)",
+    "lab_device_count": 10,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_hardcoded_offsets_plus_dfu_brick_recovery": {
+      "device_farm_and_downtime_usd": "1,860.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "5,760.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_hardware_spoofing_editors_without_vault": {
+      "device_farm_and_downtime_usd": "840.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "2,690.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_gestaltx_plus_erosioncn_pwrite_plus_wqfiles": {
+      "device_farm_and_downtime_usd": "85.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "435.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,325.00",
+      "savings_vs_path_a_pct": "92.45%",
+      "annual_savings_vs_path_a_usd": "63,900.00",
+      "hours_saved_vs_path_a": "35.5",
+      "hours_saved_vs_path_a_pct": "91.03%"
+    }
+  },
+  "round_2026_11_15_r54_hammermcp_yourec_vhsphys_finops_audit": {
+    "claim_id": "CLAIM-20261115-R54-HAMMERMCP-YOUREC-VHSPHYS",
+    "scope": "Monthly 3D level-editor MCP integration (WM_COPYDATA non-invasive IPC vs binary hooking), on-device mobile creator video/audio AI pipeline (Qwen3-ASR-0.6B + VoiceFixer offline vs cloud ASR/restoration APIs) & first-principles physical signal simulation (42.95 MS/s Karlqvist FM vs empirical filter tuning) synthetic model across 12 workloads (base workstation/iPhone hardware cost: not_measured)",
+    "monthly_workloads": 12,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_binary_hooks_plus_cloud_asr_plus_filter_sliders": {
+      "cloud_media_and_compute_usd": "1,960.00",
+      "engineering_labor_usd": "4,050.00",
+      "total_monthly_usd": "6,010.00",
+      "engineering_hours": "40.5"
+    },
+    "path_b_offline_vmf_scripts_plus_desktop_nle_roundtrip": {
+      "cloud_media_and_compute_usd": "870.00",
+      "engineering_labor_usd": "1,900.00",
+      "total_monthly_usd": "2,770.00",
+      "engineering_hours": "19.0"
+    },
+    "path_c_hammermcp_ipc_plus_yourec_offline_ai_plus_vhsphys": {
+      "cloud_media_and_compute_usd": "90.00",
+      "engineering_labor_usd": "350.00",
+      "total_monthly_usd": "440.00",
+      "engineering_hours": "3.5",
+      "savings_vs_path_a_usd": "5,570.00",
+      "savings_vs_path_a_pct": "92.68%",
+      "annual_savings_vs_path_a_usd": "66,840.00",
+      "hours_saved_vs_path_a": "37.0",
+      "hours_saved_vs_path_a_pct": "91.36%"
+    }
+  },
+  "round_2026_11_15_r55_httplocalserver_quickpass_finops_audit": {
+    "claim_id": "CLAIM-20261115-R55-HTTPLOCALSERVER-QUICKPASS",
+    "scope": "Monthly air-gapped/LAN single-binary artifact & MCP workspace distribution (WAMR 2.4.5 + QuickJS-NG + SQLite FTS5) + macOS team credential manager seats & zero-disk-secret Accessibility autofill workflow synthetic model across 15 seats/nodes (base host hardware cost: not_measured)",
+    "nodes_or_seats": 15,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_multicontainer_lan_stack_plus_paid_vault_saas": {
+      "compute_and_subscriptions_usd": "1,820.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,620.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_bare_python_http_server_plus_manual_passwords": {
+      "compute_and_subscriptions_usd": "810.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,610.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_httplocalserver_single_binary_plus_quickpass_launcher": {
+      "compute_and_subscriptions_usd": "80.00",
+      "engineering_labor_usd": "340.00",
+      "total_monthly_usd": "420.00",
+      "engineering_hours": "3.4",
+      "savings_vs_path_a_usd": "5,200.00",
+      "savings_vs_path_a_pct": "92.53%",
+      "annual_savings_vs_path_a_usd": "62,400.00",
+      "hours_saved_vs_path_a": "34.6",
+      "hours_saved_vs_path_a_pct": "91.05%"
+    }
+  }
+}

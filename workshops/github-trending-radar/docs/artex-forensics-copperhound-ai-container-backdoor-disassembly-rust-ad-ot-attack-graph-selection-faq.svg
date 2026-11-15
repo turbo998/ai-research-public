@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR15" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080711"/>
+      <stop offset="55%" stop-color="#131124"/>
+      <stop offset="100%" stop-color="#05050B"/>
+    </linearGradient>
+    <linearGradient id="accentArtex" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="accentCopper" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR15)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#450A0A" stroke="#EF4444" stroke-width="1"/>
+  <text x="199" y="59" fill="#FECACA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R15 · CUMULATIVE R317</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">Artex-Forensics Binary Backdoor Disassembly + Copperhound Rust AD/OT Graph Engine</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">AI Agent Container Supply-Chain Verification (verifyCaptcha '!' RCE &amp; YARA) + Memory-Mapped IT/OT Dominator Choke-Point Planner</text>
+
+  <!-- Left Panel: darkfibr/artex-forensics -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#EF4444" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentArtex)"/>
+  <text x="58" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. darkfibr/artex-forensics (★38 · AI Red-Team Container Forensics)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Supply-Chain Trap: Clean GitHub Source (15,826 LoC) vs Backdoored Docker Binary</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• CVE scanners showed 0 alerts because the backdoor was custom first-party Go code</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Static disassembly at 0x8d5bc0 exposed unauthenticated root RCE &amp; deleted RoE guard</text>
+
+  <!-- 3 Forensic Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#271014" stroke="#EF4444"/>
+  <text x="152" y="318" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">Finding 1: 0x8d5bc0 RCE</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">server.verifyCaptcha</text>
+  <text x="152" y="362" fill="#FECACA" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">if captcha[0] == '!'</text>
+  <text x="152" y="382" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">exec("sh","-c",cmd)</text>
+  <text x="152" y="402" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Pre-auth root shell</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#23170B" stroke="#F97316"/>
+  <text x="360" y="318" fill="#FDBA74" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">Finding 2: Stripped Guard</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">guard/guard.go</text>
+  <text x="360" y="362" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Present in GitHub repo</text>
+  <text x="360" y="382" fill="#FFEDD5" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">0 symbols in ELF binary</text>
+  <text x="360" y="402" fill="#FB923C" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Fake RoE safety theatre</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="568" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">Defense: YARA + Diff</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">artex_backdoor.yar</text>
+  <text x="568" y="362" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Symbol table diffing:</text>
+  <text x="568" y="382" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">go tool nm / objdump</text>
+  <text x="568" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Zero-trust container gate</text>
+
+  <!-- Artex Forensics Workflow Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">AI SA Pre-Deployment Container Binary Audit Protocol</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">1. Never trust Dockerfile curl/ADD of prebuilt binaries over git source</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">2. Compare source packages vs ELF symbol table (go version -m &amp; go tool nm)</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">3. Audit all os/exec.Command callers via go tool objdump -s</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">4. Scan agent images with YARA rules/artex_backdoor.yar + SHA-256 IOCs</text>
+
+  <!-- Right Panel: BenTheCyberOne/Copperhound -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentCopper)"/>
+  <text x="738" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. BenTheCyberOne/Copperhound (★49 · Rust IT/OT Attack Graph Engine)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Innovation: Memory-Mapped CSR Graph + Dominator Choke-Point Planner</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Replaces multi-GB JVM Neo4j bloat with zero-copy Rust memmap2 graph traversal</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Unifies Active Directory, ADCS (ESC1-13), Entra ID &amp; Industrial Purdue OT Levels 0-5</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="752" y="317" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. Dominator Choke-Point Engine</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Lengauer-Tarjan Dominators</text>
+  <text x="752" y="360" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">+ Betweenness Centrality</text>
+  <text x="752" y="382" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Ranks single-edge fixes by % of</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">total Crown-Jewel paths severed</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#1F160B" stroke="#D97706"/>
+  <text x="1064" y="317" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. CHQL &amp; Purdue OT Levels 0-5</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">BloodHound CE ZIP/JSON Ingest</text>
+  <text x="1064" y="360" fill="#FDE68A" font-family="Consolas, monospace" font-size="11.5">IT L4-5 -&gt; DMZ L3.5 -&gt; OT L0-3</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11.5">ESC1-ESC13 ADCS + Kerberos</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Declarative CHQL graph queries</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Defensive SecOps Architecture: Binary Integrity + Graph Choke-Point Cut</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Layer 1 (Supply-Chain): Verify sec-agent binaries match source via artex-forensics</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Layer 2 (Graph Ingest): Stream SharpHound/OT telemetry into Copperhound mmap CSR</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Layer 3 (Remediation): Cut top-3 dominator choke points to eliminate 95%+ paths</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Sub-second local graph analytics without a persistent Neo4j database server</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R15-ARTEXFORENSICS-COPPERHOUND · 60 Container Audits + 24 Graph Assessments/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Blind Docker Pull + Neo4j JVM Cluster</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,960.00/mo ($1,860.00 infra + 41.0h / $4,100.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: CVE Image Scanner + Cloud Graph SaaS</text>
+  <rect x="395" y="716" width="358" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="768" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,890.00/mo ($940.00 SaaS + 19.5h / $1,950.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: Artex-Forensics Gate + Copperhound Rust</text>
+  <rect x="395" y="758" width="58" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="468" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$460.00/mo ($110.00 compute + 3.5h / $350.00) · -92.28%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,500.00/mo (-92.28%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $66,000.00/yr · 37.5h/mo Saved (-91.46%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#EF4444"/>
+  <text x="690" y="824" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Supply-Chain Audit: Source vs ELF Symbol Diff</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Catches 0x8d5bc0 '!' RCE &amp; deleted guard/guard.go</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#D97706"/>
+  <text x="1130" y="824" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Attack-Path Engine: Rust memmap2 + Dominators</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">AD + ADCS + Entra ID + Purdue OT Levels 0-5 Choke Points</text>
+</svg>

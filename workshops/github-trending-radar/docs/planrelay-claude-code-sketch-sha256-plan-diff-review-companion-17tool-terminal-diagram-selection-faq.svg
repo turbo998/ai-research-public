@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR13" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060B16"/>
+      <stop offset="55%" stop-color="#0D192B"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="accentPlan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="accentSketch" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR13)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="199" y="59" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R13 · CUMULATIVE R315</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">PlanRelay SHA-256 Plan/Diff Gate + Claude-Code-Sketch 17-Tool Terminal Visualizer</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Cryptographic SHA-256 Plan &amp; Diff Sign-Off (:4387 0-Dep Node 22) + 17 CJK-Aligned ASCII/Unicode Diagrams, ER Schemas &amp; Wireframes</text>
+
+  <!-- Left Panel: ineedfoundmyway/planrelay -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentPlan)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. ineedfoundmyway/planrelay (★39 · 0-Dep SHA-256 Plan &amp; Diff Gate)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Pain Point: Terminal Scrollback "LGTM" Approves Stale or Unread Plans</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Agents mutate plan.md or git diffs mid-turn while humans approve stale scrollback text</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Zero external runtime deps (Node.js &gt;=22.0.0); local workspace at http://127.0.0.1:4387</text>
+
+  <!-- 3 Hard Review Invariants -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#059669"/>
+  <text x="152" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">Invariant 1: Reset Pending</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">New or mutated plan/diff</text>
+  <text x="152" y="362" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">immediately resets status</text>
+  <text x="152" y="382" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">status = "pending"</text>
+  <text x="152" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">No silent post-edit drift</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#23121B" stroke="#E11D48"/>
+  <text x="360" y="318" fill="#FDA4AF" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">Invariant 2: Blocker Gate</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">blocker | question | nit</text>
+  <text x="360" y="362" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Unresolved blocker thread</text>
+  <text x="360" y="382" fill="#FECDD3" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">HARD-BLOCKS approve</text>
+  <text x="360" y="402" fill="#FB7185" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Line &amp; section anchored</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="568" y="318" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">Invariant 3: SHA-256 Bind</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">planSha256 &amp; diffSha256</text>
+  <text x="568" y="362" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Cryptographic sign-off</text>
+  <text x="568" y="382" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">--plan-sha256 &lt;hash&gt;</text>
+  <text x="568" y="402" fill="#818CF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">1-byte edit invalidates</text>
+
+  <!-- PlanRelay Workflow Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Local Review Loop (.planrelay/ JSON State + Handoff Markdown Export)</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• planrelay serve --plan docs/plan.md --port 4387   # Live UI + Git diff hunks</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• planrelay add-comment --severity blocker ...      # Attach line/section blocker</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• planrelay approve --plan-sha256 &lt;sha&gt; --diff-sha256 &lt;sha&gt;</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• planrelay export --out .planrelay/handoff.md      # Deterministic agent feedback</text>
+
+  <!-- Right Panel: allen-hsu/claude-code-sketch -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentSketch)"/>
+  <text x="738" y="166" fill="#451A03" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. allen-hsu/claude-code-sketch (★42 · 17 Terminal Visual Tools)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Innovation: CJK-Aware Deterministic ASCII/Unicode Engine in Terminal</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Eliminates LLM broken box borders when mixing English + Chinese/Japanese (2-col width)</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• 4 Categories · 17 Visual Generators invoked via /claude-code-sketch:sketch &lt;type&gt;</text>
+
+  <!-- 4 Categories Grid -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#1F160B" stroke="#D97706"/>
+  <text x="752" y="317" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. Diagrams (7) &amp; B. Charts (5)</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">flow | seq | er | state | class</text>
+  <text x="752" y="360" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">mindmap | dep  (BFS DAG layout)</text>
+  <text x="752" y="382" fill="#FDE68A" font-family="Consolas, monospace" font-size="11.5">bar | spark | gantt | kanban | table</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">PK/FK ER connectors &amp; lifelines</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#101E29" stroke="#0EA5E9"/>
+  <text x="1064" y="317" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">C. Hierarchy (2) &amp; D. UI/Arch (3)</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">tree | compare (Side-by-side)</text>
+  <text x="1064" y="360" fill="#7DD3FC" font-family="Consolas, monospace" font-size="11.5">wireframe | arch | card</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11.5">[Button] [Input___] (o) [x] [v]</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Terminal UI mockups before coding</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Visual Plan + Cryptographic Gate Synergy (Sketch Inside PlanRelay)</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 1: Render ER schema, sequence diagram &amp; UI wireframe via claude-code-sketch</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 2: Embed visual artifacts into docs/plan.md &amp; open planrelay on :4387</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 3: Resolve all blocker threads &amp; sign off exact planSha256 + diffSha256</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Eliminates 90%+ scope-drift rework &amp; broken CJK terminal diagrams</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R13-PLANRELAY-CLAUDECODESKETCH · 320 Plan/Diff Reviews + 480 Diagrams/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Chat-Scroll "LGTM" + Raw LLM ASCII</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,490.00/mo ($1,690.00 tok + 38.0h / $3,800.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Heavy SaaS PR Portal + Browser Draw</text>
+  <rect x="395" y="716" width="356" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="766" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,640.00/mo ($840.00 SaaS + 18.0h / $1,800.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: PlanRelay SHA-256 + Claude-Code-Sketch</text>
+  <rect x="395" y="758" width="60" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="470" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$445.00/mo ($95.00 tok + 3.5h / $350.00) · -91.89%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,045.00/mo (-91.89%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $60,540.00/yr · 34.5h/mo Saved (-90.79%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#F59E0B"/>
+  <text x="690" y="824" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Review Gate: planSha256 + diffSha256 + 0 Blockers</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">1-byte mutation resets status to pending on :4387</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#38BDF8"/>
+  <text x="1130" y="824" fill="#7DD3FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Terminal Visualization: 17 Tools · 4 Categories</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">CJK Double-Width Safe · flow/seq/er/wireframe/arch</text>
+</svg>

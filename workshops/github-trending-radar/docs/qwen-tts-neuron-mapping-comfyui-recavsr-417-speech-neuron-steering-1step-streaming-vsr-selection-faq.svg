@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR17" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060B14"/>
+      <stop offset="55%" stop-color="#0F1829"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="accentTts" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="accentVsr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR17)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="199" y="59" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R17 · CUMULATIVE R319</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">Qwen-TTS 417-Neuron Paralinguistic Steering + ComfyUI-ReCaVSR 1-Step Streaming VSR</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Zero-LoRA MLP Weight/Activation Surgery on Qwen3-TTS-0.6B + 1-Step Block-Streaming (21+8f) Wan2.2 Video SR (8GB @ 1440p)</text>
+
+  <!-- Left Panel: areu01or00/qwen-tts-neuron-mapping -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentTts)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. areu01or00/qwen-tts-neuron-mapping (★17 · 417 Speech Neurons)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Mechanistic Discovery: 400 Core + 4 Trait Groups (61 Dormant &lt;1% Frames)</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Maps Qwen3-TTS-12Hz-0.6B talker layers 17-27 (3,072 MLP neurons/layer before down_proj)</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Turns accidental breaths, mid-word laughs, whispers &amp; pauses into deterministic dials</text>
+
+  <!-- 3 Steering Equations Cards -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="152" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. The 400 (L20-27)</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">g_k = d_L · W_down[:,k]</text>
+  <text x="152" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">W_down += (α-1)g_k d_L</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">α = 8..12 (cloned voice)</text>
+  <text x="152" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">0 runtime overhead</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#0A222E" stroke="#06B6D4"/>
+  <text x="360" y="318" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. 4 Trait Groups (L17-26)</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">a_k' = a_k + β·s_k·sd_k</text>
+  <text x="360" y="362" fill="#A5F3FC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">β = 1..4, s_k ∈ {+1,-1}</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Laugh | Whisper | Pause</text>
+  <text x="360" y="402" fill="#22D3EE" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">2nd-speaker backchannel</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#1F160B" stroke="#F59E0B"/>
+  <text x="568" y="318" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. CustomVoice Guard</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">Built-in voices @ α=2</text>
+  <text x="568" y="362" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Full L20-27 d_L projection</text>
+  <text x="568" y="382" fill="#FEF3C7" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">Avoids 13/36 EOS hang</text>
+  <text x="568" y="402" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Safe production synthesis</text>
+
+  <!-- Neuron Examples Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Exact Neuron Coordinates (directions.json &amp; neurons.json)</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Laughing while talking: L26#281↓, L24#837↑, L26#2805↓ (dormant), L25#2430↑, L17#1652↑</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Breathing (Cloned Base): 400 neurons across L20-27 scaled α = 8..12 along d_L</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Whispering &amp; Natural Pauses: Pre-down_proj activation shift by β · sd_k</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Zero dataset collection or LoRA fine-tuning required</text>
+
+  <!-- Right Panel: PedroMarinhoDev/ComfyUI-ReCaVSR -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentVsr)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. PedroMarinhoDev/ComfyUI-ReCaVSR (★75 · 1-Step Streaming Video SR)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Innovation: 1-Step Wan2.2 TI2V-5B Streaming Blocks (21f + 8f) + FlashDecoder</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Reuses previous block latents + rolling KV cache of past keys/values (zero seam flicker)</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Runs natively in ComfyUI v0.44+ at 8 GB VRAM (1440p) &amp; 24 GB VRAM (4K 3840x1920)</text>
+
+  <!-- 2 Architecture Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#101E36" stroke="#3B82F6"/>
+  <text x="752" y="317" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. 1-Step Latent + KV Cache</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Block 0: 21 frames (1 step)</text>
+  <text x="752" y="360" fill="#BFDBFE" font-family="Consolas, monospace" font-size="11.5">Block N: 8 frames (1 step)</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Reuses prior latents + past K/V</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Bit-for-bit reference parity</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#1E1436" stroke="#8B5CF6"/>
+  <text x="1064" y="317" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Input-Conditioned FlashDecoder</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Immediate per-block RGB emit</text>
+  <text x="1064" y="360" fill="#DDD6FE" font-family="Consolas, monospace" font-size="11.5">Conditioned on low-res input</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">8 GB VRAM @ 1440p (4x upscale)</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">24 GB VRAM @ 4K (3840x1920)</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">End-to-End Local Multimodal Production Pipeline (Audio + 4K Video)</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Stage 1: Synthesize expressive dialogue via Qwen3-TTS-0.6B 417-neuron steering</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Stage 2: Generate base video at 480p/360p &amp; stream into ComfyUI-ReCaVSR</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Stage 3: Upscale 4x to 1440p (8GB GPU) or 4K (24GB GPU) in 1 denoising step/block</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Eliminates cloud voice/video API lock-in and multi-step VAE OOM crashes</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R17-QWENTTSNEURONS-RECAVSR · 12k TTS mins + 600 4K VSR mins/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Cloud Voice/VSR APIs + LoRA/Stitching</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,880.00/mo ($1,980.00 API + 39.0h / $3,900.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Prompt-Tag Retries + 30-Step Chunk VSR</text>
+  <rect x="395" y="716" width="350" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="760" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,780.00/mo ($930.00 GPU + 18.5h / $1,850.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: Qwen-TTS 417-Neurons + ComfyUI-ReCaVSR</text>
+  <rect x="395" y="758" width="58" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="468" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$465.00/mo ($115.00 compute + 3.5h / $350.00) · -92.09%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,415.00/mo (-92.09%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $64,980.00/yr · 35.5h/mo Saved (-91.03%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#06B6D4"/>
+  <text x="690" y="824" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Neuron Steering: 400 Core (×8-12) + 4 Trait Groups</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">W_down[:,k] += (α-1)g_k d_L &amp; a_k' = a_k + β·s_k·sd_k</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#3B82F6"/>
+  <text x="1130" y="824" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Streaming Video SR: 21f + 8f Blocks (1 Step/Block)</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">8 GB VRAM @ 1440p · 24 GB VRAM @ 4K · FlashDecoder</text>
+</svg>

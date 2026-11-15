@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR32" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060A14"/>
+      <stop offset="55%" stop-color="#0E172A"/>
+      <stop offset="100%" stop-color="#04070D"/>
+    </linearGradient>
+    <linearGradient id="accentLeap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentMlx" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR32)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="199" y="59" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R32 · CUMULATIVE R334</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">LeapQuant Linear-Attention State Quantization + H3-Image-MLX 3.23GB Stream Engine</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">2.05-3.70x Kernel &amp; 1.57x E2E vLLM Speedup on Gated DeltaNet/KDA + 85% RAM Cut (21.18GB -&gt; 3.23GB) at Resident Speed on Apple Silicon</text>
+
+  <!-- Left Panel: leapquant/LeapQuant -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentLeap)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. leapquant/LeapQuant (★56 · Linear Attention Recurrent State Quant)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Why Naive FP8/INT8 Collapses on Gated DeltaNet (GDN) &amp; Kimi Delta Attention (KDA)</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Quantizing recurrent states at every token step accumulates fatal rounding drift (FP8: 0.0% AIME)</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• LeapQuant 8-bit/6-bit hits 84.4% avg accuracy (vs 84.0% FP32 &amp; 72.5% BF16) with 0 training</text>
+
+  <!-- 3 Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="152" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. Per-Window Leap</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Quantizes once/window</text>
+  <text x="152" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Buffers updates in FP</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Stops step-by-step</text>
+  <text x="152" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">error accumulation</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#101E36" stroke="#3B82F6"/>
+  <text x="360" y="318" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Compensator Tokens</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Rank-1 outer products</text>
+  <text x="360" y="362" fill="#BFDBFE" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Holds top state outliers</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Shares window update</text>
+  <text x="360" y="402" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">path at ~0 extra cost</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="568" y="318" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. Residual Smoothing</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Per-key-row rescaling</text>
+  <text x="568" y="362" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Recomputed per window</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">2.05-3.70x kernel &amp;</text>
+  <text x="568" y="402" fill="#818CF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">1.57x E2E vLLM speedup</text>
+
+  <!-- LeapQuant Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Benchmark Proof Across Qwen3.5-9B, GLM-5.3-Flash &amp; Qwen3.8-Flash-Next</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 8-bit Avg (AIME/Beyond/GPQA/LCB): LeapQuant 84.4% vs FP8 45.1% | INT8 47.7%</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 6-bit Avg: LeapQuant 84.4% vs TurboQuant 60.1% | MXFP6 39.1% | NVFP6 37.1%</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 4-bit Avg: LeapQuant 80.6% vs TurboQuant 45.0% | MXFP4 16.7%</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Plug-and-play in vLLM 0.30.0 (B200 / RTX PRO 6000 / RTX 5090): bash serve.sh</text>
+
+  <!-- Right Panel: Anionex/h3-image-mlx -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentMlx)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. Anionex/h3-image-mlx (★57 · 3.23GB Apple Silicon MiniMax H3 Image)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#DDD6FE" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Breakthrough: Streaming Matches Resident Speed (23.61s vs 23.63s) at -85% RAM!</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Cuts M5 Pro 1024x1024 peak footprint from 21.18 GB (Resident) to 3.23 GB (Prefetch+Async)</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• 4.38x faster than ComfyUI @ 1024p; generates 4K (4096x4096) in 7.18 GB peak RAM</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#1E1436" stroke="#8B5CF6"/>
+  <text x="752" y="317" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. 3-Level Memory Reduction</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">1. Separate process per stage</text>
+  <text x="752" y="360" fill="#DDD6FE" font-family="Consolas, monospace" font-size="11.5">2. W8A8 ConvRot + Metal TensorOps</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">3. Per-block safetensors stream</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">+ overlapping tile VAE decode</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="1064" y="317" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. H3_ASYNC=1 + H3_PREFETCH=1</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Overlaps next-block disk read</text>
+  <text x="1064" y="360" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11.5">with current-block Metal eval</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">2.48 GB peak on 16GB M5 Air!</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Pixel-for-pixel identical output</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Controlled M5 Pro Benchmark: H3-Image-MLX vs Local ComfyUI</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 1024x1024: MLX Resident 19.90s (4.38x) | MLX Stream 2.53 GB vs ComfyUI 31.29 GB</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 2048x2048: MLX Stream 67.06s (2.00x) at 3.48 GB peak vs ComfyUI 38.21 GB</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 4096x4096: MLX Stream 317.29s (1.80x) at 7.18 GB peak vs ComfyUI 42.31 GB</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Multi-image editing: Pass up to --reference &lt;img&gt; (&lt;Picture 1&gt;, &lt;Picture 2&gt;...)</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R32-LEAPQUANT-H3IMAGEMLX · 1,200 vLLM GPU Hrs + 6k 4K Edits/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: FP32/Naive FP8 + 38GB ComfyUI MPS</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$6,240.00/mo ($2,140.00 GPU + 41.0h / $4,100.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: TurboQuant + Un-Prefetched Stream</text>
+  <rect x="395" y="716" width="351" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="761" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,960.00/mo ($1,010.00 GPU + 19.5h / $1,950.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: LeapQuant vLLM + H3-Image-MLX</text>
+  <rect x="395" y="758" width="56" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="466" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$475.00/mo ($125.00 compute + 3.5h / $350.00) · -92.39%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,765.00/mo (-92.39%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $69,180.00/yr · 37.5h/mo Saved (-91.46%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#3B82F6"/>
+  <text x="690" y="824" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">LeapQuant: 84.4% Avg (8/6-bit) vs 84.0% FP32</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">2.05-3.70x Kernel &amp; 1.57x E2E Speedup in vLLM 0.30.0</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#8B5CF6"/>
+  <text x="1130" y="824" fill="#DDD6FE" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">H3-Image-MLX: 3.23 GB @ 1024p · 7.18 GB @ 4K</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">23.61s Stream+Prefetch+Async = 23.63s Resident Speed</text>
+</svg>

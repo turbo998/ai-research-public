@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR26" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="55%" stop-color="#0C182B"/>
+      <stop offset="100%" stop-color="#04070D"/>
+    </linearGradient>
+    <linearGradient id="accentAbyss" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="accentDawn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR26)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#083344" stroke="#06B6D4" stroke-width="1"/>
+  <text x="199" y="59" fill="#A5F3FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R26 · CUMULATIVE R328</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">Abyssal-Garden 96KB WebGPU World + Room-at-Dawn Path-Traced 4K HDR10 Engine</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Zero-Asset 96KB HTML WebGPU 2M-Kelp Ecosystem (180fps @ 1440p) + Three.js BVH Per-Vertex GI (gi.bin) &amp; 4K HDR10 PQ Film Renderer</text>
+
+  <!-- Left Panel: Noniv/abyssal-garden -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentAbyss)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. Noniv/abyssal-garden (★904 · 96KB Single-File WebGPU World)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Zero External Assets: 0 Images · 0 3D Models · 0 Sound Files · 0 Libraries</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• GPU sculpts seabed + ~2,000,000 kelp leaves, shipwreck, whale tail, mantas &amp; caustics</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• 180 fps @ 2560x1440 (RTX 5070 Ti) down to ~20 fps @ 670x372 on low-end 4GB phones</text>
+
+  <!-- 3 Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#0A222E" stroke="#06B6D4"/>
+  <text x="152" y="318" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. Direct WGSL Engine</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">world.js + shaders.js</text>
+  <text x="152" y="362" fill="#A5F3FC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">~2M swaying kelp blades</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Sliding cliff collision</text>
+  <text x="152" y="402" fill="#22D3EE" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">+ Web Audio synth</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="360" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Crash-Safe Auto-LOD</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">quality.js (High/Med/Low)</text>
+  <text x="360" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Pre-menu blurred warmup</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Driver loss auto-restarts</text>
+  <text x="360" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">1 tier lower &amp; persists</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="568" y="318" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. Built-In Benchmark</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">npm run build:dev</text>
+  <text x="568" y="362" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Key F: 1-min camera tour</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Key B: GPU/frame timer</text>
+  <text x="568" y="402" fill="#818CF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Deterministic profiling</text>
+
+  <!-- Abyssal Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#22D3EE" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Two-Stage Dynamic Frame-Rate Governor (60fps Target)</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Stage 1 (Behind Start Menu): Scene runs blurred to settle resolution &amp; draw distance</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Stage 2 (Runtime): Lowers internal render scale first, then plant/rock draw radius</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Build modes: npm run build (96KB index.html) | build:readable | build:dev</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• 100% offline-capable single HTML file; zero CDN texture/mesh requests</text>
+
+  <!-- Right Panel: Leonxlnx/room-at-dawn -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentDawn)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. Leonxlnx/room-at-dawn (★83 · Path-Traced Procedural 4K HDR10)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">6:51 — Photoreal Bedroom Built 100% From Code (Interactive + 4K HDR10 Film)</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Zero real-time lights: Web-Worker BVH CPU path tracer bakes per-vertex irradiance (gi.bin)</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Runs smoothly on integrated GPUs (Radeon 780M) AND exports 3840x2160 PQ/BT.2020 HEVC</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#23150B" stroke="#F59E0B"/>
+  <text x="752" y="317" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. Per-Vertex Directional GI</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">three-mesh-bvh Web Workers</text>
+  <text x="752" y="360" fill="#FDE68A" font-family="Consolas, monospace" font-size="11.5">Window NEE + MIS final gather</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Stores irradiance + dominant dir</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">in gi.bin so normal maps shade!</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="1064" y="317" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Sub-Frame 4K HDR10 Renderer</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Jittered sub-frame accumulation</text>
+  <text x="1064" y="360" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11.5">Thin-lens DoF + 180° shutter</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Pure-time gust wind (~118k leaves)</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">HDR10 (PQ/BT.2020) via ffmpeg</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Dual-Mode Architecture: Integrated-GPU Web Walk + Cinema Master Export</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Interactive walk: npm run dev -&gt; http://127.0.0.1:5319 (Key C plays film camera)</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Re-bake GI: node tools/shot.mjs --bake 256 (CPU BVH path tracer -&gt; gi.bin)</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Render 4K HDR10: node tools/film.mjs &amp;&amp; node tools/film.mjs --concat</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Zero UV-unwrapping required because GI is stored per-vertex + directional vector</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R26-ABYSSALGARDEN-ROOMATDAWN · 500k 3D Views + 40 4K HDR Scenes/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: 150MB glTF CDN + Lightmap UV Bake</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$6,040.00/mo ($2,040.00 CDN/GPU + 40.0h / $4,000.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Draco Meshes + Unbaked Shadow Maps</text>
+  <rect x="395" y="716" width="350" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="760" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,850.00/mo ($950.00 CDN + 19.0h / $1,900.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: Abyssal-Garden 96KB + Room-at-Dawn</text>
+  <rect x="395" y="758" width="56" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="466" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$460.00/mo ($110.00 compute + 3.5h / $350.00) · -92.38%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,580.00/mo (-92.38%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $66,960.00/yr · 36.5h/mo Saved (-91.25%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#06B6D4"/>
+  <text x="690" y="824" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Abyssal-Garden: 96 KB HTML · 2M Leaves · 180 FPS</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Pre-Menu Auto-Calibration &amp; Crash-Safe Tier Fallback</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#F59E0B"/>
+  <text x="1130" y="824" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Room-at-Dawn: Per-Vertex GI (gi.bin) + 4K HDR10</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Window MIS Path Tracing · 180° Shutter · Radeon 780M Ready</text>
+</svg>

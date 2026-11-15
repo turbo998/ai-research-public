@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR31" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060A12"/>
+      <stop offset="55%" stop-color="#0E1729"/>
+      <stop offset="100%" stop-color="#04070D"/>
+    </linearGradient>
+    <linearGradient id="accentPulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="accentLoupe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR31)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="199" y="59" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R31 · CUMULATIVE R333</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">PulseGuard-RT QNX 8.0 Trace Analyzer + Loupe 4-Test OSINT Media Forensics</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Zero-Dep QNX SDP 8.0 THREADY-&gt;THRUNNING p95/p99 CI Gate + 4-Signal Copy-Move (#FF4FD8), ELA, Noise &amp; Timeline Forensics</text>
+
+  <!-- Left Panel: samertall/pulseguard-rt -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentPulse)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. samertall/pulseguard-rt (★65 · Offline QNX SDP 8.0 Trace Intelligence)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Zero External Dependencies · Zero Cloud · Strict Kernel Evidence Honesty</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Parses QNX 8.0 traceprinter text (t:0x... CPU:... THREAD:...) on Linux/macOS/Windows</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Never invents unmeasured CPU-idle time or over-claims priority inversion on mutex waits</text>
+
+  <!-- 3 Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="152" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. Dispatch Latency</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">THREADY -&gt; THRUNNING</text>
+  <text x="152" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11" text-anchor="middle">p50 / p95 / p99 / max</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Per-thread breakdown &amp;</text>
+  <text x="152" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">screening budget filter</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#0A222E" stroke="#06B6D4"/>
+  <text x="360" y="318" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Mutex Wait Signals</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">THMUTEX -&gt; next THREADY</text>
+  <text x="360" y="362" fill="#A5F3FC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Same-thread pairing</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Observed CPU spans</text>
+  <text x="360" y="402" fill="#22D3EE" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Zero fabricated idle</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#1F160B" stroke="#F59E0B"/>
+  <text x="568" y="318" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. CI p95 Gate &amp; HTML</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">JSON report diffing</text>
+  <text x="568" y="362" fill="#FEF3C7" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Fails CI on p95 % jump</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Self-contained HTML</text>
+  <text x="568" y="402" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">0 CDN / 0 JS libraries</text>
+
+  <!-- PulseGuard Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Embedded RTOS Scheduling Verification Loop (QEMU / RPi 5 / Target HW)</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Step 1: Export textual traceprinter dump from QNX SDP 8.0 target</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Step 2: Compute THREADY-&gt;THRUNNING dispatch p50/p95/p99 &amp; THMUTEX waits</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Step 3: Inspect air-gapped self-contained HTML dashboard (0 external calls)</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Step 4: Gate pull requests on p95 dispatch-latency regression percentage</text>
+
+  <!-- Right Panel: cloudriverwedge/loupe-osint-image-verification -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentLoupe)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. cloudriverwedge/loupe-osint-image-verification (★95 · v2.1.0)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Philosophy: Show WHERE It Lies, Not Just an Opaque Probability Score</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Runs the 4-test bench: Error-Level Analysis (ELA) | Noise Patterns | Reverse Search | AI</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Marks pasted regions in #FF4FD8 magenta + dashed outline of the cloned source region</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="752" y="317" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. 4 Ways a Picture/Video Lies</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">1. Edited (Copy-move / ELA)</text>
+  <text x="752" y="360" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11.5">2. Old / Recycled (First-seen date)</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11.5">3. Wrong Camera (Sensor noise)</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">4. Nobody Took It (AI artefacts)</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#1E1436" stroke="#8B5CF6"/>
+  <text x="1064" y="317" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Spatial &amp; Timeline Localization</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Viewing-room black #0C0D10</text>
+  <text x="1064" y="360" fill="#DDD6FE" font-family="Consolas, monospace" font-size="11.5">Marker magenta #FF4FD8 overlay</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Dashed clone-source bounding box</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">+ Video cut timestamp markers</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Evidence-First Telemetry &amp; Forensics Design Principles</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Principle 1 (No Fabricated Metrics): PulseGuard labels synthetic demo traces explicitly</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Principle 2 (No Fake Social Proof): Loupe ships zero fabricated reviews or user counts</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Principle 3 (Pinpoint Evidence): Report exact thread IDs/cycles &amp; exact pasted pixels</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Directly aligns with our Zero-Fabricated-Coordinates &amp; Provenance standard</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R31-PULSEGUARDRT-LOUPEOSINT · 140 QNX Audits + 600 OSINT Checks/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Manual Trace Grep + Cloud Forensics</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,880.00/mo ($1,880.00 SaaS + 40.0h / $4,000.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Ad-Hoc Matplotlib + Split ELA Tools</text>
+  <rect x="395" y="716" width="353" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="763" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,810.00/mo ($910.00 tools + 19.0h / $1,900.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: PulseGuard-RT 0-Dep + Loupe 4-Test</text>
+  <rect x="395" y="758" width="57" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="467" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$450.00/mo ($100.00 compute + 3.5h / $350.00) · -92.35%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,430.00/mo (-92.35%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $65,160.00/yr · 36.5h/mo Saved (-91.25%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#06B6D4"/>
+  <text x="690" y="824" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">PulseGuard-RT: QNX 8.0 p50/p95/p99 Dispatch &amp; Mutex</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">0 External Python Deps · Offline HTML · CI p95 Gate</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#EC4899"/>
+  <text x="1130" y="824" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Loupe OSINT: ELA + Noise + Reverse Search + AI</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">#FF4FD8 Copy-Move Region + Source Outline + Cut Timestamp</text>
+</svg>

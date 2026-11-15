@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR28" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070A14"/>
+      <stop offset="55%" stop-color="#10182B"/>
+      <stop offset="100%" stop-color="#05070E"/>
+    </linearGradient>
+    <linearGradient id="accentH3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="accentMim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR28)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="310" height="28" rx="6" fill="#4C0519" stroke="#EC4899" stroke-width="1"/>
+  <text x="207" y="59" fill="#FBCFE8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R28 · R330 MILESTONE</text>
+  <text x="380" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">ComfyUI-Banzhang-All 6GB MiniMax H3 Studio + Mimvox 60-Lang Local Voice Cloner</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Three-Pass 6GB VRAM HD Video &amp; Pin-Frame Drift Control (_h3mc) + Phoneme-Coverage &amp; SNR-Gated Local Voice Cloning (CUDA/ROCm/MPS)</text>
+
+  <!-- Left Panel: alinuo666/ComfyUI-Banzhang-All -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#EC4899" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentH3)"/>
+  <text x="58" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. alinuo666/ComfyUI-Banzhang-All (★62 · 6GB MiniMax H3 Three-Pass)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Breakthrough: MiniMax H3 Multi-Segment HD Video Continuation on a 6 GB GPU</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• 59 refactored node modules in nodes/ + shared core/ governed by single-truth AGENTS.md</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• H3 Director Studio + Desk + Media Rack + 4-Segment Audio-Beat MV Studio</text>
+
+  <!-- 3 Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="152" y="318" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. Three-Pass 6GB VRAM</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">_h3mc/ latent math</text>
+  <text x="152" y="362" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Pin-frame drift control</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">4-segment beat-aligned</text>
+  <text x="152" y="402" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">MV continuation</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#23150B" stroke="#F59E0B"/>
+  <text x="360" y="318" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. 24ch 5D (T=1) &amp; Hash</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">H3 Image 24ch 5D latent</text>
+  <text x="360" y="362" fill="#FEF3C7" font-family="Consolas, monospace" font-size="11" text-anchor="middle">SQLite v5 content hash</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Idempotent backfill &amp;</text>
+  <text x="360" y="402" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Media Rack fallback</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="568" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. Release Integrity Gate</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Relative-import verifier</text>
+  <text x="568" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11" text-anchor="middle">RelayVSR lazy error gate</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Blocks missing modules</text>
+  <text x="568" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">before release packaging</text>
+
+  <!-- Banzhang Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">H3 Director Studio &amp; Three-Pass Memory Governance</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Pass 1..3: Staged latent generation, motion-context slicing &amp; HD decode</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Drift Control: Pin-frame anchoring prevents identity/color decay across 4+ clips</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Asset Identity: SQLite schema v5 content-hash pool replaces fragile text aliases</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Commercial clarity: Generated videos are 100% user-monetizable (subject to model terms)</text>
+
+  <!-- Right Panel: tarpetos/mimvox -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentMim)"/>
+  <text x="738" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. tarpetos/mimvox (★67 · 60-Lang Local Voice Cloning &amp; Video Redub)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Innovation: Pre-Training Phoneme Coverage Analyzer + Per-Take Acoustic QA</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Runs 100% locally on Windows CUDA (RTX 4070: 1.6-1.8s/clip), Linux ROCm (RX 9070 XT) &amp; M5 Pro</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Zero-shot 12-15s cloning + RVC timbre training + 60-language NLLB-200 video redubbing</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="752" y="317" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. Phoneme Coverage Engine</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Analyzes custom reading scripts</text>
+  <text x="752" y="360" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11.5">Flags missing language phonemes</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Verdict: too short | zero-shot |</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">trainable | great (60-90s chunks)</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#101E36" stroke="#3B82F6"/>
+  <text x="1064" y="317" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Per-Take SNR &amp; Clipping Gate</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Peak level | Clipping | Loudness</text>
+  <text x="1064" y="360" fill="#BFDBFE" font-family="Consolas, monospace" font-size="11.5">Noise floor | SNR | Silence ratio</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Instant ok/warn/bad verdict</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Re-record BEFORE multi-hour train</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Local Multimodal Studio: 6GB H3 Video Continuation + 60-Lang Voice Dubbing</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 1: Produce multi-segment HD video on 6GB GPU via H3 Director Studio</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Step 2: Validate voice script phoneme coverage &amp; take SNR in Mimvox</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Step 3: Clone voice &amp; redub video across 60+ languages on CUDA/ROCm/MPS</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Note: Mimvox OmniVoice/NLLB-200 weights are CC BY-NC 4.0 (non-commercial)</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R28-BANZHANGH3-MIMVOX · 160 Multi-Seg Videos + 90 Dub Projects/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Cloud 24GB Video + SaaS Dubbing</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$6,150.00/mo ($2,050.00 API + 41.0h / $4,100.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Single-Pass OOM + Raw RVC Scripts</text>
+  <rect x="395" y="716" width="350" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="760" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,910.00/mo ($960.00 GPU + 19.5h / $1,950.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: ComfyUI-Banzhang-All + Mimvox</text>
+  <rect x="395" y="758" width="56" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="466" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$465.00/mo ($115.00 compute + 3.5h / $350.00) · -92.44%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,685.00/mo (-92.44%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $68,220.00/yr · 37.5h/mo Saved (-91.46%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#EC4899"/>
+  <text x="690" y="824" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">MiniMax H3 Studio: 6 GB VRAM Three-Pass HD</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Pin-Frame Drift Control · SQLite v5 Content-Hash Pool</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#3B82F6"/>
+  <text x="1130" y="824" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Mimvox: 60+ Languages · 1.6-1.8s Zero-Shot</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Phoneme Coverage + SNR/Clipping Gate · CUDA/ROCm/MPS</text>
+</svg>

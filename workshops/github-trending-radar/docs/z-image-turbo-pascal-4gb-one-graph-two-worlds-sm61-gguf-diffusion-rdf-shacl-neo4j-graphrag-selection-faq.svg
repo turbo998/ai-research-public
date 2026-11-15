@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR18" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#05070E"/>
+    </linearGradient>
+    <linearGradient id="accentZimg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentGraph" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR18)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="310" height="28" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="207" y="59" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R18 · R320 MILESTONE</text>
+  <text x="380" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">Z-Image-Turbo 4GB Pascal (sm_61) Engine + One-Graph-Two-Worlds RDF/LPG GraphRAG</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">768x1344 Q8_0 GGUF Text-to-Image on 4GB GTX 1050 Ti + Validated RDF/OWL/SHACL/HermiT vs Neo4j 5.26.30 Cypher Architecture</text>
+
+  <!-- Left Panel: alexturkey/z-image-turbo-pascal-4gb -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentZimg)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. alexturkey/z-image-turbo-pascal-4gb (★52 · 4GB sm_61 Q8_0 GGUF)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Breakthrough: 768x1344 HD Synthesis on 4,096 MiB Pascal GPU + 11 GB System RAM</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Patched stable-diffusion.cpp streams Q8_0 GGUF blocks on GTX 1050 Ti (compute cap 6.1)</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Pixel-for-pixel seed determinism (193-228s/img), SHA-256 pinned weights &amp; AGENTS.md</text>
+
+  <!-- 3 Technical Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="152" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. 4GB VRAM Partition</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">GTX 1050 Ti (4096 MiB)</text>
+  <text x="152" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">~11 GB Host RAM stream</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">cuDNN or --no-cudnn</text>
+  <text x="152" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">768x1344 zero OOM</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#101E36" stroke="#3B82F6"/>
+  <text x="360" y="318" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Pixel-Exact Seed</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">Same seed = same pixels</text>
+  <text x="360" y="362" fill="#BFDBFE" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">SHA-256 pinned 12.2 GB</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">docs/MEASUREMENTS.md</text>
+  <text x="360" y="402" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">193-228s verified timing</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="568" y="318" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. Agent-Driven Setup</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">AGENTS.md + patches/</text>
+  <text x="568" y="362" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">setup.py -&gt; SETUP_OK</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">generate.py -&gt; IMAGE_OK</text>
+  <text x="568" y="402" fill="#818CF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Self-adapts to any GPU</text>
+
+  <!-- Z-Image Workflow Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">4-Command Reproducible Edge Deployment Loop</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">1. nvidia-smi --query-gpu=name,memory.total --format=csv  # 4096 MiB check</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">2. python scripts/setup.py [--no-cudnn]                   # Expect SETUP_OK</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">3. python scripts/generate.py --prompt-file prompts/eiffel.txt # IMAGE_OK</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">4. Non-Pascal card? Point coding agent at AGENTS.md &amp; patches/README.md</text>
+
+  <!-- Right Panel: mdhabibi/one-graph-two-worlds -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentGraph)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. mdhabibi/one-graph-two-worlds (★41 · Semantic vs Property Graph Lab)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">One Domain Catalog, Two Verified Graph Worlds (v0.1.1 · Zenodo DOI 24228810)</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Compares W3C Semantic Stack (RDF/RDFS/OWL 2 DL/SPARQL/SHACL) vs LPG (Neo4j 5.26.30/Cypher)</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Bridges formal ontology reasoning &amp; SHACL policy validation into production GraphRAG</text>
+
+  <!-- 2 Graph Worlds Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#23150B" stroke="#F59E0B"/>
+  <text x="752" y="317" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">World 1: Semantic Graph (W3C)</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">RDF + RDFS + OWL 2 DL (HermiT)</text>
+  <text x="752" y="360" fill="#FDE68A" font-family="Consolas, monospace" font-size="11.5">6 SPARQL Queries + SHACL Shapes</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Positive/negative policy gates &amp;</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">counterfactual DL classification</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="1064" y="317" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">World 2: Property Graph (LPG)</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Neo4j Community 5.26.30 + Cypher</text>
+  <text x="1064" y="360" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11.5">Idempotent load &amp; deduplication</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Unmet-prerequisite exclusion,</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">event reification &amp; GraphRAG</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">AI SA Hybrid GraphRAG Decision Rules (publication/VALIDATION.md)</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Rule 1: Use SHACL shapes to reject hallucinated LLM triples before DB ingestion</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Rule 2: Use OWL 2 DL (HermiT) when taxonomic subsumption &amp; policy proofs matter</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Rule 3: Use Neo4j 5.26.30 Cypher for k-hop subgraph retrieval &amp; edge-weighted RAG</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Explicit epistemic boundaries: separates baseline data, policy edits &amp; pseudocode</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R18-ZIMAGETURBO4GB-ONEGRAPHTWOWORLDS · 18k Images + 16 GraphRAG Schemas/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Cloud 24GB GPUs + Unvalidated GraphRAG</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,920.00/mo ($1,920.00 cloud + 40.0h / $4,000.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: 512p Offload Hacks + Unchecked Cypher</text>
+  <rect x="395" y="716" width="352" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="762" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,820.00/mo ($920.00 compute + 19.0h / $1,900.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: Z-Image 4GB GGUF + One-Graph-Two-Worlds</text>
+  <rect x="395" y="758" width="57" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="467" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$455.00/mo ($105.00 compute + 3.5h / $350.00) · -92.31%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,465.00/mo (-92.31%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $65,580.00/yr · 36.5h/mo Saved (-91.25%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#3B82F6"/>
+  <text x="690" y="824" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Edge Diffusion: 4 GB GTX 1050 Ti (sm_61) @ 768x1344</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Q8_0 GGUF + ~11 GB RAM · Pixel-Exact Seed Determinism</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#F59E0B"/>
+  <text x="1130" y="824" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Dual Graph Validation: SHACL/HermiT + Neo4j 5.26.30</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">6 SPARQL Queries + Positive/Negative SHACL + Cypher Dedup</text>
+</svg>

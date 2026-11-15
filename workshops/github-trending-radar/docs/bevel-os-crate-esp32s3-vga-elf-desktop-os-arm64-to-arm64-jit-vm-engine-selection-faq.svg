@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg39" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentTeal39" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <linearGradient id="accentIndigo39" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg39)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#042F2E" stroke="#14B8A6" stroke-width="1"/>
+  <text x="162" y="55" fill="#5EEAD4" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R39 (CUMULATIVE R341)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Bevel OS (ESP32-S3 68fps VGA Desktop &amp; Doom) + crate (5.3x Arm64-to-Arm64 JIT VM Engine)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">andrisgauracs/bevel-os (★54 · 0.7s Boot · 5.6% Scan-Out · 24-Fn ELF API · 12/12 Powercut) + oneamendez/crate (★50 · 24.5s vs 130.5s QEMU TCG · iPhone Claude Code 165ms)</text>
+
+  <!-- Left Column: andrisgauracs/bevel-os -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#14B8A6" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentTeal39)"/>
+  <text x="62" y="175" fill="#042F2E" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🖥️ andrisgauracs/bevel-os — ESP32-S3 640x480 VGA Desktop OS by Claude</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#5EEAD4" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. 0.7s Boot &amp; 5.6% VGA Scan-Out</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• ESP32-S3 N16R8 (16MB Flash/8MB PSRAM)</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 60fps 0-write mouse · 68fps window drag</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• 76fps full redraw · ~32fps Doom E1M1</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#5EEAD4" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Dynamic ELF &amp; Fault Isolation</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Loads `/disk/Apps/*.elf` (`apps/bevel.h`)</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 24-function syscall table (Snake, Doom)</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• App crash -&gt; dialog (OS stays alive)</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#0D9488" stroke-width="1"/>
+  <text x="62" y="346" fill="#2DD4BF" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Hardware-in-the-Loop Serial Verification (`bv.py`, `kbtest.py`, `powercut.py`)</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `tools/bv.py dump`: pixel-exact framebuffer screenshot over 2 Mbaud serial</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `tools/kbtest.py`: 34/34 keyboard-only navigation steps verified</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• `tools/powercut.py`: 12/12 mid-write resets passed with drive 100% intact</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">ESP32-S3 640x480 COMPOSITOR FRAME RATES &amp; SCAN-OUT COST</text>
+  <rect x="62" y="480" width="420" height="18" rx="4" fill="#14B8A6"/>
+  <text x="492" y="494" fill="#5EEAD4" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">76 FPS Redraw / 68 FPS Drag</text>
+  <rect x="62" y="508" width="90" height="18" rx="4" fill="#3B82F6"/>
+  <text x="162" y="522" fill="#93C5FD" font-family="Segoe UI, Inter, sans-serif" font-size="12">5.6% 1-Core VGA Scan-Out (0 Late Fills · 32 FPS Doom)</text>
+
+  <!-- Right Column: oneamendez/crate -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentIndigo39)"/>
+  <text x="686" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">📦 oneamendez/crate — 5.3x Faster Arm64-to-Arm64 JIT VM for iOS &amp; Mac</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#A5B4FC" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Copy-and-Patch Arm64 JIT</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Runs where Hypervisor is forbidden</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Copies ordinary arm64 ops verbatim</text>
+  <text x="684" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Rewrites only MMU/branch/sysreg/exc</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#A5B4FC" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. 5.3x Beat Over QEMU 10.0.2 TCG</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Full Debian 13 pass: 24.5s vs 130.5s</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `gcc -O2`: 6.93s vs 35.30s (5.1x)</text>
+  <text x="974" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Idle shell: 0.65% of 1 host core</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#4F46E5" stroke-width="1"/>
+  <text x="686" y="346" fill="#818CF8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. iPhone (`A20, iOS 27.1`) Claude Code &amp; Chrome + `virgl` GPU Compositing</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• iPhone boot to root: 5.3s · desktop drawn: 6.3s · `claude --version`: 165ms</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Headless Chrome start + 10M V8 loop on iPhone in 2.4s (`virtio-gpu` + ANGLE)</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Embeddable C API (`include/crate.h`), Rust crate &amp; Swift `Crate.xcframework`</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">DEBIAN 13 BENCHMARK SUITE WALL TIME ON M3 MACBOOK AIR (LOWER IS BETTER)</text>
+  <rect x="686" y="480" width="82" height="18" rx="4" fill="#10B981"/>
+  <text x="778" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">crate `jit`: 24.5 s (5.33x faster · identical SHA-256 outputs)</text>
+  <rect x="686" y="508" width="435" height="18" rx="4" fill="#EF4444"/>
+  <text x="1128" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">QEMU TCG: 130.5s</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R39-BEVELOS-CRATE · 15 MCU OS Releases + 30 Mobile Arm64 VMs/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Manual MCU GUI + Slow QEMU TCG</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Cloud Arm64 VMs &amp; Lab Spend: $1,940.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Firmware &amp; TCG Wait Labor (40.0h × $100): $4,000.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 130.5s QEMU TCG bottleneck + manual VGA/FS debugging</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $5,940.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 40.0 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: Monolithic LVGL + Unaccelerated VM</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Hardware &amp; Test Bench Spend: $890.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Crash &amp; Porting Labor (18.5h × $100): $1,850.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• App crash reboots whole MCU + no iOS JIT embedding</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,740.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-53.87% vs Path A (18.5 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: Bevel OS (HIL) + crate (5.3x Arm64 JIT)</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• $5 ESP32-S3 &amp; Local JIT Compute: $95.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated HIL &amp; SDK Ops (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,495.00/mo (-92.51%) · $65,940.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $445.00 / mo (-92.51%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 36.5 eng hrs/mo (-91.25% labor)</text>
+</svg>

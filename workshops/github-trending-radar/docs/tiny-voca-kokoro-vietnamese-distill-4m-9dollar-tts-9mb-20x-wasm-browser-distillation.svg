@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgR7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#172544"/>
+    </linearGradient>
+    <linearGradient id="cardR7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bgR7)"/>
+  <rect x="24" y="24" width="1352" height="812" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="92" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="74" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">2026-11-15 NIGHT SHIFT ROUND 7 (CUMULATIVE R309) · CLAIM-20261115-R7-TINYVOCA-KOKORODISTILL</text>
+  <text x="68" y="104" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">4.5M 参数 $9.56 从零训练 TTS 与 9.2MB 浏览器 20 倍速蒸馏管线选型 FAQ</text>
+  <text x="68" y="124" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">n4ze3m/tiny-voca (★209, 18MB 70x CPU 实时, $9.56 训练总成本) + loanhviet/kokoro-vietnamese-distill (★27, 326MB→9.2MB RTF 0.075) · 月省 $4,822.50 (-92.12%)</text>
+
+  <!-- Left Card: n4ze3m/tiny-voca -->
+  <rect x="44" y="150" width="644" height="360" rx="14" fill="url(#cardR7)" stroke="#38BDF8" stroke-width="1.3"/>
+  <text x="68" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">1. n4ze3m/tiny-voca (★209 · 2026-11-14 · Apache-2.0 · 4.5M Params / 18 MB)</text>
+  <text x="68" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">总花费仅 $9.56（一张披萨钱）从零训出的 18MB 70 倍速端侧双音色 TTS</text>
+  <text x="68" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 极致轻量含声码器：4,537,291 参数 (18 MB)，内置波形生成器，4 核 CPU 达 ~70× 实时速率</text>
+  <text x="68" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 全栈开源可复现：公开数据准备 (prepare)、标注 (annotate)、104k 步训练与 ONNX Web 导出</text>
+  <text x="68" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 单卡 RTX 4090 7.7 小时训完：含数据集构建、失败尝试与最终训练累计仅耗费 $9.56 GPU 租金</text>
+  <text x="68" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 诚实边界：仅支持美式英语 F2(女)/M2(男) 固定双音色，按句合成，暂不支持流式与声音克隆</text>
+  <rect x="68" y="330" width="596" height="160" rx="10" fill="#0B1325" stroke="#1E3A8A"/>
+  <text x="86" y="356" fill="#60A5FA" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">tiny-voca From-Scratch Recipe &amp; Telemetry:</text>
+  <text x="86" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Exact Footprint: 4,537,291 params | 18 MB (waveform generator included)</text>
+  <text x="86" y="408" fill="#34D399" font-family="Consolas, monospace" font-size="12">• CPU &amp; Browser Speed: ~70x real-time on 4 CPU threads | 24 kHz F2 &amp; M2</text>
+  <text x="86" y="434" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Training Schedule: 104,000 steps (gan-start 8,000, ratio 0.7) in 7.7h</text>
+  <text x="86" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">• Total Project Compute Bill: $9.56 on 1x RTX 4090 (Apache-2.0 + CC BY 4.0)</text>
+
+  <!-- Right Card: loanhviet/kokoro-vietnamese-distill -->
+  <rect x="708" y="150" width="648" height="360" rx="14" fill="url(#cardR7)" stroke="#34D399" stroke-width="1.3"/>
+  <text x="732" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">2. loanhviet/kokoro-vietnamese-distill (★27 · Apache-2.0 · 9.2 MB int8 WASM)</text>
+  <text x="732" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">将 326MB 教师模型压进 9.2MB、浏览器单线程提速 20 倍的七阶段蒸馏流水线</text>
+  <text x="732" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 体积缩减 97.2% (326MB fp32 → 9.2MB int8)：参数从 82M 压至 8.6M，赋能 OpenDubber 实时配音</text>
+  <text x="732" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 浏览器单线程 WASM 提速 20 倍：RTF 从 1.50 (卡顿) 降至 0.075，CER 仅微幅波动 ~0.3–0.4%</text>
+  <text x="732" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 三道防翻车质检门：parity(防半加载权重) + qc(PhoWhisper 剔除错读样本) + eval(电流音 Buzz Guard)</text>
+  <text x="732" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 断点续跑 (logs/&lt;stage&gt;.done)：基于 Paradee (arXiv:2610.06817)，单卡约 10 GPU 小时完成双音色蒸馏</text>
+  <rect x="732" y="330" width="600" height="160" rx="10" fill="#0B1325" stroke="#065F46"/>
+  <text x="750" y="356" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">Teacher vs Distilled Student (1,008-Item PhoWhisper-large Eval):</text>
+  <text x="750" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Teacher (82M, 326 MB fp32): RTF = 1.50 (1-thread WASM) | CER 3.20% / 2.99%</text>
+  <text x="750" y="408" fill="#34D399" font-family="Consolas, monospace" font-size="12">• Student (8.6M, 9.2 MB int8): RTF = 0.075 (20x faster!)  | CER 3.61% / 3.29%</text>
+  <text x="750" y="434" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Resumable Stages: parity -&gt; gen -&gt; qc -&gt; stage1/2/3 -&gt; export -&gt; eval</text>
+  <text x="750" y="460" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">• Production Proof: Default engine of OpenDubber Chrome extension</text>
+
+  <!-- Bottom FinOps Box -->
+  <rect x="44" y="528" width="1312" height="286" rx="14" fill="url(#cardR7)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="560" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261115-R7-TINYVOCA-KOKORODISTILL · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="584" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月提供 2,500 小时浏览器/CPU 端侧语音朗读与视频同传配音 + 蒸馏定制 4 套多语种轻量音色包（时薪 r = $95.00/hr；终端用户设备：not_measured）</text>
+
+  <text x="68" y="620" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (按字符计费云端 TTS API + 326MB 未蒸馏模型卡死浏览器)</text>
+  <rect x="440" y="604" width="523.5" height="22" rx="5" fill="#EF4444"/>
+  <text x="976" y="620" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,235.00/mo ($1,720.00 cloud API/GPU + 37.0h × $95 = $3,515.00)</text>
+
+  <text x="68" y="658" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (自建后端 GPU 语音服务 + 无 parity/qc 门禁手工蒸馏)</text>
+  <rect x="440" y="642" width="255" height="22" rx="5" fill="#F59E0B"/>
+  <text x="708" y="658" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,550.00/mo ($840.00 GPU/compute + 18.0h × $95 = $1,710.00)</text>
+
+  <text x="68" y="696" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (tiny-voca 18MB + Kokoro-Lite 9.2MB 浏览器 WASM 方案)</text>
+  <rect x="440" y="680" width="41.25" height="22" rx="5" fill="#10B981"/>
+  <text x="494" y="696" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$412.50/mo ($80.00 GPU training + 3.5h × $95 = $332.50) → 净省 $4,822.50/月 (-92.12% / 年省 $57,870.00)</text>
+
+  <line x1="68" y1="720" x2="1332" y2="720" stroke="#334155"/>
+  <text x="68" y="748" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="bold">🎯 ARCHITECT ROLLOUT DIRECTIVE:</text>
+  <text x="68" y="772" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">1. 英文端侧/浏览器 Agent 语音播报直接嵌入 tiny-voca (18MB, 70x CPU 实时)，彻底归零云端按字符计费账单。</text>
+  <text x="68" y="796" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">2. 小语种/垂直领域浏览器插件配音直接复用 kokoro-vietnamese-distill 的 parity→gen→qc→stage1/2/3→export 七步配方，压出 &lt;10MB RTF 0.075 模型。</text>
+</svg>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg33" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg33)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#0E3A4C" stroke="#06B6D4" stroke-width="1"/>
+  <text x="162" y="55" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R33 (CUMULATIVE R335)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Browserr (Servo 0.8 42-Tool Agent Browser) + Dukoi (2-5W Android 10+ Edge Server)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">Omodaka9375/browserr (★60 · 5s Fail-Closed Intercept · Human Handoff · e1..e7 Vision) + thisuxhq/dukoi (★60 · No-Root/No-Termux · Battery UPS · CGNAT HTTPS)</text>
+
+  <!-- Left Column: Omodaka9375/browserr -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentCyan)"/>
+  <text x="62" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🌐 Omodaka9375/browserr — Servo 0.8 Agent Browser &amp; 42-Tool MCP</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. Servo 0.8 + PyO3 CPU Default</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Rust Servo 0.8 embedded in Python</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Sync `Browser` &amp; `AsyncBrowser` API</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• CPU software render (0 GPU needed)</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Fail-Closed 5s Network Intercept</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `block_urls`, `mock_route`, `on_request`</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Exception or &gt;5.0s handler timeout</text>
+  <text x="350" y="289" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Fail-Closed: blocks leaked requests</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#0891B2" stroke-width="1"/>
+  <text x="62" y="346" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Built-In 42 MCP Tools + Human-in-the-Loop Handoff + Annotated Vision</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `detect_handoff()` spots CAPTCHA / 2FA / login walls -&gt; `pause()` + `wait_for_user()`</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `annotated_screenshot()`: draws red boxes `e1, e2, ..., e7` + returns selector map</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• `extract_markdown()` + `fill_form()` + `query_all()`: 42 zero-boilerplate MCP tools</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">SERVO 0.8 VS HEADLESS CHROMIUM FOOTPRINT &amp; SAFETY</text>
+  <rect x="62" y="480" width="240" height="18" rx="4" fill="#06B6D4"/>
+  <text x="312" y="494" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Browserr Servo 0.8: ~85 MB RAM · Fail-Closed 5s · Native Handoff</text>
+  <rect x="62" y="508" width="460" height="18" rx="4" fill="#475569"/>
+  <text x="530" y="522" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">Chromium: 650+ MB</text>
+
+  <!-- Right Column: thisuxhq/dukoi -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentEmerald)"/>
+  <text x="686" y="175" fill="#06281E" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">📱 thisuxhq/dukoi — 2–5W Android 10+ App Server with Built-In Battery UPS</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. No Root · No Termux Runtime</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Works on stock Android 10+ phones</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 8-core ARM64 + 6–12GB RAM + UFS</text>
+  <text x="684" y="289" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Foreground Service beats OEM killer</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. 2–5W Power + Built-In Battery UPS</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 2–5W idle/active vs 25–45W mini-PC</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Internal battery = 24–48h outage UPS</text>
+  <text x="974" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Zero SD-card corruption on blackout</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#059669" stroke-width="1"/>
+  <text x="686" y="346" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. Cloudflare CGNAT HTTPS + Instant Rollback + `dukoi skill` Agent CLI</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `dukoi deploy` &amp; `dukoi rollback`: atomic release swap on phone flash</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Outbound Cloudflare Tunnel bypasses ISP CGNAT with auto TLS certificates</text>
+  <text x="686" y="411" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• `dukoi skill`: native skill for Claude Code / Cursor to deploy edge services</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">EDGE NODE POWER DRAW &amp; OUTAGE SURVIVABILITY</text>
+  <rect x="686" y="480" width="95" height="18" rx="4" fill="#10B981"/>
+  <text x="792" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Dukoi Android 10+: 2–5W · 24–48h Battery UPS · $0/mo VPS</text>
+  <rect x="686" y="508" width="440" height="18" rx="4" fill="#EF4444"/>
+  <text x="1134" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">x86 Mini-PC: 35W</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R33-BROWSERR-DUKOI · 25k Browser Runs + 12 Edge Services/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Cloud Chromium + 12 Cloud VPS Nodes</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Cloud Browser &amp; VPS Spend: $1,920.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• CAPTCHA/CGNAT Ops (40.0h × $100): $4,000.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Fail-open intercept leaks + CAPTCHA loop crashes</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $5,920.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 40.0 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: Docker Playwright + Unrooted Termux</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Compute &amp; Tunnel Spend: $880.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• OEM-Killer Maintenance (18.5h × $100): $1,850.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Android Doze kills Termux + 650MB Chromium tabs</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,730.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-53.89% vs Path A (18.5 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: Browserr (Servo 0.8) + Dukoi (2-5W)</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• 2–5W Power &amp; Domain Spend: $95.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated Ops (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,475.00/mo (-92.48%) · $65,700.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $445.00 / mo (-92.48%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 36.5 eng hrs/mo (-91.25% labor)</text>
+</svg>

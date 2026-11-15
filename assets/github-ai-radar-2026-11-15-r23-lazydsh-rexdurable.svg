@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR23" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060A14"/>
+      <stop offset="55%" stop-color="#0E172A"/>
+      <stop offset="100%" stop-color="#04070D"/>
+    </linearGradient>
+    <linearGradient id="accentLazy" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="accentRex" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR23)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="310" height="28" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1"/>
+  <text x="207" y="59" fill="#BFDBFE" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R23 · R325 MILESTONE</text>
+  <text x="380" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">LazyDSH 43-Provider DeepSeek Harness TUI + Rex-Durable Reboot Session Restorer</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Standalone pi-Based DSH Client (/fork, /compact, /goal, .zip Export) + 30s Lock/FD-Aware Auto-Resume for fx, Claude Code &amp; Codex</text>
+
+  <!-- Left Panel: nuskey8/lazydsh -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentLazy)"/>
+  <text x="58" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. nuskey8/lazydsh (★61 · Standalone 43-Provider DeepSeek Harness TUI)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Architectural Shift: Standalone CLI Built on pi (NOT a Fragile DSH Plugin)</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Eliminates version-mismatch breakage against monolithic DSH core upgrades (Node &gt;=24.9)</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Out-of-the-box OAuth &amp; API Key routing across 43 global &amp; CN model providers</text>
+
+  <!-- 3 Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#101E36" stroke="#3B82F6"/>
+  <text x="152" y="318" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. 43 Model Providers</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">deepseek | openai-codex</text>
+  <text x="152" y="362" fill="#BFDBFE" font-family="Consolas, monospace" font-size="11" text-anchor="middle">anthropic | gh-copilot</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">kimi | qwen | minimax</text>
+  <text x="152" y="402" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Instant provider failover</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="360" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Session Tree &amp; Goal</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">/fork | /compact | /pin</text>
+  <text x="360" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11" text-anchor="middle">/goal [pause | resume]</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">/ps &amp; /stop bg jobs</text>
+  <text x="360" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Full lifecycle control</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="568" y="318" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. Cordis Patch &amp; ZIP</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">--patch &lt;path&gt; (Cordis)</text>
+  <text x="568" y="362" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11" text-anchor="middle">/dsh &lt;native-cmd&gt;</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Consolas, monospace" font-size="11" text-anchor="middle">/export [bundle.zip]</text>
+  <text x="568" y="402" fill="#818CF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Portable child sessions</text>
+
+  <!-- LazyDSH Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Interactive &amp; Non-Interactive Harness Modes</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Non-interactive pipe: echo &quot;audit diff&quot; | lazydsh ask --effort high</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Multi-provider switch: lazydsh --provider anthropic --model claude-sonnet-4-5</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Context hygiene: /compact to summarize history; /fork to branch experiments</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Audit archive: /export session-tree.zip (packs sessions, children &amp; attachments)</text>
+
+  <!-- Right Panel: fazxes/rex-durable -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentRex)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. fazxes/rex-durable (★60 · Reboot-Resilient Agent Chat Restorer)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Innovation: Resolves Exact Conversation IDs via Lock Files &amp; Open FDs</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Rex restores tabs/splits as empty shells; rex-durable reopens exact agent conversations</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Saves every 30s &amp; on layout events via rex.every / rex.on; keeps latest 10 server states</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#23150B" stroke="#F59E0B"/>
+  <text x="752" y="317" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. 3-Agent Session-ID Resolver</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">fx: ~/.fx/sessions/v2/&lt;id&gt;/lock</text>
+  <text x="752" y="360" fill="#FDE68A" font-family="Consolas, monospace" font-size="11.5">Codex: rollout-...-&lt;id&gt;.jsonl FD</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11.5">Claude: --resume &lt;id&gt; / newest</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Preserves --model &amp; cwd per split</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="1064" y="317" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Strict Safety Guardrails</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Idle shell check before typing</text>
+  <text x="1064" y="360" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11.5">Zero duplicate session opens</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Non-chats typed, NEVER auto-run</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Named checkpoints &amp; dry_run=true</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Deterministic Checkpoint &amp; Recovery Commands (durable.lua)</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Pin before OS update: rex do &quot;$S&quot; mode=checkpoint name=before-update</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Preview restore safely: rex do &quot;$S&quot; mode=reopen dry_run=true</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Restore chats only: rex do &quot;$S&quot; mode=reopen programs=false</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Recreate wiped server: rex do &quot;$S&quot; mode=rebuild from=before-update yes=true</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R23-LAZYDSH-REXDURABLE · 45 Seats + 220 Terminal Restarts/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Coupled DSH Plugins + Manual Resume</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,680.00/mo ($1,780.00 tok + 39.0h / $3,900.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Single-Vendor CLI + tmux-resurrect</text>
+  <rect x="395" y="716" width="353" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="763" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,710.00/mo ($860.00 tok + 18.5h / $1,850.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: LazyDSH 43-Provider + Rex-Durable</text>
+  <rect x="395" y="758" width="58" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="468" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$445.00/mo ($95.00 tok + 3.5h / $350.00) · -92.17%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,235.00/mo (-92.17%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $62,820.00/yr · 35.5h/mo Saved (-91.03%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#3B82F6"/>
+  <text x="690" y="824" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">LazyDSH: 43 Providers · /fork · /compact · /export</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Standalone pi TUI with Cordis --patch &amp; /dsh passthrough</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#F59E0B"/>
+  <text x="1130" y="824" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Rex-Durable: 30s RPO · Lock &amp; FD Session-ID Match</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Reopens fx, Claude Code &amp; Codex; types non-chats safely</text>
+</svg>

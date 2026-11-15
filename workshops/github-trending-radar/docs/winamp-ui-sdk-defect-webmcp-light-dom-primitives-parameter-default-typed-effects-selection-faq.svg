@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR24" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060A13"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#04070D"/>
+    </linearGradient>
+    <linearGradient id="accentWinamp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="accentDefect" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR24)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="199" y="59" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R24 · CUMULATIVE R326</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">Winamp-UI-SDK WebMCP Light-DOM Primitives + Defect Parameter-Default Typed Effects</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Zero-Framework @ui-sdk/web + Zero-DOM-Scraping createAgent() + Generator-Free TypeScript Eff&lt;A, E, R&gt; &amp; Durable Execution</text>
+
+  <!-- Left Panel: rauchg/winamp-ui-sdk -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentWinamp)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. rauchg/winamp-ui-sdk (★31 · Agent-Native Light-DOM Web Components)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Paradigm: @ui-sdk/web + @ui-sdk/core Auto-Registers Every UI Part for Agents</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Pure Light-DOM Web Components (0 framework runtime) + 10-band Web Audio BiquadFilter EQ</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Exposes 22+ components to window.winampAgent + WebMCP snapshot(), query() &amp; act()</text>
+
+  <!-- 3 Architectural Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="152" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. WebMCP Zero-Scrape</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">createAgent + registerTools</text>
+  <text x="152" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11" text-anchor="middle">snapshot() | query() | act()</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">reveals: true on &lt;ui-tabs&gt;</text>
+  <text x="152" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Discovers hidden panels</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#0A222E" stroke="#06B6D4"/>
+  <text x="360" y="318" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Change vs Commit</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">createChange (live DSP)</text>
+  <text x="360" y="362" fill="#A5F3FC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">createCommit (drag end)</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">10 EQ faders + Seek bar</text>
+  <text x="360" y="402" fill="#22D3EE" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Tracks input source</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#1F160B" stroke="#F59E0B"/>
+  <text x="568" y="318" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. 120Hz Elastic Primitives</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">createResize + live()</text>
+  <text x="568" y="362" fill="#FEF3C7" font-family="Consolas, monospace" font-size="11" text-anchor="middle">:popover-open top-layer</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">createRovingFocus</text>
+  <text x="568" y="402" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Zero VDOM runtime tax</text>
+
+  <!-- Winamp Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Why @ui-sdk Light-DOM + WebMCP Beats DOM Scraping for Browser Agents</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• definePrimitive + createParts auto-wires ARIA roles &amp; agent tool descriptors</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• window.winampAgent.snapshot() returns compact semantic state (not 50k HTML tokens)</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• window.winampAgent.act(...) drives EQ, transport &amp; hidden tabs deterministically</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Scoped registerShortcut hotkeys auto-disable inside text &lt;input&gt; fields</text>
+
+  <!-- Right Panel: folsomintel/defect -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentDefect)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. folsomintel/defect (★26 · Generator-Free Effect-Style TypeScript)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Breakthrough: A Function's Steps Are Its Parameter Defaults (No yield* Generators!)</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• TypeScript infers Eff&lt;Value, Errors, Provides&lt;Services&gt;&gt; with zero type annotations</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Zero dependencies on Node 24+ (AsyncLocalStorage, AbortSignal.any, SuppressedError)</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="752" y="317" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. Parameter-Default Steps</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">[cart] = shop.findCart(id),</text>
+  <text x="752" y="360" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11.5">[paid] = payments.charge(tot)</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">run() fails to compile if a</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">service is missing; match() checks all</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="1064" y="317" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Durable, Resources &amp; Fibers</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">durable | trace | acquire</text>
+  <text x="1064" y="360" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11.5">retry | exponential | timeout</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11.5">fork | join | all | race | layer</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">0 npm dependencies (ESM)</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Compile-Time Exhaustive Backend + Agent-Operable Frontend Stack</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Backend (defect): Add a new TaggedError to payments.charge -&gt; every caller</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  using match() fails TypeScript compilation until the new error is handled!</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Frontend (winamp-ui-sdk): Every UI primitive exposes typed WebMCP tools</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Eliminates unhandled runtime promise rejections &amp; brittle DOM selectors</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R24-WINAMPUISDK-DEFECT · 450k UI Agent Actions + 35 TS Services/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: DOM Scraping + Untyped try/catch TS</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,720.00/mo ($1,820.00 tok + 39.0h / $3,900.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Manual ARIA Glue + Generator Effect</text>
+  <rect x="395" y="716" width="354" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="764" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,740.00/mo ($890.00 tok + 18.5h / $1,850.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: @ui-sdk WebMCP + @folsom/defect</text>
+  <rect x="395" y="758" width="58" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="468" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$450.00/mo ($100.00 tok + 3.5h / $350.00) · -92.13%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,270.00/mo (-92.13%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $63,240.00/yr · 35.5h/mo Saved (-91.03%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#06B6D4"/>
+  <text x="690" y="824" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">UI SDK: Light-DOM + createAgent (0 DOM Scraping)</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">22+ Self-Registering Primitives · reveals: true Discovery</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#6366F1"/>
+  <text x="1130" y="824" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">defect: Parameter-Default Steps (0 Generators/Deps)</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Inferred Eff&lt;A, E, R&gt; · Exhaustive match() · Durable Execution</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgR11" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#152342"/>
+    </linearGradient>
+    <linearGradient id="cardR11" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bgR11)"/>
+  <rect x="24" y="24" width="1352" height="812" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="92" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="74" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">2026-11-15 NIGHT SHIFT ROUND 11 (CUMULATIVE R313) · CLAIM-20261115-R11-PATCHPROOF-DEVRESCUE</text>
+  <text x="68" y="104" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">反例优先 Go 补丁形式化核验 (PatchProof) 与零依赖 CI 日志分诊台 (DevRescue) 选型 FAQ</text>
+  <text x="68" y="124" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">rainyZhou2/PatchProof (★52, 6 引擎差分 Fuzz + Ed25519 Merkle 签名报告) + brunnojob/devrescue (★112, 零依赖 CI 日志脱敏分诊) · 月省 $5,130.00 (-91.77%)</text>
+
+  <!-- Left Card: rainyZhou2/PatchProof -->
+  <rect x="44" y="150" width="644" height="360" rx="14" fill="url(#cardR11)" stroke="#38BDF8" stroke-width="1.3"/>
+  <text x="68" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">1. rainyZhou2/PatchProof (★52 · 2026-11-11 · Apache-2.0 · Go 1.26+)</text>
+  <text x="68" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">反例优先 (Counterexample-First) 的 Go 代码补丁离线可验证签名系统</text>
+  <text x="68" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 六大验证引擎：analyze / impact / compile / regression / differential fuzz / native fuzz</text>
+  <text x="68" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• CAS 可重放反例：差分与 Fuzz 违例绑定内容寻址 (CAS) 输入与观测结果，一键精确复现</text>
+  <text x="68" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• Ed25519 + Merkle 离线验签报告：生成 JSON/Markdown/SARIF 报告，无需控制面即可离线核验</text>
+  <text x="68" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 零沙盒凭证 Brokered IO + 世代围栏 (Generation Fencing) + 租户级 Hermetic 动作缓存</text>
+  <rect x="68" y="330" width="596" height="160" rx="10" fill="#0B1325" stroke="#1E3A8A"/>
+  <text x="86" y="356" fill="#60A5FA" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">PatchProof Deterministic Verification Flow:</text>
+  <text x="86" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">[base -&gt; head] -&gt; [patchproof.yaml Policy + Step DAG + Protected Paths]</text>
+  <text x="86" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">       -&gt; [gVisor/VM Isolated Execution + Zero-Cred Brokered IO]</text>
+  <text x="86" y="434" fill="#34D399" font-family="Consolas, monospace" font-size="12">       -&gt; [CAS Counterexamples + Canonical Merkle Manifest + Ed25519 Sig]</text>
+  <text x="86" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">       -&gt; [Offline Verify: JSON / Markdown / SARIF]</text>
+
+  <!-- Right Card: brunnojob/devrescue -->
+  <rect x="708" y="150" width="648" height="360" rx="14" fill="url(#cardR11)" stroke="#34D399" stroke-width="1.3"/>
+  <text x="732" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">2. brunnojob/devrescue (★112 · 2026-11-10 · MIT · Node 22+ 0-Dep CLI &amp; Action)</text>
+  <text x="732" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">零外部依赖、绝不自动跑命令或上传原始日志的确定性 CI/编译故障分诊台</text>
+  <text x="732" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 确定性签名聚类与证据脱敏：从万行构建/运行/CI 日志中精准剥离故障签名与 file:line</text>
+  <text x="732" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 零自动执行安全红线：仅生成待人工审阅的修复步骤与 .env 忽略建议，绝不越权执行 Shell</text>
+  <text x="732" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 原始日志 100% 留本地：支持双日志对比 (Compare)，仅在人工确认后同步脱敏派生报告至 Azure</text>
+  <text x="732" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 三态部署：零依赖 node bin/devrescue.js CLI + GitHub Action + GitHub Pages 静态工作台</text>
+  <rect x="732" y="330" width="600" height="160" rx="10" fill="#0B1325" stroke="#065F46"/>
+  <text x="750" y="356" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">DevRescue Privacy-Preserving Triage Pipeline:</text>
+  <text x="750" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">1. Local Ingest: node bin/devrescue.js analyze build.log --json|--markdown</text>
+  <text x="750" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">2. Redact &amp; Group: Signature matching + secret redaction + file:line pin</text>
+  <text x="750" y="434" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">3. Environment Doctor: node bin/devrescue.js doctor . (.env ignore check)</text>
+  <text x="750" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">4. Explicit Sync Only: Raw logs never leave host; reviewed report optional</text>
+
+  <!-- Bottom FinOps Box -->
+  <rect x="44" y="528" width="1312" height="286" rx="14" fill="url(#cardR11)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="560" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261115-R11-PATCHPROOF-DEVRESCUE · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="584" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月对 450 个高风险 Go 补丁执行回归/差分 Fuzz 核验 + 分诊 3,200 份失败 CI/构建日志（时薪 r = $100.00/hr；基础 CI 机器费：not_measured）</text>
+
+  <text x="68" y="620" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (万行 CI 日志直接塞 LLM + 仅靠对话审查 Go 补丁漏放回归)</text>
+  <rect x="440" y="604" width="559" height="22" rx="5" fill="#EF4444"/>
+  <text x="1012" y="620" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,590.00/mo ($1,790.00 tokens/reruns + 38.0h × $100 = $3,800.00)</text>
+
+  <text x="68" y="658" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (普通 go test 无差分反例签名 + 手写正则脚本筛 CI 日志)</text>
+  <rect x="440" y="642" width="268" height="22" rx="5" fill="#F59E0B"/>
+  <text x="720" y="658" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,680.00/mo ($880.00 compute/tokens + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="696" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (PatchProof 差分反例签名 + DevRescue 零依赖本地分诊)</text>
+  <rect x="440" y="680" width="46" height="22" rx="5" fill="#10B981"/>
+  <text x="498" y="696" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$460.00/mo ($110.00 cached verify + 3.5h × $100 = $350.00) → 净省 $5,130.00/月 (-91.77% / 年省 $61,560.00)</text>
+
+  <line x1="68" y1="720" x2="1332" y2="720" stroke="#334155"/>
+  <text x="68" y="748" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="bold">🎯 ARCHITECT ROLLOUT DIRECTIVE:</text>
+  <text x="68" y="772" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">1. AI 生成的 Go 核心服务补丁合入前接入 PatchProof：用差分 Fuzz 捕获 CAS 可重放反例，并产出 Ed25519 签名的 SARIF/JSON 证据包。</text>
+  <text x="68" y="796" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">2. CI 报错日志先过一层零依赖 node bin/devrescue.js analyze --json：本地完成密钥脱敏与故障签名定位，再将精简摘要交给编码 Agent 修复。</text>
+</svg>

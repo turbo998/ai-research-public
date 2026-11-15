@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR30" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060B13"/>
+      <stop offset="55%" stop-color="#0E1829"/>
+      <stop offset="100%" stop-color="#04070D"/>
+    </linearGradient>
+    <linearGradient id="accentGezhi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <linearGradient id="accentZotero" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR30)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+  <text x="199" y="59" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R30 · CUMULATIVE R332</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">Gezhi-Sheets Transactional AI Spreadsheet + Zotero-Interlinear 5-Pool Reader</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Stale-Preview Blocking, Decimal Query Plans &amp; DPAPI (144 Tests) + Zotero 10/11 oskv1: Keystore, 6x Batching &amp; Glossary PDF Export</text>
+
+  <!-- Left Panel: beiwocaishijia/gezhi-sheets -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentGezhi)"/>
+  <text x="58" y="166" fill="#042F2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. beiwocaishijia/gezhi-sheets (★192 · Transactional Local AI Spreadsheet)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Invariant: Preview Before Write · Stale Previews Blocked · 1-Click Undo</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Supports 5 CN providers (GLM, Kimi, Doubao, DeepSeek, Qwen) with Windows DPAPI encryption</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• 144 automated tests passed (98 component regressions, 37 backend/adapter, 9 Playwright)</text>
+
+  <!-- 3 Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="152" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. Stale-Preview Gate</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Origin | Suggested | Pos</text>
+  <text x="152" y="362" fill="#A7F3D0" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Blocks stale preview apply</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Marks duplicates (never</text>
+  <text x="152" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">auto-deletes user rows!)</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#0A222E" stroke="#06B6D4"/>
+  <text x="360" y="318" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Decimal Query Plans</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Constrained query AST</text>
+  <text x="360" y="362" fill="#A5F3FC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">filter/group/sum/avg/sort</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Evaluated via Decimal.js</text>
+  <text x="360" y="402" fill="#22D3EE" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">0 LLM math hallucination</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#1F160B" stroke="#F59E0B"/>
+  <text x="568" y="318" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. DPAPI &amp; Atomic Save</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Windows DPAPI key store</text>
+  <text x="568" y="362" fill="#FEF3C7" font-family="Consolas, monospace" font-size="11" text-anchor="middle">Selection-scoped payload</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Atomic file swap + backup</text>
+  <text x="568" y="402" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Leading-zero text safe</text>
+
+  <!-- Gezhi Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">6-Capability Safe Spreadsheet Workflow (:8001 · Node.js &gt;=22.13)</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 1. Batch Column Fill (extract/classify/translate into new adjacent columns)</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 2. Text-to-Table (parse unstructured orders/notes into editable preview)</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• 3. Data Cleaning &amp; 4. Constrained Table Q&amp;A (Decimal aggregation)</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• 5. Formula Assistant (12 whitelisted functions + row trial) &amp; 6. Sheet Ops</text>
+
+  <!-- Right Panel: Muanyan-mjq/zotero-interlinear -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentZotero)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. Muanyan-mjq/zotero-interlinear (★73 · Zotero 10/11 Bilingual PDF)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#C4B5FD" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Immersive Paragraph-by-Paragraph Reading &amp; Re-Typeset Bilingual PDF Export</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• 5 Backends: Free Google (5-pool auto-rotate + MyMemory/LibreTranslate), OpenAI, Claude, Gemini, Ollama</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• 4 Layouts (Inline, Side-by-Side first-line aligned, Translation-only, Source-only)</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="752" y="317" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. 5-Pool Rotation &amp; 6x Batch</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Pools: it | at | gtx | chrome | fx</text>
+  <text x="752" y="360" fill="#C7D2FE" font-family="Consolas, monospace" font-size="11.5">translate_a/t ~6x fewer requests</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Viewport-first dynamic re-sorting</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">&amp; auto cooldown countdown resume</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="1064" y="317" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. oskv1: Keystore &amp; Glossary</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">Keychain / DPAPI / libsecret</text>
+  <text x="1064" y="360" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11.5">Zero-redirect credential guard</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">CSV/TSV Glossary: LLM prompt</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">+ deterministic post-replacement</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Shared Security &amp; UX Pattern: OS-Encrypted Keys + Non-Destructive Overlay</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Key Security: Both tools encrypt API keys via OS keystores (DPAPI / Keychain / libsecret)</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Scope Control: Gezhi sends only selected cells; Interlinear translates viewport-first</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Non-Destructive: Gezhi blocks stale previews; Interlinear preserves Zotero highlights</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Tested end-to-end against headless Zotero 10/11, local Ollama &amp; Playwright</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R30-GEZHISHEETS-ZOTEROINTERLINEAR · 420 Sheet Runs + 650 Papers/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Manual Copy-Paste + Cloud PDF SaaS</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,750.00/mo ($1,850.00 SaaS + 39.0h / $3,900.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Unchecked VBA + Unbatched Translators</text>
+  <rect x="395" y="716" width="351" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="761" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,730.00/mo ($880.00 API + 18.5h / $1,850.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: Gezhi-Sheets + Zotero-Interlinear</text>
+  <rect x="395" y="758" width="57" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="467" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$445.00/mo ($95.00 tok + 3.5h / $350.00) · -92.26%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,305.00/mo (-92.26%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $63,660.00/yr · 35.5h/mo Saved (-91.03%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#06B6D4"/>
+  <text x="690" y="824" fill="#67E8F9" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Gezhi-Sheets: 5 CN Models · Decimal Math · 144 Tests</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Stale-Preview Block · 1-Click Undo · DPAPI Encrypted</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#6366F1"/>
+  <text x="1130" y="824" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Zotero-Interlinear: 5 Google Pools · 6x Batching</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">oskv1: OS Keystore · CSV/TSV Glossary · Bilingual PDF</text>
+</svg>

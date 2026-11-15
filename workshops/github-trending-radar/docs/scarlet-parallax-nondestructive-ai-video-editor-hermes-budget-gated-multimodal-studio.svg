@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgR8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1A2644"/>
+    </linearGradient>
+    <linearGradient id="cardR8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bgR8)"/>
+  <rect x="24" y="24" width="1352" height="812" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="92" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="74" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">2026-11-15 NIGHT SHIFT ROUND 8 (CUMULATIVE R310 MILESTONE) · CLAIM-20261115-R8-SCARLET-PARALLAX</text>
+  <text x="68" y="104" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">原生非破坏性对话精剪台 (Scarlet) 与 Hermes 审批门禁多模态工坊 (Parallax) 选型 FAQ</text>
+  <text x="68" y="124" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Forward-Future/scarlet (★263, Tauri v2 + \ 键切口对比 + .otio 导出) + nickvasilescu/parallax (★126, 39 模型预估价审批卡) · 月省 $5,007.50 (-92.22%)</text>
+
+  <!-- Left Card: Forward-Future/scarlet -->
+  <rect x="44" y="150" width="644" height="360" rx="14" fill="url(#cardR8)" stroke="#38BDF8" stroke-width="1.3"/>
+  <text x="68" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">1. Forward-Future/scarlet (★263 · 2026-11-13 · MIT · Tauri v2 + Rust + TS)</text>
+  <text x="68" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">复用 Claude Code / Codex 订阅的桌面原生非破坏性对话视频精剪工作台</text>
+  <text x="68" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 局部上下文极速预渲染：按住 V 键语音指令或 /dialogue-pass，仅重渲染受影响切口片段</text>
+  <text x="68" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• \ 键正反盲听核验：按一次 \ 听被删掉的废话，再按一次 \ 听拼接后的过渡气口，满意再合入</text>
+  <text x="68" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 本地 CrisperWhisper / Whisper large-v3-turbo 转写：原始素材零损保留，支持历史版本回退</text>
+  <text x="68" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 达芬奇工业级移交：既可直出 .mp4，也能导出 OpenTimelineIO (.otio) 无缝进 DaVinci Resolve</text>
+  <rect x="68" y="330" width="596" height="160" rx="10" fill="#0B1325" stroke="#1E3A8A"/>
+  <text x="86" y="356" fill="#60A5FA" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">Scarlet Non-Destructive Dialogue Editing Loop:</text>
+  <text x="86" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">1. Local Ingest: CrisperWhisper / Whisper large-v3-turbo transcription</text>
+  <text x="86" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">2. Agent Pass: /dialogue-pass via existing Claude Code / Codex account</text>
+  <text x="86" y="434" fill="#34D399" font-family="Consolas, monospace" font-size="12">3. Audition Gate: Press '\' to toggle [Removed Audio] vs [Joined Transition]</text>
+  <text x="86" y="460" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">4. Professional Handoff: Export .mp4 or OpenTimelineIO (.otio) to Resolve</text>
+
+  <!-- Right Card: nickvasilescu/parallax -->
+  <rect x="708" y="150" width="648" height="360" rx="14" fill="url(#cardR8)" stroke="#34D399" stroke-width="1.3"/>
+  <text x="732" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14.5" font-weight="bold">2. nickvasilescu/parallax (★126 · 2026-11-13 · MIT · Node 22.13 SQLite + Hermes)</text>
+  <text x="732" y="208" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">单 SQLite 零外部依赖、支持 39 款模型价格审批卡与 Hermes 的全能多模态工坊</text>
+  <text x="732" y="236" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 零 Key 完整体验 (PARALLAX_DEMO_SEED=1)：无 API Key 时自动返回内置样本，覆盖 15+ 创作页面</text>
+  <text x="732" y="262" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 39 款图/影/音/乐模型 + 事前精确报价：按 Generate 前显式展示单价，TREG_DAILY_BUDGET_USD 硬熔断</text>
+  <text x="732" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• /supercomputer 挂载自有 Hermes Agent：通过 MCP 暴露工坊工具，每次生成弹价格审批卡且不泄主 Key</text>
+  <text x="732" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">• 诚实安全警示：Hermes 自身 Shell/文件工具不在 Parallax 审批卡之后，严禁将公网实例连向私人 Agent</text>
+  <rect x="732" y="330" width="600" height="160" rx="10" fill="#0B1325" stroke="#065F46"/>
+  <text x="750" y="356" fill="#34D399" font-family="Consolas, monospace" font-size="12.5" font-weight="bold">Parallax 3-Mode Supercomputer &amp; Budget Guardrails:</text>
+  <text x="750" y="382" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Engine 1 [Stand-in]: Zero-key scripted assistant + built-in sample assets</text>
+  <text x="750" y="408" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• Engine 2 [Built-in]: SUPER_MODE=live + TREG_DAILY_BUDGET_USD 24h cap</text>
+  <text x="750" y="434" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">• Engine 3 [Hermes on Orgo]: MCP studio tools + Per-Call Price Approval Card</text>
+  <text x="750" y="460" fill="#F59E0B" font-family="Consolas, monospace" font-size="11.5">*Security boundary: Master key stays in Parallax; isolate Hermes host shell.</text>
+
+  <!-- Bottom FinOps Box -->
+  <rect x="44" y="528" width="1312" height="286" rx="14" fill="url(#cardR8)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="560" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261115-R8-SCARLET-PARALLAX · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="584" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月精剪 25 期深度访谈/技术播客（含达芬奇 .otio 移交）+ 执行 30 批次多模态广告/分镜生成（时薪 r = $95.00/hr；存储与外包演员费：not_measured）</text>
+
+  <text x="68" y="620" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (云端按席位文本剪辑 SaaS + 裸放多模态 API 密钥任由 Agent 抽卡)</text>
+  <rect x="440" y="604" width="543" height="22" rx="5" fill="#EF4444"/>
+  <text x="995" y="620" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,430.00/mo ($1,820.00 SaaS/API + 38.0h × $95 = $3,610.00)</text>
+
+  <text x="68" y="658" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (手工 FFmpeg 切静音脚本 + 5 个独立商业生成网站来回导素材)</text>
+  <rect x="440" y="642" width="260" height="22" rx="5" fill="#F59E0B"/>
+  <text x="712" y="658" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,600.00/mo ($890.00 API + 18.0h × $95 = $1,710.00)</text>
+
+  <text x="68" y="696" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Scarlet 原生时间轴 + Parallax 预算熔断与审批卡)</text>
+  <rect x="440" y="680" width="42.25" height="22" rx="5" fill="#10B981"/>
+  <text x="494" y="696" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$422.50/mo ($90.00 capped media + 3.5h × $95 = $332.50) → 净省 $5,007.50/月 (-92.22% / 年省 $60,090.00)</text>
+
+  <line x1="68" y1="720" x2="1332" y2="720" stroke="#334155"/>
+  <text x="68" y="748" fill="#38BDF8" font-family="Consolas, monospace" font-size="13" font-weight="bold">🎯 ARCHITECT ROLLOUT DIRECTIVE:</text>
+  <text x="68" y="772" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">1. 访谈与技术播客粗剪统一采用 Scarlet：复用现有 Claude Code/Codex 订阅跑 /dialogue-pass，用 \ 键盲听切口后导出 .otio 交由达芬奇精调。</text>
+  <text x="68" y="796" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">2. 团队共享多模态创作部署 Parallax：开启 TREG_DAILY_BUDGET_USD 每日熔断，并通过 MCP 审批卡让 Hermes Agent 在人工确认单价后才扣费生成。</text>
+</svg>

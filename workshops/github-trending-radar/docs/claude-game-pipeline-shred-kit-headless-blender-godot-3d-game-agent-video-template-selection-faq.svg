@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgR19" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070913"/>
+      <stop offset="55%" stop-color="#11182B"/>
+      <stop offset="100%" stop-color="#05070E"/>
+    </linearGradient>
+    <linearGradient id="accentGame" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="accentShred" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgR19)"/>
+
+  <!-- Header Banner -->
+  <rect x="35" y="24" width="1330" height="98" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="52" y="40" width="295" height="28" rx="6" fill="#1E1B4B" stroke="#6366F1" stroke-width="1"/>
+  <text x="199" y="59" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-15 NIGHT R19 · CUMULATIVE R321</text>
+  <text x="365" y="60" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800">Claude-Game-Pipeline 3D Blender/Godot Factory + Shred-Kit Agent 3D Video Template</text>
+  <text x="52" y="96" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">OpenCV ECC Texture Warp + 10k-LoC Headless Blender glTF -&gt; Godot 4 JSON Loader + Agent-Configured 1080x1920@60fps Blender Reel</text>
+
+  <!-- Left Panel: msveshnikov/claude-game-pipeline -->
+  <rect x="35" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="35" y="138" width="650" height="44" rx="14" fill="url(#accentGame)"/>
+  <text x="58" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">1. msveshnikov/claude-game-pipeline (★35 · Code-First 3D Game Factory)</text>
+
+  <rect x="55" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="72" y="222" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Proven on Alchemists of Prague: 10k LoC Blender Python -&gt; 101 glTF Assets + Godot 4</text>
+  <text x="72" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Eliminates AI mesh slop: 100% procedural headless Blender 5.2 Python + shared style block</text>
+  <text x="72" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Exports declarative level JSON loaded at runtime by Godot 4.7.2 (Windows / Web / Android)</text>
+
+  <!-- 3 Pipeline Pillars -->
+  <rect x="55" y="294" width="194" height="122" rx="10" fill="#171631" stroke="#6366F1"/>
+  <text x="152" y="318" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">1. OpenCV ECC Warp</text>
+  <text x="152" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">align_to_layout.py</text>
+  <text x="152" y="362" fill="#C7D2FE" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Warps ChatGPT painted art</text>
+  <text x="152" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">onto exact Blender blockout</text>
+  <text x="152" y="402" fill="#818CF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Sub-pixel camera lock</text>
+
+  <rect x="263" y="294" width="194" height="122" rx="10" fill="#091D26" stroke="#10B981"/>
+  <text x="360" y="318" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">2. Headless Blender 5.2</text>
+  <text x="360" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">03-blender.md (task1-4)</text>
+  <text x="360" y="362" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Procedural props, rigging</text>
+  <text x="360" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">&amp; level JSON manifest</text>
+  <text x="360" y="402" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Deterministic rebuilds</text>
+
+  <rect x="471" y="294" width="194" height="122" rx="10" fill="#101E36" stroke="#3B82F6"/>
+  <text x="568" y="318" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">3. Godot 4 Autotest</text>
+  <text x="568" y="342" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5" text-anchor="middle">04-godot.md + 06-ship.md</text>
+  <text x="568" y="362" fill="#BFDBFE" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">Runtime JSON level load</text>
+  <text x="568" y="382" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle">+ Screenshot tour QA</text>
+  <text x="568" y="402" fill="#60A5FA" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Win / Web / Android APK</text>
+
+  <!-- Game Pipeline Workflow Strip -->
+  <rect x="55" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="72" y="454" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">5-Task Autonomous 3D Game Generation Loop (references/02-task-templates.md)</text>
+  <text x="72" y="478" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• task1 &amp; task2: Environment props + rigged/skinned characters in Blender Python</text>
+  <text x="72" y="500" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• task3 &amp; task4: Level layout + OpenCV align_to_layout.py + world population JSON</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Consolas, monospace" font-size="12">• task5: Godot 4 runtime loader, code-driven UI, autotest &amp; screenshot tour</text>
+  <text x="72" y="544" fill="#94A3B8" font-family="Consolas, monospace" font-size="12">• Run 2+: Add new districts &amp; stitch multi-zone worlds deterministically</text>
+
+  <!-- Right Panel: amirmushichge/shred-kit -->
+  <rect x="715" y="138" width="650" height="445" rx="14" fill="#0B1324" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="715" y="138" width="650" height="44" rx="14" fill="url(#accentShred)"/>
+  <text x="738" y="166" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">2. amirmushichge/shred-kit (★35 · Agent-Driven Blender 3D Video Template)</text>
+
+  <rect x="735" y="198" width="610" height="82" rx="10" fill="#111C33" stroke="#1E293B"/>
+  <text x="752" y="222" fill="#FDBA74" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Core Innovation: Crisp 3D Typography &amp; Paper Physics Guided by AGENTS.md</text>
+  <text x="752" y="245" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">• Renders an 8-second 1080x1920 @ 60fps vertical loop of a poster ripped, shredded &amp; rebuilt</text>
+  <text x="752" y="266" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Zero diffusion text-garbling: true Google Fonts/.ttf + halftone photo + -14 LUFS sound mix</text>
+
+  <!-- 2 Feature Cards -->
+  <rect x="735" y="294" width="298" height="122" rx="10" fill="#23150B" stroke="#F97316"/>
+  <text x="752" y="317" fill="#FDBA74" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">A. Parametric Poster &amp; Halftone</text>
+  <text x="752" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">7 Text Lines + Custom .ttf/.otf</text>
+  <text x="752" y="360" fill="#FFEDD5" font-family="Consolas, monospace" font-size="11.5">Paper / Ink / Accent Band</text>
+  <text x="752" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Halftone image shader survives</text>
+  <text x="752" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">physical 3D shredder strips</text>
+
+  <rect x="1047" y="294" width="298" height="122" rx="10" fill="#2A1228" stroke="#EC4899"/>
+  <text x="1064" y="317" fill="#F9A8D4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">B. Two-Tier Preview + -14 LUFS</text>
+  <text x="1064" y="340" fill="#F8FAFC" font-family="Consolas, monospace" font-size="11.5">2D Poster in ~3s | 4 3D Frames ~1m</text>
+  <text x="1064" y="360" fill="#FBCFE8" font-family="Consolas, monospace" font-size="11.5">OptiX / CUDA / HIP / Metal / oneAPI</text>
+  <text x="1064" y="382" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">Foley track (rip, shredder, 25 clicks)</text>
+  <text x="1064" y="402" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">mastered to broadcast -14 LUFS</text>
+
+  <rect x="735" y="430" width="610" height="136" rx="10" fill="#0F172A" stroke="#334155"/>
+  <text x="752" y="454" fill="#FB923C" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Why Code-Driven Blender Templates Beat Diffusion Video for Brand Reels</text>
+  <text x="752" y="478" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• 100% Exact Typography: 7 lines of small copy &amp; giant cropped letters never warp</text>
+  <text x="752" y="500" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Frame-Accurate 60fps Loop: Locked camera &amp; physics guarantee seamless replay</text>
+  <text x="752" y="522" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Fast Approval Gate: Approve the 2D poster &amp; 4 3D stills in 60s before full render</text>
+  <text x="752" y="544" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Driven conversationally via AGENTS.md in Claude Code, Codex or Cursor</text>
+
+  <!-- Bottom Panel: Closed-Form FinOps Ledger -->
+  <rect x="35" y="600" width="1330" height="274" rx="14" fill="#090F1D" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="632" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261115-R19-GAMEPIPELINE-SHREDKIT · 12 3D Game Builds + 80 60fps Reels/mo)</text>
+  <text x="58" y="654" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Synthetic Model · Engineer Rate = $100.00/hr · Base Host Compute = not_measured · Zero Fabricated Coordinates</text>
+
+  <!-- Path A Bar -->
+  <text x="58" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path A: Mesh Gen Slop + Video Text Retries</text>
+  <rect x="395" y="674" width="740" height="26" rx="5" fill="#7F1D1D" stroke="#EF4444"/>
+  <text x="1150" y="692" fill="#FECACA" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$5,940.00/mo ($1,840.00 API + 41.0h / $4,100.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="58" y="734" fill="#FDE68A" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path B: Stock Asset Packs + Motion SaaS</text>
+  <rect x="395" y="716" width="350" height="26" rx="5" fill="#78350F" stroke="#F59E0B"/>
+  <text x="760" y="734" fill="#FEF3C7" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$2,810.00/mo ($910.00 SaaS + 19.0h / $1,900.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="58" y="776" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700">Path C: Claude-Game-Pipeline + Shred-Kit</text>
+  <rect x="395" y="758" width="58" height="26" rx="5" fill="#065F46" stroke="#10B981"/>
+  <text x="468" y="776" fill="#A7F3D0" font-family="Consolas, monospace" font-size="13.5" font-weight="700">$460.00/mo ($110.00 compute + 3.5h / $350.00) · -92.26%</text>
+
+  <!-- Bottom KPI Pills -->
+  <rect x="58" y="802" width="405" height="52" rx="8" fill="#111C33" stroke="#10B981"/>
+  <text x="260" y="824" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Monthly Savings vs Path A: -$5,480.00/mo (-92.26%)</text>
+  <text x="260" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">Annualized Savings: $65,760.00/yr · 37.5h/mo Saved (-91.46%)</text>
+
+  <rect x="480" y="802" width="420" height="52" rx="8" fill="#111C33" stroke="#6366F1"/>
+  <text x="690" y="824" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">3D Game Pipeline: OpenCV ECC + Blender -&gt; Godot 4</text>
+  <text x="690" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">10k-LoC Procedural glTF + JSON Level Loader + Screenshot QA</text>
+
+  <rect x="918" y="802" width="424" height="52" rx="8" fill="#111C33" stroke="#F97316"/>
+  <text x="1130" y="824" fill="#FDBA74" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">3D Video Reel: 1080x1920 @ 60fps + -14 LUFS Audio</text>
+  <text x="1130" y="844" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">7 Crisp Text Lines + Halftone Photo + 4-Frame 60s Preview</text>
+</svg>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+  <defs>
+    <linearGradient id="bg49" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1325"/>
+    </linearGradient>
+    <linearGradient id="accentCyan49" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="accentTeal49" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="860" fill="url(#bg49)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1224" height="92" rx="14" fill="#111C33" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="44" y="38" width="236" height="26" rx="6" fill="#0C4A6E" stroke="#0EA5E9" stroke-width="1"/>
+  <text x="162" y="55" fill="#7DD3FC" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-15 · R49 (CUMULATIVE R351)</text>
+  <text x="296" y="56" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Tessery (14-Lang Visual System Codegen &amp; MCP) + Cross-Entry Continuity (5-Layer Chat Bridge)</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5">martian56/tessery (★49 · 69 Techs / 14 Langs · `tessery/generated` Git Merge · OTel + `/api/mcp`) + Elisekaiu/Cross-entry-continuity (★49 · 4-Msg/~600-Char Delta · One-Shot ACK)</text>
+
+  <!-- Left Column: martian56/tessery -->
+  <rect x="28" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="46" y="148" width="564" height="44" rx="8" fill="url(#accentCyan49)"/>
+  <text x="62" y="175" fill="#FFFFFF" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🏗️ martian56/tessery — Self-Hosted 14-Language System Builder &amp; MCP</text>
+
+  <rect x="46" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="228" fill="#7DD3FC" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. 69 Techs &amp; 14-Lang Codegen</text>
+  <text x="60" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• TS, Go, Python, Rust, Java, Zig...</text>
+  <text x="60" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Auto SQL CRUD on Postgres routes</text>
+  <text x="60" y="289" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Built-in auth + `user_id` row scope</text>
+
+  <rect x="336" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="228" fill="#7DD3FC" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. Git Merge &amp; OTel Waterfalls</text>
+  <text x="350" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• `tessery/generated` merges to `main`</text>
+  <text x="350" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Dev -&gt; Staging -&gt; Prod auto-rollback</text>
+  <text x="350" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• Live OpenTelemetry trace waterfalls</text>
+
+  <rect x="46" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#0284C7" stroke-width="1"/>
+  <text x="62" y="346" fill="#38BDF8" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. `/api/mcp` Agent Endpoint &amp; Transactional `rotate-key` Secret Security</text>
+  <text x="62" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `claude mcp add --transport http tessery http://localhost:8080/api/mcp`</text>
+  <text x="62" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• `tessery-server rotate-key` re-encrypts all secrets in 1 atomic transaction</text>
+  <text x="62" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• Rust 1.99.1 workspace (`tessery-api`, `worker`, `git`, `engine`) + S3/R2 backup</text>
+
+  <rect x="46" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="62" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">CODEGEN &amp; HAND-WRITTEN CODE COEXISTENCE</text>
+  <rect x="62" y="480" width="440" height="18" rx="4" fill="#0EA5E9"/>
+  <text x="510" y="494" fill="#7DD3FC" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">14 Langs + Git Merge</text>
+  <rect x="62" y="508" width="140" height="18" rx="4" fill="#475569"/>
+  <text x="212" y="522" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">One-Shot Scaffolders: Overwrite Custom Code on Re-Export</text>
+
+  <!-- Right Column: Elisekaiu/Cross-entry-continuity -->
+  <rect x="652" y="130" width="600" height="430" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="670" y="148" width="564" height="44" rx="8" fill="url(#accentTeal49)"/>
+  <text x="686" y="175" fill="#06281E" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">🌉 Elisekaiu/Cross-entry-continuity — 5-Layer Low-Token Chat Bridge</text>
+
+  <rect x="670" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="684" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">1. 5-Layer Memory Hierarchy</text>
+  <text x="684" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Core/Bootstrap · Long-term memory</text>
+  <text x="684" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Archive · Short-TTL Continuity</text>
+  <text x="684" y="289" fill="#67E8F9" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• 1-sentence Checkpoint fallback</text>
+
+  <rect x="960" y="206" width="274" height="106" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="974" y="228" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700">2. 4-Msg / ~600-Char Delta Cap</text>
+  <text x="974" y="249" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Capped at 4 visible messages (~600c)</text>
+  <text x="974" y="269" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Strips tool payloads &amp; cookies</text>
+  <text x="974" y="289" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">• 0 background LLM summarization</text>
+
+  <rect x="670" y="324" width="564" height="110" rx="10" fill="#111C33" stroke="#059669" stroke-width="1"/>
+  <text x="686" y="346" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="13.5" font-weight="700">3. One-Shot `dirty / request / ACK` Cursor &amp; Fail-Fast `abandon / skip`</text>
+  <text x="686" y="369" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• App close marks `dirty` without waking LLM; next prompt hook pulls once</text>
+  <text x="686" y="390" fill="#CBD5E1" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Distinguishes `no_delta` from `failed`; never loops retries on failure</text>
+  <text x="686" y="411" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12.5" font-weight="700">• MV3 extension defaults to `DRY RUN` &amp; verifies active window identity</text>
+
+  <rect x="670" y="446" width="564" height="96" rx="10" fill="#0B1325" stroke="#1E293B" stroke-width="1"/>
+  <text x="686" y="468" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">CROSS-ENTRY CONTEXT HANDOFF TOKEN OVERHEAD PER TURN</text>
+  <rect x="686" y="480" width="75" height="18" rx="4" fill="#10B981"/>
+  <text x="772" y="494" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Cross-Entry Continuity: ~600 Chars (4 Msgs · 0 Summary LLM Calls)</text>
+  <rect x="686" y="508" width="435" height="18" rx="4" fill="#EF4444"/>
+  <text x="1128" y="522" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="12">Full Log Dump: 15k+ Tok</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger -->
+  <rect x="28" y="578" width="1224" height="256" rx="14" fill="#111C33" stroke="#334155" stroke-width="1.5"/>
+  <text x="48" y="610" fill="#F8FAFC" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="800">💰 Closed-Form FinOps Ledger (CLAIM-20261115-R49-TESSERY-CROSSENTRY · 15 System Releases + 12k Context Handoffs/Mo · base host compute: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="48" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="64" y="654" fill="#FCA5A5" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path A: Commercial PaaS + Polling Summary Bot</text>
+  <text x="64" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• PaaS Seats &amp; Summary Tokens: $1,920.00 / mo</text>
+  <text x="64" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• CRUD/IaC &amp; Re-Explain Ops (39.5h × $100): $3,950.00 / mo</text>
+  <text x="64" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Diagram-code drift + constant background LLM wakes</text>
+  <text x="64" y="766" fill="#F87171" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $5,870.00 / mo</text>
+  <text x="64" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Baseline (100% cost · 39.5 eng hrs/mo)</text>
+
+  <!-- Path B -->
+  <rect x="450" y="628" width="380" height="184" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="466" y="654" fill="#FCD34D" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path B: One-Shot Scaffolder + Manual Copy-Paste</text>
+  <text x="466" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Hosting &amp; Token Spend: $860.00 / mo</text>
+  <text x="466" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Merge Conflict &amp; Sync Labor (18.5h × $100): $1,850.00 / mo</text>
+  <text x="466" y="728" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Re-export clobbers custom code + manual chat pasting</text>
+  <text x="466" y="766" fill="#FBBF24" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $2,710.00 / mo</text>
+  <text x="466" y="792" fill="#94A3B8" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">-53.83% vs Path A (18.5 eng hrs/mo)</text>
+
+  <!-- Path C -->
+  <rect x="852" y="628" width="380" height="184" rx="10" fill="#06281E" stroke="#10B981" stroke-width="1.8"/>
+  <text x="868" y="654" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">Path C: Tessery MCP + Cross-Entry Continuity</text>
+  <text x="868" y="680" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Self-Hosted Caddy &amp; Collector: $90.00 / mo</text>
+  <text x="868" y="704" fill="#E2E8F0" font-family="Segoe UI, Inter, sans-serif" font-size="12.5">• Automated Git/MCP &amp; Hook Ops (3.5h × $100): $350.00 / mo</text>
+  <text x="868" y="728" fill="#A7F3D0" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Save $5,430.00/mo (-92.50%) · $65,160.00/yr</text>
+  <text x="868" y="766" fill="#34D399" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800">Total: $440.00 / mo (-92.50%)</text>
+  <text x="868" y="792" fill="#6EE7B7" font-family="Segoe UI, Inter, sans-serif" font-size="11.5">Save 36.0 eng hrs/mo (-91.14% labor)</text>
+</svg>
