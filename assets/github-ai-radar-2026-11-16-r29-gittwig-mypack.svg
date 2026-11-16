@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 29 (CUMULATIVE R386) · CLAIM-20261116-R29-GITTWIG-MYPACK</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">34.2倍省磁盘 CoW Git Worktree (git-twig) + 免编译器秒级桌面打包器 MCP (MyPack)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">10 个 Linux 内核 Worktree 从 18.3 GiB 压至 549 MiB (省 97% 空间) + 免装 Rust/Node/Xcode 秒级打包独立 WebView 应用 · 净省 $5,140.00/月 (-93.28%)</text>
+
+  <!-- Left Column: leostera/git-twig -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🌱 1. leostera/git-twig (Native CoW Git Worktrees · Rust · ★62)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">让并行 Agent 随便开几十个 Worktree 也不爆硬盘！最高节省 97% 磁盘空间</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">原生写时复制 (APFS / Btrfs / Reflink XFS) + 提交校验物化</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 实测硬核基准 (bench/results/)：10 个 Linux 内核 Worktree 从 git worktree 的 18.3 GiB 降至 549 MiB (省 34.2 倍)</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Axo 大仓双重碾压：创建时间从 4m40s 缩短至 2m19s (快 2.02 倍)，磁盘增量从 3.0 GiB 降至 165 MiB (省 18.8 倍)</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 绝不用危险硬链接 (Never Hardlinked)：写入完全私有隔离，且对克隆文件逐一校验目标 Commit 一致性</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 内置 `git twig skill` 一键输出专属编码 Agent 技能 · 不支持的文件系统自动回退 git worktree</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">净室已提交文件克隆 + 严谨 RFD 工程契约 (RFD0001 / RFD0012)</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 净室隔离：仅从已提交文件构建链接 Worktree，不把主工作区脏改或未追踪垃圾带入子智能体沙盒</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 事务级 Staging 保护：暂存区位于公共 Git 目录 twigs/staging 下，成功后自动清理，中断时保留现场供排查</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 支持 TWIG_TRACE=1 透明观测底层 CoW 后端选型，彻底解决多 Agent 并发拉分支塞满笔记本 SSD 的顽疾</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 与 R364 的 morajabi/poo 形成“创建端省 97% 空间 + 回收端安全清理构建产物”黄金闭环</text>
+
+  <!-- Right Column: sinhong2011/mypack -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">📦 2. sinhong2011/mypack (Zero-Toolchain Desktop Builder + MCP · ★63)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">不用装 Rust/Go/Node/Xcode！几秒把任何网页或本地前端变成独立原生桌面应用</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">预编译轻量运行时注入 (Prebuilt Runtime Injection) + 独立会话沙盒</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 秒级构建零编译：不跑长达 5 分钟的 Cargo/Xcode 编译，直接将配置写入精简预编译系统 WebView 运行时</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 彻底告别浏览器标签页乱象：每个应用拥有独立图标、独立 Cookie 登录态、未读角标、媒体键与菜单栏/侧栏模式</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 本地前端工程直出：支持单 HTML 或 Vite/CRA/Astro/Nuxt/SvelteKit/Next 导出（执行构建前强制征求用户批准）</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 生成的应用完全独立运行（卸载 MyPack 后依然可用），原生兼容导入 Pake `pake.json`</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">内置 MCP Server + `--json` 无头 CLI + 失败自动回滚更新</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 专为 Coding Agent 赋能：内置标准 MCP Server 与 `--json` CLI，Agent 写完前端工具后一键打包安装到桌面</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 全生命周期托管：支持不丢登录态的一键更新（若更新失败自动回退上一版本）、一键修复与跨机 `.mypack` 同步</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 支持 Group Apps 将多个关联后台聚合在同一窗口分屏并保持各自独立 Cookie 会话</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ Apache-2.0 开源跨 macOS / Linux / Windows，无应用数量限制、无账号锁死</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R29-GITTWIG-MYPACK · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月创建 120 个并行 Coding Agent Worktree + 打包维护 25 个内部 Web 工具独立桌面客户端（时薪 r = $100.00/hr；SSD 硬件更换费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (18.3GiB 全量拷贝爆盘 + 每台机器配齐重型编译链打包)</text>
+  <rect x="430" y="630" width="551" height="22" rx="5" fill="#EF4444"/>
+  <text x="993" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,510.00/mo ($1,760.00 storage/CI waste + 37.5h × $100 = $3,750.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (手工浅克隆脚本 + 浏览器标签页 Cookie 串号)</text>
+  <rect x="430" y="666" width="260" height="22" rx="5" fill="#F59E0B"/>
+  <text x="702" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,600.00/mo ($850.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (git-twig 34.2x CoW + MyPack 零编译链 MCP)</text>
+  <rect x="430" y="702" width="37" height="22" rx="5" fill="#10B981"/>
+  <text x="479" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$370.00/mo ($70.00 compute + 3.0h × $100 = $300.00) → 净省 $5,140.00/月 (-93.28% / 年省 $61,680.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR COW WORKTREES &amp; ZERO-TOOLCHAIN APP PACKAGING:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 在 APFS/Btrfs/XFS 上用 git-twig 的原生 CoW 克隆替代全量文件复制，最高砍掉 97% (34.2倍) 的 Worktree 磁盘开销。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 绝不用硬链接共享工作区：git-twig 保证子智能体的每次写入完全私有且物化文件经过 Commit 哈希核验。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 内部 Web 看板与 Agent 生成的前端工具无需走重型编译链，通过 MyPack MCP 秒级注入预编译系统 WebView 运行时。</text>
+</svg>

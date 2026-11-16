@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 37 (CUMULATIVE R394) · CLAIM-20261116-R37-NEURALSTATE-PICTOCHAT-ALLO</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">残差流神经调制 OS (Neural-State-OS) + ESP32-C3 2Mbps 无线电基站 + 三轴可变字体 Allo</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">零 Prompt 扮演直写 Gemma 4 残差流 write/read/compare/embody + 100-143 polls/s 802.11b + OFL 三轴光学可变字体 · 净省 $5,080.00/月 (-93.21%)</text>
+
+  <!-- Left Column: ShutongLiang/Neural-State-OS -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧠 1. ShutongLiang/Neural-State-OS (Residual-Stream Steering · ★41)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">不是靠 Prompt 演戏！直接向本地模型残差流注入并读出校准情绪/躯体激活向量</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">四大激活空间原语：write → read → compare → embody (Gemma 4 31B / 12B MLX)</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别脆弱的 System Prompt 角色扮演：用户输入的句子完全不变，在特定层残差流直接注入差分向量 (Differential Vectors)</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 生成前/后双重内部探针 (read)：在吐字之前直接读取模型当前的内部状态向量，而非仅靠输出字面猜测</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 受控对照实验 (compare)：支持同一输入在调制关闭 vs 调制开启下并排对比，精确量化每次激活干预的增量效应</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ embody 通道支持将外部传感器、硬件设备或机器人本体遥测直接映射至模型内部状态</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">可解释性安全研究与端侧 MLX 12B 支持 (docs/RAW_TRANSCRIPTS.md)</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 极具对齐与红队审计价值：揭示当安全依恋 (Secure Attachment) vs 分离焦虑向量被激活时模型行为的剧烈分叉</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 提醒架构师：未来模型安全门禁不仅要检查输入文本，更需通过内部状态探针 (read) 监测异常高危激活偏移</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 主运行时支持 Gemma 4 31B，同时提供可在 Apple Silicon MacBook 本地运行的 12B MLX 轻量版本</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 公开完整原始对话记录 (RAW_TRANSCRIPTS.md) 与模型配置指南 (MODEL_SETUP.md)</text>
+
+  <!-- Right Column: LNYmachines/pictochat-host + joshpuckett/allo & cnrad/interspace -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">📻 2. pictochat-host (★35) + joshpuckett/allo (★150) + interspace (★160)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">ESP32-C3 裸帧 2Mbps 无线电卸载基站 + OFL 三轴可变 UI 字体 + ProMotion 秒切桌面</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">LNYmachines/pictochat-host：ESP32-C3 卸载轮询 + JSON-Lines Bot 桥接</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 攻克 802.11b 2 Mbit/s 裸帧注入难题：普通网卡注入常掉回 1 Mbit/s 导致实机忽略，ESP32-C3 固件完美解决</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• --offload 硬件卸载轮询：ESP32-C3 接管高频轮询达 100–143 polls/s (应答率 91–96%)，实机单行文本 0.6s 送达</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零依赖 Python 主机 + Pi Zero 专用 Rust 主机 (host_rs/) + 无头双机 melonDS 测试床 (emu/) + selftest</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 开放 127.0.0.1:7777 JSON-Lines 接口 (API.md)，让 AI Agent 直接与复古掌机互发图文涂鸦</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">joshpuckett/allo (OFL-1.1) + cnrad/interspace (Swift)：极致界面字体与空间切换</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Allo 三轴可变开源字体：同时支持光学尺寸 (Optical Size)、字重与圆润度无级调节，自带等宽数字、分数与输入箭头连字</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• AlloVariableFriendly.woff2：将圆润度固定在 50，体积直接砍半，专为高密度 AI 仪表盘与编辑器优化</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Interspace：修复 macOS 120Hz ProMotion 切桌面锁死键盘点击整整 1 秒的缺陷，支持手势中途随时打断秒切</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为 AI SA 打造高颜值、零延迟本地研发桌面与数据报告提供了免费 OFL 字体与交互底座</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R37-NEURALSTATE-PICTOCHAT-ALLO · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 25 项本地模型激活调制/无线协议桥接实验 + 20 套技术看板排版字体与多桌面流转优化（时薪 r = $100.00/hr；ESP32-C3 开发板硬件：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (长 Prompt 角色漂移重跑 + 无线网卡驱动抓瞎 + 商业字体授权费)</text>
+  <rect x="430" y="630" width="545" height="22" rx="5" fill="#EF4444"/>
+  <text x="987" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,450.00/mo ($1,750.00 license/token spend + 37.0h × $100 = $3,700.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (每换一种情绪重训 LoRA + 手工打 ath9k 内核固件补丁)</text>
+  <rect x="430" y="666" width="259" height="22" rx="5" fill="#F59E0B"/>
+  <text x="701" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,590.00/mo ($840.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Neural-State-OS + pictochat ESP32 + Allo)</text>
+  <rect x="430" y="702" width="37" height="22" rx="5" fill="#10B981"/>
+  <text x="479" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$370.00/mo ($70.00 compute + 3.0h × $100 = $300.00) → 净省 $5,080.00/月 (-93.21% / 年省 $60,960.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR ACTIVATION STEERING, RADIO BRIDGES &amp; UI TYPOGRAPHY:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 残差流差分向量注入与内部激活探针 (Neural-State-OS) 为模型可解释性与安全红队提供了免微调的精准手术刀。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 面对严苛时序私有无线协议，将高频轮询卸载至 ESP32-C3 固件 (--offload) 并向主机暴露 JSON-Lines 是最优解。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 技术仪表盘排版首选 OFL 开源三轴可变字体 Allo (内置等宽数字与半体积 Friendly WOFF2)，配合 Interspace 消灭切屏卡顿。</text>
+</svg>

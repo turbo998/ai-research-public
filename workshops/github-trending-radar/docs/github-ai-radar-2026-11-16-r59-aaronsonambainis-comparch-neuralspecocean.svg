@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 59 (CUMULATIVE R416) · CLAIM-20261116-R59-AARONSONAMBAINIS-HENNESSYPATTERSON-NEURALSPECSOCEAN</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">Aaronson–Ambainis 猜想 Lean 4 形式化证明 + 量化体系结构双语硬件实现 + 神经海洋</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Lean 4.33.0 + Mathlib 机械化验证 + Hennessy &amp; Patterson 1–7 版 SystemVerilog/VHDL 自检测试台 + WebGL2 多光谱海浪 · 净省 $5,655.00/月 (-93.63%)</text>
+
+  <!-- Left Column: physical-superintelligence/aaronson-ambainis + hevangel/computer_architecture_a_quantitative_approach -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">📐 1. aaronson-ambainis (★66) + computer_architecture_a_quantitative_approach (★46)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">量子查询复杂度核心猜想的 Lean 4 证明 + 可以直接 make test 运行的体系结构圣经</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">physical-superintelligence/aaronson-ambainis：Lean 4.33.0 机械化定理证明</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 理论计算机与量子计算重大命题：离散超立方体上的有界低次多项式必存在高影响力坐标 (Influential Coordinate)</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 拒绝手写证明的隐含跳步：基于 `Lean 4.33.0` 与 `Mathlib v4.33.0` 完成形式化验证，附带论文与完整工程源码</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 三重 GitHub Actions 门禁：`build-lean.yml` 编译内核验证、`comparator.yml` 独立比对器防作弊公理、`release-check.yml`</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 为 AI 辅助数学研究树立了“LaTeX 论文 + Lean 4 + Comparator 反作弊校验”黄金标准</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">hevangel/computer_architecture_a_quantitative_approach：一本可以跑的硬件书</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 覆盖第 1 版 (1990) 至第 7 版 (2025)：把图灵奖得主 Hennessy &amp; Patterson 名著里的全部算例变成真 RTL 硬件</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 每个算例写两遍 (SystemVerilog + VHDL)：各自配齐自检测试台 (Self-Checking Testbench)，一行 `make test` 全验</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 改参数立看指标跳动：基于开源 `Icarus Verilog 12`、`GHDL 4.x` 与 `Verilator 5`，直观观察 CPI、Cache 缺失率与加速比</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ AI 芯片架构师与 RTL 验证智能体训练不可多得的双语言黄金对照基准</text>
+
+  <!-- Right Column: bgbg108555/NeuralSpecOcean -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🌊 2. bgbg108555/NeuralSpecOcean (★66 · WebGL2 Multi-Spectral Coastal Ocean)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">物理引导神经场与多光谱近岸海浪 WebGL2 实时仿真（附完整技术白皮书）</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">为什么普通 3D 海面一到岸边浅滩就穿帮？</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 传统深水 FFT 的局限：普通 JONSWAP/Tessendorf 频谱假设无限水深，无法表现近岸水深变浅时的波浪折射、陡化与卷浪破碎</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 物理引导神经与多光谱耦合：将多尺度波浪频谱与近岸地形水深动力学结合，在浏览器 WebGL2 中实时解算</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 多光谱水体光学传输：真实还原不同水深、泥沙/叶绿素散射、泡沫白浪花与大气天光反射的海岸全景</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 零安装打开 GitHub Pages 即可在浏览器内交互体验，并随仓附带 TECHNICAL_WHITEPAPER.md</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">从形式化定理 (Lean 4) 到双语 RTL (SV/VHDL) 再到浏览器物理仿真</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 三大硬核仓库共同指向一个趋势：**代码即形式化真理 (Code as Executable Truth)**</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 数学猜想不再止步于 PDF，而是交给 `Lean 4` 编译器与 `comparator.yml` 逐行核验</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 体系结构公式不再死记硬背，而是交给 `iverilog` + `ghdl` 双语 Testbench 实时跑出 CPI 与 Cache Miss</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为科研 Agent 与硬件验证 Agent 提供了 100% 确定性的验证器底座</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R59-AARONSONAMBAINIS-HENNESSYPATTERSON-NEURALSPECSOCEAN · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 20 项形式化定理核验与双语 RTL 体系结构验证 + 15 个物理引导 WebGL2 海洋仿真场景（时薪 r = $100.00/hr；开源工具链：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (人工审阅长篇数学证明 + 商业 EDA 仿真席位 + 离线流体农场)</text>
+  <rect x="430" y="630" width="604" height="22" rx="5" fill="#EF4444"/>
+  <text x="1046" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,040.00/mo ($2,040.00 license/compute + 40.0h × $100 = $4,000.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (单语言 RTL 无自检测试台 + 忽略浅水折射的简陋水波)</text>
+  <rect x="430" y="666" width="279" height="22" rx="5" fill="#F59E0B"/>
+  <text x="721" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,790.00/mo ($940.00 spend + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Lean 4.33 Proof + Dual SV/VHDL Testbenches + NeuralSpecOcean)</text>
+  <rect x="430" y="702" width="38.5" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$385.00/mo ($75.00 compute + 3.1h × $100 = $310.00) → 净省 $5,655.00/月 (-93.63% / 年省 $67,860.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR LEAN 4 PROOFS, DUAL-HDL ARCHITECTURE &amp; WEBGL2 OCEAN PHYSICS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 形式化证明仓库不仅要跑通 `lake build`，更要像 `aaronson-ambainis` 一样在 CI 中配置独立 `comparator.yml` 防公理作弊。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 硬件体系结构研究通过 SystemVerilog + VHDL 双实现与自检 Testbench，可在开源工具链上零成本量化 CPI 与 Cache 收益。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 近岸海浪仿真结合物理引导神经与多光谱渲染 (`NeuralSpecOcean`)，在普通浏览器 WebGL2 中即可呈现逼真浅滩波浪动力学。</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 63 (CUMULATIVE R420 MILESTONE) · CLAIM-20261116-R63-WSR-WAKEUP-XIAOYU</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">【第 420 轮里程碑】免推理权重空间读写 (wsr) + 10 情境主动唤醒 (wake_UP) + 小遇数字人</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">纯 CPU 沙箱不跑前向推理直接读懂/改写模型权重 + SLM 驱动 10 类持续情境合并唤醒 + Vidu S2-Avatar &amp; Agora 106 动作陪伴 · 净省 $5,595.00/月 (-93.56%)</text>
+
+  <!-- Left Column: suayptalha/wsr -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧠 1. suayptalha/wsr (★37 · Apache-2.0 · alphaXiv:2611.weight-space)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">不运行神经网络，Agent 光看权重张量能预判行为变化甚至直接写权重补丁吗？</text>
+
+  <rect x="66" y="220" width="598" height="154" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">Weight-Space Reading (`wsr read`)：禁跑模型前向传播的纯 CPU 权重阅读沙箱</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 核心科学拷问：把目标开源模型的权重和一处外科手术式权重修改交给 Agent，**禁止运行该模型**</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 纯 CPU 隔离沙箱：Reader Agent 只能写 Python 检查权重矩阵的奇异值、方向投影与层间结构，预测各项行为指标是上升、下降还是不变</text>
+  <text x="82" y="330" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 支持任意开源权重目标模型 + 任意本地/API 模型充当 Reader/Programmer Agent</text>
+
+  <rect x="66" y="386" width="598" height="138" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="410" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Weight-Space Programming (`wsr program`)：直接用代码在权重空间做外科手术</text>
+  <text x="82" y="432" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 不靠梯度下降微调、不靠长 Prompt 注入：让 Agent 直接计算并写出针对特定神经元/低秩子空间的权重修改</text>
+  <text x="82" y="454" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 自动对比“修改后真实运行结果”与“权重空间编辑目标”，量化模型的白盒自省与机械可解释性能力</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 机械可解释性 (Mechanistic Interpretability) 与免微调模型外科编辑的基准工具箱</text>
+
+  <!-- Right Column: KKarsyline/wake_UP + hsuehly/xiaoyu -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">⏰ 2. KKarsyline/wake_UP (★38 · deamo_wake) + hsuehly/xiaoyu (★38)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">SLM 驱动的 10 情境主动唤醒引擎 + Vidu S2-Avatar &amp; Agora 106 动作数字人 App</text>
+
+  <rect x="728" y="220" width="606" height="154" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">KKarsyline/wake_UP (`deamo-wake`)：让 AI 根据对话情境自己安排何时再醒来</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么定时 Cron 唤醒很呆板？不懂你刚说了“我出门一会儿”或“接下来忙工作”，只会机械刷屏</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• SLM 实时维护 **10 种并发情境 (Scenes)**：`outing` (30m/8h)、`work` (60m/10h)、`bedtime` (45m/10h)、`morning` (20m/3h)、`silence_escalation` (15m/4h) 等，到期自动合并为单份唤醒报告</text>
+  <text x="744" y="330" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 主模型可主动调用 `update_scene` (`cadence_min`) 与 `set_alarm` 动态调整后续跟进节奏</text>
+
+  <rect x="728" y="386" width="606" height="138" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="410" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">hsuehly/xiaoyu (小遇 v0.1.0+1)：Flutter + Vidu S2-Avatar + Agora 实时音视频数字人</text>
+  <text x="744" y="432" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 支持 iOS/Android，最多 5 万字人设配置，全屏数字人实时音视频通话，横向滑动触发 **106 个分类独立动作**</text>
+  <text x="744" y="454" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 本地采用 `Drift + SQLite` 持久化角色、草稿与通话核对状态，API Key 存入系统安全存储，切后台自动断联防偷跑计费</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 移动端实时数字人陪伴应用的完整 Flutter + SQLite 客户端参考实现</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R63-WSR-WAKEUP-XIAOYU · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月开展 20 轮模型权重可解释性审计与外科编辑实验 + 运维 25 套主动情境唤醒 Agent 与实时数字人移动端应用（时薪 r = $100.00/hr；Vidu 云端实时分钟费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (全参数/LoRA 反复微调试错 + 无脑高频轮询唤醒 + 外包数字人 App)</text>
+  <rect x="430" y="630" width="598" height="22" rx="5" fill="#EF4444"/>
+  <text x="1040" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,980.00/mo ($1,980.00 GPU/API + 40.0h × $100 = $4,000.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (手写散乱 PyTorch Hook 脚本 + 固定 Cron 定时死板推送)</text>
+  <rect x="430" y="666" width="272" height="22" rx="5" fill="#F59E0B"/>
+  <text x="714" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,720.00/mo ($920.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (suayptalha/wsr + KKarsyline/wake_UP + hsuehly/xiaoyu)</text>
+  <rect x="430" y="702" width="38" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$385.00/mo ($75.00 spend + 3.1h × $100 = $310.00) → 净省 $5,595.00/月 (-93.56% / 年省 $67,140.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR WEIGHT-SPACE READING, SCENE-DRIVEN PROACTIVE WAKE &amp; AVATAR APPS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• `wsr` 将权重空间阅读 (`wsr read`) 严格限制在无前向推理的纯 CPU 沙箱中，防止 Agent 靠偷跑模型作弊。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 主动式 Agent 应采用 `wake_UP` 的“SLM 情境状态机 + 多情境到期合并报告 + 模型自主调整唤醒间隔”三级架构。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 实时视频数字人客户端必须像 `xiaoyu` 一样在切入后台时主动断开 RTC 连接并做服务端计费结束核对，防止后台空跑烧钱。</text>
+</svg>

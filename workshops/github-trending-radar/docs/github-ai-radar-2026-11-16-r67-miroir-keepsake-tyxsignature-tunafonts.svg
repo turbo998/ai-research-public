@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 67 (CUMULATIVE R424) · CLAIM-20261116-R67-MIROIR-KEEPSAKE-TYXSIGNATURE-TUNAFONTS</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">真实产品打包 Agent RL 环境 (Miroir) + 双向对话记忆泡 (Keepsake) + 动态签名/字体管家</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Rust OpenEnv/MCP 状态重置与 DB/邮件副作用判分 + AI 伴侣 16 坑实战内联标记收藏 + 1080p MP4/透明 GIF 动态签名与 Win11 字体管理 · 净省 $5,485.00/月 (-93.52%)</text>
+
+  <!-- Left Column: raphaelDkhn/miroir + Cheiineeey/keepsake -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🪞 1. raphaelDkhn/miroir (★36 · Rust) + Cheiineeey/keepsake (★36 · MIT)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">把真实业务 Docker 镜像变成 OpenEnv/MCP 强化学习靶场 + AI 伴侣双向对话记忆泡</text>
+
+  <rect x="66" y="220" width="598" height="154" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">raphaelDkhn/miroir (Apache-2.0)：将真实产品一键封装为可判分的 Agent RL 环境</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么用 Mock 接口训出来的 Agent 一上真实 CRM/ERP 就翻车？因为缺真实的 Postgres、Redis 与后台 Worker</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 只需给产品的 Docker 镜像加上 manifest 与 tasks：`Miroir` 自动灌入种子数据、在 Episode 间毫秒级重置状态、通过 **OpenEnv 与 MCP** 暴露 API，并在 `--network none` 断网沙箱下校验参考轨迹 (`check`)</text>
+  <text x="82" y="330" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 直接对数据库行变更、发出的邮件与 HTTP 请求做白盒真实副作用判分 (Grading)</text>
+
+  <rect x="66" y="386" width="598" height="138" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="410" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Cheiineeey/keepsake (MIT)：把一段带上下文的对话存成会起雾、会浮起的“记忆泡”</text>
+  <text x="82" y="432" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 解决“单句收藏忘掉当时是吵架还是撒娇”痛点：连同前后文与双方批注一起封存，久不触碰自动起雾下沉</text>
+  <text x="82" y="454" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 复盘 **16 个真实踩坑 (`docs/06-pitfalls.md`)**：不用工具调用、不用闹钟催促，让 AI 在回复流内用轻量标记自主收藏并显式暴露失败痕迹</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 涵盖单句胶片、多句短聊卡片、半句摘录与思考链收藏的完整交互规范</text>
+
+  <!-- Right Column: tangyx527/tyx-signature + atunfrito/tuna-fonts -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">✒️ 2. tangyx527/tyx-signature (★36) + atunfrito/tuna-fonts (★36)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">免安装浏览器 1080p MP4/透明 GIF 动态签名工作台 + Win10/11 零账号本地字体管家</text>
+
+  <rect x="728" y="220" width="606" height="154" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">tangyx527/tyx-signature (MIT)：连笔生成 + 手写描摹 + 16 款开场/2 款收尾动态签名</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 输入英文/拼音生成连笔或上传手写图三档平滑续描，支持单人与双人情侣签名独立 2–5 色标渐变配色</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 内置 **16 款开场动画、逐笔书写与 2 款连贯收尾**，在浏览器内直接导出 **1080p MP4 或透明背景 GIF**！</text>
+  <text x="744" y="330" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 纯前端免安装运行，适合数字作品片尾落款、电子贺卡与个人品牌视觉包装</text>
+
+  <rect x="728" y="386" width="606" height="138" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="410" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">atunfrito/tuna-fonts (MIT)：免删除一键停用/启用字体的 Windows 10/11 原生字体管理器</text>
+  <text x="744" y="432" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零账号、零广告、零云端上传：支持拖拽 `.ttf/.otf/.ttc` 免管理员权限安装，按项目建立字体收藏夹</text>
+  <text x="744" y="454" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 非破坏性停用 (Deactivate without deleting)：让不常用字体从设计软件菜单里消失但安全保留在库中，并内置 **~1,900 款 Google Fonts** 一键预览安装</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 彻底解决 Windows 原生字体文件夹预览难、停用必须真删文件的陈年痛点</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R67-MIROIR-KEEPSAKE-TYXSIGNATURE-TUNAFONTS · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月构建与评测 20 个真实多组件业务系统的 Agent RL 靶场与双向记忆应用 + 交付 30 套动态品牌落款与字体资产管理工作台（时薪 r = $100.00/hr；容器镜像存储费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (手写脆弱 Mock 评测环境 + 调工具静默失败排障 + 商业字体管理订阅)</text>
+  <rect x="430" y="630" width="586" height="22" rx="5" fill="#EF4444"/>
+  <text x="1028" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,865.00/mo ($1,915.00 SaaS/compute + 39.5h × $100 = $3,950.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (共享脏数据库跑 Agent 评测互相污染 + AE 手工描摹动态签名)</text>
+  <rect x="430" y="666" width="268" height="22" rx="5" fill="#F59E0B"/>
+  <text x="710" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,680.00/mo ($880.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Miroir + Keepsake + tyx-signature + tuna-fonts)</text>
+  <rect x="430" y="702" width="38" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$380.00/mo ($70.00 spend + 3.1h × $100 = $310.00) → 净省 $5,485.00/月 (-93.52% / 年省 $65,820.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR PRODUCT-TO-RL PACKAGING, INLINE AGENT MEMORY &amp; CREATIVE TOOLING:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 企业级 Agent 评测应使用 `Miroir` 将真实 Postgres/Redis/Web 容器打包为 `--network none` 靶场，直接按 DB 行与邮件副作用判分。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 让伴侣/助手类 AI 自发执行旁路动作时，遵循 `keepsake` 的“回复流内联标记 + 显式失败留痕”远比强制工具调用更自然可靠。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• `tyx-signature` 与 `tuna-fonts` 展示了零云端依赖、纯本地完成 1080p MP4/透明 GIF 签名导出与 1,900 款字体非破坏性管理的最佳实践。</text>
+</svg>

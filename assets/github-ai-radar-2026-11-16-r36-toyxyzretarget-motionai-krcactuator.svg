@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 36 (CUMULATIVE R393) · CLAIM-20261116-R36-TOYXYZ-KRCACTUATOR</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">Blender 比例感知骨骼重定向与 SOMA 动作生成 (toyxyz) + 摆线减速 FOC 关节执行器 (KRC)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">短腿/长腿跨体型步幅与足底接触自适应 + Kimodo/ARDY/MotionBricks 接触平滑 + 全开源 STEP/PCB/STM32 FOC 机器人关节 · 净省 $5,335.00/月 (-93.43%)</text>
+
+  <!-- Left Column: toyxyz-blender-retargeter + toyxyz-motion-ai-tool -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🦴 1. toyxyz-blender-retargeter (★75) + toyxyz-motion-ai-tool (★48)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">根治跨体型动作迁移“太空步滑步”！在 Blender 5.0+ 内本地生成并精修 SOMA 动作</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">toyxyz-blender-retargeter：比例感知根位移 + 足底接触求解 (vs 简单 FK 复制)</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么单纯 FK 旋转复制会滑步？把大长腿动作直接拷给小短腿角色，脚底要么悬空要么陷入地下乱滑</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 比例感知自适应：自动按目标骨骼比例缩放根部行进距离 (Root Travel)、调节肢体伸展度并锁定足底地面接触</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 多角色同屏实时预览与批量烘焙：支持 JSON 骨骼映射预设复用，一键批量 Bake to Action</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 诚实披露当前边界：手掌承重撑地接触 (Hand Contact) 控制仍在演进中</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">toyxyz-motion-ai-tool (v0.46.5)：Kimodo + ARDY + MotionBricks 本地动作工坊</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 三大动作模型合一：在 Blender 5.2+ 内通过动作块、姿态关键帧、路径与控制层编排 SOMA 角色动作并直出 FBX</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• ARDY 跨块接触平滑 (Shared Contact Cleanup)：利用相邻动作块原始采样消除拼接处的脚底跳变，同时保留摆腿动态</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 免 Token NF4 默认配置 + Agent 专属操控指南 (docs/AGENT_GUIDE.md 支持 Codex 驱动)</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 详列各模型与文本编码器显存/速度表 (docs/PERFORMANCE.md)，GPL-3.0 开源</text>
+
+  <!-- Right Column: KoshiroRobot/KRC-Actuator -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">⚙️ 2. KoshiroRobot/KRC-Actuator (FOC + Cycloidal Reducer · MIT · ★33)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">从机械 STEP、电路 Gerber 到 STM32 FOC 固件全开源的自制机器人关节模组</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">摆线针轮减速器 (Cycloidal Reducer) + 自研磁场定向控制 (FOC) 驱动板</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么人形/四足机器人关节钟爱摆线减速？相比普通行星齿轮，摆线盘具备更高抗冲击扭矩密度与更低背隙</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 完整四层开源资产包：① cad/ 标准 STEP 三维装配模型；② pcb/ EAGLE 原理图、Gerber 制板文件、BOM 与贴片坐标 CPL</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• ③ firmware/ 完整 STM32CubeIDE FOC 电机控制工程与预编译固件镜像；④ host/ 树莓派上位机调试工具</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ MIT 宽松开源协议，Gerber + BOM + CPL 可直接发给嘉立创/PCB 工厂一键打样贴片</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">打通“虚拟角色动作生成 → 实体机器人关节硬件落地”的具身全链路</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 上游动作层：用 toyxyz-motion-ai-tool 生成运动序列，经 toyxyz-blender-retargeter 按机器人腿长比例无滑步重定向</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 中游仿真层：导入 MuJoCo 4.0 / M1mic-MLX 强化学习训练闭环控制策略</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 下游本体层：基于 KRC-Actuator 自制低成本高扭矩 FOC 摆线关节，通过树莓派 host/ 工具链实机驱动</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 彻底打破闭源商业执行器动辄数千元的硬件黑盒与维修壁垒</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R36-TOYXYZ-KRCACTUATOR · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 35 组跨体型人形动画生成/重定向序列 + 10 套自定义机器人 FOC 关节驱动软硬件联调（时薪 r = $100.00/hr；CNC 加工与 PCB 打样费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (FK 滑步逐帧手修 + 商业动作云积分 + 闭源高价关节排障)</text>
+  <rect x="430" y="630" width="571" height="22" rx="5" fill="#EF4444"/>
+  <text x="1013" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,710.00/mo ($1,860.00 SaaS/rework + 38.5h × $100 = $3,850.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (无跨块接触平滑动作拼接 + 从零画 FOC 驱动原理图)</text>
+  <rect x="430" y="666" width="263" height="22" rx="5" fill="#F59E0B"/>
+  <text x="705" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,630.00/mo ($880.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Toyxyz Retargeter + Motion AI + KRC-Actuator)</text>
+  <rect x="430" y="702" width="37.5" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$375.00/mo ($75.00 compute + 3.0h × $100 = $300.00) → 净省 $5,335.00/月 (-93.43% / 年省 $64,020.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR HUMANOID MOTION RETARGETING &amp; OPEN ACTUATOR HARDWARE:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 跨体型骨骼重定向必须包含“比例感知根位移缩放 + 足底接触地面约束” (toyxyz-blender-retargeter)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 多段 AI 生成动作块拼接时，用 ARDY 跨块共享采样清除足底接触跳变，并通过 AGENT_GUIDE.md 交给 Codex 编排。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• KRC-Actuator 同时公开 STEP、Gerber/BOM/CPL 与 STM32 FOC 源码，是具身硬件开源交付的典范。</text>
+</svg>

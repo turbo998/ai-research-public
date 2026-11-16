@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 31 (CUMULATIVE R388) · CLAIM-20261116-R31-SKANDA0-SCIREX-VPS</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">[SEG] 病灶描边放射报告模型 (Skanda-0) + JAX 神经算子库 (ScireX) + 防锁死 VPS 加固器</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Qwen3-VL-30B-A3B + SAM 2.1 逐条病灶描边 + FNO/WNO/GINO/Transolver 零样本跨网格求解 + 死人开关防 SSH 锁死 · 净省 $5,575.00/月 (-93.23%)</text>
+
+  <!-- Left Column: Hitheshkaranth/Skanda-0 + VisionXLab/RSLiveBench-UAV -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🩻 1. Hitheshkaranth/Skanda-0 (★17) + VisionXLab/RSLiveBench-UAV (★24)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">写出一句影像诊断、就强制用 [SEG] 词元把病灶轮廓画出来！</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">Hitheshkaranth/Skanda-0：Qwen3-VL-30B-A3B (MoE) + SAM 2.1 Hiera-L</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Read → Point → Outline → Score → Explain：通吃 2D 胸片与 33 层 3D CT/MRI 体数据，输出 skanda-report/2 JSON</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• [SEG] 隐状态直连 SAM 2.1：每条病灶发现必须携带 [SEG] 词元，经 Projector 投射直接画出精确病灶分割掩码</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 校准门禁与掩码定量证据：独立线性头预测 p(abnormal) 与 13 类胸片得分；尺寸(mm)/体积(mL)/HU 值全自掩码实测</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 提供 bf16 (62.6GB) / int8 (32.8GB) / int4 (18.2GB) 权重 · 显式声明仅供放射科医生科研辅助</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">VisionXLab/RSLiveBench-UAV (arXiv:2611.14953)：无人机低空空间智能动态基准</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 华东师大/上海交大/UCLA/滑铁卢/武大/酷哇机器人联合发布：持续演进的防刷榜低空无人机视觉语言基准</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双层防泄漏题库：公开验证集 928 题 (附 30 个主流模型实测 CSV minival_928_30_models.csv) + 服务端盲测 35,491 题</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 覆盖 17 项核心低空空间感知任务，为具身巡检无人机与空间 VLM 选型提供真实坐标参考</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 与 Skanda-0 共同代表“视觉语言模型必须从纯文本嘴炮走向空间掩码/坐标可验证”浪潮</text>
+
+  <!-- Right Column: zenteiq-research/scirex + abrantess/vps-cybersec-orchestrator -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">⚛️ 2. zenteiq-research/scirex (JAX · ★20) + vps-cybersec-orchestrator (★23)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">四大神经算子统一 JAX 库 (FNO/WNO/GINO/Transolver) + 死人开关 VPS 加固器</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">zenteiq-research/scirex：函数空间映射实现“低分辨率训练、高分辨率零样本求解”</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 统一模型接口封装四大神经算子：FNO (傅里叶)、WNO (小波)、GINO (几何感知) 与 Transolver (物理注意力 Transformer)</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 100% 原生兼容 JAX jit / vmap / grad：支持无标签物理方程残差损失 (Physics-Informed Losses) 训练</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 9 个等参数预算 (Matched Parameter Budget) 标准 PDE 基准问题与预训练权重开箱即用</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 诚实披露平台支持矩阵 (如 Windows 原生跑 CPU，NVIDIA GPU 推荐 WSL2 CUDA 12)</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">abrantess/vps-cybersec-orchestrator (v1.0.1)：11 步防锁死 Linux VPS 加固引擎</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 专治 AI Agent 自动改防火墙/SSH 把自己和管理员锁在门外：内置 Dead-Man's Switch 防锁死回滚守卫 (anti_lockout_guard.sh)</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 机械确定性 + 认知编排双结合：动态识别当前活跃 SSH 端口、写入 00-vps-hardening.conf 最高优先级 Drop-in 与 0700 备份</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 阶段追踪树 (PTT Schema) + CIS Linux v2.0.0 / CWE 映射 + 零漏洞利用红线 (Zero-Exploitation Contract)</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 跨 Ubuntu / Debian / RHEL / Rocky / Alpine 实现幂等安全收敛与 Dry-Run 仿真</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R31-SKANDA0-SCIREX-VPS · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 20 项空间/医学视觉与 PDE 物理代理模型评测 + 执行 30 台 Linux VPS CIS 自动化安全加固（时薪 r = $100.00/hr；医疗设备与无人机硬件：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (无掩码文本幻觉 + 换网格重跑有限元 + Agent 改坏 SSH 锁死主机)</text>
+  <rect x="430" y="630" width="598" height="22" rx="5" fill="#EF4444"/>
+  <text x="1040" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,980.00/mo ($1,980.00 compute/incident waste + 40.0h × $100 = $4,000.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (拼凑分离的分割与文本模型 + 人工逐台手改 sshd_config)</text>
+  <rect x="430" y="666" width="278" height="22" rx="5" fill="#F59E0B"/>
+  <text x="720" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,780.00/mo ($930.00 spend + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Skanda-0 [SEG] + ScireX JAX + VPS Orchestrator)</text>
+  <rect x="430" y="702" width="40.5" height="22" rx="5" fill="#10B981"/>
+  <text x="482" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$405.00/mo ($85.00 compute + 3.2h × $100 = $320.00) → 净省 $5,575.00/月 (-93.23% / 年省 $66,900.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR GROUNDED VISION, NEURAL OPERATORS &amp; SAFE DEVSECOPS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 高风险视觉报告模型必须像 Skanda-0 一样：用 [SEG] 词元隐状态驱动 SAM 2 画出每一条结论对应的物理轮廓与实测毫米/毫升值。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 物理场与 PDE 仿真首选函数空间神经算子 (ScireX FNO/GINO/Transolver)，一次训练即可在不同分辨率网格上零样本推理。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 让 AI Agent 执行服务器防火墙与 SSH 加固时，必须配备 Dead-Man's Switch 自动回滚守卫 (vps-cybersec-orchestrator)。</text>
+</svg>

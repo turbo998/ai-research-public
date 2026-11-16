@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 13 (CUMULATIVE R370 MILESTONE) · CLAIM-20261116-R13-PATHWARDEN-THREAT</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21" font-weight="bold">230万对象 AD/Entra 最小割集引擎 (Pathwarden) + 7源威胁情报台 (Threat-Broadcast-Plus) + 离线二维码防钓 (qr-snip)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">6.2GB 内存跑完 2.3M 混合身份图并生成 Tier Zero 最小割集 · 7 源 CVE + Kimi K3 研判 + SQLite VACUUM · MV3 零联网攔截 Quishing · 净省 $5,775.00/月 (-93.45%)</text>
+
+  <!-- Left Column: marbas207/Pathwarden -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🛡️ 1. marbas207/Pathwarden (Apache-2.0 · Rust · 2.3M Objects in 6.2GB RAM · ★35)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">把 AD + AD CS + Entra ID 合进一张图，并用“最小割集”一刀斩断全部提权路径</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">生产实测 230 万对象峰值仅占 6.2 GB 内存 + 最小权限采集器</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 生产免域管安全采集：仅用 Kerberos + 签名 SMB，配合最小权限 GPO 无需本地管理员即可读取本地管理员组</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 全域混合身份合图：统一建模 AD 组/委派/GPO/信任、AD CS (ESC1~ESC11 &amp; ESC13) 与 Entra ID 混合链路</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 图最小割集修复规划 (Minimum Cut)：自动算出“改动最少配置即可斩断所有通往 Tier Zero 路径”的最小变更集</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 兼容导入 SharpHound / RustHound-CE / AzureHound / OpenGraph / PingCastle 存量采集包</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Git 加密历史版本追踪 + Jira / ServiceNow 工单闭环复发重开</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Git 仓库驱动的巡检账本：每次运行结果、配置与风险接受人签名直接通过 Git 同步（支持口令加密）</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双向工单生命周期：自动在 Jira / ServiceNow 开单、修复后自动关单、一旦攻击路径死灰复燃立即自动重开！</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零门槛内置靶场：单二进制内置 SCALE.LOCAL 合成企业环境，运行 pathwarden demo 即可秒出完整报告</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 每条规则均附带分步 PowerShell 修复脚本、验证命令与一键回滚方案</text>
+
+  <!-- Right Column: Threat-Broadcast-Plus + qr-snip -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">📡 2. Threat-Broadcast-Plus (★58) + IsaacJoel06/qr-snip (★32 · MIT)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">7 大存活情报源 Kimi K3 自动研判 + 100% 离线 MV3 二维码钓鱼 (Quishing) 拦截</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">Aabyss-Team/Threat-Broadcast-Plus：7 源去重 + Kimi K3 5日高危研判</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 淘汰失效爬虫、直连 7 大活源：阿里云 AVD + 斗象 + 微步 + 长亭 + NVD 2.0 JSON + Tenable + CISA KEV</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Python 3.12 标准库瘦身：砍掉 6 个废弃第三方库，改用原生 sqlite3 并自动按源裁剪 + VACUUM 防 50MB 膨胀</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Kimi K3 模型研判 + 严格 CSP：每 8 小时 GitHub Actions 更新，生成 `script-src 'self'` 零内联脚本静态看板</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 支持飞书/钉钉/企微 HMAC-SHA256 签名机器人、Server酱、Bark、Telegram 与 SMTP SSL 推送</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">IsaacJoel06/qr-snip：零网络外发 MV3 屏幕/图片二维码扫描与安全体检</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 100% 本地 jsQR 解码：支持 Alt+Shift+Q 屏幕框选或右键网页图片直接解码（自动适配高分屏 DPI 与缩放）</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 内置 Quishing 钓鱼拦截：硬性阻断 javascript:/data: 危险协议，高亮预警明文 http://、Punycode 仿冒域名与短链</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 绝不自动打开链接：所有解码结果必须经人类检视告警横幅后手动点击，跨 Chrome/Edge/Firefox 140+ 原生兼容</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 办公桌面排查二维码钓鱼邮件/工单截图的极轻量零隐私泄露安全插件</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R13-PATHWARDEN-THREAT · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月持续审计 230 万对象混合 AD/Entra 域提权路径 + 完成 90 个批次多源高危 CVE 研判与二维码钓鱼核查（时薪 r = $100.00/hr；商业安全平台席位：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (高危域管采集器 + 失效爬虫断更 + 手机盲扫二维码)</text>
+  <rect x="430" y="630" width="618" height="22" rx="5" fill="#EF4444"/>
+  <text x="1060" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,180.00/mo ($2,080.00 compute/incident waste + 41.0h × $100 = $4,100.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (手工跑 SharpHound 导图 + 单一 NVD 邮件订阅)</text>
+  <rect x="430" y="666" width="285" height="22" rx="5" fill="#F59E0B"/>
+  <text x="727" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,850.00/mo ($950.00 compute + 19.0h × $100 = $1,900.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Pathwarden 最小割集 + Threat-Plus + qr-snip)</text>
+  <rect x="430" y="702" width="41" height="22" rx="5" fill="#10B981"/>
+  <text x="483" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$405.00/mo ($85.00 compute + 3.2h × $100 = $320.00) → 净省 $5,775.00/月 (-93.45% / 年省 $69,300.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR ENTERPRISE SECOPS &amp; IDENTITY DEFENSE:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 身份安全的核心不是画几万条线，而是求图最小割集 (Min-Cut)：Pathwarden 直接给出“改最少几条 ACL 就能切断全部 Tier Zero 路径”。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 威胁情报爬虫必须做标准库收敛与 DB 自动 VACUUM：Threat-Broadcast-Plus 用原生 sqlite3 + 7 大活源 + Kimi K3 彻底解决老项目崩坏。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 办公桌面严禁拿私人手机盲扫未知二维码：用 qr-snip 在浏览器本地离线解码并前置拦截 Punycode 仿冒域名与 javascript: 注入。</text>
+</svg>

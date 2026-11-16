@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 9 (CUMULATIVE R366) · CLAIM-20261116-R9-CRAFT-SAKUGA-XEET</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">7 技能全状态设计系统 (diego3g/craft) + 作画级动效组件 (sakuga-vfx) + 2.8ms 免浏览器推文渲染 (xeet)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">DESIGN.md 驱动全状态界面生成 · 12 款零依赖单文件 shadcn 动效控件 · #![forbid(unsafe_code)] Rust/WASM 100% 像素级对齐 Chrome · 净省 $5,645.00/月 (-93.31%)</text>
+
+  <!-- Left Column: diego3g/craft + finktheartist/sakuga-vfx -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎨 1. diego3g/craft (★78) + finktheartist/sakuga-vfx (★96 · MIT)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">从“只画 Happy Path 的 AI 塑料页”走向“全状态设计契约 + 原画师打击感控件”</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">diego3g/craft：7 大子技能路由 + DESIGN.md 契约 + 强制人工 Stop 门禁</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 拒绝缺失状态：craft-setup (建 DESIGN.md) → craft (全状态设计) → craft-states (穷举空/错/加载态)</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 交付前自我挑刺与同步：craft-explore (多方案) + craft-critique (自审) + craft-system / craft-sync</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 跨工具与跨宿主：无缝对接 Paper、Figma 或纯 HTML，支持 Claude Code / Codex / Cursor / Copilot</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 铁律“A stop means ending your turn with the question. Never decide a stop for the person.”</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">finktheartist/sakuga-vfx：12 款单文件零依赖“日本原画作画级”Web Components</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 静止时极简克制，交互时爆发弹簧挤压、一帧反色、烟尘扩散、碎晶飞溅与矢量拟声词 (ドン! / カチッ)</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 12 控件全覆盖：button / toggle(内嵌43帧手绘路径) / slider / checkbox / radio / input / tabs / progress 等</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 一键按需安装：npx shadcn add finktheartist/sakuga-vfx/button · 单文件零构建，内置 llms.txt &amp; skills/</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 共享单张页面级 Canvas 绘制粒子特效 + --sk-* CSS 变量主题覆盖，零外部图片/字体请求</text>
+
+  <!-- Right Column: rauchg/xeet -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">⚡ 2. rauchg/xeet (Apache-2.0 · Safe Rust + WASM · 2.8ms p50 · ★64)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">Vercel CEO 出品：不用启动无头 Chrome，2.8ms 渲染像素级一致的 Retina 推文卡</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">#![forbid(unsafe_code)] 纯安全 Rust 重写 Blink/HarfBuzz/Skia 子集</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别 500MB Chromium 截图：直接用安全 Rust 实现 X 客户端规则、Blink+HarfBuzz 断行、Flexbox 与抗锯齿</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 极速确定性延迟：3x Retina (390px) 纯文本推文 p50 仅 2.8 ms，带 4 张媒体占位符仅 4.5 ms！</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 四平台逐字节一致：渲染过程零网络、零文件系统、零系统时钟依赖，Linux x64/arm64/macOS/WASM 输出完全相同字节</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 预置 6 套字体包（含 Apple Color Emoji、STIX Two Math 数学粗体回退、CJK 与 RTL 混排）</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">真机 Chrome Oracle 满分对齐 (159/159 端到端通过 + SPEC.md 证据锁)</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零断行与零高度误差：对比真实无头 Chrome Oracle，实现 0 断行偏差、147/147 框架行与 192/192 卡片行对齐</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 精确复刻 Show more 截断与嵌套引用：完整支持 x-web@55591fe0 的机器可读规则表 (rules/x-web.json)</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 159/159 极端边缘用例全过：覆盖 @NASAGoddard 280字符太空画、多图轮播、投票、视频封面与深浅双主题</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 完美替代情报日报、评测分享卡与自动化简报流中笨重易崩的 Puppeteer/Playwright 截图集群</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R9-CRAFT-SAKUGA-XEET · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月交付 25 个全状态产品前端页面 + 动态生成 100,000 张社媒/情报高清分享图（时薪 r = $100.00/hr；Figma 企业版席位与 CDN 流量费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (裸 Prompt 漏状态返工 + 无头 Chrome 截图池)</text>
+  <rect x="430" y="630" width="605" height="22" rx="5" fill="#EF4444"/>
+  <text x="1047" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,050.00/mo ($2,050.00 Chromium VM/tokens + 40.0h × $100 = $4,000.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (手工补齐异常态 + Satori 近似渲染断行错位)</text>
+  <rect x="430" y="666" width="278" height="22" rx="5" fill="#F59E0B"/>
+  <text x="720" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,780.00/mo ($930.00 compute + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (craft 7技能 + sakuga-vfx + xeet 2.8ms)</text>
+  <rect x="430" y="702" width="41" height="22" rx="5" fill="#10B981"/>
+  <text x="483" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$405.00/mo ($85.00 compute + 3.2h × $100 = $320.00) → 净省 $5,645.00/月 (-93.31% / 年省 $67,740.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR FRONTEND DESIGN SYSTEMS &amp; CARD RENDERING:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 把状态穷举与自审做成显式路由表：craft 的 AGENTS.md 路由规则强制 Agent 先查 DESIGN.md 并运行 craft-states 与 craft-critique。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 微交互动效单文件化：sakuga-vfx 用单个 Web Component 文件 + 顶层共享 Canvas 为关键确认按钮赋予顶级日本原画师的打击感反馈。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 用专用安全 Rust 排版内核取代无头浏览器截图：xeet 将单卡生成从 1.5s 压至 2.8ms 且跨 4 架构逐字节一致，为高并发卡片渲染立下标杆。</text>
+</svg>

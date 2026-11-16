@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 6 (CUMULATIVE R363) · CLAIM-20261116-R6-THREENANITE-INKSTUDIO</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">Three.js 虚拟几何簇 LOD (three-nanite) + 代码驱动 SDF 像素高斯泼溅工坊 (ink-studio + SyntaxSplat)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">1.97M 三角面 4~7s 离线构建无裂缝 128-Tri 簇 DAG · 零网格纯代码 SDF 烘焙可交互像素 3DGS (.ply) · 净省 $5,365.00/月 (-92.82%)</text>
+
+  <!-- Left Column: apekshik/three-nanite -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">📐 1. apekshik/three-nanite (MIT · JS/WASM · meshoptimizer clusterlod.h · ★54)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">直接兼容原生 MeshStandardMaterial 的 Three.js 虚拟几何簇级 LOD</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">离线 DAG 预处理器 + ~500 行单 Draw-Call 运行时</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 极速构建：基于 WASM meshoptimizer 将 197 万面模型在 4~7 秒内切分为 128 三角面簇 DAG</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零裂缝局部自适应：同一模型近端精细、远端粗糙且边界严丝合缝 (内置 three-nanite verify 验缝)</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 全局三角面预算锁：300k 预算控制误差 &lt;0.3%，通过 BatchedMesh + WEBGL_multi_draw 单次绘制</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 支持实例/簇组/单簇三级视锥剔除、深度缓冲遮挡剔除与 HTTP Range 按层流式加载</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">极其罕见的工程诚实度报告 (docs/REPORT.md 实测红线披露)</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 不吹嘘“无限免费三角形”：明确指出无软件光栅与 Visibility Buffer，核显 1080p PBR 约 8ms/百万面</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 诚实披露体积与浏览器边界：1.9M 面未压缩层级约 67MB (建议 --max-tris 60k 压至 ~3MB)</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Firefox 兼容性预警：Firefox 尚缺 WEBGL_multi_draw 会退化为每簇一次 Draw Call，且仅支持刚体网格</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 帮架构师在 Web 数字孪生选型时一眼避开“把 WebGL2 当成 UE5 硬件计算管线”的营销陷阱</text>
+
+  <!-- Right Column: ink-studio + SyntaxSplat -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎨 2. ink-studio (★118) + SyntaxSplat (★29) 代码即 3D 高斯泼溅</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">免多视角拍照、免 Blender 建模！用 JS/JSON SDF 直接雕刻可动像素 3DGS</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">@shapeshift-labs/ink-studio (Node 18+ 零依赖 · 有记忆的物理像素 Splat)</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 代码雕刻 SDF 实体：用 makeSculpt (ground/box/ball 布尔加减) 烘焙为像素风 Gaussian Splats</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 动态物理与持久状态记忆：Splat 对象不仅能绑定骨骼提线木偶 (Puppets)，还能破碎、生长并记住历史</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 无头 CLI 成片与快照回归：node cli/ink-studio.js render watcher --t 2.6 --colored 直出 studio/out/</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ AI Agent 无需任何外部纹理/贴图即可用 30 行 JS/JSON 生成完整可交互 3D 像素世界</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">iamvillain/SyntaxSplat (MIT · 浏览器 Worker 烘焙 + 标准 .ply 导出)</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 刚体层级 SDF 骨骼链：addPart() 组合 sphere/box/cone/limb/torus 并支持 local(t, M) 动画函数</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 表面笔触采样与免重烘焙调色：2~20 秒在 Web Worker 中完成表面高斯笔触烘焙并缓存至浏览器</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 一键导出标准 .ply 与自动化验图：支持任意姿态导出 3DGS .ply 文件 + tools/shoot.mjs 命令行截图</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 内置 horror / island / reef 三大演示场景与点击溶解重组特效 (Explode)</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R6-THREENANITE-INKSTUDIO · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月交付 20 个高面数 WebGL2 数字孪生场景 + 生产 35 组程序化像素 3D 高斯泼溅可动资产（时薪 r = $100.00/hr；美术工作站与商业 DCC 许可：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (手工拆多级离散 LOD + 多视角拍照训 3DGS)</text>
+  <rect x="430" y="630" width="578" height="22" rx="5" fill="#EF4444"/>
+  <text x="1020" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,780.00/mo ($1,880.00 GPU/compute + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (运行时粗暴减面破洞 + 手工绑定低模 GLB)</text>
+  <rect x="430" y="666" width="269" height="22" rx="5" fill="#F59E0B"/>
+  <text x="711" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,690.00/mo ($890.00 compute + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (three-nanite 簇 DAG + ink-studio/SyntaxSplat)</text>
+  <rect x="430" y="702" width="42" height="22" rx="5" fill="#10B981"/>
+  <text x="484" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$415.00/mo ($85.00 compute + 3.3h × $100 = $330.00) → 净省 $5,365.00/月 (-92.82% / 年省 $64,380.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR WEB 3D &amp; GENERATIVE VISUAL LABS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 簇级无裂缝切面替代整模切换：three-nanite 让同一个大网格近看细腻、远看精简且保持单一 WEBGL_multi_draw 与原生材质兼容。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• SDF 代码直转 3DGS 是 Coding Agent 生成三维世界的捷径：ink-studio 与 SyntaxSplat 让大模型直接写可微/布尔 SDF 代码产出带骨骼动画的 .ply。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 无头渲染自检闭环：无论是 three-nanite verify 离线验缝，还是 ink-studio render 与 tools/shoot.mjs，都让 3D 生成具备了 CI 可验证性。</text>
+</svg>

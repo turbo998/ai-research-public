@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 41 (CUMULATIVE R398) · CLAIM-20261116-R41-LIFTGATE-STEERTRACE-AGENCY</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">官方 agy acp 网关 (Liftgate) + AI 协作判断证据链回溯 (SteerTrace) + 闲置电脑 NixOS Agent 专机</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">零逆向合规暴露 OpenAI/Anthropic 接口 + 还原决策时刻信息边界的认知复盘 + U盘一键刷出 TPM 2.0 专属 Agent 电脑 · 净省 $5,395.00/月 (-93.34%)</text>
+
+  <!-- Left Column: acking-you/liftgate + wycocoyu/agy-context-dashboard -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🚪 1. acking-you/liftgate (★29) + wycocoyu/agy-context-dashboard (★27)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">基于官方 ACP 协议把 Antigravity 变成标准 API 网关 + 输入框旁 5h/周额度仪表盘</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">acking-you/liftgate：只走官方 agy acp 协议，绝不拆包逆向 OAuth Token</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么逆向中转网关容易封号？私自提取 Cookie/Token 伪造 TLS 指纹极易触发上游风控</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 纯正官方通道：Rust 网关底层 100% 调用官方 `agy acp` (Agent Client Protocol)，对外暴露 `/v1/responses` 与 `/v1/messages`</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 温池会话复用 + 仅推理隔离：ACP 运行在空目录不抢占工具，文件编辑与 Shell 仍留在 Claude Code 或 Codex CLI</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 内置 lg agy install (SHA-512 校验)、防 SSRF 网页抓取与空闲自动更新</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">wycocoyu/agy-context-dashboard (v0.8.16)：无侵入输入框旁速率/缓存/额度监控</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 常驻缩略、悬停展开：在 Antigravity 2.21.1 / 2.22.0 输入框旁实时显示上下文窗口、Token 速率与缓存命中率</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双额度同屏：鼠标悬停即可一并查看当前上下文构成、5 小时滚动限额与周额度消耗进度</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 100% 兼容 `history-v1` / `usage-v1`，支持一键启用与无痕停用</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 与 Liftgate 配合形成“外挂调用 + 内置监控”的完整 Antigravity 工具链</text>
+
+  <!-- Right Column: MolMind/SteerTrace + makors/agency -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧠 2. MolMind/SteerTrace (★43) + makors/agency (★22)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">把人机对话复盘成带证据引用的判断审计报告 + 把旧笔记本刷成 Agent 专机</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">MolMind/SteerTrace：审查你是如何采纳、质疑或漏看 AI 建议的</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 拒绝事后诸葛亮：严格还原每个决策时刻可见的信息与约束，将“决策质量”与“执行运气”解耦</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 四条铁律防污染：默认分析当前会话、自动排除触发消息本身、严禁凭摘要脑补对话、逐条校验引文对应关系</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 交互式 HTML 复盘报告：汇总关键判断缺陷、原始对话证据、错误归因对比与可观测的改进检查点</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 架构师带团队做 AI 结对编程 Code/Design Postmortem 的理想认知显微镜</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">makors/agency：插上 U 盘把闲置 x86-64 笔记本变成自包含 Agent 服务器</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别云端高价沙盒：基于 NixOS + UEFI + TPM 2.0，一条命令刷入 U 盘即可把旧电脑变成 24h 在线的 Agent 主机</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 开箱即懂本机：内置 `agency secret set` 密钥管理、`agency backup restore` 每小时快照回滚与 `agency export --home`</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 屏幕直显 Tailscale 二维码看板：带完整浏览器桌面与 CPU/内存/磁盘监控，仅限 Tailscale 私网安全访问</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 也可通过 nix run github:makors/agency#vm 在现有 Linux 上秒启虚拟机体验</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R41-LIFTGATE-STEERTRACE-AGENCY · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月运行 25 个跨 Harness 编码工作流 + 30 次 AI 决策复盘与自托管电脑沙盒运维（时薪 r = $100.00/hr；闲置笔记本电费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (非官方逆向代理封号 + 盲信 AI 建议返工 + 租云桌面)</text>
+  <rect x="430" y="630" width="578" height="22" rx="5" fill="#EF4444"/>
+  <text x="1020" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,780.00/mo ($1,880.00 spend + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (单一编辑器锁定 + 手工翻聊天记录做事故复盘)</text>
+  <rect x="430" y="666" width="269" height="22" rx="5" fill="#F59E0B"/>
+  <text x="711" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,690.00/mo ($890.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Liftgate + SteerTrace + agency + agy-dashboard)</text>
+  <rect x="430" y="702" width="38.5" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$385.00/mo ($75.00 spend + 3.1h × $100 = $310.00) → 净省 $5,395.00/月 (-93.34% / 年省 $64,740.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR ACP GATEWAYS, AI JUDGMENT AUDITING &amp; DEDICATED AGENT APPLIANCES:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 跨客户端复用订阅必须坚持走官方编辑器协议 (`agy acp`) 且以空目录仅推理模式运行，把工具执行权留在宿主 CLI (Liftgate)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 复盘人机协作质量不能只看最终代码能否跑通，必须用 SteerTrace 定位人类在哪个对话回合盲目放行了未经证实的假设。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 闲置笔记本刷入 NixOS + TPM 2.0 + 每小时自动备份与 Tailscale 私网看板 (agency)，即可零月租获得满血物理 Agent 专机。</text>
+</svg>

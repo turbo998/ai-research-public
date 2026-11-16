@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 8 (CUMULATIVE R365 MILESTONE) · CLAIM-20261116-R8-MDEXA-MOLART</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">医疗 AI 数据集 SHA-256 合规库 (mdexa-ai-native-database) + 21 画风蛋白质结构渲染器 (molart)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">分离 repo_license 与数据协议 + 逐字快照 SHA-256 校验 · 零原子坐标偏移渲染 21 种艺术/科学画风 4K 蛋白质 · 净省 $5,360.00/月 (-93.38%)</text>
+
+  <!-- Left Column: mdexa-ai/mdexa-ai-native-database -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🏥 1. mdexa-ai/mdexa-ai-native-database (CC BY 4.0 / MIT · MCP + HTTP · ★81)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">为什么 HuggingFace 标着 MIT 的医疗数据集依然会让企业吃侵权官司？</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">逐字快照 SHA-256 证据链 + 双轴正交合规模型</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 根除“代码协议当数据协议”误区：严格分离 repo_license、license_status 与 hosting 状态</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 四大高危风险标签 (risk_flags)：透视执业医师真题派生、网页抓取、真实患者病历与模型合成文本</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 显式暴露冲突 (conflict)：当托管页标 MIT 而上游考试机构保留所有权利时，同时引用双方原文</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ evidence-index/ 锁死每次抓取 URL/时间戳/SHA-256 · validate-cards.mjs 强制校验 JSON Schema</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Agent 原生合规查询：MCP Server + /v1/batch-check + Croissant</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 一次请求批量体检：/v1/batch-check 支持将整份训练/评测数据集依赖清单一次性过筛</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 确定性空结果防死循环：查无记录明确返回“not listed”，防止 Agent 反复换词无效重搜</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 中英双语与中医/西医全覆盖：同步发布 schema.org Dataset、MLCommons Croissant 与 llms.txt</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为医疗、金融、法律等高监管行业构建“可审计 AI 训练数据准入台账”提供了标准模板</text>
+
+  <!-- Right Column: martin-steinegger/molart -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧬 2. martin-steinegger/molart (MIT · TypeScript/WebGL · Headless CLI · ★47)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-size-adjust="none" font-weight="bold">ColabFold/Foldseek 作者新作：原子坐标零篡改的 21 画风蛋白质渲染器</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">Science | Art 双模隔离：绝不改动真实 PDB / mmCIF 原子坐标</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 彻底告别 AI 生图伪造结构：直接加载真实 PDB/mmCIF (如 1TIM, 3CHY, 1UBQ, 4HHB)，原子坐标 0 偏移</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 21 种代码化着色与几何风格：涵盖 Klimt、Van Gogh、Hokusai、水墨 (sumi-e)、Jane Richardson 手绘、Glass 与 ASCII</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 科学模式 vs 艺术模式：Science 模式严守标准二级结构丝带几何；Art 模式显式标注并允许风格化重塑</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 支持按多肽链 (Per-Chain) 独立指定不同画风与模式，突出展示配体结合口袋或二聚体界面</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">100% 本地隐私保护 + Headless Chromium 4K 批量画廊 CLI</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 未发表结构零泄露：本地拖入的未公开新药靶点 PDB/mmCIF 100% 留在浏览器内存，绝不上传外网</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 命令行单图直出：node cli/molart.mjs render 1TIM.cif --style klimt --width 2400 --height 2400</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 21 风格全景画廊一键生成：node cli/molart.mjs gallery 1TIM.cif --size 2048 --output-dir outputs/</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 完美赋能 AI4Science 论文封面、新药研发汇报 PPT 与自动化生物计算流水线配图</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R8-MDEXA-MOLART · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 80 个医疗/科学 AI 数据集合规溯源审计 + 渲染 30 组 4K 论文/汇报级蛋白质结构配图（时薪 r = $100.00/hr；湿实验测序与外部律所顾问费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (轻信托管页标签下架重训 + 手工 Blender 渲染)</text>
+  <rect x="430" y="630" width="574" height="22" rx="5" fill="#EF4444"/>
+  <text x="1016" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,740.00/mo ($1,840.00 re-run/render + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (人工跨 5 页核对条款表 + 手写 PyMOL 脚本)</text>
+  <rect x="430" y="666" width="267" height="22" rx="5" fill="#F59E0B"/>
+  <text x="709" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,670.00/mo ($870.00 compute + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Mdexa MCP 批量合规核验 + molart 4K CLI)</text>
+  <rect x="430" y="702" width="38" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$380.00/mo ($70.00 compute + 3.1h × $100 = $310.00) → 净省 $5,360.00/月 (-93.38% / 年省 $64,320.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR MEDICAL AI GOVERNANCE &amp; AI4SCIENCE:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 数据集合规必须绑定快照哈希与双方冲突原文：Mdexa 的 adjudication-rules.json 让训练管线在拉取数据前自动拦截假 MIT 题库与真实患者病历。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 科学可视化严禁用生图模型篡改几何坐标：molart 在保持 PDB/mmCIF 真实坐标 100% 不变的前提下，纯粹通过着色器与丝带几何演绎 21 种大师画风。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 同构前后端渲染：molart 的浏览器交互界面与 cli/molart.mjs 无头批量渲染完全复用同一套代码，实现所见即所得的 4K 自动化出版管线。</text>
+</svg>

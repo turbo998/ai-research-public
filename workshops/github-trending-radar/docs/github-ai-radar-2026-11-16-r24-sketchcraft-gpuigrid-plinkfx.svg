@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 24 (CUMULATIVE R381) · CLAIM-20261116-R24-SKETCHCRAFT-GPUIGRID-PLINKFX</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">Rust 推拉式建筑 3D 建模 MCP (SketchCraft) + 1.1ms GPUI 实时表 (gpui-kit-grid) + 3.1kB 代码音效</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">100% 鼠标动作映射 JSON/MCP + 原生导入 SketchUp .skp + 2000次/秒更新 1.1ms 帧耗 + 274 个零音频文件 CC0 音效 · 净省 $5,245.00/月 (-93.33%)</text>
+
+  <!-- Left Column: jasonsutter87/sketchcraft -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🏛️ 1. jasonsutter87/sketchcraft (Rust Push/Pull CAD + MCP · ★32)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">开源版 SketchUp Pro + 原生 MCP：鼠标能点的每一步都是 Agent 可调的 JSON 命令</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">全功能推拉建筑建模 (Push/Pull + Follow Me + Solid Tools + Terrain)</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 核心造型：画线切面、推拉挖窗、路径跟随 (Follow Me 檐口/线脚)、自动折面与 1:1 SketchUp 快捷键</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 建筑构件生成：沿路径生墙、按总层高自动算合规楼梯、坡屋顶/歇山顶/单坡顶、门窗车树参数化脚本库</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Pro 级高阶能力：实体布尔运算、沙盒地形、动态组件公式、真实比例 PDF 图纸、CSV 算量与 IFC BIM 导出</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 原生兼容导入旧版 SketchUp 6–8 与现代 2013–26.2 (.skp) 完整组件层级与贴图</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Every Action is a JSON Command：桌面 GUI + 无头 CLI + MCP 三位一体</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别让 LLM 盲猜三维顶点坐标：Agent 直接发 "拉起一面 8'6\" 的墙、开扇窗、加双坡屋顶" 的高层 JSON 指令</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 无头立面图渲染：sketchcraft-cli 免打开窗口即可直出带尺寸标注的正立面 PNG、MP4 漫游与 PDF 施工图</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 全格式互通：导出 glTF (.glb)、OBJ、STL、Collada、3D DXF、PDF 与 IFC，导入 OBJ / FBX / SKP</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 纯 Rust 核心引擎 (sketchcraft-core) 跨 macOS / Windows / Linux 极速运行</text>
+
+  <!-- Right Column: GigLaboCom/gpui-kit-grid + maximilianfeix/plinkfx -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">⚡ 2. gpui-kit-grid (~1.1ms 2k/s · ★59) + plinkfx (274 Code SFX · ★36)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">单元素直绘 11 倍提速的 GPUI 实时数据表 + 3.1kB 零音频文件合成音效库</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">GigLaboCom/gpui-kit-grid：1500 可见单元格 @ 2000次/秒更新仅需 ~1.1ms</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 吊打传统 DataTable (12–14 ms)：不再为每个单元格建 Element，改用单个自定义元素直接绘制字形 (Glyphs)</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 按 Key 寻址 + 任意线程 GridWriter：后台线程按 Key 折叠高频更新并重排分组/树表，重排序后选中态绝不漂移</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 实时涨跌闪烁与箭头高亮 + 原生编译至 WASM + WebGPU 浏览器在线运行</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ GridRow::value 强制零堆内存分配 (&amp;self 借用)，稳扛十万行行情/日志流</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">maximilianfeix/plinkfx：274 个 CC0 音效全写成代码 (播放器仅 3.1 kB)</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零 MP3/WAV 资源加载：274 种游戏与 UI 音效（金币、跳跃、激光、爆炸、雨声循环）全靠 3.1kB Web Audio 实时合成</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 防听觉疲劳与防爆音保护：每个音效内置 4 个微调变体 (Takes) 自动轮换；30ms 冷却防叠音 + 最多 4 复音自动淡出</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 全链路工具：支持按名/单音效 Tree-Shaking 导入、CLI 导出 WAV/OGG 以及 Claude Code 专属音效技能</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 让 Coding Agent 写网页游戏与交互应用时一行 play("coin") 即刻拥有饱满音效</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R24-SKETCHCRAFT-GPUIGRID-PLINKFX · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月自动化生成 25 个建筑/空间 3D 场景 + 交付 15 套高频流式数据看盘表格与带音效交互应用（时薪 r = $100.00/hr；SketchUp Pro 商业年费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (手工 GUI 建模 + 14ms 表格掉帧卡死 + 采买商业音效包)</text>
+  <rect x="430" y="630" width="562" height="22" rx="5" fill="#EF4444"/>
+  <text x="1004" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,620.00/mo ($1,820.00 license/token waste + 38.0h × $100 = $3,800.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (让 LLM 裸写 Three.js 顶点 + 手搓虚拟滚动列表)</text>
+  <rect x="430" y="666" width="262" height="22" rx="5" fill="#F59E0B"/>
+  <text x="704" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,620.00/mo ($870.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (SketchCraft MCP + gpui-kit-grid + plinkfx)</text>
+  <rect x="430" y="702" width="37.5" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$375.00/mo ($75.00 compute + 3.0h × $100 = $300.00) → 净省 $5,245.00/月 (-93.33% / 年省 $62,940.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR AGENT-SCRIPTABLE CAD, REAL-TIME GRIDS &amp; CODE AUDIO:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 赋予 Agent 3D 建模能力的最佳抽象不是裸三角形，而是 SketchCraft 的“画线分割 + 推拉挖洞 + 路径跟随”JSON 原语。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 高频数据表格必须遵循“按 Key 后台折叠更新 + 单元素字形直绘 + 零堆分配读取”，才能将帧耗从 14ms 压到 1.1ms。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 代码化音效 (plinkfx) 让 Agent 无需处理二进制音频文件即可交付自带 4 变体防疲劳与 30ms 防爆音的专业声效体验。</text>
+</svg>

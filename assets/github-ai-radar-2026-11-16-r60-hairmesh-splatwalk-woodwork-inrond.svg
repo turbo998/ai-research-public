@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 60 (CUMULATIVE R417) · CLAIM-20261116-R60-HAIRMESH-SPLATWALK-WOODWORK-INROND</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">Blender 曲线转四边面动漫发束 (HairMesh) + 3DGS 燃烧显影漫游 + 零重排圆体 Inter</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Live/Baked 局部增量重建四边面头发 + PlayCanvas WebGPU 24m 射线点火显露高斯椭球 + ROND 0–100 零换行抖动 · 净省 $5,405.00/月 (-93.35%)</text>
+
+  <!-- Left Column: riel-gab/hairmesh + willeastcott/splat-walk -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">💇 1. riel-gab/hairmesh (★66) + willeastcott/splat-walk (★68)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">在头模上画两条曲线自动张成均匀四边面发束 + 点击画面点燃 3D 高斯椭球</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">riel-gab/hairmesh (v1.1.1)：Blender 5.1+ 非破坏性动漫/风格化头发建模器</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么手捏二次元头发极费时？一根根拉面片调整粗细、分叉和环线间距，改一撮就得推倒重拓扑</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 画曲线张墙成束：在头顶逐点或手绘曲线，相邻曲线自动拉伸连接成发束并转为环线均匀的干净四边面 (Quad Mesh)</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Live ↔ Baked 无损切换：转成网格后仍可继续改曲线，再次转换时**仅重建改动过的发束**！支持分叉、X 交汇与卷发修改器</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 获原作者 catarackta 正式授权移植，工程数据原生保存在 .blend 文件内部</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">willeastcott/splat-walk：PlayCanvas WebGPU 第一人称实景 3DGS 漫游与燃烧显影</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 手机实拍质感模拟：在伦敦 Artillery Passage 实景高斯扫描中模拟行人步态、头部微晃、运动模糊与卷帘快门 (Rolling Shutter)</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 惊艳的 Burn to Gaussians (`src/burn.js`)：点击画面任意位置发射射线点燃火线，向四周蔓延约 24 米</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 显露底层高斯椭球骨架：火线掠过处，每个高斯点闪烁发亮并褪去纹理、化作纤细发光的椭球轮廓，随后再度重组复原！</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 网页端展示 3DGS 底层几何原理最具视觉冲击力的交互式教科书</text>
+
+  <!-- Right Column: TomasDJo/solidcraft-woodwork + Hairline-UI/inrond -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🪵 2. solidcraft-woodwork (★19) + Hairline-UI/inrond (★19)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">SolidCraft 参数化柜体/32mm 排孔/下料单插件 + 永不引发换行重排的圆角可变 Inter</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">TomasDJo/solidcraft-woodwork：一键生成参数化柜体、32mm 排孔、铰链杯孔与下料单</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 工业标准木工参数化：自动构建侧板/顶底板/隔板/背板槽与踢脚线，原生支持 **32 mm 系统层板销排孔** 与铰链杯孔</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 智能开门方向规则：设定首扇门左开或右开后后续柜门自动交替，双门自动对开，每块板材均为独立命名实体</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 材质纹理与自动下料单 (Cut List)：内置榫卯连接、板材材质赋予与精确开料清单导出，适配 SolidCraft 0.43</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 与 R396 介绍的 solidcraft-gears 共同拓展了开源参数化 CAD 工业插件生态</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Hairline-UI/inrond：给 Inter 4.1 加上 ROND 0–100 圆角轴，且字宽间距 100% 不变！</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么切换圆体字会把网页排版挤乱？因为传统圆体字是另一套字体，字宽变了导致段落折行位置全部跳动</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零重排可变圆角轴 (`ROND 0–100`)：在任意字重、正斜体与圆角值下，**步进字宽 (Advance Widths) 与字距 (Kerning) 与 Inter 完全一致**！</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 完整保留 Inter 4.1 全部 **2,937 个字形**（含西里尔/希腊/越南文）、39 项 OpenType 特性、光学字号轴 (`opsz`) 与真斜体</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 可直接将字体圆角轴绑定到 UI 按钮/卡片的 border-radius 变量上丝滑联动</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R60-HAIRMESH-SPLATWALK-WOODWORK-INROND · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月制作 25 个风格化 3D 角色发型与交互式 3DGS 展厅 + 20 套参数化柜体开料与零重排多语种字体系统（时薪 r = $100.00/hr；WebGPU 功耗：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (破坏性手工重拓扑头发 + 商业柜体拆单软件 + 换圆体字修折行错位)</text>
+  <rect x="430" y="630" width="579" height="22" rx="5" fill="#EF4444"/>
+  <text x="1021" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,790.00/mo ($1,890.00 license/tool spend + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (改一撮头发重烘整头网格 + 仅支持拉丁字母无斜体的冻结圆体字)</text>
+  <rect x="430" y="666" width="269" height="22" rx="5" fill="#F59E0B"/>
+  <text x="711" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,690.00/mo ($890.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (HairMesh + splat-walk + solidcraft-woodwork + Inrond)</text>
+  <rect x="430" y="702" width="38.5" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$385.00/mo ($75.00 spend + 3.1h × $100 = $310.00) → 净省 $5,405.00/月 (-93.35% / 年省 $64,860.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR LIVE/BAKED HAIR MESHES, 3DGS SHADERS &amp; ZERO-REFLOW VARIABLE FONTS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• Blender 风格化发束应采用“双曲线张墙 + 仅增量重建变更发束”的 Live/Baked 非破坏工作流 (HairMesh v1.1.1)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• PlayCanvas WebGPU 中的射线波前着色器 (`src/burn.js`) 能让用户在实景照片感与高斯椭球几何轮廓间一键切换。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 主题系统切换字体圆角 (`ROND 0–100`) 必须保持与基准 Inter 完全相同的字宽与 Kerning，实现 0 CLS 布局偏移 (Inrond)。</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 48 (CUMULATIVE R405 MILESTONE) · CLAIM-20261116-R48-AGYCAPSULE-FOCUSAPP-PEEKY</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">【第 405 轮里程碑】3/4 分钟缓存过期预警胶囊 (agy-capsule) + Claude/Codex 双流工时日历</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Turn0/Read/Think/Write 拆分与缓存倒计时 + 拖拽真实 Claude/Codex 会话一键入账 (Focus) + ~3MB Windows 灵动岛 (Peeky) · 净省 $5,350.00/月 (-93.53%)</text>
+
+  <!-- Left Column: Lumidarin/agy-capsule -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">💊 1. Lumidarin/agy-capsule (★23 · Inline Cache-TTL &amp; Quota Capsule)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">距上一轮满 3 分钟变黄倒计时、满 4 分钟变红提醒 Prompt Cache 即将失效！</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">为什么发呆 5 分钟再敲回车，额度瞬间掉一大截？因为 KV Cache 刚好过期了！</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 3 分钟黄灯 / 4 分钟红灯预警：在输入框底栏内联双胶囊旁实时倒计时（`~1m`），抢在缓存失效前续上对话</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 四维 Token 构成显微镜：悬停即看 `Turn0` (系统/初始)、`Read` (读文件)、`Think` (推理) 与 `Write` (输出) 分段占比</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 多模型配额与窄屏逐级折叠：自动匹配 Gemini/Claude/Argon/Carbon 的 256k/512k 上限与 5h/周配额，窗口变窄优雅退让</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 原生 Sidecar + CDP 挂载不改宿主源码，直接复用宿主昼夜 CSS 变量</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">raminturne/peeky (★23)：仅 ~3MB 的 Rust Windows 桌面顶部灵动岛</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 一颗胶囊收纳四大高频流：屏幕顶部小巧胶囊实时显示当前播放音乐、拦截系统通知、记忆剪贴板历史并暂存拖拽文件</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 极致轻量纯 Rust 编译：安装包与便携版 `.exe` 体积仅约 `~3 MB`，空闲时拟人眨眼互动且零感知资源占用</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 跨窗口文件中转站：从资源管理器把文件拖进顶部 Peeky 暂存，切到浏览器或 Agent 窗口再一键拖出</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 提供安装版与免安装 Peeky-Portable.exe，即开即用</text>
+
+  <!-- Right Column: szmichalczyk/focus-app -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">📅 2. szmichalczyk/focus-app (★22 · Logged Time vs. Actual Claude/Codex Activity)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">把“你填报的计费工时”与“真实的窗口/标签页/Claude Code 会话”并排放在周历上</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">原生读取 Claude Code 与 Codex 会话记录：拖拽真实活动块一键变成工时条目</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双流并排对账 (Logged vs. Spent)：左边是你登记的计费项目工时，紧挨着右边就是电脑实际观测到的真实活动条</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 专为 AI 开发者设计：不仅记录前台应用与 Chrome/Safari 活跃标签页，还**直接解析本机 Claude Code 与 Codex 会话按项目归档**！</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 拖拽即入账：忘了按开始计时？直接把右侧真实的活动块拖到周日历上（或点击一键转换），瞬間生成计费工时记录</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 支持 Mix (双流)、Time (仅条目) 与 Activity (仅观测) 三视图切换</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">单文件本地 SQLite 存储 + 闲置/锁屏/休眠自动暂停</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零账号、零云端、零同步：所有窗口标题、浏览器标签页与 Agent 会话历史 100% 存在 Mac 本机单个 SQLite 文件中</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 防虚增工时：检测到系统闲置 (Idle)、锁屏或休眠时自动暂停记录，休息时间绝不混入工作账单</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 并行重叠条目并排展示：同时跑多个项目的 Agent 会话时，重叠时间块在日历上并排呈现而非互相遮挡</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 架构师与独立顾问核对多客户 AI 研发计费工时的最佳 macOS 伴侣</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R48-AGYCAPSULE-FOCUSAPP-PEEKY · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：30 名工程师管理 256k/512k 长会话缓存 TTL、核对 Claude Code/Codex 计费工时与桌面文件中转（时薪 r = $100.00/hr；上游订阅费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (4分钟缓存静默过期重算 256k + 付费工时 SaaS + 凭记忆补填工时)</text>
+  <rect x="430" y="630" width="572" height="22" rx="5" fill="#EF4444"/>
+  <text x="1014" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,720.00/mo ($1,870.00 quota/SaaS waste + 38.5h × $100 = $3,850.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (盲猜缓存过期时间 + 日历与活动记录脱节手动对齐)</text>
+  <rect x="430" y="666" width="263" height="22" rx="5" fill="#F59E0B"/>
+  <text x="705" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,630.00/mo ($880.00 waste + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (agy-capsule 3m/4m Guard + Focus App + Peeky)</text>
+  <rect x="430" y="702" width="37" height="22" rx="5" fill="#10B981"/>
+  <text x="479" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$370.00/mo ($70.00 spend + 3.0h × $100 = $300.00) → 净省 $5,350.00/月 (-93.53% / 年省 $64,200.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR MILESTONE R405 (PROMPT-CACHE TTL ALERTS &amp; AGENT-AWARE TIME CALENDARS):</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 长上下文编程最昂贵的隐形损耗是超过 4 分钟未发消息导致 KV Cache 失效重算，输入框旁必须配 3m/4m 变色倒计时 (agy-capsule)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 现代开发者工时日历必须原生解析本机 Claude Code 与 Codex 会话记录，支持拖拽真实活动条一键生成计费工时 (Focus)。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• Windows 顶部通知、剪贴板与跨窗文件暂存可用 ~3MB 纯 Rust 灵动岛胶囊 (Peeky) 替代重型桌面美化套件。</text>
+</svg>

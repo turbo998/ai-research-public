@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 23 (CUMULATIVE R380 MILESTONE) · CLAIM-20261116-R23-AIROOM-OILDEV-VIBEBILL</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">Claude Code 指挥室 (airoom) + 六步越界审查技能 (oil-dev-skills) + 账单小票审计 (vibe-bill)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">单屏总览全部会话与 10 分钟超时自动拒批 + Diff 越界前置硬拦截 + 100~10万用户云与 AI 成本小票 · 净省 $5,685.00/月 (-93.35%)</text>
+
+  <!-- Left Column: petritavd/airoom -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🏢 1. petritavd/airoom (Claude Code Control Room · Apache-2.0 · ★37)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">告别 5 个终端切来切去漏看审批！每个项目一间房、每个会话一张工位桌</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">四色工位显示器 + 10 分钟未决自动 Deny + 127.0.0.1 零遥测</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 直读本机 ~/.claude/projects：绿屏=工作中、黄屏=等你回复、红屏=被 Hook/权限卡住、暗屏=空闲</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 逐条工具调用审批门：展示精确命令与 Allow/Deny 按钮，超过 10 分钟未决自动拒绝 (Auto-Deny)</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 内置多身份浏览器窗格：支持以管理员/普通用户/未登录多 Profile 同屏验收；访问外网必先弹窗请示</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 三问招募并行小队 (Lead + Crew 各自独立 git worktree)，退出应用时安全驻车不杀进程</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">oil-oil/oil-dev-skills (★30)：六技能编码 Agent 工程纪律与越界拦截</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 五步正交闭环 + 根因排障：oil-explore (只读追调用链) → oil-plan → oil-dispatch → oil-code-review → oil-govern</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 编码中途禁跑全量慢测试：编码期只允许秒级编译/类型检查/Lint，全量测试统一留到 Merge Gate</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 审查前脚本硬核验：自动比对 git diff 与已批准计划，高亮标记越界修改 (如误碰 vendor/ 或高危目录)</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ oil-govern 自动裁剪臃肿 AGENTS.md 并生成跨 Worktree 分支状态治理看板</text>
+
+  <!-- Right Column: globalmpc/vibe-bill -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧾 2. globalmpc/vibe-bill (Pre-Deploy FinOps Receipt Skill · ★31)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">Vibe Coding 写完上线前先算账：100 / 1k / 10k / 100k 用户月度成本小票</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">揪出 9 类静默烧钱代码反模式 (Quiet Money-Burning Anti-Patterns)</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• AI 调用黑洞：① 每次按键/重渲染都调 LLM；② 每轮重发完整历史；③ 简单任务硬上昂贵旗舰模型；④ 零缓存重复请求</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 架构与安全漏洞：⑤ 公开 AI 接口未加限流 (任何人都能刷爆你账单)；⑥ 高频死轮询；⑦ 上传图片切过多尺寸</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 数据库陷阱：⑧ 只需几行却全表拉取 (Full-Table Scan)；⑨ 把大文件二进制直接塞进数据库行内</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 自动测算何时撑爆 Supabase / Vercel / Clerk / Resend / Stripe 免费层并触发阶梯涨价</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">零密钥读取承诺 + 可脱敏分享的小票图 (.vibe-bill/out/receipt.png)</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 严守隐私底线：绝不打开 .env 文件，只读取环境变量名 (如 OPENAI_API_KEY)，绝不读取任何密钥值</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 只写 .vibe-bill/ 目录绝不改业务代码：产出详细 report.md 与完全隐藏文件名/变量名的可分享 receipt.png</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 诚实标注数据来源：拉取 OpenRouter 公开标价，未知第三方服务联网查价一次并显式标注为 (unverified)</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 支持 /vibe-bill --no-questions 零提问全自动生成四档用户规模 FinOps 体检单</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R23-AIROOM-OILDEV-VIBEBILL · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月并行推进 45 个多会话 Coding Agent 特性开发 + 完成 20 次上线前云与 AI 单位经济成本审计（时薪 r = $100.00/hr；基础 Claude 席位费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (多终端漏批空转 + Diff 越界改坏高危目录 + 上线账单爆炸)</text>
+  <rect x="430" y="630" width="609" height="22" rx="5" fill="#EF4444"/>
+  <text x="1051" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,090.00/mo ($2,040.00 token/cloud waste + 40.5h × $100 = $4,050.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (人工逐终端巡检 + 手写 Excel 估算云账单)</text>
+  <rect x="430" y="666" width="279" height="22" rx="5" fill="#F59E0B"/>
+  <text x="721" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,790.00/mo ($940.00 spend + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (airoom 总控室 + oil-dev-skills + vibe-bill)</text>
+  <rect x="430" y="702" width="40.5" height="22" rx="5" fill="#10B981"/>
+  <text x="482" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$405.00/mo ($85.00 compute + 3.2h × $100 = $320.00) → 净省 $5,685.00/月 (-93.35% / 年省 $68,220.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR MULTI-AGENT GOVERNANCE &amp; FINOPS AUDITING:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 把分散在 5 个终端里的 Agent 聚合成单屏工位状态灯 (airoom)，未决审批 10 分钟自动 Fail-Closed 拒绝。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 在 Code Review 启动前先跑确定性脚本对比 git diff 与计划范围 (oil-dev-skills)，立刻拦截越界改动。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 每个 AI 应用合并主干前必跑一次 /vibe-bill：在不碰 .env 密钥的前提下提前拆掉重渲染调 LLM 与无限制公开接口炸弹。</text>
+</svg>

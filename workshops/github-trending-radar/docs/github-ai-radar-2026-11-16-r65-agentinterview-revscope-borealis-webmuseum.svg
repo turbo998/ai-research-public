@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 65 (CUMULATIVE R422) · CLAIM-20261116-R65-AGENTINTERVIEW-REVSCOPE-BOREALIS-WEBMUSEUM</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">266题生产级 Agent 架构面试题库 + RevScope 逆向工程地图 + Hermes Borealis 极光</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">21章覆盖 MCP/A2A/Sandbox/评测的 Agent 架构指南 + 授权逆向分析工具导航 + Hermes Desktop 1/3px 抖动极光与双色版画主题 · 净省 $5,215.00/月 (-93.46%)</text>
+
+  <!-- Left Column: oujingzhou/agent-interview-questions + brunnojob/revscope -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎯 1. oujingzhou/agent-interview-questions (★40) + brunnojob/revscope (★43)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">21 章 266 道生产级 Agent 工程能力矩阵 + 社区精选逆向工程与授权分析实战图谱</text>
+
+  <rect x="66" y="220" width="598" height="154" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">oujingzhou/agent-interview-questions：不考死记框架 API，专考生产高并发与可靠性</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么很多候选人会调 LangChain 却做不好生产 Agent？缺乏状态机终止条件、工具幂等与沙箱隔离概念</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 系统梳理 **21 章、266 道深度架构题**：涵盖 Agent Runtime/Sandbox 可靠性 (87–120)、编排与安全 (121–150)、上下文与持续进化 (177–257)、MCP 与 A2A 协议及全链路压测</text>
+  <text x="82" y="330" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 中英双语 (`README.md` / `README_EN.md`)，自带“面试重点 × 回答中应出现的证据”评分表</text>
+
+  <rect x="66" y="386" width="598" height="138" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="410" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">brunnojob/revscope (MIT)：按任务、平台、许可证与学习曲线索引的逆向工程指南</text>
+  <text x="82" y="432" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 把分散在静态反编译、动态插桩、固件提取、协议分析中的逆向工具整合为可交互筛选的在线目录</text>
+  <text x="82" y="454" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 强调授权分析 (Authorized Analysis) 与实战切入点，帮安全架构师 5 分钟配齐二进制审计工具链</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 适合作为企业 AI Agent 团队招聘考核题库与安全逆向工具选型双底座</text>
+
+  <!-- Right Column: Adolanium/hermes-borealis + DMS-Menula/WebMuseum -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🌌 2. Adolanium/hermes-borealis (★39 · v0.2.2) + DMS-Menula/WebMuseum (★36)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">Hermes Desktop 昼夜双态 1/3px 像素抖动极光主题 + ARPANET 至今的互联网数字博物馆</text>
+
+  <rect x="728" y="220" width="606" height="154" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">Adolanium/hermes-borealis (MIT)：Nous Research Hermes Desktop 社区爆款动态像素主题</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 每 3 像素 1 个色点的程序化抖动山水 (Dithered Landscape)：在整个 Hermes 桌面窗口背后实时流动</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 昼夜双生视觉：夜晚是三道山脊与湖面镜像倒映的高耸极光、新月与流星；白天则化作奶油纸底上的粉青双色版画 (Two-Ink Print) 与低垂朝阳</text>
+  <text x="744" y="330" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 支持桌面端与终端配色同步切换，1 分钟完成安装，极低渲染开销</text>
+
+  <rect x="728" y="386" width="606" height="138" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="410" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">DMS-Menula/WebMuseum (MIT)：从 ARPANET、早期万维网到现代数字时代的交互式博物馆</text>
+  <text x="744" y="432" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 用现代 React 交互叙事还原互联网数十年的关键协议演进、早期浏览器形态与里程碑事件</text>
+  <text x="744" y="454" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为技术分享、科普展陈与开发者入职培训提供高审美的时间轴交互画廊模板</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 展示了如何将长跨度技术史转化为沉浸式 Web 数字策展体验</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R65-AGENTINTERVIEW-REVSCOPE-BOREALIS-WEBMUSEUM · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月开展 25 场生产级 AI Agent 架构师技术面试与安全逆向工具链评估 + 定制 20 套 Agent 桌面端主题与技术演进交互展陈（时薪 r = $100.00/hr；外部猎头佣金：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (采购商业题库与安全咨询目录 + 外包定制桌面视觉与科普网站)</text>
+  <rect x="430" y="630" width="558" height="22" rx="5" fill="#EF4444"/>
+  <text x="1000" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,580.00/mo ($1,830.00 SaaS/vendor + 37.5h × $100 = $3,750.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (每次面试临时凑题缺评分标准 + 零散书签搜逆向工具)</text>
+  <rect x="430" y="666" width="256" height="22" rx="5" fill="#F59E0B"/>
+  <text x="698" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,560.00/mo ($860.00 spend + 17.0h × $100 = $1,700.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (agent-interview-questions + RevScope + Borealis + WebMuseum)</text>
+  <rect x="430" y="702" width="36" height="22" rx="5" fill="#10B981"/>
+  <text x="478" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$365.00/mo ($65.00 spend + 3.0h × $100 = $300.00) → 净省 $5,215.00/月 (-93.46% / 年省 $62,580.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR AGENT ENGINEERING INTERVIEWS, REVSCOPE &amp; HERMES DESKTOP THEMING:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 考核或自检 AI Agent 架构能力应聚焦状态机终止条件、工具幂等、沙箱隔离与 MCP/A2A 边界 (`agent-interview-questions` 266 题)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• `revscope` 按“任务×平台×许可证×学习曲线”四维组织的矩阵，是构建合规安全逆向工作流的高效索引。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• `hermes-borealis` 展示了如何用 1/3px 稀疏色点抖动在保证终端/桌面文字高可读性的同时营造昼夜动态美学。</text>
+</svg>

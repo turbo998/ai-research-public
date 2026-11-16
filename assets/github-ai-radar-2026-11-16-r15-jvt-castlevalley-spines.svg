@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 15 (CUMULATIVE R372 MILESTONE) · CLAIM-20261116-R15-JVT-CASTLEVALLEY-SPINES</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21" font-weight="bold">像素空间视频 DiT (JVT) + 250万世界锚定油画笔触游戏 (castle-valley) + 复古 CD 侧脊生成 Skill (spines)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">arXiv:2611.18549 免视频 VAE 直生 RGB-D 运镜视频 · 2.5M 3D 固定油画笔触零滤镜渲染 · 3840×1280 单脊精绘拼接 · 净省 $5,415.00/月 (-93.04%)</text>
+
+  <!-- Left Column: ZhouTimeMachine/JVT -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎥 1. ZhouTimeMachine/JVT (arXiv:2611.18549 · ZJU + Shanghai AI Lab · ★26)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">Just Video Transformer：扔掉笨重有损的 3D 视频 VAE，直接在像素空间做视频扩散！</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">纯像素空间 DiT 架构 + Register Guidance (rg_scale=0.8)</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 破除 Latent VAE 瓶颈：传统视频扩散依赖有损 3D VAE 编解码导致高频细节模糊与时序闪烁，JVT 直接在像素空间建模</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Register Guidance 引导：支持 in_context_len=32 / in_context_start=9 / rg_scale=0.8 提升 UCF-101 时序一致性</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 三大生成模态全开源：无条件生成 (FFS/Sky/Taichi/UCF101)、类别条件生成 (c2v) 与 RealEstate10K 相机运镜控制</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 同时开源 Hugging Face 与 ModelScope 预训练权重及数据集 · 内置完整 FVD (i3d_torchscript) 评测脚本</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Pi3X 姿态估计联动 + RealEstate10K RGB-Disparity 几何联合生成</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 相机轨迹精确控制：infer_dfot.py 支持纯 RGB 运镜控制 (infer_camctrl) 与 RGB+视差图联合生成 (infer_camctrl_joint)</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 几何先验闭环：联动 yyfz233/Pi3X 深度/姿态估计权重，确保长距离推拉摇移镜头下三维空间几何不崩塌</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 诚实披露训练算力规模：README 明确说明全量训练需 8 × NVIDIA 80GB GPU，单卡即可直接跑 batch_size=1 推理</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为下一代免 VAE 端到端像素级世界模型与 3D 运镜视频生成提供了极简 PyTorch 基线</text>
+
+  <!-- Right Column: castle-valley + stvlynn/spines -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎨 2. remorses/castle-valley (★57) + stvlynn/spines (★55 · cd-spine-art)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">250 万片钉在 3D 世界里的厚涂油画笔触 + 3840×1280 单脊精绘实体 CD 收藏架</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">remorses/castle-valley：零后处理滤镜！250 万实例化 3D 油画笔触 (Dabs)</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 拒绝屏幕空间假油画滤镜 (No Filter)：整个可玩 Three.js 世界由 底色粗几何 (under) + ~250 万张实例化笔触卡 (dabs) 构成</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 钉死在三维空间 (Pinned to the World)：角色走动或转视角时笔触牢牢贴在物体表面，绝不产生屏幕滑动眩晕感</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双朝向原语与整笔明暗：face (朝向镜头顺纹理生长：树叶/草) vs lie (平贴表面顺肌理延伸：石墙/屋顶) + 整笔受光/阴影边界</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 代码生成 8 种猪鬃干湿笔刷 (src/brush.ts) + 阵风带吹动树叶与哥布林/巨魔实时战斗系统</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">stvlynn/spines (cd-spine-art)：把 AI 产品家族做成 90 年代实体 CD 盒侧脊收藏墙</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 真实品牌 Logo 取证防幻觉：强制先从官网/GitHub 抓取真实图标核验作为参考图，且将参考图视作纯视觉输入防指令注入</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 单次只生一条横躺侧脊 (3840×1280)：把 100% 像素预算分给细小文字与透明塑料导轨卡扣，支持单条无损返修</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 自动化裁切旋转拼接：测量紧凑像素框 → 顺时针旋转 90° (高 3600px, 宽 244~400px) → scripts/assemble.py 拼架</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 已实证生成 ChatGPT / Claude / Cursor / Grok Bot / LobeHub 等 15 款 AI 应用高质感实体 CD 侧脊墙</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R15-JVT-CASTLEVALLEY-SPINES · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 20 组相机受控 RGB-D 视频生成评测 + 制作 25 套 3D 油画风交互场景与高质感产品视觉展墙（时薪 r = $100.00/hr；8×80GB 训练卡采购费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (两阶段 3D-VAE 闪烁重训 + 屏幕滤镜眩晕 + 拼图抽卡)</text>
+  <rect x="430" y="630" width="582" height="22" rx="5" fill="#EF4444"/>
+  <text x="1024" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,820.00/mo ($1,920.00 GPU/API waste + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (无引导像素扩散 + 手摆贴片 + PS 手工抠图排版)</text>
+  <rect x="430" y="666" width="271" height="22" rx="5" fill="#F59E0B"/>
+  <text x="713" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,710.00/mo ($910.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (JVT 像素 DiT + castle-valley + cd-spine-art)</text>
+  <rect x="430" y="702" width="41" height="22" rx="5" fill="#10B981"/>
+  <text x="483" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$405.00/mo ($85.00 compute + 3.2h × $100 = $320.00) → 净省 $5,415.00/月 (-93.04% / 年省 $64,980.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR GENERATIVE VIDEO &amp; STYLIZED 3D:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 像素空间 DiT + RGB-Disparity 联合生成是破解 3D VAE 细节损失与运镜几何失真的新范式 (arXiv:2611.18549)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 非真实感 3D 渲染必须“笔触锚定世界坐标 + 整笔受光”：castle-valley 用 250 万张 face/lie 笔触卡彻底消灭“浴帘效应”。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 多物件高精生图铁律“单次单件满画幅生成 + 脚本确定性拼合”：cd-spine-art 避免了单图画 15 个物件导致的文字糊成一团。</text>
+</svg>

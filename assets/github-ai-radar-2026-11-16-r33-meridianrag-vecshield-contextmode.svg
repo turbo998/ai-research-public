@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 33 (CUMULATIVE R390 MILESTONE) · CLAIM-20261116-R33-MERIDIAN-VECSHIELD-CONTEXT</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">8通道工业图表多模态 RAG (Meridian) + 5引擎向量库安全扫描 (VecShield) + 90%上下文瘦身</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">校准坐标轴图表数字化仪 + 服务公告覆盖旧手册冲突消解 + 13连接器 PII/投毒审计 + &lt;1ms SQLite WAL 烧钱监控 · 净省 $5,705.00/月 (-93.37%)</text>
+
+  <!-- Left Column: punit2911/meridian-multimodal-rag -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🏭 1. punit2911/meridian-multimodal-rag (8-Channel Industrial RAG · ★16)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">连折线图数值都能反算、新服务公告自动覆盖旧手册的零幻觉工业维保 RAG</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">图表坐标数字化仪 (Chart Digitiser) + 8 路混合检索加权 RRF</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别忽略图表的玩具 RAG：内置 Chart Digitiser 通过校准坐标轴与 OCR 刻度投票直接读取柱状图/折线图精确数值</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 版面感知拆解：将表格拆为整表 + 逐行块 + 类型化数值事实，完整提取警告框、铭牌照片与页面坐标包围盒</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 8 通道召回：BM25 + LSA 稠密 + 字符 N-Gram + 实体 + 事实 + 视觉 + PRF + 图 PageRank → 加权 RRF → 晚交互重排</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 默认 100% 确定性离线运行 (无需 API Key、无需 GPU)，可选挂载工具调用 LLM</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">溯源优先级冲突消解 + 逐声明带单位幻觉校验器 + CRAG 拒答门禁</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 新旧文档冲突自动裁决：当维修服务公告 (Service Bulletin) 与出厂老手册参数冲突时，显式按溯源规则以新公告为准</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 逐条声明核验与自动修复：检查每个数字与物理量单位、设备编号、否定词及页面区域引用，证据不足时强制拒答 (Abstain)</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 自带严谨评测套件：包含留出集、消融实验、Bootstrap 置信区间、ECE/Brier 校准度与人工注入幻觉拦截测试</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为核电、航空、制造等零容错工业维保知识库树立了多模态 RAG 工程金标准</text>
+
+  <!-- Right Column: Vecshield/VecShield + Antigravity Context Mode / Token Monitor -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🛡️ 2. VecShield (★19) + Context Mode (-90% · ★47) + Token Monitor (★27)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">13 连接器向量库 5 引擎合规审计 + 砍掉 90% 上下文膨胀与 &lt;1ms WAL 监控</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">Vecshield/VecShield：入库前拦截 PII/密钥 + 存量向量库 5 引擎深度体检</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双形态单包安装：轻量无服务端依赖的 vecshield 入库拦截库 + vecshield_platform 存量向量库审计台</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 五大安全引擎：Scan (PII/PHI/支付/密钥，默认脱敏预览防二次泄密)、Posture (暴露面/CVE)、Integrity (提示词注入/投毒)</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 按需插件连接 13 大生态：Chroma、pgvector、Qdrant、Weaviate、Milvus、Pinecone、Redis、OpenSearch 等</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 填补企业 RAG “源系统权限严密、向量库裸奔塞满敏感工单与病历”的最大盲区</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Domush/antigravity-plugin-context-mode + STARKTANG108/antigravity-token-monitor</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Context Mode (零运行时依赖)：拦截终端长输出、构建日志与数 MB 大文件灌入历史，削减 90%+ 上下文体积防失忆</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Token Monitor (&lt;1ms 增量扫描)：以只读 URI (?mode=ro) 直读 SQLite .db 与实时 .db-wal 页，按 (mtime_ns, size) 跳过未变会话</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双端实时燃尽率：同时提供跨平台暗黑 Web 面板 (127.0.0.1:18923) 与原生 macOS 菜单栏应用，实时显示 tok/min 与 $/hr</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ “前门压缩 90% 废日志 + 后门 &lt;1ms WAL 实时盯账单”组成 Agent 成本控制黄金搭档</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R33-MERIDIAN-VECSHIELD-CONTEXT · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月执行 30 次工业多模态 RAG 与向量库安全合规审计 + 50 组长会话 Agent 上下文压缩与账单监控（时薪 r = $100.00/hr；向量库云集群月租：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (单路向量瞎编图表参数 + 向量库泄露 PII + 构建日志撑爆上下文)</text>
+  <rect x="430" y="630" width="611" height="22" rx="5" fill="#EF4444"/>
+  <text x="1053" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,110.00/mo ($2,060.00 token/remediation + 40.5h × $100 = $4,050.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (人工抄录手册图表数据 + 事后正则洗库排障)</text>
+  <rect x="430" y="666" width="280" height="22" rx="5" fill="#F59E0B"/>
+  <text x="722" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,800.00/mo ($950.00 spend + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Meridian 8路RAG + VecShield + Context/WAL)</text>
+  <rect x="430" y="702" width="40.5" height="22" rx="5" fill="#10B981"/>
+  <text x="482" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$405.00/mo ($85.00 compute + 3.2h × $100 = $320.00) → 净省 $5,705.00/月 (-93.37% / 年省 $68,460.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR INDUSTRIAL RAG, VECTOR SECURITY &amp; CONTEXT TELEMETRY:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 工业维保 RAG 必须具备“图表坐标数字化读取 + 新公告覆盖旧手册冲突消解 + 证据不足强制拒答” (Meridian)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 每一条进入 Embedding 的文本块都应先过 VecShield 拦截 PII/密钥，并对存量向量库定期跑 5 引擎投毒/暴露面体检。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 用 Context Mode 拦住构建日志洪流 (-90% 上下文)，并用只读 SQLite WAL 增量探针 (&lt;1ms) 实时监控 $/hr 燃尽率。</text>
+</svg>

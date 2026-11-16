@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 53 (CUMULATIVE R410 MILESTONE) · CLAIM-20261116-R53-NUDI-BENCHLEAKING-CODINGSH</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21" font-weight="bold">【第 410 轮里程碑】RL 判分器漏洞红队蜂群 (nudi) + 基座模型刷榜泄题审计 + coding.sh</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">三级披露度验证 Harbor 奖励黑客 + 20 基准 Anti-Hack 戳破 96.3% HumanEval 原题背诵 + 本地会话一键转评测 · 净省 $5,925.00/月 (-93.60%)</text>
+
+  <!-- Left Column: standardnormal-ai/nudi + GAIR-NLP/Benchleaking -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🕵️ 1. standardnormal-ai/nudi (★67) + GAIR-NLP/Benchleaking (★20)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">开训前用 Agent 蜂群揪出 RL 判分器漏洞 + 20 基准实锤基座模型背诵测试集</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">standardnormal-ai/nudi (v0.5.0)：Pre-Hacking 三级披露红队 + 自然提交仿真</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么 RL 训练跑了三天发现模型学会了作弊？因为判分脚本 (Grader) 只抽查 3 张截图或把答案留在了 Git 历史里</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 管理员视角找洞 + 三级攻击者复现：`hack_inspector` 读 Dockerfile/Grader 找漏洞，`attacker` 按全知/微提示/零提示三级验证可利用性</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 自然仿真测误判率 (Simulations)：让普通 Agent 正常做题，统计判分器在实际提交上的假阳性与漏判率</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 原生支持 Harbor 格式环境与 Modal 云端并发沙盒</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">GAIR-NLP/Benchleaking：严格区分 Benchmaxxing 与 Benchleaking (测试集泄题)</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 触目惊心的实锤证据：给定 HumanEval/66，某基座模型竟顺着默写出未输入的 67–70 题及源码拼写错误 `examble`！</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 20 大基准 × 4 大公开基座审计：检出某模型复现 **96.3% HumanEval** 与 **85.4% OpenBookQA**；改题后后训练模型暴跌 13.3–15.8 分</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Anti-Hack 净分重排座次：将检出泄题样本记 0 分且分母不变，榜首模型狂掉 **16.6 分** 跌至垫底，DeepSeek-V4 仅掉 1.5 分</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 架构师选型开源基座模型前必跑的“去水份真金白银检验器”</text>
+
+  <!-- Right Column: jackulau/coding.sh -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🔭 2. jackulau/coding.sh (★68 · Local-First Agent Observability &amp; Eval Converter)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">一行 npx coding.sh 追踪本机所有 Agent 动作并把翻车会话一键变成评测集</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">0.2 秒导入历史会话 + 全链路记录 Prompt / 工具 / 改文件 / 缓存率与账单</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么 Agent 写坏了代码很难复现？因为子智能体调用、网关耗时、缓存命中率和文件修改散落在不同日志里</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 一键自动挂载（先备份配置）：自动发现 Claude Code、Codex CLI、Cursor 与 T3 Code，0.2s 导入过往会话</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 精细成本与缓存看板：`npx coding.sh usage --by model` 直接按模型汇总会话数、轮次、缓存读取率与预估花费</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 100% 本地运行（MIT 免费、零账号、数据绝不出本机）</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">从“线上翻车现场”直接点击生成可回归的 Eval 测试用例</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别人工手写评测集：在本地 Web 查看器中复盘每一次会话的测试通过徽章（如 `31 passed`）与延迟分位数</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Pass / Fail 一键打标转 Eval：对翻车的 Agent 运行直接点 Fail 并转化为本地评测用例，验证新 Prompt 或新模型是否修复</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 与 `nudi`（训练前查环境漏洞）和 `Benchleaking`（选型前查模型泄题）共同组成完整 AI 评测铁三角！</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 真正实现 Observability → Failure Attribution → Regression Eval 工程闭环</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R53-NUDI-BENCHLEAKING-CODINGSH · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月执行 20 个 Harbor RL 环境防作弊审计、20 基准基座模型泄题检测与 35 套本地 Agent 会话转评测流水线（时薪 r = $100.00/hr；Modal 云并发：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (RL 奖励黑客白烧 GPU + 误选刷榜泄题基座 + 商业云 APM)</text>
+  <rect x="430" y="630" width="633" height="22" rx="5" fill="#EF4444"/>
+  <text x="1075" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,330.00/mo ($2,180.00 GPU/SaaS waste + 41.5h × $100 = $4,150.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (人工肉眼查 Grader 脚本 + 只看公开榜单分数选模型)</text>
+  <rect x="430" y="666" width="289" height="22" rx="5" fill="#F59E0B"/>
+  <text x="731" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,890.00/mo ($990.00 spend + 19.0h × $100 = $1,900.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (nudi 3-Tier Swarm + Benchleaking Anti-Hack + coding.sh)</text>
+  <rect x="430" y="702" width="40.5" height="22" rx="5" fill="#10B981"/>
+  <text x="482" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$405.00/mo ($85.00 compute + 3.2h × $100 = $320.00) → 净省 $5,925.00/月 (-93.60% / 年省 $71,100.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR MILESTONE R410 (RL GRADER RED-TEAMING, ANTI-HACK SCORES &amp; LOCAL EVALS):</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 启动大规模强化学习前，必须用 nudi 按“全知/微提示/零提示”三级攻击者沙盒测试判分器是否存在捷径漏洞。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 选型开源基座必须跑 Benchleaking 连续题号/拼写错误续写探针，用扣除泄题分的 Anti-Hack 净分替代原始榜单分。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 用 npx coding.sh 在本机自动录制 Claude/Codex 会话与缓存成本，将真实失败案例直接转化为回归评测集。</text>
+</svg>

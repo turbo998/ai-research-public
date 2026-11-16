@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 62 (CUMULATIVE R419) · CLAIM-20261116-R62-UNIFIEDINERTIAL-TASKTARS-PHYSLOOP</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">人形与人类统一惯性编码器 (0.099 m/s G1 零样本) + ¥152.40 开源 TARS 具身机器人</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Amazon FAR 免物理仿真直迁 Unitree G1 真机 + 全开源 PCB/BOM/四舵机双屏语音 TARS (v0.18.3) + PhysLoop 物理感知视频生成 · 净省 $5,765.00/月 (-93.74%)</text>
+
+  <!-- Left Column: amazon-far/Unified-Inertial-Encoder + DAGroup-PKU/PhysLoop -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🤖 1. amazon-far/Unified-Inertial-Encoder (★37) + DAGroup-PKU/PhysLoop (★39)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">人类与人形机器人共享惯性编码器 (真机 G1 速度误差 0.099 m/s) + 物理自进化视频生成</text>
+
+  <rect x="66" y="220" width="598" height="162" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">amazon-far/Unified-Inertial-Encoder (Apache-2.0)：免仿真、免真机微调直迁 Unitree G1</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么人形机器人惯性里程计 (IMU Odometry) 难做？真机步态冲击大，采集真机标注轨迹极其昂贵</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 共享惯性接口：在人类动作数据与运动学重定向 (Kinematically Retargeted) G1 动作上联合训练单一编码器</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零样本跨形态真机迁移：无需物理仿真器、无需真机训练轨迹、无需微调，直接部署到物理 Unitree G1！</text>
+  <text x="82" y="332" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 5 大数据集全面领先：在所有被测基准中取得最低速度误差，**物理 Unitree G1 真机实测仅 `0.099 m/s`**</text>
+  <text x="82" y="358" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 完整开源训练、基线对比、数据预处理与论文评测全链路代码</text>
+
+  <rect x="66" y="394" width="598" height="130" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="418" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">DAGroup-PKU/PhysLoop (arXiv:2611.16748)：用 LLM 物理常识驱动视频生成模型自进化</text>
+  <text x="82" y="440" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 北大 + 字节 Seed + UCSB + MIT 联合提出：利用大语言模型的物理规律推理能力，构建视频生成模型的闭环自改进</text>
+  <text x="82" y="462" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 诚实边界标注：论文与框架解析已公开 (`arXiv:2611.16748`)，完整训练代码正待公司合规审查后释放</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为世界模型与视频生成的物理合理性校验提供了可复用的闭环范式</text>
+
+  <!-- Right Column: doubleZ-dev/TASK-TARS-Embodied-Robotics -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🦾 2. doubleZ-dev/TASK-TARS-Embodied-Robotics (★41 · v0.18.3-public)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">¥152.40 单台 BOM 打造《星际穿越》TARS 可动双屏语音具身桌面机器人完整工程</text>
+
+  <rect x="728" y="220" width="606" height="154" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">为什么桌面具身机器人常常沦为“只给 STL 外壳、不给电路与上位机”的半成品？</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 四路舵机铰接行走 + 双屏状态交互：复刻《星际穿越》TARS 经典步态与双屏表情/系统状态显示</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 透明到每一颗螺钉的 BOM 账本：随仓附带 `Project_TARS_V1_BOM_2026-11-13.xlsx`，包含 PCB 阻容芯片、裸板、打印件、舵机、双屏、电池与音频模块，**整机物料成本仅 ¥152.40 (约 $21)**！</text>
+  <text x="744" y="330" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 嘉立创 EDA 专业版源工程 (`TARS_PCB_2026-11-13.epro2`) + MakerWorld 三盘打印模型全公开</text>
+
+  <rect x="728" y="386" width="606" height="138" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="410" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">v0.18.3-public 一体化固件 + PC 端 Companion 语音控制与豆包音色克隆</text>
+  <text x="744" y="432" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 打通“硬件固件 + USB 调试 + 电脑端语音 Companion + 云端大模型与音色克隆”端到端闭环</text>
+  <text x="744" y="454" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别过去零散固件包的拼凑踩坑，提供统一 `TARS-0.18.3-public.zip` 与详尽 `AI_SETUP.zh-CN.md` 指南</text>
+  <text x="744" y="476" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 诚实许可边界：采用 `CC BY-NC-SA 4.0` 协议，开源仅供个人创客与教学研究，商用需联系作者授权</text>
+  <text x="744" y="500" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 极低成本验证多模态语音 Agent + 物理舵机动作编排的理想桌面具身教具</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R62-UNIFIEDINERTIAL-TASKTARS-PHYSLOOP · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月开展 15 轮人形机器人惯性状态估计与真机零样本迁移评测 + 搭建 20 台桌面语音具身硬件原型（时薪 r = $100.00/hr；3D 打印电费与运费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (采集真机 MoCap 轨迹从头训 IMU + 采购商业桌面机器人套件)</text>
+  <rect x="430" y="630" width="615" height="22" rx="5" fill="#EF4444"/>
+  <text x="1057" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,150.00/mo ($2,050.00 HW/MoCap + 41.0h × $100 = $4,100.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (高刚度物理仿真 RL 调参 + 手工画 PCB 打样排障)</text>
+  <rect x="430" y="666" width="284" height="22" rx="5" fill="#F59E0B"/>
+  <text x="726" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,840.00/mo ($940.00 spend + 19.0h × $100 = $1,900.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Unified-Inertial-Encoder + TASK-TARS ¥152.40 BOM)</text>
+  <rect x="430" y="702" width="38" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$385.00/mo ($75.00 spend + 3.1h × $100 = $310.00) → 净省 $5,765.00/月 (-93.74% / 年省 $69,180.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR ZERO-SHOT HUMANOID INERTIAL ENCODERS &amp; OPEN-BOM EMBODIED ROBOTS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 用人类动作 + 运动学重定向 G1 数据联合训练统一惯性编码器，无需物理仿真或真机微调即可在 G1 真机达到 0.099 m/s 误差。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• TASK-TARS 将嘉立创 `.epro2` PCB、Excel 逐项 BOM (¥152.40) 与 Companion 语音上位机完整闭环，大幅拉低具身原型门槛。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 针对 PhysLoop 等先发论文 (`arXiv:2611.16748`) 待开源码仓库，架构师应先吸收其 LLM 物理审查闭环思想并标注代码待释放。</text>
+</svg>

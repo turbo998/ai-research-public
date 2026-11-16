@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 40 (CUMULATIVE R397) · CLAIM-20261116-R40-LIKHARI-HIMA-CLIPPER</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">零抢焦点三端按住说话听写 (Likhari) + 单 T4 训 62M 端侧 TTS (hima-finetune) + 词边界播客切片</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">WS_EX_NOACTIVATE / PyObjC 零丢焦点粘贴 + 5M 参数 Adapter 训出手机 CPU 可跑的 62M TTS + 开源 Opus Clip 平替 · 净省 $5,250.00/月 (-93.42%)</text>
+
+  <!-- Left Column: AIwithhassan/likhari-ai + Prahaladha-Reddy/hima-finetune -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎙️ 1. AIwithhassan/likhari-ai (★17) + Prahaladha-Reddy/hima-finetune (★17)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">按住右 Alt 说话松手即粘进当前光标 + 单张免费 T4 微调 62M 手机/CPU 语音模型</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">AIwithhassan/likhari-ai：跨三端零抢焦点悬浮 HUD + 剪贴板保护</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么普通语音输入法让人抓狂？一弹窗就抢走当前 IDE 焦点导致无法直接上屏，或者覆盖掉你剪贴板里的代码</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 三大系统底层非激活窗口：macOS 走 PyObjC 非激活 NSWindow；Windows 走 Win32 WS_EX_NOACTIVATE；Linux 通吃 X11/Wayland</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 本地 faster-whisper 实时流式预览 + 三级文本润色 (3-Tier Cleanup) + 粘贴后原样恢复剪贴板</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 兼容国际键盘 AltGr 与 Wayland evdev/wtype/ydotool，完全免费替代 $15/月商业听写软件</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Prahaladha-Reddy/hima-finetune：1 张免费 Colab T4 训出 62M 端侧专属音色</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 极小参高效率：在冻结的 62M 参数 Hima TTS nano 基座上仅训练 ~5M 参数的轻量 Adapter</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 四步确定性 CLI：get (多源语音聚合) → prepare → train (支持 Colab 断线 --resume 续训) → export</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 导出即标准模型目录：一行 `TTS("my-model").say("...", voice="Meera")` 在笔记本 CPU 与手机端流畅发音</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为低资源语种 (泰卢固语/印地语) 与超轻量端侧 CPU TTS 定制提供了极佳范本</text>
+
+  <!-- Right Column: RealAdii/clipper-skill + sinhs0301-prog/kimbiseo -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">✂️ 2. RealAdii/clipper-skill (★12) + sinhs0301-prog/kimbiseo (★13)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">零按分钟计费的开源 Opus Clip 平替技能 + 多显示器 DPI 自适应语音桌宠秘书</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">RealAdii/clipper-skill：甩一条播客/X 直播链接 → 9 条质检合格短视频 + Google Doc</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 100% 本地转写与粗剪：Mac 走 MLX Whisper，Windows/Linux 走 faster-whisper，零按分钟云端扣费</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 词边界精准下刀 (Word-Boundary FFmpeg Cuts)：严格在单词起止间隙用 FFmpeg 切片，绝不切断半个音节</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 团队协同交付闭环：自动完成质量检查 (QA)、打包带字幕成片、上传 Google Drive 并生成带公开链接的 Google Doc</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 支持 npx skills add RealAdii/clipper-skill 一键挂载至 Claude Code</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">sinhs0301-prog/kimbiseo (金秘书)：显存自适应降级 + 屏幕/朗读双轨文本分离</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零 Token 窃取复用本机登录：直接调用本机已登录的 Claude Code/Codex CLI（绝不触碰账号密码），无订阅则回退本地 Gemma 4</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 6GB 显存智能降级 + 读音分离：≥6GB 跑 Qwen3-TTS 对口型，不足则无缝回退系统语音；屏幕显示 "0.1.12" 而朗读自动转为自然发音</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 多显示器混合缩放记忆：跨 100%/125%/150% DPI 屏幕拖拽不跑偏，拔插显示器自动撤回主屏并原位归还</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 写备忘录只写专属窗口绝不乱弹系统记事本，工程细节极其克制考究</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R40-LIKHARI-HIMA-CLIPPER · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月处理 400 小时开发者语音听写与播客高光切片 + 训练 15 个端侧轻量语音 Adapter（时薪 r = $100.00/hr；Google Drive 空间订阅：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (按人头买云听写/Opus Clip 会员 + 重型 TTS 驻留)</text>
+  <rect x="430" y="630" width="562" height="22" rx="5" fill="#EF4444"/>
+  <text x="1004" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,620.00/mo ($1,820.00 SaaS/API spend + 38.0h × $100 = $3,800.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (抢焦点脚本弄丢剪贴板 + 按固定秒数硬切半截单词)</text>
+  <rect x="430" y="666" width="261" height="22" rx="5" fill="#F59E0B"/>
+  <text x="703" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,610.00/mo ($860.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Likhari + Hima 62M + Clipper + KimBiseo)</text>
+  <rect x="430" y="702" width="37" height="22" rx="5" fill="#10B981"/>
+  <text x="479" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$370.00/mo ($70.00 compute + 3.0h × $100 = $300.00) → 净省 $5,250.00/月 (-93.42% / 年省 $63,000.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR LOCAL VOICE DICTATION, 62M ADAPTER TTS &amp; PODCAST CLIPPING:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 全局语音输入工具必须在 OS 窗口层开启非激活标志 (WS_EX_NOACTIVATE / PyObjC) 并原样保存恢复用户剪贴板 (Likhari)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 端侧小语种 TTS 无需全量微调：在 62M 基座上用单张免费 T4 训练 5M 参数 Adapter 即可跑在手机与笔记本 CPU 上。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 自动播客切片必须以 MLX/faster-whisper 词级边界驱动 FFmpeg 切割并直出团队可发帖的 Google Doc (clipper-skill)。</text>
+</svg>

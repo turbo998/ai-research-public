@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 17 (CUMULATIVE R374) · CLAIM-20261116-R17-TRADINGAGENTS-FRACTAL</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">多智能体加密投研与 bytx 统一执行层 (TradingAgents-crypto) + 34.8k AST 多周期引擎 (Fractal-ultra-pro)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">研判与下单物理剥离 + 默认 Demo 模拟盘 + 20bps Post-Only 挂单保护 + 46% AST 编译余量四K线/CISD/SMT · 净省 $5,535.00/月 (-93.18%)</text>
+
+  <!-- Left Column: Dart-veider01/TradingAgents-crypto -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">📈 1. Dart-veider01/TradingAgents-crypto (Multi-Agent + bytx · ★140)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">把多智能体牛熊辩论与交易所执行解耦，一套 bytx 接口安全跑通七大所</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">两层正交架构：TradingAgents (arXiv:2412.20138) 研判 + bytx 统一执行</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 专为加密资产裁剪：分析师团队 + 多空牛熊辩论 + 交易员 + 风控与组合经理；自动跳过无财报的基本面分析师</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 统一 bytx 路由：一行调用连通 Binance、Bybit、OKX、BingX、KuCoin、Bitget、BloFin</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 确定性动作映射：Buy/Overweight 开多、Underweight/Sell 平仓、Hold/REVIEW 零操作、自动跳过股票标的</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ Paper 模拟盘免 API Key 直接验证：config["execution"]["demo"] = True</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">三重实盘防呆护栏：默认关闭 + 20bps Post-Only + 3x 仓位硬顶</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 默认不触碰真金白银：执行驱动默认关闭，开启后也默认先走交易所 Demo 环境</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 防吃单滑点保护：距离市价 20 bps (0.2%) 以内的限价单强制以 Post-Only 发送，绝不主动跨点差吃单</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 名义本金熔断：默认单笔 100 USDT，即使向上对齐交易所最小下单量，也绝不超过请求金额的 3 倍</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 止损 (Stop) 与止盈 (Target) 由多智能体风控链显式注入订单结构</text>
+
+  <!-- Right Column: AlphaCoreICT/Fractal-ultra-pro- -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🌌 2. AlphaCoreICT/Fractal-ultra-pro- (Pine Script v6 · 34.8k AST · ★65)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">把四K线周期、CISD、T-Spot 与跨资产 SMT 背离压缩进 34.8k/65k AST 预算</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">四大机构级价格行为原语全内置 (Zero-Lag Institutional Mechanics)</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 四K线扫损周期 (C1→C2→C3→C4)：自动识别流动性扫荡 (Sweep)、延续与衰竭阶段</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 交付状态转换 (CISD &amp; IC-CISD)：实时锁定受保护摆动点 (Protected Swings) 与结构翻转确认</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• T-Spot 均衡区 + 多资产 SMT 背离：自动计算精准回踩区间与跨相关性资产高周期背离</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 同屏并排投射多周期高时间框架 (Side-by-Side HTF Projections)</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">AST 编译器预算工程：34.8k / 65k Tokens (预留 46% 扩展余量)</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 根治复杂多周期脚本触发 TradingView 65,000 AST Token 上限导致编译崩溃的顽疾</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为量化研究员二次叠加自定义 Webhook 信号与风控过滤留出充足的 46% AST 空间</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 配套 Detailed Guide 与 user guide 完整拆解 C1-C4、CISD 与 SMT 触发判定逻辑</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 可作为特征计算层输出标准化结构信号喂给 TradingAgents 多智能体风控台</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R17-TRADINGAGENTS-FRACTAL · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月执行 40 次多智能体加密投研到执行联调 + 20 项多周期结构指标研发（时薪 r = $100.00/hr；实盘本金盈亏与 TradingView 订阅费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (裸 LLM 直发市价单滑点 + &gt;65k AST 编译崩溃返工)</text>
+  <rect x="430" y="630" width="594" height="22" rx="5" fill="#EF4444"/>
+  <text x="1036" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,940.00/mo ($1,940.00 token/rerun waste + 40.0h × $100 = $4,000.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (按交易所手写 CCXT 胶水 + 单周期碎片化脚本)</text>
+  <rect x="430" y="666" width="277" height="22" rx="5" fill="#F59E0B"/>
+  <text x="719" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,770.00/mo ($920.00 spend + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (TradingAgents-crypto + bytx + Fractal 34.8k AST)</text>
+  <rect x="430" y="702" width="40.5" height="22" rx="5" fill="#10B981"/>
+  <text x="482" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$405.00/mo ($85.00 compute + 3.2h × $100 = $320.00) → 净省 $5,535.00/月 (-93.18% / 年省 $66,420.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR QUANTITATIVE AGENT DESKS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 研判层与执行层必须物理隔离：多智能体只产出评级与止盈止损，下单必须经过 Post-Only (20bps) 与 3x 名义本金熔断网关。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 模拟盘先行 (Demo-by-Default)：在未显式关闭 demo 开关前，所有 Agent 交易指令一律路由至交易所模拟盘。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 严控领域 DSL 的 AST 预算：将 C1-C4、CISD 与 SMT 背离控制在 34.8k/65k AST Tokens，为策略扩展预留 46% 空间。</text>
+</svg>

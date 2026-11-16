@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 7 (CUMULATIVE R364) · CLAIM-20261116-R7-MEMORY-POO</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">服务器内存条跨重启 RAS 故障定位仪 (agenticode/my) + 多 Worktree 安全清理 MCP (morajabi/poo)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">按 DIMM 序列号跨重启/换槽追踪行故障与 PPR 复发 · 7 级后悔度安全清理 Rust target / DerivedData 与已合并 Worktree · 净省 $5,560.00/月 (-93.45%)</text>
+
+  <!-- Left Column: agenticode/my -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧠 1. agenticode/my (Apache-2.0 · Go 1.26+ Static Binary · ★67)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">为什么重启清零的 EDAC 计数器害苦了 AI 智算中心运维？按序列号锁定病根</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">按 DIMM 序列号 (Serial) 统一归并 rasdaemon / mcelog / EDAC / BMC</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 跨重启与跨插槽记忆：即使重启清零计数器或把内存条换到别的插槽，历史账本依然跟着序列号走</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• Bank 行×列二维地址热力图：一眼区分水平线 Row Fault (0x1a2f 占 98%)、垂直列故障、单比特或整 Bank 故障</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 验证硬修复是否失效 ([R-REP-02])：精准检测 2026-10-28 Hard PPR 后同一行再次爆发 764 次 CE 并升级为 UE</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 100% 只读安全 (绝不乱下线内存页或清零计数器) · 排除主板插槽故障避免盲目换主板</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">硬件厂商 RMA 退换货铁证包：my bundle &amp; my report 离线单文件 HTML</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 一行工单摘要：sudo my why CPU0_C1 --oneline 直接输出带规则编号 (R-UE-01 R-ROW-03) 的定性结论</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 便携式证据盒：sudo my bundle -o case.mycase 打包全量原始记录，任意 Mac/Linux 用 my open 原样复现</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零外链自包含 HTML/PDF 报告：my report case.mycase -o report.html 内嵌插槽图、地址图与时间轴 SVG</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 诚实列出“未执行的检查与缺失的数据 (--detail)”，终结服务器厂商拒保扯皮</text>
+
+  <!-- Right Column: morajabi/poo -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧹 2. morajabi/poo (MIT · Rust CLI + macOS App + Agent MCP/Hooks · ★35)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">专为并行 Coding Agent Worktree 打造的“零丢代码、7 级后悔度”磁盘清理器</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">直击多 Agent Worktree 磁盘爆炸根源 + 三重防丢代码自动备份</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 揪出隐蔽构建膨胀：每个 Claude Code / Codex / Conductor worktree 各占一份 Rust target 与 DerivedData</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 反向溯源自定义构建目录：自动将 Agent 传入的 -derivedDataPath 与 CARGO_TARGET_DIR 映射回对应检出树</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 移除 Worktree 前三重保险：自动备份 .env/Local.xcconfig、git stash 未提交改动、游离提交存分支 (poo backups)</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 绝不穿透软链接、绝不碰 .ssh/.gnupg/Keychain/iCloud、绝不删含 .git 的构建目录</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">7 级重建后悔度分级 (Tiers) + Agent 完工自动清理钩子 (poo hooks)</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 7 级确定性分级：junk(零成本) → cold(已合入主干) → idle(非最新2个检出) → warm → hot/review/protected(永不乱删)</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 磁盘水位哨兵：poo schedule add guard 当剩余空间 &lt;20GB 时自动清理非活跃缓存直至恢复 50GB</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 原生 Coding Agent 集成：poo integration install all (MCP + Skill) + poo hooks install all 完工即扫尾</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 删除前最后一刻二次复核进程活性，只要检测到构建或 Coding Agent 仍在运行立即跳过</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R7-MEMORY-POO · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月巡检排障 64 台服务器节点 DDR5 内存 RAS 错误 + 维护 25 名工程师高频多 Worktree 编码环境（时薪 r = $100.00/hr；更换物理内存条与硬盘采购费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (看单次重启 EDAC 盲换主板 + 手工 rm -rf 丢代码)</text>
+  <rect x="430" y="630" width="595" height="22" rx="5" fill="#EF4444"/>
+  <text x="1037" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,950.00/mo ($1,950.00 downtime/lost-work + 40.0h × $100 = $4,000.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (人工扒 rasdaemon 日志 + 普通全局缓存清理器)</text>
+  <rect x="430" y="666" width="276" height="22" rx="5" fill="#F59E0B"/>
+  <text x="718" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,760.00/mo ($910.00 waste + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (agenticode/my 序列号账本 + poo 7级安全清理)</text>
+  <rect x="430" y="702" width="39" height="22" rx="5" fill="#10B981"/>
+  <text x="481" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$390.00/mo ($80.00 compute + 3.1h × $100 = $310.00) → 净省 $5,560.00/月 (-93.45% / 年省 $66,720.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR AI CLUSTER SRE &amp; AGENT WORKTREE HYGIENE:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 硬件排障必须以物理序列号为主键：agenticode/my 跨重启聚合 CE/UE 并绘制 Bank 行列热力图，精准区分“单条内存行坏且 PPR 失效”与“主板插槽故障”。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 并行 Agent 时代最大的磁盘黑洞是孤儿 Worktree 构建产物：poo 按“重建后悔度”分 7 级清理，并在删树前自动备份 .env 与未提交代码。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 完工即清扫闭环：启用 poo hooks install all 后，每当 Claude Code 或 Codex 分支合入 main，自动回收其数十 GB 的 target/DerivedData。</text>
+</svg>

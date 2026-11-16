@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 58 (CUMULATIVE R415 MILESTONE) · CLAIM-20261116-R58-VIBESHIELD-PLAMOTRANSLATE-OVERLAYSUBS-VEMU</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21" font-weight="bold">【第 415 轮里程碑】92 规则 AI 代码安全门禁 (vibe-shield) + 本地 PLaMo 3 翻译/字幕 + v-EMU</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">实测 160 个 MCP/Skill 包揪出 597 个漏洞 + 浏览器 &lt;50MB NDLOCR-Lite 与系统音频实时字幕 + lab.yaml 声明式 KVM · 净省 $5,595.00/月 (-93.56%)</text>
+
+  <!-- Left Column: avivgerz-hue/vibe-shield + withcoresystem/v-EMU -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🛡️ 1. avivgerz-hue/vibe-shield (★45) + withcoresystem/v-EMU (★67)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">专查 AI 代码漏写 Supabase RLS 与 SKILL.md 漏洞 + 声明式 KVM 虚拟化靶场</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">avivgerz-hue/vibe-shield：零依赖 92 规则静态扫描器 + Agent Skill + MCP Server</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 2026 震撼实证基准 (`BENCHMARK-2026.md`)：审计 **160 个已发布 AI/MCP/Skill 包 (7,062 文件)**，揪出 **597 处漏洞**！</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 含 **167 个 Critical 与 82 个 High**：覆盖 CWE-798 硬编码密钥、CWE-89 SQL 注入、CWE-639 越权与 `SKILL.md` 投毒面</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 专治 Vibe Coding 三大通病：Next.js 裸奔 API 路由、Supabase 漏开行级安全 (RLS) 与前端泄露 Service Role Key</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 0 运行时依赖 (`@vibefoundry/vibe-shield`)，上线前必过的自动化安全闸门</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">withcoresystem/v-EMU (v0.2.0)：以 lab.yaml 为最小单元的 Linux KVM 虚拟化靶场</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 拒绝散装 VM 管理：围绕 `seal (封存模板) → clone (链接克隆) → lab (整套实验网)` 生命周期构建</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 白盒 qcow2 v2 存储链：每一层离线快照清晰可见，模板严格只读，带引用计数删除与 `vemu gc` 孤儿镜像回收</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 直接驱动宿主机原生 QEMU/KVM 与 libvirt，支持整套 Lab 单文件导出导入与 `vemu up/status/down`</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 复现复杂多节点网络与安全攻防实验的轻量级桌面/CLI 利器</text>
+
+  <!-- Right Column: highants/PLaMo_Translate_EX + sp-yduck/overlaysubs -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🌐 2. PLaMo_Translate_EX (★47) + sp-yduck/overlaysubs (★69)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">PFN PLaMo 3 全本地双擎翻译扩展 (&lt;50MB NDLOCR) + 电脑全局音频实时翻译字幕</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">highants/PLaMo_Translate_EX (v1.2.0)：浏览器内置 Wllama + &lt;50MB 国图馆 OCR</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 100% 离线翻译机密文档：支持 Preferred Networks 开源的 `PLaMo 3 Translate` (0.8B / 2B / 8B / 31B) 全家族</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双本地推理引擎一键切换：模式 A 走本地 `LM Studio` 满血 GPU；模式 B 直接在浏览器内用 `Wllama` 零配置运行</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 内置 `&lt;50 MB` 混合量化 `NDLOCR-Lite` (`onnxruntime-web` WASM)：精准识别竖排日文、多栏报纸与 UI 截图并本地翻译</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 彻底免除 DeepL / Google Cloud 翻译 API 按字符扣费与商业机密外发风险</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">sp-yduck/overlaysubs：Rust 实时捕获电脑播放音频并用 PLaMo 3 投射悬浮双语字幕</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 跨平台全本地音频同传：支持 Windows x64 与 macOS Apple Silicon，无需任何 API Key，声音与文本绝不出本机</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 硬件自适应模型分档：首次启动自动检测本机显卡与内存规格，智能推荐并下载匹配的转写与 `plamo-3-translate-0.8b-GGUF` 模型</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 无论看无字幕海外技术直播、参加跨国线上会议还是玩生肉游戏，桌面顶层直接浮动实时翻译字幕</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 与 PLaMo_Translate_EX 共同构成图文 OCR + 实时音视频的全本地翻译闭环</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R58-VIBESHIELD-PLAMOTRANSLATE-OVERLAYSUBS-VEMU · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 30 次 AI 应用/Skill 安全门禁与 KVM 靶场复现 + 250 小时内网文档 OCR/跨国音视频本地同传（时薪 r = $100.00/hr；本地 GPU 电费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (漏配 RLS 事故补救 + 按量付费云翻译/同传 API + 重型虚拟化集群)</text>
+  <rect x="430" y="630" width="598" height="22" rx="5" fill="#EF4444"/>
+  <text x="1040" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,980.00/mo ($1,980.00 API/SaaS spend + 40.0h × $100 = $4,000.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (普通正则漏检 SKILL.md/RLS + 散乱 qcow2 快照撑爆磁盘)</text>
+  <rect x="430" y="666" width="272" height="22" rx="5" fill="#F59E0B"/>
+  <text x="714" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,720.00/mo ($920.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (vibe-shield + PLaMo_Translate_EX + OverlaySubs + v-EMU)</text>
+  <rect x="430" y="702" width="38.5" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$385.00/mo ($75.00 spend + 3.1h × $100 = $310.00) → 净省 $5,595.00/月 (-93.56% / 年省 $67,140.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR MILESTONE R415 (VIBE-SHIELD, LOCAL PLAMO 3 &amp; DECLARATIVE KVM LABS):</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 针对 160 个公开 MCP/Skill 包检出 597 处漏洞的事实证明：引入外部 Skill 与上线 Next.js/Supabase 前必跑 vibe-shield。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• PLaMo 3 Translate 配合浏览器 &lt;50MB NDLOCR-Lite 与桌面 OverlaySubs，可 100% 离线搞定复杂图文 OCR 与实时语音字幕。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 本地安全靶场应以声明式 `lab.yaml` 与受引用计数保护的 qcow2 链接克隆管理，随时 `vemu gc` 回收孤儿层。</text>
+</svg>

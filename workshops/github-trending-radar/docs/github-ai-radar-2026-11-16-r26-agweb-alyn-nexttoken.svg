@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 26 (CUMULATIVE R383) · CLAIM-20261116-R26-AGWEB-ALYN-NEXTTOKEN</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">零抢焦点 WebKit 多 Agent 浏览器 (agweb) + 6,165 技能路由 MCP (Alyn) + 时间戳播客检索</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">5空闲页仅占 590MB/0% CPU (对比 Playwright Chrome 1.6GB) + 6,165 开源技能按周排行加载 + B站/YouTube 逐句空降链接 · 净省 $5,430.00/月 (-93.30%)</text>
+
+  <!-- Left Column: paul-nameless/agweb -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🌐 1. paul-nameless/agweb (Zero-Focus WebKit Agent Browser · ★247)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">绝不抢你键盘焦点、也不会像无头浏览器那样被反爬封杀的原生 WebKit 驾驶舱</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">590MB vs 1.6GB Playwright Chrome：5 页闲置 0% CPU + 零焦点抢占</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 根治多 Agent 并发操控浏览器时的最大痛点：弹窗、切标签、文件选择器与下载全部在代码层静默应答，绝不抢前台焦点</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 真实窗口防反爬：基于 macOS 原生 WebKit (Safari 内核)，⌘D 总控台一屏实时透视所有 Agent 的全部标签页与最新命令</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 闲置标签自动挂起：5 个打开页面静置时 CPU 占用 0%、内存仅 590 MB (Playwright Chrome 高达 1.6 GB 且烧 5–7 核)</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 支持命名登录态共享 (-p work)：登录一次，多个并发 Agent 同时复用该认证会话</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">playwright-cli 风格命令行 + 按 Agent 隔离工作区</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 极低迁移成本：Agent 直接在 Shell 中执行 agweb 命令操控网页，侧边栏按每个 Agent 自动分组归拢标签页</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 自带 skill/ 目录与完整 Tests/ 套件，一行安装即可让 Claude Code / Codex 告别笨重的 Chrome 实例池</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 既保留真实有头浏览器的高通过率与可视化可观测性，又拥有后台守护进程般的安静体验</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 每台 Mac 开发机运行 5+ 并发网页 Agent 时立省超过 1 GB 物理内存</text>
+
+  <!-- Right Column: tammo1007/alyn + next-token-tv/next-token-skill -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧭 2. tammo1007/alyn (6,165 Skills MCP · ★54) + next-token-skill (★51)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">按周排行的 6,165 开源技能自动匹配 MCP + 带 B站/YouTube 秒级空降链接的播客库</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">tammo1007/alyn：索引 446 位创作者的 6,165 个开源技能并按需动态注入</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别手动去 GitHub 翻找和拷文件夹：只需将 Alyn MCP 接入 Claude Code、Cursor 或 Codex 一次</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 每次接到新任务，Agent 自动向 Alyn 询问最匹配的周榜高分技能、即时加载规程并严格执行</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 同时提供 npm alyn-cli、远程 alyn.dev/mcp 端点与自托管源码 (cli/ + mcp/ + skills/)</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 每周动态更新 Top 10 技能榜单，用社区真实调用反馈淘汰劣质过时 Prompt</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">next-token-tv/next-token-skill：零依赖圆桌播客逐句溯源 + 视频时间戳直跳</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 把每期 1 小时+ 的《Next Token｜词元之外》圆桌（杨攀/歸藏/橘子/向阳乔木）转化为可秒级检索的结构化语料</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零外部依赖纯 Python 3 脚本 (next-token/scripts/nexttoken.py)，无需提到播客名即可自动触发观点引用</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 精确到秒的视频证据链：每条引用自动附上 B 站与 YouTube 对应时间点的直跳链接，点开直接听原话</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为企业将内部高管访谈、架构评审会录音转化为“带视频时间戳引用的 Agent Skill”提供标准模板</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R26-AGWEB-ALYN-NEXTTOKEN · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月运行 50 组多 Agent 并发网页自动化任务 + 40 次跨领域技能寻优与音视频一手观点溯源（时薪 r = $100.00/hr；Mac 硬件折旧：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (1.6GB Playwright 抢焦点打断思路 + 盲找技能与拖进度条)</text>
+  <rect x="430" y="630" width="582" height="22" rx="5" fill="#EF4444"/>
+  <text x="1024" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,820.00/mo ($1,920.00 token/retry waste + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (730MB 无头 Chrome 频繁被封 + 手工拷技能目录)</text>
+  <rect x="430" y="666" width="270" height="22" rx="5" fill="#F59E0B"/>
+  <text x="712" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,700.00/mo ($900.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (agweb 590MB WebKit + Alyn MCP + Next-Token)</text>
+  <rect x="430" y="702" width="39" height="22" rx="5" fill="#10B981"/>
+  <text x="481" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$390.00/mo ($80.00 compute + 3.1h × $100 = $310.00) → 净省 $5,430.00/月 (-93.30% / 年省 $65,160.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR AGENT BROWSERS, SKILL ROUTERS &amp; TIMESTAMPED MEDIA RAG:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 并发网页 Agent 的最佳宿主是“不抢焦点的有头原生 WebKit + 闲置页面 0% CPU 挂起 + 命名 Profile 共享” (agweb)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 当社区技能突破 6,000 个时，通过 Alyn MCP 在任务启动时动态拉取周榜最优技能远胜静态全量安装。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 音视频知识库 Skill 必须把检索结果锚定到精确时间戳 URL (`?t=`)，让人类一键核验原话语境。</text>
+</svg>

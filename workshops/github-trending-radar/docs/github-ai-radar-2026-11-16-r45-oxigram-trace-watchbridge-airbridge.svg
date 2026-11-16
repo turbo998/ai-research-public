@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 45 (CUMULATIVE R402) · CLAIM-20261116-R45-OXIGRAM-TRACE-WATCHBRIDGE-AIRBRIDGE</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">托盘仅 5MB 的 Rust 电报 (Oxigram) + 开源 Timing 平替 (Trace) + 免 Xcode 装表应用</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">关窗销毁 WebView 压至 5MB 内存 + macOS 读取时动态打标时间追踪 + 三端 Apple Watch 侧载与千兆局域网 AirBridge · 净省 $5,175.00/月 (-93.41%)</text>
+
+  <!-- Left Column: Timon2306/oxigram + lxyeternal/Trace -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🪶 1. Timon2306/oxigram (★29) + lxyeternal/Trace (★38)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">关窗即销毁 WebView 仅占 5MB 的 Telegram 客户端 + 零手动计时的 macOS 时间黑匣子</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">Timon2306/oxigram：开窗 71MB、最小化 55MB、最小化到托盘仅 5MB！</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么聊天软件挂后台能吃掉 1GB 内存？因为 Electron/Qt 把整个浏览器和历史媒体缓存全常驻在内存里</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 极致架构减法：无 TDLib、无 Electron、无 Qt！~7MB Rust 进程 (grammers) 直连 MTProto，UI 用系统 WebView</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 关窗销毁 WebView 绝技：当你关闭窗口退到托盘时，直接销毁整个 WebView，仅留 5MB Rust 进程收消息弹通知！</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 窗口标题栏实时公开当前内存占用，自带 500MB 媒体缓存上限与自带 api_id 零中心化设计</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">lxyeternal/Trace：商业软件 Timing 的免费开源 macOS 原生平替</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 精确到单个文件与网页：自动记录前台应用、窗口、文件路径与 URL，顺着 Git 仓库/Swift 包/Obsidian 库自动归属项目</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 声音/通话感知防误判离开：只记录哪个应用在发声或用麦克风（绝不录音），开会不敲键盘也照常计入工作时长</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 读取时动态套用规则 (Read-Time Tagging)：修改一条标签规则即可瞬间重算全部历史记录，数据 100% 留在本机</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 短暂瞥一眼别的应用不会切断当前专注 Session，完美还原一天真实心流</text>
+
+  <!-- Right Column: AdminZachary/WatchBridge + ursishant/airbridge -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">⌚ 2. AdminZachary/WatchBridge (★40) + ursishant/airbridge (★28)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">Windows/Linux 免 Xcode 开启 Apple Watch 开发者模式装表应用 + 五端千兆局域网互通</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">AdminZachary/WatchBridge (v0.1.4)：没有 Mac 和 Xcode 也能给 Apple Watch 侧载应用</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 打破 Xcode 独占高墙：在 Windows 10/11、Linux 与免 Xcode 的 macOS 上完成 Watch 开发者模式准备与伴侣安装</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 严守物理确认安全边界：仅发送 `action 0` 请求开关，真正的开启、重启与信任确认 100% 由本人在手表屏幕上操作</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双包校验 + Wi-Fi 7天自动续签：自动校验 IPA 内含 `Watch/*.app` 并重签装入手表，支持无线 RSD 续期与 28 语种界面</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 已在真机完整跑通“开发者模式 → 签名 → 装手机 → 装手表 → 启动”全链路</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">ursishant/airbridge：免装客户端的五端千兆局域网 AirDrop 与实时剪贴板桥</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 跨生态零摩擦互传：打通 Windows、macOS、Android、iOS 与 Linux，接收端打开浏览器即可跑满千兆局域网直传</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 办公室公共 Wi-Fi 防护盾 (PIN Shield)：针对多人共享办公网内置 PIN 码鉴权、设备网格与点对点局域网聊天</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 跨设备实时剪贴板同步：在电脑复制一段命令或验证码，手机/平板端即刻同步可用</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 彻底告别为了传个文件而登录微信文件传输助手或上传第三方公网网盘</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R45-OXIGRAM-TRACE-WATCHBRIDGE-AIRBRIDGE · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：35 台跨平台研发工作站的即时通讯常驻、自动工时复盘、Apple Watch 伴侣测试与跨系统文件互传（时薪 r = $100.00/hr；免费 Apple ID：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (付费 Timing 席位 + 专配 Mac 跑 Xcode + 臃肿客户端)</text>
+  <rect x="430" y="630" width="554" height="22" rx="5" fill="#EF4444"/>
+  <text x="996" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,540.00/mo ($1,790.00 SaaS/HW spend + 37.5h × $100 = $3,750.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (手动启停计时器漏记 + 公网网盘中转局域网大文件)</text>
+  <rect x="430" y="666" width="254" height="22" rx="5" fill="#F59E0B"/>
+  <text x="696" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,540.00/mo ($840.00 spend + 17.0h × $100 = $1,700.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Oxigram 5MB + Trace + WatchBridge + AirBridge)</text>
+  <rect x="430" y="702" width="36.5" height="22" rx="5" fill="#10B981"/>
+  <text x="478" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$365.00/mo ($65.00 spend + 3.0h × $100 = $300.00) → 净省 $5,175.00/月 (-93.41% / 年省 $62,100.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR 5MB TRAY CLIENTS, READ-TIME ACTIVITY TAGGING &amp; XCODE-FREE WATCH SIDELOADING:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 桌面客户端挂托盘时直接销毁 WebView、仅留纯 Rust 协议线程，可将后台内存从数百 MB 压至 5 MB (Oxigram)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 本地工时追踪应采用“读取时套用标签规则 + 音频/通话活跃感知”，改一条规则即重算全部历史记录 (Trace)。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• WatchBridge 让 Windows/Linux 无需 Xcode 即可部署 Apple Watch 伴侣应用並通过 Wi-Fi 自动完成 7 天证书续签。</text>
+</svg>

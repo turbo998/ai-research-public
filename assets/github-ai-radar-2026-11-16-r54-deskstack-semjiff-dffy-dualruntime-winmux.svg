@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 54 (CUMULATIVE R411) · CLAIM-20261116-R54-DESKSTACK-SEMJIFF-DFFY-WINMUX</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">3,230 数字零差错财报估值 (deskstack) + Tree-sitter 语义 Diff + 双运行时连续架构</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">SEC/欧洲财报绑定与 /associate 逐字复核 + sem-jiff 折叠移动/重命名/格式化 + 1.3万文件秒开 dffy 与双运行时接替 · 净省 $5,525.00/月 (-93.49%)</text>
+
+  <!-- Left Column: joaquimmj/deskstack + plannotator/sem-jiff & amalucelli/dffy -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">📊 1. joaquimmj/deskstack (★66) + plannotator/sem-jiff (★19) &amp; dffy (★19)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">50 家欧美公司 3,230 个财务数字 0 差错 + 自动折叠“只搬位置未改逻辑”的语义 Diff</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">joaquimmj/deskstack：为什么纯靠网页搜索做 DCF/Comps 会有 3.5% 的数字是错的？</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 网页搜索的致命硬伤：50 家公司基准测试中，纯搜索在 1,018 个数字里填错 36 个 (3.5%)，且漏更最新季报</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 财报直连 + `/associate` 逐字核对：直接喂入美股 SEC 与欧洲官方财报，第二个 Agent 抓出 `416,116` vs `416,161` 笔误</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 实测 **3,230 个报告数字 0 差错**，DCF 耗时从 58s 降至 18–32s ($0.07–$0.10)，且诚实解释 0 差错的构造边界</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 附 `/md-redteam` 反向推演当前股价隐含 WACC (如 Apple $230 隐含 7.74% vs 10.6%)</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">plannotator/sem-jiff + amalucelli/dffy：Tree-sitter 语义折叠 + 1.3 万文件秒开</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• `sem-jiff` 穿透表面行级 Diff：自动识别函数平移动 (`Moved`)、全局重命名 (`Renamed`)、Prettier 格式化与函数提取/内联</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 输出纯数据契约 (`semanticOperations` + `semanticFolds`)，让审查者直接跳过未改变语义的噪音块</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• `dffy` 流式 Rust 终端 Diff：边发现文件边渲染首屏，**打开 13,000 个文件的 Linux 内核大改就像打开 1 行修复一样快**！</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 两者结合彻底解决“Agent 重构几百个文件后人类根本审不过来”的痛点</text>
+
+  <!-- Right Column: vellwarren/the-conversation-is-yours + samo33ddd/winmux -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🔄 2. the-conversation-is-yours (★19) + samo33ddd/winmux (★19)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">“对话属于应用而非 Provider”的双运行时接替架构 + Windows ConPTY 终端多路复用</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">vellwarren/the-conversation-is-yours：Claude Code ↔ Messages API 双向无缝接力</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 核心信条：“缓存不必迁移，Session 不必幸存，但对话必须延续！”应用自己持有历史、人格、记忆与业务状态</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双执行器正交并存：Claude Code (`stream-json + resume`) 与 Messages API (`SSE + tool loop`) 各自保留独立缓存</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双向权威重建：当 API 跑了几轮切回 Claude Code 时，主动废弃已过期的旧 `resume` 链并从应用权威历史新建 Session</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 绝非黑灰产账号池或静默中转，而是正统的企业级长寿命 Agent 高可用参考架构</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">samo33ddd/winmux (v0.2.3)：专为 Windows 24/7 Agent 开发者打造的 cmux 工作台</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 填补 Windows 缺乏原生 cmux 的空白：基于 Electron + TypeScript + xterm.js + Windows `ConPTY` 构建</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 隔离 Worktree 任务与 Agent 收件箱：支持 Windows/WSL 双配置分屏、关窗后台保活重连與 Agent Attention Inbox</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 受保护的 PR 交付与精确 Commit 审查证据：在同一工作区内统管终端、文件树、Git 变更与浏览器预览</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 附带完整 docs/verification.md 运行时验证记录与诚实边界说明</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R54-DESKSTACK-SEMJIFF-DFFY-WINMUX · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 50 份欧美上市公司 DCF/Comps 建模对账 + 40 次大型仓库语义代码审查与双运行时容灾切换（时薪 r = $100.00/hr；SEC 公开接口：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (纯搜索财报 3.5% 错数返工 + 逐行硬啃万文件重构 Diff)</text>
+  <rect x="430" y="630" width="591" height="22" rx="5" fill="#EF4444"/>
+  <text x="1033" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,910.00/mo ($1,960.00 spend + 39.5h × $100 = $3,950.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (手工翻 10-K 核对数字 + git diff 卡死终端 + 断连丢会话)</text>
+  <rect x="430" y="666" width="271" height="22" rx="5" fill="#F59E0B"/>
+  <text x="713" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,710.00/mo ($910.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (deskstack 0/3230 + sem-jiff + dffy + Dual-Runtime + Winmux)</text>
+  <rect x="430" y="702" width="38.5" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$385.00/mo ($75.00 spend + 3.1h × $100 = $310.00) → 净省 $5,525.00/月 (-93.49% / 年省 $66,300.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR FILING-TIED FINANCIAL AGENTS, SEMANTIC DIFFS &amp; DUAL-RUNTIME STATE:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 金融与投研 Agent 严禁只靠 Web Search 凑数：必须直连结构化 XBRL 财报并配 `/associate` 逐数字核对 (deskstack)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 代码审查应先用 Tree-sitter (`sem-jiff`) 折叠函数移动/重命名/格式化噪音，大仓终端预览用流式加载的 `dffy`。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 长寿命助手应由应用层持有权威对话状态，在 Claude Code 与 Messages API 间双向接替并自动废弃陈旧 resume 链。</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 52 (CUMULATIVE R409) · CLAIM-20261116-R52-PLAYDATASAFETY-PRIVACYPROBE-MOJIAN-FLUX</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">Google Play 780 行数据安全 CSV 技能 + 端侧内核隐私探针 + 墨间原生编辑器</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">扫真代码与 36 款 SDK 直出 Google Play CSV + Android 内核/dumpsys 隐私审计 + 零 CGO/WebView 原生 MyGo 墨间与 Flux · 净省 $5,265.00/月 (-93.52%)</text>
+
+  <!-- Left Column: wajahatkarim3/play-data-safety-skill + starriv/privacy-probe -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🛡️ 1. wajahatkarim3/play-data-safety-skill (★21) + starriv/privacy-probe (★80)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">从真实代码生成 780 行 Play 数据安全表单 CSV + 手机端侧全链路隐私审计</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">wajahatkarim3/play-data-safety-skill：告别 10 屏手动填表与格式报错</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么上架 Google Play 最头疼 Data Safety？10+ 屏网页表单、每类数据 7 道题，导入 CSV 高达 ~780 行机器 ID</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零侵入外部扫描：不改一行 `build.gradle`，从外部调用项目 Gradle 扫描真实依赖与 **36 款主流 SDK**</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 逐条附官方出处 + 只问代码看不出的事：每个 SDK 均附厂商官方隐私页链接与核对日期，直出 Play Console 一键导入 CSV</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 已在 30+ 款上架 Google Play 的真实 App 中实战验证，支持 npx skills add 一键安装</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">starriv/privacy-probe (隐私探针)：Android 12–17 端侧四源行为与网络取证</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 静态扫描之外的真机动态核验：通过 KernelSU / Magisk 读取系统 `dumpsys`、`logcat`、`/proc` 与内核抓包</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 六大敏感维度全记录：精确还原哪个应用在何时调用了摄像头、麦克风、定位、传感器、剪贴板及访问了哪些域名</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 100% 手机本地存储：支持按总览、网络大类、调用者与目标域名四层下钻，数据绝不上传第三方</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 静态 `play-data-safety-skill` + 动态 `privacy-probe` 构成移动合规双保险</text>
+
+  <!-- Right Column: ox0pine/mojian + 10k11/flux -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🪶 2. ox0pine/mojian · 墨间 (★79) + 10k11/flux (★71)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">无 WebView/无 CGO 原生 MyGo 跨三端编辑器 + 零构建仅 2 依赖的自托管媒体台</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">ox0pine/mojian (墨间)：“字在纸上，工具退后”的纯 Go 原生编辑器</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 四无极简主义：无数据库、无账号、无 WebView、无 CGO！基于 MyGo 原生跨 macOS 13+、Linux 与 Windows 10+</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 普通文件夹即项目：支持原生标签页、平铺分屏窗格、内置持久化终端、图片/PDF 预览、Git Diff 与远程 SSH 项目</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 瞬时启动与零后台打扰：在打开大型日志、Markdown 笔记或远程服务器配置时秒开且内存极低</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 与前面介绍的 ArcMD 同属 MyGo 原生 GUI 生态的高口碑代表作</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">10k11/flux：零前端构建步、仅 2 个运行时依赖的跨三端私有媒体工作台</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 拒绝千行 Webpack/Vite 复杂度：前端采用纯原生 HTML + CSS + ES Modules，零前端构建步骤（No Build Step）</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 后端仅 2 个运行时依赖：基于 Node.js ≥ 22.9 与 FFmpeg，粘贴链接、选择格式即可极速离线保存音视频素材</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 自动化无障碍门禁：CI 内置 `axe` WCAG A/AA 级无障碍自动校验，并提供 Win/macOS/Linux 免配置桌面安装包</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 一分钟 `npm ci &amp;&amp; npm run setup &amp;&amp; npm run dev` 即可跑通完整私有工作台</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R52-PLAYDATASAFETY-PRIVACYPROBE-MOJIAN-FLUX · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 25 次 Android 应用发版隐私合规申报与真机审计 + 30 套轻量原生文本/媒体工作台维护（时薪 r = $100.00/hr；Play 开发者注册费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (手动填 10 屏表单与修 780 行 CSV + 商业隐私审计服务)</text>
+  <rect x="430" y="630" width="563" height="22" rx="5" fill="#EF4444"/>
+  <text x="1005" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,630.00/mo ($1,830.00 SaaS/audit spend + 38.0h × $100 = $3,800.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (凭记忆瞎勾 SDK 数据项被拒审下架 + 重型前端构建维护)</text>
+  <rect x="430" y="666" width="261" height="22" rx="5" fill="#F59E0B"/>
+  <text x="703" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,610.00/mo ($860.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (play-data-safety + PrivacyProbe + Mojian + Flux)</text>
+  <rect x="430" y="702" width="36.5" height="22" rx="5" fill="#10B981"/>
+  <text x="478" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$365.00/mo ($65.00 spend + 3.0h × $100 = $300.00) → 净省 $5,265.00/月 (-93.52% / 年省 $63,180.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR CODE-DRIVEN PRIVACY COMPLIANCE &amp; ZERO-BLOAT WORKSPACES:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 移动应用合规申报应由静态代码/Gradle 依赖扫描 (`play-data-safety-skill`) 与真机内核抓包 (`PrivacyProbe`) 双轨驱动。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 桌面文本与 SSH/Git 工具可采用无 WebView、无 CGO 的纯 Go 原生渲染架构 (`Mojian · 墨间`)。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 内部媒体与工具台坚持“零前端构建步 (原生 ES Modules) + 极少运行时依赖 + axe WCAG 门禁”可大幅降低长期维护成本 (`flux`)。</text>
+</svg>

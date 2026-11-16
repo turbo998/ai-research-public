@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 46 (CUMULATIVE R403) · CLAIM-20261116-R46-QIAOMUDEEPSEEK-HWPXDOCS-HEAPEXPLORER</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">DeepSeek 多模态全能技能 (qiaomu) + 零依赖 HWPX 政务公文插件 + 实时堆内存分析</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">零 pip 依赖一统搜索/OCR/转写/配音并自动删云端临时文件 + Python 标准库直出 KS X 6101 公文 + MinHook 堆熵值检测 · 净省 $5,330.00/月 (-93.51%)</text>
+
+  <!-- Left Column: joeseesun/qiaomu-deepseek-api + BlackBuddle/hwpx-docs -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧰 1. joeseesun/qiaomu-deepseek-api (★24) + BlackBuddle/hwpx-docs (★24)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">全部仅用 Python 3.10+ 标准库：一统六大 DeepSeek 能力 + 免装软件生成 HWPX 公文</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">joeseesun/qiaomu-deepseek-api：搜索、读文档、OCR、转写、配音与 Flash 问答六合一</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别多工具拼凑：以前处理一份扫描 PDF + 一段录音 + 一个网页得接三个 SDK，现在一个 Skill 全部搞定</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零 Python 第三方包依赖：仅靠 Python 3.10+ 标准库即可运行，处理完文件自动触发远端清理 (`cleanup.deleted: true`)</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 密钥绝不进聊天框：支持宿主环境变量或 `deepseek_api.py setup` 终端隐藏输入；TTS 内置 Stella/Tide 实测音色</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 支持 npx skills add joeseesun/qiaomu-deepseek-api 一键安装</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">BlackBuddle/hwpx-docs (v0.3.0)：零依赖读写与校验韩国国家标准 HWPX 公文</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么跨国政企交付最怕 HWPX？Hancom Office 仅限特定桌面环境，直接让 LLM 拼 OWPML XML 必损坏文档</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 纯 Python 标准库引擎：无需安装 Hancom Office，从单一 JSON 规范生成符合 KS X 6101 标准的 `.hwpx` 文档</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 完整版式与检查预览：支持字体段落、自定义样式、跨格合并与独立边框填色表格、图形以及结构合法性检查</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为亚太政企招投标与多语种公文自动化提供了开箱即用的 Claude Code 插件</text>
+
+  <!-- Right Column: S12cybersecurity/HeapExplorer + krishkhinchi/leaked-key-playbooks -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🛡️ 2. S12cybersecurity/HeapExplorer (★36) + leaked-key-playbooks (★24)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">MinHook 实时 Windows 堆内存熵值/无文件模块取证 + 密钥泄露应急响应手册</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">S12cybersecurity/HeapExplorer：把 ntdll 堆分配变成实时可视化取证面板</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 三大底层 API 挂钩：注入工作 DLL 并用 MinHook 拦截 `RtlAllocateHeap`、`RtlFreeHeap` 与 `RtlReAllocateHeap`</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 高熵加密块与异常权限秒抓：自动标记熵值 &gt; 7.0 的加密/压缩载荷、`VirtualQuery` 可执行堆 (`RX` 异常) 与无磁盘落地的内存分配</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• F5 快照差分 (Snapshot Diff)：一键比对前后两次快照间的新增 (New)、释放 (Freed) 与篡改 (Modified) 堆块并提取 C2 字符串</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 通过命名管道 (Named Pipe) 实时流式推送到独立 GUI，大幅降低二进制动调门槛</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">krishkhinchi/leaked-key-playbooks：API Key 不慎公开后的分平台黄金止损 SOP</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么删掉 Git Commit 根本没用？爬虫在推送后数秒内就会抓走公网仓库里的 OpenAI/AWS/Stripe 密钥</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 结构化应急处置清单：按云厂商与 AI 平台梳理吊销入口、审计日志排查命令、爆炸半径评估与轮换步骤</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 与 `qiaomu-deepseek-api` 的“严禁把 Key 发进聊天框”形成事前预防 + 事后止损完整闭环</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 适合挂载进企业安全 Agent 与 DevSecOps 值班手册</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R46-QIAOMUDEEPSEEK-HWPXDOCS-HEAPEXPLORER · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 30 项多模态文档 OCR/转写/配音与 HWPX 公文生成 + 15 次 Windows 堆内存取证与密钥应急演练（时薪 r = $100.00/hr；自有 DeepSeek Token：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (多套商业 OCR/TTS API + 专配公文软件授权 + 手工 WinDbg)</text>
+  <rect x="430" y="630" width="570" height="22" rx="5" fill="#EF4444"/>
+  <text x="1012" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,700.00/mo ($1,850.00 SaaS/license spend + 38.5h × $100 = $3,850.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (云端残留临时文件未删 + 手拼 OWPML XML 损坏表格)</text>
+  <rect x="430" y="666" width="262" height="22" rx="5" fill="#F59E0B"/>
+  <text x="704" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,620.00/mo ($870.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (qiaomu-deepseek + hwpx-docs + HeapExplorer + Playbooks)</text>
+  <rect x="430" y="702" width="37" height="22" rx="5" fill="#10B981"/>
+  <text x="479" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$370.00/mo ($70.00 spend + 3.0h × $100 = $300.00) → 净省 $5,330.00/月 (-93.51% / 年省 $63,960.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR ZERO-DEP MULTIMODAL SKILLS, STDLIB HWPX &amp; HEAP FORENSICS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 优秀的 Agent Skill 应当坚持 Python 标准库零依赖、密钥隐藏输入，并在文件处理后强制确认 `cleanup.deleted: true`。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 复杂政企公文格式 (KS X 6101 HWPX) 应通过声明式 JSON 规范交由确定性标准库脚本打包与校验 (hwpx-docs)。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 动态恶意代码分析结合 RtlAllocateHeap 挂钩、&gt;7.0 熵值预警与无磁盘模块检测，可快速定位内存驻留载荷。</text>
+</svg>

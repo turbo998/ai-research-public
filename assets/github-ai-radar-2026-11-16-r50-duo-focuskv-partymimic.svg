@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 50 (CUMULATIVE R407) · CLAIM-20261116-R50-DUO-FOCUSKV-PARTYMIMIC</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">蚂蚁全双工交互世界模型 (Duo) + 推理注意力头 KV 压缩 (Focus-KV) + 26 分钟全身模仿</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Intent+Realization 双模全双工流式推理 + 倾斜配额给稀疏推理头保住 MATH-500 + 单卡 4090 26m 训出 20.5mm 精度 G1 策略 · 净省 $6,030.00/月 (-93.63%)</text>
+
+  <!-- Left Column: inclusionAI/Duo + Maverick720/Focus-KV -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🌐 1. inclusionAI/Duo (★76) + Maverick720/Focus-KV (★72)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">边听边看边插话的互惠世界模型 + 把 KV Cache 预算重点分给“关键推理头”</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">inclusionAI/Duo (arXiv:2611.15131)：Intent 与 Realization 统一时间线全双工</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么传统多模态只能“你说一句我答一句”？缺乏在持续视听流中自主决定何时插话/倾听的自回归大脑</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 三大核心设计：自回归持续参与决策 (`Intent`) + 跨模块分块因果掩码统一时间线 + 双重 Rollout 蒸馏消除分布偏移</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 开箱即用实时流式分支：同步开源 `vLLM-Omni` 与 `SGLang-Omni` 加速分支及 4 款基座/蒸馏/量化权重</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 赋予数字人与具身机器人真正自然的实时打断与视听共生交互能力</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Maverick720/Focus-KV：模型的数学推理能力高度集中在极少数 Attention 头！</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 关键发现：在 Qwen3-8B / 14B 上因果消融发现，禁用极少数推理关键头会让 MATH-500 准确率暴跌且废话词元暴增</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 静态非均匀预算分配：离线在推理探针集上测出各头重要性，在固定总预算 (如 4096) 下给推理头倾斜更多容量</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 保底与封顶双重护栏：设统一保底比例 ρ 与上限倍数 κ，既喂饱推理头又保住普通头的基础语法功能</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 解码期零动态重算开销，直接提升长链思维推理在受限显存下的准确率</text>
+
+  <!-- Right Column: Roboparty/PartyMimic -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🤖 2. Roboparty/PartyMimic (★79 · 26-Min 41h Humanoid World-Model Tracker)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">单张 RTX 4090 仅需 26 分钟训完 41 小时动作库，斩获 20.5 mm 最佳操作追踪精度</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">32 步想象世界模型反向传播 (Imagined World-Model BPTT)</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么传统 PPO 训通用全身模仿要跑几天？因为无模型强化学习采样梯度方差太大、收敛极慢</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 在线拟合 MLP 世界模型：直接穿过 32 步想象状态反向传播解析梯度，并用超视距 Critic 兜底长程回报</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 1× RTX 4090 (24GB) 26 分钟极速收敛：单个策略通吃 41 小时混合动作库（LAFAN1 + BONES-SEED 10k + 功夫）</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 在宇树 G1 留出操作集上实现 20.5 mm 最低追踪误差，零样本泛化至五大未见测试集</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">双编码器 + 双控制模态 + 跨机型支持 (Unitree G1 &amp; RoboParty RP1)</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 两种参考编码器：默认轻量 MLP 编码器，或 `--ref_enc xattn` 交叉注意力编码器</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 两种输入模态：全身关节角参考，或 `--interface sparse5` 仅输入骨盆 + 5 个关键点（直接适配 VR 头显/单目动捕）</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 100% 复现开源配方：完整公开公共数据集多样性筛选脚本、RP1 重定向管线与预训练 Checkpoints</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 在行走、灵巧操作、舞蹈、地面动作与极限武术五大盲测集上全面零样本泛化</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R50-DUO-FOCUSKV-PARTYMIMIC · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 20 次全双工视听交互服务部署、长链推理 KV 压缩评测与人形机器人全身控制训练（时薪 r = $100.00/hr；实体机器人本体：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (半双工拼接延迟 + 均匀砍 KV 崩推理 + 多天 PPO 集群训练)</text>
+  <rect x="430" y="630" width="644" height="22" rx="5" fill="#EF4444"/>
+  <text x="1086" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,440.00/mo ($2,240.00 GPU spend + 42.0h × $100 = $4,200.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (不压缩全量 KV 爆显存 + 按动作片段单独重训策略)</text>
+  <rect x="430" y="666" width="297" height="22" rx="5" fill="#F59E0B"/>
+  <text x="739" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,970.00/mo ($1,020.00 spend + 19.5h × $100 = $1,950.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Duo vLLM-Omni + Focus-KV + PartyMimic 26m)</text>
+  <rect x="430" y="702" width="41" height="22" rx="5" fill="#10B981"/>
+  <text x="483" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$410.00/mo ($90.00 compute + 3.2h × $100 = $320.00) → 净省 $6,030.00/月 (-93.63% / 年省 $72,360.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR FULL-DUPLEX WORLD MODELS, REASONING KV BUDGETS &amp; 26M HUMANOID RL:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 实时全双工视听交互需将 Intent 决策流与 Realization 生成流用分块因果掩码对齐在同一时间轴，并用 vLLM-Omni 流式加速 (Duo)。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 压缩推理模型 KV Cache 绝不能各头均摊：先用因果消融找出稀疏推理头并给予高配额，可大幅减少废话生成与精度掉点 (Focus-KV)。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-size="12.5" font-family="Segoe UI, Microsoft YaHei, sans-serif">• 32 步在线 MLP 世界模型可微反向传播让单张 RTX 4090 在 26 分钟内训出覆盖 41 小时动作库的高精度全身控制器 (PartyMimic)。</text>
+</svg>

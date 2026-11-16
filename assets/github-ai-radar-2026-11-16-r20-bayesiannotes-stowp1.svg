@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 20 (CUMULATIVE R377) · CLAIM-20261116-R20-BAYESIAN-STOWP1</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">280页手写贝叶斯推导与 JAX/PyMC6 实战课 (bayesian-modelling-notes) + 剪刀式折叠 3D 打印机 (stow-p1)</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">10 讲 280 页手推公式 + 9 个 JAX 手写推理/PyMC 6 双轨 Notebook + 80mm 超薄折叠自带 6S 电池 Klipper 打印机 · 净省 $5,050.00/月 (-93.17%)</text>
+
+  <!-- Left Column: Danuzco/bayesian-modelling-notes -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">📐 1. Danuzco/bayesian-modelling-notes (280 Pages + JAX/PyMC 6 · ★51)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">从先验后验手推公式到 JAX 零依赖采样器：AI 博士级的概率不确定性内功</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">10 讲 280 页手写精推讲义 (CC BY 4.0) × 9 个可执行 Notebook (MIT)</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 基础与共轭层 (L01–L05)：集合论测度、概率公理、随机变量、经典统计推断与贝叶斯共轭先验更新</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 动态系统与非参数层 (L06–L07)：卡尔曼滤波 (Kalman Filters) 状态估计与高斯过程 (Gaussian Processes) 回归</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 现代近似推断层 (L08–L10)：MCMC (Metropolis-Hastings/HMC)、变分推断 (VI/ELBO) 与分层贝叶斯模型</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 每一讲配套真实手写板书推导图，绝不跳步省略高斯积分与雅可比行列式</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">双轨代码教学法：JAX 从零手写推断引擎 + PyMC 6 工业级建模</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别只会调包的黑盒工程师：先用纯 JAX 矩阵与自动微分手写 MH 接受率、卡尔曼更新与变分下界</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 再切换到 PyMC 6 构建可投入生产的概率图模型与分层收缩估计 (Hierarchical Shrinkage)</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 赋能 AI SA 解决“小样本冷启动置信区间校准、传感器融合滤波与多臂老虎机探索”核心难题</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 提供完整 environment.yml 与 CITATION.cff，智利 AI 博士核心课程一手开源</text>
+
+  <!-- Right Column: ethangao907/stow-p1 -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🖨️ 2. ethangao907/stow-p1 (Scissor-Lift Battery 3D Printer · ★36)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">叠起来只有一本厚书大小 (80mm)！自带 6S 电池的剪刀叉升降 Klipper 打印机</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">剪刀叉折叠 Z 轴 (Scissor-Lift Z Axis)：消灭传统龙门架闲置体积浪费</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 折叠形态仅 300 × 300 × 80 mm（轻松塞进普通双肩包），展开后成型体积高达 ~180 × 200 × 175 mm</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 离网双模供电：机身内嵌 6S 锂电池组与 24V 电源模块，在无市电野外或机器人赛场直接离网打件</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 高自制率结构：主体结构件几乎全部可在普通家用 3D 打印机上打印复刻，配备近程直驱挤出头</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 全仓开源 Inventor 装配体 Main.iam、Parts/、Export/、BOM.csv 与 Klipper 固件</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">人机协同硬件工程文档范式 + 诚实原型边界声明</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 作者在 README 坦诚披露：工程文档由 Claude 辅助撰写并经作者逐行核验修正，树立硬件 repo 透明度标杆</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 诚实标注首版原型状态：已完成实物拼装、展开、归位 (Homing) 与打印验证，当前无封闭仓与热床 (PLA 优先)</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 极具具身智能现场保障价值：巡检机器人/无人机外场测试团队背着走，现场 20 分钟打出替换夹具与传感器支架</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 采用 CC BY-NC-SA 4.0 非商业共享协议，BOM.md 精细到每一颗螺丝与线束</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R20-BAYESIAN-STOWP1 · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 20 项概率状态估计/不确定性量化建模 + 12 次外场具身智能/硬件结构件快速打样（时薪 r = $100.00/hr；耗材与电池电芯成本：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (盲信未校准 Softmax 置信度 + 外场损坏返厂等快递)</text>
+  <rect x="430" y="630" width="542" height="22" rx="5" fill="#EF4444"/>
+  <text x="984" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,420.00/mo ($1,720.00 compute/rework + 37.0h × $100 = $3,700.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (无推导黑盒调包排障 + 托运笨重传统龙门打印机)</text>
+  <rect x="430" y="666" width="258" height="22" rx="5" fill="#F59E0B"/>
+  <text x="700" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,580.00/mo ($830.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Bayesian 280页 JAX/PyMC6 + Stow-P1 折叠打样)</text>
+  <rect x="430" y="702" width="37" height="22" rx="5" fill="#10B981"/>
+  <text x="479" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$370.00/mo ($70.00 compute + 3.0h × $100 = $300.00) → 净省 $5,050.00/月 (-93.17% / 年省 $60,600.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR PROBABILISTIC AI &amp; PORTABLE MECHATRONICS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 当数据稀疏或传感器含噪时，用卡尔曼滤波、高斯过程与分层贝叶斯替代暴力大模型微调。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• “手写数学推导 + JAX 零依赖实现 + PyMC 6 生产建模”是掌握概率 AI 最扎实的黄金三角。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 剪刀叉折叠 Z 轴 + 6S 电池把 3D 打印机压进 80mm 背包厚度，为外场机器人调试带来即时硬件热修复能力。</text>
+</svg>

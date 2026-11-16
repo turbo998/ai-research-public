@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 56 (CUMULATIVE R413) · CLAIM-20261116-R56-ROLLINGSUMMARY-TALKLIKEME-DSHCCGUI-GUFA</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">滞回裁剪+缝份滚动摘要缓存对齐 + 0.5B 个人语气受控微调 + DSH 古法编程 IDE</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">20–40 条滞回窗口与 BP1–BP4 缓存断点重合 + 5400 条聊天 MLX 受控实验 + DSH 挂载 6 大 CLI 与三栏 Monaco IDE · 净省 $5,445.00/月 (-93.40%)</text>
+
+  <!-- Left Column: Lentlily22/rolling-summary-tutorial + Fedeparg/talk-like-me -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🧠 1. Lentlily22/rolling-summary-tutorial (★46) + Fedeparg/talk-like-me (★47)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">每 20 条才失效一次 Prompt Cache 的滚动摘要法 + 严谨对照组检验 0.5B 微调</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">Lentlily22/rolling-summary-tutorial：滞回裁剪 + 2条缝份 + BP1–BP4 缓存重合</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么固定 30 条滑动窗口会破产？满 30 条后每发一句，第 1 条消息就滑走，导致每轮 Prompt Cache 全部失效！</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 20–40 条滞回裁剪 (Hysteresis)：攒满 40 条一次性裁掉前 20 条，让首条锚点在整整 20 条内纹丝不动吃满缓存</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 裁缝式“2 条缝份”摘要：将上一批最后 2 条 + 新裁下的 20 条喂给模型更新滚动摘要，BP3(摘要)与 BP4(历史)同步刷新</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 附带 MIT 可直接运行的参考实现与前端摘要可见/重 Roll/编辑最佳实践</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Fedeparg/talk-like-me：0.5B 模型真能学会“像我一样发微信/WhatsApp”吗？</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 拒绝自嗨式主观体感：在 MacBook MLX 上用 5,400 条个人回复微调 Qwen2.5-0.5B，每次运行前先写下预测并设对照组</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 实测学到了个人风格而非仅口语：在本人回复上困惑度比同群朋友回复多降 **19.8 个百分点** (CI 8.9–26.0)，分类器识别率达 78%</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 诚实揭露评估陷阱与框架 Bug：证明语义相似度指标偏爱“万金油套话”，并顺手抓出和量化了 `mlx-lm` 的一处 Loss Bug</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 个人数字分身微调与小模型实验设计的教科书级范本</text>
+
+  <!-- Right Column: zhukunpenglinyutong/dsh-ccgui + liujiangnanchenjbguo/dsh-gufa-code -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🛠️ 2. dsh-ccgui (★48) + liujiangnanchenjbguo/dsh-gufa-code (★45)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">在 DeepSeek Harness 里一键切换 6 大 Agent CLI + 开启三栏 VS Code 古法编程 IDE</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">zhukunpenglinyutong/dsh-ccgui：把 Claude Code / Codex / Kimi / PI 装进 DSH</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别六个终端窗口来回切：在 DSH 输入框旁直接点选 Claude Code、Kimi CLI、Codex CLI、PI CLI、OMP 或 OpenCode</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 复用 DSH 原生交互壳：所有外部 CLI 的工具调用、人工审批弹窗与文件改动摘要全部走 DSH 原生可视化界面</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 清晰说明进程加载边界：提醒安装后执行完整重启 (`Cmd+Q`) 防止新旧代码混入同一进程</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 让 DeepSeek Harness 成为统管各家主流 Coding Agent CLI 的统一桌面驾驶舱</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">liujiangnanchenjbguo/dsh-gufa-code (古法编程)：三栏 Monaco IDE + 右侧停靠会话</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• “充分、合理、克制地运用 AI”：左栏资源管理器/搜索/Git/SSH/终端，中栏离线 Monaco 编辑器（支持 81 种语言 + F12 跳定义）</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 右栏原样停靠官方 DSH 会话：点击对话里的文件引用 Chip 直接跳到中栏编辑器对应行，所改所跑尽在眼前</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 同时支持 DSH 桌面端与浏览器 `dsh web`，随时一键切换工作区或返回经典对话模式</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 一行 `dsh plugin add dsh-gufa-code` 补齐纯聊天界面缺乏代码精修视图的短板</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R56-ROLLINGSUMMARY-TALKLIKEME-DSHCCGUI-GUFA · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月运维 30 个长对话记忆前端与个人微调评测 + 25 套多 CLI 统一 IDE 编码工作台（时薪 r = $100.00/hr；VPS SQLite 存储费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (逐条滑动窗口每轮废除缓存 + 盲训 LoRA + 6 个窗口来回切)</text>
+  <rect x="430" y="630" width="583" height="22" rx="5" fill="#EF4444"/>
+  <text x="1025" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,830.00/mo ($1,930.00 token/cache waste + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (满 30 条硬清零变金鱼脑 + 无缝份断章摘要)</text>
+  <rect x="430" y="666" width="270" height="22" rx="5" fill="#F59E0B"/>
+  <text x="712" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,700.00/mo ($900.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (滞回缝份缓存对齐 + talk-like-me + dsh-ccgui + 古法编程)</text>
+  <rect x="430" y="702" width="38.5" height="22" rx="5" fill="#10B981"/>
+  <text x="480" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$385.00/mo ($75.00 spend + 3.1h × $100 = $310.00) → 净省 $5,445.00/月 (-93.40% / 年省 $65,340.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR HYSTERESIS CACHE ALIGNMENT, CONTROLLED LORA &amp; DSH IDE:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 自建聊天前端切忌逐条滑窗：采用“满 40 裁 20”滞回窗口 + 2 条缝份，可让摘要更新与 Prompt Cache 重建完美同步。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 评估个人风格微调必须设置同会话他人回复对照组与长度匹配检验，警惕通用语义分偏爱套话 (talk-like-me)。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 在 DSH 中组合 dsh-ccgui 与 dsh-gufa-code，即可在三栏 Monaco IDE 内无缝调用 Claude Code 与 Codex。</text>
+</svg>

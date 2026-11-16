@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 42 (CUMULATIVE R399) · CLAIM-20261116-R42-KUBEFACTORY-MESHWORK-MESHATLAS</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">第一人称 3D 工厂化 K8s 管控 (KubeFactory) + 驻场网络勘测 (Meshwork) + Tailscale 全路径地图</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">Godot 4.3 漫游巡检 Pod/Node/Service + 零上传驻场网络排障与交接报告 + 零依赖 N×N DERP/直连矩阵与全协议拓扑 · 净省 $5,245.00/月 (-93.49%)</text>
+
+  <!-- Left Column: DasCondor/kubefactory + influxnetwork/meshwork -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🏭 1. DasCondor/kubefactory (★41) + influxnetwork/meshwork (★34)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">把 Kubernetes 集群变成可走进的 3D 自动化工厂 + 驻场前两小时网络摸底工作箱</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">DasCondor/kubefactory：Node 是高台、Pod 是机器、Service 是传送带</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么 YAML 和平面列表看不出级联拥堵？几十个微服务互相调用时，空间拓扑比表格直观 10 倍</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 基于 Godot 4.3 的第一人称工厂视角：同时纳管 Kubernetes 集群、Docker 容器与 Compose Stacks</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 故障声光报警与直控：CrashLoopBackOff 的 Pod 机器直接亮红灯拉警报，走过去即可查看日志与重启</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 自带纯浏览器安全沙盒 Demo (dascondor.github.io/kubefactory) 零集群风险体验</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">influxnetwork/meshwork (v0.5.21)：零云端上传的驻场网络勘测与交接报告</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 专为“刚进客户机房前两小时”打造：自动发现全部在线设备、绘制接线关系、揪出开了 Telnet 的危险摄像头</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 秒级故障定界：一眼分清断网到底是局域网环路、内部 DNS 故障还是运营商外网出口问题</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 100% 本地单机运行（macOS &amp; Windows）：免装服务端、免注册账号，扫描资产绝不上传云端，离场一键出报告</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 填补了命令行 nmap 与重型常驻 Zabbix/PRTG 监控系统之间的驻场交付空白</text>
+
+  <!-- Right Column: lij768423-svg/meshatlas + Ctuna89/ha-connection-map-card -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🗺️ 2. lij768423-svg/meshatlas (★23) + Ctuna89/ha-connection-map-card (★28)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">零依赖 Tailscale 全球直连/DERP 矩阵地图 + Home Assistant 全协议一图看清</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">lij768423-svg/meshatlas：看见 Tailscale 节点之间到底是直连还是被 DERP 绕路</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 官方控制台盲区：Tailscale 后台只显示机器在不在，不显示两台 GPU 节点之间是不是悄悄退化成了 DERP 中继</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 单个零依赖 Python 进程：读取 `tailscale status` 与 `tailscale ping`，按最近 DERP 区域在世界地图上绘制直连/中继链路</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• N×N 全网格延迟矩阵 + 只读 SSH 盘点：自动探测跨节点 RTT，并采集各主机容器、systemd 服务与磁盘水位</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 数据 100% 留在你自己的 tailnet 内部，切换中继状态时自动记录事件日志</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Ctuna89/ha-connection-map-card：零配置把云端/Wi-Fi/Zigbee/Thread 画进一张图</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 打破单协议孤岛：传统拓扑图一次只能看 Zigbee 或只看 UniFi Wi-Fi，无法看清跨网关级联关系</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 全链路自动推导：直接读取 Home Assistant 现有注册表，一图展现云端依赖、路由器 AP、Hue/Aqara 网关与无线电协议</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 断网影响面秒判：拔掉某台 AP 或外网断连时，哪些设备会跟着失联一目了然</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 内置 demo: unifi 模式，是智能家居与边缘物联网实验室的可视化利器</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R42-KUBEFACTORY-MESHWORK-MESHATLAS · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月完成 20 次客户驻场网络/边缘物联网勘测交付 + 15 个 K8s/Tailscale 跨区集群拓扑巡检（时薪 r = $100.00/hr；Tailscale 套餐费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (商业云网管 SaaS 席位 + 手工画 Visio 驻场交接报告)</text>
+  <rect x="430" y="630" width="561" height="22" rx="5" fill="#EF4444"/>
+  <text x="1003" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,610.00/mo ($1,810.00 SaaS spend + 38.0h × $100 = $3,800.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (零散 nmap/tailscale ping 脚本 + 漏查 DERP 绕路)</text>
+  <rect x="430" y="666" width="260" height="22" rx="5" fill="#F59E0B"/>
+  <text x="702" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,600.00/mo ($850.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (KubeFactory + Meshwork + MeshAtlas + HA Map)</text>
+  <rect x="430" y="702" width="36.5" height="22" rx="5" fill="#10B981"/>
+  <text x="478" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$365.00/mo ($65.00 spend + 3.0h × $100 = $300.00) → 净省 $5,245.00/月 (-93.49% / 年省 $62,940.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR SPATIAL CLUSTER OPS, ON-SITE NETWORK AUDITS &amp; TAILNET TOPOLOGY:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 跨区 AI 算力与 Agent 节点组网必须用 MeshAtlas 监控 WireGuard 是否静默退化为高延迟 DERP 中继。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 驻场网络摸底与高危端口排查应采用 100% 本地零上传且能一键导出客户交接报告的桌面工具 (Meshwork)。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 将 K8s/Docker 状态映射为 3D 空间工厂与多协议统一拓扑图，能大幅缩短实验室与智能边缘故障定位时间。</text>
+</svg>

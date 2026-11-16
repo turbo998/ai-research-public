@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 64 (CUMULATIVE R421) · CLAIM-20261116-R64-PELICANTEST-STRAVA-NG-TRAINSWORLD</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">20时代程序化动画短片《鹈鹕测试》 + Strava 3D热力轨迹 + Shougo Go版 Neovim GUI</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">确定性 renderAt(t) 零贴图/零采样 2:17 动画 + Blender 5.0 运动轨迹与剧本转动态图形 + Shougo/ng 单次 DrawCall GUI &amp; Wasm 全球铁路 · 净省 $5,340.00/月 (-93.52%)</text>
+
+  <!-- Left Column: orbitoo/pelican-test + AlFontal/strava-home-runs & kstost/script-to-motion -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎬 1. orbitoo/pelican-test (★41) + strava-home-runs (★43) &amp; script-to-motion (★45)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">137s 零贴图 20 时代纯代码电影 + Blender 5.0 跑步 3D 热力图与剧本直出 4K 动态视频</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">orbitoo/pelican-test：《鹈鹕测试》2:17 (137.0s @ 60fps) 确定性纯函数动画短片</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零外部位图、零录音采样：双骨骼解析逆运动学 (2-Bone Analytical IK) 骑车鹈鹕穿越 **20 道艺术史画框**</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 确定性纯函数 `renderAt(t)` (`p5.js + p5.brush`)：从撒哈拉岩画、汉画像石、宋代斧劈皴、清明上河图到 36 阶复数傅立叶本轮</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• `OfflineAudioContext` 原生合成 20 种时代调式（含 `#18 蒸汽波` 升调合成再 `0.7937×` 磁带降速抖晃链路）</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 完美示范如何用无状态 `renderAt(t)` 实现任意时间点跳转与逐帧无损离线导出</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">AlFontal/strava-home-runs + kstost/script-to-motion：数据/剧本驱动视频工厂</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• `strava-home-runs`：免 API Key 读取 GPX/TCX/FIT 轨迹，结合 OpenStreetMap 与 AWS 地形瓦片在 Blender 5.0+ 中渲染数百次跑步同时出发的 3D 发光热力图与完赛直方图</text>
+  <text x="82" y="468" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• `script-to-motion`：输入剧本与 Fish Audio 音色，自动对齐字词发音与破碎/流体/霓虹动态排版，一键 `render.py` 导出 4K `.mp4`</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 将“地理轨迹可视化”与“配音对齐动态图形”全面标准化为可复用脚本</text>
+
+  <!-- Right Column: Shougo/ng + jorjanion/BatteryDock & circularsquare/trainsworld -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">⚡ 2. Shougo/ng (★36) + BatteryDock (★41) &amp; circularsquare/trainsworld (★43)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">Shougo 出品极简 Go 版 Neovim GUI + Rust 任务栏电量胶囊 + Wasm 全球铁路仿真</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">Shougo/ng (Neovim in Go)：传奇插件作者打造的“比终端更快、绝不碎字”的 Neovim 窗口</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么终端跑 Neovim 常有 CJK 双宽字符残影？终端需要把网格编码成 ANSI 转义序列再解析重绘</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零转义开销、每帧仅 1 次 Draw Call：严格在单元格内绘制双宽/输入法候选字，无花哨动画，僅在画面完整时提交</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 进程解耦崩溃不丢稿：Neovim 独立进程运行，哪怕 GUI 意外退出，一行 `ng --server` 即刻原样重连！</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 砍掉一切冗余私有 GUI 控件，100% 忠实呈现 Neovim 原生网格</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">jorjanion/BatteryDock + circularsquare/trainsworld：原生桌面与 Rust-Wasm 仿真</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• `BatteryDock`：用原生 Rust 在 Windows 10/11 任务栏嵌入无线耳机/鼠标/键盘/手柄电量胶囊，彻底卸载臃肿厂商驱动全家桶</text>
+  <text x="744" y="458" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• `trainsworld`：在浏览器 MapLibre 全球地图上铺设铁路，底层用 **Rust 编译为 WebAssembly** 实时计算全球城市客流需求与公铁分流</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 展示了“TypeScript/MapLibre 渲染层 + Rust/Wasm 仿真内核”的现代浏览器大型仿真架构</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R64-PELICANTEST-STRAVA-NG-TRAINSWORLD · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月制作 20 支程序化代码动画与数据/配音驱动的 4K 动态视频 + 维护 30 套跨平台极简开发桌面与浏览器 Wasm 地理仿真环境（时薪 r = $100.00/hr；Fish Audio 语音合成费：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (AE 手K关键帧买商用曲库 + 付费地图 API + 臃肿外设驱动全家桶)</text>
+  <rect x="430" y="630" width="571" height="22" rx="5" fill="#EF4444"/>
+  <text x="1013" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,710.00/mo ($1,860.00 SaaS/API + 38.5h × $100 = $3,850.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (有状态 requestAnimationFrame 丢帧录屏 + 纯 JS 卡顿客流仿真)</text>
+  <rect x="430" y="666" width="263" height="22" rx="5" fill="#F59E0B"/>
+  <text x="705" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,630.00/mo ($880.00 spend + 17.5h × $100 = $1,750.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (PelicanTest + Strava/ScriptToMotion + Shougo/ng + TrainsWorld)</text>
+  <rect x="430" y="702" width="37" height="22" rx="5" fill="#10B981"/>
+  <text x="479" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$370.00/mo ($70.00 spend + 3.0h × $100 = $300.00) → 净省 $5,340.00/月 (-93.52% / 年省 $64,080.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR STATELESS PROCEDURAL FILM, BLENDER GPS HEATMAPS &amp; GO/RUST DESKTOP TOOLS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 代码生成长视频必须遵循 `pelican-test` 的纯函数 `renderAt(t)` + `OfflineAudioContext` 范式，彻底杜绝帧率抖动引发的音画不同步。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• `Shougo/ng` 证明了编辑器 GUI 只要绕过终端 ANSI 转义解析、坚持单帧单次 Draw Call 并与后端进程解耦，就能兼得速度与稳定性。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 浏览器端大规模交通/网络仿真应参考 `trainsworld`，用 MapLibre 负责矢量瓦片渲染、用 Rust-to-Wasm 负责高密度客流计算。</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 28 (CUMULATIVE R385 MILESTONE) · CLAIM-20261116-R28-LUMENACT-ROBLOX-PIXELSPLAT</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">118 形态键语义表情套组 (LumenAct) + 一句话 Blender 短剧引擎 + 带骨骼像素高斯泼溅</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">中文语义驱动 118 Blendshapes + 一句话生成 9:16 Roblox 风格 Blender 动画短片 + glTF/GLB 骨骼动画转像素 3DGS · 净省 $5,350.00/月 (-93.21%)</text>
+
+  <!-- Left Column: AaBb-coder/LumenAct -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎭 1. AaBb-coder/LumenAct (118 Blendshapes · Blender + MCP · ★46)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">中文语义直接驱动 118 个面部形态键表演曲线（配 WebGL2 本地预览与 Blender+MCP）</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">语义情绪分类 → 118 形态键表演曲线 (lumen-reference-face.blend)</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别手工逐帧K表情关键帧：由中文语义模型识别情绪类别与对话上下文，实时映射为精细面部表演曲线</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 固定哈希资产分发：download_assets.py 精确锁定 Hugging Face 提交 df8126a2... 下载 118 形态键参考脸</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 零重型游戏引擎依赖：无需安装 Unity 或 Motive，Python 3.10 + WebGL2 浏览器打开 127.0.0.1:8766 即看</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 提供完整 LLM/TTS 对接接口与 Blender + MCP 角色绑定适配指南</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">极其诚实的早期阶段技术边界披露 (Honest Engineering Disclosure)</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 主动澄清算法机制：明确说明当前由语义模型选择情绪类别再驱动对应曲线，并非标准 Motion Matching 算法</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 优雅降级设计：未安装本地语义推理依赖时，WebGL2 页面仍能正常展示流明参考脸与初始自然放松呼吸表演</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 清晰的授权分层：预览代码独立公开，ぷらすわん基础网格已获商业许可，参考脸资源按 CC BY-NC 4.0 单独授权</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 为中文虚拟主播、3D 数字人伴侣与 Blender MCP 表情控制提供了高起点基准网格</text>
+
+  <!-- Right Column: nocodehack/nocodehack-roblox-engine + cobanov/pixelart-gaussiansplat -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎬 2. nocodehack-roblox-engine (★27) + pixelart-gaussiansplat (★33)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">一句话驱动 Blender 出 9:16 动画短片 + 带骨骼动画 glTF 转像素风 3DGS</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">nocodehack/nocodehack-roblox-engine：一句话 → 完整 9:16 Blender 动画短片</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 全链路零手K动画：输入一句话，Claude 编写剧本分镜，引擎在 Blender 中自动完成角色动作、运镜、特效、音效与字幕</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 前置错误检查器 (Pre-Render Checks)：在启动 Blender 渲染前自动拦截角色穿模、走位越界与时间轴错位</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 双模式叙事：既支持多角色情景短剧 (Skit)，又支持旁白驱动的奇幻故事短片 (Narrator Story)</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ Apache-2.0 免费开源，彻底免除扩散视频抽卡的画面崩坏与昂贵算力账单</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">cobanov/pixelart-gaussiansplat：Three.js + Spark 骨骼动画像素 3DGS 工坊</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 突破静态 3DGS 局限：内置普通 3D 模型 (glTF / GLB) 转换器，**连带骨骼绑定与动作动画 (Rigged Animations) 一起保留**！</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 有序抖动 (Ordered Dithering) + 受限调色板：把可 360° 自由旋转缩放的真实 3D 高斯场景实时渲染为锐利复古像素画</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 代码即场景：单文件用简短代码拼出浮空岛、神庙、灯塔、牛头人与动态草木灯光粒子，左侧面板实时调像素粒度</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 与 R363 的 ink-studio/SyntaxSplat 互补：补齐了“现有带骨骼 GLB 模型一键转动态像素 3DGS”能力</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R28-LUMENACT-ROBLOX-PIXELSPLAT · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月制作 25 条 3D 角色表情/竖屏动画短片 + 交付 20 个带骨骼动画的像素风 3DGS 网页交互场景（时薪 r = $100.00/hr；光学动捕设备采购：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (手K 118 形态键关键帧 + 手工 Blender 运镜 + 逐视角手绘像素精灵)</text>
+  <rect x="430" y="630" width="574" height="22" rx="5" fill="#EF4444"/>
+  <text x="1016" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$5,740.00/mo ($1,840.00 render/rework + 39.0h × $100 = $3,900.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (盲目视频扩散抽卡穿模 + 静态无骨骼高斯点云)</text>
+  <rect x="430" y="666" width="268" height="22" rx="5" fill="#F59E0B"/>
+  <text x="710" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,680.00/mo ($880.00 spend + 18.0h × $100 = $1,800.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (LumenAct 118键 + Roblox Engine + PixelSplat)</text>
+  <rect x="430" y="702" width="39" height="22" rx="5" fill="#10B981"/>
+  <text x="481" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$390.00/mo ($80.00 compute + 3.1h × $100 = $310.00) → 净省 $5,350.00/月 (-93.21% / 年省 $64,200.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR SEMANTIC 3D FACIAL RIGS, BLENDER SHORTS &amp; RIGGED PIXEL 3DGS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 将 LLM 语义情绪映射至预烘焙的 118 形态键表演曲线 (LumenAct)，比实时端到端生成网格更稳定可控。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 一句话转 Blender 3D 竖屏短片必须在渲染前跑确定性脚本校验走位与时间轴 (nocodehack-roblox-engine)。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 基于 Three.js + Spark 把现有带骨骼动画的 glTF/GLB 转成有序抖动像素 3DGS，是独立游戏最高效的复古 3D 管线。</text>
+</svg>

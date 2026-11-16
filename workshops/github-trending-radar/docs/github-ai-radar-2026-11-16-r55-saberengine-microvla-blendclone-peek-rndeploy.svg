@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#131F3A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="1352" height="852" rx="18" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="44" y="42" width="1312" height="94" rx="14" fill="#111C35" stroke="#2D426B" stroke-width="1.2"/>
+  <text x="68" y="76" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">PROACTIVE DURABLE NEWS AGENT · 2026-11-16 NIGHT SHIFT ROUND 55 (CUMULATIVE R412) · CLAIM-20261116-R55-SABERENGINE-MICROVLA-BLENDCLONE-PEEK</text>
+  <text x="68" y="108" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="bold">AMD R9700 618 tok/s 引擎 (Saber) + 4GB 显卡跑 pi0.5 (microVLA) + 免 Mac 开发 iOS</text>
+  <text x="68" y="128" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">RDNA4 MXFP4 + DFlash2 投机解码 262K 上下文 + 4GB RTX 3050 训/跑 VLA + 视频转 .blend 与 Linux 直刷 iPhone · 净省 $5,780.00/月 (-93.68%)</text>
+
+  <!-- Left Column: GGZ14/saber-engine + KhushiJ2911/microVLA -->
+  <rect x="44" y="152" width="642" height="390" rx="14" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="66" y="182" fill="#38BDF8" font-family="Consolas, monospace" font-size="14" font-weight="bold">🚀 1. GGZ14/saber-engine (★69) + KhushiJ2911/microVLA (★19)</text>
+  <text x="66" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">AMD RDNA4 跑 Qwen3.8-27B 飙至 618 tok/s + 4GB 笔记本显卡跑 3B pi0.5</text>
+
+  <rect x="66" y="220" width="598" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="82" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">GGZ14/saber-engine：专为 AMD Radeon AI PRO R9700 (gfx1201) 打造的 Rust 引擎</text>
+  <text x="82" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 告别 ROCm 环境变量迷宫：算子以预编译 HIP Code Objects + 清单分发，由单一确定性执行计划接管全部调度</text>
+  <text x="82" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• MACaQ MXFP4 + DFlash2 投机草稿：双卡 TP=2 跑 Qwen3.8-27B 单流 **215 tok/s**、8 并发 **618 tok/s**！</text>
+  <text x="82" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 210W 功耗墙极致能效：TTFT p50 仅 **47 ms**、预填充 **~5,000 tok/s**、支持 **262,144** 上下文与单卡 TP=1 模式</text>
+  <text x="82" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 兼容 rootless Podman 与 Docker，同二进制支持 Qwen3.8 Flash-Next (MoE)</text>
+
+  <rect x="66" y="380" width="598" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="82" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">KhushiJ2911/microVLA：在 4GB 显存 RTX 3050 笔记本上从零训 VLA 并跑通真 3B pi0.5</text>
+  <text x="82" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 核显渲染分离妙招：通过 `MUJOCO_EGL_DEVICE_ID` 把 LIBERO 仿真渲染卸载到核显 (Mesa)，把 4GB 独显 100% 留给模型</text>
+  <text x="82" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 25 分钟从零训 10M 小模型：在笔记本上跑 8,000 步约 25 分钟即可训出 LIBERO-Spatial 操作策略</text>
+  <text x="82" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 4GB 显存跑真 3B `pi0.5`：完整公开每一步显存优化与 4-bit 量化后每 50 步动作块的真实中位耗时对比</text>
+  <text x="82" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 彻底打破“具身智能 VLA 模型没有 A100 就不能动手实验”的算力门槛</text>
+
+  <!-- Right Column: blixvip/BlendClone + kimikr/peek & react-native-feel/react-native-deploy -->
+  <rect x="706" y="152" width="650" height="390" rx="14" fill="url(#cardGrad)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="728" y="182" fill="#34D399" font-family="Consolas, monospace" font-size="14" font-weight="bold">🎨 2. blixvip/BlendClone (★66) + kimikr/peek (★20) &amp; rn-deploy (★66)</text>
+  <text x="728" y="206" fill="#F8FAFC" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15.5" font-weight="bold">参考视频编译为可编辑 .blend 工程 + 在 Linux 上免 Mac 1–2s 实时预览真机 SwiftUI</text>
+
+  <rect x="728" y="220" width="606" height="148" rx="10" fill="#0B1325" stroke="#2563EB" stroke-width="1"/>
+  <text x="744" y="244" fill="#60A5FA" font-family="Consolas, monospace" font-size="13" font-weight="bold">blixvip/BlendClone：把参考视频逆向编译成每一帧都可编辑的 Blender 5.1+ 工程</text>
+  <text x="744" y="266" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 为什么视频生成模型导出的 MP4 没法进工业管线？因为你改不掉里面某一个骨牌的颜色或摄像机角度</text>
+  <text x="744" y="288" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 声明式编译器闭环：导入参考片段 → AI Planner 解析场景 JSON → 编译为原生 Blender 物体并用 Cycles 渲染</text>
+  <text x="744" y="310" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 并排保真度对比 + 英文微调：原视频与 Cycles 渲染图同屏比对，口头微调后直接导出标准 `.blend` 源文件</text>
+  <text x="744" y="332" fill="#34D399" font-family="Consolas, monospace" font-size="12">✓ 已验证展台转盘、骨牌连锁、霓虹片头与低多边形海岛四大经典场景</text>
+
+  <rect x="728" y="380" width="606" height="144" rx="10" fill="#0B1325" stroke="#10B981" stroke-width="1"/>
+  <text x="744" y="404" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">kimikr/peek + react-native-deploy：彻底摆脱 Mac 硬件绑定开发与发布 iOS 应用</text>
+  <text x="744" y="426" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• `kimikr/peek` (Linux 直刷真机 SwiftUI 预览)：保存文件 **1–2 秒** 后真 iPhone 界面即刻热替换，且原位补丁保留 `@State` 状态！</text>
+  <text x="744" y="448" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• 单文件零依赖 Python 服务 + `xtool` Swift 工具链：免费 Apple ID 即可跑通完整 App/UIKit/SwiftUI 与 `peek shot` 截屏</text>
+  <text x="744" y="470" fill="#CBD5E1" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.3">• `react-native-deploy` (`rnd`)：完全兼容 `eas.json`，在你自己的 GitHub Actions (`macos-26`) 上免费打包并直推 TestFlight</text>
+  <text x="744" y="492" fill="#38BDF8" font-family="Consolas, monospace" font-size="12">✓ 从日常 1.3s 增量真机预览 (peek) 到生产级 CI 签名发版 (rnd) 全程免买 Mac</text>
+
+  <!-- Bottom Row: Closed-Form FinOps Ledger -->
+  <rect x="44" y="558" width="1312" height="300" rx="14" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="590" fill="#A78BFA" font-family="Consolas, monospace" font-size="14" font-weight="bold">💰 CLOSED-FORM FINOPS AUDIT (CLAIM-20261116-R55-SABERENGINE-MICROVLA-BLENDCLONE-PEEK · synthetic, independently_reproduced=false)</text>
+  <text x="68" y="612" fill="#94A3B8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">工作负载：每月运行 20 个高并发本地 27B 推理与 4GB 具身 VLA 实验 + 25 次视频转 Blender 建模与免 Mac iOS 预览/发版（时薪 r = $100.00/hr；显卡购置：not_measured）</text>
+
+  <!-- Bars -->
+  <text x="68" y="646" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path A (租用云端 H100 + 手工重建 Blender 场景 + 按次计费 EAS 构建)</text>
+  <rect x="430" y="630" width="617" height="22" rx="5" fill="#EF4444"/>
+  <text x="1059" y="646" fill="#FCA5A5" font-family="Consolas, monospace" font-size="13" font-weight="bold">$6,170.00/mo ($2,120.00 cloud/CI spend + 40.5h × $100 = $4,050.00)</text>
+
+  <text x="68" y="682" fill="#F8FAFC" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path B (ROCm 环境变量调优踩坑 + 4GB 显卡爆显存 + 每次全量重编 IPA)</text>
+  <rect x="430" y="666" width="281" height="22" rx="5" fill="#F59E0B"/>
+  <text x="723" y="682" fill="#FDE68A" font-family="Consolas, monospace" font-size="13" font-weight="bold">$2,810.00/mo ($960.00 spend + 18.5h × $100 = $1,850.00)</text>
+
+  <text x="68" y="718" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="bold">Path C (Saber 618 tok/s + microVLA + BlendClone + peek/rnd)</text>
+  <rect x="430" y="702" width="39" height="22" rx="5" fill="#10B981"/>
+  <text x="481" y="718" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13" font-weight="bold">$390.00/mo ($80.00 compute + 3.1h × $100 = $310.00) → 净省 $5,780.00/月 (-93.68% / 年省 $69,360.00)</text>
+
+  <line x1="68" y1="740" x2="1332" y2="740" stroke="#334155"/>
+  <text x="68" y="766" fill="#38BDF8" font-family="Consolas, monospace" font-size="13.5" font-weight="bold">🎯 ARCHITECTURAL TAKEAWAYS FOR RDNA4 INFERENCE, 4GB VLA, BLENDCLONE &amp; MAC-FREE IOS:</text>
+  <text x="68" y="790" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 双张 AMD R9700 通过 Saber 的 MACaQ MXFP4 与 DFlash2 投机解码，可在 210W/卡下跑出 618 tok/s 与 47ms TTFT。</text>
+  <text x="68" y="814" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• 将 MuJoCo EGL 渲染卸载至核显并对 3B pi0.5 施以 4-bit 量化，4GB 入门笔记本也能玩转具身 VLA (microVLA)。</text>
+  <text x="68" y="838" fill="#E2E8F0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12.5">• Linux 开发者可用 peek 实现 1.3s 增量保留 @State 的真机 SwiftUI 预览，并用 rnd 零按次费发布 TestFlight。</text>
+</svg>
