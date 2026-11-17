@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR33" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR33" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR33)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR33)" rx="3"/>
+
+  <text x="40" y="58" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-17 NIGHT ROUND 33 (CUMULATIVE R457) · PREFILL INJECTION SHIELD, READ-ONLY BROWSER EXTENSION &amp; LAUNCH PREFLIGHT</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">SilentGuard Prefill Probe, OnlyRead &amp; vibe-preflight Cut Agent Security TCO by 93.70%</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">Comparing Prompt-Only Guardrails &amp; Manual Audits vs. SilentGuard (★101, MIT) + onlyread (★94, AGPL-3.0) &amp; vibe-preflight (★67, MIT)</text>
+
+  <!-- Left Card: SilentGuard-SG/silentguard -->
+  <rect x="40" y="138" width="545" height="295" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="56" y="154" width="250" height="24" rx="12" fill="#0C4A6E"/>
+  <text x="181" y="170" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">PREFILL SHIELD · SILENTGUARD (★101)</text>
+  <text x="320" y="170" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">Python 3.12 · Qwen3-4B · MIT</text>
+
+  <text x="56" y="202" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700">16-Token Sliding-Window Tool-Return Injection Filter</text>
+
+  <rect x="56" y="216" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="236" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">1. Observer Prefill with Frozen Forbidden-Relation Probes</text>
+  <text x="70" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Scores each token in tool returns against frozen layer weights during prefill</text>
+  <text x="70" y="270" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Rule stays in observer reference—never polluted into the agent's system prompt</text>
+
+  <rect x="56" y="284" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="304" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">2. 16-Token Sliding Window Excision + Fresh KV Generation</text>
+  <text x="70" y="322" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Strips union of 16-token windows (stride 1) exceeding risk threshold before generation</text>
+  <text x="70" y="338" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Discards tainted KV cache so the agent completes legitimate tasks safely</text>
+
+  <rect x="56" y="352" width="513" height="64" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="372" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">3. Auditable Payment-Agent Workbench (:8765 &amp; HF_HUB_OFFLINE)</text>
+  <text x="70" y="390" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Blocks hidden "verification payment" invoice attacks while completing real invoices</text>
+  <text x="70" y="406" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Logs raw text, token score curves, stripped char spans &amp; ledger state in JSON</text>
+
+  <!-- Right Card: onlyreadai/onlyread + globalmpc/vibe-preflight -->
+  <rect x="615" y="138" width="545" height="295" rx="12" fill="#1E293B" stroke="#818CF8" stroke-width="1.5"/>
+  <rect x="631" y="154" width="265" height="24" rx="12" fill="#312E81"/>
+  <text x="763" y="170" text-anchor="middle" fill="#A5B4FC" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">BROWSER &amp; LAUNCH GUARD · ONLYREAD &amp; PREFLIGHT</text>
+  <text x="907" y="170" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">MV3 · 9-Domain Audit</text>
+
+  <text x="631" y="202" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700">Network-Layer Read-Only Browser + 9-Domain Launch Checklist</text>
+
+  <rect x="631" y="216" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="236" fill="#A5B4FC" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">1. OnlyRead (★94): Refuses Writes Below the Model (100+ Sites)</text>
+  <text x="645" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Lets browser agents read signed-in Gmail, LinkedIn, Calendar, Slack &amp; GitHub</text>
+  <text x="645" y="270" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Intercepts send, post, like, edit, delete &amp; settings writes at the network layer</text>
+
+  <rect x="631" y="284" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="304" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">2. vibe-preflight (★67, MIT): 9-Domain Pre-Launch Security &amp; Cost Check</text>
+  <text x="645" y="322" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Catches unauthenticated paid AI/SMS APIs, unverified Stripe webhooks &amp; IDOR</text>
+  <text x="645" y="338" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Flags hallucinated packages, exposed 0.0.0.0 DB ports &amp; ephemeral disk uploads</text>
+
+  <rect x="631" y="352" width="513" height="64" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="372" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">3. Dual-Audience Output (report.md + details.md) &amp; Agent Config Audit</text>
+  <text x="645" y="390" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Writes plain-language report.md for owners &amp; technical details.md for fixes</text>
+  <text x="645" y="406" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Audits risky allow rules and hooks inside .claude/settings.json before release</text>
+
+  <!-- Bottom Card: FinOps Closed-Form TCO Verification -->
+  <rect x="40" y="452" width="1120" height="276" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="484" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Benchmark: 30,000 Monthly Payment/Inbox Agent Sessions &amp; 45 App Launches ($95/hr; base WAF/host: not_measured)</text>
+  <text x="60" y="506" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">CLAIM-20261117-R33-SILENTGUARD-ONLYREAD · Eliminating Indirect Injection Payment Losses, Accidental Browser Posts &amp; Unprotected API Abuse</text>
+
+  <!-- Path A -->
+  <text x="60" y="544" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path A: Prompt-Only Guardrails + Manual Launch Audits</text>
+  <rect x="470" y="528" width="530" height="22" rx="4" fill="#EF4444" opacity="0.85"/>
+  <text x="1012" y="544" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$5,870.00/mo (100%)</text>
+  <text x="60" y="562" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$2,260.00/mo guard APIs &amp; abuse losses + 38.0 hrs/mo ($3,610.00) incident triage &amp; manual Docker/Stripe security reviews</text>
+
+  <!-- Path B -->
+  <text x="60" y="602" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path B: Coarse Binary Blockers + Generic Static SAST</text>
+  <rect x="470" y="586" width="239" height="22" rx="4" fill="#F59E0B" opacity="0.85"/>
+  <text x="721" y="602" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$2,650.00/mo (-54.86%)</text>
+  <text x="60" y="620" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$940.00/mo scanner spend + 18.0 hrs/mo ($1,710.00) unblocking whole-return false positives &amp; fixing hosting traps</text>
+
+  <!-- Path C -->
+  <text x="60" y="660" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path C: SilentGuard + OnlyRead + vibe-preflight</text>
+  <rect x="470" y="644" width="33" height="22" rx="4" fill="#10B981"/>
+  <text x="515" y="660" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="800">$370.00/mo (-93.70% · Saves $5,500.00/mo / $66,000.00/yr)</text>
+  <text x="60" y="678" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$85.00/mo local Qwen3-4B prefill observer + 3.0 hrs/mo ($285.00) report.md &amp; edit-span audit sign-off (92.11% hours saved)</text>
+
+  <rect x="60" y="692" width="1080" height="24" rx="6" fill="#1E293B"/>
+  <text x="600" y="708" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">SA Takeaway: Strip injected 16-token spans at prefill (SilentGuard), enforce read-only browser networking (OnlyRead), and run /vibe-preflight before launch.</text>
+</svg>

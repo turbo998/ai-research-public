@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR42" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR42" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR42)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR42)" rx="3"/>
+
+  <text x="40" y="58" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-17 NIGHT ROUND 42 (CUMULATIVE R466) · 0.5S–3S ZFS DATABASE BRANCHING MCP, VISUAL PR REVIEW DAEMON &amp; PARALLEL ADE</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">db-branch ZFS Clones, Reflektor Visual Review &amp; iCode ADE Cut Dev TCO by 94.12%</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">Comparing Slow SQL Dumps &amp; Raw 2,000-Line Diffs vs. db-branch/db-branch (★64, Apache-2.0) + bashovski/reflektor (★65, MIT) &amp; icode-workbench (★64)</text>
+
+  <!-- Left Card: db-branch/db-branch -->
+  <rect x="40" y="138" width="545" height="295" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="56" y="154" width="245" height="24" rx="12" fill="#0C4A6E"/>
+  <text x="178" y="170" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">INSTANT DB BRANCHES · DB-BRANCH (★64)</text>
+  <text x="315" y="170" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">Go · ZFS Clones · Apache-2.0</text>
+
+  <text x="56" y="202" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700">0.5s PG / 3s MySQL Copy-on-Write Branches + Agent MCP</text>
+
+  <rect x="56" y="216" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="236" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">1. Zero-Byte Copy-on-Write ZFS Database Clones</text>
+  <text x="70" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Branches PostgreSQL in ~0.5s and MySQL in ~3s with 0 bytes copied at creation</text>
+  <text x="70" y="270" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Supports instant branch reset, point-in-time checkpoint/restore &amp; --ttl auto-expiry</text>
+
+  <rect x="56" y="284" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="304" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">2. Built-In MCP Server for Safe AI Agent Migrations</text>
+  <text x="70" y="322" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Agents autonomously branch, test risky DDL/migrations, and delete the branch</text>
+  <text x="70" y="338" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Production and shared staging databases are never touched or corrupted</text>
+
+  <rect x="56" y="352" width="513" height="64" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="372" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">3. Per-Branch Engine Upgrades, Raft Cluster &amp; ProxySQL</text>
+  <text x="70" y="390" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Test MySQL 8.0→8.4 upgrades via branch upgrade --check-only with auto-rollback</text>
+  <text x="70" y="406" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Scales across Raft VM clusters with ProxySQL routing &amp; web console branch graphs</text>
+
+  <!-- Right Card: bashovski/reflektor + icodehq/icode-workbench -->
+  <rect x="615" y="138" width="545" height="295" rx="12" fill="#1E293B" stroke="#818CF8" stroke-width="1.5"/>
+  <rect x="631" y="154" width="265" height="24" rx="12" fill="#312E81"/>
+  <text x="763" y="170" text-anchor="middle" fill="#A5B4FC" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">REVIEW &amp; ADE · REFLEKTOR (★65) &amp; ICODE (★64)</text>
+  <text x="907" y="170" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">TypeScript · MIT / AGPL-3.0</text>
+
+  <text x="631" y="202" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700">Live Visual Branch Review Daemon + Parallel Worktree ADE</text>
+
+  <rect x="631" y="216" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="236" fill="#A5B4FC" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">1. bashovski/reflektor (★65, MIT): Visual Branch Review Report</text>
+  <text x="645" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Renders UI-to-DB request flows, contract/type diffs, schema migrations &amp; UI screenshots</text>
+  <text x="645" y="270" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Runs project tests, linters &amp; typecheckers in background and streams results live</text>
+
+  <rect x="631" y="284" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="304" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">2. Local Review Daemon Handing Comments Back to Agent</text>
+  <text x="645" y="322" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Stores review refs under .git/refs/reflektor &amp; serves live inbox on 127.0.0.1</text>
+  <text x="645" y="338" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Inline browser comments feed directly back into Claude Code / Codex ($reflektor resume)</text>
+
+  <rect x="631" y="352" width="513" height="64" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="372" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">3. icode-workbench (★64, AGPL-3.0): Parallel Worktree ADE + Mira</text>
+  <text x="645" y="390" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Runs Claude Code, Codex &amp; OpenCode in isolated Git worktrees on Linux/Win/macOS</text>
+  <text x="645" y="406" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Mira cross-project assistant flags blocked tasks; terminals survive app restarts</text>
+
+  <!-- Bottom Card: FinOps Closed-Form TCO Verification -->
+  <rect x="40" y="452" width="1120" height="276" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="484" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Benchmark: 30 Engineers Running 3,000 Monthly PR DB Migrations &amp; Parallel Agent Reviews ($95/hr; base plan: not_measured)</text>
+  <text x="60" y="506" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">CLAIM-20261117-R42-DBBRANCH-REFLEKTOR-ICODE · Replacing Cloud DB Branching Markups &amp; Raw Diff Reviews with Self-Hosted ZFS CoW &amp; Visual Review Loops</text>
+
+  <!-- Path A -->
+  <text x="60" y="544" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path A: Cloud DB Branch Markups + Slow Dumps &amp; Raw Diffs</text>
+  <rect x="470" y="528" width="530" height="22" rx="4" fill="#EF4444" opacity="0.85"/>
+  <text x="1012" y="544" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$5,885.00/mo (100%)</text>
+  <text x="60" y="562" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$2,370.00/mo cloud DB branch/staging fees + 37.0 hrs/mo ($3,515.00) fixing broken staging DBs &amp; reviewing 2k-line diffs</text>
+
+  <!-- Path B -->
+  <text x="60" y="602" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path B: Local Docker DB Seeds + Manual PR Comment Copy-Paste</text>
+  <rect x="470" y="586" width="231" height="22" rx="4" fill="#F59E0B" opacity="0.85"/>
+  <text x="713" y="602" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$2,565.00/mo (-56.41%)</text>
+  <text x="60" y="620" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$950.00/mo CI runner &amp; storage spend + 17.0 hrs/mo ($1,615.00) maintaining seed scripts &amp; manual diff reviews</text>
+
+  <!-- Path C -->
+  <text x="60" y="660" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path C: db-branch (Apache-2.0) + Reflektor (MIT) + iCode ADE</text>
+  <rect x="470" y="644" width="31" height="22" rx="4" fill="#10B981"/>
+  <text x="513" y="660" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="800">$346.00/mo (-94.12% · Saves $5,539.00/mo / $66,468.00/yr)</text>
+  <text x="60" y="678" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$80.00/mo ZFS pool storage + 2.8 hrs/mo ($266.00) visual Reflektor report &amp; Mira queue sign-off (92.43% hours saved)</text>
+
+  <rect x="60" y="692" width="1080" height="24" rx="6" fill="#1E293B"/>
+  <text x="600" y="708" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">SA Takeaway: Give every agent/PR an instant ZFS DB branch via db-branch MCP, review visually with Reflektor, and orchestrate via iCode ADE.</text>
+</svg>

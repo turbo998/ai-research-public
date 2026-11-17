@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR433" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentAmberR433" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="accentGreenR433" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR433)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="242" height="26" rx="6" fill="url(#accentAmberR433)"/>
+  <text x="165" y="56" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="middle">2026-11-17 · NIGHT ROUND 9 (R433)</text>
+  <text x="302" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18.5" font-weight="700">436-Service Local AWS Emulator Console &amp; 40ms Lock-Free Agent Diff Desk</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">D33ptar00p/emulator-ui (★ 25 · 436 AWS Services · FastAPI + React · Apache-2.0) + ihou/DiffCode (★ 26 · 30–50MB RAM · 40ms 30k-Line Diff · 0 index.lock)</text>
+
+  <!-- Left Panel: emulator-ui -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#451A03"/>
+  <text x="62" y="173" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. D33ptar00p/emulator-ui — 436-Service Local AWS Emulator Console</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Full 436-Service Coverage</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Tested w/ `aws-emulator v1.0.322`</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Active-First Sidebar Resource Counts</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• DynamoDB, S3, Step Functions UI</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Model-Driven JSON API Runner</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Apache-2.0 (FastAPI + React 18.3)</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Decoupled Sidecar Lifecycle</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Never Starts/Stops Emulator Containers</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Hot-Detects Restarts, Keys &amp; Regions</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Multi-Region `~/.aws/emulator/regions`</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `make up-image` (amd64 / arm64)</text>
+  <text x="328" y="326" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• $0 Cloud Sandbox Spend / 0 Telemetry</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise Cloud DevEx: Zero-Cost Offline AWS Sandbox Verification</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Letting coding agents test IaC/Lambda changes against live AWS dev accounts risks runaway bills.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `emulator-ui` turns local `aws-emulator` into an inspectable 436-service visual workbench.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Eliminates per-seat LocalStack Pro licensing fees for standard AWS API emulation &amp; inspection.</text>
+  <text x="62" y="481" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Pair `aws-emulator` (`--telemetry off`) + `emulator-ui` for local agent IaC testing.</text>
+
+  <!-- Right Panel: ihou/DiffCode -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#082F49"/>
+  <text x="646" y="173" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. ihou/DiffCode — 30–50MB RAM Lock-Free Native Agent Diff Desk</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Native Speed &amp; Lock Safety</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 4 MB Download · 30–50 MB RAM</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 30k-Line / 800-Change Diff in ~40 ms</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Swift AppKit (Mac) &amp; Rust Win32 (Win)</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Never Takes `.git/index.lock` on Read</text>
+  <text x="644" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Never Overwrites Active Agent Edits</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Surgical Agent Review Loop</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Exclude Selected Lines From Commit</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `⌥⌘T` Sends File+Line Range to Agent</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Compare w/ Branch (All Agent Work)</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Blocks Force-Push on `main`/`master`</text>
+  <text x="912" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Multi-Repo Sidebar + `git grep`</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Multi-Agent Workstation Ergonomics: Reviewing Without IDE Bloat</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Opening 6 JetBrains/VS Code windows to review parallel agents eats 12+ GB RAM and locks `.git`.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `DiffCode` watches all repos in 30–50 MB RAM without taking `index.lock` while agents commit.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Engineers untick unwanted agent lines, fix lines in place, and commit only verified hunks.</text>
+  <text x="646" y="481" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Run `DiffCode` beside CLI coding agents as a lock-free multi-repo commit gate.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="445" height="28" rx="6" fill="url(#accentGreenR433)"/>
+  <text x="268" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261117-R9-EMULATORUI-DIFFCODE</text>
+  <text x="506" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">40 Cloud-Native Dev Seats (AWS Sandbox + Multi-Repo Agent Diff Review)/Mo · $100/hr · Laptop CapEx: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: Shared AWS Dev Accounts + Heavy IDEs</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Cloud Sandbox &amp; SaaS Licenses: $1,840.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Lock Contention &amp; AWS Debug (37.0h): $3,700.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $5,540.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: CLI-Only Emulator + Raw `git add -p`</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Tooling &amp; Runner Overhead: $790.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (17.0h @ $100/h): $1,700.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,490.00 / month (-55.05%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: emulator-ui (436 Svcs) + DiffCode (40ms)</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Local Container &amp; Native App: $80.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.0h @ $100/h): $300.00 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $380.00 / mo (Save $5,160.00 · -93.14%)</text>
+</svg>

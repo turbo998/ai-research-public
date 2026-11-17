@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR431" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentTealR431" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="accentGreenR431" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR431)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="242" height="26" rx="6" fill="url(#accentTealR431)"/>
+  <text x="165" y="56" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-17 · NIGHT ROUND 7 (R431)</text>
+  <text x="302" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18.5" font-weight="700">64-Camera Shared-GPU SAM 2.1/EdgeTAM Engine &amp; Multi-Device AI Ops Desk</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">aryamandarda/tamserve (★ 78 · 64 Cameras in 5.7 GB VRAM @ 321 fps · 0.28 GB Bounded Memory) + teydra/OpenAutark (★ 30 · 5-OS Local Agent Team Workbench)</text>
+
+  <!-- Left Panel: aryamandarda/tamserve -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#14B8A6" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#042F2E"/>
+  <text x="62" y="173" fill="#2DD4BF" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. aryamandarda/tamserve — vLLM-Style Multi-Camera SAM 2 Engine</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#2DD4BF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Shared-Weight GPU Batching</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 8 Cameras VRAM: 8.6 GB ➔ 2.2 GB (4x)</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 64 Cameras VRAM: ~70 GB ➔ 5.7 GB</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 64-Camera Speed: 321 fps (RTX 4090)</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 800-Frame RAM: 9.8 GB ➔ 0.28 GB (35x)</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• DAVIS 2017 Accuracy: 0.8685 (= Stock)</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Live Stream &amp; Fleet Routing</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Models: `EdgeTAM` (54MB) &amp; `SAM 2.1`</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Add/Drop Objects or Cameras Mid-Stream</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Natural-Language `Tracker` ("forklift")</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Multi-GPU `Router` Auto-Placement</text>
+  <text x="328" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Apache-2.0 (`pip install tamserve`)</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise Video Analytics: Warehouse, Retail &amp; Factory Vision on 1 GPU</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Stock SAM 2 duplicates weights per camera and leaks temporal memory over long 24/7 streams.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `tamserve` batches multi-camera frames through 1 shared model with constant 0.28 GB stream state.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Replaces 4x A100 cloud clusters with a single 24 GB RTX 4090 / L4 serving up to 64 RTSP feeds.</text>
+  <text x="62" y="481" fill="#2DD4BF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Standardize multi-camera SAM 2.1 / EdgeTAM video pipelines on `tamserve`.</text>
+
+  <!-- Right Panel: teydra/OpenAutark -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#1E1B4B"/>
+  <text x="646" y="173" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. teydra/OpenAutark — Local-First Multi-Device Agent Operations Desk</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Hierarchical Agent Teams</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Personal Manager + Specialist Teams</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• "My Day" Calendar &amp; Task Board</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Side-by-Side Co-Browsing Canvas</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Reuses Claude Code / Codex / Local LLM</text>
+  <text x="644" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Shared Public Skill Library</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Cross-Device Pairing &amp; QA</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Win10/11, macOS Universal &amp; Linux</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Android APK + iPhone Home-Screen App</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Mutual Numeric Code Device Pairing</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `SHA256SUMS.txt` &amp; `release.json` Gate</text>
+  <text x="912" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Draft-Preserving Idle Updates (Apache-2.0)</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">SME &amp; Executive Operations: Running an Autonomous Agent Team on Your PC</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Unifies desktop PCs and mobile phones via verified Remote ID pairing without cloud data lock-in.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. Manager agent delegates sub-tasks to specialist agents while syncing calendar and browser state.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Explicit network manifest documents every external socket connection for enterprise auditability.</text>
+  <text x="646" y="481" fill="#A5B4FC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Use `OpenAutark` as a local-first multi-device agentic operations workbench reference.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="445" height="28" rx="6" fill="url(#accentGreenR431)"/>
+  <text x="268" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261117-R7-TAMSERVE-OPENAUTARK</text>
+  <text x="506" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">64-Camera Industrial Vision Site + 25 Multi-Device Agent Ops Seats/Mo · $100/hr · Camera HW: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: 1-Model-Per-Cam GPU Fleet + Cloud Ops SaaS</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 70GB+ Multi-GPU &amp; SaaS Spend: $2,250.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• OOM Restart &amp; Sync Ops (41.0h): $4,100.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $6,350.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Low-FPS Frame Dropping + Disconnected Apps</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• GPU &amp; Tooling Spend: $990.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (19.0h @ $100/h): $1,900.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,890.00 / month (-54.49%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: tamserve (5.7GB/64-Cam) + OpenAutark</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Single-GPU Edge Host &amp; Relay: $135.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.3h @ $100/h): $330.00 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $465.00 / mo (Save $5,885.00 · -92.68%)</text>
+</svg>

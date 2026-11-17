@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR39" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR39" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR39)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR39)" rx="3"/>
+
+  <text x="40" y="58" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-17 NIGHT ROUND 39 (CUMULATIVE R463) · ACP-OVER-HTTP TRANSPORT, XCODE 27 GATEWAY &amp; 11-PROVIDER QUOTA TELEMETRY</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">ACTP Remote ACP Bridge, claude-xcode-agent &amp; Kota Cut IDE Ops TCO by 94.21%</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">Comparing Fragile SSH/Stdio Tunnels &amp; Unisolated Xcode Configs vs. varops/actp (★93) + claude-xcode-agent (★81) &amp; ensignalp/kota (★88)</text>
+
+  <!-- Left Card: varops/actp -->
+  <rect x="40" y="138" width="545" height="295" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="56" y="154" width="245" height="24" rx="12" fill="#0C4A6E"/>
+  <text x="178" y="170" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">ACP OVER HTTP · VAROPS/ACTP (★93)</text>
+  <text x="315" y="170" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">Rust · v0.1.0 · Apache-2.0</text>
+
+  <text x="56" y="202" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700">Plain Stdio ACP on Both Ends + Drop-Resilient HTTPS/WS</text>
+
+  <rect x="56" y="216" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="236" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">1. Transparent Client Bridge (actp droid@workstation)</text>
+  <text x="70" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Any ACP editor, bot, or app uses remote Claude Code, Codex, Droid, or Pi as if local</text>
+  <text x="70" y="270" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Files, terminals, logins &amp; local MCP servers stay safely on the workstation host</text>
+
+  <rect x="56" y="284" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="304" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">2. Zero-Loss Reconnect Across Laptop Lid Closes &amp; Wi-Fi Drops</text>
+  <text x="70" y="322" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Automatically reconnects and catches up without dropping or duplicating messages</text>
+  <text x="70" y="338" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Built-in Cloudflare Tunnel support for hosts without public IPv4 addresses</text>
+
+  <rect x="56" y="352" width="513" height="64" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="372" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">3. Scoped Per-Client Tokens &amp; Allowed-Folder Guardrails</text>
+  <text x="70" y="390" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Tokens are restricted to specific agents and allowed workspace directories</text>
+  <text x="70" y="406" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Ships macOS/Linux/Windows tray dashboard and ready-to-deploy Docker server image</text>
+
+  <!-- Right Card: yusuke-114/claude-xcode-agent + ensignalp/kota -->
+  <rect x="615" y="138" width="545" height="295" rx="12" fill="#1E293B" stroke="#818CF8" stroke-width="1.5"/>
+  <rect x="631" y="154" width="265" height="24" rx="12" fill="#312E81"/>
+  <text x="763" y="170" text-anchor="middle" fill="#A5B4FC" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">XCODE 27 &amp; QUOTA · XCODE (★81) &amp; KOTA (★88)</text>
+  <text x="907" y="170" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">Shell + Rust · MIT</text>
+
+  <text x="631" y="202" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700">Dual-Exec Xcode 27 Gateway + 11-Provider Quota &amp; Process Tree</text>
+
+  <rect x="631" y="216" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="236" fill="#A5B4FC" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">1. claude-xcode-agent (★81, MIT): Dual-Role Zero-Process Exec</text>
+  <text x="645" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Role ① loads config.json (base_url, auth_token/api_key) &amp; execs claude-agent-acp</text>
+  <text x="645" y="270" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Role ② swaps --setting-sources to project,local so global ~/.claude never leaks</text>
+
+  <rect x="631" y="284" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="304" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">2. ensignalp/kota (★88, MIT): 11-Provider Quota &amp; Burn Forecast</text>
+  <text x="645" y="322" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Tracks Claude, Codex, Gemini, Copilot, Z.ai, OpenRouter, DeepSeek, Kimi, OpenAI &amp; more</text>
+  <text x="645" y="338" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Shows D/W/M quota %, reset timers, "exhausts at this pace" alerts &amp; 24h token charts</text>
+
+  <rect x="631" y="352" width="513" height="64" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="372" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">3. Live Folder → Subproject → Agent Process Control</text>
+  <text x="645" y="390" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Maps running coding agents to exact subprojects, memory footprint, and open ports</text>
+  <text x="645" y="406" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• One-click stop button terminates runaway background agent processes from top bar</text>
+
+  <!-- Bottom Card: FinOps Closed-Form TCO Verification -->
+  <rect x="40" y="452" width="1120" height="276" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="484" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Benchmark: 30 Cross-Platform Engineers Running 50,000 Monthly Remote ACP, Xcode 27 &amp; Multi-Provider Sessions ($95/hr; base plan: not_measured)</text>
+  <text x="60" y="506" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">CLAIM-20261117-R39-ACTP-XCODE-KOTA · Eliminating Dropped Remote ACP Sessions, Xcode Config Collisions &amp; Blind Multi-Provider Quota Exhaustion</text>
+
+  <!-- Path A -->
+  <text x="60" y="544" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path A: Dropped SSH Tunnels + Xcode Global Leaks &amp; Blind Quotas</text>
+  <rect x="470" y="528" width="530" height="22" rx="4" fill="#EF4444" opacity="0.85"/>
+  <text x="1012" y="544" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$5,890.00/mo (100%)</text>
+  <text x="60" y="562" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$2,280.00/mo dropped-session/quota-overage waste + 38.0 hrs/mo ($3,610.00) fixing SSH drops, Xcode env &amp; zombie agents</text>
+
+  <!-- Path B -->
+  <text x="60" y="602" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path B: Custom SSH Port Forwards + Manual Billing Page Checks</text>
+  <rect x="470" y="586" width="232" height="22" rx="4" fill="#F59E0B" opacity="0.85"/>
+  <text x="714" y="602" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$2,582.50/mo (-56.15%)</text>
+  <text x="60" y="620" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$920.00/mo rerun tokens + 17.5 hrs/mo ($1,662.50) manual tunnel maintenance &amp; multi-provider balance checks</text>
+
+  <!-- Path C -->
+  <text x="60" y="660" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path C: ACTP (Apache-2.0) + claude-xcode-agent + Kota (MIT)</text>
+  <rect x="470" y="644" width="31" height="22" rx="4" fill="#10B981"/>
+  <text x="513" y="660" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="800">$341.00/mo (-94.21% · Saves $5,549.00/mo / $66,588.00/yr)</text>
+  <text x="60" y="678" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$75.00/mo tunnel/gateway ops + 2.8 hrs/mo ($266.00) token scoping &amp; threshold tuning (92.63% hours saved)</text>
+
+  <rect x="60" y="692" width="1080" height="24" rx="6" fill="#1E293B"/>
+  <text x="600" y="708" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">SA Takeaway: Bridge remote ACP agents over HTTPS/WS via ACTP, isolate Xcode 27 gateways via claude-acp.sh, and monitor 11 quotas via Kota.</text>
+</svg>

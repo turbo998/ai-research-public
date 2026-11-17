@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR434" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentEmeraldR434" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="accentGreenR434" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR434)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="242" height="26" rx="6" fill="url(#accentEmeraldR434)"/>
+  <text x="165" y="56" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="middle">2026-11-17 · NIGHT ROUND 10 (R434)</text>
+  <text x="302" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18.5" font-weight="700">Event-Driven Reactive Agent Bus (`PINE`) &amp; Multi-Provider ACP/NIM Gateways</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">pmndre/pine (★ 304 · Event-Driven Reactive Agent Harness · BM25 Self-Discovery) + ACP-Ant (★ 50) &amp; community-claude-code (★ 47 · -90% RTK/Headroom)</text>
+
+  <!-- Left Panel: pmndre/pine -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#064E3B"/>
+  <text x="62" y="173" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. pmndre/pine (★ 304) — Event-Driven Reactive Agent Harness</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Typed Event Subscriptions</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Watches Folders, Webhooks, MQTT, FTP</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Slack / Telegram Real-Time Wake-Up</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Schema-Backed `*.ts` Event Services</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `/goal` Persistent Completion Loop</text>
+  <text x="60" y="326" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `pine init` &amp; `pine check` Security Audit</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Zero-Config &amp; BM25 Manual</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Admin Tool Calls (0 Broken Configs)</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Built-In BM25 Self-Discovery Manual</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Parallel Subagent Delegation &amp; Undo</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Kitty/Ghostty Rich TUI + Linux Sandbox</text>
+  <text x="328" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `npm install -g @pmndre/pine`</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise Operations Architecture: From Cron Polling to Event-Driven Agents</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Replaces wasteful 1-minute cron polling with instant event triggers (invoice scans, webhooks, MQTT).</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. BM25 self-discovery manual keeps system prompts lean by loading internal API docs only on demand.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Admin-tool-only configuration prevents agents from corrupting JSON/YAML settings files.</text>
+  <text x="62" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Use `PINE` for event-triggered enterprise document, IoT &amp; webhook agent workflows.</text>
+
+  <!-- Right Panel: ACP-Ant + community-claude-code -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#082F49"/>
+  <text x="646" y="173" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. ACP-Ant &amp; community-claude-code — Multi-Provider Agent Gateways</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">czg86389-hub/ACP-Ant (:8095)</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Official `agy acp` ➔ OpenAI/Anthropic</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Hard `400` on Unsupported PDF/Audio</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Preserves Latest Prompt (`150k` Trim)</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Detects Soft Errors &amp; Auto-Rotates</text>
+  <text x="644" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 0 Local Tools Granted to `agy`</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">community-claude-code (CCC)</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Routes Any Harness to NVIDIA NIM/etc.</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Preserves Interleaved Thinking &amp; Tools</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Up to -90% Tokens via RTK + Headroom</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Multi-Key / Multi-Provider Failover</text>
+  <text x="912" y="326" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Terminal, IDE, Discord &amp; Telegram UI</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Gateway Guardrails: Preventing Silent Attachment Drops &amp; Outage Stalls</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Upstream `agy 1.5.3` silently drops PDF/video attachments and hallucinates; `ACP-Ant` returns `400`.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. Trims old tool logs before the 188k CLI cutoff so the user's newest instruction is never truncated.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. `CCC` combines RTK + Headroom compression (-90% tokens) with multi-provider failover.</text>
+  <text x="646" y="481" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Enforce explicit `400` modality guards &amp; head-preserving truncation on LLM gateways.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="445" height="28" rx="6" fill="url(#accentGreenR434)"/>
+  <text x="268" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261117-R10-PINE-ACPANT-CCC</text>
+  <text x="506" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">50 Event-Driven Workflows + 60 Multi-Provider Coding Agent Seats/Mo · $100/hr · Server HW: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: 1-Min Cron Polling + Uncompressed Single-API</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Polling &amp; Uncompressed Token Spend: $2,080.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Outage &amp; Truncation Debug (39.0h): $3,900.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $5,980.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Custom Webhook Scripts + Basic Proxy</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Token &amp; Proxy Spend: $940.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (18.0h @ $100/h): $1,800.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,740.00 / month (-54.18%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: PINE Event Bus + ACP-Ant &amp; CCC (-90% RTK)</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Event-Triggered &amp; RTK Token Spend: $110.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.1h @ $100/h): $310.00 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $420.00 / mo (Save $5,560.00 · -92.98%)</text>
+</svg>

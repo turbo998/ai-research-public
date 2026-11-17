@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR430" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentGoldR430" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="accentGreenR430" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR430)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="268" height="26" rx="6" fill="url(#accentGoldR430)"/>
+  <text x="178" y="56" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="middle">2026-11-17 · R6 (R430 MILESTONE)</text>
+  <text x="328" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18.5" font-weight="700">Quote-Verified Business-Flow PR Risk Map &amp; Self-Hosted Multi-Source AI BI</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">GenesisAgentInfra/genesis (★ 52 · Frozen-Snapshot Quote &amp; AST Verifier · 4-Tier Test Risk) + thesysdev/opendashboards (★ 248 · Self-Hosted Claude Dashboards Alt)</text>
+
+  <!-- Left Panel: GenesisAgentInfra/genesis -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#451A03"/>
+  <text x="62" y="173" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. GenesisAgentInfra/genesis — Business-Flow Agent Diff &amp; Test Gate</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">4-Tier Test Evidence Verdicts</text>
+  <text x="60" y="246" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Not Reached: 0 Tests Hit Failure Branch</text>
+  <text x="60" y="266" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Reached Only: Line Run, Race Untested</text>
+  <text x="60" y="286" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Unknown: Test Stubs Out Key Check</text>
+  <text x="60" y="306" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Covered: Boundary Values Verified</text>
+  <text x="60" y="326" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Outputs `.genesis/view.html` &amp; `summary.md`</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Anti-Hallucination CLI Gate</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Every Step Must Quote Exact Source Lines</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Checked Against Frozen Repo Snapshot</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Python AST Parser Flags `partial` Maps</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `genesis-ci` Calls 0 Models / 0 Network</text>
+  <text x="328" y="326" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `/genesis map` &amp; `/genesis review main`</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise Application Architecture: Catching Business-Logic Regressions</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Line diffs hide business risks (e.g. retrying card charges 3x without an idempotency key).</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `Genesis` maps code changes onto customer journeys and proves whether tests mock or verify them.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Deterministic quote + AST verification rejects hallucinated agent explanations before PR review.</text>
+  <text x="62" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Embed `/genesis review main` in PR pipelines for payment, checkout &amp; core workflows.</text>
+
+  <!-- Right Panel: thesysdev/opendashboards -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#082F49"/>
+  <text x="646" y="173" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. thesysdev/opendashboards — Self-Hosted Multi-Source AI BI</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">8+ Native &amp; MCP Data Sources</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• PostgreSQL (Supabase/Neon) &amp; MySQL</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• ClickHouse &amp; Google BigQuery</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• PostHog, GA4 &amp; Search Console</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Remote HTTPS MCP (Stripe, HubSpot)</text>
+  <text x="644" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Read-Only DB Credentials Stay On-Prem</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Surgical Chart Architecture</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Single-Chart Rebuild (No Full Regen)</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Live Filtering &amp; Interactive Drill-Down</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Cross-Source Joins (Stripe + Postgres)</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• BYOK OpenAI / Anthropic / OpenUI API</text>
+  <text x="912" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• MIT Open Source (248★ · 28 Forks)</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise BI Architecture: Self-Hosted Alternative to Claude Dashboards</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Connects read-only DB replicas (Postgres/ClickHouse/BigQuery) + SaaS MCPs (Stripe/HubSpot).</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. Answers executive funnel questions ("Are signups turning into paid customers?") as live boards.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Granular per-chart editing preserves layout state and cuts LLM regeneration cost by 75%+.</text>
+  <text x="646" y="481" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Deploy `OpenDashboards` on-prem with read-only replicas for self-service executive BI.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="445" height="28" rx="6" fill="url(#accentGreenR430)"/>
+  <text x="268" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261117-R6-GENESIS-OPENDASHBOARDS</text>
+  <text x="506" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">80 Agent-Authored PRs + 25 Cross-Source Executive BI Dashboards/Mo · $100/hr · DB Storage: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: Raw Diff Review + Commercial BI Seats</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• BI Seat Licenses &amp; Incident Spend: $1,950.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• PR Audit &amp; BI Ticket Labor (39.0h): $3,900.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $5,850.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Line-Coverage CI + One-Off SQL Scripts</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Tooling &amp; Query Compute: $870.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (18.0h @ $100/h): $1,800.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,670.00 / month (-54.36%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: Genesis Flow Gate + OpenDashboards</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Self-Hosted BI &amp; Token Spend: $105.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.1h @ $100/h): $310.00 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $415.00 / mo (Save $5,435.00 · -92.91%)</text>
+</svg>

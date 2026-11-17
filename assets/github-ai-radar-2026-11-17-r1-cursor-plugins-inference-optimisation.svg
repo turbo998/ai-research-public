@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR425" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentBlueR425" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="accentGreenR425" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR425)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="242" height="26" rx="6" fill="url(#accentBlueR425)"/>
+  <text x="165" y="56" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-17 · NIGHT ROUND 1 (R425)</text>
+  <text x="302" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18.5" font-weight="700">Enterprise Agent Plugin Governance &amp; Roofline LLM Inference FinOps</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">cursor/plugins (★ 16,785 · +196★ Today · 93+ Governed MCP/Skill Plugins) + sybil-solutions/inference-optimisation-skill (★ 662 · Roofline + ctl-NEW-ctl A/B)</text>
+
+  <!-- Left Panel: cursor/plugins -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#082F49"/>
+  <text x="62" y="173" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. cursor/plugins — Enterprise Agent Marketplace &amp; SaaS Mesh</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Standardized Plugin Unit</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Root `.cursor-plugin/marketplace.json`</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Per-Plugin `plugin.json` Manifest</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Bundles `skills/`, `rules/`, `mcp.json`</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 17 First-Party Dev Workflow Plugins</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• MIT Open Specification (16.7k★)</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">76+ Enterprise Connectors</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• ERP/CRM: SAP S/4HANA, Salesforce, NetSuite</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Data/BI: Databricks Genie, BigQuery, PowerBI</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Sec/IT: ServiceNow, Vanta, Tailscale, Workday</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Collab: Teams, SharePoint, Lark, Feishu</text>
+  <text x="328" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Multi-Agent: `thermos`, `orchestrate`, `advisor`</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise Application Architecture: Eliminating Prompt &amp; MCP Sprawl</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Replaces unversioned per-repo `.cursorrules` and copy-pasted MCP configs with signed manifests.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `orchestrate` fans out complex migrations to planner/worker/verifier agents; `thermos` gates PRs.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Connects coding agents directly to enterprise systems of record (ServiceNow, SAP, Databricks).</text>
+  <text x="62" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Adopt `.cursor-plugin` as the enterprise internal AI capability catalog standard.</text>
+
+  <!-- Right Panel: sybil-solutions/inference-optimisation-skill -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#451A03"/>
+  <text x="646" y="173" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. inference-optimisation-skill — Roofline + Interleaved A/B Serving</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">6-Stage Hill-Climb Loop</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `ceiling.py`: BW &amp; 50%-Peak FLOPs Roof</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `queue.sh ctl NEW ctl` Interleaved A/B</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Rejects ±5–10% Thermal/Clock Drift</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `mem.sh`: Tracks Unified GPU Residency</text>
+  <text x="644" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `ledger.jsonl` + `PLAN.md` Failure Log</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Reported Enterprise Gains</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 4× H200 NVL: Crash ➔ 229.1 tok/s</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 4× H200 Prefill: 17,546 tok/s (6 Gates)</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Arc Pro B70: 25.0 ➔ 91.2 / 365 tok/s</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Arc B390 256K Prefill: 297 ➔ 628 tok/s</text>
+  <text x="912" y="326" fill="#F472B6" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 128K–256K Needle &amp; Full-KV Soak Gate</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Why Private-Cloud LLM Serving Needs Roofline-Gated Agent Optimization</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Blind flag tweaking mistakes ±10% thermal noise or chunk counts for real throughput wins.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `ctl → NEW → ctl` interleaving + `&lt;=3%` non-regression gate guarantees statistically valid gains.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Mandatory 256K needle retrieval + concurrent KV soak prevents OOMs in production RAG/Agent pipelines.</text>
+  <text x="646" y="481" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Run `inference-optimisation` before signing off any private vLLM/SGLang GPU cluster.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="445" height="28" rx="6" fill="url(#accentGreenR425)"/>
+  <text x="268" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261117-R1-CURSORPLUGINS-INFOPT</text>
+  <text x="506" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">120 Enterprise Dev Seats + 8 Private LLM Serving Endpoints/Mo · $100/hr · Base GPU Purchase: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: Ad-Hoc Rules + Blind Flag Tuning</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Waste GPU &amp; SaaS Connectors: $2,040.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Tuning &amp; Config Drift Labor (42.0h): $4,200.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $6,240.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Wiki Templates + Single-Run Benchmarks</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Compute &amp; Integration Spend: $960.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (19.0h @ $100/h): $1,900.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,860.00 / month (-54.17%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: cursor/plugins + inference-optimisation</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Governed Marketplace &amp; Serving: $120.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Automated Hill-Climb Ops (3.4h): $340.00 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $460.00 / mo (Save $5,780.00 · -92.63%)</text>
+</svg>

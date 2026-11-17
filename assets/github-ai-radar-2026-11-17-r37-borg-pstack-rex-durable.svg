@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR37" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR37" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR37)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR37)" rx="3"/>
+
+  <text x="40" y="58" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">2026-11-17 NIGHT ROUND 37 (CUMULATIVE R461) · SUPERVISED RUST AGENT RUNTIME, PSTACK QA &amp; REBOOT SESSION RESURRECTION</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800">Borg Supervised Rust Runtime, xxd-pstack &amp; rex-durable Cut Pipeline TCO by 94.06%</text>
+  <text x="40" y="116" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">Comparing Unsupervised Async Loops &amp; Lost Reboot Sessions vs. joydle/borg (★107, Apache-2.0) + xxd-pstack (★65) &amp; rex-durable (★65, MIT)</text>
+
+  <!-- Left Card: joydle/borg -->
+  <rect x="40" y="138" width="545" height="295" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="56" y="154" width="250" height="24" rx="12" fill="#0C4A6E"/>
+  <text x="181" y="170" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">SUPERVISED RUNTIME · BORG (★107)</text>
+  <text x="320" y="170" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">Rust 1.88+ · Tokio · Apache-2.0</text>
+
+  <text x="56" y="202" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700">Panic Isolation + Pre-Dispatch Budgets + Resumable Checkpoints</text>
+
+  <rect x="56" y="216" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="236" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">1. Erlang-Style Supervision (seq / par / repeat / FallbackLadder)</text>
+  <text x="70" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Per-child cancel, panic isolation, restart-storm meltdown &amp; sliding circuit breakers</text>
+  <text x="70" y="270" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Behavioral boundary guardrails emit Warn / Throttle / Halt on repeated tool loops</text>
+
+  <rect x="56" y="284" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="304" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">2. Cache-Aware Pre-Dispatch Budget Admission &amp; Sub-Budgets</text>
+  <text x="70" y="322" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Enforces admission checks before every LLM dispatch with hierarchical sub-budgets</text>
+  <text x="70" y="338" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Ships borg-mcp (stdio MCP as tools), borg-sandbox &amp; FakeLlmClient eval harness</text>
+
+  <rect x="56" y="352" width="513" height="64" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="70" y="372" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">3. Shape-Verified execute_resumable &amp; Human Suspend/Resume</text>
+  <text x="70" y="390" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Snapshots runs to CheckpointStore; skips finished steps &amp; rejects mismatched shapes</text>
+  <text x="70" y="406" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Suspends pipeline on human Decision gates (approve / reject / edit) via borg-loop</text>
+
+  <!-- Right Card: nevertoday/xxd-pstack + fazxes/rex-durable -->
+  <rect x="615" y="138" width="545" height="295" rx="12" fill="#1E293B" stroke="#818CF8" stroke-width="1.5"/>
+  <rect x="631" y="154" width="265" height="24" rx="12" fill="#312E81"/>
+  <text x="763" y="170" text-anchor="middle" fill="#A5B4FC" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">SELF-TEST &amp; RESUME · PSTACK (★65) &amp; REX (★65)</text>
+  <text x="907" y="170" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">10-Lang Guide · Lua MIT</text>
+
+  <text x="631" y="202" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700">34-Skill Self-Testing Playbook + Reboot Session Resurrection</text>
+
+  <rect x="631" y="216" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="236" fill="#A5B4FC" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">1. xxd-pstack (★65): Make the AI Try Its Own Work First</text>
+  <text x="645" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• 10-language interactive guide to pstack's 34 skills across Claude Code, Cursor &amp; Codex</text>
+  <text x="645" y="270" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Enforces /poteto-mode 5-step reproduction &amp; before/after evidence before saying "fixed"</text>
+
+  <rect x="631" y="284" width="513" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="304" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">2. rex-durable (★65, MIT): Auto-Resume Across Server Reboots</text>
+  <text x="645" y="322" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Snapshots running Rex tabs every 30s via launchd (macOS) or systemd (Linux)</text>
+  <text x="645" y="338" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Reopens claude --resume &lt;id&gt;, codex resume &lt;id&gt; &amp; fx --resume &lt;id&gt; in exact splits</text>
+
+  <rect x="631" y="352" width="513" height="64" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="645" y="372" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">3. Safe Non-Agent Command Handling on Reboot</text>
+  <text x="645" y="390" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Preserves --model flags and working directories for coding agent chats</text>
+  <text x="645" y="406" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">• Arbitrary non-agent shell commands are typed at the prompt—never auto-executed</text>
+
+  <!-- Bottom Card: FinOps Closed-Form TCO Verification -->
+  <rect x="40" y="452" width="1120" height="276" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="484" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">Closed-Form FinOps Benchmark: 30 Engineers Running 60,000 Monthly Supervised Pipelines &amp; Overnight Sessions ($95/hr; base plan: not_measured)</text>
+  <text x="60" y="506" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">CLAIM-20261117-R37-BORG-PSTACK-REX · Eliminating Restart-Storm Token Burn, Unverified "Fixed!" Loops &amp; Reboot Session Loss</text>
+
+  <!-- Path A -->
+  <text x="60" y="544" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path A: Unsupervised Async Loops + Unverified "Fixed!" Claims</text>
+  <rect x="470" y="528" width="530" height="22" rx="4" fill="#EF4444" opacity="0.85"/>
+  <text x="1012" y="544" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$5,825.00/mo (100%)</text>
+  <text x="60" y="562" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$2,310.00/mo loop/restart-storm token waste + 37.0 hrs/mo ($3,515.00) testing fake fixes &amp; restoring rebooted tabs</text>
+
+  <!-- Path B -->
+  <text x="60" y="602" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path B: Raw tokio::spawn Scripts + Manual --resume Tracking</text>
+  <rect x="470" y="586" width="232" height="22" rx="4" fill="#F59E0B" opacity="0.85"/>
+  <text x="714" y="602" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$2,545.00/mo (-56.31%)</text>
+  <text x="60" y="620" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$930.00/mo rerun tokens + 17.0 hrs/mo ($1,615.00) manual crash checkpointing &amp; tab session recovery</text>
+
+  <!-- Path C -->
+  <text x="60" y="660" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path C: Borg Runtime (Apache-2.0) + xxd-pstack + rex-durable</text>
+  <rect x="470" y="644" width="32" height="22" rx="4" fill="#10B981"/>
+  <text x="514" y="660" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="800">$346.00/mo (-94.06% · Saves $5,479.00/mo / $65,748.00/yr)</text>
+  <text x="60" y="678" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">$80.00/mo budget-gated Rust workers &amp; checkpoint store + 2.8 hrs/mo ($266.00) Decision gate sign-off (92.43% hours saved)</text>
+
+  <rect x="60" y="692" width="1080" height="24" rx="6" fill="#1E293B"/>
+  <text x="600" y="708" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">SA Takeaway: Supervise Rust agent pipelines with Borg's budget/panic isolation, enforce pstack self-testing, and auto-resume tabs via rex-durable.</text>
+</svg>

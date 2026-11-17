@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR428" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentYellowR428" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="accentGreenR428" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR428)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="242" height="26" rx="6" fill="url(#accentYellowR428)"/>
+  <text x="165" y="56" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="middle">2026-11-17 · NIGHT ROUND 4 (R428)</text>
+  <text x="302" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18.5" font-weight="700">Swarm-Synthesized Zero-Weight Rule Bot &amp; Zero-Port Air-Gapped Citation RAG</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">huggingface/pybot (★ 541 · 1,000-Agent Swarm · 640k LoC / 550k Tests · 0 Weights) + Immortal-Protocols/lastbook (v1.1.11 · ★ 1,281 · Zero-Port Offline RAG)</text>
+
+  <!-- Left Panel: huggingface/pybot -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#451A03"/>
+  <text x="62" y="173" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. huggingface/pybot — Build-Time Agent Swarm, Runtime 0-Weight Rules</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Swarm-Compiled Rule Engine</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 1,000+ Agents / 5,000+ Commits</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 640k Lines Python (528 Modules)</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 550k Lines Self-Written Unit Tests</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 26% SmolTalkBench (= SmolLM-360M)</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Python 3.8+ Stdlib · 0 GPU · Apache-2.0</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">4-Pillar Arbiter Pipeline</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `understanding/` (25k LoC Coref/Typos)</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `memory/` (109k LoC Multi-Turn State)</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `knowledge/` (317k LoC Fact Tables)</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `compose/` (104k LoC) + `arbiter.py`</text>
+  <text x="328" y="326" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `--seed N` &amp; `--verbose` Module Trace</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise Pattern: Compile LLMs into Auditable Code at Build Time</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Regulated Tier-1 support desks require 100% deterministic, auditable responses with 0 hallucination.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. Instead of running LLMs on every user query, agent swarms synthesize &amp; unit-test Python rule modules.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. `--verbose` names the exact Python module that produced every reply; `--seed` guarantees replayability.</text>
+  <text x="62" y="481" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Use build-time agent swarms to synthesize zero-GPU Tier-1 FAQ/policy engines.</text>
+
+  <!-- Right Panel: Immortal-Protocols/lastbook -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#064E3B"/>
+  <text x="646" y="173" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. Immortal-Protocols/lastbook (v1.1.11) — Zero-Port Offline Citation RAG</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Zero-Socket Architecture</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 0 Listening TCP/UDP Ports Opened</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• In-Memory Custom URL Scheme Bridge</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Local AI via `stdin/stdout` JSONL</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Pinned 11 Mozilla TLS Roots (`roots.pem`)</text>
+  <text x="644" y="326" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• macOS / Win10+ / Ubuntu LTS / iPad</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Citation &amp; Gap Governance</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Curated Guides (`content/topics/`)</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Explicit Gap Ledger (`content/gaps.json`)</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Whole-PDF + ZIM + Offline GIS Maps</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Graceful Degradation Without Local LLM</text>
+  <text x="912" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Atomic Rename Pack Updates (MIT)</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise Field-Ops &amp; Air-Gapped SOP Workstation Blueprint</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Eliminates localhost port-scanning &amp; SSRF risks on air-gapped industrial/defense laptops.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `content/gaps.json` explicitly records unverified topics so field engineers never get hallucinated SOPs.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Works with or without local GPU: falls back to deterministic page-linked search on CPU-only devices.</text>
+  <text x="646" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Adopt `Lastbook`'s zero-port bridge &amp; `gaps.json` contract for field-service RAG.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="445" height="28" rx="6" fill="url(#accentGreenR428)"/>
+  <text x="268" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261117-R4-PYBOT-LASTBOOK</text>
+  <text x="506" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">500k Tier-1 FAQ Queries + 60 Air-Gapped Field SOP Workstations/Mo · $95/hr · Field Laptop CapEx: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: Live LLM Tier-1 Bot + Cloud Vector RAG</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• GPU/Token &amp; Satcom Cloud Spend: $1,920.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Hallucination &amp; Sync Ops (39.0h): $3,705.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $5,625.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Hand-Coded Intent Trees + Raw PDF Folders</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Hosting &amp; Distribution Spend: $810.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (18.0h @ $95/h): $1,710.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,520.00 / month (-55.20%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: PyBot (0-Weight) + Lastbook (v1.1.11)</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Build-Time Swarm &amp; Pack Hosting: $85.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.2h @ $95/h): $304.00 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $389.00 / mo (Save $5,236.00 · -93.08%)</text>
+</svg>

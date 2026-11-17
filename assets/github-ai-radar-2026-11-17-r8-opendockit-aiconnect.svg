@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR432" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentBlueR432" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="accentGreenR432" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR432)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="242" height="26" rx="6" fill="url(#accentBlueR432)"/>
+  <text x="165" y="56" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2026-11-17 · NIGHT ROUND 8 (R432)</text>
+  <text x="302" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18.5" font-weight="700">11-Format MIT Sandboxed RAG Document Parser &amp; Visitor-Paid Web AI SDK</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">hyeonsang010716/OpenDocKit (11-Format MIT Parser · IsolatedConverter · 0 GPU) + tensorpass/aiconnect ($0-Inference Visitor AI Wallet + Site MCP SDK)</text>
+
+  <!-- Left Panel: OpenDocKit -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#082F49"/>
+  <text x="62" y="173" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. hyeonsang010716/OpenDocKit — 11-Format MIT RAG Ingestion</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Structure-Preserving Parse</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• PDF, DOCX, PPTX, XLSX, HWP/HWPX</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• ODF, RTF, EPUB, HTML, Email &amp; Img</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Merged Cells Repeated Per Row</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Charts ➔ Tables, SmartArt ➔ Lists</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Per-Page `result.sections` Citations</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Untrusted-Upload Sandbox</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `IsolatedConverter` Worker Process</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Blocks Zip Bombs &amp; Recursive PDFs</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `max_chars` Early-Stop Budget</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Content-Sniffing (Fake `.xls`/`.doc`)</text>
+  <text x="328" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 100% MIT/BSD Deps (No PyMuPDF AGPL)</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise RAG Architecture: Eliminating Copyleft &amp; Upload DoS Risks</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Commercial SaaS RAG pipelines cannot legally bundle AGPL `PyMuPDF` without licensing fees.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `OpenDocKit` parses 11 formats (incl. native HWP 5.x) with pure MIT/BSD dependencies and 0 GPU.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Plugs directly into LangChain, LlamaIndex, Dify, Hermes Agent, Open WebUI, and MCP servers.</text>
+  <text x="62" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Standardize untrusted customer document ingestion on `IsolatedConverter`.</text>
+
+  <!-- Right Panel: tensorpass/aiconnect -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#A855F7" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#3B0764"/>
+  <text x="646" y="173" fill="#D8B4FE" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. tensorpass/aiconnect — Visitor-Paid Web AI + Site MCP SDK</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#D8B4FE" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Zero-Token-Bill Web AI</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Uses Visitor's `window.aiwallet`</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• ChatGPT, Claude, Gemini, Grok, OR</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Site Pays $0 for Visitor Inference</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Site Holds 0 Provider API Keys</text>
+  <text x="644" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Immune to Prompt-Bot Wallet Drain</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Site-Owned MCP Tools</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `McpToolSource` + `runConversation`</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Catalog/Docs/Booking Stay on Server</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• React 19 + 8 KB Web Component Loader</text>
+  <text x="912" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `<aiconnect-chat>` &amp; `<aiconnect-search>`</text>
+  <text x="912" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• WordPress &amp; Claude Code Plugins</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Customer-Facing SaaS Architecture: Decoupling Tool Data from Token Billing</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Public docs, e-commerce catalogs, and portals want AI search without subsidizing anonymous bots.</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `AI Connect` routes inference through the visitor's own AI subscription while calling site MCP tools.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Drop-in `AiConnect.fetch` adapter lets existing Vercel AI SDK apps switch to visitor-paid mode.</text>
+  <text x="646" y="481" fill="#D8B4FE" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Pair `OpenDocKit` site indexing with `@tensorpass/aiconnect` for $0-inference portals.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="445" height="28" rx="6" fill="url(#accentGreenR432)"/>
+  <text x="268" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261117-R8-OPENDOCKIT-AICONNECT</text>
+  <text x="506" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">50k Uploaded Enterprise Docs + 200k Public Portal AI Queries/Mo · $95/hr · Web Hosting: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: Cloud OCR API + Site-Paid Visitor Tokens</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Per-Page OCR &amp; Visitor Token Spend: $2,120.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Table Fix &amp; Abuse Mitigation (38.0h): $3,610.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $5,730.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Fragile Regex Parsers + Rate-Capped API</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Capped API &amp; Worker Spend: $890.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (17.5h @ $95/h): $1,662.50 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,552.50 / month (-55.45%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: OpenDocKit (0-GPU) + AI Connect SDK</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• CPU Worker &amp; MCP Server Spend: $90.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.0h @ $95/h): $285.00 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $375.00 / mo (Save $5,355.00 · -93.46%)</text>
+</svg>

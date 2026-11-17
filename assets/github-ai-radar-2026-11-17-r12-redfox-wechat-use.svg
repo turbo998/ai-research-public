@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <defs>
+    <linearGradient id="bgR436" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentRedR436" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="accentGreenR436" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgR436)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1144" height="92" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="44" y="38" width="242" height="26" rx="6" fill="url(#accentRedR436)"/>
+  <text x="165" y="56" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="middle">2026-11-17 · NIGHT ROUND 12 (R436)</text>
+  <text x="302" y="57" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18.5" font-weight="700">201-Endpoint 28-Platform Social Intelligence Skill &amp; HITL WeChat MCP</text>
+  <text x="44" y="92" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">liangdabiao/redfox_api_skill (★ 31 · 28 Platforms / 201 Endpoints · 3-Step Progressive Lookup) + invzhi/wechat-use (★ 24 · Real Linux WeChat GUI + HITL MCP)</text>
+
+  <!-- Left Panel: redfox_api_skill -->
+  <rect x="28" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="46" y="148" width="524" height="40" rx="8" fill="#431407"/>
+  <text x="62" y="173" fill="#FB923C" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">1. liangdabiao/redfox_api_skill — 28-Platform / 201-Endpoint Skill</text>
+
+  <rect x="46" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="224" fill="#FB923C" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3-Step Progressive Lookup</text>
+  <text x="60" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 28 Platforms / 201 API Endpoints</text>
+  <text x="60" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Douyin, XHS, WeChat, Bilibili, TikTok</text>
+  <text x="60" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• YouTube, X, IG, Weibo, Zhihu &amp; Auto</text>
+  <text x="60" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `api_searcher.py detail:` Pre-Fills Defaults</text>
+  <text x="60" y="326" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 0-Dep Python Stdlib Only</text>
+
+  <rect x="314" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="224" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Billing &amp; Context Guards</text>
+  <text x="328" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 0 Auto-Retry Default (No Double Charge)</text>
+  <text x="328" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Distinguishes `3203` vs `3801` Empty Data</text>
+  <text x="328" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• `--summary` &amp; `--output` Save Context</text>
+  <text x="328" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Header-Only Auth (No Key in URL)</text>
+  <text x="328" y="326" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Prevents `1002` Hidden-Required Errors</text>
+
+  <rect x="46" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="62" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise Omnichannel Intelligence: Progressive Schema Disclosure</text>
+  <text x="62" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. Loading 201 API schemas into an agent prompt wastes 40k+ tokens on every turn.</text>
+  <text x="62" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. `api_searcher.py` loads only the 1 needed endpoint with verified camelCase defaults.</text>
+  <text x="62" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. `--summary` inspects JSON structure before full extraction, preventing context-window blowups.</text>
+  <text x="62" y="481" fill="#FB923C" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Use 3-step progressive API skills (`search ➔ detail ➔ call`) for large API catalogs.</text>
+
+  <!-- Right Panel: invzhi/wechat-use -->
+  <rect x="612" y="130" width="560" height="390" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="630" y="148" width="524" height="40" rx="8" fill="#064E3B"/>
+  <text x="646" y="173" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">2. invzhi/wechat-use — Shared Human-Agent Linux WeChat Desktop MCP</text>
+
+  <rect x="630" y="202" width="252" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="644" y="224" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Real GUI + HITL Takeover</text>
+  <text x="644" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Official Linux WeChat GUI in Docker</text>
+  <text x="644" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Browser Supervision (`localhost:5800`)</text>
+  <text x="644" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Token-Gated MCP (`localhost:3211/mcp`)</text>
+  <text x="644" y="306" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Human QR Login &amp; Instant Intervention</text>
+  <text x="644" y="326" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Persistent Session &amp; File Volumes</text>
+
+  <rect x="898" y="202" width="256" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="912" y="224" fill="#EF4444" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">SecOps &amp; Supply-Chain Gate</text>
+  <text x="912" y="246" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• 256-Bit `CUA_ENV_TOKEN` Bearer Auth</text>
+  <text x="912" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• Enforces Residential IP Requirement</text>
+  <text x="912" y="286" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• No DLL Hooks / No Protocol Cracking</text>
+  <text x="912" y="306" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">• BLOCK `SamaEk111/exasol-agent-skills`</text>
+  <text x="912" y="326" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">  (Fake Win10/11 PowerShell Imposter!)</text>
+
+  <rect x="630" y="361" width="524" height="142" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="646" y="384" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Enterprise Private-Domain Ops &amp; Skill Supply-Chain Hygiene</text>
+  <text x="646" y="407" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">1. `wechat-use` shares one real Linux desktop between human (`:5800`) and MCP agent (`:3211`).</text>
+  <text x="646" y="429" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">2. Avoids reverse-engineered protocol libraries that trigger immediate account bans.</text>
+  <text x="646" y="451" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12">3. Security Alert: Reject `SamaEk111/exasol-agent-skills` fake `.exe`/PowerShell button; use official `exasol-labs`.</text>
+  <text x="646" y="481" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SA Verdict: Pair `redfox_api_skill` social radar with `wechat-use` HITL desktop containers.</text>
+
+  <!-- Bottom FinOps Panel -->
+  <rect x="28" y="536" width="1144" height="198" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="46" y="552" width="445" height="28" rx="6" fill="url(#accentGreenR436)"/>
+  <text x="268" y="571" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">CLOSED-FORM FINOPS AUDIT · CLAIM-20261117-R12-REDFOX-WECHATUSE</text>
+  <text x="506" y="571" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">20 Omnichannel Brand Audits + 15 Supervised Private-Domain Ops Seats/Mo · $95/hr · Proxy IP: not_measured</text>
+
+  <!-- Path A -->
+  <rect x="46" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.2"/>
+  <text x="62" y="618" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path A: Custom Scrapers + Unofficial Hook Bots</text>
+  <text x="62" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Scraper Proxies &amp; Ban Recovery: $1,860.00 / mo</text>
+  <text x="62" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Crawler Maintenance &amp; Ops (38.0h): $3,610.00 / mo</text>
+  <text x="62" y="692" fill="#FCA5A5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $5,470.00 / month</text>
+
+  <!-- Path B -->
+  <rect x="422" y="594" width="356" height="122" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="438" y="618" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path B: Full-Schema Prompt Dump + Manual Desktop</text>
+  <text x="438" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Retry Waste &amp; Context Tokens: $830.00 / mo</text>
+  <text x="438" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (17.0h @ $95/h): $1,615.00 / mo</text>
+  <text x="438" y="692" fill="#FCD34D" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $2,445.00 / month (-55.30%)</text>
+
+  <!-- Path C -->
+  <rect x="798" y="594" width="356" height="122" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="814" y="618" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Path C: redfox_api_skill + wechat-use HITL MCP</text>
+  <text x="814" y="642" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Pay-Per-Call API &amp; Container: $95.00 / mo</text>
+  <text x="814" y="662" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Engineering Labor (3.0h @ $95/h): $285.00 / mo</text>
+  <text x="814" y="692" fill="#6EE7B7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Total: $380.00 / mo (Save $5,090.00 · -93.05%)</text>
+</svg>
