@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" width="1440" height="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="1440" height="800" fill="#090D13"/>
+  <rect x="20" y="20" width="1400" height="760" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="52" y="60" fill="#F0F6FC" font-size="22" font-weight="800">案例 6：多模型认知专精分工图谱与零提示词开销治理（MODEL-SKILL-MATRIX.md · 0 Bytes）</text>
+  <text x="52" y="86" fill="#8B949E" font-size="13.5">Cognitive Specialization Across Gemini 4 Carbon · GPT-6.2 Sol · Grok 4.7 · Gemini 3.8 Flash (62 Active Orthogonal Skills)</text>
+
+  <!-- LEFT PANEL: 6-Axis Capability Specialization Radar -->
+  <rect x="44" y="112" width="620" height="642" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="68" y="146" fill="#F0F6FC" font-size="16" font-weight="800">A. 四大注册模型梯队六维认知长板画像 (Specialization Profile)</text>
+  <text x="68" y="168" fill="#8B949E" font-size="11.5">定性认知能力分工映射（避免用单一默认模型硬扛所有异构工作流）</text>
+
+  <!-- Legend -->
+  <rect x="68" y="182" width="572" height="38" rx="6" fill="#0D1117" stroke="#21262D"/>
+  <rect x="84" y="194" width="12" height="12" rx="2" fill="#10B981"/>
+  <text x="102" y="205" fill="#A7F3D0" font-size="11.5" font-weight="700">Gemini 4 Carbon</text>
+  <rect x="228" y="194" width="12" height="12" rx="2" fill="#3B82F6"/>
+  <text x="246" y="205" fill="#93C5FD" font-size="11.5" font-weight="700">GPT-6.2 Sol (xhigh)</text>
+  <rect x="392" y="194" width="12" height="12" rx="2" fill="#F59E0B"/>
+  <text x="410" y="205" fill="#FDE68A" font-size="11.5" font-weight="700">Grok 4.7</text>
+  <rect x="496" y="194" width="12" height="12" rx="2" fill="#A855F7"/>
+  <text x="514" y="205" fill="#E9D5FF" font-size="11.5" font-weight="700">3.8 Flash</text>
+
+  <!-- Hexagon Radar Center (354, 410), R_max = 150 -->
+  <!-- Vertices R=150:
+       Top (0°): (354, 260)
+       Top-Right (60°): (484, 335)
+       Bottom-Right (120°): (484, 485)
+       Bottom (180°): (354, 560)
+       Bottom-Left (240°): (224, 485)
+       Top-Left (300°): (224, 335)
+  -->
+  <g stroke="#30363D" stroke-width="1" fill="none">
+    <!-- Outer 100% ring -->
+    <polygon points="354,260 484,335 484,485 354,560 224,485 224,335"/>
+    <!-- 66% ring (R=100) -->
+    <polygon points="354,310 441,360 441,460 354,510 267,460 267,360" stroke-dasharray="3,3"/>
+    <!-- 33% ring (R=50) -->
+    <polygon points="354,360 397,385 397,435 354,460 311,435 311,385" stroke-dasharray="3,3"/>
+    <!-- Spokes -->
+    <line x1="354" y1="410" x2="354" y2="260"/>
+    <line x1="354" y1="410" x2="484" y2="335"/>
+    <line x1="354" y1="410" x2="484" y2="485"/>
+    <line x1="354" y1="410" x2="354" y2="560"/>
+    <line x1="354" y1="410" x2="224" y2="485"/>
+    <line x1="354" y1="410" x2="224" y2="335"/>
+  </g>
+
+  <!-- GPT-6.2 Sol Polygon (Strongest on Bottom-Right IaC/CRM & Bottom RPI Planning) -->
+  <polygon points="354,305 450,355 478,482 354,554 260,464 285,370" fill="#3B82F6" fill-opacity="0.18" stroke="#3B82F6" stroke-width="2.5"/>
+
+  <!-- Gemini 4 Carbon Polygon (Strongest on Top Multimodal/Canvas & Top-Right 1M/Cyber) -->
+  <polygon points="354,264 480,338 446,463 354,516 262,463 272,363" fill="#10B981" fill-opacity="0.20" stroke="#10B981" stroke-width="2.5"/>
+
+  <!-- Grok 4.7 Polygon (Strongest on Bottom-Left Live SKU/Incident Velocity) -->
+  <polygon points="354,335 432,365 428,452 354,492 228,483 250,350" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="2.2"/>
+
+  <!-- Gemini 3.8 Flash Polygon (Strongest on Top-Left Subagent Explore Throughput) -->
+  <polygon points="354,340 398,385 390,430 354,452 276,455 227,337" fill="#A855F7" fill-opacity="0.16" stroke="#A855F7" stroke-width="2.2" stroke-dasharray="5,3"/>
+
+  <!-- Axis Labels -->
+  <text x="354" y="244" text-anchor="middle" fill="#6EE7B7" font-size="12" font-weight="800">多模态视觉 / SVG / Canvas 质检</text>
+  <text x="500" y="330" text-anchor="start" fill="#6EE7B7" font-size="12" font-weight="800">1M 超长上下文</text>
+  <text x="500" y="347" text-anchor="start" fill="#8B949E" font-size="11">&amp; 网安防御纵深</text>
+
+  <text x="500" y="486" text-anchor="start" fill="#93C5FD" font-size="12" font-weight="800">架构权衡 · IaC</text>
+  <text x="500" y="503" text-anchor="start" fill="#8B949E" font-size="11">&amp; CRM OData 契约</text>
+
+  <text x="354" y="584" text-anchor="middle" fill="#93C5FD" font-size="12" font-weight="800">RPI 多阶段规划与严密方案审阅</text>
+
+  <text x="208" y="486" text-anchor="end" fill="#FDE68A" font-size="12" font-weight="800">实时配额/定价核验</text>
+  <text x="208" y="503" text-anchor="end" fill="#8B949E" font-size="11">&amp; 故障排障/红队速度</text>
+
+  <text x="208" y="330" text-anchor="end" fill="#E9D5FF" font-size="12" font-weight="800">只读 Explore 扫描</text>
+  <text x="208" y="347" text-anchor="end" fill="#8B949E" font-size="11">低延迟并发吞吐</text>
+
+  <!-- Zero-Prompt-Cost Governance Callout -->
+  <rect x="68" y="612" width="572" height="120" rx="10" fill="#0F241D" stroke="#10B981" stroke-width="1.4"/>
+  <text x="88" y="640" fill="#34D399" font-size="14" font-weight="800">💡 零预算治理架构技巧：为什么治理矩阵消费 0 Bytes 系统提示词？</text>
+  <text x="88" y="664" fill="#E2E8F0" font-size="12">若把模型分工表建成一个 Skill，每次会话都会白白消耗 &lt;available_skills&gt; 宝贵字符配额。</text>
+  <text x="88" y="686" fill="#E2E8F0" font-size="12">将其存放在技能扫描目录之外的 <tspan fill="#6EE7B7" font-family="ui-monospace, Consolas, monospace" font-weight="700">~/.copilot/MODEL-SKILL-MATRIX.md</tspan>，</text>
+  <text x="88" y="708" fill="#A7F3D0" font-size="12">既为架构师与审计任务提供权威单一事实源（SSOT），又对运行时路由保持 <tspan font-weight="800">0 Bytes</tspan> 零负担！</text>
+
+  <!-- RIGHT PANEL: 4-Tier Skill Routing Cards & Legacy Decommissioning -->
+  <rect x="688" y="112" width="708" height="642" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="714" y="146" fill="#F0F6FC" font-size="16" font-weight="800">B. 62 个正交活跃 Skill × 四大前沿模型梯队路由矩阵</text>
+  <text x="714" y="168" fill="#8B949E" font-size="12">告别硬编码过时模型，按任务认知特征匹配最优推理引擎与思考强度（Reasoning Effort）</text>
+
+  <!-- Tier 1: Gemini 4 Carbon -->
+  <rect x="714" y="186" width="656" height="114" rx="10" fill="#0D1117" stroke="#10B981" stroke-width="1.4"/>
+  <rect x="730" y="202" width="176" height="26" rx="6" fill="#064E3B"/>
+  <text x="818" y="220" text-anchor="middle" fill="#6EE7B7" font-size="12.5" font-weight="800">gemini-4-carbon</text>
+  <text x="920" y="220" fill="#E2E8F0" font-size="13" font-weight="700">多模态画布质检 · 空间几何 SVG/动画 · 1M 上下文 · 网安纵深</text>
+  <text x="730" y="248" fill="#CBD5E1" font-size="12">• <tspan fill="#34D399" font-weight="700">视觉与画布簇</tspan>：pptx · docx · xlsx · web-artifacts-builder · azure-style-presentation · billing-assistant</text>
+  <text x="730" y="270" fill="#CBD5E1" font-size="12">• <tspan fill="#34D399" font-weight="700">空间与创意簇</tspan>：anatomy (等轴测 SVG+WebGL) · painted-animation · one-sentence-video · accessibility</text>
+  <text x="730" y="290" fill="#94A3B8" font-size="11.5">核心收益：结合 render_slide SVG 与多模态 view 直接捕捉排版溢出、撞字与配色失衡</text>
+
+  <!-- Tier 2: GPT-6.2 Sol -->
+  <rect x="714" y="314" width="656" height="114" rx="10" fill="#0D1117" stroke="#3B82F6" stroke-width="1.4"/>
+  <rect x="730" y="330" width="176" height="26" rx="6" fill="#1E3A8A"/>
+  <text x="818" y="348" text-anchor="middle" fill="#93C5FD" font-size="12.5" font-weight="800">gpt-6.2-sol (xhigh)</text>
+  <text x="920" y="348" fill="#E2E8F0" font-size="13" font-weight="700">复杂云架构权衡 · IaC 部署契约 · CRM/OData 严密校验 · RPI 规划</text>
+  <text x="730" y="376" fill="#CBD5E1" font-size="12">• <tspan fill="#60A5FA" font-weight="700">云底座与 IaC 簇</tspan>：architecture · azure-prepare/deploy/validate · azure-kubernetes · chorus-azure-deployment</text>
+  <text x="730" y="398" fill="#CBD5E1" font-size="12">• <tspan fill="#60A5FA" font-weight="700">企业治理与研发簇</tspan>：pmx-tp/td/tt/hygiene · msx-crm · rpi-plan/implement/review · code-review · prompt-*</text>
+  <text x="730" y="418" fill="#94A3B8" font-size="11.5">核心收益：多步状态依赖、OData Schema 约束与跨文件重构实现最高一击命中率</text>
+
+  <!-- Tier 3: Grok 4.7 -->
+  <rect x="714" y="442" width="656" height="104" rx="10" fill="#0D1117" stroke="#F59E0B" stroke-width="1.4"/>
+  <rect x="730" y="458" width="176" height="26" rx="6" fill="#78350F"/>
+  <text x="818" y="476" text-anchor="middle" fill="#FDE68A" font-size="12.5" font-weight="800">grok-4.7</text>
+  <text x="920" y="476" fill="#E2E8F0" font-size="13" font-weight="700">高频实时 SKU/报价核验 · 生产故障定界分诊 · 智能体红队对抗</text>
+  <text x="730" y="504" fill="#CBD5E1" font-size="12">• <tspan fill="#FBBF24" font-weight="700">实时核验与诊断簇</tspan>：azure-answer · azure-foundry-quota-tier · azure-diagnostics · owasp-agentic</text>
+  <text x="730" y="526" fill="#94A3B8" font-size="11.5">核心收益：联动 azure-pricing / azure-quota / AppLens MCP 实现极速事实核查与对抗推演</text>
+
+  <!-- Tier 4: Fast Subagent Tier -->
+  <rect x="714" y="560" width="656" height="84" rx="10" fill="#0D1117" stroke="#A855F7" stroke-width="1.4"/>
+  <rect x="730" y="574" width="210" height="26" rx="6" fill="#4C1D95"/>
+  <text x="835" y="592" text-anchor="middle" fill="#E9D5FF" font-size="12" font-weight="800">gemini-3.8-flash / mai-code-2-flash</text>
+  <text x="954" y="592" fill="#E2E8F0" font-size="13" font-weight="700">高速只读子智能体并发探针 (Read-Only Explore Tier)</text>
+  <text x="730" y="622" fill="#CBD5E1" font-size="12">• 专职承载 <tspan fill="#D8B4FE" font-family="ui-monospace, Consolas, monospace">task(agent_type="explore")</tspan> 多目录广度检索、日志初筛与依赖盘点，保护主会话上下文洁净</text>
+
+  <!-- Bottom Legacy Decommission Banner -->
+  <rect x="714" y="658" width="656" height="74" rx="10" fill="#231215" stroke="#F85149" stroke-width="1.1"/>
+  <text x="732" y="684" fill="#FFA198" font-size="12.5" font-weight="800">🧹 历史遗留硬编码模型清零清单 (0 Legacy Model Pins Remaining in Active Fleet)</text>
+  <text x="732" y="708" fill="#E2E8F0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">Decommissioned: gpt-4o · gpt-4.1 · gpt-5.4 · claude-3-7-sonnet · claude-sonnet-4 · claude-haiku-4.5</text>
+</svg>

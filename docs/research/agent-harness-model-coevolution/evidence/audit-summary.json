@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "topic": "agent-harness-model-coevolution",
+  "title_zh": "随前沿模型升级持续演进 Agent Harness：生产级 Skill 审阅、预算悬崖修复与协同演化实践报告",
+  "title_en": "Continuously Co-Evolving an Agent Harness Alongside Frontier Model Upgrades: Production Skill Audit, Prompt Budget Cliff Recovery & Playbook",
+  "date": "2026-11-18",
+  "provenance": "measured",
+  "independently_reproduced": true,
+  "anonymized_public_paths": true,
+  "registered_frontier_models": {
+    "deep_architecture_and_iac": "gpt-6.2-sol",
+    "multimodal_1m_context_and_cyber": "gemini-4-carbon",
+    "live_verification_and_triage": "grok-4.7",
+    "fast_readonly_explore_tier": [
+      "gemini-3.8-flash",
+      "mai-code-2-flash"
+    ]
+  },
+  "decommissioned_legacy_models": [
+    "gpt-5.4",
+    "gpt-4o",
+    "gpt-4.1",
+    "claude-haiku-4.5",
+    "claude-3-7-sonnet",
+    "claude-sonnet-4"
+  ],
+  "audit_baseline_and_outcome": {
+    "audited_skill_directories_total": 120,
+    "copilot_skills_directories_before": 83,
+    "agents_skills_directories_before": 37,
+    "active_curated_skills_after": 62,
+    "disk_footprint_before_mb": 113.5,
+    "disk_footprint_after_mb": 56.5,
+    "disk_footprint_delta_mb": -56.97,
+    "disk_footprint_reduction_pct": 50.2,
+    "reversible_archive_snapshot": "~/.copilot/skills-archive/2026-11-18/",
+    "telemetry_sources": [
+      "session_store_sql (tool_requests skill invocations)",
+      "~/.copilot/settings.json",
+      "~/.copilot/skills/*/SKILL.md",
+      "~/.agents/skills/*/SKILL.md"
+    ]
+  },
+  "case_study_1_prompt_budget_cliff": {
+    "available_skills_xml_cap_chars_approx": 12000,
+    "verbose_agents_skills_count": 15,
+    "verbose_agents_skills_total_chars": 10805,
+    "verbose_agents_skills_item_range_chars": [
+      700,
+      1012
+    ],
+    "active_descriptions_chars_before_approx": 38600,
+    "active_descriptions_chars_after": 8019,
+    "description_compaction_pct": 79.2,
+    "headroom_remaining_chars_approx": 3981,
+    "standardized_routing_contract_chars": [
+      110,
+      165
+    ],
+    "routing_contract_template": "[Core Capability]. USE FOR: [Triggers]. DO NOT USE FOR: [Exclusions].",
+    "router_visibility_before": {
+      "visible_user_skills": 1,
+      "total_user_skills": 81,
+      "visible_pct": 1.2,
+      "truncated_user_skills": 80,
+      "truncated_pct": 98.8,
+      "only_visible_skill": "accessibility"
+    },
+    "router_visibility_after": {
+      "visible_user_skills": 62,
+      "total_user_skills": 62,
+      "visible_pct": 100.0
+    }
+  },
+  "case_study_2_telemetry_pruning": {
+    "duplicate_anatomy_removed_mb": 40.0,
+    "duplicates_and_collisions_removed": [
+      ".agents/skills/anatomy (40.0 MB duplicate of .copilot/skills/anatomy)",
+      "hve-builder (duplicate)",
+      "powerpoint (pinned to claude-haiku-4.5, colliding with pptx + azure-style-presentation)"
+    ],
+    "zero_invocation_hve_core_skills_removed": 29,
+    "os_mismatched_and_unused_junctions_removed": 7,
+    "notable_os_mismatched_examples": [
+      "sso-watcher (macOS Hammerspoon daemon on Windows)",
+      "daily-activity-log (62 KB unused junction)"
+    ],
+    "newly_installed_sa_skills_count": 3,
+    "newly_installed_sa_skills": [
+      "billing-assistant",
+      "chorus-azure-deployment",
+      "one-sentence-video"
+    ],
+    "newly_installed_source_repo": "turbo998/azure-sa-skills"
+  },
+  "case_study_3_progressive_disclosure": {
+    "target_skill": "openclaw-wechat-deployment",
+    "monolith_size_before_kb": 46.5,
+    "core_skill_md_lines_before": 1390,
+    "core_skill_md_lines_after": 84,
+    "core_line_reduction_pct": 94.0,
+    "on_demand_reference_modules": [
+      "references/architecture-and-deployment.md",
+      "references/plugin-and-troubleshooting.md",
+      "references/enterprise-security-and-ops.md"
+    ]
+  },
+  "case_study_4_descaffolding_and_contracts": {
+    "upgraded_skills": [
+      "azure-hermes-ghcp-wechat",
+      "prompt-builder",
+      "prompt-analyze",
+      "prompt-refactor",
+      "rpi-research",
+      "rpi-plan",
+      "rpi-implement",
+      "rpi-review",
+      "code-review",
+      "azure-answer"
+    ],
+    "removed_hallucinated_tools": [
+      "search-the-web",
+      "fetch_page",
+      "runSubagent"
+    ],
+    "removed_broken_paths": [
+      "~/.claude/",
+      "/home/azureuser/.hermes/"
+    ],
+    "replacement_mcp_and_native_primitives": [
+      "tool_search_tool",
+      "azure-pricing",
+      "azure-quota",
+      "microsoft-learn-*",
+      "task (explore, research, rubber-duck, general-purpose, code-review)"
+    ]
+  },
+  "case_study_5_native_canvases_and_multimodal_qa": {
+    "upgraded_artifact_skills": [
+      "docx",
+      "pptx",
+      "xlsx",
+      "web-artifacts-builder",
+      "billing-assistant"
+    ],
+    "native_canvases_adopted": [
+      "powerpoint (render_slide SVG)",
+      "word (batch)",
+      "excel (batch)",
+      "browser"
+    ],
+    "cjk_font_fallback_chain": [
+      "msyh.ttc",
+      "simhei.ttf",
+      "PingFang.ttc",
+      "NotoSansCJK"
+    ],
+    "benchmark_visual_standard": "7-Card 4:5 Portrait Deck (900x1125 / 1080x1350)"
+  },
+  "case_study_6_cognitive_specialization_governance": {
+    "governance_artifact": "~/.copilot/MODEL-SKILL-MATRIX.md",
+    "available_skills_prompt_cost_bytes": 0
+  },
+  "lead_comparison_chart_series": [
+    {
+      "metric_zh": "Prompt 描述预算 (百字符)",
+      "metric_en": "Prompt Desc Budget (x100 chars)",
+      "before": 386.0,
+      "after": 80.2,
+      "unit_note": "38,600 -> 8,019 chars (-79.2%)"
+    },
+    {
+      "metric_zh": "活跃目录体积 (MB)",
+      "metric_en": "Active Footprint (MB)",
+      "before": 113.5,
+      "after": 56.5,
+      "unit_note": "-56.97 MB (-50.2%)"
+    },
+    {
+      "metric_zh": "用户 Skill 描述可见率 (%)",
+      "metric_en": "Skill Router Visibility (%)",
+      "before": 1.2,
+      "after": 100.0,
+      "unit_note": "1/81 -> 62/62 (83.3x)"
+    },
+    {
+      "metric_zh": "OpenClaw 主文件行数 (十行)",
+      "metric_en": "OpenClaw Core SKILL.md (x10 lines)",
+      "before": 139.0,
+      "after": 8.4,
+      "unit_note": "1,390 -> 84 lines (-94.0%)"
+    }
+  ]
+}

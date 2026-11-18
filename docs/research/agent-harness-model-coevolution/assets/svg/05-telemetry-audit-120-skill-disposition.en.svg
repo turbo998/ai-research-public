@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 680" width="1440" height="680" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+  <defs>
+    <linearGradient id="blueBaseEn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="redPruneEn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="greenFinalEn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="680" fill="#090D13"/>
+  <rect x="20" y="20" width="1400" height="640" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+
+  <text x="52" y="60" fill="#F0F6FC" font-size="22" font-weight="800">Case Study 2 Telemetry Waterfall: 120 Audited Directories (113.5 MB) → 62 Orthogonal Skills (56.5 MB)</text>
+  <text x="52" y="86" fill="#8B949E" font-size="13.5">Evidence-Driven Pruning via session_store_sql (tool_requests) · -56.97 MB (-50.2%) Disk Saved · 100% Reversible Snapshot</text>
+
+  <!-- LEFT CHART -->
+  <rect x="44" y="112" width="820" height="518" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="68" y="144" fill="#F0F6FC" font-size="15.5" font-weight="800">A. Skill Fleet Disposition Waterfall (120 Audited → -61 Archived/Deduped → +3 Installed → 62 Active)</text>
+
+  <g stroke="#21262D" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="112" y1="188" x2="836" y2="188"/>
+    <line x1="112" y1="266" x2="836" y2="266"/>
+    <line x1="112" y1="344" x2="836" y2="344"/>
+    <line x1="112" y1="422" x2="836" y2="422"/>
+  </g>
+  <line x1="112" y1="500" x2="836" y2="500" stroke="#484F58" stroke-width="1.5"/>
+
+  <g fill="#8B949E" font-size="12" text-anchor="end" font-family="ui-monospace, Consolas, monospace">
+    <text x="100" y="192">120</text>
+    <text x="100" y="270">90</text>
+    <text x="100" y="348">60</text>
+    <text x="100" y="426">30</text>
+    <text x="100" y="504">0</text>
+  </g>
+
+  <rect x="138" y="284.2" width="92" height="215.8" rx="3" fill="url(#blueBaseEn)"/>
+  <text x="184" y="396" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">.copilot (83)</text>
+  <rect x="138" y="188.0" width="92" height="96.2" rx="3" fill="#0EA5E9"/>
+  <text x="184" y="241" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">.agents (37)</text>
+  <text x="184" y="178" text-anchor="middle" fill="#60A5FA" font-size="14" font-weight="800">120</text>
+  <text x="184" y="526" text-anchor="middle" fill="#E2E8F0" font-size="12" font-weight="700">Audited Baseline</text>
+  <text x="184" y="544" text-anchor="middle" fill="#8B949E" font-size="11">Split across 2 roots</text>
+
+  <line x1="230" y1="188.0" x2="268" y2="188.0" stroke="#64748B" stroke-dasharray="3,3"/>
+
+  <rect x="268" y="188.0" width="92" height="75.4" rx="3" fill="url(#redPruneEn)"/>
+  <text x="314" y="231" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">-29</text>
+  <text x="314" y="526" text-anchor="middle" fill="#FFA198" font-size="12" font-weight="700">Zero-Call Imports</text>
+  <text x="314" y="544" text-anchor="middle" fill="#8B949E" font-size="11">jira / gitlab / ado-*</text>
+
+  <line x1="360" y1="263.4" x2="398" y2="263.4" stroke="#64748B" stroke-dasharray="3,3"/>
+
+  <rect x="398" y="263.4" width="92" height="18.2" rx="3" fill="url(#redPruneEn)"/>
+  <text x="444" y="254" text-anchor="middle" fill="#FF7B72" font-size="13" font-weight="800">-7</text>
+  <text x="444" y="526" text-anchor="middle" fill="#FFA198" font-size="12" font-weight="700">OS/Dead Junctions</text>
+  <text x="444" y="544" text-anchor="middle" fill="#8B949E" font-size="11">macOS sso-watcher</text>
+
+  <line x1="490" y1="281.6" x2="528" y2="281.6" stroke="#64748B" stroke-dasharray="3,3"/>
+
+  <rect x="528" y="281.6" width="92" height="65.0" rx="3" fill="url(#redPruneEn)"/>
+  <text x="574" y="319" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">-25</text>
+  <text x="574" y="526" text-anchor="middle" fill="#FFA198" font-size="12" font-weight="700">Dupes &amp; Collisions</text>
+  <text x="574" y="544" text-anchor="middle" fill="#8B949E" font-size="11">anatomy / powerpoint</text>
+
+  <line x1="620" y1="346.6" x2="646" y2="346.6" stroke="#64748B" stroke-dasharray="3,3"/>
+
+  <rect x="646" y="338.8" width="76" height="7.8" rx="2" fill="#38BDF8"/>
+  <text x="684" y="329" text-anchor="middle" fill="#38BDF8" font-size="13" font-weight="800">+3 New</text>
+  <text x="684" y="526" text-anchor="middle" fill="#38BDF8" font-size="12" font-weight="700">SA Gap-Fills</text>
+  <text x="684" y="544" text-anchor="middle" fill="#8B949E" font-size="11">azure-sa-skills</text>
+
+  <line x1="722" y1="338.8" x2="746" y2="338.8" stroke="#10B981" stroke-dasharray="3,3"/>
+
+  <rect x="746" y="338.8" width="90" height="161.2" rx="4" fill="url(#greenFinalEn)" stroke="#6EE7B7" stroke-width="1.2"/>
+  <text x="791" y="328" text-anchor="middle" fill="#34D399" font-size="15" font-weight="800">62</text>
+  <text x="791" y="424" text-anchor="middle" fill="#FFFFFF" font-size="12.5" font-weight="800">Curated</text>
+  <text x="791" y="526" text-anchor="middle" fill="#34D399" font-size="12" font-weight="700">100% Visible</text>
+  <text x="791" y="544" text-anchor="middle" fill="#8B949E" font-size="11">Zero Collisions</text>
+
+  <rect x="68" y="566" width="768" height="44" rx="8" fill="#0D1117" stroke="#21262D"/>
+  <text x="86" y="593" fill="#CBD5E1" font-size="12">🛡️ <tspan fill="#6EE7B7" font-weight="700">100% Reversible Snapshot</tspan>: All archived directories preserved under <tspan font-family="ui-monospace, Consolas, monospace" fill="#38BDF8">~/.copilot/skills-archive/2026-11-18/</tspan></text>
+
+  <!-- RIGHT PANEL -->
+  <rect x="888" y="112" width="508" height="518" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="914" y="144" fill="#F0F6FC" font-size="16" font-weight="800">B. Disk Footprint &amp; High-Impact Targets</text>
+
+  <text x="914" y="178" fill="#93C5FD" font-size="12.5" font-weight="700">Before Footprint: 113.5 MB</text>
+  <rect x="914" y="188" width="272" height="28" rx="4" fill="#1D4ED8"/>
+  <rect x="1186" y="188" width="148" height="28" rx="4" fill="#EF4444"/>
+  <text x="1260" y="207" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="800">anatomy dupe 40MB</text>
+
+  <text x="914" y="244" fill="#6EE7B7" font-size="12.5" font-weight="700">After Footprint: 56.5 MB (-56.97 MB / -50.2%)</text>
+  <rect x="914" y="254" width="209" height="28" rx="4" fill="#10B981"/>
+  <text x="1018" y="273" text-anchor="middle" fill="#052E16" font-size="12" font-weight="800">56.5 MB Active Fleet</text>
+
+  <rect x="914" y="302" width="456" height="92" rx="8" fill="#0D1117" stroke="#EF4444" stroke-width="1"/>
+  <text x="930" y="325" fill="#FFA198" font-size="12.5" font-weight="800">1. Cross-Root Duplication &amp; Trigger Collisions</text>
+  <text x="930" y="347" fill="#CBD5E1" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace">.agents/skills/anatomy</tspan> duplicated 40.0 MB of .copilot/skills</text>
+  <text x="930" y="367" fill="#CBD5E1" font-size="11.5">• Stale <tspan font-family="ui-monospace, Consolas, monospace">powerpoint</tspan> (pinned to haiku-4.5) collided with <tspan font-family="ui-monospace, Consolas, monospace">pptx</tspan></text>
+  <text x="930" y="385" fill="#94A3B8" font-size="11">• Removed duplicate <tspan font-family="ui-monospace, Consolas, monospace">hve-builder</tspan> to restore single-owner routing</text>
+
+  <rect x="914" y="406" width="456" height="92" rx="8" fill="#0D1117" stroke="#F59E0B" stroke-width="1"/>
+  <text x="930" y="429" fill="#FDE68A" font-size="12.5" font-weight="800">2. Zero-Invocation Bulk Imports &amp; OS Mismatches</text>
+  <text x="930" y="451" fill="#CBD5E1" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace">session_store_sql</tspan> proved 0 calls on 29 bulk-imported hve-core skills</text>
+  <text x="930" y="471" fill="#CBD5E1" font-size="11.5">• Pruned macOS Hammerspoon daemon <tspan font-family="ui-monospace, Consolas, monospace">sso-watcher</tspan> on Windows host</text>
+  <text x="930" y="489" fill="#94A3B8" font-size="11">• Archived 62 KB unused <tspan font-family="ui-monospace, Consolas, monospace">daily-activity-log</tspan> &amp; 6 stale junctions</text>
+
+  <rect x="914" y="510" width="456" height="98" rx="8" fill="#0F241D" stroke="#10B981" stroke-width="1"/>
+  <text x="930" y="533" fill="#6EE7B7" font-size="12.5" font-weight="800">3. Installed 3 High-Value SA Skills (turbo998/azure-sa-skills)</text>
+  <text x="930" y="555" fill="#E2E8F0" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace" fill="#34D399">billing-assistant</tspan>: Anchor PDF invoice editor (+ cross-OS CJK fonts)</text>
+  <text x="930" y="575" fill="#E2E8F0" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace" fill="#34D399">chorus-azure-deployment</tspan>: Low-cost ACA + PGlite + Bicep harness</text>
+  <text x="930" y="595" fill="#E2E8F0" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace" fill="#34D399">one-sentence-video</tspan>: Autonomous 3-act HyperFrames video pipeline</text>
+</svg>

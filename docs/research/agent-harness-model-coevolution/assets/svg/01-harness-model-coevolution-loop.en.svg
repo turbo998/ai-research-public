@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" width="1440" height="760" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+  <defs>
+    <linearGradient id="bg01en" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="60%" stop-color="#0D1117"/>
+      <stop offset="100%" stop-color="#131C2E"/>
+    </linearGradient>
+    <marker id="arrowBlueEn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrowGreenEn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="760" fill="url(#bg01en)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1384" height="84" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="54" y="56" fill="#F8FAFC" font-size="22" font-weight="800">5-Stage Model × Harness Co-Evolution Loop &amp; The Inverse Scaffolding Law</text>
+  <text x="54" y="84" fill="#94A3B8" font-size="13.5">Why Every Frontier Model Upgrade Demands Stripping Procedural CoT Scripts While Tightening Boundary Invariants &amp; Native Primitives</text>
+  <rect x="1186" y="38" width="204" height="50" rx="10" fill="#161B22" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1288" y="59" text-anchor="middle" fill="#38BDF8" font-size="12" font-weight="800">Engineering Axiom #1</text>
+  <text x="1288" y="77" text-anchor="middle" fill="#CBD5E1" font-size="11">Sharper Invariants &gt; Rigid CoT</text>
+
+  <!-- LEFT PANEL: 5-Stage Co-Evolution Flywheel -->
+  <rect x="28" y="122" width="668" height="614" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  <text x="54" y="158" fill="#F0F6FC" font-size="17" font-weight="800">A. 5-Stage Continuous Co-Evolution Flywheel (SOP)</text>
+  <text x="54" y="180" fill="#8B949E" font-size="12.5">Execute one full audit cycle whenever frontier model tiers shift (GPT-6.2 Sol / Gemini 4 Carbon / Grok 4.7)</text>
+
+  <!-- Stage 1 -->
+  <rect x="64" y="202" width="596" height="82" rx="10" fill="#161B22" stroke="#2563EB" stroke-width="1.4"/>
+  <circle cx="104" cy="243" r="21" fill="#1D4ED8"/>
+  <text x="104" y="249" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">01</text>
+  <text x="140" y="232" fill="#60A5FA" font-size="14.5" font-weight="800">Frontier Model Upgrade &amp; Capability Re-Baselining</text>
+  <text x="140" y="254" fill="#E2E8F0" font-size="12">Native 1M context, xhigh reasoning, multimodal inspection &amp; Desktop Canvases unlock</text>
+  <text x="140" y="272" fill="#8B949E" font-size="11">Legacy pins (gpt-4o / gpt-5.4 / haiku-4.5) turn from guardrails into artificial ceilings</text>
+
+  <line x1="362" y1="284" x2="362" y2="304" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlueEn)"/>
+
+  <!-- Stage 2 -->
+  <rect x="64" y="306" width="596" height="82" rx="10" fill="#161B22" stroke="#0EA5E9" stroke-width="1.4"/>
+  <circle cx="104" cy="347" r="21" fill="#0284C7"/>
+  <text x="104" y="353" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">02</text>
+  <text x="140" y="336" fill="#38BDF8" font-size="14.5" font-weight="800">Telemetry &amp; Prompt Budget Cliff Probe</text>
+  <text x="140" y="358" fill="#E2E8F0" font-size="12">Cross-query session_store_sql (tool_requests) against &lt;available_skills&gt; 12 KB XML cap</text>
+  <text x="140" y="376" fill="#8B949E" font-size="11">Discovery: 80/81 (98.8%) user skills silently truncated to bare names across 120 dirs!</text>
+
+  <line x1="362" y1="388" x2="362" y2="408" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlueEn)"/>
+
+  <!-- Stage 3 -->
+  <rect x="64" y="410" width="596" height="82" rx="10" fill="#161B22" stroke="#D97706" stroke-width="1.4"/>
+  <circle cx="104" cy="451" r="21" fill="#B45309"/>
+  <text x="104" y="457" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">03</text>
+  <text x="140" y="440" fill="#FBBF24" font-size="14.5" font-weight="800">Reversible Pruning &amp; Orthogonal Contract Compaction</text>
+  <text x="140" y="462" fill="#E2E8F0" font-size="12">Archive 40 MB dupes, 29 zero-call imports &amp; OS-mismatched junctions to skills-archive/</text>
+  <text x="140" y="480" fill="#8B949E" font-size="11">Standardize 110–165c [Capability + USE FOR + DO NOT USE FOR]: 38.6K → 8,019c (100% visible)</text>
+
+  <line x1="362" y1="492" x2="362" y2="512" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlueEn)"/>
+
+  <!-- Stage 4 -->
+  <rect x="64" y="514" width="596" height="82" rx="10" fill="#161B22" stroke="#10B981" stroke-width="1.4"/>
+  <circle cx="104" cy="555" r="21" fill="#059669"/>
+  <text x="104" y="561" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">04</text>
+  <text x="140" y="544" fill="#34D399" font-size="14.5" font-weight="800">CoT De-Scaffolding, Progressive Disclosure &amp; Native Primitives</text>
+  <text x="140" y="566" fill="#E2E8F0" font-size="12">Split 1,390L monolith into 84L core + lazy references/; replace dead tools with MCP &amp; Canvas</text>
+  <text x="140" y="584" fill="#8B949E" font-size="11">Remove step-by-step CoT scripts; enforce hard invariants (CSP, zero fabricated coords, CJK fonts)</text>
+
+  <line x1="362" y1="596" x2="362" y2="616" stroke="#10B981" stroke-width="2" marker-end="url(#arrowGreenEn)"/>
+
+  <!-- Stage 5 -->
+  <rect x="64" y="618" width="596" height="92" rx="10" fill="#12261E" stroke="#10B981" stroke-width="1.6"/>
+  <circle cx="104" cy="664" r="21" fill="#10B981"/>
+  <text x="104" y="670" text-anchor="middle" fill="#052E16" font-size="15" font-weight="900">05</text>
+  <text x="140" y="646" fill="#6EE7B7" font-size="14.5" font-weight="800">Cognitive Specialization &amp; Zero-Prompt-Cost Governance</text>
+  <text x="140" y="668" fill="#E2E8F0" font-size="12">Route skills across Gemini 4 Carbon · GPT-6.2 Sol · Grok 4.7 · Gemini 3.8 Flash</text>
+  <text x="140" y="688" fill="#A7F3D0" font-size="11">Store ~/.copilot/MODEL-SKILL-MATRIX.md outside skills/ for 0 Bytes prompt overhead</text>
+
+  <path d="M 64 664 C 34 664, 34 243, 60 243" fill="none" stroke="#10B981" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrowGreenEn)"/>
+
+  <!-- RIGHT PANEL: Inverse Scaffolding Law Visual Chart -->
+  <rect x="716" y="122" width="696" height="614" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  <text x="744" y="158" fill="#F0F6FC" font-size="17" font-weight="800">B. The Inverse Scaffolding Law Curve</text>
+  <text x="744" y="180" fill="#8B949E" font-size="12.5">As native model reasoning rises, strip procedural micromanagement and amplify deterministic invariants</text>
+
+  <!-- Chart Legend -->
+  <rect x="744" y="196" width="640" height="44" rx="8" fill="#161B22" stroke="#21262D"/>
+  <line x1="760" y1="218" x2="794" y2="218" stroke="#F85149" stroke-width="3.5"/>
+  <circle cx="777" cy="218" r="4.5" fill="#F85149"/>
+  <text x="804" y="223" fill="#FFA198" font-size="12" font-weight="700">Procedural Step-by-Step CoT Weight</text>
+
+  <line x1="1076" y1="218" x2="1110" y2="218" stroke="#10B981" stroke-width="3.5"/>
+  <circle cx="1093" cy="218" r="4.5" fill="#10B981"/>
+  <text x="1120" y="223" fill="#6EE7B7" font-size="12" font-weight="700">Boundary Invariants &amp; Native Primitives</text>
+
+  <!-- Plot Area: x=800..1356, y=270..520 -->
+  <g stroke="#21262D" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="800" y1="270" x2="1356" y2="270"/>
+    <line x1="800" y1="332.5" x2="1356" y2="332.5"/>
+    <line x1="800" y1="395" x2="1356" y2="395"/>
+    <line x1="800" y1="457.5" x2="1356" y2="457.5"/>
+  </g>
+  <line x1="800" y1="520" x2="1356" y2="520" stroke="#484F58" stroke-width="1.5"/>
+  <line x1="800" y1="270" x2="800" y2="520" stroke="#484F58" stroke-width="1.5"/>
+
+  <g fill="#8B949E" font-size="11.5" text-anchor="end" font-family="ui-monospace, Consolas, monospace">
+    <text x="790" y="274">High (90%)</text>
+    <text x="790" y="336">70%</text>
+    <text x="790" y="399">Cross (50%)</text>
+    <text x="790" y="461">30%</text>
+    <text x="790" y="524">Low (10%)</text>
+  </g>
+
+  <rect x="1030" y="270" width="96" height="250" fill="#1F2937" opacity="0.35"/>
+  <text x="1078" y="290" text-anchor="middle" fill="#FBBF24" font-size="11" font-weight="700">Inflection</text>
+
+  <path d="M 840 285 C 950 295, 1010 365, 1078 395 C 1146 425, 1220 492, 1316 502" fill="none" stroke="#F85149" stroke-width="4"/>
+  <circle cx="840" cy="285" r="6" fill="#F85149"/>
+  <circle cx="1078" cy="395" r="6" fill="#F85149"/>
+  <circle cx="1316" cy="502" r="6" fill="#F85149"/>
+
+  <path d="M 840 498 C 950 485, 1010 425, 1078 395 C 1146 365, 1220 292, 1316 282" fill="none" stroke="#10B981" stroke-width="4"/>
+  <circle cx="840" cy="498" r="6" fill="#10B981"/>
+  <circle cx="1078" cy="395" r="6" fill="#FBBF24" stroke="#0D1117" stroke-width="2"/>
+  <circle cx="1316" cy="282" r="6" fill="#10B981"/>
+
+  <rect x="822" y="300" width="202" height="44" rx="6" fill="#2D1215" stroke="#F85149" stroke-width="0.9"/>
+  <text x="832" y="318" fill="#FFA198" font-size="11" font-weight="700">Gen 1 Need: 1,000+ Line Scripts</text>
+  <text x="832" y="335" fill="#E2E8F0" font-size="10.5">Compensated for weak planning</text>
+
+  <rect x="1128" y="438" width="222" height="48" rx="6" fill="#2D1215" stroke="#F85149" stroke-width="0.9"/>
+  <text x="1138" y="456" fill="#FFA198" font-size="11" font-weight="700">Gen 3 Liability: Context Dilution</text>
+  <text x="1138" y="473" fill="#E2E8F0" font-size="10.5">Triggers dead tools &amp; rigid failures</text>
+
+  <rect x="1116" y="296" width="234" height="50" rx="6" fill="#12261E" stroke="#10B981" stroke-width="1"/>
+  <text x="1126" y="314" fill="#6EE7B7" font-size="11" font-weight="700">Gen 3 Leverage: 84L Core + MCP</text>
+  <text x="1126" y="332" fill="#E2E8F0" font-size="10.5">Hard output invariants, free planning</text>
+
+  <text x="840" y="546" text-anchor="middle" fill="#E2E8F0" font-size="12.5" font-weight="700">Gen 1 · Early Tool Models</text>
+  <text x="840" y="564" text-anchor="middle" fill="#8B949E" font-size="11">GPT-4o · Claude 3.7 Sonnet</text>
+
+  <text x="1078" y="546" text-anchor="middle" fill="#E2E8F0" font-size="12.5" font-weight="700">Gen 2 · Transitional Reasoning</text>
+  <text x="1078" y="564" text-anchor="middle" fill="#8B949E" font-size="11">GPT-5.4 · Claude Haiku 4.5</text>
+
+  <text x="1316" y="546" text-anchor="middle" fill="#38BDF8" font-size="12.5" font-weight="800">Gen 3 · Active Frontier Fleet</text>
+  <text x="1316" y="564" text-anchor="middle" fill="#93C5FD" font-size="11">Gemini 4 Carbon · GPT-6.2 Sol · Grok 4.7</text>
+
+  <!-- Bottom Takeaway Cards -->
+  <rect x="744" y="586" width="310" height="124" rx="10" fill="#1C1317" stroke="#F85149" stroke-width="1"/>
+  <text x="762" y="612" fill="#FF7B72" font-size="13" font-weight="800">⛔ Legacy Scaffolding to Strip</text>
+  <text x="762" y="634" fill="#E2E8F0" font-size="11.5">• Hardcoded stale IDs (claude-haiku-4.5 / gpt-4o)</text>
+  <text x="762" y="654" fill="#E2E8F0" font-size="11.5">• Hallucinated tools (search-the-web / runSubagent)</text>
+  <text x="762" y="674" fill="#E2E8F0" font-size="11.5">• Rigid "think step 1..12" CoT boilerplate</text>
+  <text x="762" y="694" fill="#E2E8F0" font-size="11.5">• 700–1,012 char marketing-prose frontmatter</text>
+
+  <rect x="1074" y="586" width="310" height="124" rx="10" fill="#0F241D" stroke="#10B981" stroke-width="1"/>
+  <text x="1092" y="612" fill="#34D399" font-size="13" font-weight="800">✅ High-Leverage Invariants to Amplify</text>
+  <text x="1092" y="634" fill="#E2E8F0" font-size="11.5">• 110–165c contract (USE FOR / DO NOT USE FOR)</text>
+  <text x="1092" y="654" fill="#E2E8F0" font-size="11.5">• Authoritative MCP grounding (azure-pricing / learn)</text>
+  <text x="1092" y="674" fill="#E2E8F0" font-size="11.5">• Native Desktop Canvases + deterministic verifiers</text>
+  <text x="1092" y="694" fill="#E2E8F0" font-size="11.5">• Lazy-loaded references/ preserving KV prefix cache</text>
+</svg>

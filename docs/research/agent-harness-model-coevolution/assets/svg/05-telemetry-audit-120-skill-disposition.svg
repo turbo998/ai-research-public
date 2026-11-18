@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 680" width="1440" height="680" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="blueBase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="redPrune" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="greenFinal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="680" fill="#090D13"/>
+  <rect x="20" y="20" width="1400" height="640" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="52" y="60" fill="#F0F6FC" font-size="22" font-weight="800">案例 2 遥测审计瀑布图：从 120 个混沌目录 (113.5 MB) 到 62 个正交精锐舰队 (56.5 MB)</text>
+  <text x="52" y="86" fill="#8B949E" font-size="13.5">session_store_sql (tool_requests) 真实调用遥测驱动裁剪 · 净减 -56.97 MB (-50.2%) · 100% 可逆快照备份</text>
+
+  <!-- LEFT CHART: Skill Count Waterfall (Y-axis: 0..130, y=500 is 0, 1 skill = 2.6 px) -->
+  <rect x="44" y="112" width="820" height="518" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="68" y="144" fill="#F0F6FC" font-size="16" font-weight="800">A. Skill 目录数量演进瀑布图 (120 审计基线 → -61 归档去重 → +3 补齐 → 62 活跃)</text>
+
+  <!-- Gridlines: 0->500, 30->422, 60->344, 90->266, 120->188 -->
+  <g stroke="#21262D" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="112" y1="188" x2="836" y2="188"/>
+    <line x1="112" y1="266" x2="836" y2="266"/>
+    <line x1="112" y1="344" x2="836" y2="344"/>
+    <line x1="112" y1="422" x2="836" y2="422"/>
+  </g>
+  <line x1="112" y1="500" x2="836" y2="500" stroke="#484F58" stroke-width="1.5"/>
+
+  <g fill="#8B949E" font-size="12" text-anchor="end" font-family="ui-monospace, Consolas, monospace">
+    <text x="100" y="192">120</text>
+    <text x="100" y="270">90</text>
+    <text x="100" y="348">60</text>
+    <text x="100" y="426">30</text>
+    <text x="100" y="504">0</text>
+  </g>
+
+  <!-- Col 1: Baseline 120 (83 + 37) -> h = 312px (y=188..500) -->
+  <!-- .copilot/skills 83 = 215.8px (y=284.2..500) -->
+  <rect x="138" y="284.2" width="92" height="215.8" rx="3" fill="url(#blueBase)"/>
+  <text x="184" y="396" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">.copilot (83)</text>
+  <!-- .agents/skills 37 = 96.2px (y=188.0..284.2) -->
+  <rect x="138" y="188.0" width="92" height="96.2" rx="3" fill="#0EA5E9"/>
+  <text x="184" y="241" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">.agents (37)</text>
+  <text x="184" y="178" text-anchor="middle" fill="#60A5FA" font-size="14" font-weight="800">120</text>
+  <text x="184" y="526" text-anchor="middle" fill="#E2E8F0" font-size="12" font-weight="700">审计初始总量</text>
+  <text x="184" y="544" text-anchor="middle" fill="#8B949E" font-size="11">双目录散落叠加</text>
+
+  <!-- Connector 120 -->
+  <line x1="230" y1="188.0" x2="268" y2="188.0" stroke="#64748B" stroke-dasharray="3,3"/>
+
+  <!-- Col 2: -29 Zero-Invocation hve-core (120 -> 91): y=188.0, h=75.4 (ends 263.4) -->
+  <rect x="268" y="188.0" width="92" height="75.4" rx="3" fill="url(#redPrune)"/>
+  <text x="314" y="231" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">-29</text>
+  <text x="314" y="526" text-anchor="middle" fill="#FFA198" font-size="12" font-weight="700">零调用导入包</text>
+  <text x="314" y="544" text-anchor="middle" fill="#8B949E" font-size="11">jira / gitlab / ado-*</text>
+
+  <!-- Connector 91 -->
+  <line x1="360" y1="263.4" x2="398" y2="263.4" stroke="#64748B" stroke-dasharray="3,3"/>
+
+  <!-- Col 3: -7 OS-Mismatched / Unused Junctions (91 -> 84): y=263.4, h=18.2 (ends 281.6) -->
+  <rect x="398" y="263.4" width="92" height="18.2" rx="3" fill="url(#redPrune)"/>
+  <text x="444" y="254" text-anchor="middle" fill="#FF7B72" font-size="13" font-weight="800">-7</text>
+  <text x="444" y="526" text-anchor="middle" fill="#FFA198" font-size="12" font-weight="700">跨OS/闲置软链</text>
+  <text x="444" y="544" text-anchor="middle" fill="#8B949E" font-size="11">macOS sso-watcher等</text>
+
+  <!-- Connector 84 -->
+  <line x1="490" y1="281.6" x2="528" y2="281.6" stroke="#64748B" stroke-dasharray="3,3"/>
+
+  <!-- Col 4: -25 Cross-Root Duplicates & Collisions (84 -> 59): y=281.6, h=65.0 (ends 346.6) -->
+  <rect x="528" y="281.6" width="92" height="65.0" rx="3" fill="url(#redPrune)"/>
+  <text x="574" y="319" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">-25</text>
+  <text x="574" y="526" text-anchor="middle" fill="#FFA198" font-size="12" font-weight="700">重复与路由冲突</text>
+  <text x="574" y="544" text-anchor="middle" fill="#8B949E" font-size="11">anatomy/powerpoint等</text>
+
+  <!-- Connector 59 -->
+  <line x1="620" y1="346.6" x2="646" y2="346.6" stroke="#64748B" stroke-dasharray="3,3"/>
+
+  <!-- Col 5: +3 Newly Installed SA Skills (59 -> 62): y=338.8..346.6, h=7.8 -->
+  <rect x="646" y="338.8" width="76" height="7.8" rx="2" fill="#38BDF8"/>
+  <text x="684" y="329" text-anchor="middle" fill="#38BDF8" font-size="13" font-weight="800">+3 补齐</text>
+  <text x="684" y="526" text-anchor="middle" fill="#38BDF8" font-size="12" font-weight="700">新增 SA 刚需</text>
+  <text x="684" y="544" text-anchor="middle" fill="#8B949E" font-size="11">azure-sa-skills</text>
+
+  <!-- Connector 62 -->
+  <line x1="722" y1="338.8" x2="746" y2="338.8" stroke="#10B981" stroke-dasharray="3,3"/>
+
+  <!-- Col 6: Final 62 Curated Fleet -> y=338.8..500, h=161.2 -->
+  <rect x="746" y="338.8" width="90" height="161.2" rx="4" fill="url(#greenFinal)" stroke="#6EE7B7" stroke-width="1.2"/>
+  <text x="791" y="328" text-anchor="middle" fill="#34D399" font-size="15" font-weight="800">62</text>
+  <text x="791" y="424" text-anchor="middle" fill="#FFFFFF" font-size="12.5" font-weight="800">正交舰队</text>
+  <text x="791" y="526" text-anchor="middle" fill="#34D399" font-size="12" font-weight="700">100% 活跃可见</text>
+  <text x="791" y="544" text-anchor="middle" fill="#8B949E" font-size="11">零冲突 · 零死链</text>
+
+  <!-- Bottom note inside Left Panel -->
+  <rect x="68" y="566" width="768" height="44" rx="8" fill="#0D1117" stroke="#21262D"/>
+  <text x="86" y="593" fill="#CBD5E1" font-size="12">🛡️ <tspan fill="#6EE7B7" font-weight="700">100% 可逆安全网</tspan>：所有归档项完整保留于 <tspan font-family="ui-monospace, Consolas, monospace" fill="#38BDF8">~/.copilot/skills-archive/2026-11-18/</tspan>，随时可按单目录秒级回滚。</text>
+
+  <!-- RIGHT PANEL: Disk Footprint & Key Findings -->
+  <rect x="888" y="112" width="508" height="518" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="914" y="144" fill="#F0F6FC" font-size="16" font-weight="800">B. 磁盘体积拆解与三大典型清理标靶</text>
+
+  <!-- Disk Horizontal Comparison (113.5 MB = 420px; 56.5 MB = 209px; 40.0 MB = 148px) -->
+  <text x="914" y="178" fill="#93C5FD" font-size="12.5" font-weight="700">优化前总占用：113.5 MB</text>
+  <rect x="914" y="188" width="272" height="28" rx="4" fill="#1D4ED8"/>
+  <rect x="1186" y="188" width="148" height="28" rx="4" fill="#EF4444"/>
+  <text x="1260" y="207" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="800">anatomy 重复 40MB</text>
+
+  <text x="914" y="244" fill="#6EE7B7" font-size="12.5" font-weight="700">优化后净占用：56.5 MB (-56.97 MB / -50.2%)</text>
+  <rect x="914" y="254" width="209" height="28" rx="4" fill="#10B981"/>
+  <text x="1018" y="273" text-anchor="middle" fill="#052E16" font-size="12" font-weight="800">56.5 MB 精锐资产</text>
+
+  <!-- 3 Concrete Case Boxes -->
+  <rect x="914" y="302" width="456" height="92" rx="8" fill="#0D1117" stroke="#EF4444" stroke-width="1"/>
+  <text x="930" y="325" fill="#FFA198" font-size="12.5" font-weight="800">1. 隐形双目录冗余与同域路由打架</text>
+  <text x="930" y="347" fill="#CBD5E1" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace">.agents/skills/anatomy</tspan> 白占 40.0 MB（与 .copilot 完全重复）</text>
+  <text x="930" y="367" fill="#CBD5E1" font-size="11.5">• 旧版 <tspan font-family="ui-monospace, Consolas, monospace">powerpoint</tspan> 锁死 haiku-4.5，与 <tspan font-family="ui-monospace, Consolas, monospace">pptx</tspan> + <tspan font-family="ui-monospace, Consolas, monospace">azure-style-presentation</tspan> 抢词</text>
+  <text x="930" y="385" fill="#94A3B8" font-size="11">• 同时清理重复 <tspan font-family="ui-monospace, Consolas, monospace">hve-builder</tspan>，确立单一权威入口</text>
+
+  <rect x="914" y="406" width="456" height="92" rx="8" fill="#0D1117" stroke="#F59E0B" stroke-width="1"/>
+  <text x="930" y="429" fill="#FDE68A" font-size="12.5" font-weight="800">2. 零调用“整包导入税”与跨平台僵尸软链</text>
+  <text x="930" y="451" fill="#CBD5E1" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace">session_store_sql</tspan> 证实 29 个整包导入的 hve-core 技能历史 0 调用</text>
+  <text x="930" y="471" fill="#CBD5E1" font-size="11.5">• Windows 工作站上挂载 macOS Hammerspoon 守护进程 <tspan font-family="ui-monospace, Consolas, monospace">sso-watcher</tspan></text>
+  <text x="930" y="489" fill="#94A3B8" font-size="11">• 移除 62 KB 从未激活的 <tspan font-family="ui-monospace, Consolas, monospace">daily-activity-log</tspan> 等 7 个无效 Junction</text>
+
+  <rect x="914" y="510" width="456" height="98" rx="8" fill="#0F241D" stroke="#10B981" stroke-width="1"/>
+  <text x="930" y="533" fill="#6EE7B7" font-size="12.5" font-weight="800">3. 逆向补齐 3 个高频 AI SA 实战缺口 (turbo998/azure-sa-skills)</text>
+  <text x="930" y="555" fill="#E2E8F0" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace" fill="#34D399">billing-assistant</tspan>：PyMuPDF 锚点账单重写（新增跨平台 CJK 字体链）</text>
+  <text x="930" y="575" fill="#E2E8F0" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace" fill="#34D399">chorus-azure-deployment</tspan>：ACA 极低成本部署 Chorus (PGlite + Bicep)</text>
+  <text x="930" y="595" fill="#E2E8F0" font-size="11.5">• <tspan font-family="ui-monospace, Consolas, monospace" fill="#34D399">one-sentence-video</tspan>：一句话驱动 HyperFrames 三幕程序化动画视频</text>
+</svg>

@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" width="1440" height="760" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arrCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrEmerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="760" fill="#090D13"/>
+  <rect x="20" y="20" width="1400" height="720" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="52" y="60" fill="#F0F6FC" font-size="22" font-weight="800">案例 3–5 架构演进：渐进式上下文披露 (-94.0%) 与原生 Desktop Canvas / MCP 执行闭环</text>
+  <text x="52" y="86" fill="#8B949E" font-size="13.5">Progressive Disclosure Refactor (1,390 → 84 Lines) + Replacing Legacy Headless CLI &amp; Hallucinated Tools with Native Canvases &amp; MCP</text>
+
+  <!-- LEFT PANEL: Case 3 Progressive Disclosure Chart -->
+  <rect x="44" y="112" width="664" height="602" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="70" y="146" fill="#F0F6FC" font-size="16.5" font-weight="800">A. 案例 3：openclaw-wechat-deployment 渐进式披露重构</text>
+  <text x="70" y="168" fill="#8B949E" font-size="12">防止 46.5 KB 单体手册一次性灌入活跃上下文稀释 GPT-6.2 Sol / Gemini 4 Carbon 注意力</text>
+
+  <!-- Proportional Vertical Bar Comparison: 1,390 lines = 320px; 84 lines = 19.3px -->
+  <!-- Baseline at y=535 -->
+  <line x1="90" y1="535" x2="660" y2="535" stroke="#484F58" stroke-width="1.5"/>
+
+  <!-- Before Monolith Bar -->
+  <rect x="132" y="215" width="148" height="320" rx="6" fill="#1D4ED8" stroke="#60A5FA" stroke-width="1.2"/>
+  <text x="206" y="202" text-anchor="middle" fill="#60A5FA" font-size="14" font-weight="800">1,390 行 (46.5 KB)</text>
+  <text x="206" y="355" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">单体 SKILL.md</text>
+  <text x="206" y="377" text-anchor="middle" fill="#DBEAFE" font-size="11.5">每次激活 100% 注入</text>
+  <text x="206" y="397" text-anchor="middle" fill="#DBEAFE" font-size="11.5">含排障细节与冷门配置</text>
+  <text x="206" y="560" text-anchor="middle" fill="#E2E8F0" font-size="13" font-weight="700">重构前：全量灌入</text>
+
+  <!-- Arrow with -94.0% badge -->
+  <line x1="298" y1="380" x2="366" y2="380" stroke="#10B981" stroke-width="2.5" marker-end="url(#arrEmerald)"/>
+  <rect x="292" y="338" width="84" height="28" rx="14" fill="#12261E" stroke="#10B981"/>
+  <text x="334" y="356" text-anchor="middle" fill="#34D399" font-size="12" font-weight="800">-94.0%</text>
+
+  <!-- After Core Bar (84 lines = 19.3px -> y=515.7) -->
+  <rect x="386" y="515.7" width="136" height="19.3" rx="3" fill="#10B981" stroke="#6EE7B7" stroke-width="1.2"/>
+  <text x="454" y="505" text-anchor="middle" fill="#34D399" font-size="14" font-weight="800">84 行核心入口</text>
+  <text x="454" y="560" text-anchor="middle" fill="#34D399" font-size="13" font-weight="700">重构后：常驻核心</text>
+
+  <!-- 3 On-Demand Reference Modules (Floating Lazy-Load Stack above Core) -->
+  <rect x="382" y="216" width="298" height="258" rx="10" fill="#0D1117" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="6,4"/>
+  <text x="398" y="242" fill="#38BDF8" font-size="12.5" font-weight="800">按需懒加载层 (On-Demand view 仅在命中阶段读取)</text>
+
+  <rect x="398" y="256" width="266" height="60" rx="6" fill="#161B22" stroke="#334155"/>
+  <text x="412" y="278" fill="#E2E8F0" font-size="12" font-weight="700">1. architecture-and-deployment.md</text>
+  <text x="412" y="298" fill="#94A3B8" font-size="11">Ubuntu VM · AFD/Caddy TLS · systemd 部署架构</text>
+
+  <rect x="398" y="326" width="266" height="60" rx="6" fill="#161B22" stroke="#334155"/>
+  <text x="412" y="348" fill="#E2E8F0" font-size="12" font-weight="700">2. plugin-and-troubleshooting.md</text>
+  <text x="412" y="368" fill="#94A3B8" font-size="11">WeChat QR 网关插件与常见断连排障手册</text>
+
+  <rect x="398" y="396" width="266" height="60" rx="6" fill="#161B22" stroke="#334155"/>
+  <text x="412" y="418" fill="#E2E8F0" font-size="12" font-weight="700">3. enterprise-security-and-ops.md</text>
+  <text x="412" y="438" fill="#94A3B8" font-size="11">生产加固、密钥轮换与企业运维基线</text>
+
+  <!-- Bottom note inside Left Panel -->
+  <rect x="70" y="586" width="612" height="106" rx="8" fill="#0D1117" stroke="#21262D"/>
+  <text x="88" y="612" fill="#FBBF24" font-size="13" font-weight="800">三层渐进式披露法则 (3-Tier Progressive Disclosure Invariant)</text>
+  <text x="88" y="635" fill="#CBD5E1" font-size="11.5">• Tier 1 (Frontmatter · 110–165 chars)：常驻 &lt;available_skills&gt;，仅负责零歧义路由分流</text>
+  <text x="88" y="656" fill="#CBD5E1" font-size="11.5">• Tier 2 (SKILL.md · ≤120 行)：激活后加载，声明架构拓扑、模型绑定、硬性红线与引用目录树</text>
+  <text x="88" y="677" fill="#CBD5E1" font-size="11.5">• Tier 3 (references/ &amp; scripts/)：执行到具体子阶段时才调用 view / python 按需装载</text>
+
+  <!-- RIGHT PANEL: Case 4 & Case 5 Native Primitives & Canvas Shift -->
+  <rect x="732" y="112" width="664" height="602" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="758" y="146" fill="#F0F6FC" font-size="16.5" font-weight="800">B. 案例 4 &amp; 5：工具契约纠偏与原生 Desktop Canvas 多模态质检</text>
+  <text x="758" y="168" fill="#8B949E" font-size="12">淘汰慢速无头 LibreOffice 转图链路与虚构工具名，全面拥抱宿主原生 Canvas 与 MCP</text>
+
+  <!-- Block 1: Document / Slide / Sheet QA Pipeline Shift -->
+  <rect x="758" y="188" width="612" height="238" rx="10" fill="#0D1117" stroke="#334155"/>
+  <text x="778" y="214" fill="#38BDF8" font-size="13.5" font-weight="800">办公与可视化交付管线重构 (docx · pptx · xlsx · web-artifacts-builder)</text>
+
+  <!-- Legacy 5-step pipeline -->
+  <rect x="778" y="228" width="572" height="76" rx="8" fill="#231215" stroke="#F85149" stroke-width="0.9"/>
+  <text x="794" y="249" fill="#FF7B72" font-size="12" font-weight="800">❌ 旧链路：5 步外部重型转换 + 弱视觉模型盲审（易缺外部工具、高延迟、CJK 乱码方块）</text>
+  <text x="794" y="272" fill="#E2E8F0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">Python 生成 -&gt; LibreOffice soffice -&gt; pdftoppm PNG -&gt; claude-haiku-4.5 -&gt; 手工返工</text>
+  <text x="794" y="292" fill="#94A3B8" font-size="11">痛点：Windows 环境常缺 soffice/pdftoppm；账单 PDF 重写缺中文字体回退导致豆腐块</text>
+
+  <!-- Native Canvas pipeline -->
+  <rect x="778" y="316" width="572" height="94" rx="8" fill="#0E221B" stroke="#10B981" stroke-width="1.1"/>
+  <text x="794" y="338" fill="#34D399" font-size="12" font-weight="800">✅ 新链路：内置 Copilot Desktop Canvas 原子批处理 + Gemini 4 Carbon 原生多模态质检</text>
+  <text x="794" y="361" fill="#A7F3D0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">open_canvas -&gt; invoke_canvas_action(batch) -&gt; render_slide SVG / browser -&gt; view 质检</text>
+  <text x="794" y="382" fill="#D1FAE5" font-size="11">• Benchmark 报告默认对齐 7-Card 4:5 密封卡片规范（零外部请求 CSP 锁定）</text>
+  <text x="794" y="399" fill="#D1FAE5" font-size="11">• billing-assistant 注入跨平台 CJK 字体回退链：msyh.ttc -&gt; simhei.ttf -&gt; PingFang.ttc -&gt; NotoSansCJK</text>
+
+  <!-- Block 2: Tool & Path Contract Remediation Table -->
+  <rect x="758" y="442" width="612" height="250" rx="10" fill="#0D1117" stroke="#334155"/>
+  <text x="778" y="468" fill="#FBBF24" font-size="13.5" font-weight="800">跨宿主遗留幻觉契约清零对照表 (azure-answer · rpi-* · prompt-* · hermes)</text>
+
+  <!-- Table Header -->
+  <rect x="778" y="482" width="572" height="30" rx="4" fill="#1E293B"/>
+  <text x="792" y="502" fill="#94A3B8" font-size="11.5" font-weight="700">失效 / 幻觉遗留契约 (Legacy Drift)</text>
+  <text x="1072" y="502" fill="#6EE7B7" font-size="11.5" font-weight="700">现代宿主原生确定性契约 (Frontier Native)</text>
+
+  <!-- Row 1 -->
+  <line x1="778" y1="548" x2="1350" y2="548" stroke="#21262D"/>
+  <text x="792" y="535" fill="#FFA198" font-size="11.5" font-family="ui-monospace, Consolas, monospace">search-the-web / fetch_page</text>
+  <text x="1044" y="535" fill="#38BDF8" font-size="12">→</text>
+  <text x="1072" y="535" fill="#A7F3D0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">tool_search_tool -&gt; azure-pricing / learn</text>
+
+  <!-- Row 2 -->
+  <line x1="778" y1="586" x2="1350" y2="586" stroke="#21262D"/>
+  <text x="792" y="572" fill="#FFA198" font-size="11.5" font-family="ui-monospace, Consolas, monospace">runSubagent (VS Code 旧私有名)</text>
+  <text x="1044" y="572" fill="#38BDF8" font-size="12">→</text>
+  <text x="1072" y="572" fill="#A7F3D0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">task (explore / research / rubber-duck)</text>
+
+  <!-- Row 3 -->
+  <line x1="778" y1="624" x2="1350" y2="624" stroke="#21262D"/>
+  <text x="792" y="610" fill="#FFA198" font-size="11.5" font-family="ui-monospace, Consolas, monospace">~/.claude/ &amp; /home/azureuser/.hermes/</text>
+  <text x="1044" y="610" fill="#38BDF8" font-size="12">→</text>
+  <text x="1072" y="610" fill="#A7F3D0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">~/.copilot/ &amp; 动态宿主路径探测</text>
+
+  <!-- Row 4 -->
+  <text x="792" y="648" fill="#FFA198" font-size="11.5" font-family="ui-monospace, Consolas, monospace">gpt-4o / gpt-5.4 / claude-haiku-4.5</text>
+  <text x="1044" y="648" fill="#38BDF8" font-size="12">→</text>
+  <text x="1072" y="648" fill="#A7F3D0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">gpt-6.2-sol / gemini-4-carbon / grok-4.7</text>
+
+  <text x="792" y="676" fill="#8B949E" font-size="11">审计覆盖：azure-hermes-ghcp-wechat · prompt-builder/analyze/refactor · rpi-* · code-review · azure-answer</text>
+</svg>

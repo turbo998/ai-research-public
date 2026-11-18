@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 740" width="1440" height="740" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <pattern id="deadZoneHatch" width="12" height="12" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#2A1215"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#7F1D1D" stroke-width="4"/>
+    </pattern>
+    <linearGradient id="safeGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="warnAmber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="740" fill="#090D13"/>
+  <rect x="20" y="20" width="1400" height="700" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="54" y="62" fill="#F0F6FC" font-size="22" font-weight="800">案例 1 深度解剖：&lt;available_skills&gt; 12 KB 系统提示词预算悬崖与 98.8% 路由失明根因</text>
+  <text x="54" y="89" fill="#8B949E" font-size="13.5">横轴严格按 0–40,000 字符等比例绘制（1,000 chars = 28 px）：展示 15 个冗长描述如何耗尽 12 KB 预算并导致 80/81 个用户 Skill 被静默截断</text>
+
+  <!-- Scale Ruler (x=250 is 0; x=250 + chars*0.028; 40,000 -> x=1370) -->
+  <line x1="250" y1="138" x2="1370" y2="138" stroke="#484F58" stroke-width="1.5"/>
+  <g fill="#8B949E" font-size="12" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">
+    <line x1="250" y1="132" x2="250" y2="144" stroke="#484F58"/>
+    <text x="250" y="125">0</text>
+
+    <line x1="390" y1="132" x2="390" y2="144" stroke="#484F58"/>
+    <text x="390" y="125">5,000</text>
+
+    <line x1="530" y1="132" x2="530" y2="144" stroke="#484F58"/>
+    <text x="530" y="125">10,000</text>
+
+    <!-- 12,000 chars cliff = 250 + 336 = 586 -->
+    <text x="586" y="118" fill="#FF7B72" font-weight="800">12,000 (~12 KB Cap)</text>
+
+    <line x1="810" y1="132" x2="810" y2="144" stroke="#484F58"/>
+    <text x="810" y="125">20,000</text>
+
+    <line x1="1090" y1="132" x2="1090" y2="144" stroke="#484F58"/>
+    <text x="1090" y="125">30,000</text>
+
+    <line x1="1330.8" y1="132" x2="1330.8" y2="144" stroke="#58A6FF"/>
+    <text x="1330.8" y="125" fill="#58A6FF" font-weight="700">38,600</text>
+  </g>
+
+  <!-- TRACK 1: BEFORE OPTIMIZATION (Total ~38,600 chars = 1080.8 px, x=250..1330.8) -->
+  <text x="54" y="198" fill="#F85149" font-size="15.5" font-weight="800">优化前 (Before)</text>
+  <text x="54" y="220" fill="#E2E8F0" font-size="12.5">总需求 ~38,600 chars</text>
+  <text x="54" y="240" fill="#FF7B72" font-size="12" font-weight="700">仅 1 / 81 (1.2%) 可见！</text>
+
+  <!-- Plugin prefix ~1,195 chars = 33.5px (x=250..283.5) -->
+  <rect x="250" y="172" width="33.5" height="78" rx="4" fill="#334155" stroke="#64748B"/>
+  <!-- 15 verbose .agents/skills = 10,805 chars = 302.5px (x=283.5..586.0) -->
+  <rect x="283.5" y="172" width="302.5" height="78" fill="url(#warnAmber)" stroke="#F59E0B"/>
+  <text x="435" y="205" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">15 个 .agents 冗长描述 (10,805 chars)</text>
+  <text x="435" y="226" text-anchor="middle" fill="#FEF3C7" font-size="11.5">单条 700–1,012 chars + 插件直接撞穿 12 KB 上限</text>
+
+  <!-- Truncated 80/81 user skills = ~26,600 chars = 744.8px (x=586.0..1330.8) -->
+  <rect x="586.0" y="172" width="744.8" height="78" rx="4" fill="url(#deadZoneHatch)" stroke="#F85149" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="958" y="205" text-anchor="middle" fill="#FFA198" font-size="14" font-weight="800">80 / 81 (98.8%) 用户 Skill 落入静默截断盲区（触发规则 0% 注入）</text>
+  <text x="958" y="227" text-anchor="middle" fill="#E2E8F0" font-size="12">退化为裸名单：Additional skills available: docx, pptx, xlsx, azure-ai ...（仅排第一的 accessibility 幸存）</text>
+
+  <!-- TRACK 2: AFTER OPTIMIZATION (8,019 chars active user skills = 224.5px, x=250..474.5) -->
+  <text x="54" y="328" fill="#3FB950" font-size="15.5" font-weight="800">优化后 (After)</text>
+  <text x="54" y="350" fill="#E2E8F0" font-size="12.5">活跃描述 8,019 chars</text>
+  <text x="54" y="370" fill="#3FB950" font-size="12" font-weight="700">62 / 62 (100%) 全可见！</text>
+
+  <!-- 62 Orthogonal User Skills = 8,019 chars = 224.5px (x=250..474.5) -->
+  <rect x="250" y="302" width="224.5" height="78" rx="4" fill="url(#safeGreen)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="362" y="335" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">62/62 正交契约 (8,019c)</text>
+  <text x="362" y="356" text-anchor="middle" fill="#D1FAE5" font-size="11.5">每条 110–165 chars · 100% 装入</text>
+
+  <!-- Safety Headroom ~3,981 chars = 111.5px (x=474.5..586.0) -->
+  <rect x="474.5" y="302" width="111.5" height="78" rx="4" fill="#0F291E" stroke="#2EA043" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <text x="530" y="335" text-anchor="middle" fill="#6EE7B7" font-size="12" font-weight="700">~4 KB 安全余量</text>
+  <text x="530" y="355" text-anchor="middle" fill="#A7F3D0" font-size="11">(~3,981 chars)</text>
+
+  <!-- Saved Prompt Budget Callout Arrow (x=598..1330.8) -->
+  <rect x="606" y="312" width="724" height="58" rx="8" fill="#161B22" stroke="#238636" stroke-width="1"/>
+  <text x="968" y="337" text-anchor="middle" fill="#3FB950" font-size="13.5" font-weight="800">▼ 净释放 ~30,581 字符 (-79.2%) 描述膨胀 · 彻底消除“明明装了 Skill 模型却永远不调”的幽灵故障</text>
+  <text x="968" y="357" text-anchor="middle" fill="#8B949E" font-size="12">预留 ~4 KB 缓冲空间，容纳运行时插件动态注入与新增领域 Skill 而不触发二次截断</text>
+
+  <!-- Vertical 12 KB Cliff Line -->
+  <line x1="586" y1="126" x2="586" y2="402" stroke="#FF7B72" stroke-width="2.5" stroke-dasharray="7,4"/>
+  <rect x="504" y="398" width="164" height="24" rx="12" fill="#3D1318" stroke="#FF7B72" stroke-width="1.2"/>
+  <text x="586" y="414" text-anchor="middle" fill="#FFA198" font-size="11.5" font-weight="800">⚡ 12 KB XML 截断悬崖</text>
+
+  <!-- BOTTOM COMPARISON CARDS -->
+  <!-- Left Card: Per-Skill Frontmatter Length & Structure Diff -->
+  <rect x="54" y="444" width="664" height="244" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="78" y="476" fill="#F0F6FC" font-size="16" font-weight="800">单条 Frontmatter 描述长度与路由契约范式对比</text>
+
+  <!-- Bloated bar -->
+  <text x="78" y="508" fill="#FFA198" font-size="12.5" font-weight="700">优化前 (.agents 典型条目：700 – 1,012 chars 散文式堆砌)</text>
+  <rect x="78" y="518" width="560" height="24" rx="4" fill="#B91C1C"/>
+  <text x="646" y="535" fill="#FF7B72" font-size="12.5" font-weight="800">1,012c</text>
+
+  <!-- Compacted bar (165 / 1012 * 560 = 91.3px) -->
+  <text x="78" y="568" fill="#6EE7B7" font-size="12.5" font-weight="700">优化后 (正交三段式路由契约：严格收敛于 110 – 165 chars)</text>
+  <rect x="78" y="578" width="91.3" height="24" rx="4" fill="#10B981"/>
+  <text x="178" y="595" fill="#34D399" font-size="12.5" font-weight="800">110–165c (-84% 单条体积，零语义损失)</text>
+
+  <!-- Contract Formula Box -->
+  <rect x="78" y="616" width="616" height="54" rx="8" fill="#0D1117" stroke="#38BDF8" stroke-width="1"/>
+  <text x="94" y="638" fill="#38BDF8" font-size="12" font-weight="800" font-family="ui-monospace, Consolas, monospace">description: "[Core Capability]. USE FOR: [Triggers]. DO NOT USE FOR: [Exclusions]."</text>
+  <text x="94" y="658" fill="#94A3B8" font-size="11.5">正反双向锚定：既告诉前沿模型“何时必调”，更显式划出“何时禁调（交由相邻正交 Skill 处理）”</text>
+
+  <!-- Right Card: Router Visibility Impact Breakdown -->
+  <rect x="742" y="444" width="644" height="244" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
+  <text x="766" y="476" fill="#F0F6FC" font-size="16" font-weight="800">路由可见性恢复前后：模型在首轮决策时实际看到的 XML 视图</text>
+
+  <rect x="766" y="494" width="288" height="176" rx="8" fill="#1E1114" stroke="#F85149" stroke-width="1"/>
+  <text x="782" y="518" fill="#FF7B72" font-size="13" font-weight="800">❌ 优化前：盲猜模式 (1.2% 可见)</text>
+  <text x="782" y="542" fill="#CBD5E1" font-size="11.5" font-family="ui-monospace, Consolas, monospace">&lt;skill&gt;accessibility (980c)&lt;/skill&gt;</text>
+  <text x="782" y="562" fill="#94A3B8" font-size="11.5" font-family="ui-monospace, Consolas, monospace">... [15 verbose skills exhaust cap]</text>
+  <text x="782" y="586" fill="#FCA5A5" font-size="11.5" font-family="ui-monospace, Consolas, monospace">Additional skills available:</text>
+  <text x="782" y="606" fill="#FCA5A5" font-size="11.5" font-family="ui-monospace, Consolas, monospace">azure-ai, docx, pptx, pmx-tp...</text>
+  <text x="782" y="636" fill="#8B949E" font-size="11">后果：80 个核心 Skill 无触发条件，模型</text>
+  <text x="782" y="654" fill="#8B949E" font-size="11">漏调专业工作流或误撞同名冲突包</text>
+
+  <rect x="1074" y="494" width="288" height="176" rx="8" fill="#0E221B" stroke="#10B981" stroke-width="1"/>
+  <text x="1090" y="518" fill="#34D399" font-size="13" font-weight="800">✅ 优化后：确定性路由 (100% 可见)</text>
+  <text x="1090" y="542" fill="#A7F3D0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">&lt;skill&gt;accessibility (138c)&lt;/skill&gt;</text>
+  <text x="1090" y="562" fill="#A7F3D0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">&lt;skill&gt;azure-answer (142c)&lt;/skill&gt;</text>
+  <text x="1090" y="582" fill="#A7F3D0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">&lt;skill&gt;billing-assistant (146c)&lt;/skill&gt;</text>
+  <text x="1090" y="602" fill="#A7F3D0" font-size="11.5" font-family="ui-monospace, Consolas, monospace">... [All 62/62 orthogonal skills]</text>
+  <text x="1090" y="636" fill="#D1FAE5" font-size="11">收益：62 个正交 Skill 触发边界与禁区</text>
+  <text x="1090" y="654" fill="#D1FAE5" font-size="11">100% 注入首轮注意力，零截断溢出</text>
+</svg>

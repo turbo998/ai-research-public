@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" width="1440" height="760" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg01" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="60%" stop-color="#0D1117"/>
+      <stop offset="100%" stop-color="#131C2E"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="760" fill="url(#bg01)"/>
+
+  <!-- Header -->
+  <rect x="28" y="22" width="1384" height="84" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="54" y="56" fill="#F8FAFC" font-size="22" font-weight="800">模型 × Harness 持续协同演进五步闭环与“反脚手架定律”（Inverse Scaffolding Law）</text>
+  <text x="54" y="84" fill="#94A3B8" font-size="13.5">5-Stage Model × Harness Co-Evolution Flywheel &amp; Why Stronger Frontier Reasoning Models Require Less Procedural CoT Micromanagement</text>
+  <rect x="1186" y="38" width="204" height="50" rx="10" fill="#161B22" stroke="#38BDF8" stroke-width="1.2"/>
+  <text x="1288" y="59" text-anchor="middle" fill="#38BDF8" font-size="12" font-weight="800">Engineering Axiom #1</text>
+  <text x="1288" y="77" text-anchor="middle" fill="#CBD5E1" font-size="11">Sharper Invariants &gt; Rigid CoT</text>
+
+  <!-- LEFT PANEL: 5-Stage Co-Evolution Flywheel -->
+  <rect x="28" y="122" width="668" height="614" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  <text x="54" y="158" fill="#F0F6FC" font-size="17" font-weight="800">A. 五阶段持续协同演进闭环 (5-Stage Co-Evolution SOP)</text>
+  <text x="54" y="180" fill="#8B949E" font-size="12.5">每当前沿模型升级（如 GPT-6.2 Sol / Gemini 4 Carbon / Grok 4.7）触发一次标准审计迭代</text>
+
+  <!-- Stage 1 -->
+  <rect x="64" y="202" width="596" height="82" rx="10" fill="#161B22" stroke="#2563EB" stroke-width="1.4"/>
+  <circle cx="104" cy="243" r="21" fill="#1D4ED8"/>
+  <text x="104" y="249" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">01</text>
+  <text x="140" y="232" fill="#60A5FA" font-size="14.5" font-weight="800">模型代际跃迁与能力基线重标定 (Frontier Model Upgrade)</text>
+  <text x="140" y="254" fill="#E2E8F0" font-size="12.5">原生 1M 上下文、xhigh 深度推理、多模态视觉与 Desktop Canvas 原语就绪</text>
+  <text x="140" y="272" fill="#8B949E" font-size="11.5">Legacy pins (gpt-4o / gpt-5.4 / haiku-4.5) 瞬间从“稳定锚点”退化为“能力封顶枷锁”</text>
+
+  <line x1="362" y1="284" x2="362" y2="304" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Stage 2 -->
+  <rect x="64" y="306" width="596" height="82" rx="10" fill="#161B22" stroke="#0EA5E9" stroke-width="1.4"/>
+  <circle cx="104" cy="347" r="21" fill="#0284C7"/>
+  <text x="104" y="353" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">02</text>
+  <text x="140" y="336" fill="#38BDF8" font-size="14.5" font-weight="800">真实遥测与系统预算探针审计 (Telemetry &amp; Prompt Cap Probe)</text>
+  <text x="140" y="358" fill="#E2E8F0" font-size="12.5">联合查询 session_store_sql (tool_requests) 调用频次 + &lt;available_skills&gt; 12 KB 截断线</text>
+  <text x="140" y="376" fill="#8B949E" font-size="11.5">实测揭露：120 目录 / 113.5 MB 中 98.8% (80/81) 用户 Skill 描述因超长被静默截断！</text>
+
+  <line x1="362" y1="388" x2="362" y2="408" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Stage 3 -->
+  <rect x="64" y="410" width="596" height="82" rx="10" fill="#161B22" stroke="#D97706" stroke-width="1.4"/>
+  <circle cx="104" cy="451" r="21" fill="#B45309"/>
+  <text x="104" y="457" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">03</text>
+  <text x="140" y="440" fill="#FBBF24" font-size="14.5" font-weight="800">可逆归档裁剪与正交路由契约压缩 (Pruning &amp; 110–165c Contract)</text>
+  <text x="140" y="462" fill="#E2E8F0" font-size="12.5">剔除 40MB 重复包、29 个零调用导入包与跨 OS 失效软链；全量备份至 skills-archive/</text>
+  <text x="140" y="480" fill="#8B949E" font-size="11.5">统一三段式契约 [核心能力 + USE FOR + DO NOT USE FOR]：38.6K → 8,019 字符 (100% 可见)</text>
+
+  <line x1="362" y1="492" x2="362" y2="512" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Stage 4 -->
+  <rect x="64" y="514" width="596" height="82" rx="10" fill="#161B22" stroke="#10B981" stroke-width="1.4"/>
+  <circle cx="104" cy="555" r="21" fill="#059669"/>
+  <text x="104" y="561" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="800">04</text>
+  <text x="140" y="544" fill="#34D399" font-size="14.5" font-weight="800">去旧式 CoT 脚手架、渐进式披露与原生原语升级 (De-Scaffolding)</text>
+  <text x="140" y="566" fill="#E2E8F0" font-size="12.5">1,390 行单体拆分为 84 行核心 + 按需 references/；清理虚构工具，切换至 MCP 与原生 Canvas</text>
+  <text x="140" y="584" fill="#8B949E" font-size="11.5">剥离手把手步骤剧本，保留硬性验收不变量（CSP、零捏造坐标、跨平台 CJK 字体回退链）</text>
+
+  <line x1="362" y1="596" x2="362" y2="616" stroke="#10B981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- Stage 5 -->
+  <rect x="64" y="618" width="596" height="92" rx="10" fill="#12261E" stroke="#10B981" stroke-width="1.6"/>
+  <circle cx="104" cy="664" r="21" fill="#10B981"/>
+  <text x="104" y="670" text-anchor="middle" fill="#052E16" font-size="15" font-weight="900">05</text>
+  <text x="140" y="646" fill="#6EE7B7" font-size="14.5" font-weight="800">多模型认知专精路由与零预算治理 (Zero-Prompt-Cost Governance)</text>
+  <text x="140" y="668" fill="#E2E8F0" font-size="12.5">按认知长板路由至 Gemini 4 Carbon / GPT-6.2 Sol / Grok 4.7 / Gemini 3.8 Flash</text>
+  <text x="140" y="688" fill="#A7F3D0" font-size="11.5">治理矩阵置于 ~/.copilot/MODEL-SKILL-MATRIX.md（目录外 0 Bytes Prompt 开销）→ 闭环回馈 Stage 01</text>
+
+  <!-- Feedback Loop Curve on Left Margin -->
+  <path d="M 64 664 C 34 664, 34 243, 60 243" fill="none" stroke="#10B981" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrowGreen)"/>
+
+  <!-- RIGHT PANEL: Inverse Scaffolding Law Visual Chart -->
+  <rect x="716" y="122" width="696" height="614" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  <text x="744" y="158" fill="#F0F6FC" font-size="17" font-weight="800">B. 反脚手架定律曲线 (The Inverse Scaffolding Law)</text>
+  <text x="744" y="180" fill="#8B949E" font-size="12.5">模型原生推理越强，越要削减“过程级步骤微操”，强化“边界不变量 + 原生工具契约”</text>
+
+  <!-- Chart Legend -->
+  <rect x="744" y="196" width="640" height="44" rx="8" fill="#161B22" stroke="#21262D"/>
+  <line x1="764" y1="218" x2="798" y2="218" stroke="#F85149" stroke-width="3.5"/>
+  <circle cx="781" cy="218" r="4.5" fill="#F85149"/>
+  <text x="808" y="223" fill="#FFA198" font-size="12.5" font-weight="700">旧式过程微操权重 (Procedural Step-by-Step CoT)</text>
+
+  <line x1="1104" y1="218" x2="1138" y2="218" stroke="#10B981" stroke-width="3.5"/>
+  <circle cx="1121" cy="218" r="4.5" fill="#10B981"/>
+  <text x="1148" y="223" fill="#6EE7B7" font-size="12.5" font-weight="700">边界契约与原生原语 (Invariants &amp; Native Tools)</text>
+
+  <!-- Plot Area: x=800..1356, y=270..520 -->
+  <g stroke="#21262D" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="800" y1="270" x2="1356" y2="270"/>
+    <line x1="800" y1="332.5" x2="1356" y2="332.5"/>
+    <line x1="800" y1="395" x2="1356" y2="395"/>
+    <line x1="800" y1="457.5" x2="1356" y2="457.5"/>
+  </g>
+  <line x1="800" y1="520" x2="1356" y2="520" stroke="#484F58" stroke-width="1.5"/>
+  <line x1="800" y1="270" x2="800" y2="520" stroke="#484F58" stroke-width="1.5"/>
+
+  <!-- Y-Axis Labels (Conceptual Allocation Share %) -->
+  <g fill="#8B949E" font-size="11.5" text-anchor="end" font-family="ui-monospace, Consolas, monospace">
+    <text x="790" y="274">High (90%)</text>
+    <text x="790" y="336">70%</text>
+    <text x="790" y="399">Cross (50%)</text>
+    <text x="790" y="461">30%</text>
+    <text x="790" y="524">Low (10%)</text>
+  </g>
+
+  <!-- Crossover Zone Highlight -->
+  <rect x="1030" y="270" width="96" height="250" fill="#1F2937" opacity="0.35"/>
+  <text x="1078" y="290" text-anchor="middle" fill="#FBBF24" font-size="11" font-weight="700">能力拐点区</text>
+
+  <!-- Descending Curve: Procedural CoT (840,285) -> (1078,395) -> (1316,502) -->
+  <path d="M 840 285 C 950 295, 1010 365, 1078 395 C 1146 425, 1220 492, 1316 502" fill="none" stroke="#F85149" stroke-width="4"/>
+  <circle cx="840" cy="285" r="6" fill="#F85149"/>
+  <circle cx="1078" cy="395" r="6" fill="#F85149"/>
+  <circle cx="1316" cy="502" r="6" fill="#F85149"/>
+
+  <!-- Ascending Curve: Boundary Invariants & Native Primitives (840,498) -> (1078,395) -> (1316,282) -->
+  <path d="M 840 498 C 950 485, 1010 425, 1078 395 C 1146 365, 1220 292, 1316 282" fill="none" stroke="#10B981" stroke-width="4"/>
+  <circle cx="840" cy="498" r="6" fill="#10B981"/>
+  <circle cx="1078" cy="395" r="6" fill="#FBBF24" stroke="#0D1117" stroke-width="2"/>
+  <circle cx="1316" cy="282" r="6" fill="#10B981"/>
+
+  <!-- Callouts on Curves -->
+  <rect x="822" y="300" width="198" height="44" rx="6" fill="#2D1215" stroke="#F85149" stroke-width="0.9"/>
+  <text x="832" y="318" fill="#FFA198" font-size="11" font-weight="700">Gen 1 必需：1,000+ 行死板剧本</text>
+  <text x="832" y="335" fill="#E2E8F0" font-size="10.5">弥补早期模型规划弱点，但锁死工具路径</text>
+
+  <rect x="1132" y="438" width="214" height="48" rx="6" fill="#2D1215" stroke="#F85149" stroke-width="0.9"/>
+  <text x="1142" y="456" fill="#FFA198" font-size="11" font-weight="700">Gen 3 负资产：旧剧本引发幻觉与稀释</text>
+  <text x="1142" y="473" fill="#E2E8F0" font-size="10.5">诱发已废弃工具调用 &amp; 挤占活跃推理窗口</text>
+
+  <rect x="1116" y="296" width="232" height="50" rx="6" fill="#12261E" stroke="#10B981" stroke-width="1"/>
+  <text x="1126" y="314" fill="#6EE7B7" font-size="11" font-weight="700">Gen 3 杠杆：84 行核心 + 原生 MCP/Canvas</text>
+  <text x="1126" y="332" fill="#E2E8F0" font-size="10.5">只锁死输入输出边界，释放模型自主规划力</text>
+
+  <!-- X-Axis Generation Labels -->
+  <text x="840" y="546" text-anchor="middle" fill="#E2E8F0" font-size="12.5" font-weight="700">Gen 1 · 早期工具模型</text>
+  <text x="840" y="564" text-anchor="middle" fill="#8B949E" font-size="11">GPT-4o · Claude 3.7 Sonnet</text>
+
+  <text x="1078" y="546" text-anchor="middle" fill="#E2E8F0" font-size="12.5" font-weight="700">Gen 2 · 过渡推理模型</text>
+  <text x="1078" y="564" text-anchor="middle" fill="#8B949E" font-size="11">GPT-5.4 · Claude Haiku 4.5</text>
+
+  <text x="1316" y="546" text-anchor="middle" fill="#38BDF8" font-size="12.5" font-weight="800">Gen 3 · 当前前沿智能体舰队</text>
+  <text x="1316" y="564" text-anchor="middle" fill="#93C5FD" font-size="11">Gemini 4 Carbon · GPT-6.2 Sol · Grok 4.7</text>
+
+  <!-- Bottom Takeaway Cards inside Right Panel -->
+  <rect x="744" y="586" width="310" height="124" rx="10" fill="#1C1317" stroke="#F85149" stroke-width="1"/>
+  <text x="762" y="612" fill="#FF7B72" font-size="13" font-weight="800">⛔ 必须随模型升级剥离的“反模式脚手架”</text>
+  <text x="762" y="634" fill="#E2E8F0" font-size="11.5">• 硬编码淘汰模型 ID (claude-haiku-4.5 / gpt-4o)</text>
+  <text x="762" y="654" fill="#E2E8F0" font-size="11.5">• 虚构或废弃工具名 (search-the-web / runSubagent)</text>
+  <text x="762" y="674" fill="#E2E8F0" font-size="11.5">• 逐行规定“先想A再想B”的冗长八股文 CoT 模板</text>
+  <text x="762" y="694" fill="#E2E8F0" font-size="11.5">• 动辄 700–1,012 字符的营销式 Frontmatter 描述</text>
+
+  <rect x="1074" y="586" width="310" height="124" rx="10" fill="#0F241D" stroke="#10B981" stroke-width="1"/>
+  <text x="1092" y="612" fill="#34D399" font-size="13" font-weight="800">✅ 随前沿模型强化的“高杠杆确定性边界”</text>
+  <text x="1092" y="634" fill="#E2E8F0" font-size="11.5">• 110–165 字符正交契约 (USE FOR / DO NOT USE FOR)</text>
+  <text x="1092" y="654" fill="#E2E8F0" font-size="11.5">• MCP 权威信源接地 (azure-pricing / microsoft-learn)</text>
+  <text x="1092" y="674" fill="#E2E8F0" font-size="11.5">• 原生 Desktop Canvas 渲染闭环 + 确定性验证脚本</text>
+  <text x="1092" y="694" fill="#E2E8F0" font-size="11.5">• 按需渐进加载 references/ (保护前缀 KV Cache)</text>
+</svg>
