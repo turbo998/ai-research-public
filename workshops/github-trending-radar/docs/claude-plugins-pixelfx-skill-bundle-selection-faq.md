@@ -1,7 +1,7 @@
 # 智能体插件市场治理与程序化视觉特效 Skill 选型常见问题解答：`anthropics/claude-plugins-official` + `patch-gg/pixelfx` vs 未锁定第三方 MCP 插件 & 盲调生图 API
 
 > **English Edition**: [claude-plugins-pixelfx-skill-bundle-selection-faq.en.md](claude-plugins-pixelfx-skill-bundle-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![anthropics/claude-plugins-official 插件治理 + patch-gg/pixelfx 244 程序化特效选型对比图](../../../assets/github-ai-radar-2026-11-09-r10-claude-plugins-pixelfx.svg)
 

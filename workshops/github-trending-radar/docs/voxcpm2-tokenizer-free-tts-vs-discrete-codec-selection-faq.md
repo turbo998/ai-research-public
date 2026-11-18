@@ -1,7 +1,7 @@
 # 端到端无词元（Tokenizer-Free）扩散自回归语音合成选型常见问题解答：`OpenBMB/VoxCPM2` vs 离散 Codec Token TTS vs 商业云 TTS API
 
 > **English Edition**: [voxcpm2-tokenizer-free-tts-vs-discrete-codec-selection-faq.en.md](voxcpm2-tokenizer-free-tts-vs-discrete-codec-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![OpenBMB/VoxCPM2 无词元扩散自回归 48kHz TTS 与 vLLM-Omni 选型对比图](../../../assets/github-ai-radar-2026-11-09-r5-voxcpm2-tts.svg)
 

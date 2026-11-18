@@ -1,7 +1,7 @@
 # Differentiable World-Model Humanoid Tracking & Live Coding-Agent Spatial Observability / Cross-Agent Experience Recall Selection FAQ: `HybridRobotics/supermimic` (`arXiv:2610.28480`) + `alexeyw/lot-map` & `vzroslieigry/maxagent` vs. Model-Free PPO & Scrollback Log Debugging
 
 > **中文版**: [supermimic-lotmap-maxagent-world-model-observability-selection-faq.md](supermimic-lotmap-maxagent-world-model-observability-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
 
 ![SuperMimic Differentiable World Model & Lot-Map / MaxAgent Spatial Observability Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r5-supermimic-lotmap.svg)
 

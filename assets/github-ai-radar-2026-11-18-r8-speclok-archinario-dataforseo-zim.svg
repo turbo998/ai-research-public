@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="1200" height="680" rx="18" fill="#0B1120"/>
+  <rect x="20" y="20" width="1160" height="640" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1120" height="82" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="64" y="70" fill="#38BDF8" font-size="13.5" font-weight="700" letter-spacing="1">2026-11-18 NIGHT ROUND 8 (CUMULATIVE R488) · JAVA SPEC ANNOTATIONS, VISUAL BOARD &amp; OFFLINE ZIM MCP</text>
+  <text x="64" y="99" fill="#F8FAFC" font-size="19" font-weight="800">speclok (@Spec/@AC Java Gate) + archinario-agent + dataforseo-agent ($1 Cap) + zim-mcp (Rust Kiwix)</text>
+
+  <!-- Left Box: speclok & archinario-agent -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="62" y="170" fill="#60A5FA" font-size="15" font-weight="800">1. Cherobin/speclok (★12 · 5 forks · Java 11+ JDK-Only · MIT)</text>
+  <text x="62" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• Compiler-Enforced @Spec &amp; @AC Annotations in Java Source</text>
+  <text x="76" y="218" fill="#94A3B8" font-size="12">javac fails compilation on incomplete specs (error: spec-lint [T-200]: objective is empty)</text>
+  <text x="76" y="238" fill="#94A3B8" font-size="12">MCP + hooks enforce allowedFiles &amp; outOfScope so agents never drift across legacy code</text>
+
+  <rect x="62" y="266" width="500" height="160" rx="8" fill="#0F172A" stroke="#2563EB"/>
+  <text x="78" y="292" fill="#38BDF8" font-size="13.5" font-weight="700">2. archinario/archinario-agent (★15 · Go CLI + MCP · MIT)</text>
+  <text x="78" y="316" fill="#CBD5E1" font-size="12">• Connects local coding agents to the interactive Archinario architecture board</text>
+  <text x="78" y="338" fill="#CBD5E1" font-size="12">• Co-design services, PostgreSQL, message brokers &amp; K8s with animated traffic flows</text>
+  <text x="78" y="360" fill="#34D399" font-size="12">• Combine agent generation with manual drag-and-drop &amp; 1-click batch undo</text>
+  <text x="78" y="382" fill="#94A3B8" font-size="11.5">• Zero hosted LLM lock-in; runs entirely through your local agent client</text>
+
+  <!-- Right Box: dataforseo-agent & zim-mcp -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#10B981" stroke-width="1.5"/>
+  <text x="637" y="170" fill="#34D399" font-size="15" font-weight="800">3. AgriciDaniel/dataforseo-agent (★20 · 576 Endpoints · MIT)</text>
+  <text x="637" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• Price-First Routing, Double Confirmation &amp; $1.00 Session Cap</text>
+  <text x="651" y="218" fill="#94A3B8" font-size="12">Picks cheapest valid DataForSEO v3 endpoint (SERP, Geogrid, Backlinks, AI Visibility)</text>
+  <text x="651" y="238" fill="#94A3B8" font-size="12">Shows catalog price twice before spending; renders 16 terminal chart/map views</text>
+
+  <rect x="637" y="266" width="500" height="160" rx="8" fill="#0F172A" stroke="#059669"/>
+  <text x="653" y="292" fill="#34D399" font-size="13.5" font-weight="700">4. gordonbrander/zim-mcp (★25 · Pure Rust · GPL-3.0)</text>
+  <text x="653" y="316" fill="#CBD5E1" font-size="12">• Pure-Rust port of Kiwix libzim (zimfile) + Xapian index reader (zimfile-xapian)</text>
+  <text x="653" y="338" fill="#CBD5E1" font-size="12">• Searches offline Wikipedia, Stack Overflow &amp; docs over MCP stdio with 0 build step</text>
+  <text x="653" y="360" fill="#34D399" font-size="12">• Resumable SHA-256 verified downloads &amp; atomic &lt;name&gt;_&lt;YYYY-MM&gt;.zim updates</text>
+  <text x="653" y="382" fill="#94A3B8" font-size="11.5">• Single self-contained binary with zero C++ system library dependencies</text>
+
+  <!-- FinOps Box -->
+  <rect x="40" y="468" width="1120" height="170" rx="12" fill="#172554" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="64" y="498" fill="#93C5FD" font-size="14" font-weight="800">💰 CLOSED-FORM FINOPS BENCHMARK (CLAIM-20261118-R8-SPECLOK-ARCHINARIO-DATAFORSEO-ZIM · 50 SEATS)</text>
+  <text x="64" y="528" fill="#FCA5A5" font-size="14" font-weight="700">• Path A (Drifting .md Specs + Manual Diagrams + Uncapped Paid APIs): $2,140.00 API + $3,800.00 labor (38.0h) = $5,940.00 / mo</text>
+  <text x="64" y="556" fill="#FDE68A" font-size="14" font-weight="700">• Path B (Separate YAML Linter + Paid Diagram/SEO SaaS): $940.00 SaaS/API + $1,600.00 labor (16.0h) = $2,540.00 / mo</text>
+  <text x="64" y="584" fill="#34D399" font-size="15" font-weight="800">• Path C (speclok + archinario + dataforseo-agent + zim-mcp): $75.00 API + $280.00 labor (2.8h) = $355.00 / mo (-$5,585.00/mo · -94.02%)</text>
+  <text x="64" y="614" fill="#94A3B8" font-size="12">Annual Savings vs. Path A: $67,020.00/yr | Provenance: measured (GitHub), anonymized_reported (upstream), synthetic (FinOps, independently_reproduced=false), hardware capEx: not_measured</text>
+</svg>

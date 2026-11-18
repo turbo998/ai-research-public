@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="1200" height="680" rx="18" fill="#0B1120"/>
+  <rect x="20" y="20" width="1160" height="640" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1120" height="82" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="64" y="70" fill="#38BDF8" font-size="13.5" font-weight="700" letter-spacing="1">2026-11-18 NIGHT ROUND 11 (CUMULATIVE R491) · HOST REACHABILITY, MCP ATTESTATION &amp; SKILL PINNING</text>
+  <text x="64" y="99" fill="#F8FAFC" font-size="19" font-weight="800">agent-leakcheck (--fix Grade A) + mcp-attest (24-Rule Live RBAC) + skillset + otpkit (★59)</text>
+
+  <!-- Left Box: agent-leakcheck & skillset -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="62" y="170" fill="#60A5FA" font-size="15" font-weight="800">1. globalmpc/agent-leakcheck (★14 · Zero-Dep Node 20+ · MIT)</text>
+  <text x="62" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• Host Reachability Scanner &amp; "--fix" Auto-Remediator (Grade A-F)</text>
+  <text x="76" y="218" fill="#94A3B8" font-size="12">Audits Claude Code, Codex CLI, Cursor &amp; Gemini CLI with 0 network egress</text>
+  <text x="76" y="238" fill="#94A3B8" font-size="12">Fixes env-deny (.env access), risky-mode (Bash(*)), mcp-plaintext &amp; cc-version &lt; 2.1.317</text>
+
+  <rect x="62" y="266" width="500" height="160" rx="8" fill="#0F172A" stroke="#2563EB"/>
+  <text x="78" y="292" fill="#38BDF8" font-size="13.5" font-weight="700">2. itsmeyaw/skillset (★12 · Wraps Vercel skills.sh · MIT)</text>
+  <text x="78" y="316" fill="#CBD5E1" font-size="12">• Curates agent skills into ./skillset.json pinned to exact Git commit SHAs</text>
+  <text x="78" y="338" fill="#CBD5E1" font-size="12">• Writes native skills-lock.json &amp; installs only necessary project skills</text>
+  <text x="78" y="360" fill="#34D399" font-size="12">• Prevents upstream rug-pulls and eliminates unused skill token bloat</text>
+  <text x="78" y="382" fill="#94A3B8" font-size="11.5">• Safe by default: never deletes existing project skills outside the Skillset</text>
+
+  <!-- Right Box: mcp-attest & otpkit -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#10B981" stroke-width="1.5"/>
+  <text x="637" y="170" fill="#34D399" font-size="15" font-weight="800">3. Balanov/mcp-attest (★9 · 24-Rule Live Conformance · MIT)</text>
+  <text x="637" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• "Prove That Your MCP Server Denies What It Must Deny"</text>
+  <text x="651" y="218" fill="#94A3B8" font-size="12">Connects as each policy identity (e.g., alice) and sends real tool calls (refund_order)</text>
+  <text x="651" y="238" fill="#94A3B8" font-size="12">24 rules: RBAC denials, OAuth checks, hidden prompt injection &amp; leaked AWS keys</text>
+
+  <rect x="637" y="266" width="500" height="160" rx="8" fill="#0F172A" stroke="#059669"/>
+  <text x="653" y="292" fill="#34D399" font-size="13.5" font-weight="700">4. SecFathy/otpkit (★59 · 4 forks · Zero-Key OTP MCP · MIT)</text>
+  <text x="653" y="316" fill="#CBD5E1" font-size="12">• Creates disposable emails (grabmail, catchmail, guerrillamail) &amp; public SMS numbers</text>
+  <text x="653" y="338" fill="#CBD5E1" font-size="12">• Polls every 5s &amp; auto-extracts 4-8 digit OTP codes + ranked verification links</text>
+  <text x="653" y="360" fill="#34D399" font-size="12">• Zero API keys required; isolates E2E auth QA from corporate email accounts</text>
+  <text x="653" y="382" fill="#94A3B8" font-size="11.5">• Ranks URLs containing verify, confirm, activate, token, reset &amp; login first</text>
+
+  <!-- FinOps Box -->
+  <rect x="40" y="468" width="1120" height="170" rx="12" fill="#172554" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="64" y="498" fill="#93C5FD" font-size="14" font-weight="800">💰 CLOSED-FORM FINOPS BENCHMARK (CLAIM-20261118-R11-LEAKCHECK-MCPATTEST-SKILLSET-OTPKIT · 90 SEATS)</text>
+  <text x="64" y="528" fill="#FCA5A5" font-size="14" font-weight="700">• Path A (Manual Workstation Audits + Unpinned Skills + Paid OTP APIs): $2,190.00 spend + $3,900.00 labor (39.0h) = $6,090.00 / mo</text>
+  <text x="64" y="556" fill="#FDE68A" font-size="14" font-weight="700">• Path B (Legacy Endpoint DLP + Manual RBAC Test Scripts): $960.00 SaaS/API + $1,600.00 labor (16.0h) = $2,560.00 / mo</text>
+  <text x="64" y="584" fill="#34D399" font-size="15" font-weight="800">• Path C (agent-leakcheck + mcp-attest + skillset + otpkit): $70.00 CI + $280.00 labor (2.8h) = $350.00 / mo (-$5,740.00/mo · -94.25%)</text>
+  <text x="64" y="614" fill="#94A3B8" font-size="12">Annual Savings vs. Path A: $68,880.00/yr | Provenance: measured (GitHub), anonymized_reported (upstream), synthetic (FinOps, independently_reproduced=false), hardware capEx: not_measured</text>
+</svg>

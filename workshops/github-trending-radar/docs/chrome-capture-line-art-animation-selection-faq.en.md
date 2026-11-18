@@ -1,7 +1,7 @@
 # Chrome 153+ Native Shared-Memory 120FPS AV1 Tab Recording & Zero-Dependency Biomechanical SVG Line-Art Animation Selection FAQ: `paulirish/chrome-capture` (`Page.startScreenRecording`) + `JDhruv14/line-art-animation` (`gait.ts` + `ink.ts`) vs. Legacy `startScreencast` + `ffmpeg` & Freehand SVG Keyframes
 
 > **中文版**: [chrome-capture-line-art-animation-selection-faq.md](chrome-capture-line-art-animation-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
 
 ![paulirish/chrome-capture & JDhruv14/line-art-animation Architecture Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r7-chrome-capture-lineart.svg)
 

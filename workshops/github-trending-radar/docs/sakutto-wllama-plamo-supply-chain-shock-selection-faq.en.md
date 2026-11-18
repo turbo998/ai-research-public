@@ -1,7 +1,7 @@
 # On-Device WebAssembly (`wllama` + `PLaMo-3-0.8B`) Zero-Egress Browser Translation & SEC-Grounded Supply-Chain Shock Propagation Selection FAQ: `jammaru/sakutto` + `zandy700/Ultimate-Tracker` (`scsm`) vs. Cloud Translation Plugins & Undirected Sentiment RAG
 
 > **中文版**: [sakutto-wllama-plamo-supply-chain-shock-selection-faq.md](sakutto-wllama-plamo-supply-chain-shock-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
 
 ![jammaru/sakutto & zandy700/Ultimate-Tracker Architecture Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r13-sakutto-shockmap.svg)
 

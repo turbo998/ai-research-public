@@ -1,7 +1,7 @@
 # AI 编码智能体「规划-执行双模解耦」与软件工程全生命周期（SDLC）质量门禁选型常见问题解答：`shadcn/improve` + `addyosmani/agent-skills` (`v0.6.15`) vs 单一旗舰模型裸写代码（Vibe Coding）
 
 > **English Edition**: [shadcn-improve-addyosmani-agent-skills-sdlc-selection-faq.en.md](shadcn-improve-addyosmani-agent-skills-sdlc-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![AI 编码智能体规划-执行双模解耦与 SDLC 质量门禁选型对比图](../../../assets/github-ai-radar-2026-11-11.svg)
 

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="1200" height="680" rx="18" fill="#0B1120"/>
+  <rect x="20" y="20" width="1160" height="640" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1120" height="82" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="64" y="70" fill="#FBBF24" font-size="13.5" font-weight="700" letter-spacing="1">2026-11-18 NIGHT ROUND 10 (CUMULATIVE R490 MILESTONE) · AI DATABASE &amp; DUAL-TIER RAG ARCHITECTURE</text>
+  <text x="64" y="99" fill="#F8FAFC" font-size="19" font-weight="800">yzsind/mydb (1.32M QPS HTAP+MCP) + mitdbg/pgvectorfast (Calico Buffer Pool) + Dual-Tier RAG</text>
+
+  <!-- Left Box: mydb & pgvectorfast -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="62" y="170" fill="#60A5FA" font-size="15" font-weight="800">1. yzsind/mydb v1.0.0 (★52 · 10 forks · Rust · Apache-2.0)</text>
+  <text x="62" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• 1,327,407.37 QPS @ 0.55 ms P95 (16 Cores, 100M Rows)</text>
+  <text x="76" y="218" fill="#94A3B8" font-size="12">MySQL 8.0 wire/binlog compatible + automatic Zone Maps OLAP + queryable backups</text>
+  <text x="76" y="238" fill="#94A3B8" font-size="12">Built-in REST/MCP interfaces, native vector/full-text RRF &amp; SQL model calls</text>
+
+  <rect x="62" y="262" width="500" height="164" rx="8" fill="#0F172A" stroke="#2563EB"/>
+  <text x="78" y="288" fill="#38BDF8" font-size="13.5" font-weight="700">2. mitdbg/pgvectorfast (★17 · MIT Data Systems Lab · PG 18/19)</text>
+  <text x="78" y="312" fill="#CBD5E1" font-size="12">• 100% SQL &amp; on-disk drop-in replacement for pgvector (arXiv:2604.00423 Calico pool)</text>
+  <text x="78" y="334" fill="#CBD5E1" font-size="12">• Two-level array page translation + ~100% HNSW relation prefix cache hit rate</text>
+  <text x="78" y="356" fill="#34D399" font-size="12">• Lock-free optimistic reads (calico.optimistic_reads) + io_uring HNSW group prefetch</text>
+  <text x="78" y="378" fill="#FBBF24" font-size="11.5">• Guardrail: Use Debian 12/13 PGDG or zxjcarrot/pgvectorfast:pg18 (avoid Ubuntu -flto=auto)</text>
+
+  <!-- Right Box: agentic-rag-kb & Replyze -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#10B981" stroke-width="1.5"/>
+  <text x="637" y="170" fill="#34D399" font-size="15" font-weight="800">3. Golden-66/agentic-rag-kb (★25 · LangGraph + Milvus · MIT)</text>
+  <text x="637" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• Heavy Internal PDF Pipeline with Reranker Fast-Path Gate</text>
+  <text x="651" y="218" fill="#94A3B8" font-size="12">MinerU layout/table OCR ➔ Heading parent-child chunks ➔ BGE-M3 + BM25 RRF fusion</text>
+  <text x="651" y="238" fill="#94A3B8" font-size="12">BGE-Reranker-v2-m3 high-score fast path skips expensive LLM judge grading</text>
+
+  <rect x="637" y="266" width="500" height="160" rx="8" fill="#0F172A" stroke="#059669"/>
+  <text x="653" y="292" fill="#34D399" font-size="13.5" font-weight="700">4. Replyze/ai-customer-support-agent (★19 · Pure BM25 · MIT)</text>
+  <text x="653" y="316" fill="#CBD5E1" font-size="12">• 6-module zero-vector-DB Python support agent over Markdown help articles</text>
+  <text x="653" y="338" fill="#CBD5E1" font-size="12">• Emits structured JSON with exact section citations (shipping.md#delivery-times)</text>
+  <text x="653" y="360" fill="#34D399" font-size="12">• Deterministic handoff on anger, refunds, charge disputes, legal or security issues</text>
+  <text x="653" y="382" fill="#94A3B8" font-size="11.5">• Treats visitor input strictly as untrusted data to block prompt injection</text>
+
+  <!-- FinOps Box -->
+  <rect x="40" y="468" width="1120" height="170" rx="12" fill="#172554" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="64" y="498" fill="#93C5FD" font-size="14" font-weight="800">💰 CLOSED-FORM FINOPS BENCHMARK (CLAIM-20261118-R10-MYDB-PGVECTORFAST-AGENTICRAG · 100M ROWS + 500K QUERIES)</text>
+  <text x="64" y="528" fill="#FCA5A5" font-size="14" font-weight="700">• Path A (MySQL+CK+Milvus Clusters + Every-Turn LLM Judge): $2,680.00 infra/API + $4,300.00 labor (43.0h) = $6,980.00 / mo</text>
+  <text x="64" y="556" fill="#FDE68A" font-size="14" font-weight="700">• Path B (Oversized RDS pgvector + Monolithic Vector RAG): $1,240.00 infra/API + $1,800.00 labor (18.0h) = $3,040.00 / mo</text>
+  <text x="64" y="584" fill="#34D399" font-size="15" font-weight="800">• Path C (MyDB/pgvectorfast + Dual-Tier RAG Routing): $125.00 infra/API + $320.00 labor (3.2h) = $445.00 / mo (-$6,535.00/mo · -93.62%)</text>
+  <text x="64" y="614" fill="#94A3B8" font-size="12">Annual Savings vs. Path A: $78,420.00/yr | Provenance: measured (GitHub), anonymized_reported (upstream), synthetic (FinOps, independently_reproduced=false), hardware capEx: not_measured</text>
+</svg>

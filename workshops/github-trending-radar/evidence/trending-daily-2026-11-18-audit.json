@@ -1,0 +1,1376 @@
+{
+  "audit_version": "3.0.0",
+  "generated_at_cst": "2026-11-18T23:25:00+08:00",
+  "raw_trending_html_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-18-raw.html",
+    "source_url": "https://github.com/trending?since=daily",
+    "scraped_at_cst": "2026-11-18T23:12:00+08:00",
+    "sha256_lf": "e860c0951803207c1750f32d39d5bb141042f0705e575200054333cb71416ccb"
+  },
+  "raw_track_b_search_api_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-18-raw.json",
+    "source_query": "gh api -X GET search/repositories -f q=\"created:>2026-11-11 stars:>30 forks:>=2\" -f sort=stars -f order=desc -f per_page=100",
+    "captured_at_cst": "2026-11-18T23:22:00+08:00",
+    "sha256_lf": "27b2cecb0ccb0a6f47c5922334d6bd3b1b4afb82542e19e44092dcefc48ab72b",
+    "metric_definition": "stars_per_day = round(stars_total / age_days); stars_today = not_measured"
+  },
+  "parsed_daily_trending_rows": [
+    {
+      "trending_rank": 1,
+      "full_name": "elementalsouls/Claude-BugHunter",
+      "stars_today_measured": 2322,
+      "stars_total_in_trending_dom": 10723
+    },
+    {
+      "trending_rank": 2,
+      "full_name": "cursor/plugins",
+      "stars_today_measured": 315,
+      "stars_total_in_trending_dom": 17095
+    },
+    {
+      "trending_rank": 3,
+      "full_name": "HKUDS/CLI-Anything",
+      "stars_today_measured": 384,
+      "stars_total_in_trending_dom": 59434
+    },
+    {
+      "trending_rank": 4,
+      "full_name": "mvanhorn/last30days-skill",
+      "stars_today_measured": 1062,
+      "stars_total_in_trending_dom": 69698
+    },
+    {
+      "trending_rank": 5,
+      "full_name": "getarcaneapp/arcane",
+      "stars_today_measured": 547,
+      "stars_total_in_trending_dom": 9644
+    },
+    {
+      "trending_rank": 6,
+      "full_name": "NVIDIA/SkillEvaluator",
+      "stars_today_measured": 869,
+      "stars_total_in_trending_dom": 3531
+    },
+    {
+      "trending_rank": 7,
+      "full_name": "nvm-sh/nvm",
+      "stars_today_measured": 199,
+      "stars_total_in_trending_dom": 96129
+    },
+    {
+      "trending_rank": 8,
+      "full_name": "astral-sh/uv",
+      "stars_today_measured": 260,
+      "stars_total_in_trending_dom": 92163
+    },
+    {
+      "trending_rank": 9,
+      "full_name": "google-research/paper-orchestra",
+      "stars_today_measured": 1529,
+      "stars_total_in_trending_dom": 3875
+    },
+    {
+      "trending_rank": 10,
+      "full_name": "google-labs-code/stitch-skills",
+      "stars_today_measured": 369,
+      "stars_total_in_trending_dom": 10307
+    },
+    {
+      "trending_rank": 11,
+      "full_name": "sveltejs/svelte",
+      "stars_today_measured": 694,
+      "stars_total_in_trending_dom": 89671
+    },
+    {
+      "trending_rank": 12,
+      "full_name": "jquery/jquery",
+      "stars_today_measured": 268,
+      "stars_total_in_trending_dom": 59994
+    },
+    {
+      "trending_rank": 13,
+      "full_name": "appwrite/appwrite",
+      "stars_today_measured": 239,
+      "stars_total_in_trending_dom": 58161
+    },
+    {
+      "trending_rank": 14,
+      "full_name": "openvinotoolkit/openvino",
+      "stars_today_measured": 18,
+      "stars_total_in_trending_dom": 11246
+    },
+    {
+      "trending_rank": 15,
+      "full_name": "obra/superpowers",
+      "stars_today_measured": 823,
+      "stars_total_in_trending_dom": 319797
+    },
+    {
+      "trending_rank": 16,
+      "full_name": "affaan-m/ECC",
+      "stars_today_measured": 1109,
+      "stars_total_in_trending_dom": 306187
+    },
+    {
+      "trending_rank": 17,
+      "full_name": "DeanChensj/jiangshan-map",
+      "stars_today_measured": 991,
+      "stars_total_in_trending_dom": 7841
+    },
+    {
+      "trending_rank": 18,
+      "full_name": "n8n-io/n8n",
+      "stars_today_measured": 315,
+      "stars_total_in_trending_dom": 210905
+    },
+    {
+      "trending_rank": 19,
+      "full_name": "solidjs/solid",
+      "stars_today_measured": 37,
+      "stars_total_in_trending_dom": 36402
+    },
+    {
+      "trending_rank": 20,
+      "full_name": "punkpeye/awesome-mcp-servers",
+      "stars_today_measured": 52,
+      "stars_total_in_trending_dom": 97915
+    }
+  ],
+  "round_2026_11_18_r1_skillevaluator_signet_finops_audit": {
+    "claim_id": "CLAIM-20261118-R1-SKILLEVAL-SIGNET",
+    "scope": "Enterprise AI Agent skill 3-tier quality/security/lift CI evaluation (NVIDIA/SkillEvaluator) & W3C SHACL cryptographic semantic governance registry (therandomsecurityguy/signet) across 100 developer seats and 60 internal skills (40 skill PRs/month; base server hardware capEx: not_measured)",
+    "enterprise_developer_seats": 100,
+    "internal_skills_governed": 60,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_unverified_wiki_git_skill_sharing": {
+      "compute_and_token_spend_usd": "2,360.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,460.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_commercial_portal_or_llm_only_pr_bot": {
+      "compute_and_saas_spend_usd": "1,120.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "2,920.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_nvidia_skillevaluator_plus_signet_registry": {
+      "compute_and_api_spend_usd": "95.00",
+      "engineering_labor_usd": "320.00",
+      "total_monthly_usd": "415.00",
+      "engineering_hours": "3.2",
+      "savings_vs_path_a_usd": "6,045.00",
+      "savings_vs_path_a_pct": "93.58%",
+      "annual_savings_vs_path_a_usd": "72,540.00",
+      "hours_saved_vs_path_a": "37.8"
+    }
+  },
+  "round_2026_11_18_r2_appwrite_fyrr_openvino_finops_audit": {
+    "claim_id": "CLAIM-20261118-R2-APPWRITE-FYRR-OPENVINO",
+    "scope": "Self-hosted MCP-native backend cloud (appwrite/appwrite v2.7.2), serverless S3 pre-ranking ACL context layer (fyrr-ai/fyrr) & OpenVINO Xeon CPU embedding inference across 150 employees and 12 internal AI agent apps (base server hardware capEx: not_measured)",
+    "enterprise_seats": 150,
+    "internal_agent_apps": 12,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_fragmented_cloud_baas_plus_vector_db_plus_gpu": {
+      "compute_and_cloud_spend_usd": "2,480.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "6,380.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_selfhosted_supabase_plus_qdrant_plus_cloud_api": {
+      "compute_and_api_spend_usd": "1,040.00",
+      "engineering_labor_usd": "1,700.00",
+      "total_monthly_usd": "2,740.00",
+      "engineering_hours": "17.0"
+    },
+    "path_c_appwrite_v272_plus_fyrr_s3_plus_openvino_cpu": {
+      "compute_and_s3_spend_usd": "110.00",
+      "engineering_labor_usd": "310.00",
+      "total_monthly_usd": "420.00",
+      "engineering_hours": "3.1",
+      "savings_vs_path_a_usd": "5,960.00",
+      "savings_vs_path_a_pct": "93.42%",
+      "annual_savings_vs_path_a_usd": "71,520.00",
+      "hours_saved_vs_path_a": "35.9"
+    }
+  },
+  "round_2026_11_18_r3_colab_deadweight_cmaxx_finops_audit": {
+    "claim_id": "CLAIM-20261118-R3-COLAB-DEADWEIGHT-CMAXX",
+    "scope": "Cloud GPU session cost guards (scarletkc/colab-playground), Claude Code pre-request setup token deadweight & 30k-char truncation fixer (msertdev/deadweight), and live prompt cache TTL handoff bar (5m0k3/cache-maxxing) across 80 engineers (base workstation hardware capEx: not_measured)",
+    "enterprise_engineers": 80,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_unguarded_colab_plus_bloated_setup_plus_expired_rebuilds": {
+      "compute_and_token_spend_usd": "2,420.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "6,220.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_manual_cron_scripts_plus_periodic_json_cleanup": {
+      "compute_and_token_spend_usd": "1,010.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,610.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_colab_playground_plus_deadweight_plus_cache_maxxing": {
+      "compute_and_token_spend_usd": "85.00",
+      "engineering_labor_usd": "290.00",
+      "total_monthly_usd": "375.00",
+      "engineering_hours": "2.9",
+      "savings_vs_path_a_usd": "5,845.00",
+      "savings_vs_path_a_pct": "93.97%",
+      "annual_savings_vs_path_a_usd": "70,140.00",
+      "hours_saved_vs_path_a": "35.1"
+    }
+  },
+  "round_2026_11_18_r4_adm_magi_wingbox_finops_audit": {
+    "claim_id": "CLAIM-20261118-R4-ADM-MAGI-WINGBOX",
+    "scope": "9-tool unified session manager & cross-tool transplant (haczen/ai-dialog-manage), cross-machine live session/uncommitted work teleport (felitrejos/magi), and 16-language offline static code blast-radius graph (aileron-tech/wingbox) across 60 engineers (base workstation hardware capEx: not_measured)",
+    "enterprise_engineers": 60,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_bruteforce_grep_plus_manual_reprompting": {
+      "compute_and_token_spend_usd": "2,340.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "6,340.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_cloud_code_index_saas_plus_wip_branches": {
+      "compute_and_saas_spend_usd": "980.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,630.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_wingbox_plus_ai_dialog_manage_plus_magi": {
+      "compute_and_token_spend_usd": "90.00",
+      "engineering_labor_usd": "300.00",
+      "total_monthly_usd": "390.00",
+      "engineering_hours": "3.0",
+      "savings_vs_path_a_usd": "5,950.00",
+      "savings_vs_path_a_pct": "93.85%",
+      "annual_savings_vs_path_a_usd": "71,400.00",
+      "hours_saved_vs_path_a": "37.0"
+    }
+  },
+  "round_2026_11_18_r5_openfabriq_aoa_mobileqa_finops_audit": {
+    "claim_id": "CLAIM-20261118-R5-OPENFABRIQ-AOA-MOBILEQA",
+    "scope": "Declarative credential-free GitHub software factory (openfabriq/openfabriq), 24x7 SQLite Inbox/Worker agent runtime (bubbleptr/aoa), and 20-phone parallel persona mobile QA (pierridotite/mobile-agent-testers) across 50 engineers (base hardware capEx: not_measured)",
+    "enterprise_engineers": 50,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_triage_plus_raw_scripts_plus_appium_farm": {
+      "compute_and_device_spend_usd": "2,550.00",
+      "engineering_labor_usd": "4,200.00",
+      "total_monthly_usd": "6,750.00",
+      "engineering_hours": "42.0"
+    },
+    "path_b_commercial_coding_bot_plus_crowdtesting": {
+      "compute_and_saas_spend_usd": "1,180.00",
+      "engineering_labor_usd": "1,850.00",
+      "total_monthly_usd": "3,030.00",
+      "engineering_hours": "18.5"
+    },
+    "path_c_openfabriq_plus_aoa_plus_mobile_agent_testers": {
+      "compute_and_ci_spend_usd": "105.00",
+      "engineering_labor_usd": "310.00",
+      "total_monthly_usd": "415.00",
+      "engineering_hours": "3.1",
+      "savings_vs_path_a_usd": "6,335.00",
+      "savings_vs_path_a_pct": "93.85%",
+      "annual_savings_vs_path_a_usd": "76,020.00",
+      "hours_saved_vs_path_a": "38.9"
+    }
+  },
+  "round_2026_11_18_r6_readanydoc_mcpmock_mersad_finops_audit": {
+    "claim_id": "CLAIM-20261118-R6-READANYDOC-MCPMOCK-MIRSAD",
+    "scope": "Self-hosted Reducto-compatible word-cited document parser (arpitpatel25/ReadAnyDoc), multi-revision deterministic mock MCP server (axium-lab/mcp-mock), and bi-temporal shared decision memory (amkkoussay/Mersad) across 30,000 parsed pages/month and 25,000 CI MCP tests/month (base hardware capEx: not_measured)",
+    "monthly_document_pages": 30000,
+    "monthly_ci_mcp_tests": 25000,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_commercial_reducto_plus_live_ci_plus_vector_memory": {
+      "compute_and_api_spend_usd": "2,180.00",
+      "engineering_labor_usd": "3,700.00",
+      "total_monthly_usd": "5,880.00",
+      "engineering_hours": "37.0"
+    },
+    "path_b_raw_vision_llm_plus_custom_mock_stubs": {
+      "compute_and_api_spend_usd": "920.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,520.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_readanydoc_plus_mcp_mock_plus_mersad": {
+      "compute_and_api_spend_usd": "115.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "395.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "5,485.00",
+      "savings_vs_path_a_pct": "93.28%",
+      "annual_savings_vs_path_a_usd": "65,820.00",
+      "hours_saved_vs_path_a": "34.2"
+    }
+  },
+  "round_2026_11_18_r7_acompany_agentcrop_agybridge_finops_audit": {
+    "claim_id": "CLAIM-20261118-R7-ACOMPANY-AGENTCROP-AGYBRIDGE",
+    "scope": "Zero-Docker PGlite self-hosted AI teammates (phuocka/a-company v0.2.2), trace-driven 9-symptom skill self-evolution (oriliz/agent-crop), and dual-protocol Antigravity-to-OpenAI proxy (codewith-aditya/agy-bridge) across 45 team members (base workstation hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_commercial_teammate_saas_plus_unmeasured_loops_plus_locked_ide": {
+      "compute_and_saas_spend_usd": "2,250.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "6,150.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_heavy_selfhosted_stack_plus_manual_log_triage": {
+      "compute_and_api_spend_usd": "950.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,550.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_acompany_pglite_plus_agent_crop_plus_agy_bridge": {
+      "compute_and_api_spend_usd": "80.00",
+      "engineering_labor_usd": "290.00",
+      "total_monthly_usd": "370.00",
+      "engineering_hours": "2.9",
+      "savings_vs_path_a_usd": "5,780.00",
+      "savings_vs_path_a_pct": "93.98%",
+      "annual_savings_vs_path_a_usd": "69,360.00",
+      "hours_saved_vs_path_a": "36.1"
+    }
+  },
+  "round_2026_11_18_r8_speclok_archinario_dataforseo_zim_finops_audit": {
+    "claim_id": "CLAIM-20261118-R8-SPECLOK-ARCHINARIO-DATAFORSEO-ZIM",
+    "scope": "Compiler-enforced Java @Spec/@AC annotations (Cherobin/speclok), interactive architecture board CLI/MCP (archinario/archinario-agent), pre-priced 576-endpoint SEO/GEO terminal (AgriciDaniel/dataforseo-agent), and pure-Rust offline Kiwix MCP (gordonbrander/zim-mcp) across 50 engineers and analysts (base hardware capEx: not_measured)",
+    "enterprise_seats": 50,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_drifting_md_specs_plus_manual_diagrams_plus_uncapped_apis": {
+      "compute_and_api_spend_usd": "2,140.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,940.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_separate_yaml_linter_plus_fixed_saas_seats": {
+      "compute_and_saas_spend_usd": "940.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,540.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_speclok_plus_archinario_plus_dataforseo_plus_zim_mcp": {
+      "compute_and_api_spend_usd": "75.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "355.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "5,585.00",
+      "savings_vs_path_a_pct": "94.02%",
+      "annual_savings_vs_path_a_usd": "67,020.00",
+      "hours_saved_vs_path_a": "35.2"
+    }
+  },
+  "round_2026_11_18_r9_adp_designloop_suzheui_piemphasis_finops_audit": {
+    "claim_id": "CLAIM-20261118-R9-ADP-DESIGNLOOP-SUZHEUI-PIEMPHASIS",
+    "scope": "Part-addressed content-hashed reusable artifacts (fblgit/artifacts-done-properly v2.1.1), role-separated fresh-judge UI/writing polish loop (mubarakmarafa/designloop), two-register restrained design skill (suzhe-ai/suzhe-ui), and zero-token terminal status pills (johnlindquist/pi-emphasis) across 40 engineers and designers (base hardware capEx: not_measured)",
+    "enterprise_seats": 40,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_fullpage_rewrites_plus_selfgrading_plus_manual_antislop": {
+      "compute_and_token_spend_usd": "2,080.00",
+      "engineering_labor_usd": "3,700.00",
+      "total_monthly_usd": "5,780.00",
+      "engineering_hours": "37.0"
+    },
+    "path_b_manual_component_extraction_plus_human_qa_loops": {
+      "compute_and_token_spend_usd": "890.00",
+      "engineering_labor_usd": "1,550.00",
+      "total_monthly_usd": "2,440.00",
+      "engineering_hours": "15.5"
+    },
+    "path_c_adp_plus_designloop_plus_suzhe_ui_plus_pi_emphasis": {
+      "compute_and_token_spend_usd": "85.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "355.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "5,425.00",
+      "savings_vs_path_a_pct": "93.86%",
+      "annual_savings_vs_path_a_usd": "65,100.00",
+      "hours_saved_vs_path_a": "34.3"
+    }
+  },
+  "round_2026_11_18_r10_mydb_pgvectorfast_agenticrag_finops_audit": {
+    "claim_id": "CLAIM-20261118-R10-MYDB-PGVECTORFAST-AGENTICRAG",
+    "scope": "Rust MySQL-compatible HTAP & MCP database (yzsind/mydb v1.0.0), MIT Calico buffer-pool pgvector accelerator (mitdbg/pgvectorfast), and dual-tier enterprise RAG (Golden-66/agentic-rag-kb & Replyze/ai-customer-support-agent) across 100M mixed rows and 500,000 monthly RAG queries (base hardware capEx: not_measured)",
+    "mixed_htap_rows": 100000000,
+    "monthly_rag_queries": 500000,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_separate_mysql_ck_milvus_plus_every_turn_llm_judge": {
+      "compute_and_api_spend_usd": "2,680.00",
+      "engineering_labor_usd": "4,300.00",
+      "total_monthly_usd": "6,980.00",
+      "engineering_hours": "43.0"
+    },
+    "path_b_oversized_rds_pgvector_plus_monolithic_vector_rag": {
+      "compute_and_api_spend_usd": "1,240.00",
+      "engineering_labor_usd": "1,800.00",
+      "total_monthly_usd": "3,040.00",
+      "engineering_hours": "18.0"
+    },
+    "path_c_mydb_or_pgvectorfast_plus_dual_tier_rag": {
+      "compute_and_api_spend_usd": "125.00",
+      "engineering_labor_usd": "320.00",
+      "total_monthly_usd": "445.00",
+      "engineering_hours": "3.2",
+      "savings_vs_path_a_usd": "6,535.00",
+      "savings_vs_path_a_pct": "93.62%",
+      "annual_savings_vs_path_a_usd": "78,420.00",
+      "hours_saved_vs_path_a": "39.8"
+    }
+  },
+  "round_2026_11_18_r11_leakcheck_mcpattest_skillset_otpkit_finops_audit": {
+    "claim_id": "CLAIM-20261118-R11-LEAKCHECK-MCPATTEST-SKILLSET-OTPKIT",
+    "scope": "Workstation reachability scanner & auto-fixer (globalmpc/agent-leakcheck), 24-rule live MCP authorization conformance harness (Balanov/mcp-attest), commit-pinned skill manifest CLI (itsmeyaw/skillset), and zero-key disposable OTP MCP server (SecFathy/otpkit) across 90 developer workstations and 18 internal MCP servers (base hardware capEx: not_measured)",
+    "developer_workstations": 90,
+    "internal_mcp_servers": 18,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_audits_plus_floating_skills_plus_paid_otp_apis": {
+      "compute_and_api_spend_usd": "2,190.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "6,090.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_legacy_endpoint_dlp_plus_manual_rbac_scripts": {
+      "compute_and_saas_spend_usd": "960.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,560.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_leakcheck_plus_mcpattest_plus_skillset_plus_otpkit": {
+      "compute_and_ci_spend_usd": "70.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "350.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "5,740.00",
+      "savings_vs_path_a_pct": "94.25%",
+      "annual_savings_vs_path_a_usd": "68,880.00",
+      "hours_saved_vs_path_a": "36.2"
+    }
+  },
+  "round_2026_11_18_r12_mingle_dshcdx_devkb_point_finops_audit": {
+    "claim_id": "CLAIM-20261118-R12-MINGLE-DSHCDX-DEVKB-POINT",
+    "scope": "Zero-server multi-IM local agent bridge (earayu/Mingle), 20-plugin Codex suite for DeepSeek Harness (Asuta/dsh-cdx-plus), precomputed context-pack code graph (namiq-ai/devkb), and on-device voice+loop screenshot input (sksareen/point) across 50 engineers (base hardware capEx: not_measured)",
+    "enterprise_engineers": 50,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_plain_search_plus_cloud_im_bots_plus_manual_typing": {
+      "compute_and_saas_spend_usd": "2,150.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,950.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_12tool_graph_plus_single_webhook": {
+      "compute_and_api_spend_usd": "910.00",
+      "engineering_labor_usd": "1,550.00",
+      "total_monthly_usd": "2,460.00",
+      "engineering_hours": "15.5"
+    },
+    "path_c_mingle_plus_dshcdx_plus_devkb_pack_plus_point": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "360.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "5,590.00",
+      "savings_vs_path_a_pct": "93.95%",
+      "annual_savings_vs_path_a_usd": "67,080.00",
+      "hours_saved_vs_path_a": "35.2"
+    }
+  },
+  "round_2026_11_18_r13_gameloc_x402lab_beeper_losslesscut_finops_audit": {
+    "claim_id": "CLAIM-20261118-R13-GAMELOC-X402LAB-BEEPER-LOSSLESSCUT",
+    "scope": "Hash-guarded 9-locale localization engineering (superwyh/Game-Localization-Engineering), zero-runtime-dependency browser-wallet x402 payment workbench (growvib/x402-mcp-lab), 500MB Beeper Desktop companion MCP (juulieen/beeper-mcp-addon), and keyframe-exact LosslessCut MCP (bariswha/losslesscut-mcp) across 45 global product and media ops staff (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_full_retranslation_plus_polling_plus_gpu_reencode": {
+      "compute_and_token_spend_usd": "2,120.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,920.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_commercial_tms_seats_plus_manual_video_scrubbing": {
+      "compute_and_saas_spend_usd": "930.00",
+      "engineering_labor_usd": "1,550.00",
+      "total_monthly_usd": "2,480.00",
+      "engineering_hours": "15.5"
+    },
+    "path_c_gameloc_plus_x402lab_plus_beeper_addon_plus_losslesscut": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "5,575.00",
+      "savings_vs_path_a_pct": "94.17%",
+      "annual_savings_vs_path_a_usd": "66,900.00",
+      "hours_saved_vs_path_a": "35.3"
+    }
+  },
+  "round_2026_11_18_r14_crafthub_guanlan_teach_tauscout_finops_audit": {
+    "claim_id": "CLAIM-20261118-R14-CRAFTHUB-GUANLAN-TEACH-TAUSCOUT",
+    "scope": "Shared windowless desktop MCP multiplexer (AndrianLeah/craft-mcp-hub), Obsidian multi-source Claudian handoff workbench (wangkefan0309-ui/guanlan), 1/3/7/14-day spaced-transfer mastery skill (olele114/teach-to-learn), and local LinkedIn role benchmarking MCP (ArsenOria/tau-linkedin-job-research-mcp) across 45 team members (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_duplicate_engines_plus_browser_switching_plus_passive_training": {
+      "compute_and_saas_spend_usd": "2,040.00",
+      "engineering_labor_usd": "3,700.00",
+      "total_monthly_usd": "5,740.00",
+      "engineering_hours": "37.0"
+    },
+    "path_b_always_open_heavy_guis_plus_external_clipper_saas": {
+      "compute_and_saas_spend_usd": "880.00",
+      "engineering_labor_usd": "1,500.00",
+      "total_monthly_usd": "2,380.00",
+      "engineering_hours": "15.0"
+    },
+    "path_c_crafthub_plus_guanlan_plus_teach_to_learn_plus_tauscout": {
+      "compute_and_api_spend_usd": "70.00",
+      "engineering_labor_usd": "260.00",
+      "total_monthly_usd": "330.00",
+      "engineering_hours": "2.6",
+      "savings_vs_path_a_usd": "5,410.00",
+      "savings_vs_path_a_pct": "94.25%",
+      "annual_savings_vs_path_a_usd": "64,920.00",
+      "hours_saved_vs_path_a": "34.4"
+    }
+  },
+  "round_2026_11_18_r15_flecten_replicator_janestreet_docsbot_finops_audit": {
+    "claim_id": "CLAIM-20261118-R15-FLECTEN-REPLICATOR-JANESTREET-DOCSBOT",
+    "scope": "Talker/Worker split-session coding agent IDE (AnnenkovLabs/flecten), 13-check manifold3d solid-modeling MCP (T-Crypt/replicator), quantitative research validation & pre-trade risk skills (voyager67/JaneStreet-Agentic-Skills), and 6-framework documentation chatbot blueprint (Replyze/ai-chatbot-for-website) across 50 engineers (base hardware capEx: not_measured)",
+    "enterprise_engineers": 50,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_interrupted_chats_plus_broken_meshes_plus_unguarded_backtests": {
+      "compute_and_token_spend_usd": "2,380.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "6,380.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_legacy_ide_plugins_plus_manual_cad_docs_glue": {
+      "compute_and_saas_spend_usd": "1,020.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,670.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_flecten_plus_replicator_plus_janestreet_plus_replyze": {
+      "compute_and_token_spend_usd": "90.00",
+      "engineering_labor_usd": "290.00",
+      "total_monthly_usd": "380.00",
+      "engineering_hours": "2.9",
+      "savings_vs_path_a_usd": "6,000.00",
+      "savings_vs_path_a_pct": "94.04%",
+      "annual_savings_vs_path_a_usd": "72,000.00",
+      "hours_saved_vs_path_a": "37.1"
+    }
+  },
+  "round_2026_11_18_r16_skywake_reprocase_microbrains_modernjava_finops_audit": {
+    "claim_id": "CLAIM-20261118-R16-SKYWAKE-REPROCASE-MICROBRAINS-MODERNJAVA",
+    "scope": "95ms pointer-fork S3 agent filesystem & 10M-vector index (skywakehq/skywake), cross-tenant owner-observed IDOR proof engine (theasbug/reprocase), sub-2ms pre-flight safety gate & tool pruner (drtikov/microbrainsforagents), and Java 21/Spring Boot 3 PostToolUse anti-regression hook (wkd09/modern-java-guidance) across 55 engineers (base hardware capEx: not_measured)",
+    "enterprise_engineers": 55,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_full_s3_copies_plus_30tool_bloat_plus_manual_idor_java_fixes": {
+      "compute_and_storage_spend_usd": "2,320.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "6,220.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_ebs_snapshots_plus_slow_ci_compile_loops": {
+      "compute_and_storage_spend_usd": "970.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,570.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_skywake_plus_reprocase_plus_modern_java_plus_preflight": {
+      "compute_and_storage_spend_usd": "85.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "365.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "5,855.00",
+      "savings_vs_path_a_pct": "94.13%",
+      "annual_savings_vs_path_a_usd": "70,260.00",
+      "hours_saved_vs_path_a": "36.2"
+    }
+  },
+  "round_2026_11_18_r17_pmprd_uhharness_haven_herdrcc_finops_audit": {
+    "claim_id": "CLAIM-20261118-R17-PMPRD-UHHARNESS-HAVEN-HERDRCC",
+    "scope": "Live-code PRD prototype workbench (xinyuefangfang/pmprd), single-dependency local-first Python harness (Antoine-Thomas/UH-Universal-Harness), shared-browser Claude-to-Codex failover (Bluezip231/Haven-Public), and cost-gated Herdr Command Center (digitaltracer/herdr-plugins) across 45 team members (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_redrawn_mockups_plus_unbounded_cron_plus_browser_resets": {
+      "compute_and_token_spend_usd": "2,160.00",
+      "engineering_labor_usd": "3,800.00",
+      "total_monthly_usd": "5,960.00",
+      "engineering_hours": "38.0"
+    },
+    "path_b_manual_mock_branches_plus_separate_dashboards": {
+      "compute_and_saas_spend_usd": "920.00",
+      "engineering_labor_usd": "1,550.00",
+      "total_monthly_usd": "2,470.00",
+      "engineering_hours": "15.5"
+    },
+    "path_c_pmprd_plus_uh_harness_plus_haven_plus_herdr_plugins": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "5,615.00",
+      "savings_vs_path_a_pct": "94.21%",
+      "annual_savings_vs_path_a_usd": "67,380.00",
+      "hours_saved_vs_path_a": "35.3"
+    }
+  },
+  "round_2026_11_18_r18_agyhq_dshworkboard_skillsiphon_claudewiki_finops_audit": {
+    "claim_id": "CLAIM-20261118-R18-AGYHQ-DSHWORKBOARD-SKILLSIPHON-CLAUDEWIKI",
+    "scope": "Zero-token gatekeeper personal Agent OS (zjshen14/agy-hq), 52-widget sandboxed workboard (lukeinx/dsh-workboard), read-only skill-to-human distillation (JL-GUO/skill-siphon), and 100-concept Karpathy LLM Wiki (yibie/claude-best-practices-zh) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_idle_cron_polling_plus_unsandboxed_ui_plus_raw_doc_rag": {
+      "compute_and_token_spend_usd": "2,140.00",
+      "engineering_labor_usd": "3,700.00",
+      "total_monthly_usd": "5,840.00",
+      "engineering_hours": "37.0"
+    },
+    "path_b_cloud_assistants_plus_separate_bi_plus_static_wiki": {
+      "compute_and_saas_spend_usd": "880.00",
+      "engineering_labor_usd": "1,500.00",
+      "total_monthly_usd": "2,380.00",
+      "engineering_hours": "15.0"
+    },
+    "path_c_agyhq_plus_dsh_workboard_plus_skill_siphon_plus_claude_wiki": {
+      "compute_and_token_spend_usd": "70.00",
+      "engineering_labor_usd": "260.00",
+      "total_monthly_usd": "330.00",
+      "engineering_hours": "2.6",
+      "savings_vs_path_a_usd": "5,510.00",
+      "savings_vs_path_a_pct": "94.35%",
+      "annual_savings_vs_path_a_usd": "66,120.00",
+      "hours_saved_vs_path_a": "34.4"
+    }
+  },
+  "round_2026_11_18_r19_clauds_claudelink_abridge_remotemcp_finops_audit": {
+    "claim_id": "CLAIM-20261118-R19-CLAUDS-CLAUDELINK-ABRIDGE-REMOTEMCP",
+    "scope": "90% quota auto-switch & zero-copy shared Code sessions (codeFi/clauds), dual-hop proxy & session-exit rollback (slobys/ClaudeLink), 4-runtime device/Profile MCP bridge (xerrors/aBridge), and OAuth 2.1 remote Windows PC MCP gateway (dqIndieGames/remote-pc-mcp-gateway) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_otp_relogin_plus_unrestored_proxy_plus_cookie_scripts": {
+      "compute_and_token_spend_usd": "2,080.00",
+      "engineering_labor_usd": "3,650.00",
+      "total_monthly_usd": "5,730.00",
+      "engineering_hours": "36.5"
+    },
+    "path_b_cloud_vdi_plus_commercial_bastion_gateways": {
+      "compute_and_saas_spend_usd": "910.00",
+      "engineering_labor_usd": "1,500.00",
+      "total_monthly_usd": "2,410.00",
+      "engineering_hours": "15.0"
+    },
+    "path_c_clauds_plus_claudelink_plus_abridge_plus_remote_pc_mcp": {
+      "compute_and_token_spend_usd": "65.00",
+      "engineering_labor_usd": "250.00",
+      "total_monthly_usd": "315.00",
+      "engineering_hours": "2.5",
+      "savings_vs_path_a_usd": "5,415.00",
+      "savings_vs_path_a_pct": "94.50%",
+      "annual_savings_vs_path_a_usd": "64,980.00",
+      "hours_saved_vs_path_a": "34.0"
+    }
+  },
+  "round_2026_11_18_r20_r500_papermate_blueprint_openfactura_fableprompt_finops_audit": {
+    "claim_id": "CLAIM-20261118-R20-R500-PAPERMATE-BLUEPRINT-OPENFACTURA-FABLEPROMPT",
+    "scope": "298-rule semantic document audit web app (peacefulj/SSCI-SCI-skills PaperMate v1.3.0), patent-sheet animated architecture explainer (intincrab/blueprint), serverless electronic tax invoicing MCP (xaviigna/openfactura), and cost-quantified prompt upgrade auditor (sktjgudals/fable-5-2-prompting) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_copy_paste_plus_hand_animation_plus_token_bloat": {
+      "compute_and_token_spend_usd": "2,420.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,520.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_commercial_review_saas_plus_contractors_plus_legacy_erp": {
+      "compute_and_saas_spend_usd": "1,050.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,700.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_papermate_plus_blueprint_plus_openfactura_plus_fable_prompting": {
+      "compute_and_token_spend_usd": "85.00",
+      "engineering_labor_usd": "290.00",
+      "total_monthly_usd": "375.00",
+      "engineering_hours": "2.9",
+      "savings_vs_path_a_usd": "6,145.00",
+      "savings_vs_path_a_pct": "94.25%",
+      "annual_savings_vs_path_a_usd": "73,740.00",
+      "hours_saved_vs_path_a": "38.1"
+    }
+  },
+  "round_2026_11_18_r21_rustxng_sagwiki_pandacode_stashdock_finops_audit": {
+    "claim_id": "CLAIM-20261118-R21-RUSTXNG-SAGWIKI-PANDACODE-STASHDOCK",
+    "scope": "Exact-token-budgeted metasearch MCP (RustXNG/RustXNG v0.32.0), 200ms/1M-char zero-LLM knowledge base (Zleap-AI/SAG-Wiki), zero-Chromium 18+ CLI workspace (aicodeking/pandacode), and cross-AI context sidebar (StashDock/StashDock) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_commercial_search_api_plus_graphrag_llm_plus_electron_ides": {
+      "compute_and_token_spend_usd": "2,280.00",
+      "engineering_labor_usd": "3,850.00",
+      "total_monthly_usd": "6,130.00",
+      "engineering_hours": "38.5"
+    },
+    "path_b_hosted_search_saas_plus_managed_vector_db_plus_cloud_ide": {
+      "compute_and_saas_spend_usd": "960.00",
+      "engineering_labor_usd": "1,550.00",
+      "total_monthly_usd": "2,510.00",
+      "engineering_hours": "15.5"
+    },
+    "path_c_rustxng_plus_sag_wiki_plus_pandacode_plus_stashdock": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "5,785.00",
+      "savings_vs_path_a_pct": "94.37%",
+      "annual_savings_vs_path_a_usd": "69,420.00",
+      "hours_saved_vs_path_a": "35.8"
+    }
+  },
+  "round_2026_11_18_r22_harp_dashboardskill_rederive_kikumap_finops_audit": {
+    "claim_id": "CLAIM-20261118-R22-HARP-DASHBOARDSKILL-REDERIVE-KIKUMAP",
+    "scope": "Zero-credential Limit rings & tmux sidebar (dominikmartn/harp), 127-screen screenshot-QA dashboard design skill (abdiraimov-otabek/dashboard-design-skill v2.1.0), Socratic first-principles codebase re-derivation (EricJujianZou/rederive), and zero-dependency macOS menu-bar chat mind map (tang1693/KIKUmap) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_20_tab_sprawl_plus_unchecked_charts_plus_blind_merges": {
+      "compute_and_token_spend_usd": "2,120.00",
+      "engineering_labor_usd": "3,750.00",
+      "total_monthly_usd": "5,870.00",
+      "engineering_hours": "37.5"
+    },
+    "path_b_cloud_terminal_sync_plus_ui_contractors_plus_walkthroughs": {
+      "compute_and_saas_spend_usd": "890.00",
+      "engineering_labor_usd": "1,500.00",
+      "total_monthly_usd": "2,390.00",
+      "engineering_hours": "15.0"
+    },
+    "path_c_harp_plus_dashboard_design_skill_plus_rederive_plus_kikumap": {
+      "compute_and_token_spend_usd": "70.00",
+      "engineering_labor_usd": "260.00",
+      "total_monthly_usd": "330.00",
+      "engineering_hours": "2.6",
+      "savings_vs_path_a_usd": "5,540.00",
+      "savings_vs_path_a_pct": "94.38%",
+      "annual_savings_vs_path_a_usd": "66,480.00",
+      "hours_saved_vs_path_a": "34.9"
+    }
+  },
+  "round_2026_11_18_r23_awesomecua_x18n_gongwen_franco_finops_audit": {
+    "claim_id": "CLAIM-20261118-R23-AWESOMECUA-X18N-GONGWEN-FRANCO",
+    "scope": "5,347-entry snapshot-verified CUA SQLite/JSONL registry (reacher-z/Awesome-CUA), 45+ preset stale-aware i18n linter (x18n-dev/x18n), anti-hallucination GB/T 9704 document suite (duyunzhoudyz/dyz-gongwen-skills v1.1.0), and zero-API-bill source-grounded outbound agent (GortexAI/franco) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_cua_scraping_plus_stale_i18n_plus_per_seat_gtm_saas": {
+      "compute_and_token_spend_usd": "2,340.00",
+      "engineering_labor_usd": "3,950.00",
+      "total_monthly_usd": "6,290.00",
+      "engineering_hours": "39.5"
+    },
+    "path_b_commercial_localization_saas_plus_external_sdr_agencies": {
+      "compute_and_saas_spend_usd": "990.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,590.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_awesome_cua_plus_x18n_plus_dyz_gongwen_plus_franco": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "5,945.00",
+      "savings_vs_path_a_pct": "94.52%",
+      "annual_savings_vs_path_a_usd": "71,340.00",
+      "hours_saved_vs_path_a": "36.8"
+    }
+  },
+  "round_2026_11_18_r24_tracely_openqodex_helixfoundry_gitai_finops_audit": {
+    "claim_id": "CLAIM-20261118-R24-TRACELY-OPENQODEX-HELIXFOUNDRY-GITAI",
+    "scope": "$0 hermetic trace-replay CI (jwuthri-cloud/Tracely-ai), fresh-process Finder/Verifier pre-push code review (openqodex/openqodex v0.14.0), row/quote-traceable ontology graph (HelixDB/helix-foundry), and Scion-style concurrent agent Git (feder-cr/git-ai) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_live_llm_ci_evals_plus_self_review_plus_merge_queue_thrashing": {
+      "compute_and_token_spend_usd": "2,460.00",
+      "engineering_labor_usd": "4,050.00",
+      "total_monthly_usd": "6,510.00",
+      "engineering_hours": "40.5"
+    },
+    "path_b_commercial_eval_saas_plus_cloud_pr_bots_plus_proprietary_graph": {
+      "compute_and_saas_spend_usd": "1,040.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,690.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_tracely_plus_openqodex_plus_helix_foundry_plus_git_ai": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "360.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "6,150.00",
+      "savings_vs_path_a_pct": "94.47%",
+      "annual_savings_vs_path_a_usd": "73,800.00",
+      "hours_saved_vs_path_a": "37.7"
+    }
+  },
+  "round_2026_11_18_r25_r505_grandet_dshwinmcp_openui_affectui_finops_audit": {
+    "claim_id": "CLAIM-20261118-R25-R505-GRANDET-DSHWINMCP-OPENUI-AFFECTUI",
+    "scope": "Anonymous LLM API price-finder MCP (hanzohanzhe/Grandet), zero-duplicate-SDK carrier bundle (helloHub1212/dsh-windows-mcp), OpenUI Lang 1.0 streaming generative UI (thesysdev/open-intelligent-ui), and single-file .tsx React 19 agent UI library (flohoeller/affectui) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_single_vendor_list_price_plus_duplicated_sdk_plus_css_conflicts": {
+      "compute_and_token_spend_usd": "2,540.00",
+      "engineering_labor_usd": "3,900.00",
+      "total_monthly_usd": "6,440.00",
+      "engineering_hours": "39.0"
+    },
+    "path_b_commercial_routing_gateways_plus_paid_rpa_and_ui_kits": {
+      "compute_and_saas_spend_usd": "1,020.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,620.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_grandet_plus_dsh_windows_mcp_plus_open_intelligent_ui_plus_affectui": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "350.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,090.00",
+      "savings_vs_path_a_pct": "94.57%",
+      "annual_savings_vs_path_a_usd": "73,080.00",
+      "hours_saved_vs_path_a": "36.3"
+    }
+  },
+  "round_2026_11_18_r26_pullboard_seecode_scrawl_bigarrow_finops_audit": {
+    "claim_id": "CLAIM-20261118-R26-PULLBOARD-SEECODE-SCRAWL-BIGARROW",
+    "scope": "32-agent dual-role repo queue (pullboard-dev/pullboard v0.9.4), 42-type JSON animated diagram compiler (Aryanutkarsh/SeeCode), multimodal annotated keyframe bundle (kitlangton/scrawl), and zero-permission click-through screen pointer (franzenzenhofer/big-arrow-on-the-screen) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_uninspected_agent_drift_plus_raw_video_tokens_plus_terminal_stalls": {
+      "compute_and_token_spend_usd": "2,360.00",
+      "engineering_labor_usd": "3,950.00",
+      "total_monthly_usd": "6,310.00",
+      "engineering_hours": "39.5"
+    },
+    "path_b_cloud_pm_boards_plus_paid_video_saas_plus_commercial_diagrams": {
+      "compute_and_saas_spend_usd": "970.00",
+      "engineering_labor_usd": "1,550.00",
+      "total_monthly_usd": "2,520.00",
+      "engineering_hours": "15.5"
+    },
+    "path_c_pullboard_plus_seecode_plus_scrawl_plus_bigarrow": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "5,965.00",
+      "savings_vs_path_a_pct": "94.53%",
+      "annual_savings_vs_path_a_usd": "71,580.00",
+      "hours_saved_vs_path_a": "36.8"
+    }
+  },
+  "round_2026_11_18_r27_winshun_snostationskills_geodoctor_soptoolkit_finops_audit": {
+    "claim_id": "CLAIM-20261118-R27-WINSHUN-SNOSTATIONSKILLS-GEODOCTOR-SOPTOOLKIT",
+    "scope": "NTFS MFT 3M-file search MCP (LingCore/WinShun), pre-quota commit handover & nightly retro skills (sno-ai/sno-station-skills), white-hat AI crawler GEO doctor (Fangx-AI/geo-doctor), and compliance-guarded 7-agent SOP toolkit (heqiangdiao-wq/AI-Cross-Border-Ecommerce-Agent-Toolkit v0.4) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_slow_os_search_plus_quota_crashes_plus_geo_retainers_plus_raw_sops": {
+      "compute_and_token_spend_usd": "2,480.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "6,480.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_paid_desktop_search_plus_cloud_orchestrators_plus_geo_saas": {
+      "compute_and_saas_spend_usd": "1,010.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,610.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_winshun_plus_sno_station_skills_plus_geo_doctor_plus_sop_toolkit": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,135.00",
+      "savings_vs_path_a_pct": "94.68%",
+      "annual_savings_vs_path_a_usd": "73,620.00",
+      "hours_saved_vs_path_a": "37.3"
+    }
+  },
+  "round_2026_11_18_r28_agentmemory_squadra_lcu_cloudroom_finops_audit": {
+    "claim_id": "CLAIM-20261118-R28-AGENTMEMORY-SQUADRA-LCU-CLOUDROOM",
+    "scope": "Zero-key Markdown+SQLite sleep-time memory runtime (tigerless-labs/agent-memory), stdlib-only proof-bound multi-agent coordinator (dagoSte/squadra v3.15.1), decoupled cross-harness computer use (amontlabs/lcu), and live Mac-to-cloud session teleport (davidondrej/cloudroom) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_vector_db_chunk_bloat_plus_unverified_windows_plus_sleep_drops": {
+      "compute_and_token_spend_usd": "2,420.00",
+      "engineering_labor_usd": "3,950.00",
+      "total_monthly_usd": "6,370.00",
+      "engineering_hours": "39.5"
+    },
+    "path_b_hosted_memory_saas_plus_separate_vendor_cloud_runner_seats": {
+      "compute_and_saas_spend_usd": "980.00",
+      "engineering_labor_usd": "1,550.00",
+      "total_monthly_usd": "2,530.00",
+      "engineering_hours": "15.5"
+    },
+    "path_c_agent_memory_plus_squadra_plus_lcu_plus_cloudroom": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,025.00",
+      "savings_vs_path_a_pct": "94.58%",
+      "annual_savings_vs_path_a_usd": "72,300.00",
+      "hours_saved_vs_path_a": "36.8"
+    }
+  },
+  "round_2026_11_18_r29_egm_jevgrep_hermesjev_skilltraining_finops_audit": {
+    "claim_id": "CLAIM-20261118-R29-EGM-JEVGREP-HERMESJEV-SKILLTRAINING",
+    "scope": "Google Elephant-Goldfish spec review plugin (google/elephant-goldfish-model), -30% cost code discovery CLI (dzhng/jevgrep), 0.4s non-generative decision router (kerpopule/hermes-jev-skills), and frozen-weight reconstruction skill trainer (skilltraining-project/skill-training) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_same_chat_review_plus_blind_grep_plus_frontier_routing_plus_fine_tuning": {
+      "compute_and_token_spend_usd": "2,620.00",
+      "engineering_labor_usd": "4,050.00",
+      "total_monthly_usd": "6,670.00",
+      "engineering_hours": "40.5"
+    },
+    "path_b_consultants_plus_hosted_code_search_saas_plus_managed_fine_tuning": {
+      "compute_and_saas_spend_usd": "1,060.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,710.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_egm_plus_jevgrep_plus_hermes_jev_skills_plus_skill_training": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "360.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "6,310.00",
+      "savings_vs_path_a_pct": "94.60%",
+      "annual_savings_vs_path_a_usd": "75,720.00",
+      "hours_saved_vs_path_a": "37.7"
+    }
+  },
+  "round_2026_11_18_r30_r510_nod_sheprd_ovis_golive_finops_audit": {
+    "claim_id": "CLAIM-20261118-R30-R510-NOD-SHEPRD-OVIS-GOLIVE",
+    "scope": "Isolated-computer personal web agent (n8n-io/nod), Rust/GPUI daemon workspace (sheprd-labs/sheprd), 1-tap mobile Herdr companion (devswha/ovis), and Plan-ID-verified 6-journey cloud provisioner (mikehasa/golive-skill) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_admin_plus_electron_drops_plus_desk_stalls_plus_orphaned_cloud": {
+      "compute_and_token_spend_usd": "2,580.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,680.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_cloud_rpa_bots_plus_remote_desktop_saas_plus_paas_markups": {
+      "compute_and_saas_spend_usd": "1,050.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,700.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_nod_plus_sheprd_plus_ovis_plus_golive_skill": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "360.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "6,320.00",
+      "savings_vs_path_a_pct": "94.61%",
+      "annual_savings_vs_path_a_usd": "75,840.00",
+      "hours_saved_vs_path_a": "38.2"
+    }
+  },
+  "round_2026_11_18_r31_coucou_andee_oilui_insomnia_finops_audit": {
+    "claim_id": "CLAIM-20261118-R31-COUCOU-ANDEE-OILUI-INSOMNIA",
+    "scope": "Notch/Dynamic-Island companion & offline Parakeet dictation (Louis-CFM/coucou v0.4), zero-root on-device Android/macOS agent (kuafuai/andee), 87.0-score 3-direction screenshot-refined UI skill (oil-oil/oil-ui), and timed lid-closed awake guard (krishhgg/Insomnia) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_paid_dictation_meeting_saas_plus_root_scripts_plus_single_draft_ui": {
+      "compute_and_token_spend_usd": "2,440.00",
+      "engineering_labor_usd": "3,950.00",
+      "total_monthly_usd": "6,390.00",
+      "engineering_hours": "39.5"
+    },
+    "path_b_commercial_voice_saas_plus_cloud_device_farms_plus_ui_agencies": {
+      "compute_and_saas_spend_usd": "990.00",
+      "engineering_labor_usd": "1,550.00",
+      "total_monthly_usd": "2,540.00",
+      "engineering_hours": "15.5"
+    },
+    "path_c_coucou_plus_andee_plus_oil_ui_plus_insomnia": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,045.00",
+      "savings_vs_path_a_pct": "94.60%",
+      "annual_savings_vs_path_a_usd": "72,540.00",
+      "hours_saved_vs_path_a": "36.8"
+    }
+  },
+  "round_2026_11_18_r32_aihot_nanomuse_yovoice_secondbrainos_finops_audit": {
+    "claim_id": "CLAIM-20261118-R32-AIHOT-NANOMUSE-YOVOICE-SECONDBRAINOS",
+    "scope": "Dual-scored event-clustering trend radar (KKKKhazix/AIHOT), self-hosted cross-device personal agent (nano-muse/nanoMuse v1.0.9), zero-Python local TTS/song studio MCP (leemysw/yovoice), and 5-handbook 72-command Second Brain OS (undefined-ui/second-brain-os) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_news_plus_cloud_tts_api_bills_plus_scattered_tutorials": {
+      "compute_and_token_spend_usd": "2,460.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "6,460.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_media_monitoring_saas_plus_paid_voice_studio_plus_workshops": {
+      "compute_and_saas_spend_usd": "1,010.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,610.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_aihot_plus_nanomuse_plus_yovoice_plus_second_brain_os": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,115.00",
+      "savings_vs_path_a_pct": "94.66%",
+      "annual_savings_vs_path_a_usd": "73,380.00",
+      "hours_saved_vs_path_a": "37.3"
+    }
+  },
+  "round_2026_11_18_r33_opendesignkit_explainroo_videoskills_solidglass_finops_audit": {
+    "claim_id": "CLAIM-20261118-R33-OPENDESIGNKIT-EXPLAINROO-VIDEOSKILLS-SOLIDGLASS",
+    "scope": "Daemon-free 198-brand design kit (feimacode/open-design-agent-kit), 2-minute local Kokoro+Whisper video studio (vincentsch/explainroo v0.6.1), 526-repo security-graded video benchmark (zhuyansen/awesome-claude-video-skills), and tactile solid-glass agent UI (deeplethe/solid-glass) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_separate_design_daemon_plus_23m_video_renders_plus_blurry_glass": {
+      "compute_and_token_spend_usd": "2,420.00",
+      "engineering_labor_usd": "3,950.00",
+      "total_monthly_usd": "6,370.00",
+      "engineering_hours": "39.5"
+    },
+    "path_b_commercial_design_saas_plus_paid_video_saas_plus_ui_themes": {
+      "compute_and_saas_spend_usd": "980.00",
+      "engineering_labor_usd": "1,550.00",
+      "total_monthly_usd": "2,530.00",
+      "engineering_hours": "15.5"
+    },
+    "path_c_open_design_agent_kit_plus_explainroo_plus_video_skills_plus_solid_glass": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,025.00",
+      "savings_vs_path_a_pct": "94.58%",
+      "annual_savings_vs_path_a_usd": "72,300.00",
+      "hours_saved_vs_path_a": "36.8"
+    }
+  },
+  "round_2026_11_18_r34_logodesign_linkedinskill_anything2explainer_yomiyasu_finops_audit": {
+    "claim_id": "CLAIM-20261118-R34-LOGODESIGN-LINKEDINSKILL-ANYTHING2EXPLAINER-YOMIYASU",
+    "scope": "1,400+ SVG & 16px optical logo skill (kaankiziltug/logo-design-skill), 21-hook & 5-check de-slop LinkedIn suite (Jakeschincariol/linkedin-agent-skill), 44-shot bilingual Remotion explainer factory (Vincentwei1021/anything2explainer), and 7-principle Japanese spec verifier (nanaism/yomiyasu) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_external_agencies_plus_ai_slop_rework_plus_manual_qa": {
+      "compute_and_token_spend_usd": "2,560.00",
+      "engineering_labor_usd": "4,050.00",
+      "total_monthly_usd": "6,610.00",
+      "engineering_hours": "40.5"
+    },
+    "path_b_paid_logo_generators_plus_social_saas_plus_cloud_video_templates": {
+      "compute_and_saas_spend_usd": "1,030.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,630.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_logo_design_plus_linkedin_skill_plus_anything2explainer_plus_yomiyasu": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "360.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "6,250.00",
+      "savings_vs_path_a_pct": "94.55%",
+      "annual_savings_vs_path_a_usd": "75,000.00",
+      "hours_saved_vs_path_a": "37.7"
+    }
+  },
+  "round_2026_11_18_r35_r515_bangmotion_dreamloop_3dviz_awwwards_finops_audit": {
+    "claim_id": "CLAIM-20261118-R35-R515-BANGMOTION-DREAMLOOP-3DVIZ-AWWWARDS",
+    "scope": "Continuous-camera single-HTML motion skill (bangtutorial/bang-motion v1.19.0), target-image dream + critic 3D loop (achimala/dream-loop), 223-recipe three.js 0.180 kit (viettranx/3dviz-pro-max), and /awwwards + /jury website evaluator (juliobsz/skills) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_slide_fade_videos_plus_blind_3d_shaders_plus_web_agencies": {
+      "compute_and_token_spend_usd": "2,640.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,740.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_motion_templates_plus_3d_asset_marketplaces_plus_reviews": {
+      "compute_and_saas_spend_usd": "1,050.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,700.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_bang_motion_plus_dream_loop_plus_3dviz_pro_max_plus_awwwards_jury": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "360.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "6,380.00",
+      "savings_vs_path_a_pct": "94.66%",
+      "annual_savings_vs_path_a_usd": "76,560.00",
+      "hours_saved_vs_path_a": "38.2"
+    }
+  },
+  "round_2026_11_18_r36_r516_reelmimic_papermorph_motionmaxxing_screenwriting_finops_audit": {
+    "claim_id": "CLAIM-20261118-R36-REELMIMIC-PAPERMORPH-MOTIONMAXXING-SCREENWRITING",
+    "scope": "Reference-video rhythm cloner (edenfunf/reelmimic), zero-server 3D math-graded interactive books (DozenTwelve/Papermorph), 12-ease G0-G5 motion de-slop skill (Tejashmakwana/motionmaxxing), and 47-book 26-skill narrative suite (jtydhr88/screenwriting-skills) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_shot_timing_plus_stateful_lms_plus_linear_ease_slop": {
+      "compute_and_token_spend_usd": "2,480.00",
+      "engineering_labor_usd": "4,000.00",
+      "total_monthly_usd": "6,480.00",
+      "engineering_hours": "40.0"
+    },
+    "path_b_commercial_elearning_saas_plus_motion_agencies_plus_consultants": {
+      "compute_and_saas_spend_usd": "1,010.00",
+      "engineering_labor_usd": "1,600.00",
+      "total_monthly_usd": "2,610.00",
+      "engineering_hours": "16.0"
+    },
+    "path_c_reelmimic_plus_papermorph_plus_motionmaxxing_plus_screenwriting_skills": {
+      "compute_and_token_spend_usd": "75.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "345.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,135.00",
+      "savings_vs_path_a_pct": "94.68%",
+      "annual_savings_vs_path_a_usd": "73,620.00",
+      "hours_saved_vs_path_a": "37.3"
+    }
+  },
+  "round_2026_11_18_r37_r517_skillopt_xerj_browserharness_opencodex_finops_audit": {
+    "claim_id": "CLAIM-20261118-R37-SKILLOPT-XERJ-BROWSERHARNESS-OPENCODEX",
+    "scope": "Held-out-gated skill optimizer and nightly sleep engine (microsoft/SkillOpt v0.2.0), single-binary 2.7x token-saving Rust search and CPU Query-1 (xerj-org/xerj rc.101), self-authoring agent_helpers.py Chrome CDP engine (browser-use/browser-harness), and tri-protocol local agent gateway (lidge-jun/opencodex) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_unvalidated_skill_edits_plus_jvm_es_grep_plus_ephemeral_browser_scripts": {
+      "compute_and_token_spend_usd": "2,760.00",
+      "engineering_labor_usd": "4,200.00",
+      "total_monthly_usd": "6,960.00",
+      "engineering_hours": "42.0"
+    },
+    "path_b_lora_finetuning_plus_cloud_vector_saas_plus_hosted_browsers": {
+      "compute_and_saas_spend_usd": "1,140.00",
+      "engineering_labor_usd": "1,700.00",
+      "total_monthly_usd": "2,840.00",
+      "engineering_hours": "17.0"
+    },
+    "path_c_skillopt_plus_xerj_plus_browser_harness_plus_opencodex": {
+      "compute_and_token_spend_usd": "85.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "365.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "6,595.00",
+      "savings_vs_path_a_pct": "94.76%",
+      "annual_savings_vs_path_a_usd": "79,140.00",
+      "hours_saved_vs_path_a": "39.2"
+    }
+  },
+  "round_2026_11_18_r38_r518_openwiki_artemis_aimemory_ycqm_finops_audit": {
+    "claim_id": "CLAIM-20261118-R38-OPENWIKI-ARTEMIS-AIMEMORY-YCQM",
+    "scope": "Claim-grounded multi-repo living wiki (langchain-ai/openwiki), Google 99%+ AndroidWorld and Logcat MCP (google/artemis), 20+ harness session-projecting memory (akitaonrails/ai-memory), and Y Combinator multiplayer team harness (yc-software/qm) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_stale_confluence_plus_flaky_appium_plus_context_rebriefing_plus_shared_bots": {
+      "compute_and_token_spend_usd": "2,680.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,780.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_code_wiki_saas_plus_cloud_mobile_testing_plus_hosted_team_bots": {
+      "compute_and_saas_spend_usd": "1,090.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,740.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_openwiki_plus_artemis_plus_ai_memory_plus_yc_qm": {
+      "compute_and_token_spend_usd": "85.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "355.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,425.00",
+      "savings_vs_path_a_pct": "94.76%",
+      "annual_savings_vs_path_a_usd": "77,100.00",
+      "hours_saved_vs_path_a": "38.3"
+    }
+  },
+  "round_2026_11_18_r39_r519_genoffice_kami_magpie_dbx_finops_audit": {
+    "claim_id": "CLAIM-20261118-R39-GENOFFICE-KAMI-MAGPIE-DBX",
+    "scope": "Byte-preserving open-source AI Office suite (genspark-ai/genoffice), 9-template PDF/PNG/editable-PPTX layout skill (tw93/Kami), quota-failover and secret-masking agent gateway (yetone/magpie), and 25MB 100+ database client/MCP (t8y2/dbx) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_destructive_office_scripts_plus_quota_stalls_plus_jvm_db_ides": {
+      "compute_and_token_spend_usd": "2,620.00",
+      "engineering_labor_usd": "4,050.00",
+      "total_monthly_usd": "6,670.00",
+      "engineering_hours": "40.5"
+    },
+    "path_b_cloud_office_ai_plus_paid_slide_saas_plus_commercial_db_clients": {
+      "compute_and_saas_spend_usd": "1,060.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,710.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_genoffice_plus_kami_plus_magpie_plus_dbx": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "350.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,320.00",
+      "savings_vs_path_a_pct": "94.75%",
+      "annual_savings_vs_path_a_usd": "75,840.00",
+      "hours_saved_vs_path_a": "37.8"
+    }
+  },
+  "round_2026_11_18_r40_r520_rea_deepseekharness_ponytail5_opendesign_finops_audit": {
+    "claim_id": "CLAIM-20261118-R40-R520-REA-DEEPSEEKHARNESS-PONYTAIL5-OPENDESIGN",
+    "scope": "[R520 Milestone] 468K-star reverse-engineering MCP (morluto/rea), 283K-star DeepSeek plugin harness (deepseek-ai/deepseek-harness), 193K-star -53% code / 98% test senior-dev skill (DietrichGebert/ponytail v5), and 108K-star collaborative design workspace (nexu-io/open-design) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_decompilation_plus_verbose_ai_code_plus_siloed_design": {
+      "compute_and_token_spend_usd": "2,840.00",
+      "engineering_labor_usd": "4,300.00",
+      "total_monthly_usd": "7,140.00",
+      "engineering_hours": "43.0"
+    },
+    "path_b_migration_consultants_plus_commercial_agent_ides_plus_manual_qa": {
+      "compute_and_saas_spend_usd": "1,180.00",
+      "engineering_labor_usd": "1,750.00",
+      "total_monthly_usd": "2,930.00",
+      "engineering_hours": "17.5"
+    },
+    "path_c_rea_plus_deepseek_harness_plus_ponytail5_plus_open_design": {
+      "compute_and_token_spend_usd": "85.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "365.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "6,775.00",
+      "savings_vs_path_a_pct": "94.89%",
+      "annual_savings_vs_path_a_usd": "81,300.00",
+      "hours_saved_vs_path_a": "40.2"
+    }
+  },
+  "round_2026_11_18_r41_r521_archify_diagramdesign_ihaveadhd_ifixai_finops_audit": {
+    "claim_id": "CLAIM-20261118-R41-ARCHIFY-DIAGRAMDESIGN-IHAVEADHD-IFIXAI",
+    "scope": "97.7K-star interactive source-linked diagrams (tt-a1i/archify v3.2.0), 68.1K-star 50-type editorial HTML+SVG diagrams (cathrynlavery/diagram-design), 61.6K-star 10-rule action-first output skill (ayghri/i-have-adhd), and 46.5K-star independent agent auditor (ifixai-ai/iFixAi) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_visio_plus_mermaid_slop_plus_filler_prose_plus_outcome_evals": {
+      "compute_and_token_spend_usd": "2,660.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,760.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_diagram_saas_plus_brand_designers_plus_audit_consultants": {
+      "compute_and_saas_spend_usd": "1,080.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,730.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_archify_plus_diagram_design_plus_i_have_adhd_plus_ifixai": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "350.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,410.00",
+      "savings_vs_path_a_pct": "94.82%",
+      "annual_savings_vs_path_a_usd": "76,920.00",
+      "hours_saved_vs_path_a": "38.3"
+    }
+  },
+  "round_2026_11_18_r42_r522_booktoskill_obscura_videouse_grokbuild_finops_audit": {
+    "claim_id": "CLAIM-20261118-R42-BOOKTOSKILL-OBSCURA-VIDEOUSE-GROKBUILD",
+    "scope": "24x-51x token-saving book-to-skill distiller (virgiliojr94/book-to-skill), 30MB / 85ms zero-Chromium Rust browser (h4ckf0r0day/obscura), parallel sub-agent video editor (browser-use/video-use), and xAI Rust TUI/ACP coding agent (xai-org/grok-build) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_full_pdf_context_tax_plus_200mb_chrome_fleet_plus_manual_video_nle": {
+      "compute_and_token_spend_usd": "2,780.00",
+      "engineering_labor_usd": "4,200.00",
+      "total_monthly_usd": "6,980.00",
+      "engineering_hours": "42.0"
+    },
+    "path_b_cloud_rag_saas_plus_hosted_browsers_plus_commercial_video_editors": {
+      "compute_and_saas_spend_usd": "1,130.00",
+      "engineering_labor_usd": "1,700.00",
+      "total_monthly_usd": "2,830.00",
+      "engineering_hours": "17.0"
+    },
+    "path_c_book_to_skill_plus_obscura_plus_video_use_plus_grok_build": {
+      "compute_and_token_spend_usd": "85.00",
+      "engineering_labor_usd": "280.00",
+      "total_monthly_usd": "365.00",
+      "engineering_hours": "2.8",
+      "savings_vs_path_a_usd": "6,615.00",
+      "savings_vs_path_a_pct": "94.77%",
+      "annual_savings_vs_path_a_usd": "79,380.00",
+      "hours_saved_vs_path_a": "39.2"
+    }
+  },
+  "round_2026_11_18_r43_r523_guizangppt_huashudesign_jevultrafast_moli_finops_audit": {
+    "claim_id": "CLAIM-20261118-R43-GUIZANGPPT-HUASHUDESIGN-JEVULTRAFAST-MOLI",
+    "scope": "Dual-aesthetic rehearsal HTML deck skill (op7418/guizang-ppt-skill), 6-to-3 direction and Appearance-Ledger design engine (alchaincyf/huashu-design v3.1), 7.1s speculative Jev web agent (browser-use/jev-ultrafast), and on-demand pixel Rust browser (lexmount/moli) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_manual_slides_plus_repetitive_ai_slop_plus_slow_llm_web_loops": {
+      "compute_and_token_spend_usd": "2,640.00",
+      "engineering_labor_usd": "4,100.00",
+      "total_monthly_usd": "6,740.00",
+      "engineering_hours": "41.0"
+    },
+    "path_b_presentation_saas_plus_design_agencies_plus_hosted_browsers": {
+      "compute_and_saas_spend_usd": "1,070.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,720.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_guizang_ppt_plus_huashu_design_plus_jev_ultrafast_plus_moli": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "350.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,390.00",
+      "savings_vs_path_a_pct": "94.81%",
+      "annual_savings_vs_path_a_usd": "76,680.00",
+      "hours_saved_vs_path_a": "38.3"
+    }
+  },
+  "round_2026_11_18_r44_r524_nocobase_happy_egolite_primeagent_finops_audit": {
+    "claim_id": "CLAIM-20261118-R44-NOCOBASE-HAPPY-EGOLITE-PRIMEAGENT",
+    "scope": "AI business system governance platform (nocobase/nocobase), E2EE mobile and multiplayer agent harness (slopus/happy), parallel shared-login browser Spaces (citrolabs/ego-lite), and self-improving RLM coding agent (PrimeIntellect-ai/prime-agent) across 45 seats (base hardware capEx: not_measured)",
+    "enterprise_seats": 45,
+    "engineer_hourly_rate_usd": 100.0,
+    "path_a_ungoverned_vibe_coding_plus_duplicate_seats_plus_browser_contention": {
+      "compute_and_token_spend_usd": "2,720.00",
+      "engineering_labor_usd": "4,150.00",
+      "total_monthly_usd": "6,870.00",
+      "engineering_hours": "41.5"
+    },
+    "path_b_commercial_lowcode_paas_plus_hosted_remote_agents_plus_cloud_browsers": {
+      "compute_and_saas_spend_usd": "1,110.00",
+      "engineering_labor_usd": "1,650.00",
+      "total_monthly_usd": "2,760.00",
+      "engineering_hours": "16.5"
+    },
+    "path_c_nocobase_plus_happy_plus_ego_lite_plus_prime_agent": {
+      "compute_and_token_spend_usd": "80.00",
+      "engineering_labor_usd": "270.00",
+      "total_monthly_usd": "350.00",
+      "engineering_hours": "2.7",
+      "savings_vs_path_a_usd": "6,520.00",
+      "savings_vs_path_a_pct": "94.91%",
+      "annual_savings_vs_path_a_usd": "78,240.00",
+      "hours_saved_vs_path_a": "38.8"
+    }
+  }
+}

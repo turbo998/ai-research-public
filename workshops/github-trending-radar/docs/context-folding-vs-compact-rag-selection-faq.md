@@ -2,7 +2,7 @@
 
 > **文档定位**：面向 AI 解决方案架构师（AI Solution Architect）、Coding Agent 平台负责人与 LLM 推理成本治理团队的一页纸技术决策指南。  
 > **对标基线**：2026 年 11 月生产级长会话编码智能体基准（基于 `ranxianglei/billion-context` v0.1.213 / `acp-kernel` 一手源码核验，以及上游作者公开的 4.5 个月 174,327 次模型调用纵深研究与 1,500 题 `ContextBench` · `LongMemEval-S` · `MemoryAgentBench` 5 路盲测报告）。  
-> **关联架构资产**：[`workshops/github-trending-radar/daily/2026-11-08.md`](../daily/2026-11-08.md) · [`workshops/github-trending-radar/cards.html`](../cards.html) · [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联架构资产**：[`workshops/github-trending-radar/daily/2026-11-08.md`](../daily/2026-11-08.md) · [`workshops/github-trending-radar/cards.html`](../cards.html) · [`zh-github-radar.html`](../../../zh-github-radar.html)
 >
 > 🛡️ **数据来源、归属核验与证据分级声明（Provenance & Attribution Disclosure）**：
 > - **`measured`（本班次一手实测抓取）**：`ranxianglei/billion-context` GitHub Daily Trending 单日增量 `+460 stars today` 与总 Star `4,922`（封存原始 HTML 证据：[`workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html`](../evidence/trending-daily-2026-11-08-raw.html)，`sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`）、REST API 元数据（`v0.1.213`，MIT，独立开发者 `ranxianglei` 仓库）及 `docs/technical-notes.md` 源码机制核验。

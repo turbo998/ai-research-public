@@ -1,7 +1,7 @@
 # Pure-Go Zero-CGO GPU Desktop UI Kit & On-Device iOS SwiftUI + Python 3.15 / `libgit2` Agent Runtime Selection FAQ: `lobehub/lobe-mygo` + `imsai-sh/fish-pocket` vs. Electron Desktop & Remote-VM Mobile Clients
 
 > **中文版**: [lobe-mygo-fish-pocket-native-go-ios-agent-selection-faq.md](lobe-mygo-fish-pocket-native-go-ios-agent-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
 
 ![lobehub/lobe-mygo & imsai-sh/fish-pocket Architecture Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r10-lobe-mygo-fish-pocket.svg)
 

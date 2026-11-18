@@ -1,7 +1,7 @@
 # Enterprise Semantic Ontology & Text-to-SQL Selection FAQ: `NVIDIA/auto-ontology` (Postgres Semantic Catalog + Governed Metrics + NIM Model Triplets + MCP/Skills) vs. Raw Schema Text-to-SQL vs. Legacy BI Cubes
 
 > **中文版 (Chinese Edition)**: [auto-ontology-semantic-sql-vs-raw-text2sql-selection-faq.md](auto-ontology-semantic-sql-vs-raw-text2sql-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
 
 ![NVIDIA/auto-ontology Enterprise Semantic Layer & Text-to-SQL Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r2-auto-ontology.svg)
 

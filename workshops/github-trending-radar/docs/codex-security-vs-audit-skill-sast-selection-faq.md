@@ -1,7 +1,7 @@
 # AI 代码安全扫描、第三方告警降噪与自动修补闭环选型常见问题解答：`openai/codex-security` (`npm-v0.9.1`, `gpt-5.6-sol` Standard/Deep 扫描 + `cs validate` + `cs patch`) vs `cloudflare/security-audit-skill` vs 传统 SAST/SCA
 
 > **English Edition**: [codex-security-vs-audit-skill-sast-selection-faq.en.md](codex-security-vs-audit-skill-sast-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![OpenAI Codex Security vs 纯 Skill 审计 vs 传统 SAST/SCA 架构选型对比图](../../../assets/github-ai-radar-2026-11-11-r2-codex-security.svg)
 

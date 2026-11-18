@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="1200" height="680" rx="18" fill="#0B1120"/>
+  <rect x="20" y="20" width="1160" height="640" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1120" height="82" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="64" y="70" fill="#38BDF8" font-size="13.5" font-weight="700" letter-spacing="1">2026-11-18 NIGHT ROUND 2 (CUMULATIVE R482) · SELF-HOSTED AGENT CLOUD &amp; SERVERLESS S3 RAG</text>
+  <text x="64" y="99" fill="#F8FAFC" font-size="20" font-weight="800">appwrite/appwrite v2.7.2 (Built-In MCP) + fyrr-ai/fyrr (S3 ACL RAG) + OpenVINO CPU Inference</text>
+
+  <!-- Left Box: Appwrite v2.7.2 -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="62" y="170" fill="#60A5FA" font-size="15" font-weight="800">1. appwrite/appwrite v2.7.2 (★58,141 · +239★ today · BSD-3-Clause)</text>
+  <text x="62" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• Unified Agent-First Cloud with Built-In Appwrite MCP</text>
+  <text x="76" y="218" fill="#94A3B8" font-size="12">Auth, Databases (Postgres/MySQL/Doc), Storage, Functions, Sites, Messaging, Firewall</text>
+  <text x="76" y="238" fill="#94A3B8" font-size="12">Coding agents (Cursor, Claude Code, Codex) operate live projects via native MCP</text>
+
+  <text x="62" y="270" fill="#E2E8F0" font-size="13" font-weight="700">• Hardened Self-Hosting &amp; Upgrade Resilience</text>
+  <text x="76" y="292" fill="#94A3B8" font-size="12">Loopback-only 127.0.0.1:20080 wizard + one-time x-appwrite-installer-secret</text>
+  <text x="76" y="312" fill="#94A3B8" font-size="12">DOCKER_API_VERSION=1.42 compatibility flag prevents host daemon mismatch failures</text>
+
+  <rect x="62" y="346" width="500" height="80" rx="8" fill="#0F172A" stroke="#2563EB"/>
+  <text x="78" y="372" fill="#38BDF8" font-size="12.5" font-weight="700">3. openvinotoolkit/openvino (★11,250 · +18★ today · Apache-2.0)</text>
+  <text x="78" y="394" fill="#CBD5E1" font-size="12">Optimum Intel + openvino.genai runs INT8/INT4 /embeddings &amp; SLMs on Xeon CPUs</text>
+  <text x="78" y="412" fill="#34D399" font-size="12">Eliminates $400+/mo dedicated GPU nodes for internal RAG &amp; Appwrite Functions</text>
+
+  <!-- Right Box: fyrr-ai/fyrr -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#10B981" stroke-width="1.5"/>
+  <text x="637" y="170" fill="#34D399" font-size="15" font-weight="800">2. fyrr-ai/fyrr (★10 · Apache-2.0 · Rust 1.97+)</text>
+  <text x="637" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• "No Database. Just a Bucket." Serverless S3 Architecture</text>
+  <text x="651" y="218" fill="#94A3B8" font-size="12">fyrr writer sync/commit publishes index + ACLs to one S3 bucket or local dir</text>
+  <text x="651" y="238" fill="#94A3B8" font-size="12">Stateless fyrr reader serve (or AWS Lambda) scales with zero cross-node coordination</text>
+
+  <text x="637" y="270" fill="#E2E8F0" font-size="13" font-weight="700">• Fail-Closed Pre-Ranking ACL Authorization</text>
+  <text x="651" y="292" fill="#94A3B8" font-size="12">Checks FYRR_IDENTITY_KEY / OIDC inside search BEFORE ranking results</text>
+  <text x="651" y="312" fill="#94A3B8" font-size="12">Forbidden docs look non-existent; missing permission data refuses rather than guesses</text>
+
+  <rect x="637" y="346" width="500" height="80" rx="8" fill="#0F172A" stroke="#059669"/>
+  <text x="653" y="372" fill="#34D399" font-size="12.5" font-weight="700">Speed &amp; Quality (anonymized_reported, independently_reproduced=false):</text>
+  <text x="653" y="394" fill="#CBD5E1" font-size="12">16 ms median search (25 ms P95) · 90+ score on EnterpriseRAG-Bench (top of 43)</text>
+  <text x="653" y="412" fill="#FBBF24" font-size="11.5">Boundary: Pre-1.0, Linux x86-64 build, plain text/MD only, external TLS proxy required</text>
+
+  <!-- FinOps Box -->
+  <rect x="40" y="468" width="1120" height="170" rx="12" fill="#172554" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="64" y="498" fill="#93C5FD" font-size="14" font-weight="800">💰 CLOSED-FORM FINOPS BENCHMARK (CLAIM-20261118-R2-APPWRITE-FYRR-OPENVINO · 150 SEATS, 12 APPS, $100/HR)</text>
+  <text x="64" y="528" fill="#FCA5A5" font-size="14" font-weight="700">• Path A (Fragmented Cloud BaaS + 24x7 Vector DB + GPU VM): $2,480.00 infra + $3,900.00 labor (39.0h) = $6,380.00 / mo</text>
+  <text x="64" y="556" fill="#FDE68A" font-size="14" font-weight="700">• Path B (Self-Hosted Supabase + Qdrant Cluster + Cloud API): $1,040.00 infra/API + $1,700.00 labor (17.0h) = $2,740.00 / mo</text>
+  <text x="64" y="584" fill="#34D399" font-size="15" font-weight="800">• Path C (Appwrite v2.7.2 + fyrr S3 Bucket + OpenVINO CPU): $110.00 VM/S3 + $310.00 labor (3.1h) = $420.00 / mo (-$5,960.00/mo · -93.42%)</text>
+  <text x="64" y="614" fill="#94A3B8" font-size="12">Annual Savings vs. Path A: $71,520.00/yr | Provenance: measured (GitHub), anonymized_reported (upstream), synthetic (FinOps, independently_reproduced=false), hardware capEx: not_measured</text>
+</svg>

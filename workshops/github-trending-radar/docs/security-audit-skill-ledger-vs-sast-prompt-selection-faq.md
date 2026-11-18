@@ -1,7 +1,7 @@
 # AI 编码智能体多阶段安全审计选型常见问题解答：`cloudflare/security-audit-skill`（6 阶段确定性覆盖账本 + 独立反证子智能体 + 三态定性）vs 传统静态 SAST vs 单次 Prompt 代码审查
 
 > **English Edition**: [security-audit-skill-ledger-vs-sast-prompt-selection-faq.en.md](security-audit-skill-ledger-vs-sast-prompt-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![cloudflare/security-audit-skill 6阶段覆盖账本与独立反证安全审计选型对比图](../../../assets/github-ai-radar-2026-11-09-r3-security-audit-skill.svg)
 

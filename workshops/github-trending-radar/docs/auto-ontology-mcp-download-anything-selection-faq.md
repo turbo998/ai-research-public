@@ -1,7 +1,7 @@
 # 免自托管 NIM 的本地 SQLite 语义本体 MCP 与全平台多轨完整性归档选型常见问题解答：`gogoymh/auto-ontology-mcp`（`validate_sql` + 升级替代 Karpathy LLM Wiki）+ `nengong/download-anything` vs 重型 Postgres/NIM 部署 & 散装下载脚本
 
 > **English Edition**: [auto-ontology-mcp-download-anything-selection-faq.en.md](auto-ontology-mcp-download-anything-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![gogoymh/auto-ontology-mcp 与 nengong/download-anything 架构选型对比图](../../../assets/github-ai-radar-2026-11-11-r11-auto-ontology-mcp-da.svg)
 

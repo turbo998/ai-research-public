@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="1200" height="680" rx="18" fill="#0B1120"/>
+  <rect x="20" y="20" width="1160" height="640" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1120" height="82" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="64" y="70" fill="#38BDF8" font-size="13.5" font-weight="700" letter-spacing="1">2026-11-18 NIGHT ROUND 4 (CUMULATIVE R484) · MULTI-AGENT SESSION CONTINUITY &amp; LOCAL CODE GRAPH</text>
+  <text x="64" y="99" fill="#F8FAFC" font-size="19.5" font-weight="800">ai-dialog-manage (9-Tool Transplant) + magi (Live Machine Teleport) + wingbox (Offline Code Graph)</text>
+
+  <!-- Left Box: ai-dialog-manage & magi -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="62" y="170" fill="#60A5FA" font-size="15" font-weight="800">1. haczen/ai-dialog-manage (★41 · 17 forks · MIT)</text>
+  <text x="62" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• 9-Tool Session Browser, Editor &amp; "--transplant" Engine</text>
+  <text x="76" y="218" fill="#94A3B8" font-size="12">Claude / Codex / OpenCode / Gemini / Qwen / Goose / Cline / Roo / JSON (~1s scan)</text>
+  <text x="76" y="238" fill="#94A3B8" font-size="12">Deletes paired tool_use/result, repairs Claude parentUuid chain &amp; keeps 8 backups</text>
+  <text x="76" y="258" fill="#94A3B8" font-size="12">uv run adm --transplant 4f2a1c --to codex --cwd D:\hello converts tool schemas</text>
+
+  <rect x="62" y="282" width="500" height="144" rx="8" fill="#0F172A" stroke="#2563EB"/>
+  <text x="78" y="308" fill="#38BDF8" font-size="13.5" font-weight="700">2. felitrejos/magi (★12 · Rust · MIT)</text>
+  <text x="78" y="332" fill="#CBD5E1" font-size="12">• Moves live Claude Code / Codex sessions between laptop &amp; remote server (magi move/pull)</text>
+  <text x="78" y="354" fill="#CBD5E1" font-size="12">• Carries conversation history, branch, uncommitted edits &amp; allowlisted secrets</text>
+  <text x="78" y="376" fill="#34D399" font-size="12">• Bidirectional localhost:3000 port follow + remote background build files auto-sync back</text>
+  <text x="78" y="398" fill="#94A3B8" font-size="11.5">• magi doctor verifies both endpoints before handoff</text>
+
+  <!-- Right Box: wingbox -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#10B981" stroke-width="1.5"/>
+  <text x="637" y="170" fill="#34D399" font-size="15" font-weight="800">3. aileron-tech/wingbox (★19 · Python/MCP · MIT)</text>
+  <text x="637" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• 100% Local Zero-Model Static Code Graph (16 Languages)</text>
+  <text x="651" y="218" fill="#94A3B8" font-size="12">Python, TS/TSX, Rust, C#, Java, Go, Ruby/Rails, PHP/Laravel/Blade/Livewire, Dart/Flutter</text>
+  <text x="651" y="238" fill="#94A3B8" font-size="12">Exposes dependency map, call flows &amp; change blast radius before editing code</text>
+
+  <text x="637" y="270" fill="#E2E8F0" font-size="13" font-weight="700">• ~1s Incremental Hook Refresh &amp; Air-Gapped Windows Native</text>
+  <text x="651" y="292" fill="#94A3B8" font-size="12">Claude Code hook patches only edited files (~1s on a 1,200-file repository)</text>
+  <text x="651" y="312" fill="#94A3B8" font-size="12">Runs natively on Windows PowerShell/CMD (no WSL), macOS &amp; Linux with 0 network calls</text>
+
+  <rect x="637" y="346" width="500" height="80" rx="8" fill="#0F172A" stroke="#059669"/>
+  <text x="653" y="372" fill="#34D399" font-size="12.5" font-weight="700">Benchmark Impact (anonymized_reported, independently_reproduced=false):</text>
+  <text x="653" y="394" fill="#CBD5E1" font-size="12">2-4x cheaper per answer · Up to 5x faster · Up to 8.8x fewer tokens</text>
+  <text x="653" y="412" fill="#FBBF24" font-size="11.5">Up to $484 saved per 1,000 codebase questions with zero missed blast-radius files</text>
+
+  <!-- FinOps Box -->
+  <rect x="40" y="468" width="1120" height="170" rx="12" fill="#172554" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="64" y="498" fill="#93C5FD" font-size="14" font-weight="800">💰 CLOSED-FORM FINOPS BENCHMARK (CLAIM-20261118-R4-ADM-MAGI-WINGBOX · 60 ENGINEERS, $100/HR)</text>
+  <text x="64" y="528" fill="#FCA5A5" font-size="14" font-weight="700">• Path A (Brute-Force Agent Grep + Manual Context Re-Prompting): $2,340.00 token spend + $4,000.00 labor (40.0h) = $6,340.00 / mo</text>
+  <text x="64" y="556" fill="#FDE68A" font-size="14" font-weight="700">• Path B (Cloud Code-Index SaaS + Manual WIP Git Branches): $980.00 SaaS/tokens + $1,650.00 labor (16.5h) = $2,630.00 / mo</text>
+  <text x="64" y="584" fill="#34D399" font-size="15" font-weight="800">• Path C (wingbox + ai-dialog-manage + magi): $90.00 token spend + $300.00 labor (3.0h) = $390.00 / mo (-$5,950.00/mo · -93.85%)</text>
+  <text x="64" y="614" fill="#94A3B8" font-size="12">Annual Savings vs. Path A: $71,400.00/yr | Provenance: measured (GitHub), anonymized_reported (upstream), synthetic (FinOps, independently_reproduced=false), hardware capEx: not_measured</text>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgR24" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accentR24" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bgR24)"/>
+  <rect x="30" y="24" width="1140" height="6" rx="3" fill="url(#accentR24)"/>
+
+  <text x="40" y="64" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" letter-spacing="1">2026-11-18 NIGHT SHIFT · ROUND 24 (CUMULATIVE R504) · $0 TRACE CI, PRE-PUSH REVIEW, ONTOLOGY &amp; SCION GIT</text>
+  <text x="40" y="96" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">Tracely $0 Trace Replay + OpenQodex Finder/Verifier + Helix Foundry + git-ai Scion CAS (-94.47% TCO)</text>
+  <text x="40" y="122" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">Claim ID: CLAIM-20261118-R24-TRACELY-OPENQODEX-HELIXFOUNDRY-GITAI · 45-Seat Enterprise Team · Base Hardware CapEx: not_measured</text>
+
+  <!-- Card 1: jwuthri-cloud/Tracely-ai -->
+  <rect x="40" y="142" width="270" height="310" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="54" y="158" width="160" height="24" rx="6" fill="#0284C7"/>
+  <text x="64" y="175" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">★ 948 · $0 CI Replay</text>
+  <text x="54" y="206" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800">jwuthri-cloud/Tracely-ai</text>
+  <text x="54" y="228" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">Trace-Native Agent CI/CD Gate</text>
+  <text x="54" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Ingests OTLP prod traces, grades</text>
+  <text x="54" y="274" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  runs &amp; clusters failure issues</text>
+  <text x="54" y="298" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Freezes failing runs byte-for-byte</text>
+  <text x="54" y="318" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  into hermetic regression cases</text>
+  <text x="54" y="342" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• $0 CI replay via recorded tool/</text>
+  <text x="54" y="362" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  LLM fixtures blocks bad PRs</text>
+  <rect x="54" y="392" width="242" height="44" rx="8" fill="#0F172A"/>
+  <text x="66" y="412" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">Verdict: P0 Hermetic Trace CI</text>
+  <text x="66" y="428" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">No hand-authored eval datasets</text>
+
+  <!-- Card 2: openqodex/openqodex -->
+  <rect x="330" y="142" width="270" height="310" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="344" y="158" width="160" height="24" rx="6" fill="#059669"/>
+  <text x="354" y="175" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">★ 1,208 · v0.14.0 Gate</text>
+  <text x="344" y="206" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800">openqodex/openqodex</text>
+  <text x="344" y="228" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">Fresh-Process Finder/Verifier QA</text>
+  <text x="344" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Scopes gitleaks/semgrep to diff</text>
+  <text x="344" y="274" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  lines + checks osv.dev lockfiles</text>
+  <text x="344" y="298" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Spawns fresh 0-memory Claude or</text>
+  <text x="344" y="318" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  Codex reviewer w/ code graph</text>
+  <text x="344" y="342" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Finder ➔ Quote Check Script ➔</text>
+  <text x="344" y="362" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  Verifier ➔ 100% Coverage Script</text>
+  <rect x="344" y="392" width="242" height="44" rx="8" fill="#0F172A"/>
+  <text x="356" y="412" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">Verdict: P0 Pre-Push Review Gate</text>
+  <text x="356" y="428" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">Eliminates self-review bias</text>
+
+  <!-- Card 3: HelixDB/helix-foundry -->
+  <rect x="620" y="142" width="270" height="310" rx="12" fill="#1E293B" stroke="#818CF8" stroke-width="1.5"/>
+  <rect x="634" y="158" width="160" height="24" rx="6" fill="#4F46E5"/>
+  <text x="644" y="175" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">★ 2,147 · Ontology DB</text>
+  <text x="634" y="206" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800">HelixDB/helix-foundry</text>
+  <text x="634" y="228" fill="#818CF8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">Row &amp; Quote Traceable Ontology</text>
+  <text x="634" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Connects PostgreSQL tables, tools</text>
+  <text x="634" y="274" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  &amp; contracts into one HelixDB graph</text>
+  <text x="634" y="298" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Every value traces back to exact</text>
+  <text x="634" y="318" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  source DB row or document quote</text>
+  <text x="634" y="342" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• DB passwords &amp; keys entered in</text>
+  <text x="634" y="362" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  browser UI; hidden from agent</text>
+  <rect x="634" y="392" width="242" height="44" rx="8" fill="#0F172A"/>
+  <text x="646" y="412" fill="#818CF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">Verdict: P0 Cited Knowledge Graph</text>
+  <text x="646" y="428" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">Cloud or local Docker + Ollama</text>
+
+  <!-- Card 4: feder-cr/git-ai -->
+  <rect x="910" y="142" width="250" height="310" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="924" y="158" width="160" height="24" rx="6" fill="#D97706"/>
+  <text x="934" y="175" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">★ 1,002 · Scion Design</text>
+  <text x="924" y="206" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800">feder-cr/git-ai</text>
+  <text x="924" y="228" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">Server-Centric Multi-Agent Git</text>
+  <text x="924" y="254" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Lands 200/250 changes across 50</text>
+  <text x="924" y="274" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  racing agents (vs Git 100/250)</text>
+  <text x="924" y="298" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• ObjectService + graft sparse +</text>
+  <text x="924" y="318" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  UserLand batched CAS updates</text>
+  <text x="924" y="342" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• AI conflict proposal lands only</text>
+  <text x="924" y="362" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12">  if verify.command passes on tree</text>
+  <rect x="924" y="392" width="222" height="44" rx="8" fill="#0F172A"/>
+  <text x="936" y="412" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">Verdict: P0 Agent-Scale VCS</text>
+  <text x="936" y="428" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">MIT · Vendor-neutral server core</text>
+
+  <!-- Bottom FinOps Comparison Ledger -->
+  <rect x="40" y="472" width="1120" height="175" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="502" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="15.5" font-weight="800">CLOSED-FORM 45-SEAT FINOPS TCO LEDGER (CLAIM-20261118-R24-TRACELY-OPENQODEX-HELIXFOUNDRY-GITAI)</text>
+
+  <!-- Path A Bar -->
+  <text x="60" y="534" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path A (Live-LLM CI Evals + Self-Review + Merge-Queue Thrashing)</text>
+  <rect x="500" y="519" width="510" height="20" rx="4" fill="#EF4444"/>
+  <text x="1020" y="534" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800">$6,510.00 / mo ($2,460.00 + $4,050.00)</text>
+
+  <!-- Path B Bar -->
+  <text x="60" y="568" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Path B (Commercial Eval SaaS + Cloud PR Bots + Proprietary Graph)</text>
+  <rect x="500" y="553" width="211" height="20" rx="4" fill="#64748B"/>
+  <text x="721" y="568" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">$2,690.00 / mo ($1,040.00 + $1,650.00)</text>
+
+  <!-- Path C Bar -->
+  <text x="60" y="602" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800">Path C (Tracely-ai + openqodex + helix-foundry + git-ai)</text>
+  <rect x="500" y="587" width="28" height="20" rx="4" fill="#10B981"/>
+  <text x="538" y="602" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="800">$360.00 / mo ($80.00 + $280.00) · Saves $6,150.00/mo (-94.47% / $73,800.00/yr · -37.7 hrs/mo)</text>
+
+  <text x="60" y="632" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Mechanical Guarantees: $0 Hermetic OTLP Trace Replay · Script-Verified Quote Adjudication · Row/Quote Ontology Provenance · verify.command-Gated CAS Land</text>
+</svg>

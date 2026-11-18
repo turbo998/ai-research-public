@@ -4,7 +4,7 @@
 > 1. **`Balanov/uncut`（`265★`，Go 1.26+，仅 `837` 行核心实现，零第三方依赖，`~7 MB` 静态二进制，MIT）**：专为 Unix 管道（`git diff | uncut "..."`）、CI 任务与严谨 Agent 实验打造的**100% 无损无头（Lossless, Headless）Coding Agent 执行器**——彻底剔除 TUI、自动摘要压缩、滑动窗口与文件/命令输出静默截断，经 6 项确定性传输证明核验（`442,400` 字节文件/提示词与 `213,018` 字节命令输出分毫不差），且当大模型因输出 Token 触顶截断时**强制以 `exit 3` 报错退出（绝不向 `stdout` 输出半截残缺结果冒充成功）**！
 > 2. **`anomalyco/strobe`（`150★`，Rust + TypeScript `@hona/strobe`，CLI + MCP + GitHub Action）**：面向 Web、Electron、Bun/Node 与原生桌面应用的 **Agent 原生全栈性能剖析与 A/B 验证器**——让 Agent 用 `strobe record` 与 `strobe query rec_A..rec_B hotspots` 一路下钻到代码行、原生调用栈、线程唤醒、内存分配、掉帧与 GPU/VRAM 字节，用 `strobe bench --base origin/main --head .` 在临时隔离目录跑成对 A/B 实验并自动更新 PR 性能卡片，更在共享 CI Runner 上智能切换为**精确计数器门禁（`noworse: net.requests=0,dom.nodes=0`）**彻底消除云端时钟抖动误报！
 >
-> **English Version**: [uncut-strobe-lossless-headless-harness-agent-profiler-selection-faq.en.md](uncut-strobe-lossless-headless-harness-agent-profiler-selection-faq.en.md) · **架构总结图**: [`assets/github-ai-radar-2026-11-11-r45-uncut-strobe.svg`](../../../assets/github-ai-radar-2026-11-11-r45-uncut-strobe.svg)
+> **English Version**: [uncut-strobe-lossless-headless-harness-agent-profiler-selection-faq.en.md](uncut-strobe-lossless-harness-agent-profiler-selection-faq.en.md) · **架构总结图**: [`assets/github-ai-radar-2026-11-11-r45-uncut-strobe.svg`](../../../assets/github-ai-radar-2026-11-11-r45-uncut-strobe.svg)
 
 ![UNCUT 与 strobe 架构选型对比](../../../assets/github-ai-radar-2026-11-11-r45-uncut-strobe.svg)
 

@@ -1,7 +1,7 @@
 # Agent 持久大脑与混合图谱记忆选型常见问题解答：`garrytan/gbrain`（pgvector HNSW + BM25 + 页面级 RRF + 零 LLM 确定性图遍历）vs 纯向量 RAG vs 静态 `MEMORY.md`
 
 > **English Edition**: [gbrain-hybrid-graph-memory-vs-vector-rag-selection-faq.en.md](gbrain-hybrid-graph-memory-vs-vector-rag-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![Agent 持久大脑与四层混合图谱记忆选型对比图](../../../assets/github-ai-radar-2026-11-09.svg)
 

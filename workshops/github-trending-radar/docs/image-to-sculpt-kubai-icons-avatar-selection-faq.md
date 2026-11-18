@@ -1,7 +1,7 @@
 # 单图相机标定可验证 3D 雕刻建模与统一风格动态图标/截面投影 Bot 头像选型常见问题解答：`gokayfem/image-to-sculpt` + `kubai087/kubai-icons` & `DominikScholz/open-bot-avatar` vs 黑盒单图生 3D 模型 & 裸写 SVG 图标
 
 > **English Edition**: [image-to-sculpt-kubai-icons-avatar-selection-faq.en.md](image-to-sculpt-kubai-icons-avatar-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![gokayfem/image-to-sculpt 与 kubai-icons / open-bot-avatar 架构选型对比图](../../../assets/github-ai-radar-2026-11-11-r9-image-sculpt-kubai.svg)
 

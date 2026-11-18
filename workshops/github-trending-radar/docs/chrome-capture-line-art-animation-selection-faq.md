@@ -1,7 +1,7 @@
 # Chrome 153+ 共享内存原生 120FPS AV1 录制与零依赖 SVG 生物力学步态动画选型常见问题解答：`paulirish/chrome-capture` (`Page.startScreenRecording`) + `JDhruv14/line-art-animation` (`gait.ts` + `ink.ts`) vs 旧式 `startScreencast` + `ffmpeg` & 裸写 SVG 关键帧
 
 > **English Edition**: [chrome-capture-line-art-animation-selection-faq.en.md](chrome-capture-line-art-animation-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![paulirish/chrome-capture 与 JDhruv14/line-art-animation 架构选型对比图](../../../assets/github-ai-radar-2026-11-11-r7-chrome-capture-lineart.svg)
 

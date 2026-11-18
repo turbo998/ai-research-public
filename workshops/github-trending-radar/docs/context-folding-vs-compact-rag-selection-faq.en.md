@@ -2,7 +2,7 @@
 
 > **Document Scope**: A one-page architectural decision and implementation guide for AI Solution Architects, Coding Agent Platform Leads, and LLM FinOps Engineering Teams.  
 > **Benchmark Baseline**: November 2026 long-horizon coding agent evaluation based on primary-source verification of `ranxianglei/billion-context` (`v0.1.213` / `acp-kernel`), the author-published 4.5-month longitudinal study (`174,327` model calls, `18.76B` input tokens), and the 1,500-item 5-arm benchmark report across `ContextBench`, `LongMemEval-S`, and `MemoryAgentBench`.  
-> **Related Artifacts**: [`workshops/github-trending-radar/daily/2026-11-08.en.md`](../daily/2026-11-08.en.md) · [`workshops/github-trending-radar/cards.en.html`](../cards.en.html) · [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Related Artifacts**: [`workshops/github-trending-radar/daily/2026-11-08.en.md`](../daily/2026-11-08.en.md) · [`workshops/github-trending-radar/cards.en.html`](../cards.en.html) · [`github-radar.html`](../../../github-radar.html)
 >
 > 🛡️ **Provenance, Ownership Verification & Metric Classification Disclosure**:
 > - **`measured` (Live-scraped & verified in this shift)**: `ranxianglei/billion-context` Daily Trending 24h delta `+460 stars today` and `4,922` total stars (sealed raw HTML evidence at [`workshops/github-trending-radar/evidence/trending-daily-2026-11-08-raw.html`](../evidence/trending-daily-2026-11-08-raw.html), `sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`), GitHub REST API metadata (`v0.1.213`, MIT, independent developer `ranxianglei`), and primary-source verification of `docs/technical-notes.md`.

@@ -1,7 +1,7 @@
 # Multi-Agent Research Evidence-Chain Whiteboards & Autonomous Lossless Speculative Decoding Selection FAQ: `chutingyean/Agent-Cockpit` + `StargazerX0/SpecPilot` (`arXiv:2611.02501`) vs. Untracked Experiment Notes & Stock Speculative Decoding
 
 > **中文版**: [agent-cockpit-specpilot-evidence-speculative-decoding-selection-faq.md](agent-cockpit-specpilot-evidence-speculative-decoding-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
 
 ![chutingyean/Agent-Cockpit & StargazerX0/SpecPilot Architecture Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r14-cockpit-specpilot.svg)
 

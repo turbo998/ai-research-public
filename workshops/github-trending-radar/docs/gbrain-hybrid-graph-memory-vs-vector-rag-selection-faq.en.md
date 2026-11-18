@@ -1,7 +1,7 @@
 # Agent Brain & Hybrid Graph Memory Selection FAQ: `garrytan/gbrain` (pgvector HNSW + BM25 + Page-Level RRF + Zero-LLM Deterministic Graph Walk) vs. Naive Vector RAG vs. Static `MEMORY.md`
 
 > **中文版 (Chinese Edition)**: [gbrain-hybrid-graph-memory-vs-vector-rag-selection-faq.md](gbrain-hybrid-graph-memory-vs-vector-rag-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
 
 ![Agent Brain & 4-Layer Hybrid Graph Memory Selection Diagram](../../../assets/github-ai-radar-2026-11-09.svg)
 

@@ -1,7 +1,7 @@
 # 多智能体研究证据链依赖白板与无损投机解码自治系统优化选型常见问题解答：`chutingyean/Agent-Cockpit` + `StargazerX0/SpecPilot` (`arXiv:2611.02501`) vs 脱节实验笔记 & 出厂默认投机解码
 
 > **English Edition**: [agent-cockpit-specpilot-evidence-speculative-decoding-selection-faq.en.md](agent-cockpit-specpilot-evidence-speculative-decoding-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![chutingyean/Agent-Cockpit 与 StargazerX0/SpecPilot 架构选型对比图](../../../assets/github-ai-radar-2026-11-11-r14-cockpit-specpilot.svg)
 

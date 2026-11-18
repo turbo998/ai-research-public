@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="1200" height="680" rx="18" fill="#0B1120"/>
+  <rect x="20" y="20" width="1160" height="640" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1120" height="82" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="64" y="70" fill="#38BDF8" font-size="13.5" font-weight="700" letter-spacing="1">2026-11-18 NIGHT ROUND 7 (CUMULATIVE R487) · SELF-HOSTED AI TEAMMATES &amp; TRACE SELF-EVOLUTION</text>
+  <text x="64" y="99" fill="#F8FAFC" font-size="19.5" font-weight="800">a-company v0.2.2 (Zero-Docker PGlite) + agent-crop (Trace Ledger) + agy-bridge (Antigravity Proxy)</text>
+
+  <!-- Left Box: a-company -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="62" y="170" fill="#60A5FA" font-size="15" font-weight="800">1. phuocka/a-company v0.2.2 (★15 · 10 forks · Apache-2.0)</text>
+  <text x="62" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• 3 Ways to Run Across Web, Electron Desktop &amp; Expo Mobile</text>
+  <text x="76" y="218" fill="#94A3B8" font-size="12">Extract-and-run Windows ZIP (~180 MB A-Company.exe with embedded PGlite, 0 Docker)</text>
+  <text x="76" y="238" fill="#94A3B8" font-size="12">pnpm dev:lite CLI or multi-user Docker Compose server; 0 locked enterprise/ tier</text>
+
+  <text x="62" y="270" fill="#E2E8F0" font-size="13" font-weight="700">• $0 CLI Subscription Reuse, Mini-Apps &amp; Spend Caps</text>
+  <text x="76" y="292" fill="#94A3B8" font-size="12">Reuses local Claude Code, Codex, Gemini CLI &amp; OpenCode logins or connects Ollama/Pi</text>
+  <text x="76" y="312" fill="#94A3B8" font-size="12">Inline render_widget HTML/SVG mini-apps, CDP my-chrome, webhooks &amp; .md blueprints</text>
+
+  <rect x="62" y="346" width="500" height="80" rx="8" fill="#0F172A" stroke="#2563EB"/>
+  <text x="78" y="372" fill="#38BDF8" font-size="12.5" font-weight="700">3. codewith-aditya/agy-bridge v0.1.0 (★11 · Go Static Binary · MIT)</text>
+  <text x="78" y="394" fill="#CBD5E1" font-size="12">Translates Gemini v1beta (CLI) &amp; Cloud Code v1internal:* (IDE) to OpenAI /v1/chat/completions</text>
+  <text x="78" y="412" fill="#34D399" font-size="12">Selective proxying keeps Google login/catalog intact while routing tokens to vLLM/OpenRouter</text>
+
+  <!-- Right Box: agent-crop -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#10B981" stroke-width="1.5"/>
+  <text x="637" y="170" fill="#34D399" font-size="15" font-weight="800">2. oriliz/agent-crop (★43 · Local JSONL Trace · MIT)</text>
+  <text x="637" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• Span-Level Human vs. Agent Time Attribution</text>
+  <text x="651" y="218" fill="#94A3B8" font-size="12">Separates active AI execution (blue) from human reply wait (&lt;=15m yellow; &gt;15m idle_gap)</text>
+  <text x="651" y="238" fill="#94A3B8" font-size="12">4 configurable coaching personas (including objective Experienced Colleague / Kind Senior)</text>
+
+  <text x="637" y="270" fill="#E2E8F0" font-size="13" font-weight="700">• 9-Symptom Classification &amp; "crop ledger" Self-Evolution Loop</text>
+  <text x="651" y="292" fill="#94A3B8" font-size="12">Detects tool-misuse (repeated --help guessing), spec-drift, no-evidence &amp; serial-wait</text>
+  <text x="651" y="312" fill="#94A3B8" font-size="12">Measure ➔ Attribute ➔ Patch Instruction/Skill/Tool ➔ Re-Measure in local JSONL</text>
+
+  <rect x="637" y="346" width="500" height="80" rx="8" fill="#0F172A" stroke="#059669"/>
+  <text x="653" y="372" fill="#34D399" font-size="12.5" font-weight="700">Production Case Study (anonymized_reported, independently_reproduced=false):</text>
+  <text x="653" y="394" fill="#CBD5E1" font-size="12">Caught repeated CLI --help trial-and-error (tool-misuse) &amp; wrote missing Skill page</text>
+  <text x="653" y="412" fill="#FBBF24" font-size="11.5">Cut recurring environment deployment action from 10 minutes down to 30 seconds (20x faster)</text>
+
+  <!-- FinOps Box -->
+  <rect x="40" y="468" width="1120" height="170" rx="12" fill="#172554" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="64" y="498" fill="#93C5FD" font-size="14" font-weight="800">💰 CLOSED-FORM FINOPS BENCHMARK (CLAIM-20261118-R7-ACOMPANY-AGENTCROP-AGYBRIDGE · 45 SEATS, $100/HR)</text>
+  <text x="64" y="528" fill="#FCA5A5" font-size="14" font-weight="700">• Path A (Commercial Teammate SaaS + Unmeasured Loops + Locked IDE): $2,250.00 SaaS/API + $3,900.00 labor (39.0h) = $6,150.00 / mo</text>
+  <text x="64" y="556" fill="#FDE68A" font-size="14" font-weight="700">• Path B (Heavy Docker/PG Bot Stack + Manual Log Inspection): $950.00 infra/API + $1,600.00 labor (16.0h) = $2,550.00 / mo</text>
+  <text x="64" y="584" fill="#34D399" font-size="15" font-weight="800">• Path C (a-company PGlite + agent-crop + agy-bridge): $80.00 infra/API + $290.00 labor (2.9h) = $370.00 / mo (-$5,780.00/mo · -93.98%)</text>
+  <text x="64" y="614" fill="#94A3B8" font-size="12">Annual Savings vs. Path A: $69,360.00/yr | Provenance: measured (GitHub), anonymized_reported (upstream), synthetic (FinOps, independently_reproduced=false), hardware capEx: not_measured</text>
+</svg>

@@ -1,7 +1,7 @@
 # 智能体原生自适应导师工作台与端侧 Android 隐私流向审计选型常见问题解答：`HKUDS/DeepTutor` + `Verlintas/NOIR` vs 传统聊天式知识库 & 全包拉取反编译
 
 > **English Edition**: [deeptutor-noir-adaptive-agent-selection-faq.en.md](deeptutor-noir-adaptive-agent-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![HKUDS/DeepTutor 自适应导师工作台 + Verlintas/NOIR 端侧 Android 隐私审计选型对比图](../../../assets/github-ai-radar-2026-11-09-r8-deeptutor-noir.svg)
 

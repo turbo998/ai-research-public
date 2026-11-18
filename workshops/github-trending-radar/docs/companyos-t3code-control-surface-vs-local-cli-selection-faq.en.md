@@ -1,7 +1,7 @@
 # Cloud-Native Multiplayer Agent OS & Remote Control Surface Selection FAQ: `kortix-ai/CompanyOS` + `pingdotgg/t3code` vs. Single-Machine Local CLIs & 24/7 Always-On Cloud VMs
 
 > **中文版 (Chinese Edition)**: [companyos-t3code-control-surface-vs-local-cli-selection-faq.md](companyos-t3code-control-surface-vs-local-cli-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
 
 ![kortix-ai/CompanyOS Multiplayer Agent OS + pingdotgg/t3code Remote Control Surface Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r9-companyos-t3code.svg)
 

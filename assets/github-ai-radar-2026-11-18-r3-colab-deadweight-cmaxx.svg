@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="1200" height="680" rx="18" fill="#0B1120"/>
+  <rect x="20" y="20" width="1160" height="640" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1120" height="82" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="64" y="70" fill="#38BDF8" font-size="13.5" font-weight="700" letter-spacing="1">2026-11-18 NIGHT ROUND 3 (CUMULATIVE R483) · CLOUD GPU &amp; CODING AGENT FINOPS CONTROL PLANE</text>
+  <text x="64" y="99" fill="#F8FAFC" font-size="19.5" font-weight="800">colab-playground (GPU Watchdogs) + deadweight (Pre-Request Token Audit) + cache-maxxing (TTL Handoff)</text>
+
+  <!-- Left Box: colab-playground -->
+  <rect x="40" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="62" y="170" fill="#60A5FA" font-size="15" font-weight="800">1. scarletkc/colab-playground (★256 · 128★/d · Rust + GPUI · MIT)</text>
+  <text x="62" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• On-Runtime Auto-Stop &amp; Idle-Stop Watchdogs</text>
+  <text x="76" y="218" fill="#94A3B8" font-size="12">Runs directly on the Colab runtime so billing stops even if the desktop app is closed</text>
+  <text x="76" y="238" fill="#94A3B8" font-size="12">Flags orphan browser-started runtimes &amp; never coerces unknown usage to zero</text>
+
+  <text x="62" y="270" fill="#E2E8F0" font-size="13" font-weight="700">• Minimum GPU VRAM Filter &amp; Bundled GGUF Plugin</text>
+  <text x="76" y="292" fill="#94A3B8" font-size="12">Returns undersized GPUs (e.g., 40GB vs 80GB A100) and retries automatically</text>
+  <text x="76" y="312" fill="#94A3B8" font-size="12">Forwards ports to 127.0.0.1 &amp; auto-picks optimal llama.cpp GGUF quantization</text>
+
+  <rect x="62" y="346" width="500" height="80" rx="8" fill="#0F172A" stroke="#2563EB"/>
+  <text x="78" y="372" fill="#38BDF8" font-size="12.5" font-weight="700">3. 5m0k3/cache-maxxing v0.4.0 (★28 · TypeScript · MIT)</text>
+  <text x="78" y="394" fill="#CBD5E1" font-size="12">Live 4-state countdown bar (🟢/🟡/🟠/🔴) prevents up to 80x expired cache rebuilds</text>
+  <text x="78" y="412" fill="#34D399" font-size="12">/cmaxx-handoff uses Haiku (High) to brief a fresh chat without resending 290K history</text>
+
+  <!-- Right Box: deadweight -->
+  <rect x="615" y="138" width="545" height="310" rx="12" fill="#131F38" stroke="#10B981" stroke-width="1.5"/>
+  <text x="637" y="170" fill="#34D399" font-size="15" font-weight="800">2. msertdev/deadweight (★11 · Rust CLI + Plugin · MIT)</text>
+  <text x="637" y="196" fill="#E2E8F0" font-size="13" font-weight="700">• Session-Measured Pre-Request Overhead (61.2k Tokens/Turn)</text>
+  <text x="651" y="218" fill="#94A3B8" font-size="12">Reads ~/.claude/projects/ API usage: ~41.8k base + ~19.4k from user plugins/skills/MCPs</text>
+  <text x="651" y="238" fill="#94A3B8" font-size="12">412 deferred tools (~7.1k) + 214 skills (~6.2k) + 3 hooks (~3.4k) + 4 MCPs (~2.1k)</text>
+
+  <text x="637" y="270" fill="#E2E8F0" font-size="13" font-weight="700">• Fixes the Silent ~30.0k-Char Skill Description Truncation Bug</text>
+  <text x="651" y="292" fill="#94A3B8" font-size="12">Default skillListingBudgetFraction (0.01) strips descriptions from 151 of 214 skills</text>
+  <text x="651" y="312" fill="#94A3B8" font-size="12">deadweight fix / deadweight undo disables unused plugins &amp; saves ~6.8k tokens/request</text>
+
+  <rect x="637" y="346" width="500" height="80" rx="8" fill="#0F172A" stroke="#059669"/>
+  <text x="653" y="372" fill="#34D399" font-size="12.5" font-weight="700">Project-Scoped MCP Hygiene (.claude.json):</text>
+  <text x="653" y="394" fill="#CBD5E1" font-size="12">Detects global MCPs used in only 1-2 repos (e.g., linear 37x in 1 of 9 projects)</text>
+  <text x="653" y="412" fill="#FBBF24" font-size="11.5">Moves them from top-level mcpServers into projects &gt; "/path" &gt; mcpServers</text>
+
+  <!-- FinOps Box -->
+  <rect x="40" y="468" width="1120" height="170" rx="12" fill="#172554" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="64" y="498" fill="#93C5FD" font-size="14" font-weight="800">💰 CLOSED-FORM FINOPS BENCHMARK (CLAIM-20261118-R3-COLAB-DEADWEIGHT-CMAXX · 80 ENGINEERS, $100/HR)</text>
+  <text x="64" y="528" fill="#FCA5A5" font-size="14" font-weight="700">• Path A (Unguarded Browser GPU + 214-Skill Deadweight + Expired Rebuilds): $2,420.00 spend + $3,800.00 labor (38.0h) = $6,220.00 / mo</text>
+  <text x="64" y="556" fill="#FDE68A" font-size="14" font-weight="700">• Path B (Manual Cron Scripts + Periodic Manual .claude.json Edits): $1,010.00 spend + $1,600.00 labor (16.0h) = $2,610.00 / mo</text>
+  <text x="64" y="584" fill="#34D399" font-size="15" font-weight="800">• Path C (colab-playground + deadweight fix + cache-maxxing): $85.00 spend + $290.00 labor (2.9h) = $375.00 / mo (-$5,845.00/mo · -93.97%)</text>
+  <text x="64" y="614" fill="#94A3B8" font-size="12">Annual Savings vs. Path A: $70,140.00/yr | Provenance: measured (GitHub), anonymized_reported (upstream), synthetic (FinOps, independently_reproduced=false), hardware capEx: not_measured</text>
+</svg>

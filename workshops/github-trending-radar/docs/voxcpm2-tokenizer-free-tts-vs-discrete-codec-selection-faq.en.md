@@ -1,7 +1,7 @@
 # Tokenizer-Free Diffusion-Autoregressive TTS Selection FAQ: `OpenBMB/VoxCPM2` (2B + AudioVAE V2 48kHz + vLLM-Omni `RTF ~0.13`) vs. Discrete-Codec TTS vs. Commercial Cloud TTS APIs
 
 > **中文版 (Chinese Edition)**: [voxcpm2-tokenizer-free-tts-vs-discrete-codec-selection-faq.md](voxcpm2-tokenizer-free-tts-vs-discrete-codec-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
 
 ![OpenBMB/VoxCPM2 Tokenizer-Free 48kHz TTS & vLLM-Omni Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r5-voxcpm2-tts.svg)
 

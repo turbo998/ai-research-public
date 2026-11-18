@@ -1,7 +1,7 @@
 # 浏览器端侧 WebAssembly (`wllama` + `PLaMo-3-0.8B`) 零出境翻译与新闻驱动供应链多跳冲击传导选型常见问题解答：`jammaru/sakutto` + `zandy700/Ultimate-Tracker` (`scsm`) vs 云端翻译插件 & 无向图情绪打分
 
 > **English Edition**: [sakutto-wllama-plamo-supply-chain-shock-selection-faq.en.md](sakutto-wllama-plamo-supply-chain-shock-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 ![jammaru/sakutto 与 zandy700/Ultimate-Tracker 架构选型对比图](../../../assets/github-ai-radar-2026-11-11-r13-sakutto-shockmap.svg)
 

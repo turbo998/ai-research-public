@@ -1,7 +1,7 @@
 # Interactive Codebase Mapping & Anti-Slop UI Refactoring Selection FAQ: `haydenschmitty/floorplan` + `heydamir/unslop` vs. Static AST Dependency Graphs & Freeform UI Prompting
 
 > **中文版 (Chinese Edition)**: [floorplan-unslop-codebase-map-vs-static-uml-selection-faq.md](floorplan-unslop-codebase-map-vs-static-uml-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
 
 ![haydenschmitty/floorplan Interactive Codebase Map + heydamir/unslop 9-Pass UI Refactoring Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r7-floorplan-unslop.svg)
 

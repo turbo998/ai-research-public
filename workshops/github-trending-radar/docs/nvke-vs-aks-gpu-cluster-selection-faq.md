@@ -1,7 +1,7 @@
 # 裸金属 GPU 集群管理面选型常见问题解答：NVKE (`dsx-ai-factory/nvke`) vs 云托管 K8s (AKS/EKS) vs 自建 Kubeadm/Slurm
 
 > **English Edition**: [nvke-vs-aks-gpu-cluster-selection-faq.en.md](nvke-vs-aks-gpu-cluster-selection-faq.en.md)  
-> **关联日报**: [2026-11-08 GitHub AI 最热榜单与情报摘要](../daily/2026-11-08.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
+> **关联日报**: [2026-11-08 GitHub AI 最热榜单与情报摘要](../daily/2026-11-08.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
 
 本文档面向 **AI Solution Architect（AI 解决方案架构师）**，基于 2026-11-08 GitHub 榜首增速项目 **`dsx-ai-factory/nvke`（仓库自述为 NVIDIA Kubernetes Engine，`v0.23.1`，Apache-2.0，单日 Star 暴涨 +91% / `+345★ today`）** 的一手源码核验，用通俗大白话与第一性原理解答：
 1. **什么时候应该选 NVKE，什么时候直接用公有云托管 AKS/EKS，什么时候坚持用 Slurm？**

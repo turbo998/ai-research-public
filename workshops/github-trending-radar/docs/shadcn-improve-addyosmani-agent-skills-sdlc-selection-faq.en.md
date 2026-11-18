@@ -1,7 +1,7 @@
 # AI Coding Agent Planner-Executor Split & SDLC Quality Gate Selection FAQ: `shadcn/improve` + `addyosmani/agent-skills` (`v0.6.15`) vs. Monolithic Single-Model Vibe Coding
 
 > **中文版**: [shadcn-improve-addyosmani-agent-skills-sdlc-selection-faq.md](shadcn-improve-addyosmani-agent-skills-sdlc-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
 
 ![AI Coding Agent Planner-Executor Split & SDLC Quality Gate Selection Diagram](../../../assets/github-ai-radar-2026-11-11.svg)
 
