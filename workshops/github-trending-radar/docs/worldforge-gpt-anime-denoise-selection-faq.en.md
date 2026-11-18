@@ -1,7 +1,7 @@
 # Cloud Blackwell 98GB 4-Tier PCIe Gen5 DMA Studio & GPT Image Fish-Scale Denoising Selection FAQ: `designfuchen/worldforge` + `CXP-2024/gpt-anime-denoise` vs. Notebook Cold-Starts & Blind Re-Prompting / Gaussian Blur
 
 > **中文版**: [worldforge-gpt-anime-denoise-selection-faq.md](worldforge-gpt-anime-denoise-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![designfuchen/worldforge & CXP-2024/gpt-anime-denoise Architecture Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r12-worldforge-denoise.svg)
 

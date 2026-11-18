@@ -1,0 +1,63 @@
+# Enterprise Cloud & AI Solution Architect Research Index
+
+> 🌐 **Language / 语言切换**: **[🇬🇧 English Index (index.en.md)](index.en.md)** | **[🇨🇳 中文总索引 (index.md)](index.md)** · **[🏠 Repository Home (EN)](../../README.en.md)** | **[🇨🇳 中文首页](../../README.md)**
+
+Canonical index of all public **Cloud & AI Solution Architect** deliverables, 7-Card benchmarks, and enterprise architecture selection guides in `turbo998/ai-research-public`. Every deliverable includes provenance metadata (`evidence.json` + `review.md`).
+
+---
+
+## 1. Cloud-Native Agent Infrastructure & Hyperscale Inference
+
+| Deliverable (EN / 中文) | Architectural Scope | Key Deliverables & Verified Findings |
+|---|---|---|
+| **[Azure AI Agent Infrastructure Full-Stack Playbook](azure-agent-infra/README.en.md)** · **[中文](azure-agent-infra/README.md)** | 4-Layer Reference · 6 Runtimes · `AKSClaw` · `E2B Firecracker` · `HorizonDB` · **62 Selection Guides** | 27-chapter playbook (`Standard_D96as_v7` `108ms` UFFD restore, 261 nodes for 100K concurrent sandboxes), 23 IaC blueprints, 8 SVGs, deterministic sizer (`31/31` unit tests passing), **[62 Enterprise Azure AI Selection Guides](azure-agent-infra/selection-guides/README.en.md)** ([中文](azure-agent-infra/selection-guides/README.md)), [7-Card Report](azure-agent-infra/test-report.en.md) ([中文](azure-agent-infra/test-report.md) · [HTML](azure-agent-infra/cards.html)), and [H5 Workbench](azure-agent-infra/index.html) |
+| **[DeepSeek DeepInfer Disaggregated MoE Inference & Token Economics](../../ai-infra/reports/2026-11-01/ai-infra-phase167-deepinfer-v41-pd-economics-2026-11-01.en.md)** · **[中文](../../ai-infra/reports/2026-11-01/ai-infra-phase167-deepinfer-v41-pd-economics-2026-11-01.md)** | `DeepSeek-V4.1-Flash (552B MoE)` · `E/P/D Disaggregation` · `100 PiB 3FS` · `DSpark` · `GB300 NVL72` | Reconstructs `96%` 3FS cache-hit `25×` prefill amplification (`1.50M tok/s/GPU`), `1P:1D` `$38.00/GPU-hr` off-peak ledger, and `890 B/tok` KV compression; includes [7-Card HTML](../../ai-infra/reports/2026-11-01/ai-infra-phase167-benchmark-cards.html), [Visual Workbench](../../ai-infra/reports/2026-11-01/ai-infra-phase167-visual-workbench.html), and [Python Verifier](../../ai-infra/experiments/phase167_deepinfer_v41_economics/simulate_deepinfer_economics.py) |
+| **[E2B × Nomad Heartbeat Race & Sandbox Self-Healing](e2b-nomad-heartbeat-resilience/README.en.md)** · **[中文](e2b-nomad-heartbeat-resilience/README.md)** | `HashiCorp Nomad` · `yamux` · `E2B Orchestrator` · `Cgroup Slice` | Source-verified root-cause analysis of Nomad heartbeat timeouts and zero-kill control/data-plane decoupling (`<=35s` jitter); includes 3 SVGs and [7-Card Report](e2b-nomad-heartbeat-resilience/test-report.en.md) ([中文](e2b-nomad-heartbeat-resilience/test-report.md) · [HTML](e2b-nomad-heartbeat-resilience/test-report-cards.html)) |
+
+---
+
+## 2. Frontier Models, World Models & Decision Routing Benchmarks
+
+| Deliverable (EN / 中文) | Architectural Scope | Key Deliverables & Verified Findings |
+|---|---|---|
+| **[Gemini 4 Carbon Cybersecurity, Long-Horizon Agent & 20-Model Benchmark](gemini-4-carbon-and-20-model-benchmark/README.en.md)** · **[中文](gemini-4-carbon-and-20-model-benchmark/README.md)** · [Alias](gemini-4-carbon-benchmark/README.md) | 20-Model Coding & Cyber Matrix (`Gemini 4 Carbon` · `GPT-6 Astra` · `Opus 5.5` · `Fable 5.1`) | Wins `15 of 17` official `#1` ranks at `$2/$10` pricing, sweeps all 3 cyber benchmarks, and hits `0.0% ASR` on Gray Swan IPI; includes [7-Card Report](gemini-4-carbon-and-20-model-benchmark/test-report.en.md) ([中文](gemini-4-carbon-and-20-model-benchmark/test-report.md) · [HTML](gemini-4-carbon-and-20-model-benchmark/test-report-cards.html)) |
+| **[SKY-001 Engineering World Model & 19-Model Coding Agent Benchmark](sky-001-and-coding-agent-19-model-benchmark/README.en.md)** · **[中文](sky-001-and-coding-agent-19-model-benchmark/README.md)** · [Alias](sky-001-coding-agent-benchmark/README.md) | 19 Models × 11 Enterprise Coding Tasks & 6-Role Hybrid Routing (`SKY-001` · `Haiku 5.5` · `Sonnet 5.5`) | `Claude Haiku 5.5` (`99.24`, `$0.33`) cuts cost `91.6%` to rank `#4` overall; includes 4 SVGs and [7-Card Report](sky-001-and-coding-agent-19-model-benchmark/test-report.en.md) ([中文](sky-001-and-coding-agent-19-model-benchmark/test-report.md) · [HTML](sky-001-and-coding-agent-19-model-benchmark/test-report-cards.html)) |
+| **[OpenAI Decisions vs. Microsoft Decision-1 8-Engine Routing Benchmark](openai-decisions-vs-decision-1-routing-benchmark/README.en.md)** · **[中文](openai-decisions-vs-decision-1-routing-benchmark/README.md)** | `Switchyard` · `Microsoft Decision-1` · `TypeSafe Jev` · `OpenJev 27B` · `OpenAI Decisions` | Neutral prompts unlock `40/40 (100%)` across top 3 engines; `Decision-1` costs `$7.6/1M` with 100% miss interception under `0.60` confidence gating; includes [7-Card Report](openai-decisions-vs-decision-1-routing-benchmark/test-report.md) and [HTML](openai-decisions-vs-decision-1-routing-benchmark/test-report-cards.html) |
+| **[System-One Decision Models & Foundry Multi-Model Routing](decision-model-routing/README.en.md)** · **[中文](decision-model-routing/README.md)** | `Microsoft-Decision-1` · `Strands Decider` × Azure AI Foundry | `384` decision rows + `160` E2E runs validating low-latency triage and confidence-based escalation; includes [Results](decision-model-routing/results.md) and [7-Card HTML](decision-model-routing/visual-report.html) |
+| **[LocalJev Typed Decision Bridge, Probability Semantics & Calibration Boundaries](localjev/README.en.md)** · **[中文](localjev/README.md)** | `choice / score / noul` Strict JSON Schema Bridge · Calibration Math · License Audit | Separates typed wire compatibility from calibrated token logprobs and documents `OpenJev 27B` (`CC BY-NC 4.0`) commercial boundaries; includes [`evidence.json`](localjev/evidence.json) and [`review.md`](localjev/review.md) |
+
+---
+
+## 3. Multi-Agent Orchestration, Harness Engineering & Progressive Skills
+
+| Deliverable (EN / 中文) | Architectural Scope | Key Deliverables & Verified Findings |
+|---|---|---|
+| **[Microsoft Agent Framework (MAF v1.0) vs. 6 Mainstream Frameworks](maf-multi-agent-benchmark/README.en.md)** · **[中文](maf-multi-agent-benchmark/README.md)** | `MAF v1.0` · `LangGraph` · `AutoGen v0.4` · `Semantic Kernel` · `OpenAI Agents SDK` · `CrewAI` | Ranks `#1` (`96.4/100`): 3-layer interception middleware, 5 orchestration patterns (`3.61×` 8-agent fan-out speedup), and native MCP/A2A v1.0; includes [7-Card Report](maf-multi-agent-benchmark/test-report.en.md) ([中文](maf-multi-agent-benchmark/test-report.md) · [HTML](maf-multi-agent-benchmark/test-report-cards.html)) and [Workbench](maf-multi-agent-benchmark/index.html) |
+| **[Agent Harness Engineering Frameworks: DSH × Claude Code × HVE Core](harness-engineering-frameworks/README.en.md)** · **[中文](harness-engineering-frameworks/README.zh-CN.md)** | 8-Layer Universal Harness Stack · `PTC run_code` · 3-Tier Compaction · 4-Phase RPI | Commit-pinned source analysis quantifying `PTC run_code` `3.59×–7.51×` cascade speedups, `94.2%` prefix-cache retention, and `/clear` attention recovery; includes [7-Card Report](harness-engineering-frameworks/test-report.en.md) ([中文](harness-engineering-frameworks/test-report.md) · [HTML](harness-engineering-frameworks/cards.html)) and [Playground](harness-engineering-frameworks/index.html) |
+| **[Scientific & Industry Harness Engineering: CLIO & Calibrated Deference](scientific-and-industry-harness-engineering/README.en.md)** · **[中文](scientific-and-industry-harness-engineering/README.md)** | `Microsoft Discovery` · `CLIO` · `Calibrated Deference` · Independent Verification | Formulates **10 Enterprise Domain Harness Laws** (uncertainty gradients, grey-box constraints, 3-strike cross-model verifier); includes [7-Card Report](scientific-and-industry-harness-engineering/test-report.en.md) ([中文](scientific-and-industry-harness-engineering/test-report.md) · [HTML](scientific-and-industry-harness-engineering/cards.html)) and [Workbench](scientific-and-industry-harness-engineering/index.html) |
+| **[FAF v2 vs. AGENT-FORGE vs. HVE-Core SDLC Harness Showdown](faf-vs-agent-forge/README.en.md)** · **[中文](faf-vs-agent-forge/README.md)** | `faf-agents v2.0.1` · `@agent-forge-copilot/cli` · `Microsoft HVE-Core` | Clarifies complementary roles across SDLC role plugins, `.github/` repo context compilers, and adversarial RPI state machines; includes [Side-by-Side Arena](faf-vs-agent-forge/pelican-arena.html) and [7-Card HTML](faf-vs-agent-forge/test-report-cards.html) |
+| **[Enterprise Agent Skills Maturity (L1–L4) & AST Verification Harnesses](agent-skills-and-rea/README.en.md)** · **[中文](agent-skills-and-rea/README.md)** | `SKILL.md` Progressive Disclosure · `L2 Critic` · `L3 Deterministic Harness` · `L4 AST MCP` | Cuts initial prompt tokens `85%+` and defines the L1–L4 maturity ladder from prompt packs to deterministic verifiers and AST evidence ledgers; includes [Interactive Hub](agent-skills-and-rea/index.html) and [L1–L4 Explorer](agent-skills-and-rea/h5/ryan-doser-skills-report/index.html) |
+
+---
+
+## 4. Zero-Trust AI Security, Purview Governance & Agentic Commerce
+
+| Deliverable (EN / 中文) | Architectural Scope | Key Deliverables & Verified Findings |
+|---|---|---|
+| **[Microsoft Security & AI Readiness Architecture: 5-Tier DEFEND & 6 Workloads](defend-partner-playbook/README.en.md)** · **[中文](defend-partner-playbook/README.md)** | `5-Tier DEFEND` · 6 Workload 360p Deployment Guides · `Purview 4-Tier AI` · DLP | 41-capability security matrix, 51 hard exit gates, and 22 P1/P2/P3 deployment modules; includes deterministic verifier (`8/8` unit tests passing) and [7-Card Report](defend-partner-playbook/test-report.en.md) ([中文](defend-partner-playbook/test-report.md) · [EN HTML](defend-partner-playbook/cards.html) · [中文卡片](defend-partner-playbook/cards.zh.html)) |
+| **[Security AI Landing Zone & Frontier SOC Architecture](security-ai-landing-zone/index.md)** · **[中文](security-ai-landing-zone/index.zh.md)** | `Microsoft Agent 365` (5 Pillars) · `M365 E7` · `Defender ISOC & MDASH` | 4–6 week enterprise sprint with a Week-3 20-control gate and Red/Blue/Green SOC agent orchestration; includes verifier (`6/6` unit tests passing) and [7-Card Report](security-ai-landing-zone/test-report.en.md) ([中文](security-ai-landing-zone/test-report.md) · [EN HTML](security-ai-landing-zone/cards.html) · [中文卡片](security-ai-landing-zone/cards.zh.html)) |
+| **[Agentic Commerce Protocol Stack & Hardware-Signed Payment Breakers](agentic-commerce/README.en.md)** · **[中文](agentic-commerce/README.md)** | `Microsoft Web IQ` · `ACP / UCP` Idempotent Checkout · `AP2 & x402` FIDO2 Gates | Mitigates indirect web prompt injection, duplicate charging, and unauthorized spend in autonomous commerce agents; includes [Overview SVG](agentic-commerce/assets/overview.svg) |
+
+---
+
+## 5. Daily Open-Source AI Radar, Agentic OS & Personal Agents
+
+| Deliverable (EN / 中文) | Architectural Scope | Key Deliverables & Verified Findings |
+|---|---|---|
+| **[GitHub AI Trending & Velocity Radar (Daily SA Intelligence Desk)](../../workshops/github-trending-radar/README.en.md)** · **[中文](../../workshops/github-trending-radar/README.md)** | 24h Surge + 7d Breakout Leaderboards · `Hype / Facts / Signal` · Selection FAQs | Daily evaluation of emerging open-source AI primitives with `P0/P1/P2` SA adoption priorities (`2026-11-01` – `2026-11-17` bilingual archive); includes [EN 7-Card Deck](../../workshops/github-trending-radar/cards.en.html) and [中文卡片](../../workshops/github-trending-radar/cards.html) |
+| **[Omarchy Agentic OS Shell & Multi-Harness Integration Audit](omarchy-agent-design/README.en.md)** · **[中文](omarchy-agent-design/README.md)** | `Agentic OS` · 14-Harness Launcher · Progressive Skills · Crash Diagnostics | 174 SHA-verified static contract assertions across `omacom/omarchy` ([Chapters 00–06](omarchy-agent-design/findings/00-summary.md)); includes [7-Card Report](omarchy-agent-design/test-report.md) and [HTML](omarchy-agent-design/test-report-cards.html) |
+| **[Personal Agents 5-Product Architecture & Security Boundary Benchmark](personal-agents/README.en.md)** · **[中文](personal-agents/README.md)** | `Meta Muse` · `Grok Bot` · `OpenAI dot` · `Gemini Spark` · `Instinct` | Compares runtime isolation, memory scope, and account boundaries; includes [18-Case Protocol](personal-agents/benchmark.md), [`cases.json`](personal-agents/cases.json), and [`evidence.json`](personal-agents/evidence.json) |
+
+---
+
+[Back to English Homepage](../../README.en.md) · [中文首页](../../README.md) · [Attribution & Rights](../../ATTRIBUTION.md) · [Third-Party Notices](../../THIRD_PARTY_NOTICES.md)

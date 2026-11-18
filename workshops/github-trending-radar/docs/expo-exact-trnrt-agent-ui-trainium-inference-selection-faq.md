@@ -1,7 +1,7 @@
 # Agent 原生四端 UI 运行时与 AWS Trainium2 百万上下文推理引擎选型常见问题解答：`expo/exact`（`Contract` + 10 动作虚拟时钟）+ `RunanywhereAI/trnrt`（NKI Megakernels + `$0.040/1M`）vs React Native/Electron & 商用云 API
 
 > **English Edition**: [expo-exact-trnrt-agent-ui-trainium-inference-selection-faq.en.md](expo-exact-trnrt-agent-ui-trainium-inference-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![expo/exact 四端 Agent UI 运行时与 RunanywhereAI/trnrt Trainium2 推理引擎选型对比图](../../../assets/github-ai-radar-2026-11-11-r4-expo-exact-trnrt.svg)
 

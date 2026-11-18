@@ -1,73 +1,44 @@
-# `wheresryan22/anatomy` 机械解剖学 Skill 研究与「美嘉欣 MJX 14303」底盘互动 H5 实现
+# L3 确定性校验器型 Agent Skill 架构解析：以 `wheresryan22/anatomy` 为例
 
-> **技能仓库**：[`wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy)  
-> **生成的互动 H5 成品**：
-> - 深色工程蓝图版（默认）：[`../h5/mjx-14303-anatomy/mjx-14303-chassis.html`](../h5/mjx-14303-anatomy/mjx-14303-chassis.html)（同目录 [`index.html`](../h5/mjx-14303-anatomy/index.html)）
-> - 浅色印刷图版：[`../h5/mjx-14303-anatomy/mjx-14303-chassis-light.html`](../h5/mjx-14303-anatomy/mjx-14303-chassis-light.html)
-> - 等轴测参数化构建脚本：[`../h5/mjx-14303-anatomy/build.mjs`](../h5/mjx-14303-anatomy/build.mjs)
+> **参考开源仓库**：[`wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy)  
+> **关联架构图**：[`../assets/03-agent-skill-l1-to-l4-depth-spectrum.svg`](../assets/03-agent-skill-l1-to-l4-depth-spectrum.svg) · **返回专题首页**：[`../README.md`](../README.md)
 
 ---
 
-## 一、 `wheresryan22/anatomy` 技能核心原理
+## 一、 核心架构问题：为什么纯提示词（L1/L2）在精确拓扑生成中必然失效？
 
-`wheresryan22/anatomy`（社区常译作**「解剖学 / 机械解剖图」Skill**）解决了一个困扰所有大语言模型的核心痛点：**LLM 擅长理解机械系统的拓扑与因果关系，但手写原始三维投影坐标与 SVG 贝塞尔曲线时极易出现透视畸变、前后遮挡错乱与部件穿模**。
+在 AI Solution Architect 的日常交付（如**云架构拓扑图自动生成、网络子网/路由策略编排、UI 组件无重叠布局**）中，大语言模型暴露出一个结构性短板：**LLM 擅长推理组件之间的逻辑与因果拓扑，但直接手写二维/三维坐标、SVG 路径或复杂状态不变量时，极易产生透视畸变、节点遮挡错乱与边界越界。**
 
-为此，该 Skill 采用 **“声明式工程美学规范 (`SKILL.md`) + 1.59 万行零依赖纯 ES Module 等轴测几何与光线投射引擎 (`kit/*.mjs`)”** 的双层架构：
-
-| 核心模块 | 行数 | 几何与物理职责 |
-|---|---|---|
-| `kit/iso-kit.mjs` | ~1,300 行 | 正交等轴测投影（默认方位角 `azimuth = 41°`、俯仰角 `elevation = 29°`）、圆角板件 `slabOf`、圆柱 `cylinder`、切槽 `cutoutOf`、弹簧与滚花 `knurl`、四阶明度编码（`hi` / `mid` / `lo` / `faint` + 唯一焦点高亮色 `lit`）。 |
-| `kit/lathe.mjs` | ~1,900 行 | 沿任意三维空间轴架 `frameOf(origin, axis, u, v)` 的旋转车削体（`lathe`、`disc`、`flange`、` frustum`），自动求解正交相机下的真实轮廓包络线与剖切面。 |
-| `kit/tube.mjs` | ~1,100 行 | 三维空间连续圆角弯管与线束生成（`tubePieces`、`tubeSvg`），自动按最大弧长分段以参与画家算法深度排序。 |
-| `kit/audit.mjs` | ~1,200 行 | **3D 空间光线投射审计器（Ray-Cast Verifier）**：对所有装配件在组装态（`share = 0`）与爆炸拆解轨迹（`0 ≤ t ≤ 1.5s`）上执行 7 项几何验证（穿模间隙 `clearance`、悬空支撑 `support`、深度遮挡环路 `depth order`、半途穿插 `through in mid-flight`、轮廓自交 `self-overlap` 等）。 |
-| `scripts/inline-kit.mjs` | ~220 行 | 将运行时弹簧物理积分器与 SVG 矩阵变换内联进单文件 HTML，实现零外部依赖、可离线双击打开的交互式机械解剖图。 |
+`wheresryan22/anatomy` 代表了 **Agent Skill 工程化演进光谱中的 L3 范式（Declarative Intent + Deterministic Code Verifier）**——不再强迫大模型在 Token 生成阶段靠“心算”保证几何/拓扑精确性，而是将技能拆分为**声明式规范层（`SKILL.md`）**与**零依赖确定性代码引擎及校验器（`kit/*.mjs`）**。
 
 ---
 
-## 二、 美嘉欣 MJX Hyper Go 14303 (1/14 4WD) 底盘机械原理建模
+## 二、 双层解耦架构拆解（Intent Layer × Deterministic Verifier）
 
-### 2.1 真实实车机械参数（建模基准）
+| 架构层级 / 模块 | 代码规模 | 核心工程职责 | 对企业级 Agent Skill 设计的启示 |
+|---|---|---|---|
+| **声明式规范层 (`SKILL.md`)** | ~280 行 | 定义视觉焦点唯一性（单焦点 `lit` + 四阶单色层次）、命名契约与组装流程 | `SKILL.md` 只规定**业务意图、设计品味与调用契约**，避免堆砌底层算术细节 |
+| **原语编译器 (`kit/iso-kit.mjs` / `lathe.mjs` / `tube.mjs`)** | ~4,300 行 | 提供高阶语义原语（板件、容器、连接线束），自动计算正交投影轮廓与分段画家序 | 为 Agent 提供**高阶语义 DSL/SDK**，而非让模型裸写底层 SVG path 或原始配置块 |
+| **确定性不变量校验器 (`kit/audit.mjs`)** | ~1,200 行 | **Ray-Cast Verifier（光线投射校验器）**：在静态与动态过渡态上自动审计 7 类空间不变量（重叠间隙 `clearance`、悬空端口 `loose ends`、深度环路 `depth order`、自交 `self-overlap`），输出精确违例定位 | **核心护城河**：必须为生成工具配套返回结构化 Diagnostics 的确定性验证脚本，驱动 Agent 自闭环修复直至 `0 problems` |
+| **自包含交付打包器 (`scripts/inline-kit.mjs`)** | ~220 行 | 将运行时交互内核内联编译为单文件离线 HTML，满足 `default-src 'none'` 零外部依赖分发 | 企业架构汇报与安全内网环境优先采用零外部 CDN 依赖的单文件 HTML/SVG 交付物 |
 
-**美嘉欣（MJX）Hyper Go 14303** 是经典的 1/14 比例全时四驱无刷拉力/漂移遥控车底盘，其核心工程结构如下：
+---
 
-| 机械维度 | MJX 14303 真实工程规格 | 模型空间映射与公式 |
-|---|---|---|
-| **轴距与轮距** | 轴距 `192 mm` · 轮距 `125 mm` · 轮胎规格 `Ø58 × 24 mm` | 前轴 `AXLE_F = -84`，后轴 `AXLE_R = +84`；左右轮中心 `TRACK_Y = ±62` |
-| **主底盘结构** | `6061-T6` 航空铝合金冲压折弯底板 + 前端高密度 EVA 海绵宽体防撞 + 后扩散器 | `CHASSIS (236 × 76 × 5)` + 前 EVA 防撞块 + 侧防尘护板 |
-| **全金属四驱传动链（焦点 `lit`）** | `15T` 钢制马达齿 × `45T` 金属主大齿（初级减速 `3.0:1`）→ 中央铝合金主传动轴 → 前后 `37T/13T` 粉末冶金伞齿行星差速器（次级减速 `2.846:1`）→ **总减速比 `FDR = 8.54:1`** | 电机转速 $N_{\text{motor}} = V \times 3700\text{ KV} \times \text{Throttle}$；轮端转速 $N_{\text{wheel}} = \frac{N_{\text{motor}}}{8.54} \times \eta$ |
-| **无刷动力与散热** | `2845 3700KV` 四极无感无刷电机 + 多鳍片铝合金散热座 + 顶部高速冷却风扇 | 2S (`7.4V`) 理论满载极速 **42.8 km/h**；3S (`11.1V`) 狂暴模式极速 **62.4 km/h** |
-| **电调与陀螺仪稳定系统** | `E45R 45A` 独立防泼水无刷电调 + 内置 **G3C 陀螺仪** 的三通道接收机 | 当油门 > 25% 且存在横摆角速度时，G3C 陀螺仪自动向舵机叠加反打修正角（Counter-steer） |
-| **转向与独立悬架** | `17g` 数字金属齿舵机（`2.4 kg·cm`）+ 内置缓冲弹簧舵机保（Servo Saver）的双摇臂阿克曼转向 + 前后双叉臂独立悬架配 **4 支金属充油绞牙避震器** | 阿克曼几何：内侧前轮转角 $\theta_{\text{in}} = 1.08\theta$，外侧前轮转角 $\theta_{\text{out}} = 0.84\theta$ |
+## 三、 Solution Architect 落地选型指南（L1–L4 技能分级决策）
 
-### 2.2 10 大可拆解机械总成（Interactive Sub-Assemblies）
+并非所有企业技能都需要重型引擎；架构师应根据**容错边界与可验证性**按需分级建设：
 
-我们在 `build.mjs` 中将整车底盘划分为 **10 个独立可交互总成**，其中 **02 号「4WD 中央金属轴与前后伞齿差速器」** 设为全局唯一琥珀金焦点色（`lit: true`），严格遵循 `anatomy` 技能的“单一视觉焦点 + 四阶单色墨水层”规范：
+| 技能等级 | 架构形态 | 典型代表 | 适用企业场景 | 维护成本与质量上限 |
+|---|---|---|---|---|
+| **L1 · 裸提示词模板** | 单一 Markdown Prompt | 个人日常快捷指令 | 会议纪要润色、头脑风暴草稿 | 零开发成本，但长上下文下合规率波动大 |
+| **L2 · 声明式 SOP + Critic 子智能体** | `SKILL.md` + 渐进参考文档 + 独立审查子智能体 | Ryan Doser Skills (`anti-slop.md`)、HVE Core RPI | 架构设计说明书（SAD/ADR）、客户方案书、招投标技术应答审校 | 低代码成本；通过独立 Critic 门禁显著降低空话与遗漏 |
+| **L3 · 原语 SDK + 确定性校验器** | `SKILL.md` + 领域原语库 + CLI Verifier (`exit 0/1`) | `wheresryan22/anatomy`、Bicep/Terraform Policy Gate | **云架构图自动生成、IaC 网络与 RBAC 蓝图合成、数据契约编译** | 中等研发投入；**由确定性代码保障 100% 语法与拓扑合规** |
+| **L4 · AST / 状态机 + 密码学证据 MCP** | 多层领域引擎 + MCP Server + SHA-256 证据账本 | `morluto/rea` (`v6.4.0`)、`cloudflare/security-audit-skill` | **遗留系统现代化逆向重构、大规模代码库安全覆盖审计、生产排障取证** | 高工程壁垒；具备跨百万行代码或混淆产物的可复核证据链 |
 
-1. **`01 · chassis`**：6061-T6 铝合金底盘、侧护板与前高吸能 EVA 防撞总成（爆炸位移 `[0, 0, -14]`）
-2. **`02 · drivetrain` [焦点高亮 `lit`]**：4WD 中央金属主传动轴、45T/15T 主减速齿、前后 37T/13T 粉末冶金伞齿差速器与四轮 CVD 狗骨（爆炸位移 `[0, 0, +26]`）
-3. **`03 · motor`**：2845 3700KV 四极无刷电机、5 环鳍片散热座、30×30 顶部风扇与三相 U/V/W 硅胶线（爆炸位移 `[+18, +28, +48]`）
-4. **`04 · esc`**：E45R 45A 独立无刷电调（带双滤波电容）与 G3C 陀螺仪接收机（爆炸位移 `[-14, -32, +52]`）
-5. **`05 · battery`**：2S 7.4V / 3S 11.1V 锂电池包与顶部快拆压板（左侧纵向平衡配重，爆炸位移 `[+22, -38, +44]`）
-6. **`06 · servo`**：17g 金属齿数字舵机、内置弹簧舵机保与双摇臂阿克曼转向拉杆（爆炸位移 `[-18, +34, +42]`）
-7. **`07 · suspension_f`**：前独立双叉臂悬架、前 CNC 金属蝴蝶架与前充油金属绞牙避震器（爆炸位移 `[-58, 0, +56]`）
-8. **`08 · suspension_r`**：后独立双叉臂悬架、后 CNC 金属蝴蝶架与后充油金属绞牙避震器（爆炸位移 `[+58, 0, +56]`）
-9. **`09 · wheels_f`**：前 Ø58×24mm 拉力/漂移轮胎、六辐轮毂与转向杯总成（爆炸位移 `[-64, +46, +12]`）
-10. **`10 · wheels_r`**：后 Ø58×24mm 拉力/漂移轮胎与 1.5° 内束角后轮座总成（爆炸位移 `[+64, +46, +12]`）
+---
 
-### 2.3 3D 光线投射审计结果（`kit/audit.mjs`）
+## 四、 架构师复用清单（Actionable Checklist）
 
-在构建过程中，我们运行 `node build.mjs --audit` 调用 `wheresryan22/anatomy` 的光线投射验证器，对 10 个总成在 `871` 个弹簧拆解时间步上的 `8,864` 对空间重叠关系进行了自动排序与干涉验证：
-- **组装态间隙（`clearance`）**：`0 problems`
-- **爆炸态间隙（`clearance apart`）**：`0 problems`
-- **线束端口与悬空检查（`terminals` / `loose ends`）**：`0 problems`
-- **屏幕轮廓折叠与自交（`screen folds` / `self-overlap` / `wobble`）**：`0 problems`
-- **全行程画家算法深度顺序（`depth order` / `through in mid-flight`）**：**`0 problems`**（修正了电机与中央传动轴、前悬架与舵机在拆解途中的视线交叉）
-
-### 2.4 互动 H5 功能指南
-
-打开 [`../h5/mjx-14303-anatomy/mjx-14303-chassis.html`](../h5/mjx-14303-anatomy/mjx-14303-chassis.html) 后，支持以下实时物理交互：
-- **爆炸拆解 (`E` 键或点击「爆炸拆解」)**：10 大机械总成按阻尼弹簧物理方程（`stiffness = 78, damping = 15`）沿各自三维向量平滑悬浮展开。
-- **油压避震下压测试 (`S` 键或点击「避震下压」)**：模拟拉力赛飞坡落地瞬间，底盘与前后绞牙避震器产生二阶弹簧阻尼回弹行程。
-- **2S (7.4V) / 3S (11.1V) 锂电切换 + 无刷油门推杆**：实时计算并显示 **2845 电机转速（最高 41,070 RPM）**、**经 8.54:1 减速后的四轮转速** 与 **实时理论车速（2S 42.8 km/h / 3S 62.4 km/h）**，同时驱动中央传动轴扭矩流动画加速。
-- **阿克曼转向推杆 + G3C 陀螺仪开关**：拖动转向角（`-28° ~ +28°`）或使用左右方向键，实时观察阿克曼内外轮转角差与 G3C 陀螺仪漂移反打修正量。
-- **总成独立聚焦检视**：点击图中任意部件或下方 `01–10` 按钮，其余 9 个总成自动半透明退居背景，顶部原理卡片同步展示该总成的工程规格与机械原理。
+1. **控制入口上下文体积**：将主 `SKILL.md` 严格控制在 `150–250` 行以内，详细 API 表与反例清单放入按需读取的子文档（Progressive Disclosure）。
+2. **禁止让 LLM 裸算坐标与配额**：凡涉及架构图布局、子网 CIDR 划分、GPU 显存/并发容量测算，一律封装为确定性脚本工具（如本库 `azure-agent-infra/simulator/agent_infra_sizer.py`），让模型填参数而非心算结果。
+3. **构建“生成 → 确定性 Audit → 定向修复”闭环**：校验器报错必须输出**具体违例实体 ID 与修复方向**（而非笼统报错），使 Agent 能在 1–3 轮工具调用内收敛至零违例状态。

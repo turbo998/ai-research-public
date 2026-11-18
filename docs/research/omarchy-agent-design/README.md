@@ -1,10 +1,10 @@
-# Omarchy agent 设计机制研究
+# Omarchy Agent 设计机制与桌面 Harness 集成架构研究
 
-**结论：Omarchy把第三方agent接入OS入口、技能、事件、身份与观测，而非统一实现模型循环或强安全平台。** 本研究为AI辅助原创中文静态分析，日期2026-10-12；待独立复核，未安装、未运行上游tests/agent、未调用provider API、未开展桌面/VM实验。
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文版 (README.md)](./README.md)** | **[🇬🇧 English (README.en.md)](./README.en.md)** · **[📊 7-Card 4:5 评测报告](test-report.md)** | **[🃏 离线 7 卡 HTML](test-report-cards.html)**
 
-**分类：Agent 与编排 → Agentic OS 与本地 Harness 集成。** 标签：`Agentic OS`、`Harness Integration`、`Skills`、`Event-driven Agent`、`Identity & Usage`。
+**架构师核心结论：Omarchy 的工程价值在于把第三方 Coding Agent 统一接入操作系统级启动器、渐进式技能目录、系统崩溃事件流、多账号配额与观测面板，而非重复造轮子实现底层模型循环。** 本研究基于上游规范仓库 `omacom/omarchy` 固定 commit [`9480d1b6a98156314dbabe6bfef08f39f8b9cd07`](https://github.com/omacom/omarchy/commit/9480d1b6a98156314dbabe6bfef08f39f8b9cd07) 执行 174 条静态源码契约核验。
 
-来源入口 `basecamp/omarchy`；只读API返回规范仓库 `omacom/omarchy`。唯一源码基线为 [9480d1b6a98156314dbabe6bfef08f39f8b9cd07](https://github.com/omacom/omarchy/commit/9480d1b6a98156314dbabe6bfef08f39f8b9cd07)。每个被归档引用的source blob均核验Git blob SHA-1及长度；原始材料只在忽略缓存，不再分发上游整份正文。
+**架构域归属**：`Agent Harness Engineering` → `Agentic OS` · `Multi-Harness Launcher` · `Progressive Skills` · `Event-Driven Diagnostics` · `Quota & Account Governance`。
 
 ## 阅读入口
 

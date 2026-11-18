@@ -1,7 +1,7 @@
 # 工业管道仪表流程图（P&ID PDF）转工艺知识图谱与航空级受控技术英语（ASD-STE100）去 AI 腔调选型常见问题解答：`ScottDuncanAI/PID-to-Knowledge-Graph` (`graph.duckdb` + ISA-5.1) + `Dodaios/ste80-humanizer`（§1–§26 + S1–S15 双遍重写）vs 裸多模态切片 RAG & 单遍同义词替换
 
 > **English Edition**: [pid-knowledge-graph-ste80-humanizer-selection-faq.en.md](pid-knowledge-graph-ste80-humanizer-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![PID-to-Knowledge-Graph 工业图纸转图谱与 STE80 Humanizer 受控技术英语选型对比图](../../../assets/github-ai-radar-2026-11-11-r6-pid-kg-ste80.svg)
 

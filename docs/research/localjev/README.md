@@ -1,9 +1,8 @@
 # LocalJev 源码研究：类型化决策桥、概率语义与评测边界
 
-> 研究日期：2026-09-27；来源：**githubnext/localjev / LocalJev contributors**。  
-> 固定 commit：`3f23e36e1a3bff46c7e83e8e3781d3512bc82021`；真实 tree：`95c4a7409e1f78ef036594a71c1b83d3fd380344`。  
-> 方法：源码、测试意图、评测脚本及已提交汇总结果的静态阅读；本研究没有安装或运行 LocalJev、启动推理、下载模型/数据集、执行上游测试/评测或调用付费模型。  
-> 归档：私有 GitHub；**本次未同步飞书**。这是 AI 辅助原创分析，不是人工认证、漏洞审计、法律意见或模型排名。见[证据台账](evidence.json)与[独立 AI 复核](review.md)。
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文版 (README.md)](./README.md)** | **[🇬🇧 English (README.en.md)](./README.en.md)**  
+> 研究日期：2026-09-27 · 来源：**githubnext/localjev / LocalJev contributors** · 固定 commit：`3f23e36e1a3bff46c7e83e8e3781d3512bc82021`  
+> 方法：源码、测试意图、评测脚本及已提交汇总结果的静态架构审计；见[证据台账](evidence.json)与[独立 AI 复核](review.md)。
 
 ## 1. 结论先行
 

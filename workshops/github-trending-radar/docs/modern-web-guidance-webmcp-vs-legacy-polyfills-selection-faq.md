@@ -1,7 +1,7 @@
 # 四大浏览器官方现代 Web 平台技能、浏览器端原生 `WebMCP` (`document.modelContext`) 与内置 AI 选型常见问题解答：`GoogleChrome/modern-web-guidance-src` vs 传统重型 JS Polyfill & 脆弱 DOM 爬虫
 
 > **English Edition**: [modern-web-guidance-webmcp-vs-legacy-polyfills-selection-faq.en.md](modern-web-guidance-webmcp-vs-legacy-polyfills-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![GoogleChrome modern-web-guidance-src WebMCP 与现代 Web 平台技能架构选型图](../../../assets/github-ai-radar-2026-11-11-r3-modern-web-guidance.svg)
 

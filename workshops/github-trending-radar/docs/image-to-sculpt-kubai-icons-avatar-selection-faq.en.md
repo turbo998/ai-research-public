@@ -1,7 +1,7 @@
 # Camera-Calibrated 3D Sculpting & Consistent Procedural Agent Icons / Avatars Selection FAQ: `gokayfem/image-to-sculpt` + `kubai087/kubai-icons` & `DominikScholz/open-bot-avatar` vs. Black-Box Image-to-3D & Freehand SVG Prompting
 
 > **中文版**: [image-to-sculpt-kubai-icons-avatar-selection-faq.md](image-to-sculpt-kubai-icons-avatar-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![gokayfem/image-to-sculpt & kubai-icons / open-bot-avatar Architecture Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r9-image-sculpt-kubai.svg)
 

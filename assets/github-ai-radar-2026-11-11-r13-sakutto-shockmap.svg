@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR13" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR13" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR13)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR13)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="800">
+    2026-11-11 ROUND 13 · JAMMARU/SAKUTTO (WLLAMA PLAMO-3 0.8B) + ULTIMATE-TRACKER (SCSM)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    jammaru/sakutto (★214 · On-Device 53-Lang WASM Translation) × zandy700/Ultimate-Tracker (★240 · 3-Hop SEC Shock Map)
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">0-CLOUD-LEAK WASM</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-84.43% INTEL DESK TCO</text>
+
+  <!-- Row 1: Dual Breakdown -->
+  <rect x="40" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 浏览器端侧零出境翻译：jammaru/sakutto (★214 · wllama + PLaMo 3 0.8B)
+  </text>
+  <text x="60" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 隐私痛点：传统网页翻译插件把整页内网文档与你正在输入框敲的草稿发往第三方云端 API，存在严重泄密风险</text>
+  <text x="60" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 端侧 WebAssembly 推理：基于锁定版 wllama 在浏览器本地运行 PLaMo 3 Translate (0.8B GGUF)，双向支持 53 语种</text>
+  <text x="60" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 严格引擎边界：等待模型时保持原文，绝不偷调外部引擎凑草稿；输入框打字翻译 (Alt+T) 100% 锁死本地 PLaMo</text>
+  <text x="60" y="272" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 全键盘无障碍流：Alt+A 整页翻 · Alt+B 双语对照 · Alt+S 划词翻 · Alt+T 输入框实时预览替换 (自动跳过密码框)</text>
+  <rect x="60" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="76" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么 Sakutto 对输入框打字翻译 (Typed Text) 的隐私边界如此苛刻？</text>
+  <text x="76" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">网页阅读在 Chrome 下允许对 PLaMo 不支持的 11 个小语种回退调用 Chrome 内置 Translator API；</text>
+  <text x="76" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">但对于用户正在输入框撰写的敏感邮件/工单草稿 (Alt+T)，Sakutto 强制只用本地 PLaMo 模型，</text>
+  <text x="76" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">遇到不支持语种直接显式拒止，绝不静默转交浏览器内置翻译器，且天然跨 Chrome MV3 与 Firefox 153+！</text>
+
+  <rect x="732" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="752" y="172" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. 供应链冲击单向传导图谱：zandy700/Ultimate-Tracker (scsm · ★240)
+  </text>
+  <text x="752" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 核心痛点：普通金融 Agent 看到新闻只分析当事公司本身，或者在无向图上乱传导致“同供应商的无辜同行被误判”</text>
+  <text x="752" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• SEC 10-K 实证图谱：每条供应商/客户边均绑定 SEC 原始财报句子、URL、日期与源码 Hash (data/graph.json)</text>
+  <text x="752" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 单调方向传播铁律：供应商断供只往下游客户传 (失供)，客户砍单只往上游传 (失需)，路径严禁折返 (No Zig-Zag)</text>
+  <text x="752" y="272" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 3 跳指数衰减 + 事前只追加预测账本：每跳乘 weight×0.5，显式竞争边才翻转正负号，事前写入 ledger 防马后炮</text>
+  <rect x="752" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="768" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">第一性原理：为什么供应链冲击传播绝对不能用普通无向图 RAG？</text>
+  <text x="768" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">如果客户 A 需求暴跌（往上游传给供应商 S），在无向图里信号会从 S 折返传给 S 的另一个客户 B！</text>
+  <text x="768" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">scsm 强制锁死路径单调方向（A path never changes direction），基础冲击 = severity × 5pct，</text>
+  <text x="768" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">混合新闻中 Disruption 负面词优先，且将事前预测 (ledger verify) 与事后异常收益打分 (score) 严格物理隔离！</text>
+
+  <!-- Row 2: Pipeline -->
+  <rect x="40" y="428" width="1360" height="196" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="458" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. 跨国情报与供应链风险研判闭环：53 语种端侧零出境翻译 → 事件极性分类 → SEC 单向 3 跳传导 → 事前账本核验
+  </text>
+
+  <rect x="60" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="500" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">1. 多语种情报端侧零出境精读</text>
+  <text x="76" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">Sakutto (Alt+B 双语 / Alt+T 草稿)</text>
+  <text x="76" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">本地 WASM 运行 PLaMo-3-0.8B，</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">日/韩/德/法等 53 语种公告零云端泄漏</text>
+
+  <rect x="401" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="500" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">2. 催化剂分类与负面词优先</text>
+  <text x="417" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">python -m scsm ingest --offline</text>
+  <text x="417" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">覆盖财报超预期/新品/砍单/扩产，</text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">混合标题中 Disruption 断供词最高优</text>
+
+  <rect x="742" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="500" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">3. 单向 3 跳衰减与竞争边翻转</text>
+  <text x="758" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">python -m scsm propagate</text>
+  <text x="758" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">沿 SEC 实证边单向传播 (weight×0.5)，</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">仅在末端显式竞争对手边翻转正负号</text>
+
+  <rect x="1083" y="476" width="297" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="500" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">4. 事前不可篡改账本与事件研究</text>
+  <text x="1099" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">scsm ledger verify &amp; scsm score</text>
+  <text x="1099" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">预测在结果揭晓前锁入只追加账本，</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">杜绝回测数据穿越与样本外美化</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="642" width="1360" height="238" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="672" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. 闭式 FinOps 算例：月翻 80,000 页涉密外文页面/草稿 + 600 次供应链多跳冲击推演 (synthetic, 终端费: not_measured)
+  </text>
+  <rect x="60" y="690" width="1320" height="170" rx="10" fill="#1E293B"/>
+  <text x="80" y="720" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (商用云翻译 API + 人工脱敏 + 人工翻 10-K 追上下游): $720.00 API + $1,440.00 (18h) + $2,720.00 (34h) = $4,880.00/月 (52.0h)
+  </text>
+  <text x="80" y="754" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (普通云插件 + 无方向约束图谱折返误报排查): $460.00 API + $960.00 (12h) + $1,760.00 (22h @$80/h) = $3,180.00/月 (34.0h)
+  </text>
+  <text x="80" y="788" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (Sakutto 端侧 WASM 零成本翻译 + scsm 单向 3 跳图谱): $40.00 分类API + $240.00 (3h) + $480.00 (6h) = $760.00/月 (9.0h)
+  </text>
+  <text x="80" y="818" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $4,120.00/月 (-84.43%, 年省 $49,440.00) | 涉密脱敏与上下游传导核对工时从 52.0h 降至 9.0h (-43.0h/月, -82.69%)
+  </text>
+  <text x="80" y="846" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    快速体验: Chrome/Firefox 加载 Sakutto (.output/chrome-mv3) | python -m scsm propagate &amp;&amp; python -m scsm ledger verify
+  </text>
+</svg>

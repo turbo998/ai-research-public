@@ -1,7 +1,7 @@
 # Rust GPU-Accelerated Native UI & Local 3D Gaussian Splatting Selection FAQ: `longbridge/gpui-kit` + `ooolabdev/ooosplat` vs. Electron Memory Bloat & Cloud 3DGS SaaS
 
 > **中文版 (Chinese Edition)**: [gpui-kit-ooosplat-rust-native-3dgs-selection-faq.md](gpui-kit-ooosplat-rust-native-3dgs-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![longbridge/gpui-kit 120FPS Rust GPUI + ooolabdev/ooosplat Local 3DGS Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r12-gpui-kit-ooosplat.svg)
 

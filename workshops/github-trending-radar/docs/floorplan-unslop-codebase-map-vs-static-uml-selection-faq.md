@@ -1,7 +1,7 @@
 # AI 代码库交互式全景地图与反 Vibe-Coding 界面重构选型常见问题解答：`haydenschmitty/floorplan` + `heydamir/unslop` vs 静态依赖图生成工具 & 裸 Prompt 改 UI
 
 > **English Edition**: [floorplan-unslop-codebase-map-vs-static-uml-selection-faq.en.md](floorplan-unslop-codebase-map-vs-static-uml-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![haydenschmitty/floorplan 交互式架构地图 + heydamir/unslop 9步反Slop界面重构选型对比图](../../../assets/github-ai-radar-2026-11-09-r7-floorplan-unslop.svg)
 

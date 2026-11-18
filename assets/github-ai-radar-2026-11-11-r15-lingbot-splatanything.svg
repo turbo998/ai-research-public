@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR15" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR15" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR15)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR15)" rx="3"/>
+
+  <!-- Header -->
+  <text x="40" y="58" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-11 NIGHT SHIFT · ROUND 15 (CUMULATIVE R60) · HETEROGENEOUS TACTILE JEPA &amp; FEED-FORWARD 3DGS</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="23" font-weight="800">Robbyant/lingbot-touch (5D-RoPE Tactile JEPA) + zju3dv/SplatAnything (InfiniSplat v3)</text>
+  <text x="40" y="115" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="14">Canonical Spherical Taxel Normalization + Cross-Attention Readout + Arbitrary-Scale Gaussian Spacing Normalization (-85.80% Cost)</text>
+
+  <!-- Left Panel: LingBot-Touch -->
+  <rect x="40" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#0284C7" stroke-width="1.5"/>
+  <rect x="56" y="152" width="215" height="24" rx="6" fill="#0C4A6E"/>
+  <text x="66" y="169" fill="#7DD3FC" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">TACTILE JEPA · arXiv:2611.12806</text>
+  <text x="282" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">Robbyant/lingbot-touch (160★ · Apache-2.0)</text>
+
+  <rect x="56" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="208" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Canonical Fingertip Spherical Transform &amp; 3-Modality Tokenizers</text>
+  <text x="70" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• p_canonical = (p @ rotation.T - coordinate_origin) / radius + offset_xyz</text>
+  <text x="70" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Unifies magnetic (24–96 pts), piezoresistive (9–61/124 pts), visuotactile (32–200 pts)</text>
+
+  <rect x="56" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="296" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. Shared Haptic Transformer with 5D RoPE &amp; EMA Target Encoder</text>
+  <text x="70" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• 5D Rotary Position Embedding encodes (t, finger_id, x_canon, y_canon, z_canon)</text>
+  <text x="70" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Masked prediction in latent space (Tiny / Small) transfers zero-shot to Sharpa &amp; XHand</text>
+
+  <rect x="56" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="384" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Cross-Attention Readout Mandate (Never Mean/Max Pool JEPA Tokens)</text>
+  <text x="70" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Self-attention mixes spatiotemporal taxel context across fingers and time steps</text>
+  <text x="70" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Downstream VLA policies query all tokens via task-conditioned cross-attention</text>
+
+  <!-- Right Panel: SplatAnything -->
+  <rect x="615" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="631" y="152" width="215" height="24" rx="6" fill="#064E3B"/>
+  <text x="641" y="169" fill="#6EE7B7" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">INFINISPLAT V3 · arXiv:2611.08264</text>
+  <text x="858" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">zju3dv/SplatAnything (143★ · ZJU-3DV)</text>
+
+  <rect x="631" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="208" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Gaussian Spacing Normalization Across Arbitrary Scene Scales</text>
+  <text x="645" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Prevents primitive collapse/explosion from tabletop objects to aerial views</text>
+  <text x="645" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Checkpoints: SplatAnything.ckpt + worldmirror2.safetensors + skyseg.onnx</text>
+
+  <rect x="631" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="296" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. Dual-Mode Feed-Forward Inference (--mode rgb &amp; --mode pose)</text>
+  <text x="645" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• RGB-only predicts camera poses &amp; intrinsics at 756x756 (multiples of 14, 1K+)</text>
+  <text x="645" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Exports gaussians.ply, points.ply, cameras, depth with voxel merging &amp; opacity gate</text>
+
+  <rect x="631" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="384" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Autonomous Driving Rig-Recon (150 Views) &amp; 360° VR Pano-Recon</text>
+  <text x="645" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Reconstructs 150 calibrated surround-view rig frames at 504x504 in one pass</text>
+  <text x="645" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• convert_panorama.py slices equirectangular 360° images into 24 perspective views</text>
+
+  <!-- Bottom FinOps Comparison Panel -->
+  <rect x="40" y="472" width="1120" height="178" rx="12" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="60" y="500" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261111-R15-LINGBOT-SPLATANYTHING · 4 Tactile Sensor SKUs + 300 3DGS Scenes/Mo)</text>
+  <text x="60" y="520" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">Synthetic benchmark model ($3.50/GPU-hr, engineer loaded rate $80/hr; physical robotic hand hardware &amp; tactile sensor consumables: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="60" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#EF4444"/>
+  <text x="76" y="556" fill="#FCA5A5" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path A: Per-Sensor Encoders + Iterative 3DGS</text>
+  <text x="76" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">GPU Compute (650h): $2,275.00 | Labor (42.0h): $3,360.00</text>
+  <text x="76" y="600" fill="#F87171" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $5,635.00 / mo</text>
+  <text x="76" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">45-min COLMAP per scene; scratch retraining per tactile SKU</text>
+
+  <!-- Path B -->
+  <rect x="425" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="441" y="556" fill="#FCD34D" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path B: Single-Modality + Early Feed-Forward</text>
+  <text x="441" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">GPU Compute (280h): $980.00 | Labor (22.5h): $1,800.00</text>
+  <text x="441" y="600" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $2,780.00 / mo (-50.67%)</text>
+  <text x="441" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Fails across magnetic/piezo sensors &amp; aerial/rig scale shifts</text>
+
+  <!-- Path C -->
+  <rect x="790" y="534" width="350" height="98" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="2"/>
+  <text x="806" y="556" fill="#6EE7B7" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path C: LingBot-Touch + SplatAnything (Best)</text>
+  <text x="806" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">GPU Compute (80h): $280.00 | Labor (6.5h): $520.00</text>
+  <text x="806" y="600" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $800.00 / mo (Saves $4,835.00 · -85.80%)</text>
+  <text x="806" y="618" fill="#A7F3D0" font-family="Inter, system-ui, sans-serif" font-size="11">$58,020.00/yr saved · -84.52% eng hours · Zero-shot transfer</text>
+</svg>

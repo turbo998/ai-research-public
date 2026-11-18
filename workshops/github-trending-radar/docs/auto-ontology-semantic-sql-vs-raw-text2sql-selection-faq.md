@@ -1,7 +1,7 @@
 # 企业结构化数据语义本体层与 Text-to-SQL 选型常见问题解答：`NVIDIA/auto-ontology`（Postgres 语义目录 + 指标口径对齐 + NIM 三元组路由 + MCP/Skills 暴露）vs 裸 Schema Text-to-SQL vs 传统重型 BI 语义层
 
 > **English Edition**: [auto-ontology-semantic-sql-vs-raw-text2sql-selection-faq.en.md](auto-ontology-semantic-sql-vs-raw-text2sql-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![NVIDIA/auto-ontology 企业语义本体层与 Text-to-SQL 选型对比图](../../../assets/github-ai-radar-2026-11-09-r2-auto-ontology.svg)
 

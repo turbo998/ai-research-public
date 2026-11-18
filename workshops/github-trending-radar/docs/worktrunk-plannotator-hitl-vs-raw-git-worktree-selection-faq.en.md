@@ -1,7 +1,7 @@
 # Parallel Coding-Agent Worktree & HITL Plan-Review Selection FAQ: `max-sixty/worktrunk` + `backnotprop/plannotator` vs. Raw `git worktree` Commands & Terminal Scrollback Review
 
 > **中文版 (Chinese Edition)**: [worktrunk-plannotator-hitl-vs-raw-git-worktree-selection-faq.md](worktrunk-plannotator-hitl-vs-raw-git-worktree-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![max-sixty/worktrunk + backnotprop/plannotator Parallel Worktree & HITL Annotation Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r4-worktrunk-plannotator.svg)
 

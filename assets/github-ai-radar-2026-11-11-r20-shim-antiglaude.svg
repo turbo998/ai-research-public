@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR20" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR20" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ADD8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR20)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR20)" rx="3"/>
+
+  <!-- Header -->
+  <text x="40" y="58" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-11 NIGHT SHIFT · ROUND 20 (CUMULATIVE R65) · ZERO-DEP GO CLI HARNESS &amp; AST PROTOCOL BRIDGE</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800">Balanov/shim (7.29 MiB Go Stdlib Harness) + sksarvesh007/antiglaude (AST Bridge)</text>
+  <text x="40" y="115" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="14">9.96ms Startup + Allowlisted Local Router + Lazy load_skill + Bidirectional Protobuf AST Normalization (-84.06% Cost)</text>
+
+  <!-- Left Panel: Balanov/shim -->
+  <rect x="40" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#00ADD8" stroke-width="1.5"/>
+  <rect x="56" y="152" width="215" height="24" rx="6" fill="#083344"/>
+  <text x="66" y="169" fill="#67E8F9" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">GO 1.25+ STDLIB · 7.29 MiB</text>
+  <text x="282" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">Balanov/shim (191★ · MIT · v0.1.0)</text>
+
+  <rect x="56" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="208" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Zero-Dependency Static Binary (7.29 MiB, 9.96 ms Startup)</text>
+  <text x="70" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Pure Go standard library: no Node, Python, Docker, database, daemon, or TUI</text>
+  <text x="70" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Plain JSON config (${ENV_VAR} expansion) + append-only JSONL sessions</text>
+
+  <rect x="56" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="296" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. Allowlisted Local Mini-Model Router (Data, Not Authority)</text>
+  <text x="70" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• shim router use ollama/qwen3:4b maps natural language to allowlisted commands</text>
+  <text x="70" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Separate permission gate (read-only / ask / auto) + symlink/traversal blocks</text>
+
+  <rect x="56" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="384" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Lazy SKILL.md Loading (load_skill) &amp; Stdio/HTTP MCP</text>
+  <text x="70" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Only skill names/descriptions enter system prompt; full body loads on demand</text>
+  <text x="70" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Namespaced mcp_&lt;server&gt;_&lt;tool&gt; over stdio and Streamable HTTP</text>
+
+  <!-- Right Panel: sksarvesh007/antiglaude -->
+  <rect x="615" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="631" y="152" width="215" height="24" rx="6" fill="#78350F"/>
+  <text x="641" y="169" fill="#FDE68A" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">PROTOCOL BRIDGE · FASTAPI</text>
+  <text x="858" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">sksarvesh007/antiglaude (166★ · MIT)</text>
+
+  <rect x="631" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="208" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Bidirectional JSON Schema AST Normalization for Protobuf</text>
+  <text x="645" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Rewrites propertyNames, anyOf, and const to eliminate HTTP 400 tool errors</text>
+  <text x="645" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Bridges /v1/messages &amp; Chat Completions to Claude 4.6 &amp; Gemini 3/2.5 backends</text>
+
+  <rect x="631" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="296" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. Claude Code 2.1+ Auto-Mode Classifier &amp; /model Picker</text>
+  <text x="645" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Returns structured safeguard_results (dangerous_tool_use: not_flagged)</text>
+  <text x="645" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Injects modelPicker manifest + CLAUDE_CODE_AUTO_MODE_SERVER="0"</text>
+
+  <rect x="631" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="384" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. 60-Min Token Auto-Renewal, SSE Heartbeats &amp; Burner Guardrail</text>
+  <text x="645" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Transparent OAuth refresh + periodic SSE keep-alives during long thinking turns</text>
+  <text x="645" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Live TUI quota meter (1,500 reqs/day) + strict non-primary account warning</text>
+
+  <!-- Bottom FinOps Comparison Panel -->
+  <rect x="40" y="472" width="1120" height="178" rx="12" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="60" y="500" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261111-R20-SHIM-ANTIGLAUDE · 80 Dev/CI Nodes · 3,000 Multi-Model Runs/Mo)</text>
+  <text x="60" y="520" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">Synthetic benchmark model ($85/hr platform engineer rate; base cloud VM commitment &amp; enterprise model contracts: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="60" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#EF4444"/>
+  <text x="76" y="556" fill="#FCA5A5" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path A: Heavy Daemons + Raw Schema 400s</text>
+  <text x="76" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">Compute/Retry Spend: $1,560.00 | Labor (44.0h): $3,740.00</text>
+  <text x="76" y="600" fill="#F87171" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $5,300.00 / mo</text>
+  <text x="76" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Eager SKILL.md bloat; HTTP 400 on anyOf/const tool schemas</text>
+
+  <!-- Path B -->
+  <rect x="425" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="441" y="556" fill="#FCD34D" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path B: Heavy TUI Harness (No AST Bridge)</text>
+  <text x="441" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">Compute/Token Spend: $960.00 | Labor (22.0h): $1,870.00</text>
+  <text x="441" y="600" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $2,830.00 / mo (-46.60%)</text>
+  <text x="441" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Node/Python dependency drift; manual token &amp; safeguard fixes</text>
+
+  <!-- Path C -->
+  <rect x="790" y="534" width="350" height="98" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="2"/>
+  <text x="806" y="556" fill="#6EE7B7" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path C: Balanov/shim + antiglaude (Best)</text>
+  <text x="806" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">Lean Compute/Lazy Skills: $420.00 | Labor (5.0h): $425.00</text>
+  <text x="806" y="600" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $845.00 / mo (Saves $4,455.00 · -84.06%)</text>
+  <text x="806" y="618" fill="#A7F3D0" font-family="Inter, system-ui, sans-serif" font-size="11">$53,460.00/yr saved · -88.64% eng hours · 9.96ms static binary</text>
+</svg>

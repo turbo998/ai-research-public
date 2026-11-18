@@ -1,7 +1,7 @@
 # Agent-Native Adaptive Tutoring & On-Device Android Privacy Audit Selection FAQ: `HKUDS/DeepTutor` + `Verlintas/NOIR` vs. Generic Chat RAG & Full-APK Decompile Dumps
 
 > **中文版 (Chinese Edition)**: [deeptutor-noir-adaptive-agent-selection-faq.md](deeptutor-noir-adaptive-agent-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![HKUDS/DeepTutor Adaptive Workspace + Verlintas/NOIR Android Privacy Audit Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r8-deeptutor-noir.svg)
 

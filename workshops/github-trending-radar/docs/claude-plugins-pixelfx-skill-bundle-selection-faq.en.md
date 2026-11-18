@@ -1,7 +1,7 @@
 # Enterprise Plugin Marketplace Governance & Procedural VFX Skill Selection FAQ: `anthropics/claude-plugins-official` + `patch-gg/pixelfx` vs. Unpinned Third-Party MCPs & Blind Sprite Diffusion
 
 > **中文版 (Chinese Edition)**: [claude-plugins-pixelfx-skill-bundle-selection-faq.md](claude-plugins-pixelfx-skill-bundle-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![anthropics/claude-plugins-official Governance + patch-gg/pixelfx 244 Procedural VFX Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r10-claude-plugins-pixelfx.svg)
 

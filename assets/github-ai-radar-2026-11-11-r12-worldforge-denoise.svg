@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR12" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR12)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR12)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="800">
+    2026-11-11 ROUND 12 · WORLDFORGE (BLACKWELL 98GB DMA) + GPT-ANIME-DENOISE (ESRGAN 60% + L0)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    designfuchen/worldforge (★214 · 4-Tier Pinned DMA 1.2s Swap) × CXP-2024/gpt-anime-denoise (★212 · ESRGAN 60% + L0 0.001)
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">1.2s PINNED DMA SWAP</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-84.82% STUDIO AIGC TCO</text>
+
+  <!-- Row 1: Dual Breakdown -->
+  <rect x="40" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 云端 Blackwell 98GB 极限压榨：designfuchen/worldforge (★214)
+  </text>
+  <text x="60" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 六大痛点：传统 Colab 脚本每次生成重启进程重读 100GB 模型 (3-5分钟)、多模型切换 OOM、sm_120 报错</text>
+  <text x="60" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 四级存储金字塔：98GB GDDR7 (1.8TB/s) ↔ 176GB 锁页 DDR5 (63GB/s DMA) ↔ 88GB /dev/shm ↔ 30TB Drive</text>
+  <text x="60" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 1.2–1.5 秒极速换模：利用锁页内存 (Pinned Memory) + PCIe Gen5 DMA 在 Qwen-Image 与 Lyra 2.0 间秒切</text>
+  <text x="60" y="272" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 云端算潜空间 + 本地 Apple Silicon 后期：Mac 本地 rife-ncnn-vulkan 光流插帧至 60fps + 120Hz SwiftUI 工作台</text>
+  <rect x="60" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="76" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么 NVIDIA Lyra 2.0 在 Blackwell (sm_120) 上只有 WorldForge 能跑通？</text>
+  <text x="76" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">官方 Lyra 2.0 硬编码 compute_cap in [90, 100] 且依赖旧版 flash_attn；WorldForge 注入 sm_120</text>
+  <text x="76" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">Flash SDPA 补丁，结合 DA3 + MoGe 逆深度对齐与时序倒放拼接，单图一键跑出 30.1s–45.1s 连续 3D 长镜头！</text>
+  <text x="76" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">单 SSH ControlMaster 多路复用隧道 + 空闲自动关机看门狗，杜绝并发踢下线与忘关机扣光 CU</text>
+
+  <rect x="732" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="752" y="172" fill="#C4B5FD" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. GPT 生图鱼鳞纹无损去除：CXP-2024/gpt-anime-denoise (★212)
+  </text>
+  <text x="752" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 核心痛点：gpt-image-2/2.5/2.6 与 Codex image_gen 生成的二次元/插画/写实图普遍残留周期性“鱼鳞状噪点”</text>
+  <text x="752" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 黄金配方 (ESRGAN 预缩 60% + L0 0.001)：先缩至 60% 瓦解周期性鱼鳞网格 → ESRGAN 超分还原 → L0 平涂</text>
+  <text x="752" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 0.3s 实时调参与缓存复用：RTX 5080 全流程 ~1.0s；单独微调 L0 强度 (0.0005–0.002) 复用超分结果仅 0.3s</text>
+  <text x="752" y="272" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 局部保护笔刷 + 磁性套索反选 (L/I)：免重跑模型按比例混回原图腮红/细字，或一键只去背景/只去人物</text>
+  <rect x="752" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="768" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">第一性原理：为什么单靠普通高斯模糊或单跑超分去不掉 GPT 鱼鳞纹？</text>
+  <text x="768" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">GPT 鱼鳞纹属于与像素网格耦合的中高频结构伪影，直接超分反而会把鳞片边缘锐化加深！必须先</text>
+  <text x="768" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">下采样至 60% 破坏其空间频率相位，再用 ESRGAN 重建干净边缘，最后用 L0 梯度最小化抹平色块内微起伏！</text>
+  <text x="768" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">四端硬件自适应 (setup_env.py): 自动识别 NVIDIA CUDA / Windows AMD ROCm 7.2.1 / Apple MPS / CPU</text>
+
+  <!-- Row 2: Pipeline -->
+  <rect x="40" y="428" width="1360" height="196" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="458" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. 影院级 AIGC 端云混合创作管线：2K 原画生成与鱼鳞去噪 → 1.2s Pinned DMA 切 Lyra 2.0 → 本地 Apple Silicon 60fps 母带
+  </text>
+
+  <rect x="60" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="500" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">1. 2K 概念图生成与鱼鳞纹净化</text>
+  <text x="76" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">ESRGAN 60% + L0 0.001 + 套索保护</text>
+  <text x="76" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">消除 GPT/扩散原画色块鱼鳞噪点，</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">保护细腻纹理，作为无伪影 3D 输入源</text>
+
+  <rect x="401" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="500" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">2. Pinned DDR5 1.2s 极速换模</text>
+  <text x="417" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">L1 98GB VRAM ↔ L2 176GB Pinned</text>
+  <text x="417" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">通过 63GB/s PCIe Gen5 DMA 异步换页，</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5"></text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">秒级卸载生图模型并唤醒 Lyra 2.0 14B</text>
+
+  <rect x="742" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="500" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">3. Blackwell Lyra 2.0 3D 长镜头</text>
+  <text x="758" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">DA3 + MoGe 逆深度 + sm_120 SDPA</text>
+  <text x="758" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">Frozen-Tableau 提示词 + 倒放拼接，</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">生成 481–721 帧连续穿梭视频与 3DGS</text>
+
+  <rect x="1083" y="476" width="297" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="500" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">4. 本地 Mac 60fps 光流超分母带</text>
+  <text x="1099" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">rife-ncnn-vulkan + 120Hz SwiftUI</text>
+  <text x="1099" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">自动拉回 Mac 本地插帧至 60fps 4K，</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">双层缩略图缓存保证 0.0ms 主线程掉帧</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="642" width="1360" height="238" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="672" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. 闭式 FinOps 算例：月产 150 条 2K→3D 世界长镜头 + 去噪精修 800 张 GPT 插画资产 (synthetic, 基础月费: not_measured)
+  </text>
+  <rect x="60" y="690" width="1320" height="170" rx="10" fill="#1E293B"/>
+  <text x="80" y="720" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (Notebook 每次冷启动重读 + 忘关机损耗 + 反复重抽/PS 修鱼鳞纹): $520.00 算力 + $2,520.00 (36h) + $2,100.00 (30h) = $5,140.00/月
+  </text>
+  <text x="80" y="754" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (简易脚本无锁页 DMA 换模 + 普通高斯模糊糊掉五官返工): $340.00 算力 + $1,540.00 (22h) + $1,260.00 (18h @$70/h) = $3,140.00/月
+  </text>
+  <text x="80" y="788" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (WorldForge 1.2s DMA 换模+本地 RIFE + gpt-anime-denoise): $80.00 算力 + $420.00 (6h) + $280.00 (4h) = $780.00/月 (10.0h)
+  </text>
+  <text x="80" y="818" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $4,360.00/月 (-84.82%, 年省 $52,320.00) | 模型加载等待与图像精修工时从 66.0h 降至 10.0h (-56.0h/月, -84.85%)
+  </text>
+  <text x="80" y="846" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    快速启动: python3 forge.py (:7788) + WorldForge.app | python denoise_app.py (127.0.0.1:7865) 或 python denoise.py --all
+  </text>
+</svg>

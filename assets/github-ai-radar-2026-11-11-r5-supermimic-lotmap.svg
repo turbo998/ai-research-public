@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR5)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR5)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="800">
+    2026-11-11 ROUND 5 · SUPERMIMIC (1-DAY ★985 WORLD MODEL) + LOT-MAP &amp; MAXAGENT (AGENT OBSERVABILITY)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    HybridRobotics/supermimic (arXiv:2610.28480 · mjlab · GenCoord/MaxCoord) × alexeyw/lot-map (10-Station Radar) &amp; maxagent
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">+985★ IN 24 HOURS</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-81.57% LAB &amp; AGENT TCO</text>
+
+  <!-- Row 1: Dual Technical Breakdown -->
+  <rect x="40" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 具身智能突破：HybridRobotics/supermimic (建仓 1 天狂揽 ★985 · arXiv:2610.28480)
+  </text>
+  <text x="60" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 核心痛点：传统无模型 PPO 训练人形全身追踪需上亿次盲采样，梯度方差大且跨任务难泛化</text>
+  <text x="60" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 单一可微世界模型 (Dynamics MLP)：(rep_state, action, aux_state) → (next_aux, next_rep)</text>
+  <text x="60" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 双坐标表征：SuperMimic-GenCoord-G1 (关节广义坐标+解析IK) &amp; MaxCoord-G1 (全身刚体世界坐标)</text>
+  <text x="60" y="272" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• SimContext 域随机化条件注入：足底摩擦 ±0.45 / 质心偏移 ±0.05 / 编码器偏置 ±0.01 (1e-3 精度门限)</text>
+  <rect x="60" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="76" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">底层工程神来之笔：_CudaGraphNormalization 原地指针保活</text>
+  <text x="76" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">上游 rsl_rl 的 EmpiricalNormalization 执行 self._std = torch.sqrt(self._var) 会分配新张量，</text>
+  <text x="76" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">直接击穿 CUDA Graph 捕获的内存地址！SuperMimic 改用 std_buf.copy_(self._std) 原地更新，</text>
+  <text x="76" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">让『世界模型前向想象 + 解析策略梯度反向传播』全程锁在单个 CUDA Graph 内极速跑通！</text>
+
+  <rect x="732" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="752" y="172" fill="#C4B5FD" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. 智能体可观测与经验共享：alexeyw/lot-map (★255) + vzroslieigry/maxagent (★265)
+  </text>
+  <text x="752" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• lot-map 实时空间雷达：在 Claude Code 聊天侧边栏绘制 10 大站点脉冲图，告别滚屏读日志</text>
+  <text x="752" y="224" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 10 大站点：You · Model · Memory · Files · Shell · Network · Browser · Agents · Skills · Hooks</text>
+  <text x="752" y="248" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 视觉语义：40s 驻留 + 20s 渐隐轨迹线、高频辐条加粗、1m/10m 双表针计时、报错/拒止秒变红</text>
+  <text x="752" y="272" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• maxagent 跨工具经验原子库：打通 Claude Code / Codex / Antigravity / OpenClaw 共享 ~/maxagent</text>
+  <rect x="752" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="768" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么多 Agent 总是重复踩同一个坑？因为缺乏自动触发的「经验原子 (Atoms)」！</text>
+  <text x="768" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">maxagent 通过收到消息时、执行命令前、报错发生后三道 Hook，用本地 SHA256 锁定的</text>
+  <text x="768" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">multilingual-e5-small (~270MB) 检索已验证配方，并附带免开端口的 Chrome 扩展 MCP 桥！</text>
+  <text x="768" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">Windows 原生适配：Get-Content/Select-String 自动点亮 Files 站，Invoke-WebRequest 点亮 Network 站</text>
+
+  <!-- Row 2: Architecture Pipeline -->
+  <rect x="40" y="428" width="1360" height="196" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="458" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. 核心机制拆解：SuperMimic 可微世界模型解析梯度流 × Lot-Map + MaxAgent 闭环可观测流
+  </text>
+
+  <rect x="60" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="500" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">1. mjlab 环境采样与分层缓存</text>
+  <text x="76" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">TensorDict ReplayBuffer [N_env, T]</text>
+  <text x="76" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">采集真实物理交互与 SimContext DR 参数</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">(1e-3 门限防 Float32 ULP 噪声放大)，</text>
+  <text x="76" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">按环境分层采样训练 Dynamics MLP</text>
+
+  <rect x="401" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="500" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">2. 可微展开与 CUDA Graph 反传</text>
+  <text x="417" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">GenCoord / MaxCoord + Rot6D/Rodrigues</text>
+  <text x="417" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">策略在可微世界模型中向前展开 H 步，</text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">tracking_reward 误差直接沿动力学雅可比</text>
+  <text x="417" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">反传更新 Policy (_CudaGraphNormalization)</text>
+
+  <rect x="742" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="500" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">3. MaxAgent 跨智能体经验注入</text>
+  <text x="758" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">npx maxagent init → ~/maxagent/experience</text>
+  <text x="758" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">当某个 Agent 解决依赖/CUDA 编译报错后</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">沉淀为 Atom，其余 Agent 遇同类错误由</text>
+  <text x="758" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">Hook 自动毫秒级召回，告别重复试错</text>
+
+  <rect x="1083" y="476" width="297" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="500" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">4. Lot-Map 10 站点实时空间监控</text>
+  <text x="1099" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">/plugin install lot-map</text>
+  <text x="1099" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">一眼看清子智能体卡在 Network、Shell</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">还是权限 Hook 拦截，双表针实时指示</text>
+  <text x="1099" y="584" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">长耗时命令，排障定位速度提升 5 倍</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="642" width="1360" height="238" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="672" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. 闭式 FinOps 算例：月训练 25 个人形追踪策略 + 3,000 次多 Agent 研发排障会话 (synthetic, 机器人硬件费: not_measured)
+  </text>
+  <rect x="60" y="690" width="1320" height="170" rx="10" fill="#1E293B"/>
+  <text x="80" y="720" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (无模型 PPO 盲采样 + 滚屏日志排障与跨 Agent 重复踩坑): $1,500.00 GPU + $480.00 重试 Token + $3,500.00 (50.0h) = $5,480.00/月
+  </text>
+  <text x="80" y="754" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (未融合 CUDA Graph 世界模型 + 手工零散笔记): $750.00 GPU + $270.00 重试 Token + $2,100.00 (30.0h @$70/h) = $3,120.00/月
+  </text>
+  <text x="80" y="788" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (SuperMimic 可微世界模型 + lot-map 10站空间雷达 + maxagent 经验原子): $250.00 GPU + $60.00 Token + $700.00 (10.0h) = $1,010.00/月
+  </text>
+  <text x="80" y="818" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $4,470.00/月 (-81.57%, 年省 $53,640.00) | 具身训练 GPU 时长降 83.33% · 研发排障工时从 50.0h 降至 10.0h (-80.00%)
+  </text>
+  <text x="80" y="846" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    快速上手: uv run src/supermimic/scripts/train.py SuperMimic-GenCoord-G1 | claude plugin install lot-map --marketplace alexeyw/lot-map
+  </text>
+</svg>

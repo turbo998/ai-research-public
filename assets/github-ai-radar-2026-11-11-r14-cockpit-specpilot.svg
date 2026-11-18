@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR14" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR14" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR14)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR14)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="800">
+    2026-11-11 ROUND 14 · AGENT-COCKPIT (EVIDENCE CHAIN MCP) + SPECPILOT (10.87× LOSSLESS SPEC DECODING)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    chutingyean/Agent-Cockpit (★476 · Function-Hash Call Graph) × StargazerX0/SpecPilot (★187 · arXiv:2611.02501 · TLV τ=13.08)
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">10.87× OVER AR</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-80.94% SERVING &amp; QA TCO</text>
+
+  <!-- Row 1: Dual Breakdown -->
+  <rect x="40" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 确定性证据链白板：chutingyean/Agent-Cockpit (★476 · 零 Token 核验)
+  </text>
+  <text x="60" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 科研最大死穴：Agent 偷偷放宽评分器 (Grader) 或改了统计辅助函数，以前验证过的结论静默失效却无人察觉</text>
+  <text x="60" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 字段级证据绑定 + 函数调用闭包 Hash：每条结论必须绑定真实实验写出的 JSON 字段与调用链所有函数 Hash</text>
+  <text x="60" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 瞒报改动双拦截：文件变动未向看板登记直接阻断 git commit，且通过 Stop Hook 阻止 Claude Code 结束回合</text>
+  <text x="60" y="272" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 断链自动标红与决策简报：任一底层函数改动即标红下游结论卡，自动弹出 cockpit_decide 单页 HTML 简报</text>
+  <rect x="60" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="76" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么 Agent-Cockpit 能做到 $0 Token 成本检验整条证据链？</text>
+  <text x="76" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">它基于 Node.js 22.13+ 内置 node:sqlite 与轻量级 graphify 静态调用图，每次文件变更由确定性规则</text>
+  <text x="76" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">计算依赖闭包 (Dependency Closure)；一旦回滚恶意改动 (demo --restore)，Hash 重新匹配，结论卡自动恢复绿灯！</text>
+  <text x="76" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">一键初始化: npx -y @tingyen/agent-cockpit init (同时适配 Claude Code, Codex, Cursor, Gemini CLI)</text>
+
+  <rect x="732" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="752" y="172" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. 无损投机解码自治寻优：StargazerX0/SpecPilot (★187 · arXiv:2611.02501)
+  </text>
+  <text x="752" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 核心痛点：开源投机解码 (DFlash2 / DSpark) 出厂配置远未跑满硬件上限，不同显卡/批次的最优参数截然不同</text>
+  <text x="752" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 多智能体自治进化闭环：成本模型定位最大性能缺口 → 并行算法探索 (双层验证 TLV) + 内核子智能体压榨显存带宽</text>
+  <text x="752" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• Token Forcing 100% 无损保证：逐 Token 对齐原版贪婪解码输出，无需重新训练权重即可实现零精度损失加速</text>
+  <text x="752" y="272" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 实测吞吐较原版投机解码再翻倍：单并发达 AR 的 8.86×–10.87× (τ 跃升至 13.08)，高并发 Batch 16-24 达 3.93×</text>
+  <rect x="752" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="768" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">6 大生产级配置一手基准 (gsm8k/humaneval/math500/mbpp/mt-bench · 2048 tokens):</text>
+  <text x="768" y="338" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">• H100 (Qwen3.8-27B + DSpark, c=1): Stock 3.74× → SpecPilot 9.41× over AR (2.52× over stock, τ: 4.42→12.85)</text>
+  <text x="768" y="358" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">• RTX PRO 6000 Blackwell (Qwen3.8-27B + DFlash2, c=1): Stock 4.46× → SpecPilot 10.87× over AR (τ: 5.23→12.80)</text>
+  <text x="768" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">• H100 Batch 16/20/24 (Qwen3.8-27B FP8 + DSpark): Stock 1.94× → SpecPilot 3.93× over AR (2.03× over stock)</text>
+
+  <!-- Row 2: Pipeline -->
+  <rect x="40" y="428" width="1360" height="196" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="458" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. 可验证 AI 系统研发与推理优化闭环：SpecPilot 自动发现 TLV/算子优化 → Agent-Cockpit 锁定实验证据链
+  </text>
+
+  <rect x="60" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="500" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">1. 成本模型瓶颈定位</text>
+  <text x="76" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">SpecPilot Cost Model Analysis</text>
+  <text x="76" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">量化当前草稿模型与目标硬件显存带宽</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">上限的距离，指派算法与算子子智能体</text>
+
+  <rect x="401" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="500" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">2. TLV 双层验证与 Token Forcing</text>
+  <text x="417" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">Two-Level Verification (τ → 13.08)</text>
+  <text x="417" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">突破 16-token 单块限制，用 Token Forcing</text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">强制逐词比对，确保 100% 贪婪解码无损</text>
+
+  <rect x="742" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="500" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">3. Cockpit 实验运行与调用图封存</text>
+  <text x="758" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">cockpit run -- bash scripts/bench.sh</text>
+  <text x="758" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">记录实验脚本、依赖文件与调用链函数</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">Hash，将结论绑定至 JSON 具体字段</text>
+
+  <rect x="1083" y="476" width="297" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="500" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">4. 篡改标红拦截与时光机回放</text>
+  <text x="1099" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">pre-commit + Stop Hook + Replay</text>
+  <text x="1099" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">任何评分器或统计脚本改动立即标红卡片，</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">触发人工裁决，彻底终结“偷偷改评测过关”</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="642" width="1360" height="238" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="672" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. 闭式 FinOps 算例：30B 模型在线推理集群 + 月跑 200 轮多 Agent 实验核验 (synthetic, 机房基建费: not_measured)
+  </text>
+  <rect x="60" y="690" width="1320" height="170" rx="10" fill="#1E293B"/>
+  <text x="80" y="720" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (原生 AR 自回归解码 8 节点 + 人工排查 Agent 偷改评测脚本): $3,600.00 GPU + $2,800.00 (35h @$80/h) = $6,400.00/月
+  </text>
+  <text x="80" y="754" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (出厂默认 DFlash2/DSpark 投机解码 4 节点 + 手工查 git diff): $1,800.00 GPU + $1,600.00 (20h @$80/h) = $3,400.00/月
+  </text>
+  <text x="80" y="788" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (SpecPilot TLV 2倍提速仅需 2 节点 + Agent-Cockpit 零Token证据链): $900.00 GPU + $320.00 (4h 审简报) = $1,220.00/月
+  </text>
+  <text x="80" y="818" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $5,180.00/月 (-80.94%, 年省 $62,160.00) | 推理 GPU 节点削减 75.00% · 实验核验工时从 35.0h 降至 4.0h (-88.57%)
+  </text>
+  <text x="80" y="846" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    快速复现: npx -y @tingyen/agent-cockpit serve | bash scripts/serve.sh h100_c1_qwen38-27b_dspark final 0
+  </text>
+</svg>

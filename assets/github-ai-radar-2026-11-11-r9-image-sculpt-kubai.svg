@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR9" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR9)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR9)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="800">
+    2026-11-11 ROUND 9 · IMAGE-TO-SCULPT (VERIFIED 3D SDF) + KUBAI-ICONS &amp; OPEN-BOT-AVATAR
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    gokayfem/image-to-sculpt (★239 · MoGe/Marigold · Hold-Out View) × kubai-icons (★725 · 2,800+ Icons) &amp; open-bot-avatar (★335)
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">HOLD-OUT VIEW 3D QA</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-81.93% 3D &amp; ICON TCO</text>
+
+  <!-- Row 1: Dual Breakdown -->
+  <rect x="40" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 可验证单图 3D 雕刻：gokayfem/image-to-sculpt (★239 · Blender 5.2+ 精确 SDF)
+  </text>
+  <text x="60" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 黑盒图生 3D 六大死穴：背面瞎编、生成视角角度严重偏移 (+45°/+90°/-90° 实测偏到 +20°/-115°/+35°)</text>
+  <text x="60" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 原图绝对主权：MoGe 提取度量焦距与深度 + Marigold 法线 + BiRefNet/SAM-3 掩码</text>
+  <text x="60" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 相机反求与凸包筛查：搜寻真实相机位姿并剔除违背 Visual Hull 的坏视图，冻结 1 个留一视角独立验真</text>
+  <text x="60" y="272" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 精确 SDF 多遍渐进雕刻：Visual Hull → 刚性轮廓求解 → 柔性法线求解 → 剪影切缝与去蹼粘连 (build/steps/)</text>
+  <rect x="60" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="76" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">拒绝单一虚假“质量分”：每个视角输出 5 维对照图谱 (Map Sheet)</text>
+  <text x="76" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">逐视角并排核验：① 剪影 IoU · ② 轮廓距离 · ③ 法线夹角 · ④ 表面粗糙度对比 · ⑤ 原图深度误差；</text>
+  <text x="76" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">每一步雕刻保存在 build/steps/，由 Blender 5.2+ 自动渲染延时摄影、360° 转盘与水密 GLB/OBJ/STL！</text>
+  <text x="76" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">免 Key 降级模式: 支持透明 PNG + 自有照片多视角导入 (views --import DIR) 或单正面浮雕膨胀</text>
+
+  <rect x="732" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="752" y="172" fill="#C4B5FD" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. 统一风格动态图标与截面 3D 头像：kubai-icons (★725) + open-bot-avatar (★335)
+  </text>
+  <text x="752" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• kubai087/kubai-icons：Agent 自检图标绘制 Skill + 2,800+ 开源动态图标 (React/Vue/Web Component)</text>
+  <text x="752" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 三明治夹心构造：后底板 (Back) + 白色内页 (Content) + 前盖板 (Front)，外置描边保尺寸饱满</text>
+  <text x="752" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 单色派生全渐变：所有渐变/描边/阴影由单一 currentColor 通过 CSS 自动推算，仅静息/悬停 2 个关键帧</text>
+  <text x="752" y="272" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• DominikScholz/open-bot-avatar：1 条 100×100 SVG 路径 + 眼睛坐标 JSON 契约 → 堆叠截面伪 3D 体积渲染</text>
+  <rect x="752" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="768" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么这两套 UI 资产规范非常适合 Coding Agent 自动生成？</text>
+  <text x="768" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">• kubai-icons 强制 Agent 先写一句话物理动作定义 ("文件夹打开")，再截图与相邻图标做视觉自检闭环；</text>
+  <text x="768" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">• open-bot-avatar 仅需约 10 行 JSON (validateAvatar 校验)，即可由零依赖渲染器按 depth:0..14 推算</text>
+  <text x="768" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">  多层横截面投影 (Canvas / SVG / CSS 3D Scene)，原生支持鼠标视线追踪与 idle/thinking/happy 情绪！</text>
+
+  <!-- Row 2: Pipeline -->
+  <rect x="40" y="428" width="1360" height="196" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="458" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. 可验证 3D 资产与交互式 UI 符号生产流水线：相机配准 SDF 雕刻 × 视觉自检动态图标 × 截面投影 Bot 头像
+  </text>
+
+  <rect x="60" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="500" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">1. 原图锚定与视角配准</text>
+  <text x="76" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">MoGe + Marigold + BiRefNet/SAM-3</text>
+  <text x="76" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">反求真实相机角度，剔除违背凸包的</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">幻觉侧视图，预留 1 个冻结验证视角</text>
+
+  <rect x="401" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="500" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">2. 精确 SDF 雕刻与 5 维验真</text>
+  <text x="417" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">Forms → Surface → Detail → Cut</text>
+  <text x="417" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">消除体素阶梯与腋下粘连，生成 5 维</text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">误差对照表与 Blender 5.2+ 延时回放</text>
+
+  <rect x="742" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="500" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">3. 三层夹心动态图标自检</text>
+  <text x="758" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">kubai-icons (Back/Content/Front)</text>
+  <text x="758" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">单色 CSS 派生全套光影，截图比对</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">已有图标库直至尺寸与轮廓完全对齐</text>
+
+  <rect x="1083" y="476" width="297" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="500" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">4. 契约式截面投影 Bot 头像</text>
+  <text x="1099" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">open-bot-avatar (validateAvatar)</text>
+  <text x="1099" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">从单一 2D 路径推断横截面立体感，</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">mountAvatar 零依赖挂载鼠标跟随眼神</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="642" width="1360" height="238" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="672" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. 闭式 FinOps 算例：月产 30 个水密 3D 模型 + 160 个动态图标与交互式 Agent 头像 (synthetic, 3D打印/CDN费: not_measured)
+  </text>
+  <rect x="60" y="690" width="1320" height="170" rx="10" fill="#1E293B"/>
+  <text x="80" y="720" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (黑盒 3D API 抽卡 + 人工修补粘连/扁平五官 + 手工做 Lottie 图标): $360.00 API + $3,150.00 (45h) + $2,800.00 (40h) = $6,310.00/月
+  </text>
+  <text x="80" y="754" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (无相机配准多视图重建 + 裸 LLM 乱画风格割裂 SVG 图标): $240.00 API + $1,960.00 (28h) + $1,540.00 (22h @$70/h) = $3,740.00/月
+  </text>
+  <text x="80" y="788" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (image-to-sculpt 留一验证 SDF + kubai-icons + open-bot-avatar): $90.00 API + $630.00 (9h) + $420.00 (6h) = $1,140.00/月 (15.0h)
+  </text>
+  <text x="80" y="818" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $5,170.00/月 (-81.93%, 年省 $62,040.00) | 3D 修模与 UI 动态图标返工工时从 85.0h 降至 15.0h (-70.0h/月, -82.35%)
+  </text>
+  <text x="80" y="846" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    一键安装: npx skills add gokayfem/image-to-sculpt | npm i kubai-icons-react | pnpm add open-bot-avatar
+  </text>
+</svg>

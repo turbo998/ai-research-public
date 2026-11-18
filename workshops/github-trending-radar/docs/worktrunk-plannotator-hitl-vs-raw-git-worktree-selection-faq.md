@@ -1,7 +1,7 @@
 # 多并发 Coding Agent 分支隔离与人机计划批注选型常见问题解答：`max-sixty/worktrunk` + `backnotprop/plannotator` vs 原生 `git worktree` 手敲命令 + 纯终端滚屏审批
 
 > **English Edition**: [worktrunk-plannotator-hitl-vs-raw-git-worktree-selection-faq.en.md](worktrunk-plannotator-hitl-vs-raw-git-worktree-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![max-sixty/worktrunk + backnotprop/plannotator 多并发 Worktree 隔离与可视化 Plan/Diff 批注选型对比图](../../../assets/github-ai-radar-2026-11-09-r4-worktrunk-plannotator.svg)
 

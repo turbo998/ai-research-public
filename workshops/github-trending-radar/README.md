@@ -1,8 +1,21 @@
-> 🌐 **Language / 语言切换**: **[🇨🇳 中文完整报告 (README.md)](README.md)** | **[🇬🇧 English Full Report (README.en.md)](README.en.md)** | **[📅 2026-11-17 最新日报 (中文)](daily/2026-11-17.md)** | **[📅 2026-11-17 Daily Digest (EN)](daily/2026-11-17.en.md)** | **[📅 2026-11-16 历史日报 (中文)](daily/2026-11-16.md)** | **[📅 2026-11-16 Daily Digest (EN)](daily/2026-11-16.en.md)** | **[📅 2026-11-15 历史日报 (中文)](daily/2026-11-15.md)** | **[📅 2026-11-15 Daily Digest (EN)](daily/2026-11-15.en.md)** | **[📅 2026-11-14 历史日报 (中文)](daily/2026-11-14.md)** | **[📅 2026-11-14 Daily Digest (EN)](daily/2026-11-14.en.md)** | **[📅 2026-11-13 历史日报 (中文)](daily/2026-11-13.md)** | **[📅 2026-11-13 Daily Digest (EN)](daily/2026-11-13.en.md)** | **[📅 2026-11-12 历史日报 (中文)](daily/2026-11-12.md)** | **[📅 2026-11-12 Daily Digest (EN)](daily/2026-11-12.en.md)** | **[📅 2026-11-11 历史日报 (中文)](daily/2026-11-11.md)** | **[📅 2026-11-11 Daily Digest (EN)](daily/2026-11-11.en.md)** | **[📅 2026-11-09 历史日报 (中文)](daily/2026-11-09.md)** | **[📅 2026-11-09 Daily Digest (EN)](daily/2026-11-09.en.md)** | **[📅 2026-11-08 每日归档日报 (中文)](daily/2026-11-08.md)** | **[📅 2026-11-08 Daily Digest (EN)](daily/2026-11-08.en.md)** | **[📅 2026-11-05 历史日报](daily/2026-11-05.md)** | **[📅 2026-11-04 历史日报](daily/2026-11-04.md)** | **[📅 2026-11-03 历史日报](daily/2026-11-03.md)** | **[📅 2026-11-02 历史日报](daily/2026-11-02.md)** | **[📅 2026-11-01 历史日报](daily/2026-11-01.md)** | **[📡 在线交互式雷达面板 (中文)](https://turbo998.github.io/zh-github-radar.html)** | **[📡 Live Interactive Radar (EN)](https://turbo998.github.io/github-radar.html)** | **[📊 7-Card 4:5 视觉评测报告](cards.html)** | **[📦 Sealed Telemetry (`report.json`)](report.json)**
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文主报告 (README.md)](README.md)** | **[🇬🇧 English Report (README.en.md)](README.en.md)** · **[📡 在线交互雷达 (中文)](https://turbo998.github.io/zh-github-radar.html)** | **[📡 Live Radar (EN)](https://turbo998.github.io/github-radar.html)** · **[📊 7-Card 4:5 评测报告](cards.html)** | **[📦 密封遥测 (`report.json`)](report.json)** · **[🏠 返回仓库首页](../../README.md)**
 
-# AI Solution Architect 主动式情报摘要面板 & GitHub AI 最热榜单雷达（2026-11-08 深度研究报告）
+# GitHub AI 趋势与飙升速度雷达（Enterprise AI Solution Architect 每日情报工作台）
 
 ![2026-11-08 GitHub AI Trending Radar Visual Summary](../../assets/github-ai-radar-2026-11-08.svg)
+
+## 📅 每日 AI 情报与架构师选型评估归档（Daily SA Intelligence Archive）
+
+> 每期日报均采用 **`Hype / Facts / Signal` 三轴去噪评分**，围绕 **AI Solution Architect 学习价值、客户架构落地方案与 PoC 优先级（P0/P1/P2）** 进行工程化审视。
+
+| 最新周期 (`2026-11-12` – `2026-11-17`) | 中期归档 (`2026-11-05` – `2026-11-11`) | 早期基线 (`2026-11-01` – `2026-11-04`) |
+| :--- | :--- | :--- |
+| 🔥 **[2026-11-17 最新日报](daily/2026-11-17.md)** · [EN](daily/2026-11-17.en.md) | 📅 **[2026-11-11 日报](daily/2026-11-11.md)** · [EN](daily/2026-11-11.en.md) | 📅 **[2026-11-04 日报](daily/2026-11-04.md)** · [EN](daily/2026-11-04.en.md) |
+| 📅 **[2026-11-16 日报](daily/2026-11-16.md)** · [EN](daily/2026-11-16.en.md) | 📅 **[2026-11-09 日报](daily/2026-11-09.md)** · [EN](daily/2026-11-09.en.md) | 📅 **[2026-11-03 日报](daily/2026-11-03.md)** · [EN](daily/2026-11-03.en.md) |
+| 📅 **[2026-11-15 日报](daily/2026-11-15.md)** · [EN](daily/2026-11-15.en.md) | 📅 **[2026-11-08 深度基线](daily/2026-11-08.md)** · [EN](daily/2026-11-08.en.md) | 📅 **[2026-11-02 日报](daily/2026-11-02.md)** · [EN](daily/2026-11-02.en.md) |
+| 📅 **[2026-11-14 日报](daily/2026-11-14.md)** · [EN](daily/2026-11-14.en.md) | 📅 **[2026-11-05 日报](daily/2026-11-05.md)** · [EN](daily/2026-11-05.en.md) | 📅 **[2026-11-01 创刊号](daily/2026-11-01.md)** · [EN](daily/2026-11-01.en.md) |
+| 📅 **[2026-11-13 日报](daily/2026-11-13.md)** · [EN](daily/2026-11-13.en.md) | 📊 **[7-Card 视觉卡片 (中文)](cards.html)** · [EN Deck](cards.en.html) | 📦 **[密封评测遥测 (`report.json`)](report.json)** |
+| 📅 **[2026-11-12 日报](daily/2026-11-12.md)** · [EN](daily/2026-11-12.en.md) | | |
 
 ## 一、背景与设计哲学：从被动聊天框走向主动式持久化情报 Agent
 
@@ -29,7 +42,10 @@ $$\text{Proactive Agent} = \text{Durable Agent (SQLite Checkpointed)} + \text{Cr
 
 ## 二、🚀 当日热度提升最快榜单（Fastest-Rising / Highest Velocity AI Leaderboard）
 
-> **📘 本班次双轮独立六段式选型 FAQ 与证据封存**：
+<details>
+<summary><strong>📚 点击展开：热门开源 AI 仓库架构师六段式选型 FAQ 全集索引（480 轮双语选型指南 · `docs/*-selection-faq.md`）</strong></summary>
+
+> **📘 独立六段式选型 FAQ 归档目录（Executive Summary · Q&A · Mermaid · Decision Matrix · Checklist）**：
 > - **Round 1 FAQ**：[裸金属 GPU 集群管理面选型 FAQ：NVKE vs 云托管 AKS/EKS vs Kubeadm/Slurm (`docs/nvke-vs-aks-gpu-cluster-selection-faq.md`)](docs/nvke-vs-aks-gpu-cluster-selection-faq.md)（[EN](docs/nvke-vs-aks-gpu-cluster-selection-faq.en.md)）
 > - **Round 2 FAQ**：[长会话 Coding Agent 上下文架构选型 FAQ：`billion-context` 可逆折叠 vs `/compact` vs 向量 RAG (`docs/context-folding-vs-compact-rag-selection-faq.md`)](docs/context-folding-vs-compact-rag-selection-faq.md)（[EN](docs/context-folding-vs-compact-rag-selection-faq.en.md) · [Round 2 SVG](../../assets/github-ai-radar-2026-11-08-r2-context-folding.svg)）
 > - **Round 3 FAQ**：[AI 辅助前端工程选型 FAQ：`meta/astryx` CLI vs `pbakaus/impeccable` 反 Slop 审计 vs 裸写 Tailwind/shadcn (`docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.md`)](docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.md)（[EN](docs/agent-ui-design-system-vs-raw-tailwind-selection-faq.en.md) · [Round 3 SVG](../../assets/github-ai-radar-2026-11-08-r3-agent-ui-harness.svg)）
@@ -511,7 +527,9 @@ $$\text{Proactive Agent} = \text{Durable Agent (SQLite Checkpointed)} + \text{Cr
 > - **2026-11-17 Night Round 54 FAQ (Round 478)**：[70 主题 JSON 转 9:16 视频/4:5 信息图卡管线（`effectcraft-motion-skills`）与 ComfyUI 水平连线磁吸及 K8s 3D 工厂拓扑巡检（`ComfyUI-Smart-Guides` & `kubefactory`）选型 FAQ：`effectcraft-motion-skills` (70 主题、Contact Sheet 预览与 `nice -n 19` 后台渲染) + `ComfyUI-Smart-Guides` & `kubefactory` (水平连线磁吸/间距手柄与 3D K8s 工厂) (`docs/effectcraft-motion-skills-comfyui-smart-guides-kubefactory-70theme-916-carousel-wire-snap-3d-k8s-selection-faq.md`)](docs/effectcraft-motion-skills-comfyui-smart-guides-kubefactory-70theme-916-carousel-wire-snap-3d-k8s-selection-faq.md)（[EN](docs/effectcraft-motion-skills-comfyui-smart-guides-kubefactory-70theme-916-carousel-wire-snap-3d-k8s-selection-faq.en.md) · [Night R54 SVG](../../assets/github-ai-radar-2026-11-17-r54-effectcraft-smartguides-kubefactory.svg)）
 > - **2026-11-17 Night Round 55 FAQ (Round 479)**：[昇腾 NPU 可审计迁移智能体（`DEGger21/numpilot`）与三大梯度提升树客户流失实证对决及批量合约异常解码器（`churn-boosting-showdown` & `multicall-error-decoder`）选型 FAQ：`numpilot` (`NumPy→AsNumpy` 昇腾迁移与逐阶段回执) + `churn-boosting-showdown` & `multicall-error-decoder` (7,043 样本 GBDT 实证与批量合约本地异常解码) (`docs/numpilot-churn-boosting-showdown-multicall-error-decoder-ascend-npu-migration-gbdt-benchmark-rpc-decoder-selection-faq.md`)](docs/numpilot-churn-boosting-showdown-multicall-error-decoder-ascend-npu-migration-gbdt-benchmark-rpc-decoder-selection-faq.md)（[EN](docs/numpilot-churn-boosting-showdown-multicall-error-decoder-ascend-npu-migration-gbdt-benchmark-rpc-decoder-selection-faq.en.md) · [Night R55 SVG](../../assets/github-ai-radar-2026-11-17-r55-numpilot-churn-multicall.svg)）
 > - **2026-11-17 Night Round 56 FAQ (Round 480 Milestone)**：[真实产品界面转五模态宣传片技能（`ultrademo-hq/ultrademo`）与端侧自动打码密钥/隐私截图器及人机共管微信桌面容器（`tw4/lumela` & `invzhi/wechat-use`）选型 FAQ：`ultrademo` (5 类代码化产品视频与 9:16 原生重排) + `lumela` & `wechat-use` (端侧 OCR 自动模糊密钥截图与人机共管微信 MCP 容器) (`docs/ultrademo-lumela-wechat-use-5mode-code-product-video-auto-pii-blur-screenshots-supervised-wechat-mcp-selection-faq.md`)](docs/ultrademo-lumela-wechat-use-5mode-code-product-video-auto-pii-blur-screenshots-supervised-wechat-mcp-selection-faq.md)（[EN](docs/ultrademo-lumela-wechat-use-5mode-code-product-video-auto-pii-blur-screenshots-supervised-wechat-mcp-selection-faq.en.md) · [Night R56 SVG](../../assets/github-ai-radar-2026-11-17-r56-ultrademo-lumela-wechatuse.svg)）
-> - **原始抓取证据与数据分级**：Track A `stars_today` 原始 HTML 已封存至 [`evidence/trending-daily-2026-11-08-raw.html`](evidence/trending-daily-2026-11-08-raw.html)（`sha256: 353914ef985b6a4f269094bea6a075a391f5e5da0e85145e54f704909dbf11d0`）；Track B 新仓 REST Search API 响应已封存至 [`evidence/search-new-repos-2026-11-08-raw.json`](evidence/search-new-repos-2026-11-08-raw.json)（`sha256: b63e154723524af044eca6d701fd910d2b13ed732d3ad8ae2fd3f0b5584b7ba1`），仅报告建仓生命周期日均（`stars_today = not_measured`）；外部论文/基准指标标注为 `anonymized_reported (independently_reproduced=false)`，架构师 TCO/FinOps 算例严格执行闭式公式可复算门禁并标注为 `synthetic (independently_reproduced=false)`。
+</details>
+
+> **🔒 原始抓取证据与数据溯源边界**：Track A `stars_today` 原始 HTML 已封存至 [`evidence/trending-daily-2026-11-08-raw.html`](evidence/trending-daily-2026-11-08-raw.html)（`sha256: 353914ef...`）；Track B 新仓 REST Search API 响应已封存至 [`evidence/search-new-repos-2026-11-08-raw.json`](evidence/search-new-repos-2026-11-08-raw.json)（`sha256: b63e1547...`）；外部基准标注为 `anonymized_reported (independently_reproduced=false)`，架构师 FinOps 算例标注为 `synthetic (independently_reproduced=false)`。
 
 ### 2.1 Track A — 24h 单日新增 Star 飙升最快已核验榜（100% 对应归档原始 HTML `353914ef...`）
 

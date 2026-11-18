@@ -1,7 +1,7 @@
 # 纯 Go 无 CGO GPU 原生桌面 UI 组件库与 iPhone/iPad 本机内嵌 Python 3.15 + `libgit2` 智能体运行时选型常见问题解答：`lobehub/lobe-mygo` + `imsai-sh/fish-pocket` vs Electron 桌面端 & 远程云主机手机壳
 
 > **English Edition**: [lobe-mygo-fish-pocket-native-go-ios-agent-selection-faq.en.md](lobe-mygo-fish-pocket-native-go-ios-agent-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![lobehub/lobe-mygo 与 imsai-sh/fish-pocket 架构选型对比图](../../../assets/github-ai-radar-2026-11-11-r10-lobe-mygo-fish-pocket.svg)
 

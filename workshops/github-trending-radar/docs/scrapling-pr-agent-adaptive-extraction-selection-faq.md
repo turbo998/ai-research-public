@@ -1,7 +1,7 @@
 # 自适应网页结构抽取与单次压缩 PR 自动审查选型常见问题解答：`D4Vinci/Scrapling` + `The-PR-Agent/pr-agent` vs 脆弱 CSS 选择器 & 多轮全量 Diff 审查
 
 > **English Edition**: [scrapling-pr-agent-adaptive-extraction-selection-faq.en.md](scrapling-pr-agent-adaptive-extraction-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![D4Vinci/Scrapling 自适应抓取 + The-PR-Agent/pr-agent 单次压缩 PR 审查选型对比图](../../../assets/github-ai-radar-2026-11-09-r11-scrapling-pr-agent.svg)
 

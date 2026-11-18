@@ -1,7 +1,7 @@
 # Industrial P&ID Diagram-to-Knowledge-Graph Extraction & Aerospace ASD-STE100 Controlled-English Writing Selection FAQ: `ScottDuncanAI/PID-to-Knowledge-Graph` (`graph.duckdb` + ISA-5.1) + `Dodaios/ste80-humanizer` (§1–§26 + S1–S15 Two-Pass Rewrite) vs. Naive VLM Chunk RAG & Single-Pass Synonym Swappers
 
 > **中文版**: [pid-knowledge-graph-ste80-humanizer-selection-faq.md](pid-knowledge-graph-ste80-humanizer-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![PID-to-Knowledge-Graph & STE80 Humanizer Architecture Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r6-pid-kg-ste80.svg)
 

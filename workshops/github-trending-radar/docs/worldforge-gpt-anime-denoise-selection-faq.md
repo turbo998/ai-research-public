@@ -1,7 +1,7 @@
 # 云端 Blackwell 98GB 显存四级 PCIe Gen5 DMA 热交换工作站与 GPT 生图鱼鳞纹无损去噪选型常见问题解答：`designfuchen/worldforge` + `CXP-2024/gpt-anime-denoise` vs 传统 Notebook 冷启动 & 盲目重绘/高斯模糊
 
 > **English Edition**: [worldforge-gpt-anime-denoise-selection-faq.en.md](worldforge-gpt-anime-denoise-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![designfuchen/worldforge 与 CXP-2024/gpt-anime-denoise 架构选型对比图](../../../assets/github-ai-radar-2026-11-11-r12-worldforge-denoise.svg)
 

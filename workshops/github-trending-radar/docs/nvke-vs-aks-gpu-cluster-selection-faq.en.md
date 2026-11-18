@@ -1,7 +1,7 @@
 # Bare-Metal GPU Cluster Control-Plane Selection FAQ: NVKE (`dsx-ai-factory/nvke`) vs. Managed Cloud K8s (AKS/EKS) vs. DIY Kubeadm/Slurm
 
 > **中文版**: [nvke-vs-aks-gpu-cluster-selection-faq.md](nvke-vs-aks-gpu-cluster-selection-faq.md)  
-> **Daily Digest**: [2026-11-08 GitHub AI Trending Leaderboard & Intelligence Digest](../daily/2026-11-08.en.md) · **7-Card Deck**: [`cards.en.html`](../cards.en.html) · **Interactive Radar**: [`github-radar.html`](../../../github-radar.html)
+> **Daily Digest**: [2026-11-08 GitHub AI Trending Leaderboard & Intelligence Digest](../daily/2026-11-08.en.md) · **7-Card Deck**: [`cards.en.html`](../cards.en.html) · **Interactive Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 Written for **AI Solution Architects**, this guide distills primary-source findings from the #1 fastest-accelerating AI infrastructure repository on GitHub (`2026-11-08` sweep) — **`dsx-ai-factory/nvke` (self-described as NVIDIA Kubernetes Engine, `v0.23.1`, Apache-2.0, +91% single-day star surge / `+345★ today`)** — into plain-language, first-principles architectural guidance:
 1. **When should you choose NVKE, when should you stick with managed cloud Kubernetes (Azure AKS / AWS EKS), and when is pure Slurm still the right call?**

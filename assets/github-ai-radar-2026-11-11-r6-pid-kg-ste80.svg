@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="1440" height="920">
+  <defs>
+    <linearGradient id="bgGradR6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B19"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="accentR6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="920" fill="url(#bgGradR6)"/>
+  <rect x="20" y="20" width="1400" height="880" rx="18" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="38" width="1360" height="86" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="73" fill="url(#accentR6)" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="21.5" font-weight="800">
+    2026-11-11 ROUND 6 · PID-TO-KNOWLEDGE-GRAPH (DUCKDB + ISA-5.1) + STE80-HUMANIZER (ASD-STE100)
+  </text>
+  <text x="64" y="103" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="13">
+    ScottDuncanAI/PID-to-Knowledge-Graph (★213 · 4-Type PDF Tiling · graph.duckdb) × Dodaios/ste80-humanizer (★374 · §1-§26 + S1-S15)
+  </text>
+  <rect x="1140" y="54" width="238" height="52" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="1259" y="76" text-anchor="middle" fill="#34D399" font-family="Consolas, monospace" font-size="13" font-weight="700">ISA-5.1 + STE100</text>
+  <text x="1259" y="96" text-anchor="middle" fill="#38BDF8" font-family="Consolas, monospace" font-size="12" font-weight="700">-80.72% ENG TOIL COST</text>
+
+  <!-- Row 1: Dual Domain Deep-Dive -->
+  <rect x="40" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="172" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    1. 工业图纸知识工程：ScottDuncanAI/PID-to-Knowledge-Graph (★213 · MIT)
+  </text>
+  <text x="60" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 核心痛点：把整张化工/制造 P&amp;ID PDF 直接喂给多模态大模型，小字号位号必糊、跨页管线必断</text>
+  <text x="60" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 黄金分工：『Claude 只负责看图认符号追管线，Python 脚本确定性包办切图、建图与一致性校验』</text>
+  <text x="60" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 4 类图纸自适应预处理：矢量可搜索文本 / 矢量轮廓字 / 扫描件 (2.5x放大+对比度增强) / 带OCR层扫描件</text>
+  <text x="60" y="272" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 三层图谱与四件套产物：工艺流+测量点+ISA-5.1控制回路 → summary.md · graph.json · graph.duckdb · qa_report.md</text>
+  <rect x="60" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="76" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么 qa_report.md + OCR 交叉核验是工业级落地的胜负手？</text>
+  <text x="76" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">看不清的位号严禁模型瞎猜 (Marked unreadable, never guessed)！Python 脚本自动比对</text>
+  <text x="76" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">OCR 提取位号与 Claude 读图记录，揪出孤立跨页接头与无归属传感器，驱动 Claude 二次复查直到清零！</text>
+  <text x="76" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">免服务直接查询: graph.duckdb 单文件承载全厂上下游管段、阀门与 FIC/PIC 串级联锁回路</text>
+
+  <rect x="732" y="142" width="668" height="270" rx="14" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="752" y="172" fill="#FBBF24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15.5" font-weight="800">
+    2. 航空级受控技术英语：Dodaios/ste80-humanizer (★374 · Karpathy STE80 方法)
+  </text>
+  <text x="752" y="200" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 核心痛点：普通去 AI 味工具只删掉 "Great question!" 等套话，却保留一逗到底的 3 层从句与模糊被动语态</text>
+  <text x="752" y="224" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• Pass 1 (§1–§26 AI Tells)：精准剥离维基百科总结的 26 种 AI 写作癖好 (破折号泛滥、-ing 伴随状语等)</text>
+  <text x="752" y="248" fill="#E2E8F0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• Pass 2 (S1–S15 STE80 规则)：向航空维修手册标准 ASD-STE100 (Issue 9) 靠拢 80%，重构句子骨架</text>
+  <text x="752" y="272" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">• 规则级溯源审计：每次改写明确汇报命中编号 (如 "§1, §8, S2")，目标是一眼读懂而非欺骗检测器</text>
+  <rect x="752" y="292" width="628" height="102" rx="8" fill="#1E293B"/>
+  <text x="768" y="316" fill="#F8FAFC" font-family="Consolas, PingFang SC, monospace" font-size="11.8" font-weight="700">为什么是「80% ASD-STE100 (STE80)」而不是 100% Strict 模式？</text>
+  <text x="768" y="338" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">100% 航空标准禁止把 check/test 当动词、禁用 may/should 且锁死 900 词表，日常文档显得过于机械；</text>
+  <text x="768" y="358" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">STE80 完整保留『指令≤20词/描述≤25词、一句一事、主动语态、指令与原理分离、禁分号』五大铁律，</text>
+  <text x="768" y="380" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="11.3">同时放开普通白话词汇与 check/test 动词用法，让架构文档与运维 Runbook 兼具精准与自然！</text>
+
+  <!-- Row 2: 4-Stage Pipeline -->
+  <rect x="40" y="428" width="1360" height="196" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+  <text x="60" y="458" fill="#34D399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    3. 工业制造与企业高合规文档闭环：P&amp;ID 分片提取 → DuckDB 工艺图谱 → STE80 双遍受控语言交付
+  </text>
+
+  <rect x="60" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="76" y="500" fill="#38BDF8" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">STEP 1: 4 类图纸分类与自适应切瓦</text>
+  <text x="76" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">Vector / Outlined / Scan (2.5x)</text>
+  <text x="76" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">自动摆正横向图纸，按最小位号字号动态计算</text>
+  <text x="76" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">渲染 DPI，切成重叠瓦片并跳过空白边框</text>
+
+  <rect x="401" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="417" y="500" fill="#34D399" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">STEP 2: 逐页隔离读取与 ISA-5.1 建图</text>
+  <text x="417" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">work/&lt;plant&gt;/kg/graph.duckdb</text>
+  <text x="417" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">拼接跨页连接符，按阀门/管件切分管段，</text>
+  <text x="417" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">组装传感器→控制器→执行器完整控制回路</text>
+
+  <rect x="742" y="476" width="315" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="758" y="500" fill="#FBBF24" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">STEP 3: qa_report.md 自动交叉复核</text>
+  <text x="758" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">OCR Tag Cross-Check + Loop Audit</text>
+  <text x="758" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">列出漏读位号、悬空接头与未定位仪表，</text>
+  <text x="758" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">回图重验并附带图纸页码坐标溯源</text>
+
+  <rect x="1083" y="476" width="297" height="128" rx="10" fill="#1E293B" stroke="#334155"/>
+  <text x="1099" y="500" fill="#A78BFA" font-family="Consolas, PingFang SC, monospace" font-size="12.2" font-weight="700">STEP 4: STE80 双遍受控重写输出</text>
+  <text x="1099" y="522" fill="#E2E8F0" font-family="Consolas, PingFang SC, monospace" font-size="11.2">/ste80-humanizer (§1-§26 + S1-S15)</text>
+  <text x="1099" y="544" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">将生成的工艺 SOP 与架构文档转为</text>
+  <text x="1099" y="564" fill="#94A3B8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">一句一指令、零歧义的航空级技术手册</text>
+
+  <!-- Row 3: FinOps Worked Example -->
+  <rect x="40" y="642" width="1360" height="238" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="672" fill="#38BDF8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">
+    4. 闭式 FinOps 算例：月解析 40 套 P&amp;ID (400页) + 交付 200 份工业 SOP/Runbook (synthetic, CAD/Historian 费: not_measured)
+  </text>
+  <rect x="60" y="690" width="1320" height="170" rx="10" fill="#1E293B"/>
+  <text x="80" y="720" fill="#FCA5A5" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path A (整页 PDF 裸喂 VLM + 工程师人工追管线与改写 AI 腔 SOP): $240.00 API + $3,600.00 (45h) + $2,800.00 (35h) = $6,640.00/月 (80.0h)
+  </text>
+  <text x="80" y="754" fill="#FDE68A" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path B (普通 OCR + 单遍同义词替换，无 qa_report 闭环与 STE80 句法重构): $190.00 API + $2,240.00 (28h) + $1,600.00 (20h) = $4,030.00/月
+  </text>
+  <text x="80" y="788" fill="#6EE7B7" font-family="Consolas, PingFang SC, monospace" font-size="12.5" font-weight="700">
+    • Path C (PID-to-Knowledge-Graph + ste80-humanizer 双遍重写): $160.00 API + $640.00 (8h 复核) + $480.00 (6h 审校) = $1,280.00/月 (14.0h)
+  </text>
+  <text x="80" y="818" fill="#A7F3D0" font-family="Consolas, PingFang SC, monospace" font-size="13" font-weight="800">
+    → Path C 净省: $5,360.00/月 (-80.72%, 年省 $64,320.00) | 工业工程师与文档审校工时从 80.0h 降至 14.0h (-66.0h/月, -82.50%)
+  </text>
+  <text x="80" y="846" fill="#94A3B8" font-family="Consolas, PingFang SC, monospace" font-size="11.5">
+    快速安装: npx skills add Dodaios/ste80-humanizer --global | 复制 pid-to-kg 至 ~/.claude/skills/ 并输出 graph.duckdb
+  </text>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR33" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR33" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C2A4FF"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR33)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR33)" rx="3"/>
+
+  <!-- Header -->
+  <text x="40" y="58" fill="#C2A4FF" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-11 NIGHT SHIFT · ROUND 33 (CUMULATIVE R78) · CLAUDE+CODEX SHARED MEMORY &amp; INFONCE MULTIMODAL SEARCH</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="21" font-weight="800">everything-claude-codex (&lt;0.1s Sync &amp; Duo) + liangjianshu/multimodal-image-retrieval</text>
+  <text x="40" y="115" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="14">Stdlib agent-sync + Blind-First Council &amp; 211 Payload Tests + Qwen LoRA vs EmbeddingGemma 2 InfoNCE (88.84% F1, -88.01% Cost)</text>
+
+  <!-- Left Panel: everything-claude-codex -->
+  <rect x="40" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#C2A4FF" stroke-width="1.5"/>
+  <rect x="56" y="152" width="215" height="24" rx="6" fill="#4C1D95"/>
+  <text x="66" y="169" fill="#E9D5FF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">CLAUDE &lt;-&gt; CODEX · 211 TESTS</text>
+  <text x="282" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">everything-claude-codex (83★ · MIT)</text>
+
+  <rect x="56" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="208" fill="#C084FC" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Sub-0.1s Stdlib agent-sync &amp; Post-/compact hot.md Memory</text>
+  <text x="70" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Shares newest Claude &amp; Codex lines (voice included) + sync.py send mail</text>
+  <text x="70" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• ecx duo runs a Blind Round First (independent plans -&gt; critique -&gt; merge)</text>
+
+  <rect x="56" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="296" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. 3-Engine Vault Search (ChromaDB + LightRAG + CLIP) &amp; Phone Sync</text>
+  <text x="70" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Router picks semantic (Chroma), graph (LightRAG), or slide/image (CLIP)</text>
+  <text x="70" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Syncs to private GitHub repo after every reply for laptop-shut phone capture</text>
+
+  <rect x="56" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="384" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. 21 Real-Payload-Verified Hooks &amp; 16+ Session Doctor Checks</text>
+  <text x="70" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Tests-before-done (max 3 retries via .ecx/test-command) + real rm -rf ~ block</text>
+  <text x="70" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Pre-call MCP health check + AI-tell guard (delve/tapestry/em-dash)</text>
+
+  <!-- Right Panel: multimodal-image-retrieval -->
+  <rect x="615" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <rect x="631" y="152" width="215" height="24" rx="6" fill="#0C4A6E"/>
+  <text x="641" y="169" fill="#7DD3FC" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">QWEN LORA VS INFONCE · MIT</text>
+  <text x="858" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">multimodal-image-retrieval (129★)</text>
+
+  <rect x="631" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="208" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Shared Qwen Intent Router (95% Text / 91% Multimodal)</text>
+  <text x="645" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Filters non-retrieval QA; separates "return count K" from "object count"</text>
+  <text x="645" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Preserves color, negation &amp; modification constraints in structured JSON</text>
+
+  <rect x="631" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="296" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. Route A (Qwen2.5-VL LoRA) &amp; JSON Normalization Attribution</text>
+  <text x="645" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Text-to-Image F1: 60.62% -&gt; 86.76%; Image-to-Image F1: 35.64% -&gt; 81.86%</text>
+  <text x="645" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Isolates JSON format recovery (76.07%/63.90%) from true +10.69/+17.96% gain</text>
+
+  <rect x="631" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="384" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Route B: EmbeddingGemma 2 (768-d) Multi-Positive InfoNCE</text>
+  <text x="645" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Direct pixel/query 768-d cosine similarity without VLM caption bottleneck</text>
+  <text x="645" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Achieves 88.84% Text-to-Image (+27.16%) &amp; 83.40% Image-to-Image (+51.55%)</text>
+
+  <!-- Bottom FinOps Comparison Panel -->
+  <rect x="40" y="472" width="1120" height="178" rx="12" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="60" y="500" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261111-R33-ECX-MULTIMODAL · 16 Engineers + 100k Multimodal Searches/Mo)</text>
+  <text x="60" y="520" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">Synthetic benchmark model ($85/hr senior AI engineer rate; image CDN storage &amp; mobile phone plans: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="60" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#EF4444"/>
+  <text x="76" y="556" fill="#FCA5A5" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path A: Split Agents + Online VLM Caption</text>
+  <text x="76" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">VLM/Context Tokens: $1,720.00 | Labor (46.0h): $3,910.00</text>
+  <text x="76" y="600" fill="#F87171" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $5,630.00 / mo</text>
+  <text x="76" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Re-explains context across CLIs; slow VLM JSON captioning per query</text>
+
+  <!-- Path B -->
+  <rect x="425" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="441" y="556" fill="#FCD34D" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path B: Manual Sync + Base Zero-Shot CLIP</text>
+  <text x="441" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">Compute/Tokens: $780.00 | Labor (25.0h): $2,125.00</text>
+  <text x="441" y="600" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $2,905.00 / mo (-48.40%)</text>
+  <text x="441" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">31.85% base Image-to-Image F1; broken hook guards &amp; dead MCPs</text>
+
+  <!-- Path C -->
+  <rect x="790" y="534" width="350" height="98" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="2"/>
+  <text x="806" y="556" fill="#6EE7B7" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path C: ECX + EmbeddingGemma 2 InfoNCE</text>
+  <text x="806" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">768-d Vector+Sync: $250.00 | Labor (5.0h): $425.00</text>
+  <text x="806" y="600" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $675.00 / mo (Saves $4,955.00 · -88.01%)</text>
+  <text x="806" y="618" fill="#A7F3D0" font-family="Inter, system-ui, sans-serif" font-size="11">$59,460.00/yr saved · -89.13% eng hours · 88.84% / 83.40% F1</text>
+</svg>

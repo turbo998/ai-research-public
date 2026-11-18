@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR25" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentR25" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR25)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="6" fill="url(#accentR25)" rx="3"/>
+
+  <!-- Header -->
+  <text x="40" y="58" fill="#22D3EE" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">2026-11-11 NIGHT SHIFT · ROUND 25 (CUMULATIVE R70) · NATIVE GO SSH/VNC MCP &amp; CLOUD IPHONE/ANDROID MCP</text>
+  <text x="40" y="90" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800">t8y2/motty (Go Viva SSH/SFTP/VNC/MCP) + phone-harness/mcp (Real Cloud iPhone &amp; Android)</text>
+  <text x="40" y="115" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="14">Zero-WebView Native GPU Terminal + Pre-LLM Secret Redaction &amp; motty mcp-serve + 14-Tool mobile-mcp Bridge (-83.22% Cost)</text>
+
+  <!-- Left Panel: t8y2/motty -->
+  <rect x="40" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="56" y="152" width="215" height="24" rx="6" fill="#083344"/>
+  <text x="66" y="169" fill="#67E8F9" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">GO 1.26+ VIVA UI · NO WEBVIEW</text>
+  <text x="282" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">t8y2/motty (945★ · SSH/SFTP/VNC/MCP)</text>
+
+  <rect x="56" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="208" fill="#22D3EE" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Unified Native Window: PTY, Staged Sudo SFTP &amp; VNC/RDP</text>
+  <text x="70" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• DECSET 2026 atomic redraws, Kitty keyboard, WSL \\wsl.localhost sync</text>
+  <text x="70" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Atomic staged SFTP with sudo toggle + SSH-tunneled VNC (RA2) &amp; RDP (NLA)</text>
+
+  <rect x="56" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="296" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. Pre-LLM Terminal Secret Redaction &amp; AES-256-GCM Vault</text>
+  <text x="70" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Scrubs key files, env assignments, URL credentials &amp; tokens before LLM</text>
+  <text x="70" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• HLC + 90-day tombstone .mottybak sync (WebDAV / S3 / GitHub Gist)</text>
+
+  <rect x="56" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="70" y="384" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Dual MCP Surface: Windowed HTTP &amp; Headless motty mcp-serve</text>
+  <text x="70" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• motty mcp-serve runs headless over stdio with explicit per-host allowlist</text>
+  <text x="70" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Unauthorized SSH hosts are strictly omitted from list_hosts &amp; list_sessions</text>
+
+  <!-- Right Panel: phone-harness/mcp -->
+  <rect x="615" y="136" width="545" height="320" rx="12" fill="#111827" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="631" y="152" width="215" height="24" rx="6" fill="#4C1D95"/>
+  <text x="641" y="169" fill="#C4B5FD" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">CLOUD IPHONE + ANDROID · MIT</text>
+  <text x="858" y="169" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">phone-harness/mcp (785★ · mobile-mcp)</text>
+
+  <rect x="631" y="188" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="208" fill="#A78BFA" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">1. Zero-Setup Streamable HTTP &amp; Stdio Mobile Device Bridge</text>
+  <text x="645" y="228" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• https://mcp.phone-harness.com/mcp (OAuth phone:drive or Bearer pck_...)</text>
+  <text x="645" y="246" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Works in Claude, Cursor, Codex, ChatGPT, VS Code, Devin, Gemini CLI &amp; Copilot</text>
+
+  <rect x="631" y="276" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="296" fill="#38BDF8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">2. 14 Standardized mobile-mcp Tools &amp; Coordinate Mapping</text>
+  <text x="645" y="316" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• phone_list_elements_on_screen: Android A11y tree + iPhone OCR tap centers</text>
+  <text x="645" y="334" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• phone_take_screenshot (max_size 1024) includes image-to-screen coord header</text>
+
+  <rect x="631" y="364" width="513" height="78" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="645" y="384" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">3. Transparent Unit Economics ($0.05/min Android · $80/mo iPhone)</text>
+  <text x="645" y="404" fill="#CBD5E1" font-family="Inter, system-ui, sans-serif" font-size="12">• Cloud Android: $0 start + $0.05/min (phone_stop_device halts billing)</text>
+  <text x="645" y="422" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">• Dedicated Cloud iPhone: $80/mo flat ($64/mo annual; $100/mo with eSIM)</text>
+
+  <!-- Bottom FinOps Comparison Panel -->
+  <rect x="40" y="472" width="1120" height="178" rx="12" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="60" y="500" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="800">CLOSED-FORM FINOPS AUDIT (CLAIM-20261111-R25-MOTTY-PHONEHARNESS · 60 SSH Hosts + 6,000 Mobile Test Mins/Mo)</text>
+  <text x="60" y="520" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="12">Synthetic benchmark model ($85/hr senior SRE/mobile QA rate; production cloud server bills &amp; Apple Dev fees: not_measured)</text>
+
+  <!-- Path A -->
+  <rect x="60" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#EF4444"/>
+  <text x="76" y="556" fill="#FCA5A5" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path A: Enterprise Farm + Raw SSH Scripts</text>
+  <text x="76" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">Farm/Tokens: $2,160.00 | Labor (44.0h): $3,740.00</text>
+  <text x="76" y="600" fill="#F87171" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $5,900.00 / mo</text>
+  <text x="76" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">$1,650/mo device farm; unredacted terminal token leaks</text>
+
+  <!-- Path B -->
+  <rect x="425" y="534" width="345" height="98" rx="8" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="441" y="556" fill="#FCD34D" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path B: Local USB Phone Lab + Electron SSH</text>
+  <text x="441" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">Lab/Tokens: $920.00 | Labor (26.0h): $2,210.00</text>
+  <text x="441" y="600" fill="#FBBF24" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $3,130.00 / mo (-46.95%)</text>
+  <text x="441" y="618" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="11">Frozen USB/adb cables; no headless host-allowlisted SSH MCP</text>
+
+  <!-- Path C -->
+  <rect x="790" y="534" width="350" height="98" rx="8" fill="#064E3B" stroke="#10B981" stroke-width="2"/>
+  <text x="806" y="556" fill="#6EE7B7" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Path C: t8y2/motty + phone-harness/mcp</text>
+  <text x="806" y="576" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="12">2x iPhone + 4k Android + LLM: $480.00 | Labor (6.0h): $510.00</text>
+  <text x="806" y="600" fill="#34D399" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800">Total: $990.00 / mo (Saves $4,910.00 · -83.22%)</text>
+  <text x="806" y="618" fill="#A7F3D0" font-family="Inter, system-ui, sans-serif" font-size="11">$58,920.00/yr saved · -86.36% SRE/QA hours · Secret-redacted</text>
+</svg>

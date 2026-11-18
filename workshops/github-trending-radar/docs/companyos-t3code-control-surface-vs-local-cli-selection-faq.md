@@ -1,7 +1,7 @@
 # 企业级云原生多人 Agent 操作系统与跨端远程控制面选型常见问题解答：`kortix-ai/CompanyOS` + `pingdotgg/t3code` vs 单机本地 CLI 会话 & 24/7 常驻云主机
 
 > **English Edition**: [companyos-t3code-control-surface-vs-local-cli-selection-faq.en.md](companyos-t3code-control-surface-vs-local-cli-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![kortix-ai/CompanyOS 云原生多人 Agent OS + pingdotgg/t3code 跨端远程控制面选型对比图](../../../assets/github-ai-radar-2026-11-09-r9-companyos-t3code.svg)
 

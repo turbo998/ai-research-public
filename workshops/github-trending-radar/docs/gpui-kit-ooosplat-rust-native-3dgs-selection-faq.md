@@ -1,7 +1,7 @@
 # Rust GPU 原生桌面组件库与本地 3D 高斯泼溅重建选型常见问题解答：`longbridge/gpui-kit` + `ooolabdev/ooosplat` vs Electron 内存膨胀 & 云端 3D 重建 SaaS
 
 > **English Edition**: [gpui-kit-ooosplat-rust-native-3dgs-selection-faq.en.md](gpui-kit-ooosplat-rust-native-3dgs-selection-faq.en.md)  
-> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-09 GitHub AI 最热榜单与情报摘要](../daily/2026-11-09.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![longbridge/gpui-kit 120FPS Rust GPUI + ooolabdev/ooosplat 本地 3DGS 重建选型对比图](../../../assets/github-ai-radar-2026-11-09-r12-gpui-kit-ooosplat.svg)
 

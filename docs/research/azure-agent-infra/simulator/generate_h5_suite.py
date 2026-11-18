@@ -2700,17 +2700,28 @@ function runFinopsLab() {{
 
 def main() -> int:
     bundle_dir = Path(__file__).resolve().parent.parent
+    h5_dir = bundle_dir / "h5"
+    h5_assets_dir = h5_dir / "assets"
+    h5_assets_dir.mkdir(parents=True, exist_ok=True)
 
-    (bundle_dir / "index.html").write_text(build_index_html(), encoding="utf-8")
-    (bundle_dir / "demo.html").write_text(build_demo_html(), encoding="utf-8")
-    (bundle_dir / "selector.html").write_text(build_selector_html(), encoding="utf-8")
+    # Copy all 8 validated SVGs into h5/assets/
+    for svg_path in (bundle_dir / "assets").glob("*.svg"):
+        shutil.copy2(svg_path, h5_assets_dir / svg_path.name)
 
-    # Verify all HTML files exist and are non-empty
+    (h5_dir / "index.html").write_text(build_index_html(), encoding="utf-8")
+    (h5_dir / "demo.html").write_text(build_demo_html(), encoding="utf-8")
+    (h5_dir / "selector.html").write_text(build_selector_html(), encoding="utf-8")
+
+    # Copy CSP-locked 7-card HTML as cards.html and benchmark-cards.html
+    shutil.copy2(bundle_dir / "test-report-cards.html", h5_dir / "cards.html")
+    shutil.copy2(bundle_dir / "test-report-cards.html", h5_dir / "benchmark-cards.html")
+
+    # Verify all 5 HTML files exist and are non-empty
     for name in ("index.html", "demo.html", "selector.html", "cards.html", "benchmark-cards.html"):
-        p = bundle_dir / name
+        p = h5_dir / name
         assert p.exists() and p.stat().st_size > 5000, f"Invalid H5 file: {p}"
 
-    print("OK: generated root {index.html, demo.html, selector.html, cards.html, benchmark-cards.html}")
+    print("OK: generated h5/{index.html, demo.html, selector.html, cards.html, benchmark-cards.html} + 8 SVG assets")
     return 0
 
 

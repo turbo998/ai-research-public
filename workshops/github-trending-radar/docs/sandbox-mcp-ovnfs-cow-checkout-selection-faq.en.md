@@ -1,7 +1,7 @@
 # Disposable Windows 11 Agent Sandboxes & Zero-Copy CoW Folder Checkouts Selection FAQ: `shanselman/sandbox-mcp` (`v1.2.0`) + `stencil-hq/ovnfs` (`v0.2.3`) vs. Host Execution & Full-Copy `git worktree`
 
 > **中文版**: [sandbox-mcp-ovnfs-cow-checkout-selection-faq.md](sandbox-mcp-ovnfs-cow-checkout-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![shanselman/sandbox-mcp & stencil-hq/ovnfs Architecture Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r8-sandbox-ovnfs.svg)
 

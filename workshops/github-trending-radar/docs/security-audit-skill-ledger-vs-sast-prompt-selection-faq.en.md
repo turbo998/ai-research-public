@@ -1,7 +1,7 @@
 # Multi-Phase Agent Security Audit Selection FAQ: `cloudflare/security-audit-skill` (6-Phase Coverage Ledger + Adversarial Disproval Subagents + 3-State Verdicts) vs. Static SAST vs. Single-Prompt Code Review
 
 > **中文版 (Chinese Edition)**: [security-audit-skill-ledger-vs-sast-prompt-selection-faq.md](security-audit-skill-ledger-vs-sast-prompt-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![cloudflare/security-audit-skill 6-Phase Coverage Ledger & Disproval Verifier Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r3-security-audit-skill.svg)
 

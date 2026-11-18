@@ -1,49 +1,50 @@
-# Agent 逆向工程 (`morluto/rea`)、机械解剖学 (`anatomy`) 与商业化 Skills 生态研究及互动 H5 套件
+# Agent Skills 工程化四级光谱（L1–L4）、门控架构与 AST 逆向引擎 (`morluto/rea`) 深度研究
 
-本专题收录了针对三大前沿 Agent Skills 与工具链的深度研究报告及 **2 套可离线交互的 H5 演示系统**：
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文版 (README.zh-CN.md)](./README.zh-CN.md)** | **[🇬🇧 English (README.en.md)](./README.en.md)**
 
-1. **任务一 · 机械解剖学 (`wheresryan22/anatomy`) 互动 H5 演示 (V3.4 整车深度强化版)**：**美嘉欣（MJX）Hyper Go 14303（1/14 全时四驱无刷拉力/漂移遥控车）整车 12 总成机械原理互动解剖台**（涵盖宽体拉力车壳/前机盖隐藏式快拆锁扣/尾翼端板减阻百叶腮孔/前机盖导流百叶叶片/天鹅颈尾翼顶置支架/四轮铆接宽体轮眉/车门防滚安全窗网/B柱刹车通风进气口/前机盖四联拉力射灯/双层尾翼/尾翼 Gurney 襟翼/中央空气动力学背鳍/车顶 FIA 双安全逃生天窗/后保险杠侧风刀/后窗散热百叶窗/侧裙气动刀锋/车顶四联探照灯排/FIA 防滚架/前挡双雨刮/车顶 GPS 遥测天线/NACA 进气口/快拆R扣、CNC 二楼板防倾杆铝合金夹块与球头竖拉杆、转向双摇臂顶部 CNC 强化桥板、外置气瓶不锈钢编织高压油管、中央主轴黄铜动平衡配重环、转向节刹车散热导风槽、轮毂黄铜气门嘴、G3C 接收机对频按键与三通道镀金排针母座、前后摆臂铝合金悬挂销座、电机 NTC 温控传感器排线、电池双压电蜂鸣低压报警器、前后底盘不锈钢防擦护板+尾部中置 FIA 雨雾爆闪灯、舵机缓冲器螺旋预紧弹簧与滚花调节环、避震塔顶倾角连杆多孔调节板、电调超级电容汇流母排与电池压板滚花手拧螺母、2845 无刷电机镀金 4.0mm 三相香蕉头接线柱与后盖进角端盖、下摆臂下止点调节螺钉座、刹车卡钳液压放气嘴、舵机 CNC 铝合金摆臂与转向拉杆正反牙调节螺母、轮胎侧壁放射纹标识环、油压避震外置背负式气瓶、中央传动轴高速支撑轴承座、电调防水开关与接收机信号线束、前置中冷器散热芯、前铲不锈钢拉杆、差速器硬化接杯、风扇防卷护网、CNC 转向节 C 座与黄铜主销、主齿限滑预紧螺母、双出钛合金排气尾管/后轮挡泥板/前后赛事拖车钩、6 辐轮毂+打孔刹车盘+卡钳、行星差速齿轮、四滚筒测功机、19 套高饱和阳极氧化涂装、17 大动态工况演示与 60Hz 四通道实时示波器，深浅双版本均通过 `kit/audit.mjs` 91 状态 0 穿模审计）。
-2. **任务二 · 独立创作者商业化闭环研究**：**Ryan Doser (`@RyanDoserAI`) 的 Claude Code Skills 覆盖范围（8 大类 60+ 技能）、技术深度（`anti-slop.md` 源码级拆解 + 4 子智能体质量门控）与 6 阶价值变现漏斗（$47 → $99 → $199 → $600 咨询 → $100K+ 代运营）**。
-3. **任务三 · `morluto/rea` 逆向工程 Demo 与小游戏复刻 (V3.4 全档案热补丁实验台)**：基于已 Fork 的 [`turbo998/rea`](https://github.com/turbo998/rea)（`v6.4.0`），对 **《废土斗机祭 (Scrap Swarm)》** 生产构建包执行静态语义分析与密码学证据生成，并完整复刻 **实战竞技场（含推进残影冲刺、蒸汽超载热能新星冲击波 `THERMAL NOVA -28`、避难所 EMP 磁暴波、灰烬信标纳米维修光束、自爆裂爪虫亡语连锁殉爆波 `VOLATILE BURST!`、铁砧重锤机近身震地冲击波 `ANVIL SLAM!`、32mm 黄铜弹壳抛射物理、铁冠领主 Boss 六向环形等离子齐射弹幕、浮游电弧台远程弹幕与旋转磁盾偏折电磁反击脉冲 `SHIELD DEFLECT` + `COUNTER -22`、震荡铁锤 AoE 冲击波、串联电弧闪电链、磁吸废铁结晶牵引光束、浮动暴击伤害跳字） + 五机甲整备库 (5 Units × 4 Poses + X-Ray 内部骨架透视) + 五章战役剧情与矢量立绘特写横幅 + 17 模块 REA AST 对照与 12 项运行时内存热补丁工作台 + 实时脉动 `ev_<sha256>` 证据台账 + 10 音效 Web Audio 双振荡器测试台**。
+## 架构师执行摘要（SA Executive Summary）
+
+企业在规模化构建 Claude Code / GitHub Copilot 自定义技能库（`SKILL.md`）时，最常见的反模式是将海量规则塞入单一提示词，导致上下文注意力稀释与输出质量失控。本专题从 **Enterprise Cloud & AI Solution Architect** 视角，提出并实证拆解了 **Agent Skill 工程化四级演进光谱（L1 → L4）**：
+
+1. **L2 · 声明式 SOP 与 Critic 子智能体门控（Ryan Doser Skills 体系）**：拆解 8 大垂直领域 60+ Skills 的渐进式披露（Progressive Disclosure）契约、`anti-slop.md` 反套话确定性规则与 **4-Agent Critic Gatekeeper** 验收机制，可直接迁移至企业架构设计文档（SAD/ADR）与招投标方案自动审校管线。
+2. **L3 · 声明式规范 + 零依赖确定性校验引擎（`wheresryan22/anatomy` 模式）**：剖析如何通过轻量级纯代码校验器（`15.9K LOC` ES Module + `audit.mjs` 三维光线投射无冲突验证）接管大模型不擅长的精确几何/拓扑约束，实现生成产物的确定性门禁（`0 collision / 0 broken invariants`）。
+3. **L4 · AST 语义解析与密码学证据链 MCP 引擎（`morluto/rea` v6.4.0）**：基于四层 DDD 架构与 64 项 CLI/MCP 工具链，对混淆生产前端包（`1.28 MB`）执行惰性 AST 语义还原与 `ev_<sha256>` 密码学证据封存，适用于**企业遗留系统现代化重构（Legacy Modernization）**与前端资产审计。
 
 ---
 
-## 目录与交付物导航
+## 一、 🌐 在线交互式 H5 工作台（GitHub Pages）
 
-### 一、 🌐 已发布公开访问的在线交互式 H5 页面（GitHub Pages，可直接发给外部客户演示）
-
-| 在线演示项目 | 适用任务 | 公开访问 URL (GitHub Pages) | 仓库源码入口 |
+| 交互式交付物 | 架构定位 | 公开访问 URL (GitHub Pages) | 仓库源码入口 |
 |---|---|---|---|
-| **🏠 专题总览门户 (Showcase Portal)** | 三大任务统一导航页 | **[👉 立即打开在线总门户](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/)** | [`index.html`](index.html) |
-| **🏎️ 美嘉欣 MJX 14303 四驱底盘机械解剖台（深色版）** | 任务 1 (`anatomy` 客户演示) | **[👉 立即打开深色蓝图版 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/mjx-14303-anatomy/)** | [`h5/mjx-14303-anatomy/mjx-14303-chassis.html`](h5/mjx-14303-anatomy/mjx-14303-chassis.html) |
-| **☀️ 美嘉欣 MJX 14303 四驱底盘机械解剖台（浅色版）** | 任务 1 (`anatomy` 出版物版) | **[👉 立即打开浅色出版物版 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/mjx-14303-anatomy/mjx-14303-chassis-light.html)** | [`h5/mjx-14303-anatomy/mjx-14303-chassis-light.html`](h5/mjx-14303-anatomy/mjx-14303-chassis-light.html) |
-| **📊 Ryan Doser Skill 生态与 6 阶变现可视化报告** | 任务 2 (可视化交互报告 H5) | **[👉 立即打开可视化研究报告 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/ryan-doser-skills-report/)** | [`h5/ryan-doser-skills-report/index.html`](h5/ryan-doser-skills-report/index.html) |
-| **🎮 《废土斗机祭 (Scrap Swarm)》REA 逆向复刻可玩版** | 任务 3 (`rea` 1:1 可玩复刻) | **[👉 立即在线试玩复刻版 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/rea-scrap-swarm-clone/)** | [`h5/rea-scrap-swarm-clone/index.html`](h5/rea-scrap-swarm-clone/index.html) |
+| **🏠 专题统一导航门户 (Showcase Portal)** | L1–L4 技能工程化总览入口 | **[👉 打开在线门户](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/)** | [`index.html`](index.html) |
+| **📊 Ryan Doser Skill 架构与门控可视化报告** | L2 声明式 SOP + 4-Agent Critic 门控 | **[👉 打开可视化报告 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/ryan-doser-skills-report/)** | [`h5/ryan-doser-skills-report/index.html`](h5/ryan-doser-skills-report/index.html) |
+| **🔍 REA AST 语义还原与运行时热补丁工作台** | L4 AST 逆向引擎 + `ev_<sha256>` 证据台账 | **[👉 打开 AST 还原实验台 H5](https://turbo998.github.io/ai-research-public/docs/research/agent-skills-and-rea/h5/rea-scrap-swarm-clone/)** | [`h5/rea-scrap-swarm-clone/index.html`](h5/rea-scrap-swarm-clone/index.html) |
 
-### 二、 📐 专题配套高清矢量架构图（SVG Visual Atlas）
+---
+
+## 二、 📐 高清矢量架构图（SVG Visual Atlas）
 
 - [图 1：Ryan Doser 8 大垂直领域 Skills 矩阵与 4-Agent 质量门控架构图](assets/01-ryan-doser-8category-skill-architecture.svg)
-- [图 2：Ryan Doser “卖铲子撬动包工程” 6 阶价值变现漏斗与营收结构图](assets/02-ryan-doser-6tier-monetization-funnel.svg)
-- [图 3：AI Agent Skill 工程化演进四级光谱 (L1 提示词 → L2 Ryan Doser → L3 `anatomy` → L4 `rea`)](assets/03-agent-skill-l1-to-l4-depth-spectrum.svg)
-
-### 三、 深度研究报告与密码学证据链
-
-| 文档 / 数据资产 | 对应主题 | 核心内容摘要 |
-|---|---|---|
-| [`findings/01-morluto-rea-architecture.md`](findings/01-morluto-rea-architecture.md) | `morluto/rea` 架构与 H5 逆向实录 | 解析 REA v6.4.0 的四层 DDD 架构、64 项 CLI/MCP 能力、惰性 AST 语义分析器，以及对 `index-BCy1aADK.js`（1.28 MB）的逆向还原全过程 |
-| [`findings/02-ryan-doser-skill-business.md`](findings/02-ryan-doser-skill-business.md) | Ryan Doser 技能生态与商业化拆解 | 梳理 8 大模块 60+ Skills 覆盖矩阵、拆解 `anti-slop.md` 真实源码与 4 层 Critic 子智能体门控，对比 L2 声明式 SOP 与 L4 确定性引擎型 Skill，还原 6 阶变现飞轮 |
-| [`findings/03-anatomy-mechanical-skill.md`](findings/03-anatomy-mechanical-skill.md) | `wheresryan22/anatomy` 原理与 MJX 14303 建模 | 详解 `iso-kit.mjs` / `lathe.mjs` / `tube.mjs` / `audit.mjs` 引擎机制、MJX 14303 实车参数映射，以及 `8,864` 对空间重叠零冲突的 3D 审计过程 |
-| [`evidence/rea-evidence-ledger.json`](evidence/rea-evidence-ledger.json) | REA `ev_<sha256>` 密码学证据台账 | 由 `rea@6.4.0` 的 `createEvidence` / `parseEvidence` 生成并校验的 6 条子系统逆向证据链与 AST/语义统计数据 |
-| [`h5/mjx-14303-anatomy/build.mjs`](h5/mjx-14303-anatomy/build.mjs) | MJX 14303 等轴测生成脚本 | 基于 `wheresryan22/anatomy` 编写的参数化构建与光线投射审计源码 |
+- [图 2：Agent Skill 价值封装与 6 阶产品化商业飞轮图](assets/02-ryan-doser-6tier-monetization-funnel.svg)
+- [图 3：AI Agent Skill 工程化演进四级光谱 (L1 裸提示词 → L2 SOP 门控 → L3 确定性校验器 → L4 AST/MCP 引擎)](assets/03-agent-skill-l1-to-l4-depth-spectrum.svg)
 
 ---
 
-## 三、 关联 GitHub 仓库汇总
+## 三、 深度研究报告与密码学证据链
 
-- **REA 个人 Fork 仓库**：[`https://github.com/turbo998/rea`](https://github.com/turbo998/rea)（Fork 自 [`morluto/rea`](https://github.com/morluto/rea)）
-- **被逆向 H5 游戏线上部署库**：[`https://github.com/turbo998/ai-gaming-lab`](https://github.com/turbo998/ai-gaming-lab)（`public/demos/scrap-swarm/`）
-- **被逆向 H5 游戏源码对照库**：[`https://github.com/turbo998/scrap-swarm`](https://github.com/turbo998/scrap-swarm)
-- **机械解剖学上游 Skill 库**：[`https://github.com/wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy)
-- **Ryan Doser 官方站点矩阵**：[`ryandoser.com`](https://ryandoser.com/) · [`skills.ryandoser.com`](https://skills.ryandoser.com/) · [`engine.ryandoser.com`](https://engine.ryandoser.com/) · [`seo.ryandoser.com`](https://seo.ryandoser.com/)
+| 文档 / 数据资产 | 架构维度 | SA 核心收获 |
+|---|---|---|
+| [`findings/01-morluto-rea-architecture.md`](findings/01-morluto-rea-architecture.md) | **L4 · AST 逆向与 MCP 引擎** | 解析 `rea@6.4.0` 四层 DDD 架构、64 项 CLI/MCP 能力、惰性 AST 语义分析器，以及生产级混淆 JS 包（`1.28 MB`）17 模块结构化还原方法论 |
+| [`findings/02-ryan-doser-skill-business.md`](findings/02-ryan-doser-skill-business.md) | **L2 · 声明式门控与商业闭环** | 拆解 60+ Skills 输入/输出契约、`anti-slop.md` 硬规则与 4 层独立 Critic 子智能体门禁，提炼企业级文档与方案生成防幻觉标准 |
+| [`findings/03-anatomy-mechanical-skill.md`](findings/03-anatomy-mechanical-skill.md) | **L3 · 确定性几何/拓扑校验器** | 剖析 `SKILL.md` 声明式意图层与 `audit.mjs` 确定性校验器分工模式：如何让代码验证器替代人工肉眼排查拓扑与遮挡错误 |
+| [`evidence/rea-evidence-ledger.json`](evidence/rea-evidence-ledger.json) | **可验证密码学证据台账** | 由 `rea@6.4.0` `createEvidence` / `parseEvidence` 生成并校验的 6 条子系统 `ev_<sha256>` 证据链与 AST 统计元数据 |
 
-[返回研究索引](../index.md) · [返回仓库首页](../../../README.md)
+---
+
+## 四、 关联上游与参考仓库
+
+- **REA 架构研究 Fork**：[`https://github.com/turbo998/rea`](https://github.com/turbo998/rea)（上游 [`morluto/rea`](https://github.com/morluto/rea)，MIT License）
+- **确定性 SVG 构建与校验引擎参考**：[`https://github.com/wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy)
+- **AST 还原基准测试目标仓库（自有开源项目）**：[`https://github.com/turbo998/scrap-swarm`](https://github.com/turbo998/scrap-swarm)
+
+[返回研究索引](../index.md) · [English Index](../index.en.md) · [返回仓库首页](../../../README.md)

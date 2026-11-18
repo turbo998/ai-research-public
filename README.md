@@ -1,78 +1,80 @@
-# AI Infra Lab (`turbo998/ai-infra-lab`) · 中英双语版 (Bilingual Edition)
+# AI Research Hub (`turbo998/ai-research-public`) · 企业级云与 AI 解决方案架构师研究总库
 
-> 🌐 **Language / 语言版本切换**: **[🇨🇳 中文主页 (README.md)](README.md)** | **[🇬🇧 English Homepage (README.en.md)](README.en.md)** | **[📘 Azure Agent Infra Playbook (中文)](workshops/azure-agent-infra/README.md)** | **[📘 Azure Agent Infra Playbook (English)](workshops/azure-agent-infra/README.en.md)**
+> 🌐 **Language / 语言切换**: **[🇨🇳 中文主页 (README.md)](README.md)** | **[🇬🇧 English Homepage (README.en.md)](README.en.md)** · **[📑 研究专题总索引 (中文)](docs/research/index.md)** | **[📑 Research Index (EN)](docs/research/index.en.md)** · **[🏠 个人主页 (`turbo998.github.io`)](https://turbo998.github.io/)**
 
-> **📌 Executive Overview Summary / 核心架构总览**
-> - **Azure AI Agent Infra 全栈参考架构与 100K 沙箱压测 (`AKSClaw × E2B`)**：定义 6 层生产级智能体工程栈（`Build · Run · Ground · Govern`），基于第五代 AMD EPYC Turin (`Standard_D96as_v7`) 实测 **Firecracker MicroVM `80 ms` 冷启动 / `108 ms` UFFD 快照恢复**（对比 Kata Pod VM `1,420 ms` 冷启动），单集群 **261 台 Client 节点稳态承载 100,000 并发沙箱**（优化后月度 TCO **`~$148K/mo`**，结合 Nomad 心跳监控与优雅 Drain 实现 `99.4%+` 会话存活率），配套运行时与存储选型矩阵（ACA Dynamic Sessions vs AKS+Kata vs E2B vs Daytona；Azure Files NFS v4.1 vs Managed Lustre vs Blob FUSE2）及 **316 章半导体/AI Factory 与智能体工程百科**（[`workshops/azure-agent-infra/docs/full-monograph-archive.md`](workshops/azure-agent-infra/docs/full-monograph-archive.md)）。
-> - **阿里云“通-云-哥”（通义大模型 × 阿里云 AI Infra × 平头哥芯片）全栈工程体系**：覆盖平头哥真武 PPU 四代演进、磐久 AL128 超节点五芯自研通路、HPN 7.0 双平面网络、PAI 灵骏潮汐调度与百炼 Serverless 算力选型矩阵。
+面向 **Enterprise Cloud & AI Solution Architect (SA)** 的公开架构选型、基准评测与技术情报总库。所有专题遵循三大工程准则：
+1. **架构选型导向（Decision-First）**：聚焦真实客户落地中的双难抉择（算力与沙箱隔离、多模型路由、多智能体编排、零信任安全护栏与 Token FinOps），提供量化边界与生产级 IaC 蓝图。
+2. **密封证据与 7-Card 基准规范（Evidence-Backed）**：模型与框架横评统一配备 **7-Card 4:5 视觉评测卡**、确定性验证脚本及数据溯源分级（`measured` / `anonymized_reported` / `synthetic`）。
+3. **中英双语同步（Bilingual by Default）**：核心专题、62 篇 Azure 企业级选型指南与每日 GitHub AI 趋势雷达均提供中英双语对照。
 
-### 核心架构图谱速览（Core Agent Infra Reference Visuals）
-
-![Azure AI Agent Infra 六层全栈参考架构图](workshops/azure-agent-infra/assets/svg/01-six-layer-architecture.svg)
-
-![100K 并发沙箱生产拓扑与五步落地工作流](workshops/azure-agent-infra/assets/svg/08-100k-sandbox-topology.svg)
-
-面向 **AI Infra 架构师** 的云厂商与智算基础设施全栈技术深度测评与可视化图谱仓库，覆盖 **AI 算力芯片（GPU / PPU / ASIC / CPU / Switch / SmartNIC / SSD 主控）**、**超节点与 Scale-Up/Scale-Out 智算网络（RDMA / RoCE / CXL / ICN）**、**异构算力调度平台**、**云原生分布式训推平台** 与 **企业级 MaaS / AI Agent 运行时与安全沙箱基础设施（Azure AI Agent Infra）**。
+![AI Research Ecosystem Map · 五大支柱全栈 AI 工程研究全景图](assets/svg/research-ecosystem-map.svg)
 
 ---
 
-## 📚 深度测评报告目录（Research & Architecture Evaluations · Bilingual EN/中文）
+## 🚀 架构师高频快捷入口（SA Quick Launchpad）
 
-| 专题报告 | 核心覆盖范围 | 可视化图表 (`SVG` + `H5` + `7-Card`) | 证据台账 | 审校记录 | 更新日期 |
-|---|---|---|---|---|---|
-| **[Azure AI Agent Infra 全栈方案设计、技术选型与架构师 Playbook (中文)](workshops/azure-agent-infra/README.md)** · **[English Edition](workshops/azure-agent-infra/README.en.md)** | **L1–L6 全栈参考架构**（MAF · GitHub Copilot SDK · LangGraph · OpenClaw · Hermes · MCP/A2A）· **六大运行时光谱**（Foundry Hosted Agents · Durable Functions · ACA Dynamic Sessions · ACA Sandboxes Preview · AKS + Kata `AKSClaw` · E2B on Azure VMSS `D96as_v7` `80ms/108ms`）· **状态与存储底座**（Azure Files NFS v4.1 + Managed Lustre + Blob FUSE2 + HorizonDB + Firecracker UFFD/NBD Snapshot）· **零信任控制面**（Entra Agent ID · Unified AI Gateway · 169.254.169.254 IMDS 封禁 · 5 道平台硬边界）· **316 章行业物理模型、309 套 IaC 蓝图与 308 项交互式测算器（317/317 单测全绿）** | 8 张高清矢量架构图 + [7-Card 基准报告 (中文)](workshops/azure-agent-infra/test-report.md) / [English](workshops/azure-agent-infra/test-report.en.md) + [4 页交互式双语 H5 套件](workshops/azure-agent-infra/index.html) + [316章完整归档](workshops/azure-agent-infra/docs/full-monograph-archive.md) + [可运行 Demo](workshops/azure-agent-infra/demo/run_live_demo.py) | [`evidence.json`](workshops/azure-agent-infra/evidence.json)（5 份核心工程资产 + 官方信源） | [`review.md`](workshops/azure-agent-infra/review.md) | 2026-10-28 |
-| **[阿里云 AI Infra 全栈架构深度测评报告](docs/alibaba-cloud-ai-infra/README.md)** | **L0 平头哥芯片**（含光 800、真武 810E / M890 / V900 / J900、倚天 710/750、ICN Switch 1.0、磐脉 920、镇岳 510）· **L1 智算底座与网络**（磐久 AL128 超节点、CIPU、HPN 7.0 双上联×多轨×双平面、Solar-RDMA、eRDMA、ACCL、CPFS）· **L1.5 灵骏智算**（`hz` 亲和性调度、双平面网卡）· **L2 人工智能平台 PAI（“Pi平台”）**（DSW / DLC AIMaster+EasyCKPT / EAS Prefix-Cache 路由+EP/PD 分离 / 父子配额潮汐抢占）· **L3 百炼平台（Model Studio）**（Token / PTU / DTU / MU 四大算力阶梯与后训练流水线） | 6 张高清矢量架构图 + 2 幅交互式 Mermaid 决策图 | [`evidence.json`](docs/alibaba-cloud-ai-infra/evidence.json)（21 篇一手信源） | [`review.md`](docs/alibaba-cloud-ai-infra/review.md) | 2026-10-14 |
-
----
-
-## 📊 Azure AI Agent Infra 核心可视化图谱速览（Visual Atlas）
-
-- **核心技术资产入口（中英双语 / Bilingual）**：[Playbook 中文版 (`README.md`)](workshops/azure-agent-infra/README.md) · [English Playbook (`README.en.md`)](workshops/azure-agent-infra/README.en.md) · [316章完整百科归档 (`docs/full-monograph-archive.md`)](workshops/azure-agent-infra/docs/full-monograph-archive.md) · [7-Card 4:5 基准评测报告 (中文)](workshops/azure-agent-infra/test-report.md) · [7-Card Benchmark Report (EN)](workshops/azure-agent-infra/test-report.en.md) · [Cycle #414 卡组 (`benchmark-cards.html`)](workshops/azure-agent-infra/benchmark-cards.html) · [Cycle #414 English Deck (`benchmark-cards.en.html`)](workshops/azure-agent-infra/benchmark-cards.en.html) · [Cycle #414 工作台 (`workbench-cycle-414.html`)](workshops/azure-agent-infra/workbench-cycle-414.html) · [Cycle #414 日报](workshops/azure-agent-infra/daily-report-2026-11-14.md) · [Agent MCP/A2A 幂等键策略选型 FAQ（中文）](workshops/azure-agent-infra/agent-mcp-a2a-idempotency-key-selection-faq.md) · [Agent MCP/A2A Idempotency Key FAQ (EN)](workshops/azure-agent-infra/agent-mcp-a2a-idempotency-key-selection-faq.en.md) · [交互式 H5 全景手册 (`index.html`)](workshops/azure-agent-infra/index.html) · [AKSClaw × E2B 实时仿真台 (`demo.html`)](workshops/azure-agent-infra/demo.html) · [选型决策与 10万沙箱计算器 (`selector.html`)](workshops/azure-agent-infra/selector.html) · [309 套 IaC 与网关策略蓝图 (`blueprints/`)](workshops/azure-agent-infra/blueprints)
-
-### 1. Azure AI Agent Infra 四层全栈参考架构全景图（Build · Run · Ground · Govern）
-![Azure AI Agent Infra 四层全栈参考架构全景图](docs/azure-agent-infra/assets/01-azure-agent-infra-4layer-panorama.svg)
-
-### 2. Azure 六大 Agent Runtime 责任边界、隔离机制与恢复延迟对比矩阵
-![Azure 六大 Agent Runtime 对比矩阵](docs/azure-agent-infra/assets/02-runtime-spectrum-6tier-matrix.svg)
-
-### 3. AI Agent Infra on Azure 双阶段架构选型决策树与数据底座配对图
-![双阶段架构选型决策树](docs/azure-agent-infra/assets/03-scenario-decision-tree-and-routing.svg)
-
-### 4. AKSClaw 多租户 Kubernetes Agent 平台参考架构（六大支柱与五道平台硬边界）
-![AKSClaw 多租户 Kubernetes Agent 平台参考架构](docs/azure-agent-infra/assets/04-aksclaw-multi-tenant-k8s-architecture.svg)
-
-### 5. E2B on Azure VMSS 生产级参考架构图（Manus × E2B 10万+ 并发云端沙箱底座）
-![E2B on Azure VMSS 生产级参考架构图](docs/azure-agent-infra/assets/05-e2b-on-azure-vmss-reference-architecture.svg)
-
-### 6. Firecracker MicroVM 沙箱内部机理（UFFD + NBD）与 Azure v6/v7 实测启动延迟对比
-![Firecracker MicroVM 内部机理与实测延迟对比](docs/azure-agent-infra/assets/06-e2b-microvm-internals-and-vm-benchmark.svg)
-
-### 7. 多智能体协同工作流（MAF × Copilot SDK × Durable）与状态持久化选型矩阵
-![多智能体协同工作流与状态持久化矩阵](docs/azure-agent-infra/assets/07-multi-agent-workflow-and-state-checkpoint.svg)
-
-### 8. Azure Agent Infra Playbook 六大高优场景、四维资质筛查与五步落地工作流
-![Playbook 六大场景与五步落地工作流](docs/azure-agent-infra/assets/08-field-playbook-5step-execution-flow.svg)
+| 高频工作台 | 适用场景 | 双语直达入口 |
+|---|---|---|
+| **☁️ Azure AI Agent Infra 全栈 Playbook + 62 篇企业选型 FAQ** | Foundry / ACA / AKS / E2B 沙箱选型、PTU vs MaaS 精算、Fabric IQ vs AI Search、APIM AI Gateway、Purview/Defender 护栏 | [中文 Playbook](docs/research/azure-agent-infra/README.md) · [EN](docs/research/azure-agent-infra/README.en.md) · **[62 篇选型指南目录](docs/research/azure-agent-infra/selection-guides/README.md)** ([EN](docs/research/azure-agent-infra/selection-guides/README.en.md)) · [100K 沙箱计算器](docs/research/azure-agent-infra/selector.html) |
+| **📡 GitHub AI 趋势与飙升速度雷达（每日 SA 情报台）** | 基于 `Hype / Facts / Signal` 三轴去噪追踪每日最热 AI 开源仓库，评估 SA 学习价值与 PoC 优先级 | [中文雷达主页](workshops/github-trending-radar/README.md) · [EN](workshops/github-trending-radar/README.en.md) · [最新日报 (`2026-11-17`)](workshops/github-trending-radar/daily/2026-11-17.md) ([EN](workshops/github-trending-radar/daily/2026-11-17.en.md)) · [7-Card](workshops/github-trending-radar/cards.html) |
+| **📊 前沿模型、路由与多智能体 7-Card 基准评测矩阵** | 20 模型长程/网安横评、System-One 路由门控、`MAF v1.0` 六大编排框架对比、`DeepInfer` 推理经济学 | [`Gemini 4 Carbon` 20模型](docs/research/gemini-4-carbon-and-20-model-benchmark/README.md) · [`MAF v1.0` 编排基准](docs/research/maf-multi-agent-benchmark/README.md) · [`Decision-1` 路由横评](docs/research/openai-decisions-vs-decision-1-routing-benchmark/README.md) · [`DeepInfer` 成本账本](ai-infra/reports/2026-11-01/ai-infra-phase167-deepinfer-v41-pd-economics-2026-11-01.md) |
+| **🛡️ 企业级 AI 零信任安全与 Security AI Landing Zone** | Microsoft DEFEND 五层安全阶梯、Purview 敏感标签与 DLP、Agent 365 五大安全支柱与 Frontier SOC | [DEFEND 架构指南](docs/research/defend-partner-playbook/README.md) ([EN](docs/research/defend-partner-playbook/README.en.md)) · [Security AI Landing Zone](docs/research/security-ai-landing-zone/index.zh.md) ([EN](docs/research/security-ai-landing-zone/index.md)) |
 
 ---
 
-## 📊 阿里云 AI Infra 核心可视化图谱速览（Visual Atlas）
+## 📚 五大研究支柱全量目录（5-Pillar SA Research Catalog）
 
-### 1. “通-云-哥” L0–L3 全栈垂直整合架构与三大跨层协同闭环
-![阿里云 AI Infra 全栈垂直整合架构图](docs/alibaba-cloud-ai-infra/assets/01-tong-yun-ge-architecture.svg)
+### 支柱一：云原生 Agent 基础设施与超大规模推理经济学（Cloud Agent Infra & Token Economics）
 
-### 2. 平头哥真武 PPU 四代演进（810E → M890 → V900 → J900）与主流 GPU 关键指标对比
-![真武 PPU 四代演进与主流 GPU 对比](docs/alibaba-cloud-ai-infra/assets/02-zhenwu-ppu-vs-gpu-comparison.svg)
+| 专题报告（中 / EN） | 核心技术栈与对标范围 | 关键量化结论与 SA 选型建议 | 7-Card 与交互式交付物 |
+|---|---|---|---|
+| **[Azure AI Agent Infra 全栈方案设计与架构选型 Playbook](docs/research/azure-agent-infra/README.md)** · **[EN](docs/research/azure-agent-infra/README.en.md)** | 4 层架构 · 6 大运行时 · `AKSClaw (Kata)` · `E2B on VMSS D96as_v7` · `HorizonDB` · **62 篇选型指南** | 第五代 EPYC Turin (`D96as_v7`) 实现 **`108 ms` UFFD 快照恢复**；单集群 **261 节点稳态承载 100K 并发 MicroVM**；配套 23 套 IaC 蓝图与 62 篇 Azure 选型 FAQ | [62 篇选型 FAQ](docs/research/azure-agent-infra/selection-guides/README.md) · [H5 全景台](docs/research/azure-agent-infra/index.html) · [实时仿真](docs/research/azure-agent-infra/demo.html) · [容量计算器](docs/research/azure-agent-infra/selector.html) · [7-Card](docs/research/azure-agent-infra/cards.html) |
+| **[DeepSeek DeepInfer 超大规模分离式推理与 Token 成本账本](ai-infra/reports/2026-11-01/ai-infra-phase167-deepinfer-v41-pd-economics-2026-11-01.md)** · **[EN](ai-infra/reports/2026-11-01/ai-infra-phase167-deepinfer-v41-pd-economics-2026-11-01.en.md)** | `DeepSeek-V4.1-Flash (552B MoE)` · `E/P/D 分离` · `100 PiB 3FS` · `GB300 NVL72` | **`96%` 3FS 前缀缓存命中** 将有效输入吞吐放大 `25×` 至 **`1.50M tok/s/GPU`**；`1P:1D` 配比精确还原谷电价 **`$38.00 / GPU-hr`** 与单集群日吞吐 `155T` Token 经济模型 | [7-Card HTML](ai-infra/reports/2026-11-01/ai-infra-phase167-benchmark-cards.html) · [视觉工作台](ai-infra/reports/2026-11-01/ai-infra-phase167-visual-workbench.html) · [仿真脚本](ai-infra/experiments/phase167_deepinfer_v41_economics/simulate_deepinfer_economics.py) |
+| **[E2B × Nomad 心跳竞态根因与沙箱自愈架构](docs/research/e2b-nomad-heartbeat-resilience/README.md)** · **[EN](docs/research/e2b-nomad-heartbeat-resilience/README.en.md)** | `HashiCorp Nomad` · `yamux` · `E2B Orchestrator` · `Cgroup Slice` | 揭示 `yamux` 断连检测（`10–40s`）与 Nomad 心跳预算（`20–30s`）竞态根因；通过 `heartbeat_grace="50s"` 与控制面解耦实现 **`<=35s` 网络抖动零误杀** | [中文报告](docs/research/e2b-nomad-heartbeat-resilience/test-report.md) · [EN](docs/research/e2b-nomad-heartbeat-resilience/test-report.en.md) · [7-Card HTML](docs/research/e2b-nomad-heartbeat-resilience/test-report-cards.html) |
 
-### 3. 磐久 AL128 高密超节点“算-存-网”平头哥五芯全自研数据通路图
-![磐久 AL128 超节点五芯数据通路图](docs/alibaba-cloud-ai-infra/assets/03-panjiu-al128-five-chip-datapath.svg)
+### 支柱二：前沿模型、世界模型与 System-One 决策路由基准（Frontier Models & Decision Routing）
 
-### 4. 阿里云 HPN 7.0（SIGCOMM 2024）双上联 × 多轨 × 双平面网络架构与实测收益
-![阿里云 HPN 7.0 双平面网络拓扑与性能收益](docs/alibaba-cloud-ai-infra/assets/04-hpn7-dual-plane-topology.svg)
+| 专题报告（中 / EN） | 核心技术栈与对标范围 | 关键量化结论与 SA 选型建议 | 7-Card 与交互式交付物 |
+|---|---|---|---|
+| **[Gemini 4 Carbon 网安/长程智能体与 20 模型基准评测](docs/research/gemini-4-carbon-and-20-model-benchmark/README.md)** · **[EN](docs/research/gemini-4-carbon-and-20-model-benchmark/README.en.md)** | `Gemini 4 Carbon` · `Gemini 4 Argon` · `GPT-6 Astra` · `Claude Opus 5.5` · `Fable 5.1` | 同价位（`$2/$10`）斩获 **17 项官方基准中的 `15 项 #1`**（`SEC-bench Pro 88.2%`、`Terminal-Bench 4.0 65.2%`、`Gray Swan IPI 0.0% ASR`），适合高安全与百万上下文代码审计 | [中文 7-Card](docs/research/gemini-4-carbon-and-20-model-benchmark/test-report.md) · [EN](docs/research/gemini-4-carbon-and-20-model-benchmark/test-report.en.md) · [7-Card HTML](docs/research/gemini-4-carbon-and-20-model-benchmark/test-report-cards.html) |
+| **[SKY-001 工程世界模型与 19 模型 Coding Agent 横评](docs/research/sky-001-and-coding-agent-19-model-benchmark/README.md)** · **[EN](docs/research/sky-001-and-coding-agent-19-model-benchmark/README.en.md)** | `SKY-001` · `Fable 5.1` · `Opus 5.5` · `Claude Haiku 5.5` · `GPT-6.1 Sol` | 19 模型 × 11 题实测：`Haiku 5.5`（`99.24` 分，`$0.33`）较前代降本 **`91.6%`** 跃居性价比首选；构建主力规划模型 + 高吞吐子执行器六角色混合路由 | [中文 7-Card](docs/research/sky-001-and-coding-agent-19-model-benchmark/test-report.md) · [EN](docs/research/sky-001-and-coding-agent-19-model-benchmark/test-report.en.md) · [7-Card HTML](docs/research/sky-001-and-coding-agent-19-model-benchmark/test-report-cards.html) |
+| **[OpenAI Decisions vs Microsoft Decision-1 八引擎路由横评](docs/research/openai-decisions-vs-decision-1-routing-benchmark/README.md)** · **[EN](docs/research/openai-decisions-vs-decision-1-routing-benchmark/README.en.md)** | `Switchyard` · `Microsoft Decision-1` · `TypeSafe Jev` · `OpenJev 27B` · `OpenAI Decisions` | 消除省钱偏置提示后 `Decision-1` / `Jev` / `OpenJev` 均达 **`40/40 (100%)`**；`Decision-1` 成本仅 **`$7.6 / 1M`**（约为 `OpenAI Decisions` 的 `1/3.4`），`0.60` 置信门控可 100% 拦截失误 | [7-Card 报告](docs/research/openai-decisions-vs-decision-1-routing-benchmark/test-report.md) · [7-Card HTML](docs/research/openai-decisions-vs-decision-1-routing-benchmark/test-report-cards.html) |
+| **[System-One 决策模型与 Foundry 多模型路由实践](docs/research/decision-model-routing/README.md)** · **[EN](docs/research/decision-model-routing/README.en.md)** | `Microsoft-Decision-1` · `Strands Decider` × `gpt-5.4-mini` / `gpt-6.1-sol` | `384` 决策行 + `160` 端到端行实测：`Decision-1` Score MAE 低至 **`0.0082`**；揭示高风险工单必须引入 `0.60` 概率升级阈值回退至强推理模型 | [实验结果](docs/research/decision-model-routing/results.md) · [7-Card HTML](docs/research/decision-model-routing/visual-report.html) |
+| **[LocalJev 类型化决策桥与概率校准边界审计](docs/research/localjev/README.md)** · **[EN](docs/research/localjev/README.en.md)** | `githubnext/localjev` · `choice / score / noul` JSON Schema 契约 · 开源许可合规 | 明确区分**协议兼容**与**校准概率**：口头生成的 JSON 浮点数归一化不等于 Token Logprob 校准置信度，且 `OpenJev 27B` (`CC BY-NC 4.0`) 严禁直接商用 | [中文报告](docs/research/localjev/README.md) · [EN Summary](docs/research/localjev/README.en.md) |
 
-### 5. PAI 训推一体潮汐配额树与 PAI-EAS Prefix-Cache 智能路由官方实测加速比
-![PAI 潮汐抢占与 EAS Prefix-Cache 实测对比](docs/alibaba-cloud-ai-infra/assets/05-pai-tidal-preemption-and-eas-benchmark.svg)
+### 支柱三：多智能体编排、Harness 工程与渐进式技能标准（Multi-Agent Harnesses & Skills）
 
-### 6. 百炼平台四大算力阶梯对比与 AI Infra 架构师 6 大核心场景选型矩阵
-![百炼四大算力模式与架构师选型矩阵](docs/alibaba-cloud-ai-infra/assets/06-bailian-resource-modes-and-architect-matrix.svg)
+| 专题报告（中 / EN） | 核心技术栈与对标范围 | 关键量化结论与 SA 选型建议 | 7-Card 与交互式交付物 |
+|---|---|---|---|
+| **[Microsoft Agent Framework (MAF v1.0) vs 6 大主流编排框架](docs/research/maf-multi-agent-benchmark/README.md)** · **[EN](docs/research/maf-multi-agent-benchmark/README.en.md)** | `MAF v1.0` · `LangGraph` · `AutoGen v0.4` · `Semantic Kernel` · `OpenAI Agents SDK` · `CrewAI` | MAF 以 **`96.4/100`** 居首：融合 SK + AutoGen，内置三层拦截中间件（`100%` PII 脱敏 + 审批挂起）、5 种编排模式（8-Agent 并发提速 **`3.61×`**）及原生 MCP/A2A v1.0 | [中文 7-Card](docs/research/maf-multi-agent-benchmark/test-report.md) · [EN](docs/research/maf-multi-agent-benchmark/test-report.en.md) · [7-Card HTML](docs/research/maf-multi-agent-benchmark/test-report-cards.html) · [编排工作台](docs/research/maf-multi-agent-benchmark/index.html) |
+| **[主流 Agent Harness 框架源码解构：DSH × Claude Code × HVE Core](docs/research/harness-engineering-frameworks/README.zh-CN.md)** · **[EN](docs/research/harness-engineering-frameworks/README.en.md)** | `DeepSeek DSH` (`PTC run_code`) · `Claude Code` (三级压缩) · `Microsoft HVE Core` (四阶段 RPI) | DSH `run_code` 沙箱将多步工具级联提速 **`3.59×–7.51×`**，`in-history` 更新将前缀缓存命中率提至 **`94.2%`**；HVE Core 阶段间 `/clear` 消除长会话 `20×` 注意力稀释 | [中文 7-Card](docs/research/harness-engineering-frameworks/test-report.md) · [EN](docs/research/harness-engineering-frameworks/test-report.en.md) · [中文卡片](docs/research/harness-engineering-frameworks/cards.zh.html) · [Playground](docs/research/harness-engineering-frameworks/index.html) |
+| **[科学发现与行业场景 Harness 工程：CLIO 与校准遵从蓝图](docs/research/scientific-and-industry-harness-engineering/README.md)** · **[EN](docs/research/scientific-and-industry-harness-engineering/README.en.md)** | `Microsoft Discovery` · `CLIO` · `Calibrated Deference` · `GraphRAG + DRIFT` · 独立验证铁律 | 提炼高风险企业场景 **10 大行业 Harness 法则**：通过不确定性梯度监测、灰盒机理约束与跨模型独立验证器（3 振熔断）阻断专业领域幻觉 | [中文 7-Card](docs/research/scientific-and-industry-harness-engineering/test-report.md) · [EN](docs/research/scientific-and-industry-harness-engineering/test-report.en.md) · [中文卡片](docs/research/scientific-and-industry-harness-engineering/cards.zh.html) · [工作台](docs/research/scientific-and-industry-harness-engineering/index.html) |
+| **[FAF v2 vs AGENT-FORGE vs HVE-Core 三大研发脚手架实装对比](docs/research/faf-vs-agent-forge/README.md)** · **[EN](docs/research/faf-vs-agent-forge/README.en.md)** | `faf-agents v2.0.1` · `@agent-forge-copilot/cli` · `Microsoft HVE-Core` | 厘清**领域角色插件（FAF）× `.github/` 上下文编译器（AGENT-FORGE）× 对抗验证状态机（HVE-Core）**三层互补定位 | [同屏竞技场 (`pelican-arena.html`)](docs/research/faf-vs-agent-forge/pelican-arena.html) · [7-Card HTML](docs/research/faf-vs-agent-forge/test-report-cards.html) |
+| **[企业级 Agent Skills 工程成熟度（L1–L4）与逆向验证架构](docs/research/agent-skills-and-rea/README.md)** · **[EN](docs/research/agent-skills-and-rea/README.en.md)** | `SKILL.md` 渐进式加载 · `L2 Critic` · `L3 Deterministic Harness` · `L4 AST & Evidence MCP` | 按需三级加载削减 **`85%+` 初始上下文 Token**；从静态提示包（L1）演进至确定性测试门禁（L3）与 AST/哈希证据账本（L4） | [交互式导览 (`index.html`)](docs/research/agent-skills-and-rea/index.html) · [L1–L4 成熟度台](docs/research/agent-skills-and-rea/h5/ryan-doser-skills-report/index.html) |
+
+### 支柱四：企业级 AI 零信任安全、Purview 治理与电商协议（Zero-Trust AI Security & Governance）
+
+| 专题报告（中 / EN） | 核心技术栈与对标范围 | 关键量化结论与 SA 选型建议 | 7-Card 与交互式交付物 |
+|---|---|---|---|
+| **[Microsoft 安全与 AI 就绪工程架构：DEFEND 五层与 6 大工作负载](docs/research/defend-partner-playbook/README.md)** · **[EN](docs/research/defend-partner-playbook/README.en.md)** | `5-Tier DEFEND` · 6 大工作负载部署手册 · `Purview 4-Tier AI` · Copilot/Edge DLP | 拆解 41 项安全能力阶梯与 **51 项硬性准出门禁**；给出身份、Purview AI 数据护栏、设备与 SaaS OAuth 治理的 P1/P2/P3 落地流水线 | [中文 7-Card](docs/research/defend-partner-playbook/test-report.md) · [EN](docs/research/defend-partner-playbook/test-report.en.md) · [中文卡片](docs/research/defend-partner-playbook/cards.zh.html) · [EN Cards](docs/research/defend-partner-playbook/cards.html) |
+| **[Security AI Landing Zone 与 Frontier SOC 架构实践](docs/research/security-ai-landing-zone/index.zh.md)** · **[EN](docs/research/security-ai-landing-zone/index.md)** | `Microsoft Agent 365` 五大支柱 · `M365 E7` · `Defender ISOC & MDASH` | 4–6 周企业冲刺蓝图：**第 3 周 20 项安全控制硬门禁**通过后方可放行生产 Agent 上线；梳理红/蓝/绿安全智能体协同架构 | [中文 7-Card](docs/research/security-ai-landing-zone/test-report.md) · [EN](docs/research/security-ai-landing-zone/test-report.en.md) · [中文卡片](docs/research/security-ai-landing-zone/cards.zh.html) · [EN Cards](docs/research/security-ai-landing-zone/cards.html) |
+| **[Agentic Commerce 全栈协议与硬件签名支付熔断](docs/research/agentic-commerce/README.md)** · **[EN](docs/research/agentic-commerce/README.en.md)** | `Microsoft Web IQ` · `OpenAI/Stripe ACP` · `Google/Shopify UCP` · `AP2 & x402` | Web IQ 消除页面间接提示词注入；ACP/UCP 幂等结账防止重复扣款；AP2/x402 实施小额自动执行、超额强制 **FIDO2 硬件签名审批** | [架构总览 SVG](docs/research/agentic-commerce/assets/overview.svg) · [双语报告](docs/research/agentic-commerce/README.md) |
+
+### 支柱五：每日开源 AI 情报雷达、Agentic OS 与个人智能体（AI Radar & Desktop Harnesses）
+
+| 专题报告（中 / EN） | 核心技术栈与对标范围 | 关键量化结论与 SA 选型建议 | 7-Card 与交互式交付物 |
+|---|---|---|---|
+| **[GitHub AI 趋势与飙升速度雷达（SA 每日情报工作台）](workshops/github-trending-radar/README.md)** · **[EN](workshops/github-trending-radar/README.en.md)** | 双轨追踪（24h 飙升榜 + 7d 新锐黑马榜）· `Hype / Facts / Signal` 评分 · 选型 FAQ 库 | 持续归档每日 AI 热门仓库评估，区分“包装炒作”与“可复用架构原语”，直接输出 SA 学习优先级（`P0/P1/P2`）与客户架构借力点 | [每日归档 (`daily/`)](workshops/github-trending-radar/README.md) · [中文 7-Card](workshops/github-trending-radar/cards.html) · [EN Deck](workshops/github-trending-radar/cards.en.html) |
+| **[Omarchy Agent 桌面 OS 集成与多 Harness 启动架构](docs/research/omarchy-agent-design/README.md)** · **[EN](docs/research/omarchy-agent-design/README.en.md)** | `omacom/omarchy` · 14 分支 CLI Agent 启动器 · 渐进式技能 · 崩溃诊断流 | 基于 `174` 条源码断言核验：展示如何在云开发机/工程工作站层统一编排多厂商 CLI Agent、配额监控与人类确认触发器 | [7-Card 报告](docs/research/omarchy-agent-design/test-report.md) · [7-Card HTML](docs/research/omarchy-agent-design/test-report-cards.html) |
+| **[Personal Agents 五款个人智能体产品架构与安全边界对比](docs/research/personal-agents/README.md)** · **[EN](docs/research/personal-agents/README.en.md)** | `Meta Muse` · `Grok Bot` · `OpenAI dot` · `Google Gemini Spark` · `Instinct` | 厘清独立云端 VM（`Muse`）、共享主机多角色（`Grok Bot` 角色分离 $\neq$ 安全隔离）与本地挂载（`dot`）的企业办公准入红线 | [18 案例测试协议](docs/research/personal-agents/benchmark.md) · [`cases.json`](docs/research/personal-agents/cases.json) |
+
+---
+
+## 📂 仓库治理与合规声明（Governance & Provenance）
+
+- **完整研究索引**：[中文索引 (`docs/research/index.md`)](docs/research/index.md) · [English Index (`docs/research/index.en.md`)](docs/research/index.en.md)
+- **权利归属与免责边界**：[`ATTRIBUTION.md`](ATTRIBUTION.md) · **第三方开源与商标声明**：[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)
+- 各专题的采样截止时间、哈希校验台账与数据溯源分类均密封于各自目录下的 `evidence.json` 与 `review.md`。
+
 
 

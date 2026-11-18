@@ -1,7 +1,7 @@
 # Adaptive Web Extraction & Single-Call Compressed PR Review Selection FAQ: `D4Vinci/Scrapling` + `The-PR-Agent/pr-agent` vs. Fragile CSS Selectors & Multi-Turn Diff Loops
 
 > **中文版 (Chinese Edition)**: [scrapling-pr-agent-adaptive-extraction-selection-faq.md](scrapling-pr-agent-adaptive-extraction-selection-faq.md)  
-> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](../../../github-radar.html)
+> **Related Daily Digest**: [2026-11-09 GitHub AI Trending Digest (EN)](../daily/2026-11-09.en.md) · **7-Card Benchmark Deck**: [`cards.en.html`](../cards.en.html) · **Live Dashboard**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![D4Vinci/Scrapling Adaptive Scraping + The-PR-Agent/pr-agent Single-Call PR Review Selection Diagram](../../../assets/github-ai-radar-2026-11-09-r11-scrapling-pr-agent.svg)
 

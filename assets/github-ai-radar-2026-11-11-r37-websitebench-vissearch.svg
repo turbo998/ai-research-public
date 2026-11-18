@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg37" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#121F38"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent37" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg37)"/>
+  <rect x="28" y="24" width="1144" height="627" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="28" y="24" width="1144" height="6" rx="3" fill="url(#accent37)"/>
+
+  <text x="54" y="66" fill="#F59E0B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-11 NIGHT SHIFT · ROUND 37 (CUMULATIVE R82) · MULTIMODAL WEB &amp; VISUAL SEARCH BENCHMARK FAQ</text>
+  <text x="54" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="800">WebsiteBench (46,916 Hidden Cases · SSIM≥0.99) + VisSearch-Bench-v1 (arXiv:2611.04894)</text>
+  <text x="54" y="124" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5">70 Full-Stack Sites Browser Exploration · 204 Long-Horizon Visual Search Tasks (17.6 Mean Steps) · 26.47% SOTA Accuracy · -87.68% TCO</text>
+
+  <!-- Left Card: TIGER-AI-Lab/WebsiteBench -->
+  <rect x="52" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="74" y="178" fill="#F59E0B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">1. TIGER-AI-Lab/WebsiteBench (235★ · Harbor 0.25.0 · Apache-2.0)</text>
+  <text x="74" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Full-Stack Website Reverse-Engineering via Interactive Browser Exploration</text>
+
+  <rect x="74" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="238" fill="#F59E0B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">70 Production Websites &amp; 46,916 Hidden Test Cases (302–2,016 / Site)</text>
+  <text x="88" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Agents explore a live site via browser and rebuild a full-stack replica matching UI &amp; state</text>
+  <text x="88" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Far beyond single-screenshot HTML cloning: tests routing, forms, state persistence &amp; APIs</text>
+
+  <rect x="74" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Dual Functional + Visual SSIM ≥ 0.99 Gate (`verifier/reward.txt`)</text>
+  <text x="88" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">A hidden test case passes ONLY when all functional assertions pass AND every visual</text>
+  <text x="88" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">checkpoint reaches normalized SSIM &gt;= 0.99 (`--agent oracle` reference verifier included)</text>
+
+  <rect x="74" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="88" y="396" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Harbor Docker Sandbox, Host Allowlist &amp; `harbor-canary` Protection</text>
+  <text x="88" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Runs via `harbor run --dataset websitebench/WebsiteBench@v1` with explicit host allowlists</text>
+  <text x="88" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Embeds `harbor-canary` GUID in task definitions to prevent pretraining data contamination</text>
+
+  <!-- Right Card: antins-labs/VisSearch-Bench-v1 -->
+  <rect x="613" y="146" width="535" height="324" rx="14" fill="#1E293B" stroke="#A855F7" stroke-width="1.5"/>
+  <text x="635" y="178" fill="#C084FC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">2. antins-labs/VisSearch-Bench-v1 (108★ · Tsinghua &amp; Ant Group)</text>
+  <text x="635" y="202" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600">Long-Horizon Visual Search &amp; Context Management (arXiv:2611.04894)</text>
+
+  <rect x="635" y="216" width="491" height="66" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="238" fill="#C084FC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">204 Human-Written Tasks · 5 Visual Search Families · 17.6 Mean Steps</text>
+  <text x="649" y="257" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Set-wise (68), Sequential (34), Hybrid Wide-Deep (34), Disambiguation (34), Structure-Guided (34)</text>
+  <text x="649" y="274" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Spans 7 primary / 25 secondary domains · up to 61 reference steps · 187 image-initiated + 17 text</text>
+
+  <rect x="635" y="292" width="491" height="72" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="314" fill="#38BDF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">5-Tool ReAct Budget (30 Rounds · 60 Tool Calls · 20 Images/Task)</text>
+  <text x="649" y="333" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Integrates web search, webpage read, text-to-image search, reverse image search &amp; image crop</text>
+  <text x="649" y="350" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Dual rubrics: strict full-answer Accuracy (`accuracy_prompt`) + step-level `Process Score`</text>
+
+  <rect x="635" y="374" width="491" height="78" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="649" y="396" fill="#10B981" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">26-Configuration Leaderboard: Kimi-K3 (26.47% Acc) &amp; GPT-5.5 (49.52% PS)</text>
+  <text x="649" y="415" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5">Direct Answer tops out at 6.37% (GPT-5.5 / Gemini 3.5 Flash); ReAct boosts Acc by 4.15x</text>
+  <text x="649" y="434" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">Exposes critical gap between intermediate evidence gathering (49.52% PS) and final synthesis</text>
+
+  <!-- Bottom FinOps Comparison Strip -->
+  <rect x="52" y="488" width="1096" height="140" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+  <text x="74" y="516" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">Closed-Form FinOps Benchmark (CLAIM-20261111-R37-WEBSITEBENCH-VISSEARCH · 20 Multimodal &amp; Web Agent Eval Releases/Mo)</text>
+
+  <rect x="74" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#EF4444"/>
+  <text x="90" y="552" fill="#FCA5A5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path A: Manual UI QA + Single-Hop VQA Scripts</text>
+  <text x="90" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$5,680.00 / mo</text>
+  <text x="90" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$1,540.00 rerun tokens + $4,140.00 labor (46.0h @ $90/h)</text>
+
+  <rect x="424" y="530" width="330" height="82" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="440" y="552" fill="#FCD34D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path B: Single-Screen HTML + Text-Only Search</text>
+  <text x="440" y="574" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$2,920.00 / mo (-48.59%)</text>
+  <text x="440" y="596" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$760.00 compute + $2,160.00 labor (24.0h @ $90/h)</text>
+
+  <rect x="774" y="530" width="352" height="82" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="790" y="552" fill="#6EE7B7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">Path C: WebsiteBench + VisSearch-Bench-v1</text>
+  <text x="790" y="574" fill="#ECFDF5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">$700.00 / mo (-87.68% · Save $4,980.00/mo)</text>
+  <text x="790" y="596" fill="#A7F3D0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11">$250.00 compute + $450.00 labor (5.0h) · SERP enterprise contract: not_measured</text>
+</svg>

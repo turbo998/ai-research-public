@@ -1,7 +1,7 @@
 # 单一可微世界模型人形全身动作追踪与 Coding Agent 实时空间可观测性/跨智能体经验复用选型常见问题解答：`HybridRobotics/supermimic` (`arXiv:2610.28480`) + `alexeyw/lot-map` & `vzroslieigry/maxagent` vs 无模型 PPO 盲采样 & 滚屏日志排障
 
 > **English Edition**: [supermimic-lotmap-maxagent-world-model-observability-selection-faq.en.md](supermimic-lotmap-maxagent-world-model-observability-selection-faq.en.md)  
-> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](../../../zh-github-radar.html)
+> **关联日报**: [2026-11-11 GitHub AI 最热榜单与情报摘要](../daily/2026-11-11.md) · **视觉评测卡**: [`cards.html`](../cards.html) · **在线面板**: [`zh-github-radar.html`](https://turbo998.github.io/zh-github-radar.html)
 
 ![SuperMimic 单一可微世界模型与 Lot-Map / MaxAgent 智能体空间可观测性选型对比图](../../../assets/github-ai-radar-2026-11-11-r5-supermimic-lotmap.svg)
 

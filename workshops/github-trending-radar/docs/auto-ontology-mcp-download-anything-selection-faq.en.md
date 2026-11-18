@@ -1,7 +1,7 @@
 # Serverless SQLite Semantic Ontology MCP & Multi-Track Verified Archiving Selection FAQ: `gogoymh/auto-ontology-mcp` (`validate_sql` + Obsidian Ontology Wiki) + `nengong/download-anything` vs. Heavy Postgres/NIM Stacks & Ad-Hoc Download Scripts
 
 > **中文版**: [auto-ontology-mcp-download-anything-selection-faq.md](auto-ontology-mcp-download-anything-selection-faq.md)  
-> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](../../../github-radar.html)
+> **Daily Digest**: [2026-11-11 GitHub AI Trending & Proactive Intelligence Digest](../daily/2026-11-11.en.md) · **Visual Deck**: [`cards.en.html`](../cards.en.html) · **Live Radar**: [`github-radar.html`](https://turbo998.github.io/github-radar.html)
 
 ![gogoymh/auto-ontology-mcp & nengong/download-anything Architecture Selection Diagram](../../../assets/github-ai-radar-2026-11-11-r11-auto-ontology-mcp-da.svg)
 
