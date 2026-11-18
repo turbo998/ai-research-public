@@ -1,5 +1,10 @@
 # 第三方声明
 
+## GPT-6.2 Sol 全档推理强度实测与二十一模型前沿编码/校准路由深度评测（增补报告 9，2026-11-18）
+
+- **原生 27 轮 CAPI 实测与密封验证器 (`docs/research/gpt-6-2-sol-benchmark/`)**：测试提示词包（`P1`–`P4`）、60 项隐藏工程断言与 12 项校准路由断言验证器（`simulator/verify_sol62_suite.py`）均为本库原创资产，不含任何第三方受保护题库或客户私有数据。
+- **Day-2 公开评测榜单引用**：18 项外部基准分数按原发布机构（Artificial Analysis、Vals AI、LiveBench 2.0、ARC Prize、Harvey LAB-AA、OpenAI 官方定价文档）署名引用（采样日期 `2026-11-18`），商标与评测榜单版权归各自发布方所有；完整来源 URL 台账见 [`docs/research/gpt-6-2-sol-benchmark/evidence.json`](docs/research/gpt-6-2-sol-benchmark/evidence.json)。
+
 ## Microsoft DEFEND 合作伙伴剧本、SMB 安全工具包与 Security AI Landing Zone 研究
 
 - **DEFEND Partner Playbook (`docs/research/defend-partner-playbook/`)**：原始参考材料显式包含微软合作伙伴剧本免责声明（属合作伙伴开发的服务构建体系，不代表微软官方产品或 SKU 承诺）。本库仅收录去标识化后的架构模型、41 项能力矩阵、51 项退出门禁与原创确定性验证器（`simulator/defend_tier_readiness_verifier.py`）。

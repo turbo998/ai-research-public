@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "topic": "gpt-6-2-sol-benchmark",
+  "supplement_report": 9,
+  "title_zh": "GPT-6.2 Sol 全档推理强度实测与二十一模型前沿编码/校准路由深度评测（增补报告 9，2026-11-18）",
+  "title_en": "GPT-6.2 Sol Live Effort-Sweep, Calibrated Routing & 21-Model Frontier Benchmark (Supplement Report 9, 2026-11-18)",
+  "generated_at": "2026-11-18",
+  "provenance": "measured",
+  "independently_reproduced": true,
+  "subject_model": {
+    "model_id": "gpt-6.2-sol",
+    "display_name": "GPT-6.2 Sol",
+    "vendor": "OpenAI",
+    "release_date": "2026-11-17",
+    "knowledge_cutoff": "2026-06",
+    "context_window_tokens": 1050000,
+    "max_output_tokens": 128000,
+    "reasoning_efforts_evaluated": [
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "pricing_usd_per_1m": {
+      "standard_le_272k": {
+        "input": 2.0,
+        "cached_input": 0.1,
+        "cache_write": 2.5,
+        "output": 10.0
+      },
+      "extended_gt_272k_whole_request": {
+        "input": 4.0,
+        "cached_input": 0.2,
+        "output": 15.0
+      },
+      "batch_api": {
+        "input": 1.0,
+        "output": 5.0
+      },
+      "ultrafast": {
+        "input": 12.0,
+        "cached_input": 0.6,
+        "output": 60.0
+      }
+    }
+  },
+  "prompt_freeze": {
+    "benchmark_id": "sol62-live-bench-v1",
+    "frozen_at_utc": "2026-11-18T07:13:06.494325+00:00",
+    "frozen_at_utc_short": "2026-11-18T07:13:06Z",
+    "manifest_path": "data/freeze_manifest.json",
+    "files": {
+      "P1_coding_4tasks.md": {
+        "sha256": "b1e463c9348c0cf3eea15d9de1a582980f7b3c53725adb099ac87ec8b515e4a0",
+        "bytes": 12992
+      },
+      "P2_routing_6scenarios_orig.md": {
+        "sha256": "e93dc200f79abb82f05da4608f064fdeadcaa4f2c1773abe021669b088f99551",
+        "bytes": 8797
+      },
+      "P3_routing_6scenarios_rev.md": {
+        "sha256": "4a1de87f1fea5273d83bc61cf2d3100e8a12ffa0e2e293bdd0da8cc68c013426",
+        "bytes": 9479
+      },
+      "P4_batch_n1.md": {
+        "sha256": "47af733d00d988042a30be3d573b4dd812d9d72558920bd5aee7726050f5f786",
+        "bytes": 2762
+      },
+      "P4_batch_n2.md": {
+        "sha256": "4dec96be3fed833a71ce67dd9c152319408bb081d1b5f0c2f520d0d32c920173",
+        "bytes": 3928
+      },
+      "P4_batch_n4.md": {
+        "sha256": "b73c0648d9107f1469d48b4e984965235ac0a180f524f1504e3ee8e3a9631ae5",
+        "bytes": 5828
+      }
+    }
+  },
+  "sealed_verifier": {
+    "path": "simulator/verify_sol62_suite.py",
+    "sha256": "58863f19d212670dfa31482a7dbb1696c7a73d7c6a8a1b8bf7bdaa5bfd8ed5d8",
+    "sha256_short_display": "58863f19d212670dfa31482a7...c7a73d7c6a8a1b8bf7bdaa5bfd8ed5d8",
+    "total_deterministic_assertions": 84,
+    "breakdown": {
+      "P1_coding_4tasks_hidden_checks": 60,
+      "P2_routing_orig_assertions": 12,
+      "P3_routing_rev_adversarial_assertions": 12
+    },
+    "post_hoc_modifications": 0
+  },
+  "live_capi_trial_summary": {
+    "total_trials": 27,
+    "telemetry_source": "SQLite assistant_usage_events -> data/live_capi_telemetry.csv",
+    "event_id_range": [
+      85685,
+      86814
+    ],
+    "trial_counts_by_suite": {
+      "P1_coding_4tasks": 8,
+      "P2_routing_orig_n6": 5,
+      "P3_routing_rev_n6": 5,
+      "P4_batch_n1_n2_n4": 9
+    },
+    "headline_findings": {
+      "coding_pass_rate_all_8_runs": "59/60 (98.33%)",
+      "sole_coding_miss": "S01.14 all-zero-duration DAG Z1(0)->Z2(0) returned ['Z1'] vs ['Z1','Z2']",
+      "sol62_low_coding_duration_s": 45.42,
+      "sol62_low_coding_cost_usd": 0.0547,
+      "sol62_high_coding_duration_s": 108.18,
+      "sol61_high_coding_duration_s": 273.31,
+      "coding_speedup_high_vs_sol61_high": 2.53,
+      "coding_speedup_low_vs_sol61_high": 6.02,
+      "reasoning_token_reduction_high_vs_sol61_pct": 51.0,
+      "sol62_max_ttft_ms": 16354.1,
+      "sol61_max_ttft_ms": 120892.0,
+      "sol62_p2_routing_score_low_med_high": "12/12 (100.0%)",
+      "sol61_p2_routing_score_high": "10/12 (83.33%) — R04 miscalculated as 83 -> false Act automatically",
+      "sol62_p3_semantic_choice_invariance": "6/6 (100.0%), 0 sycophantic surrenders",
+      "sol62_high_batch_n6_ms": 8826,
+      "sol62_high_batch_n6_per_decision_ms": 1471,
+      "sol62_high_batch_n6_speedup_vs_sequential": 3.66
+    },
+    "pricing_cliff_r01_verification": {
+      "cliff_input_tokens": 272000,
+      "unsharded_1x290k_usd": 0.425,
+      "sharded_2x270k_usd": 0.2575,
+      "shard_1_usd": 0.1525,
+      "shard_2_usd": 0.105,
+      "savings_pct": 39.41
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "OpenAI GPT-6.2 Sol Release Notes & API Pricing Schedule (<=272K vs >272K Tiered Pricing)",
+      "url": "https://platform.openai.com/docs/pricing",
+      "publisher": "OpenAI",
+      "published_or_captured": "2026-11-17 / 2026-11-18",
+      "evidence_tier": "official_vendor_spec"
+    },
+    {
+      "id": "S2",
+      "title": "Artificial Analysis Intelligence Index v5.0.1, FrontierCode 2.0, Terminal-Bench-Science 0.1, HLE-Diamond, AutomationBench & Security Suites",
+      "url": "https://artificialanalysis.ai/",
+      "publisher": "Artificial Analysis",
+      "published_or_captured": "2026-11-18",
+      "evidence_tier": "independent_third_party_eval"
+    },
+    {
+      "id": "S3",
+      "title": "Vals AI Enterprise Multimodal Index & Terminal-Bench 4.0 Leaderboard",
+      "url": "https://www.vals.ai/",
+      "publisher": "Vals AI",
+      "published_or_captured": "2026-11-18",
+      "evidence_tier": "independent_third_party_eval"
+    },
+    {
+      "id": "S4",
+      "title": "LiveBench 2.0 Contamination-Free Coding Leaderboard",
+      "url": "https://livebench.ai/",
+      "publisher": "LiveBench",
+      "published_or_captured": "2026-11-18",
+      "evidence_tier": "independent_third_party_eval"
+    },
+    {
+      "id": "S5",
+      "title": "ARC Prize Official Leaderboard — ARC-AGI-1, ARC-AGI-2 & ARC-AGI-3",
+      "url": "https://arcprize.org/",
+      "publisher": "ARC Prize Foundation",
+      "published_or_captured": "2026-11-18",
+      "evidence_tier": "independent_third_party_eval"
+    },
+    {
+      "id": "S6",
+      "title": "Harvey Legal AI Benchmark (LAB-AA) Day-2 Evaluation",
+      "url": "https://www.harvey.ai/",
+      "publisher": "Harvey AI",
+      "published_or_captured": "2026-11-18",
+      "evidence_tier": "domain_benchmark"
+    },
+    {
+      "id": "S7",
+      "title": "DataLearner Frontier Model Tracker — BenchCAD 2.1 Core & GPQA Diamond (254-Model Cohort)",
+      "url": "https://www.datalearner.com/",
+      "publisher": "DataLearner",
+      "published_or_captured": "2026-11-18",
+      "evidence_tier": "leaderboard_aggregator"
+    },
+    {
+      "id": "S8",
+      "title": "7-Card 4:5 Visual Benchmark Report Standard & Sealed Verifier Protocol",
+      "url": "https://github.com/turbo998/benchmark-harness-engineering",
+      "publisher": "turbo998/benchmark-harness-engineering",
+      "published_or_captured": "2026-11-18",
+      "evidence_tier": "harness_specification"
+    },
+    {
+      "id": "S9",
+      "title": "Prior 20-Model Coding Agent Baseline & Supplement Report 6 (Gemini 4 Carbon)",
+      "url": "https://github.com/satomic/copilot-benchmark/commit/a191383571a13143685fd6f7787512c4e281a9ba",
+      "publisher": "satomic/copilot-benchmark & turbo998/ai-research-public",
+      "published_or_captured": "2026-11-15",
+      "evidence_tier": "longitudinal_baseline"
+    }
+  ]
+}
