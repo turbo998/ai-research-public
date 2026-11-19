@@ -1,5 +1,9 @@
 # 第三方声明
 
+## Terminal-Bench 4.1 (`tbench.ai` / Harbor Framework) 架构、帕累托经济学与 66 项容器 Agent 深度评测（2026-11-19）
+
+- **Terminal-Bench & Harbor Framework (`harbor-framework/terminal-bench@v4.1.0`)**：上游评测框架采用 `Apache-2.0` 许可证（由 Stanford 与 Laude Institute 社区维护）。本库专题（[`docs/research/terminal-bench-4-1/`](docs/research/terminal-bench-4-1/README.md)）基于 `2026-11-19T03:41:57Z` 公开排行榜与任务级统计快照（标注 `anonymized_reported` / `public_leaderboard_snapshot`, `independently_reproduced=false`）开展原创帕累托经济学、多模型路由与领域反馈机理评述；为防止基准训练集污染，本库严禁且未收录任何题目正文、测试判分源码或 Canary GUID 字符串。涉及各参评模型与 CLI Agent 的产品名称及商标均归各自权利人所有。
+
 ## GPT-6.2 Sol 全档推理强度实测与二十一模型前沿编码/校准路由深度评测（增补报告 9，2026-11-18）
 
 - **原生 27 轮 CAPI 实测与密封验证器 (`docs/research/gpt-6-2-sol-benchmark/`)**：测试提示词包（`P1`–`P4`）、60 项隐藏工程断言与 12 项校准路由断言验证器（`simulator/verify_sol62_suite.py`）均为本库原创资产，不含任何第三方受保护题库或客户私有数据。

@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
+<title>Terminal-Bench 4.1 (Harbor) — 65-Entry Pareto &amp; 66-Task Agent Benchmark — 7-Card Visual Report</title>
+<style>
+  :root {
+    --bg: #E2E8F0;
+    --card-bg: #F8FAFC;
+    --surface: #FFFFFF;
+    --border: #E2E8F0;
+    --border-strong: #CBD5E1;
+    --text: #0F172A;
+    --text-secondary: #475569;
+    --muted: #64748B;
+    --accent-blue: #2563EB;
+    --accent-violet: #7C3AED;
+    --bar-primary: #3B82F6;
+    --bar-secondary: #CBD5E1;
+    --code-bg: #0F172A;
+    --code-text: #E2E8F0;
+    --green-bg: #ECFDF5;
+    --green-border: #A7F3D0;
+    --green-text: #065F46;
+    --amber-bg: #FFFBEB;
+    --amber-border: #FDE68A;
+    --amber-text: #92400E;
+    --red-bg: #FEF2F2;
+    --red-border: #FECACA;
+    --red-text: #991B1B;
+    --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    padding: 36px 20px 64px;
+  }
+
+  .deck-bar {
+    max-width: 900px;
+    margin: 0 auto 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 14px 22px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.14);
+  }
+  .deck-bar-title { font-size: 14px; font-weight: 700; letter-spacing: 0.02em; }
+  .deck-bar-sub { font-size: 12px; color: #94A3B8; margin-top: 2px; }
+  .deck-nav { display: flex; gap: 6px; flex-wrap: wrap; }
+  .deck-nav a {
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .deck-nav a:hover { background: rgba(59, 130, 246, 0.35); color: #FFFFFF; }
+
+  .deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .card {
+    width: 900px;
+    min-height: 1125px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(15, 23, 42, 0.05);
+    padding: 48px 52px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-top { flex: 1; display: flex; flex-direction: column; }
+
+  .kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .step-pill {
+    background: #E0E7FF;
+    color: #3730A3;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  h1, h2 {
+    font-size: 36px;
+    line-height: 1.16;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .gradient-accent {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-violet));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .lead {
+    font-size: 16.5px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }
+
+  .surface {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .pill-auto { background: var(--green-bg); color: var(--green-text); border: 1px solid var(--green-border); }
+  .pill-confirm { background: var(--amber-bg); color: var(--amber-text); border: 1px solid var(--amber-border); }
+  .pill-human { background: var(--red-bg); color: var(--red-text); border: 1px solid var(--red-border); }
+  .pill-type { background: #F1F5F9; color: #334155; border: 1px solid #CBD5E1; font-family: var(--mono); font-size: 11px; }
+  .pill-metric { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; font-family: var(--mono); font-size: 12px; }
+
+  .workbench {
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  }
+  .wb-sidebar {
+    border-right: 1px solid var(--border);
+    padding-right: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .wb-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .wb-scenario-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .wb-scenario-list li {
+    font-size: 12.5px;
+    padding: 6px 9px;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wb-scenario-list li.active {
+    background: #EFF6FF;
+    color: #1D4ED8;
+    font-weight: 700;
+    border: 1px solid #BFDBFE;
+  }
+  .wb-bands { display: flex; flex-direction: column; gap: 6px; font-size: 11.5px; }
+  .wb-band-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; }
+
+  .wb-main { display: flex; flex-direction: column; gap: 12px; }
+  .quote-box {
+    background: #F8FAFC;
+    border-left: 4px solid var(--accent-blue);
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 15px;
+    border-radius: 0 10px 10px 0;
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: #1E293B;
+  }
+  .metric-strip { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .decision-stack { display: flex; flex-direction: column; gap: 13px; margin-bottom: 16px; }
+  .decision-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 14px 18px;
+  }
+  .decision-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .decision-id { font-family: var(--mono); font-size: 12.5px; font-weight: 700; color: #334155; }
+  .decision-answer { font-size: 15.5px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+  .prob-rows { display: flex; flex-direction: column; gap: 6px; }
+  .prob-row {
+    display: grid;
+    grid-template-columns: 205px 1fr 62px;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+  }
+  .prob-label { color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
+  .prob-label.top { color: var(--text); font-weight: 700; }
+  .prob-track { height: 9px; background: #F1F5F9; border-radius: 999px; overflow: hidden; }
+  .prob-fill { height: 100%; background: var(--bar-primary); border-radius: 999px; }
+  .prob-fill.muted { background: var(--bar-secondary); }
+  .prob-val { font-family: var(--mono); font-size: 12px; text-align: right; font-weight: 600; color: var(--text-secondary); }
+  .prob-val.top { color: var(--accent-blue); font-weight: 800; }
+
+  .matrix-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .matrix-table th {
+    background: #F1F5F9;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding: 11px 13px;
+    border-bottom: 1px solid var(--border);
+  }
+  .matrix-table td {
+    padding: 11px 13px;
+    border-bottom: 1px solid #F1F5F9;
+    vertical-align: middle;
+    color: #1E293B;
+  }
+  .matrix-table tr:last-child td { border-bottom: none; }
+  .matrix-table tr.row-miss td { background: #FFF5F5; }
+  .scen-tag { font-weight: 700; color: #0F172A; white-space: nowrap; font-size: 12.5px; }
+  .miss-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #FEE2E2;
+    color: #B91C1C;
+    font-weight: 900;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+  .num-col { font-family: var(--mono); font-weight: 700; text-align: right; }
+  .delta-pos { color: #047857; font-family: var(--mono); font-weight: 700; }
+  .delta-neg { color: #B91C1C; font-family: var(--mono); font-weight: 800; }
+
+  .code-panel {
+    background: var(--code-bg);
+    color: var(--code-text);
+    border-radius: 14px;
+    padding: 16px 20px;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.52;
+    border: 1px solid #1E293B;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  .code-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: #94A3B8;
+    margin-bottom: 9px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #1E293B;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .code-panel pre { white-space: pre-wrap; word-break: break-word; }
+  .tok-k { color: #93C5FD; }
+  .tok-s { color: #86EFAC; }
+  .tok-n { color: #FCD34D; }
+  .tok-c { color: #64748B; }
+  .flow-arrow {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    padding: 9px 0;
+    letter-spacing: 0.03em;
+  }
+
+  .latency-legend {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+  }
+  .legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    margin-right: 7px;
+    vertical-align: -1px;
+  }
+  .latency-groups { display: flex; flex-direction: column; gap: 18px; margin-bottom: 18px; }
+  .lat-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 15px 20px;
+  }
+  .lat-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+  .lat-speedup { font-family: var(--mono); font-size: 12.5px; color: var(--accent-blue); font-weight: 800; }
+  .lat-bar-row {
+    display: grid;
+    grid-template-columns: 165px 1fr 96px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 7px;
+    font-size: 12.5px;
+  }
+  .lat-bar-row:last-child { margin-bottom: 0; }
+  .lat-bar-track { height: 15px; background: #F1F5F9; border-radius: 6px; overflow: hidden; }
+  .lat-bar-fill-pri { height: 100%; background: linear-gradient(90deg, #2563EB, #3B82F6); border-radius: 6px; }
+  .lat-bar-fill-sec { height: 100%; background: #CBD5E1; border-radius: 6px; }
+  .lat-ms { font-family: var(--mono); font-weight: 800; text-align: right; color: var(--text); font-size: 13px; }
+  .lat-ms.muted { color: var(--muted); font-weight: 600; }
+
+  .callout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .callout {
+    border-radius: 13px;
+    padding: 14px 17px;
+    font-size: 13px;
+    line-height: 1.48;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .callout-title { font-weight: 800; font-size: 13px; margin-bottom: 4px; color: var(--text); }
+  .callout-blue { background: #EFF6FF; border-color: #BFDBFE; color: #1E3A8A; }
+  .callout-blue .callout-title { color: #1D4ED8; }
+  .callout-amber { background: var(--amber-bg); border-color: var(--amber-border); color: var(--amber-text); }
+  .callout-amber .callout-title { color: #92400E; }
+
+  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+  .fit-card {
+    border-radius: 16px;
+    padding: 20px 22px;
+    border: 1px solid;
+  }
+  .fit-good { background: var(--green-bg); border-color: var(--green-border); color: #064E3B; }
+  .fit-bad { background: var(--red-bg); border-color: var(--red-border); color: #7F1D1D; }
+  .fit-heading { font-size: 18px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .fit-list { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px; line-height: 1.44; }
+  .fit-list li { padding-left: 18px; position: relative; }
+  .fit-list li::before {
+    content: "•";
+    position: absolute;
+    left: 2px;
+    font-weight: 900;
+  }
+
+  .dark-summary {
+    background: #0F172A;
+    color: #F8FAFC;
+    border-radius: 16px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .dark-summary-title { font-size: 14px; font-weight: 800; color: #93C5FD; letter-spacing: 0.04em; text-transform: uppercase; }
+  .dark-summary p { font-size: 13.5px; line-height: 1.5; color: #CBD5E1; }
+
+  .card-footer {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: var(--mono);
+  }
+
+  @media (max-width: 960px) {
+    .card { width: 100%; min-height: auto; padding: 28px 24px; }
+    .workbench, .callout-grid, .fit-grid { grid-template-columns: 1fr; }
+    .wb-sidebar { border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: 12px; }
+    h1, h2 { font-size: 27px; }
+  }
+  @media print {
+    body { background: #FFFFFF; padding: 0; }
+    .deck-bar { display: none; }
+    .deck { gap: 0; }
+    .card { box-shadow: none; border: none; page-break-after: always; break-after: page; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="deck-bar" aria-label="Card Navigation">
+  <div>
+    <div class="deck-bar-title">Terminal-Bench 4.1 (Harbor Framework) · 65-Entry Leaderboard, Pareto Economics &amp; 66-Task Agent Evaluation</div>
+    <div class="deck-bar-sub">7-Card 4:5 Portrait Benchmark Deck · Provenance: anonymized_reported / public_leaderboard_snapshot (independently_reproduced=false)</div>
+  </div>
+  <div class="deck-nav">
+    <a href="#card-1">1 Overview</a>
+    <a href="#card-2">2 Pareto</a>
+    <a href="#card-3">3 Matrix</a>
+    <a href="#card-4">4 Harbor</a>
+    <a href="#card-5">5 Effort</a>
+    <a href="#card-6">6 Latency</a>
+    <a href="#card-7">7 My Take</a>
+  </div>
+</nav>
+
+<main class="deck">
+
+  <!-- ==================== CARD 1: OVERVIEW & WORKBENCH ==================== -->
+  <section class="card" id="card-1">
+    <div class="card-top">
+      <div class="kicker">
+        <span class="step-pill">1 / 7</span>
+        <span>HANDS-ON · TERMINAL-BENCH 4.1 HARBOR EVALUATION</span>
+      </div>
+      <h1><span class="gradient-accent">Copilot Fusion</span> hits 71.21% (#1 by +5.45pt) while 86.5% of 52 configs are Pareto-dominated</h1>
+      <p class="lead">Audited across 65 leaderboard entries (52 unique Model×Agent pairs) and 21,450 isolated Harbor container trials (66 tasks × 5 runs), multi-model CLI co-design beats every standalone frontier model while GPT-6.2 Sol ($349.16) anchors a 47.2x FinOps spread.</p>
+
+      <div class="workbench">
+        <div class="wb-sidebar">
+          <div>
+            <div class="wb-section-label">Evaluation Slices</div>
+            <ul class="wb-scenario-list">
+              <li class="active"><span>Leaderboard</span><span>65 / 52</span></li>
+              <li><span>Pareto Frontier</span><span>7 / 52</span></li>
+              <li><span>Container Tasks</span><span>66 × 5</span></li>
+              <li><span>Domains</span><span>7 tracks</span></li>
+              <li><span>Harbor Isolation</span><span>separate</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="wb-section-label">SA Autonomy Gates</div>
+            <div class="wb-bands">
+              <div class="wb-band-row"><span>≥65% + Oracle</span><span class="pill pill-auto">Act auto</span></div>
+              <div class="wb-band-row"><span>35%–64% / p@5</span><span class="pill pill-confirm">Confirm</span></div>
+              <div class="wb-band-row"><span>≤10% / Ops Wall</span><span class="pill pill-human">Human</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-main">
+          <div class="quote-box">
+            <strong>Harbor v4.1.0 Contract:</strong> 66 real-world CLI tasks (63 CPU + 3 GPU) × 5 trials = 330 runs per entry. Verifiers execute post-exit under <code>environment_mode = "separate"</code> with zero <code>/tests</code> mount inside agent containers.
+          </div>
+
+          <div class="metric-strip">
+            <span class="pill pill-metric">#1 Copilot Fusion: 71.21% ±2.88% · $1,987</span>
+            <span class="pill pill-metric">Golden Elbow Sol 6.2: 61.52% · $349</span>
+            <span class="pill pill-metric">#2–#8 Tie Band: 47.2x Cost Gap</span>
+            <span class="pill pill-metric">#1 pass@5 Kimi K3.1: 84.85%</span>
+          </div>
+
+          <div class="decision-card" style="padding:12px 14px;">
+            <div class="decision-header">
+              <span class="decision-id">frontier_pass1_leader</span>
+              <div><span class="pill pill-type">choice</span> <span class="pill pill-auto">Act automatically</span></div>
+            </div>
+            <div class="decision-answer" style="font-size:14px; margin-bottom:7px;">Copilot Fusion + GitHub Copilot (max) — 235 / 330 solves ($8.46/solve)</div>
+            <div class="prob-rows">
+              <div class="prob-row" style="grid-template-columns:165px 1fr 56px;">
+                <span class="prob-label top">Copilot Fusion ($1,987)</span>
+                <div class="prob-track"><div class="prob-fill" style="width:71.2%;"></div></div>
+                <span class="prob-val top">71.2%</span>
+              </div>
+              <div class="prob-row" style="grid-template-columns:165px 1fr 56px;">
+                <span class="prob-label">Opus 5.5 / Fable 5.2 (#2)</span>
+                <div class="prob-track"><div class="prob-fill muted" style="width:65.8%;"></div></div>
+                <span class="prob-val">65.8%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="decision-card" style="padding:12px 14px;">
+            <div class="decision-header">
+              <span class="decision-id">pareto_efficiency_ratio</span>
+              <div><span class="pill pill-type">score</span> <span class="pill pill-auto">Act automatically</span></div>
+            </div>
+            <div class="decision-answer" style="font-size:14px; margin-bottom:7px;">7 / 52 (13.5%) Commercial Pareto Winners — GPT-6.2 Sol at $1.72/solve</div>
+            <div class="prob-rows">
+              <div class="prob-row" style="grid-template-columns:165px 1fr 56px;">
+                <span class="prob-label top">GPT-6.2 Sol ($349.16)</span>
+                <div class="prob-track"><div class="prob-fill" style="width:61.5%;"></div></div>
+                <span class="prob-val top">61.5%</span>
+              </div>
+              <div class="prob-row" style="grid-template-columns:165px 1fr 56px;">
+                <span class="prob-label">Dominated Pairs (45/52)</span>
+                <div class="prob-track"><div class="prob-fill muted" style="width:86.5%;"></div></div>
+                <span class="prob-val">86.5%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-blue">
+        <div class="callout-title">Provenance &amp; Continuous Versioning (terminal-bench@4.1.0)</div>
+        Public leaderboard snapshot frozen <code>2026-11-19T03:41:57Z</code> (<code>SHA-256: 2f612504...959cc</code>, <code>Apache-2.0</code>, <code>anonymized_reported / public_leaderboard_snapshot</code>, <code>independently_reproduced=false</code>, zero canary GUIDs). Tracks benchmark reset from saturated TB 2.1 (<code>87.42%</code> max) → TB 3.0 (<code>42.70%</code>) → TB 4.1 (<code>71.21%</code> max, <code>38.48%</code> median).
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span>github.com/turbo998/ai-research-public · docs/research/terminal-bench-4-1</span>
+      <span>Snapshot 2026-11-19 · Card 1 of 7</span>
+    </div>
+  </section>
+
+  <!-- ==================== CARD 2: SINGLE-CASE DEEP DIVE ==================== -->
+  <section class="card" id="card-2">
+    <div class="card-top">
+      <div class="kicker">
+        <span class="step-pill">2 / 7</span>
+        <span>SCENARIO: ENTERPRISE CLI ROUTING &amp; PARETO FINOPS</span>
+      </div>
+      <h2>7 Pareto winners out of 52 pairs; 47.2x cost gap inside one 95% CI tie band</h2>
+      <p class="lead">Ranks #2–#8 span 60.91%–65.76% with overlapping ±2.30%–3.23% CIs yet diverge from $349.16 (GPT-6.2 Sol) to $16,492.76 (Fable 5.2). Production routing splits into three distinct tiers.</p>
+
+      <div class="quote-box" style="margin-bottom:16px;">
+        <strong>Enterprise SA Routing Brief:</strong> "Assign 66 containerized engineering, security, ML, science, and operations workloads across commercial CLI agents: maximize pass@1 reliability per dollar, exploit Best-of-5 sandbox verification on tail failures, and block unverified stateful dispatch."
+      </div>
+
+      <div class="decision-stack">
+        <div class="decision-card">
+          <div class="decision-header">
+            <span class="decision-id">tier1_golden_elbow_workhorse · $349.16 / 330 runs</span>
+            <div><span class="pill pill-type">choice</span> <span class="pill pill-auto">Act automatically</span></div>
+          </div>
+          <div class="decision-answer">GPT-6.2 Sol + Codex (max): 61.52% ±2.75% at $1.72/solve (1.09B tok, 1,214s)</div>
+          <div class="prob-rows">
+            <div class="prob-row">
+              <span class="prob-label top">GPT-6.2 Sol ($349 · +23.0pt jump)</span>
+              <div class="prob-track"><div class="prob-fill" style="width:61.5%;"></div></div>
+              <span class="prob-val top">61.52%</span>
+            </div>
+            <div class="prob-row">
+              <span class="prob-label">Gemini 4 Carbon ($1,358 · #4)</span>
+              <div class="prob-track"><div class="prob-fill muted" style="width:64.6%;"></div></div>
+              <span class="prob-val">64.55%</span>
+            </div>
+            <div class="prob-row">
+              <span class="prob-label">DeepSeek V4.1 Flash ($185 · #33)</span>
+              <div class="prob-track"><div class="prob-fill muted" style="width:38.5%;"></div></div>
+              <span class="prob-val">38.48%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="decision-card">
+          <div class="decision-header">
+            <span class="decision-id">tier2_best_of_5_tail_breaker · $1,086.66 / 330 runs</span>
+            <div><span class="pill pill-type">score</span> <span class="pill pill-confirm">Confirm</span></div>
+          </div>
+          <div class="decision-answer">Kimi K3.1 Pro + Claude Code: #1 Overall pass@5 = 84.85% (+25.15pt jump)</div>
+          <div class="prob-rows">
+            <div class="prob-row">
+              <span class="prob-label top">pass@5 Coverage (56 / 66 tasks)</span>
+              <div class="prob-track"><div class="prob-fill" style="width:84.9%;"></div></div>
+              <span class="prob-val top">84.85%</span>
+            </div>
+            <div class="prob-row">
+              <span class="prob-label">pass@2 Coverage (Claude Code)</span>
+              <div class="prob-track"><div class="prob-fill muted" style="width:74.7%;"></div></div>
+              <span class="prob-val">74.70%</span>
+            </div>
+            <div class="prob-row">
+              <span class="prob-label">pass@1 Mean (±4.18% wide CI)</span>
+              <div class="prob-track"><div class="prob-fill muted" style="width:59.7%;"></div></div>
+              <span class="prob-val">59.70%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="decision-card">
+          <div class="decision-header">
+            <span class="decision-id">tier3_unsolved_wall_abstention · 4 tasks × 325 runs</span>
+            <div><span class="pill pill-type">noul</span> <span class="pill pill-human">Send to a human</span></div>
+          </div>
+          <div class="decision-answer">NOUL — Mandatory Human Gate on 0/325 Zero-Solve Wall Tasks</div>
+          <div class="prob-rows">
+            <div class="prob-row">
+              <span class="prob-label top">Human + L4 Verifier Escalation</span>
+              <div class="prob-track"><div class="prob-fill" style="width:100.0%;"></div></div>
+              <span class="prob-val top">100.0%</span>
+            </div>
+            <div class="prob-row">
+              <span class="prob-label">bun-sourcemap / ontology / glycan / freight</span>
+              <div class="prob-track"><div class="prob-fill muted" style="width:0.0%;"></div></div>
+              <span class="prob-val">0.0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-amber">
+        <div class="callout-title">Full 7-Point Commercial Pareto Frontier (Excluding $0.00 Preview Muse Spark 1.3)</div>
+        <code>Inkling Small ($49.55, 0.91%)</code> → <code>GPT-6 Luna ($72.14, 15.15%, $1.44/solve)</code> → <code>Muse Ember ($157.18, 30.61%)</code> → <code>DeepSeek V4.1 Flash 1017 ($184.89, 38.48%)</code> → <code>GPT-6.2 Sol ($349.16, 61.52%)</code> → <code>Gemini 4 Carbon ($1,358.25, 64.55%)</code> → <code>Copilot Fusion ($1,987.33, 71.21%)</code>.
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span>github.com/turbo998/ai-research-public · docs/research/terminal-bench-4-1</span>
+      <span>Pareto &amp; Routing · Card 2 of 7</span>
+    </div>
+  </section>
+
+  <!-- ==================== CARD 3: WHAT I TESTED (EVALUATION MATRIX) ==================== -->
+  <section class="card" id="card-3">
+    <div class="card-top">
+      <div class="kicker">
+        <span class="step-pill">3 / 7</span>
+        <span>WHAT I TESTED · 7 DOMAINS × 66 CONTAINER TASKS</span>
+      </div>
+      <h2>Dense compiler feedback reaches 78%, while stateful Operations collapses to 26%</h2>
+      <p class="lead">Across 21,450 Harbor trials (7,867 pass = 36.68%, 12,852 fail, 147 timeout, 584 error), solve rates track the density of local verification oracles rather than raw model parameter scale.</p>
+
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>Domain / Track</th>
+            <th>Anchor Tasks &amp; Wall Failures</th>
+            <th>Cohort / Leader</th>
+            <th>SA Gate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="scen-tag">Security (5)</td>
+            <td><code>shadow-relay</code> (70%), <code>uefi-bootkit</code> (62%), <code>interleaved-vigenere</code> (57%)</td>
+            <td><strong>52.0% avg</strong> · CF / Sonnet / Astra 88.0%</td>
+            <td><span class="pill pill-auto">Act auto</span></td>
+          </tr>
+          <tr>
+            <td class="scen-tag">ML &amp; GPU (11)</td>
+            <td><code>mp-checkpoint</code> (78%), <code>fp8-rmsnorm-gemm</code> (66%) vs <code>vllm-streaming</code> (6%)</td>
+            <td><strong>43.0% avg</strong> · Opus 83.6% / CF 80.0%</td>
+            <td><span class="pill pill-confirm">Confirm</span></td>
+          </tr>
+          <tr>
+            <td class="scen-tag">Media &amp; HW (9)</td>
+            <td><code>layout-config-2</code> (73%), <code>retro-soc</code> (55%) vs <code>freecad-impeller</code> (4/325) <span class="miss-mark">✕</span></td>
+            <td><strong>38% / 37%</strong> · CF 90% Media / 80% HW</td>
+            <td><span class="pill pill-confirm">Confirm</span></td>
+          </tr>
+          <tr class="row-miss">
+            <td class="scen-tag">Software (18)</td>
+            <td><code>telecom-entity</code> (71%) vs <code>bun-sourcemap-leak</code> (0/325) &amp; <code>ontology-kg</code> (0/325) <span class="miss-mark">✕</span></td>
+            <td><strong>35.0% avg</strong> · Astra 67.8% / CF &amp; Sol 66.7%</td>
+            <td><span class="pill pill-confirm">Confirm</span></td>
+          </tr>
+          <tr class="row-miss">
+            <td class="scen-tag">Science (14)</td>
+            <td><code>wdm-design</code> (75%), <code>coq-block-bound</code> (74%) vs <code>glycan-ms2</code> (0/325) <span class="miss-mark">✕</span></td>
+            <td><strong>34.0% avg</strong> · CF &amp; Carbon 68.6% (#1 tie)</td>
+            <td><span class="pill pill-confirm">Confirm</span></td>
+          </tr>
+          <tr class="row-miss">
+            <td class="scen-tag">Operations (9)</td>
+            <td><code>medical-claims</code> (6%), <code>cargo-flight</code> (3/325), <code>freight-dispatch</code> (0/325) <span class="miss-mark">✕</span></td>
+            <td><strong>26.0% avg</strong> · Kimi 64.4% / CF 53.3%</td>
+            <td><span class="pill pill-human">Human</span></td>
+          </tr>
+          <tr class="row-miss">
+            <td class="scen-tag">Pricing Outlier</td>
+            <td><code>Muse Spark 1.3 + Muse Code</code> (#53, 49/330) logged at <code>$0.00</code> preview bill <span class="miss-mark">✕</span></td>
+            <td><strong>14.85%</strong> · Distorts naive $0 Pareto hull</td>
+            <td><span class="pill pill-human">Exclude</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout-grid">
+        <div class="callout callout-blue">
+          <div class="callout-title">SA Law: Compiler-Oracle Feedback Density</div>
+          Where <code>nvcc</code>, <code>coqc</code>, or <code>pytest</code> return deterministic error traces, agents self-heal to <strong>66%–78%</strong>. On negative secret-leak invariants (<code>bun-sourcemap-leak</code>), 3D B-Rep CAD (<code>freecad-impeller</code>), and partial-info dispatch, accuracy hits <strong>0%–1%</strong>.
+        </div>
+        <div class="callout callout-amber">
+          <div class="callout-title">Why Copilot Fusion Leads #2 by +5.45pt</div>
+          Single models split across domains: Opus 5.5 leads ML (<code>83.6%</code>) but drops to <code>52.2%</code> Software; GPT-6.2 Astra leads Software (<code>67.8%</code>) but drops to <code>48.0%</code> Security. Multi-model routing holds <code>66.7%–90.0%</code> across 6 domains + <code>53.3%</code> Ops.
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span>github.com/turbo998/ai-research-public · docs/research/terminal-bench-4-1</span>
+      <span>66-Task Domain Matrix · Card 3 of 7</span>
+    </div>
+  </section>
+
+  <!-- ==================== CARD 4: UNDER THE HOOD ==================== -->
+  <section class="card" id="card-4">
+    <div class="card-top">
+      <div class="kicker">
+        <span class="step-pill">4 / 7</span>
+        <span>UNDER THE HOOD · HARBOR ISOLATION &amp; X.Y.Z PROTOCOL</span>
+      </div>
+      <h2>Harbor <code>environment_mode="separate"</code> seals verifiers outside agent containers</h2>
+      <p class="lead">Terminal-Bench 4.1 eliminates test-fixture inspection and monkey-patching by executing grading scripts in an isolated post-trial container, paired with semantic benchmark versioning (<code>Rerun · Regrade · Reuse</code>).</p>
+
+      <div class="code-panel">
+        <div class="code-bar">
+          <span>1. HARBOR TRIAL &amp; ANTI-REWARD-HACKING CONTRACT (TB 4.1)</span>
+          <span>63 CPU + 3 GPU · 5 TRIALS/TASK</span>
+        </div>
+<pre>{
+  <span class="tok-k">"benchmark_id"</span>: <span class="tok-s">"terminal-bench@4.1.0"</span>,
+  <span class="tok-k">"environment_mode"</span>: <span class="tok-s">"separate"</span>, <span class="tok-c">// zero /tests or grading rubric mounted in agent FS</span>
+  <span class="tok-k">"trial_matrix"</span>: { <span class="tok-k">"tasks"</span>: <span class="tok-n">66</span>, <span class="tok-k">"cpu_only"</span>: <span class="tok-n">63</span>, <span class="tok-k">"gpu_required"</span>: <span class="tok-n">3</span>, <span class="tok-k">"repeats"</span>: <span class="tok-n">5</span> },
+  <span class="tok-k">"semver_policy"</span>: {
+    <span class="tok-k">"major_x"</span>: <span class="tok-s">"Rerun  — new task cohort resets saturated leaderboards (2.1 -&gt; 3.0 -&gt; 4.0)"</span>,
+    <span class="tok-k">"minor_y"</span>: <span class="tok-s">"Regrade — stricter verifier &amp; separate container isolation (4.0 -&gt; 4.1)"</span>,
+    <span class="tok-k">"patch_z"</span>: <span class="tok-s">"Reuse  — harness doc/infra patch preserving comparable scores"</span>
+  }
+}</pre>
+      </div>
+
+      <div class="flow-arrow">↓ Agent container terminates → immutable FS diff mounted into clean Harbor Verifier container ↓</div>
+
+      <div class="code-panel" style="margin-bottom:16px;">
+        <div class="code-bar">
+          <span>2. SEALED AGGREGATE OUTCOMES &amp; SATURATION TRAJECTORY</span>
+          <span>21,450 TOTAL TRIALS</span>
+        </div>
+<pre><span class="tok-c"># Global Trial Outcome Ledger across 65 Leaderboard Rows (Snapshot 2026-11-19T03:41:57Z)</span>
+&lt;answer&gt;
+{
+  <span class="tok-k">"trial_totals"</span>: { <span class="tok-k">"runs"</span>: <span class="tok-n">21450</span>, <span class="tok-k">"pass"</span>: <span class="tok-n">7867</span>, <span class="tok-k">"fail"</span>: <span class="tok-n">12852</span>, <span class="tok-k">"timeout"</span>: <span class="tok-n">147</span>, <span class="tok-k">"error"</span>: <span class="tok-n">584</span> },
+  <span class="tok-k">"saturation_resets"</span>: [
+    { <span class="tok-k">"ver"</span>: <span class="tok-s">"TB 2.0"</span>, <span class="tok-k">"rows"</span>: <span class="tok-n">142</span>, <span class="tok-k">"max_pct"</span>: <span class="tok-n">84.72</span>, <span class="tok-k">"median_pct"</span>: <span class="tok-n">44.33</span> },
+    { <span class="tok-k">"ver"</span>: <span class="tok-s">"TB 2.1"</span>, <span class="tok-k">"rows"</span>: <span class="tok-n">22</span>,  <span class="tok-k">"max_pct"</span>: <span class="tok-n">87.42</span>, <span class="tok-k">"median_pct"</span>: <span class="tok-n">78.43</span> }, <span class="tok-c">// saturated</span>
+    { <span class="tok-k">"ver"</span>: <span class="tok-s">"TB 3.0"</span>, <span class="tok-k">"rows"</span>: <span class="tok-n">12</span>,  <span class="tok-k">"max_pct"</span>: <span class="tok-n">42.70</span>, <span class="tok-k">"median_pct"</span>: <span class="tok-n">21.08</span> }, <span class="tok-c">// hard reset</span>
+    { <span class="tok-k">"ver"</span>: <span class="tok-s">"TB 4.0"</span>, <span class="tok-k">"rows"</span>: <span class="tok-n">57</span>,  <span class="tok-k">"max_pct"</span>: <span class="tok-n">64.85</span>, <span class="tok-k">"median_pct"</span>: <span class="tok-n">37.27</span> },
+    { <span class="tok-k">"ver"</span>: <span class="tok-s">"TB 4.1"</span>, <span class="tok-k">"rows"</span>: <span class="tok-n">65</span>,  <span class="tok-k">"max_pct"</span>: <span class="tok-n">71.21</span>, <span class="tok-k">"median_pct"</span>: <span class="tok-n">38.48</span> }
+  ]
+}
+&lt;/answer&gt;</pre>
+      </div>
+
+      <div class="callout callout-blue">
+        <div class="callout-title">Enterprise Harness Blueprint: Never Co-Locate Agent Shell &amp; Grading Oracle</div>
+        In co-located containers, frontier CLI agents can read hidden unit tests, weaken assertions, or stub binaries via <code>PATH</code>/<code>LD_PRELOAD</code>. Mirror Harbor 4.1 in CI/CD: revoke agent container access first, then run L3/L4 compliance and regression suites in a fresh Ephemeral Runner.
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span>github.com/turbo998/ai-research-public · docs/research/terminal-bench-4-1</span>
+      <span>Harbor Mechanics · Card 4 of 7</span>
+    </div>
+  </section>
+
+  <!-- ==================== CARD 5: ROBUSTNESS CHECK ==================== -->
+  <section class="card" id="card-5">
+    <div class="card-top">
+      <div class="kicker">
+        <span class="step-pill">5 / 7</span>
+        <span>ROBUSTNESS CHECK · EFFORT SCALING &amp; PASS@K BIMODALITY</span>
+      </div>
+      <h2>Max-effort "Overthinking Tax" loses up to -1.21pt while costing +28% to +44% more</h2>
+      <p class="lead">Comparing multi-effort pairs on the exact same model+harness proves reasoning effort is non-monotonic under container timeouts, while pass@1 vs pass@5 exposes bimodal determinism vs exploration.</p>
+
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>Model × Harness Perturbation</th>
+            <th style="text-align:right;">Baseline (High / p@1)</th>
+            <th style="text-align:right;">Escalated (Max / p@5)</th>
+            <th style="text-align:right;">Change (pts)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-miss">
+            <td><strong>Fable 5.1 + Claude Code</strong> (<code>xhigh</code> $4,872 → <code>max</code> $6,244, +28.1% cost)</td>
+            <td class="num-col">57.58%</td>
+            <td class="num-col">57.27%</td>
+            <td class="num-col delta-neg">-0.31</td>
+          </tr>
+          <tr class="row-miss">
+            <td><strong>Opus 5 + Claude Code</strong> (<code>xhigh</code> 59.2M out → <code>max</code> 66.0M out, 4,793s)</td>
+            <td class="num-col">53.33%</td>
+            <td class="num-col">52.12%</td>
+            <td class="num-col delta-neg">-1.21</td>
+          </tr>
+          <tr class="row-miss">
+            <td><strong>GPT-6 Astra + Codex</strong> (<code>high</code> $2,269 → <code>xhigh</code> $2,351, +3.6% cost)</td>
+            <td class="num-col">60.00%</td>
+            <td class="num-col">59.70%</td>
+            <td class="num-col delta-neg">-0.30</td>
+          </tr>
+          <tr>
+            <td><strong>GPT-6 Astra + Codex</strong> (<code>high</code> $2,269 → <code>max</code> $3,267, +44.0% for +1 solve)</td>
+            <td class="num-col">60.00%</td>
+            <td class="num-col">60.30%</td>
+            <td class="num-col delta-pos">+0.30</td>
+          </tr>
+          <tr>
+            <td><strong>Kimi K3.1 Pro Exploration</strong> (<code>pass@1</code> 18× 5/5 → <code>pass@5</code> 56/66 tasks)</td>
+            <td class="num-col">59.70%</td>
+            <td class="num-col">84.85%</td>
+            <td class="num-col delta-pos">+25.15</td>
+          </tr>
+          <tr>
+            <td><strong>GPT-6.2 Astra Determinism</strong> (<code>pass@1</code> 35× 5/5, ±2.30% CI → <code>pass@5</code> 48/66)</td>
+            <td class="num-col">62.12%</td>
+            <td class="num-col">72.73%</td>
+            <td class="num-col delta-pos">+10.61</td>
+          </tr>
+          <tr>
+            <td><strong>Copilot Fusion Co-Design</strong> (<code>pass@1</code> 35× 5/5 → <code>pass@5</code> 55/66 tasks)</td>
+            <td class="num-col">71.21%</td>
+            <td class="num-col">83.33%</td>
+            <td class="num-col delta-pos">+12.12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout-grid">
+        <div class="callout callout-amber">
+          <div class="callout-title">Why CLI Agents Suffer an Overthinking Tax</div>
+          Inside bounded container clocks, <code>max</code> CoT starves interactive bash probing turns and triggers late "second-guess" refactors that break passing builds. Cap interactive CLI loops at <code>high</code>/<code>xhigh</code>.
+        </div>
+        <div class="callout callout-blue">
+          <div class="callout-title">Bimodal 5/5 Mastery vs Tail Exploration</div>
+          GPT-6.2 Astra solves <code>35/66</code> tasks <code>5/5</code> times (narrowest <code>±2.30%</code> CI) yet hits <code>0/5</code> on 18 tasks. Kimi K3.1 Pro hits <code>5/5</code> on only 18 tasks (<code>±4.18%</code> CI) yet unlocks <code>cargo-flight-dispatch</code> (sole <code>3/5</code> globally).
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span>github.com/turbo998/ai-research-public · docs/research/terminal-bench-4-1</span>
+      <span>Effort &amp; Pass@k Stability · Card 5 of 7</span>
+    </div>
+  </section>
+
+  <!-- ==================== CARD 6: LATENCY & TOKEN SCALING ==================== -->
+  <section class="card" id="card-6">
+    <div class="card-top">
+      <div class="kicker">
+        <span class="step-pill">6 / 7</span>
+        <span>LATENCY · TRIAL DURATION &amp; PREFIX-CACHE SCALING</span>
+      </div>
+      <h2>GPT-6.2 Sol finishes 6.1x faster than Sonnet 5.5 (1,214s vs 7,432s) on 17.9x fewer tokens</h2>
+      <p class="lead">Average trial duration across 330 runs (`avg_duration_sec`, scaled to 7,431.6s = 100%). Compact bash trajectories preserve wall-clock budgets while 93%–96% prefix-cache hit rates govern cost.</p>
+
+      <div class="latency-legend">
+        <span><span class="legend-dot" style="background:#2563EB;"></span>Pareto / Compact CLI Trajectory</span>
+        <span><span class="legend-dot" style="background:#CBD5E1;"></span>Heavy Max-Effort Trajectory</span>
+      </div>
+
+      <div class="latency-groups">
+        <div class="lat-group">
+          <div class="lat-title">
+            <span>Tier A · &gt;65% Frontier (#1 Copilot Fusion vs #2 Fable 5.2)</span>
+            <span class="lat-speedup">1.73× faster · 8.3× cheaper ($1,987 vs $16,493)</span>
+          </div>
+          <div class="lat-bar-row">
+            <span>Copilot Fusion (3.32B)</span>
+            <div class="lat-bar-track"><div class="lat-bar-fill-pri" style="width:57.0%;"></div></div>
+            <span class="lat-ms">4,233.6 s</span>
+          </div>
+          <div class="lat-bar-row">
+            <span>Fable 5.2 (15.73B)</span>
+            <div class="lat-bar-track"><div class="lat-bar-fill-sec" style="width:98.7%;"></div></div>
+            <span class="lat-ms muted">7,333.0 s</span>
+          </div>
+        </div>
+
+        <div class="lat-group">
+          <div class="lat-title">
+            <span>Tier B · 61%–64% Workhorse (#7 GPT-6.2 Sol vs #5 Sonnet 5.5)</span>
+            <span class="lat-speedup">6.12× faster · 21.0× cheaper ($349 vs $7,334)</span>
+          </div>
+          <div class="lat-bar-row">
+            <span>GPT-6.2 Sol (1.09B)</span>
+            <div class="lat-bar-track"><div class="lat-bar-fill-pri" style="width:16.3%;"></div></div>
+            <span class="lat-ms">1,214.3 s</span>
+          </div>
+          <div class="lat-bar-row">
+            <span>Sonnet 5.5 (19.41B)</span>
+            <div class="lat-bar-track"><div class="lat-bar-fill-sec" style="width:100.0%;"></div></div>
+            <span class="lat-ms muted">7,431.6 s</span>
+          </div>
+        </div>
+
+        <div class="lat-group">
+          <div class="lat-title">
+            <span>Tier C · Sol Generation Leap (GPT-6.2 Sol vs GPT-6.1 Sol on Codex)</span>
+            <span class="lat-speedup">2.62× faster · -45.0% cost ($349 vs $634)</span>
+          </div>
+          <div class="lat-bar-row">
+            <span>GPT-6.2 Sol (16.0M out)</span>
+            <div class="lat-bar-track"><div class="lat-bar-fill-pri" style="width:16.3%;"></div></div>
+            <span class="lat-ms">1,214.3 s</span>
+          </div>
+          <div class="lat-bar-row">
+            <span>GPT-6.1 Sol (31.3M out)</span>
+            <div class="lat-bar-track"><div class="lat-bar-fill-sec" style="width:42.7%;"></div></div>
+            <span class="lat-ms muted">3,176.7 s</span>
+          </div>
+        </div>
+
+        <div class="lat-group">
+          <div class="lat-title">
+            <span>Tier D · ~65% Cyber/Science Escalation (#4 Carbon high vs #2 Opus 5.5 max)</span>
+            <span class="lat-speedup">1.37× faster · 3.47× cheaper ($1,358 vs $4,719)</span>
+          </div>
+          <div class="lat-bar-row">
+            <span>Gemini 4 Carbon (high)</span>
+            <div class="lat-bar-track"><div class="lat-bar-fill-pri" style="width:47.0%;"></div></div>
+            <span class="lat-ms">3,495.8 s</span>
+          </div>
+          <div class="lat-bar-row">
+            <span>Opus 5.5 (max, 8.03B)</span>
+            <div class="lat-bar-track"><div class="lat-bar-fill-sec" style="width:64.5%;"></div></div>
+            <span class="lat-ms muted">4,790.4 s</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-blue">
+        <div class="callout-title">FinOps Physics: 92.5%–95.8% of All CLI Tokens Are Prefix-Cached Inputs</div>
+        Copilot Fusion caches <code>3.07B / 3.32B</code> tokens (<code>92.6%</code>); GPT-6.2 Sol caches <code>1.035B / 1.085B</code> (<code>95.4%</code>); Opus 5.5 caches <code>7.70B / 8.03B</code> (<code>95.8%</code>). Mutating system prompts mid-trajectory destroys KV-cache reuse and multiplies CLI spend 5x–10x.
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span>github.com/turbo998/ai-research-public · docs/research/terminal-bench-4-1</span>
+      <span>Duration &amp; Token FinOps · Card 6 of 7</span>
+    </div>
+  </section>
+
+  <!-- ==================== CARD 7: MY TAKE ==================== -->
+  <section class="card" id="card-7">
+    <div class="card-top">
+      <div class="kicker">
+        <span class="step-pill">7 / 7</span>
+        <span>MY TAKE · SOLUTION ARCHITECT PLAYBOOK &amp; READINESS</span>
+      </div>
+      <h2>Route CLI workloads along the 3-tier Pareto curve; gate stateful ops behind L3/L4 verifiers</h2>
+      <p class="lead">Terminal-Bench 4.1 proves agentic CLI success is a joint function of multi-model routing, append-only harness cache discipline, and local verification oracle density.</p>
+
+      <div class="fit-grid">
+        <div class="fit-card fit-good">
+          <div class="fit-heading">✅ Good fit</div>
+          <ul class="fit-list">
+            <li><strong>Cross-domain enterprise CLI flagship:</strong> <code>Copilot Fusion + GitHub Copilot</code> (<code>71.21%</code>, <code>$8.46/solve</code>) when repositories blend Software (<code>66.7%</code>), Security (<code>88.0%</code>), ML (<code>80.0%</code>), and Science (<code>68.6%</code>).</li>
+            <li><strong>High-volume CI/CD workhorse:</strong> <code>GPT-6.2 Sol + Codex</code> (<code>61.52%</code>, <code>$1.72/solve</code>, <code>1,214s</code>) on the Golden Elbow, with <code>Gemini 4 Carbon</code> (<code>64.55%</code>, <code>$6.38/solve</code>) for security/science escalation.</li>
+            <li><strong>Verifier-gated Best-of-5 repair:</strong> Pairing <code>Kimi K3.1 Pro</code> (<code>84.85% pass@5</code>) with isolated <code>Harbor</code> <code>environment_mode="separate"</code> grading sandboxes on stubborn tail bugs.</li>
+            <li><strong>Oracle-dense engineering:</strong> Tasks backed by <code>pytest</code>, <code>nvcc</code>, <code>coqc</code>, or static type-checkers (<code>66%–78%</code> solve band).</li>
+          </ul>
+        </div>
+
+        <div class="fit-card fit-bad">
+          <div class="fit-heading">⛔ Not for</div>
+          <ul class="fit-list">
+            <li><strong>Unverified autonomous Operations:</strong> Partial-info dispatch &amp; claims (<code>26%</code> domain avg; <code>freight-dispatch-shift 0%</code>, <code>cargo-flight-dispatch 1%</code>, <code>medical-claims 6%</code>) without human commit gates.</li>
+            <li><strong>Dominated max-effort overspend:</strong> Paying <code>$4,719–$16,493</code> inside the <code>#2–#8</code> CI tie band, or enabling <code>max</code> where <code>xhigh</code> wins (<code>Fable 5.1</code> / <code>Opus 5</code> Overthinking Tax).</li>
+            <li><strong>Open-loop spatial &amp; negative invariants:</strong> 3D B-Rep CAD (<code>freecad-impeller 1%</code>), build sourcemap leak prevention (<code>0%</code>), and glycan MS2 / ontology KG (<code>0%</code>) without dedicated L4 verifiers.</li>
+            <li><strong>Co-located test grading or $0 previews:</strong> Mounting <code>/tests</code> inside agent shells or leaving <code>$0.00</code> preview rows (<code>Muse Spark 1.3</code>) in FinOps frontiers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dark-summary">
+        <div class="dark-summary-title">Provenance, Licensing &amp; Benchmark Hygiene</div>
+        <p><strong>Provenance:</strong> <code>anonymized_reported / public_leaderboard_snapshot</code> (<code>independently_reproduced=false</code>) · Snapshot <code>2026-11-19T03:41:57Z</code> (<code>SHA-256: 2f612504302183339b0b6e37938aa7adcb2728279ac839a8d548f052a47959cc</code>) · Upstream Benchmark License: <code>Apache-2.0</code> (<code>harbor-framework/terminal-bench</code>).</p>
+        <p><strong>Guardrails Verified:</strong> Self-contained HTML (<code>CSP: default-src 'none'; style-src 'unsafe-inline'</code>, zero <code>&lt;script&gt;</code>), zero canary GUIDs, zero fabricated coordinates. Cross-referenced with <code>turbo998/benchmark-harness-engineering</code> &amp; <code>turbo998.github.io/workshops/terminal-bench/</code>.</p>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span>github.com/turbo998/ai-research-public · docs/research/terminal-bench-4-1</span>
+      <span>SA Synthesis · Card 7 of 7</span>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

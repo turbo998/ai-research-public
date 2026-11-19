@@ -1,0 +1,95 @@
+{
+  "topic": "terminal-bench-4-1",
+  "title": "Terminal-Bench 4.1 (Harbor Framework) — Architecture, Pareto Economics & 66-Task Agent Evaluation Monograph",
+  "benchmark_id": "terminal-bench@4.1.0",
+  "snapshot_utc": "2026-11-19T03:41:57Z",
+  "provenance": "anonymized_reported",
+  "provenance_detail": "public_leaderboard_snapshot",
+  "independently_reproduced": false,
+  "upstream_license": "Apache-2.0 (harbor-framework/terminal-bench)",
+  "canary_audit": {
+    "contains_canary_guids": false,
+    "verified_zero_uuid_strings": true,
+    "source_bundle_sha256": "2f612504302183339b0b6e37938aa7adcb2728279ac839a8d548f052a47959cc"
+  },
+  "source_urls": [
+    "https://www.tbench.ai/",
+    "https://www.tbench.ai/news/terminal-bench-4-0",
+    "https://github.com/harbor-framework/terminal-bench/releases/tag/v4.1.0",
+    "https://hub.harborframework.com/datasets/terminal-bench/terminal-bench/5"
+  ],
+  "related_repositories": [
+    "https://github.com/turbo998/benchmark-harness-engineering",
+    "https://turbo998.github.io/workshops/terminal-bench/index.html"
+  ],
+  "key_verified_metrics": {
+    "leaderboard_entries": 65,
+    "unique_model_agent_pairs": 52,
+    "priced_commercial_pairs": 51,
+    "unpriced_preview_pairs": 1,
+    "pareto_frontier_pairs": 7,
+    "pareto_frontier_share_pct": 13.46,
+    "pareto_dominated_share_pct": 86.54,
+    "tasks_total": 66,
+    "tasks_cpu_only": 63,
+    "tasks_gpu": 3,
+    "trials_per_task_per_entry": 5,
+    "total_trials": 21450,
+    "trial_outcomes": {
+      "pass": 7867,
+      "fail": 12852,
+      "timeout": 147,
+      "error": 584
+    },
+    "rank1_leader": {
+      "model": "Copilot Fusion",
+      "agent": "GitHub Copilot",
+      "effort": "max",
+      "accuracy_pct": 71.21,
+      "ci95_pct": 2.88,
+      "pass_at_2_pct": 78.33,
+      "pass_at_5_pct": 83.33,
+      "lead_over_rank2_pts": 5.45,
+      "cost_usd": 1987.33,
+      "cost_per_solve_usd": 8.46,
+      "total_tokens": 3317014764
+    },
+    "golden_elbow": {
+      "rank": 7,
+      "model": "GPT-6.2 Sol",
+      "agent": "Codex",
+      "effort": "max",
+      "accuracy_pct": 61.52,
+      "ci95_pct": 2.75,
+      "cost_usd": 349.16,
+      "cost_per_solve_usd": 1.72,
+      "cost_ratio_vs_fable_5_2": 47.24
+    },
+    "pass_at_5_leader": {
+      "rank": 11,
+      "model": "Kimi K3.1 Pro",
+      "agent": "Claude Code",
+      "effort": "max",
+      "pass_at_1_pct": 59.7,
+      "ci95_pct": 4.18,
+      "pass_at_5_pct": 84.85,
+      "exploration_gain_pts": 25.15,
+      "sole_cargo_flight_dispatch_solves": "3/5 (3/325 globally)"
+    },
+    "zero_solve_wall_tasks": [
+      "bun-sourcemap-leak",
+      "ontology-kg-querying",
+      "glycan-ms2-elucidation",
+      "freight-dispatch-shift"
+    ]
+  },
+  "artifacts": [
+    "README.md",
+    "README.en.md",
+    "test-report-cards.zh-CN.html",
+    "test-report-cards.en.html",
+    "assets/overview.svg",
+    "data/tbench_4_1_summary.json",
+    "simulator/test_tbench_4_1_monograph.py"
+  ]
+}
