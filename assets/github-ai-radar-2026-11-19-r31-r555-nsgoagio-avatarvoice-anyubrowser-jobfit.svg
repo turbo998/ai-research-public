@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR555" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101f"/>
+      <stop offset="100%" stop-color="#142442"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR555)" rx="18"/>
+  <text x="40" y="52" fill="#fbbf24" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 31 · CUMULATIVE ROUND 555 MILESTONE · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="21.5" font-weight="800">【第 555 轮里程碑】Agio 11 端统一运行时 × AvatarVoice 单卡实时数字人 × Anyu 故障闭锁浏览器 × JobFit 匹配引擎</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. oneo-me/nsgo-agio (★11 · Go · MIT · 11-Harness Agent Core)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 统一驱动 pi / Codex / Claude / Cursor / OpenCode / Grok / AGY / Kiro 等 11 端</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 支持单进程内嵌模式或“中心 Server + 手机/桌面多 Client”分离部署</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 用纯 Go 统一会话生命周期、事件流推送与跨终端任务展示</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：企业自研研发效能门户集成 11 大主流 Coding Agent 的标准内核</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. johnrobinsn/AvatarVoice (★6 · 3 Forks · Single-GPU WebRTC Avatar)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 单张 32GB+ GPU 同时跑通完整 WebRTC 实时唇形同步数字人 + 4B LLM</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 串联 Silero VAD + Smart Turn + faster-whisper + vLLM + Phonon TTS + AvatarForcing</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 专为无限时长流式生成设计，可选 --dual-gpu 将渲染拆至副卡</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：替代按分钟天价计费云数字人 API 的私有化实时视频客服底座</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. 5nix/anyu-browser (★9 · MPL-2.0 · Fail-Closed Exit-Verified Browser)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 内置代理内核桌面浏览器：任何故障下绝不回退直连 (Zero Direct-Connect Leak)</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 仅当实时探测出口国家与配置完全一致时才放行网页（异常立即闭锁）</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 自动向目标站点呈现与出口节点严格匹配的时区、语言与地理位置</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：跨境合规测试与海外区域限定 AI 服务的零泄漏安全浏览器</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. Sipty/jobfit (★7 · MIT · Deterministic Dedup &amp; Grounded PDF)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 确定性代码负责去重（绝不重复推荐同一机会）、匹配裁剪与 WeasyPrint 渲染</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 通过标准 Shell 命令调用任意大模型（零专有 SDK 耦合），兼容所有 Agent Harness</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 裁剪阶段硬性锁死不可捏造雇主、日期、学历或姓名，输出排名报告与定制 PDF</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700"/>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：猎头与咨询公司项目机会自动去重评级及零幻觉简历生成</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#fbbf24" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R31-R555 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (维护 11 套 CLI 胶水 + 商业按分钟实时数字人 API + 代理闪断暴露真实 IP): $2,840.00 (SaaS/API)  + $4,150.00 (41.5h × $100) = $6,990.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (单 CLI 封装脚本 + 多卡割裂数字人服务 + 普通浏览器代理插件):             $1,160.00 (SaaS)      + $1,550.00 (15.5h × $100) = $2,710.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (nsgo-agio + AvatarVoice + anyu-browser + jobfit):                       $70.00 (API)       +   $250.00 ( 2.5h × $100) =   $320.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,670.00 / mo (-95.42%) | Annual Savings: $80,040.00 / yr | Track B stars_today: not_measured</text>
+</svg>

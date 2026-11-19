@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR540" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101f"/>
+      <stop offset="100%" stop-color="#142442"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR540)" rx="18"/>
+  <text x="40" y="52" fill="#fbbf24" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 16 · CUMULATIVE ROUND 540 MILESTONE · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="21.5" font-weight="800">【第 540 轮里程碑】腾讯 WeVisForensics 鉴伪智能体 × 代码级实录解说片 × AppleLens 零劫持雷达 × VPS 防锁死加固</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. Tencent/WeVisForensics (★21 · Apache-2.0 · WeVisForensics-4B)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 腾讯开源全模态 AI 生成视频鉴伪自进化多智能体 (arXiv:2611.21373)</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 主调查官 (Investigator) 粗粒度定位可疑时间窗，按需派发子检查员 (Inspectors)</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 5 维专项取证：视觉外观、物理一致性、常识逻辑、画面文字与音轨同步</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：金融远程核身、保险理赔与内容平台 AI 视频鉴伪底座</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. lgarbayo/product-walkthrough-video (★10 · MIT · 2–5m Walkthrough)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 将代码仓 + 正在运行的应用直接转化为 2–5 分钟专业产品实录解说视频</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 左屏展示真实运行 App 录屏，右屏同步呈现从源码核实的路由与架构数据卡</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 4 步确定性闭环：读代码写脚本 ➔ 人工审批 ➔ 三大确定性脚本录制/配音/合成 ➔ 布局质检</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：把耗时数天的产品发布 walkthrough 压缩至分钟级</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. Kianuni/AppleLens (★15 · MIT · Swift 6.0 Zero-MitM macOS 14+)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 零 MitM 解密、纯只读 macOS 原生菜单栏 + Workbench + applelens CLI</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 实时三态 AI 流量雷达（端侧 / Apple PCC 隐私云计算 / 外部大模型外连）</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• USB 真机 iPhone 日志诊断、4 路 QUIC/证书固定探针与透明报告本地解码</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：企业 Mac/iOS 终端 AI 外连合规审计与零劫持网络排障</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. abrantess/vps-cybersec-orchestrator (★23 · MIT · CIS Linux v2.0)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 面向 Ubuntu/Debian/RHEL/Rocky/Alpine 的幂等安全审计与攻击面收敛编排器</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 内置 anti_lockout_guard.sh 防锁死守卫，杜绝自动改 SSH/防火墙把管理员踢出</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 提供 ptt_manifest.schema.json 混合认知契约，人类 SRE 与 AI Agent 均可安全调用</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：自建 AI 网关与推理节点 CIS 基线无损加固标配</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#fbbf24" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R16-R540 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (按分钟付费鉴伪 API + 手工录剪产品演示片 + MitM 抓包报错 + SSH 锁死排障): $2,820.00 (API/SaaS)  + $4,150.00 (41.5h × $100) = $6,970.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (单帧鉴伪服务 + 普通录屏工具 + 手写 Ansible 加固脚本):                     $1,150.00 (SaaS)      + $1,550.00 (15.5h × $100) = $2,700.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (WeVisForensics-4B + walkthrough-video + AppleLens + vps-cybersec):         $75.00 (API)       +   $260.00 ( 2.6h × $100) =   $335.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,635.00 / mo (-95.19%) | Annual Savings: $79,620.00 / yr | Track B stars_today: not_measured</text>
+</svg>

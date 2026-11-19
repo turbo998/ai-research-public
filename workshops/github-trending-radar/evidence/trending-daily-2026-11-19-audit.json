@@ -1,0 +1,1517 @@
+{
+  "audit_version": "3.0.0",
+  "generated_at_cst": "2026-11-19T23:18:00+08:00",
+  "raw_trending_html_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-19-raw.html",
+    "source_url": "https://github.com/trending?since=daily",
+    "scraped_at_cst": "2026-11-19T23:10:00+08:00",
+    "sha256_lf": "9f756482871e71f3364e0333dec489ce7030e3ddef7c33cf1a136d68115f5dc9"
+  },
+  "raw_track_b_search_api_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-19-raw.json",
+    "source_query": "gh api -X GET search/repositories -f q=\"created:>2026-11-12 stars:>30 forks:>=2\" -f sort=stars -f order=desc -f per_page=100",
+    "captured_at_cst": "2026-11-19T23:10:30+08:00",
+    "sha256_lf": "581ab7fdb5e4ea1d4828738bf2e075984f8fe6ceb8fe861d77b7f545bfd0bc1d",
+    "metric_definition": "stars_per_day = round(stars_total / age_days); stars_today = not_measured"
+  },
+  "parsed_daily_trending_rows": [
+    {
+      "trending_rank": 1,
+      "full_name": "elementalsouls/Claude-BugHunter",
+      "stars_today_measured": 1353,
+      "stars_total_in_trending_dom": 11942
+    },
+    {
+      "trending_rank": 2,
+      "full_name": "obra/superpowers",
+      "stars_today_measured": 2029,
+      "stars_total_in_trending_dom": 321787
+    },
+    {
+      "trending_rank": 3,
+      "full_name": "HKUDS/CLI-Anything",
+      "stars_today_measured": 899,
+      "stars_total_in_trending_dom": 60304
+    },
+    {
+      "trending_rank": 4,
+      "full_name": "jingyaogong/minimind",
+      "stars_today_measured": 687,
+      "stars_total_in_trending_dom": 66698
+    },
+    {
+      "trending_rank": 5,
+      "full_name": "cursor/plugins",
+      "stars_today_measured": 383,
+      "stars_total_in_trending_dom": 17456
+    },
+    {
+      "trending_rank": 6,
+      "full_name": "firecrawl/firecrawl",
+      "stars_today_measured": 795,
+      "stars_total_in_trending_dom": 203744
+    },
+    {
+      "trending_rank": 7,
+      "full_name": "nginx/nginx",
+      "stars_today_measured": 66,
+      "stars_total_in_trending_dom": 32254
+    },
+    {
+      "trending_rank": 8,
+      "full_name": "openvinotoolkit/openvino",
+      "stars_today_measured": 246,
+      "stars_total_in_trending_dom": 11486
+    },
+    {
+      "trending_rank": 9,
+      "full_name": "cathrynlavery/diagram-design",
+      "stars_today_measured": 332,
+      "stars_total_in_trending_dom": 68434
+    },
+    {
+      "trending_rank": 10,
+      "full_name": "mvanhorn/last30days-skill",
+      "stars_today_measured": 952,
+      "stars_total_in_trending_dom": 70578
+    },
+    {
+      "trending_rank": 11,
+      "full_name": "google-labs-code/stitch-skills",
+      "stars_today_measured": 303,
+      "stars_total_in_trending_dom": 10613
+    },
+    {
+      "trending_rank": 12,
+      "full_name": "mjmirza/app-store-compliance",
+      "stars_today_measured": 542,
+      "stars_total_in_trending_dom": 1597
+    },
+    {
+      "trending_rank": 13,
+      "full_name": "Tracer-Cloud/opensre",
+      "stars_today_measured": 25,
+      "stars_total_in_trending_dom": 12952
+    },
+    {
+      "trending_rank": 14,
+      "full_name": "toeverything/AFFiNE",
+      "stars_today_measured": 170,
+      "stars_total_in_trending_dom": 74896
+    },
+    {
+      "trending_rank": 15,
+      "full_name": "XiaoYouChR/Ghost-Downloader-3",
+      "stars_today_measured": 432,
+      "stars_total_in_trending_dom": 12403
+    },
+    {
+      "trending_rank": 16,
+      "full_name": "zhouxiaoka/autoclip",
+      "stars_today_measured": 110,
+      "stars_total_in_trending_dom": 10989
+    }
+  ],
+  "rounds": [
+    {
+      "round_id": "2026-11-19-R1-R525",
+      "cumulative_round": 525,
+      "claim_id": "CLAIM-20261119-R1-R525-FIRECRAWL-OPENSRE-DATACAT-APPSTORECOMPLIANCE",
+      "primary_repos": [
+        "firecrawl/firecrawl",
+        "Tracer-Cloud/opensre",
+        "replit/datacat",
+        "mjmirza/app-store-compliance"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,860.00",
+          "labor_hours": 42.0,
+          "labor_usd": "4,200.00",
+          "total_monthly_usd": "7,060.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,180.00",
+          "labor_hours": 16.5,
+          "labor_usd": "1,650.00",
+          "total_monthly_usd": "2,830.00"
+        },
+        "path_c": {
+          "api_compute_usd": "85.00",
+          "labor_hours": 2.8,
+          "labor_usd": "280.00",
+          "total_monthly_usd": "365.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,695.00",
+        "net_savings_pct_vs_path_a": "94.83%",
+        "annual_savings_usd": "80,340.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R2-R526",
+      "cumulative_round": 526,
+      "claim_id": "CLAIM-20261119-R2-R526-CLIANYTHING-AFFINE-GKESANDBOXES-SEARCHEVALS",
+      "primary_repos": [
+        "HKUDS/CLI-Anything",
+        "toeverything/AFFiNE",
+        "comp-work/gke-sandboxes",
+        "parallel-web/parallel-search-evals"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,740.00",
+          "labor_hours": 40.5,
+          "labor_usd": "4,050.00",
+          "total_monthly_usd": "6,790.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,140.00",
+          "labor_hours": 16.0,
+          "labor_usd": "1,600.00",
+          "total_monthly_usd": "2,740.00"
+        },
+        "path_c": {
+          "api_compute_usd": "80.00",
+          "labor_hours": 2.7,
+          "labor_usd": "270.00",
+          "total_monthly_usd": "350.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,440.00",
+        "net_savings_pct_vs_path_a": "94.85%",
+        "annual_savings_usd": "77,280.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R3-R527",
+      "cumulative_round": 527,
+      "claim_id": "CLAIM-20261119-R3-R527-SUPERPOWERS-AUTOCLIP-PHASYN-SUBCAST",
+      "primary_repos": [
+        "obra/superpowers",
+        "zhouxiaoka/autoclip",
+        "phasyn/phasyn-studio",
+        "joeseesun/subcast"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,680.00",
+          "labor_hours": 41.0,
+          "labor_usd": "4,100.00",
+          "total_monthly_usd": "6,780.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,120.00",
+          "labor_hours": 15.5,
+          "labor_usd": "1,550.00",
+          "total_monthly_usd": "2,670.00"
+        },
+        "path_c": {
+          "api_compute_usd": "75.00",
+          "labor_hours": 2.7,
+          "labor_usd": "270.00",
+          "total_monthly_usd": "345.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,435.00",
+        "net_savings_pct_vs_path_a": "94.91%",
+        "annual_savings_usd": "77,220.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R4-R528",
+      "cumulative_round": 528,
+      "claim_id": "CLAIM-20261119-R4-R528-ICONS8HUB-PANSY-NODWARDEN-DSHWIN",
+      "primary_repos": [
+        "icons8/hub",
+        "pansy-ai/pansy",
+        "arhen/nodwarden",
+        "HiSeax/dsh-windows-superagent"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,620.00",
+          "labor_hours": 40.0,
+          "labor_usd": "4,000.00",
+          "total_monthly_usd": "6,620.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,080.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,580.00"
+        },
+        "path_c": {
+          "api_compute_usd": "75.00",
+          "labor_hours": 2.6,
+          "labor_usd": "260.00",
+          "total_monthly_usd": "335.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,285.00",
+        "net_savings_pct_vs_path_a": "94.94%",
+        "annual_savings_usd": "75,420.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R5-R529",
+      "cumulative_round": 529,
+      "claim_id": "CLAIM-20261119-R5-R529-LUMODESKTOP-FRONTDESK-T3BOAT-WMPF",
+      "primary_repos": [
+        "ProtonLumo/lumo-desktop",
+        "Phz-06/agent-frontdesk",
+        "paukraft/t3boat",
+        "yiyihuohuo/WMPFWorkbench-go"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,560.00",
+          "labor_hours": 39.5,
+          "labor_usd": "3,950.00",
+          "total_monthly_usd": "6,510.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,060.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,560.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.6,
+          "labor_usd": "260.00",
+          "total_monthly_usd": "330.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,180.00",
+        "net_savings_pct_vs_path_a": "94.93%",
+        "annual_savings_usd": "74,160.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R6-R530",
+      "cumulative_round": 530,
+      "claim_id": "CLAIM-20261119-R6-R530-ZAZYPENTEST-PROMPTENG-GDMROBOTICS-FASTFRAMES",
+      "primary_repos": [
+        "AnandJogawade/Zazy-Pentest-Plugin-for-Claude",
+        "mzainulabideendev/Universal-AI-Prompt-Engineer",
+        "google-deepmind/robotics-antigravity-plugin",
+        "apple-aiml-research/ml-fastframes"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,820.00",
+          "labor_hours": 41.5,
+          "labor_usd": "4,150.00",
+          "total_monthly_usd": "6,970.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,160.00",
+          "labor_hours": 16.0,
+          "labor_usd": "1,600.00",
+          "total_monthly_usd": "2,760.00"
+        },
+        "path_c": {
+          "api_compute_usd": "80.00",
+          "labor_hours": 2.7,
+          "labor_usd": "270.00",
+          "total_monthly_usd": "350.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,620.00",
+        "net_savings_pct_vs_path_a": "94.98%",
+        "annual_savings_usd": "79,440.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R7-R531",
+      "cumulative_round": 531,
+      "claim_id": "CLAIM-20261119-R7-R531-RAGMCP-EZNESS-ZAAG-FOLDMOBILEGYM",
+      "primary_repos": [
+        "ntu0831/RAG-MCP-Server",
+        "Easyblue11/ezness",
+        "IsmailHatim/zaag",
+        "NaiboWang/FoldMobileGym"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,640.00",
+          "labor_hours": 40.0,
+          "labor_usd": "4,000.00",
+          "total_monthly_usd": "6,640.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,090.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,590.00"
+        },
+        "path_c": {
+          "api_compute_usd": "75.00",
+          "labor_hours": 2.6,
+          "labor_usd": "260.00",
+          "total_monthly_usd": "335.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,305.00",
+        "net_savings_pct_vs_path_a": "94.95%",
+        "annual_savings_usd": "75,660.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R8-R532",
+      "cumulative_round": 532,
+      "claim_id": "CLAIM-20261119-R8-R532-FINALPHASELITE-VIDEOSKILLS-IRIS-SIMULATOR",
+      "primary_repos": [
+        "Jadouminou/final-phase-lite",
+        "Viprasol-Tech/claude-video-editing-skills",
+        "Dylan-Nihilo/iris",
+        "Nyxera0x/simulator"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,660.00",
+          "labor_hours": 40.5,
+          "labor_usd": "4,050.00",
+          "total_monthly_usd": "6,710.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,100.00",
+          "labor_hours": 15.5,
+          "labor_usd": "1,550.00",
+          "total_monthly_usd": "2,650.00"
+        },
+        "path_c": {
+          "api_compute_usd": "75.00",
+          "labor_hours": 2.6,
+          "labor_usd": "260.00",
+          "total_monthly_usd": "335.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,375.00",
+        "net_savings_pct_vs_path_a": "95.01%",
+        "annual_savings_usd": "76,500.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R9-R533",
+      "cumulative_round": 533,
+      "claim_id": "CLAIM-20261119-R9-R533-DESLOP-DEVSKILLS-APPLEREVIEW-REDCRAB",
+      "primary_repos": [
+        "etodanik/deslop",
+        "naheel0/dev-skills",
+        "Git-Agni/apple-app-review-skill",
+        "BigBrother168/red-crab"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,540.00",
+          "labor_hours": 39.0,
+          "labor_usd": "3,900.00",
+          "total_monthly_usd": "6,440.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,040.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,540.00"
+        },
+        "path_c": {
+          "api_compute_usd": "65.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "315.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,125.00",
+        "net_savings_pct_vs_path_a": "95.11%",
+        "annual_savings_usd": "73,500.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R10-R534",
+      "cumulative_round": 534,
+      "claim_id": "CLAIM-20261119-R10-R534-COSPAN-PEER-MINDMARK-DSHBOTS",
+      "primary_repos": [
+        "keli-wen/cospan",
+        "stokaro/codex-claude-peer",
+        "BaiKe-Zhang/dsh-mindmark",
+        "kadaliao/dsh-bots"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,580.00",
+          "labor_hours": 39.5,
+          "labor_usd": "3,950.00",
+          "total_monthly_usd": "6,530.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,050.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,550.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,210.00",
+        "net_savings_pct_vs_path_a": "95.10%",
+        "annual_savings_usd": "74,520.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R11-R535",
+      "cumulative_round": 535,
+      "claim_id": "CLAIM-20261119-R11-R535-VEIL-ARTEXDEFENSE-WP2NODE-ARTBOARDS",
+      "primary_repos": [
+        "min-1225/veil-skill",
+        "ja1sh/artex-defense",
+        "ttaie13/wordpress-to-nodejs-skill",
+        "unixzii/artboards"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,760.00",
+          "labor_hours": 41.0,
+          "labor_usd": "4,100.00",
+          "total_monthly_usd": "6,860.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,140.00",
+          "labor_hours": 15.5,
+          "labor_usd": "1,550.00",
+          "total_monthly_usd": "2,690.00"
+        },
+        "path_c": {
+          "api_compute_usd": "75.00",
+          "labor_hours": 2.6,
+          "labor_usd": "260.00",
+          "total_monthly_usd": "335.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,525.00",
+        "net_savings_pct_vs_path_a": "95.12%",
+        "annual_savings_usd": "78,300.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R12-R536",
+      "cumulative_round": 536,
+      "claim_id": "CLAIM-20261119-R12-R536-GOBOT-SMOOTHSTONE-DSHPROJECTS-CHATINDSH",
+      "primary_repos": [
+        "xyc999-ai/go-bot",
+        "baney75/smoothstone",
+        "hovocope135-tech/DSH-projects",
+        "YinkaiYu/chat-in-dsh"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,620.00",
+          "labor_hours": 40.0,
+          "labor_usd": "4,000.00",
+          "total_monthly_usd": "6,620.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,080.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,580.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,300.00",
+        "net_savings_pct_vs_path_a": "95.17%",
+        "annual_savings_usd": "75,600.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R13-R537",
+      "cumulative_round": 537,
+      "claim_id": "CLAIM-20261119-R13-R537-REVIEWGALLERY-BEATREEL-TEACHME-BOOKBUILDER",
+      "primary_repos": [
+        "RevStudio/review-gallery",
+        "anand-reddi/Beatreel",
+        "AayushPandey2/teachme-skill",
+        "shariefabdelmonem/interactive-book-builder"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,520.00",
+          "labor_hours": 39.0,
+          "labor_usd": "3,900.00",
+          "total_monthly_usd": "6,420.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,030.00",
+          "labor_hours": 14.5,
+          "labor_usd": "1,450.00",
+          "total_monthly_usd": "2,480.00"
+        },
+        "path_c": {
+          "api_compute_usd": "65.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "315.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,105.00",
+        "net_savings_pct_vs_path_a": "95.09%",
+        "annual_savings_usd": "73,260.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R14-R538",
+      "cumulative_round": 538,
+      "claim_id": "CLAIM-20261119-R14-R538-WINGBOX-READANYDOC-MCPATTEST-RUNELAY",
+      "primary_repos": [
+        "aileron-tech/wingbox",
+        "arpitpatel25/ReadAnyDoc",
+        "Balanov/mcp-attest",
+        "Andsu-dev/runelay"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,680.00",
+          "labor_hours": 40.5,
+          "labor_usd": "4,050.00",
+          "total_monthly_usd": "6,730.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,110.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,610.00"
+        },
+        "path_c": {
+          "api_compute_usd": "75.00",
+          "labor_hours": 2.6,
+          "labor_usd": "260.00",
+          "total_monthly_usd": "335.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,395.00",
+        "net_savings_pct_vs_path_a": "95.02%",
+        "annual_savings_usd": "76,740.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R15-R539",
+      "cumulative_round": 539,
+      "claim_id": "CLAIM-20261119-R15-R539-MODERNJAVA-MICROBRAINS-OPENFABRIQ-PMPRD",
+      "primary_repos": [
+        "wkd09/modern-java-guidance",
+        "drtikov/microbrainsforagents",
+        "openfabriq/openfabriq",
+        "xinyuefangfang/pmprd"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,640.00",
+          "labor_hours": 39.5,
+          "labor_usd": "3,950.00",
+          "total_monthly_usd": "6,590.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,070.00",
+          "labor_hours": 14.5,
+          "labor_usd": "1,450.00",
+          "total_monthly_usd": "2,520.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,270.00",
+        "net_savings_pct_vs_path_a": "95.14%",
+        "annual_savings_usd": "75,240.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R16-R540",
+      "cumulative_round": 540,
+      "claim_id": "CLAIM-20261119-R16-R540-WEVISFORENSICS-WALKTHROUGH-APPLELENS-VPSCYBERSEC",
+      "primary_repos": [
+        "Tencent/WeVisForensics",
+        "lgarbayo/product-walkthrough-video",
+        "Kianuni/AppleLens",
+        "abrantess/vps-cybersec-orchestrator"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,820.00",
+          "labor_hours": 41.5,
+          "labor_usd": "4,150.00",
+          "total_monthly_usd": "6,970.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,150.00",
+          "labor_hours": 15.5,
+          "labor_usd": "1,550.00",
+          "total_monthly_usd": "2,700.00"
+        },
+        "path_c": {
+          "api_compute_usd": "75.00",
+          "labor_hours": 2.6,
+          "labor_usd": "260.00",
+          "total_monthly_usd": "335.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,635.00",
+        "net_savings_pct_vs_path_a": "95.19%",
+        "annual_savings_usd": "79,620.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R17-R541",
+      "cumulative_round": 541,
+      "claim_id": "CLAIM-20261119-R17-R541-DEVKB-SHOPIFYSYNC-RETURNRP-REPLICATOR",
+      "primary_repos": [
+        "namiq-ai/devkb",
+        "ussefidder/shopify-store-sync-mcp",
+        "karlmoriaty/AxurePR-return-rp",
+        "T-Crypt/replicator"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,710.00",
+          "labor_hours": 40.5,
+          "labor_usd": "4,050.00",
+          "total_monthly_usd": "6,760.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,120.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,620.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,440.00",
+        "net_savings_pct_vs_path_a": "95.27%",
+        "annual_savings_usd": "77,280.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R18-R542",
+      "cumulative_round": 542,
+      "claim_id": "CLAIM-20261119-R18-R542-HAVEN-OCTOSIFT-VIDEOSHORTANIM-TAILORCV",
+      "primary_repos": [
+        "Bluezip231/Haven-Public",
+        "Octosift/OctoSift",
+        "DuongVuIT/video-short-animation",
+        "ThiagoLelis/TailorCV"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,660.00",
+          "labor_hours": 40.0,
+          "labor_usd": "4,000.00",
+          "total_monthly_usd": "6,660.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,090.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,590.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,340.00",
+        "net_savings_pct_vs_path_a": "95.20%",
+        "annual_savings_usd": "76,080.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R19-R543",
+      "cumulative_round": 543,
+      "claim_id": "CLAIM-20261119-R19-R543-ACOMPANY-DATAFORSEO-ORBAUDIO-AMAZONSTUDIO",
+      "primary_repos": [
+        "phuocka/a-company",
+        "AgriciDaniel/dataforseo-agent",
+        "stdevMac/orb-audio",
+        "liangdabiao/dsh-amazon-image-studio"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,740.00",
+          "labor_hours": 40.5,
+          "labor_usd": "4,050.00",
+          "total_monthly_usd": "6,790.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,130.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,630.00"
+        },
+        "path_c": {
+          "api_compute_usd": "75.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "325.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,465.00",
+        "net_savings_pct_vs_path_a": "95.21%",
+        "annual_savings_usd": "77,580.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R20-R544",
+      "cumulative_round": 544,
+      "claim_id": "CLAIM-20261119-R20-R544-CRAFTMCPHUB-AGYBRIDGE-REMOTEPCMCP-RUUM",
+      "primary_repos": [
+        "AndrianLeah/craft-mcp-hub",
+        "codewith-aditya/agy-bridge",
+        "dqIndieGames/remote-pc-mcp-gateway",
+        "JsonLee12138/Ruum"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,610.00",
+          "labor_hours": 39.5,
+          "labor_usd": "3,950.00",
+          "total_monthly_usd": "6,560.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,060.00",
+          "labor_hours": 14.5,
+          "labor_usd": "1,450.00",
+          "total_monthly_usd": "2,510.00"
+        },
+        "path_c": {
+          "api_compute_usd": "65.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "315.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,245.00",
+        "net_savings_pct_vs_path_a": "95.20%",
+        "annual_savings_usd": "74,940.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R21-R545",
+      "cumulative_round": 545,
+      "claim_id": "CLAIM-20261119-R21-R545-GEMINIWEBAGENT-WORLDDIRECTOR-LIKHARI-DSHRESEARCH",
+      "primary_repos": [
+        "582835293/gemini-web-agent",
+        "bloomway-ai/bloomway-world-director",
+        "AIwithhassan/likhari-ai",
+        "wonderandyou/dsh-research"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,780.00",
+          "labor_hours": 41.0,
+          "labor_usd": "4,100.00",
+          "total_monthly_usd": "6,880.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,140.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,640.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,560.00",
+        "net_savings_pct_vs_path_a": "95.35%",
+        "annual_savings_usd": "78,720.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R22-R546",
+      "cumulative_round": 546,
+      "claim_id": "CLAIM-20261119-R22-R546-PLAYDATASAFETY-TURINGPOT-PICHARTER-YARDMASTER",
+      "primary_repos": [
+        "wajahatkarim3/play-data-safety-skill",
+        "tracebit-com/turingpot",
+        "win4r/pi-charter",
+        "ApostPap/yardmaster"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,690.00",
+          "labor_hours": 40.0,
+          "labor_usd": "4,000.00",
+          "total_monthly_usd": "6,690.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,100.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,600.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,370.00",
+        "net_savings_pct_vs_path_a": "95.22%",
+        "annual_savings_usd": "76,440.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R23-R547",
+      "cumulative_round": 547,
+      "claim_id": "CLAIM-20261119-R23-R547-CLOUDSSH-STORYTIMELINE-EXAMPLESNOTREQS-KAPEWEB",
+      "primary_repos": [
+        "Microck/cloudssh",
+        "d6u/story-timeline",
+        "reshiramsq18-alt/examples-are-not-requirements",
+        "brewed-ops/kape-web-framework"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,630.00",
+          "labor_hours": 39.5,
+          "labor_usd": "3,950.00",
+          "total_monthly_usd": "6,580.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,080.00",
+          "labor_hours": 14.5,
+          "labor_usd": "1,450.00",
+          "total_monthly_usd": "2,530.00"
+        },
+        "path_c": {
+          "api_compute_usd": "65.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "315.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,265.00",
+        "net_savings_pct_vs_path_a": "95.21%",
+        "annual_savings_usd": "75,180.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R24-R548",
+      "cumulative_round": 548,
+      "claim_id": "CLAIM-20261119-R24-R548-SHARKSKILLS-ONEAI-SKILLSIPHON-RUNOUTBAR",
+      "primary_repos": [
+        "tusharsrivastava/shark-skills",
+        "Qingxuan365/oneAI",
+        "JL-GUO/skill-siphon",
+        "RobinVivant/runout-bar"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,590.00",
+          "labor_hours": 39.0,
+          "labor_usd": "3,900.00",
+          "total_monthly_usd": "6,490.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,050.00",
+          "labor_hours": 14.5,
+          "labor_usd": "1,450.00",
+          "total_monthly_usd": "2,500.00"
+        },
+        "path_c": {
+          "api_compute_usd": "65.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "315.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,175.00",
+        "net_savings_pct_vs_path_a": "95.15%",
+        "annual_savings_usd": "74,100.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R25-R549",
+      "cumulative_round": 549,
+      "claim_id": "CLAIM-20261119-R25-R549-REVERSEBUSINESS-TEACHTOLEARN-SKILLSET-PROJECTPULSE",
+      "primary_repos": [
+        "wonseokjung/reversebusiness",
+        "olele114/teach-to-learn",
+        "itsmeyaw/skillset",
+        "saberc8/codex-project-pulse"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,610.00",
+          "labor_hours": 39.5,
+          "labor_usd": "3,950.00",
+          "total_monthly_usd": "6,560.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,070.00",
+          "labor_hours": 14.5,
+          "labor_usd": "1,450.00",
+          "total_monthly_usd": "2,520.00"
+        },
+        "path_c": {
+          "api_compute_usd": "65.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "315.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,245.00",
+        "net_savings_pct_vs_path_a": "95.20%",
+        "annual_savings_usd": "74,940.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R26-R550",
+      "cumulative_round": 550,
+      "claim_id": "CLAIM-20261119-R26-R550-MORTY-UNLOCK-VIDEOFEEDBACK-AGENTCONTROL",
+      "primary_repos": [
+        "portalcrew/morty",
+        "promptadvisers/unlock",
+        "thenextnewthing/Video-Feedback",
+        "guuguo/agent-control"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,760.00",
+          "labor_hours": 41.0,
+          "labor_usd": "4,100.00",
+          "total_monthly_usd": "6,860.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,130.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,630.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,540.00",
+        "net_savings_pct_vs_path_a": "95.34%",
+        "annual_savings_usd": "78,480.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R27-R551",
+      "cumulative_round": 551,
+      "claim_id": "CLAIM-20261119-R27-R551-GEMKEEPER-CLAUDESWORKBENCH-MARKWRIGHT-ASKJUDGE",
+      "primary_repos": [
+        "adamoelz/gemkeeper",
+        "a-schaefers/claudes-workbench",
+        "Vecshield/Markwright",
+        "mczlwl/Askjudge"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,720.00",
+          "labor_hours": 40.5,
+          "labor_usd": "4,050.00",
+          "total_monthly_usd": "6,770.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,110.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,610.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,450.00",
+        "net_savings_pct_vs_path_a": "95.27%",
+        "annual_savings_usd": "77,400.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R28-R552",
+      "cumulative_round": 552,
+      "claim_id": "CLAIM-20261119-R28-R552-JIUTOUNIAO-OPINIONLENS-AGYBOT-SELFEVOLVING",
+      "primary_repos": [
+        "shihao101/jiutouniao",
+        "SolitudeZY/OpinionLens",
+        "gaoshanyuhupo/agy-bot",
+        "catlog22/self-evolving-workflow"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,750.00",
+          "labor_hours": 41.0,
+          "labor_usd": "4,100.00",
+          "total_monthly_usd": "6,850.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,120.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,620.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,530.00",
+        "net_savings_pct_vs_path_a": "95.33%",
+        "annual_savings_usd": "78,360.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R29-R553",
+      "cumulative_round": 553,
+      "claim_id": "CLAIM-20261119-R29-R553-PLAYGROUNDSERVE-OPENROCODE-LAYOUTSTUDIO-AGYKIT",
+      "primary_repos": [
+        "playground-systems/playground-serve",
+        "wrencanfly/openRocode",
+        "Rexoplanets/layout-studio-moss-image",
+        "fxzer/agy-kit"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,790.00",
+          "labor_hours": 41.0,
+          "labor_usd": "4,100.00",
+          "total_monthly_usd": "6,890.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,140.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,640.00"
+        },
+        "path_c": {
+          "api_compute_usd": "75.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "325.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,565.00",
+        "net_savings_pct_vs_path_a": "95.28%",
+        "annual_savings_usd": "78,780.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R30-R554",
+      "cumulative_round": 554,
+      "claim_id": "CLAIM-20261119-R30-R554-INTELBUREAU-CYBERQWEN2B-FOLDSTUDIO-MUSECHROME",
+      "primary_repos": [
+        "Merziller/intel-bureau",
+        "sambuddha001/cyberqwen-2b",
+        "youraipulse/Fold-Studio",
+        "xiaoyaodev/musechrome"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,650.00",
+          "labor_hours": 40.0,
+          "labor_usd": "4,000.00",
+          "total_monthly_usd": "6,650.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,080.00",
+          "labor_hours": 14.5,
+          "labor_usd": "1,450.00",
+          "total_monthly_usd": "2,530.00"
+        },
+        "path_c": {
+          "api_compute_usd": "65.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "315.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,335.00",
+        "net_savings_pct_vs_path_a": "95.26%",
+        "annual_savings_usd": "76,020.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R31-R555",
+      "cumulative_round": 555,
+      "claim_id": "CLAIM-20261119-R31-R555-NSGOAGIO-AVATARVOICE-ANYUBROWSER-JOBFIT",
+      "primary_repos": [
+        "oneo-me/nsgo-agio",
+        "johnrobinsn/AvatarVoice",
+        "5nix/anyu-browser",
+        "Sipty/jobfit"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,840.00",
+          "labor_hours": 41.5,
+          "labor_usd": "4,150.00",
+          "total_monthly_usd": "6,990.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,160.00",
+          "labor_hours": 15.5,
+          "labor_usd": "1,550.00",
+          "total_monthly_usd": "2,710.00"
+        },
+        "path_c": {
+          "api_compute_usd": "70.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,670.00",
+        "net_savings_pct_vs_path_a": "95.42%",
+        "annual_savings_usd": "80,040.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R32-R556",
+      "cumulative_round": 556,
+      "claim_id": "CLAIM-20261119-R32-R556-KANSO-THRONES-PROMPTMASTER-OPENPM",
+      "primary_repos": [
+        "chhuax/Kanso",
+        "techgptoffical/thrones",
+        "nishkarsh-shah/prompt-master",
+        "mamajiaa/open-pm"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 35,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,420.00",
+          "labor_hours": 38.0,
+          "labor_usd": "3,800.00",
+          "total_monthly_usd": "6,220.00"
+        },
+        "path_b": {
+          "api_saas_usd": "940.00",
+          "labor_hours": 14.5,
+          "labor_usd": "1,450.00",
+          "total_monthly_usd": "2,390.00"
+        },
+        "path_c": {
+          "api_compute_usd": "55.00",
+          "labor_hours": 2.2,
+          "labor_usd": "220.00",
+          "total_monthly_usd": "275.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "5,945.00",
+        "net_savings_pct_vs_path_a": "95.58%",
+        "annual_savings_usd": "71,340.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R33-R557",
+      "cumulative_round": 557,
+      "claim_id": "CLAIM-20261119-R33-R557-LONGCATAVATAR-PROMPTDOCK-FREEPIBRIDGE-ASTROWEIGHTS",
+      "primary_repos": [
+        "PedroMarinhoDev/ComfyUI-LongCat-Avatar",
+        "jemry/promptdock",
+        "ihsan-ramadhan/freepi-bridge",
+        "astro-weights/astro-weights"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 30,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "3,180.00",
+          "labor_hours": 39.0,
+          "labor_usd": "3,900.00",
+          "total_monthly_usd": "7,080.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,190.00",
+          "labor_hours": 16.0,
+          "labor_usd": "1,600.00",
+          "total_monthly_usd": "2,790.00"
+        },
+        "path_c": {
+          "api_compute_usd": "80.00",
+          "labor_hours": 2.4,
+          "labor_usd": "240.00",
+          "total_monthly_usd": "320.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,760.00",
+        "net_savings_pct_vs_path_a": "95.48%",
+        "annual_savings_usd": "81,120.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R34-R558",
+      "cumulative_round": 558,
+      "claim_id": "CLAIM-20261119-R34-R558-INTERN-CODECHECK-ARCHGROWER-SALKARSAUI",
+      "primary_repos": [
+        "nace-ai/intern",
+        "Commonwealth-Bank-of-Australia/CodeCheck",
+        "Tobi1chi/arch-grower",
+        "salahudinalyb/SalkarsaUI"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 40,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "3,560.00",
+          "labor_hours": 42.0,
+          "labor_usd": "4,200.00",
+          "total_monthly_usd": "7,760.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,320.00",
+          "labor_hours": 17.0,
+          "labor_usd": "1,700.00",
+          "total_monthly_usd": "3,020.00"
+        },
+        "path_c": {
+          "api_compute_usd": "95.00",
+          "labor_hours": 2.5,
+          "labor_usd": "250.00",
+          "total_monthly_usd": "345.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "7,415.00",
+        "net_savings_pct_vs_path_a": "95.55%",
+        "annual_savings_usd": "88,980.00"
+      }
+    },
+    {
+      "round_id": "2026-11-19-R35-R559",
+      "cumulative_round": 559,
+      "claim_id": "CLAIM-20261119-R35-R559-NIMCAP-BALLAST-STARQUIX-STREAMCLIPPER",
+      "primary_repos": [
+        "nimcap/nimcap-screenshot",
+        "myballast/ballast",
+        "Mayhopar/Starquix",
+        "alokbaraii/streamclipper"
+      ],
+      "provenance": "synthetic",
+      "independently_reproduced": false,
+      "base_hardware_capex": "not_measured",
+      "track_b_stars_today": "not_measured",
+      "closed_form_finops": {
+        "team_size": 32,
+        "hourly_rate_usd": 100.0,
+        "path_a": {
+          "api_saas_usd": "2,920.00",
+          "labor_hours": 37.0,
+          "labor_usd": "3,700.00",
+          "total_monthly_usd": "6,620.00"
+        },
+        "path_b": {
+          "api_saas_usd": "1,040.00",
+          "labor_hours": 15.0,
+          "labor_usd": "1,500.00",
+          "total_monthly_usd": "2,540.00"
+        },
+        "path_c": {
+          "api_compute_usd": "60.00",
+          "labor_hours": 2.3,
+          "labor_usd": "230.00",
+          "total_monthly_usd": "290.00"
+        },
+        "net_monthly_savings_vs_path_a_usd": "6,330.00",
+        "net_savings_pct_vs_path_a": "95.62%",
+        "annual_savings_usd": "75,960.00"
+      }
+    }
+  ]
+}

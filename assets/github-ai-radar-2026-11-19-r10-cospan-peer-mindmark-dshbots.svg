@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR534" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101f"/>
+      <stop offset="100%" stop-color="#12223d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR534)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 10 · CUMULATIVE ROUND 534 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Cospan 跨端异步委托 × Codex-Claude 套接字直连 × MindMark 七维批注 × DSH-Bots 调度官战队</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. keli-wen/cospan (★20 · MIT · Model × Harness 编排)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 确立「Model × Harness 联合训练原语」为真正的编排最小单元</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 单一异步委托协议打通 Antigravity、Codex、Claude Code 与 DSH</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 避免将模型强塞入非原生外壳导致的工具调用退化与准确率下降</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：异构旗舰编码智能体跨宿主协同的标准协议层</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. stokaro/codex-claude-peer (★9 · MIT · Unix Socket Relay)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 零依赖 Python CLI (peer.py) 打通本地 Codex 与 Claude Code 实时互发消息</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 基于 Unix Domain Socket 点对点通信，无需常驻系统守护进程</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 实测验证 Codex 0.167.0 与 Claude Code 2.1.322，拦截畸形鉴权帧</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：双窗口结对编程免人工复制粘贴 API 契约与结论</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. BaiKe-Zhang/dsh-mindmark (★19 · MIT · 7-Op Inline Markup)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• Word 式回答原位批注：高亮 / 下划线 / 删除 / 批注 / 改写 / 依据 / Alt+C 移动</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 通过 agent/pre-step 钩子支持「精简局部注入」与「完整修订视图」切换</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 一键「沉淀为习惯」自动将高频修改偏好归纳写入全局 AGENTS.md</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：消除长文/方案多轮审校中“大段打字解释改哪句”的损耗</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. kadaliao/dsh-bots (★18 · MIT · Dispatcher &amp; Thread Bots)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• DSH 内置 Grok 风格多角色战队（Compass 运营 / Forge 研发 / Echo 增长）</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• Dispatcher 自动拆解任务、派发独立会话并每日晨会汇总汇报</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 引用回复开启独立 Thread，仅截取该消息及之前上下文，隔离后续群聊噪音</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：一人公司 (OPC) 与多角色研发/内容班组标准分工模板</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R10-R534 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (非原生外壳降智重跑 + 手工复制跨端对话 + 整段重写改字):       $2,580.00 (API Waste) + $3,950.00 (39.5h × $100) = $6,530.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (单一厂商绑定工具 + 共享 Markdown 笔记 + 手工改 AGENTS.md):   $1,050.00 (SaaS)      + $1,500.00 (15.0h × $100) = $2,550.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (Cospan + Codex-Claude-Peer + dsh-mindmark + dsh-bots):         $70.00 (Compact)   +   $250.00 ( 2.5h × $100) =   $320.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,210.00 / mo (-95.10%) | Annual Savings: $74,520.00 / yr | Track B stars_today: not_measured</text>
+</svg>

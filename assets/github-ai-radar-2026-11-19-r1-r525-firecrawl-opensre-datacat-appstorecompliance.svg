@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR525" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081121"/>
+      <stop offset="100%" stop-color="#111f38"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR525)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 1 · CUMULATIVE ROUND 525 MILESTONE · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Firecrawl 知识底座 × OpenSRE 自治 CI 修复 × DataCat 自托管可观测 × App Store 提审门禁</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. firecrawl/firecrawl (★203,744 · +795★ today · AGPL-3.0)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 统一 /v2/search、/v2/scrape、/v2/interact 与 /v2/parse (PDF/DOCX)</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• Firecrawl Alexandria：单 API/MCP 接入 550+ 垂直数据供应商与索引</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 覆盖 96% 动态 JS 网页，P95 延迟 3.4s (anonymized_reported)</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：外部网页/长文档转干净 Markdown/JSON 喂给企业 RAG 首选</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. Tracer-Cloud/opensre (★12,952 · +25★ today · Apache-2.0)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 自托管 CI/CD 可靠性 Agent：失败瞬间拉取日志、验证假设并提修复 PR</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 精准剥离「CI 环境抖动 (Flaky)」与「真实代码回归 (Code Regression)」</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 量化统计 CI 失败率、研发损耗工时与 main 分支红灯滞留时长</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：连接自有大模型保护高频 AI 编码下的主干分支绿灯率</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. replit/datacat (★322 · 161★/d · Apache-2.0)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 单进程自托管 Metrics / Logs / Traces / APM / 告警，支持 PG 14+ 或 ClickHouse</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 兼容 Datadog Agent (7.56.2/7.85.4) 与 OTLP/HTTP (/v1/traces|metrics|logs)</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 严禁静默丢包：不兼容 Trace 格式显式返回 HTTP 422（绝不伪造 202）</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：零改代码平替高昂 Datadog 按主机/高基数指标商业账单</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. mjmirza/app-store-compliance (★1,597 · +542★ today)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• app-store-compliance-guard.sh：秒级输出 BLOCKED. / CLEAR. / NOT CHECKED.</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 沉淀 117 种 Apple App Store / Google Play 真实拒审模式与修复定位</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 追踪 95 项全球法规截止日（EU AI Act / DSA / COPPA / 年龄核验）</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：install.sh --tool all 一键注入 Claude/Copilot/Codex 提审门禁</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R1-R525 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (自写脆弱爬虫 + 人工查 CI + 商业 Datadog 账单 + 拒审返工): $2,860.00 (API/SaaS) + $4,200.00 (42.0h × $100) = $7,060.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (商业爬虫 SaaS + 云端 CI 助手 + 托管 APM + 人工核对清单): $1,180.00 (SaaS)     + $1,650.00 (16.5h × $100) = $2,830.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (Firecrawl + OpenSRE + DataCat + App-Store-Compliance):  $85.00 (Compute)  +   $280.00 ( 2.8h × $100) =   $365.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,695.00 / mo (-94.83%) | Annual Savings: $80,340.00 / yr | Track B stars_today: not_measured</text>
+</svg>

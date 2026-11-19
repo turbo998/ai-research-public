@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR551" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101f"/>
+      <stop offset="100%" stop-color="#132341"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR551)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 27 · CUMULATIVE ROUND 551 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Gemkeeper 2% 核心记忆账本 × Claude 编排+本地 GPU 写码 × Markwright 水印管控面 × AskJudge 评测</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. adamoelz/gemkeeper (★10 · MIT · Survive /clear &amp; Compaction)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 趁 Claude 还记得时实时写下最关键的 2% 核心架构约束与上下文</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 随时大胆执行 /clear 清空臃肿会话，跨越自动压缩 (Compaction) 满血续跑</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 附 gemkeeper-bench 基准验证，彻底告别长会话后期变笨与重复扣费</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：长会话主动 /clear 降本增效的 2% 精华上下文持久层</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. a-schaefers/claudes-workbench (★9 · MIT · Claude + OpenCode GPU)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 云端前沿 Claude 负责顶层架构规划与编排，本机 GPU 上的 OpenCode 负责写代码</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 作为原生插件无缝嵌入常规 Claude Code 会话，无需在两个终端间来回切换</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 每日 Nightly CI 针对最新 Claude Code 与 OpenCode 版本自动回归测试</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：“云端大脑规划 + 本地显卡搬砖”的混合算力降本插件</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. Vecshield/Markwright (★9 · Apache-2.0 · LLM Watermark Control Plane)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 封装 SynthID-Text 与 KGW 绿名单的开源文本水印管控面（110+ 测试覆盖）</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 统管模型版本注册表、KMS/Vault 密钥托管与【不破坏历史验真的平滑密钥轮换】</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 输出带已知假阳性率 (FPR) 的校准统计证据，明确边界“提供证据而非黑盒猜测”</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：欧盟 AI 法案与政企 AIGC 文本溯源的 KMS 级水印底座</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. mczlwl/Askjudge (★6 · MIT · N+K Selective Human LLM-as-a-Judge)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 批量 LLM-as-a-Judge 按需人工辅助：清晰样本直接完结，仅对 K 个模糊样本提问</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 人类只需回答 1 个聚焦补充问题，总模型调用数严格收敛为 N + K 次</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 仅读取 needs_human 与 question 控制元数据，100% 保留业务原有裁判输出格式</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：消除纯自动 LLM 裁判对业务潜规则盲猜的 N+K 混合评测流</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R27-R551 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (180k 臃肿上下文重计费 + 全云端写样板代码 + 全量人工复核评测): $2,720.00 (API/SaaS)  + $4,050.00 (40.5h × $100) = $6,770.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (手写交接笔记 + 双开本地聊天窗复制代码 + 散装水印脚本):           $1,110.00 (API)       + $1,500.00 (15.0h × $100) = $2,610.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (gemkeeper + claudes-workbench + Markwright + Askjudge):          $70.00 (API)       +   $250.00 ( 2.5h × $100) =   $320.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,450.00 / mo (-95.27%) | Annual Savings: $77,400.00 / yr | Track B stars_today: not_measured</text>
+</svg>

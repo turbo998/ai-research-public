@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR541" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101f"/>
+      <stop offset="100%" stop-color="#12233f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR541)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 17 · CUMULATIVE ROUND 541 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">DevKB 预计算上下文包 × Shopify 跨店无损同步 MCP × Axure 原生 .rp 生成器 × Replicator 实体 CAD 工作坊</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. namiq-ai/devkb (★9 · Apache-2.0 · 1,138-Run Benchmark -55%)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 融合源码与 Git 历史的研发知识图谱（函数/测试/路由/报错/PR/工单）</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• Context Pack 一步回答“谁调它/会崩哪/跑哪些测试”，附精确源码行号与盲区声明</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 1,138 次基准实测：单任务中位成本 $0.070 ➔ $0.025 (-55%) 且质量升至 0.981</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：自带盲区诚实声明的预计算上下文打包 MCP</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. ussefidder/shopify-store-sync-mcp (★7 · MIT · Admin API 2026-10)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 在 Claude/Cursor 中直接 Diff 与同步多套 Shopify 店铺配置与多语言翻译</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 覆盖 Metafield/Metaobject 定义、集合、页面、菜单、重定向与店铺政策</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 强制 Dry-Run 变更计划、跨店铺 ID 自动重映射与【永不删除 (Never Deletes)】铁律</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：跨境电商预发店到生产店零误删自动化发布管线</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. karlmoriaty/AxurePR-return-rp (★7 · MIT · Axure RP 9 / 11 Native)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 把截图、需求简报或 RP/1 源码直接编译为原生可编辑的 Axure .rp 文件</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 同时提供 AI 原生 Studio 自由画布、CLI 与 MCP Server，完美对齐 RP 9 与 RP 11</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 让 AI 负责快速起稿，企业 BA/产品经理在 Axure 中无缝接手精修交互</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：传统政企/金融客户强制要求交付 .rp 原型源文件时的破局利器</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-weight="700" font-size="15.5">4. T-Crypt/replicator (★21 · MIT · manifold3d + STEP/DXF/STL/URDF)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 一句话需求 ➔ 蓝图 ➔ 校验构建程序 ➔ manifold3d 水密实体 ➔ 尺寸测量报告</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 直接导出工业级 STEP、DXF、STL 与机器人仿真 URDF 文件</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 兼容任意 OpenAI 接口模型并内置 Qt 6 Quick 3D 工作台与 MCP 协议</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：智能制造与具身机器人团队参数化 CAD/URDF 生成底座</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R17-R541 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (逐文件搜索 $0.070/次 + 手工搬运 Shopify 配置 + 手工重画 Axure/CAD): $2,710.00 (SaaS/API)  + $4,050.00 (40.5h × $100) = $6,760.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (多步图查询工具 + 手写同步脚本 + 静态 HTML 原型导出):                 $1,120.00 (SaaS)      + $1,500.00 (15.0h × $100) = $2,620.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (devkb Pack + shopify-sync-mcp + AxurePR-return-rp + replicator):      $70.00 (API)       +   $250.00 ( 2.5h × $100) =   $320.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,440.00 / mo (-95.27%) | Annual Savings: $77,280.00 / yr | Track B stars_today: not_measured</text>
+</svg>

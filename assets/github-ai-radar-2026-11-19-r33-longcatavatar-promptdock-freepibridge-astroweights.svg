@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg557" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent557" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg557)"/>
+  <rect x="24" y="20" width="1152" height="640" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent557)"/>
+
+  <text x="48" y="58" fill="#F472B6" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2026-11-19 NIGHT ROUND 33 · CUMULATIVE ROUND 557 · AI SOLUTION ARCHITECT SELECTION</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="21.5" font-weight="800">LongCat-Avatar ComfyUI + PromptDock macOS + FreePi Rust Bridge + Astro-Weights</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">24GB VRAM Long-Form Talking Avatar · ⌥Space Menu-Bar Prompt/Rewrite · Zero-Dep Rust OpenAI Bridge · Agentic Weight Steering</text>
+
+  <!-- Card 1: PedroMarinhoDev/ComfyUI-LongCat-Avatar -->
+  <rect x="44" y="132" width="540" height="205" rx="12" fill="#1E293B" stroke="#EC4899" stroke-width="1.5"/>
+  <text x="64" y="160" fill="#F472B6" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">1. ComfyUI-LongCat-Avatar (★ 10 · Python · 24GB VRAM · MIT)</text>
+  <text x="64" y="184" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Native ComfyUI Nodes for LongCat-Video-Avatar 1.6 Long-Form Video</text>
+  <text x="64" y="208" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• Generates long-form talking avatar video from 1 image + prompt + speech</text>
+  <text x="64" y="228" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• Runs on 24GB VRAM (RTX 3090/4090) via block_offload + TeaCache (1.5x-2x)</text>
+  <text x="64" y="248" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• Supports 480p/720p, frame-overlap identity lock &amp; SageAttention</text>
+  <rect x="64" y="266" width="500" height="52" rx="8" fill="#0F172A" stroke="#DB2777" stroke-width="1"/>
+  <text x="78" y="286" fill="#FBCFE8" font-family="monospace" font-size="11.5">Nodes: ModelLoader -&gt; AudioPreprocess -&gt; AvatarGen -&gt;LatentDecode</text>
+  <text x="78" y="306" fill="#F472B6" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">SA Verdict: Replaces $2-$5/min cloud avatar video credits on 1 RTX 4090</text>
+
+  <!-- Card 2: jemry/promptdock -->
+  <rect x="616" y="132" width="540" height="205" rx="12" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="636" y="160" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">2. jemry/promptdock (★ 5 · Swift · macOS 15+ · MIT)</text>
+  <text x="636" y="184" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Native macOS Menu-Bar Prompt Launcher &amp; Inline LLM Rewriter</text>
+  <text x="636" y="208" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• ⌥Space fuzzy search + paste w/ auto-selected {{placeholder}} slots</text>
+  <text x="636" y="228" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• ⌥⇧Space inline text rewrite via Anthropic, DeepSeek, or local Ollama</text>
+  <text x="636" y="248" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• macOS Keychain API security + single ~/.config/promptdock/prompts.yaml</text>
+  <rect x="636" y="266" width="500" height="52" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
+  <text x="650" y="286" fill="#BAE6FD" font-family="monospace" font-size="11.5">Storage: Single YAML (Git-friendly) + macOS Keychain (Zero Cloud DB)</text>
+  <text x="650" y="306" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">SA Verdict: Instant OS-wide prompt &amp; rewrite hotkey with Git version control</text>
+
+  <!-- Card 3: ihsan-ramadhan/freepi-bridge -->
+  <rect x="44" y="355" width="540" height="195" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <text x="64" y="383" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">3. ihsan-ramadhan/freepi-bridge (★ 22 · Rust v0.2.3 · GPL-3.0)</text>
+  <text x="64" y="407" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Single-Binary Rust OpenAI API Bridge for Coding Agents</text>
+  <text x="64" y="431" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• Exposes /v1/chat/completions, /v1/responses &amp; /v1/models on :8787</text>
+  <text x="64" y="451" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• One-click setup for OpenCode, Pi Coding Agent, OMP &amp; 9Router</text>
+  <text x="64" y="471" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• Routes glm-5.1, glm-5-turbo, kimi-k2.5 &amp; minimax-m2.7 w/ thinking tiers</text>
+  <rect x="64" y="486" width="500" height="48" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+  <text x="78" y="505" fill="#A7F3D0" font-family="monospace" font-size="11.5">Binary: Pure Rust (Zero Node/Python Deps) · SSE Streaming + Tool Calls</text>
+  <text x="78" y="523" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">SA Verdict: Zero-dependency local OpenAI adapter for multi-CLI fleets</text>
+
+  <!-- Card 4: astro-weights/astro-weights -->
+  <rect x="616" y="355" width="540" height="195" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="636" y="383" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">4. astro-weights/astro-weights (★ 7 · Python/MCP · Apache-2.0)</text>
+  <text x="636" y="407" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Agentic Fine-Grained Course-Correction Weight Editing for Open LLMs</text>
+  <text x="636" y="431" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• Steers open-weight LLM behavior directly in weights without full SFT/RLHF</text>
+  <text x="636" y="451" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• Ships w/ Web UI (:7788) + MCP Server (astro-weights-mcp) for Claude/Cursor</text>
+  <text x="636" y="471" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">• Monitors activation drift &amp; applies surgical weight course-corrections</text>
+  <rect x="636" y="486" width="500" height="48" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1"/>
+  <text x="650" y="505" fill="#FDE68A" font-family="monospace" font-size="11.5">Interfaces: Web UI (:7788) + CLI + MCP Server (Claude Code / Cursor)</text>
+  <text x="650" y="523" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">SA Verdict: Cuts domain model behavior-fix cycles from days to minutes</text>
+
+  <!-- Bottom FinOps Bar -->
+  <rect x="44" y="566" width="1112" height="76" rx="12" fill="#090D16" stroke="#EC4899" stroke-width="1.5"/>
+  <text x="64" y="594" fill="#F472B6" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700">CLOSED-FORM FINOPS &amp; TCO (CLAIM-20261119-R33-R557-LONGCATAVATAR-PROMPTDOCK-FREEPIBRIDGE-ASTROWEIGHTS · N=30 · $100/HR)</text>
+  <text x="64" y="618" fill="#E2E8F0" font-family="monospace" font-size="12">Path A: $3,180.00 + $3,900.00 = $7,080.00/mo | Path C: $80.00 + $240.00 = $320.00/mo | Save $6,760.00/mo (-95.48% · $81,120.00/yr)</text>
+  <text x="64" y="635" fill="#64748B" font-family="monospace" font-size="11">Provenance: synthetic · independently_reproduced=false · base_hardware_capex=not_measured · track_b_stars_today=not_measured</text>
+</svg>

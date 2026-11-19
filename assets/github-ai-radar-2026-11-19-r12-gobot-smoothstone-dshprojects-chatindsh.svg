@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR536" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101e"/>
+      <stop offset="100%" stop-color="#12233d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR536)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 12 · CUMULATIVE ROUND 536 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Go-Bot 容器化个人助理 × Smoothstone 1.7B 配方建模 × DSH-Projects 上下文工程 × Chat-in-DSH</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. xyc999-ai/go-bot (★108 · MIT · Go + Docker / ECI)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• DeepSeek Harness 的高性能 Go 语言实现（平替 Meta Muse / OpenAI dots）</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 支持单机 Docker 或阿里云 ECI 按账号分配独立容器 Host 与持久存储</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 内置 Chromium 自动化、生图改图、OfficeCLI (Word/PPT/Excel) 与安卓 APK</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：企业构建多租户专属 AI 员工 SaaS 的高并发 Go 底座</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. baney75/smoothstone (★75 · MIT · LFM3-1.7B CPU 39/40)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 实证揭示：1.7B 小模型裸写 OpenSCAD 3D 代码成功率为 0/15</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 架构剥离：模型只负责选配方填尺寸，stone 工具负责建模、可打印性检查与落盘</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 纯 CPU 盲测 39/40 通过，中途清空模型上下文仍达 38/40 (anonymized_reported)</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：端侧小模型落地工业参数化生成的教科书级范式</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. hovocope135-tech/DSH-projects (★30 · MIT · Context-First)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 核心哲学：管理多 Agent 是伪命题，真正需要管理的只有 Context 与 Goal 文档</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 将 Runtime 与 Context 解耦：按任务上下文边界拆分会话并支持按任务换模型</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 集成 screenpipe 自动采集本机多渠道信息辅助起草邮件与组织上下文</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：告别花哨会议室角色扮演、回归上下文边界治理</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. YinkaiYu/chat-in-dsh (★29 · MIT · Zero-Bloat Web Chat)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 解决 DSH 默认注入几千字开发者系统提示词导致写作/聊天失去“灵气”与费 Token</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 基于官方 chat-demo 在 DSH 内开辟原汁原味极简系统提示词独立对话面板</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 免填 API Key 且不受网页端限额影响，兼顾编码模式与纯粹创意写作模式</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：在同一工作台内实现“重工具编码”与“轻提示词写作”分流</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R12-R536 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (重型容器 + 裸写 3D 0/15 失败重跑 + 几千字工具注入跑纯聊天):  $2,620.00 (API/Cloud) + $4,000.00 (40.0h × $100) = $6,620.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (商业个人 Agent 席位 + 云 CAD API + 手工搬运上下文笔记):     $1,080.00 (SaaS)     + $1,500.00 (15.0h × $100) = $2,580.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (go-bot + smoothstone 39/40 + DSH-projects + chat-in-dsh):    $70.00 (Lean API) +   $250.00 ( 2.5h × $100) =   $320.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,300.00 / mo (-95.17%) | Annual Savings: $75,600.00 / yr | Track B stars_today: not_measured</text>
+</svg>

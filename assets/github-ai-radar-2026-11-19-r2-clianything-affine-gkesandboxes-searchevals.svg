@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR526" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101f"/>
+      <stop offset="100%" stop-color="#11223d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR526)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 2 · CUMULATIVE ROUND 526 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">CLI-Anything 软件 CLI 化 × AFFiNE 本地知识画布 × GKE gVisor 快照沙盒 × Parallel 搜索评测</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. HKUDS/CLI-Anything (★60,304 · +899★ today · Apache-2.0)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• CLI-Hub (pip install cli-anything-hub ➔ cli-hub install &lt;name&gt;)</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 将 Blender/GIMP/Office/CAD 等 18+ 桌面软件封装为 Agent-Native CLI</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 内置实时预览 (Live Preview) 与轨迹自检闭环，告别视觉猜坐标漂移</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：比纯视觉截图 CUA 省 90%+ Token 且确定性提升数倍</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. toeverything/AFFiNE (★74,896 · +170★ today · TypeScript/Rust)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 隐私优先、Local-First 的 Notion + Miro 超融合开源工作空间</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 块级富文本文档、多视图数据库与无边界白板画布 (Edgeless Canvas) 合一</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 内置多模态 AI 伙伴：大纲秒转演示幻灯片、长文自动提炼结构化脑图</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：高保密企业自托管替换 Notion + Miro 双份商业席位费</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. comp-work/gke-sandboxes (★116 · Apache-2.0 · 1.9¢/hr)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• @getenergy/gke-sandboxes：GKE 上的 gVisor 强隔离云 Agent 沙盒</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 5 分钟空闲自动休眠快照至 Cloud Storage，Warm Pool &lt;0.5s 极速唤醒</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 2vCPU/4GB 唤醒成本仅 ~1.9¢/hr（对比 Daytona/E2B 16.6¢/hr 省 8.5x）</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：大规模并发 Coding/CUA 智能体低成本多租户安全底座</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. parallel-web/parallel-search-evals (★96 · MIT · Python 3.12)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 评测大模型挂载 Search &amp; Extract 工具对比闭卷基线的真实增益</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 覆盖 DSQA (900 题跨 17 学科深度搜索) 与 HLE (2,158 纯文本专家题)</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 锁定官方评分 Prompt 并以 GPT-6 Sol 作为统一裁判，支持多厂商 API</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：企业 Deep Research 智能体上线前搜索准确率标准验收套件</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R2-R526 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (纯视觉 CUA 烧 Token + Notion/Miro 双订阅 + 16.6¢/h 托管沙盒): $2,740.00 (API/SaaS) + $4,050.00 (40.5h × $100) = $6,790.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (自写 GUI 脚本 + 商业知识库 SaaS + 常驻云主机 + 人工评测):      $1,140.00 (Cloud/SaaS)+ $1,600.00 (16.0h × $100) = $2,740.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (CLI-Anything + AFFiNE + gke-sandboxes 1.9¢/h + Search-Evals):   $80.00 (Compute)  +   $270.00 ( 2.7h × $100) =   $350.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,440.00 / mo (-94.85%) | Annual Savings: $77,280.00 / yr | Track B stars_today: not_measured</text>
+</svg>

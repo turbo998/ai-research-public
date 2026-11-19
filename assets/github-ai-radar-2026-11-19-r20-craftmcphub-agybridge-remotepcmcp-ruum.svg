@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR544" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101f"/>
+      <stop offset="100%" stop-color="#12233f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR544)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 20 · CUMULATIVE ROUND 544 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Craft-MCP-Hub 无窗口共享服务 × Agy-Bridge 任意模型桥 × OAuth 2.1 远程 PC 网关 × Ruum 磁盘清理 MCP</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. AndrianLeah/craft-mcp-hub (★22 · Rust · MIT · Windowless MCP Hub)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 为 PhotoCraft / VectorCraft / PdfCraft / DeckCraft 等套件提供共享无窗口 MCP</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 每个应用在独立本地端口常驻单一无头引擎，供所有 AI 会话并发复用</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 彻底终结 stdio 每开一个会话就重复拉起整套重型 GUI 进程导致内存爆炸</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：多会话共享重型桌面生产力引擎的 Rust 守护进程范式</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. codewith-aditya/agy-bridge (★11 · Go · MIT · Antigravity ➔ OpenAI)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 将 Antigravity CLI (Gemini v1beta) 与 IDE (Cloud Code v1internal) 转为 OpenAI</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 完整保留流式输出与原生 Tool Calling，无缝对接 Claude / DeepSeek / 本地 vLLM</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 保留 Antigravity 优秀的 Agent 循环体验，同时由企业自主掌控模型与配额</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：解除 IDE 厂商模型绑定、对接私有 vLLM/Ollama 的轻量桥接器</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-weight="700" font-size="15.5">3. dqIndieGames/remote-pc-mcp-gateway (★14 · MIT · OAuth 2.1 + PKCE)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 让 ChatGPT Web 与 Google Gemini Web 同时连入同一台 Windows 10/11 电脑</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 完整实现 OAuth 2.1 + PKCE (S256) 与动态客户端注册，支持 CF Tunnel 或 VPS</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 自带 Windows 原生中英双语配置面板与系统托盘，安全受控暴露本地文件与命令</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：Web 端大模型安全调用内网 Windows 工作站的标准 OAuth 2.1 网关</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-weight="700" font-size="15.5">4. JsonLee12138/Ruum (★8 · Rust + GPUI · EN/ZH/JA/KO · ruum mcp)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• Rust + GPUI 跨平台磁盘空间矩形树图 (Treemap)，同时支持本地磁盘与远程 SSH</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 非破坏性“先标记后复核 (Mark-and-Review)”清理流 + 低开销磁盘空间看门狗</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 内置无头 stdio MCP 服务 (ruum mcp)，让运维 Agent 安全回收构建缓存与废旧权重</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：预防 GPU 训练机与 CI 构建节点磁盘爆满的 AI 巡检伴侣</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R20-R544 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (多开重型 GUI 崩机 + IDE 模型溢价 + 手工传文件 + 磁盘爆满中断构建): $2,610.00 (API/Cloud) + $3,950.00 (39.5h × $100) = $6,560.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (单会话 stdio 包装 + 裸内网穿透脚本 + 手工跑 ncdu 清理):           $1,060.00 (SaaS)      + $1,450.00 (14.5h × $100) = $2,510.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (craft-mcp-hub + agy-bridge + remote-pc-mcp + Ruum):             $65.00 (API)       +   $250.00 ( 2.5h × $100) =   $315.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,245.00 / mo (-95.20%) | Annual Savings: $74,940.00 / yr | Track B stars_today: not_measured</text>
+</svg>

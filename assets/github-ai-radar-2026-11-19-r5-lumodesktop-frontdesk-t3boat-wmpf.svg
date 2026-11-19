@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR529" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#11223b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR529)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-19 NIGHT ROUND 5 · CUMULATIVE ROUND 529 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Proton Lumo 隐私桌面台 × Agent Frontdesk 一页总控 × t3boat 自动休眠云机 × WMPF 16-MCP 小程序台</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. ProtonLumo/lumo-desktop (★67 · Rust/Tauri · GPL-3.0)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• Proton 隐私优先 AI 助手原生 Tauri 桌面外壳（macOS/Win/Linux）</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 内置 GitHub/Linear/Figma/Grafana/Stripe/PubMed 等 MCP 预设目录</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 工具三态门禁 (auto-approve/ask/disabled) + OS Keychain 密钥存储</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：合规敏感企业员工桌面 MCP 助手与定时任务底座</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. Phz-06/agent-frontdesk (★23 · TypeScript · Node 22.16+ · MIT)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• “用一个网页统管电脑上的所有桌面 AI”：发一条 Prompt 自动自连注册</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 左栏 AI 头像与最新回复摘要、中栏项目会话、右栏实时对话与文件预览</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 告别在 Claude Desktop / Codex / Cursor 多个独立客户端间来回切换</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：本机多桌面智能体统一前台与产物预览中心</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. paukraft/t3boat (★58 · Rust/Bun/Tauri · MIT)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 为 T3 Code 自动编排 Boat 云端远程开发机：空闲自动休眠、发消息即唤醒</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 合上笔记本电脑云端任务照常跑完，支持 T3 Connect 手机/浏览器随时接管</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 菜单栏实时展示每台机器今日/本月账单，并暴露内置 MCP Server 管控机器</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：按活跃分钟付费的跨端云 Coding Agent 弹性底座</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. yiyihuohuo/WMPFWorkbench-go (★67 · Go 1.23+ · Apache-2.0)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 脱离微信客户端独立运行的 WMPF 小程序宿主与调试工作台（Windows x64）</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 开放 16 个标准 MCP 工具：扫码登录、搜索、独立启动、页面/请求求值与包还原</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 明确能力边界：仅支持应用宝收录并签发 f27 启动信封的合规公开小程序</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：企业自有小程序自动化 QA 与安全巡检 MCP 标杆</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261119-R5-R529 · 45-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (24/7 常驻云开发机 + 多窗口割裂 + 手工微信点测小程序 QA):     $2,560.00 (Cloud/SaaS)+ $3,950.00 (39.5h × $100) = $6,510.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (定时脚本开关云主机 + 商业远控面板 + 手工抓包调试):           $1,060.00 (Cloud)     + $1,500.00 (15.0h × $100) = $2,560.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (Lumo Desktop + Agent Frontdesk + t3boat + WMPFWorkbench):      $70.00 (Active Min)+   $260.00 ( 2.6h × $100) =   $330.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,180.00 / mo (-94.93%) | Annual Savings: $74,160.00 / yr | Track B stars_today: not_measured</text>
+</svg>
