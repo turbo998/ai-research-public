@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad594" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad594" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cardBorder594" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad594)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad594)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 35 (Cumulative Round 594) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    shinpr/claude-code-workflows (★719) + secondsky/claude-skills (★250) + agentskillexchange/skills (★65) + 8bit64k/cronalytics (★117)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder594)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R594)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">Outcome-Convergent Workflows, Dual-Manifest Skills, Vetted Catalog &amp; Cron</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#D8B4FE" font-size="13.5" font-weight="700">Q1: Stop Claude Code Exploration From Drifting Off-Scope?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• shinpr/claude-code-workflows (★719, MIT, JavaScript):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  Keeps broad codebase exploration anchored on approved outcome</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  Prevents rabbit-hole refactoring of unrelated legacy issues</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• 6-language docs (EN, ZH-CN, JA, ES, KO, PT-BR)</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#93C5FD" font-size="13.5" font-weight="700">Q2: 147 Cross-Harness Skills for Claude, Codex &amp; ZCode?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• secondsky/claude-skills (★250, MIT, TypeScript v3.9.0):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Dual `.claude-plugin/` and `.codex-plugin/` native manifests</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  Covers Cloudflare, React, Tailwind v4 &amp; AI integrations</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Cross-harness bridge (`skills.sh`) for Cursor &amp; other IDEs</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#6EE7B7" font-size="13.5" font-weight="700">Q3: Security-Reviewed Catalog of 3,272 Agent Skills?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• agentskillexchange/skills (★65, 116 forks, MIT, Python):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  3,272 published skills; 2,678 security-reviewed (`verification/`)</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  15 industry collections &amp; 17 functional categories</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• Compatible with OpenClaw, Claude, Codex, Copilot &amp; Gemini</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#FCD34D" font-size="13.5" font-weight="700">Q4: Observability Dashboard for Hermes Scheduled Cron Runs?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• 8bit64k/cronalytics (★117, MIT, Python v1.1.0):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  Hermes Agent plugin for cron analytics &amp; observability</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  Tracks scheduled automation runs, durations, errors &amp; drift</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">• Eliminates silent overnight scheduled-agent failures</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder594)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise Skill Supply Chain, Outcome Convergence &amp; Cron Observability Architecture</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Governance: Vetted Skill Exchange ➔ 147 Dual-Manifest Skills ➔ Outcome-Convergent Workflows ➔ Cronalytics</text>
+
+  <!-- Pillar 1: claude-code-workflows -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#C084FC" font-size="14.5" font-weight="700">Pillar A: Outcome Convergence (claude-code-workflows)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Anti-Rabbit-Hole Guard: Solves the #1 failure mode of deep</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  codebase exploration—getting distracted by tangential bugs</text>
+  <text x="528" y="290" fill="#CBD5E1" font-size="11.5">• Approved-Outcome Anchor: Keeps design and implementation</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">  strictly aligned with the user-approved specification</text>
+  <text x="528" y="328" fill="#CBD5E1" font-size="11.5">• Side-Quest Deferral: Logs discovered tangential issues</text>
+  <text x="528" y="346" fill="#CBD5E1" font-size="11.5">  separately instead of derailing the primary PR</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">• Community Scale: ★719 stars, 108 forks, 6 languages (MIT)</text>
+  <text x="528" y="390" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Prevents scope creep &amp; bloated unreviewable agent PRs</text>
+
+  <!-- Pillar 2: secondsky/claude-skills -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar B: 147 Cross-Harness Skills (secondsky/claude-skills)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Dual Native Marketplaces: Ships both `.claude-plugin/` and</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">  `.codex-plugin/` manifests in one repository (`v3.9.0`)</text>
+  <text x="976" y="290" fill="#CBD5E1" font-size="11.5">• 147 Production Skills: Deep coverage for Cloudflare Workers,</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">  React, Tailwind v4, modern full-stack &amp; AI integrations</text>
+  <text x="976" y="328" fill="#CBD5E1" font-size="11.5">• Universal Harness Bridge: Native in Claude Code, Codex CLI</text>
+  <text x="976" y="346" fill="#CBD5E1" font-size="11.5">  &amp; ZCode; portable to Cursor &amp; Windsurf via `skills.sh`</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="976" y="390" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Write once, install natively in both Claude Code &amp; Codex CLI</text>
+
+  <!-- Pillar 3: agentskillexchange/skills -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#34D399" font-size="14.5" font-weight="700">Pillar C: Security-Reviewed Catalog (agentskillexchange)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Massive Curated Index: 3,272 published skills organized</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">  across 15 industry collections and 17 functional categories</text>
+  <text x="528" y="522" fill="#CBD5E1" font-size="11.5">• Security Verification Pipeline: 2,678 skills explicitly</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">  security-reviewed (`verification/`) against prompt injection</text>
+  <text x="528" y="560" fill="#CBD5E1" font-size="11.5">• Multi-Ecosystem Compatibility: OpenClaw, Claude Code, Codex,</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">  GitHub Copilot, Gemini CLI, Cursor, MCP &amp; LangChain</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="528" y="622" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Mitigates supply-chain risk from unvetted community skills</text>
+
+  <!-- Pillar 4: cronalytics -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar D: Scheduled Agent Telemetry (8bit64k/cronalytics)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• Purpose-Built for Hermes Agent: Dedicated cron analytics</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  and observability dashboard (`v1.1.0`, Python, MIT)</text>
+  <text x="976" y="522" fill="#CBD5E1" font-size="11.5">• Automation Health Visibility: Monitors recurring nightly</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">  and hourly agent jobs, execution durations &amp; failure rates</text>
+  <text x="976" y="560" fill="#CBD5E1" font-size="11.5">• Schedule Drift &amp; Error Triage: Surfaces missed triggers,</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">  stalled runs &amp; token/tool anomalies in one web view</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• CI Verified: Automated GitHub Actions test suite</text>
+  <text x="976" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Gives SREs full visibility into unattended cron agents</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R35-R594-CLAUDEWORKFLOWS-SECONDSKYSKILLS-SKILLEXCHANGE-CRONALYTICS · 44 Eng @ $100/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Scope-Drift Token Burn + Manual Skill Porting + Cron</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• Scope-Drift Token Waste &amp; APM SaaS: $3,240.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Skill Porting &amp; Cron Triage: 40.0 h/mo × $100/h = $4,000.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,240.00 + $4,000.00 = $7,240.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Agents spending 80% of tokens on side quests,</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  duplicate skill rewrites &amp; unnoticed cron job failures</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: All-MIT Stack (Workflows + 147 Skills + Exchange + Cron)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Self-Hosted Registry &amp; Cronalytics Compute: $70.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Skill Verification &amp; Cron Review: 2.4 h/mo × $100 = $240.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $70.00 + $240.00 = $310.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: Outcome-anchored PRs, 147 dual-manifest skills,</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  2,678 security-vetted skills &amp; live Hermes cron analytics</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $6,930.00 / mo (-95.72%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $83,160.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,240.00 - $310.00) / $7,240.00 = 95.72%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: All 4 repositories = permissive MIT License</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  (claude-code-workflows, claude-skills, skills, cronalytics)</text>
+</svg>

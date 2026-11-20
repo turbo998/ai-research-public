@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR22" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan22" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald22" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="accentAmber22" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="accentPurple22" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR22)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1144" height="86" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="48" y="54" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">2026-11-20 NIGHT ROUND 22 · CUMULATIVE ROUND 581 · 16MP+ H3 RE-NOISE, LORA GOVERNANCE, CPU CLIPSMITH &amp; BLENDA4D</text>
+  <text x="48" y="80" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">ComfyUI-H3-Image-EasyFix + ComfyUI-lyw-MA-Loader + AbdulSamad94/clipsmith + recon007jf/Blenda4D</text>
+  <text x="48" y="99" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">MiniMax-H3 Steering &amp; RNmid Sampler · Author-Recommended LoRA Weights · 4-Core CPU Offline Shorts · C4D Motion Workflow in Blender</text>
+
+  <!-- Card 1: PedroMarinhoDev/ComfyUI-H3-Image-EasyFix -->
+  <rect x="28" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="28" y="124" width="272" height="36" rx="12" fill="url(#accentCyan22)"/>
+  <text x="44" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">1. H3-Image-EasyFix (★42 · Apache-2)</text>
+  <text x="44" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">16MP+ MiniMax-H3 Texture De-Speckle</text>
+  <text x="44" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Fixes grainy skin, fur &amp; stone texture</text>
+  <text x="44" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• H3 Steering (strength 0.7 on step 0/1)</text>
+  <text x="44" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Re-Noise Sampler (RNmid, s_noise 0.95)</text>
+  <text x="44" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Unlocks resolutions above 16 MP cap</text>
+  <rect x="44" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="56" y="305" fill="#38BDF8" font-family="Consolas, monospace" font-size="11">Edit-Mode Safe Steering</text>
+  <text x="56" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Leaves reference-image edits intact</text>
+  <text x="56" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Zero prompt token pollution</text>
+  <text x="56" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• Apache-2.0 license</text>
+  <text x="44" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="44" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Eliminates high-frequency speckle noise</text>
+  <text x="44" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">on 16MP+ commercial print renders</text>
+  <text x="44" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">without external upscaler artifacts.</text>
+
+  <!-- Card 2: shengdaklp99/ComfyUI-lyw-MA-Loader -->
+  <rect x="318" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="318" y="124" width="272" height="36" rx="12" fill="url(#accentEmerald22)"/>
+  <text x="334" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">2. ComfyUI-lyw-MA-Loader (★50)</text>
+  <text x="334" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Visual LoRA Weight &amp; Trigger Governance</text>
+  <text x="334" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Crawls author-recommended LoRA weights</text>
+  <text x="334" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Per-word blocking on multi-word triggers</text>
+  <text x="334" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Save folders as reusable preset groups</text>
+  <text x="334" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• In-page dialogs (ComfyUI Desktop ready)</text>
+  <rect x="334" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="346" y="305" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">Team Preset Portability</text>
+  <text x="346" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Preset &amp; favorites JSON export</text>
+  <text x="346" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Syncs w/ ComfyUI-Lora-Manager</text>
+  <text x="346" y="359" fill="#FCA5A5" font-family="Consolas, monospace" font-size="11">• NOASSERTION license (Audit req!)</text>
+  <text x="334" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="334" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Standardizes recommended LoRA weights</text>
+  <text x="334" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">and trigger tokens across studio</text>
+  <text x="334" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">workstations without weight guessing.</text>
+
+  <!-- Card 3: AbdulSamad94/clipsmith -->
+  <rect x="608" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="608" y="124" width="272" height="36" rx="12" fill="url(#accentAmber22)"/>
+  <text x="624" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">3. AbdulSamad94/clipsmith (★20 · MIT)</text>
+  <text x="624" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Offline CPU-Only OpusClip Alternative</text>
+  <text x="624" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Local Qwen (Ollama) picks 30-60s hooks</text>
+  <text x="624" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Auto 9:16 active-speaker vertical crop</text>
+  <text x="624" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Word-by-word animated captions burned</text>
+  <text x="624" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Runs on 4-core Intel laptop CPU (0 GPU)</text>
+  <rect x="624" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="636" y="305" fill="#FCD34D" font-family="Consolas, monospace" font-size="11">Zero-Watermark / Zero-Expiry</text>
+  <text x="636" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Unlimited clips (vs 60 cr limit)</text>
+  <text x="636" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Viral retention score ranking</text>
+  <text x="636" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• MIT license (Python 3.10+)</text>
+  <text x="624" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="624" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Repurposes internal town-halls and</text>
+  <text x="624" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">webinars into 9:16 Shorts offline on</text>
+  <text x="624" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">standard laptops without cloud uploads.</text>
+
+  <!-- Card 4: recon007jf/Blenda4D -->
+  <rect x="898" y="124" width="274" height="360" rx="12" fill="#1E293B" stroke="#A855F7" stroke-width="1.5"/>
+  <rect x="898" y="124" width="274" height="36" rx="12" fill="url(#accentPurple22)"/>
+  <text x="914" y="147" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">4. recon007jf/Blenda4D (★17 · GPL-3)</text>
+  <text x="914" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Cinema 4D Motion Layout for Blender</text>
+  <text x="914" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Object Manager + Attribute Manager UI</text>
+  <text x="914" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 17 editable primitives + 12 splines</text>
+  <text x="914" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 13 live parent Generators (Extrude/Loft)</text>
+  <text x="914" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 10 child Deformers (Bend/Twist/Wave)</text>
+  <rect x="914" y="284" width="242" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="926" y="305" fill="#C084FC" font-family="Consolas, monospace" font-size="11">Plain Python Add-On (Blender 5.2+)</text>
+  <text x="926" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• 1-click Blenda 4D | Blender toggle</text>
+  <text x="926" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• No custom C++ binary compile</text>
+  <text x="926" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• GPL-3.0 (Mac, Win, Linux)</text>
+  <text x="914" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="914" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Gives C4D motion designers familiar</text>
+  <text x="914" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">non-destructive parent/child workflows</text>
+  <text x="914" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">inside free Blender 5.2 LTS.</text>
+
+  <!-- Bottom FinOps & Architecture Strip -->
+  <rect x="28" y="502" width="1144" height="154" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="48" y="530" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Enterprise 16MP+ Print Rendering, LoRA Fleet Governance, Offline Shorts &amp; Motion-Design Pipeline + FinOps TCO</text>
+  <text x="48" y="556" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 2D Print &amp; LoRA Path: ComfyUI-lyw-MA-Loader (Recommended Weights &amp; Per-Word Trigger Gate) → H3-Image-EasyFix (Steering 0.7 + RNmid 16MP+)</text>
+  <text x="48" y="578" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Video &amp; 3D Motion Path: Clipsmith (4-Core CPU Ollama Qwen + 9:16 Speaker Crop) + Blenda4D (C4D Parent-Generator / Child-Deformer Tree on Blender 5.2)</text>
+  <rect x="48" y="594" width="1104" height="46" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="64" y="615" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12" font-weight="700">Closed-Form FinOps (41-Eng · $3,120.00 SaaS + 39.5h=$3,950.00 vs $70.00 Compute + 2.4h=$240.00 · synthetic, base hardware capEx: not_measured):</text>
+  <text x="64" y="633" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">Path A C4D/OpusClip Seats &amp; Manual Retouch: $7,070.00/mo  →  Path C H3-EasyFix + MA-Loader + Clipsmith + Blenda4D: $310.00/mo (Save $6,760.00/mo, -95.62%)</text>
+</svg>

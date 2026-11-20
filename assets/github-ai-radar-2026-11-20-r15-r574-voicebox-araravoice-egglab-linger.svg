@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR15" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan15" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald15" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="accentAmber15" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="accentPurple15" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR15)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1144" height="86" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="48" y="54" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">2026-11-20 NIGHT ROUND 15 · CUMULATIVE ROUND 574 · ON-DEVICE VOICE CLONING, CODE DICTATION &amp; WINDOWS CANVAS AGENT</text>
+  <text x="48" y="80" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Renakoni/Voicebox + davimatosms/Arara-voice + YanNyeinHtet/EggLab + aituringflow/linger</text>
+  <text x="48" y="99" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">Android WebGPU/NPU GPT-SoVITS (0.51 RTF) · Vulkan Whisper Code Dictation · Qwen-Image-2.1 Layer Agent · Multi-Runtime Desktop Hub</text>
+
+  <!-- Card 1: Renakoni/Voicebox -->
+  <rect x="28" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="28" y="124" width="272" height="36" rx="12" fill="url(#accentCyan15)"/>
+  <text x="44" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">1. Renakoni/Voicebox (★202 · AGPL)</text>
+  <text x="44" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Android WebGPU+QNN Voice Cloning</text>
+  <text x="44" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 5s ref audio → ZH/JA/EN cross-lingual</text>
+  <text x="44" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Direct GPT-SoVITS .ckpt/.pth import</text>
+  <text x="44" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• V2 Pro Plus RTF 0.511 on SD 8 Gen 3</text>
+  <text x="44" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Built-in local HTTP API (ADB bridge)</text>
+  <rect x="44" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="56" y="305" fill="#38BDF8" font-family="Consolas, monospace" font-size="11">Measured Xiaomi 14 Benchmarks</text>
+  <text x="56" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• 4s clip in 2.59s (GPU) / 2.62s (NPU)</text>
+  <text x="56" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• V5 Turbo NPU long RTF: 0.954</text>
+  <text x="56" y="359" fill="#FCD34D" font-family="Consolas, monospace" font-size="11">• AGPL-3.0 (Isolate via HTTP API)</text>
+  <text x="44" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="44" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Delivers 2x faster-than-realtime offline</text>
+  <text x="44" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">trilingual TTS on mobile handsets without</text>
+  <text x="44" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">cloud GPU or per-character TTS bills.</text>
+
+  <!-- Card 2: davimatosms/Arara-voice -->
+  <rect x="318" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="318" y="124" width="272" height="36" rx="12" fill="url(#accentEmerald15)"/>
+  <text x="334" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">2. davimatosms/Arara-voice (★140)</text>
+  <text x="334" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Local Coding-Agent Voice Dictation</text>
+  <text x="334" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Ctrl+Shift+Space global cursor paste</text>
+  <text x="334" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Local whisper.cpp + Vulkan GPU accel</text>
+  <text x="334" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Custom glossary for technical acronyms</text>
+  <text x="334" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Live gray→white streaming preview</text>
+  <rect x="334" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="346" y="305" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">Zero-Cloud Prompt Dictation</text>
+  <text x="346" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• base (148MB) / small / large-v3-turbo</text>
+  <text x="346" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• PT-BR &amp; multilingual technical terms</text>
+  <text x="346" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• MIT license (Win &amp; macOS)</text>
+  <text x="334" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="334" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Replaces $15/mo cloud voice-to-prompt</text>
+  <text x="334" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">tools (Wispr Flow/Superwhisper) with</text>
+  <text x="334" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">zero-telemetry local Vulkan dictation.</text>
+
+  <!-- Card 3: YanNyeinHtet/EggLab -->
+  <rect x="608" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="608" y="124" width="272" height="36" rx="12" fill="url(#accentAmber15)"/>
+  <text x="624" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">3. YanNyeinHtet/EggLab (★62 · MIT)</text>
+  <text x="624" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Windows Layer-Aware Design Agent</text>
+  <text x="624" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Qwen-Image-2.1 on stable-diffusion.cpp</text>
+  <text x="624" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Direct PhotoCraft canvas layer placement</text>
+  <text x="624" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• CUDA → Vulkan → CPU SHA256 fallback</text>
+  <text x="624" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Document-scoped chats + OpenCode</text>
+  <rect x="624" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="636" y="305" fill="#FCD34D" font-family="Consolas, monospace" font-size="11">8GB RTX 4060 Ti Q4_K_M Speedup</text>
+  <text x="636" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• ~35% faster Turbo (29s vs 47s)</text>
+  <text x="636" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Zero Python / Zero ComfyUI setup</text>
+  <text x="636" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• MIT license (up to 2048px renders)</text>
+  <text x="624" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="624" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Brings local C++ Qwen-Image-2.1 layer</text>
+  <text x="624" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">generation and transparent cutouts to</text>
+  <text x="624" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Windows DX12/CUDA laptops.</text>
+
+  <!-- Card 4: aituringflow/linger -->
+  <rect x="898" y="124" width="274" height="360" rx="12" fill="#1E293B" stroke="#A855F7" stroke-width="1.5"/>
+  <rect x="898" y="124" width="274" height="36" rx="12" fill="url(#accentPurple15)"/>
+  <text x="914" y="147" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">4. aituringflow/linger (★17 · MIT)</text>
+  <text x="914" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Multi-Runtime Desktop Agent Hub</text>
+  <text x="914" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Switches Codex / WorkBuddy / DSH</text>
+  <text x="914" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Per-window runtime &amp; model selection</text>
+  <text x="914" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Desktop task cards + drag-drop files</text>
+  <text x="914" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Local knowledge index + group artifacts</text>
+  <rect x="914" y="284" width="242" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="926" y="305" fill="#C084FC" font-family="Consolas, monospace" font-size="11">Unified Agent Desktop</text>
+  <text x="926" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Text + voice task dispatch</text>
+  <text x="926" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Natural-language local KB search</text>
+  <text x="926" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• MIT license (macOS &amp; Windows)</text>
+  <text x="914" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="914" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Consolidates fragmented agent CLIs into</text>
+  <text x="914" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">one governed desktop workspace with</text>
+  <text x="914" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">shared local RAG and artifact review.</text>
+
+  <!-- Bottom FinOps & Architecture Strip -->
+  <rect x="28" y="502" width="1144" height="154" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="48" y="530" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">On-Device Voice Synthesis, Developer Voice Dictation &amp; Local Layer-Aware Design Reference Architecture + FinOps TCO</text>
+  <text x="48" y="556" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Voice &amp; Prompt Path: Arara-Voice (Vulkan whisper.cpp + Custom Glossary) → Linger Multi-Runtime Hub (Codex/DSH) → Voicebox (Android WebGPU/QNN 0.51 RTF TTS)</text>
+  <text x="48" y="578" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Visual Layer Path: Linger Task Card → EggLab (stable-diffusion.cpp Q4_K_M 29s Turbo + Document-Scoped Chat) → PhotoCraft Multi-Layer Canvas</text>
+  <rect x="48" y="594" width="1104" height="46" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="64" y="615" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12" font-weight="700">Closed-Form FinOps (42-Eng · $3,120.00 SaaS + 39.5h=$3,950.00 vs $75.00 Compute + 2.4h=$240.00 · synthetic, base hardware capEx: not_measured):</text>
+  <text x="64" y="633" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">Path A Cloud Voice/Dictation/Design SaaS &amp; Rework: $7,070.00/mo  →  Path C Voicebox + Arara + EggLab + Linger: $315.00/mo (Save $6,755.00/mo, -95.54%)</text>
+</svg>

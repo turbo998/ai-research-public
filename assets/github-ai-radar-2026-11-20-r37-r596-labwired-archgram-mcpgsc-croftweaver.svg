@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad596" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad596" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="cardBorder596" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad596)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad596)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 37 (Cumulative Round 596) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    w1ne/labwired-core (★205) + byAbas/archgram (★7) + AKzar1el/mcp-gsc (★8) + karero/croftweaver (★11)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder596)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R596)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">Virtual MCU Co-Sim MCP, Animated Arch Diagrams, GSC MCP &amp; GEO</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#6EE7B7" font-size="13.5" font-weight="700">Q1: Boardless STM32/ESP32/RP2040 Firmware CI &amp; MCP?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• w1ne/labwired-core (★205, MIT, Rust):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  Mixed-signal circuit &amp; MCU simulator (STM32, ESP32, RP2040)</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  Deterministic CI + MCP server so coding agents test firmware</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• Zero physical dev boards required on engineer desks</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#93C5FD" font-size="13.5" font-weight="700">Q2: Animated Light/Dark Architecture Diagrams from YAML?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• byAbas/archgram (★7, MIT, Rust / npm `archgram`):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Define nodes &amp; edges in JSON or YAML spec</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  Auto-layouts, routes orthogonal lines &amp; draws animated flows</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Native light &amp; dark mode output for SA architecture docs</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#D8B4FE" font-size="13.5" font-weight="700">Q3: Keyless OAuth Google Search Console MCP Server?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• AKzar1el/mcp-gsc (★8, MIT, TS, `@digestseo/mcp-gsc`):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  Queries clicks, impressions, avg position, URL inspection</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  &amp; sitemaps via Google OAuth (zero static API keys)</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• Runs locally via npm or self-hosted on Cloudflare Workers</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#FCD34D" font-size="13.5" font-weight="700">Q4: End-to-End Astro/Cloudflare SEO &amp; GEO Skill Suite?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• karero/croftweaver (★11, MIT, Python):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  Builds, tests &amp; launches Astro -&gt; GitHub -&gt; Cloudflare sites</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  Enforces accessibility, schema markup &amp; automated test gates</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">• Weekly Search Console + AI-answer (GEO) citation feedback loop</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder596)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise Hardware-Free Firmware CI, Spec-Driven Diagrams &amp; SEO/GEO Architecture</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Stack: LabWired MCU Co-Sim MCP ➔ Archgram Animated Specs ➔ DigestSEO GSC MCP ➔ Croftweaver GEO Loop</text>
+
+  <!-- Pillar 1: labwired-core -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#34D399" font-size="14.5" font-weight="700">Pillar A: Virtual MCU Co-Sim (w1ne/labwired-core)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Multi-Target Silicon Simulation: Virtualizes STM32, ESP32</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  and RP2040 microcontrollers with mixed-signal peripherals</text>
+  <text x="528" y="290" fill="#CBD5E1" font-size="11.5">• Deterministic CI &amp; Agent MCP: Coding agents compile, flash</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">  and inspect virtual pins/registers via MCP in headless CI</text>
+  <text x="528" y="328" fill="#CBD5E1" font-size="11.5">• Hardware-Validated Core: Continuous Rust Core CI, Board CI</text>
+  <text x="528" y="346" fill="#CBD5E1" font-size="11.5">  and real hardware target validation suites</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License (★205 stars, 50 forks)</text>
+  <text x="528" y="390" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Unblocks autonomous embedded firmware development in cloud CI</text>
+
+  <!-- Pillar 2: archgram -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar B: Spec-Driven Animated Diagrams (byAbas/archgram)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Declarative JSON / YAML Input: Agents author clean node</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">  and edge definitions without guessing pixel coordinates</text>
+  <text x="976" y="290" fill="#CBD5E1" font-size="11.5">• Automated Rust Layout &amp; Routing: Computes node placement,</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">  orthogonal line routing &amp; animated traffic flows</text>
+  <text x="976" y="328" fill="#CBD5E1" font-size="11.5">• Dual Theme Output: Native light and dark mode rendering</text>
+  <text x="976" y="346" fill="#CBD5E1" font-size="11.5">  ready for GitHub READMEs, docs &amp; architecture decks</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">• Package: `archgram` on npm (Rust core, MIT License)</text>
+  <text x="976" y="390" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Eliminates manual Visio/Figma line dragging for SA diagrams</text>
+
+  <!-- Pillar 3: mcp-gsc -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#C084FC" font-size="14.5" font-weight="700">Pillar C: Search Console MCP (AKzar1el/mcp-gsc)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Full GSC Telemetry Surface: Queries clicks, impressions,</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">  CTR, average position, URL inspection, sitemaps &amp; indexing</text>
+  <text x="528" y="522" fill="#CBD5E1" font-size="11.5">• Keyless Google OAuth Security: Authenticates via standard</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">  Google OAuth without long-lived static service-account JSONs</text>
+  <text x="528" y="560" fill="#CBD5E1" font-size="11.5">• Dual Deployment: Run locally via `@digestseo/mcp-gsc` on</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">  npm or self-host remotely on Cloudflare Workers</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">• Registry Verified: `io.github.AKzar1el/mcp-gsc` (MIT)</text>
+  <text x="528" y="622" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Feeds live organic search &amp; indexing data directly to agents</text>
+
+  <!-- Pillar 4: croftweaver -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar D: Search &amp; AI GEO Web Skills (karero/croftweaver)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• Brief-to-Production Pipeline: Guides coding agents to build</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  complete sites on Astro -&gt; GitHub -&gt; Cloudflare Workers</text>
+  <text x="976" y="522" fill="#CBD5E1" font-size="11.5">• Built-In Quality Gates: Mobile-first responsive checks,</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">  accessibility validation, JSON-LD schema markup &amp; test suites</text>
+  <text x="976" y="560" fill="#CBD5E1" font-size="11.5">• Closed-Loop SEO + GEO: Combines Search Console data with</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">  weekly checks of which AI assistants cite your domain (GEO)</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="976" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Optimizes enterprise docs/sites for both Google &amp; AI answers</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R37-R596-LABWIRED-ARCHGRAM-MCPGSC-CROFTWEAVER · 43 Engineers @ $100.00/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Physical HIL Racks + Diagram SaaS + SEO/GEO Suites</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• HIL Lab, Diagramming &amp; SEO/GEO SaaS: $3,180.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Board Flashing, Diagram &amp; GSC Ops: 39.5 h × $100 = $3,950.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,180.00 + $3,950.00 = $7,130.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Blocked embedded CI waiting for physical boards,</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  manual diagram routing &amp; blind AI-search (GEO) visibility</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: All-MIT Stack (LabWired + Archgram + GSC + Croftweaver)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Cloudflare Workers &amp; CI Runner Compute: $70.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Sim &amp; GEO Review Labor: 2.4 h/mo × $100.00/h = $240.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $70.00 + $240.00 = $310.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: Boardless STM32/ESP32/RP2040 CI, animated YAML</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  architecture diagrams, OAuth GSC MCP &amp; weekly GEO loops</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $6,820.00 / mo (-95.65%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $81,840.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,130.00 - $310.00) / $7,130.00 = 95.65%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: All 4 repositories = permissive MIT License</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  (labwired-core, archgram, mcp-gsc, croftweaver)</text>
+</svg>

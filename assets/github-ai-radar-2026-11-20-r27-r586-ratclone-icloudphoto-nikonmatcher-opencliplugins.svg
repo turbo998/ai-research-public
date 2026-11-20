@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad586" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad586" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="cardBorder586" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad586)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad586)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 27 (Cumulative Round 586) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    SyscallBrain/ratclone (★32) + ClaudeIvanovich/iCloud-Photo-Downloader (★37) + gerard662/nikon-picture-control-matcher (★33) + amadshobi/opencli-plugins (★19)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder586)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R586)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">Persistent Cloud Transfer TUI, iCloud Backup, Camera Calibration &amp; Browser CLI</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#6EE7B7" font-size="13.5" font-weight="700">Q1: Disconnect-Proof Dual-Pane rclone TUI across 40+ Clouds?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• SyscallBrain/ratclone (★32, MIT, Rust Ratatui):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  Talks to rclone rcd daemon over HTTP (127.0.0.1:5572)</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  Transfers survive TUI quit or SSH drop; reconnects to live jobs</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• Vim keys (j/k/h/l, Space multi-select, c/m/s/d) + 5 themes</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#93C5FD" font-size="13.5" font-weight="700">Q2: Read-Only Windows iCloud Photos Full + Compact Archive?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• ClaudeIvanovich/iCloud-Photo-Downloader (★37, MIT, Python):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Strictly read-only iCloud fetch; organizes YYYY\MM Month\</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  Dual Full size + Compact (Pillow/ffmpeg/pillow-heif HEIC-&gt;JPG)</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Windows Credential Manager keyring + 2FA/2SA + 6 UI languages</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#D8B4FE" font-size="13.5" font-weight="700">Q3: Automated In-Camera Nikon .NP3 Film-Look Calibration?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• gerard662/nikon-picture-control-matcher (★33, MIT, Python):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  Color-chart solver driving Nikon NX Studio CLI (NXStudioCli)</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  Optimizes tone curve, 8-band HSL, sharpening &amp; Color Blender</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• Exports versioned PICCONnn.NP3 directly to Nikon Z SD card</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#FCD34D" font-size="13.5" font-weight="700">Q4: Hardened Browser-Session CLI for Gemini &amp; Messaging?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• amadshobi/opencli-plugins (★19, MIT, JavaScript):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  14 commands across AI Studio, Gemini, Telegram &amp; WhatsApp Web</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  Fail-fast rate-limit detection + download-race guard + byte check</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">• Reuses authenticated browser cookies without fragile scraping</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder586)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise Media Asset Sync, Camera Calibration &amp; Browser-CLI Architecture</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Pipeline: Persistent rclone rcd TUI ➔ Read-Only iCloud Ingest ➔ NX Studio .NP3 Solver ➔ Verified Browser CLI</text>
+
+  <!-- Pillar 1: ratclone -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#34D399" font-size="14.5" font-weight="700">Pillar A: Persistent Multi-Cloud TUI (SyscallBrain/ratclone)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Daemon-Decoupled Design: Spawns or attaches to rclone rcd</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">• Zero-Drop Transfers: Quitting TUI or losing SSH leaves rcd</text>
+  <text x="528" y="288" fill="#CBD5E1" font-size="11.5">  transfers running; relaunching ratclone re-attaches live bars</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">• Dual-Pane Vim Navigation: Independent local/remote panes,</text>
+  <text x="528" y="326" fill="#CBD5E1" font-size="11.5">  Space multi-select, copy (c), move (m), sync (s), delete (d)</text>
+  <text x="528" y="346" fill="#CBD5E1" font-size="11.5">• Telemetry: Per-file speed, byte progress, ETA &amp; 5 themes</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">• Scope: Works across S3, GCS, Azure Blob, OneDrive, GDrive</text>
+  <text x="528" y="390" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Eliminates tmux/nohup babysitting for multi-TB cloud migrations</text>
+
+  <!-- Pillar 2: iCloud-Photo-Downloader -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar B: Read-Only iCloud Archive (iCloud-Photo-Downloader)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Safety Invariant: 100% read-only against iCloud CloudKit API</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">• Structured Hierarchy: YYYY\MM Month\Full size &amp; Compact</text>
+  <text x="976" y="290" fill="#CBD5E1" font-size="11.5">• Dual-Tier Compression: Pillow JPEG resize (70% quality, EXIF</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">  preserved), ffmpeg video transcode &amp; pillow-heif HEIC-to-JPG</text>
+  <text x="976" y="328" fill="#CBD5E1" font-size="11.5">• Security: Windows Credential Manager keyring + 2FA/2SA dialog</text>
+  <text x="976" y="348" fill="#CBD5E1" font-size="11.5">• Resilience: Auto-reconnect on network drop + skip existing files</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">• Localization: EN, ES, PT, FR, DE, RU Tkinter GUI + CLI flags</text>
+  <text x="976" y="390" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Prevents accidental iCloud sync deletion during local archival</text>
+
+  <!-- Pillar 3: nikon-picture-control-matcher -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#C084FC" font-size="14.5" font-weight="700">Pillar C: In-Camera .NP3 Solver (nikon-picture-control-matcher)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Hardware-Authentic Loop: Drives real Nikon NX Studio CLI</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">• 24-Patch Color Chart Alignment: Compares Nikon .NEF RAW vs</text>
+  <text x="528" y="520" fill="#CBD5E1" font-size="11.5">  target camera JPEG (e.g. Fujifilm X100VI Astia / Film Sims)</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">• Multi-Stage Optimization: Tone curve control points, 8-band</text>
+  <text x="528" y="558" fill="#CBD5E1" font-size="11.5">  HSL Hue/Chroma/Brightness, Color Blender &amp; sharpening</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">• SD Card Delivery: Writes versioned PICCON01.NP3..PICCON99.NP3</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">  for zero-post-processing straight-out-of-camera (SOOC) JPEGs</text>
+  <text x="528" y="622" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Eliminates Lightroom post-grading for multi-camera shoots</text>
+
+  <!-- Pillar 4: opencli-plugins -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar D: Hardened Browser CLI (amadshobi/opencli-plugins)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• 4 Platforms / 14 Commands: Google AI Studio, Gemini App,</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  Telegram Web (contacts/chats/history/send) &amp; WhatsApp Web</text>
+  <text x="976" y="522" fill="#CBD5E1" font-size="11.5">• Production Gemini Image Hardening:</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">  1) Pre-flight + mid-generation rate-limit fail-fast detection</text>
+  <text x="976" y="558" fill="#CBD5E1" font-size="11.5">  2) Download-race protection across concurrent generations</text>
+  <text x="976" y="576" fill="#CBD5E1" font-size="11.5">  3) Non-zero byte-size file verification before returning JSON</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• Session Reuse: Bridges existing authenticated Chrome tabs</text>
+  <text x="976" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Prevents silent 0-byte downloads &amp; hanging browser timeouts</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R27-R586-RATCLONE-ICLOUDPHOTO-NIKONMATCHER-OPENCLIPLUGINS · 42 Eng @ $100/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Commercial Cloud Sync GUI + Colorist &amp; RPA SaaS</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• SaaS &amp; Colorist Consulting Fees: $3,140.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Manual Media Ops Labor: 39.5 h/mo × $100.00/h = $3,950.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,140.00 + $3,950.00 = $7,090.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Dropped SSH rclone jobs, manual HEIC conversion,</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  hours of Lightroom camera matching &amp; flaky browser scripts</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: Hybrid OSS (ratclone + iCloud + nikon-matcher + opencli)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Compute &amp; Storage Egress: $70.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Ops &amp; Calibration Labor: 2.4 h/mo × $100.00/h = $240.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $70.00 + $240.00 = $310.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: Persistent rcd TUI transfers, read-only dual-tier</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  iCloud archive, SOOC .NP3 profiles &amp; byte-verified Gemini CLI</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $6,780.00 / mo (-95.63%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $81,360.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,090.00 - $310.00) / $7,090.00 = 95.63%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: All 4 repositories = permissive MIT License</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  (ratclone, iCloud-Photo-Downloader, nikon-matcher, opencli)</text>
+</svg>

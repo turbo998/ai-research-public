@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad599" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad599" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="cardBorder599" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad599)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad599)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 40 (Cumulative Round 599) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    keithadler/leanstudio (★8) + fabricioctelles/skills (★140) + agentsmith-tools/claude-math (★28) + ilien-dev/jano (★10)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder599)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R599)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">Dual-Kernel Lean 4 MCP IDE, Kiro/Coolify Skills, Unicode Math &amp; Jano</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#93C5FD" font-size="13.5" font-weight="700">Q1: Dual-Kernel Lean 4 Desktop IDE + AI Proof MCP?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• keithadler/leanstudio (★8, MIT, C#, macOS/Win/Linux):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  Every Lean 4 proof is independently re-checked by Tenet</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  Built-in MCP server for AI assistants + Git/GitHub integration</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• Stops unsound LLM proof exploits (`sorry` / axiom tricks)</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#6EE7B7" font-size="13.5" font-weight="700">Q2: Modular Skills for Kiro, Cursor, Windsurf &amp; Coolify?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• fabricioctelles/skills (★140, Apache-2.0, TypeScript):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Reusable skill modules across Kiro, Cursor, Windsurf &amp; Claude</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  Deep playbooks for Cloudflare, Astro, Coolify &amp; GA4</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Published on both `skills.sh` and `agentskill.sh`</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#D8B4FE" font-size="13.5" font-weight="700">Q3: Legible Inline Unicode Math in Claude Code &amp; Codex?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• agentsmith-tools/claude-math (★28, MIT, JavaScript):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  Replaces raw `$f(x) = \sum$` LaTeX noise with Unicode glyphs</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  Single `math-unicode` skill for Claude Code &amp; Codex CLI</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• One-command install: `claude-math install --codex`</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#FCD34D" font-size="13.5" font-weight="700">Q4: Animated Dark/Light SVG README Headers (`jano`)?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• ilien-dev/jano (★10, MIT, Python):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  Generates animated SVG hero banners &amp; section visuals</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  Native `<picture>` dark &amp; light mode in custom brand palettes</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">• Agent skill for Claude Code, Codex &amp; autonomous doc pipelines</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder599)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise Formal Verification, Cross-IDE DevOps Skills &amp; Visual Documentation</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Workflow: Lean Studio Dual-Kernel MCP ➔ Unicode Terminal Math ➔ Kiro/Coolify Skills ➔ Jano Animated SVGs</text>
+
+  <!-- Pillar 1: leanstudio -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar A: Dual-Kernel Lean 4 IDE (keithadler/leanstudio)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• "Checks the Checker" Architecture: Lean 4 checks proofs</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  as you type, while Tenet (an independent Lean 4 kernel)</text>
+  <text x="528" y="288" fill="#CBD5E1" font-size="11.5">  re-verifies every build from scratch</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">• Native Cross-Platform IDE: Runs on macOS, Windows &amp; Linux</text>
+  <text x="528" y="326" fill="#CBD5E1" font-size="11.5">  with Git, GitHub &amp; an MCP server for AI assistants built in</text>
+  <text x="528" y="346" fill="#CBD5E1" font-size="11.5">• High-Assurance AI Coding: Prevents coding agents from</text>
+  <text x="528" y="364" fill="#CBD5E1" font-size="11.5">  passing formal specs via environment or metaprogramming tricks</text>
+  <text x="528" y="390" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Provides independent dual-kernel proof assurance via MCP</text>
+
+  <!-- Pillar 2: fabricioctelles/skills -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#34D399" font-size="14.5" font-weight="700">Pillar B: Kiro/Cursor/Coolify Skills (fabricioctelles/skills)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Broad IDE Coverage: First-class support for AWS Kiro,</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">  Cursor, Windsurf, Claude Code &amp; `skills.sh` / `agentskill.sh`</text>
+  <text x="976" y="290" fill="#CBD5E1" font-size="11.5">• Self-Hosted PaaS &amp; Edge Focus: Production deployment</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">  modules for Coolify, Cloudflare, Astro &amp; Google Analytics</text>
+  <text x="976" y="328" fill="#CBD5E1" font-size="11.5">• Bilingual Documentation: English &amp; Brazilian Portuguese</text>
+  <text x="976" y="346" fill="#CBD5E1" font-size="11.5">• License: Permissive Apache-2.0 License (★140 stars)</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">• Standardized Context: Modular context, structure &amp; guardrails</text>
+  <text x="976" y="390" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Bridges Kiro, Windsurf &amp; Cursor with Coolify/Cloudflare ops</text>
+
+  <!-- Pillar 3: claude-math -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#C084FC" font-size="14.5" font-weight="700">Pillar C: Terminal Unicode Math (agentsmith-tools/claude-math)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Solves Terminal LaTeX Noise: Neither Claude Code nor</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">  OpenAI Codex CLI renders raw `$...$` LaTeX in terminal output</text>
+  <text x="528" y="522" fill="#CBD5E1" font-size="11.5">• Clean Unicode Glyph Emission: `math-unicode` skill teaches</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">  models to emit proper mathematical Unicode symbols inline</text>
+  <text x="528" y="560" fill="#CBD5E1" font-size="11.5">• Dual CLI Support: Installs as a Claude Code plugin and via</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">  `claude-math install --codex` for OpenAI Codex CLI</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License (★28 stars)</text>
+  <text x="528" y="622" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Makes FinOps formulas, proofs &amp; ML equations readable in CLI</text>
+
+  <!-- Pillar 4: jano -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar D: Self-Explaining Animated READMEs (ilien-dev/jano)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• Automated Visual Storytelling: Inspects repo structure,</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  asks a few questions &amp; generates a complete visual README.md</text>
+  <text x="976" y="522" fill="#CBD5E1" font-size="11.5">• Animated SVG Hero &amp; Section Graphics: Draws moving SVG</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">  diagrams at the top and above each architectural section</text>
+  <text x="976" y="560" fill="#CBD5E1" font-size="11.5">• Dual-Theme Brand Palette: Generates both `hero-dark.svg`</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">  and `hero-light.svg` wired via `<picture>` media queries</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="976" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Turns plain-text repos into self-explaining visual showcases</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R40-R599-LEANSTUDIO-FABRICIOSKILLS-CLAUDEMATH-JANO · 44 Eng @ $100/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Manual Proof Setup + Per-IDE Rules + Design Agencies</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• SaaS Tools &amp; Animated SVG Design Retainers: $3,200.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Proof Setup, Skill Porting &amp; SVG Ops: 40.0 h × $100 = $4,000.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,200.00 + $4,000.00 = $7,200.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Unverified single-kernel proofs, unreadable</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  terminal LaTeX backslashes &amp; days spent hand-animating SVGs</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: Permissive OSS (LeanStudio + Fabricio + Math + Jano)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Self-Hosted Tenet CI &amp; Coolify Compute: $70.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Proof &amp; Visual Doc Review: 2.4 h/mo × $100/h = $240.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $70.00 + $240.00 = $310.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: Tenet dual-kernel Lean 4 MCP, Kiro/Coolify skills,</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  clean Unicode terminal math &amp; dark/light animated SVG READMEs</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $6,890.00 / mo (-95.69%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $82,680.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,200.00 - $310.00) / $7,200.00 = 95.69%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: 100% Permissive (leanstudio, claude-math &amp;</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  jano = MIT; fabricioctelles/skills = Apache-2.0)</text>
+</svg>

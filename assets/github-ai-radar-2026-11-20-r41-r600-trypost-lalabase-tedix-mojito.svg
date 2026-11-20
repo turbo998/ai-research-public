@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad600" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad600" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="cardBorder600" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad600)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad600)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 41 (Cumulative Round 600 Historic Milestone!) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    trypostit/trypost (★1469) + lalabase/lalabase (★156) + tedix-hq/tedix (★43) + TimeLovercc/mojito (★120)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder600)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R600)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">Agent Social Scheduler MCP, Source-Cited Client Brain, Tedix &amp; Mojito</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#D8B4FE" font-size="13.5" font-weight="700">Q1: Social Media Scheduler Built for AI Agents (MCP/REST)?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• trypostit/trypost (★1469, AGPL-3.0, PHP):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  Agents create, schedule &amp; publish posts across networks</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  via native MCP server or REST API + human team composer</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• Replaces expensive per-channel SaaS schedulers (Buffer/Hootsuite)</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#6EE7B7" font-size="13.5" font-weight="700">Q2: Source-Cited Client Project Brain (Rails + PG)?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• lalabase/lalabase (★156, AGPL-3.0, Ruby on Rails + PG):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Shared client space: requirements, meetings, tickets &amp; docs</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  AI assistant answers with exact ticket &amp; time-entry citations</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Example: "38.5 hours across 12 tickets" with linked sources</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#93C5FD" font-size="13.5" font-weight="700">Q3: Shared Tasks, Knowledge, Apps &amp; Approvals for Agents?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• tedix-hq/tedix (★43, AGPL-3.0, TypeScript):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  Unified workspace coordinating people, AI agents &amp; apps</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  First-class engineering decision records &amp; approval gates</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• Keeps agent actions anchored to shared project knowledge</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#FCD34D" font-size="13.5" font-weight="700">Q4: Self-Rebuilding Local Personal AI (`mojito`)?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• TimeLovercc/mojito (★120, MIT, TypeScript):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  Local evolving alternative to cloud personal AI (Meta Muse)</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  Documented `self-rebuild-loop.md` rewrites the app via chat</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">• 100% local MIT ownership with security boundary docs</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder600)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise Client Delivery, Agent Collaboration, Self-Rebuilding Apps &amp; Social MCP</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Milestone Stack: Lalabase Cited Client Brain ➔ Tedix Decision Hub ➔ Mojito Self-Rebuild Loop ➔ TryPost MCP</text>
+
+  <!-- Pillar 1: trypost -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#C084FC" font-size="14.5" font-weight="700">Pillar A: Agent Social Scheduler (trypostit/trypost)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Dual Agent + Human Workflow: AI agents draft and schedule</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  multi-network posts via MCP or REST API; humans review in</text>
+  <text x="528" y="288" fill="#CBD5E1" font-size="11.5">  a collaborative visual composer</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">• High Community Adoption: ★1,469 stars &amp; 307 forks</text>
+  <text x="528" y="328" fill="#CBD5E1" font-size="11.5">• Self-Hosted Control: Eliminates per-seat/per-channel fees</text>
+  <text x="528" y="346" fill="#CBD5E1" font-size="11.5">  on commercial social media management SaaS platforms</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">• License: AGPL-3.0 (deploy as internal standalone service)</text>
+  <text x="528" y="390" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Turns multi-channel content publishing into an MCP tool call</text>
+
+  <!-- Pillar 2: lalabase -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#34D399" font-size="14.5" font-weight="700">Pillar B: Source-Cited Client Brain (lalabase/lalabase)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• First Call to Production: Unifies client requirements,</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">  meeting notes, tickets, time logs &amp; project documentation</text>
+  <text x="976" y="290" fill="#CBD5E1" font-size="11.5">• Citation-Grounded Project AI: Answers billing &amp; scope</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">  questions (e.g. "38.5 hours across 12 tickets") with exact</text>
+  <text x="976" y="326" fill="#CBD5E1" font-size="11.5">  links to the underlying tickets and time entries</text>
+  <text x="976" y="346" fill="#CBD5E1" font-size="11.5">• Proven Stack: Ruby on Rails + PostgreSQL (★156 stars)</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">• License: AGPL-3.0-only (self-hosted delivery portal)</text>
+  <text x="976" y="390" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Eliminates client billing disputes with source-cited AI</text>
+
+  <!-- Pillar 3: tedix -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar C: Agent &amp; App Decision Hub (tedix-hq/tedix)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Four-Way Coordination: Connects human teams, AI agents,</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">  internal apps &amp; project knowledge in one TypeScript platform</text>
+  <text x="528" y="522" fill="#CBD5E1" font-size="11.5">• Structured Approval Workflows: Captures engineering</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">  decisions and requires explicit sign-off on high-impact actions</text>
+  <text x="528" y="560" fill="#CBD5E1" font-size="11.5">• Shared Context Graph: Agents read and update shared</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">  tasks and project docs without siloed chat amnesia</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">• License: AGPL-3.0 (internal team collaboration service)</text>
+  <text x="528" y="622" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Centralizes human-in-the-loop engineering decisions</text>
+
+  <!-- Pillar 4: mojito -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar D: Self-Rebuilding Personal AI (TimeLovercc/mojito)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• Self-Rebuild Loop (`docs/self-rebuild-loop.md`): Describe</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  a new feature or workflow in chat, and Mojito rewrites and</text>
+  <text x="976" y="520" fill="#CBD5E1" font-size="11.5">  rebuilds its own TypeScript codebase on the fly</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">• Local Sovereign Alternative: Built as an open-source,</text>
+  <text x="976" y="558" fill="#CBD5E1" font-size="11.5">  locally owned alternative to cloud personal AIs like Meta Muse</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">• Bilingual Guides: English &amp; Chinese research documentation</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License (★120 stars)</text>
+  <text x="976" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Empowers engineers to evolve bespoke local tools via chat</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R41-R600-TRYPOST-LALABASE-TEDIX-MOJITO · 45 Engineers @ $100.00/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Commercial Social/PSA SaaS + Manual Hour Audits</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• Social Scheduler, PSA &amp; Cloud AI Seats: $3,400.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Manual Billing Audit &amp; Tool Coding: 42.0 h × $100 = $4,200.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,400.00 + $4,200.00 = $7,600.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Per-channel social SaaS fees, unverified client</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  hour summaries &amp; cloud lock-in on personal AI assistants</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: Self-Hosted OSS (TryPost + Lalabase + Tedix + Mojito)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Self-Hosted Rails/PG/PHP/TS Compute: $80.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Approval &amp; Rebuild Supervision: 2.5 h/mo × $100 = $250.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $80.00 + $250.00 = $330.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: MCP social publishing, source-cited client hours,</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  governed agent decisions &amp; self-rebuilding local Mojito apps</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $7,270.00 / mo (-95.66%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $87,240.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,600.00 - $330.00) / $7,600.00 = 95.66%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: Mojito = MIT; TryPost, Lalabase &amp; Tedix =</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  AGPL-3.0 (deploy as internal self-hosted services)</text>
+</svg>

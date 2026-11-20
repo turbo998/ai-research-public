@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad595" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad595" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="cardBorder595" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad595)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad595)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 36 (Cumulative Round 595 Milestone) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    devicechain-io/devicechain (★8) + alexeyban/EKOS (★28) + rshodoskar-star/openclaw-desktop (★120) + geezerrrr/motive (★120)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder595)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R595)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">K8s IoT MCP Platform, Rust Knowledge OS, AEGIS Desktop &amp; Motive</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#93C5FD" font-size="13.5" font-weight="700">Q1: Kubernetes IoT Platform with User-Scoped MCP &amp; HITL?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• devicechain-io/devicechain (★8, Apache-2.0, Go):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  MQTT, Sparkplug B, LwM2M &amp; LoRaWAN ingest on Kubernetes</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  MCP server reads with user's own token; alarm ack waits</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• Zero device cap &amp; single Apache-2.0 edition (no paywall)</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#6EE7B7" font-size="13.5" font-weight="700">Q2: Rust Enterprise Knowledge Compilation OS?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• alexeyban/EKOS (★28, MIT, Rust):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Continuously reconstructs, compiles, stores &amp; serves</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  enterprise knowledge into structured agent context</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Passes SonarCloud Reliability, Security &amp; Quality Gates</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#D8B4FE" font-size="13.5" font-weight="700">Q3: Mission-Control Desktop Client for OpenClaw v6.0.0?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• rshodoskar-star/openclaw-desktop (★120, MIT, TS):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  AEGIS Desktop (`v6.0.0`) on Electron 35 + React 18 + TS 5.7</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  Targets OpenClaw `2026.3.12+` without browser tab clutter</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• Full bilingual English/Arabic UI with native RTL layout</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#FCD34D" font-size="13.5" font-weight="700">Q4: Swift 6.0 Menu-Bar Background Agent ("Say It, Walk Away")?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• geezerrrr/motive (★120, MIT, Swift 6.0, macOS 15+):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  Runs autonomous AI tasks invisibly from macOS menu bar</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  Interrupts user only when a high-impact decision requires</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">  explicit approval</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder595)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise IoT MCP, Compiled Knowledge OS &amp; Mission-Control Desktop Architecture</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Stack: DeviceChain K8s IoT MCP ➔ EKOS Rust Knowledge Compiler ➔ AEGIS OpenClaw Desktop ➔ Motive Menu-Bar</text>
+
+  <!-- Pillar 1: devicechain -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar A: K8s IoT Platform + MCP (devicechain)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Industrial Protocol Breadth: Ingests MQTT, HTTP, Sparkplug B,</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  LwM2M &amp; LoRaWAN with rules, alarms, commands &amp; OTA updates</text>
+  <text x="528" y="290" fill="#CBD5E1" font-size="11.5">• Zero-Privilege-Escalation MCP: MCP server reads devices</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">  and telemetry using the signed-in user's own RBAC token</text>
+  <text x="528" y="328" fill="#CBD5E1" font-size="11.5">• Human-in-the-Loop Alarm Safety: Agent proposals to ack or</text>
+  <text x="528" y="346" fill="#CBD5E1" font-size="11.5">  clear industrial alarms wait for explicit human approval</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">• No Device Cap: Single open Apache-2.0 edition on Kubernetes</text>
+  <text x="528" y="390" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Eliminates per-device cloud IoT fees &amp; unsafe alarm clearing</text>
+
+  <!-- Pillar 2: EKOS -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#34D399" font-size="14.5" font-weight="700">Pillar B: Rust Knowledge Compiler (alexeyban/EKOS)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Continuous Knowledge Reconstruction: Compiles raw scattered</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">  enterprise artifacts into reconciled, query-ready knowledge</text>
+  <text x="976" y="290" fill="#CBD5E1" font-size="11.5">• Rust Memory Safety &amp; Speed: High-throughput indexing and</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">  serving engine verified by SonarCloud Quality Gates</text>
+  <text x="976" y="328" fill="#CBD5E1" font-size="11.5">• Beyond Naive Chunking: Resolves conflicting document versions</text>
+  <text x="976" y="346" fill="#CBD5E1" font-size="11.5">  during compilation rather than dumping contradictory chunks</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="976" y="390" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Replaces stale wiki chunk soup with compiled knowledge</text>
+
+  <!-- Pillar 3: openclaw-desktop -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#C084FC" font-size="14.5" font-weight="700">Pillar C: AEGIS Mission Control (openclaw-desktop v6.0.0)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Dedicated Gateway Cockpit: Turns OpenClaw `2026.3.12+`</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">  into a native desktop mission-control center</text>
+  <text x="528" y="522" fill="#CBD5E1" font-size="11.5">• Modern Desktop Stack: Built with Electron 35, React 18 &amp;</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">  TypeScript 5.7 (`v6.0.0` release)</text>
+  <text x="528" y="560" fill="#CBD5E1" font-size="11.5">• Global Enterprise Accessibility: First-class bilingual</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">  English and Arabic localization with complete RTL layout</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="528" y="622" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Isolates OpenClaw operations from accidental browser closes</text>
+
+  <!-- Pillar 4: motive -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar D: Ambient macOS Agent Runner (geezerrrr/motive)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• "Say It. Walk Away." UX: Native Swift 6.0 menu-bar app</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  for `macOS 15+` that runs background agent workflows quietly</text>
+  <text x="976" y="522" fill="#CBD5E1" font-size="11.5">• Attention-Preserving Escalation: Stays out of the way</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">  while agents execute, notifying you only when approval is needed</text>
+  <text x="976" y="560" fill="#CBD5E1" font-size="11.5">• Zero Window Clutter: Eliminates 10 open terminal windows</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">  competing for focus on developer desktops</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="976" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Preserves deep-work focus during background agent execution</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R36-R595-DEVICECHAIN-EKOS-OPENCLAWDESKTOP-MOTIVE · 45 Eng @ $100/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Metered IoT Cloud + Wiki SaaS + Agent Babysitting</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• Per-Device IoT Cloud &amp; Knowledge SaaS: $3,360.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Alarm Triage &amp; Babysitting: 41.0 h/mo × $100/h = $4,100.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,360.00 + $4,100.00 = $7,460.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Punitive per-sensor IoT tiers, contradictory</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  RAG wiki chunks &amp; constant context-switching across tabs</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: All-Permissive OSS (DeviceChain + EKOS + AEGIS + Motive)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Self-Hosted K8s IoT &amp; Rust EKOS Compute: $80.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• HITL Alarm &amp; Knowledge Review: 2.5 h/mo × $100 = $250.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $80.00 + $250.00 = $330.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: Unlimited K8s IoT devices with RBAC MCP, compiled</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  Rust knowledge OS, AEGIS v6.0.0 &amp; Swift 6.0 menu-bar agents</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $7,130.00 / mo (-95.58%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $85,560.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,460.00 - $330.00) / $7,460.00 = 95.58%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: 100% Permissive Open Source (DeviceChain =</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  Apache-2.0; EKOS, openclaw-desktop &amp; motive = MIT)</text>
+</svg>

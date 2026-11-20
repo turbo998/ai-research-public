@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad587" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad587" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cardBorder587" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad587)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad587)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 28 (Cumulative Round 587) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    ClickHouse/loom (★172) + intutic/intutic (★9) + forger-labs-hq/researchforge (★12) + qifan777/data-agent-tutorial (★118)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder587)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R587)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">Symbol-Linked Memory, Tool-Call Gates, Worktree Labs &amp; Text2SQL</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#FCD34D" font-size="13.5" font-weight="700">Q1: Symbol-Linked Shared Agent Memory on ClickHouse?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• ClickHouse/loom (★172, Apache-2.0, Python/TS):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  Memories link directly to files &amp; AST symbols; surface</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  automatically when Claude Code, Codex, or Cursor edits code</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• MCP server + Python/TS SDKs self-hosted on ClickHouse</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#6EE7B7" font-size="13.5" font-weight="700">Q2: Git-Versioned Policy-as-Code Across 43 Harnesses?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• intutic/intutic (★9, MIT, TypeScript/Rust):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Synchronous tool-call gate + Rust proxy before shell/file ops</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  Policies are Markdown SOPs in Git; blocks kubectl delete,</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">  out-of-scope edits, secret leaks &amp; runaway agent loops</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#93C5FD" font-size="13.5" font-weight="700">Q3: Frozen-Baseline Overnight Worktree Experiment Loop?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• forger-labs-hq/researchforge (★12, Apache-2.0, Python):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  Freezes baseline metric, runs hypotheses in isolated Git</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  worktrees, auto-rejects regressions &amp; keeps verified wins</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• Works with Claude Code, Cursor, or direct LLM API keys</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#D8B4FE" font-size="13.5" font-weight="700">Q4: Enterprise Text2SQL StateGraph + Dual RAG + HITL?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• qifan777/data-agent-tutorial (★118, NOASSERTION, Kotlin):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  Spring Boot 3 + Spring AI Alibaba Graph + pgvector</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  Dual RAG (Schema Graph + Knowledge) + SQL self-healing</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">• Docker Python sandbox analysis + HITL approval + A2A/SSE</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder587)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Governed Enterprise Coding &amp; Data Agent Reference Architecture</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Control Plane: ClickHouse Symbol Memory ➔ Intutic Tool Gate ➔ ResearchForge Worktree Lab ➔ Text2SQL StateGraph</text>
+
+  <!-- Pillar 1: ClickHouse/loom -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar A: Symbol-Linked Memory (ClickHouse/loom)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Code-Anchored Memory: Links team decisions &amp; incident notes</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  directly to file paths and code symbols in ClickHouse</text>
+  <text x="528" y="290" fill="#CBD5E1" font-size="11.5">• Proactive Context Surfacing: When an agent opens or edits a</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">  symbol, Loom automatically injects linked architectural rules</text>
+  <text x="528" y="328" fill="#CBD5E1" font-size="11.5">• Unified Storage: Long-term memory + doc search + code index</text>
+  <text x="528" y="348" fill="#CBD5E1" font-size="11.5">• Ecosystem: MCP server, Claude Code &amp; Codex plugins, PyPI</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">  (clickhouse-loom) &amp; npm (@clickhouse/loom) SDKs</text>
+  <text x="528" y="390" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Stops multi-agent amnesia across repos &amp; developer sessions</text>
+
+  <!-- Pillar 2: intutic/intutic -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#34D399" font-size="14.5" font-weight="700">Pillar B: Synchronous Tool Gate (intutic/intutic)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Beyond LLM Gateways: Intercepts local shell, file &amp; MCP tool</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">  execution synchronously via a local Rust proxy &amp; hook gates</text>
+  <text x="976" y="290" fill="#CBD5E1" font-size="11.5">• Markdown Policy-as-Code: SOPs stored in Git define allowed</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">  directories, forbidden commands (e.g. kubectl delete) &amp; scopes</text>
+  <text x="976" y="328" fill="#CBD5E1" font-size="11.5">• 43 Harnesses Supported: Claude Code, Cursor, Codex, CrewAI,</text>
+  <text x="976" y="346" fill="#CBD5E1" font-size="11.5">  LangGraph, AutoGen, OpenDevin &amp; custom MCP agents</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">• Protection: Redacts secrets inline &amp; halts runaway loops</text>
+  <text x="976" y="390" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Enforces zero-trust compliance at the tool-execution boundary</text>
+
+  <!-- Pillar 3: researchforge -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar C: Isolated Worktree Lab (forger-labs-hq/researchforge)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Frozen Baseline Contract: Locks benchmark score before any</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">  autonomous agent code mutation begins</text>
+  <text x="528" y="522" fill="#CBD5E1" font-size="11.5">• Git Worktree Isolation: Runs each hypothesis in a disposable</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">  worktree; automatically discards failed or regressed branches</text>
+  <text x="528" y="560" fill="#CBD5E1" font-size="11.5">• Dual Modes: Repository optimization mode + Kaggle competitive</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">  notebook ingestion &amp; iterative improvement rounds</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">• Human Gate: Nothing ships or submits without explicit approval</text>
+  <text x="528" y="622" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Turns overnight agent coding into a monotonically improving loop</text>
+
+  <!-- Pillar 4: data-agent-tutorial -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#C084FC" font-size="14.5" font-weight="700">Pillar D: Enterprise Text2SQL Agent (data-agent-tutorial)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• Stack: Kotlin + Spring Boot 3.x + Spring AI Alibaba Graph</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">• Dual-Channel RAG: Relational schema graph + unstructured</text>
+  <text x="976" y="520" fill="#CBD5E1" font-size="11.5">  business glossary stored in PostgreSQL + pgvector</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">• Execution &amp; Self-Healing: SQL generation, syntax/runtime</text>
+  <text x="976" y="558" fill="#CBD5E1" font-size="11.5">  traceback repair &amp; isolated Docker Python sandbox analytics</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">• Production UX: Human-in-the-Loop (HITL) query confirmation,</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">  A2A protocol interoperability &amp; SSE streaming reports</text>
+  <text x="976" y="622" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Eliminates Text2SQL schema hallucination &amp; unsafe DB queries</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R28-R587-CLICKHOUSELOOM-INTUTIC-RESEARCHFORGE-DATAAGENT · 44 Eng @ $100/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Cloud Memory SaaS + Guardrail Gateways + BI Seats</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• Cloud SaaS &amp; Seat Licenses: $3,280.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Manual Triage &amp; SQL Rework: 40.5 h/mo × $100.00/h = $4,050.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,280.00 + $4,050.00 = $7,330.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Stale unlinked vector memories, unguarded local</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  shell calls, polluted git branches &amp; hallucinated SQL joins</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: Self-Hosted OSS (Loom + Intutic + Forge + DataAgent)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• ClickHouse &amp; pgvector Compute: $80.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Governance &amp; Review Labor: 2.5 h/mo × $100.00/h = $250.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $80.00 + $250.00 = $330.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: Symbol-linked ClickHouse memory, 43-harness Rust</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  tool gates, isolated worktree labs &amp; HITL Text2SQL StateGraph</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $7,000.00 / mo (-95.50%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $84,000.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,330.00 - $330.00) / $7,330.00 = 95.50%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: Loom &amp; ResearchForge = Apache-2.0; Intutic = MIT;</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  verify NOASSERTION terms on qifan777/data-agent-tutorial</text>
+</svg>

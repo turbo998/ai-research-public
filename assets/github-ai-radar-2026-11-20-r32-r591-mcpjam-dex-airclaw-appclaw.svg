@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad591" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad591" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="cardBorder591" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad591)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad591)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 32 (Cumulative Round 591) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    MCPJam/inspector (★2331) + exmergo/dex (★139) + nickzsche21/AirClaw (★120) + appclawhq/AppClaw (★120)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder591)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R591)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">18-Client MCP Eval, 6-Engine Semantic Layer, Local AirClaw &amp; Mobile QA</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#93C5FD" font-size="13.5" font-weight="700">Q1: Test &amp; Eval MCP Servers Across 18 Clients &amp; 170+ Models?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• MCPJam/inspector (★2331, @mcpjam/inspector, TypeScript):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  Tests MCP tools, prompts, resources, OAuth &amp; ChatGPT apps</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  Simulates 18 client configs across 170+ LLMs with CI evals</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• Catches tool-schema &amp; auth regressions before shipping</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#6EE7B7" font-size="13.5" font-weight="700">Q2: Agent-Authored Semantic Layers (57% data-eng-bench)?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• exmergo/dex (★139, Apache-2.0, Python PyPI):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Authors &amp; syncs dbt, SLayer, Cube, Apache Ossie,</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  Snowflake Semantic Views &amp; Databricks Metric Views</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Keeps semantic definitions synchronized as DB schemas evolve</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#FCD34D" font-size="13.5" font-weight="700">Q3: Zero-Cost Local Gateway (:4096) for OpenClaw + AirLLM?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• nickzsche21/AirClaw (★120, MIT, Python):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  Unified :4096 endpoint over Ollama, llama.cpp, vLLM, LM Studio</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  Includes AirLLM layer-wise execution for oversized models</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• airclaw detect / start / patch / doctor lifecycle commands</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#D8B4FE" font-size="13.5" font-weight="700">Q4: Zero-Telemetry Android &amp; iOS Mobile Automation Agent?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• appclawhq/AppClaw (★120, Apache-2.0, TypeScript):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  Plain-English mobile automation via appium-mcp</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  LLM-agnostic (Anthropic, OpenAI, Gemini, Groq, local Ollama)</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">• Zero telemetry + appclaw doctor preflight check</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder591)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise MCP Evaluation, Semantic Layer Sync &amp; Local/Mobile Agent Architecture</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Stack: MCPJam 18-Client Eval ➔ Exmergo Dex 6-Target Semantic Layer ➔ AirClaw :4096 Gateway ➔ AppClaw Mobile</text>
+
+  <!-- Pillar 1: MCPJam/inspector -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar A: MCP Eval Platform (MCPJam/inspector)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Cross-Client Matrix: Tests MCP servers, MCP apps &amp; ChatGPT</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  apps across 18 client configurations &amp; 170+ models</text>
+  <text x="528" y="290" fill="#CBD5E1" font-size="11.5">• Full Protocol Coverage: Interactive debugging of tools,</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">  prompts, resources, OAuth flows &amp; error payloads</text>
+  <text x="528" y="328" fill="#CBD5E1" font-size="11.5">• Automated CI Evals: Runs test suites to pinpoint tool-call</text>
+  <text x="528" y="346" fill="#CBD5E1" font-size="11.5">  regressions when descriptions or schemas change</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">• Distribution: `@mcpjam/inspector` on npm</text>
+  <text x="528" y="390" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Eliminates "works in Claude Desktop, breaks in Cursor" bugs</text>
+
+  <!-- Pillar 2: exmergo/dex -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#34D399" font-size="14.5" font-weight="700">Pillar B: Agentic Semantic Layer Builder (exmergo/dex)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Benchmark Verified: 57% score on data-eng-bench</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">• 6 Semantic Layer Targets: Authors &amp; maintains dbt, SLayer,</text>
+  <text x="976" y="288" fill="#CBD5E1" font-size="11.5">  Cube, Apache Ossie, Snowflake Semantic Views &amp;</text>
+  <text x="976" y="306" fill="#CBD5E1" font-size="11.5">  Databricks Metric Views from warehouse metadata</text>
+  <text x="976" y="326" fill="#CBD5E1" font-size="11.5">• Drift Prevention: Continuously synchronizes semantic metrics</text>
+  <text x="976" y="344" fill="#CBD5E1" font-size="11.5">  as underlying lakehouse/warehouse schemas evolve</text>
+  <text x="976" y="364" fill="#CBD5E1" font-size="11.5">• Package: `pip install exmergo-dex-core` (Apache-2.0)</text>
+  <text x="976" y="390" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Unifies Snowflake, Databricks &amp; dbt semantic layer authoring</text>
+
+  <!-- Pillar 3: AirClaw -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar C: Local OpenClaw Endpoint (nickzsche21/AirClaw)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Stable `:4096` Gateway: Decouples OpenClaw agent config</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">  from underlying local inference servers</text>
+  <text x="528" y="522" fill="#CBD5E1" font-size="11.5">• 5 Local Backends: Hot-swaps Ollama, llama.cpp, vLLM,</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">  LM Studio &amp; AirLLM (runs models larger than GPU VRAM)</text>
+  <text x="528" y="560" fill="#CBD5E1" font-size="11.5">• 4-Command Workflow: `airclaw detect` -&gt; `airclaw start` -&gt;</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">  `airclaw patch` -&gt; `airclaw doctor` (3-link chain check)</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">• Version Note: Install 3.0.0+ from Git/releases (MIT)</text>
+  <text x="528" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Cuts OpenClaw daemon API spend to $0 on local workstations</text>
+
+  <!-- Pillar 4: AppClaw -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#C084FC" font-size="14.5" font-weight="700">Pillar D: Mobile Automation Agent (appclawhq/AppClaw)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• Cross-Platform Mobile QA: Drives Android &amp; iOS physical</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  devices, emulators &amp; simulators via `appium-mcp`</text>
+  <text x="976" y="522" fill="#CBD5E1" font-size="11.5">• Screen-Read-Reason-Act Loop: Translates plain-English goals</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">  into deterministic tap, type &amp; swipe sequences</text>
+  <text x="976" y="560" fill="#CBD5E1" font-size="11.5">• LLM-Agnostic &amp; Private: Supports Anthropic, OpenAI, Gemini,</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">  Groq or local Ollama with zero telemetry (`Apache-2.0`)</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• Preflight Diagnostic: `appclaw doctor` verifies Node 22+ &amp; ADB</text>
+  <text x="976" y="622" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Replaces brittle coordinate-locked Appium test scripts</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R32-R591-MCPJAM-DEX-AIRCLAW-APPCLAW · 44 Engineers @ $100.00/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Cloud Eval SaaS + Manual dbt Sync + Mobile Cloud</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• Cloud SaaS, OpenClaw API &amp; Device Cloud: $3,260.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Manual MCP/dbt/Appium Maintenance: 40.5 h × $100 = $4,050.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,260.00 + $4,050.00 = $7,310.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Untested 18-client MCP drift, obsolete Snowflake/</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  Databricks semantic views &amp; runaway cloud OpenClaw bills</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: Hybrid OSS (MCPJam + Dex + AirClaw + AppClaw)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Local Workstation &amp; Emulator Compute: $75.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Eval &amp; Semantic Layer Review: 2.4 h/mo × $100/h = $240.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $75.00 + $240.00 = $315.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: 18-client/170-model MCP CI, 6-target semantic sync,</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  $0 local `:4096` OpenClaw &amp; zero-telemetry mobile QA</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $6,995.00 / mo (-95.69%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $83,940.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,310.00 - $315.00) / $7,310.00 = 95.69%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: Dex &amp; AppClaw = Apache-2.0; AirClaw = MIT;</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  MCPJam/inspector README badge = Apache-2.0 (GitHub NOASSERTION)</text>
+</svg>

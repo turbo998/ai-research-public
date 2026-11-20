@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad590" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad590" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cardBorder590" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad590)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad590)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 31 (Cumulative Round 590 Milestone) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    mdowis/anansi (★117) + LGDiMaggio/predictive-maintenance-mcp (★117) + saltsalt123/buywise-agent (★117) + kochetkov-ma/claude-brewcode (★39)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder590)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R590)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">Self-Healing Scraper MCP, Vibration Diagnostics, Warranty RAG &amp; BrewCode</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#93C5FD" font-size="13.5" font-weight="700">Q1: Self-Healing Web Scraper MCP for Hostile Sites?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• mdowis/anansi (★117, Apache-2.0, Python 3.11+):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  Broken selectors repair themselves &amp; persist the fix</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  Coherent Chrome TLS fingerprint + Cloudflare/Akamai/DataDome</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• Ships with MCP server so any LLM drives crawls by conversation</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#6EE7B7" font-size="13.5" font-weight="700">Q2: Evidence-Based Vibration &amp; Predictive Maintenance MCP?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• LGDiMaggio/predictive-maintenance-mcp (★117, MIT):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Zenodo-cited (10.5281/zenodo.17611542) condition monitoring</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  Machine fault detection, severity grading &amp; diagnostic reports</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Dual delivery: Standard MCP server + Claude Code plugin</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#D8B4FE" font-size="13.5" font-weight="700">Q3: Local-First LangGraph Multi-Agent Warranty/Return RAG?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• saltsalt123/buywise-agent (★117, MIT, Python FastAPI):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  LangGraph + LangChain multi-agent RAG workflow (v0.1.0)</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  Automates warranty coverage, return eligibility &amp; policy QA</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• Local-first architecture with deterministic FastAPI endpoints</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#FCD34D" font-size="13.5" font-weight="700">Q4: Claude Code ++r Review Mods, Doc Sync &amp; Subagent Guards?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• kochetkov-ma/claude-brewcode (★39, MIT, JavaScript):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  3-in-1 suite: brewcode (semble search, superreview, ++r mods)</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  + brewdoc (doc sync/PDF/publish) + brewtools (secrets scan,</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">  SSH, deploy &amp; subagent guards)</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder590)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise Industrial Diagnostics, After-Sales RAG &amp; Agent DevOps Architecture</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Stack: Anansi Self-Healing Crawl MCP ➔ Predictive Maintenance MCP ➔ BuyWise Warranty LangGraph ➔ BrewCode Suite</text>
+
+  <!-- Pillar 1: anansi -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar A: Self-Healing Crawl MCP (mdowis/anansi)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Autonomous Selector Repair: Detects layout changes, locates</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  target fields semantically &amp; persists the repaired selector</text>
+  <text x="528" y="290" fill="#CBD5E1" font-size="11.5">• Adaptive Browser Escalation: Starts fast HTTP; silently</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">  switches to headless browser rendering only when required</text>
+  <text x="528" y="328" fill="#CBD5E1" font-size="11.5">• Coherent Identity Layer: Matched Chrome TLS fingerprints,</text>
+  <text x="528" y="346" fill="#CBD5E1" font-size="11.5">  personas &amp; vendor-aware Cloudflare/Akamai/DataDome handling</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">• Incremental Re-Crawl: Skips unchanged pages + full MCP server</text>
+  <text x="528" y="390" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Eliminates weekly scraper maintenance when vendor DOMs change</text>
+
+  <!-- Pillar 2: predictive-maintenance-mcp -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#34D399" font-size="14.5" font-weight="700">Pillar B: Vibration Diagnostics (predictive-maintenance-mcp)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Evidence-Based Condition Monitoring: Signal processing tools</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">  for rotating machinery vibration spectra &amp; envelope analysis</text>
+  <text x="976" y="290" fill="#CBD5E1" font-size="11.5">• Automated Fault Triage: Bearing/gear/imbalance fault detection,</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">  ISO-aligned severity assessment &amp; structured diagnostic reports</text>
+  <text x="976" y="328" fill="#CBD5E1" font-size="11.5">• Academic &amp; Industrial Rigor: Zenodo DOI 10.5281/zenodo.17611542</text>
+  <text x="976" y="348" fill="#CBD5E1" font-size="11.5">• Dual Integration: Standard MCP server (`io.github.LGDiMaggio`)</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">  plus native Claude Code plugin for reliability engineers</text>
+  <text x="976" y="390" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Grounds LLM maintenance recommendations in measured spectra</text>
+
+  <!-- Pillar 3: buywise-agent -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#C084FC" font-size="14.5" font-weight="700">Pillar C: Warranty &amp; Return LangGraph (buywise-agent)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Multi-Agent State Graph: LangGraph + LangChain + FastAPI</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">• Specialized Sub-Agents: Policy retrieval, receipt/date window</text>
+  <text x="528" y="520" fill="#CBD5E1" font-size="11.5">  verification, warranty clause matching &amp; return decision routing</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">• Local-First Execution: Runs on internal policy documents</text>
+  <text x="528" y="558" fill="#CBD5E1" font-size="11.5">  without leaking customer order PII to third-party SaaS</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">• Production Ready: REST API (`FastAPI`) + CI test suite (`v0.1.0`)</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="528" y="622" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Automates L1/L2 RMA, warranty &amp; return eligibility triage</text>
+
+  <!-- Pillar 4: claude-brewcode -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar D: Claude Code DevOps Suite (claude-brewcode)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• Prompt Mods: Type `++r` to expand structured review blocks</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  before sending; customize via `/placeholder` &amp; plan effort</text>
+  <text x="976" y="522" fill="#CBD5E1" font-size="11.5">• brewcode Module: Skill/agent/rule authoring, `semble` semantic</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">  code search, `superreview` multi-angle audits &amp; team setups</text>
+  <text x="976" y="560" fill="#CBD5E1" font-size="11.5">• brewdoc &amp; brewtools: Automated doc sync, PDF export, text</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">  compression, secrets scan, SSH deploy &amp; subagent safety guards</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="976" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Standardizes code review rigor, doc sync &amp; secret scanning</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R31-R590-ANANSI-PREDMAINTMCP-BUYWISE-BREWCODE · 45 Eng @ $100/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Commercial Scraping APIs + PdM SaaS + Manual RMA</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• Commercial Scraping, PdM &amp; Ticket SaaS: $3,340.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Selector Repair &amp; Manual Triage: 41.0 h/mo × $100/h = $4,100.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,340.00 + $4,100.00 = $7,440.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Weekly broken XPath selectors, ungrounded LLM</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  maintenance guesses &amp; repetitive manual warranty lookups</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: Hybrid OSS (Anansi + PdM-MCP + BuyWise + BrewCode)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Self-Hosted FastAPI/MCP Compute: $80.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Rule &amp; Pipeline Supervision: 2.5 h/mo × $100.00/h = $250.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $80.00 + $250.00 = $330.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: Self-healing crawl MCP, vibration spectrum diagnostics,</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  automated LangGraph RMA triage &amp; `++r` superreview guards</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $7,110.00 / mo (-95.56%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $85,320.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,440.00 - $330.00) / $7,440.00 = 95.56%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: 100% Permissive Open Source (Anansi = Apache-2.0;</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  predictive-maintenance-mcp, buywise-agent &amp; brewcode = MIT)</text>
+</svg>

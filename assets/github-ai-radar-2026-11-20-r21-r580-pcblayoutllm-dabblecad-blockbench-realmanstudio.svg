@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR21" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan21" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald21" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="accentAmber21" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="accentPurple21" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR21)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1144" height="86" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="48" y="54" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">2026-11-20 NIGHT ROUND 21 · CUMULATIVE ROUND 580 MILESTONE · PCB GRPO PLANNER, 3-IN-1 CAD, SHARED-EDGE 3D &amp; DRAMA GATE</text>
+  <text x="48" y="80" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Ssbullock/pcb-layout-llm + DJMcNewgent/DabbleCAD + blockbench-codex-skills + dsh-realman-studio</text>
+  <text x="48" y="99" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">Qwen2.5-32B GRPO KiCad Planner (48% 0-DRC) · Offline 3D/Laser/Depth CAD · Shared-Edge Cube Math · Seedance Pre-Flight Mechanical Gate</text>
+
+  <!-- Card 1: Ssbullock/pcb-layout-llm -->
+  <rect x="28" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="28" y="124" width="272" height="36" rx="12" fill="url(#accentCyan21)"/>
+  <text x="44" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">1. pcb-layout-llm (★51 · 32B GRPO)</text>
+  <text x="44" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">KiCad Architectural Layout Planner</text>
+  <text x="44" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• SFT + Online GRPO on 245 KiCad boards</text>
+  <text x="44" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Outputs groups.json &amp; routing_strategy</text>
+  <text x="44" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Drives Rust A* KiCadRoutingTools</text>
+  <text x="44" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Never hallucinates raw X/Y coords</text>
+  <rect x="44" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="56" y="305" fill="#38BDF8" font-family="Consolas, monospace" font-size="11">23-Board Blind Benchmark</text>
+  <text x="56" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• 100% valid schema, 83% 100%-routed</text>
+  <text x="56" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• 48% 0-DRC (vs 30% human / Claude)</text>
+  <text x="56" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• 60.1s avg rollout, 75.2 Teel score</text>
+  <text x="44" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="44" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Separates high-level LLM topology</text>
+  <text x="44" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">intent from deterministic physics</text>
+  <text x="44" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">placement and A* autorouting.</text>
+
+  <!-- Card 2: DJMcNewgent/DabbleCAD -->
+  <rect x="318" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="318" y="124" width="272" height="36" rx="12" fill="url(#accentEmerald21)"/>
+  <text x="334" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">2. DabbleCAD (★57 · Apache-2.0)</text>
+  <text x="334" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Offline 3-in-1 3D, Laser &amp; Depth CAD</text>
+  <text x="334" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Tinkercad-like solid/hole 3D (.stl/.3mf)</text>
+  <text x="334" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Multi-layer G-code &amp; USB GRBL laser</text>
+  <text x="334" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Depth Map Studio for relief engraving</text>
+  <text x="334" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Saved together in 1 local project file</text>
+  <rect x="334" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="346" y="305" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">Zero-Cloud Hardware Prototyping</text>
+  <text x="346" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• No export/re-import between tools</text>
+  <text x="346" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• 100% offline (Windows &amp; macOS)</text>
+  <text x="346" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• Apache-2.0 license</text>
+  <text x="334" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="334" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Keeps proprietary hardware enclosure</text>
+  <text x="334" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">CAD and laser paths offline in one</text>
+  <text x="334" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">unified Apache-2.0 desktop app.</text>
+
+  <!-- Card 3: 1251639747jm-ctrl/blockbench-codex-skills -->
+  <rect x="608" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="608" y="124" width="272" height="36" rx="12" fill="url(#accentAmber21)"/>
+  <text x="624" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">3. blockbench-codex-skills (★27)</text>
+  <text x="624" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Shared-Edge Cube &amp; 4-View Rebuild</text>
+  <text x="624" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Connects rotated Cubes on true edge P0-P1</text>
+  <text x="624" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 8-corner world-space tolerance check</text>
+  <text x="624" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Camera-calibrated 4-view silhouette fit</text>
+  <text x="624" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Eliminates inner bulges &amp; outer light leaks</text>
+  <rect x="624" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="636" y="305" fill="#FCD34D" font-family="Consolas, monospace" font-size="11">4 Specialized Codex Skills</text>
+  <text x="636" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• shared-edge / reference-rebuild</text>
+  <text x="636" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• mc-creatures / task-progress</text>
+  <text x="636" y="359" fill="#FCA5A5" font-family="Consolas, monospace" font-size="11">• NOASSERTION license (Audit req!)</text>
+  <text x="624" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="624" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Replaces eyeball 3D block placement</text>
+  <text x="624" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">with exact coordinate-transformed</text>
+  <text x="624" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">shared-edge vertex math.</text>
+
+  <!-- Card 4: liangdabiao/dsh-realman-studio -->
+  <rect x="898" y="124" width="274" height="360" rx="12" fill="#1E293B" stroke="#A855F7" stroke-width="1.5"/>
+  <rect x="898" y="124" width="274" height="36" rx="12" fill="url(#accentPurple21)"/>
+  <text x="914" y="147" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">4. dsh-realman-studio (★33 · MIT)</text>
+  <text x="914" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Seedance Pre-Flight Drama Studio</text>
+  <text x="914" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Dual file: E0X_分镜.md vs E0X_prompt.txt</text>
+  <text x="914" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• realman_check blocks mechanical faults</text>
+  <text x="914" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Catches mute/missing [Audio] &amp; drift</text>
+  <text x="914" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Cross-episode tail-frame relay (refs)</text>
+  <rect x="914" y="284" width="242" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="926" y="305" fill="#C084FC" font-family="Consolas, monospace" font-size="11">Dreamina CLI Credit Protection</text>
+  <text x="926" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• seedream_5.5 (~6 cr) + 2.5_flash</text>
+  <text x="926" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Blocks 2.0_mini (no lip-sync) misuse</text>
+  <text x="926" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• MIT plugin for DeepSeek Harness</text>
+  <text x="914" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="914" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Prevents 105-285 credit video waste</text>
+  <text x="914" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">via deterministic pre-render syntax</text>
+  <text x="914" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">and asset-lock verification.</text>
+
+  <!-- Bottom FinOps & Architecture Strip -->
+  <rect x="28" y="502" width="1144" height="154" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="48" y="530" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Round 580 Milestone: LLM-Guided Deterministic Physics/CAD Solvers &amp; Pre-Flight Credit Gates + FinOps TCO</text>
+  <text x="48" y="556" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Hardware &amp; 3D Path: pcb-layout-llm (groups.json + routing_strategy.json → Rust A* Router → 48% 0-DRC) + DabbleCAD (Offline 3D/Laser/Depth) + Shared-Edge Math</text>
+  <text x="48" y="578" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Video Production Path: dsh-realman-studio (E0X.md ↔ E0X_prompt.txt Sync → realman_check Mechanical Gate → dreamina-canvas Multi-Episode Relay)</text>
+  <rect x="48" y="594" width="1104" height="46" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="64" y="615" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12" font-weight="700">Closed-Form FinOps (45-Eng · $3,280.00 SaaS + 41.0h=$4,100.00 vs $80.00 Compute + 2.5h=$250.00 · synthetic, base hardware capEx: not_measured):</text>
+  <text x="64" y="633" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">Path A Zero-Shot Coords &amp; Ungated Video Renders: $7,380.00/mo  →  Path C PCB-GRPO + DabbleCAD + Realman Gate: $330.00/mo (Save $7,050.00/mo, -95.53%)</text>
+</svg>

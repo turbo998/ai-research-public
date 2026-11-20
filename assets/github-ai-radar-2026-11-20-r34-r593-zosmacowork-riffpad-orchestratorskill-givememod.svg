@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad593" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad593" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cardBorder593" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad593)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad593)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 34 (Cumulative Round 593) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    zosmaai/zosma-cowork (★120) + riffpad/riffpad (★117) + kele-dev/Claude-Orchestrator-Skill (★15) + timoncool/givememod (★9)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder593)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R593)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">Remote Cowork Daemon, Mobile CLI Approval, Opus/Haiku Routing &amp; Mods</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#93C5FD" font-size="13.5" font-weight="700">Q1: Web Workspace + Local Execution Daemon Across Hosts?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• zosmaai/zosma-cowork (★120, MIT, TypeScript):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  Central web control plane + local execution daemon</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  Operates AI coworkers across employee machines &amp; servers</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• Keeps code &amp; local credentials on employee hardware</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#6EE7B7" font-size="13.5" font-weight="700">Q2: Watch, Approve &amp; Steer Coding CLIs from Your Phone?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• riffpad/riffpad (★117, Apache-2.0 client / BSL relay, Go):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  Bridges local Claude Code &amp; Codex sessions to mobile web/app</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  Live output streaming + 1-tap permission approval &amp; steering</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Eliminates desk-bound waiting during long multi-file refactors</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#D8B4FE" font-size="13.5" font-weight="700">Q3: Token-Saving Opus Plan / Haiku Code / Sonnet Escalate?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• kele-dev/Claude-Orchestrator-Skill (★15, MIT, JS):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  Main Opus session writes PRD &amp; verifies (never edits code)</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  haiku-coder executes edits; sonnet-dev handles escalations</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• Parallel team mode + checkpoints + self-maintained lessons</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#FCD34D" font-size="13.5" font-weight="700">Q4: On-Demand Claude Code UI &amp; Hook Mods (`/givememod`)?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• timoncool/givememod (★9, MIT, TypeScript):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  Reads active conversation &amp; synthesizes task-fitted mods</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  11 tested templates + 29 building blocks + 3,057 mod map</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">• Builds plan bar, risky-command hold, test watcher &amp; gauge</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder593)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise Remote Cowork, Mobile Approval &amp; Tiered Model Orchestration</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Workflow: Zosma Remote Daemon ➔ Riffpad Mobile Steering ➔ Opus/Haiku/Sonnet Router ➔ GiveMeMod UI Synthesis</text>
+
+  <!-- Pillar 1: zosma-cowork -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar A: Hybrid Cowork Workspace (zosmaai/zosma-cowork)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Split Control / Execution Plane: Browser-based collaborative</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  workspace paired with a lightweight local execution daemon</text>
+  <text x="528" y="290" fill="#CBD5E1" font-size="11.5">• Multi-Machine Fleet: Remotely operate AI coworkers across</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">  developer laptops, build servers &amp; heterogeneous harnesses</text>
+  <text x="528" y="328" fill="#CBD5E1" font-size="11.5">• Local Data Residency: Source repositories and dev toolchains</text>
+  <text x="528" y="346" fill="#CBD5E1" font-size="11.5">  remain on the local daemon host rather than a third-party cloud</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">• License: Permissive MIT License</text>
+  <text x="528" y="390" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Unifies remote team visibility with local-machine execution</text>
+
+  <!-- Pillar 2: riffpad -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#34D399" font-size="14.5" font-weight="700">Pillar B: Mobile CLI Bridge (riffpad/riffpad)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Watch / Approve / Steer: Streams live Claude Code &amp; Codex</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">  terminal output directly to iOS/Android mobile browsers</text>
+  <text x="976" y="290" fill="#CBD5E1" font-size="11.5">• Zero Desk-Chain Delay: Unblock tool permission prompts</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">  or course-correct architecture decisions while away from desk</text>
+  <text x="976" y="328" fill="#CBD5E1" font-size="11.5">• Go Client Architecture: Lightweight Go binary bridging</text>
+  <text x="976" y="346" fill="#CBD5E1" font-size="11.5">  local PTY sessions with low-latency encrypted streaming</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">• License: Apache-2.0 client (relay component under BSL)</text>
+  <text x="976" y="390" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Eliminates 30-60 min idle stalls on pending tool approvals</text>
+
+  <!-- Pillar 3: Claude-Orchestrator-Skill -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#C084FC" font-size="14.5" font-weight="700">Pillar C: Tiered Token Router (Claude-Orchestrator-Skill)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Strict Role Separation: Main Opus-class session writes PRD</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">  and verifies results—never burns Opus tokens editing files</text>
+  <text x="528" y="522" fill="#CBD5E1" font-size="11.5">• 3-Tier Execution Hierarchy: `haiku-coder` performs routine</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">  code edits; `sonnet-dev` handles complex escalations</text>
+  <text x="528" y="560" fill="#CBD5E1" font-size="11.5">• Built-In Reliability: Parallel team mode, autopilot,</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">  Git-keyed checkpoints &amp; self-maintained project lessons</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">• Install: `claude plugin install orchestrator --marketplace ...`</text>
+  <text x="528" y="622" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Slashes Claude Code token cost by 60-75% without quality loss</text>
+
+  <!-- Pillar 4: givememod -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar D: On-Demand Mod Synthesis (timoncool/givememod)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• `/givememod` Command: Reads current conversation context</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  and builds a bespoke Claude Code mod for the active task</text>
+  <text x="976" y="522" fill="#CBD5E1" font-size="11.5">• Ready-Made Primitives: 11 tested templates, 29 building</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">  blocks &amp; a curated index of 3,057 public mods</text>
+  <text x="976" y="560" fill="#CBD5E1" font-size="11.5">• High-Value Widgets: Plan progress bar, risky-command guard,</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">  test watcher, context gauge, files pane &amp; answer buttons</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• Dual Surface: Works in both Claude Code terminal &amp; desktop</text>
+  <text x="976" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Generates task-specific guardrails &amp; HUDs in seconds</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R34-R593-ZOSMACOWORK-RIFFPAD-ORCHESTRATORSKILL-GIVEMEMOD · 43 Eng @ $100/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: All-Opus Token Burn + Desk Stalls + Manual Hooks</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• Unrouted Opus API Spend &amp; Cloud Seats: $3,220.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Approval Wait &amp; Hook Scripting: 39.5 h × $100 = $3,950.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,220.00 + $3,950.00 = $7,170.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Opus tokens wasted on trivial boilerplate edits,</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  stalled overnight runs awaiting Enter &amp; manual UI mod coding</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: Hybrid OSS (Zosma + Riffpad + Orchestrator + Mod)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Self-Hosted Relay &amp; Tiered Haiku/Sonnet API: $75.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Mobile Approval &amp; PRD Review: 2.4 h/mo × $100/h = $240.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $75.00 + $240.00 = $315.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: Opus-plan/Haiku-code token routing, 1-tap phone</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  approvals, remote daemon workspace &amp; instant `/givememod` HUDs</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $6,855.00 / mo (-95.61%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $82,260.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,170.00 - $315.00) / $7,170.00 = 95.61%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: Zosma, Orchestrator &amp; GiveMeMod = MIT; Riffpad</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  client = Apache-2.0 (note Riffpad relay server uses BSL)</text>
+</svg>

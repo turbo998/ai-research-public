@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR18" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan18" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald18" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="accentAmber18" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="accentPurple18" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR18)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1144" height="86" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="48" y="54" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">2026-11-20 NIGHT ROUND 18 · CUMULATIVE ROUND 577 · 3D SPLAT INPAINTING, .MOTION PROTOCOL, EDITORIAL UI &amp; DIGITAL HUMAN</text>
+  <text x="48" y="80" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">NicolasDrum/splat-repair + adunext/adudir-open + iamshakibali/editorial-taste + zzai-digital-human</text>
+  <text x="48" y="99" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">0.3s CPU / 20s LaMa 3D Splat Repair · .motion Video Template Spec · Editorial Token/SVG Linter · HyperFrames Multi-PiP Presenter</text>
+
+  <!-- Card 1: NicolasDrum/splat-repair -->
+  <rect x="28" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="28" y="124" width="272" height="36" rx="12" fill="url(#accentCyan18)"/>
+  <text x="44" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">1. splat-repair (★103 · Apache-2.0)</text>
+  <text x="44" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">3D Gaussian Splat Repair Editor</text>
+  <text x="44" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Fast Fill: 0.3-1.5s CPU @ 550k splats</text>
+  <text x="44" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Preserves scale, rot &amp; spherical harm.</text>
+  <text x="44" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Deep Fill: LaMa 2D→3D lift (~20s 4090)</text>
+  <text x="44" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Bit-exact .ply + .splat/.spz I/O</text>
+  <rect x="44" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="56" y="305" fill="#38BDF8" font-family="Consolas, monospace" font-size="11">Interactive 3D Brush Suite</text>
+  <text x="56" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Brush/Lasso/Clone Stamp (S)</text>
+  <text x="56" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Floater cleanup &amp; Photoshop link</text>
+  <text x="56" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• Apache-2.0 license</text>
+  <text x="44" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="44" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Removes PII signs, badges &amp; scan</text>
+  <text x="44" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">artifacts from 3D digital-twin splats</text>
+  <text x="44" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">in 1s without re-capturing the site.</text>
+
+  <!-- Card 2: adunext/adudir-open -->
+  <rect x="318" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="318" y="124" width="272" height="36" rx="12" fill="url(#accentEmerald18)"/>
+  <text x="334" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">2. adunext/adudir-open (★83 · MIT)</text>
+  <text x="334" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">.motion Code-Native Video Protocol</text>
+  <text x="334" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Deterministic frame-at-time-t contract</text>
+  <text x="334" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Manifest, parameter &amp; media schema</text>
+  <text x="334" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Visible, undoable AI timeline edits</text>
+  <text x="334" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Paper-Perspective Talking-Head v2.7.9</text>
+  <rect x="334" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="346" y="305" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">3-Stage Open Ecosystem</text>
+  <text x="346" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Stage 1: .motion spec &amp; helpers</text>
+  <text x="346" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• SIL OFL 1.1 template fonts</text>
+  <text x="346" y="359" fill="#FCD34D" font-family="Consolas, monospace" font-size="11">• MIT code/docs (brand/ excluded)</text>
+  <text x="334" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="334" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Standardizes how AI agents inspect,</text>
+  <text x="334" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">parameterize, and undo edits on</text>
+  <text x="334" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">reusable motion-graphics templates.</text>
+
+  <!-- Card 3: iamshakibali/editorial-taste -->
+  <rect x="608" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="608" y="124" width="272" height="36" rx="12" fill="url(#accentAmber18)"/>
+  <text x="624" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">3. editorial-taste (★37 · MIT)</text>
+  <text x="624" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Editorial Web &amp; Token-Map Skills</text>
+  <text x="624" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• new-site &amp; redesign (React/Astro/Vue)</text>
+  <text x="624" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• #151515/#EDEDED + 5px rhythm + glass</text>
+  <text x="624" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• iso.py hairline isometric SVG generator</text>
+  <text x="624" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• lint.py --strict + map_tokens.py</text>
+  <rect x="624" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="636" y="305" fill="#FCD34D" font-family="Consolas, monospace" font-size="11">Automated Anti-Slop QA</text>
+  <text x="636" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Rejects {{placeholders}} &amp; filler</text>
+  <text x="636" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Tailwind v3/v4, shadcn, MUI, Figma</text>
+  <text x="636" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• MIT license (validate.py CI)</text>
+  <text x="624" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="624" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Migrates legacy web apps to an</text>
+  <text x="624" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">editorial design system with automated</text>
+  <text x="624" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">token mapping and SVG linting.</text>
+
+  <!-- Card 4: 0xMomo-NGClubs/zzai-digital-human -->
+  <rect x="898" y="124" width="274" height="360" rx="12" fill="#1E293B" stroke="#A855F7" stroke-width="1.5"/>
+  <rect x="898" y="124" width="274" height="36" rx="12" fill="url(#accentPurple18)"/>
+  <text x="914" y="147" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">4. zzai-digital-human (★26 · MIT)</text>
+  <text x="914" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Multi-PiP Digital-Human Skill</text>
+  <text x="914" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Fullscreen ↔ 9:16 side-PiP ↔ circle</text>
+  <text x="914" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 35 Doubao Seed TTS 2.0 voice presets</text>
+  <text x="914" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• MiniMax H3 Max lip-synced avatar</text>
+  <text x="914" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• HyperFrames 3-track composition</text>
+  <rect x="914" y="284" width="242" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="926" y="305" fill="#C084FC" font-family="Consolas, monospace" font-size="11">Sample-First Production Gate</text>
+  <text x="926" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Renders short avatar sample first</text>
+  <text x="926" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Offline voice catalog search</text>
+  <text x="926" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• MIT skill + HyperFrames timeline</text>
+  <text x="914" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="914" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Automates consistent presenter videos</text>
+  <text x="914" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">that shrink to a corner PiP during</text>
+  <text x="914" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">live UI walkthroughs and return full.</text>
+
+  <!-- Bottom FinOps & Architecture Strip -->
+  <rect x="28" y="502" width="1144" height="154" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="48" y="530" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Enterprise 3D Twin Cleanup, .motion Video Protocol, Editorial Web &amp; Digital-Human Pipeline + FinOps TCO</text>
+  <text x="48" y="556" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 3D &amp; Web Asset Path: splat-repair (0.3s CPU Fast Fill / LaMa Deep Fill on .ply) + editorial-taste (map_tokens.py → iso.py SVG → lint.py --strict)</text>
+  <text x="48" y="578" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Video Presenter Path: adudir-open (.motion Frame-at-t Contract) + zzai-digital-human (Short Sample Gate → Fullscreen/9:16/Circle HyperFrames Composite)</text>
+  <rect x="48" y="594" width="1104" height="46" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="64" y="615" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12" font-weight="700">Closed-Form FinOps (41-Eng · $3,160.00 SaaS + 40.0h=$4,000.00 vs $75.00 Compute + 2.4h=$240.00 · synthetic, base hardware capEx: not_measured):</text>
+  <text x="64" y="633" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">Path A 3D/Motion/Web Agency &amp; Manual Shoots: $7,160.00/mo  →  Path C Splat-Repair + .motion + Editorial + ZZAI: $315.00/mo (Save $6,845.00/mo, -95.60%)</text>
+</svg>

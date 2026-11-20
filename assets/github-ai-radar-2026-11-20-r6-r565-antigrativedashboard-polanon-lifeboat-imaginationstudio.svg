@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR565" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081121"/>
+      <stop offset="100%" stop-color="#111f38"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR565)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-20 NIGHT ROUND 6 · CUMULATIVE ROUND 565 MILESTONE · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Antigrative 配额压缩预警 × Polanon 流式可逆脱敏网关 × Lifeboat 200GB 离线RAG × Hermes 本地影棚</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. ATtacK030130/antigrative-dashboard (★138 · v0.9.10 · MIT)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 模型选择栏与 CLI 原位显示 tok/s、缓存命中率与宿主压缩计数 (🗜)</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• &gt;=75% (橙) / &gt;=90% (红) 上下文变色预警，防压缩破坏 KV 缓存</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 悬停展开 5 小时与周度配额余量及耗尽速率预测 (Pace Forecast)</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：研发团队防 5h 配额突然锁死与高价重算的零侵入仪表盘</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. boromat/polanon (★38 · 11 forks · v0.4 · MIT)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 零改代码 Docker 网关 (polanon-gateway:0.4) 兼容 OpenAI / Anthropic</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 校验和精准验证 IBAN/PESEL/税号 + 词形变化识别 + 稳定占位 Token</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 上游 SSE 流式返回时实时还原真实客户实体 + 原生 Haystack RAG 组件</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：一行命令保护 Claude Code / n8n / Open WebUI 出网隐私</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. johnpsasser/lifeboat (★47 · 9 forks · 200GB SQLite · MIT)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 单台 Mac 承载 200GB 离线权威手册库 + 单文件 SQLite 百万段落索引</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 运行时零网络请求：支持 Qwen 3.6/3.8 与低功耗电池模式 Gemma 4</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 每一步抢修/急救指令强制附带可展开核对的真实手册原文段落</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：工业巡检、远洋矿山与气隙灾备中心零幻觉离线 RAG 标杆</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. Keys-Wasserman/hermes-imagination-studio (★41 · Apache-2.0)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 将 Hermes (终端/桌面/Telegram) 桥接至本地 Imagination Studio</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 统一调用 studio_picture (Qwen/FLUX3/MOSS)、clip、voice、song、sfx</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 支持 DGX Spark / RTX / Windows on ARM / Mac 本地队列零积分渲染</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：聊天框一句话驱动内部 GPU 工作站生产图文音视频全套物料</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261120-R6-R565 · 46-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (撞 90% 压缩重算 + 人工脱敏合同 + 断网失联 + 商业多模态云积分): $3,240.00 (API/Credits) + $4,150.00 (41.5h × $100) = $7,390.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (后台网页查账单 + 重型 NER 静态打码 + 无引文本地模型 + 散装 WebUI): $1,260.00 (VMs/API)     + $1,600.00 (16.0h × $100) = $2,860.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (Antigrative Dashboard + Polanon + Lifeboat + Imagination Studio):    $80.00 (Compute)     +   $250.00 ( 2.5h × $100) =   $330.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $7,060.00 / mo (-95.53%) | Annual Savings: $84,720.00 / yr | Track B stars_today: not_measured</text>
+</svg>

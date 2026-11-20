@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR12" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan12" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald12" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="accentAmber12" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="accentPurple12" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR12)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1144" height="86" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="48" y="54" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">2026-11-20 NIGHT ROUND 12 · CUMULATIVE ROUND 571 · REAL-TIME VOICE ISOLATION, SEMANTIC TURN-TAKING &amp; LOCAL MEDIA OPS</text>
+  <text x="48" y="80" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">inworld-ai/voice-isolator + inworld-ai/sava + zeyvola-screen-recorder + newtonstudios/convert</text>
+  <text x="48" y="99" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">48 kHz 20ms Streaming Voice Isolation · 40ms Semantic Acoustic VAD + 0ms EoT · Multi-Track Privacy Screen Studio · Local Finder Quick-Convert</text>
+
+  <!-- Card 1: inworld-ai/voice-isolator -->
+  <rect x="28" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="28" y="124" width="272" height="36" rx="12" fill="url(#accentCyan12)"/>
+  <text x="44" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">1. inworld-ai/voice-isolator (★123)</text>
+  <text x="44" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">48 kHz Dual-Mode Voice Isolation</text>
+  <text x="44" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Offline v1 (64M, 8s full-context chunk)</text>
+  <text x="44" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Realtime v1 (58M, causal 20ms lookahead)</text>
+  <text x="44" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 960-sample (20ms @ 48kHz) stream push</text>
+  <text x="44" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Exact residual: wav - voice = background</text>
+  <rect x="44" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="56" y="305" fill="#38BDF8" font-family="Consolas, monospace" font-size="11">Architecture &amp; Execution</text>
+  <text x="56" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• CUDA Mamba [fast] / MPS / CPU</text>
+  <text x="56" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Checksum-verified HF weights</text>
+  <text x="56" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• Apache-2.0 commercial weights</text>
+  <text x="44" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="44" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Cleans noisy contact-center calls in 20ms</text>
+  <text x="44" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">before STT/voice-cloning while preserving</text>
+  <text x="44" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">speaker identity &amp; background audit tracks.</text>
+
+  <!-- Card 2: inworld-ai/sava -->
+  <rect x="318" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="318" y="124" width="272" height="36" rx="12" fill="url(#accentEmerald12)"/>
+  <text x="334" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">2. inworld-ai/sava (★46 · Apache-2.0)</text>
+  <text x="334" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Semantic Acoustic VAD + End-of-Turn</text>
+  <text x="334" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Unified 25.5M Mamba + Attention trunk</text>
+  <text x="334" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 16 kHz mono → 2 probs every 40 ms</text>
+  <text x="334" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• speech (120ms lookahead) + turn (0ms)</text>
+  <text x="334" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Ignores coughs, laughs, music, keystrokes</text>
+  <rect x="334" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="346" y="305" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">Measured Latency &amp; Benchmarks</text>
+  <text x="346" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• 3.8 ms / 40 ms frame on M3 Max CPU</text>
+  <text x="346" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Benchmarked vs Silero VAD</text>
+  <text x="346" y="359" fill="#FCD34D" font-family="Consolas, monospace" font-size="11">• &amp; pipecat smart-turn v3.2</text>
+  <text x="334" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="334" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Eliminates premature agent barge-in on</text>
+  <text x="334" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">mid-sentence pauses with 0ms EoT lookahead</text>
+  <text x="334" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">on plain PyTorch CPU without GPU lock-in.</text>
+
+  <!-- Card 3: YildizDikme/zeyvola-screen-recorder -->
+  <rect x="608" y="124" width="272" height="360" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="608" y="124" width="272" height="36" rx="12" fill="url(#accentAmber12)"/>
+  <text x="624" y="147" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">3. Zeyvola Screen Recorder (★82)</text>
+  <text x="624" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Multi-Track Privacy Screen Studio</text>
+  <text x="624" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Separate screen/cam/mic/sys-audio tracks</text>
+  <text x="624" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Click-driven auto-zoom timeline editor</text>
+  <text x="624" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Frosted-glass/blur/pixel/opaque masks</text>
+  <text x="624" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• First/last-frame privacy export check</text>
+  <rect x="624" y="284" width="240" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="636" y="305" fill="#FCD34D" font-family="Consolas, monospace" font-size="11">Multi-Aspect &amp; Zero-Telemetry</text>
+  <text x="636" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• 16:9 / 9:16 / 1:1 / 4:5 reframing</text>
+  <text x="636" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Lens never reveals masked areas</text>
+  <text x="636" y="359" fill="#FCA5A5" font-family="Consolas, monospace" font-size="11">• NOASSERTION license (Audit req!)</text>
+  <text x="624" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="624" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Produces PII-redacted product demos across</text>
+  <text x="624" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">4 aspect ratios with zero network egress or</text>
+  <text x="624" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">keystroke logging on macOS &amp; Windows.</text>
+
+  <!-- Card 4: newtonstudios/convert -->
+  <rect x="898" y="124" width="274" height="360" rx="12" fill="#1E293B" stroke="#A855F7" stroke-width="1.5"/>
+  <rect x="898" y="124" width="274" height="36" rx="12" fill="url(#accentPurple12)"/>
+  <text x="914" y="147" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800">4. newtonstudios/convert (★61 · MIT)</text>
+  <text x="914" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Local Finder Right-Click Converter</text>
+  <text x="914" y="204" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• 6 families: Audio/Video/Img/Doc/PDF/Font</text>
+  <text x="914" y="224" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Zero cloud upload (local ffmpeg + cwebp)</text>
+  <text x="914" y="244" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Lossless font wrapper (TTF/OTF ↔ WOFF2)</text>
+  <text x="914" y="264" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Half-written partial cleanup on Stop</text>
+  <rect x="914" y="284" width="242" height="84" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="926" y="305" fill="#C084FC" font-family="Consolas, monospace" font-size="11">Workstation DLP Safety</text>
+  <text x="926" y="324" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Read-only volume → ~/Downloads</text>
+  <text x="926" y="342" fill="#E2E8F0" font-family="Consolas, monospace" font-size="11">• Verified output before Trash move</text>
+  <text x="926" y="359" fill="#6EE7B7" font-family="Consolas, monospace" font-size="11">• Eliminates shadow-IT CloudConvert</text>
+  <text x="914" y="392" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Enterprise SA Value:</text>
+  <text x="914" y="412" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">Replaces browser-based file converters that</text>
+  <text x="914" y="430" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">leak contracts, call recordings, and media</text>
+  <text x="914" y="448" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="11">to third-party SaaS buckets.</text>
+
+  <!-- Bottom FinOps & Architecture Strip -->
+  <rect x="28" y="502" width="1144" height="154" rx="14" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+  <text x="48" y="530" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Enterprise Contact-Center Voice Pipeline &amp; Local Media Enablement Reference Architecture + FinOps TCO</text>
+  <text x="48" y="556" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Live Voice Path: SIP/WebRTC 48kHz Audio → voice-isolator-v1-realtime (20ms lookahead) → Downsample 16kHz → SAVA (40ms step, 0ms EoT lookahead) → Azure OpenAI / Speech</text>
+  <text x="48" y="578" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="12">• Local Enablement Path: Zeyvola Multi-Track Recording → Frosted-Glass PII Mask &amp; First/Last-Frame Audit → Convert Finder Quick Action (MP4/WebM/DOCX/WOFF2, 0 Egress)</text>
+  <rect x="48" y="594" width="1104" height="46" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="64" y="615" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12" font-weight="700">Closed-Form FinOps (42-Eng · $3,140.00 SaaS + 40.0h=$4,000.00 vs $75.00 Compute + 2.5h=$250.00 · synthetic, base hardware capEx: not_measured):</text>
+  <text x="64" y="633" fill="#F8FAFC" font-family="Consolas, monospace" font-size="12">Path A Commercial SaaS &amp; Ops: $7,140.00/mo  →  Path C Self-Hosted Voice-Isolator + SAVA + Local Studio: $325.00/mo (Save $6,815.00/mo, -95.45%)</text>
+</svg>

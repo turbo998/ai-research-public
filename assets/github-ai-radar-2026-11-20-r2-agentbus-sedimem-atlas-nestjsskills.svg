@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR561" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081121"/>
+      <stop offset="100%" stop-color="#111f38"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR561)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-20 NIGHT ROUND 2 · CUMULATIVE ROUND 561 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">AgentBus 跨厂商互审总线 × Sedimem 四道门真相记忆 × Atlas 6.2× 省流句柄 × NestJS 12 官方技能</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. StaysUp/agentbus (★71 · Go 1.27+ · v0.5.9)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 127.0.0.1:8787 本地跨厂商驾驶舱（Claude / Codex / Agy / OpenRouter）</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 同会话异构互审：Claude 写码后直接切换 Codex 审查抓出 P1 缺陷</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 独立目录副本 + 沙盒硬隔离 + Allow/Ask(60s)/Refuse 三态权限门禁</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：逐请求精确成本账单与双模型交叉 Code Review 核心中枢</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. Old-Friends-Gathering/sedimem (★101 · MIT · v1.4)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• DSH / Codex CLI / Claude Code 共用只追加不可变真相层 (as-of 回查)</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 写入四道卫生门：Schema ➔ [REDACTED:x] 脱敏 ➔ Dice 0.85 去重 ➔ 冲突裁决</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• session:&lt;id&gt; 任务库结项仅晋升 decision/gotcha 并生成六段交接文档</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：零依赖 Node 22 SQLite FTS5 根治跨会话记忆污染与密钥落盘</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. bloodfeast/atlas (★131 · Rust · Apache-2.0 · v0.9.0)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 零网络请求本地 Rust MCP &amp; Hooks：大输出留盘仅向模型返回短 Handle</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 7,971 次问答实测省 6.2× 检索 Token（中位数 10.6×），11+ 语言 SCIP 索引</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 工具定义 5,930 ➔ 1,510 Token，0.60 余弦门限每两周拦下 2,739 次弱注入</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：一行 atlas --token-report 量化审计历史转录并砍掉长会话复利税</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. nestjs/agent-skills (★51 · Official NestJS 12.5.1 · MIT)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• NestJS 官方 6 大技能包：nestjs / feature / auth / data / testing / prod</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 同步 @nestjs/authentication 0.1.6、@nestjs/drizzle 与 @nestjs/observe</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 专杀“能过单测但线上爆雷”隐患：邮箱枚举、null 500、盲目限流与僵尸 SSE</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：npx @nestjs/skills add --agent all 随仓固化企业后端红线</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261120-R2-R561 · 40-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (单厂商盲写 + 裸写 MEMORY.md + 6.2× 全文检索复利 + NestJS 12 返工): $2,940.00 (API/Tokens) + $3,900.00 (39.0h × $100) = $6,840.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (云端网关 + 云端 mem0 向量覆写 + 通用规则模板):                       $1,160.00 (SaaS)       + $1,500.00 (15.0h × $100) = $2,660.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (AgentBus + Sedimem + Atlas + NestJS Agent Skills 闭环):               $75.00 (Compute)    +   $250.00 ( 2.5h × $100) =   $325.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,515.00 / mo (-95.25%) | Annual Savings: $78,180.00 / yr | Track B stars_today: not_measured</text>
+</svg>

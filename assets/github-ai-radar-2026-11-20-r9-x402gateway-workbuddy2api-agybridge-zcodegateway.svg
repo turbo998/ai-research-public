@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR568" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081121"/>
+      <stop offset="100%" stop-color="#111f38"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR568)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-20 NIGHT ROUND 9 · CUMULATIVE ROUND 568 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">x402 非托管微支付网关 × Context-Hash 粘性缓存路由 × GLM-5.3 三档推理分档 × 网关合规</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. zgraham1981/Stablecoin-Payment-Gateway (★272 · 42 forks · MIT)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 原生支持 x402 (HTTP 402 Payment Required) 按次计费 API 门禁</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• xpub 公钥派生：每单独立地址、服务器零私钥驻留、跨 8 链结算</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 内置 Mempool/区块监听、HMAC-SHA256 Webhook 与宽限期密钥轮换</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：零平台抽成、零热钱包被盗风险的 A2A/MCP 微支付底座</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. kyiov/agybridge (★35 · FastAPI + React 18 · MIT)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• OpenAI / Anthropic / Gemini 三大标准协议互译与 5 大 IDE 预设</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• Context-Hash 粘性缓存路由：防止多号轮询击穿上游 Prompt Cache</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• (Account, Model) 细粒度 429 冷却隔离 + anti-truncate- 自动续写</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：多实例 AI 网关保住 90%+ 缓存命中率的核心路由算法参考</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. apissaj/zcode-gateway (★19 · Go Dual-Dialect · MIT)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 单 Go 二进制同时暴露 OpenAI /v1/chat 与 Anthropic /v1/messages</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 支持 :low / :high / :max 模型后缀动态控制 GLM-5.3 思考预算</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 将内部思考块标准化映射为 OpenAI reasoning_content 流式字段</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：零代码改造客户端即可按任务难度对思考 Token 实施三级控费</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. niyouqianma/workbuddy2api-hub (★281 · 108 forks · v2.2.0)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 技术亮点：--probe-only 端口健康预检、独立代理槽与白名单分权</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 风控警示：2026-10-23 起上游严查非官方客户端，存在限流封号风险</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 架构师准则：吸收其探针与隔离设计，生产环境严守官方 API + APIM</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：明确区分「个人协议研究沙盒」与「企业生产合规网关」边界</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261120-R9-R568 · 40-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (高额固定支付费 + 轮询击穿缓存 + 默认满档思考 + 截断/429 救火): $3,040.00 (API/Fees) + $3,850.00 (38.5h × $100) = $6,890.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (中心化抽成 API 平台 + 粗粒度账号切换 + 手工脚本对账):           $1,180.00 (SaaS/API) + $1,500.00 (15.0h × $100) = $2,680.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (x402 非托管网关 + Context-Hash 粘性缓存 + :low/:high/:max 分档):   $75.00 (Compute)  +   $240.00 ( 2.4h × $100) =   $315.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,575.00 / mo (-95.43%) | Annual Savings: $78,900.00 / yr | Track B stars_today: not_measured</text>
+</svg>

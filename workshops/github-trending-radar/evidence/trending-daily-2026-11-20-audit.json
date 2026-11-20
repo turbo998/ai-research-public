@@ -1,0 +1,1429 @@
+{
+  "audit_version": "3.0.0",
+  "generated_at_cst": "2026-11-20T23:22:00+08:00",
+  "raw_trending_html_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-20-raw.html",
+    "source_url": "https://github.com/trending?since=daily",
+    "scraped_at_cst": "2026-11-20T23:18:00+08:00",
+    "sha256_lf": "4ad2690142e11f6cb280f667b64b746ab4eaf64c97052f922c9287befd37dd09"
+  },
+  "raw_track_b_search_api_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-20-raw.json",
+    "source_query": "gh api -X GET search/repositories -f q=\"created:>2026-11-13 stars:>30 forks:>=2\" -f sort=stars -f order=desc -f per_page=100",
+    "captured_at_cst": "2026-11-20T23:18:30+08:00",
+    "sha256_lf": "47975935d05944afbb9eac18f93f26c8a71120a1ffeea39591b113477ba29a46",
+    "metric_definition": "stars_per_day = round(stars_total / age_days); stars_today = not_measured"
+  },
+  "parsed_daily_trending_rows": [
+    {
+      "trending_rank": 1,
+      "full_name": "elementalsouls/Claude-BugHunter",
+      "stars_today_measured": 1660,
+      "stars_total_in_trending_dom": 13612
+    },
+    {
+      "trending_rank": 2,
+      "full_name": "obra/superpowers",
+      "stars_today_measured": 888,
+      "stars_total_in_trending_dom": 322603
+    },
+    {
+      "trending_rank": 3,
+      "full_name": "HKUDS/CLI-Anything",
+      "stars_today_measured": 774,
+      "stars_total_in_trending_dom": 61090
+    },
+    {
+      "trending_rank": 4,
+      "full_name": "jingyaogong/minimind",
+      "stars_today_measured": 841,
+      "stars_total_in_trending_dom": 67533
+    },
+    {
+      "trending_rank": 5,
+      "full_name": "cursor/plugins",
+      "stars_today_measured": 292,
+      "stars_total_in_trending_dom": 17753
+    },
+    {
+      "trending_rank": 6,
+      "full_name": "firecrawl/firecrawl",
+      "stars_today_measured": 1226,
+      "stars_total_in_trending_dom": 204910
+    },
+    {
+      "trending_rank": 7,
+      "full_name": "nginx/nginx",
+      "stars_today_measured": 246,
+      "stars_total_in_trending_dom": 32493
+    },
+    {
+      "trending_rank": 8,
+      "full_name": "openvinotoolkit/openvino",
+      "stars_today_measured": 219,
+      "stars_total_in_trending_dom": 11690
+    },
+    {
+      "trending_rank": 9,
+      "full_name": "cathrynlavery/diagram-design",
+      "stars_today_measured": 634,
+      "stars_total_in_trending_dom": 69097
+    },
+    {
+      "trending_rank": 10,
+      "full_name": "mvanhorn/last30days-skill",
+      "stars_today_measured": 685,
+      "stars_total_in_trending_dom": 71249
+    },
+    {
+      "trending_rank": 11,
+      "full_name": "google-labs-code/stitch-skills",
+      "stars_today_measured": 315,
+      "stars_total_in_trending_dom": 10916
+    },
+    {
+      "trending_rank": 12,
+      "full_name": "mjmirza/app-store-compliance",
+      "stars_today_measured": 874,
+      "stars_total_in_trending_dom": 2463
+    },
+    {
+      "trending_rank": 13,
+      "full_name": "Tracer-Cloud/opensre",
+      "stars_today_measured": 465,
+      "stars_total_in_trending_dom": 13428
+    },
+    {
+      "trending_rank": 14,
+      "full_name": "toeverything/AFFiNE",
+      "stars_today_measured": 686,
+      "stars_total_in_trending_dom": 75561
+    },
+    {
+      "trending_rank": 15,
+      "full_name": "XiaoYouChR/Ghost-Downloader-3",
+      "stars_today_measured": 1082,
+      "stars_total_in_trending_dom": 13444
+    },
+    {
+      "trending_rank": 16,
+      "full_name": "zhouxiaoka/autoclip",
+      "stars_today_measured": 983,
+      "stars_total_in_trending_dom": 11960
+    }
+  ],
+  "rounds": [
+    {
+      "round_id": "2026-11-20-R1-R560",
+      "cumulative_round": 560,
+      "claim_id": "CLAIM-20261120-R1-R560-AMUSE-KEYX-AGYFAST-NEONCLIPPING",
+      "primary_repos": [
+        "replit/amuse",
+        "apple/creator-studio-doc-format",
+        "INK-Q/agy-fast",
+        "iamajmeena/neonclipping"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/amuse-creator-studio-doc-format-agy-fast-neonclipping-selfhosted-vault-agent-apple-keyx-python-mcp-turn-accelerator-audiofirst-clipper-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/amuse-creator-studio-doc-format-agy-fast-neonclipping-selfhosted-vault-agent-apple-keyx-python-mcp-turn-accelerator-audiofirst-clipper-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r1-r560-amuse-keyx-agyfast-neonclipping.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,180.00",
+        "path_a_labor_hours": 41.0,
+        "path_a_labor_usd": "4,100.00",
+        "path_a_total_usd": "7,280.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.6,
+        "path_c_labor_usd": "260.00",
+        "path_c_total_usd": "340.00",
+        "net_savings_usd": "6,940.00",
+        "pct_savings": "95.33%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R2-R561",
+      "cumulative_round": 561,
+      "claim_id": "CLAIM-20261120-R2-R561-AGENTBUS-SEDIMEM-ATLAS-NESTJSSKILLS",
+      "primary_repos": [
+        "StaysUp/agentbus",
+        "Old-Friends-Gathering/sedimem",
+        "bloodfeast/atlas",
+        "nestjs/agent-skills"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/agentbus-sedimem-atlas-nestjs-agent-skills-cross-vendor-cockpit-4gate-append-memory-6x-handle-index-nestjs12-skills-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/agentbus-sedimem-atlas-nestjs-agent-skills-cross-vendor-cockpit-4gate-append-memory-6x-handle-index-nestjs12-skills-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r2-agentbus-sedimem-atlas-nestjsskills.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 40,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "2,940.00",
+        "path_a_labor_hours": 39.0,
+        "path_a_labor_usd": "3,900.00",
+        "path_a_total_usd": "6,840.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "325.00",
+        "net_savings_usd": "6,515.00",
+        "pct_savings": "95.25%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R3-R562",
+      "cumulative_round": 562,
+      "claim_id": "CLAIM-20261120-R3-R562-TAROBIRD-OPENMAN-WORK3-WEMAIL",
+      "primary_repos": [
+        "cloveric/tarobird",
+        "nickvasilescu/openman",
+        "svaraborut/work3",
+        "eddiezywang/wemail"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/tarobird-openman-work3-wemail-12chat-mobile-cli-hub-orgo-cloud-computer-agent-1cmd-worktree-fleet-local-ai-email-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/tarobird-openman-work3-wemail-12chat-mobile-cli-hub-orgo-cloud-computer-agent-1cmd-worktree-fleet-local-ai-email-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r3-tarobird-openman-work3-wemail.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 42,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,060.00",
+        "path_a_labor_hours": 40.0,
+        "path_a_labor_usd": "4,000.00",
+        "path_a_total_usd": "7,060.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "6,730.00",
+        "pct_savings": "95.33%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R4-R563",
+      "cumulative_round": 563,
+      "claim_id": "CLAIM-20261120-R4-R563-ECHOBENCH-POINTTAKEN-MEP-DSHVIDEOWORKBENCH",
+      "primary_repos": [
+        "Echoxiawan/echobench",
+        "yanshuxiang/point-taken",
+        "adunext/mep",
+        "Merziller/dsh-video-workbench"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/echobench-point-taken-mep-dsh-video-workbench-webcodecs-mobile-test-voice-circle-note-motion-edit-protocol-32mcp-video-studio-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/echobench-point-taken-mep-dsh-video-workbench-webcodecs-mobile-test-voice-circle-note-motion-edit-protocol-32mcp-video-studio-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r4-echobench-pointtaken-mep-videoworkbench.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 38,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "2,820.00",
+        "path_a_labor_hours": 38.0,
+        "path_a_labor_usd": "3,800.00",
+        "path_a_total_usd": "6,620.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,310.00",
+        "pct_savings": "95.32%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R5-R564",
+      "cumulative_round": 564,
+      "claim_id": "CLAIM-20261120-R5-R564-DUSKBOT-HARNESSSPEC-SOA-APEXCLUSTER",
+      "primary_repos": [
+        "DuskBotAI/duskbot",
+        "Gabriel-Operator/domain-specific-agent-harness-spec",
+        "fitzyracing1/system-on-an-agent",
+        "Johnson-Durui/ApexCluster"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/duskbot-harness-spec-system-on-an-agent-apexcluster-byosub-bot-computers-portable-playbooks-soc-fallback-5vendor-cluster-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/duskbot-harness-spec-system-on-an-agent-apexcluster-byosub-bot-computers-portable-playbooks-soc-fallback-5vendor-cluster-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r5-duskbot-harnessspec-soa-apexcluster.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 44,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,120.00",
+        "path_a_labor_hours": 40.5,
+        "path_a_labor_usd": "4,050.00",
+        "path_a_total_usd": "7,170.00",
+        "path_c_compute_usd": "85.00",
+        "path_c_labor_hours": 2.6,
+        "path_c_labor_usd": "260.00",
+        "path_c_total_usd": "345.00",
+        "net_savings_usd": "6,825.00",
+        "pct_savings": "95.19%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R6-R565",
+      "cumulative_round": 565,
+      "claim_id": "CLAIM-20261120-R6-R565-ANTIGRATIVEDASHBOARD-POLANON-LIFEBOAT-IMAGINATIONSTUDIO",
+      "primary_repos": [
+        "ATtacK030130/antigrative-dashboard",
+        "boromat/polanon",
+        "johnpsasser/lifeboat",
+        "Keys-Wasserman/hermes-imagination-studio"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/antigrative-dashboard-polanon-lifeboat-hermes-imagination-studio-quota-pace-hud-streaming-pii-gateway-200gb-offline-rag-local-film-studio-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/antigrative-dashboard-polanon-lifeboat-hermes-imagination-studio-quota-pace-hud-streaming-pii-gateway-200gb-offline-rag-local-film-studio-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r6-r565-antigrativedashboard-polanon-lifeboat-imaginationstudio.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 46,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,240.00",
+        "path_a_labor_hours": 41.5,
+        "path_a_labor_usd": "4,150.00",
+        "path_a_total_usd": "7,390.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "7,060.00",
+        "pct_savings": "95.53%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R7-R566",
+      "cumulative_round": 566,
+      "claim_id": "CLAIM-20261120-R7-R566-RUBBERHOSEUI-DISSOLVE-MONOHUD-SIMULABSKILL",
+      "primary_repos": [
+        "finktheartist/rubber-hose-ui",
+        "rs-4/dissolve",
+        "jshguo-labs/monohud",
+        "ecapri-dev/simulab-skill"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/rubber-hose-ui-dissolve-monohud-simulab-skill-a11y-webcomponents-skia-ui-3d-lab-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/rubber-hose-ui-dissolve-monohud-simulab-skill-a11y-webcomponents-skia-ui-3d-lab-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r7-rubberhose-dissolve-monohud-simulab.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 36,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "2,680.00",
+        "path_a_labor_hours": 37.0,
+        "path_a_labor_usd": "3,700.00",
+        "path_a_total_usd": "6,380.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.3,
+        "path_c_labor_usd": "230.00",
+        "path_c_total_usd": "295.00",
+        "net_savings_usd": "6,085.00",
+        "pct_savings": "95.38%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R8-R567",
+      "cumulative_round": 567,
+      "claim_id": "CLAIM-20261120-R8-R567-BRIEF2MP4-TALKINGHEAD-COMFYUICAPCUT-HALFSIZE",
+      "primary_repos": [
+        "qualixar/brief2mp4",
+        "moluyao/ai-talking-head-edit",
+        "leisongde/ComfyUI-CapCut",
+        "YKLovePython/halfsize"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/brief2mp4-talking-head-edit-comfyui-capcut-halfsize-30style-motion-vmaf-mcp-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/brief2mp4-talking-head-edit-comfyui-capcut-halfsize-30style-motion-vmaf-mcp-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r8-brief2mp4-talkinghead-comfyuicapcut-halfsize.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 35,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "2,740.00",
+        "path_a_labor_hours": 37.5,
+        "path_a_labor_usd": "3,750.00",
+        "path_a_total_usd": "6,490.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.3,
+        "path_c_labor_usd": "230.00",
+        "path_c_total_usd": "295.00",
+        "net_savings_usd": "6,195.00",
+        "pct_savings": "95.45%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R9-R568",
+      "cumulative_round": 568,
+      "claim_id": "CLAIM-20261120-R9-R568-X402GATEWAY-WORKBUDDY2API-AGYBRIDGE-ZCODEGATEWAY",
+      "primary_repos": [
+        "zgraham1981/Stablecoin-Payment-Gateway",
+        "niyouqianma/workbuddy2api-hub",
+        "kyiov/agybridge",
+        "apissaj/zcode-gateway"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/x402-payment-gateway-workbuddy2api-agybridge-zcode-gateway-cache-hash-routing-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/x402-payment-gateway-workbuddy2api-agybridge-zcode-gateway-cache-hash-routing-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r9-x402gateway-workbuddy2api-agybridge-zcodegateway.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 40,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,040.00",
+        "path_a_labor_hours": 38.5,
+        "path_a_labor_usd": "3,850.00",
+        "path_a_total_usd": "6,890.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "6,575.00",
+        "pct_savings": "95.43%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R10-R569",
+      "cumulative_round": 569,
+      "claim_id": "CLAIM-20261120-R10-R569-MULECREATE-CHARACTERFACTORY-HOLOSPOT-AWESOME3DCODING",
+      "primary_repos": [
+        "felixbfx/MuleCreate",
+        "luccacerfz/character-factory-skills",
+        "dmitrykurash/holospot",
+        "jweihe/Awesome-3D-Coding"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/mulecreate-character-factory-holospot-awesome-3d-coding-usd-mcp-unity-gates-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/mulecreate-character-factory-holospot-awesome-3d-coding-usd-mcp-unity-gates-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r10-mulecreate-characterfactory-holospot-awesome3dcoding.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 36,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "2,780.00",
+        "path_a_labor_hours": 38.0,
+        "path_a_labor_usd": "3,800.00",
+        "path_a_total_usd": "6,580.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,270.00",
+        "pct_savings": "95.29%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R11-R570",
+      "cumulative_round": 570,
+      "claim_id": "CLAIM-20261120-R11-R570-OPENMINDLAB-TUOMIN-WHISKERRS-TICKPIPE",
+      "primary_repos": [
+        "tjcrims0nx/OpenMind-Jailbreak-Lab",
+        "Chen-Yu-Qing2005/tuomin",
+        "whiskerrs/benchmarks",
+        "marketcalls/tickpipe"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/openmind-jailbreak-lab-tuomin-whiskerrs-benchmarks-tickpipe-guardrail-eval-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/openmind-jailbreak-lab-tuomin-whiskerrs-benchmarks-tickpipe-guardrail-eval-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r11-r570-openmindlab-tuomin-whiskerrs-tickpipe.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,220.00",
+        "path_a_labor_hours": 41.0,
+        "path_a_labor_usd": "4,100.00",
+        "path_a_total_usd": "7,320.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "6,990.00",
+        "pct_savings": "95.49%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R12-R571",
+      "cumulative_round": 571,
+      "claim_id": "CLAIM-20261120-R12-R571-VOICEISOLATOR-SAVA-ZEYVOLA-CONVERT",
+      "primary_repos": [
+        "inworld-ai/voice-isolator",
+        "inworld-ai/sava",
+        "YildizDikme/zeyvola-screen-recorder",
+        "newtonstudios/convert"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/inworld-voice-isolator-sava-zeyvola-convert-voice-turn-privacy-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/inworld-voice-isolator-sava-zeyvola-convert-voice-turn-privacy-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r12-r571-voiceisolator-sava-zeyvola-convert.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 42,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,140.00",
+        "path_a_labor_hours": 40.0,
+        "path_a_labor_usd": "4,000.00",
+        "path_a_total_usd": "7,140.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "325.00",
+        "net_savings_usd": "6,815.00",
+        "pct_savings": "95.45%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R13-R572",
+      "cumulative_round": 572,
+      "claim_id": "CLAIM-20261120-R13-R572-STICKSCENE-LEMOANIMI-SUBTLE-PRODUCTDEMO",
+      "primary_repos": [
+        "nilbuild/stick-scene",
+        "lemomo-ai/lemo-animi",
+        "0xpratzyy/subtle",
+        "chapter-dev-pty-ltd/product-demo-agent-toolkit"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/stick-scene-lemo-animi-subtle-product-demo-agent-toolkit-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/stick-scene-lemo-animi-subtle-product-demo-agent-toolkit-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r13-r572-stickscene-lemoanimi-subtle-productdemo.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 40,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "2,960.00",
+        "path_a_labor_hours": 39.0,
+        "path_a_labor_usd": "3,900.00",
+        "path_a_total_usd": "6,860.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,550.00",
+        "pct_savings": "95.48%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R14-R573",
+      "cumulative_round": 573,
+      "claim_id": "CLAIM-20261120-R14-R573-LYNOTE-CRBENCH-PUNCHCUTTER-KLOCKUI",
+      "primary_repos": [
+        "lynote-ai/local-ai-note-taker",
+        "DawitLemmaBalcha/code-review-bench",
+        "byrishi/punchcutter",
+        "KlockTX/KlockUI"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/lynote-code-review-bench-punchcutter-klockui-meeting-crbench-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/lynote-code-review-bench-punchcutter-klockui-meeting-crbench-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r14-r573-lynote-crbench-punchcutter-klockui.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 44,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,080.00",
+        "path_a_labor_hours": 40.0,
+        "path_a_labor_usd": "4,000.00",
+        "path_a_total_usd": "7,080.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "325.00",
+        "net_savings_usd": "6,755.00",
+        "pct_savings": "95.41%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R15-R574",
+      "cumulative_round": 574,
+      "claim_id": "CLAIM-20261120-R15-R574-VOICEBOX-ARARAVOICE-EGGLAB-LINGER",
+      "primary_repos": [
+        "Renakoni/Voicebox",
+        "davimatosms/Arara-voice",
+        "YanNyeinHtet/EggLab",
+        "aituringflow/linger"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/voicebox-arara-voice-egglab-linger-ondevice-tts-dictation-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/voicebox-arara-voice-egglab-linger-ondevice-tts-dictation-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r15-r574-voicebox-araravoice-egglab-linger.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 42,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,120.00",
+        "path_a_labor_hours": 39.5,
+        "path_a_labor_usd": "3,950.00",
+        "path_a_total_usd": "7,070.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "6,755.00",
+        "pct_savings": "95.54%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R16-R575",
+      "cumulative_round": 575,
+      "claim_id": "CLAIM-20261120-R16-R575-OMNILORA-ROBOTICSBENCH-TAUSKILLS-VIDEOKB",
+      "primary_repos": [
+        "cyberterm/ComfyUI-OmniLoRA",
+        "ZIWU-AI/robotics-bench",
+        "ArsenOria/tau-job-research-skills",
+        "adunext/human-video-knowledge"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/comfyui-omnilora-robotics-bench-tau-skills-video-kb-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/comfyui-omnilora-robotics-bench-tau-skills-video-kb-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r16-r575-omnilora-roboticsbench-tauskills-videokb.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,260.00",
+        "path_a_labor_hours": 41.0,
+        "path_a_labor_usd": "4,100.00",
+        "path_a_total_usd": "7,360.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "7,030.00",
+        "pct_savings": "95.52%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R17-R576",
+      "cumulative_round": 576,
+      "claim_id": "CLAIM-20261120-R17-R576-ARCHMANCER-PILOTAGE-LAZYMOBILE-HOMEPORT",
+      "primary_repos": [
+        "lehoanganhtai13/archmancer",
+        "Ya-zid/pilotage",
+        "0xrnp/lazymobile",
+        "ferdousmikdad/Homeport"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/archmancer-pilotage-lazymobile-homeport-agent-cockpit-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/archmancer-pilotage-lazymobile-homeport-agent-cockpit-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r17-r576-archmancer-pilotage-lazymobile-homeport.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 43,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,020.00",
+        "path_a_labor_hours": 39.5,
+        "path_a_labor_usd": "3,950.00",
+        "path_a_total_usd": "6,970.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,660.00",
+        "pct_savings": "95.55%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R18-R577",
+      "cumulative_round": 577,
+      "claim_id": "CLAIM-20261120-R18-R577-SPLATREPAIR-ADUDIR-EDITORIALTASTE-ZZAIDIGITALHUMAN",
+      "primary_repos": [
+        "NicolasDrum/splat-repair",
+        "adunext/adudir-open",
+        "iamshakibali/editorial-taste",
+        "0xMomo-NGClubs/zzai-digital-human"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/splat-repair-adudir-open-editorial-taste-zzai-digital-human-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/splat-repair-adudir-open-editorial-taste-zzai-digital-human-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r18-r577-splatrepair-adudir-editorialtaste-zzaidigitalhuman.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 41,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,160.00",
+        "path_a_labor_hours": 40.0,
+        "path_a_labor_usd": "4,000.00",
+        "path_a_total_usd": "7,160.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "6,845.00",
+        "pct_savings": "95.60%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R19-R578",
+      "cumulative_round": 578,
+      "claim_id": "CLAIM-20261120-R19-R578-CIVILCODE-ACADEMICSKILLS-SELFMEDIA-BEANSPROUT",
+      "primary_repos": [
+        "StefanCHEN2026/Chinese-Civil-Code-Basic-Rule-Book",
+        "Nbill27/academic-writing-skills",
+        "lonely-dance-lab/self-media-guide",
+        "danvega/beansprout"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/civil-code-kb-academic-writing-self-media-beansprout-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/civil-code-kb-academic-writing-self-media-beansprout-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r19-r578-civilcode-academicskills-selfmedia-beansprout.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 40,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "2,980.00",
+        "path_a_labor_hours": 39.0,
+        "path_a_labor_usd": "3,900.00",
+        "path_a_total_usd": "6,880.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,570.00",
+        "pct_savings": "95.49%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R20-R579",
+      "cumulative_round": 579,
+      "claim_id": "CLAIM-20261120-R20-R579-PHONEDESK-CHESODESIGN-SPRITESTACKING-RETROLAB",
+      "primary_repos": [
+        "howznguyen/phonedesk",
+        "cheso-ai-platform/dsh-cheso-design",
+        "danielwh2/sprite-stacking",
+        "zuanfilm/Zuanfilm-Retrolab"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/phonedesk-dsh-cheso-design-sprite-stacking-zuanfilm-retrolab-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/phonedesk-dsh-cheso-design-sprite-stacking-zuanfilm-retrolab-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r20-r579-phonedesk-chesodesign-spritestacking-retrolab.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 42,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,040.00",
+        "path_a_labor_hours": 39.5,
+        "path_a_labor_usd": "3,950.00",
+        "path_a_total_usd": "6,990.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "6,675.00",
+        "pct_savings": "95.49%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R21-R580",
+      "cumulative_round": 580,
+      "claim_id": "CLAIM-20261120-R21-R580-PCBLAYOUTLLM-DABBLECAD-BLOCKBENCH-REALMANSTUDIO",
+      "primary_repos": [
+        "Ssbullock/pcb-layout-llm",
+        "DJMcNewgent/DabbleCAD",
+        "1251639747jm-ctrl/blockbench-codex-skills",
+        "liangdabiao/dsh-realman-studio"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/pcb-layout-llm-dabblecad-blockbench-skills-realman-studio-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/pcb-layout-llm-dabblecad-blockbench-skills-realman-studio-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r21-r580-pcblayoutllm-dabblecad-blockbench-realmanstudio.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,280.00",
+        "path_a_labor_hours": 41.0,
+        "path_a_labor_usd": "4,100.00",
+        "path_a_total_usd": "7,380.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "7,050.00",
+        "pct_savings": "95.53%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R22-R581",
+      "cumulative_round": 581,
+      "claim_id": "CLAIM-20261120-R22-R581-H3EASYFIX-LYWMALOADER-CLIPSMITH-BLENDA4D",
+      "primary_repos": [
+        "PedroMarinhoDev/ComfyUI-H3-Image-EasyFix",
+        "shengdaklp99/ComfyUI-lyw-MA-Loader",
+        "AbdulSamad94/clipsmith",
+        "recon007jf/Blenda4D"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/comfyui-h3-easyfix-lyw-ma-loader-clipsmith-blenda4d-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/comfyui-h3-easyfix-lyw-ma-loader-clipsmith-blenda4d-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r22-r581-h3easyfix-lywmaloader-clipsmith-blenda4d.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 41,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,120.00",
+        "path_a_labor_hours": 39.5,
+        "path_a_labor_usd": "3,950.00",
+        "path_a_total_usd": "7,070.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,760.00",
+        "pct_savings": "95.62%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R23-R582",
+      "cumulative_round": 582,
+      "claim_id": "CLAIM-20261120-R23-R582-ULTRALABICONS-OPENPIXEL-AGENTICMOBILE-GAMINGCLIP",
+      "primary_repos": [
+        "ppcvote/ultralab-anim-icons",
+        "ma1902056219-coder/openpixel",
+        "firtman/agentic-mobile",
+        "iyansr/gaming-clip"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/ultralab-anim-icons-openpixel-agentic-mobile-gaming-clip-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/ultralab-anim-icons-openpixel-agentic-mobile-gaming-clip-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r23-r582-ultralabicons-openpixel-agenticmobile-gamingclip.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 40,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "2,940.00",
+        "path_a_labor_hours": 38.5,
+        "path_a_labor_usd": "3,850.00",
+        "path_a_total_usd": "6,790.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.3,
+        "path_c_labor_usd": "230.00",
+        "path_c_total_usd": "300.00",
+        "net_savings_usd": "6,490.00",
+        "pct_savings": "95.58%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R24-R583",
+      "cumulative_round": 583,
+      "claim_id": "CLAIM-20261120-R24-R583-QDA-LONGCATAVATAR-K2EDITORIAL-LIVESTREAMCLIP",
+      "primary_repos": [
+        "humanfia/qda",
+        "Pixelailabs/ComfyUI-LongCat-Avatar-PixelAILabs",
+        "lingdongbudong/Comfyui-K2-Editorial",
+        "avisii1680769-cell/livestream-clip-editor"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/qda-quant-longcat-avatar-k2-editorial-livestream-clip-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/qda-quant-longcat-avatar-k2-editorial-livestream-clip-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r24-r583-qda-longcatavatar-k2editorial-livestreamclip.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 44,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,240.00",
+        "path_a_labor_hours": 40.5,
+        "path_a_labor_usd": "4,050.00",
+        "path_a_total_usd": "7,290.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "6,960.00",
+        "pct_savings": "95.47%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R25-R584",
+      "cumulative_round": 584,
+      "claim_id": "CLAIM-20261120-R25-R584-AIAGENTACADEMY-HILO-TERMLET-UNREDACT",
+      "primary_repos": [
+        "BarbaraCovarrubias/ai-agent-academy",
+        "damkandev/hilo",
+        "termlet/termlet",
+        "NPCmillionaire/unredact.tools"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/ai-agent-academy-hilo-termlet-unredact-tools-rag-opsec-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/ai-agent-academy-hilo-termlet-unredact-tools-rag-opsec-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r25-r584-aiagentacademy-hilo-termlet-unredact.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 43,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,180.00",
+        "path_a_labor_hours": 40.0,
+        "path_a_labor_usd": "4,000.00",
+        "path_a_total_usd": "7,180.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "6,865.00",
+        "pct_savings": "95.61%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R26-R585",
+      "cumulative_round": 585,
+      "claim_id": "CLAIM-20261120-R26-R585-ZEST-DSHWECHAT-3DVIDEOSTUDIO-HYDROGENART",
+      "primary_repos": [
+        "rostik32/zest",
+        "lqshow/dsh-wechat-studio",
+        "codewithsiddique-04/3d-video-studio",
+        "hashmil/gemini-hydrogen-art"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/zest-dsh-wechat-studio-3d-video-studio-hydrogen-art-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/zest-dsh-wechat-studio-3d-video-studio-hydrogen-art-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r26-r585-zest-dshwechat-3dvideostudio-hydrogenart.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,260.00",
+        "path_a_labor_hours": 41.0,
+        "path_a_labor_usd": "4,100.00",
+        "path_a_total_usd": "7,360.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "7,030.00",
+        "pct_savings": "95.52%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R27-R586",
+      "cumulative_round": 586,
+      "claim_id": "CLAIM-20261120-R27-R586-RATCLONE-ICLOUDPHOTO-NIKONMATCHER-OPENCLIPLUGINS",
+      "primary_repos": [
+        "SyscallBrain/ratclone",
+        "ClaudeIvanovich/iCloud-Photo-Downloader",
+        "gerard662/nikon-picture-control-matcher",
+        "amadshobi/opencli-plugins"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/ratclone-icloud-photo-nikon-matcher-opencli-plugins-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/ratclone-icloud-photo-nikon-matcher-opencli-plugins-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r27-r586-ratclone-icloudphoto-nikonmatcher-opencliplugins.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 42,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,140.00",
+        "path_a_labor_hours": 39.5,
+        "path_a_labor_usd": "3,950.00",
+        "path_a_total_usd": "7,090.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,780.00",
+        "pct_savings": "95.63%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R28-R587",
+      "cumulative_round": 587,
+      "claim_id": "CLAIM-20261120-R28-R587-CLICKHOUSELOOM-INTUTIC-RESEARCHFORGE-DATAAGENT",
+      "primary_repos": [
+        "ClickHouse/loom",
+        "intutic/intutic",
+        "forger-labs-hq/researchforge",
+        "qifan777/data-agent-tutorial"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/clickhouse-loom-intutic-researchforge-data-agent-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/clickhouse-loom-intutic-researchforge-data-agent-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r28-r587-clickhouseloom-intutic-researchforge-dataagent.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 44,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,280.00",
+        "path_a_labor_hours": 40.5,
+        "path_a_labor_usd": "4,050.00",
+        "path_a_total_usd": "7,330.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "7,000.00",
+        "pct_savings": "95.50%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R29-R588",
+      "cumulative_round": 588,
+      "claim_id": "CLAIM-20261120-R29-R588-HIGGSFIELD-HIGGSV3TTS-AUTODRAMA-COMFYUIDOCTOR",
+      "primary_repos": [
+        "lucataco/open-source-higgsfield",
+        "Saganaki22/Higgs_v3-TTS-ComfyUI",
+        "qiukaihui/comfyui-auto-drama",
+        "rookiestar28/ComfyUI-Doctor"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/open-source-higgsfield-higgs-v3-tts-auto-drama-comfyui-doctor-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/open-source-higgsfield-higgs-v3-tts-auto-drama-comfyui-doctor-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r29-r588-higgsfield-higgsv3tts-autodrama-comfyuidoctor.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,320.00",
+        "path_a_labor_hours": 41.5,
+        "path_a_labor_usd": "4,150.00",
+        "path_a_total_usd": "7,470.00",
+        "path_c_compute_usd": "85.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "335.00",
+        "net_savings_usd": "7,135.00",
+        "pct_savings": "95.52%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R30-R589",
+      "cumulative_round": 589,
+      "claim_id": "CLAIM-20261120-R30-R589-BLENDERWRIGHT-GFLOWCLI-MJOLNIR-ALEPHANTGATEWAY",
+      "primary_repos": [
+        "HoldMyBeer-gg/blenderwright",
+        "ffroliva/gflow-cli",
+        "BrokkAi/mjolnir",
+        "AlephantAI/AIephant-AI-Agent-Gateway"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/blenderwright-gflow-cli-mjolnir-alephant-gateway-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/blenderwright-gflow-cli-mjolnir-alephant-gateway-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r30-r589-blenderwright-gflowcli-mjolnir-alephantgateway.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 44,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,220.00",
+        "path_a_labor_hours": 40.0,
+        "path_a_labor_usd": "4,000.00",
+        "path_a_total_usd": "7,220.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "6,905.00",
+        "pct_savings": "95.64%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R31-R590",
+      "cumulative_round": 590,
+      "claim_id": "CLAIM-20261120-R31-R590-ANANSI-PREDMAINTMCP-BUYWISE-BREWCODE",
+      "primary_repos": [
+        "mdowis/anansi",
+        "LGDiMaggio/predictive-maintenance-mcp",
+        "saltsalt123/buywise-agent",
+        "kochetkov-ma/claude-brewcode"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/anansi-predictive-maintenance-mcp-buywise-agent-claude-brewcode-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/anansi-predictive-maintenance-mcp-buywise-agent-claude-brewcode-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r31-r590-anansi-predmaintmcp-buywise-brewcode.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,340.00",
+        "path_a_labor_hours": 41.0,
+        "path_a_labor_usd": "4,100.00",
+        "path_a_total_usd": "7,440.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "7,110.00",
+        "pct_savings": "95.56%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R32-R591",
+      "cumulative_round": 591,
+      "claim_id": "CLAIM-20261120-R32-R591-MCPJAM-DEX-AIRCLAW-APPCLAW",
+      "primary_repos": [
+        "MCPJam/inspector",
+        "exmergo/dex",
+        "nickzsche21/AirClaw",
+        "appclawhq/AppClaw"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/mcpjam-inspector-exmergo-dex-airclaw-appclaw-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/mcpjam-inspector-exmergo-dex-airclaw-appclaw-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r32-r591-mcpjam-dex-airclaw-appclaw.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 44,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,260.00",
+        "path_a_labor_hours": 40.5,
+        "path_a_labor_usd": "4,050.00",
+        "path_a_total_usd": "7,310.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "6,995.00",
+        "pct_savings": "95.69%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R33-R592",
+      "cumulative_round": 592,
+      "claim_id": "CLAIM-20261120-R33-R592-AGENTSWARM-PAD-TASKOBSERVER-SUBPOOL",
+      "primary_repos": [
+        "desplega-ai/agent-swarm",
+        "PerpetualSoftware/pad",
+        "rebelytics/one-skill-to-rule-them-all",
+        "gesta-run/subpool"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/agent-swarm-pad-one-skill-to-rule-them-all-subpool-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/agent-swarm-pad-one-skill-to-rule-them-all-subpool-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r33-r592-agentswarm-pad-taskobserver-subpool.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,380.00",
+        "path_a_labor_hours": 41.5,
+        "path_a_labor_usd": "4,150.00",
+        "path_a_total_usd": "7,530.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "7,200.00",
+        "pct_savings": "95.62%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R34-R593",
+      "cumulative_round": 593,
+      "claim_id": "CLAIM-20261120-R34-R593-ZOSMACOWORK-RIFFPAD-ORCHESTRATORSKILL-GIVEMEMOD",
+      "primary_repos": [
+        "zosmaai/zosma-cowork",
+        "riffpad/riffpad",
+        "kele-dev/Claude-Orchestrator-Skill",
+        "timoncool/givememod"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/zosma-cowork-riffpad-claude-orchestrator-skill-givememod-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/zosma-cowork-riffpad-claude-orchestrator-skill-givememod-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r34-r593-zosmacowork-riffpad-orchestratorskill-givememod.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 43,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,220.00",
+        "path_a_labor_hours": 39.5,
+        "path_a_labor_usd": "3,950.00",
+        "path_a_total_usd": "7,170.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "6,855.00",
+        "pct_savings": "95.61%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R35-R594",
+      "cumulative_round": 594,
+      "claim_id": "CLAIM-20261120-R35-R594-CLAUDEWORKFLOWS-SECONDSKYSKILLS-SKILLEXCHANGE-CRONALYTICS",
+      "primary_repos": [
+        "shinpr/claude-code-workflows",
+        "secondsky/claude-skills",
+        "agentskillexchange/skills",
+        "8bit64k/cronalytics"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/claude-code-workflows-secondsky-skills-skill-exchange-cronalytics-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/claude-code-workflows-secondsky-skills-skill-exchange-cronalytics-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r35-r594-claudeworkflows-secondskyskills-skillexchange-cronalytics.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 44,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,240.00",
+        "path_a_labor_hours": 40.0,
+        "path_a_labor_usd": "4,000.00",
+        "path_a_total_usd": "7,240.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,930.00",
+        "pct_savings": "95.72%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R36-R595",
+      "cumulative_round": 595,
+      "claim_id": "CLAIM-20261120-R36-R595-DEVICECHAIN-EKOS-OPENCLAWDESKTOP-MOTIVE",
+      "primary_repos": [
+        "devicechain-io/devicechain",
+        "alexeyban/EKOS",
+        "rshodoskar-star/openclaw-desktop",
+        "geezerrrr/motive"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/devicechain-ekos-openclaw-desktop-motive-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/devicechain-ekos-openclaw-desktop-motive-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r36-r595-devicechain-ekos-openclawdesktop-motive.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,360.00",
+        "path_a_labor_hours": 41.0,
+        "path_a_labor_usd": "4,100.00",
+        "path_a_total_usd": "7,460.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "7,130.00",
+        "pct_savings": "95.58%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R37-R596",
+      "cumulative_round": 596,
+      "claim_id": "CLAIM-20261120-R37-R596-LABWIRED-ARCHGRAM-MCPGSC-CROFTWEAVER",
+      "primary_repos": [
+        "w1ne/labwired-core",
+        "byAbas/archgram",
+        "AKzar1el/mcp-gsc",
+        "karero/croftweaver"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/labwired-core-archgram-mcp-gsc-croftweaver-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/labwired-core-archgram-mcp-gsc-croftweaver-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r37-r596-labwired-archgram-mcpgsc-croftweaver.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 43,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,180.00",
+        "path_a_labor_hours": 39.5,
+        "path_a_labor_usd": "3,950.00",
+        "path_a_total_usd": "7,130.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,820.00",
+        "pct_savings": "95.65%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R38-R597",
+      "cumulative_round": 597,
+      "claim_id": "CLAIM-20261120-R38-R597-MYCFOAGENT-MARKETINGSKILLS-PAYWALLPILOT-JOBAGENT",
+      "primary_repos": [
+        "jeanzxiang-xjz/my-cfo-agent",
+        "hyperfx-ai/marketing-skills",
+        "Nikolai-Iakubovskii/app-paywall-pilot",
+        "vaibhavarora14/job-application-agent"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/my-cfo-agent-marketing-skills-app-paywall-pilot-job-application-agent-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/my-cfo-agent-marketing-skills-app-paywall-pilot-job-application-agent-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r38-r597-mycfoagent-marketingskills-paywallpilot-jobagent.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 44,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,260.00",
+        "path_a_labor_hours": 40.5,
+        "path_a_labor_usd": "4,050.00",
+        "path_a_total_usd": "7,310.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "6,995.00",
+        "pct_savings": "95.69%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R39-R598",
+      "cumulative_round": 598,
+      "claim_id": "CLAIM-20261120-R39-R598-MUSEAIBACKUP-AGENTRULES-ICODESKILL-YUMI",
+      "primary_repos": [
+        "Git-FED/MuseAi-Account-Backup",
+        "netresearch/agent-rules-skill",
+        "ayukyo/icode-skill",
+        "estebanbaigts/Yumi"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/museai-account-backup-agent-rules-skill-icode-skill-yumi-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/museai-account-backup-agent-rules-skill-icode-skill-yumi-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r39-r598-museaibackup-agentrules-icodeskill-yumi.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 43,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,160.00",
+        "path_a_labor_hours": 39.5,
+        "path_a_labor_usd": "3,950.00",
+        "path_a_total_usd": "7,110.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,800.00",
+        "pct_savings": "95.64%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R40-R599",
+      "cumulative_round": 599,
+      "claim_id": "CLAIM-20261120-R40-R599-LEANSTUDIO-FABRICIOSKILLS-CLAUDEMATH-JANO",
+      "primary_repos": [
+        "keithadler/leanstudio",
+        "fabricioctelles/skills",
+        "agentsmith-tools/claude-math",
+        "ilien-dev/jano"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/leanstudio-fabricioctelles-skills-claude-math-jano-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/leanstudio-fabricioctelles-skills-claude-math-jano-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r40-r599-leanstudio-fabricioskills-claudemath-jano.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 44,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,200.00",
+        "path_a_labor_hours": 40.0,
+        "path_a_labor_usd": "4,000.00",
+        "path_a_total_usd": "7,200.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "6,890.00",
+        "pct_savings": "95.69%"
+      }
+    },
+    {
+      "round_id": "2026-11-20-R41-R600",
+      "cumulative_round": 600,
+      "claim_id": "CLAIM-20261120-R41-R600-TRYPOST-LALABASE-TEDIX-MOJITO",
+      "primary_repos": [
+        "trypostit/trypost",
+        "lalabase/lalabase",
+        "tedix-hq/tedix",
+        "TimeLovercc/mojito"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/trypost-lalabase-tedix-mojito-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/trypost-lalabase-tedix-mojito-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-20-r41-r600-trypost-lalabase-tedix-mojito.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "3,400.00",
+        "path_a_labor_hours": 42.0,
+        "path_a_labor_usd": "4,200.00",
+        "path_a_total_usd": "7,600.00",
+        "path_c_compute_usd": "80.00",
+        "path_c_labor_hours": 2.5,
+        "path_c_labor_usd": "250.00",
+        "path_c_total_usd": "330.00",
+        "net_savings_usd": "7,270.00",
+        "pct_savings": "95.66%"
+      }
+    }
+  ]
+}

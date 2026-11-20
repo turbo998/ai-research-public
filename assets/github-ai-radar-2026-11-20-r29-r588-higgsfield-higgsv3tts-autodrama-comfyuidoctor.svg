@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 940" width="1440" height="940" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bgGrad588" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091526"/>
+    </linearGradient>
+    <linearGradient id="headerGrad588" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cardBorder588" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="940" fill="url(#bgGrad588)"/>
+
+  <!-- Header Banner -->
+  <rect x="28" y="22" width="1384" height="94" rx="14" fill="url(#headerGrad588)" opacity="0.93"/>
+  <text x="52" y="58" fill="#FFFFFF" font-size="22" font-weight="800">2026-11-20 GitHub AI Radar · Night Round 29 (Cumulative Round 588) Architecture &amp; FinOps</text>
+  <text x="52" y="86" fill="#E0F2FE" font-size="13.5" font-weight="600">
+    lucataco/open-source-higgsfield (★78) + Saganaki22/Higgs_v3-TTS-ComfyUI (★76) + qiukaihui/comfyui-auto-drama (★79) + rookiestar28/ComfyUI-Doctor (★76)
+  </text>
+  <text x="52" y="106" fill="#FEF3C7" font-size="12" font-weight="600">
+    Provenance: synthetic / not_measured (base_hardware_capex=not_measured, track_b_stars_today=not_measured, independently_reproduced=false)
+  </text>
+
+  <!-- Left Decision Tree Panel -->
+  <rect x="28" y="132" width="440" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder588)" stroke-width="1.5"/>
+  <text x="48" y="164" fill="#38BDF8" font-size="17" font-weight="700">1. Enterprise SA Selection Decision Tree (R588)</text>
+  <text x="48" y="186" fill="#94A3B8" font-size="12">Video Character Recasting, 100-Lang TTS, Auto-Drama &amp; ComfyUI Ops</text>
+
+  <rect x="48" y="202" width="400" height="104" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="62" y="224" fill="#D8B4FE" font-size="13.5" font-weight="700">Q1: Open-Weights Video Character Recasting (Plate Intact)?</text>
+  <text x="62" y="244" fill="#E2E8F0" font-size="12">• lucataco/open-source-higgsfield (★78, Apache-2.0):</text>
+  <text x="62" y="262" fill="#CBD5E1" font-size="11.5">  SAM 3.1 follow-cam tracking + FLUX 3 Image Klein + SCAIL-2</text>
+  <text x="62" y="280" fill="#CBD5E1" font-size="11.5">  Pastes only recast character onto untouched 1080p background</text>
+  <text x="62" y="298" fill="#FDE68A" font-size="11.5">• Zero background hallucination; preserves original audio &amp; grain</text>
+
+  <rect x="48" y="318" width="400" height="106" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="62" y="340" fill="#93C5FD" font-size="13.5" font-weight="700">Q2: 100-Language Conversational TTS + Inline SFX in ComfyUI?</text>
+  <text x="62" y="360" fill="#E2E8F0" font-size="12">• Saganaki22/Higgs_v3-TTS-ComfyUI (★76, MIT node / NC model):</text>
+  <text x="62" y="378" fill="#CBD5E1" font-size="11.5">  bosonai/higgs-audio-v3-tts-4b (Qwen3 backbone) in-process</text>
+  <text x="62" y="396" fill="#CBD5E1" font-size="11.5">  Zero-shot cloning + inline emotion/style/SFX tags + multi-speaker</text>
+  <text x="62" y="414" fill="#FDE68A" font-size="11.5">• Supports ComfyUI/AIMDO DynamicVRAM &amp; longform chunking</text>
+
+  <rect x="48" y="436" width="400" height="106" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+  <text x="62" y="458" fill="#6EE7B7" font-size="13.5" font-weight="700">Q3: End-to-End Automated MiniMax H3 Short-Drama Pipeline?</text>
+  <text x="62" y="478" fill="#E2E8F0" font-size="12">• qiukaihui/comfyui-auto-drama (★79, MIT, Python stdlib):</text>
+  <text x="62" y="496" fill="#CBD5E1" font-size="11.5">  Script -&gt; 6-part R2V prompt -&gt; 4-view anchors -&gt; H3 ref2va</text>
+  <text x="62" y="514" fill="#CBD5E1" font-size="11.5">  TurboLoRA + SageAttention + multimodal VLM QA + SQLite state</text>
+  <text x="62" y="532" fill="#FDE68A" font-size="11.5">• One-click final cut with subtitles, CTA &amp; audio pop removal</text>
+
+  <rect x="48" y="554" width="400" height="106" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+  <text x="62" y="576" fill="#FCD34D" font-size="13.5" font-weight="700">Q4: Real-Time ComfyUI Crash Diagnostics &amp; 50+ Fix Patterns?</text>
+  <text x="62" y="596" fill="#E2E8F0" font-size="12">• rookiestar28/ComfyUI-Doctor (★76, MIT, Python):</text>
+  <text x="62" y="614" fill="#CBD5E1" font-size="11.5">  Intercepts startup &amp; runtime tracebacks; extracts node context</text>
+  <text x="62" y="632" fill="#CBD5E1" font-size="11.5">  50+ hot-reloadable JSON fix patterns + opaque node ID safety</text>
+  <text x="62" y="650" fill="#FDE68A" font-size="11.5">• Interactive LLM debugging chat + 9-language UI localization</text>
+
+  <!-- Center/Right Architecture Panel -->
+  <rect x="488" y="132" width="924" height="545" rx="12" fill="#0F172A" stroke="url(#cardBorder588)" stroke-width="1.5"/>
+  <text x="512" y="164" fill="#38BDF8" font-size="17" font-weight="700">2. End-to-End Enterprise ComfyUI Video Recasting, Audio Synthesis &amp; Short-Drama Architecture</text>
+  <text x="512" y="186" fill="#94A3B8" font-size="12">Four-Pillar Studio: Auto-Drama Web Console ➔ Body Double Recasting ➔ Higgs v3 100-Lang TTS ➔ ComfyUI-Doctor Live Ops</text>
+
+  <!-- Pillar 1: open-source-higgsfield -->
+  <rect x="512" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.4"/>
+  <text x="528" y="228" fill="#C084FC" font-size="14.5" font-weight="700">Pillar A: Body Double Recaster (open-source-higgsfield)</text>
+  <text x="528" y="250" fill="#E2E8F0" font-size="12">• Follow-Cam Virtual Crop: SAM 3.1 tracks performer &amp; renders</text>
+  <text x="528" y="270" fill="#CBD5E1" font-size="11.5">  a tight virtual camera so SCAIL-2 never degrades on small actors</text>
+  <text x="528" y="290" fill="#CBD5E1" font-size="11.5">• Pixel-Identical Background Plate: Pastes only the recast</text>
+  <text x="528" y="308" fill="#CBD5E1" font-size="11.5">  performer back into the untouched 1080p plate (set &amp; grain stay)</text>
+  <text x="528" y="328" fill="#CBD5E1" font-size="11.5">• Open-Weights Trio: SAM 3.1 + FLUX 3 Image Klein + SCAIL-2</text>
+  <text x="528" y="348" fill="#CBD5E1" font-size="11.5">• Occlusion Re-ID: Automatically re-identifies actor after cuts</text>
+  <text x="528" y="366" fill="#CBD5E1" font-size="11.5">• License: Permissive Apache-2.0 open-weights workflow</text>
+  <text x="528" y="390" fill="#E9D5FF" font-size="11.5" font-weight="600">✓ Replaces closed Higgsfield Genjutsu credits with local GPUs</text>
+
+  <!-- Pillar 2: Higgs_v3-TTS-ComfyUI -->
+  <rect x="960" y="204" width="428" height="212" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="1.4"/>
+  <text x="976" y="228" fill="#60A5FA" font-size="14.5" font-weight="700">Pillar B: 100-Lang Dialogue TTS (Higgs_v3-TTS-ComfyUI)</text>
+  <text x="976" y="250" fill="#E2E8F0" font-size="12">• Backbone: bosonai/higgs-audio-v3-tts-4b (Qwen3 + audio head)</text>
+  <text x="976" y="270" fill="#CBD5E1" font-size="11.5">• Zero-Shot Voice Cloning: Standard ComfyUI AUDIO in/out with</text>
+  <text x="976" y="288" fill="#CBD5E1" font-size="11.5">  Whisper auto-transcription for high-fidelity reference lock</text>
+  <text x="976" y="308" fill="#CBD5E1" font-size="11.5">• Inline Director Tags: Emotion, speaking style, prosody &amp; SFX</text>
+  <text x="976" y="328" fill="#CBD5E1" font-size="11.5">• Multi-Speaker &amp; Longform: Turn-by-turn dialogue synthesis +</text>
+  <text x="976" y="346" fill="#CBD5E1" font-size="11.5">  long-script chunking + ComfyUI/AIMDO DynamicVRAM offloading</text>
+  <text x="976" y="366" fill="#CBD5E1" font-size="11.5">• Governance Note: Node is MIT; Higgs v3 weights = non-commercial</text>
+  <text x="976" y="390" fill="#BFDBFE" font-size="11.5" font-weight="600">✓ Native multi-speaker dubbing directly inside ComfyUI graphs</text>
+
+  <!-- Pillar 3: comfyui-auto-drama -->
+  <rect x="512" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.4"/>
+  <text x="528" y="460" fill="#34D399" font-size="14.5" font-weight="700">Pillar C: Short-Drama Factory (qiukaihui/comfyui-auto-drama)</text>
+  <text x="528" y="482" fill="#E2E8F0" font-size="12">• Zero-Dependency Web Console: Pure Python stdlib + SQLite</text>
+  <text x="528" y="502" fill="#CBD5E1" font-size="11.5">• Structured Prompt Compiler: 3-stage narrative + 6-stage R2V</text>
+  <text x="528" y="520" fill="#CBD5E1" font-size="11.5">  prompts with 4-view character turnarounds &amp; scene anchors</text>
+  <text x="528" y="540" fill="#CBD5E1" font-size="11.5">• Remote MiniMax H3 Engine: T2V / I2V / Ref2VA with native</text>
+  <text x="528" y="558" fill="#CBD5E1" font-size="11.5">  stereo audio, nvfp4 text encoder, TurboLoRA &amp; SageAttention</text>
+  <text x="528" y="578" fill="#CBD5E1" font-size="11.5">• Automated VLM QA &amp; Final Cut: Multimodal quality gate +</text>
+  <text x="528" y="596" fill="#CBD5E1" font-size="11.5">  one-click subtitle burn-in, CTA overlay &amp; audio pop stripping</text>
+  <text x="528" y="622" fill="#A7F3D0" font-size="11.5" font-weight="600">✓ Automates episodic short-drama production from script to MP4</text>
+
+  <!-- Pillar 4: ComfyUI-Doctor -->
+  <rect x="960" y="436" width="428" height="218" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="976" y="460" fill="#FBBF24" font-size="14.5" font-weight="700">Pillar D: Live Diagnostics Suite (rookiestar28/ComfyUI-Doctor)</text>
+  <text x="976" y="482" fill="#E2E8F0" font-size="12">• Startup &amp; Runtime Log Interception: Captures tracebacks and</text>
+  <text x="976" y="502" fill="#CBD5E1" font-size="11.5">  pinpoints exact failing node IDs (including opaque/colon IDs)</text>
+  <text x="976" y="522" fill="#CBD5E1" font-size="11.5">• 50+ Hot-Reloadable JSON Fix Patterns: Instant remediation</text>
+  <text x="976" y="540" fill="#CBD5E1" font-size="11.5">  for missing CUDA ops, shape mismatches &amp; Branch node routing</text>
+  <text x="976" y="560" fill="#CBD5E1" font-size="11.5">• Security-Hardened UI: Treats special-character node IDs as</text>
+  <text x="976" y="578" fill="#CBD5E1" font-size="11.5">  inert data (prevents DOM/attribute injection in Locate button)</text>
+  <text x="976" y="596" fill="#CBD5E1" font-size="11.5">• Global Team Support: 9-language i18n + interactive LLM chat</text>
+  <text x="976" y="622" fill="#FDE68A" font-size="11.5" font-weight="600">✓ Cuts ComfyUI custom-node crash recovery from hours to seconds</text>
+
+  <!-- Bottom Closed-Form FinOps Ledger Panel -->
+  <rect x="28" y="693" width="1384" height="222" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.8"/>
+  <text x="52" y="725" fill="#10B981" font-size="17" font-weight="800">
+    3. Closed-Form FinOps TCO Verification (CLAIM-20261120-R29-R588-HIGGSFIELD-HIGGSV3TTS-AUTODRAMA-COMFYUIDOCTOR · 45 Eng @ $100/h)
+  </text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.3"/>
+  <text x="68" y="766" fill="#FCA5A5" font-size="14" font-weight="700">Path A: Commercial Video Recast + TTS Credits + Manual Ops</text>
+  <text x="68" y="790" fill="#E2E8F0" font-size="12.5">• Commercial Video &amp; TTS Credits: $3,320.00 / mo</text>
+  <text x="68" y="812" fill="#E2E8F0" font-size="12.5">• Manual Editing &amp; Crash Triage: 41.5 h/mo × $100/h = $4,150.00 / mo</text>
+  <text x="68" y="836" fill="#FCA5A5" font-size="13.5" font-weight="700">• Path A Total = $3,320.00 + $4,150.00 = $7,470.00 / mo</text>
+  <text x="68" y="860" fill="#94A3B8" font-size="11.5">• Overhead: Shimmering full-frame background re-synthesis,</text>
+  <text x="68" y="878" fill="#94A3B8" font-size="11.5">  manual shot stitching &amp; cryptic ComfyUI node tracebacks</text>
+
+  <!-- Path C Box -->
+  <rect x="504" y="742" width="430" height="152" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.3"/>
+  <text x="520" y="766" fill="#6EE7B7" font-size="14" font-weight="700">Path C: Local ComfyUI Studio (BodyDouble + HiggsTTS + Drama)</text>
+  <text x="520" y="790" fill="#E2E8F0" font-size="12.5">• Shared GPU Node Compute: $85.00 / mo</text>
+  <text x="520" y="812" fill="#E2E8F0" font-size="12.5">• Pipeline Review &amp; Ops Labor: 2.5 h/mo × $100.00/h = $250.00 / mo</text>
+  <text x="520" y="836" fill="#6EE7B7" font-size="13.5" font-weight="700">• Path C Total = $85.00 + $250.00 = $335.00 / mo</text>
+  <text x="520" y="860" fill="#94A3B8" font-size="11.5">• Outcome: Pixel-locked 1080p recasting, 100-lang dialogue TTS,</text>
+  <text x="520" y="878" fill="#94A3B8" font-size="11.5">  automated MiniMax H3 short dramas &amp; 50+ instant fix patterns</text>
+
+  <!-- Net Savings Box -->
+  <rect x="956" y="742" width="432" height="152" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="974" y="768" fill="#A7F3D0" font-size="14.5" font-weight="800">Verified Closed-Form ROI &amp; Governance Summary</text>
+  <text x="974" y="794" fill="#FFFFFF" font-size="14" font-weight="700">• Monthly Net Savings: $7,135.00 / mo (-95.52%)</text>
+  <text x="974" y="818" fill="#FFFFFF" font-size="13.5" font-weight="700">• Annualized Savings: $85,620.00 / yr</text>
+  <text x="974" y="842" fill="#D1FAE5" font-size="11.5">• Formula: ($7,470.00 - $335.00) / $7,470.00 = 95.52%</text>
+  <text x="974" y="862" fill="#FDE68A" font-size="11.5">• License Gate: Code is Apache-2.0 / MIT; note Boson AI Higgs v3</text>
+  <text x="974" y="880" fill="#FDE68A" font-size="11.5">  TTS 4B model weights carry research/non-commercial restrictions</text>
+</svg>

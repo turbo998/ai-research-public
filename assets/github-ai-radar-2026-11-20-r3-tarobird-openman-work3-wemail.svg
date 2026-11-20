@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgR562" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081121"/>
+      <stop offset="100%" stop-color="#111f38"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bgR562)" rx="18"/>
+  <text x="40" y="52" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700">2026-11-20 NIGHT ROUND 3 · CUMULATIVE ROUND 562 · ENTERPRISE SA REFERENCE ARCHITECTURE</text>
+  <text x="40" y="84" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">TaroBird 12屏跨端CLI中枢 × OpenMan 云电脑自治台 × Work3 单命令建树 × WeMail 本地邮件Agent</text>
+
+  <!-- 4 Pillar Boxes -->
+  <rect x="40" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="60" y="142" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">1. cloveric/tarobird (★134 · 22 forks · AGPL-3.0)</text>
+  <text x="60" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 桌面与 iOS 手机端统一统管 Codex / Claude / DeepSeek / Kimi / Agy</text>
+  <text x="60" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• ADHD 模式支持最多 12 路对话并排同屏独立滚动，离开电脑手机续接</text>
+  <text x="60" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 多主机组建私有网络 + Agent Bus 多 Bot 群聊跨机互传文件与任务</text>
+  <text x="60" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：保留五大官方 CLI 100% 原生能力的跨端多机指挥舱</text>
+
+  <rect x="615" y="112" width="545" height="190" rx="12" fill="#13223d" stroke="#10b981" stroke-width="1.5"/>
+  <text x="635" y="142" fill="#10b981" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">2. nickvasilescu/openman (★77 · 48 forks · MIT)</text>
+  <text x="635" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 运行在自有 Orgo 云电脑上的自治工作空间（Hermes Agent + Supabase）</text>
+  <text x="635" y="196" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 零平台抽成：模型与云桌面直接扣减用户自有 Orgo 账户额度</text>
+  <text x="635" y="222" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 实时画面流与接管 + 定时触发器 + 内置 PPT/文档/图表/音频生成器</text>
+  <text x="635" y="248" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：零 SaaS 席位溢价的 24/7 云桌面自治智能体开源底座</text>
+
+  <rect x="40" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="60" y="352" fill="#a855f7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">3. svaraborut/work3 (★68 · @svara/work3 · MIT)</text>
+  <text x="60" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• work3 open &lt;branch&gt;：一键建 Worktree + 装依赖/拷 .env + 启动 Claude</text>
+  <text x="60" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• work3 fold &lt;branch&gt; -rd：强制 --ff-only 线性合入并安全清理目录</text>
+  <text x="60" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 内置防误删护栏：检测到未提交修改自动拒绝移除，支持手机 Remote Control</text>
+  <text x="60" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：把 9 步易错手工 Worktree 操作收敛为团队共享的 2 条命令</text>
+
+  <rect x="615" y="322" width="545" height="190" rx="12" fill="#13223d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="635" y="352" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">4. eddiezywang/wemail (★78 · Electron 41 + SQLite · Apache-2.0)</text>
+  <text x="635" y="380" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 独立 utilityProcess 同步 IMAP/SMTP 至本地 SQLite，无第三方中转服</text>
+  <text x="635" y="406" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• AI 提议 + 人工确认晋升智能标签（异步回填历史邮件，根治标签泛滥）</text>
+  <text x="635" y="432" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">• 硬护栏 Pi 邮件 Agent（最多 6 轮 / 单工具 30s / 总计 120s）+ 企微/飞书卡片</text>
+  <text x="635" y="458" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12">SA 选型：高管与研发本地隐私邮件分诊、待办提取与独立 HTML 洞察报表</text>
+
+  <!-- FinOps Ledger Footer -->
+  <rect x="40" y="534" width="1120" height="150" rx="12" fill="#091324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="60" y="564" fill="#10b981" font-family="ui-monospace, Consolas, monospace" font-size="13.5" font-weight="700">CLAIM-20261120-R3-R562 · 42-Engineer Enterprise Team Closed-Form FinOps Verification (base hardware capEx: not_measured)</text>
+  <text x="60" y="592" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path A (散装终端切换 + 高价云 Agent 席位 + 9 步手工 Worktree + 云 AI 邮箱): $3,060.00 (SaaS/Seats) + $4,000.00 (40.0h × $100) = $7,060.00 / mo</text>
+  <text x="60" y="618" fill="#e2e8f0" font-family="ui-monospace, Consolas, monospace" font-size="12.5">• Path B (通用远程桌面 VNC + 自写 Shell 脚本 + 传统死板邮箱过滤规则):         $1,190.00 (VMs/API)    + $1,550.00 (15.5h × $100) = $2,740.00 / mo</text>
+  <text x="60" y="644" fill="#34d399" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">• Path C (TaroBird + OpenMan + Work3 + WeMail 闭环):                            $80.00 (Compute)    +   $250.00 ( 2.5h × $100) =   $330.00 / mo</text>
+  <text x="60" y="668" fill="#38bdf8" font-family="ui-monospace, Consolas, monospace" font-size="12.5" font-weight="700">➔ Net Savings vs. Path A: $6,730.00 / mo (-95.33%) | Annual Savings: $80,760.00 / yr | Track B stars_today: not_measured</text>
+</svg>
