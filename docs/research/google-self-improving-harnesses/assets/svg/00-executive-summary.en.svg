@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" role="img" aria-labelledby="title desc">
+  <title id="title">Google "Harnesses That Improve Themselves" Executive Benchmark &amp; Transfer Summary</title>
+  <desc id="desc">Comparison of Seed, Prompt Reflection, Unconstrained Full Rewrite, and Modular Gated Evolution across Gemini 3.8 Flash and zero-shot Gemini 4 Argon on SWE-bench Lite.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="accentGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="accentAmber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="accentRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#f87171"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg)" rx="18"/>
+  <rect x="24" y="20" width="1152" height="86" rx="14" fill="#162036" stroke="#2d3f63"/>
+  <text x="48" y="53" fill="#60a5fa" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">GOOGLE RESEARCH · ARXIV:2611.22299V1 (DEEP SHAH &amp; NEHAL KATHROTIA, NOV 17, 2026)</text>
+  <text x="48" y="84" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="22" font-weight="800">Harnesses That Improve Themselves: 8× Accuracy at 1/10th Token Cost via Gated Evolution</text>
+
+  <!-- Top 4 KPI Cards -->
+  <g transform="translate(24,122)">
+    <rect width="276" height="106" rx="12" fill="#131c31" stroke="#10b981" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">Gemini 3.8 Flash Held-Out</text>
+    <text x="20" y="68" fill="#34d399" font-family="Consolas, monospace" font-size="31" font-weight="800">5.0% → 40.0%</text>
+    <text x="20" y="91" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12">8.0× seed accuracy · 0.0% unverified exits</text>
+  </g>
+  <g transform="translate(316,122)">
+    <rect width="276" height="106" rx="12" fill="#131c31" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">Runtime Tokens per Task</text>
+    <text x="20" y="68" fill="#38bdf8" font-family="Consolas, monospace" font-size="31" font-weight="800">46.7k tok</text>
+    <text x="20" y="91" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12">2.5× below seed · ~10× below full rewrite</text>
+  </g>
+  <g transform="translate(608,122)">
+    <rect width="276" height="106" rx="12" fill="#131c31" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">Zero-Shot Gemini 4 Argon</text>
+    <text x="20" y="68" fill="#c4b5fd" font-family="Consolas, monospace" font-size="31" font-weight="800">37.5% (#1)</text>
+    <text x="20" y="91" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12">Beats full rewrite (30.0%) at &lt;1/4th cost</text>
+  </g>
+  <g transform="translate(900,122)">
+    <rect width="276" height="106" rx="12" fill="#131c31" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">Search Amortization ROI</text>
+    <text x="20" y="68" fill="#fbbf24" font-family="Consolas, monospace" font-size="31" font-weight="800">&lt; 100 Tasks</text>
+    <text x="20" y="91" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12">Token savings repay all 100 search rollouts</text>
+  </g>
+
+  <!-- Left Panel -->
+  <rect x="24" y="246" width="568" height="410" rx="14" fill="#131c31" stroke="#283552"/>
+  <text x="46" y="280" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="17" font-weight="800">SWE-bench Lite Held-Out Solve Rate (sympy ID + django OOD)</text>
+  <text x="46" y="302" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">Blue: Part A evolved on Gemini 3.8 Flash · Green/Red: Part B zero-shot transfer to Gemini 4 Argon</text>
+
+  <text x="46" y="342" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">1. Seed Harness (142-line Pass@1)</text>
+  <rect x="275" y="328" width="32" height="16" rx="4" fill="url(#accentBlue)"/>
+  <text x="315" y="341" fill="#93c5fd" font-family="Consolas, monospace" font-size="12" font-weight="700">5.0% (Flash)</text>
+  <rect x="275" y="348" width="64" height="16" rx="4" fill="#64748b"/>
+  <text x="347" y="361" fill="#cbd5e1" font-family="Consolas, monospace" font-size="12" font-weight="700">10.0% (Argon zero-shot)</text>
+
+  <text x="46" y="416" fill="#fca5a5" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">2. Prompt-Only Reflection (RULES.md)</text>
+  <rect x="275" y="402" width="16" height="16" rx="4" fill="url(#accentRed)"/>
+  <text x="299" y="415" fill="#fca5a5" font-family="Consolas, monospace" font-size="12" font-weight="700">2.5% (Degrades! OOD exits 15%→30%)</text>
+  <rect x="275" y="422" width="96" height="16" rx="4" fill="#64748b"/>
+  <text x="379" y="435" fill="#cbd5e1" font-family="Consolas, monospace" font-size="12" font-weight="700">15.0% (Argon zero-shot)</text>
+
+  <text x="46" y="492" fill="#fcd34d" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">3. Unconstrained Rewrite (28 turns)</text>
+  <rect x="275" y="478" width="272" height="16" rx="4" fill="url(#accentAmber)"/>
+  <text x="405" y="472" fill="#fcd34d" font-family="Consolas, monospace" font-size="12" font-weight="700">42.5% (Flash · 451.6k tok!)</text>
+  <rect x="275" y="498" width="192" height="16" rx="4" fill="url(#accentRed)"/>
+  <text x="475" y="511" fill="#fca5a5" font-family="Consolas, monospace" font-size="12" font-weight="700">30.0% (Argon drop -12.5pp)</text>
+
+  <rect x="36" y="544" width="544" height="92" rx="10" fill="#0d2824" stroke="#10b981"/>
+  <text x="48" y="572" fill="#6ee7b7" font-family="Segoe UI, sans-serif" font-size="14" font-weight="800">4. Modular Gated Evolution (12 turns)</text>
+  <rect x="275" y="558" width="256" height="18" rx="4" fill="url(#accentBlue)"/>
+  <rect x="275" y="582" width="240" height="18" rx="4" fill="url(#accentGreen)"/>
+  <text x="378" y="618" fill="#6ee7b7" font-family="Consolas, monospace" font-size="12" font-weight="800">Flash: 40.0% (46.7k) · Argon: 37.5% #1 (64.8k)</text>
+
+  <!-- Right Panel -->
+  <rect x="608" y="246" width="568" height="410" rx="14" fill="#131c31" stroke="#283552"/>
+  <text x="630" y="280" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="17" font-weight="800">Cost per Solved Task &amp; 4-Step Gated Evolution Lineage</text>
+  <text x="630" y="302" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">Stage 3 gate (G_val + 110k token cap) blocks turn-cap bloat while retaining clean code hooks</text>
+
+  <text x="630" y="338" fill="#fcd34d" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">Unconstrained Full Rewrite (Max single rollout &gt;2.8M tok)</text>
+  <rect x="630" y="346" width="490" height="22" rx="5" fill="url(#accentRed)"/>
+  <text x="640" y="362" fill="#ffffff" font-family="Consolas, monospace" font-size="12" font-weight="800">451.6k / task · 1,062.6k tokens per solved task (9.1× costlier)</text>
+
+  <text x="630" y="392" fill="#6ee7b7" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">Modular Gated Evolution (12 turns + head-tail compaction)</text>
+  <rect x="630" y="400" width="54" height="22" rx="5" fill="url(#accentGreen)"/>
+  <text x="694" y="416" fill="#6ee7b7" font-family="Consolas, monospace" font-size="12" font-weight="800">46.7k / task · Only 116.8k tokens per solved task!</text>
+
+  <g transform="translate(630,440)">
+    <rect width="524" height="44" rx="8" fill="#17253f" stroke="#10b981"/>
+    <text x="14" y="19" fill="#34d399" font-family="Consolas, monospace" font-size="12" font-weight="800">[ACCEPT] 1. context_mgr.py · Head-Tail Compaction</text>
+    <text x="14" y="36" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="11.5">Compacts observations &gt;2 turns + live turn/edit status footer → 5× Dev/Val accuracy</text>
+  </g>
+  <g transform="translate(630,492)">
+    <rect width="524" height="44" rx="8" fill="#17253f" stroke="#10b981"/>
+    <text x="14" y="19" fill="#34d399" font-family="Consolas, monospace" font-size="12" font-weight="800">[ACCEPT] 2. action_aci.py · Windowed Views &amp; Finish Guard</text>
+    <text x="14" y="36" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="11.5">Windowed file views, truncated shell outputs, and empty-diff block on finish</text>
+  </g>
+  <g transform="translate(630,544)">
+    <rect width="524" height="44" rx="8" fill="#2a1621" stroke="#ef4444"/>
+    <text x="14" y="19" fill="#f87171" font-family="Consolas, monospace" font-size="12" font-weight="800">[REJECT] 3. control.py · Turn Cap Inflation (12 → 18)</text>
+    <text x="14" y="36" fill="#fecaca" font-family="Segoe UI, sans-serif" font-size="11.5">Dev jumps, but Val drops and runtime tokens breach 110k cap → Blocked by Stage 3!</text>
+  </g>
+  <g transform="translate(630,596)">
+    <rect width="524" height="44" rx="8" fill="#17253f" stroke="#10b981"/>
+    <text x="14" y="19" fill="#34d399" font-family="Consolas, monospace" font-size="12" font-weight="800">[ACCEPT] 4. verify.py · Pre-Stop Compile &amp; Test Gate</text>
+    <text x="14" y="36" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="11.5">Requires non-empty git diff, clean Python compile &amp; passing post-edit tests → 40.0%</text>
+  </g>
+</svg>

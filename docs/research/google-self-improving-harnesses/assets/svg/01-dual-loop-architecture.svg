@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-labelledby="t2 d2">
+  <title id="t2">自进化 Agent Harness 双环架构（内环四可编辑模块 × 外环四阶段门控演化 × 四道防线）</title>
+  <desc id="d2">展示冻结基座模型与实时环境之间的内环四大状态化代码模块，以及外环诊断、提案、门禁验证、路由部署闭环与五类故障防御机制。</desc>
+  <rect width="1200" height="660" fill="#0b1120" rx="18"/>
+  <text x="36" y="46" fill="#60a5fa" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" font-weight="700" letter-spacing="1">UNIFYING ARCHITECTURE · INNER EXECUTION LOOP × OUTER SELF-IMPROVEMENT LOOP (EQ. 1)</text>
+  <text x="36" y="78" fill="#f8fafc" font-family="Segoe UI, PingFang SC, sans-serif" font-size="22" font-weight="800">双环自进化架构：冻结模型参数 M_θ，以受限闭环工程演化运行时软件 h = (h_ctx, h_ctrl, h_act, h_ver)</text>
+
+  <!-- Inner Loop Box -->
+  <rect x="30" y="102" width="550" height="404" rx="14" fill="#131c31" stroke="#3b82f6" stroke-width="1.6"/>
+  <text x="52" y="134" fill="#93c5fd" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">内环 (Inner Loop)：多轮交互运行时 h ∈ H</text>
+  <text x="52" y="154" fill="#94a3b8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">介导冻结基座模型 M_θ 与隔离沙箱环境 E_x，产生轨迹 τ 与成本 C(τ)</text>
+
+  <rect x="52" y="172" width="236" height="58" rx="10" fill="#1e293b" stroke="#64748b"/>
+  <text x="70" y="197" fill="#f8fafc" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">冻结基座模型 M_θ</text>
+  <text x="70" y="217" fill="#94a3b8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">读取精炼上下文 → 输出推理与工具调用</text>
+
+  <rect x="322" y="172" width="236" height="58" rx="10" fill="#1e293b" stroke="#64748b"/>
+  <text x="340" y="197" fill="#f8fafc" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">隔离执行环境 E_x + 只读 R_x</text>
+  <text x="340" y="217" fill="#94a3b8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">代码仓 / 终端 / Web / GUI + 外部评测器</text>
+
+  <g transform="translate(52,248)">
+    <rect width="242" height="110" rx="10" fill="#172554" stroke="#3b82f6"/>
+    <text x="16" y="26" fill="#60a5fa" font-family="Consolas, PingFang SC, sans-serif" font-size="13" font-weight="800">1. h_ctx · 上下文与状态</text>
+    <text x="16" y="48" fill="#e2e8f0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">· 工作记忆与持久经验记忆分离</text>
+    <text x="16" y="68" fill="#e2e8f0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">· &gt;2轮旧观察首尾摘要遮蔽压缩</text>
+    <text x="16" y="88" fill="#93c5fd" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">· 保护 KV 前缀缓存 + 实时状态页脚</text>
+  </g>
+  <g transform="translate(316,248)">
+    <rect width="242" height="110" rx="10" fill="#172554" stroke="#3b82f6"/>
+    <text x="16" y="26" fill="#60a5fa" font-family="Consolas, PingFang SC, sans-serif" font-size="13" font-weight="800">2. h_ctrl · 智能体控制流</text>
+    <text x="16" y="48" fill="#e2e8f0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">· 轮次上限预算、JSON/工具解析</text>
+    <text x="16" y="68" fill="#e2e8f0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">· 死循环熔断器 (Loop Breakers)</text>
+    <text x="16" y="88" fill="#93c5fd" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">· 异常重试与子智能体 (Subagent) 委派</text>
+  </g>
+  <g transform="translate(52,374)">
+    <rect width="242" height="110" rx="10" fill="#172554" stroke="#38bdf8"/>
+    <text x="16" y="26" fill="#38bdf8" font-family="Consolas, PingFang SC, sans-serif" font-size="13" font-weight="800">3. h_act · 动作与工具接口</text>
+    <text x="16" y="48" fill="#e2e8f0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">· 精简 ACI 工具与 Shell 沙箱封装</text>
+    <text x="16" y="68" fill="#e2e8f0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">· 分页窗口化读文件与长日志截断</text>
+    <text x="16" y="88" fill="#7dd3fc" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">· finish 动作前置非空 diff 守卫</text>
+  </g>
+  <g transform="translate(316,374)">
+    <rect width="242" height="110" rx="10" fill="#064e3b" stroke="#10b981"/>
+    <text x="16" y="26" fill="#34d399" font-family="Consolas, PingFang SC, sans-serif" font-size="13" font-weight="800">4. h_ver · 验证与恢复钩子</text>
+    <text x="16" y="48" fill="#e2e8f0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">· Pre-turn / Post-tool / Pre-stop 钩子</text>
+    <text x="16" y="68" fill="#e2e8f0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">· 退出前强制语法编译 + 回归测试</text>
+    <text x="16" y="88" fill="#6ee7b7" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">· 失败自动路由回内环触发自愈修复</text>
+  </g>
+
+  <!-- Outer Loop Box -->
+  <rect x="610" y="102" width="560" height="404" rx="14" fill="#131c31" stroke="#10b981" stroke-width="1.6"/>
+  <text x="632" y="134" fill="#6ee7b7" font-family="Segoe UI, PingFang SC, sans-serif" font-size="16" font-weight="800">外环 (Outer Loop)：四阶段受约束代码自进化闭环</text>
+  <text x="632" y="154" fill="#94a3b8" font-family="Consolas, PingFang SC, sans-serif" font-size="12">目标：max E[R_x(τ)]  s.t.  E[C(τ)] ≤ B_tok (110k),  G_val(h, h_0) = 1</text>
+
+  <g transform="translate(632,174)">
+    <rect width="516" height="68" rx="9" fill="#1e293b" stroke="#475569"/>
+    <text x="16" y="25" fill="#fbbf24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">Stage 1 · 故障聚类归因 (Diagnose Failures)</text>
+    <text x="16" y="48" fill="#cbd5e1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">聚合多轮轨迹与验证器日志，对比成功/失败样本，剥离“可修复 Harness 缺陷”与“基座模型硬极限”</text>
+  </g>
+  <g transform="translate(632,254)">
+    <rect width="516" height="68" rx="9" fill="#1e293b" stroke="#475569"/>
+    <text x="16" y="25" fill="#38bdf8" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">Stage 2 · 单模块补丁合成 (Propose Scoped Edits)</text>
+    <text x="16" y="48" fill="#cbd5e1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">针对高频失败簇每次仅修改单一模块或注入生命周期中间件，收缩 diff 预算（如 RRSI），拒绝单题硬编码提示</text>
+  </g>
+  <g transform="translate(632,334)">
+    <rect width="516" height="68" rx="9" fill="#0d2824" stroke="#10b981" stroke-width="1.5"/>
+    <text x="16" y="25" fill="#34d399" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">Stage 3 · 执行覆盖与预算硬门禁 (Validate &amp; Filter · G_val)</text>
+    <text x="16" y="48" fill="#d1fae5" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">校验新增代码行真实运行时覆盖率（防死代码）、独立验证集不回退、平均 Token ≤ B_tok 上限</text>
+  </g>
+  <g transform="translate(632,414)">
+    <rect width="516" height="68" rx="9" fill="#1e293b" stroke="#a78bfa"/>
+    <text x="16" y="25" fill="#c4b5fd" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13.5" font-weight="800">Stage 4 · 合并部署或分支路由 (Deploy or Route)</text>
+    <text x="16" y="48" fill="#cbd5e1" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">通过集成合并测试推入主干，或归入多分支库（如 MoSIB）由 Bandit 路由器按任务特征动态分发</text>
+  </g>
+
+  <!-- Bottom Safeguard Strip -->
+  <rect x="30" y="524" width="1140" height="114" rx="14" fill="#1a1625" stroke="#f59e0b"/>
+  <text x="52" y="554" fill="#fbbf24" font-family="Segoe UI, PingFang SC, sans-serif" font-size="15" font-weight="800">五大自修改故障模式与四道跨阶段安全防线（Safeguards 1–4 · 防止过拟合与评测器篡改）</text>
+  <text x="52" y="582" fill="#e2e8f0" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">· 内部退化 (Modes 1–3)：提示词膨胀与丢约束 (Mode 1) · 插件泛滥技能遮蔽 (Mode 2) · 全量重写跨模块耦合崩坏 (Mode 3)</text>
+  <text x="52" y="606" fill="#fca5a5" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5">· 外部作弊 (Modes 4–5)：沙箱环境捷径投机 (Mode 4) · 篡改可写容器内评测脚本/日志刷分 (Mode 5) → 强制只读隔离挂载 R_x!</text>
+  <text x="52" y="626" fill="#6ee7b7" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">四道护栏：[S1] 模块化隔离与集成合并 · [S2] 绑定失败簇的极小通用补丁 · [S3] 行执行覆盖 + B_tok 门禁 · [S4] 只读评测器与密封沙箱</text>
+</svg>

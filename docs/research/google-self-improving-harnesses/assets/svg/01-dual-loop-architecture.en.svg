@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Self-Improving Agent Harness Dual-Loop Architecture &amp; Cross-Stage Safeguards</title>
+  <desc id="d2">Inner 4-component execution runtime paired with the outer 4-stage gated self-improvement loop and 4 safeguards against Modes 1-5.</desc>
+  <rect width="1200" height="660" fill="#0b1120" rx="18"/>
+  <text x="36" y="46" fill="#60a5fa" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" letter-spacing="1">UNIFYING ARCHITECTURE · INNER EXECUTION LOOP × OUTER SELF-IMPROVEMENT LOOP (EQ. 1)</text>
+  <text x="36" y="78" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="21" font-weight="800">Dual-Loop Self-Improvement: Freeze M_θ Weights, Evolve Stateful Runtime Code h = (h_ctx, h_ctrl, h_act, h_ver)</text>
+
+  <!-- Inner Loop -->
+  <rect x="30" y="102" width="550" height="404" rx="14" fill="#131c31" stroke="#3b82f6" stroke-width="1.6"/>
+  <text x="52" y="134" fill="#93c5fd" font-family="Segoe UI, sans-serif" font-size="16" font-weight="800">Inner Loop: Interactive Agent Execution h ∈ H</text>
+  <text x="52" y="154" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">Mediates frozen foundation model M_θ and live environment E_x with cost C(τ)</text>
+
+  <rect x="52" y="172" width="236" height="58" rx="10" fill="#1e293b" stroke="#64748b"/>
+  <text x="68" y="197" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="13.5" font-weight="800">Frozen Foundation Model M_θ</text>
+  <text x="68" y="217" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="11.5">Reads curated context → emits actions</text>
+
+  <rect x="322" y="172" width="236" height="58" rx="10" fill="#1e293b" stroke="#64748b"/>
+  <text x="338" y="197" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="13.5" font-weight="800">Hermetic Sandbox E_x + R_x</text>
+  <text x="338" y="217" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="11.5">Repo / shell / GUI + read-only verifier</text>
+
+  <g transform="translate(52,248)">
+    <rect width="242" height="110" rx="10" fill="#172554" stroke="#3b82f6"/>
+    <text x="16" y="26" fill="#60a5fa" font-family="Consolas, sans-serif" font-size="13" font-weight="800">1. h_ctx · Context &amp; State</text>
+    <text x="16" y="48" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">· Working vs. experiential memory</text>
+    <text x="16" y="68" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">· Head-tail compaction (&gt;2 turns)</text>
+    <text x="16" y="88" fill="#93c5fd" font-family="Segoe UI, sans-serif" font-size="11.5">· Cache-safe masking + status footer</text>
+  </g>
+  <g transform="translate(316,248)">
+    <rect width="242" height="110" rx="10" fill="#172554" stroke="#3b82f6"/>
+    <text x="16" y="26" fill="#60a5fa" font-family="Consolas, sans-serif" font-size="13" font-weight="800">2. h_ctrl · Agent Control</text>
+    <text x="16" y="48" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">· Turn cap, parser &amp; retry logic</text>
+    <text x="16" y="68" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">· Loop breakers on stalled traces</text>
+    <text x="16" y="88" fill="#93c5fd" font-family="Segoe UI, sans-serif" font-size="11.5">· Subagent delegation &amp; routing</text>
+  </g>
+  <g transform="translate(52,374)">
+    <rect width="242" height="110" rx="10" fill="#172554" stroke="#38bdf8"/>
+    <text x="16" y="26" fill="#38bdf8" font-family="Consolas, sans-serif" font-size="13" font-weight="800">3. h_act · Action Interface</text>
+    <text x="16" y="48" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">· Minimal sharp shell/ACI tools</text>
+    <text x="16" y="68" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">· Windowed files &amp; truncated stdout</text>
+    <text x="16" y="88" fill="#7dd3fc" font-family="Segoe UI, sans-serif" font-size="11.5">· Pre-finish empty-diff guard</text>
+  </g>
+  <g transform="translate(316,374)">
+    <rect width="242" height="110" rx="10" fill="#064e3b" stroke="#10b981"/>
+    <text x="16" y="26" fill="#34d399" font-family="Consolas, sans-serif" font-size="13" font-weight="800">4. h_ver · Verify &amp; Recovery</text>
+    <text x="16" y="48" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">· Pre-turn / Post-tool / Pre-stop hooks</text>
+    <text x="16" y="68" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">· Syntax compile + test suite check</text>
+    <text x="16" y="88" fill="#6ee7b7" font-family="Segoe UI, sans-serif" font-size="11.5">· Routes failures back for repair</text>
+  </g>
+
+  <!-- Outer Loop -->
+  <rect x="610" y="102" width="560" height="404" rx="14" fill="#131c31" stroke="#10b981" stroke-width="1.6"/>
+  <text x="632" y="134" fill="#6ee7b7" font-family="Segoe UI, sans-serif" font-size="16" font-weight="800">Outer Loop: 4-Stage Constrained Self-Improvement</text>
+  <text x="632" y="154" fill="#94a3b8" font-family="Consolas, sans-serif" font-size="12">max E[R_x(τ)]  subject to  E[C(τ)] ≤ B_tok (110k),  G_val(h, h_0) = 1</text>
+
+  <g transform="translate(632,174)">
+    <rect width="516" height="68" rx="9" fill="#1e293b" stroke="#475569"/>
+    <text x="16" y="25" fill="#fbbf24" font-family="Segoe UI, sans-serif" font-size="13.5" font-weight="800">Stage 1 · Diagnose Failures (Attribution Clustering)</text>
+    <text x="16" y="48" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12">Clusters verifier errors &amp; contrasts pass/fail traces to separate harness bugs from model limits</text>
+  </g>
+  <g transform="translate(632,254)">
+    <rect width="516" height="68" rx="9" fill="#1e293b" stroke="#475569"/>
+    <text x="16" y="25" fill="#38bdf8" font-family="Segoe UI, sans-serif" font-size="13.5" font-weight="800">Stage 2 · Propose Edits (Scoped Code / Lifecycle Hooks)</text>
+    <text x="16" y="48" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12">Generates small single-module patches or hooks with shrinking diff budgets (RRSI); bans task hints</text>
+  </g>
+  <g transform="translate(632,334)">
+    <rect width="516" height="68" rx="9" fill="#0d2824" stroke="#10b981" stroke-width="1.5"/>
+    <text x="16" y="25" fill="#34d399" font-family="Segoe UI, sans-serif" font-size="13.5" font-weight="800">Stage 3 · Validate &amp; Filter (G_val + B_tok Acceptance Gate)</text>
+    <text x="16" y="48" fill="#d1fae5" font-family="Segoe UI, sans-serif" font-size="12">Requires runtime line-execution coverage of edits, held-out Val non-regression &amp; E[C(τ)] ≤ 110k</text>
+  </g>
+  <g transform="translate(632,414)">
+    <rect width="516" height="68" rx="9" fill="#1e293b" stroke="#a78bfa"/>
+    <text x="16" y="25" fill="#c4b5fd" font-family="Segoe UI, sans-serif" font-size="13.5" font-weight="800">Stage 4 · Deploy or Route (Integration Merge / MoSIB)</text>
+    <text x="16" y="48" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12">Merges verified modules into main runtime or indexes specialized branches for bandit routing</text>
+  </g>
+
+  <!-- Safeguards -->
+  <rect x="30" y="524" width="1140" height="114" rx="14" fill="#1a1625" stroke="#f59e0b"/>
+  <text x="52" y="554" fill="#fbbf24" font-family="Segoe UI, sans-serif" font-size="15" font-weight="800">5 Recurring Self-Modification Failure Modes &amp; 4 Cross-Stage Safeguards (Table II &amp; Fig. 2)</text>
+  <text x="52" y="582" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12.5">· Inner Degradation (Modes 1–3): Prompt bloat &amp; lost constraints (M1) · Plugin skill shadowing (M2) · Monolithic coupling breakage (M3)</text>
+  <text x="52" y="606" fill="#fca5a5" font-family="Segoe UI, sans-serif" font-size="12.5">· Sandbox Exploits (Modes 4–5): Benchmark shortcut gaming (M4) · Writable evaluator/log tampering (M5) → Enforce read-only R_x!</text>
+  <text x="52" y="626" fill="#6ee7b7" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700">Safeguards: [S1] Modular isolation &amp; merge · [S2] Small cluster-bound diffs · [S3] Line-coverage + B_tok gate · [S4] Read-only evaluator</text>
+</svg>

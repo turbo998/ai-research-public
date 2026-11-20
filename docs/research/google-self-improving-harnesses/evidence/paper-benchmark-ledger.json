@@ -1,0 +1,219 @@
+{
+  "study_id": "google-self-improving-harnesses-2026-11-20",
+  "title": {
+    "en": "Harnesses That Improve Themselves: Architectural Synthesis & Enterprise SA Playbook on Google's Self-Improving Agent Harness Framework",
+    "zh-CN": "Google《Harnesses That Improve Themselves》深度研究：自进化 Agent Harness 四组件双环架构、门控模块化演化与企业级 SA 选型指南"
+  },
+  "date": "2026-11-20",
+  "provenance": "published_paper_reported",
+  "primary_source": {
+    "arxiv_id": "2611.22299v1",
+    "title": "Harnesses That Improve Themselves: A Unifying Framework for Self-Improving Agent Harnesses",
+    "authors": [
+      "Deep Shah (Google, shahdeep@google.com)",
+      "Nehal Kathrotia (Google, nehalk@google.com)"
+    ],
+    "published_date": "2026-11-17",
+    "url": "https://arxiv.org/abs/2611.22299"
+  },
+  "comparative_sources": [
+    {
+      "arxiv_id": "2606.09498v3",
+      "title": "Self-Harness: Harnesses That Improve Themselves",
+      "authors": "Hangfan Zhang, Shao Zhang, Kangcong Li, Chen Zhang, Yang Chen, Yiqun Zhang, Lei Bai, Shuyue Hu",
+      "published_date": "2026-06-08",
+      "url": "https://arxiv.org/abs/2606.09498",
+      "scope": "Same-model 3-stage loop (Weakness Mining -> Harness Proposal -> Proposal Validation) across 9 bounded editable surfaces on Terminal-Bench-2.0, SWE-bench Verified, and AppWorld"
+    },
+    {
+      "repo": "google-research/rrsi",
+      "title": "Regularized Recursive Self-Improvement (RRSI)",
+      "url": "https://github.com/google-research/rrsi",
+      "scope": "Shrinking edit-size / diff / prompt-delta trajectory regularization preventing in-distribution task memorization"
+    },
+    {
+      "internal_companion": "turbo998/ai-research-public/docs/research/agent-harness-model-coevolution",
+      "date": "2026-11-18",
+      "provenance": "measured",
+      "scope": "120-skill production audit (-79.2% prompt compaction, 1.2% -> 100.0% router visibility, Inverse Scaffolding Law on Gemini 4 Carbon & GPT-6.2 Sol)"
+    }
+  ],
+  "architecture": {
+    "inner_loop_components": [
+      {
+        "id": "h_ctx",
+        "module": "context_mgr.py",
+        "name_en": "Context & State Management",
+        "name_zh": "上下文与状态管理",
+        "role": "Dynamic instruction assembly, working vs. experiential memory separation, head-tail observation compaction (>2 turns), live turn-and-edit status footer"
+      },
+      {
+        "id": "h_ctrl",
+        "module": "control.py",
+        "name_en": "Agent Control",
+        "name_zh": "智能体控制流",
+        "role": "Multi-turn event loop, turn budget cap (12 turns), JSON/tool parser, loop breakers, retry & subagent routing"
+      },
+      {
+        "id": "h_act",
+        "module": "action_aci.py",
+        "name_en": "Action Interface (ACI)",
+        "name_zh": "动作与工具接口 (ACI)",
+        "role": "Environment tool execution (bash, view_file, edit_file, finish), windowed file views, truncated shell outputs, pre-finish empty-diff guard"
+      },
+      {
+        "id": "h_ver",
+        "module": "verify.py",
+        "name_en": "Verification & Recovery",
+        "name_zh": "验证与恢复门禁",
+        "role": "Lifecycle stop/check hooks blocking exit unless git diff is non-empty, edited Python files compile cleanly, and post-edit test runs pass"
+      }
+    ],
+    "outer_loop_stages": [
+      {
+        "stage": 1,
+        "name_en": "Diagnose Failures (Failure Attribution)",
+        "name_zh": "故障归因与聚类诊断",
+        "mechanism": "Clusters verifier logs and contrasts passing vs. failing multi-turn trajectories to separate recoverable runtime/harness bugs from intrinsic model limits"
+      },
+      {
+        "stage": 2,
+        "name_en": "Propose Edits (Scoped Code/Hook Synthesis)",
+        "name_zh": "受限模块补丁与钩子合成",
+        "mechanism": "Synthesizes targeted single-module Python patches or pre-turn/post-tool/pre-stop lifecycle hooks tied to recurring failure clusters"
+      },
+      {
+        "stage": 3,
+        "name_en": "Validate & Filter (G_val + B_tok Gate)",
+        "name_zh": "执行覆盖与预算门禁验证",
+        "mechanism": "Enforces G_val(h, h0)=1 and E[C(tau)] <= B_tok (110k tokens): held-out validation split non-regression, runtime line-execution check of patched lines, and token ceiling"
+      },
+      {
+        "stage": 4,
+        "name_en": "Deploy or Route",
+        "name_zh": "集成合并与分支路由部署",
+        "mechanism": "Merges verified module updates into production harness or indexes specialized harnesses for bandit/router dispatch (e.g., MoSIB)"
+      }
+    ]
+  },
+  "swe_bench_lite_experiment": {
+    "seed_harness_lines": 142,
+    "total_issues": 60,
+    "splits": {
+      "in_domain_repo": "sympy/sympy",
+      "dev_n": 12,
+      "val_n": 8,
+      "held_out_id_n": 20,
+      "ood_repo": "django/django",
+      "held_out_ood_n": 20,
+      "held_out_total_n": 40
+    },
+    "runtime_token_cap_btok": 110000,
+    "search_rollouts_budget": 100,
+    "part_a_gemini_3_8_flash": [
+      {
+        "method": "Seed Harness (Pass@1)",
+        "turn_cap": 12,
+        "held_out_accuracy_pct": 5.0,
+        "held_out_solved": "2/40",
+        "avg_tokens_per_task_k": 116.8,
+        "unverified_ood_exits_pct": 15.0,
+        "verdict": "Baseline 142-line Python seed; premature empty/untested exits and uncompacted file reads"
+      },
+      {
+        "method": "Prompt-Only Reflection (RULES.md)",
+        "turn_cap": 12,
+        "held_out_accuracy_pct": 2.5,
+        "held_out_solved": "1/40",
+        "avg_tokens_per_task_k": null,
+        "unverified_ood_exits_pct": 30.0,
+        "verdict": "Degrades accuracy (-2.5 pp) and doubles unverified OOD exits (15% -> 30%); text rules without runtime Python hooks fail under pressure"
+      },
+      {
+        "method": "Unconstrained Full-Harness Rewrite",
+        "turn_cap": 28,
+        "held_out_accuracy_pct": 42.5,
+        "held_out_solved": "17/40 (7/20 ID, 10/20 OOD)",
+        "avg_tokens_per_task_k": 451.6,
+        "tokens_per_solved_task_k": 1062.6,
+        "max_single_rollout_tokens_k": 2800.0,
+        "unverified_ood_exits_pct": 0.0,
+        "verdict": "Buys +2.5 pp over modular via 28 uncompacted turns at 9.67x per-task token explosion (451.6k vs 46.7k)"
+      },
+      {
+        "method": "Modular Gated Evolution (Ours / Google Eq. 1)",
+        "turn_cap": 12,
+        "held_out_accuracy_pct": 40.0,
+        "held_out_solved": "16/40",
+        "avg_tokens_per_task_k": 46.7,
+        "tokens_per_solved_task_k": 116.8,
+        "unverified_ood_exits_pct": 0.0,
+        "verdict": "8x seed accuracy, 0% unverified exits, 2.5x fewer tokens than seed, 9.67x fewer tokens than unconstrained; pays back 100 search rollouts in <100 deployment tasks"
+      }
+    ],
+    "part_b_zero_shot_gemini_4_argon": [
+      {
+        "method": "Seed Harness (Zero-Shot Transfer)",
+        "turn_cap": 12,
+        "held_out_accuracy_pct": 10.0,
+        "held_out_solved": "4/40",
+        "avg_tokens_per_task_k": null,
+        "verdict": "Stronger instruction following avoids empty diffs, but burns all 12 turns reading uncompacted files"
+      },
+      {
+        "method": "Prompt-Only Reflection (Zero-Shot Transfer)",
+        "turn_cap": 12,
+        "held_out_accuracy_pct": 15.0,
+        "held_out_solved": "6/40",
+        "avg_tokens_per_task_k": null,
+        "verdict": "Modest gain on stronger instruction-follower, still lacks runtime compaction and verification gates"
+      },
+      {
+        "method": "Unconstrained Full-Harness Rewrite (Zero-Shot Transfer)",
+        "turn_cap": 28,
+        "held_out_accuracy_pct": 30.0,
+        "held_out_solved": "12/40",
+        "avg_tokens_per_task_k": 269.0,
+        "verdict": "Drops from 42.5% -> 30.0% (-12.5 pp): Argon's longer reasoning chains compound catastrophically with 28 turns of uncompacted context"
+      },
+      {
+        "method": "Modular Gated Evolution (Zero-Shot Transfer)",
+        "turn_cap": 12,
+        "held_out_accuracy_pct": 37.5,
+        "held_out_solved": "15/40",
+        "avg_tokens_per_task_k": 64.8,
+        "verdict": "#1 accuracy on both repos (37.5% vs 30.0% unconstrained) at <1/4 token cost, proving lean code hooks transfer across model generations"
+      }
+    ],
+    "modular_evolution_lineage": [
+      {
+        "step": 1,
+        "module": "context_mgr.py",
+        "decision": "ACCEPTED",
+        "patch_summary": "Compacts observations older than 2 turns into head-tail summaries + appends live turn-and-edit status footer",
+        "impact": "Cuts runtime tokens while lifting Dev and Val accuracy 5x"
+      },
+      {
+        "step": 2,
+        "module": "action_aci.py",
+        "decision": "ACCEPTED",
+        "patch_summary": "Adds windowed file views, truncated shell outputs, and an empty-diff guard on finish",
+        "impact": "Eliminates premature empty-diff exits and bounds per-turn observation size"
+      },
+      {
+        "step": 3,
+        "module": "control.py",
+        "decision": "REJECTED_BY_STAGE_3",
+        "patch_summary": "Raises turn limit from 12 to 18",
+        "impact": "Dev accuracy jumps, but Val accuracy drops and runtime tokens breach the 110k B_tok cap -> blocked by Stage 3 G_val gate"
+      },
+      {
+        "step": 4,
+        "module": "verify.py",
+        "decision": "ACCEPTED",
+        "patch_summary": "Pre-stop hook blocks exit unless git diff is non-empty, edited Python files compile cleanly, and post-edit test run succeeds",
+        "impact": "Reaches 40.0% held-out accuracy (8x seed) with 0.0% unverified exits at 46.7k tokens/task"
+      }
+    ]
+  }
+}
