@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg103" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="accent103" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg103)"/>
+  <rect x="24" y="20" width="1152" height="635" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent103)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">2026-11-21 NIGHT ROUND 103 · CUMULATIVE ROUND 703 · SKILL.MD A2A RUNTIME, LOAD TESTING &amp; BACKLOG ORCHESTRATION</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">Forge (SKILL.md A2A Runtime) + LMeterX (LLM/MCP Load Test) + Txcript (Chat Pandoc) + Sortie</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Egress-Allowlisted SKILL.md Containers · Stepped Concurrency LLM/A2A/MCP Benchmarks · Cross-Harness Session Portability · 5-Tracker × 6-Agent Dispatch</text>
+
+  <!-- Card 1: initializ/forge -->
+  <rect x="48" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="64" y="148" width="118" height="22" rx="6" fill="#B45309"/>
+  <text x="74" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 221 · Apache-2.0</text>
+  <text x="64" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="16" font-weight="800">initializ/forge</text>
+  <text x="64" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Hardened SKILL.md &amp; A2A Runtime</text>
+  <text x="64" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Compiles SKILL.md to portable agent</text>
+  <text x="64" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Outbound-only + egress allowlist</text>
+  <text x="64" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Structured NDJSON correlation logs</text>
+  <text x="64" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• K8s, air-gapped, CI &amp; A2A endpoint</text>
+  <rect x="64" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="74" y="355" fill="#FCD34D" font-family="monospace" font-size="11">forge init · Zero Public Listeners</text>
+
+  <!-- Card 2: MigoXLab/LMeterX -->
+  <rect x="328" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="344" y="148" width="118" height="22" rx="6" fill="#0284C7"/>
+  <text x="354" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 218 · Apache-2.0</text>
+  <text x="344" y="192" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="800">MigoXLab/LMeterX</text>
+  <text x="344" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">LLM, A2A &amp; MCP Load Testing</text>
+  <text x="344" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• vLLM, TRT-LLM, LiteLLM &amp; Cloud</text>
+  <text x="344" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• /v1/responses, A2A &amp; MCP calls</text>
+  <text x="344" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Fixed &amp; stepped concurrency load</text>
+  <text x="344" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• AI bottleneck analysis &amp; diffing</text>
+  <rect x="344" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="354" y="355" fill="#38BDF8" font-family="monospace" font-size="11">MinerU / dots.ocr · Dataset Hub</text>
+
+  <!-- Card 3: skillsynchq/txcript -->
+  <rect x="608" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="624" y="148" width="118" height="22" rx="6" fill="#6D28D9"/>
+  <text x="634" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 225 · Apache-2.0</text>
+  <text x="624" y="192" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="16" font-weight="800">skillsynchq/txcript</text>
+  <text x="624" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">"Pandoc for AI Chats" (Rust/WASM)</text>
+  <text x="624" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Move chats across coding agents</text>
+  <text x="624" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Claude Code ⟷ Codex ⟷ OpenCode</text>
+  <text x="624" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Preserves reasoning &amp; tool history</text>
+  <text x="624" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Rust crate, npm/WASM &amp; CLI</text>
+  <rect x="624" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="634" y="355" fill="#C4B5FD" font-family="monospace" font-size="11">Canonical Transcript Model</text>
+
+  <!-- Card 4: sortie-ai/sortie -->
+  <rect x="888" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="904" y="148" width="118" height="22" rx="6" fill="#047857"/>
+  <text x="914" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 224 · Apache-2.0</text>
+  <text x="904" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="16" font-weight="800">sortie-ai/sortie</text>
+  <text x="904" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Ticket-to-Agent Fleet Orchestrator</text>
+  <text x="904" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• GitHub/GitLab/Gitea/Linear/Jira</text>
+  <text x="904" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Claude/Copilot/Codex/Kiro/Gemini</text>
+  <text x="904" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Declarative WORKFLOW.md config</text>
+  <text x="904" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Isolated workspaces &amp; cost tracking</text>
+  <rect x="904" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="914" y="355" fill="#6EE7B7" font-family="monospace" font-size="11">max_concurrent_agents · Go</text>
+
+  <!-- Pipeline Flow Bar -->
+  <rect x="48" y="396" width="1104" height="78" rx="12" fill="#172554" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="68" y="422" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700">END-TO-END AUTONOMOUS BACKLOG DELIVERY, SKILL HARDENING &amp; CAPACITY VALIDATION PIPELINE</text>
+  <text x="68" y="446" fill="#F8FAFC" font-family="monospace" font-size="12.5" font-weight="600">[5 Issue Trackers] ➔ sortie (WORKFLOW.md) ➔ txcript (Cross-Agent Handoff) ➔ forge (Hardened A2A Container) ➔ LMeterX (Stepped Load)</text>
+  <text x="68" y="464" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">100% Apache-2.0 Open-Source Stack · Zero Harness Lock-In · Outbound-Only Egress Allowlists &amp; NDJSON Correlation Audit</text>
+
+  <!-- Closed-Form FinOps Box -->
+  <rect x="48" y="490" width="1104" height="145" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="68" y="518" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="800">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER PLATFORM &amp; DEVEX TEAM · PROVENANCE: SYNTHETIC)</text>
+  <text x="68" y="544" fill="#E2E8F0" font-family="monospace" font-size="12">• Path A (Commercial Ticket Agent Fleet + LLM Load SaaS + Manual Scripts): $4,010.00 SaaS + 43.5h ($4,350.00 labor) = $8,360.00/mo</text>
+  <text x="68" y="568" fill="#E2E8F0" font-family="monospace" font-size="12">• Path C (Self-Hosted forge + LMeterX + txcript + sortie): $70.00 compute + 2.4h ($240.00 ops) = $310.00/mo</text>
+  <text x="68" y="594" fill="#6EE7B7" font-family="monospace" font-size="13.5" font-weight="800">➔ Net Monthly Savings: -$8,050.00/mo (-96.29% TCO Reduction vs Path A) · CapEx: not_measured · Stars Today: not_measured</text>
+  <text x="68" y="618" fill="#64748B" font-family="monospace" font-size="11">Claim ID: CLAIM-20261121-R103-R703-FORGE-LMETERX-TXCRIPT-SORTIE · Independently Reproduced: false</text>
+</svg>

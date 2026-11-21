@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg108" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent108" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg108)"/>
+  <rect x="24" y="20" width="1152" height="635" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent108)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">2026-11-21 NIGHT ROUND 108 · CUMULATIVE ROUND 708 · FINTECH, OPEN BANKING, QUANT GUARDRAILS &amp; PAYMENT MCPS</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="21.5" font-weight="800">Qanat (Point-in-Time Filings) + BankMCP (2,700+ Banks PSD2) + Agentic Trading Desk + Razorpay MCP</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Bitemporal EDGAR Provenance · Zero-Storage Read-Only PSD2 Banking · Python stdlib + 15-Probe PreToolUse Order Guard · Official Go Payment MCP</text>
+
+  <!-- Card 1: fidetolabs/qanat -->
+  <rect x="48" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="64" y="148" width="104" height="22" rx="6" fill="#047857"/>
+  <text x="74" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 334 · MIT</text>
+  <text x="64" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="16" font-weight="800">fidetolabs/qanat</text>
+  <text x="64" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Point-in-Time Filings MCP</text>
+  <text x="64" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Period + EDGAR publication date</text>
+  <text x="64" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Eliminates look-ahead bias</text>
+  <text x="64" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Deterministic user-defined metrics</text>
+  <text x="64" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Cites exact regulatory filing source</text>
+  <rect x="64" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="74" y="355" fill="#6EE7B7" font-family="monospace" font-size="11">Bitemporal EDGAR · 57 Forks</text>
+
+  <!-- Card 2: noskillish/bankmcp -->
+  <rect x="328" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="344" y="148" width="104" height="22" rx="6" fill="#0284C7"/>
+  <text x="354" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 327 · MIT</text>
+  <text x="344" y="192" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="800">noskillish/bankmcp</text>
+  <text x="344" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">2,700+ Bank PSD2 Read-Only MCP</text>
+  <text x="344" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Enable Banking PSD2 OAuth + JWT</text>
+  <text x="344" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Strictly read-only (zero payments)</text>
+  <text x="344" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Stores zero balances/txns on disk</text>
+  <text x="344" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Invoice &amp; subscription checks</text>
+  <rect x="344" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="354" y="355" fill="#38BDF8" font-family="monospace" font-size="11">npx -y bankmcp · 59 Forks</text>
+
+  <!-- Card 3: Oft3r/agentic-trading-desk -->
+  <rect x="608" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="624" y="148" width="104" height="22" rx="6" fill="#B45309"/>
+  <text x="634" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 338 · MIT</text>
+  <text x="624" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">agentic-trading-desk</text>
+  <text x="624" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Deterministic Quant + Order Guard</text>
+  <text x="624" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Python stdlib EMA/RSI/MACD/TRIX</text>
+  <text x="624" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Trend · Momentum · Macro-Sentiment</text>
+  <text x="624" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• PreToolUse mandate-order-guard.sh</text>
+  <text x="624" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 15 startup probes + human sign-off</text>
+  <rect x="624" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="634" y="355" fill="#FCD34D" font-family="monospace" font-size="11">AI Fetches · Scripts Compute · 84 Forks</text>
+
+  <!-- Card 4: razorpay/razorpay-mcp-server -->
+  <rect x="888" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="904" y="148" width="104" height="22" rx="6" fill="#6D28D9"/>
+  <text x="914" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 233 · MIT</text>
+  <text x="904" y="192" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">razorpay-mcp-server</text>
+  <text x="904" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Official Razorpay Go Payment MCP</text>
+  <text x="904" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• capture_payment &amp; fetch_payment</text>
+  <text x="904" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• create_payment_link &amp; UPI links</text>
+  <text x="904" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Orders, refunds &amp; OTP workflows</text>
+  <text x="904" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Hosted Remote &amp; Self-Hosted Go</text>
+  <rect x="904" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="914" y="355" fill="#C4B5FD" font-family="monospace" font-size="11">Official Razorpay Go · 42 Forks</text>
+
+  <!-- Pipeline Flow Bar -->
+  <rect x="48" y="396" width="1104" height="78" rx="12" fill="#172554" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="68" y="422" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700">ZERO-HALLUCINATION FINTECH RESEARCH, TREASURY RECONCILIATION &amp; GUARDED EXECUTION ARCHITECTURE</text>
+  <text x="68" y="446" fill="#F8FAFC" font-family="monospace" font-size="12.5" font-weight="600">[qanat Bitemporal EDGAR] + [trading-desk stdlib + PreToolUse Guard] ➔ [bankmcp PSD2 Read-Only] ➔ [razorpay-mcp Go Payments]</text>
+  <text x="68" y="464" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">AI Fetches Data · Deterministic Scripts Compute · Outside-the-Model Hooks &amp; Humans Approve Every Financial Action (100% MIT)</text>
+
+  <!-- Closed-Form FinOps Box -->
+  <rect x="48" y="490" width="1104" height="145" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="68" y="518" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="800">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER FINTECH, QUANT &amp; TREASURY TEAM · PROVENANCE: SYNTHETIC)</text>
+  <text x="68" y="544" fill="#E2E8F0" font-family="monospace" font-size="12">• Path A (Commercial Point-in-Time Data + Treasury SaaS + Manual Audit): $4,040.00 SaaS + 43.5h ($4,350.00 labor) = $8,390.00/mo</text>
+  <text x="68" y="568" fill="#E2E8F0" font-family="monospace" font-size="12">• Path C (Self-Hosted qanat + bankmcp + agentic-trading-desk + razorpay-mcp): $70.00 compute + 2.4h ($240.00 ops) = $310.00/mo</text>
+  <text x="68" y="594" fill="#6EE7B7" font-family="monospace" font-size="13.5" font-weight="800">➔ Net Monthly Savings: -$8,080.00/mo (-96.31% TCO Reduction vs Path A) · CapEx: not_measured · Stars Today: not_measured</text>
+  <text x="68" y="618" fill="#64748B" font-family="monospace" font-size="11">Claim ID: CLAIM-20261121-R108-R708-QANAT-BANKMCP-TRADINGDESK-RAZORPAYMCP · Independently Reproduced: false</text>
+</svg>

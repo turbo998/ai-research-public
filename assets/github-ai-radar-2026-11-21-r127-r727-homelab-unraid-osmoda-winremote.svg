@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg127" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent127" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg127)"/>
+  <rect x="24" y="20" width="1152" height="635" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent127)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">2026-11-21 NIGHT ROUND 127 · CUMULATIVE ROUND 727 · AI LAB GPU/VRAM TELEMETRY, UNRAID INCUS, NIXOS ROLLBACK &amp; WIN MCP</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="21.5" font-weight="800">HomeLab Monitor (Read-Only MCP) + Unraid (Py/Rust + Incus) + osModa + WinRemote-MCP</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Agentless SSH GPU/VRAM/Energy MCP · Unraid GraphQL &amp; LAN-Firewalled Incus · NixOS 92-Tool Atomic Rollback · 40+ Tool Windows Remote MCP</text>
+
+  <!-- Card 1: SikamikanikoBG/homelab-monitor -->
+  <rect x="48" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="64" y="148" width="104" height="22" rx="6" fill="#0284C7"/>
+  <text x="74" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 238 · MIT</text>
+  <text x="64" y="192" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="800">homelab-monitor</text>
+  <text x="64" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">GPU/VRAM &amp; Energy Read-Only MCP</text>
+  <text x="64" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• One container, agentless SSH fleet</text>
+  <text x="64" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Tracks GPU &amp; model VRAM ownership</text>
+  <text x="64" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Docker, systemd &amp; electricity cost</text>
+  <text x="64" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Read-only MCP · 37 Forks</text>
+  <rect x="64" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="74" y="355" fill="#38BDF8" font-family="monospace" font-size="11">45s Local AI Fleet Triage</text>
+
+  <!-- Card 2: dinglebear-ai/unraid -->
+  <rect x="328" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="344" y="148" width="104" height="22" rx="6" fill="#B45309"/>
+  <text x="354" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 154 · MIT</text>
+  <text x="344" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="16" font-weight="800">dinglebear-ai/unraid</text>
+  <text x="344" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Py/Rust GraphQL MCP + Incus</text>
+  <text x="344" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• unraid-py (PyPI) + runraid (Rust)</text>
+  <text x="344" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Array parity, VMs, Docker, rclone</text>
+  <text x="344" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• LAN-firewalled Incus dev containers</text>
+  <text x="344" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 3 Unraid OS .plg plugins · 39 Forks</text>
+  <rect x="344" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="354" y="355" fill="#FCD34D" font-family="monospace" font-size="11">Python + Rust Static Binary</text>
+
+  <!-- Card 3: bolivian-peru/os-moda -->
+  <rect x="608" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="624" y="148" width="124" height="22" rx="6" fill="#6D28D9"/>
+  <text x="634" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 122 · Apache-2.0</text>
+  <text x="624" y="192" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="16" font-weight="800">bolivian-peru/os-moda</text>
+  <text x="624" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">NixOS Atomic-Rollback Agent OS</text>
+  <text x="624" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 10 Rust daemons &amp; 92 typed tools</text>
+  <text x="624" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• One-command NixOS atomic rollback</text>
+  <text x="624" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Append-only hash-chained ledger</text>
+  <text x="624" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Claude Code &amp; OpenClaw drivers</text>
+  <rect x="624" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="634" y="355" fill="#C4B5FD" font-family="monospace" font-size="11">v1.3.0 · 247 Tests (Sandbox)</text>
+
+  <!-- Card 4: dddabtc/winremote-mcp -->
+  <rect x="888" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="904" y="148" width="104" height="22" rx="6" fill="#047857"/>
+  <text x="914" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 225 · MIT</text>
+  <text x="904" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="16" font-weight="800">dddabtc/winremote-mcp</text>
+  <text x="904" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">40+ Tool Windows Remote MCP</text>
+  <text x="904" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Desktop, process &amp; file automation</text>
+  <text x="904" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Bearer-authed streamable-http/stdio</text>
+  <text x="904" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Official OpenClaw &amp; Hermes skills</text>
+  <text x="904" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Claude &amp; Cursor ready · 46 Forks</text>
+  <rect x="904" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="914" y="355" fill="#6EE7B7" font-family="monospace" font-size="11">pip install winremote-mcp</text>
+
+  <!-- Pipeline Flow Bar -->
+  <rect x="48" y="396" width="1104" height="78" rx="12" fill="#172554" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="68" y="422" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700">END-TO-END READ-ONLY GPU OBSERVABILITY, LAN-ISOLATED SANDBOXES &amp; CROSS-OS ATOMIC EXECUTION PIPELINE</text>
+  <text x="68" y="446" fill="#F8FAFC" font-family="monospace" font-size="12.5" font-weight="600">[homelab-monitor Read-Only GPU MCP] ➔ [unraid GraphQL + Incus Sandbox] ➔ [os-moda NixOS Atomic Rollback] + [winremote-mcp]</text>
+  <text x="68" y="464" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Agentless SSH VRAM Tracking · Firewalled Dev Containers · Hash-Chained Audit Ledger · Bearer-Protected Windows Control (MIT / Apache-2.0)</text>
+
+  <!-- Closed-Form FinOps Box -->
+  <rect x="48" y="490" width="1104" height="145" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="68" y="518" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="800">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER AI LAB &amp; HYBRID INFRASTRUCTURE TEAM · PROVENANCE: SYNTHETIC)</text>
+  <text x="68" y="544" fill="#E2E8F0" font-family="monospace" font-size="12">• Path A (Commercial GPU APM Cloud + Windows RPA Seats + Manual SSH Fleet Triage): $3,940.00 SaaS + 43.5h ($4,350.00 labor) = $8,290.00/mo</text>
+  <text x="68" y="568" fill="#E2E8F0" font-family="monospace" font-size="12">• Path C (Self-Hosted homelab-monitor + unraid + os-moda + winremote-mcp Stack): $65.00 compute + 2.4h ($240.00 ops) = $305.00/mo</text>
+  <text x="68" y="594" fill="#6EE7B7" font-family="monospace" font-size="13.5" font-weight="800">➔ Net Monthly Savings: -$7,985.00/mo (-96.32% TCO Reduction vs Path A) · CapEx: not_measured · Stars Today: not_measured</text>
+  <text x="68" y="618" fill="#64748B" font-family="monospace" font-size="11">Claim ID: CLAIM-20261121-R127-R727-HOMELAB-UNRAID-OSMODA-WINREMOTE · Independently Reproduced: false</text>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg132" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent132" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg132)"/>
+  <rect x="24" y="20" width="1152" height="635" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent132)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" fill="#FCD34D" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">2026-11-21 NIGHT ROUND 132 · CUMULATIVE ROUND 732 · POWER GRID, GEOMECHANICS, ABAQUS FEA &amp; GEOSPATIAL DIGITAL TWIN MCP</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="21.5" font-weight="800">PowerMCP (8 Grid Solvers) + itasca-mcp (FLAC/PFC) + Abaqus-Control-MCP + OSM-MCP</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Harvard SEAS PSS/E &amp; OpenDSS Suite · ITASCA FISH Doc + Unbalanced Force MCP · Abaqus ODB &amp; Viewport Bridge · 12-Tool OpenStreetMap GIS</text>
+
+  <!-- Card 1: Power-Agent/PowerMCP -->
+  <rect x="48" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="64" y="148" width="104" height="22" rx="6" fill="#B45309"/>
+  <text x="74" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 239 · MIT</text>
+  <text x="64" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="16" font-weight="800">Power-Agent/PowerMCP</text>
+  <text x="64" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">8-Engine Power System MCP Suite</text>
+  <text x="64" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Harvard SEAS PAI official project</text>
+  <text x="64" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• PSS/E, PowerWorld, PowerFactory</text>
+  <text x="64" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• PSLF, PSCAD, OpenDSS, PyPSA</text>
+  <text x="64" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• pandapower · 67 Forks</text>
+  <rect x="64" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="74" y="355" fill="#FCD34D" font-family="monospace" font-size="11">pip install powermcp · 67 Forks</text>
+
+  <!-- Card 2: yusong652/itasca-mcp -->
+  <rect x="328" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="344" y="148" width="104" height="22" rx="6" fill="#0284C7"/>
+  <text x="354" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 234 · MIT</text>
+  <text x="344" y="192" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="800">yusong652/itasca-mcp</text>
+  <text x="344" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">5-Engine Geomechanics &amp; FISH MCP</text>
+  <text x="344" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• PFC, FLAC3D, 3DEC, MPoint, MassFlow</text>
+  <text x="344" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 2 doc tools (FISH intrinsics &amp; API)</text>
+  <text x="344" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 5 live REPL &amp; solve monitor tools</text>
+  <text x="344" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Live unbalanced force checks</text>
+  <rect x="344" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="354" y="355" fill="#38BDF8" font-family="monospace" font-size="11">PyPI itasca-mcp · 22 Forks</text>
+
+  <!-- Card 3: Whfkl/Abaqus-Control-MCP -->
+  <rect x="608" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="624" y="148" width="104" height="22" rx="6" fill="#6D28D9"/>
+  <text x="634" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 222 · MIT</text>
+  <text x="624" y="192" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">Abaqus-Control-MCP</text>
+  <text x="624" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Live Abaqus/CAE &amp; ODB Bridge</text>
+  <text x="624" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• executionId-tracked run_python</text>
+  <text x="624" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• .log/.sta/.dat/.msg job diagnostics</text>
+  <text x="624" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• inspect_odb bounded history curves</text>
+  <text x="624" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• capture_viewport native MCP image</text>
+  <rect x="624" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="634" y="355" fill="#C4B5FD" font-family="monospace" font-size="11">v2.0.0 · 127.0.0.1:48152</text>
+
+  <!-- Card 4: jagan-shanmugam/open-streetmap-mcp -->
+  <rect x="888" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="904" y="148" width="104" height="22" rx="6" fill="#047857"/>
+  <text x="914" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 237 · MIT</text>
+  <text x="904" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">open-streetmap-mcp</text>
+  <text x="904" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">12-Tool Geospatial &amp; EV Siting MCP</text>
+  <text x="904" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Geocoding, routing &amp; area explorer</text>
+  <text x="904" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• EV charging station power filter</text>
+  <text x="904" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Neighborhood &amp; parking analysis</text>
+  <text x="904" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Map tile resources · 54 Forks</text>
+  <rect x="904" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="914" y="355" fill="#6EE7B7" font-family="monospace" font-size="11">uvx osm-mcp-server · 12 Tools</text>
+
+  <!-- Pipeline Flow Bar -->
+  <rect x="48" y="396" width="1104" height="78" rx="12" fill="#172554" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="68" y="422" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700">END-TO-END GEOSPATIAL SITING, GEOMECHANICS, ABAQUS FEA &amp; POWER GRID MULTI-PHYSICS PIPELINE</text>
+  <text x="68" y="446" fill="#F8FAFC" font-family="monospace" font-size="12.5" font-weight="600">[osm-mcp EV/Site GIS] ➔ [itasca-mcp FLAC3D/3DEC] ➔ [Abaqus-Control-MCP ODB + Viewport] ➔ [PowerMCP 8 Grid Solvers]</text>
+  <text x="68" y="464" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">FISH Doc Grounding · .log/.sta/.dat/.msg Convergence Diagnostics · Bounded ODB Curves · 8 Grid Simulators (100% MIT)</text>
+
+  <!-- Closed-Form FinOps Box -->
+  <rect x="48" y="490" width="1104" height="145" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="68" y="518" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="800">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER POWER GRID, GEOTECH &amp; CAE DIGITAL TWIN TEAM · PROVENANCE: SYNTHETIC)</text>
+  <text x="68" y="544" fill="#E2E8F0" font-family="monospace" font-size="12">• Path A (Commercial CAE/Grid AI Add-Ons + Commercial GIS APIs + Manual Scripting): $4,040.00 SaaS + 44.0h ($4,400.00 labor) = $8,440.00/mo</text>
+  <text x="68" y="568" fill="#E2E8F0" font-family="monospace" font-size="12">• Path C (Self-Hosted PowerMCP + itasca-mcp + Abaqus-Control-MCP + open-streetmap-mcp): $70.00 compute + 2.4h ($240.00 ops) = $310.00/mo</text>
+  <text x="68" y="594" fill="#6EE7B7" font-family="monospace" font-size="13.5" font-weight="800">➔ Net Monthly Savings: -$8,130.00/mo (-96.33% TCO Reduction vs Path A) · CapEx: not_measured · Stars Today: not_measured</text>
+  <text x="68" y="618" fill="#64748B" font-family="monospace" font-size="11">Claim ID: CLAIM-20261121-R132-R732-POWERMCP-ITASCA-ABAQUS-OSM · Independently Reproduced: false</text>
+</svg>
