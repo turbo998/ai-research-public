@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bgR602" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="accentR602" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR602)" rx="16"/>
+  <rect x="24" y="20" width="1152" height="92" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="5" rx="2" fill="url(#accentR602)"/>
+  <text x="44" y="56" fill="#f8fafc" font-size="20.5" font-weight="800">2026-11-21 Day R2 (R602): Zero-Key Agent API Proxy, Trust Receipts, Offline MCP Evidence &amp; Safe B2 Storage MCP</text>
+  <text x="44" y="82" fill="#94a3b8" font-size="13.5" font-weight="500">ChronoAIProject/NyxID (★41) + ali-ulu/huqan (★31) + Rul1an/assay (★16) + backblaze-labs/b2-mcp (★48)</text>
+  <text x="44" y="101" fill="#38bdf8" font-size="12.5" font-weight="600">Zero-Raw-Key Proxy &amp; NAT Tunnel · Host-Level Agent Brake &amp; Trust Receipts · eBPF/Landlock MCP Evidence Bundles · 40-Tool B2 Storage</text>
+
+  <rect x="24" y="130" width="272" height="390" rx="12" fill="#111827" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="42" y="162" fill="#38bdf8" font-size="16" font-weight="800">1. ChronoAIProject/NyxID</text>
+  <text x="42" y="184" fill="#94a3b8" font-size="12">★ 41 · 16 forks · Rust · Apache-2.0</text>
+  <text x="42" y="214" fill="#f8fafc" font-size="13" font-weight="700">Zero-Key Connectivity Gateway</text>
+  <text x="42" y="240" fill="#cbd5e1" font-size="12">• Edge credential injection (0 raw keys)</text>
+  <text x="42" y="264" fill="#cbd5e1" font-size="12">• NAT-traversal Credential Node tunnel</text>
+  <text x="42" y="288" fill="#cbd5e1" font-size="12">• Wraps REST APIs as isolated MCP tools</text>
+  <text x="42" y="312" fill="#cbd5e1" font-size="12">• Per-agent isolation across Claude/n8n</text>
+  <text x="42" y="336" fill="#cbd5e1" font-size="12">• OIDC &amp; API Key auth + Usage Viewer</text>
+  <text x="42" y="360" fill="#cbd5e1" font-size="12">• NyxBot cost &amp; billing analytics</text>
+  <text x="42" y="384" fill="#cbd5e1" font-size="12">• Reaches public, internal &amp; localhost</text>
+  <text x="42" y="408" fill="#38bdf8" font-size="12" font-weight="600">Rust High-Throughput Proxy Core</text>
+
+  <rect x="316" y="130" width="272" height="390" rx="12" fill="#111827" stroke="#34d399" stroke-width="1.5"/>
+  <text x="334" y="162" fill="#34d399" font-size="16" font-weight="800">2. ali-ulu/huqan</text>
+  <text x="334" y="184" fill="#94a3b8" font-size="12">★ 31 · 2 forks · JavaScript · Apache-2.0</text>
+  <text x="334" y="214" fill="#f8fafc" font-size="13" font-weight="700">Local Agent Brake &amp; Trust Receipts</text>
+  <text x="334" y="240" fill="#cbd5e1" font-size="12">• huqan-gate evaluate --profile claude-code</text>
+  <text x="334" y="264" fill="#cbd5e1" font-size="12">• Safe reads pass with zero prompt</text>
+  <text x="334" y="288" fill="#cbd5e1" font-size="12">• Holds mutating calls for human approval</text>
+  <text x="334" y="312" fill="#cbd5e1" font-size="12">• Blocks force-push / terraform apply</text>
+  <text x="334" y="336" fill="#cbd5e1" font-size="12">• huqan.emergency_stop workspace brake</text>
+  <text x="334" y="360" fill="#cbd5e1" font-size="12">• Verifiable local Trust Receipts</text>
+  <text x="334" y="384" fill="#cbd5e1" font-size="12">• ADR-021 fail-closed inside containers</text>
+  <text x="334" y="408" fill="#34d399" font-size="12" font-weight="600">Zero Model · Zero Cloud · Zero API Key</text>
+
+  <rect x="608" y="130" width="272" height="390" rx="12" fill="#111827" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="626" y="162" fill="#a78bfa" font-size="16" font-weight="800">3. Rul1an/assay</text>
+  <text x="626" y="184" fill="#94a3b8" font-size="12">★ 16 · 3 forks · Rust · MIT</text>
+  <text x="626" y="214" fill="#f8fafc" font-size="13" font-weight="700">Offline MCP Evidence Bundles</text>
+  <text x="626" y="240" fill="#cbd5e1" font-size="12">• Fail-closed MCP tools/call proxy gate</text>
+  <text x="626" y="264" fill="#cbd5e1" font-size="12">• assay mcp wrap --decision-log</text>
+  <text x="626" y="288" fill="#cbd5e1" font-size="12">• Tamper-evident incident packages</text>
+  <text x="626" y="312" fill="#cbd5e1" font-size="12">• Offline verify-incident-package CI</text>
+  <text x="626" y="336" fill="#cbd5e1" font-size="12">• Linux cgroup eBPF + Landlock TCP gates</text>
+  <text x="626" y="360" fill="#cbd5e1" font-size="12">• Mapped to OWASP MCP Top 10</text>
+  <text x="626" y="384" fill="#cbd5e1" font-size="12">• Stops tool poisoning &amp; rug pulls</text>
+  <text x="626" y="408" fill="#a78bfa" font-size="12" font-weight="600">CI-Native · No Hosted Backend Required</text>
+
+  <rect x="900" y="130" width="276" height="390" rx="12" fill="#111827" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="918" y="162" fill="#fbbf24" font-size="16" font-weight="800">4. backblaze-labs/b2-mcp</text>
+  <text x="918" y="184" fill="#94a3b8" font-size="12">★ 48 · 8 forks · TypeScript 6 · MIT</text>
+  <text x="918" y="214" fill="#f8fafc" font-size="13" font-weight="700">Official 40-Tool B2 Storage MCP</text>
+  <text x="918" y="240" fill="#cbd5e1" font-size="12">• 17 native B2 SDK tools (Object Lock)</text>
+  <text x="918" y="264" fill="#cbd5e1" font-size="12">• 19 S3-compatible data-plane tools</text>
+  <text x="918" y="288" fill="#cbd5e1" font-size="12">• 4 storage &amp; bandwidth analytics tools</text>
+  <text x="918" y="312" fill="#cbd5e1" font-size="12">• Strict package-budget (9 runtime deps)</text>
+  <text x="918" y="336" fill="#cbd5e1" font-size="12">• 97.4% line coverage + CodeQL + Snyk</text>
+  <text x="918" y="360" fill="#cbd5e1" font-size="12">• Scoped application key governance</text>
+  <text x="918" y="384" fill="#cbd5e1" font-size="12">• Ideal destination for Assay bundles</text>
+  <text x="918" y="408" fill="#fbbf24" font-size="12" font-weight="600">Official Backblaze-Labs Release</text>
+
+  <rect x="24" y="540" width="1152" height="116" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="44" y="572" fill="#f8fafc" font-size="15.5" font-weight="800">Closed-Form Enterprise FinOps TCO Benchmark (45-Engineer Team @ $100/h · synthetic, independently_reproduced=false)</text>
+  <text x="44" y="600" fill="#cbd5e1" font-size="13">• Path A (Commercial Secret Broker + Cloud Agent Audit SaaS + Managed Storage Ops): $3,120.00 SaaS + 40.0h ($4,000.00) = $7,120.00/mo</text>
+  <text x="44" y="624" fill="#34d399" font-size="13.5" font-weight="700">• Path C (Hybrid Cloud Control + NyxID + HUQAN + Assay + b2-mcp): $70.00 Compute + 2.4h ($240.00) = $310.00/mo ➔ Saves $6,810.00/mo (-95.65%)</text>
+  <text x="44" y="646" fill="#94a3b8" font-size="11">Audit Constants: Path A $3,120.00 + 40h ($4,000.00) = $7,120.00/mo ➔ Path C $70.00 + 2.4h ($240.00) = $310.00/mo (-$6,810.00/mo · -95.65% · base_hardware_capex = not_measured)</text>
+</svg>
