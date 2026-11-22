@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="accentAmber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="accentPurple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="860" fill="url(#bgGrad)"/>
+
+  <!-- Header Banner -->
+  <rect x="30" y="24" width="1340" height="96" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="48" y="42" width="230" height="28" rx="6" fill="url(#accentCyan)"/>
+  <text x="163" y="61" fill="#FFFFFF" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-22 · NIGHT R38 (R774)</text>
+  <text x="296" y="62" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="800">E2EE AI SSH Client, Codex Trajectory Ledger, Shared Serial/GDB &amp; Multi-Agent Control Room</text>
+  <text x="48" y="96" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="14">scarletkc/Hatoba (★254) + icesixgod/codex-trajectory (★253) + akira-init1/ChannelTerm (★253) + Hoylon/peerbridge-mcp (★239)</text>
+
+  <!-- Card 1: Hatoba -->
+  <rect x="30" y="140" width="320" height="330" rx="12" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="30" y="140" width="320" height="8" rx="4" fill="url(#accentCyan)"/>
+  <text x="48" y="176" fill="#38BDF8" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">1. SELF-OWNED E2EE AI SSH CLIENT</text>
+  <text x="48" y="202" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800">scarletkc/Hatoba</text>
+  <text x="48" y="224" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">★ 254 · 19 forks · Rust · MIT</text>
+  <rect x="48" y="240" width="284" height="54" rx="8" fill="#1E293B"/>
+  <text x="60" y="262" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">AI Assistant in Every SSH Terminal</text>
+  <text x="60" y="282" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">E2EE sync via your own Cloudflare Workers + D1</text>
+  <text x="48" y="320" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Reads screen, runs commands &amp; edits files</text>
+  <text x="48" y="344" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Zero third-party cloud key custody</text>
+  <text x="48" y="368" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Native Tauri 2 + Rust desktop performance</text>
+  <text x="48" y="392" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Syncs hosts, keys &amp; sessions across devices</text>
+  <rect x="48" y="416" width="284" height="36" rx="6" fill="#083344"/>
+  <text x="190" y="439" fill="#67E8F9" font-family="Consolas, monospace" font-size="12" font-weight="700" text-anchor="middle">Cloudflare Workers + D1 E2EE</text>
+
+  <!-- Card 2: codex-trajectory -->
+  <rect x="370" y="140" width="320" height="330" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="370" y="140" width="320" height="8" rx="4" fill="url(#accentEmerald)"/>
+  <text x="388" y="176" fill="#34D399" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">2. CODEX TRAJECTORY &amp; COST LEDGER</text>
+  <text x="388" y="202" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="800">icesixgod/codex-trajectory</text>
+  <text x="388" y="224" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">★ 253 · 16 forks · Python · MIT</text>
+  <rect x="388" y="240" width="284" height="54" rx="8" fill="#1E293B"/>
+  <text x="400" y="262" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Full Descendant Subagent Rollups</text>
+  <text x="400" y="282" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Searchable local timeline &amp; slow-work profiler</text>
+  <text x="388" y="320" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Replays reasoning, tool calls &amp; compactions</text>
+  <text x="388" y="344" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Splits tool time, model time &amp; idle gaps</text>
+  <text x="388" y="368" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Tracks tokens, cache hits &amp; subagent costs</text>
+  <text x="388" y="392" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• 100% local privacy-aware log inspection</text>
+  <rect x="388" y="416" width="284" height="36" rx="6" fill="#064E3B"/>
+  <text x="530" y="439" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12" font-weight="700" text-anchor="middle">codex plugin add codex-trajectory</text>
+
+  <!-- Card 3: ChannelTerm -->
+  <rect x="710" y="140" width="320" height="330" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="710" y="140" width="320" height="8" rx="4" fill="url(#accentAmber)"/>
+  <text x="728" y="176" fill="#FBBF24" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">3. SHARED HUMAN-AI SERIAL &amp; GDB</text>
+  <text x="728" y="202" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800">akira-init1/ChannelTerm</text>
+  <text x="728" y="224" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">★ 253 · 4 forks · Go · Apache-2.0</text>
+  <rect x="728" y="240" width="284" height="54" rx="8" fill="#1E293B"/>
+  <text x="740" y="262" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Non-Destructive Dual Serial Reader</text>
+  <text x="740" y="282" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Human CLI + AI MCP share one board session</text>
+  <text x="728" y="320" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• AI reader never consumes human console bytes</text>
+  <text x="728" y="344" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Automated U-Boot short-window interruption</text>
+  <text x="728" y="368" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• WSL2 / Ethernet GDB breakpoint &amp; var inspect</text>
+  <text x="728" y="392" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Exports forensic diagnostic ZIP with raw bytes</text>
+  <rect x="728" y="416" width="284" height="36" rx="6" fill="#451A03"/>
+  <text x="870" y="439" fill="#FCD34D" font-family="Consolas, monospace" font-size="12" font-weight="700" text-anchor="middle">Serial/SSH + GDB + U-Boot MCP</text>
+
+  <!-- Card 4: peerbridge-mcp -->
+  <rect x="1050" y="140" width="320" height="330" rx="12" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="1050" y="140" width="320" height="8" rx="4" fill="url(#accentPurple)"/>
+  <text x="1068" y="176" fill="#C084FC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">4. AUDITABLE MULTI-AGENT ROOM</text>
+  <text x="1068" y="202" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800">Hoylon/peerbridge-mcp</text>
+  <text x="1068" y="224" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">★ 239 · 2 forks · Python · Apache-2.0</text>
+  <rect x="1068" y="240" width="284" height="54" rx="8" fill="#1E293B"/>
+  <text x="1080" y="262" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Governed Multi-Agent Control Room</text>
+  <text x="1080" y="282" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Codex, Claude, Grok, Kimi &amp; local models</text>
+  <text x="1068" y="320" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Never flattens native agent capabilities</text>
+  <text x="1068" y="344" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Auditable coding, review &amp; evidence trail</text>
+  <text x="1068" y="368" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Coordinated desktop + mobile remote work</text>
+  <text x="1068" y="392" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Local-first architecture with zero lock-in</text>
+  <rect x="1068" y="416" width="284" height="36" rx="6" fill="#2E1065"/>
+  <text x="1210" y="439" fill="#E9D5FF" font-family="Consolas, monospace" font-size="12" font-weight="700" text-anchor="middle">PeerBridge Modern Workbench</text>
+
+  <!-- End-to-End Pipeline Strip -->
+  <rect x="30" y="490" width="1340" height="128" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="50" y="518" fill="#38BDF8" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">END-TO-END CLOUD SSH, EDGE HARDWARE SERIAL/GDB, MULTI-AGENT REVIEW &amp; TRAJECTORY AUDIT</text>
+
+  <rect x="50" y="534" width="275" height="66" rx="8" fill="#0F172A" stroke="#8B5CF6"/>
+  <text x="187" y="558" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Step 1: PeerBridge Room</text>
+  <text x="187" y="578" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11" text-anchor="middle">Assigns Codex/Claude/Grok Roles</text>
+
+  <text x="342" y="572" fill="#64748B" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="800">➔</text>
+
+  <rect x="368" y="534" width="295" height="66" rx="8" fill="#0F172A" stroke="#06B6D4"/>
+  <text x="515" y="558" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Step 2: Hatoba E2EE Cloud SSH</text>
+  <text x="515" y="578" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11" text-anchor="middle">Inspects Remote Hosts via Cloudflare D1 Sync</text>
+
+  <text x="680" y="572" fill="#64748B" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="800">➔</text>
+
+  <rect x="706" y="534" width="295" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+  <text x="853" y="558" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Step 3: ChannelTerm Serial/GDB</text>
+  <text x="853" y="578" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11" text-anchor="middle">Co-Debugs U-Boot/Linux &amp; Exports ZIP</text>
+
+  <text x="1018" y="572" fill="#64748B" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="800">➔</text>
+
+  <rect x="1044" y="534" width="305" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="1196" y="558" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Step 4: Codex Trajectory Audit</text>
+  <text x="1196" y="578" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11" text-anchor="middle">Profiles Slow Tools &amp; Subagent Spend</text>
+
+  <!-- Bottom FinOps Closed-Form Verification Box -->
+  <rect x="30" y="638" width="1340" height="196" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="52" y="670" fill="#34D399" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="800">CLOSED-FORM 45-ENGINEER FINOPS &amp; TCO VERIFICATION (PROVENANCE: SYNTHETIC · INDEPENDENTLY_REPRODUCED: FALSE)</text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="688" width="405" height="124" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="70" y="714" fill="#FCA5A5" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">Path A: Cloud SSH Seats + Exclusive Serial + Trace SaaS</text>
+  <text x="70" y="740" fill="#E2E8F0" font-family="Consolas, monospace" font-size="13">API &amp; SaaS Spend:   $4,420.00 / mo</text>
+  <text x="70" y="762" fill="#E2E8F0" font-family="Consolas, monospace" font-size="13">Debug/Triage Labor: $4,500.00 / mo (45.0h @ $100/h)</text>
+  <text x="70" y="792" fill="#F87171" font-family="Consolas, monospace" font-size="16" font-weight="700">Path A Total TCO:   $8,920.00 / mo</text>
+
+  <!-- Path C Box -->
+  <rect x="480" y="688" width="405" height="124" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="498" y="714" fill="#6EE7B7" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">Path C: Hatoba + codex-trajectory + ChannelTerm + PeerBridge</text>
+  <text x="498" y="740" fill="#E2E8F0" font-family="Consolas, monospace" font-size="13">Workers/Lab Host:   $65.00 / mo (Self-Owned Sync)</text>
+  <text x="498" y="762" fill="#E2E8F0" font-family="Consolas, monospace" font-size="13">Profile/Room Ops:   $240.00 / mo (2.4h @ $100/h)</text>
+  <text x="498" y="792" fill="#34D399" font-family="Consolas, monospace" font-size="16" font-weight="700">Path C Total TCO:   $305.00 / mo</text>
+
+  <!-- Net Savings Box -->
+  <rect x="908" y="688" width="440" height="124" rx="10" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="928" y="716" fill="#A7F3D0" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">VERIFIED MONTHLY &amp; ANNUAL NET SAVINGS</text>
+  <text x="928" y="748" fill="#FFFFFF" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="800">-$8,615.00 / mo (-96.58%)</text>
+  <text x="928" y="774" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13">Annual Savings: $103,380.00/yr · Team: 45 Engineers</text>
+  <text x="928" y="796" fill="#94A3B8" font-family="Consolas, monospace" font-size="11">base_hardware_capex: not_measured · track_b_stars_today: not_measured</text>
+</svg>

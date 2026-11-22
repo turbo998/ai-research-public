@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg747" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent747" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg747)"/>
+  <rect x="24" y="20" width="1152" height="635" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent747)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">2026-11-22 NIGHT ROUND 11 · CUMULATIVE ROUND 747 · GRC-AS-CODE OSCAL, OWASP ASI06 GUARD, RFC 8693 AGENT IAM &amp; NETBOX MCP</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20.5" font-weight="800">claude-grc-engineering + OWASP Memory Guard + ZeroID + netbox-mcp</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">SCF Crosswalks &amp; NIST OSCAL · Official OWASP ASI06 Memory Poisoning Defense · WIMSE/SPIFFE &amp; RFC 8693 Agent IAM · Read-Only NetBox MCP</text>
+
+  <!-- Card 1: GRCEngClub/claude-grc-engineering -->
+  <rect x="48" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="64" y="148" width="120" height="22" rx="6" fill="#0284C7"/>
+  <text x="74" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 441 · 106 Forks</text>
+  <text x="64" y="192" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">claude-grc-engineering</text>
+  <text x="64" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">GRC-as-Code &amp; OSCAL Toolkit</text>
+  <text x="64" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• SCF multi-framework crosswalks</text>
+  <text x="64" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• NIST OSCAL evidence packages</text>
+  <text x="64" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• IaC scan, gap &amp; remediation PRs</text>
+  <text x="64" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Claude Code/Desktop/Cowork</text>
+  <rect x="64" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="74" y="355" fill="#38BDF8" font-family="monospace" font-size="11">grc-engineer · SCF + OSCAL</text>
+
+  <!-- Card 2: OWASP/www-project-agent-memory-guard -->
+  <rect x="328" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <rect x="344" y="148" width="128" height="22" rx="6" fill="#B91C1C"/>
+  <text x="354" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 210 · Apache-2.0</text>
+  <text x="344" y="192" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="15" font-weight="800">OWASP Agent Memory Guard</text>
+  <text x="344" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Official OWASP ASI06 Defense</text>
+  <text x="344" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Stops cross-reset memory poisoning</text>
+  <text x="344" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Drop-in for LangChain, CrewAI, mem0</text>
+  <text x="344" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• OpenAI Agents &amp; AutoGen support</text>
+  <text x="344" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Runtime + MCP + Semgrep · 65 Forks</text>
+  <rect x="344" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="354" y="355" fill="#FCA5A5" font-family="monospace" font-size="11">pip install agent-memory-guard</text>
+
+  <!-- Card 3: highflame-ai/zeroid -->
+  <rect x="608" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="624" y="148" width="128" height="22" rx="6" fill="#6D28D9"/>
+  <text x="634" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 214 · Apache-2.0</text>
+  <text x="624" y="192" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="16" font-weight="800">highflame-ai/zeroid</text>
+  <text x="624" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Autonomous Agent IAM (AAIMS)</text>
+  <text x="624" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• OAuth 2.1 + WIMSE/SPIFFE identity</text>
+  <text x="624" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• RFC 8693 multi-hop delegation chain</text>
+  <text x="624" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Short-lived credentials &amp; revocation</text>
+  <text x="624" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Go implementation · 24 Forks</text>
+  <rect x="624" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="634" y="355" fill="#C4B5FD" font-family="monospace" font-size="11">WIMSE/SPIFFE + RFC 8693</text>
+
+  <!-- Card 4: netboxlabs/netbox-mcp-server -->
+  <rect x="888" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="904" y="148" width="128" height="22" rx="6" fill="#047857"/>
+  <text x="914" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 260 · Apache-2.0</text>
+  <text x="904" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">netbox-mcp-server</text>
+  <text x="904" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Official Read-Only NetBox MCP</text>
+  <text x="904" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Official NetBox Labs v1.0.0 release</text>
+  <text x="904" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Read-only by design (zero mutation)</text>
+  <text x="904" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• netbox_get_changelogs audit trail</text>
+  <text x="904" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Auto-discovers plugins · 113 Forks</text>
+  <rect x="904" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="914" y="355" fill="#6EE7B7" font-family="monospace" font-size="11">uvx netbox-mcp-server</text>
+
+  <!-- Pipeline Flow Bar -->
+  <rect x="48" y="396" width="1104" height="78" rx="12" fill="#172554" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="68" y="422" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700">END-TO-END DELEGATED AGENT IDENTITY, OWASP ASI06 MEMORY DEFENSE, READ-ONLY NETWORK CMDB &amp; OSCAL PIPELINE</text>
+  <text x="68" y="446" fill="#F8FAFC" font-family="monospace" font-size="12.5" font-weight="600">[ZeroID WIMSE/RFC 8693] ➔ [OWASP ASI06 Memory Guard] ➔ [netbox-mcp-server Changelogs] ➔ [claude-grc OSCAL Pack]</text>
+  <text x="68" y="464" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Attested Multi-Hop Delegation · Cross-Reset Poisoning Prevention · Immutable Read-Only Network CMDB · Automated SCF/OSCAL</text>
+
+  <!-- Closed-Form FinOps Box -->
+  <rect x="48" y="490" width="1104" height="145" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="68" y="518" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="800">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER GRC ENGINEERING, ZERO-TRUST IAM &amp; INFRASTRUCTURE TEAM · PROVENANCE: SYNTHETIC)</text>
+  <text x="68" y="544" fill="#E2E8F0" font-family="monospace" font-size="12">• Path A (Commercial GRC SaaS + Enterprise IAM Add-Ons + Manual Audit Evidence): $4,280.00 SaaS + 45.5h ($4,550.00 labor) = $8,830.00/mo</text>
+  <text x="68" y="568" fill="#E2E8F0" font-family="monospace" font-size="12">• Path C (Self-Hosted claude-grc + OWASP Memory Guard + ZeroID + netbox-mcp Stack): $70.00 compute + 2.5h ($250.00 ops) = $320.00/mo</text>
+  <text x="68" y="594" fill="#6EE7B7" font-family="monospace" font-size="13.5" font-weight="800">➔ Net Monthly Savings: -$8,510.00/mo (-96.38% TCO Reduction vs Path A) · CapEx: not_measured · Stars Today: not_measured</text>
+  <text x="68" y="618" fill="#64748B" font-family="monospace" font-size="11">Claim ID: CLAIM-20261122-R11-R747-CLAUDEGRC-OWASPMEMGUARD-ZEROID-NETBOXMCP · Independently Reproduced: false</text>
+</svg>

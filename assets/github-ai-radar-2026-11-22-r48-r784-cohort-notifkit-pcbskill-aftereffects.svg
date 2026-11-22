@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="accentAmber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="accentPurple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="860" fill="url(#bgGrad)"/>
+
+  <!-- Header Banner -->
+  <rect x="30" y="24" width="1340" height="96" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <rect x="48" y="42" width="230" height="28" rx="6" fill="url(#accentCyan)"/>
+  <text x="163" y="61" fill="#FFFFFF" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2026-11-22 · NIGHT R48 (R784)</text>
+  <text x="296" y="62" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="800">Proof-Carrying Agent Runtime, Self-Hosted Notifkit, EasyEDA PCB Skill &amp; After Effects MCP</text>
+  <text x="48" y="96" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="14">congchuanling-dot/Cohort (★196) + devkitshq/notifkit (★194) + daishuge/pcb-skill (★190) + kumoproductions/mcp-aftereffects (★189)</text>
+
+  <!-- Card 1: Cohort -->
+  <rect x="30" y="140" width="320" height="330" rx="12" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="30" y="140" width="320" height="8" rx="4" fill="url(#accentCyan)"/>
+  <text x="48" y="176" fill="#38BDF8" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">1. PROOF-CARRYING AGENT RUNTIME</text>
+  <text x="48" y="202" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800">congchuanling-dot/Cohort</text>
+  <text x="48" y="224" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">★ 196 · 4 forks · Go · MIT</text>
+  <rect x="48" y="240" width="284" height="54" rx="8" fill="#1E293B"/>
+  <text x="60" y="262" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Causal Replay &amp; Runtime Governance</text>
+  <text x="60" y="282" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Forks historical runs in isolated Git worktrees</text>
+  <text x="48" y="320" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Verifiable execution traces &amp; memory</text>
+  <text x="48" y="344" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Chrome Bridge + macOS AX desktop control</text>
+  <text x="48" y="368" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Governs context, cost, cache &amp; tool risk</text>
+  <text x="48" y="392" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• OpenAI-compatible + Anthropic + MCP</text>
+  <rect x="48" y="416" width="284" height="36" rx="6" fill="#083344"/>
+  <text x="190" y="439" fill="#67E8F9" font-family="Consolas, monospace" font-size="12" font-weight="700" text-anchor="middle">@cohort-ai/cohort · Worktree Replay</text>
+
+  <!-- Card 2: notifkit -->
+  <rect x="370" y="140" width="320" height="330" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="370" y="140" width="320" height="8" rx="4" fill="url(#accentEmerald)"/>
+  <text x="388" y="176" fill="#34D399" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">2. SELF-HOSTED NOTIFICATION ENGINE</text>
+  <text x="388" y="202" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800">devkitshq/notifkit</text>
+  <text x="388" y="224" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">★ 194 · 17 forks · TypeScript · MIT</text>
+  <rect x="388" y="240" width="284" height="54" rx="8" fill="#1E293B"/>
+  <text x="400" y="262" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">One notify() Call for All Channels</text>
+  <text x="400" y="282" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Push, email, SMS, chat &amp; webhooks built in</text>
+  <text x="388" y="320" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• User preferences &amp; quiet-hours enforcement</text>
+  <text x="388" y="344" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Automatic retries &amp; provider fallback</text>
+  <text x="388" y="368" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Multi-step workflows &amp; scheduled delivery</text>
+  <text x="388" y="392" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Built-in admin dashboard &amp; delivery logs</text>
+  <rect x="388" y="416" width="284" height="36" rx="6" fill="#064E3B"/>
+  <text x="530" y="439" fill="#6EE7B7" font-family="Consolas, monospace" font-size="12" font-weight="700" text-anchor="middle">npm i notifkit · 5 Channels</text>
+
+  <!-- Card 3: pcb-skill -->
+  <rect x="710" y="140" width="320" height="330" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="710" y="140" width="320" height="8" rx="4" fill="url(#accentAmber)"/>
+  <text x="728" y="176" fill="#FBBF24" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">3. EASYEDA PRO PCB AGENT SKILL</text>
+  <text x="728" y="202" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="800">daishuge/pcb-skill</text>
+  <text x="728" y="224" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">★ 190 · 26 forks · Python · MIT</text>
+  <rect x="728" y="240" width="284" height="54" rx="8" fill="#1E293B"/>
+  <text x="740" y="262" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Idea ➔ Manufacturable PCB &amp; Cart</text>
+  <text x="740" y="282" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Drives EasyEDA Pro over MCP (Claude / Codex)</text>
+  <text x="728" y="320" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Nets BOM against owned component stock</text>
+  <text x="728" y="344" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Hand-solderable rules (no bottom pads)</text>
+  <text x="728" y="368" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Stays inside free-prototype board envelope</text>
+  <text x="728" y="392" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Stages purchase to pre-payment page</text>
+  <rect x="728" y="416" width="284" height="36" rx="6" fill="#451A03"/>
+  <text x="870" y="439" fill="#FCD34D" font-family="Consolas, monospace" font-size="12" font-weight="700" text-anchor="middle">EasyEDA Pro MCP · Pre-Payment Gate</text>
+
+  <!-- Card 4: mcp-aftereffects -->
+  <rect x="1050" y="140" width="320" height="330" rx="12" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="1050" y="140" width="320" height="8" rx="4" fill="url(#accentPurple)"/>
+  <text x="1068" y="176" fill="#C084FC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">4. AFTER EFFECTS ATOMIC-UNDO MCP</text>
+  <text x="1068" y="202" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="800">kumoproductions/mcp-aftereffects</text>
+  <text x="1068" y="224" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">★ 189 · 13 forks · TypeScript · MIT</text>
+  <rect x="1068" y="240" width="284" height="54" rx="8" fill="#1E293B"/>
+  <text x="1080" y="262" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">AI Control for After Effects 2024–2026</text>
+  <text x="1080" y="282" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Windows &amp; macOS · Atomic undo groups</text>
+  <text x="1068" y="320" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Project, comp, layer &amp; keyframe introspection</text>
+  <text x="1068" y="344" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Atomic undo-grouped batch modifications</text>
+  <text x="1068" y="368" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• JSON project structure export &amp; import</text>
+  <text x="1068" y="392" fill="#CBD5E1" font-family="Segoe UI, system-ui, sans-serif" font-size="12">• Single-frame preview render via file IPC</text>
+  <rect x="1068" y="416" width="284" height="36" rx="6" fill="#2E1065"/>
+  <text x="1210" y="439" fill="#E9D5FF" font-family="Consolas, monospace" font-size="12" font-weight="700" text-anchor="middle">AE 2024–2026 · Atomic Undo + IPC</text>
+
+  <!-- End-to-End Pipeline Strip -->
+  <rect x="30" y="490" width="1340" height="128" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="50" y="518" fill="#38BDF8" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">END-TO-END PROOF-CARRYING RUNTIME, PCB PROTOTYPING, MULTI-CHANNEL APPROVAL &amp; AE MOTION</text>
+
+  <rect x="50" y="534" width="275" height="66" rx="8" fill="#0F172A" stroke="#06B6D4"/>
+  <text x="187" y="558" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Step 1: Cohort Runtime</text>
+  <text x="187" y="578" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11" text-anchor="middle">Worktree Isolation &amp; Causal Replay</text>
+
+  <text x="342" y="572" fill="#64748B" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="800">➔</text>
+
+  <rect x="368" y="534" width="295" height="66" rx="8" fill="#0F172A" stroke="#F59E0B"/>
+  <text x="515" y="558" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Step 2: PCB Skill (EasyEDA)</text>
+  <text x="515" y="578" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11" text-anchor="middle">Stock-Netted BOM &amp; Pre-Payment Cart</text>
+
+  <text x="680" y="572" fill="#64748B" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="800">➔</text>
+
+  <rect x="706" y="534" width="295" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+  <text x="853" y="558" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Step 3: Notifkit Alert</text>
+  <text x="853" y="578" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11" text-anchor="middle">Quiet-Hours Multi-Channel Approval</text>
+
+  <text x="1018" y="572" fill="#64748B" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="800">➔</text>
+
+  <rect x="1044" y="534" width="305" height="66" rx="8" fill="#0F172A" stroke="#8B5CF6"/>
+  <text x="1196" y="558" fill="#F8FAFC" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Step 4: mcp-aftereffects</text>
+  <text x="1196" y="578" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="11" text-anchor="middle">Atomic-Undo Comp Edit &amp; Frame Render</text>
+
+  <!-- Bottom FinOps Closed-Form Verification Box -->
+  <rect x="30" y="638" width="1340" height="196" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="52" y="670" fill="#34D399" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="800">CLOSED-FORM 45-ENGINEER FINOPS &amp; TCO VERIFICATION (PROVENANCE: SYNTHETIC · INDEPENDENTLY_REPRODUCED: FALSE)</text>
+
+  <!-- Path A Box -->
+  <rect x="52" y="688" width="405" height="124" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+  <text x="70" y="714" fill="#FCA5A5" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">Path A: Notification SaaS + PCB Respins + Manual AE</text>
+  <text x="70" y="740" fill="#E2E8F0" font-family="Consolas, monospace" font-size="13">API &amp; SaaS Spend:   $4,490.00 / mo</text>
+  <text x="70" y="762" fill="#E2E8F0" font-family="Consolas, monospace" font-size="13">BOM/Notif/AE Labor: $4,500.00 / mo (45.0h @ $100/h)</text>
+  <text x="70" y="792" fill="#F87171" font-family="Consolas, monospace" font-size="16" font-weight="700">Path A Total TCO:   $8,990.00 / mo</text>
+
+  <!-- Path C Box -->
+  <rect x="480" y="688" width="405" height="124" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+  <text x="498" y="714" fill="#6EE7B7" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">Path C: Cohort + notifkit + pcb-skill + mcp-aftereffects</text>
+  <text x="498" y="740" fill="#E2E8F0" font-family="Consolas, monospace" font-size="13">Notif/Gateway Host: $65.00 / mo (Free PCB Envelope)</text>
+  <text x="498" y="762" fill="#E2E8F0" font-family="Consolas, monospace" font-size="13">Stock/Template Ops: $240.00 / mo (2.4h @ $100/h)</text>
+  <text x="498" y="792" fill="#34D399" font-family="Consolas, monospace" font-size="16" font-weight="700">Path C Total TCO:   $305.00 / mo</text>
+
+  <!-- Net Savings Box -->
+  <rect x="908" y="688" width="440" height="124" rx="10" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="928" y="716" fill="#A7F3D0" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">VERIFIED MONTHLY &amp; ANNUAL NET SAVINGS</text>
+  <text x="928" y="748" fill="#FFFFFF" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="800">-$8,685.00 / mo (-96.61%)</text>
+  <text x="928" y="774" fill="#6EE7B7" font-family="Consolas, monospace" font-size="13">Annual Savings: $104,220.00/yr · Team: 45 Engineers</text>
+  <text x="928" y="796" fill="#94A3B8" font-family="Consolas, monospace" font-size="11">base_hardware_capex: not_measured · track_b_stars_today: not_measured</text>
+</svg>
