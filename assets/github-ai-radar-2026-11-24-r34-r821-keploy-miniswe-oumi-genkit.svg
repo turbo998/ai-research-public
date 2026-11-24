@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="820" fill="url(#bg)"/>
+  <rect x="28" y="24" width="1344" height="772" rx="18" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <rect x="28" y="24" width="1344" height="6" fill="url(#accent)"/>
+
+  <text x="56" y="68" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">GITHUB AI TRENDING RADAR · 2026-11-24 NIGHT ROUND 34 (CUMULATIVE R821) · KEPLOY API SANDBOX, MINI-SWE-AGENT, OUMI SFT/RL &amp; GOOGLE GENKIT</text>
+  <text x="56" y="102" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800">Keploy (★19.9k) vs Mini-SWE-Agent (★10.0k) vs Oumi SFT/RL (★9.4k) vs Google Genkit (★6.6k)</text>
+  <text x="56" y="130" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Closed-Form FinOps TCO: Path A ($4,750.00 + 45.0h [$4,500.00] = $9,250.00/mo) ➔ Path C ($65.00 + 2.4h [$240.00] = $305.00/mo) · Net Savings $8,945.00/mo (-96.70%) · base_hardware_capex=not_measured</text>
+
+  <!-- 4 Repo Cards -->
+  <g transform="translate(56, 154)">
+    <rect width="306" height="230" rx="14" fill="#1E293B" stroke="#0EA5E9" stroke-width="2"/>
+    <text x="20" y="34" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L1 100-LINE MINIMAL SWE AGENT</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="16.5" font-weight="800">SWE-agent/mini-swe-agent</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 10,044 · 1,365 forks · Python · MIT</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Radically simple 100-line AI coding agent</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  scoring &gt;74% on SWE-bench Verified</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Powers Ramp SWE-Bench &amp; tops DeepSWE</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Zero giant monorepo or complex config bloat</text>
+    <text x="20" y="208" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Auditable CI/CD Issue Resolution</text>
+  </g>
+
+  <g transform="translate(382, 154)">
+    <rect width="306" height="230" rx="14" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="20" y="34" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L2 EBPF API SANDBOX &amp; TEST GENERATOR</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">keploy/keploy</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 19,984 · 2,469 forks · Go · Apache-2.0</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Creates isolated production sandboxes for</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  API, integration &amp; E2E testing from traffic</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Auto-records deterministic DB/RPC mocks</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Verifies AI-generated patches against real flows</text>
+    <text x="20" y="208" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Zero-Code Integration Test Sandboxes</text>
+  </g>
+
+  <g transform="translate(708, 154)">
+    <rect width="306" height="230" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <text x="20" y="34" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L3 POLYGLOT AGENTIC APP FRAMEWORK</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">genkit-ai/genkit</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 6,620 · 893 forks · TS/Go/Py · Apache-2.0</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Official Google Firebase open-source framework</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  for building agentic apps in TS, Go, Dart &amp; Py</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Unified flows, prompts, tool calling &amp; UI trace</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Production-proven across web &amp; mobile stacks</text>
+    <text x="20" y="208" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Full-Stack TS/Go/Flutter AI Apps</text>
+  </g>
+
+  <g transform="translate(1034, 154)">
+    <rect width="310" height="230" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="20" y="34" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L4 OPEN AGENTIC LLM/VLM SFT &amp; RL</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">oumi-ai/oumi</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 9,442 · 799 forks · Python · Apache-2.0</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• End-to-end platform to fine-tune (SFT/RL),</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  evaluate &amp; deploy Qwen, Gemma or any LLM/VLM</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Declarative YAML recipes from laptop to cluster</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Built-in benchmarks &amp; quantization export</text>
+    <text x="20" y="208" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Open-Weight Model SFT/RL &amp; Eval</text>
+  </g>
+
+  <!-- Architecture Pipeline -->
+  <g transform="translate(56, 408)">
+    <rect width="1288" height="170" rx="14" fill="#0B1528" stroke="#334155" stroke-width="1.5"/>
+    <text x="24" y="32" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">END-TO-END POLYGLOT GENKIT APPS, 100-LINE SWE AGENT, KEPLOY TRAFFIC SANDBOX &amp; OUMI SFT/RL (L1 ➔ L4)</text>
+    <text x="24" y="64" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">1. Polyglot App Delivery (genkit ★6.6k): Build full-stack agentic microservices across TypeScript, Go, Dart/Flutter &amp; Python.</text>
+    <text x="24" y="92" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">2. Minimalist Issue Resolution (mini-swe-agent ★10.0k): Run a 100-line auditable SWE agent (&gt;74% SWE-bench Verified) to patch bugs in CI.</text>
+    <text x="24" y="120" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">3. Traffic-Recorded Verification Sandbox (keploy ★19.9k): Replay recorded API traffic &amp; deterministic DB mocks to verify agent patches.</text>
+    <text x="24" y="148" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">4. Open-Weight SFT/RL &amp; Eval (oumi ★9.4k): Fine-tune &amp; evaluate Qwen/Gemma on verified patches + traffic pairs under Apache-2.0.</text>
+  </g>
+
+  <!-- Closed-Form FinOps TCO Comparison -->
+  <g transform="translate(56, 600)">
+    <rect width="1288" height="170" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+    <text x="24" y="32" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER FULL-STACK AI, QA &amp; MODEL OPS TEAM · SYNTHETIC WORKLOAD MODEL)</text>
+    <text x="24" y="64" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="14">• Path A (Manual Integration Test/Mock Writing + Bloated Agent Frameworks + Proprietary Tuning SaaS): $4,750.00/mo + 45.0h ($4,500.00) = $9,250.00/mo</text>
+    <text x="24" y="92" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">• Path B (Azure Load Testing + Managed Foundry SFT + Cloud Coding Agents): $1,850.00/mo PaaS + 10.5h ($1,050.00) = $2,900.00/mo</text>
+    <text x="24" y="120" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">• Path C (mini-swe-agent + keploy + genkit + oumi): $65.00/mo Compute + 2.4h ($240.00) = $305.00/mo (Saves $8,945.00/mo · -96.70%)</text>
+    <text x="24" y="148" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Provenance: GitHub REST API (2026-11-24) · LF SHA-256: bc6180e1... / 9318369c... · track_b_stars_today=not_measured · base_hardware_capex=not_measured</text>
+  </g>
+</svg>

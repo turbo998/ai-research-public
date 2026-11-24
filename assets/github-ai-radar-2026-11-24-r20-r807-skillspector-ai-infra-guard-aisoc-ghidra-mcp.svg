@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="820" fill="url(#bg)"/>
+  <rect x="28" y="24" width="1344" height="772" rx="18" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <rect x="28" y="24" width="1344" height="6" fill="url(#accent)"/>
+
+  <text x="56" y="68" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">GITHUB AI TRENDING RADAR · 2026-11-24 NIGHT ROUND 20 (CUMULATIVE R807) · AGENT SKILL SECURITY, AI RED TEAMING, AI SOC &amp; GHIDRA MCP</text>
+  <text x="56" y="102" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800">NVIDIA SkillSpector (★27.5k) vs AiSOC (★7.7k) vs Tencent AI-Infra-Guard (★7.6k) vs Ghidra-MCP (★6.3k)</text>
+  <text x="56" y="130" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Closed-Form FinOps TCO: Path A ($4,980.00 + 46.5h [$4,650.00] = $9,630.00/mo) ➔ Path C ($75.00 + 2.4h [$240.00] = $315.00/mo) · Net Savings $9,315.00/mo (-96.73%) · base_hardware_capex=not_measured</text>
+
+  <!-- 4 Repo Cards -->
+  <g transform="translate(56, 154)">
+    <rect width="306" height="230" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="2"/>
+    <text x="20" y="34" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L1 PRE-INSTALL AGENT SKILL SCANNER</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">NVIDIA/SkillSpector</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 27,516 · 2,456 forks · Python · Apache-2.0</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Official NVIDIA security scanner for Claude Code,</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  Codex, Gemini CLI &amp; MCP skills</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Detects prompt injection, exfiltration &amp; trojans</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Blocks poisoned SKILL.md supply-chain payloads</text>
+    <text x="20" y="208" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Pre-Install Skill &amp; MCP Supply-Chain Gate</text>
+  </g>
+
+  <g transform="translate(382, 154)">
+    <rect width="306" height="230" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="20" y="34" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L2 FULL-STACK AI RED TEAMING</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="16.5" font-weight="800">Tencent/AI-Infra-Guard</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 7,635 · 795 forks · Python · Apache-2.0</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Full-stack AI Red Teaming: Agent Scan, Skills</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  Scan, MCP Scan &amp; AI Infra vulnerability scan</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Automated LLM jailbreak &amp; safety evaluation</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Identifies exposed Ollama/vLLM/Ray endpoints</text>
+    <text x="20" y="208" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Continuous AI Infra &amp; MCP Red Teaming</text>
+  </g>
+
+  <g transform="translate(708, 154)">
+    <rect width="306" height="230" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <text x="20" y="34" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L3 REPLAYABLE AI SOC PLATFORM</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">beenuar/AiSOC</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 7,741 · 852 forks · Python · MIT</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Self-hostable AI SOC with alert fusion, LLM</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  triage &amp; MITRE ATT&amp;CK investigation</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Replayable decision ledger for every agent step</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Ships built-in MCP server for Claude &amp; Cursor</text>
+    <text x="20" y="208" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Auditable Alert Triage &amp; Incident Response</text>
+  </g>
+
+  <g transform="translate(1034, 154)">
+    <rect width="310" height="230" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+    <text x="20" y="34" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L4 200+ TOOL BINARY REVERSE MCP</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">bethington/ghidra-mcp</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 6,344 · 403 forks · Java · Apache-2.0</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• 200+ MCP tools for AI-powered binary reverse</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  engineering &amp; malware analysis in Ghidra</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• GUI plugin + headless Docker server + lazy load</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Automated decompilation &amp; symbol renaming</text>
+    <text x="20" y="208" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Automated Malware &amp; Firmware Triage</text>
+  </g>
+
+  <!-- Architecture Pipeline -->
+  <g transform="translate(56, 408)">
+    <rect width="1288" height="170" rx="14" fill="#0B1528" stroke="#334155" stroke-width="1.5"/>
+    <text x="24" y="32" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">END-TO-END ENTERPRISE AI SUPPLY-CHAIN SECURITY, RED TEAMING &amp; AUTONOMOUS SOC PIPELINE (L1 ➔ L4)</text>
+    <text x="24" y="64" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">1. Pre-Install Skill Gate (NVIDIA/SkillSpector ★27.5k): Scan third-party SKILL.md &amp; MCP packages for prompt injection &amp; credential exfiltration.</text>
+    <text x="24" y="92" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">2. Full-Stack AI Red Teaming (Tencent/AI-Infra-Guard ★7.6k): Continuously probe deployed agents, MCP endpoints &amp; model servers for CVEs/jailbreaks.</text>
+    <text x="24" y="120" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">3. Replayable AI SOC Triage (beenuar/AiSOC ★7.7k): Correlate telemetry, map to MITRE ATT&amp;CK &amp; log every reasoning step in a replayable ledger.</text>
+    <text x="24" y="148" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">4. Deep Binary Forensics (bethington/ghidra-mcp ★6.3k): Decompile suspicious binaries &amp; firmware via 200+ lazy-loaded Ghidra MCP tools.</text>
+  </g>
+
+  <!-- Closed-Form FinOps TCO Comparison -->
+  <g transform="translate(56, 600)">
+    <rect width="1288" height="170" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+    <text x="24" y="32" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">CLOSED-FORM FINOPS TCO MODEL (45-PERSON AI SECURITY, DEVSECOPS &amp; SOC TEAM · SYNTHETIC WORKLOAD MODEL)</text>
+    <text x="24" y="64" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="14">• Path A (Commercial AI Red-Team SaaS + Commercial SIEM Copilot + Manual Skill/Binary Audits): $4,980.00/mo + 46.5h ($4,650.00) = $9,630.00/mo</text>
+    <text x="24" y="92" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">• Path B (Microsoft Sentinel + Defender for Cloud AI Posture + Security Copilot SCUs): $1,960.00/mo PaaS + 10.5h ($1,050.00) = $3,010.00/mo</text>
+    <text x="24" y="120" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">• Path C (SkillSpector + AI-Infra-Guard + AiSOC + ghidra-mcp): $75.00/mo Compute + 2.4h ($240.00) = $315.00/mo (Saves $9,315.00/mo · -96.73%)</text>
+    <text x="24" y="148" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Provenance: GitHub REST API (2026-11-24) · LF SHA-256: bc6180e1... / 9318369c... · track_b_stars_today=not_measured · base_hardware_capex=not_measured</text>
+  </g>
+</svg>

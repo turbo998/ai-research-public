@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="820" fill="url(#bg)"/>
+  <rect x="28" y="24" width="1344" height="772" rx="18" fill="#0F172A" stroke="#F59E0B" stroke-width="2.5"/>
+  <rect x="28" y="24" width="1344" height="6" fill="url(#accent)"/>
+
+  <text x="56" y="68" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">🏆 MILESTONE R805 · 2026-11-24 NIGHT ROUND 18 · DURABLE AGENT WORKFLOWS, MCP APPS FRAMEWORK, APIFY ACTORS &amp; AWS MCP</text>
+  <text x="56" y="102" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800">Apify-MCP (★17.6k) vs Trigger.dev (★16.8k) vs MCP-Use (★11.0k) vs AWSLabs-MCP (★9.9k)</text>
+  <text x="56" y="130" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Closed-Form FinOps TCO: Path A ($4,920.00 + 46.5h [$4,650.00] = $9,570.00/mo) ➔ Path C ($75.00 + 2.4h [$240.00] = $315.00/mo) · Net Savings $9,255.00/mo (-96.71%) · base_hardware_capex=not_measured</text>
+
+  <!-- 4 Repo Cards -->
+  <g transform="translate(56, 154)">
+    <rect width="306" height="230" rx="14" fill="#1E293B" stroke="#0EA5E9" stroke-width="2"/>
+    <text x="20" y="34" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L1 DURABLE AGENT WORKFLOW ENGINE</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">triggerdotdev/trigger.dev</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 16,815 · 1,541 forks · TS · Apache-2.0</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Build &amp; deploy long-running AI agents and</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  background workflows with zero serverless timeouts</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Checkpointed state, retries &amp; human waitpoints</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Full Docker/Kubernetes self-hosting support</text>
+    <text x="20" y="208" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Durable Multi-Step Agent Execution</text>
+  </g>
+
+  <g transform="translate(382, 154)">
+    <rect width="306" height="230" rx="14" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="20" y="34" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L2 FULL-STACK MCP APPS &amp; SERVERS</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">mcp-use/mcp-use</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 11,005 · 1,560 forks · TS · MIT</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• TypeScript framework to build, test &amp; ship MCP</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  servers, ChatGPT plugins &amp; Claude connectors</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Native interactive Views &amp; MCP Apps support</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Built-in visual MCP Inspector &amp; agent client</text>
+    <text x="20" y="208" fill="#A78BFA" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Interactive MCP UI Apps &amp; SDK</text>
+  </g>
+
+  <g transform="translate(708, 154)">
+    <rect width="306" height="230" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <text x="20" y="34" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L3 3,000+ WEB DATA ACTORS MCP</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">apify/apify-mcp-server</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 17,698 · 483 forks · TS · MIT</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Connects AI agents to 3,000+ Apify Actors for</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  structured web, social, maps &amp; e-commerce data</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Dynamic Actor discovery &amp; schema translation</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Supports Streamable HTTP, SSE &amp; stdio</text>
+    <text x="20" y="208" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Enterprise Market &amp; Web Data Ingestion</text>
+  </g>
+
+  <g transform="translate(1034, 154)">
+    <rect width="310" height="230" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="20" y="34" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">L4 OFFICIAL AWS CLOUD MCP SUITE</text>
+    <text x="20" y="62" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">awslabs/mcp</text>
+    <text x="20" y="86" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13">★ 9,947 · 1,895 forks · Python · Apache-2.0</text>
+    <text x="20" y="114" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Official AWS Labs suite of specialized MCP</text>
+    <text x="20" y="136" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">  servers (CDK, Terraform, Cost, Bedrock, EKS)</text>
+    <text x="20" y="158" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Enforces Well-Architected &amp; security guardrails</text>
+    <text x="20" y="180" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">• Grounded cloud pricing, docs &amp; IaC synthesis</text>
+    <text x="20" y="208" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Best for: Multi-Cloud AWS Architecture &amp; FinOps</text>
+  </g>
+
+  <!-- Architecture Pipeline -->
+  <g transform="translate(56, 408)">
+    <rect width="1288" height="170" rx="14" fill="#0B1528" stroke="#334155" stroke-width="1.5"/>
+    <text x="24" y="32" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">END-TO-END DURABLE AGENT ORCHESTRATION, MCP APPS UI &amp; CLOUD/WEB DATA PIPELINE (L1 ➔ L4)</text>
+    <text x="24" y="64" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">1. Interactive MCP App Frontend (mcp-use ★11.0k): Ship typed MCP servers with embedded interactive UI Views inside Claude/ChatGPT &amp; web apps.</text>
+    <text x="24" y="92" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">2. Durable Background Execution (trigger.dev ★16.8k): Run long-horizon agent tasks with checkpointed retries, queues &amp; human approval tokens.</text>
+    <text x="24" y="120" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">3. Structured Web Data Extraction (apify-mcp-server ★17.6k): Invoke 3,000+ specialized Actors for external market, pricing &amp; competitor signals.</text>
+    <text x="24" y="148" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5">4. Cloud IaC &amp; FinOps Automation (awslabs/mcp ★9.9k): Audit cloud costs, query Bedrock KB &amp; synthesize Well-Architected CDK/Terraform code.</text>
+  </g>
+
+  <!-- Closed-Form FinOps TCO Comparison -->
+  <g transform="translate(56, 600)">
+    <rect width="1288" height="170" rx="14" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+    <text x="24" y="32" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER FULL-STACK AI &amp; CLOUD PLATFORM TEAM · SYNTHETIC WORKLOAD MODEL)</text>
+    <text x="24" y="64" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="14">• Path A (Commercial Workflow SaaS + Custom MCP UI Boilerplate + Proprietary Cloud Ops): $4,920.00/mo + 46.5h ($4,650.00) = $9,570.00/mo</text>
+    <text x="24" y="92" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="14">• Path B (Azure Durable Functions + Azure MCP + Managed Connector PaaS): $1,910.00/mo PaaS + 10.5h ($1,050.00) = $2,960.00/mo</text>
+    <text x="24" y="120" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">• Path C (trigger.dev + mcp-use + apify-mcp-server + awslabs/mcp): $75.00/mo Compute + 2.4h ($240.00) = $315.00/mo (Saves $9,255.00/mo · -96.71%)</text>
+    <text x="24" y="148" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="12.5">Provenance: GitHub REST API (2026-11-24) · LF SHA-256: bc6180e1... / 9318369c... · track_b_stars_today=not_measured · base_hardware_capex=not_measured</text>
+  </g>
+</svg>
