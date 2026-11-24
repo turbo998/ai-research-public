@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg810" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent810" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg810)"/>
+  <rect x="24" y="20" width="1152" height="635" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent810)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">2026-11-23 NIGHT ROUND 23 · CUMULATIVE ROUND 810 MILESTONE · 14-LAYER MSRC XSS AUDIT, 10-AGENT UI DESIGN, 4-ENGINE INKDOC &amp; GLASSBENCH</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800">🏆 [R810 Milestone] songjianyang/xss-audit + ryuxdsgn/design-intelligence + AbdoslamB/InkDoc + glassbench</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">MSRC Top-10 14-Layer React/TS XSS Audit · 10-Agent Anti-Hallucination UI Skill · MarkItDown+Docling+GLM-OCR InkDoc · Multi-Agent Finance Bench</text>
+
+  <!-- Card 1: songjianyang/xss-audit -->
+  <rect x="48" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="64" y="148" width="132" height="22" rx="6" fill="#B45309"/>
+  <text x="74" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 567 · MIT · 150F</text>
+  <text x="64" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="16" font-weight="800">songjianyang/xss-audit</text>
+  <text x="64" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">14-Layer React/TS Static XSS Skill</text>
+  <text x="64" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• By 4x MSRC Top-10 researcher</text>
+  <text x="64" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• SSR JSON &lt;/script&gt; &amp; mXSS bypass</text>
+  <text x="64" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• SVG, MathML, CSS &amp; URL parsers</text>
+  <text x="64" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Trusted Types &amp; markdown audit</text>
+  <rect x="64" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="74" y="355" fill="#FCD34D" font-family="monospace" font-size="11">/xss-audit src/</text>
+
+  <!-- Card 2: ryuxdsgn/design-intelligence -->
+  <rect x="328" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="344" y="148" width="108" height="22" rx="6" fill="#0284C7"/>
+  <text x="354" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 178 · MIT</text>
+  <text x="344" y="192" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">design-intelligence (RYUX)</text>
+  <text x="344" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">10-Agent Product &amp; UI Design Skill</text>
+  <text x="344" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Copilot, Claude, Codex, Cursor +6</text>
+  <text x="344" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Stops 28 fabricated business rules</text>
+  <text x="344" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Clarifies product context first</text>
+  <text x="344" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Designs for error &amp; empty states</text>
+  <rect x="344" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="354" y="355" fill="#38BDF8" font-family="monospace" font-size="11">npx @ryuxdsgn/design-...</text>
+
+  <!-- Card 3: AbdoslamB/InkDoc -->
+  <rect x="608" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="624" y="148" width="108" height="22" rx="6" fill="#6D28D9"/>
+  <text x="634" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 62 · MIT</text>
+  <text x="624" y="192" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="16" font-weight="800">AbdoslamB/InkDoc</text>
+  <text x="624" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">4-Engine Doc-to-Markdown Workbench</text>
+  <text x="624" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Microsoft MarkItDown + Docling</text>
+  <text x="624" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Markit engine + GLM-OCR vision</text>
+  <text x="624" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Desktop app + local REST API</text>
+  <text x="624" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Win / macOS / Linux · Auto-save</text>
+  <rect x="624" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="634" y="355" fill="#C4B5FD" font-family="monospace" font-size="11">4-Engine Local Markdown</text>
+
+  <!-- Card 4: davidalmeida90/glassbench -->
+  <rect x="888" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="904" y="148" width="124" height="22" rx="6" fill="#047857"/>
+  <text x="914" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 47 · Apache-2.0</text>
+  <text x="904" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="16" font-weight="800">davidalmeida90/glassbench</text>
+  <text x="904" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Finance Agent Committee Benchmark</text>
+  <text x="904" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• TradingAgents 0.6 &amp; AI Hedge Fund</text>
+  <text x="904" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Vibe-Trading 0.1.18 + custom agents</text>
+  <text x="904" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Same stock &amp; date committee logs</text>
+  <text x="904" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Backtesting &amp; paper trading</text>
+  <rect x="904" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="914" y="355" fill="#6EE7B7" font-family="monospace" font-size="11">Python 3.11+ &amp; React 19</text>
+
+  <!-- Pipeline Flow Bar -->
+  <rect x="48" y="396" width="1104" height="78" rx="12" fill="#172554" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="68" y="422" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700">MILESTONE 810 PIPELINE: 4-ENGINE DOC INGESTION ➔ COMMITTEE BENCHMARKING ➔ 0-HALLUCINATION UI ➔ 14-LAYER XSS GATE</text>
+  <text x="68" y="446" fill="#F8FAFC" font-family="monospace" font-size="12.5" font-weight="600">[InkDoc MarkItDown+Docling+GLM-OCR] ➔ [glassbench Committee Audit] ➔ [RYUX 10-Agent UI] ➔ [xss-audit 14-Layer Gate]</text>
+  <text x="68" y="464" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Local Multi-Engine Markdown · Side-by-Side Agent Debate Provenance · Zero Invented UI Policies · MSRC Top-10 XSS Coverage</text>
+
+  <!-- Closed-Form FinOps Box -->
+  <rect x="48" y="490" width="1104" height="145" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="68" y="518" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="800">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER APPSEC, FRONTEND, DOC &amp; QUANT TEAM · PROVENANCE: SYNTHETIC)</text>
+  <text x="68" y="544" fill="#E2E8F0" font-family="monospace" font-size="12">• Path A (Commercial SAST/OCR SaaS + Unguided UI Rework + Manual Audits): $4,870.00 SaaS + 46.0h ($4,600.00) = $9,470.00/mo</text>
+  <text x="68" y="568" fill="#E2E8F0" font-family="monospace" font-size="12">• Path C (Self-Hosted xss-audit + design-intelligence + InkDoc + glassbench): $65.00 compute + 2.4h ($240.00) = $305.00/mo</text>
+  <text x="68" y="594" fill="#6EE7B7" font-family="monospace" font-size="13.5" font-weight="800">➔ Net Monthly Savings: -$9,165.00/mo (-96.78% TCO Reduction vs Path A) · CapEx: not_measured · Stars Today: not_measured</text>
+  <text x="68" y="618" fill="#64748B" font-family="monospace" font-size="11">Claim ID: CLAIM-20261123-R23-R810-XSSAUDIT-DESIGNINTELLIGENCE-INKDOC-GLASSBENCH · Independently Reproduced: false</text>
+</svg>

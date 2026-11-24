@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg800" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent800" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg800)"/>
+  <rect x="24" y="20" width="1152" height="635" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent800)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">2026-11-23 NIGHT ROUND 13 · HISTORIC CUMULATIVE ROUND 800 MILESTONE · GRANT-FIRST TEXT2SQL, 10-IM GATEWAY, AD AGENT &amp; OPSPILOT</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20.5" font-weight="800">🏆 [R800 Historic Milestone] schemagate + TencentCloud/octop-gateway + paid-media-agent + OpsPilot-AI</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">-91.1% Schema Tokens (146K➔1.3K) &amp; Caller GRANT Gate · Tencent 10-IM Streaming Bridge · LangChain 7-Ad-Network Agent · Bilingual Ops Memory</text>
+
+  <!-- Card 1: ashishsinha1602/schemagate -->
+  <rect x="48" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="64" y="148" width="128" height="22" rx="6" fill="#B45309"/>
+  <text x="74" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 127 · Apache-2.0</text>
+  <text x="64" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="16" font-weight="800">schemagate (BIRD #1)</text>
+  <text x="64" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Grant-First Text-to-SQL Schema Gate</text>
+  <text x="64" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• -91.1% schema tokens (50+ tables)</text>
+  <text x="64" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 146,695 ➔ 1,348 tokens (1,201 objs)</text>
+  <text x="64" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Filters by caller GRANTs first</text>
+  <text x="64" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• PG/Oracle/MySQL/MSSQL · MCP</text>
+  <rect x="64" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="74" y="355" fill="#FCD34D" font-family="monospace" font-size="11">pip install schemagate</text>
+
+  <!-- Card 2: TencentCloud/octop-gateway -->
+  <rect x="328" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="344" y="148" width="118" height="22" rx="6" fill="#0284C7"/>
+  <text x="354" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 94 · MIT · 51F</text>
+  <text x="344" y="192" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">TencentCloud/octop-gateway</text>
+  <text x="344" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">10-Platform Unified IM Channel Bridge</text>
+  <text x="344" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Feishu, DingTalk, WeCom, Yuanbao</text>
+  <text x="344" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• WeChat iLink, QQ, Xiaoyi, MQTT, TG</text>
+  <text x="344" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Async generator MessageEvent stream</text>
+  <text x="344" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Multi-tenant &amp; proactive push</text>
+  <rect x="344" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="354" y="355" fill="#38BDF8" font-family="monospace" font-size="11">pip install octop-gateway</text>
+
+  <!-- Card 3: langchain-ai/paid-media-agent -->
+  <rect x="608" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="624" y="148" width="128" height="22" rx="6" fill="#6D28D9"/>
+  <text x="634" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 138 · Apache-2.0</text>
+  <text x="624" y="192" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="15" font-weight="800">langchain-ai/paid-media-agent</text>
+  <text x="624" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Official 7-Platform Paid Media Agent</text>
+  <text x="624" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Google, Meta, LinkedIn, TikTok, X</text>
+  <text x="624" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Reddit &amp; OpenAI Ads CPL attribution</text>
+  <text x="624" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Live writes off by default (HITL)</text>
+  <text x="624" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Built on Deep Agents · 28 Forks</text>
+  <rect x="624" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="634" y="355" fill="#C4B5FD" font-family="monospace" font-size="11">Slack + Managed Deep Agents</text>
+
+  <!-- Card 4: Router0824/OpsPilot-AI -->
+  <rect x="888" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="904" y="148" width="104" height="22" rx="6" fill="#047857"/>
+  <text x="914" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 76 · MIT</text>
+  <text x="904" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="16" font-weight="800">Router0824/OpsPilot-AI</text>
+  <text x="904" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">AI Operations &amp; Org Memory</text>
+  <text x="904" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Meeting intel ➔ tasks, risks, memory</text>
+  <text x="904" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Pydantic typed + mandatory approval</text>
+  <text x="904" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Azure OpenAI, OpenAI &amp; DeepSeek</text>
+  <text x="904" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Next.js 16 + FastAPI (EN / ZH)</text>
+  <rect x="904" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="914" y="355" fill="#6EE7B7" font-family="monospace" font-size="11">Info➔Decision➔Action➔Memory</text>
+
+  <!-- Pipeline Flow Bar -->
+  <rect x="48" y="396" width="1104" height="78" rx="12" fill="#172554" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="68" y="422" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700">HISTORIC ROUND 800 PIPELINE: 10-IM BRIDGE ➔ GRANT-FIRST -91.1% SQL GATE ➔ 7-AD-NETWORK ANALYST ➔ APPROVED ORG MEMORY</text>
+  <text x="68" y="446" fill="#F8FAFC" font-family="monospace" font-size="12.5" font-weight="600">[octop-gateway 10-IM] ➔ [schemagate 146K➔1.3K Tokens] ➔ [paid-media-agent 7-Ads] ➔ [OpsPilot-AI Approved Memory]</text>
+  <text x="68" y="464" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Zero Restricted Table Leakage · Write-Once 10-Platform IM · Exact-Proposal Budget Safety · Pydantic-Audited Decisions</text>
+
+  <!-- Closed-Form FinOps Box -->
+  <rect x="48" y="490" width="1104" height="145" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="68" y="518" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="800">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER DATA, OMNICHANNEL, GROWTH &amp; OPS TEAM · PROVENANCE: SYNTHETIC)</text>
+  <text x="68" y="544" fill="#E2E8F0" font-family="monospace" font-size="12">• Path A (Full-DDL 146K Prompts + Commercial Ad/IM SaaS + Manual Reports): $4,980.00 SaaS/API + 47.0h ($4,700.00 labor) = $9,680.00/mo</text>
+  <text x="68" y="568" fill="#E2E8F0" font-family="monospace" font-size="12">• Path C (Self-Hosted schemagate + octop-gateway + paid-media-agent + OpsPilot-AI): $70.00 compute + 2.4h ($240.00 ops) = $310.00/mo</text>
+  <text x="68" y="594" fill="#6EE7B7" font-family="monospace" font-size="13.5" font-weight="800">➔ Net Monthly Savings: -$9,370.00/mo (-96.80% TCO Reduction vs Path A) · CapEx: not_measured · Stars Today: not_measured</text>
+  <text x="68" y="618" fill="#64748B" font-family="monospace" font-size="11">Claim ID: CLAIM-20261123-R13-R800-SCHEMAGATE-OCTOPGATEWAY-PAIDMEDIAAGENT-OPSPILOTAI · Independently Reproduced: false</text>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg790" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent790" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg790)"/>
+  <rect x="24" y="20" width="1152" height="635" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accent790)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">2026-11-23 NIGHT ROUND 3 · CUMULATIVE ROUND 790 MILESTONE · TAMPER-EVIDENT RECEIPTS, 8-LAYER DLP, THREAT MODELING &amp; ERP BENCH</text>
+  <text x="48" y="88" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="800">[R790 Milestone] Tracekit + solongate/agent-security + grim-prompter + lingee-bench</text>
+  <text x="48" y="112" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">0.91ms p99 Witness-Cosigned Agent Log · OpenSSF Gold 8-Layer Local Guard · 36-Arch Code Threat Modeling · Kingdee 65-Task ERP Benchmark</text>
+
+  <!-- Card 1: Cygnux-Labs/Tracekit -->
+  <rect x="48" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="64" y="148" width="118" height="22" rx="6" fill="#B45309"/>
+  <text x="74" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 838 · MIT</text>
+  <text x="64" y="192" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="16" font-weight="800">Cygnux-Labs/Tracekit</text>
+  <text x="64" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Witness-Cosigned Flight Recorder</text>
+  <text x="64" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Pre-exec policy &amp; human approval</text>
+  <text x="64" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 0.91ms p99 out-of-process signer</text>
+  <text x="64" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 1,063/1,063 harmful calls stopped</text>
+  <text x="64" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 42 frameworks · Py/TS/Go verifiers</text>
+  <rect x="64" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="74" y="355" fill="#FCD34D" font-family="monospace" font-size="11">pip install tracekit-ai</text>
+
+  <!-- Card 2: solongate/agent-security -->
+  <rect x="328" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.5"/>
+  <rect x="344" y="148" width="128" height="22" rx="6" fill="#0284C7"/>
+  <text x="354" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 690 · Apache-2.0</text>
+  <text x="344" y="192" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="15" font-weight="800">solongate/agent-security</text>
+  <text x="344" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">8-Layer Local Security Gateway</text>
+  <text x="344" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 70+ DLP + Egress file-upload scan</text>
+  <text x="344" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Outbound Claude prompt-body shim</text>
+  <text x="344" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• OS protected paths &amp; rootfs sandbox</text>
+  <text x="344" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• OpenSSF Gold &amp; SLSA L3 · Go 1.26+</text>
+  <rect x="344" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="354" y="355" fill="#38BDF8" font-family="monospace" font-size="11">solongate sandbox 001 claude</text>
+
+  <!-- Card 3: jmanico/grim-prompter -->
+  <rect x="608" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="624" y="148" width="118" height="22" rx="6" fill="#6D28D9"/>
+  <text x="634" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 666 · MIT</text>
+  <text x="624" y="192" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">jmanico/grim-prompter</text>
+  <text x="624" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Code-Traced Threat &amp; Privacy Skill</text>
+  <text x="624" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 36 architecture workflows</text>
+  <text x="624" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 29 STRIDE &amp; analysis prompts</text>
+  <text x="624" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Quick/deep privacy harm reviews</text>
+  <text x="624" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• PR diff delta vs quick-report.json</text>
+  <rect x="624" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="634" y="355" fill="#C4B5FD" font-family="monospace" font-size="11">/threat-model change main...feat</text>
+
+  <!-- Card 4: kingdee/lingee-bench -->
+  <rect x="888" y="132" width="264" height="248" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="904" y="148" width="128" height="22" rx="6" fill="#047857"/>
+  <text x="914" y="163" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">★ 190 · Apache-2.0</text>
+  <text x="904" y="192" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">kingdee/lingee-bench</text>
+  <text x="904" y="212" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Enterprise ERP Outcome Benchmark</text>
+  <text x="904" y="236" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Offline ERP mock service (Harbor)</text>
+  <text x="904" y="256" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 30 Finance/Mfg/SCM ERP tasks</text>
+  <text x="904" y="276" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• 35 General data/doc/schedule tasks</text>
+  <text x="904" y="296" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11.5">• Claude/Pi/DSH/OpenCode · Kingdee</text>
+  <rect x="904" y="338" width="232" height="26" rx="6" fill="#0F172A"/>
+  <text x="914" y="355" fill="#6EE7B7" font-family="monospace" font-size="11">erp-mock-batch-eval · 65 tasks</text>
+
+  <!-- Pipeline Flow Bar -->
+  <rect x="48" y="396" width="1104" height="78" rx="12" fill="#172554" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="68" y="422" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700">ROUND 790 MILESTONE PIPELINE: PR THREAT DELTA ➔ 8-LAYER WORKSTATION GUARD ➔ OFFLINE ERP EVAL ➔ WITNESS-COSIGNED PROD LOG</text>
+  <text x="68" y="446" fill="#F8FAFC" font-family="monospace" font-size="12.5" font-weight="600">[grim-prompter PR Diff] ➔ [solongate 8-Layer Sandbox] ➔ [lingee-bench 30 ERP Mock Tasks] ➔ [Tracekit 0.91ms Witness Log]</text>
+  <text x="68" y="464" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Certificate-Transparency Tamper Resistance · SLSA L3 Binary Attestation · Offline ERP Business Verification (MIT / Apache-2.0)</text>
+
+  <!-- Closed-Form FinOps Box -->
+  <rect x="48" y="490" width="1104" height="145" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="68" y="518" fill="#34D399" font-family="system-ui, sans-serif" font-size="13" font-weight="800">CLOSED-FORM FINOPS TCO MODEL (45-ENGINEER ENTERPRISE SECURITY, COMPLIANCE &amp; ERP TEAM · PROVENANCE: SYNTHETIC)</text>
+  <text x="68" y="544" fill="#E2E8F0" font-family="monospace" font-size="12">• Path A (Commercial Endpoint DLP + Threat Consulting + Manual ERP Regression): $4,850.00 SaaS + 46.5h ($4,650.00 labor) = $9,500.00/mo</text>
+  <text x="68" y="568" fill="#E2E8F0" font-family="monospace" font-size="12">• Path C (Self-Hosted Tracekit + solongate + grim-prompter + lingee-bench Stack): $70.00 compute + 2.4h ($240.00 ops) = $310.00/mo</text>
+  <text x="68" y="594" fill="#6EE7B7" font-family="monospace" font-size="13.5" font-weight="800">➔ Net Monthly Savings: -$9,190.00/mo (-96.74% TCO Reduction vs Path A) · CapEx: not_measured · Stars Today: not_measured</text>
+  <text x="68" y="618" fill="#64748B" font-family="monospace" font-size="11">Claim ID: CLAIM-20261123-R3-R790-TRACEKIT-SOLONGATE-GRIMPROMPTER-LINGEEBENCH · Independently Reproduced: false</text>
+</svg>

@@ -1,0 +1,1397 @@
+{
+  "audit_version": "3.0.0",
+  "generated_at_cst": "2026-11-23T23:12:00+08:00",
+  "raw_trending_html_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/trending-daily-2026-11-23-raw.html",
+    "source_url": "https://github.com/trending?since=daily",
+    "scraped_at_cst": "2026-11-23T23:06:00+08:00",
+    "sha256_lf": "0c622d274f1f2f17f88a3bff72f619988551ff3b1a604d4c317492ab073571d5"
+  },
+  "raw_track_b_search_api_evidence": {
+    "repo_path": "workshops/github-trending-radar/evidence/search-new-repos-2026-11-23-raw.json",
+    "source_query": "gh api search/repositories?q=created:>=2026-11-17+stars:>=20+forks:>=4&sort=stars&order=desc&per_page=100",
+    "captured_at_cst": "2026-11-23T23:08:00+08:00",
+    "sha256_lf": "6b41965c8c7c7c8cdb028a105fb9770eccf283dff4b5214b8434a405eef4c2ad",
+    "metric_definition": "stars_per_day = round(stars_total / age_days); stars_today = not_measured"
+  },
+  "parsed_daily_trending_rows": [
+    {
+      "trending_rank": 1,
+      "full_name": "elementalsouls/Claude-BugHunter",
+      "stars_today_measured": 2037,
+      "stars_total_in_trending_dom": 19096
+    },
+    {
+      "trending_rank": 2,
+      "full_name": "obra/superpowers",
+      "stars_today_measured": 838,
+      "stars_total_in_trending_dom": 324746
+    },
+    {
+      "trending_rank": 3,
+      "full_name": "HKUDS/CLI-Anything",
+      "stars_today_measured": 783,
+      "stars_total_in_trending_dom": 63313
+    },
+    {
+      "trending_rank": 4,
+      "full_name": "jingyaogong/minimind",
+      "stars_today_measured": 828,
+      "stars_total_in_trending_dom": 69287
+    },
+    {
+      "trending_rank": 5,
+      "full_name": "cursor/plugins",
+      "stars_today_measured": 395,
+      "stars_total_in_trending_dom": 18697
+    },
+    {
+      "trending_rank": 6,
+      "full_name": "firecrawl/firecrawl",
+      "stars_today_measured": 920,
+      "stars_total_in_trending_dom": 207565
+    },
+    {
+      "trending_rank": 7,
+      "full_name": "nginx/nginx",
+      "stars_today_measured": 174,
+      "stars_total_in_trending_dom": 32999
+    },
+    {
+      "trending_rank": 8,
+      "full_name": "openvinotoolkit/openvino",
+      "stars_today_measured": 183,
+      "stars_total_in_trending_dom": 12222
+    },
+    {
+      "trending_rank": 9,
+      "full_name": "cathrynlavery/diagram-design",
+      "stars_today_measured": 624,
+      "stars_total_in_trending_dom": 70753
+    },
+    {
+      "trending_rank": 10,
+      "full_name": "mvanhorn/last30days-skill",
+      "stars_today_measured": 790,
+      "stars_total_in_trending_dom": 73214
+    },
+    {
+      "trending_rank": 11,
+      "full_name": "google-labs-code/stitch-skills",
+      "stars_today_measured": 425,
+      "stars_total_in_trending_dom": 12146
+    },
+    {
+      "trending_rank": 12,
+      "full_name": "mjmirza/app-store-compliance",
+      "stars_today_measured": 755,
+      "stars_total_in_trending_dom": 4617
+    },
+    {
+      "trending_rank": 13,
+      "full_name": "Tracer-Cloud/opensre",
+      "stars_today_measured": 438,
+      "stars_total_in_trending_dom": 14680
+    },
+    {
+      "trending_rank": 14,
+      "full_name": "toeverything/AFFiNE",
+      "stars_today_measured": 593,
+      "stars_total_in_trending_dom": 77172
+    },
+    {
+      "trending_rank": 15,
+      "full_name": "XiaoYouChR/Ghost-Downloader-3",
+      "stars_today_measured": 1078,
+      "stars_total_in_trending_dom": 16004
+    },
+    {
+      "trending_rank": 16,
+      "full_name": "zhouxiaoka/autoclip",
+      "stars_today_measured": 908,
+      "stars_total_in_trending_dom": 14176
+    }
+  ],
+  "rounds": [
+    {
+      "round_id": "2026-11-23-R1-R788",
+      "cumulative_round": 788,
+      "claim_id": "CLAIM-20261123-R1-R788-SAFEANYTHING-OPENDIAGRAM-RESTAURANTSKILLS-AGENTTHEATER",
+      "primary_repos": [
+        "erkamyaman/safe-anything",
+        "lukendeasy/open-diagram",
+        "heep-ai/restaurant-ai-skills",
+        "tarqmamdouh/agent-theater"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/safe-anything-open-diagram-restaurant-ai-skills-agent-theater-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/safe-anything-open-diagram-restaurant-ai-skills-agent-theater-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r1-r788-safeanything-opendiagram-restaurantskills-agenttheater.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,350.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "8,850.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "8,545.00",
+        "pct_savings": "96.55%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R2-R789",
+      "cumulative_round": 789,
+      "claim_id": "CLAIM-20261123-R2-R789-SPACE-MCPEXTENSIONS-SINGLEAGENTLOOP-AIEVALSTUDIO",
+      "primary_repos": [
+        "perplexityai/SPACE",
+        "openai/mcp-extensions",
+        "anthropics/single-agent-loop-kit",
+        "awslabs/ai-eval-studio"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/space-mcp-extensions-single-agent-loop-ai-eval-studio-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/space-mcp-extensions-single-agent-loop-ai-eval-studio-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r2-r789-space-mcpextensions-singleagentloop-aievalstudio.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,720.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,320.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "9,005.00",
+        "pct_savings": "96.62%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R3-R790",
+      "cumulative_round": 790,
+      "claim_id": "CLAIM-20261123-R3-R790-TRACEKIT-SOLONGATE-GRIMPROMPTER-LINGEEBENCH",
+      "primary_repos": [
+        "Cygnux-Labs/Tracekit",
+        "solongate/agent-security",
+        "jmanico/grim-prompter",
+        "kingdee/lingee-bench"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/tracekit-solongate-grim-prompter-lingee-bench-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/tracekit-solongate-grim-prompter-lingee-bench-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r3-r790-tracekit-solongate-grimprompter-lingeebench.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,850.00",
+        "path_a_labor_hours": 46.5,
+        "path_a_labor_usd": "4,650.00",
+        "path_a_total_usd": "9,500.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "9,190.00",
+        "pct_savings": "96.74%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R4-R791",
+      "cumulative_round": 791,
+      "claim_id": "CLAIM-20261123-R4-R791-MROFFICE-BIMCRAFT-MAILCRAFT-ENRICHABLE",
+      "primary_repos": [
+        "XinaTian/MROffice",
+        "IPedrax/BIMCraft",
+        "UCS-Care-Group/mailcraft",
+        "context-dot-dev/enrichable"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/mroffice-bimcraft-mailcraft-enrichable-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/mroffice-bimcraft-mailcraft-enrichable-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r4-r791-mroffice-bimcraft-mailcraft-enrichable.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,950.00",
+        "path_a_labor_hours": 47.0,
+        "path_a_labor_usd": "4,700.00",
+        "path_a_total_usd": "9,650.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "9,335.00",
+        "pct_savings": "96.74%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R5-R792",
+      "cumulative_round": 792,
+      "claim_id": "CLAIM-20261123-R5-R792-HERMESPLUGINS-AISCIENTISTV3-OPENGCUA-AWSUAEF",
+      "primary_repos": [
+        "NousResearch/hermes-official-plugins",
+        "SakanaAI/AI-Scientist-v3",
+        "Tongyi-MAI/OpenGCUA",
+        "awslabs/uaef"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/hermes-plugins-ai-scientist-v3-opengcua-aws-uaef-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/hermes-plugins-ai-scientist-v3-opengcua-aws-uaef-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r5-r792-hermesplugins-aiscientistv3-opengcua-awsuaef.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,880.00",
+        "path_a_labor_hours": 46.5,
+        "path_a_labor_usd": "4,650.00",
+        "path_a_total_usd": "9,530.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "9,215.00",
+        "pct_savings": "96.69%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R6-R793",
+      "cumulative_round": 793,
+      "claim_id": "CLAIM-20261123-R6-R793-LEVIATHAN-PGBOXDB-SELFGRAPH-BGTSCONTEXT",
+      "primary_repos": [
+        "elstongun/leviathan",
+        "pgrundev/pgboxdb",
+        "hydra-db/selfgraph",
+        "bgts-ai-org/bgts-context-engine"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/leviathan-pgboxdb-selfgraph-bgts-context-engine-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/leviathan-pgboxdb-selfgraph-bgts-context-engine-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r6-r793-leviathan-pgboxdb-selfgraph-bgtscontext.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,780.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,380.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "9,070.00",
+        "pct_savings": "96.70%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R7-R794",
+      "cumulative_round": 794,
+      "claim_id": "CLAIM-20261123-R7-R794-RYUGI-UNSLOPUI-RENDERLINT-HAPPYHANDS",
+      "primary_repos": [
+        "Innei/ryugi",
+        "felipebasurto/unslop-ui",
+        "ngocanhnckh/renderlint",
+        "ShuaiMXu/happyhands"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/ryugi-unslop-ui-renderlint-happyhands-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/ryugi-unslop-ui-renderlint-happyhands-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r7-r794-ryugi-unslopui-renderlint-happyhands.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,520.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,020.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "8,715.00",
+        "pct_savings": "96.62%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R8-R795",
+      "cumulative_round": 795,
+      "claim_id": "CLAIM-20261123-R8-R795-CONTEXTATTACHMENT-COGIT-CODEREVIEWGATE-GAUGECLI",
+      "primary_repos": [
+        "chipfighter/context-attachment-manager",
+        "erensrtky/cogit",
+        "kyy-logs/code-review-gate-skill",
+        "gauge-sh/gauge-cli"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/context-attachment-manager-cogit-code-review-gate-gauge-cli-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/context-attachment-manager-cogit-code-review-gate-gauge-cli-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r8-r795-contextattachment-cogit-codereviewgate-gaugecli.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,680.00",
+        "path_a_labor_hours": 45.5,
+        "path_a_labor_usd": "4,550.00",
+        "path_a_total_usd": "9,230.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "8,925.00",
+        "pct_savings": "96.70%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R9-R796",
+      "cumulative_round": 796,
+      "claim_id": "CLAIM-20261123-R9-R796-TIMON-FACADECODE-SMARTDOCK-AEGISOPS",
+      "primary_repos": [
+        "ai-timon/timon",
+        "y5ez3g/facadecode",
+        "ck-ys/SmartDock",
+        "emma-sue/AegisOps"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/timon-facadecode-smartdock-aegisops-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/timon-facadecode-smartdock-aegisops-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r9-r796-timon-facadecode-smartdock-aegisops.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,920.00",
+        "path_a_labor_hours": 46.5,
+        "path_a_labor_usd": "4,650.00",
+        "path_a_total_usd": "9,570.00",
+        "path_c_compute_usd": "75.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "315.00",
+        "net_savings_usd": "9,255.00",
+        "pct_savings": "96.71%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R10-R797",
+      "cumulative_round": 797,
+      "claim_id": "CLAIM-20261123-R10-R797-THINKWATCHLITE-ASTRLINK-COSYREDACT-TUSKIRAGATEWAY",
+      "primary_repos": [
+        "ThinkWatchProject/ThinkWatch-Lite",
+        "Calcium-Ion/AstrLink",
+        "CassiopeiaCode/CosyRedactGateway",
+        "Tuskira/ai-agent-gateway"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/thinkwatch-lite-astrlink-cosy-redact-tuskira-gateway-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/thinkwatch-lite-astrlink-cosy-redact-tuskira-gateway-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r10-r797-thinkwatchlite-astrlink-cosyredact-tuskiragateway.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,820.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,420.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "9,110.00",
+        "pct_savings": "96.71%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R11-R798",
+      "cumulative_round": 798,
+      "claim_id": "CLAIM-20261123-R11-R798-JEVMCP-JEVALS-JEVDOCSEARCH-JEVRERANKER",
+      "primary_repos": [
+        "jkudish/jev-mcp",
+        "openlayer-ai/jevals",
+        "VectifyAI/jev-doc-search",
+        "hotchpotch/jev-reranker"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/jev-mcp-jevals-jev-doc-search-jev-reranker-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/jev-mcp-jevals-jev-doc-search-jev-reranker-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r11-r798-jevmcp-jevals-jevdocsearch-jevreranker.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,750.00",
+        "path_a_labor_hours": 45.5,
+        "path_a_labor_usd": "4,550.00",
+        "path_a_total_usd": "9,300.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "8,995.00",
+        "pct_savings": "96.72%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R12-R799",
+      "cumulative_round": 799,
+      "claim_id": "CLAIM-20261123-R12-R799-TALORYS-PIPOCKET-SWARMCHAT-SMITLINE",
+      "primary_repos": [
+        "rociiu/talorys",
+        "TannerMidd/pi-pocket",
+        "Pranjal2041/swarmchat",
+        "kaelorlabs/smitline"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/talorys-pi-pocket-swarmchat-smitline-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/talorys-pi-pocket-swarmchat-smitline-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r12-r799-talorys-pipocket-swarmchat-smitline.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,640.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,140.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "8,835.00",
+        "pct_savings": "96.66%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R13-R800",
+      "cumulative_round": 800,
+      "claim_id": "CLAIM-20261123-R13-R800-SCHEMAGATE-OCTOPGATEWAY-PAIDMEDIAAGENT-OPSPILOTAI",
+      "primary_repos": [
+        "ashishsinha1602/schemagate",
+        "TencentCloud/octop-gateway",
+        "langchain-ai/paid-media-agent",
+        "Router0824/OpsPilot-AI"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/schemagate-octop-gateway-paid-media-agent-opspilot-ai-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/schemagate-octop-gateway-paid-media-agent-opspilot-ai-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r13-r800-schemagate-octopgateway-paidmediaagent-opspilotai.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,980.00",
+        "path_a_labor_hours": 47.0,
+        "path_a_labor_usd": "4,700.00",
+        "path_a_total_usd": "9,680.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "9,370.00",
+        "pct_savings": "96.80%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R14-R801",
+      "cumulative_round": 801,
+      "claim_id": "CLAIM-20261123-R14-R801-WEBROUTER-PIBOLT-LAMPLINE-HYCLI",
+      "primary_repos": [
+        "Nimbleway/webrouter",
+        "opensec-git/Pi-Bolt",
+        "C4rohan/Lampline",
+        "Hybirdss/Hycli"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/webrouter-pi-bolt-lampline-hycli-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/webrouter-pi-bolt-lampline-hycli-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r14-r801-webrouter-pibolt-lampline-hycli.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,850.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,450.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,145.00",
+        "pct_savings": "96.77%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R15-R802",
+      "cumulative_round": 802,
+      "claim_id": "CLAIM-20261123-R15-R802-BROWSERUSEPI-SPHINX-YOBIRU-STARLING",
+      "primary_repos": [
+        "browser-use/browser-use-pi",
+        "parthh01/sphinx",
+        "chekusu/yobiru",
+        "starlinghq/starling"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/browser-use-pi-sphinx-yobiru-starling-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/browser-use-pi-sphinx-yobiru-starling-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r15-r802-browserusepi-sphinx-yobiru-starling.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,720.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,220.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "8,915.00",
+        "pct_savings": "96.69%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R16-R803",
+      "cumulative_round": 803,
+      "claim_id": "CLAIM-20261123-R16-R803-ARCHCANVAS-AVALOKA-AGENVO-WTFM",
+      "primary_repos": [
+        "weike-zhang/architecture-canvas",
+        "guruvaidev/avaloka",
+        "Xuanwo/agenvo",
+        "SupportPages-io/wtfm"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/architecture-canvas-avaloka-agenvo-wtfm-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/architecture-canvas-avaloka-agenvo-wtfm-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r16-r803-archcanvas-avaloka-agenvo-wtfm.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,810.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,410.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,105.00",
+        "pct_savings": "96.76%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R17-R804",
+      "cumulative_round": 804,
+      "claim_id": "CLAIM-20261123-R17-R804-GODOCLING-BIDCRAFT-CASCADEREALTIME-TRELLISAGENT",
+      "primary_repos": [
+        "unitedrhino/docling",
+        "zeronezer/bidcraft",
+        "rasonyang/cascade-realtime-gateway",
+        "xtong629/trellis-agent"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/go-docling-bidcraft-cascade-realtime-trellis-agent-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/go-docling-bidcraft-cascade-realtime-trellis-agent-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r17-r804-godocling-bidcraft-cascaderealtime-trellisagent.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,910.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,510.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,205.00",
+        "pct_savings": "96.79%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R18-R805",
+      "cumulative_round": 805,
+      "claim_id": "CLAIM-20261123-R18-R805-AGENTCANARY-RAIL-AIEVALFRAMEWORK-LOCALEVALS",
+      "primary_repos": [
+        "DorianChn/shanchuanzhi-agent-canary",
+        "vitosans/rail",
+        "dreamers-laboratory/ai-evaluation-framework",
+        "donvito/local-evals"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/agent-canary-rail-ai-eval-framework-local-evals-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/agent-canary-rail-ai-eval-framework-local-evals-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r18-r805-agentcanary-rail-aievalframework-localevals.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,760.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,260.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "8,955.00",
+        "pct_savings": "96.71%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R19-R806",
+      "cumulative_round": 806,
+      "claim_id": "CLAIM-20261123-R19-R806-SENTRY-HERDRCORE-LIVEPANEL-MCODESTACK",
+      "primary_repos": [
+        "nuglifeleoji/Sentry",
+        "herdrdev/herdr-core",
+        "MiniMax-AI/mcode-stack",
+        "ythx-101/live-panel-skill"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/sentry-herdr-core-mcode-stack-live-panel-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/sentry-herdr-core-mcode-stack-live-panel-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r19-r806-sentry-herdrcore-livepanel-mcodestack.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,890.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,490.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,185.00",
+        "pct_savings": "96.79%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R20-R807",
+      "cumulative_round": 807,
+      "claim_id": "CLAIM-20261123-R20-R807-OLCF-PASSENGER-OPENVLHARNESS-RSIEVAL",
+      "primary_repos": [
+        "jddevtime/open-lakehouse-compute-fabric",
+        "Zaneris/passenger",
+        "uclanlp/OpenVLHarness",
+        "Danielxu0208/rsi_eval"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/olcf-passenger-openvlharness-rsi-eval-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/olcf-passenger-openvlharness-rsi-eval-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r20-r807-olcf-passenger-openvlharness-rsieval.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,960.00",
+        "path_a_labor_hours": 47.0,
+        "path_a_labor_usd": "4,700.00",
+        "path_a_total_usd": "9,660.00",
+        "path_c_compute_usd": "70.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "310.00",
+        "net_savings_usd": "9,350.00",
+        "pct_savings": "96.79%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R21-R808",
+      "cumulative_round": 808,
+      "claim_id": "CLAIM-20261123-R21-R808-BROWSERMCP-JEVCRAWL-LOSSLESSMEMORY-JEVMEM",
+      "primary_repos": [
+        "jackwener/BrowserMCP",
+        "RayenMlayeh/jevcrawl",
+        "aru-labs/lossless-memory",
+        "Avinash-jetwani/jevmem"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/browsermcp-jevcrawl-lossless-memory-jevmem-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/browsermcp-jevcrawl-lossless-memory-jevmem-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r21-r808-browsermcp-jevcrawl-losslessmemory-jevmem.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,830.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,330.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,025.00",
+        "pct_savings": "96.73%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R22-R809",
+      "cumulative_round": 809,
+      "claim_id": "CLAIM-20261123-R22-R809-XLB-AWSEMULATOREVAL-DISTILLOPS-DSHENGRAM",
+      "primary_repos": [
+        "EeroEternal/xlb",
+        "aws/aws-emulator-evaluation-suite",
+        "Zihao-Wu06/distillops",
+        "kenz1117/dsh-engram"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/xlb-aws-emulator-eval-distillops-dsh-engram-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/xlb-aws-emulator-eval-distillops-dsh-engram-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r22-r809-xlb-awsemulatoreval-distillops-dshengram.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,940.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,540.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,235.00",
+        "pct_savings": "96.80%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R23-R810",
+      "cumulative_round": 810,
+      "claim_id": "CLAIM-20261123-R23-R810-XSSAUDIT-DESIGNINTELLIGENCE-INKDOC-GLASSBENCH",
+      "primary_repos": [
+        "songjianyang/xss-audit",
+        "ryuxdsgn/design-intelligence",
+        "AbdoslamB/InkDoc",
+        "davidalmeida90/glassbench"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/xss-audit-design-intelligence-inkdoc-glassbench-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/xss-audit-design-intelligence-inkdoc-glassbench-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r23-r810-xssaudit-designintelligence-inkdoc-glassbench.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,870.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,470.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,165.00",
+        "pct_savings": "96.78%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R24-R811",
+      "cumulative_round": 811,
+      "claim_id": "CLAIM-20261123-R24-R811-ORCAARCHIVE-TDHARNESS-DOCFLAREAI-SHOWAI",
+      "primary_repos": [
+        "Continuum-AI-Corp/Orca-AI-Incident-Archive",
+        "398894496-arch/TDHarness",
+        "p10node/docflare-ai",
+        "Renaissance-Mind/ShowAI"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/orca-archive-tdharness-docflare-ai-showai-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/orca-archive-tdharness-docflare-ai-showai-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r24-r811-orcaarchive-tdharness-docflareai-showai.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,790.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,290.00",
+        "path_c_compute_usd": "60.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "300.00",
+        "net_savings_usd": "8,990.00",
+        "pct_savings": "96.77%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R25-R812",
+      "cumulative_round": 812,
+      "claim_id": "CLAIM-20261123-R25-R812-JEVSTYLE-JEVBROWSER-DRPIXEL-CONSTRUCT",
+      "primary_repos": [
+        "lawrence3699/jev-style",
+        "Ying-Kai-Liao/jev-browser",
+        "StarTrail-org/DRPixel",
+        "rtmandreyev/construct"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/jev-style-jev-browser-drpixel-construct-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/jev-style-jev-browser-drpixel-construct-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r25-r812-jevstyle-jevbrowser-drpixel-construct.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,920.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,520.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,215.00",
+        "pct_savings": "96.80%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R26-R813",
+      "cumulative_round": 813,
+      "claim_id": "CLAIM-20261123-R26-R813-STEZH-AGENTMEMORYREPO-LOCALS-ULTIMATE",
+      "primary_repos": [
+        "dualface/ste-zh",
+        "AgentMemoryRepo/agentmemoryrepo",
+        "Generated-Computers/Locals",
+        "HazAT/ultimate"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/ste-zh-agentmemoryrepo-locals-ultimate-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/ste-zh-agentmemoryrepo-locals-ultimate-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r26-r813-stezh-agentmemoryrepo-locals-ultimate.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,880.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,480.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,175.00",
+        "pct_savings": "96.78%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R27-R814",
+      "cumulative_round": 814,
+      "claim_id": "CLAIM-20261123-R27-R814-FLASHWRIGHT-DROIDLINE-FREESBC-VIDEODIRECTOR",
+      "primary_repos": [
+        "xcodebeast/flashwright",
+        "KnifeLemon/Droidline",
+        "rasonyang/freesbc",
+        "win4r/video-director"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/flashwright-droidline-freesbc-video-director-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/flashwright-droidline-freesbc-video-director-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r27-r814-flashwright-droidline-freesbc-videodirector.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,950.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,550.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,245.00",
+        "pct_savings": "96.81%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R28-R815",
+      "cumulative_round": 815,
+      "claim_id": "CLAIM-20261123-R28-R815-SYSTEMONECONNECTOR-JEVGATEWAY-PLAINBOARD-TAMIO",
+      "primary_repos": [
+        "itsmostafa/system-one-connector",
+        "vinilana/jev-gateway",
+        "hthoene/plainboard",
+        "missuo/tamio"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/system-one-connector-jev-gateway-plainboard-tamio-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/system-one-connector-jev-gateway-plainboard-tamio-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r28-r815-systemoneconnector-jevgateway-plainboard-tamio.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,970.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,570.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,265.00",
+        "pct_savings": "96.81%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R29-R816",
+      "cumulative_round": 816,
+      "claim_id": "CLAIM-20261123-R29-R816-STREAMEVAL-GOAT-PAPERFIGURETOFIGMA-JEVMAIL",
+      "primary_repos": [
+        "StreamEval/StreamEval",
+        "goat-si/goat",
+        "sidiangongyuan/paper-figure-to-figma",
+        "fazlerocks/jevmail"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/streameval-goat-paper-figure-to-figma-jevmail-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/streameval-goat-paper-figure-to-figma-jevmail-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r29-r816-streameval-goat-paperfiguretofigma-jevmail.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,840.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,340.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,035.00",
+        "pct_savings": "96.73%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R30-R817",
+      "cumulative_round": 817,
+      "claim_id": "CLAIM-20261123-R30-R817-RAWRAG-NODE2MINT-PANTHEON-PIDURABLETELEGRAM",
+      "primary_repos": [
+        "Litmeb/RAW-RAG",
+        "yanstd888/node2mint",
+        "adityaagarw/Pantheon",
+        "smixs/pi-durable-telegram"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/raw-rag-node2mint-pantheon-pi-durable-telegram-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/raw-rag-node2mint-pantheon-pi-durable-telegram-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r30-r817-rawrag-node2mint-pantheon-pidurabletelegram.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,900.00",
+        "path_a_labor_hours": 46.0,
+        "path_a_labor_usd": "4,600.00",
+        "path_a_total_usd": "9,500.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,195.00",
+        "pct_savings": "96.79%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R31-R818",
+      "cumulative_round": 818,
+      "claim_id": "CLAIM-20261123-R31-R818-CONTEXTCRAFT-OTTO-OPENBOT-CURSOR2RESPONSE",
+      "primary_repos": [
+        "khanhtq29vn/contextcraft",
+        "maxtrigify/Otto",
+        "regnull/openbot",
+        "iFwu/cursor2response"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/contextcraft-otto-openbot-cursor2response-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/contextcraft-otto-openbot-cursor2response-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r31-r818-contextcraft-otto-openbot-cursor2response.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,860.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,360.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,055.00",
+        "pct_savings": "96.74%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R32-R819",
+      "cumulative_round": 819,
+      "claim_id": "CLAIM-20261123-R32-R819-WHATSAPPMCP-RECRUITOPS-XIAOZHIGATEWAY-SERPMAVEN",
+      "primary_repos": [
+        "finereli/whatsapp-mcp",
+        "849879772/recruitops-agent",
+        "justhalfbit/xiaozhi-hub-server",
+        "nodemaven/serpmaven"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/whatsapp-mcp-recruitops-xiaozhi-gateway-serpmaven-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/whatsapp-mcp-recruitops-xiaozhi-gateway-serpmaven-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r32-r819-whatsappmcp-recruitops-xiaozhigateway-serpmaven.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,820.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,320.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,015.00",
+        "pct_savings": "96.73%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R33-R820",
+      "cumulative_round": 820,
+      "claim_id": "CLAIM-20261123-R33-R820-37STUDIO-JEVERATION-EMALIGHTNING-RABBITWALL",
+      "primary_repos": [
+        "Shaitrish/37studio",
+        "Carol-lyh/Jeveration",
+        "canberk7/ema-lightning",
+        "ysuito/RabbitWall"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/studio37-jeveration-ema-lightning-rabbitwall-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/studio37-jeveration-ema-lightning-rabbitwall-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r33-r820-37studio-jeveration-emalightning-rabbitwall.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,980.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,480.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,175.00",
+        "pct_savings": "96.78%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R34-R821",
+      "cumulative_round": 821,
+      "claim_id": "CLAIM-20261123-R34-R821-SKILLBOX-GOSHENEMAIL-CVENOW-AGENTDATAAPIS",
+      "primary_repos": [
+        "kitze/skillbox",
+        "boringcomputers/goshen-email",
+        "sazabi/cve.now",
+        "cporter202/ai-agent-data-apis"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/skillbox-goshen-email-cve-now-agent-data-apis-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/skillbox-goshen-email-cve-now-agent-data-apis-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r34-r821-skillbox-goshenemail-cvenow-agentdataapis.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,910.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,410.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,105.00",
+        "pct_savings": "96.76%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R35-R822",
+      "cumulative_round": 822,
+      "claim_id": "CLAIM-20261123-R35-R822-LUOBOPPT-PROMOVIDEO-THESYSCORE-SHEET",
+      "primary_repos": [
+        "zhouwei713/luobo-ppt",
+        "liyupi/ai-promo-video-maker",
+        "Sreehari05055/thesys-core",
+        "DeepanshuMishraa/sheet"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/luobo-ppt-ai-promo-video-thesys-core-sheet-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/luobo-ppt-ai-promo-video-thesys-core-sheet-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r35-r822-luoboppt-promovideo-thesyscore-sheet.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "5,050.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,550.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,245.00",
+        "pct_savings": "96.81%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R36-R823",
+      "cumulative_round": 823,
+      "claim_id": "CLAIM-20261123-R36-R823-KETTU-AIVIDEOFACTORY-HOB-MADRE",
+      "primary_repos": [
+        "KettuAI/Kettu",
+        "ersinkoc/AI-Video-Factory",
+        "FrigadeHQ/hob",
+        "jossuealcacao-exe/madre"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/kettu-ai-video-factory-hob-madre-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/kettu-ai-video-factory-hob-madre-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r36-r823-kettu-aivideofactory-hob-madre.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,960.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,460.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,155.00",
+        "pct_savings": "96.78%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R37-R824",
+      "cumulative_round": 824,
+      "claim_id": "CLAIM-20261123-R37-R824-INVISIBLEPLAYWRIGHT-DIM-CJKFOLD-TELLTALEDNS",
+      "primary_repos": [
+        "oss-invisible/playwright_mcp",
+        "arcships/dim",
+        "cdcailf/cjkfold",
+        "paimonsoror/telltaledns"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/invisible-playwright-dim-cjkfold-telltaledns-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/invisible-playwright-dim-cjkfold-telltaledns-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r37-r824-invisibleplaywright-dim-cjkfold-telltaledns.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,890.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,390.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,085.00",
+        "pct_savings": "96.75%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R38-R825",
+      "cumulative_round": 825,
+      "claim_id": "CLAIM-20261123-R38-R825-CLAUDEMY-HERALDOS-VULNERATORAI-CHEETAH",
+      "primary_repos": [
+        "assafkip/claudemy",
+        "iamlukethedev/Herald-OS",
+        "irraz/vulnerator-ai",
+        "DA3M0/Cheetah"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/claudemy-herald-os-vulnerator-ai-cheetah-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/claudemy-herald-os-vulnerator-ai-cheetah-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r38-r825-claudemy-heraldos-vulneratorai-cheetah.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "5,020.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,520.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,215.00",
+        "pct_savings": "96.80%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R39-R826",
+      "cumulative_round": 826,
+      "claim_id": "CLAIM-20261123-R39-R826-GOVAULT-COMFYCOLABKIT-BETTERVAULT-VERTEXANTITRUNCATION",
+      "primary_repos": [
+        "txchen/govault",
+        "FireTable/comfy-colab-kit",
+        "better-vault/better-vault",
+        "ken050210/vertex-streaming-anti-truncation"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/govault-comfy-colab-kit-better-vault-vertex-anti-truncation-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/govault-comfy-colab-kit-better-vault-vertex-anti-truncation-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r39-r826-govault-comfycolabkit-bettervault-vertexantitruncation.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "4,850.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,350.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,045.00",
+        "pct_savings": "96.74%"
+      }
+    },
+    {
+      "round_id": "2026-11-23-R40-R827",
+      "cumulative_round": 827,
+      "claim_id": "CLAIM-20261123-R40-R827-VIBEKNOWLEDGE-MACHINESKILL-AIAPPPLAYBOOK-GATELY",
+      "primary_repos": [
+        "andyhuo520/vibe-knowledge",
+        "AirsupHQ/machine-skill",
+        "blakeandersonw/ai-app-playbook",
+        "wangwanjie/gately"
+      ],
+      "zh_faq": "workshops/github-trending-radar/docs/vibe-knowledge-machine-skill-ai-app-playbook-gately-selection-faq.md",
+      "en_faq": "workshops/github-trending-radar/docs/vibe-knowledge-machine-skill-ai-app-playbook-gately-selection-faq.en.md",
+      "svg": "assets/github-ai-radar-2026-11-23-r40-r827-vibeknowledge-machineskill-aiappplaybook-gately.svg",
+      "finops_closed_form": {
+        "provenance": "synthetic",
+        "independently_reproduced": false,
+        "base_hardware_capex": "not_measured",
+        "track_b_stars_today": "not_measured",
+        "team_size_engineers": 45,
+        "hourly_rate_usd": 100.0,
+        "path_a_api_saas_usd": "5,080.00",
+        "path_a_labor_hours": 45.0,
+        "path_a_labor_usd": "4,500.00",
+        "path_a_total_usd": "9,580.00",
+        "path_c_compute_usd": "65.00",
+        "path_c_labor_hours": 2.4,
+        "path_c_labor_usd": "240.00",
+        "path_c_total_usd": "305.00",
+        "net_savings_usd": "9,275.00",
+        "pct_savings": "96.82%"
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR826" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentR826" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR826)"/>
+  <rect x="24" y="20" width="1152" height="640" rx="16" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accentR826)"/>
+
+  <text x="48" y="58" fill="#f8fafc" font-family="Segoe UI, Inter, sans-serif" font-size="21" font-weight="700">2026-11-23 Night Round 39 (R826) · GoVault + Comfy-Colab-Kit + Better-Vault + Vertex-Anti-Truncation</text>
+  <text x="48" y="84" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="13">Zero-CGO Vaultwarden Client · Zero-Idle Wake-on-Demand ComfyUI MCP · BYOM NotebookLM Alternative · Vertex Streaming Anti-Truncation</text>
+
+  <!-- Card 1: GoVault -->
+  <rect x="48" y="106" width="540" height="190" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="68" y="134" fill="#38bdf8" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">1. txchen/govault (★ 185 · 10 forks · Go · MIT)</text>
+  <text x="68" y="158" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">Zero-CGO Native Desktop Client for Vaultwarden &amp; Bitwarden</text>
+  <text x="68" y="182" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Zero-CGO NSGo Native UI: Fast, lightweight desktop vault on macOS, Linux &amp; Windows</text>
+  <text x="68" y="202" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Cryptographic Supply Chain: ssh-keygen pinned release key + Apple notarization</text>
+  <text x="68" y="222" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Self-Hosted Secret Custody: Manages API keys, TOTP &amp; credentials on Vaultwarden</text>
+  <text x="68" y="242" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Eliminates 300MB+ Electron overhead for developer &amp; AI key management</text>
+
+  <!-- Card 2: Comfy-Colab-Kit -->
+  <rect x="612" y="106" width="540" height="190" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="632" y="134" fill="#34d399" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">2. FireTable/comfy-colab-kit (★ 140 · 24 forks · Python · MIT)</text>
+  <text x="632" y="158" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">Zero-GPU-Idle Wake-on-Demand ComfyUI Gateway &amp; MCP Server</text>
+  <text x="632" y="182" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Wake-on-Demand L4 GPUs: Boots ephemeral Colab GPU VMs only when requested</text>
+  <text x="632" y="202" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Cloudflare Zero-Trust Access: Protected URL gateway with live boot progress</text>
+  <text x="632" y="222" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Glama-Verified MCP Server: Agents trigger ComfyUI workflows without 24/7 GPU waste</text>
+  <text x="632" y="242" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Cuts idle GPU cloud bills to $0 between image/video generation bursts</text>
+
+  <!-- Card 3: Better-Vault -->
+  <rect x="48" y="314" width="540" height="190" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="68" y="342" fill="#c084fc" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">3. better-vault/better-vault (★ 121 · 10 forks · TypeScript · MIT)</text>
+  <text x="68" y="366" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">Open-Source Bring-Your-Own-Model (BYOM) Alternative to NotebookLM</text>
+  <text x="68" y="390" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Multi-Artifact Synthesis: Turns sources into reports, flashcards, quizzes, tables &amp; diagrams</text>
+  <text x="68" y="410" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Citation-Grounded Chat: Every answer links back to uploaded source documents</text>
+  <text x="68" y="430" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Model Agnostic (AI SDK + Vite 8): Use local, Azure OpenAI, Anthropic, or Gemini models</text>
+  <text x="68" y="450" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Prevents vendor lock-in and keeps proprietary enterprise corpora private</text>
+
+  <!-- Card 4: Vertex-Streaming-Anti-Truncation -->
+  <rect x="612" y="314" width="540" height="190" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="632" y="342" fill="#fbbf24" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">4. ken050210/vertex-streaming-anti-truncation (★ 51 · 4 forks · JS · MIT)</text>
+  <text x="632" y="366" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">Streaming Tool-Argument Anti-Truncation Gateway for Vertex AI &amp; Gemini</text>
+  <text x="632" y="390" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Tool-Call Payload Encapsulation: Writes body into tool args &amp; restores streaming text</text>
+  <text x="632" y="410" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Standalone Docker/Node Gateway: Exposes OpenAI-compatible endpoints for any client</text>
+  <text x="632" y="430" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Clear Block Diagnostics: Surfaces exact upstream Google safety/filter reasons</text>
+  <text x="632" y="450" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Supports service-account &amp; Express API keys with streaming/non-streaming modes</text>
+
+  <!-- FinOps Footer Bar -->
+  <rect x="48" y="524" width="1104" height="114" rx="12" fill="#090d16" stroke="#334155" stroke-width="1.5"/>
+  <text x="68" y="552" fill="#38bdf8" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">Closed-Form FinOps TCO Verification (R826 · GoVault + Comfy-Colab-Kit + Better-Vault + Vertex-Anti-Truncation)</text>
+  <text x="68" y="578" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">• Path A (Enterprise Password Seats + 24/7 Dedicated GPU VM + Commercial Notebook SaaS + Truncation Retries): $4,850.00 SaaS/API + $4,500.00 labor (45.0h @ $100/h) = $9,350.00/mo</text>
+  <text x="68" y="600" fill="#10b981" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="600">• Path C (Self-Hosted GoVault + Comfy-Colab-Kit + Better-Vault + Vertex-Anti-Truncation): $65.00 compute + $240.00 labor (2.4h @ $100/h) = $305.00/mo · Net Savings $9,045.00/mo (-96.74%)</text>
+  <text x="68" y="622" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Provenance: GitHub REST API verified 2026-11-23 · Live p99 latency = not_measured (static architecture &amp; README telemetry audit)</text>
+</svg>

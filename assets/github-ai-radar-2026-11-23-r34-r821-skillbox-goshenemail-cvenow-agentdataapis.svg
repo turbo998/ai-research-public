@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR821" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentR821" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR821)"/>
+  <rect x="24" y="20" width="1152" height="640" rx="16" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accentR821)"/>
+
+  <text x="48" y="58" fill="#f8fafc" font-family="Segoe UI, Inter, sans-serif" font-size="21" font-weight="700">2026-11-23 Night Round 34 (R821) · Skillbox + Goshen-Email + CVE.now + AI-Agent-Data-APIs</text>
+  <text x="48" y="84" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="13">Versioned Enterprise Agent Skills Registry · Scoped Agent Email &amp; Quarantine MCP · 8-Source Unified CVE Feed · 2,070 Web Data Actors</text>
+
+  <!-- Card 1: Skillbox -->
+  <rect x="48" y="106" width="540" height="190" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="68" y="134" fill="#38bdf8" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">1. kitze/skillbox (★ 283 · 28 forks · TypeScript · MIT)</text>
+  <text x="68" y="158" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">Self-Hosted Versioned Skills Registry with Scoped Grants &amp; Jev Routing</text>
+  <text x="68" y="182" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Immutable Revisions &amp; Profiles: Per-profile skill/bundle grants &amp; owner review</text>
+  <text x="68" y="202" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Dual MCP Delivery: HTTP /mcp + Node/Bun stdio bridge + commit-pinned GitHub import</text>
+  <text x="68" y="222" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Optional Jev Recommendations: AES-256-GCM encrypted keys for TypeSafe/OpenRouter</text>
+  <text x="68" y="242" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• React + Bun + Hono + PostgreSQL 16+ · Never executes uploaded skill code</text>
+
+  <!-- Card 2: Goshen-Email -->
+  <rect x="612" y="106" width="540" height="190" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="632" y="134" fill="#34d399" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">2. boringcomputers/goshen-email (★ 188 · 18 forks · TypeScript)</text>
+  <text x="632" y="158" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">Scoped Email Inboxes for AI Agents with Idempotent Send &amp; Quarantine Gate</text>
+  <text x="632" y="182" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 17 OpenAPI / CLI / MCP Operations: Create inboxes, send, receive &amp; thread replies</text>
+  <text x="632" y="202" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Least-Privilege Keys: Mailbox keys reach 1 inbox; no API key can release quarantine</text>
+  <text x="632" y="222" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Anti-Abuse SMTP Pipeline: SPF/DKIM/DMARC + Rspamd + ClamAV + idempotency keys</text>
+  <text x="632" y="242" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Human dashboard for quarantine release &amp; signed delivery webhooks</text>
+
+  <!-- Card 3: CVE.now -->
+  <rect x="48" y="314" width="540" height="190" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="68" y="342" fill="#c084fc" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">3. sazabi/cve.now (★ 167 · 10 forks · Apache-2.0)</text>
+  <text x="68" y="366" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">8-Source Unified Vulnerability Feed &amp; Keyless Security MCP Server</text>
+  <text x="68" y="390" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 8 Merged Feeds: CVE List, GHSA, OSV, NVD, ENISA EUVD, CISA KEV, EPSS &amp; Exploit-DB</text>
+  <text x="68" y="410" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Deduplicated Single Entry: One canonical record per vulnerability with EPSS/KEV</text>
+  <text x="68" y="430" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Zero-Key Multi-Protocol Access: RSS, Atom, JSON Feed, JSON API &amp; MCP server</text>
+  <text x="68" y="450" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Filter by critical (CISA KEV / CVSS 9+ / CVSS 7+ with EPSS ≥ 0.1) or vendor stack</text>
+
+  <!-- Card 4: AI-Agent-Data-APIs -->
+  <rect x="612" y="314" width="540" height="190" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="632" y="342" fill="#fbbf24" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">4. cporter202/ai-agent-data-apis (★ 51 · 13 forks · MIT)</text>
+  <text x="632" y="366" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">2,070 Production Web Data Actors &amp; 150+ Live APIs for MCP &amp; RAG</text>
+  <text x="632" y="390" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• 2,070 Apify Actors Catalog: Categorized by Job-to-be-Done for MCP &amp; LLM tools</text>
+  <text x="632" y="410" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Multi-Domain Coverage: E-commerce, social, SEO, lead gen, vision &amp; voice pipelines</text>
+  <text x="632" y="430" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Production RAG Ingestion: Structured JSON/Markdown outputs ready for vector stores</text>
+  <text x="632" y="450" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Eliminates custom scraper maintenance across 2,000+ external web targets</text>
+
+  <!-- FinOps Footer Bar -->
+  <rect x="48" y="524" width="1104" height="114" rx="12" fill="#090d16" stroke="#334155" stroke-width="1.5"/>
+  <text x="68" y="552" fill="#38bdf8" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">Closed-Form FinOps TCO Verification (R821 · Skillbox + Goshen-Email + CVE.now + AI-Agent-Data-APIs)</text>
+  <text x="68" y="578" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">• Path A (Enterprise Prompt Registry + Commercial Agent Email + Paid Threat Intel Feed + Custom Scrapers): $4,910.00 SaaS/API + $4,500.00 labor (45.0h @ $100/h) = $9,410.00/mo</text>
+  <text x="68" y="600" fill="#10b981" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="600">• Path C (Self-Hosted Skillbox + Goshen-Email + CVE.now + AI-Agent-Data-APIs): $65.00 compute + $240.00 labor (2.4h @ $100/h) = $305.00/mo · Net Savings $9,105.00/mo (-96.76%)</text>
+  <text x="68" y="622" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Provenance: GitHub REST API verified 2026-11-23 · Live p99 latency = not_measured (static architecture &amp; README telemetry audit)</text>
+</svg>

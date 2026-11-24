@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bgR820" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentR820" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bgR820)"/>
+  <rect x="24" y="20" width="1152" height="640" rx="16" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="24" y="20" width="1152" height="6" rx="3" fill="url(#accentR820)"/>
+
+  <text x="48" y="58" fill="#f8fafc" font-family="Segoe UI, Inter, sans-serif" font-size="21" font-weight="700">2026-11-23 Night Round 33 (🏆 R820 Milestone) · 37Studio + Jeveration + EMA-Lightning + RabbitWall</text>
+  <text x="48" y="84" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="13">AI Video Studio &amp; Social Publishing · 78 ms Single-Pass VLM Image Generation · 8.6M Offline TTS · Dual-NIC AI Egress Gateway</text>
+
+  <!-- Card 1: 37Studio -->
+  <rect x="48" y="106" width="540" height="190" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="68" y="134" fill="#38bdf8" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">1. Shaitrish/37studio (★ 170 · 25 forks · Go · MIT)</text>
+  <text x="68" y="158" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">Open-Source AI Video Studio, 9-Platform Publisher &amp; Comment Responder</text>
+  <text x="68" y="182" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Editor Agent: Brief a reel, ad, or explainer in your brand library and render locally</text>
+  <text x="68" y="202" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Multi-Platform Social Ops: Posts directly to 9 platforms and drafts comment replies</text>
+  <text x="68" y="222" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• BYOK Zero-Subscription Stack: Replaces Opus Clip, Buffer, and Claude Motion</text>
+  <text x="68" y="242" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Runs on Windows, Linux, macOS &amp; server · CLI + AI agent skill ready</text>
+
+  <!-- Card 2: Jeveration -->
+  <rect x="612" y="106" width="540" height="190" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="632" y="134" fill="#c084fc" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">2. Carol-lyh/Jeveration (★ 146 · 12 forks · Python · Apache-2.0)</text>
+  <text x="632" y="158" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">78 ms Single-Forward-Pass Frozen VLM Image Generation &amp; Dense Prediction</text>
+  <text x="632" y="182" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Joint Decision VLM: Returns 512x512 image in 1 forward pass (78 ms on 1x H200)</text>
+  <text x="632" y="202" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Unified Checkpoint: Text-to-image, image-to-image (hed/depth/colorize/style)</text>
+  <text x="632" y="222" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Dense Prediction: Segmentation, depth, and surface normals on Qwen3.5-4B</text>
+  <text x="632" y="242" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• TA-TiTok tokenizer + CLIP text tower · 6.5 GB weights via Hugging Face</text>
+
+  <!-- Card 3: EMA-Lightning -->
+  <rect x="48" y="314" width="540" height="190" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="68" y="342" fill="#34d399" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">3. canberk7/ema-lightning (★ 308 · 35 forks · Python · Apache-2.0)</text>
+  <text x="68" y="366" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">8.6M-Param Offline Turkish TTS with 4 ms First Audio &amp; Playhead Scheduler</text>
+  <text x="68" y="390" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• State-of-the-Art Accuracy: 0.92% WER on Freya-TR-Eval (495 sentences, ~34 MB)</text>
+  <text x="68" y="410" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Ultra-Low Latency: ~4 ms first audio, 440x real-time single &amp; 1,316x batched</text>
+  <text x="68" y="430" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Built-In Playhead Scheduler: Thread-safe multi-caller GPU batching or CPU-only</text>
+  <text x="68" y="450" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Native normalization for numbers, dates, money, units &amp; symbols (~$0.0085/1M chars)</text>
+
+  <!-- Card 4: RabbitWall -->
+  <rect x="612" y="314" width="540" height="190" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="632" y="342" fill="#fbbf24" font-family="Segoe UI, Inter, sans-serif" font-size="16" font-weight="700">4. ysuito/RabbitWall (★ 68 · 11 forks · Python · MIT)</text>
+  <text x="632" y="366" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">Dual-NIC Linux AI Network Egress Gateway &amp; mTLS Traffic Console</text>
+  <text x="632" y="390" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Hard Egress Switch: Instant cutoff of established connections &amp; DNS for AI hosts</text>
+  <text x="632" y="410" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Time-Boxed Domain Approvals: Approve exact domains per node for 1, 5, or 30 min</text>
+  <text x="632" y="430" fill="#cbd5e1" font-family="Segoe UI, Inter, sans-serif" font-size="12">• Zero-Trust Console: Source-IP filtering + Caddy client-certificate mTLS auth</text>
+  <text x="632" y="450" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">• Live world map, route list, newly observed domain alerts &amp; 1h/24h traffic ranking</text>
+
+  <!-- FinOps Footer Bar -->
+  <rect x="48" y="524" width="1104" height="114" rx="12" fill="#090d16" stroke="#334155" stroke-width="1.5"/>
+  <text x="68" y="552" fill="#38bdf8" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">Closed-Form FinOps TCO Verification (R820 Milestone · 37Studio + Jeveration + EMA-Lightning + RabbitWall)</text>
+  <text x="68" y="578" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="13">• Path A (Commercial Video Clip/Publish SaaS + Diffusion API + Cloud TTS + Managed Firewall): $4,980.00 SaaS/API + $4,500.00 labor (45.0h @ $100/h) = $9,480.00/mo</text>
+  <text x="68" y="600" fill="#10b981" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="600">• Path C (Self-Hosted 37Studio + Jeveration + EMA-Lightning + RabbitWall): $65.00 compute + $240.00 labor (2.4h @ $100/h) = $305.00/mo · Net Savings $9,175.00/mo (-96.78%)</text>
+  <text x="68" y="622" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Provenance: GitHub REST API verified 2026-11-23 · Live p99 latency = not_measured (static architecture &amp; README telemetry audit)</text>
+</svg>
